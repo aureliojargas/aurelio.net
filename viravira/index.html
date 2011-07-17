@@ -139,6 +139,18 @@ $.each(flipTable, function (key, value) {
 	flipTable[value] = key;
 });
 
+//// URL regex, to auto-link URLs at the reversed text
+//
+// Format:  [ http:// | www. ]        domain.com        [ / ]         [ ?form=data ]            [ #anchor ]
+// Regex: (https?:\/\/|www\.)[A-Za-z0-9%._\/~:,=$@&+-]+\b\/*(\?[A-Za-z0-9\/%&=+:;.,$@*_-]+)?(#[A-Za-z0-9%._-]*)?
+//
+// I've removed the = char from the 'domain.com' part, to extract protected
+// (reversed) URLs in this format: http://...?url=...//:ptth
+// Example: http://easy-sharee.com/download/link/?url=lmth.oviuqra/e1c5ab19/2551684/elif/moc.derahs2.www//:ptth
+//
+var url_regex = /(https?:\/\/|www\.)[A-Za-z0-9%._\/~:,$@&+-]+\b\/*(\?[A-Za-z0-9\/%&=+:;.,$@*_-]+)?(#[A-Za-z0-9%._-]*)?/gi;
+
+
 function vira() {
 	var url, txt, r1, r2;
 	
@@ -178,13 +190,20 @@ function vira() {
 		$('#rev .twitter-button')
 			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r1 + ' ' + url));
 		$('#flip .twitter-button')
-			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r2 + ' ' + url));		
+			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r2 + ' ' + url));
 	}
 	
 	// Show results
 	$('#rev, #flip').fadeIn();
 	$('#rev .content').text(r1);
 	$('#flip .content').text(r2);
+
+	// Auto-link protected (reversed) URLs
+	if (url_regex.test(r1)) {
+		r1 = r1.replace(url_regex, '<a href="$&">$&</a>');
+		r1 = r1.replace(/<a href="www/gi, '<a href="http://www');  // add http: prefix for www.foo.com URLs
+		$('#rev .content').html(r1);
+	}
 	
 	if (twitterMode) {
 		// Append app URL (styled)
