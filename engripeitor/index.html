@@ -1,0 +1,278 @@
+<html>
+<!--
+	ENGRIPEITOR
+	www.coisinha.com.br/engripeitor
+	
+	Criado por Aurelio Marinho Jargas (www.aurelio.net)
+	Junho de 2007
+
+	..............................................................................
+	
+	Inspiração 1:
+
+	 	20/05/2007 21:09:59 denise:
+		a gribe aqui contidua.....
+		passei só pra dar um oizinho....:P
+		e ainda dao bandei minhas coisas em flash pq to sem flash em casa...
+		abanha de bando certeza....
+		hueuhe
+		beijao
+
+	Inspiração 2:
+
+	 	24/05/2007: Acordei beio gribado...
+
+	Inspiração 3:
+
+		15/06/2007: Peguei OUTRA gripe. É só ir pra Curitiba que isso acontece...
+		Tá, dessa vez não passa, vou terminar o Engripeitor.
+-->
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="alternate" href="http://feeds.feedburner.com/coisinha" type="application/rss+xml">
+<link rel="icon" type="image/gif" href="../img/favicon.gif">
+<link rel="stylesheet" type="text/css" href="../inc/yui-2.7.0.css">
+<link rel="stylesheet" type="text/css" href="../inc/coisinha.css">
+<link rel="stylesheet" type="text/css" href="../inc/nav.css">
+<script type="text/javascript" charset="utf-8" src="../inc/coisinha.js"></script>
+
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+<meta name="keywords" content="engripeitor, engripator, gripe, gripado, resfriado, febre, doente, remédio, tosse, vírus, espirro, saúde, nariz, farmácia, médico, hospital">
+<meta name="description" content="Engripeitor - Gripe instantânea online. Veja como seu texto fica em versão gripada. Zim, gribe inzdandâdea... A-A-A-Atchô!">
+
+<title>Engripeitor - Gripe instantânea online</title>
+
+
+<style type="text/css">
+	h1, h2 { color:#fff; }
+	#header { background:red; }
+	#header a, #header td { color:yellow; font-weight:bold; }
+	#header td { padding:.5em .1em 1em 2em; }
+	#content, #content th { color:black; }
+	td.original, th.original { background:#ddd; }
+	#carregar { font-size:90%; padding-left:0.3em; }
+	#footer { padding:10px; margin:2em 0; border-top:9px solid #f00; }
+</style>
+
+<script type="text/javascript">
+	function roda() {
+		// Abre a janela do quarto
+		var t = document.getElementById('texto-original').value;
+		// Pega o vírus
+		t = t.replace(/m([aeiouáéíóúâêôãõAEIOUÁÉÍÓÚÂÊÔÃÕ])/g,	'b$1');
+		t = t.replace(/M([aeiouáéíóúâêôãõAEIOUÁÉÍÓÚÂÊÔÃÕ])/g,	'B$1');
+		t = t.replace(/n([aeiouáéíóúâêôãõAEIOUÁÉÍÓÚÂÊÔÃÕ])/g,	'd$1'); // !língua
+		t = t.replace(/N([aeiouáéíóúâêôãõAEIOUÁÉÍÓÚÂÊÔÃÕ])/g,	'D$1');
+		t = t.replace(/m([pbPB])/g,	'n$1'); // comprar/conbrar, combinar/conbinar
+		t = t.replace(/M([pbPB])/g,	'M$1');
+		t = t.replace(/v/g,		'b'); // desoVA, deVEmos, deVIa, deVOto, VU?
+		t = t.replace(/V/g,		'B');
+		t = t.replace(/p/g,		'b'); // Presente, sePArar, aPElo, PI, PO, PU
+		t = t.replace(/P/g,		'B');
+		t = t.replace(/t/g,		'd');
+		t = t.replace(/T/g,		'D');
+		t = t.replace(/[sç]/g,		'z');
+		t = t.replace(/[SÇ]/g,		'Z');
+		t = t.replace(/qu/g,		'gu'); // tks Carla
+		t = t.replace(/QU/g,		'GU');
+		t = t.replace(/ch/g,		'j'); // tks Carla
+		t = t.replace(/CH/g,		'J');
+		t = t.replace(/lh/g,		'dj');
+		t = t.replace(/\.\.\./g,	'... A-A-A-Atchô!');
+		// Fala com a moçada
+		document.getElementById('texto-traduzido').value = t;
+		
+		// Atualiza o link do botão tweet this
+		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/ATCHIM');
+		document.getElementById('tuitar').style.display = '';
+		
+	}
+	function carrega(){
+		document.getElementById('texto-original').value = ''+
+			'Hoje acordei meio gripado...\n'+
+			'Maldito frio, chegou sem avisar!\n'+
+			'Agora vou ter que ir lá na farmácia.\n'+
+			'Detesto ter que ir comprar remédio.\n'+
+			'Devia ter tomado a vacina antigripe.\n'+
+			'Só espirro.\n'+
+			'Uma, duas, três vezes...\n'+
+			'Pareço o Rudolfo com esse nariz vermelho.\n'+
+			'É muita desgraça!\n'+
+			'Amanhã tomara que eu melhore.';
+		roda();
+	}
+	window.onload = _init;
+</script>
+
+<!-- AdSense tracking at Analytics -->
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-280222-8";
+</script>
+
+</head>
+
+<body id="engripeitor">
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav -->
+<table id="nav"><tr>
+<td width="121"></td><td>
+<a href="/miguxeitor/" title="Migux@s Fofux@s Lindux@s!!!!!"><img src="../img/mini/miguxeitor.jpg" alt=""> MiGuXeiToR</a>
+<a href="/embriagueitor/" title="Tá zuzu bem (ic!) Tô zóbrio"><img src="../img/mini/embriagueitor.gif" alt=""> Embriagueitor</a>
+<a href="/engripeitor/" title="Ezdou beio gribado... A-A-A-Atchô!"><img src="../img/mini/engripeitor.gif" alt=""> Engripeitor</a>
+<a href="/subwaytor/" title="Gerador de sanduíches do Subway"><img src="../img/mini/subwaytor.png" alt=""> Subwaytor</a>
+</td><td>
+<a href="/tabuada/" title="Tabuada interativa do 1 ao 10"><img src="../img/mini/tabuada.jpg" alt=""> Tabuada</a>
+<a href="/relogio/" title="Um relógio diferente, feito com palavras!"><img src="../img/mini/relogio.gif" alt=""> Relógio</a>
+<a href="/caraoucoroa/" title="Não tem uma moeda? Use essa!"><img src="../img/mini/caraoucoroa.png" alt=""> Cara ou Coroa?</a>
+<a href="/viravira/" title="Porque um texto opɐɹıʌ é mais divertido :)"><img src="../img/mini/viravira.gif" alt=""> vira|ɐɹıʌ</a>
+</td><td class="coisinha"><a href="/" title="www.COISINHA.com.br"><img src="../img/joaninha-dedo-161.jpg" alt=""></a>
+</td></tr></table>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav -->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
+<noscript>
+	<div id="noscript">
+	<h3>JavaScript DESLIGADO</h3>
+	Você tem que <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">ligar o JavaScript</a> em seu navegador,<br>
+	pois as coisinhas precisam dele!
+	</div>
+</noscript>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
+
+
+<table id="main"><tr>
+	
+<td id="adleft">
+
+	<!-- Google AdSense -->
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Sky 120 Coisinha */
+	google_ad_slot = "8012745575";
+	google_ad_width = 120;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</td>
+
+<td id="content">
+	
+	<!-- Google AdSense Links -->
+	<div class="adhlink468 adtop">
+		<script type="text/javascript"><!--
+		google_ad_client = "pub-0009608813278754";
+		/* hLink 468_4 Coisinha */
+		google_ad_slot = "7957393099";
+		google_ad_width = 468;
+		google_ad_height = 15;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+
+
+<!-- Título -->
+<table id="header"><tr><td>
+	<h1>Engripeitor</h1>
+	<h2>Gripe instantânea online</h2>
+
+
+<!-- E-mail -->
+</td><td align="right" valign="top">
+	<a href="mailto:?subject=Engripeitor&amp;body=Oi%2C%0A%0AHoje%20acordei%20com%20gribe...%20A-A-A-Atch%C3%B4%21%0A%0ABaldido%20frio%2C%20jegou%20zem%20abizar%21%0ADebia%20der%20dobado%20a%20bacida%20andi-gribe.%0A%0AZ%C3%B3%20ezbirro.%0AUba%2C%20duaz%2C%20dr%C3%AAz%20bezez...%20A-A-A-Atch%C3%B4%21%0A%0ABarezo%20o%20Rudolfo%20com%20ezze%20dariz%20berbedjo.%0A%0Ahttp%3A%2F%2Fwww.coisinha.com.br%2Fengripeitor%0A%0AAtch%C3%B4%21%0A">Avise seus amigos</a>
+</td></tr></table>
+
+
+<!-- Anão -->
+<img src="gripado.gif" width="91" height="108" align="right" style="margin-top:-50px">
+<!-- <br> -->
+
+<!--
+<div class="banner">
+	<h3><a href="http://www.UmPortugues.com">Acordo Ortográfico</a></h3>
+	<p>Saiba tudo sobre o acordo e confira seu texto com a ferramenta online!<br>
+	<a href="http://www.UmPortugues.com">http://www.UmPortugues.com</a></p>
+</div>
+-->
+
+<!-- Tradutor -->
+<table id="tradutor">
+	<tr>
+		<th class="original" Xwidth="50%">Digite aqui</th>
+		<th>&nbsp;&nbsp;</th> <!-- spacer -->
+		<th class="traduzido" Xwidth="50%">Atchôoo!</th>
+	</tr>
+	<tr>
+		<td class="original">
+		<textarea id="texto-original" rows="12" onKeyUp="roda()"> </textarea>
+		<br>
+		<a id="carregar" href="javascript:carrega()">Carregar texto</a>
+		</td>
+
+		<td></td>
+
+		<td class="traduzido">
+		<textarea id="texto-traduzido" rows="12"> </textarea>
+		<br>
+		<a id="tuitar" href="" style="display:none;"><img src="../img/tweet.png"> Clique aqui para tuitar isso!!!</a>
+		</td>
+	</tr>
+</table>
+
+<div id="footer">
+</div> <!-- Footer -->
+
+
+<div class="links">
+	<a href="http://blog.aurelio.net/2007/06/16/engripeitor/#comments">Comentários</a> |
+	<a href="http://blog.aurelio.net/2007/06/16/engripeitor/">Divulgação</a> |
+	<a href="http://www.piazinho.com.br">Feito com expressões regulares</a>
+</div>
+
+
+</td>
+<td id="adright">
+
+	<!-- Google AdSense -->
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Sky 160 Coisinha */
+	google_ad_slot = "7979021613";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+
+</td></tr></table> <!-- main -->
+
+
+<div class="copyright">
+	Copyright © 2008-2011
+	<a href="http://aurelio.net">Aurelio Jargas</a>
+	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<img alt="" src="../img/aureliohead.gif">
+</div>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-280222-8");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

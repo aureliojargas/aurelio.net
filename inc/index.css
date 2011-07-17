@@ -1,0 +1,100 @@
+/*
+	www.COISINHA.com.br index page
+*/
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial,sans-serif;
+	background:black url(../img/joaninha-dedo-1024.jpg) no-repeat;
+}
+#header {	
+	float:left;
+	margin:0;
+	padding:2em;
+	color:white;
+}
+#header .coisinha {
+	font-size:250%;
+	font-family:"Trebuchet MS", Arial, sans-serif;
+}
+#novidade {
+	clear:right;
+	float:right;
+	margin:0;
+	margin-bottom:1px;
+	padding:0 1em 0 1em;
+	text-align:center;
+	background-color:white;
+/*	background-color:orange;*/
+	color:black;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 1px solid transparent;
+}
+#novidade a {
+	color:blue;
+	text-decoration:underline;
+	display:block;
+}
+#novidade h3 {
+	margin:0.5em 0;
+}
+
+#content {
+	padding:0;
+}
+#content #description {
+	top:340px;
+	left:140px;
+	position:absolute;
+	width:200px;
+	height:200px;
+	color:black;
+	text-align:center;
+}
+#content .box {
+/*	clear:right;*/
+	float:right;
+	width:100px;
+	height:100px;
+	margin:0;
+	margin-bottom:1px;
+	margin-left:1px;
+/*	margin:2em 2em 0 2em;*/
+	padding:1em 1em 0.5em 1em;
+	text-align:center;
+	background-color:white;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 1px solid transparent;
+}
+#content .box img {
+	margin-bottom:7px;
+	border-width:0;
+	width:64px;
+	height:64px;
+}
+#content a.box:hover {
+	background-color:yellow;
+}
+#footer {
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	background-color:black;
+	color:#316B9F;
+	padding:0.5em;
+	text-align:left;
+}
+#footer img {   /*aureliohead*/
+	height:25px;
+	vertical-align:middle;
+}
+#footer a {
+	color:#6CF;
+}
+#footer a:hover {
+	text-decoration:underline;
+}

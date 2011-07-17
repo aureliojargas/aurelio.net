@@ -1,0 +1,140 @@
+<html>
+<!--
+	Cara ou coroa?
+	www.coisinha.com.br/caraoucoroa
+	
+	Criado por Aurelio Marinho Jargas (www.aurelio.net)
+	Dezembro de 2009
+	
+	Fotos das moedas obtidas no site do Banco Central do Brasil
+	http://www.bcb.gov.br/?MOEDAFAM2
+	
+	Sons
+	http://www.wavsource.com/sfx/sfx.htm
+-->
+	
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="alternate" href="http://feeds.feedburner.com/coisinha" type="application/rss+xml">
+<link rel="icon" type="image/gif" href="../img/favicon.gif">
+
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+<meta name="keywords" content="moeda, cara, coroa, sorte, real, centavo, centavos">
+<meta name="description" content="Cara ou coroa online, com moedas de: R$ 1,00 / R$ 0,50 / R$ 0,25 / R$ 0,10 / R$ 0,01.">
+
+<title>Cara ou Coroa? - Jogue Online - www.COISINHA.com.br</title>
+
+<style type="text/css">
+	body {
+		background:#fff no-repeat center;
+		height:100%;
+		overflow:hidden; /* no scrollbars */
+	}
+	#toolbar {
+		float:right;
+		cursor:pointer;
+	}
+</style>
+
+<script type="text/javascript">
+
+	var giro_id = 0;
+	var giro_last = 0;
+	var moeda = '100'; // padrão: 1 real
+	
+	function play (el) {
+		try {
+			document.getElementById(el).Play();
+		} catch (e) {
+		// try {
+		// 	document.getElementById(el+'ogg').play(); // FF 3.5
+		// } catch (e) { }
+		}
+	}
+	function gira () {
+		document.body.style.backgroundImage = 'url(' + moeda + '-' + giro_last + '.gif)';
+		giro_last = (giro_last === 0) ? 1 : 0; // 0 ou 1, alternado
+	}
+	function para () {
+		play('sound2');
+		clearInterval(giro_id);
+		giro_id = 0;
+	}
+	function taca (m) {
+		// tacou enquanto ainda girava
+		if (giro_id > 0) { para(); }
+		// cutuco
+		play('sound1');
+		// muda a moeda atual
+		if (m) { moeda = m; }
+		// gira a moeda
+		giro_id = setInterval(gira, 100);
+		// para o giro daqui 1+N segundos (0 < N < 2.0)
+		setTimeout(para, 1000 + Math.floor(Math.random()*2000));
+	}	
+	window.onload = function () {
+		taca(moeda);
+	}
+</script>
+</head>
+
+<!-- AdSense tracking at Analytics -->
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-280222-8";
+</script>
+
+<body id="caraoucoroa">
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
+<noscript>
+	<div id="noscript">
+	<h3>JavaScript DESLIGADO</h3>
+	Você tem que <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">ligar o JavaScript</a> em seu navegador,<br>
+	pois as coisinhas precisam dele!
+	</div>
+</noscript>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
+
+<div id="toolbar">
+	<img
+		src="100-1.gif" width="43" height="43" onclick="taca('100')"><img 
+		src="050-1.gif" width="36" height="36" onclick="taca('050')"><img 
+		src="025-1.gif" width="39" height="39" onclick="taca('025')"><img 
+		src="010-1.gif" width="31" height="31" onclick="taca('010')"><img 
+		src="005-1.gif" width="34" height="34" onclick="taca('005')"><img 
+		src="001-1.gif" width="27" height="27" onclick="taca('001')"><img
+		src="100-0.gif" width="0" height="0"><img 
+		src="050-0.gif" width="0" height="0"><img 
+		src="025-0.gif" width="0" height="0"><img 
+		src="010-0.gif" width="0" height="0"><img 
+		src="005-0.gif" width="0" height="0"><img 
+		src="001-0.gif" width="0" height="0">
+</div>
+
+« <a href="http://www.coisinha.com.br">www.coisinha.com.br</a>
+
+<!-- audio -->
+<embed id="sound1" src="coin_flip.wav" autostart="false" width="0" height="0" enablejavascript="true">
+<embed id="sound2" src="coin2.wav" autostart="false" width="0" height="0" enablejavascript="true">
+<!-- FF 3.5 -->
+<!-- <audio id="sound1ogg" src="coin_flip.ogg"></audio> -->
+<!-- <audio id="sound2ogg" src="coin2.ogg"></audio> -->
+
+<!-- DIVão pra poder clicar na tela toda. Com o onclick no body não funcionou no iPhone -->
+<div id="clickme" style="height:100%;clear:both" onclick="taca()"> </div>
+
+
+<!-- Google Analytics -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-280222-8");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

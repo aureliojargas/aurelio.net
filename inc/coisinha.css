@@ -1,0 +1,133 @@
+/*
+	www.COISINHA.com.br main styles
+	
+	Content: 20px padding
+	Blocks: 2em margin
+*/
+
+/* Ocupe todo o espaço possível */
+table    { width:100%; }
+textarea { width:100%; }
+
+/* Limpa tabelas */
+h1, h2, table, td, th {
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+/* Título principal */
+h1 { font-size:300%; }
+h2 { font-size:150%; font-weight:normal; }
+
+/* O miolo é sempre alihado no topo */
+#main td { vertical-align:top; }
+
+/* Não grude os anúncios com o conteúdo */
+#content { padding:15px; }
+
+/* Tabela do tradutor: th, textarea */
+table#tradutor { clear:both; }
+table#tradutor td { vertical-align:top; padding:0 2px; }
+table#tradutor th.original  { width:50%; }
+table#tradutor th.traduzido { width:50%; }
+
+/* Botão Tweet This alinhado com o texto */
+#tuitar img { vertical-align:middle; }
+
+/* Links */
+.links {
+	margin:3em 1em 3em 1em;
+	text-align:center;
+	font-size:85%;
+}
+
+/* Warning */
+.warning {
+	margin:2em -20px -20px -20px;
+	padding:10px 20px;
+	border-top:1px solid #888;
+	text-align:justify;
+	font-size:85%;
+	line-height:110%;
+}
+
+/* Mensagem de Copyright */
+.copyright a {
+	font-weight:normal;
+}
+.copyright {
+	padding:5px 165px 5px 0;
+	text-align:right;
+	font-style:italic;
+/*	font-size:85%;*/
+}
+.copyright img {
+	width:20px;
+	height:25px;
+	vertical-align:middle;
+	padding-left:5px;
+}
+body#miguxeitor .copyright {
+	padding-right:10px;
+}
+
+/* Aviso de JavaScript desligado */
+#noscript {
+	z-index:999;
+	top:40%;
+	left:25%;
+	position:absolute;
+	display:block;
+	text-align:center;
+	background:yellow url(../img/atencao.gif) no-repeat left top;
+	background-position:25px 20px;
+	color:black;
+	padding:1em 2em 2em 2em;
+	border:7px dashed black;
+/*	display:none;*/
+}
+#noscript a {
+	color:black;
+	text-decoration:underline;
+}
+
+/* Ads */
+#adleft, #adright {
+	vertical-align:top;
+/*	padding-top:20px;*/
+}
+#adleft     { text-align:left ; width:121px; }
+#adright    { text-align:right; width:161px; }
+.adhlink468 { width:468px; }
+.adbox      { width:336px; }
+.adtwins    { width:672px; margin:4em; }
+.adcenter   { margin-right:auto; margin-left:auto; }
+.adbottom   { margin-top:25px; margin-bottom:25px; }
+.adtop      { margin-top: 5px; margin-bottom:25px; }  /* 20px é padding-top do #content */
+
+/* Tema preto e amarelo */
+body               { color:#ccc  ; background-color:black; }
+body a             { color:yellow;                         text-decoration:none; }
+#nav               {               background-color:black; }
+.warning           {               background-color:#eee ; border-top-color:#888; }
+.copyright         { color:#fff  ; background-color:black; }
+.copyright a       { color:#fff  ; }
+.copyright a:hover { color:yellow; }
+#content           { color:black ; background-color:white; }
+#content a         { color:blue  ;                         text-decoration:underline; }
+
+
+/*Acordo Ortografico*/
+#content .banner {
+	margin:10px 0;
+	padding:1px 5px;
+	background:yellow;
+	text-align:center;
+}
+#content .banner h3 a {
+	color:black;
+	text-decoration:none;
+}
+#content .banner a {
+	font-weight:bold;
+}
