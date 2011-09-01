@@ -105,11 +105,22 @@
 	window.onload = _init;
 </script>
 
-<!-- AdSense tracking at Analytics -->
-<script type="text/javascript">
-window.google_analytics_uacct = "UA-280222-8";
-</script>
 
+<!-- Google Analytics -->
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-8";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 
 <body id="engripeitor">
@@ -261,18 +272,6 @@ window.google_analytics_uacct = "UA-280222-8";
 	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
 	<img alt="" src="../img/aureliohead.gif">
 </div>
-
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-280222-8");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
 
 </body>
 </html>
