@@ -101,6 +101,7 @@ body#miguxeitor .copyright {
 .adhlink468 { width:468px; }
 .adbox      { width:336px; }
 .adtwins    { width:672px; margin:4em; }
+.twinleft   { padding-right:30px; }
 .adcenter   { margin-right:auto; margin-left:auto; }
 .adbottom   { margin-top:25px; margin-bottom:25px; }
 .adtop      { margin-top: 5px; margin-bottom:25px; }  /* 20px é padding-top do #content */
