@@ -40,7 +40,7 @@
 		display:inline;
 	}
 	#footer {
-		margin:10em 0;
+		margin:5em 0;
 		font-style:italic;
 		text-align:center;
 	}
@@ -103,6 +103,17 @@
 </head>
 
 <body id="relogio">
+
+<!-- Facebook Like Button SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /Facebook Like Button SDK -->
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
 <noscript>
@@ -273,6 +284,11 @@
 </div>
 
 <div id="footer">
+	<!-- Facebook Like button DARK -->
+	<div style="margin-bottom:2em;">
+		<div class="fb-like" data-send="true" data-width="500" data-show-faces="true" data-colorscheme="dark"></div>
+	</div>
+
 	<a href="http://www.coisinha.com.br">www.coisinha.com.br</a>
 </div>
 
