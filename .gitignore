@@ -1,5 +1,7 @@
 rsync
 .rsync-exclude
 diff
+upload
 
 miguxeitor/index-2ads.html
+
