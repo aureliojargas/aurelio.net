@@ -1,0 +1,24 @@
+/*
+	www.COISINHA.com.br navigation bar 2012
+*/
+
+#nav {
+	padding: 20px;
+}
+#nav a {
+	display: inline-block;
+	font-size: 15px;
+	line-height: 15px;
+	margin: 0 10px 0 0;
+	padding: 3px;
+}
+#nav a:hover {
+	background-color: #658AB1;
+	color: white;
+}
+#nav img {
+	width: 24px;
+	height: 24px;
+	border-width: 0;
+	vertical-align: middle;
+}
