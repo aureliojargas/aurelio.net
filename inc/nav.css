@@ -42,7 +42,7 @@ table#nav a:hover {
 
 /* Site logo image */
 table#nav td.coisinha {
-	width:161px;
+/*	width:161px;*/
 	padding:0;
 }
 table#nav td.coisinha img {

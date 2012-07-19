@@ -96,8 +96,8 @@ body#miguxeitor .copyright {
 	vertical-align:top;
 /*	padding-top:20px;*/
 }
-#adleft     { text-align:left ; width:121px; }
-#adright    { text-align:right; width:161px; }
+#adleft     { text-align:left ; width:161px; }
+#adright    { text-align:right; width:121px; }
 .adhlink468 { width:468px; }
 .adbox      { width:336px; }
 .adtwins    { width:672px; margin:4em; }
