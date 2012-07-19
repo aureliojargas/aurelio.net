@@ -12,7 +12,7 @@
 	Sons
 	http://www.wavsource.com/sfx/sfx.htm
 -->
-	
+
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="alternate" href="http://feeds.feedburner.com/coisinha" type="application/rss+xml">
@@ -41,7 +41,7 @@
 	var giro_id = 0;
 	var giro_last = 0;
 	var moeda = '100'; // padrão: 1 real
-	
+
 	function play (el) {
 		try {
 			document.getElementById(el).Play();
@@ -71,7 +71,7 @@
 		giro_id = setInterval(gira, 100);
 		// para o giro daqui 1+N segundos (0 < N < 2.0)
 		setTimeout(para, 1000 + Math.floor(Math.random()*2000));
-	}	
+	}
 	window.onload = function () {
 		taca(moeda);
 	}
