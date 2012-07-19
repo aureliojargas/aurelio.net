@@ -49,6 +49,39 @@
 	#twitter-mkt { display:none; clear:both; font-size:100%; margin:3em 0 0 0; text-align:center; }
 	#twitter-mkt a { text-decoration:none !important; }
 	#twitter-mkt a:hover { background-color:#C3D9FF; }
+
+	/* new layout */
+	#adleft336 {
+		background-color:white;
+		padding:0;
+	}
+	.copyright {
+		padding: 5px 0;
+		text-align: center;
+	}
+
+	/* new nav */
+	#nav {
+		padding: 20px;
+	}
+	#nav a {
+		display: inline-block;
+		font-size: 15px;
+		line-height: 15px;
+		margin: 0 10px 0 0;
+		padding: 3px;
+	}
+	#nav a:hover {
+		background-color: #658AB1;
+		color: white;
+	}
+	#nav img {
+		width: 24px;
+		height: 24px;
+		border-width: 0;
+		vertical-align: middle;
+	}
+
 </style>
 
 <script type="text/javascript">
@@ -282,21 +315,18 @@ $(document).ready(function () {
 
 <body id="viravira">
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav -->
-<table id="nav"><tr>
-<td width="121"></td><td>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav2 -->
+<div id="nav">
 <a href="/miguxeitor/" title="Migux@s Fofux@s Lindux@s!!!!!"><img src="../img/mini/miguxeitor.jpg" alt=""> MiGuXeiToR</a>
 <a href="/embriagueitor/" title="Tá zuzu bem (ic!) Tô zóbrio"><img src="../img/mini/embriagueitor.gif" alt=""> Embriagueitor</a>
 <a href="/engripeitor/" title="Ezdou beio gribado... A-A-A-Atchô!"><img src="../img/mini/engripeitor.gif" alt=""> Engripeitor</a>
 <a href="/subwaytor/" title="Gerador de sanduíches do Subway"><img src="../img/mini/subwaytor.png" alt=""> Subwaytor</a>
-</td><td>
 <a href="/tabuada/" title="Tabuada interativa do 1 ao 10"><img src="../img/mini/tabuada.jpg" alt=""> Tabuada</a>
 <a href="/relogio/" title="Um relógio diferente, feito com palavras!"><img src="../img/mini/relogio.gif" alt=""> Relógio</a>
 <a href="/caraoucoroa/" title="Não tem uma moeda? Use essa!"><img src="../img/mini/caraoucoroa.png" alt=""> Cara ou Coroa?</a>
 <a href="/viravira/" title="Porque um texto opɐɹıʌ é mais divertido :)"><img src="../img/mini/viravira.gif" alt=""> vira|ɐɹıʌ</a>
-</td><td class="coisinha"><a href="/" title="www.COISINHA.com.br"><img src="../img/joaninha-dedo-161.jpg" alt=""></a>
-</td></tr></table>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav -->
+</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav2 -->
 
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
@@ -311,20 +341,38 @@ $(document).ready(function () {
 
 <table id="main"><tr>
 
-<td id="adleft">
+<td id="adleft336">
 
-	<!-- Google AdSense -->
+	<!-- Google AdSense Box -->
+	<div class="adboxleft">
 	<script type="text/javascript"><!--
 	google_ad_client = "pub-0009608813278754";
-	/* Sky 120 Coisinha */
-	google_ad_slot = "8012745575";
-	google_ad_width = 120;
-	google_ad_height = 600;
+	/* Coisinha Box 336 */
+	google_ad_slot = "9867241960";
+	google_ad_width = 336;
+	google_ad_height = 280;
 	//-->
 	</script>
 	<script type="text/javascript"
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>
+	</div>
+
+	<!-- Google AdSense Box -->
+	<div class="adboxleft">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Coisinha Box 336 */
+	google_ad_slot = "9867241960";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+	</div>
+
 </td>
 
 <td id="content">
@@ -365,38 +413,8 @@ $(document).ready(function () {
 	<!-- vira|ɐɹıʌ - Porque um texto opɐɹıʌ é bem mais opıʇɹǝʌıp :) http://bit.ly/viravira -->
 </div>
 
-	<!-- Google AdSense Box -->
-	<div class="adbox adcenter adbottom" style="margin-top:80px;">
-	<script type="text/javascript"><!--
-	google_ad_client = "pub-0009608813278754";
-	/* Coisinha Box 336 Image */
-	google_ad_slot = "9867241960";
-	google_ad_width = 336;
-	google_ad_height = 280;
-	//-->
-	</script>
-	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
-	</div>
-
 </td>
-<td id="adright">
-
-	<!-- Google AdSense -->
-	<script type="text/javascript"><!--
-	google_ad_client = "pub-0009608813278754";
-	/* Coisinha Sky 160 */
-	google_ad_slot = "7979021613";
-	google_ad_width = 160;
-	google_ad_height = 600;
-	//-->
-	</script>
-	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
-
-</td></tr></table> <!-- main -->
+</tr></table> <!-- main -->
 
 <div class="copyright">
 	Copyright © 2008-2012
