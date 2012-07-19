@@ -64,7 +64,7 @@
 <script type="text/javascript">
 
 	var icons = ['icq.gif','msn.gif','hello-kitty.jpg'];
-	var kwords = ['xuxa','barbie','hello kitty']; 
+	var kwords = ['xuxa','barbie','hello kitty'];
 	var epochNames = [
 		'Miguxês Arcaico - Dialeto ICQ',
 		'Miguxês Moderno - Dialeto MSN',
@@ -125,7 +125,7 @@
 		// Horas, minutos
 		t = t.replace(/\b(\d+) horas?\b/gi, 		'$1h');
 		t = t.replace(/\b(\d+) minutos?\b/gi, 		'$1min');
-	if (level<3) {	
+	if (level<3) {
 		t = t.replace(/\b(\d+) segundos?\b/gi, 		'$1s'); // ! 2xXx
 	}
 		// Dias da semana
@@ -296,7 +296,7 @@
 	if (level==1) {
 		t = t.replace(/[ç]/gi,				'c');
 	} else {
-		t = t.replace(/[ç]/gi,				'ss');	
+		t = t.replace(/[ç]/gi,				'ss');
 	}
 	if (level>1) {
 		// l$ -> u
@@ -378,7 +378,7 @@
 		// Atualiza o link do botão tweet this
 		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/MIGUXO');
 		document.getElementById('tuitar').style.display = '';
-		
+
 	}
 	window.onload = _init;
 </script>
