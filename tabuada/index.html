@@ -26,13 +26,13 @@
 	#content {
 		background-color:white;
 		color:black;
-	}
-	#content h1 {
-		margin:0;
 		text-align:center;
 	}
+	#content h1 {
+		margin:0 0 20px 0;
+	}
 	#tabelona {
-		margin:30px auto;
+		margin:15px auto;
 		font-size:150%;
 		text-align:center;
 		width:80%;
@@ -58,7 +58,6 @@
 		background:yellow;
 	}
 	#resultado {
-		text-align:center;
 		font-size:300%;
 		margin:0 0 15px 0;
 	}
@@ -152,6 +151,17 @@
 
 <body id="tabuada">
 
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /Facebook SDK -->
+
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav -->
 <table id="nav"><tr>
 <td width="121"></td><td>
@@ -200,6 +210,9 @@
 <td id="content">
 
 <h1>Tabuada</h1>
+
+<!-- Facebook Like button -->
+<div class="fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
 
 <!-- A tabela é aumentada e preenchida pelo JavaScript -->
 <table id="tabelona" border=1 cellspacing=0 onMouseOut="zera();">
