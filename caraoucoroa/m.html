@@ -12,7 +12,7 @@
 	var giro_id = 0;
 	var giro_last = 0;
 	var moeda = '100';
-	
+
 	function gira () {
 		document.body.style.backgroundImage = 'url(' + moeda + '-' + giro_last + '.gif)';
 		giro_last = (giro_last === 0) ? 1 : 0; // 0 ou 1, alternado
@@ -28,7 +28,7 @@
 		giro_id = setInterval(gira, 100);
 		// para a moeda daqui 1+N segundos (0 < N < 2.0)
 		setTimeout(para, 1000 + Math.floor(Math.random()*2000));
-	}	
+	}
 	window.onload = taca;
 </script>
 </head>

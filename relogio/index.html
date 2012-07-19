@@ -2,11 +2,11 @@
 <!--
 	RELÓGIO
 	www.coisinha.com.br/relogio
-	
+
 	Criado por Aurelio Marinho Jargas (www.aurelio.net)
 	Novembro de 2007
 -->
-	
+
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="alternate" href="http://feeds.feedburner.com/coisinha" type="application/rss+xml">
@@ -63,7 +63,7 @@
 	}
 	function atualiza() {
 		var date, H, M, S;
-		
+
 		date = new Date();
 		H = date.getHours();
 		M = date.getMinutes();
@@ -72,7 +72,7 @@
 		limpa('s');
 		if (S === 0)            { limpa('m'); }
 		if (S === 0 && M === 0) { limpa('h'); }
-		
+
 		document.getElementById(H + 'h').className = 'active';
 		document.getElementById(M + 'm').className = 'active';
 		document.getElementById(S + 's').className = 'active';

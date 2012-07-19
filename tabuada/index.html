@@ -2,7 +2,7 @@
 <!--
 	TABUADA
 	www.coisinha.com.br/tabuada
-	
+
 	Criado por Aurelio Marinho Jargas (www.aurelio.net)
 	Junho de 2008
 -->
@@ -21,7 +21,7 @@
 <meta name="description" content="Tabuada interativa para crianças, que facilita o aprendizado da multiplicação.">
 
 <title>TABUADA INTERATIVA PARA CRIANÇAS</title>
-	
+
 <style type="text/css">
 	#content {
 		background-color:white;
@@ -79,7 +79,7 @@
 	// http://groups.google.com/group/adeptreaders/msg/9ed066fc1dcaec28
 	function getEventTarget(evt) {
 		evt = evt || event;
-		return evt.target || evt.srcElement;		
+		return evt.target || evt.srcElement;
 	}
 	function hl(evt) {
 		var td, xy;
@@ -107,7 +107,7 @@
 	// 	<td id="1-2">2</td>
 	function monta() {
 		var rows, cols, j, i, table, tr, th, td;
-		
+
 		rows = 10;
 		cols = 10;
 		table = document.getElementById('tabelona');
@@ -127,7 +127,7 @@
 				td.onmouseover = hl; // in
 				td.onmouseout = nohl; // out
 			}
-	        }
+		}
 	}
 	window.onload = monta;
 </script>
@@ -180,7 +180,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
 
 <table id="main"><tr>
-	
+
 <td id="adleft">
 
 	<!-- Google AdSense -->
@@ -200,7 +200,7 @@
 <td id="content">
 
 <h1>Tabuada</h1>
-	
+
 <!-- A tabela é aumentada e preenchida pelo JavaScript -->
 <table id="tabelona" border=1 cellspacing=0 onMouseOut="zera();">
 	<colgroup>

@@ -2,11 +2,11 @@
 <!--
 	SUBWAYTOR
 	www.coisinha.com.br/subwaytor
-	
+
 	Criado por Aurelio Marinho Jargas (www.aurelio.net)
 	Maio de 2008
 -->
-	
+
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="alternate" href="http://feeds.feedburner.com/coisinha" type="application/rss+xml">
@@ -58,7 +58,7 @@
 	.numero {
 		background-color:green;
 		color:white;
-		padding:0 0.5em; 
+		padding:0 0.5em;
 		font-weight:bold;
 	}
 	td {
@@ -103,7 +103,7 @@
 
 		// Fonte: http://www.loucosporsubway.com.br/declare/monteoseu
 		// Somente no recheio ainda uso os dados antigos por causa das fotos
-		
+
 		var cardapio = [
 			['1', 'Recheio',
 				'(1) B.M.T. Italiano',
@@ -126,16 +126,16 @@
 				'Parmesão e Orégano',
 				'Três Queijos',
 				'Integral Aveia e Mel'
-			],   
+			],
 			['1', 'Tamanho',
 				'15 cm',
 				'30 cm'
-			],   
+			],
 			['1', 'Queijo',
 				'Suíço',
 				'Prato',
 				'Cheddar'
-			],   
+			],
 			['1', 'Adicional',
 				// 'Dobro de queijo',
 				// 'Dobro de recheio',
@@ -147,7 +147,7 @@
 			['1', 'Tostado',
 				'Sim',
 				'Não'
-			],   
+			],
 			['*', 'Vegetais',
 				'Alface',
 				'Tomate',
@@ -157,7 +157,7 @@
 				'Azeitona Preta',
 				'Picles',
 				'Rúcula'
-			],   
+			],
 			['1', 'Molho',
 				'Mostarda e Mel',
 				'Cebola Agridoce',
@@ -166,7 +166,7 @@
 				'Chipotle',
 				'Mostarda',
 				'Maionese'
-			],   
+			],
 			['*', 'Tempero',
 				// 'Orégano',
 				'Sal',
@@ -174,15 +174,15 @@
 				'Azeite de Oliva',
 				'Pimenta Calabresa',
 				'Pimenta do Reino'
-			]    
+			]
 		];
-	
+
 		var quantidade, categoria, opcoes;
 		var tabelaIngredientes = '';
 		var numero = 1;
-	
+
 		for (var i = 0; i < cardapio.length; i++) {
-		
+
 			// Extrai dados da vez
 			quantidade = cardapio[i][0];
 			categoria = cardapio[i][1];
@@ -203,12 +203,12 @@
 				numero = opcoes[0].replace(/\((\d+)\) .*/, '$1');
 				opcoes[0] = opcoes[0].replace(/\((\d+)\) (.*)/, '<b>$2</b> <span class="numero">n.&nbsp;$1</span>');
 			}
-		
-			// 
+
+			//
 			tabelaIngredientes = tabelaIngredientes + '<tr><td class="categoria">' + categoria + '</td><td> ' + opcoes.join(', ') + '</td></tr>';
 		}
 		tabelaIngredientes = '<table class="ingredientes">' + tabelaIngredientes + '</table>';
-	
+
 		// Mostra a figurinha do tipo do texto
 		document.getElementById('foto').src = 'subway-' + numero + '.jpg';
 
@@ -310,7 +310,7 @@
 <div id="content">
 
 <div class="intro noprint">
-	
+
 <ul>
 <li>Toda vez que você vai no Subway, você empaca a fila?</li>
 <li>Você fica ali olhando o cartaz e não consegue se decidir?</li>
@@ -337,7 +337,7 @@
 		<!-- <img src="carregando.gif"> -->
 		<br><br>
 		<div style="width:194px;border:1px solid green"><img
-			src="subway-1.jpg" width="16" height="16"><img 
+			src="subway-1.jpg" width="16" height="16"><img
 			src="subway-2.jpg" width="16" height="16"><img
 			src="subway-3.jpg" width="16" height="16"><img
 			src="subway-4.jpg" width="16" height="16"><img

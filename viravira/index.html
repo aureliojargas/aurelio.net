@@ -2,7 +2,7 @@
 <!--
 	vira|ɐɹıʌ
 	www.coisinha.com.br/viravira
-	
+
 	Criado por Aurelio Marinho Jargas (www.aurelio.net)
 	Maio de 2010
 
@@ -11,7 +11,7 @@
 
 	Valeu @andersonrizada pela dica!
 	http://twitter.com/andersonrizada/status/14627432725
-	
+
 	Obrigado pela ajuda: Mog, @vyper, @dsracoon, @BrunoAssis, @stulzer
 	@drjackstraw, @dj_spark, @parazito, @dericklemos, @denilsonsa
 	@phpunion, @willianmsilva, @MarioRinaldi, Vinicius Dias
@@ -88,14 +88,14 @@ var unaccentTable = {
 	'Ò': 'O', 'Ó': 'O', 'Ô': 'O', 'Õ': 'O',	'Ö': 'O', 'Ő': 'O', 'Ø': 'O',
 	'Ù': 'U', 'Ú': 'U', 'Û': 'U', 'Ü': 'U',	'Ű': 'U',
 	'Ç': 'C', 'Ñ': 'N', 'Ý': 'Y',
-	
+
 	'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae',
 	'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
 	'ì': 'i', 'í': 'i',	'î': 'i', 'ï': 'i',
 	'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o',	'ö': 'o', 'ő': 'o', 'ø': 'o',
 	'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',	'ű': 'u',
 	'ç': 'c', 'ñ': 'n', 'ý': 'y',
-	
+
 	'Þ': 'P', 'þ': 'p', 'Ð': 'D', 'ð': 'd', 'ß': 'B', '§': 'S', 'µ': 'u',
 	'¢': 'c', '£': 'L', '¥': 'Y',
 	'ª': 'a', 'º': 'o'
@@ -134,7 +134,7 @@ var flipTable = {
 	'⁅' : '⁆',
 	'∴' : '∵'
 };
-// Compose the inverted table, to unflip the text 
+// Compose the inverted table, to unflip the text
 $.each(flipTable, function (key, value) {
 	flipTable[value] = key;
 });
@@ -153,7 +153,7 @@ var url_regex = /(https?:\/\/|www\.)[A-Za-z0-9%._\/~:,$@&+-]+\b\/*(\?[A-Za-z0-9\
 
 function vira() {
 	var url, txt, r1, r2;
-	
+
 	url = 'http://bit.ly/viravira';
 	txt = $('#texto-original').val();
 
@@ -170,7 +170,7 @@ function vira() {
 			$('#twitter-mkt').fadeIn(1200);
 		}
 	}
-	
+
 	// Action!
 	r1 = rev(txt);
 	r2 = applyTable(flipTable, applyTable(unaccentTable, tac(rev(txt.toLowerCase()))));
@@ -178,21 +178,21 @@ function vira() {
 
 	// Twitter?
 	if (twitterMode) {
-		
+
 		// Strip, unbreak, squeeze
 		r1 = r1.strip().replace(/\r|\n/g, ' ').replace(/\s\s+/g, ' ');
 		r2 = r2.strip().replace(/\r|\n/g, ' ').replace(/\s\s+/g, ' ');
 
 		// Update char count (same for both results)
 		$('.result .count').text(140 - r1.length - url.length - 1);
-		
+
 		// Compose twitter message URI
 		$('#rev .twitter-button')
 			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r1 + ' ' + url));
 		$('#flip .twitter-button')
 			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r2 + ' ' + url));
 	}
-	
+
 	// Show results
 	$('#rev, #flip').fadeIn();
 	$('#rev .content').text(r1);
@@ -204,7 +204,7 @@ function vira() {
 		r1 = r1.replace(/<a href="www/gi, '<a href="http://www');  // add http: prefix for www.foo.com URLs
 		$('#rev .content').html(r1);
 	}
-	
+
 	if (twitterMode) {
 		// Append app URL (styled)
 		$('#flip .content').append(' <i>' + url + '<\/i>');
@@ -252,12 +252,12 @@ $(document).ready(function () {
 		vira();
 		return true;
 	});
-	
+
 	// Start with twitter mode ON
 	twitterMode = false;
 	$('#opt-twitter').attr('checked', '');
 	$('#opt-twitter').click(); // on
-	
+
 	$('#texto-original').focus();
 });
 </script>
@@ -310,7 +310,7 @@ $(document).ready(function () {
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
 
 <table id="main"><tr>
-	
+
 <td id="adleft">
 
 	<!-- Google AdSense -->
@@ -326,7 +326,7 @@ $(document).ready(function () {
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>
 </td>
-	
+
 <td id="content">
 
 <h1>vira|ɐɹıʌ</h1>
@@ -362,7 +362,7 @@ $(document).ready(function () {
 		<!-- <br>ou<br> --><br>
 		<a id="retweet2">!oditrevid siam meb é oirártnoc oa otxet mU — vira|ɐɹıʌ http://bit.ly/viravira</a>
 	</p>
-	<!-- vira|ɐɹıʌ - Porque um texto opɐɹıʌ é bem mais opıʇɹǝʌıp :) http://bit.ly/viravira -->	
+	<!-- vira|ɐɹıʌ - Porque um texto opɐɹıʌ é bem mais opıʇɹǝʌıp :) http://bit.ly/viravira -->
 </div>
 
 	<!-- Google AdSense Box -->

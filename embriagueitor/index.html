@@ -2,7 +2,7 @@
 <!--
 	EMBRIAGUEITOR
 	www.coisinha.com.br/embriagueitor
-	
+
 	Criado por Aurelio Marinho Jargas (www.aurelio.net)
 	Julho de 2008
 
@@ -42,7 +42,7 @@
 <script type="text/javascript"> // src="admin/script.js">
 	function roda() {
 		var t = document.getElementById('texto-original').value;
-	
+
 		// linguagem escrita mais próxima da falada
 		t = t.replace(/\bes(t(á|ar|ou|ava|ariam?|ão|iver?|ivessem?))([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,		'$1$3');	// verbo estar
 		t = t.replace(/((s )?|\b)olhos\b/gi,				'$1zóio');	// meuS OLHOS, olhos
@@ -64,7 +64,7 @@
 		t = t.replace(/\btudo\b/g,					'zuzu');	// tudo
 		t = t.replace(/\bTudo\b/g,					'Zuzu');	// ^
 		t = t.replace(/\bTUDO\b/g,					'ZUZU');	// ^
-	
+
 		// fala presa (predominância do Z)
 		t = t.replace(/[sç]+/g,						'z');		// engraÇado
 		t = t.replace(/[SÇ]+/g,						'Z');		// ^
@@ -114,20 +114,20 @@
 		t = t.replace(/([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|^)r/g,		'$1rrr');	// Rindo
 		t = t.replace(/([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|^)R/g,		'$1RRR');	// ^
 		// t = t.replace(/z([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'zzz$1');	// todaZ
-	
+
 		// correções da tradução
 		t = t.replace(/\bbotecu(s?)\b/gi,				'buteco$1');	// boteco
 		t = t.replace(/\bbá([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'bar$1');	// bar
 		t = t.replace(/(meu)z( zóio)/gi,				'$1$2');	// meu zóio
-	
+
 		// soluços a cada pausa (vírgula)
 		t = t.replace(/,([ \n\r]|$)/g,					' (ic!)$1');
-	
+
 		// sonolento quando reticente
 		t = t.replace(/\.\.\./g,					'... zZzzZzZzz');
 
 		document.getElementById('texto-traduzido').value = t;
-		
+
 		// Atualiza o link do botão tweet this
 		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/BeBuM');
 		document.getElementById('tuitar').style.display = '';
@@ -139,7 +139,7 @@
 			'Por que está todo mundo rindo de mim?\n'+
 			'Não posso voltar dirigindo pra casa.\n'+
 			'Tudo bem, vou deitar por aqui...\n'+
-			'Ei, não varre eu não!'; 
+			'Ei, não varre eu não!';
 		roda();
 	}
 	function foco() {
@@ -201,7 +201,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
 
 <table id="main"><tr>
-	
+
 <td id="adleft">
 
 	<!-- Google AdSense -->
@@ -217,7 +217,7 @@
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>
 </td>
-	
+
 <td id="content">
 
 	<!-- Google AdSense Links -->
