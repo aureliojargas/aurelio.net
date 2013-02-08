@@ -3,8 +3,10 @@
 	(at bottom, similar to iOS icons)
 */
 
-#nav-intro {
-	margin-top: 30px;
+#footer {
+	padding: 40px 0 30px 0;
+	background-color: black;
+	color: silver;
 	text-align: center;
 }
 
@@ -33,4 +35,8 @@
 	border-width: 0;
 	display: block;
 	margin: 10px auto 5px auto;
+}
+
+.copyright {
+	color: inherit;
 }
