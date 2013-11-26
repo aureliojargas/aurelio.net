@@ -1,3 +1,6 @@
 _site
 _drafts
 _admin/blog-folders
+*.zip
+_posts_no_yaml
+_posts_with_yaml
