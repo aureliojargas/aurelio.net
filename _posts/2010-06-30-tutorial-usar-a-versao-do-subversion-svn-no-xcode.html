@@ -1,0 +1,40 @@
+---
+author: aurelio
+layout: wordpress
+slug: tutorial-usar-a-versao-do-subversion-svn-no-xcode
+title: 'Tutorial: Usar a versão do Subversion (SVN) no Xcode'
+wordpress_id: 1210
+categories:
+- nerd
+- screencast
+tags:
+- FinderWindowFun
+- iOS
+- Mac OS X
+- svn
+- tutorial
+- Xcode
+prev_title: "blog.aurelio.net"
+prev_url: http://aurelio.net/blog/2010/06/29/blog-aurelio-net/
+next_title: "Como impedir uma partição de montar automaticamente no Mac OS X"
+next_url: http://aurelio.net/blog/2010/07/19/como-impedir-uma-particao-de-montar-automaticamente-no-mac-os-x/
+shortlink: http://wp.me/p1ABFN-jw
+---
+
+
+
+												<p>Se você programa para Mac, iPhone ou iPad e usa Xcode e SVN, vai gostar de saber que é possível colocar o número de revisão do SVN na versão de seu aplicativo.</p>
+<p>Assim, seu app pode ter a seguinte versão: <strong>1.0 (123)</strong>, onde:</p>
+<ul>
+<li>1.0 é a versão principal</li>
+<li>123 é o número de revisão do SVN (<em>revision number</em>)</li>
+</ul>
+<p>Você pode colocar esse 123 “na mão” diretamente lá no arquivo <strong>Info.plist</strong> de seu projeto, mas há como configurar o Xcode para fazer isso automaticamente, usando a saída do comando <strong>svnversion</strong>.</p>
+<p>Basta criar uma nova <strong>Build Phase</strong> e adicionar este código nela:</p>
+<pre>_REV=$(svnversion | cut -d : -f 2 | tr -c -d 0-9)
+_PLIST="$TARGET_BUILD_DIR/$INFOPLIST_PATH"
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $_REV" "$_PLIST"</pre>
+<p>E pronto. Cada vez que você fizer um Build do seu app, a versão secundária será o número de revisão atual do SVN. Assim, você não precisará mais mudar esta versão manualmente.</p>
+<p>Fiz um videotutorial rápido mostrando como fazer esta configuração no Xcode, é bem fácil. Eu sugiro colocar em <strong>tela cheia</strong> e ver em HD (<strong>720p</strong>), pra enxergar direito as letrinhas. Seguindo a “tradição” dos <a href="http://aurelio.net/blog/category/screencast/">vídeos anteriores</a>, este também é ao vivo, sem edição e sem cortes:</p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/hI4sislDvVU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent' frameborder='0'></iframe></span></p>
+<p>Ah, o programelho que tenho aberto no Xcode, é o <a href="http://code.google.com/p/finderwindowfun/">FinderWindowFun</a>, um novo filhote que ainda é Beta e devo lançar logo.</p>

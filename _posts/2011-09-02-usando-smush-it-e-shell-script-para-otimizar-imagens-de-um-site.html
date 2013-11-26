@@ -1,0 +1,61 @@
+---
+author: aurelio
+layout: wordpress
+slug: usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site
+title: Usando Smush.it e shell script para otimizar imagens de um site
+wordpress_id: 3278
+categories:
+- nerd
+- screencast
+tags:
+- AdSense
+- blog
+- Expressões Regulares
+- sed
+- Shell Script
+- Vídeo
+- ZIP
+prev_title: "Eu te desafio a ficar 30 dias sem TV"
+prev_url: http://aurelio.net/blog/2011/07/22/eu-te-desafio-a-ficar-30-dias-sem-tv/
+next_title: "iStat Menus 2 (gratuito) funcionando no Mac OS X Lion"
+next_url: http://aurelio.net/blog/2011/10/27/istat-menus-2-gratuito-funcionando-no-mac-os-x-lion/
+shortlink: http://wp.me/p1ABFN-QS
+---
+
+
+
+												<p>Hoje acordei atacado da rinite, misturado com resfriado. Estou o dia todo espirrando, com o nariz todo trancado e respirando pela boca. São péssimas condições para se gravar qualquer coisa que dependa da minha voz, certo? Certo. Mas mesmo assim eu tive que gravar um vídeo hoje, porque senão a vontade de gravar passa e ele será mais um pra entrar na enorme lista dos vídeos que um dia eu quase gravei…</p>
+<blockquote><p>Em outras palavras: era hoje ou nunca :)</p></blockquote>
+<p>Então desde já peço perdão pelas fungadas, respiração ofegante e voz falhada. Eu também me perdi no meio do vídeo, o pensamento voou longe, mas isso não é culpa da rinite. Para este preciso arranjar outro bode expiatório :)</p>
+<p>Bem, terminado o discurso introdutório, vamos às nerdices.</p>
+<p>Neste vídeo eu mostro como usar o <a href="http://www.smushit.com/">Smush.it</a>, uma excelente ferramenta criada pelo Yahoo! para otimizar imagens de sites. Você passa pra ela os seus arquivos PNG, GIF e JPG e <strong>ela te devolve os arquivos otimizados</strong>, ou seja, com o tamanho reduzido mas sem perder a qualidade.</p>
+<blockquote><p>Este site é similar ao <a href="http://pmt.sourceforge.net/pngcrush/">pngcrush</a>, <a href="http://optipng.sourceforge.net">optipng</a> e outras ferramentas bacanas que otimizam imagens na linha de comando. Além de ser mais fácil de usar, o site tenta várias técnicas de otimização em cada arquivo e escolhe a que deu melhor resultado. Então, considere-o como <strong>um combo de várias ferramentas de otimização</strong>.</p></blockquote>
+<p>Uma foto de 200KB pode ficar com meros 100KB (-50%!) e olhando você nem nota a diferença, pois não há perda de qualidade (<a href="http://optipng.sourceforge.net/pngtech/optipng.html">lossless</a>). Muito útil pra webmasters, pois com as imagens otimizadas <strong>o seu site ficará mais leve e rápido de carregar</strong>. Com isso, todo mundo fica mais feliz:</p>
+<ul>
+<li>o visitante terá um site mais rápido</li>
+<li>o Google (<a href="http://www.brasilseo.com.br/google/google-panda-update">Panda</a>) vai gostar mais do seu site</li>
+<li>o seu provedor de hospedagem terá menos banda consumida</li>
+<li>e você ganhará mais pontinhos com todos eles :)</li>
+</ul>
+<p>Tá, mas e onde entra o <a href="http://aurelio.net/shell/">shell script</a> na história?</p>
+<p>A ferramenta espera receber uma lista de URLs de suas imagens, uma por linha. Usando mágicas na linha de comando é fácil obter a lista completa de todas as imagens do seu site, não importa em qual pasta elas estejam. Você ainda pode escolher otimizar somente um tipo de imagem (PNG, por exemplo) e deixar os outros para outro momento.</p>
+<p>No vídeo eu uso o find para listar os arquivos, depois o <a href="http://aurelio.net/sed/">sed</a> para formatar o resultado. E claro, as <a href="http://aurelio.net/regex/">expressões regulares</a> não poderiam ficar de fora!</p>
+<p>Passada a lista para o site ele te devolve um <a href="http://pt.wikipedia.org/wiki/ZIP">arquivo ZIP</a> com todas as imagens que foram otimizadas, mantendo a estrutura original de pastas. Aí é só você expandir este ZIP no lugar certo e pronto.</p>
+<p>Como bônus, no final eu mostro <strong>como usar o sed para compor um comando do shell</strong>, que depois é executado via <a href="http://en.wikipedia.org/wiki/Standard_streams">STDIN</a>. Já perdi a conta de quantas vezes usei esta técnica para me salvar de trabalho braçal. Recomendo++.</p>
+<p>Então, vamos ver o vídeo? Como <a href="http://aurelio.net/blog/category/screencast/">os vídeos anteriores</a>, este também foi gravado direto: sem cortes, sem edição, sem frescura. Então coloca em tela cheia e aproveite a viagem!</p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/GqV3psNyzy8?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent' frameborder='0'></iframe></span></p>
+<p>Gostou do vídeo? Então eu agradeço se você <a href="http://www.youtube.com/watch?v=GqV3psNyzy8">me der um joinha lá no You Tube</a> :)</p>
+<p>Vou colar aqui os dois comandos mágicos demonstrados no vídeo:</p>
+<pre># Liste os arquivos PNG, adicione http://aurelio.net/ no início
+# e copie o resultado (exceto a pasta icon)
+find img -name \*.png | sed 's@^@http://aurelio.net/@' | grep -v /icon/ | pbcopy
+#
+#
+# Liste todos os arquivos, monte um comando mv com eles e execute
+find img -type f | sed 's@.*@ mv -v &amp; /a/www/&amp; @' | sh</pre>
+<p>Aprenda mais sobre os comandos do vídeo:</p>
+<ul>
+<li><a href="http://aurelio.net/shell/">http://aurelio.net/shell/</a></li>
+<li><a href="http://aurelio.net/sed/">http://aurelio.net/sed/</a></li>
+<li><a href="http://aurelio.net/regex/">http://aurelio.net/regex/</a></li>
+</ul>

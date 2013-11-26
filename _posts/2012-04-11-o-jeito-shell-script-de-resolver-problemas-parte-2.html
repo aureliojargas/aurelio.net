@@ -1,0 +1,66 @@
+---
+author: aurelio
+layout: wordpress
+slug: o-jeito-shell-script-de-resolver-problemas-parte-2
+title: O jeito Shell Script de resolver problemas — Parte 2
+wordpress_id: 3630
+categories:
+- nerd
+- screencast
+tags:
+- Expressões Regulares
+- programação
+- sed
+- Shell Script
+prev_title: "A Mog manja de Linux"
+prev_url: http://aurelio.net/blog/2012/03/23/a-mog-manja-de-linux/
+next_title: "Arrumei o barulho no MacBook, era sujeira na ventoinha"
+next_url: http://aurelio.net/blog/2012/04/19/arrumei-o-barulho-no-macbook-era-sujeira-na-ventoinha/
+shortlink: http://wp.me/p1ABFN-Wy
+---
+
+
+
+												<p>→ <a title="O jeito Shell Script de resolver problemas — Parte 1" href="http://aurelio.net/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">Parte1</a>, <a title="O jeito Shell Script de resolver problemas — Parte 3" href="http://aurelio.net/blog/2012/05/10/o-jeito-shell-script-de-resolver-problemas-parte-3/">Parte 3</a></p>
+<p>Você tem um arquivo.<br />
+Você precisa extrair dados deste arquivo.<br />
+Linha de comando na cabeça!</p>
+<p>Python, Ruby, PHP, JavaScript? Não.<br />
+C, C++? Fala sério!<br />
+<a href="http://aurelio.net/shell/"> Shell</a>.</p>
+<p>Um grep aqui, um <a href="http://aurelio.net/sed/">sed</a> ali.<br />
+Uma pitada de <a href="http://aurelio.net/regex/">expressões regulares</a>.<br />
+Problema resolvido.</p>
+<p>Sorriso no rosto.<br />
+Dados no bolso.<br />
+Entoa o refrão:</p>
+<p>Não precisa ser perfeito.<br />
+Não precisa ser polido.<br />
+Só precisa funcionar.</p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/6i3I0vKHtO8?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent' frameborder='0'></iframe></span></p>
+<p>Resumo dos comandos:</p>
+<ul>
+<li>grep — extrai linhas</li>
+<li>cut — extrai colunas</li>
+<li>sed — edita linhas</li>
+<li>tr — troca caracteres</li>
+</ul>
+<p>Histórico:</p>
+<pre>tail -n 50 changelog.t2t
+grep ^: changelog.t2t
+grep ^: changelog.t2t | sed 's/^: //'
+grep ^: changelog.t2t | cut -c 3-10
+grep ^: changelog.t2t | cut -c 3-
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v | sed 's/^v/200/'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v | sed 's/^v/200/' | tr . -
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v | sed 's/^v/200/' | tr . - | sed 's/./&amp;x/'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v | sed 's/^v/200/' | tr . - | sed 's/./&amp;x/2'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v | sed 's/^v/200/' | tr . - | sed 's/./&amp;x/6'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | grep v | sed 's/^v/200/' | tr . - | sed 's/./&amp;x/7'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | sed 's/^v/200/' | tr . - | sed 's/./&amp;-/7'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | sed 's/^v/200/' | tr . - | sed 's/./&amp;-/7' | sed 's/--/-/'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | sed 's/^v/200/' | tr . - | sed 's/./&amp;-/7' | sed 's/--/-/' | grep ..........
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | sed 's/^v/200/' | tr . - | sed 's/./&amp;-/7' | sed 's/--/-/' | egrep '.{10}'
+grep ^: changelog.t2t | cut -c 3- | grep '[0-9]' | sed 's/^v/200/' | tr . - | sed 's/./&amp;-/7' | sed 's/--/-/' | grep .......... &gt; /tmp/lista.txt</pre>

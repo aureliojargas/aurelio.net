@@ -1,0 +1,104 @@
+---
+author: aurelio
+layout: wordpress
+slug: bookcash-software-de-controle-de-vendas-de-livros
+title: BookCash - Software de controle de vendas de livros
+wordpress_id: 214
+categories:
+- software
+tags:
+- gnuplot
+- livro
+- Python
+- txt2tags
+prev_title: "Quem é o sujeito oculto?"
+prev_url: http://aurelio.net/blog/2007/03/31/quem-e-o-sujeito-oculto/
+next_title: "Uma Missiva Especial"
+next_url: http://aurelio.net/blog/2007/04/13/uma-missiva-especial/
+shortlink: http://wp.me/p1ABFN-3s
+---
+
+
+
+												<blockquote><p>Estava no quinto parágrafo desse texto e acabei de apagar tudo. Muito denso e chato. Vou tentar fazer diferente. Diz se gostou.</p></blockquote>
+<p><a href="http://aurelio.net/blog/2007/03/29/vamos-falar-de-grana/">Você já leu</a> que eu ganho algum dinheiro com a venda do <a href="http://www.piazinho.com.br/ed1/">livro</a> e dos <a href="http://aurelio.net/shell/apostila/">PDFs</a>.</p>
+<p>Início de mês é a festa dos números!<br />
+Controlar é preciso.<br />
+Saborear os valores, admirar os gráficos.</p>
+<p>Na mão, não faço não.<br />
+A preguiça me fez <a href="http://aurelio.net/bin/">programador</a>.</p>
+<p><a href="http://python.org">Python</a> é bom.<br />
+<a href="http://txt2tags.org/pt/">Txt2tags</a> é bom.<br />
+<a href="http://gnuplot.sourceforge.net">Gnuplot</a> é bom.<br />
+Bom mesmo seria juntar tudo isso…</p>
+<p><u>/\</u> Homens trabalhando <u>/\</u></p>
+<p><a href="http://aurelio.net/bin/python/bookcash.py">Consegui</a>!</p>
+<p>Relatório é tabela do txt2tags, pronta para virar um <a href="http://aurelio.net/blog/2006/06/01/cartilha-do-webdesigner-antenado/">HTML modernoso CSSado</a>.<br />
+<a href="http://aurelio.net/bin/python/bookcash.png">Gráfico bacanoso</a> com barras vermelhas vibrantes, PNG.<br />
+Pode gerar só um ou só outro.<br />
+Ou ambos!</p>
+<p>Teu Python usa meu Python, modularmente.<br />
+Python é divertido.</p>
+<p>Português e inglês.<br />
+Vírgulas e pontos.<br />
+Reais e dólares.</p>
+<p>Não tem livro publicado?<br />
+Use para acompanhar vendas de outras coisas.<br />
+Ou outros dados periódicos.</p>
+<p>Quer usar? Use.<br />
+Quer estudar? Estude.<br />
+Quer mudar? Mude.<br />
+Quer vender? Venda.<br />
+Quer dizer que é seu? Diga.<br />
+<em>“Pega no meu e diz que é teu”</em></p>
+<h3>Meu Python:</h3>
+<ul>
+<li><a href="http://aurelio.net/bin/python/bookcash.py">http://aurelio.net/bin/python/bookcash.py</a></li>
+</ul>
+<h3>Teu Python:</h3>
+<pre>
+import sys
+sys.path.append('/tmp/foo/')       # Pasta do bookcash.py
+import bookcash                    # Carrega a parada
+#--------------------------------------------------------------
+bookcash.lang = 'pt'               # Portugues, por favor
+bookcash.earning_per_unit = 2.00   # 2 pilas por livro vendido
+bookcash.printed_amount = 500      # Tiragem de 500 copias
+bookcash.data = """
+	2007-01 29
+	2007-02 47
+	2007-03 41
+	2007-04 36
+	2007-05 39
+"""                                # Unidades vendidas por mes
+#--------------------------------------------------------------
+bookcash.report()                  # Mostra a tabelona t2t
+#--------------------------------------------------------------
+plot_config = {                    # Configuracao do grafico
+   'title'  : 'Vendas do livro',   # Titulo
+   'ylabel' : 'Exemplares',        # Nome do eixo vertical
+   'datefmt': '%b %Y',             # Formato da data (Jan 2007)
+   'output' : 'bufunfa.png',       # Arquivo de saida
+   'extra'  : 'set ytics 5',       # Outros comandos gnuplot
+}                                  #
+bookcash.plot(plot_config)         # Desenha o grafico
+
+
+</pre>
+<h3>Nossa tabela:</h3>
+<pre>
+ ||     | Mês      |    # |        $ |     ### |        $$$ |
+  |   1 | 2007 Jan |   29 |    58,00 |      29 |      58,00 |
+  |   2 | 2007 Fev |   47 |    94,00 |      76 |     152,00 |
+  |   3 | 2007 Mar |   41 |    82,00 |     117 |     234,00 |
+  |   4 | 2007 Abr |   36 |    72,00 |     153 |     306,00 |
+  |   5 | 2007 Mai |   39 |    78,00 |     192 |     384,00 |
+ ||     | MÉDIA    |   38 |    76,80 |       - |          - |
+
+Em estoque 308 exemplares.
+Estimativa de esgotamento em 8 meses.
+
+
+</pre>
+<h3>Nosso gráfico:</h3>
+<p><img src='http://aurelio.net/wp/wp-content/uploads/2007/04/bookcash.png' alt='BookCash Graphic' /></p>

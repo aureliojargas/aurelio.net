@@ -1,0 +1,41 @@
+---
+author: aurelio
+layout: wordpress
+slug: como-ressuscitei-meu-tocador-de-mp3
+title: Como ressuscitei meu tocador de mp3
+wordpress_id: 155
+categories:
+- nerd
+tags:
+- firmware
+- MP3
+- tutorial
+prev_title: "ZZ Ao Vivo – Um concerto de 10+10 dedos"
+prev_url: http://aurelio.net/blog/2006/11/14/zz-ao-vivo-um-concerto-de-1010-dedos/
+next_title: "Baterna: Aula 2 – Reggae e Ska"
+next_url: http://aurelio.net/blog/2006/11/23/baterna-aula-2-reggae-e-ska/
+shortlink: http://wp.me/p1ABFN-2v
+---
+
+
+
+												<p><a href="http://aureliosoft.files.wordpress.com/2006/08/mp3player.jpg"><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/mp3player.jpg" alt="MP3 Player Xingue-lingue" align="right" border="0" /></a></p>
+<p>Tenho um tocador de mp3 genérico xingue-lingue (player). Não, não é um iPod. Ele não é branquinho nem antenado, mas tem rádio FM, grava voz e não custou uma fortuna.</p>
+<p>Depois de quase um ano de uso, ele morreu. Ou quase. Virou um morto-vivo. Ao ligar, a telinha (display) acendia mas não mostrava nada. Apertar seus botões era inútil. O computador não o reconhecia mais.</p>
+<p>Troquei pilhas, chacoalhei e taquei no chão. Várias vezes. Droga, os procedimentos-padrão de conserto não funcionaram.</p>
+<p>Antes de xingar os chineses e aumentar o volume do lixo da cidade, consultei o Grande Oráculo (Internet). Ele me deu sábias instruções e minutos depois, o tocador voltou à vida!</p>
+<p>Vou listar aqui o que fiz. Caso o teu tocador tosco tenha morrido também, há chances de recuperá-lo. Mas atenção: o procedimento não é trivial, requer um certo grau de nerdice para ser executado.</p>
+<p>Em resumo: precisei regravar o sistema do tocador (firmware) que por algum motivo se perdeu.</p>
+<ul>
+<li><a href="http://www.s1mp3.org/pt/docs_deadrec.php#open">Abrir o tocador</a>. Essa é a parte mais divertida!</li>
+<li><a href="http://www.s1mp3.org/pt/docs_hwspecs.php#boardid">Identificar o ID da placa</a>. O meu estava atrás da plaquinha do display, fácil de ver: Sansun a208 v2.1.</li>
+<li><a href="http://www.s1mp3.org/pt/downloads_fw.php">Baixar o firmware correto de acordo com o ID</a>. Basta consultar a tabela. O meu firmware era o arquivo sd5351_7c_v2_foston.7z.</li>
+<li><strong>Descompactar o firmware</strong>. A extensão 7z indica que o firmware foi compactado no formato 7-Zip. Se necessário, <a href="http://www.7-zip.org/download.html">baixe e instale o 7-Zip</a>. O comando para descompactar é trivial: 7za e ARQUIVO.7z.</li>
+<li><a href="http://www.s1mp3.org/en/downloads_tools.php#updater">Baixar e instalar o programa que insere o firmware no tocador</a>. Leia com atenção as instruções de uso.</li>
+<li><strong>Conectar o tocador na porta USB do computador</strong>. Não precisa de pilhas.</li>
+<li><strong>Inserir o firmware no tocador</strong>. Rode o programa do item 5 para colocar no tocador o firmware que você descompactou no item 4.</li>
+<li><strong>Testar o tocador</strong>. Retire o tocador do computador, coloque as pilhas e ligue-o. Espere alguns segundos. Se você é uma pessoa de sorte, ele estará funcionando :)</li>
+</ul>
+<p>Agora basta formatá-lo (FAT32) para poder colocar as músicas e utilizá-lo normalmente.</p>
+<blockquote><p><strong>Notas para usuários de Mac</strong>: Precisei renomear o firmware para $actsdk$.fw que é o nome padrão usado pelo FirmUpgrade.app. <a href="http://hints.macworld.com/article.php?story=20030613121738812">Formatar FAT32 é chato</a>.</p>
+<p><strong>Notas a todos</strong>: Essas informações são tudo o que sei sobre o assunto, nem adianta perder tempo me perguntando algo diferente. Para saber (muito) mais sobre o seu tocador, vá no excelente site <a href="http://www.s1mp3.org/pt/">http://www.s1mp3.org/pt/</a>.</p></blockquote>

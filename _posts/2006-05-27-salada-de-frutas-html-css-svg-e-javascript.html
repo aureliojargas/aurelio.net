@@ -1,0 +1,54 @@
+---
+author: aurelio
+layout: wordpress
+slug: salada-de-frutas-html-css-svg-e-javascript
+title: 'Salada de frutas: HTML, CSS, SVG e Javascript'
+wordpress_id: 55
+categories:
+- software
+tags:
+- CSS
+- Fotógrafo
+- Gamez
+- JavaScript
+- Matinhos
+- programação
+- SVG
+- Vim
+- Webstandards
+prev_title: "They’re taking the Hobbits to Isengard!"
+prev_url: http://aurelio.net/blog/2006/05/26/theyre-taking-the-hobbits-to-isengard/
+next_title: "Enfim, ADSL"
+next_url: http://aurelio.net/blog/2006/05/28/enfim-adsl/
+shortlink: http://wp.me/p1ABFN-T
+---
+
+
+
+												<p>Agora aqui na praia o clima está congelante, então as <a href="http://aurelio.net/surf/">fotos de surfe</a> deram uma esfriada (que trocadilho infame). Com dias de frio, cinza e chuva não tem como escapar, a nerdice ressurge.</p>
+<p>Lembra que uns tempos atrás eu estava com <a href="http://aurelio.net/blog-arquivo.html#programa-novo-adium-book">planos de aprender SVG e Javascript</a> para fazer joguinhos? Bem, o pontapé inicial foi dado.</p>
+<p>Não consigo aprender algo somente lendo ou fazendo exemplos. Tem que codificar, fazer um programinha simples, ver o treco funcionando. Como já tinha brincado de fazer aquele <a href="http://aurelio.net/blog/2006/04/17/segunda-feira-chuvosa-e-nerd/">joguinho do Campo Minado em CSS</a>, resolvi fazer outras duas versões, uma em Javascript e outra em SVG.</p>
+<p>Sendo 100% leigo em ambos, comecei timidamente com o Javascript. Baixa uns guias daqui, vê uns códigos dali e é impressionante como é muito fácil. A linguagem tem acesso direto tanto à árvore de elementos da página HTML (parágrafos, tabelas, listas) quanto à sua aparência (CSS). Aí foi só aprender a sintaxe e meter ficha.</p>
+<blockquote><p>
+	Em tempo, <a href="http://www.w3schools.com/js/default.asp">Javascript</a> não tem nada a ver com Java. Colocaram esse nome por questões marketológicas (vai entender…)
+	</p></blockquote>
+<p>Já o SVG foi mais complicado… Fiz o tabuleiro no Inkscape e então voltei para o bom e velho <a href="http://aurelio.net/vim/">VI</a> para editar o XML.</p>
+<blockquote><p>
+	O <a href="http://inkscape.org">Inkscape</a> é um editor gráfico que salva como SVG. É tipo um Corel Draw. Mas é leve, livre, gratuito e funciona no Windows, Linux e Mac. Tem um tempo? Baixe-o agora e faça uns desenhos, tenho certeza que você vai se impressionar. De repente até pode limpar a consciência e desinstalar esse Corel pirata aí :)
+	</p></blockquote>
+<p>Demorei um tempo para pescar o funcionamento de tudo, mas então vi a luz. É só encarar o XML como se fosse um HTML normal. Você usa o CSS para a aparência e o Javascript para manipulação da mesma maneira! Fica tudo lá no XML, três linguagens diferentes. Só muda que ao invés de lidar com &lt;P&gt;, &lt;TABLE&gt; e &lt;UL&gt;, você lida com &lt;rect&gt;, &lt;text&gt;, &lt;circle&gt; e amigos. Mas de resto é tudo igual.</p>
+<p>Foi <b>muito</b> divertido conhecer e brincar com essas tecnologias, fica tudo bem separado, cada uma fazendo sua parte:</p>
+<ul>
+<li>HTML/SVG: estrutura
+</li>
+<li>CSS: aparência
+</li>
+<li>Javascript: manipulação
+</li>
+</ul>
+<p>Não são todos os navegadores que entendem SVG. Firefox e Opera sim, Safari ainda não e Internet Explorer precisa de um <a href="http://www.adobe.com/svg/viewer/install/">plug-in da Adobe</a>. Mas é uma questão de tempo até isso ficar universal.</p>
+<p>O que, você quer o link para o joguinho? :) Ah tá, lá vai: <a href="http://aurelio.net/web/mina/">Campo Minado versões CSS, Javascript e SVG</a>. Lembrando que esse é o resultado de um estudo, o objetivo principal é o aprendizado e não a jogabilidade.</p>
+<p>Veja o código fonte de cada um, estude, aprenda. Os códigos estão comentados e tentei deixar da maneira mais simples e limpa que consegui, para ficar fácil de entender. Baixe os arquivos, edite, experimente. Depois me mostre teus próprios joguinhos! :)</p>
+<blockquote><p>
+	<b>O que é SVG?</b><br />Sabe o Corel Draw? Nele você faz teus desenhos e ele salva os arquivos em um formato binário (.cdr), que só ele entende. Quem quiser ver teu desenho vai ter que possuir um Corel Draw também. O <a href="http://www.w3.org/Graphics/SVG/">SVG</a> é um formato alternativo, que usa um arquivo de texto normal (XML) e seu desenho pode ser visto no próprio navegador e <a href="http://www.ikivo.com/02player_phones.html">até mesmo em celulares</a>! Hoje o Corel Draw e o Adobe Illustrator (<a href="http://www.w3.org/Graphics/SVG/SVG-Implementations">além de vários outros</a>) já exportam o desenho para SVG. O bom de ser um formato textual, é que uma vez feito o desenho, você pode editá-lo em qualquer editor de textos fuleiro! Sua empresa mudou de nome e você precisa mudar a logomarca? Fácil, abra o arquivo SVG da logo no Bloco de Notas e troque o nome antigo pelo novo. Pronto!
+	</p></blockquote>

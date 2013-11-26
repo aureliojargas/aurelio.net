@@ -1,0 +1,50 @@
+---
+author: aurelio
+layout: wordpress
+slug: funcoes-zz-versao-77
+title: Funções ZZ versão 7.7
+wordpress_id: 257
+categories:
+- software
+tags:
+- Funções ZZ
+- Shell Script
+- UTF-8
+prev_title: "SAC da Vitao funciona"
+prev_url: http://aurelio.net/blog/2007/07/13/sac-da-vitao-funciona/
+next_title: "12:00 piscando no microondas"
+next_url: http://aurelio.net/blog/2007/08/18/1200-piscando-no-microondas/
+shortlink: http://wp.me/p1ABFN-49
+---
+
+
+
+												<blockquote><p>Atenção! Parem as máquinas! Versão nova das <a href="http://funcoeszz.net">Funções ZZ</a>!</p>
+<p>Este é um evento especial que ocorre algumas poucas vezes por ano ;)</p></blockquote>
+<p>Nesta versão 7.7, a maior parte das mudanças visa corrigir o de sempre: sites que mudaram de endereço ou de formato, quebrando as funções e seus filtros. As problemáticas que foram arrumadas, são:</p>
+<ul>
+<li>zzdolar</li>
+<li>zzgoogle</li>
+<li><strong>zzipinternet</strong> (arrumada após bilhares de pedidos)</li>
+<li>zznoticiaslinux (Yahoo)</li>
+<li>zzpronuncia</li>
+<li>zzwhoisbr</li>
+</ul>
+<p>Também houve a remoção da <strong>zzdicabl</strong>, que fazia pesquisas no <a href="http://www.academia.org.br/">site da Academia Brasileira de Letras</a>. Como agora eles são “modernos” e estão usando AJAX, acabou a brincadeira para as ZZ.</p>
+<p>Mas houve mudanças mais profundas também.</p>
+<blockquote><p>Eu já disse que odeio UTF-8?</p></blockquote>
+<p>Padrões são uma maravilha, são a solução da fome mundial, mas enquanto não são adotados massivamente, são uma dor de cabeça a mais para se preocupar. O futuro é <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a>, sem dúvida. Mas ainda há muito <a href="http://en.wikipedia.org/wiki/ISO_8859-1">ISO-8859-1</a> (Latin 1) por aí.</p>
+<p>As funções ZZ são conservadoras, ainda sendo disponibilizadas no formato Latin 1, porém podem ser facilmente convertidas para UTF com um único comando:</p>
+<pre>iconv -f iso-8859-1 -t utf-8 funcoeszz &gt; funcoeszz-utf</pre>
+<p>Essa diferença entre formatos só é problemática em uma única função: <strong>zzarrumanome</strong>. Os nomes de seus arquivos eram bagunçados se você a usasse em um sistema UTF-8. Agora com a versão nova, isso não acontece mais.</p>
+<p>Por falar em <strong>zzarrumanome</strong>, agora ela possui uma opção nova muito bacana, chamada “-n”. Da mesma maneira que na <strong>zznomefoto</strong>, essa opção serve para testar o comando antes de executá-lo. O processamento é feito, mas os arquivos não são renomeados. Apenas são mostrados na tela quais serão os nomes novos dos arquivos:</p>
+<pre>
+$ <strong>ls</strong>
+Nome CHATÃO !!!.TXT
+$ <strong>zzarrumanome -n *</strong>
+[-n] Nome CHATÃO !!!.TXT -&gt; ./nome_chatao.txt
+$ <strong>ls</strong>
+Nome CHATÃO !!!.TXT
+$
+</pre>
+<p><a href="http://funcoeszz.net/funcoeszz">Baixe a versão nova 7.7 das Funções ZZ</a></p>

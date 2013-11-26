@@ -1,0 +1,59 @@
+---
+author: aurelio
+layout: wordpress
+slug: funcoes-zz-versao-89
+title: Funções ZZ versão 8.9
+wordpress_id: 557
+categories:
+- software
+tags:
+- Funções ZZ
+- livro
+- sed
+- Shell Script
+prev_title: "Dicas do Mestre dos Investimentos"
+prev_url: http://aurelio.net/blog/2008/09/19/dicas-do-mestre-dos-investimentos/
+next_title: "Recados da Paróquia ZZ"
+next_url: http://aurelio.net/blog/2008/10/02/recados-da-paroquia-zz/
+shortlink: http://wp.me/p1ABFN-8Z
+---
+
+
+
+												<p>Último dia do mês, hoje é um dia bom para…<br />
+…lançar uma versão nova das <a href="http://funcoeszz.net">Funções ZZ</a>, claro!</p>
+<p>Esta é a versão 8.9, mas bem poderia ser chamada de “versão colorida”, pois traz duas funções novas que lidam com cores.</p>
+<p>A primeira é a <strong>zzecho</strong>, que assim como o comando echo, mostra uma mensagem na tela. Mas não é aquela mensagem cinza sem graça, pois a zzecho pode mostrar texto coloridos, em negrito, com sublinhado e piscando!</p>
+<p>Útil para usar em scripts, quando você quiser chamar a atenção do usuário para uma mensagem importante:</p>
+<pre>zzecho --pisca --fundo vermelho ATENÇÃO, vou apagar tudo</pre>
+<p>Ou a versão econômica:</p>
+<pre>zzecho -p -f vermelho ATENÇÃO, vou apagar tudo</pre>
+<p>Mas o legal mesmo é ver a função em ação:</p>
+<div id="attachment_561" class="wp-caption alignnone" style="width: 473px"><a href="http://funcoeszz.net/zzansi2html/zzecho.html"><img class="size-full wp-image-561 " title="zzecho" src="http://aurelio.net/wp/wp-content/uploads/2008/09/zzecho.png" alt="" width="463" height="283" /></a><p class="wp-caption-text">Clique na imagem para ver a versão em texto, gerada pela zzansi2html.</p></div>
+<p> </p>
+<p>A segunda função nova á <strong>zzansi2html</strong>. Nome estranho, não? Ela converte textos com códigos ANSI para HTML.</p>
+<blockquote><p>Não sabe o que são <a href="http://en.wikipedia.org/wiki/ANSI_escape_code">códigos ANSI</a>? São os bichinhos que fazem o texto ficar colorido, são eles que fazem a mágica na zzecho que acabamos de ver. São como micróbios, você não consegue enxergá-los, mas eles existem :)</p></blockquote>
+<p>Com essa função você pode colocar em seu site ou blog a saída completa do terminal, incluindo as cores e atributos (sublinhado, negrito, pisca-pisca). Alguns exemplos bacanas são a saída da zzecho, da zzcores e do comando <code>ls --color</code>.</p>
+<pre>zzcores | zzansi2html &gt; <a href="http://funcoeszz.net/zzansi2html/zzcores.html">zzcores.html</a></pre>
+<p>Clique no link do exemplo para ver o resultado. Note que isso não é uma imagem, mas sim um texto formatado, que você pode copiar/colar.</p>
+<p>Se quiser gravar a saída de vários comandos seguidos, preservando todas as cores, seu prompt joiado e tudo mais, use o comando script:</p>
+<pre># Chame o comando 'script' e informe o arquivo
+# onde ele deve guardar a saída: ls.ansi.
+
+<strong>script ls.ansi
+</strong>
+# Agora você está "dentro" do comando script,
+# tudo o que você fizer será gravado.
+
+<strong>ls /etc
+</strong>
+# Para sair e terminar a gravação, use o comando exit
+
+<strong>exit</strong>
+
+# Já "fora" do comando script, converta para HTML
+
+<strong>zzansi2html <a href="http://funcoeszz.net/zzansi2html/ls.ansi">ls.ansi</a></strong><strong> &gt; </strong><strong><a href="http://funcoeszz.net/zzansi2html/ls.html">ls.html</a></strong></pre>
+<p>Novamente clique nos links para ver os resultados. Massa né? :)</p>
+<blockquote><p>Detalhe nerd: <a href="http://aurelio.net/blog/2008/09/16/moedinhas-shell-script-e-emprego/#comment-44649">Estávamos aqui no blog estes dias</a> comentando sobre um futuro livro de <a href="http://aurelio.net/sed/">sed</a>… Sabe o que é mais legal? <a href="http://code.google.com/p/funcoeszz/source/browse/trunk/funcoeszz#992"><strong>A zzansi2html foi feita com um único comando sed</strong></a>. Claro, é um sed macho com trocentos comandos dentro, mas é um sed. Bom para ver que é possível fazer <a href="http://aurelio.net/sed/sokoban/sokoban.sed.html">coisas complicadas</a> com o sedinho :)</p></blockquote>
+<p>Tá esperando o quê? Veja <a href="http://funcoeszz.net/changelog.html">a lista completa das novidades</a> e faça o <a href="http://funcoeszz.net/download.html">download da versão 8.9</a>!</p>

@@ -1,0 +1,181 @@
+---
+author: aurelio
+layout: wordpress
+slug: 10anos-expressoes-regulares
+title: '10anos: Expressões Regulares'
+wordpress_id: 912
+categories:
+- sitelog
+tags:
+- 10anos
+- Conectiva
+- Expressões Regulares
+- guia-er
+- Linux
+- livro
+- piazinho
+- sed
+- Shell Script
+- txt2regex
+prev_title: "10anos: Sed"
+prev_url: http://aurelio.net/blog/2009/07/03/10anos-sed/
+next_title: "Programação ao vivo"
+next_url: http://aurelio.net/blog/2009/07/30/programacao-ao-vivo/
+shortlink: http://wp.me/p1ABFN-eI
+---
+
+
+
+												<blockquote>
+<p style="text-align:left;"><span style="color:#333333;"><em>Comemoração de 10 anos do meu site AURELIO.NET<br />
+Parte 4<br />
+</em></span></p>
+</blockquote>
+<ol>
+<li><span style="color:#333333;"><em><a href="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos de sáite</a></em></span></li>
+<li><span style="color:#333333;"><em><a href="http://aurelio.net/blog/2009/06/30/10anos-vim/">10anos: Vim</a></em></span></li>
+<li><em><a href="http://aurelio.net/blog/2009/07/03/10anos-sed/">10anos: Sed</a></em></li>
+<li><em>10anos: Expressões Regulares</em></li>
+</ol>
+<p style="text-align:center;">————— ∞ —————</p>
+<p>Voltemos uma década, ao ano de 1999. Fui ver o filme <a href="http://pt.wikipedia.org/wiki/The_Matrix">Matrix</a> no cinema (a câmera girava mesmo cara!!!) e o <a href="http://pt.wikipedia.org/wiki/Bug_do_Milênio">bug do milênio</a> seria o fim do mundo, o Apocalipse Nerd.</p>
+<blockquote><p>Pra garantir, imprimi o extrato da conta bancária no dia 31 de dezembro. Sabe como é, vai que… :)</p></blockquote>
+<p>Mas <strong>1999</strong> marcou minha vida mesmo por causa de uma outra coisinha que acabou cruzando o meu caminho: Expressões Regulares. Nosso encontro foi acidental. Eu não queria saber delas, aliás, eu nem sabia que elas existiam. Naquela época o que eu queria mesmo era aprender <a href="http://aurelio.net/sed/">Sed</a>, o comando mágico do UNIX. Mas isso você já leu <a href="http://aurelio.net/blog/2009/07/03/10anos-sed/">no texto anterior</a>, né?</p>
+<p><a href="http://aurelio.net/sed/"><img class="aligncenter" title="Sed" src="http://aurelio.net/img/icon/128/sed.png" alt="" width="128" height="128" /></a></p>
+<p>Era isso, meu único objetivo era aprender Sed. Só. Mais nada. Ele já era difícil o suficiente para me manter ocupado por semanas. Mas quando fui estudar o tal <a href="http://sed.sourceforge.net/sedfaq.html">Sed FAQ</a>, ali no meio tinha uns aliens tipo <strong>^(.*):</strong> e <strong>[0-9]{1,3}</strong>. Que isso?</p>
+<p>— Aurélio, estas são as Expressões Regulares!<br />
+— Ãn?<br />
+— Esses aliens que você viu, são metacaracteres que compõem expressões regulares.<br />
+— Quem tá falando?<br />
+— Faz diferença?<br />
+— Mmmm… Não.<br />
+— Então?<br />
+— Tá, fala.<br />
+— Você não quer aprender Sed?<br />
+— Quero.<br />
+— Você não quer DOMINAR o Sed?<br />
+— Quero! Quero! Quero!<br />
+— Então primeiro vai ter que dominar essas expressões feiosas.<br />
+— Sério?<br />
+— Sério.<br />
+— F*deu.</p>
+<p>Fiquei arrasado com esta revelação. Não podia ser verdade. Tentei comovê-lo:</p>
+<p>— Mas eu só queria aprender o Sed!<br />
+— Sim.<br />
+— E essas expressões são muito mais difíceis!<br />
+— Sim!</p>
+<p>Pô, foi uma ducha de água fria. Uma ducha não, foi um banho de cachoeira no inverno às 6 da manhã.</p>
+<p>— Mas… Mas é que….<br />
+— Sem choro. Aprenda ou desista de uma vez.<br />
+— Desistir? <a href="http://www.youtube.com/watch?v=MhXbOh7K9nE">Retroceder nunca, render-se jamais!</a></p>
+<p style="text-align:center;"><a href="http://www.youtube.com/watch?v=MhXbOh7K9nE"><img class="size-full wp-image-930 aligncenter" title="espacato" src="http://aurelio.net/wp/wp-content/uploads/2009/07/espacato.jpg" alt="espacato" width="300" height="217" /></a></p>
+<p>Confesso que no começo eu não gostei das expressões. Achei tudo muito obscuro, mal explicado e feio. Parecia uma grande gambiarra que no final funcionava por mágica.</p>
+<p>Já de início foi uma confusão tremenda com os curingas da linha de comando. Eu sabia que <strong>*.txt</strong> expandia para todos os arquivos com a extensão txt, mas o asterisco em Expressões Regulares era diferente, ele sozinho não fazia nada. Ah, e o ponto também era especial. Então o similar nessa nova linguagem era <strong>.*\.txt$</strong>. Feio.</p>
+<p>Na <a href="http://tech.groups.yahoo.com/group/sed-users/">lista de discussão gringa do Sed</a>, também apareciam muitas dúvidas sobre as expressões, e aos poucos fui acompanhando e entendendo um pedacinho aqui, outro ali. Sempre testava os exemplos na minha máquina, tentava fazer variações, tirava um caractere aqui, colocava outro ali e via no que dava. É triste aprender assim, sem um texto que te leve pela mão do início ao fim em uma sequência lógica, mas eu não tinha outra escolha.</p>
+<blockquote><p>Tentei compensar esse trauma no <a href="http://www.piazinho.com.br">livro do piazinho</a> :)</p></blockquote>
+<p>Mas <strong>devagar e sempre</strong>, como geralmente são as coisas para mim, fui aprendendo.</p>
+<p>Não sei dizer quanto tempo demorou para eu conseguir fazer minhas próprias expressões, mas aquela aversão inicial transformou-se em curiosidade, depois em empolgação e finalmente em paixão. Quanto mais eu aprendia, mais tinha vontade de aprender. Eu pensava em metacaracteres o dia todo!</p>
+<blockquote><p><strong>.oO(</strong> Qual a expressão para casar o nome de todas as pessoas deste ônibus? <strong>)</strong></p>
+<p><strong>.oO(</strong> E a expressão para casar as notas do refrão de <a href="http://www.google.com/search?q=cretin+hop+lyrics+ramones">Cretin Hop</a>? <strong>)</strong></p>
+<p><strong>.oO(</strong> E a que casa o desenho das <a href="http://images.google.com/images?q=calçada+petit+pavet+curitiba&amp;oe=UTF-8&amp;ie=UTF-8">calçadas “petit pavet” de Curitiba</a>? <strong>)</strong></p></blockquote>
+<p>— Aurélio! Menos.<br />
+— Ops. Tá.</p>
+<p style="text-align:center;">————— ∞ —————</p>
+<p>Bem, mais uma vez, eu queria compartilhar aquilo que tinha aprendido, então criei uma <a href="http://aurelio.net/regex/">área especial para as expressões regulares no meu site</a> para juntar dicas e links. Dessa vez não vou deixar para o final, afinal, você já sabe: em <a href="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">comemoração aos 10 anos do site</a>, <strong>essa área acabou de ser reformada</strong>! \o/ <a href="http://aurelio.net/regex/">Confira</a>.</p>
+<p>Mas voltando à história, no ano seguinte (<strong>2000</strong>), a Conectiva, empresa em que eu trabalhava, lançou a primeira revista nacional sobre Linux, a <a href="http://augustocampos.net/revista-do-linux/">Revista do Linux</a>. Os funcionários foram convidados a contribuir com artigos. Eu gostei da ideia e me apressei para escrever sobre o que eu sabia. Na <a href="http://augustocampos.net/revista-do-linux/003/">terceira edição</a> da revista apareceram dois artigos meus, <a href="http://aurelio.net/doc/rdl/poder-modo-texto.html">um sobre o modo texto</a> e outro sobre as então misteriosas… (rufam os tambores) …expressões regulares! (Óooooh)</p>
+<p style="text-align:center;"><a href="http://augustocampos.net/revista-do-linux/003/"><img class="aligncenter" title="RdL 3" src="http://augustocampos.net/revista-do-linux/imagens/capa003.gif" alt="" width="110" height="152" /></a></p>
+<p>Relendo <a href="http://aurelio.net/regex/rdl-regex-1.html">o texto do primeiro artigo</a> agora, é engraçado perceber como ele é confuso, bagunçado. Mas teve um parágrafo em especial que foi o campeão: não entendi nada. Misturei ignorecase com curinga e ficou sem pé nem cabeça:</p>
+<blockquote><p>Alguns editores, com uma busca um pouco mais esperta, permitem a procura <strong>ignorando a diferença entre letras maiúsculas e minúsculas, através do uso de um curinga</strong>, geralmente o asterisco (*), que significa “qualquer coisa”. Este também funciona na linha de comando, pois quando você faz um ls *.txt, está listando “todos os arquivos com a extensão .txt”.</p></blockquote>
+<p>Depois saiu <a href="http://aurelio.net/regex/rdl-regex-2.html">a segunda parte deste artigo</a>. Esse já ficou melhor, pois não está tão confuso. Curioso é perceber que nesta época eu ainda não tinha achado nomes legais para alguns metacaracteres. O “<a href="http://aurelio.net/regex/guia/ou.html">ou</a>” eu chamava de “alternância” e o “<a href="http://aurelio.net/regex/guia/retrovisor.html">retrovisor</a>” era o horrível “referência retroativa”, uma tentativa de tradução de “backreference”. Coisas da vida…</p>
+<p>Foi em <strong>2000</strong> também que resolvi meter o pé na jaca de vez e ler o desafiador <a href="http://regex.info/">Mastering Regular Expressions</a>. Um livro enorme, denso, completo, (posso dizer “chato” sem parecer que é invejinha?), que esmiuça cada detalhe de cada tipo de implementação das expressões regulares. É a obra-prima sobre o assunto. Mas infelizmente, em inglês.</p>
+<p style="text-align:center;"><a href="http://regex.info"><img class="aligncenter" title="Mastering Regular Expressions" src="http://regex.info/i/mre3_sm.gif" alt="" height="128" /></a></p>
+<blockquote><p>A Conectiva comprou o livro e eu dedicava parte de meu horário de trabalho para lê-lo e (tentar) entendê-lo. Isso sim é investir no funcionário. Bons tempos aqueles…</p></blockquote>
+<p>Apanhei, mas consegui ler o tijolão. Com meu inglês tosco e falta de conhecimento sobre alguns assuntos, devo ter entendido no máximo uns 75% do livro. Mas foi o suficiente para me mostrar todo o poder que essas expressões têm. Foi um caminho sem volta, eu já não era mais um mero usuário, agora eu sentia que <strong>dominava</strong> as benditas regex.</p>
+<p>Para praticar o conhecimento novo, escrevi o programa <a href="http://aurelio.net/txt2regex/">txt2regex</a>, um assistente que te ajuda a compor uma expressão regular. Ele vai fazendo perguntas, você responde e plim! Lá está sua expressão, pronta para usar. Ele fez sucesso durante alguns anos, foi incluído em distribuições de Linux, apareceu em revistas gringas (França, Japão, Alemanha) e era bem quisto pelos usuários. Depois não atualizei mais e ele foi sendo esquecido gradativamente… Snif.</p>
+<blockquote><p>Lembro que foi um grande desafio na época escrever esse programa, pois eu encasquetei de só usar os comandos internos (builtin) do Bash. Mas isso fica para um futuro texto sobre shell :)</p></blockquote>
+<div class="wp-caption aligncenter" style="width: 240px"><a href="http://aurelio.net/txt2regex/screenshots.html"><img class=" " title="txt2regex screenshot" src="http://aurelio.net/txt2regex/img/showmeta.png" alt="" width="230" height="229" /></a><p class="wp-caption-text">txt2regex em ação</p></div>
+<p>Com os artigos na Revista do Linux e o txt2regex, eu já era conhecido como “<strong>o cara das regex</strong>” lá na Conectiva e em alguns círculos nerds. Mas o assunto ainda era um nobre desconhecido para a grande maioria dos usuários. Uma lástima, pois eu sabia todo o poder que as expressões tinham, queria divulgar mais isso.</p>
+<p style="text-align:center;">————— ∞ —————</p>
+<p>Numa manhã qualquer de <strong>2001</strong>, eu estava conversando com meu chefe (Wanderlei Cavassin) sobre algo relacionado às expressões. Não lembro se ele estava com uma dúvida ou se queria mostrar algo que tinha encontrado. Só lembro que em determinado ponto, do nada, ele dispara:</p>
+<p>— Verde, já que você manja disso, <strong>por que não escreve um livro?</strong><br />
+— Hein?</p>
+<p>Fui pego de surpresa. Nunca tinha pensado nessa hipótese. Para mim, escrever livros técnicos era coisa de gente grande, de professor universitário com barba grande e cabelos brancos. Eu com meus 23 aninhos era apenas um girino.</p>
+<p>Mas ele disse que a editora <a href="http://www.novatec.com.br">Novatec</a>, aquela que fazia uns livros fininhos (<a href="http://www.novatec.com.br/guias/">Guias de Consulta Rápida</a>), estava procurando autores. Então ele me incentivou a mandar um email para a editora. Vai que…</p>
+<p>Desacreditado, mandei o email. Achei que não ia dar em nada, afinal, eu não tinha cabelos brancos, além de que eu achava que eram as editoras que iam atrás dos autores, e não o contrário. No email eu perguntei se eles… Péra! Será que… (vasculha, vasculha, vasculha)</p>
+<p>ACHEI! \o/</p>
+<pre><strong>----------------------------8&lt;-----------------------------</strong>
+De: verde@conectiva.com.br
+Assunto: autor para guias de sed e expressões regulares
+Data: 12 de abril de 2001 11h45min22s GMT-03:00
+Para: novo@novateceditora.com.br
+
+oi,
+
+estava olhando a página de vocês e vi que estão
+procurando autores de guias de consulta rápida para
+vários temas técnicos.
+
+se tiverem interesse em publicar algo sobre sed e/ou
+expressões regulares, me candidato.
+
+já tenho documentos, textos e programas publicados
+caso tenham interesse:
+
+sed-HOWTO
+
+http://conectiva.com.br/~aurelio/sed/sed-HOWTO
+
+txt2sgml.sed – script em sed que converte texto puro para SGML
+
+http://conectiva.com.br/~aurelio/sed/programas/txt2sgml-sed
+
+expressões regulares – parte 1
+
+http://www.RevistaDoLinux.com.br/ed/003/ferramentas.php3
+
+expressões regulares – parte 2
+
+http://www.RevistaDoLinux.com.br/ed/007/ereg.php3
+
+txt2regexp – programa “wizard” de expressões regulares
+
+http://freshmeat.net/projects/txt2regexp
+
+valeu.
+
+--
+s·:(·&gt;(·×^a]×http://www.verde666.org×^[:wq
+<strong>----------------------------&gt;8-----------------------------
+</strong></pre>
+<p>A resposta veio a jato, em 10 minutos:</p>
+<blockquote><p>Temos interesse muito grande em um guia sobre Expressões Regulares. Existem muitos detalhes a serem esclarecidos e por telefone é mais prático neste momento. Favor informar o seu número de telefone e o melhor horário para eu ligar. Se preferir, ligue para mim no fone (0xx11) 6979-XXXX ou 6959-XXXX.</p></blockquote>
+<p><strong>É difícil explicar o que senti neste momento.</strong></p>
+<p>Era uma manhã normal de trabalho, eu estava tranquilo lá no meu computador. Fazendo algum script, lendo email, sei lá. Um dia como qualquer outro. Aí do nada, numa conversa normal, o chefe faz uma pergunta estranha e minutos depois, tenho na minha caixa o email de uma editora dizendo que tem interesse em um livro que eu poderia escrever!</p>
+<p><img class="aligncenter size-full wp-image-949" title="ogrito" src="http://aurelio.net/wp/wp-content/uploads/2009/07/ogrito.jpg" alt="ogrito" width="250" height="338" /></p>
+<p>Cerca de três meses depois, em 31 de julho de 2001 era lançado na Fenasoft meu primeiro livro: <a href="http://aurelio.net/regex/guia/">Expressões Regulares — Guia de Consulta Rápida</a>. O trabalho de escrita foi intenso, me internei para conseguir terminar tudo antes da feira. Mas a satisfação de ver o livro na minha mão brilhando, folheá-lo, cheirá-lo, valeu a pena.</p>
+<div><a href="http://aurelio.net/regex/guia/"><img class="aligncenter" title="Guia Regex" src="http://aurelio.net/img/icon/128/guiaregex.png" alt="" width="128" height="128" /></a></div>
+<p>Foi o primeiro livro sobre o assunto, escrito em português. Naquela época havia alguns poucos em inglês. Para desespero do editor, ele não conseguiu tirar da minha cabeça a ideia de disponibilizar o livro completo na Internet, e <a href="http://aurelio.net/regex/guia/">assim o fiz</a>. Dias antes do lançamento, todo o livro já estava inteiro disponível no meu site, para quem quisesse consultar. E de fato, até hoje <a href="http://aurelio.net/regex/guia/">ele ainda está lá</a>, livre e gratuito.</p>
+<p style="text-align:center;">————— ∞ —————</p>
+<p>O livro me deu uma visibilidade boa, fiquei mais conhecido e assim aumentaram as visitas no meu site, e ganhei usuários novos para meus programas. Também começaram a aparecer convites para dar <a href="http://aurelio.net/curso/">palestras e cursos</a> em eventos, e assim, aquele cara que em 1999 torceu o nariz quando viu as expressões pela primeira vez e sofreu bastante para aprendê-las, agora tinha se tornado uma referência no assunto. É... <strong>Vale a pena o esforço, pode acreditar.</strong></p>
+<p>Durante cerca de cinco anos <a href="http://aurelio.net/regex/guia/vendas.html">o livrinho verde vendeu, devagar e sempre</a>, cerca de 40 exemplares por mês. Ao preço de 20 reais e com 8% de direitos autorais para o autor, eu ganhava incríveis R$ 1,60 por exemplar vendido. E aí, animou-se a virar escritor(a)? :) Fazendo as contas, dava cerca de 60 pilas por mês no meu bolso. É, dava pra pagar umas passagens de ônibus e  uns X-saladas...</p>
+<blockquote><p>Em 06/09/2006, Rubens Prates escreveu:<br />
+Aurélio, temos apenas 45 exemplares em estoque do ER, fora o que está consignado nas livrarias. Logo teremos que reimprimi-lo. O que deve ser corrigido, fora o que está indicado na <a href="http://aurelio.net/regex/guia/errata.html">errata do seu site</a>?</p></blockquote>
+<p>Em <strong>2006</strong> o estoque do livrinho estava acabando, e em vez de fazer uma reimpressão, o editor teve a ideia de transformá-lo em um livro de verdade. Me empolguei, pois eu não gostava de chamar o guia fininho de "livro", era um <code>--force</code>. Fiz uma reforma geral no conteúdo, além de ter adicionado tópicos novos, o que fez o livro pular de 96 páginas estreitas para 141 páginas espaçosas. Nasceu o <a href="http://www.piazinho.com.br/ed1/">Expressões Regulares — Uma Abordagem Divertida</a>.</p>
+<p><a href="http://www.piazinho.com.br/ed1/"><img class="aligncenter" title="Livro Regex" src="http://aurelio.net/img/icon/128/livroregex.png" alt="" width="128" height="128" /></a></p>
+<p>Ah, e sabe quem também nasceu neste momento?</p>
+<blockquote><p>Em 22/09/2006, Karine Hermes escreveu:<br />
+Percebi que, no decorrer do texto, você introduz comentários, como se alguém estivesse conversando com você, lhe perguntando coisas, aprendendo... O que você acha de utilizarmos um personagem para isso? Veja, em anexo, duas páginas de teste que fiz.</p></blockquote>
+<div id="attachment_953" class="wp-caption aligncenter" style="width: 410px"><img class="size-full wp-image-953" title="piazinho-beta" src="http://aurelio.net/wp/wp-content/uploads/2009/07/piazinho-beta.png" alt="piazinho-beta" width="400" height="202" /><p class="wp-caption-text">O piazinho em sua primeira aparição</p></div>
+<p style="text-align:center;">
+<p>O piazinho deu mais alegria ao texto, virou mascote e o livro foi um sucesso de vendas. Com uma média de 95 exemplares vendidos por mês, meus ganhos com direitos autorais aumentaram consideravelmente, batendo na casa do R$ 300,00 mensais. Nada mal, não dá pra viver disso, mas já pagava algumas contas.</p>
+<p>O blog já existia quando lancei este livro, então quem é leitor mais antigo, acompanhou toda a saga em tempo real :) Você viu o <a href="http://aurelio.net/blog/2006/10/27/livro-novo-de-expressoes-regulares/">nascimento</a>, o <a href="http://aurelio.net/blog/2006/11/10/expressoes-regulares-uma-abordagem-divertida/">lançamento</a>, o <a href="http://aurelio.net/blog/2006/12/29/expressoes-regulares-entre-os-mais-vendidos/">sucesso de vendas</a>, o <a href="http://aurelio.net/blog/2007/10/24/1000-piazinhos-vendidos/">milésimo exemplar</a>, e comemorou junto o <a href="http://aurelio.net/blog/2007/11/13/convenca-me-a-te-dar-um-livro/">primeiro ano de vida</a>. Ah sim, nesse meio tempo você também descobriu que <a href="http://aurelio.net/blog/2006/12/21/expressoes-regulares-para-criancas/">ele é um livro para crianças</a> e que <a href="http://aurelio.net/blog/2006/12/01/quem-e-o-pia-da-capa-do-livro/">o piazinho da capa existe na vida real</a> :)</p>
+<p>Em <strong>2008</strong> o livro branco esgotou-se, e novamente veio a dúvida se faríamos uma simples reimpressão ou se daríamos um passo adiante, fazendo uma segunda edição com conteúdo novo. Confesso que no início eu estava com preguiça, mas com o incentivo da Mog e do editor, fiz mais uma reforma geral no livro, adicionei tópicos novos e até uma <a href="http://nerdson.com/blog/em-terra-de-metacaractere-quem-tem-um-asterisco-e-rei/">tirinha do Nerdson</a> entrou na brincadeira.</p>
+<p><a href="http://www.piazinho.com.br"><img class="aligncenter" title="Livro Regex 2" src="http://aurelio.net/img/icon/128/livroregex2.png" alt="" width="128" height="128" /></a></p>
+<p>Assim <a href="http://aurelio.net/blog/2008/08/15/expressoes-regulares-2a-edicao/">nasceu o amarelão</a>, com direito a <a href="http://www.piazinho.com.br">site próprio</a>, muito chique. No primeiro mês ele foi <a href="http://aurelio.net/blog/2008/08/21/mais-vendido-na-livraria-cultura-dinovo/">o mais vendido na Livraria Cultura</a> e no mês seguinte <a href="http://aurelio.net/blog/2008/09/12/tempo-real-dominada/">fez dobradinha no pódio com a concha galáctica</a>. Com nove meses de vida <a href="http://aurelio.net/blog/2009/04/29/1000-piazinhos-amarelos-vendidos/">foi vendido o milésimo exemplar</a> e mês que vem ele completará um aninho.</p>
+<p>Será?<br />
+Será que dura até lá?</p>
+<p>Eu ouvi uns rumores vindos do norte, dizendo que parece que o estoque estava meio baixo... Se isso for verdade, mais uma vez será a hora de escolher entre a reimpressão e uma nova edição. E mais uma vez estou com preguiça. A história se repete :)</p>
+<p>E você, o que acha?<br />
+O livro tá bom como tá?<br />
+O que você gostaria de ver na <a href="http://aurelio.net/blog/2009/10/03/expressoes-regulares-3a-edicao/">3ª edição</a>?</p>
+<p>bejomeliga</p>

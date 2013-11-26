@@ -1,0 +1,56 @@
+---
+author: aurelio
+layout: wordpress
+slug: configurar-seu-mac-para-simular-uma-impressora-pdf-printer
+title: Configurar seu Mac para simular uma impressora (PDF-printer)
+wordpress_id: 1397
+categories:
+- nerd
+tags:
+- iOS
+- Mac OS X
+- PDF
+prev_title: "Salvar site como PDF no iPhone, iPod e iPad"
+prev_url: http://aurelio.net/blog/2011/01/28/salvar-site-como-pdf-no-iphone-ipod-ipad/
+next_title: "Ativar AirPrint no Mac OS X com uma única linha"
+next_url: http://aurelio.net/blog/2011/02/02/ativar-airprint-no-mac-os-x-com-uma-unica-linha/
+shortlink: http://wp.me/p1ABFN-mx
+---
+
+
+
+												<p>Faz anos que não tenho mais impressora em casa. É caro, ocupa espaço e só dá dor de cabeça. Nas raras vezes que preciso imprimir algo, vou numa Lan House e gasto centavinhos.</p>
+<p>Acho que a chave dessa mudança para o tudo-digital é poder <strong>guardar facilmente</strong> aquilo que você antigamente imprimiria.</p>
+<p>No Mac isso é trivial, pois sempre que você manda imprimir algo, aparece a opção <strong>Salvar como PDF</strong>. Então não importa se é um email, um site ou um documento que você está editando. É só mandar imprimir e com o clique de um botão você poderá arquivá-lo em um PDF. Depois, se precisar, você imprime o PDF numa impressora de verdade.</p>
+<p>Mas e se você estiver em outra máquina na rede local (Windows, Linux) ou no celular e quiser imprimir, digo, salvar como PDF em seu Mac?</p>
+<p>Uma solução bacana é configurar seu Mac para ele fingir ser uma impressora na rede, assim você pode mandar “imprimir” coisas nele. Na verdade, o que ele fará é salvar um PDF daquilo que você mandou imprimir. Para os outros computadores essa operação é transparente, eles enxergarão seu Mac como uma impressora de verdade e nunca saberão que foram enganados :)</p>
+<p>A configuração é simples, basta instalar o programa <a href="http://www.cups-pdf.de/">cups-pdf</a>.</p>
+<ul>
+<li>Baixe o <a href="https://bitbucket.org/codepoet/cups-pdf-for-mac-os-x/downloads">arquivo .ZIP</a>.</li>
+<li>Expanda-o e rode o instalador: <strong>CUPS-PDF.mpkg</strong>.</li>
+</ul>
+<p>Terminada a instalação, adicione a nova impressora “virtual” ao seu Mac.</p>
+<ul>
+<li>Abra as Preferências do Sistema.</li>
+<li>Clique em Impressão e Fax.</li>
+<li>Clique no botão + para adicionar uma impressora.</li>
+<li>Na lista vai aparecer o item CUPS-PDF, clique nele.</li>
+<li>Em Nome: você pode colocar algo descritivo, tipo: Salvar como PDF.</li>
+<li>No menu escolha Impressora PostScript.</li>
+<li>Aperte o botão Adicionar.</li>
+</ul>
+<p style="text-align: center;">
+<p style="text-align: center;"><a href="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-add.png"><img class="aligncenter size-full wp-image-1401" title="pdf-printer-add" src="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-add.png" alt="" width="500" height="443" /></a></p>
+<p>Pronto, a impressora PDF foi adicionada e já pode ser usada em seu Mac, o que não faz sentido, já que você já conseguia imprimir em PDF antes :)</p>
+<p>Para que as outras máquinas e equipamentos da rede local também possam usar esta impressora, ative a opção <strong>Compartilhar esta impressora na rede</strong>.</p>
+<p style="text-align: center;"><a href="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-list.png"><img class="aligncenter size-full wp-image-1403" title="pdf-printer-list" src="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-list.png" alt="" width="500" /></a></p>
+<p>Se aparecer uma advertência, clique no botão <strong>Preferências de Compartilhamento</strong> e ative o item <strong>Compart. de Impressora</strong>.</p>
+<p style="text-align: center;"><a href="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-share.png"><img class="aligncenter size-full wp-image-1404" title="pdf-printer-share" src="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-share.png" alt="" width="500" height="409" /></a></p>
+<p>Pronto!</p>
+<p>Ao mandar imprimir algo de outra máquina, agora vai aparecer a nova impressora chamada “<strong>Salvar como PDF</strong>“. Use-a normalmente, como se fosse uma impressora de verdade.</p>
+<p>Mas tá, você mandou imprimir. E onde foi que ele salvou o PDF? Em qual pasta de seu Mac? Espero que você tenha feito essa pergunta, senão acho que você está meio perdido :)</p>
+<div id="attachment_1402" class="wp-caption aligncenter" style="width: 510px"><a href="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-folder.png"><img class="size-full wp-image-1402" title="pdf-printer-folder" src="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-folder.png" alt="" width="500" height="161" /></a><p class="wp-caption-text">Seu HD &gt; Usuários &gt; Compartilhado &gt; CUPS-PDF</p></div>
+<p>Usuários registrados ganharão pastinhas personalizadas, como a pasta <strong>aurelio</strong>, que guarda os testes que fiz usando a impressora pelo próprio Mac. Quando mandar uma impressão pela rede, o PDF será guardado dentro da pasta <strong>ANONYMOUS</strong>.</p>
+<blockquote><p>Nota: A pasta <strong>guest</strong> só aparece quando usar o <a href="http://www.apple.com/br/iphone/features/airprint.html">AirPrint</a> à partir de um iPhone/iPad, mas <a href="http://aurelio.net/blog/2011/02/04/imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint/">eu falo mais sobre isso em outro post</a> ;)</p></blockquote>
+<p>Então é isso, economize algumas árvores imprimindo direto para PDF em seu Mac!</p>
+<blockquote><p><span style="text-decoration: underline;">Nota aos nerds</span>: Dê uma olhada no <code>/etc/cups/cups-pdf.conf</code> para achar algumas configurações bacanas, como por exemplo remover o prefixo <strong>job_</strong> ou alterar as permissões padrão dos PDFs criados.</p></blockquote>

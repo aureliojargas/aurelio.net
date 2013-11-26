@@ -1,0 +1,131 @@
+---
+author: aurelio
+layout: wordpress
+slug: funcoes-zz-versao-87
+title: Funções ZZ versão 8.7
+wordpress_id: 356
+categories:
+- software
+tags:
+- Funções ZZ
+- Shell Script
+- UTF-8
+prev_title: "A lua, a pedra e o amor"
+prev_url: http://aurelio.net/blog/2008/07/18/a-lua-a-pedra-e-o-amor/
+next_title: "txt2tags completa 7 anos"
+next_url: http://aurelio.net/blog/2008/07/26/txt2tags-completa-7-anos/
+shortlink: http://wp.me/p1ABFN-5K
+---
+
+
+
+												<blockquote><p><strong>ΩΩΩ Atenção Nerds ΩΩΩ</strong><br />
+Segurem-se na cadeira, pois os próximos dias serão agitados :)</p></blockquote>
+<p style="text-align:left;">Está saindo do forno mais uma versão das incansáveis <a href="http://funcoeszz.net">Funções ZZ</a>! E pela primeira vez em anos, é uma versão que sai no mês seguinte à anterior. As funções definitivamente saíram do limbo.</p>
+<p style="text-align:left;"><a href="http://aurelio.net/blog/2008/06/20/funcoes-zz-versao-86/">A versão anterior</a> contava com 66 funções. Mas esse número não é sexy, o 69 é muito melhor! Então, pisando fundo no acelerador, foram criadas <strong>três</strong> funções novas para chegarmos ao mítico número kamasutresco.</p>
+<ul style="text-align:left;">
+<li><strong>zzalfabeto:</strong> Central de alfabetos (romano, militar, radiotelefônico, OTAN, RAF, etc)</li>
+<li><strong>zzrot13:</strong> Codifica/decodifica um texto utilizando a cifra ROT13</li>
+<li><strong>zzrot47:</strong> Codifica/decodifica um texto utilizando a cifra ROT47</li>
+</ul>
+<p style="text-align:left;">Comecemos pelas duas últimas. <a href="http://pt.wikipedia.org/wiki/Cifra_de_César">Desde os tempos de César</a>, mandar mensagens cifradas era uma necessidade. As letras são trocadas de lugar para esconder textos secretos. Duas cifras simples bastante utilizadas são a <a href="http://pt.wikipedia.org/wiki/ROT13">ROT13</a> e a <a href="http://pt.wikipedia.org/wiki/ROT-47">ROT47</a>. O interessante é que a mesma cifra serve para codificar e para decodificar o texto, veja:</p>
+<pre style="text-align:left;">$ <strong>zzrot13</strong> Ataque surpresa ao meio-dia
+Ngndhr fhecerfn nb zrvb-qvn
+
+$ <strong>zzrot13</strong> Ngndhr fhecerfn nb zrvb-qvn
+Ataque surpresa ao meio-dia</pre>
+<p style="text-align:left;">O ROT13 codifica somente as letras do alfabeto (maiúsculas e minúsculas). Se você também precisar codificar números, pontuação e símbolos, utilize o ROT47:</p>
+<pre style="text-align:left;">$ <strong>zzrot47</strong> 'Coordenadas:(27S,94W)'
+r@@C56?252DiWaf$[hc(X
+
+$ <strong>zzrot47</strong> 'r@@C56?252DiWaf$[hc(X'
+Coordenadas:(27S,94W)</pre>
+<p style="text-align:left;">Agora você já pode brincar de mandar mensagens secretas para os seus amiguinhos! ;)</p>
+<p style="text-align:left;">Mas se isso ainda não satisfizer seus desejos militares, agora você também pode falar aquelas palavras estranhas tipo Alpha, Beta, Charlie, Tango. Basta digitar qual palavra você quer soletrar e escolher qual <a href="http://en.wikipedia.org/wiki/NATO_phonetic_alphabet">alfabeto estileiro</a> você quer usar:</p>
+<pre style="text-align:left;">$ <strong>zzalfabeto</strong> --otan cambio
+Charlie
+Alpha
+Mike
+Bravo
+India
+Oscar
+
+$ <strong>zzalfabeto</strong> --royal-navy cambio
+Charlie
+Apples
+Monkey
+Butter
+Ink
+Orange
+
+$ <strong>zzalfabeto</strong> --raf42 cambio
+Charlie
+Apple
+Mother
+Beer
+In
+Orange
+
+$ <strong>zzalfabeto</strong> --portugal cambio
+Coimbra
+Aveiro
+Maria
+Bragança
+Itália
+Ovar</pre>
+<p style="text-align:left;">Se você não informar nenhuma palavra, todo o alfabeto escolhido é mostrado na tela. Há vários tipos de alfabeto disponíveis, para satisfazer a todos os gostos:</p>
+<table style="text-align:left;" border="0">
+<tbody>
+<tr>
+<th>Opção</th>
+<th>Descrição</th>
+</tr>
+<tr>
+<td><code>--fone</code></td>
+<td>Alfabeto radiotelefônico internacional</td>
+</tr>
+<tr>
+<td><code>--romano</code></td>
+<td>A B C D E F…</td>
+</tr>
+<tr>
+<td><code>--royal-navy</code></td>
+<td>Marinha Real – Reino Unido, 1914-1918</td>
+</tr>
+<tr>
+<td><code>--signalese</code></td>
+<td>Primeira Guerra, 1914-1918</td>
+</tr>
+<tr>
+<td><code>--raf24</code></td>
+<td>Força Aérea Real – Reino Unido, 1924-1942</td>
+</tr>
+<tr>
+<td><code>--raf42</code></td>
+<td>Força Aérea Real – Reino Unido, 1942-1943</td>
+</tr>
+<tr>
+<td><code>--raf</code></td>
+<td>Força Aérea Real – Reino Unido, 1943-1956</td>
+</tr>
+<tr>
+<td><code>--us</code></td>
+<td>Alfabeto militar norte-americano, 1941-1956</td>
+</tr>
+<tr>
+<td><code>--portugal</code></td>
+<td>Lugares de Portugal</td>
+</tr>
+<tr>
+<td><code>--names</code></td>
+<td>Nomes de pessoas, em inglês</td>
+</tr>
+<tr>
+<td><code>--lapd</code></td>
+<td>Polícia de Los Angeles (EUA)</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align:left;">Uma melhoria importante desta versão das ZZ é que foi criada uma “rotina automática de conversão da codificação em tempo real”. Ei, isso soa bonito, não? Tá, é um iconv… O que importa é que acabaram os problemas com os acentos em várias funções, tanto em sistemas ISO-8859-1 (latin-1) quanto UTF-8. Ainda não entendeu? Eu explico: os acentos vão aparecer, tenha fé.</p>
+<p style="text-align:left;">Ah, sim. Também houve correções de probleminhas em algumas funções. Mas isso é chato, nem vou comentar aqui. Todas as mudanças estão descritas lá no <a href="http://funcoeszz.net/changelog.html">changelog</a>.</p>
+<p style="text-align:left;">Agora é contigo: <a href="http://funcoeszz.net/download.html">faça o download</a> e use!</p>

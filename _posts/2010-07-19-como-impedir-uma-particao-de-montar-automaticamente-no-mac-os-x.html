@@ -1,0 +1,85 @@
+---
+author: aurelio
+layout: wordpress
+slug: como-impedir-uma-particao-de-montar-automaticamente-no-mac-os-x
+title: Como impedir uma partição de montar automaticamente no Mac OS X
+wordpress_id: 1228
+categories:
+- nerd
+tags:
+- backup
+- Mac OS X
+prev_title: "Tutorial: Usar a versão do Subversion (SVN) no Xcode"
+prev_url: http://aurelio.net/blog/2010/06/30/tutorial-usar-a-versao-do-subversion-svn-no-xcode/
+next_title: "Blog da Mog"
+next_url: http://aurelio.net/blog/2010/07/20/blog-da-mog/
+shortlink: http://wp.me/p1ABFN-jO
+---
+
+
+
+												<blockquote><p><strong>Resumo:</strong> Use o comando vifs para editar o /etc/fstab e adicionar uma linha para cada partição, identificada pelo UUID ou LABEL, com a opção noauto no final.</p></blockquote>
+<p>Tenho um HD externo USB com três partições:</p>
+<ul>
+<li><strong>media</strong> — Para guardar músicas, filmes, jogos, etc.</li>
+<li><strong>becape</strong> — Becapes antigos, da era pré-Time Machine.</li>
+<li><strong>WINDOWS</strong> (formato FAT32) — Para trocar arquivos com sistemas Windows.</li>
+</ul>
+<p>Destas três partições a única que uso frequentemente é a “media”. Raramente preciso da “WINDOWS” para trocar arquivos com os parentes e mais raramente ainda preciso de becapes pré-históricos.</p>
+<p>O problema é que cada vez que conecto o HD externo, todas as três partições são montadas e ficam lá aparecendo no Finder e na Mesa. Eu queria que somente a “media” fosse montada automaticamente, e as outras, eu montaria apenas quando necessário, na mão.</p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><div id="attachment_1248" class="wp-caption alignnone" style="width: 208px"><img class="size-full wp-image-1248" title="finder-mount-no-2" src="http://aurelio.net/wp/wp-content/uploads/2010/07/finder-mount-no-2.png" alt="" width="198" height="335" /><p class="wp-caption-text">O problema.</p></div></td>
+<td>→</td>
+<td>
+<p><div class="wp-caption alignnone" style="width: 207px"><img title="finder-mount-ok-2" src="http://aurelio.net/wp/wp-content/uploads/2010/07/finder-mount-ok-2.png" alt="" width="197" height="334" /><p class="wp-caption-text">A solução.</p></div></td>
+</tr>
+</tbody>
+</table>
+<p>Achei a solução para este problema <a href="http://hints.macworld.com/article.php?story=20060930150059172">aqui</a>. A dica é de 2006, mas confirmo que também funciona no Snow Leopard.</p>
+<p>Se você passa por este problema e também quer impedir uma ou mais partições de montarem automaticamente, siga os passos seguintes.</p>
+<blockquote><p><strong>ATENÇÃO:</strong> Se você não tem intimidade com o Terminal e o editor vi, faça um favor a si mesmo(a) e pare de ler aqui. Não me responsabilizo se você estragar algo em seu sistema.</p></blockquote>
+<h3>Passo 1</h3>
+<p>As partições indesejadas devem estar montadas. Conecte o HD externo e espere que todas apareçam no Finder.</p>
+<h3>Passo 2</h3>
+<p>Obtenha o UUID (número de identificação) da partição que você <strong>não</strong> quer que seja montada automaticamente. É simples. Basta informar ao diskutil a pasta da partição, dentro do /Volumes, e pescar a linha com o UUID.</p>
+<pre>$ diskutil info /Volumes/becape | grep UUID
+Volume UUID:              61B7A219-6CC4-33C0-B521-CE04ADE6F780
+$</pre>
+<h3>Passo 3</h3>
+<p>Use o comando “vifs” para entrar na configuração do sistema (/etc/fstab).</p>
+<pre>$ sudo vifs</pre>
+<p><a href="http://aurelio.net/wp/wp-content/uploads/2010/07/fstab-vazio.png"><img class="aligncenter size-medium wp-image-1241" title="fstab-vazio" src="http://aurelio.net/wp/wp-content/uploads/2010/07/fstab-vazio.png" alt="" width="450" height="329" /></a></p>
+<blockquote><p>Você também pode editar diretamente o arquivo /etc/fstab <strong>se REALMENTE souber o que está fazendo</strong>. Não aconselho.</p></blockquote>
+<h3>Passo 4</h3>
+<p>Adicione uma linha nova no final, no seguinte formato, usando o seu próprio UUID:</p>
+<pre>UUID=61B7A219-6CC4-33C0-B521-CE04ADE6F780       none    hfs     rw,noauto</pre>
+<blockquote><p>Nota: Se sua partição estiver no formato do Windows (FAT32), troque <code>hfs</code> por <code>msdos</code>.</p></blockquote>
+<p>Certifique-se que você usou TABs e não espaços em branco para separar os campos. As cores das palavras devem ficar exatamente iguais às da foto seguinte. Se aparecer algo em vermelho, há algum erro e você deve arrumá-lo antes de salvar.</p>
+<p><a href="http://aurelio.net/wp/wp-content/uploads/2010/07/fstab-ok.png"><img class="aligncenter size-medium wp-image-1240" title="fstab-ok" src="http://aurelio.net/wp/wp-content/uploads/2010/07/fstab-ok.png" alt="" width="450" /></a></p>
+<h3>Passo 5</h3>
+<p>Conferiu? Tá tudo certo? Então, salve o arquivo e saia do editor. Você sabe, <code>:wq</code>.</p>
+<h3>Passo 6</h3>
+<p>Hora de ver se funcionou:</p>
+<ol>
+<li>Ejete o HD externo no Finder</li>
+<li>Remova o cabo USB</li>
+<li>Espere 3 segundos</li>
+<li>Recoloque o cabo USB</li>
+</ol>
+<p>Se tudo deu certo, seu disco será montado e aparecerão todas as partições, exceto aquela que você acabou de configurar. Está pronto.</p>
+<p>Repita estes passos para todas as partições que você quer desativar a montagem automática.</p>
+<h3>Detalhes</h3>
+<ul>
+<li>Para montar uma partição que você desativou, use o aplicativo Utilitário de Disco (ou Disk Utility, em inglês).
+<pre>$ open /Applications/Utilities/Disk\ Utility.app</pre>
+</li>
+<li>Se não conseguir encontrar o UUID de sua partição, pode colocar o nome dela, no formato LABEL=nome, exemplo:
+<pre><strong>LABEL=WINDOWS</strong>   none    msdos   rw,noauto</pre>
+</li>
+<li>Se tiver espaços em branco no nome de sua partição, use <code>\040</code> em seu lugar. Por exemplo, se a partição chama-se “MS Windows XP”, faça
+<pre>LABEL=MS<strong>\040</strong>Windows<strong>\040</strong>XP   none    msdos   rw,noauto</pre>
+</li>
+</ul>

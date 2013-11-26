@@ -1,0 +1,88 @@
+---
+author: aurelio
+layout: wordpress
+slug: a-nova-geracao-das-funcoes-zz
+title: A nova geração das Funções ZZ
+wordpress_id: 307
+categories:
+- livro
+- software
+tags:
+- Funções ZZ
+- programação
+- Shell Script
+- Shell Script Profissional
+- UTF-8
+prev_title: "Começando 2008…"
+prev_url: http://aurelio.net/blog/2008/03/03/comecando-2008/
+next_title: "Leitor, mostre a sua cara (Gravatar)"
+next_url: http://aurelio.net/blog/2008/03/12/leitor-mostre-a-sua-cara-gravatar/
+shortlink: http://wp.me/p1ABFN-4X
+---
+
+
+
+												<p>Sabe as <a href="http://funcoeszz.net">Funções ZZ</a>? É um programinha que criei em fevereiro de 2000. Ele faz um monte de coisas, como gerar senhas, gerar e validar CPF/CNPJ, buscar notícias na Internet, obter o resultado da Mega-Sena, consultar a Wikipédia, pesquisar no Google, traduzir textos, … Enfim. <a href="http://funcoeszz.net/todas.html">Faz um monte de coisas</a> :)</p>
+<p>Mês passado este programa completou oito anos de existência. Oito anos… Nem eu acredito. É, estou ficando velho…</p>
+<p>Preocupações senis à parte, as funções resistiram bravamente à obsolescência, durante tantos anos, por causa dos usuários. Se poucas pessoas o utilizassem, este programa já teria sido aposentado. Mas como há bastante usuários ativos que escrevem agradecendo, dando idéias e apontando problemas, isso é um incentivo para continuar.</p>
+<p>Mesmo assim, não é fácil. Dá muito trabalho manter tudo atualizado e funcionando, pois são mais de 60 funções (miniprogramas) diferentes para cuidar. O <a href="http://thobias.org">Thobias</a> entrou em 2003 para me ajudar, mas mesmo programando em dupla, é uma carga pesada. Com uma média vergonhosa de uma versão nova por ano, <a href="http://aurelio.net/blog/2006/11/14/zz-ao-vivo-um-concerto-de-1010-dedos/">2006</a> e <a href="http://aurelio.net/blog/2007/07/17/funcoes-zz-versao-77/">2007</a> passaram lentos para as Funções ZZ.</p>
+<p>Grande parte dessa dificuldade na manutenção deve-se a uma “brilhante” idéia deste ser que vos escreve. Desde o início, resolvi fazer do código-fonte algo, digamos, compacto. Veja um exemplo:</p>
+<pre>zztrocaarquivos(){ zzzz -z $1 zztrocaarquivos &amp;&amp; return
+[ "$2" ] || { echo 'uso: zztrocaarquivos arquivo1 arquivo2'; return; }
+local at="$ZZTMP.$$"; cat "$2" &gt; $at; cat "$1" &gt; "$2"; cat "$at" &gt; "$1"
+rm $at; echo "feito: $1 &lt;-&gt; $2"
+}</pre>
+<p>A função zztrocaarquivos serve para trocar dois arquivos de lugar. Mas eu não precisava dizer, pois isso está claro ali no código-fonte. O que, não entendeu nada? Nem eu :)</p>
+<p>Agora imagine mais de 60 monstrinhos do naipe desse, só que maiores e mais complexos. Assim fica fácil perceber o quão trabalhoso era fazer qualquer alteração no código. Era preciso atenção tripla para encontrar exatamente onde e o quê alterar.</p>
+<p>Percebemos tarde que isso era um problema. Eu explico. Existe uma época na vida do programador, quando ele ainda é um aprendiz-<a href="http://pt.starwars.wikia.com/wiki/Padawan">padawan</a>, em que códigos feios, grudados e incompreensíveis são “legais”. Há um prazer narcisista quando alguém olha seu código e diz que não entendeu nada. Você se sente fodão. Felizmente essa fase passa :)</p>
+<p>Mas reconhecer o problema não era suficiente, pois o número exagerado de funções tornava a tarefa de “limpar a casa” algo muito trabalhoso. Era mais fácil continuar com o código porco do que arrumar mais de 60 funções. E assim ficaria, <a href="http://pt.wikipedia.org/wiki/Ad_infinitum">ad infinitum</a>.</p>
+<p>Entra o <a href="http://www.shellscript.com.br">livro de shell</a> na história.</p>
+<p>Estava eu lá por Julho de 2007 escrevendo o mítico livro, argumentando que um código profissional deve ser bem alinhado, limpo, bonito e comentado, para facilitar sua manutenção.</p>
+<blockquote><p>Você já percebeu o que vai acontecer né? :)</p></blockquote>
+<p>De repente, caiu a ficha. Lembrei das ZZ e comecei a sentir vergonha. Que moral eu tenho para falar em código bonito se meu programa mais conhecido pelos shelleiros tem um <a href="http://funcoeszz.net/passado/funcoeszz-7.7">código sopa-de-letrinhas</a>? Casa de ferreiro…</p>
+<p>Fui obrigado a resolver de vez o problema. Parei a escrita do livro e fiquei vários dias trabalhando no código das funções, reformatando, alinhando, colocando comentários, melhorando os nomes de variáveis, trocando algoritmos enigmáticos por versões simplificadas. Enfim, aquela reforma geral bonita de ver, de desmontar o jipe até os chassis, não sobrando nenhum parafuso no lugar.</p>
+<p>Veja como ficou a zztrocaarquivos depois da reforma:</p>
+<pre>zztrocaarquivos ()
+{
+	zzzz -h trocaarquivos $1 &amp;&amp; return
+
+	# Um terceiro arquivo é usado para fazer a troca
+	local tmp="$ZZTMP.trocaarquivos.$$"
+
+	# Verificação dos parâmetros
+	[ "$#" -eq 2 ] || { zztool uso trocaarquivos; return; }
+
+	# Verifica se os arquivos existem
+	zztool arquivo_legivel "$1" || return
+	zztool arquivo_legivel "$2" || return
+
+	# Tiro no pé? Não, obrigado
+	[ "$1" = "$2" ] &amp;&amp; return
+
+	# A dança das cadeiras
+	cat "$2"   &gt; "$tmp"
+	cat "$1"   &gt; "$2"
+	cat "$tmp" &gt; "$1"
+
+	# E foi
+	rm "$tmp"
+	echo "Feito: $1 &lt;-&gt; $2"
+}</pre>
+<p>Volte um pouco o texto e veja a versão antiga. Não tem nem como comparar, né?</p>
+<p>A versão nova está fácil de ler, entender e alterar. Cada trecho está claramente identificado e separado dos demais. Comentários em português esclarecem o código em shell. Se der algum problema, será fácil encontrar o ponto certo para alterar.</p>
+<p>Ainda teve outra vantagem: vários problemas (bugs) com as funções apareceram durante o processo. Eram exceções que estavam escondidas no código feio, difíceis de perceber, mas na limpeza apareceram e puderam ser corrigidos. Código limpo é outro nível. Agora eu aprendi, tá? :)</p>
+<blockquote><p>Eu não devia contar para não estragar a surpresa, mas não me agüento… Outro benefício dessa reforma foi que, agora com o código legível, é possível entender como fazer algumas tarefas avançadas em shell script. A experiência leva ao aprimoramento, então há muitas pérolas por ali. Não confundir com <a href="http://aurelio.net/doc/misc/eu_odeio_perl.txt">perl</a>. Então, há um capítulo inteiro do <a href="http://www.shellscript.com.br">livro de shell</a> dedicado a esmiuçar estas pérolas do código das ZZ. A mágica foi explicada :)</p></blockquote>
+<p>Já que o código não é mais intimidador, esperamos também receber mais contribuições de outros programadores. Se você encontrou algum problema ou quer uma opção nova, que tal dar uma olhadinha no código? Ficou mais fácil modificar as funções. Só não se esqueça de nos enviar as melhorias para que todos os usuários possam usufruir delas!</p>
+<p>E último, porém não menos importante, agora o código das funções também é uma excelente fonte de estudo para quem quer aprender <a href="http://aurelio.net/shell/">shell script</a>. Se um exemplo vale mais do que mil man pages, ali você tem dezenas de miniprogramas prontos para serem estudados e dominados. Curte shell? Então não deixe de conferir a <a href="http://funcoeszz.net/funcoeszz">versão nova 8.3 das Funções ZZ</a>!</p>
+<p>Este lançamento marca uma nova fase das funções. Além do código refeito, outras novidades marcantes são:</p>
+<ul>
+<li> <strong>Migração definitiva para a codificação UTF-8.</strong> Somos conservadores e esperamos bastante tempo para abandonar o bom e velho ISO-8859-1, mas agora foi. Porém, ainda disponibilizamos uma versão especial para quem tem sistemas mais antigos, para não deixar ninguém na mão.</li>
+<li><strong>Funcionamento garantido.</strong> Foi criada uma suíte de testes automatizada que conta com 587 verificações, fazendo um controle de qualidade rigoroso nas funções. Uma <a href="http://funcoeszz.net/equipe.html">equipe de voluntários</a> roda estes testes em diversos sistemas, ajudando a encontrar e resolver problemas. As funções que não puderam ser arrumadas foram removidas, para evitar a frustração do usuário.</li>
+<li>Há duas funções novas. A <strong>zzbyte</strong> serve para fazer conversões entre grandezas de bits, na escala de byte até yota. Quantos bytes têm em 2 mega? São 2097152. A <strong>zztool</strong> é uma miniferramenta que serve para validação de textos e arquivos. Por exemplo, “zztool testa_ip” verifica se o texto informado é um número IP.</li>
+<li> Há uma <a href="http://funcoeszz.net/changelog.html">loooooooonga lista de melhorias</a>, se você quiser saber exatamente o que mudou desde a última versão. Mas prepare-se, pois cansa :)</li>
+</ul>
+<p>Para completar o pacote de grandes mudanças, o <a href="http://funcoeszz.net">site das Funções ZZ</a> também foi reformado, contando agora com um formato mais intuitivo e fácil de encontrar as informações.</p>
+<ul>
+<li> Se você já usa as funções, <a href="http://funcoeszz.net/funcoeszz">atualize agora</a>! Garanto que você não vai se arrepender.</li>
+<li>Se nunca usou, que tal <a href="http://funcoeszz.net">visitar o site</a> agora para conhecê-las? Deve ter alguma função lá que lhe seja útil.</li>
+</ul>

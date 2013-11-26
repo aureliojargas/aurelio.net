@@ -1,0 +1,71 @@
+---
+author: aurelio
+layout: wordpress
+slug: video-aula-expressoes-regulares-quantificadores-gulosos
+title: 'Vídeo-aula: Expressões Regulares - Quantificadores Gulosos'
+wordpress_id: 3420
+categories:
+- nerd
+- screencast
+tags:
+- Expressões Regulares
+- livro
+- piazinho
+- tutorial
+- Vídeo
+prev_title: "iStat Menus 2 (gratuito) funcionando no Mac OS X Lion"
+prev_url: http://aurelio.net/blog/2011/10/27/istat-menus-2-gratuito-funcionando-no-mac-os-x-lion/
+next_title: "CSS Sprites na prática: o carregamento da página caiu de 40s para 8s!"
+next_url: http://aurelio.net/blog/2011/12/05/css-sprites-na-pratica/
+shortlink: http://wp.me/p1ABFN-Ta
+---
+
+
+
+												<p>Já faz um bom tempo, anos até, que eu marquei aqui na minha interminável (e sempre crescente) lista de tarefas o item “vídeo tutorial regex”. A ideia era fazer vários pequenos vídeos, cada um explicando um conceito, ou um metacaractere das <a href="http://aurelio.net/regex/">expressões regulares</a>.</p>
+<p>Mas tá. Eu anotei e ali ficou, esquecido.</p>
+<p>Dias atrás, pesquisando sobre SQL para tentar compor uma query cabeluda (para os meus padrões de aprendiz), acabei caindo <a href="http://www.youtube.com/watch?v=M3Dj6UWDj-4">num vídeo do YouTube</a> que explicou e demonstrou de maneira muito clara e simples a diferença entre os tipos de JOIN: INNER, CROSS, LEFT, RIGHT e FULL.</p>
+<p>Nestes anos de nerdice eu já li muita documentação técnica sobre SQL e seus comandos, mas foi <strong>um simples vídeo de 9 minutos</strong> que me fez ver a luz e entender bem a diferença dos JOINs. Não que o vídeo te ensine a compor uma query, mas dá aquela visão geral de como funciona. Sem entrar em detalhes, sem exceções, sem casos especiais. Em outras palavras, ele te mostra o mapa e você faz teu próprio caminho.</p>
+<p>Após ver o vídeo, ainda sentindo aquela satisfação de ter finalmente entendido algo que era confuso na cabeça, fiquei com vontade de fazer o mesmo: <strong>criar um vídeo que esclarecesse dúvidas</strong>. Então lembrei da minha “dívida” lá na minha lista de tarefas: os vídeos de expressões regulares.</p>
+<p>Não sei se isso vai ser uma série, ou se vou logo enjoar e mudar de assunto (bem provável), mas aqui está a minha primeira tentativa de esclarecer dúvidas em regex:</p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent' frameborder='0'></iframe></span></p>
+<p>EXPRESSÕES REGULARES – Quantificadores Gulosos (<a href="http://www.youtube.com/watch?v=0O2yQgRXnLU">YouTube</a>)</p>
+<p>Iniciantes, me desculpem, mas <strong>este é um vídeo para quem já sabe usar expressões regulares</strong>. Ele demonstra (usando o <a href="http://regexpal.com/">RegexPal</a>) os conceitos de “guloso” e “não-guloso”, em relação ao comportamento dos metacaracteres quantificadores. O guloso casa tudo o que puder, enquanto o não-guloso casa o mínimo possível. Porém ambos são forçados a ceder para validar a expressão.</p>
+<p>Vou colar aqui a tabela mostrada no vídeo:</p>
+<pre>Guloso   Não-guloso  Quantidade
+---------------------------------------
+*        *?          zero ou mais
++        +?          um ou mais
+?        ??          zero ou um
+{n,m}    {n,m}?      mínimo N, máximo M</pre>
+<p>Bem, pra registrar, vou colar aqui também o histórico de expressões utilizadas:</p>
+<pre>^um
+^um.*
+^um.*i
+^um.*is
+
+^um.*?
+^um.*?i
+^um.*?in
+
+^um.+
+^um.+?
+^um.+?i
+^um.+?in
+
+^um, do?
+^um, do??
+^um, do??is
+
+^.{3,15}
+^.{3,15}?
+^.{3,15}?t
+^.{3,15}?trê</pre>
+<p>Se você tem <a href="http://www.piazinho.com.br">o livro do piazinho</a>, o vídeo demonstra o que está explicado no Capítulo 3, tópicos “Quantificadores gulosos” e “Quantificadores não-gulosos”. Estes tópicos também estão na versão online (gratuita) do livro:</p>
+<ul>
+<li><a href="http://aurelio.net/regex/guia/quantificadores-gulosos.html">http://aurelio.net/regex/guia/quantificadores-gulosos.html</a></li>
+<li><a href="http://aurelio.net/regex/guia/quantificadores-nao-gulosos.html">http://aurelio.net/regex/guia/quantificadores-nao-gulosos.html</a></li>
+</ul>
+<p><strong>Se você gostou do vídeo</strong>, <a href="http://www.youtube.com/watch?v=0O2yQgRXnLU">vai lá no YouTube e deixa um joinha</a>. E se quiser me ajudar a melhorar os próximos vídeos, deixe um comentário com a sua opinião. Pode ser aqui no blog ou lá no YouTube mesmo. Ainda não me decidi qual o melhor lugar pra estes vídeos.</p>
+<p><strong>Se você não gostou do vídeo</strong>, aí o seu comentário é obriatório, pois tenho total interesse em melhorar as falhas!</p>
+<blockquote><p>Nota: Este foi mais um vídeo da série SEM: sem ensaio, sem cortes, sem edição :)</p></blockquote>

@@ -1,0 +1,95 @@
+---
+author: aurelio
+layout: wordpress
+slug: uma-coisa-leva-a-outra
+title: Uma coisa leva a outra
+wordpress_id: 325
+categories:
+- meu-querido-diario
+tags:
+- Dicas-L
+- FeedBurner
+- livro
+- Mog
+- programação
+- Python
+- RSS
+- TextMate
+- txt2tags
+- UTF-8
+- Webstandards
+prev_title: "A Mog foi no FISL"
+prev_url: http://aurelio.net/blog/2008/04/22/a-mog-foi-no-fisl/
+next_title: "Não sei fazer barquinho de papel"
+next_url: http://aurelio.net/blog/2008/05/19/nao-sei-fazer-barquinho-de-papel/
+shortlink: http://wp.me/p1ABFN-5f
+---
+
+
+
+												<p>A seguir, duas historinhas recentes que mostram um pouco da minha rotina de trabalho. Minha “metodologia” é meio caótica e sem planejamento, com direito a mudança de rumo no meio da tarefa. Mas no final dá certo. E o mais importante: é divertido :)</p>
+<h3>Da fadiga ao Python</h3>
+<ul>
+<li><strong>(Fadiga)</strong> Essa aconteceu na semana passada. Eu estava no computador e tinha acabado de terminar uma tarefa qualquer, que consumiu algumas horas de meu tempo, fatigando meus pobres neurônios. Pude aproveitar então aquele momento mágico, onde o universo pára por uns 10 segundos e numa respirada profunda consigo relaxar com a satisfação de ter mais um trabalho concluído.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Caderninho)</strong> Como de costume, peguei o meu caderninho de anotações (ou seria obrigações?) e risquei com vontade o famigerado item. Essa é a melhor parte de qualquer trabalho: <del>riscar o item da lista</del>. Foi-se. Acabou. Tchau. Próximo! E já começa tudo novamente, sem pausa, pois a lista é enorme e todo dia ganha vários itens novos. Com a cabeça cansada, queria fazer algo leve dessa vez, algo que não exigisse muita concentração. Algum trabalho de criação e não manutenção. Vasculhando as folhas do caderninho, encontrei um item ainda não rabiscado, que tantas vezes eu já tinha lido e ignorado por haver coisas mais importantes na fila: “<a href="http://aurelio.net">aurelio.net</a> novo”.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Site novo)</strong> Há tempos eu queria mudar <a href="http://aurelio.net/blog/2006/12/23/site-novo-de-novo/">o formato do site</a>, tirar a barrona verdona, deixar o menu mais evidente, colocar <a href="http://pt.wikipedia.org/wiki/Navegação_estrutural">breadcrumb</a> e usar mais figurinhas. É isso, vou fazer. Foram horas de mastur^W, digo, experimentações com <a href="http://pt.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> e <a href="http://txt2tags.org/pt/">txt2tags</a> até chegar em um formato que me agradou. Gosto muito dessa parte da criação, nunca tenho na cabeça o formato final, ele “vai aparecendo” conforme vou mudando as coisas e vendo como fica. Tentativa e erro, como na programação.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(SMS Mog)</strong> Fui dormir satisfeito e no dia seguinte mandei um SMS para a Mog, dizendo que tinha mudado o site de verde para cinza. Ela ficou feliz com a notícia, mas retrucou zoando que eu estava muito “dezáiner” com esse lance de cinza. Essa simples frase me fez pensar. Realmente eu sempre acabo caindo no cinza.  Coisa de quem não tem talento com cores, fazer o quê…</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Site novo kiwi)</strong> Ela nem imaginava, mas sua frase tinha feito uma revolução no meu dia. Mudei tudo de novo. Do gélido tons-de-cinza, o site voltou a ser verdinho, porém não tão carregado quanto o anterior. O menu pulou da esquerda para a direita, os títulos ficaram em grande evidência e o tema ganhou um nome: <a href="http://aurelio.net/include/kiwi/">kiwi</a>.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Mágicas com txt2tags)</strong> Definido o formato novo, comecei a migrar as páginas para ele. Uso o txt2tags em todo o site, então não precisei editar nenhum conteúdo. Porém os filtros (<a href="http://txt2tags.org/userguide/preproc.html">%!preproc</a> e <a href="http://txt2tags.org/userguide/postproc.html">%!postproc</a>) e includes (<a href="http://txt2tags.org/userguide/includecommand.html">%!include</a> e <a href="http://txt2tags.org/userguide/includeconfcommand.html">%!includeconf</a>) precisaram ser revistos, pois é ali que a mágica acontece. A transformação do H3 do cabeçalho (<a href="http://txt2tags.org/userguide/infile.html">%%infile(%d)</a>) em breadcrumb com links foi especialmente prazerosa de fazer. Também fiz um <a href="http://aurelio.net/include/kiwi/database.t2t">database.t2t</a> com macros para os dados (nome, URL, ícone) dos programas, livros e artigos importantes do site, padronizando as coisas.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(UTF-8)</strong> Já que estava fazendo uma reforma geral, também decidi converter tudo para <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a>. É o tipo da coisa que você evita ao máximo fazer, mas um dia tem que ser. O bom e velho <a href="http://en.wikipedia.org/wiki/ISO-8859-1">ISO-8859-1</a> já tinha agüentado quase uma década no site, foi uma aposentadoria merecida.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(HTMLDOC)</strong> Tudo ia bem na conversão, <a href="http://www.ataliba.eti.br/node/1341">iconv</a> comendo solto, até chegar na <a href="http://aurelio.net/regex/guia/">versão online no Guia Expressões Regulares</a>. Os fontes estão no formato do txt2tags, que os converte para HTML. Depois uso o <a href="http://www.htmldoc.org">HTMLDOC</a> para dividir o HTMLão monstro em várias páginas separadas, facilitando a leitura online. Mas havia um pequeno detalhe: o HTMLDOC não gosta de UTF-8. Ele bagunçou todos os acentos, tornando o guia uma sopa de símbolos indigestos.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Programa Python)</strong> Pesquisei no Google para descobrir que não havia o que ser feito, ele <a href="http://www.easysw.com/htmldoc/faq.php?27#27">não tinha suporte a UTF-8</a> e pronto. Eu podia voltar atrás e deixar o guia como ISO-8859-1 mesmo, como ele sempre foi desde 2001, afinal, quem se importa? Infelizmente, eu me importo. Nerd é uma m*rda. Não sei se foi por desafio, perfeccionismo ou teimosia, mas parei todo o trabalho no site para ir resolver esse problema. Três horas depois, estava pronto o <a href="http://aurelio.net/bin/python/fix-htmldoc-utf8.py">fix-htmldoc-utf8.py</a>, que é um “arrumador” de acentos bagunçados pelo HTMLDOC. Se você passa pelo mesmo problema, aproveite, é de graça ;)</li>
+</ul>
+<p style="text-align: center;">————————  ♥  ————————</p>
+<h3>Do livro mais vendido ao FeedBurner</h3>
+<ul>
+<li><strong>(Mais vendido)</strong> Essa segunda-feira parecia que iria ser tranqüila, com muita chuva e frio lá fora. Como era início de mês, fui conferir a lista dos Mais Vendidos das livrarias, pois vai que de repente <a href="http://www.shellscript.com.br">o filhote</a> tinha conseguido alguma medalhinha? Euforia é uma boa palavra para descrever o que senti. Olha só: o livro foi o mais vendido da editora Novatec, o <a href="http://www.temporeal.com.br/fislpg01.php">mais vendido no FISL</a> e o <a href="http://www.temporeal.com.br/atemporeal.php">segundo mais vendido da livraria Tempo Real</a>! O piazinho uma única vez <a href="http://aurelio.net/blog/2006/12/29/expressoes-regulares-entre-os-mais-vendidos/">conseguiu ser terceiro na Novatec</a>, mas o primeiro lugar era algo que me parecia inatingível. Para fechar com chave de ouro a manhã de surpresas, meu amigo <a href="http://www.brod.com.br">Cesar Brod</a> publicou <a href="http://www.dicas-l.com.br/brod/brod_20080505.php">um texto sobre mim em sua coluna</a> no portal Dicas-L. Além do livro, ele ainda falou de Matinhos e da Mog. Diz se não é para explodir de tanta felicidade? :)</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Blog do livro)</strong> Com tantas novidades para contar, na hora comecei a fazer um texto novo aqui para o blog. Mas pensei melhor e achei chato falar de novo sobre o livro, isso está ficando repetitivo repetitivo. Afinal, este é o blog do Aurélio e não o blog do livro do Aurélio. É isso! O livro precisava de um blog. Putz, mas já estou tão sobrecarregado de coisas para cuidar, não tem como abraçar mais um blog (e seus comentários, e spam, e configuração, e estatísticas, e…). Precisava de algo rápido que fosse somente: escrever a notícia, colocar no ar e esquecer.</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Feed RSS)</strong> Na verdade eu não precisava de um blog, precisava somente publicar as notícias no <a href="http://www.shellscript.com.br">site do livro</a> e ter um feed RSS delas para quem quiser assinar. Parece simples, não? Criei um arquivo noticias.t2t e coloquei as notícias ali. Com um %!include no index.t2t as notícias ficaram integradas ao site, aparecendo na página principal. Tá, isso foi fácil. Mas e o <a href="http://pt.wikipedia.org/wiki/Feed">feed</a>? Como converter minhas notícias do <a href="http://pt.wikipedia.org/wiki/HTML">HTML</a> para o <a href="http://pt.wikipedia.org/wiki/RSS">RSS</a>? Eu poderia fazer um <a href="http://aurelio.net/sed/">Sed</a> macho que… Espera! O próprio txt2tags pode fazer isso!</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(txt2tags -t rss)</strong> Parece óbvio agora, mas demorou para cair minha ficha. A proposta do txt2tags é “UM arquivo fonte, VÁRIOS destinos”. Eu já tinha o arquivo fonte noticias.t2t, então só precisava que o txt2tags o convertesse para um formato novo: RSS. Janela nova no <a href="http://macromates.com/">TextMate</a> e lá vamos nós de novo, brincar de programador. Levou uma hora e meia para adaptar o txt2tags para gerar um arquivo <a href="http://cyber.law.harvard.edu/rss/rss.html">RSS versão 2.0</a>. Foi uma edição porca e descuidada, para resolver logo meu problema. No futuro talvez esse código seja melhorado e entre na versão oficial do programa. Mas sabe como é, o caderninho já está bem lotado…</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(Site com várias páginas)</strong> Tudo bem, as notícias estavam no site e eu tinha um feed RSS tosco (porém funcional) delas. Mas como eram várias, o site ficou muito poluído. Era preciso ter uma página somente com as notícias, separado da página inicial. Até então todo o site do livro era concentrado em uma única página, facilitando minha vida. No fundo eu sabia que isso não duraria muito, mas foi o triunfo da esperança sobre a experiência. Não teve jeito, tive que quebrar o site em várias páginas. E com isso fazer um menu de navegação, cabeçalho e rodapé padrão, criar DIVs, entupir o CSS, blábláblá…</li>
+</ul>
+<div style="text-align: center;">↓</div>
+<ul>
+<li><strong>(FeedBurner)</strong> Depois dessa festa de RSS, txt2tags e CSS, <a href="http://www.shellscript.com.br">coloquei o site no ar</a> e relaxei. Mais um trabalho terminado. Opa, quase esqueci, deixa eu adicionar o feed do livro aqui na minha lista do Safari. Beleza, tudo certo. Bem, já que estou aqui, deixa eu adicionar no Google Reader também, que todo mundo usa, só para garantir que está tudo bem com meu RSS feito em casa. <a title="Barulhinho do ICQ" href="http://aurelio.net/o-ou.wav">Ó-ou</a>. O barulhinho do ICQ tocou internamente em minha cabeça. O Google não curtiu meu RSS. Pesquisando sobre o assunto, a solução mais indicada era usar o tal <a href="http://www.feedburner.com/">FeedBurner</a> para “arrumar” meu feed para um formato que a maioria dos leitores entende. <a href="http://feeds.feedburner.com/ShellScriptProfissional">Usei</a>, resolveu meu problema e recomendo.</li>
+</ul>
+<p>Enfim, agora posso relaxar…<br />
+1, 2, 3, 4, 5.<br />
+Ok, próximo item?<br />
+;)</p>

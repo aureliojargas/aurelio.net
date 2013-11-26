@@ -1,0 +1,51 @@
+---
+author: aurelio
+layout: wordpress
+slug: teu-mailapp-esta-lento-vacuum-nele
+title: Teu Mail.app está lento? Vacuum nele!
+wordpress_id: 197
+categories:
+- nerd
+tags:
+- Mac OS X
+- Mail.app
+- sqlite
+prev_title: "Rápido! Rápido!"
+prev_url: http://aurelio.net/blog/2007/02/28/rapido-rapido/
+next_title: "O amanhecer de uma idéia"
+next_url: http://aurelio.net/blog/2007/03/15/o-amanhecer-de-uma-ideia/
+shortlink: http://wp.me/p1ABFN-3b
+---
+
+
+
+												<p>Essa foi a melhor dica de todos os tempos da última semana:<a href="http://en.wikipedia.org/wiki/Mail_(application)"><img align="right" src="http://aurelio.net/wp/wp-content/uploads/2007/03/mailapp.jpg" alt="Mail.app" height="146" width="157"></a></p>
+<pre>sqlite3 ~/Library/Mail/Envelope\\ Index vacuum</pre>
+<p>Primeiro saia do <a href="http://en.wikipedia.org/wiki/Mail_(application)">Mail</a> (-Q), então abra um Terminal, cole esse comando e aperte a tecla mágica: Enter. Espere alguns segundos até o comando acabar. Podem ser minutos se você tem dezenas de milhares de e-mails. Então abra o Mail novamente e sinta a diferença.</p>
+<blockquote><p>Não é obrigatório, mas os paranóicos podem querer copiar o arquivo <code>Library/Mail/Envelope Index</code> para a Mesa antes de executar o comando, para poder restaurá-lo em caso de problemas. Vai que acaba a luz, né? :)
+</p></blockquote>
+<p>O que este comando faz é uma faxina geral no banco de dados do Mail, organizando tudo. Eu explico: com o tempo de uso, os dados vão ficando sujinhos, coitados. Uns são jogados para um canto escuro para dar lugar a novatos, outros são amontoados. Esse comando chega com o balde e a vassoura e passa o rodo na bagunça. Nenhum dado é apagado, eles são <a href="http://www.sqlite.org/lang_vacuum.html">apenas organizados</a>. Sabe o “Defrag” do Windows? Então.</p>
+<p>O resultado é impressionante.</p>
+<p>Eu tenho uma única conta POP3 com 30 mil mensagens que no decorrer dos anos escaparam arduamente da temível tecla Delete. Como mando e recebo dezenas de e-mails diariamente, o banco de dados do Mail está bem abarrotado, com informações de endereços e assuntos das mensagens. Quanto mais dados, mais bagunça.</p>
+<blockquote><p>Para saber quantas mensagens você tem no total, use esse outro comandinho mágico no Terminal:<br />
+<code>find ~/Library/Mail -name *.emlx | wc -l</code>
+</p></blockquote>
+<p>O resultado é que o Mail ultimamente tinha se tornado um programa pouco responsivo, que demorava para iniciar e acessar pastas grandes, pensando muito em cada pesquisa. Feita a faxina, ele ficou saradão, pronto para ação instantânea. Igualzinho como quando você tinha apenas meia dúzia de e-mails, lembra?</p>
+<p>Vamos aos fatos.</p>
+<ul>
+<li>Antes:
+<ul>
+<li>Envelope Index com 14 MB.</li>
+<li>Ao iniciar o ícone pula 7 vezes no Dock. <em>(leeeeento)</em></li>
+<li>Ao encerrar leva 6 segundos para sair. <em>(carroooooça)</em></li>
+</ul>
+</li>
+<li>Depois:
+<ul>
+<li>Envelope Index com 13 MB. <em>(Ok, baixou pouco)</em></li>
+<li>Ao iniciar o ícone pula 2 vezes no Dock. <em>(Uau!)</em></li>
+<li>Ao encerrar leva meio segundo para sair. <em>(Uau!)</em></li>
+</ul>
+</li>
+</ul>
+<p>Seja mais um entre as <a href="http://www.hawkwings.net/2007/03/01/a-faster-way-to-speed-up-mailapp/">dezenas de ex-sofredores</a> que agora sorriem com um Mail tunado. <strong>Pimp My Mail!</strong></p>

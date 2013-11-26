@@ -1,0 +1,48 @@
+---
+author: aurelio
+layout: wordpress
+slug: salvar-site-como-pdf-no-iphone-ipod-ipad
+title: Salvar site como PDF no iPhone, iPod e iPad
+wordpress_id: 1390
+categories:
+- nerd
+tags:
+- iOS
+- PDF
+prev_title: "Versão nova das Funções ZZ (10.12)"
+prev_url: http://aurelio.net/blog/2010/12/23/versao-nova-das-funcoes-zz-10-12/
+next_title: "Configurar seu Mac para simular uma impressora (PDF-printer)"
+next_url: http://aurelio.net/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/
+shortlink: http://wp.me/p1ABFN-mq
+---
+
+
+
+												<blockquote><p><strong>Atualização:</strong> <a href="http://aurelio.net/blog/2011/02/04/imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint/">Escrevi outro artigo</a> que melhora este esquema, salvando o PDF no seu Mac ou ainda diretamente em seu Dropbox.</p></blockquote>
+<p>Essa dica eu vou escrever logo antes que eu me esqueça.</p>
+<p>No Mac é muito fácil salvar qualquer site como um PDF: basta mandar imprimir e pronto, lá está a opção mágica <strong>Salvar Como PDF</strong>.</p>
+<p>Mas e no iPhone? Como fazer isso?</p>
+<p>A solução barata (leia-se grátis) que encontrei foi criar um Favorito especial, que usa <a href="http://pdfmyurl.com">um site externo</a> para fazer a conversão para PDF, e depois salvo esse PDF no iBooks (<a href="http://support.apple.com/kb/HT4227?viewlocale=pt_BR&amp;locale=pt_BR">requer iOS 4.2</a>). Então tenha em mente que esta solução não funciona quando você estiver offline. Eu sei, isso é raro.</p>
+<p>Então tá, o primeiro passo é criar um Favorito genérico.</p>
+<ul>
+<li>Pegue seu iPhone/iPod/iPad</li>
+<li>Abra o Safari</li>
+<li>Acesse um site qualquer (não importa qual)</li>
+<li>Crie um favorito para ele (Flechinha-saindo-da-caixa &gt; Adicionar Favorito)</li>
+<li>Salve o favorito com o nome “Ver em PDF” ou algo mais elaborado que sua criatividade possa inventar.</li>
+</ul>
+<p>Favorito salvo? Beleza. Então vamos continuar.</p>
+<p>Agora você vai mudar o endereço desse favorito, para adicionar um código secreto mágico que até então era conhecido somente pela mais intelectual elite das comunidades miguxas do Orkut.</p>
+<ul>
+<li>Toque o livrinho para ver seus favoritos</li>
+<li>Encontre esse que você acabou de criar</li>
+<li>Toque o botão Editar</li>
+<li>Toque no favorito</li>
+<li>Toque em seu endereço (o http://…)</li>
+<li>Apague todo o endereço e coloque este código em seu lugar:
+<pre>  javascript:location.href='http://pdfmyurl.com?url='+escape(location.href)</pre>
+</li>
+</ul>
+<p>Pronto!</p>
+<p>Agora quando estiver lendo um site bacana e quiser uma cópia dele em PDF, toque o livrinho e escolha o favorito mágico que acabamos de criar. Em alguns segundos o PDF vai aparecer no Safari. Toque nele para aparecer o botão <strong>Abrir com iBooks</strong>. Tocando este botão, o PDF será salvo em sua biblioteca do iBooks, e agora poderá ser visto inclusive no computador.</p>
+<p>Obrigado ao Google e ao artigo <a href="http://slife.dudeney.com/?p=597">http://slife.dudeney.com/?p=597</a> por me ensinar essa dica.</p>

@@ -1,0 +1,110 @@
+---
+author: aurelio
+layout: wordpress
+slug: funcoes-zz-versao-810
+title: A Saga do Horário de Verão (Funções ZZ versão 8.10)
+wordpress_id: 613
+categories:
+- software
+tags:
+- Funções ZZ
+- programação
+- Shell Script
+prev_title: "1.000 conchinhas vendidas"
+prev_url: http://aurelio.net/blog/2008/10/28/1000-conchinhas-vendidas/
+next_title: "Ajude a escolher o próximo livro"
+next_url: http://aurelio.net/blog/2008/11/04/ajude-a-escolher-o-proximo-livro/
+shortlink: http://wp.me/p1ABFN-9T
+---
+
+
+
+												<p>— Olha… Eu juro que eu só queria fazer a <strong>zzhorariodeverao</strong>.<br />
+— Ahn?<br />
+— É que agora temos uma regra fixa para as datas de início e fim do horário de verão: 3º domingo de outubro e fevereiro.<br />
+— Ah, que fácil!<br />
+— É, mas tem uma pegadinha: quando o 3º domingo de fevereiro for Carnaval, então o término do horário de verão é adiado para o próximo domingo.<br />
+— Que mané.<br />
+— Pois é.<br />
+— Mas daí você fez a zzhorariodeverao então?<br />
+— Fiz.<br />
+— Foi fácil?<br />
+— Foi.<br />
+— Legal.<br />
+— Difícil foi fazer as outras três…<br />
+— Mas hein?<br />
+— É que pra saber em que data cai o 3º domingo de um mês qualquer, primeiro foi preciso fazer a <strong>zzdiadasemana</strong>.<br />
+— Você dá a data e ela te retorna em qual dia da semana vai cair?<br />
+— Isso.<br />
+— Bacana, precisei disso um dia…<br />
+— Eu também, bobeira não ter feito antes.<br />
+— E o lance do Carnaval?<br />
+— É, aí que complicou…<br />
+— Dá pra saber quando vai cair o Carnaval de qualquer ano?<br />
+— Dá. É só você saber quando vai ser a Páscoa. O Carnaval é exatamente 47 dias antes.<br />
+— Ah, que fácil! Aí é só usar a zzdata para fazer: zzdata $pascoa – 47<br />
+— Ahan… (espera pela pergunta inevitável)<br />
+— Ei! E como saber a data da Páscoa se ela também muda todo ano???<br />
+— Pois é, aí que complicou…<br />
+— Tem que consultar o site do Vaticano? :)<br />
+— Não :)<br />
+— Ufa!<br />
+— Descobri que dá pra calcular a data, usando uma fórmula maluca cheia de letrinhas.<br />
+— Então foi preciso fazer a <strong>zzpascoa</strong> para poder ter a <strong>zzcarnaval</strong>, é isso?<br />
+— Siiiiiiiiiiiim<br />
+— E a zzcarnaval você só fez por causa da exceção da regra do horário de verão?<br />
+— Siiiiiiiiiiiim<br />
+— Malditas exceções!<br />
+— Malditas exceções!</p>
+<p style="text-align:center;"><em><span style="color:#999999;">— zZZzzzZzzZZzZzZZzZzzzZZz —</span></em></p>
+<p>Exemplos para este ano:</p>
+<pre>$ <strong>zzcarnaval</strong>
+05/02/2008
+$ <strong>zzpascoa</strong>
+23/03/2008
+$ <strong>zzhorariodeverao</strong>
+19/10/2008
+15/02/2009
+$</pre>
+<p>Exemplos para o ano que vem:</p>
+<pre>$ <strong>zzcarnaval 2009</strong>
+24/02/2009
+$ <strong>zzpascoa 2009</strong>
+12/04/2009
+$ <strong>zzhorariodeverao 2009</strong>
+18/10/2009
+21/02/2010
+$</pre>
+<p>Que dia da semana é hoje?</p>
+<pre>$ <strong>zzdiadasemana</strong>
+sexta-feira</pre>
+<p>Que dia da semana que eu nasci?</p>
+<pre>$ <strong>zzdiadasemana 07/10/1977</strong>
+sexta-feira</pre>
+<p>Que dia da semana vai ser daqui 30 dias?</p>
+<pre>$ <strong>zzdiadasemana $(zzdata hoje + 30)</strong>
+domingo</pre>
+<p style="text-align:center;"><em><span style="color:#999999;">— zZZzzzZzzZZzZzZZzZzzzZZz —</span></em></p>
+<p> A zzajuda ganhou uma opção nova para listar todas as funções, com suas descrições. Agora ficou mais fácil encontrar o que você procura!</p>
+<pre> $ <strong>zzajuda --lista</strong>
+zzajuda         Mostra uma tela de ajuda com explicação e sintaxe de todas as funções
+zzalfabeto      Central de alfabetos (romano, militar, radiotelefônico, OTAN, RAF, etc)
+zzansi2html     Converte para HTML o texto colorido do terminal (códigos ANSI)
+zzarrumanome    Renomeia arquivos do diretório atual, arrumando nomes estranhos
+zzascii         Mostra a tabela ASCII com todos os caracteres imprimíveis (32-126,161-255)
+zzbeep          Aguarda N minutos e dispara uma sirene usando o 'speaker'
+...</pre>
+<p>Esqueceu-se como usa aquela função, ou quer aprender a usar várias de uma só vez? Então a zzajuda tem mais uma opção nova para o seu deleite visual:</p>
+<pre>$ <strong>zzajuda --uso</strong>
+zzajuda [--lista|--uso]
+zzalfabeto [--TIPO] [palavra]
+zzansi2html [arquivo]
+zzarrumanome [-n] [-d] [-r] arquivo(s)
+zzascii [colunas] [largura]
+zzbeep [números]
+...</pre>
+<p style="text-align:center;"><em><span style="color:#999999;">— zZZzzzZzzZZzZzZZzZzzzZZz —</span></em></p>
+<p>Tem coisas que só as <a href="http://funcoeszz.net">Funções ZZ</a> fazem para você :)</p>
+<p>Tá esperando o que?<br />
+<a href="http://funcoeszz.net/download.html"> Vai lá baixar a versão nova agora!</a></p>
+<blockquote><p>Também tem uma GRANDE novidade que é o diretório especial para funções extras, o $ZZEXTRADIR, mas sobre isso eu comento em um texto futuro. É importante demais para ser apenas uma nota de rodapé :)</p></blockquote>

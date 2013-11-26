@@ -1,0 +1,43 @@
+---
+author: aurelio
+layout: wordpress
+slug: css-menu-fixo-porem-liquido
+title: 'CSS: Menu fixo porém líquido'
+wordpress_id: 69
+tags:
+- Webstandards
+prev_title: "Dogtown versão Carveboard"
+prev_url: http://aurelio.net/blog/2006/06/20/dogtown-versao-carveboard/
+next_title: "MoneyLog Experience – Finanças descomplicadas"
+next_url: http://aurelio.net/blog/2006/07/08/moneylog-experience/
+shortlink: http://wp.me/p1ABFN-17
+---
+
+
+
+												<p>Esses dias fui consertar o leiaute do <a href="http://correria.org">site da banda</a> e finalmente consegui deixar o menu como eu queria, “fixo porém líquido”.</p>
+<p><strong>Fixo</strong> porque não muda sua largura se a janela for redimensionada. <strong>Líquido</strong> porque muda sua largura se o tamanho do texto for alterado.</p>
+<p>Tanto faz se o menu lateral do seu site é colocado à esquerda ou à direita, mas geralmente ele é uma faixa estreita, deixando o espaço restante para o conteúdo do site.</p>
+<div class="wp-caption aligncenter" style="width: 401px"><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/menu-fixo-liquido-ok.png" alt="Menu Fixo Liquido" width="391" height="98" /><p class="wp-caption-text">Exemplo de menu lateral à esquerda</p></div>
+<p>Um desafio a se resolver é deixar o menu sempre o mais estreito possível, porém maleável a ponto de não sobrarem espaços nem espremer o texto, fazendo-no quebrar linhas ou vazar para fora do menu, <strong>independente do tamanho do texto ou da janela</strong>.</p>
+<p>Notou a ênfase no final da frase? Esse é o ponto-chave que vai dizer se seu site é um bloco de concreto imutável que impõe seu formato ao usuário ou se ele é uma estrutura maleável que deixa o usuário livre para usar o texto e a janela no tamanho que preferir. Lembre-se: um dia você vai ser idoso e não vai ler com facilidade essas letrinhas minúsculas.</p>
+<p>As regras do jogo:</p>
+<ol>
+<li>Se o usuário mudar o tamanho ou tipo da fonte, o menu deve <strong>encolher ou esticar</strong> a sua largura, acompanhando o novo tamanho do texto. O conteúdo do site se acomoda no espaço que sobrar.</li>
+<li>Se o usuário mudar o tamanho da janela, o menu <strong>não muda</strong>, o que vai diminuir/aumentar é a área do conteúdo.</li>
+</ol>
+<p>Para deixar menu e conteúdo lado a lado, tem que usar o float. Quando usa float, é necessário definir uma largura para o bloco. Aí é a pegadinha. Para que tudo estique do “jeito certo”, no menu essa largura deve ser proporcional ao tamanho do <strong>texto</strong> e no conteúdo proporcional ao tamanho da <strong>janela</strong>.</p>
+<p>Parece complicado né? Mas tem uma dica ninja para simplificar o problema.</p>
+<p>O normal é definir <code>float:left</code> para o menu e <code>float:right</code> para o conteúdo, jogando um para cada lado. Também é necessário definir a largura de ambos e aí reside o problema. Ao invés disso, a espadada certeira é jogar apenas o menu para a esquerda e definir sua largura, deixando que o navegador acomode o conteúdo automaticamente, no espaço que restar. Para garantir o alinhamento, o conteúdo ganha uma margem esquerda um pouco maior que a largura do menu.</p>
+<p>Então a única incógnita que restou é a largura do menu. As opções:</p>
+<h2>Menu com largura fixa (em pixels)</h2>
+<p>A mais pobre das alternativas e a que parece ser a preferida dos webdesigners com mentalidade “anos 90”. Você diz que teu menu vai ter uma largura fixa de 100 pixels e pronto. Como é fixa, se o usuário mudar o tamanho ou tipo da fonte, lascou. Se o texto for diminuído, vai sobrar muito espaço em branco nas laterais do menu. Se o texto for aumentado, vai quebrar a linha ou vai vazar para fora do menu e se misturar com o conteúdo. Mais amador impossível.</p>
+<div class="wp-caption aligncenter" style="width: 400px"><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/menu-fixo-liquido-pixel.png" alt="Menu Fixo Liquido Pixel" width="390" height="147" /><p class="wp-caption-text">Menu com texto vazado e quebrado</p></div>
+<h2>Menu com largura proporcional à janela (em %)</h2>
+<p>Ok, não pode deixar fixo. Então você vai lá e tasca um <code>width:20%</code>. Parece correto, não? Que nada. Com uma combinação de fonte grande e janela pequena, sofre dos mesmos problemas de quebra e vazamento que ocorrem na largura fixa. Com uma janela grande, o menu cresce proporcionalmente, ocupando mais espaço do que deveria…</p>
+<div class="wp-caption aligncenter" style="width: 400px"><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/menu-fixo-liquido-percent.png" alt="Menu Fixo Liquido Porcento" width="390" height="43" /><p class="wp-caption-text">Menu muito largo, sobrando espaço</p></div>
+<h2>Menu com largura proporcional ao texto (em EM)</h2>
+<p>A solução é definir a largura usando uma unidade de medida que varie conforme o tamanho do texto. Ela existe e se chama EM. Então use algo como <code>width:9em</code>. Vá mudando o valor de EMs até chegar na largura desejada. Agora aumente e diminua a fonte e veja como o menu acompanha esta mudança.</p>
+<div class="wp-caption aligncenter" style="width: 400px"><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/menu-fixo-liquido-em.png" alt="Menu Fixo Liquido EM" width="390" height="180" /><p class="wp-caption-text">Menu continua normal mesmo com janela pequena e fonte grande</p></div>
+<blockquote><p>O “em” significa “eme” em inglês. Eme, você sabe, a letra M do alfabeto. Assim, a medida <strong>4em</strong> é o espaço ocupado por quatro emes seguidos: <strong>MMMM</strong>. Então se você aumentar o texto, o tamanho da letra eme vai aumentar, logo a medida 4em vai aumentar também.</p></blockquote>
+<p>Coloquei uma <a href="http://aurelio.net/web/menu-fixo-liquido.html">página de testes</a> no meu site, para que você possa ver estes conceitos “ao vivo”. Mude o tamanho da janela, aumente e diminua a fonte e veja como cada alternativa se comporta. Depois veja o código fonte da página para aprender como implementá-los.</p>

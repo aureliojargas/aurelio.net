@@ -1,0 +1,44 @@
+---
+author: aurelio
+layout: wordpress
+slug: como-excluir-uma-subpasta-do-dropbox-no-servidor-mantendo-a-copia-local
+title: Como excluir uma subpasta do Dropbox (no servidor), mantendo a cópia local
+wordpress_id: 1437
+categories:
+- nerd
+tags:
+- Dropbox
+- iOS
+- iTunes
+prev_title: "Em regex, nem sempre menos é mais"
+prev_url: http://aurelio.net/blog/2011/02/10/em-regex-nem-sempre-menos-e-mais/
+next_title: "Migração do meu site: SourceForge → DreamHost"
+next_url: http://aurelio.net/blog/2011/03/24/migracao-do-meu-site-sourceforge-dreamhost/
+shortlink: http://wp.me/p1ABFN-nb
+---
+
+
+
+												<p>A versão 1.0 do <a href="http://aurelio.net/dropbox">Dropbox</a> trouxe uma opção há muito tempo desejada pelos usuários, que é poder excluir uma ou mais pastas da sincronização .</p>
+<p>Chamada <a href="https://www.dropbox.com/help/175">Selective Sync</a>, é útil para deixar sua pasta do Dropbox mais diet em determinadas máquinas. Por exemplo, em sua máquina de casa você usa o Dropbox completo, com todos os seus arquivos. Já no notebook da empresa, você pode querer somente seus documentos, mas não as músicas e fotos. Então neste notebook você desmarca as pastas indesejadas e o Dropbox não vai baixá-las.</p>
+<p>Mas o que eu queria mesmo era outra coisa: era poder excluir completamente uma pasta do servidor, mas continuar com minha cópia local de maneira que ela nunca seja sincronizada.</p>
+<p>Por exemplo, digamos que dentro da minha pasta de arquivos pessoais há uma pasta chamada TORRENTS, que uso para guardar os arquivos incompletos que ainda estão sendo baixados da internet. São arquivos enormes, que depois de baixados são movidos para um HD externo e não devem nunca ser guardados no meu Dropbox.</p>
+<p>Mas como eu inclui minha pasta pessoal no Dropbox, lá foi junto a subpasta TORRENTS e não havia como eu dizer “<strong>inclua tudo, menos essa pasta</strong>“.</p>
+<p>Até agora.</p>
+<p>O novo Selective Sync não foi feito pra isso, mas usando de artifícios técnicos criativos (vulgos xunxos), ele pode ser usado pra excluir uma subpasta do servidor.</p>
+<p>Vou usar o cenário já descrito como exemplo: tenho minha pasta pessoal no Dropbox e quero excluir somente a subpasta TORRENTS do servidor.</p>
+<ol>
+<li>Em sua máquina, copie a pasta TORRENTS e todo seu conteúdo para uma pasta fora do Dropbox.</li>
+<li>Apague o conteúdo da pasta TORRENTS original, mas não a pasta em si, deixando-a vazia.</li>
+<li>Neste momento o Dropbox vai apagar também o conteúdo dessa pasta no servidor, removendo de vez os arquivos indesejados de seu Dropbox. Espere que ele termine de fazer tudo e fique parado.</li>
+<li>Agora você vai usar o Selective Sync para dizer ao Dropbox para não sincronizar mais a pasta TORRENTS (que no momento está vazia). Ele vai levar um tempo processando e no final apagará a pasta vazia.</li>
+</ol>
+<p style="text-align: center;"><img class="size-full wp-image-1439 aligncenter" title="dropbox-exclude-1" src="http://aurelio.net/wp/wp-content/uploads/2011/01/dropbox-exclude-1.png" alt="" width="480" height="248" /></p>
+<p style="text-align: center;">Nas preferências do Dropbox, aperte o botão Selective Sync</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-1445" title="dropbox-exclude-2" src="http://aurelio.net/wp/wp-content/uploads/2011/02/dropbox-exclude-2.png" alt="" width="480" /></p>
+<p style="text-align: center;">Use o botão Advanced View e desmarque a pasta indesejada</p>
+<p>Pronto!</p>
+<p>Agora esta é uma pasta “proibida” para o Dropbox. Você pode recriá-la (com o mesmo nome, claro) e colocar o que quiser lá dentro que ele vai ignorar e não tentará sincronizar com o servidor.</p>
+<blockquote><p>Nerds, leiam o tópico <a href="http://www.dropbox.com/help/175">For Our Advanced Users</a> para saber dos detalhes sórdidos.</p></blockquote>
+<p>Então agora basta você mover de volta para o local original aquela cópia da pasta TORRENTS que você fez no passo 1. Tudo volta ao seu lugar, e agora o Dropbox ignorará esta pasta e todo seu conteúdo.</p>
+<p>Hoje usei esta dica para excluir do Dropbox o cache de fotos que o iTunes cria quando você escolhe um ou mais álbuns do iPhoto para ser copiado para seu iPhone, iPod ou iPad. A pasta fica em <code>~/Pictures/iPhoto Library/iPod Photo Cache/</code> e nela são guardadas cópias de suas fotos, em tamanho reduzido. <a href="http://support.apple.com/kb/TS1314?viewlocale=pt_BR">É uma pasta inútil</a>, que não precisa estar no Dropbox, e no meu caso tinha 1.3GB. Foi um alívio remover esse peso.</p>

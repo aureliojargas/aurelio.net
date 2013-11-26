@@ -1,0 +1,52 @@
+---
+author: aurelio
+layout: wordpress
+slug: datas-fotos-e-shell
+title: Datas, fotos e shell
+wordpress_id: 1169
+categories:
+- nerd
+- screencast
+tags:
+- Expressões Regulares
+- Mac OS X
+- sed
+- Shell Script
+- Shell Script Profissional
+prev_title: "MoneyLog em Catalão 2 – O Retorno"
+prev_url: http://aurelio.net/blog/2010/05/14/moneylog-em-catalao-2-o-retorno/
+next_title: "E agora pra variar… um vídeo! :)"
+next_url: http://aurelio.net/blog/2010/05/20/e-agora-pra-variar-um-video/
+shortlink: http://wp.me/p1ABFN-iR
+---
+
+
+
+												<p>Mais um vídeo pra <a href="http://aurelio.net/blog/category/screencast/">coleção</a> :)<br />
+Dessa vez, nada de MoneyLog, TextMate, SVN, nem Google Code.<br />
+Agora é 100% a boa e velha tela preta: <a href="http://aurelio.net/shell/">Shell Script</a> na veia!</p>
+<p><strong>Problema:</strong> Você copiou algumas fotos para seu HD, mas a data do arquivo não bate com a data em que a foto foi tirada. Como arrumar isso?</p>
+<p>Acompanhe:</p>
+<p><iframe src="http://player.vimeo.com/video/11744241" width="640" height="480" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+<p>Roteiro:</p>
+<ul>
+<li>00:32 – exiftool — extraí a data em que a foto foi tirada</li>
+<li>01:10 – grep — pesquei a linha com a data</li>
+<li>01:30 – cut — recortei a linha, descartando trechos inúteis</li>
+<li>02:15 – touch — mudei a data do arquivo para a data atual</li>
+<li>03:28 – tr — apaguei caracteres indesejados com a opção -d</li>
+<li>04:07 – sed — inseri um ponto após um caractere com expressões regulares</li>
+<li>05:02 – sed — usei um número no final do s/// para trocar a 12ª ocorrência</li>
+<li>05:29 – OK, data e hora estão no formato certo</li>
+<li>05:44 – touch — usei o -t para especificar uma data (aaaammddHHMM.SS)</li>
+<li>06:23 – for — fiz um laço (loop) que percorre todos os arquivos</li>
+<li>08:02 – $(…) — inseri a subshell dentro do loop</li>
+<li>09:03 – Bug! Esqueci de usar a variável $foto dentro do loop</li>
+<li>09:40 – SEMPRE USE ASPAS NAS VARIÁVEIS!</li>
+<li>10:10 – Tática ninja: Use o echo antes de executar um comando complicado!</li>
+<li>10:50 – Feito, datas arrumadas</li>
+<li>10:59 – chmod — tirei a permissão de execução (Windows) dos arquivos</li>
+</ul>
+<p><strong>DICA:</strong> Se você for ver o vídeo <a href="http://vimeo.com/11744241">lá no site do Vimeo</a> é melhor, dá pra clicar nos números e pular direto para trechos específicos.</p>
+<p><strong>DICA2:</strong> Esta não é a única nem a melhor maneira de resolver este problema. O que quero demonstrar é como “pensar em shell” para resolver seus problemas. Ir construindo os comandos, um a um, até chegar no seu objetivo.</p>
+<p><strong>DICA3:</strong> Se quiser aprofundar seus conhecimentos em shell, recomendo o livro <a href="http://www.shellscript.com.br">Shell Script Profissional</a>, minha mãe viu a capa e disse que é muito bom! ;)</p>

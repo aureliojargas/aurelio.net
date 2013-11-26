@@ -1,0 +1,85 @@
+---
+author: aurelio
+layout: wordpress
+slug: erro-404-na-web-api-rest-json-o-que-fazer
+title: Erro 404 na Web API REST/JSON - O que fazer?
+wordpress_id: 3595
+categories:
+- nerd
+tags:
+- Dropbox
+- Funções ZZ
+- JSON
+- programação
+- twitter
+prev_title: "10 anos de SedSokoban"
+prev_url: http://aurelio.net/blog/2012/03/16/10-anos-de-sedsokoban/
+next_title: "A Mog manja de Linux"
+next_url: http://aurelio.net/blog/2012/03/23/a-mog-manja-de-linux/
+shortlink: http://wp.me/p1ABFN-VZ
+---
+
+
+
+												<p>Hoje comecei a estudar sobre <a href="http://en.wikipedia.org/wiki/Web_service#Web_API">Web APIs</a> do tipo <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>, para fazer uma API bacana para as <a href="http://funcoeszz.net">Funções ZZ</a>. A ideia é facilitar o acesso às funções por outros programas, via Internet.</p>
+<p>Como parte de meus estudos, fui ver como se comportam as Web APIs de serviços famosos, para ver nos exemplos “do mundo real” quais as melhores práticas de sua implementação.</p>
+<p>Comecei por uma tarefa bem simples: o que o servidor responde quanto eu tento acessar uma URL inválida na API?</p>
+<p>Eu esperava encontrar um padrão, e simplesmente usar este padrão na minha própria API. Mas veja só o que encontrei.</p>
+<h2>Dropbox</h2>
+<p><a href="https://api.dropbox.com/1/foo">https://api.dropbox.com/1/foo</a></p>
+<pre>{
+    error: "Not Found"
+}</pre>
+<h2>Flickr</h2>
+<p><a href="http://api.flickr.com/services/rest/?format=json&amp;method=foo">http://api.flickr.com/services/rest/?format=json&amp;method=foo</a></p>
+<pre>jsonFlickrApi({
+    "stat":"fail",
+    "code":112,
+    "message":"Method \"foo\" not found"
+})</pre>
+<h2>Google</h2>
+<p><a href="http://ajax.googleapis.com/ajax/services/foo">http://ajax.googleapis.com/ajax/services/foo</a></p>
+<pre>404</pre>
+<p><a href="http://ajax.googleapis.com/ajax/services/search/foo">http://ajax.googleapis.com/ajax/services/search/foo</a></p>
+<pre>404</pre>
+<p><a href="https://www.googleapis.com/language/foo">https://www.googleapis.com/language/foo</a></p>
+<pre>"Not Found"</pre>
+<p><a href="https://www.googleapis.com/language/translate/foo">https://www.googleapis.com/language/translate/foo</a></p>
+<pre>"Not Found"</pre>
+<h2>Facebook</h2>
+<p><a href="https://graph.facebook.com/foo">https://graph.facebook.com/foo</a></p>
+<pre>{
+   "error": {
+      "message": "(#803) Some of the aliases you requested do not exist: foo",
+      "type": "OAuthException",
+      "code": 803
+   }
+}</pre>
+<h2>Twitter</h2>
+<p><a href="https://dev.twitter.com/docs/error-codes-responses">A documentação</a> me disse que eu encontraria esta mensagem de erro:</p>
+<pre>{
+    "errors": [
+        {
+            "message": "Sorry, that page does not exist",
+            "code": 34
+        }
+    ]
+}</pre>
+<p>Eu juro que tentei, mas essa mensagem específica eu não consegui ver :)</p>
+<p><a href="https://api.twitter.com/1/foo">https://api.twitter.com/1/foo</a></p>
+<pre>404</pre>
+<p><a href="https://api.twitter.com/1/foo.json">https://api.twitter.com/1/foo.json</a></p>
+<pre>404</pre>
+<p><a href="https://api.twitter.com/1/statuses/foo.json">https://api.twitter.com/1/statuses/foo.json</a></p>
+<pre>{
+    error: "Could not authenticate you.",
+    request: "/1/statuses/foo.json"
+}</pre>
+<p><a href="https://api.twitter.com/1/statuses/show.json?id=foo">https://api.twitter.com/1/statuses/show.json?id=foo</a></p>
+<pre>{
+    request: "/1/statuses/show.json?id=foo",
+    error: "No status found with that ID."
+}</pre>
+<h2>Conclusão</h2>
+<p>Nenhuma :)</p>
+<p>Ainda não sei qual é o “certo” a se fazer quando alguém tentar acessar uma URL inválida dentro da minha API.</p>

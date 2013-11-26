@@ -1,0 +1,46 @@
+---
+author: aurelio
+layout: wordpress
+slug: como-instalar-o-vim-7-no-mac-os-x
+title: Como instalar o Vim 7 no Mac OS X
+wordpress_id: 131
+categories:
+- nerd
+tags:
+- Mac OS X
+- Vim
+prev_title: "CaracterE cUringa"
+prev_url: http://aurelio.net/blog/2006/09/17/caractere-curinga/
+next_title: "Quase 20 anos depois…"
+next_url: http://aurelio.net/blog/2006/09/20/quase-20-anos-depois/
+shortlink: http://wp.me/p1ABFN-27
+---
+
+
+
+												<p>Recentemente foi lançada a versão nova (sete) do melhor editor de textos já escrito: <a href="http://aurelio.net/vim/">Vim</a>. Algumas das novidades são: verificação ortográfica enquanto digita, autocomplemento de palavras-chave de programação, destaque de pares de colchetes, parênteses e chaves, e abas (tabs). <a href="http://www.aboutlinux.info/2006/09/visual-walk-through-of-couple-of-new.html">Saiba mais sobre as novidades</a>.</p>
+<p>Para brincar com o Vim novo no Mac é fácil, acompanhe:</p>
+<ol>
+<li>Vá no site do <a href="http://rudix.org">Rudix</a> e escolha o pacote do Vim. Para facilitar, aqui está <a href="http://sourceforge.net/projects/rudix/files/text/2006%20updates/vim-7.0-0.dmg/download">o link direto</a>.
+</li>
+<li>Espere baixar o pacote, então dê duplo clique no arquivo <code>vim-7.0-0.dmg</code>.
+</li>
+<li>Dentro desta imagem está o arquivo <code>vim.pkg</code>. Duplo clique nele!
+</li>
+<li>O instalador vai aparecer. Vá apertando o botão “Continuar” até o fim.
+</li>
+<li>Pronto! Vim instalado. Chame-o do Terminal como <code>vim7</code> e aproveite!
+</li>
+</ol>
+<blockquote><p>
+	Nota: O Vim 7 é instalado em <code>/usr/local/</code>, não conflitando com o Vim 6.2 (<code>vi</code>) que vem com o Tiger. Os dois funcionarão de maneira independente. Essa é uma das facilidades que o <a href="http://rudix.org">Rudix</a> proporciona: instalação fácil e limpa.
+	</p></blockquote>
+<p>Eu costumo escrever todo o texto no Vim e quando ele está “pronto”, abro o arquivo no Editor de Texto (TextEdit.app) somente para fazer a verificação ortográfica. Agora com o Vim 7 este passo não é mais necessário.</p>
+<p>Para ativar a verificação ortográfica nele é um pouco chato, é preciso baixar o arquivo com as palavras, processá-lo, colocar no <code>~/.vim/spell</code> e configurar o Vim para lê-lo. Ufa! O amigo TaQ descreveu todos estes passos em seu Blog, confira: <a href="http://eustaquiorangel.com/posts/293">Usando correção ortográfica no Vim7</a>.</p>
+<p>Tudo pronto? Agora enquanto você digita, as palavras erradas ficam com fundo vermelho. De cara ele mostra palavras de uma letra como erradas: a, e, é, à. Assim você já pode treinar como adiciona palavras no dicionário. Cursor sobre ela e aperte <code>zg</code> (g de Good). Caso queira retirar uma palavra do dicionário, faça <code>zw</code> (w de Wrong). Fácil e rápido.</p>
+<p><img src="http://aurelio.net/wp/wp-content/uploads/2006/09/vim7.png" alt="Vim 7 Spell Check" /></p>
+<p>Use os comandos <code>:set spell</code> e <code>:set nospell</code> para ligar e desligar a verificação. Para corrigir uma palavra errada digite <code>z=</code> para ver a lista de possibilidades e digite o número da palavra certa.</p>
+<p>O Vim está <a href="http://en.wikipedia.org/wiki/Software_bloat">bloat</a>? Sim, faz anos já… Mas continua veloz como o pensamento, simples como surfar*, e mais poderoso do que nunca!</p>
+<blockquote><p>
+	Surfar é simples. Depois que você aprende, é claro. Primeiro é preciso dominar o básico sobre seu corpo (nadar, remar, perder o medo das ondas, equilibrar-se deitado, sentado e em pé), sobre as ondas (o tempo da onda, saber onde ela vai quebrar, se vai abrir ou não, se é gorda ou cavada, saber furá-la), e sobre sua segurança (saber quem tem a preferência na onda, cuidar com o fundo, as pedras e as quilhas). Não é um aprendizado fácil nem rápido, mas depois que deslancha, é intuitivo :)
+	</p></blockquote>

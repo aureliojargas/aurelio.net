@@ -1,0 +1,83 @@
+---
+author: aurelio
+layout: wordpress
+slug: moneylog-experience
+title: MoneyLog Experience - Finanças descomplicadas
+wordpress_id: 74
+categories:
+- software
+tags:
+- JavaScript
+- MoneyLog
+- programação
+- Webstandards
+prev_title: "CSS: Menu fixo porém líquido"
+prev_url: http://aurelio.net/blog/2006/06/30/css-menu-fixo-porem-liquido/
+next_title: "Família e Amigos, não tem preço"
+next_url: http://aurelio.net/blog/2006/07/11/familia-e-amigos-nao-tem-preco/
+shortlink: http://wp.me/p1ABFN-1c
+---
+
+
+
+												<blockquote><p>Veja todos os anúncios de versões do programa:<br />
+MoneyLog Experience 1<br />
+<a href="http://aurelio.net/blog/2007/02/02/moneylog-experience-2/">MoneyLog Experience 2</a><br />
+<a href="http://aurelio.net/blog/2007/12/12/moneylog-experience-3/">MoneyLog Experience 3<br />
+</a><a href="http://aurelio.net/blog/2009/08/15/moneylog-experience-4/">MoneyLog Experience 4<br />
+</a><a title="MoneyLog Experience 5" href="http://aurelio.net/blog/2012/03/15/moneylog-experience-5/">MoneyLog Experience 5</a></p></blockquote>
+<p><strong>Primeiro a historinha</strong></p>
+<p>Agora que minhas finanças estão passando por uma fase tipicamente adolescente de confusão e dúvidas, senti a necessidade de um controle básico sobre meus ganhos e gastos.</p>
+<p>Eu já tinha um arquivo de texto (sempre ele) onde colocava alguns lançamentos mais importantes, um por linha. O problema é que se eu quisesse saber alguns totais, tinha que calcular tudo na mão:<br />
+<code>grep | cut -f2 | tr \n + | bc</code></p>
+<p>Então iniciei a jornada à procura de um programa para gerenciar meus centavos. Instalei cerca de 10, gostei de zero. Alguns faziam uns gráficos bacanas, outros podiam agendar lançamentos, outros traziam suporte a várias moedas. Mas todos pecaram em pelo menos um dos pontos que considero críticos:</p>
+<ul>
+<li>Ser simples, rápido de usar, ter interface desburocratizada</li>
+<li>Exportar/Importar os dados para/de um formato reutilizável</li>
+</ul>
+<p>Em geral, se o programa era simples, guardava os dados em algum formato interno e não exportava. Caso contrário, era um monstro bloated com 300 opções extras além da minha necessidade básica. Algo como usar o OpenOffice para editar o <code>/etc/motd</code>.</p>
+<p>Frustrado com a busca infrutífera, só me restou recorrer ao bom e velho método nerd de resolver os problemas: <strong>vou fazer meu próprio programa</strong>.</p>
+<p>Decidido a sujar as mãos, o foco principal foi a simplicidade. Como fazer este programa de maneira que ele fique extremamente simples e prático, guarde os dados em um formato padrão e rode em qualquer sistema?</p>
+<p>Comecei com <a href="http://aurelio.net/shell/">shell script</a>, passei para <a href="http://www.pythonbrasil.org.br/">Python</a> e finalmente fui iluminado: HTML + CSS + Javascript. Em uma única página HTML eu poderia embutir tanto os dados quanto o código, rodando em qualquer navegador (ou quase, desculpe-me <a href="http://lynx.browser.org">lynx</a>). Então, nasceu.</p>
+<p><a href="http://aurelio.net/moneylog/"><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/moneylog.png" alt="MoneyLog Experience Screenshot" /></a></p>
+<p><a href="http://aurelio.net/moneylog/">MoneyLog Experience</a> v1:<br />
+Acompanhe suas finanças de maneira simples e prática. Em um único arquivo ficam os seus lançamentos (quanto ganhou e gastou) e o gerador de extratos. É uma página de Internet e um programa ao mesmo tempo. Baixe a página, adicione dados novos utilizando um editor de textos comum e veja o resultado no navegador. Tudo localmente, sem precisar estar conectado na Internet.</p>
+<p>Algumas características:</p>
+<ul>
+<li>Simples, rápido, leve, personalizável, tudo-em-um-arquivo</li>
+<li>Pré-requisitos: navegador com Javascript, editor de textos</li>
+<li>Testado no Firefox, IE Win/Mac, Safari, Opera, Camino</li>
+<li>Filtro ativo que refina a pesquisa a cada tecla digitada</li>
+<li>Chave para ligar e desligar o Saldo Mensal</li>
+<li>Clicar no topo da coluna muda a ordenação (ou a inverte)</li>
+<li>Lançamentos com data futura ficam em destaque</li>
+<li>Os dados ficam no final do arquivo, bem separados do código</li>
+<li>Meganerds: <code>echo "dados" &gt;&gt; moneylog.html</code></li>
+</ul>
+<p>Instruções:</p>
+<ul>
+<li>Salve a página do programa, moneylog.html (Arquivo &gt; Salvar)</li>
+<li>Abra-na em um editor de textos comum, como Bloco de Notas, nano ou VI.</li>
+<li>Coloque seus próprios lançamentos no final do arquivo.
+<ul>
+<li>Para cada ganho/gasto, informe a data e o valor.</li>
+<li>A descrição é opcional.</li>
+<li>Use um TAB para separar os campos.</li>
+</ul>
+</li>
+<li>Salve as modificações e abra o arquivo no navegador.</li>
+<li>Pronto!</li>
+</ul>
+<p>Detalhes:</p>
+<ul>
+<li>IMPORTANTE: Não use o Word! Ele vai estragar o programa.</li>
+<li>Outros editores de HTML como o FrontPage e o Dreamweaver também podem estragar o programa. Use editores de <strong>texto</strong>.</li>
+<li>No Windows, o Internet Explorer pode mostrar um aviso de que a página tem conteúdo ativo blablabla. Clique no aviso e escolha “Permitir conteúdo bloqueado”.</li>
+<li>Caso esteja vendo uma mensagem “Ops! Seu navegador está sem Javascript” no lugar da tabela com os valores, veja as <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">intruções de como ligar o Javascript</a>.</li>
+</ul>
+<p>Versões modificadas:</p>
+<ul>
+<li><a href="http://marcelolinhares.com/moneyLog/">Por Marcelo Linhares</a>: adicionado suporte a categorias.</li>
+<li><a href="http://chaosboss.com/?path=moneylog">Por Lucas Rafael</a>: tirou a barra superior para embutir o programa no leiaute do seu site.</li>
+<li><a href="http://rchacon.nksecurity.org">Por Rodrigo Chacon</a>: fez uma interface para adicionar dados.</li>
+</ul>

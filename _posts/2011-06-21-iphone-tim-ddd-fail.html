@@ -1,0 +1,66 @@
+---
+author: aurelio
+layout: wordpress
+slug: iphone-tim-ddd-fail
+title: iPhone + TIM + DDD = FAIL
+wordpress_id: 3021
+categories:
+- meu-querido-diario
+tags:
+- Apple
+- Expressões Regulares
+- fvm
+- iPhone
+- Mac OS X
+- Oi
+- programação
+- PyObjC
+- Python
+- svn
+- TextMate
+- twitter
+prev_title: "Aos 33, descobri que meu nome não tem acento!"
+prev_url: http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/
+next_title: "$ vi livro-sed.txt"
+next_url: http://aurelio.net/blog/2011/06/24/vi-livro-sed-txt/
+shortlink: http://wp.me/p1ABFN-MJ
+---
+
+
+
+												<p>Faz anos que uso a <strong>Agenda</strong> (Address Book) do Mac OS X para guardar nomes, endereços e telefones de todos os meus contatos. Está tudo lá, bem organizado, com grupos, fotinhos, impecável.</p>
+<p>Quando ganhei um iPhone de aniversário (valeu Gabriel!), sincronizei alegremente meus contatos e plim!, tudo funcionou perfeitamente. Eu clicava em um contato, ele chamava e eu falava. Normal.</p>
+<p>Pelo menos era assim na operadora Oi (Brasil Telecom). Mas <strong>recentemente migrei para a TIM</strong> para poder usufruir da internet de pobre por 50 centavos/dia no pré-pago. A internet funcionou bem, mas quando fui fazer uma ligação:</p>
+<blockquote><p>“O número chamado não existe. Por favor, verifique o número discado e tente novamente.”</p></blockquote>
+<p>— Mas hein?<br />
+— Como assim o meu número de casa não existe?</p>
+<p>Tentei ligar para o celular da Mog, e nada, mesma mensagem. Editei o número e tirei o DDD, aí funcionou. Com DDD, só funcionou se o número estiver no formato completo: <strong>zero + operadora + DDD + número</strong>, mesmo que seja um número local.</p>
+<p>Achei bizarro, pois durante anos sempre cadastrei os telefones em minha agenda no formato <strong>(DDD) NNNN-NNNN</strong>. Então, um telefone de Curitiba, por exemplo, fica como (41) 1234-5678. E pronto. Sem zero e sem operadora, conforme Deus gosta.</p>
+<p>Após pesquisas na internet e com a ajuda de amigos <a href="http://twitter.com/oreio/status/78517719795908608">no twitter</a>, descobri que <strong>na Oi funcionava</strong> porque eles são espertos e moderninhos. Eles alteram o número no momento da chamada, para que fique correto:</p>
+<ul>
+<li>Se for uma chamada local, o código DDD é removido.</li>
+<li>Se for chamada à distância, eles colocam o zero e o código de operadora (a deles, claro).</li>
+</ul>
+<p>Tudo automaticamente, sem que eu precise sequer saber que isso existe. <strong>Simplesmente funciona</strong>, conforme Deus gosta também. Na TIM, porém, a central é mais tosca e não sabe o que fazer com o meu número. Daí a tiazinha me fala que o número não existe…</p>
+<p>Mas tá, já que a modernização da central da TIM não deve ocorrer a curto prazo, terei que mudar o meu lado e fornecer o número no formato que eles entendem. Em outras palavras, terei que <strong>poluir minha agenda</strong> colocando o código da operadora em todos os números. Que saco.</p>
+<p>A TIM até oferece uma solução para isso, um programinha no Menu TIM chamado <strong>Agenda LD</strong>, que adiciona o zero e o código da operadora deles (41) em todos os seus contatos do chip. Do chip? Quack!</p>
+<ul>
+<li>O iPhone guarda os contatos em sua memória, e não no chip.</li>
+<li>Não há opção para copiar os contatos do telefone para o chip.</li>
+<li>Quack!</li>
+</ul>
+<p>Então, só me restou a última alternativa: eu mesmo modificar manualmente todas as centenas de contatos da minha agenda (Quack²), ou achar algum programa que faça isso automaticamente. Encontrei três na App Store:</p>
+<ul>
+<li><a href="http://itunes.apple.com/br/app/ddd-facil/id381994693?mt=8#">DDD Fácil</a></li>
+<li><a href="http://itunes.apple.com/br/app/minha-operadora/id401640256?mt=8#">Minha Operadora</a></li>
+<li><a href="http://itunes.apple.com/br/app/lebcontacts/id309713512?mt=8#">LEBContacts</a></li>
+</ul>
+<p>Todos parecem funcionar bem e não são caros, e teria sido melhor eu ter simplesmente comprado um deles e pronto. <strong>Mas nerd é uma merda.</strong> Lendo as descrições dos apps e as opiniões dos usuários, acabei tendo uma ideia que arruinou meus planos de trabalho ontem:</p>
+<blockquote><p>“E se eu pudesse usar <a href="http://aurelio.net/regex/">expressões regulares</a> para reformatar os números de telefone do jeito que eu quiser?”</p></blockquote>
+<p>A ideia me empolgou, e como anos atrás eu já havia feito um <a href="http://aurelio.net/mac/dev/tutorial-pyobjc/#toc26">programa em Python que acessa a Agenda do Mac usando PyObjC</a>, não teve mais volta: abre o TextMate, pesquisas no Google, digita daqui, testa dali, e oito horas depois nascia mais um filhote: <a href="https://github.com/aureliojargas/ab-rephone">ab-rephone.py</a>.</p>
+<blockquote><p><strong>ab-rephone:</strong> Usa expressões regulares para alterar telefones na Agenda do Mac. Útil para adicionar/remover código de área e código da operadora. Pode editar todos os contatos ou um grupo específico. ATENÇÃO: SOMENTE PARA NERDS. <a href="https://github.com/aureliojargas/ab-rephone">https://github.com/aureliojargas/ab-rephone</a></p></blockquote>
+<p><a href="http://aurelio.net/wp/wp-content/uploads/2011/06/ab-rephone.png"><img class="aligncenter size-large wp-image-3024" title="ab-rephone Address Book regex replace" src="http://aurelio.net/wp/wp-content/uploads/2011/06/ab-rephone-500x306.png" alt="" width="500" height="306" /></a></p>
+<p>Resolveu o meu problema atual e futuros, pois agora tenho a liberdade de modificar os telefones de maneira automática. Assim como agora coloquei o bendito prefixo 041 em todos os telefones, amanhã posso remover, trocar por outro, colocar um +55 na frente, etc. Além disso, com poucas alterações este script pode virar um grep ou alterar outros campos da Agenda.</p>
+<p>Se você passa por um problema parecido e o termo “expressões regulares” não lhe causa medo nem estranheza, usa lá que é software livre/aberto/gratuito/casa-da-mãe-Joana. Como o código está limpo e comentado, também serve de aprendizado para usar o <a href="http://aurelio.net/mac/dev/tutorial-pyobjc/">PyObjC</a>.</p>
+<p>Se você não for nerd, <strong>nem perca tempo</strong> que este programa só servirá para você voltar aqui e me xingar. Aconselho que você compre um dos programas para iPhone que citei anteriormente.</p>
+<p>Ah, esse script marca minha estreia no <a href="http://git-scm.com/">Git</a> e no <a href="https://github.com/">GitHub</a>. Sou um feliz usuário do <a href="http://subversion.apache.org/">SVN</a> para todos os meus projetos, e num <strong>raro acesso de falta de conservadorismo</strong>, resolvi experimentar o concorrente. Sinto-me estranho :)</p>

@@ -1,0 +1,46 @@
+---
+author: aurelio
+layout: wordpress
+slug: programacao-ao-vivo
+title: Programação ao vivo
+wordpress_id: 970
+categories:
+- software
+tags:
+- MoneyLog
+- programação
+- svn
+- twitter
+prev_title: "10anos: Expressões Regulares"
+prev_url: http://aurelio.net/blog/2009/07/17/10anos-expressoes-regulares/
+next_title: "Barbearia Morgana"
+next_url: http://aurelio.net/blog/2009/08/05/barbearia-morgana/
+shortlink: http://wp.me/p1ABFN-fE
+---
+
+
+
+												<p><strong>Programar</strong> para mim é uma paixão. Eu adoro criar códigos. Também gosto de testá-los, melhorá-los, formatá-los, comentá-los e tudo mais que possa ser feito para tentar atingir a inatingível perfeição. Trabalho, lapidação, polimento. É um desafio e um prazer ao mesmo tempo. É arte.</p>
+<p><strong>Quando eu comecei a programar</strong>, a rotina de atualizar um programa era sentar e ficar lá, codificando, codificando, codificando. Dias, semanas, meses passavam. Quando finalmente o programa parecia pronto, sem nenhum problema ou deficiência (ah tá…), era lançada uma versão nova ao público. Então o pessoal baixava e testava, e alguns investiam seu tempo para mandar um email com comentários e sugestões. Assim apareciam novos itens para implementar/arrumar/melhorar em uma futura versão. E o ciclo se repetia indefinidamente, versão após versão.</p>
+<p><strong>Hoje</strong> percebo que tudo está mais ágil, dinâmico, imediato, online, colaborativo, participativo, interativo. Primeiro os blogs, depois as redes sociais, e agora até a mídia tradicional começa a experimentar esta novidade.</p>
+<p>E onde se encaixa a <strong>programação solitária</strong> neste novo cenário?</p>
+<p>Eu não sei a resposta, mas <strong>estou fazendo experimentos</strong>, tentando encontrá-la.</p>
+<p>Primeiro comecei a <strong>postar no blog</strong> anúncios de cada versão nova de meus programas. O pessoal utilizou a área de comentários para dar sua opinião, sugestões e relatar problemas que encontraram. Com isso consegui aumentar o retorno (feedback), recebendo bem mais opiniões do que normalmente recebia por email.</p>
+<p>Depois <strong>mudei meus projetos do SourceForge para o Google Code</strong>. Além de ser rápido e simples, <a href="http://code.google.com/">o site do Google</a> é mais “social”. Tem Wikis, área de comentários, SVN público e Feeds para monitorar as alterações. E como muita gente já tem conta no Google (ou Gmail) e geralmente já está logado, isso facilita muito a interação.</p>
+<p>Uma vez no Google Code, <strong>comecei a usar o SVN</strong> para o controle de versões. Até então eu usava o cVS (cp Versioning System), que consistia em fazer uma cópia do arquivo de tempos em tempos quando eu achava que era hora de guardar o progresso atual :)</p>
+<pre>cp txt2tags.py txt2tags.py.1
+cp txt2tags.py txt2tags.py.2
+cp txt2tags.py txt2tags.py.3
+...</pre>
+<blockquote><p>Nada profissional, né? Mas fazer o quê, dava preguiça de configurar <a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>. Depois veio o <a href="http://en.wikipedia.org/wiki/Subversion_(software)">SVN</a> mas eu também tive preguiça de aprender e instalar e configurar e… Ainda bem que veio o Google e entregou tudo prontinho pra eu usar :)</p></blockquote>
+<p>Uma grande vantagem do SVN, foi a de me forçar a descrever cada alteração quando mandava código novo para o servidor. Logo percebi que meu atual esquema de programar horas e mandar tudo no fim do dia não iria dar certo. Tinha tantas alterações que eu nem lembrava mais o que era, ficava uma confusão. <strong>Hoje faço apenas uma alteração por vez</strong>, a descrevo (texto este que serve para o changelog) e mando para o servidor. Parece mais burocrático, mas ao meu ver aumentou a qualidade do código, pois eu foco em apenas um problema por vez.</p>
+<blockquote><p>Antes era normal abrir o editor para arrumar um probleminha, daí ao olhar outra parte do código lembrava de outro problema, daí durante os testes tinha alguma ideia de funcionalidade nova, daí ia mudar alguma coisa na interface, daí…  …daí eu já nem sabia mais o que eu tinha conseguido terminar e o que tinha parado no meio do caminho. <strong>Caos</strong>. Hoje sou feliz: edita, descreve, commit. Próximo.</p></blockquote>
+<p>Outra vantagem deste esquema, é que o código no SVN está sempre atualizado. Em vez de uma mega atualização na madrugada, durante todo o dia pequenas correções vão acontecendo. <strong>O código fica mais vivo</strong>, mais ativo. E o Google Code ainda tem uma página que lista estas mudanças (<a href="http://code.google.com/p/moneylog-dev/source/list">veja as recentes do MoneyLog</a>, por exemplo) ou você ainda pode assinar o feed e saber de cada alteração que está acontecendo no programa.</p>
+<p>Esse esquema do feed é o meu preferido. O usuário pode <strong>assinar o Feed do SVN</strong> (<a href="http://code.google.com/feeds/p/moneylog-dev/svnchanges/basic">veja o do MoneyLog</a>, por exemplo) e ficar sabendo rapidamente quando uma novidade é implementada. Isso é praticamente “ao vivo”, pois o código que eu acabei de fazer já vai lá pro servidor, entra no feed, o usuário lê e já pode dar um “svn update” e ter o código fresquinho em sua máquina. Tudo isso em uma questão de poucos minutos. Incrível!</p>
+<blockquote><p>Não sei se você já percebeu, mas coloquei aqui no menu lateral do blog uma caixinha Nerdeando Freneticamente que é atualizada assim que eu mexo em qualquer projeto lá do Google Code. É um <a href="http://code.google.com/u/aureliojargas/updates">feed global para todos os projetos</a>, uma mão na roda.</p></blockquote>
+<p>O passo mais recente em direção à programação “ao vivo” de verdade, comecei esta semana, no <strong>twitter</strong>. Nos últimos dias fiz algumas alterações no <a href="http://aurelio.net/moneylog/">MoneyLog</a>, que já estava há um ano e meio se receber atenção, tadinho. Quando eu mandava para o servidor alguma alteração substancial, anunciava a novidade no twitter com a tag <a href="http://twitter.com/search?q=%23moneylog">#moneylog</a>. Assim, quem é usuário do programa já podia atualizar a versão beta e ter imediatamente em sua máquina o código recém-atualizado. A pessoa já pode testar, dizer o que achou e avisar de problemas. Eu já posso imediatamente arrumar o problema e mandar para o servidor e assim o ciclo continua, numa interatividade digna de 2009.</p>
+<p>Agora estou aqui, no blog, fazendo este texto para te contar tudo isso e te convidar para participar dessa brincadeira!</p>
+<p><strong>Se você já tem conta no twitter</strong>, siga-me (<a href="http://twitter.com/oreio">@oreio</a>) para ficar sabendo em tempo real das novidades dos programas (e do livro! Mas isso falo daqui a pouco). Pode usar o próprio twitter pra dar sugestões sobre os programas, relatar problemas e tudo mais.</p>
+<p><strong>Se você não é usuário do twitter</strong>, não tem problema. Você pode acompanhar o que escrevo lá seguindo o <a href="http://twitter.com/statuses/user_timeline/16367839.rss">meu feed do twitter</a>. Se quiser ser mais específico, e seguir somente o que é comentado sobre o MoneyLog, por exemplo, siga <a href="http://search.twitter.com/search.atom?q=%23moneylog">este feed</a>.</p>
+<p><strong>Especialmente se você é usuário do MoneyLog</strong>, há <a href="http://aurelio.net/moneylog/beta/">muitas novidades na versão BETA</a>, que estou codificando agora nesta semana. Participe! Baixe o programa, use com os seus dados (que agora podem estar num arquivo TXT separado!) e me conte o que achou. A versão nova oficial deve sair dentro de alguns dias (ou semanas, sabe como é). Enquanto isso o beta vai sendo atualizado.</p>
+<p>Então, agora não sei qual o próximo passo para a interação/colaboração total. <strong>Aceito sugestões</strong>! :)</p>

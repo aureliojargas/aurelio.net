@@ -1,0 +1,105 @@
+---
+author: aurelio
+layout: wordpress
+slug: o-jeito-shell-script-de-resolver-problemas-parte-3
+title: O jeito Shell Script de resolver problemas — Parte 3
+wordpress_id: 3998
+categories:
+- nerd
+- screencast
+prev_title: "Resumão das Expressões Regulares numa folha A4 (PDF)"
+prev_url: http://aurelio.net/blog/2012/05/04/resumao-das-expressoes-regulares-numa-folha-a4-pdf/
+next_title: "Piazinho 4 – A missão"
+next_url: http://aurelio.net/blog/2012/07/05/piazinho-4-a-missao/
+shortlink: http://wp.me/p1ABFN-12u
+---
+
+
+
+												<p>→ <a title="O jeito Shell Script de resolver problemas — Parte 1" href="http://aurelio.net/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">Parte1</a>, <a title="O jeito Shell Script de resolver problemas — Parte 2" href="http://aurelio.net/blog/2012/04/11/o-jeito-shell-script-de-resolver-problemas-parte-2/">Parte 2</a></p>
+<p>Problema: fatiar um arquivão em pedaços menores, com N linhas cada.</p>
+<p>Solução fácil.<br />
+Um único comando.<br />
+split -l N arquivo.txt</p>
+<p>Não conhece o comando?<br />
+Não conhece esta opção específica?<br />
+Problemas², vai ter que inventar.</p>
+<p>sed, sempre ele.<br />
+sed que gera sed: avançado e poderoso.<br />
+paste + seq + seq? Quem diria!</p>
+<p>Sem arquivos temporários.<br />
+Sem loop.<br />
+Sem design patterns.</p>
+<p>Com mágica.<br />
+Com diversão.<br />
+Com salada de frutas.</p>
+<p>Spoiler: a Mog dá “oi” tímido no final ;)</p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/usjTrYwIZCo?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent' frameborder='0'></iframe></span></p>
+<p>Resumo dos comandos:</p>
+<ul>
+<li>sed — edita linhas</li>
+<li>seq — sequência de números</li>
+<li>split — fatia arquivos</li>
+<li>paste — junta colunas</li>
+</ul>
+<p>Histórico:</p>
+<pre>### split
+seq 20
+seq 20 &gt; 20.txt
+split -l 5 20.txt
+ls
+cat xaa
+cat xab
+rm x*
+ls
+
+### sed w
+sed -n '1,5 p' 20.txt
+sed -n '4,11 p' 20.txt
+sed -n '4,11 w foo.txt' 20.txt
+ls
+cat foo.txt
+sed -n '1,5 w foo1.txt' 20.txt
+sed -n '6,10 w foo2.txt' 20.txt
+cat foo2.txt
+
+### paste + seq
+seq 5
+seq 1 20
+seq 1 5 20
+seq 5 5 20
+seq 1 5 20 &gt; a1
+seq 5 5 20 &gt; a2
+paste a1 a2
+paste a1 &lt;(seq 5 5 20)
+paste &lt;(seq 1 5 20) &lt;(seq 5 5 20)
+rm a?
+
+### sed constrói um script sed
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20)
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w foo.txt/'
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w foo-&amp;.txt/'
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/'
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/ ; s/,/-/2'
+
+### aplicação do script sed
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/ ; s/,/-/2' &gt; foo.sed
+cat foo.sed
+ls
+ls
+sed -n -f foo.sed 20.txt
+ls
+cat linhas-1-5.txt
+cat linhas-16-20.txt&lt;
+
+### recapitulando: estes são os dois comandos
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/ ; s/,/-/2' &gt; foo.sed
+sed -n -f foo.sed 20.txt
+
+### agora num único comando, sem precisar de foo.sed
+rm foo.sed
+rm linhas-*
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/ ; s/,/-/2' | sed -n -f - 20.txt
+paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/ ; s/,/-/2' | sed -n -f /dev/stdin 20.txt
+ls
+cat linhas-6-10.txt</pre>

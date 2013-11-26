@@ -1,0 +1,56 @@
+---
+author: aurelio
+layout: wordpress
+slug: css-sprites-na-pratica
+title: 'CSS Sprites na prática: o carregamento da página caiu de 40s para 8s!'
+wordpress_id: 3448
+categories:
+- nerd
+tags:
+- CSS
+- JavaScript
+- tutorial
+- Webstandards
+prev_title: "Vídeo-aula: Expressões Regulares – Quantificadores Gulosos"
+prev_url: http://aurelio.net/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/
+next_title: "Jogo EmoMemory agora é gratuito, código-fonte liberado"
+next_url: http://aurelio.net/blog/2011/12/17/jogo-emomemory-agora-e-gratuito-codigo-fonte-liberado/
+shortlink: http://wp.me/p1ABFN-TC
+---
+
+
+
+												<p>Faz alguns anos já que leio aqui e ali sobre a tal <a href="http://css-tricks.com/158-css-sprites/">técnica de CSS Sprites</a>, mas nunca experimentei. Sempre achei que era complicado demais e que era desnecessário, que o ganho seria irrisório.</p>
+<p>Como eu estava enganado!</p>
+<p>Na cruzada sagrada para diminuir o tempo de carregamento do blog e do site, melhorando sua performance, descobri esta excelente ferramenta online <a href="http://www.webpagetest.org">WebPageTest</a>.</p>
+<p>Ela mede quanto tempo leva para carregar uma página completa, e depois lhe dá um relatório detalhado, inclusive com dicas do que você pode fazer para deixar o site mais rápido. Dicas estas, que são as mesmas usadas pelo <a href="http://pagespeed.googlelabs.com/">Page Speed do Google</a>, outra excelente ferramenta online.</p>
+<p>Fiquei indignado ao saber que a página principal do meu site (home) estava levando <strong>inacreditáveis 40 segundos para carregar</strong> completamente! Uma eternidade para a internet.</p>
+<p>Uma das sugestões que a ferramenta me deu para melhorar isso, foi justamente… o CSS Sprites. Tá, você venceu. Não vou mais te ignorar. Bora aprender de vez o que é isso e como implementar.</p>
+<p>Mas antes, deixa eu te mostrar qual era o meu problema. Esta é uma foto da home do meu site, a página lerda:</p>
+<p><img class="aligncenter size-full wp-image-3410" title="Home, Matrix de ícones" src="http://aurelio.net/wp/wp-content/uploads/2011/09/home-matrix.jpg" alt="" width="450" height="350" /></p>
+<p>Tá vendo aquela tabela cheia de ícones ali? São 30 ao todo. Pois é, eu sempre achei que era melhor ter várias imagens pequenas, que o navegador poderia baixar rapidamente cada uma e fazer cache. Na minha cabeça isso era melhor do que uma única imagem enorme com todos aqueles ícones.</p>
+<p><a href="http://yuiblog.com/blog/2006/11/28/performance-research-part-1/">Mas é justo o contrário!</a></p>
+<p>No fim das contas o navegador consegue baixar mais rápido uma única imagem maior do que várias pequenas, pelo fato de que ele não pode abrir muitas conexões simultâneas. O número varia, mas consideremos que é no máximo quatro conexões.</p>
+<blockquote><p>É como um banco lotado com somente quatro atendentes. Aí forma uma fila com todas essas 30 imagenzinhas, que também concorrem com os arquivos CSS, Javascript, outras imagens e todos os outros componentes que compõem a página. E assim, de quatro em quatro por vez, todo mundo fica naquela fila enooorme esperando sua vez e a página demora pra carregar.</p></blockquote>
+<p>A técnica do CSS Sprites consiste em juntar todos estes 30 ícones numa única imagem e deixar que as regras do CSS façam os recortes necessários nesta imagem (usando background-position) para mostrar cada pedaço no lugar certo. A grande vantagem é que sendo uma única imagem em vez de 30, ela ocupa somente uma “atendente do banco”, deixando as outras três livres para atender os outros elementos, e assim a fila anda mais rápido.</p>
+<blockquote><p>É, o CSS Sprites é aquele office boy que chega com uma pasta lotada de boletos e monopoliza um dos caixas do banco por vários minutos :)</p></blockquote>
+<h2>Ok, e como implementar o CSS Sprites?</h2>
+<p>Nem perca tempo querendo fazer isso “na mão” que já tem várias ferramentas prontas na web. Basta procurar por <a href="http://www.google.com.br/search?q=CSS+Sprites+generator">CSS Sprites generator</a>.</p>
+<p>A que eu mais gostei foi a <a href="http://spritegen.website-performance.org">http://spritegen.website-performance.org</a>. Você coloca todas as imagens dentro de um ZIP (no meu caso, os ícones) e manda para o generator, que te retorna uma única imagem e ainda de brinde já te dá as regras CSS prontinhas para usar.</p>
+<p style="text-align: center;"> <a href="http://spritegen.website-performance.org"><img class="size-large wp-image-3411 aligncenter" title="CSS Sprite Generator" src="http://aurelio.net/wp/wp-content/uploads/2011/09/css-sprite-generator-500x318.png" alt="" width="500" height="318" /></a></p>
+<p>Dê uma olhada lá, há várias opções para você escolher na hora de compor a imagem final, como formato (PNG, JPG, GIF), número de cores e qualidade (ambos importantes para deixar o arquivo pequeno!). Também há opções para as regras do CSS, como adicionar prefixo ou sufixo para cada uma.</p>
+<blockquote><p><strong>Dica:</strong> Para facilitar sua vida, atente para o nome de cada imagem antes de fazer o ZIP, deixe curto e descritivo, pois ele usará os nomes para gerar as regras do CSS.</p></blockquote>
+<p>Usei este site para gerar <a href="http://aurelio.net/img/index-sprites.png">um PNG com todos os meus ícones</a>, e depois passei este PNG no <a title="Usando Smush.it e shell script para otimizar imagens de um site" href="http://aurelio.net/blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/">Smush.it</a> para garantir que ele não fique pesado.</p>
+<p>A imagem ficou com 120KB no final. Não é leve, mas também não é um monstro. Mas o mais importante foi a <strong>diferença brutal no tempo de carregamento da página</strong>: o que antes eram 40 segundos, agora com CSS Sprites ficou apenas 8 segundos!</p>
+<p>Se o seu site está pesado e carrega muitas imagens pequenas, faça a experiência de juntá-las em uma só, que você pode ter um resultado parecido com o meu.</p>
+<p>Ah, só pra ilustrar, veja um exemplo de como são as regras CSS que fazem os recortes de cada ícone:</p>
+<pre>#aa-matrix .sp-adiumbook { background-position: 0 0;       }
+#aa-matrix .sp-baterna   { background-position: 0 -81px;   }
+#aa-matrix .sp-canivete  { background-position: 0 -162px;  }
+#aa-matrix .sp-carve     { background-position: 0 -243px;  }
+#aa-matrix .sp-codare    { background-position: 0 -324px;  }
+#aa-matrix .sp-csssandbox{ background-position: 0 -405px;  }
+#aa-matrix .sp-curso     { background-position: 0 -486px;  }
+#aa-matrix .sp-dialog    { background-position: 0 -567px;  }
+#aa-matrix .sp-doc       { background-position: 0 -648px;  }
+...</pre>

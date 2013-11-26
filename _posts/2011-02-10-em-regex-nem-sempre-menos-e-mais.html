@@ -1,0 +1,66 @@
+---
+author: aurelio
+layout: wordpress
+slug: em-regex-nem-sempre-menos-e-mais
+title: Em regex, nem sempre menos é mais
+wordpress_id: 1487
+categories:
+- nerd
+tags:
+- Expressões Regulares
+- Funções ZZ
+prev_title: "Imprimir como PDF do iPhone/iPod/iPad para o Dropbox (via AirPrint)"
+prev_url: http://aurelio.net/blog/2011/02/04/imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint/
+next_title: "Como excluir uma subpasta do Dropbox (no servidor), mantendo a cópia local"
+next_url: http://aurelio.net/blog/2011/02/18/como-excluir-uma-subpasta-do-dropbox-no-servidor-mantendo-a-copia-local/
+shortlink: http://wp.me/p1ABFN-nZ
+---
+
+
+
+												<p>Uso <a href="http://aurelio.net/regex/">expressões regulares</a> há tantos anos, que hoje para mim é muito natural, diria até automático, ficar compondo uma regex na cabeça, nas mais diversas (e inúteis) situações. Por exemplo, se estou relaxado lendo um artigo e em seu texto aparece alguma repetição, pequena variação ou formato numérico, me pego pensando nos metacaracteres que casariam aquilo.</p>
+<blockquote><p>Tá, é bizarro, eu sei :)</p></blockquote>
+<p>Nos <a href="http://aurelio.net/blog/2011/01/28/salvar-site-como-pdf-no-iphone-ipod-ipad/">artigos</a> <a href="http://aurelio.net/blog/2011/02/04/imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint/">anteriores</a> do blog, falei sobre os equipamentos da Apple e várias vezes precisei citar os três brinquedos pretos: <strong>iPod</strong>, <strong>iPad</strong> e <strong>iPhone</strong>. Ao escrever estes nomes, um alerta apita aqui dentro: <em>Epa! Repetição e variação detectados!</em></p>
+<blockquote><p><a href="http://macmagazine.com.br/2010/10/11/theres-an-app-for-that-agora-e-uma-marca-registrada-da-apple/">There’s a regex for that</a> :)</p></blockquote>
+<p>Compor uma expressão regular que case os três nomes não é difícil. Uma primeira alternativa, mais simplista, seria usar o metacaractere <strong>ou</strong> para fazer a lista de palavras permitidas:</p>
+<pre>iPod|iPad|iPhone</pre>
+<p>A barra vertical indica que esta expressão casa iPod <strong>ou</strong> iPad <strong>ou</strong> iPhone. Simples, não? Fácil de ler e entender. Mas podemos tornar esta expressão menor e mais eficiente.</p>
+<p>O segredo para fazer uma boa expressão é saber identificar padrões. Ao olhar com atenção para estas três palavras, percebemos que todas possuem o mesmo prefixo, ou seja, todas iniciam com as letras “iP”:</p>
+<ul>
+<li><strong>iP</strong>od</li>
+<li><strong>iP</strong>ad</li>
+<li><strong>iP</strong>hone</li>
+</ul>
+<p>Assim, podemos tornar nossa expressão mais eficiente deixando claro que o padrão começa com “iP”, e depois disso, há três alternativas:</p>
+<pre>iP(od|ad|hone)</pre>
+<p>Essa nova expressão continua casando as três palavras, mas agora ficou menor e mais rápida. Porém, agora ela ficou mais difícil para ler e entender. <strong>Trocamos legibilidade por eficiência.</strong></p>
+<p>Aplicando mais uma vez a mesma técnica de identificar padrões e melhorar a expressão, podemos perceber que tanto iPod quanto iPad terminam com a letra “d”. Podemos isolar esta letra, trocando o trecho <code>od|ad</code> por <code>[oa]d</code>:</p>
+<pre>iP([oa]d|hone)</pre>
+<p>Continuamos casando as mesmas palavras, porém agora a legibilidade foi pelo ralo. É preciso interpretar a expressão mentalmente para saber quais são as palavras que ela casa. Será que <strong>fomos longe demais?</strong></p>
+<p>Você sempre deve avaliar se esse tipo de melhoria é mesmo uma vantagem.</p>
+<ul>
+<li>Era necessário otimizar a expressão?</li>
+<li>A expressão anterior estava lenta?</li>
+<li>Todos que darão manutenção nesta expressão saberão entendê-la?</li>
+<li>O que é mais importante: <strong>velocidade</strong> ou <strong>legibilidade</strong>?</li>
+</ul>
+<p>Acostume-se a <strong>sempre</strong> fazer estas perguntas a si mesm[ao] cada vez que for melhorar alguma expressão regular. Você pode se surpreender com as respostas :)</p>
+<p>Às vezes, é possível encontrar um meio termo que não prejudica tanto a legibilidade, mas resulta em um ganho na performance.</p>
+<pre>i(Pod|Pad|Phone)</pre>
+<p>Nesta expressão, isolei somente a letra “i”, que é um prefixo muito conhecido para os produtos da Apple. Deixei o “P” repetindo em todas as alternativas para não quebrar as palavras. Assim fica clara a separação entre o prefixo “i” e o nome dos produtos: Pod, Pad e Phone.</p>
+<pre>i(Phone|Pod|Pad)</pre>
+<p>Como última melhoria, movi o trecho “Phone” para o início das possibilidades, para deixar mais claro que esta é uma lista de palavras com produtos da Apple. As alternativas Pod e Pad são muito parecidas e podem gerar confusão. Deixando o “Phone” no início, ali bem pertinho do “i”, fica mais fácil do leitor enxergar “iPhone” e deduzir o iPod e iPad com mais facilidade.</p>
+<p>Agora, comparemos as duas expressões:</p>
+<pre>iP([oa]d|hone)
+
+i(Phone|Pod|Pad)</pre>
+<p>A primeira seguiu somente o caminho da eficiência, enquanto a segunda fez um balanço entre eficiência e legibilidade.</p>
+<p>Nos meus primeiros anos de expressões regulares, eu faria sempre a primeira, pois é a <strong>menor</strong> e mais <strong>eficiente</strong>. Hoje, depois de já ter sofrido muito dando <strong>manutenção</strong> para minhas próprias expressões enigmáticas do passado, valorizo mais uma expressão <strong>legível</strong>, melhorando a velocidade somente quando <a href="http://www.c2.com/cgi/wiki?PrematureOptimization">estritamente necessário</a>.</p>
+<blockquote><p>Quem já usa as <a href="http://funcoeszz.net/">Funções ZZ</a> há tempos, sabe que <a href="http://funcoeszz.net/passado/funcoeszz-0.0915">seu código era afetado</a> por essa mentalidade do “menor é melhor”. Ainda bem que <a href="http://code.google.com/p/funcoeszz/source/browse/trunk/zz/zzcores">evoluí</a> :)</p></blockquote>
+<p>Aprenda mais sobre os tópicos deste texto:</p>
+<ul>
+<li><a href="http://aurelio.net/regex/guia/ou.html">http://guia-er.sourceforge.net/ou.html</a></li>
+<li><a href="http://aurelio.net/regex/guia/grupo.html">http://guia-er.sourceforge.net/grupo.html</a></li>
+<li><a href="http://aurelio.net/regex/guia/lista.html">http://guia-er.sourceforge.net/lista.html</a></li>
+<li><a href="http://aurelio.net/regex/guia/nao-complique.html">http://guia-er.sourceforge.net/nao-complique.html</a></li>
+</ul>

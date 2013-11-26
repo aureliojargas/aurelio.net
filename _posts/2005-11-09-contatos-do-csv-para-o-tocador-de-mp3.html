@@ -1,0 +1,28 @@
+---
+author: aurelio
+layout: wordpress
+slug: contatos-do-csv-para-o-tocador-de-mp3
+title: Contatos do CSV para o tocador de MP3
+wordpress_id: 96
+categories:
+- software
+tags:
+- CSV
+- MP3
+- Python
+prev_title: "Uma vez nerd…"
+prev_url: http://aurelio.net/blog/2005/10/29/uma-vez-nerd/
+next_title: "“Vamos tomar água lá no pedágio?”"
+next_url: http://aurelio.net/blog/2005/11/15/vamos-tomar-agua-la-no-pedagio/
+shortlink: http://wp.me/p1ABFN-1y
+---
+
+
+
+												<p>No final da notícia anterior eu citei que seria fácil adaptar o script Python para ler os contatos de um arquivo CSV. Está feito. Agora usuários de Linux e Windows também podem copiar seus contatos para o tocador de MP3.</p>
+<p>Basta ir no seu programa favorito (MS Outlook, Kontact, Yahoo!, …) e exportar os contatos para o formato CSV. Então rode <a href="http://aurelio.net/bin/python/s1mp3-import-contacts.py">este script</a> e ele gerará o arquivo binário que o tocador entende. Copie este arquivo para o tocador e use a sua função “Import” para carregar os contatos.</p>
+<p>Exemplo:<br />
+<code>python s1mp3-import-contacts.py -v 2.0 -o outlook contacts.csv</code></p>
+<p>Há três formatos diferentes suportados (-v), tente todos que um deve funcionar no seu tocador. Se o seu CSV precisar de um offset (-o) diferente, avise-me para que eu possa inclui-lo em versões futuras.</p>
+<p><img src="http://aurelio.net/wp/wp-content/uploads/2006/07/mp3player.jpg" alt="MP3 Player Xingue-lingue" /><br />
+Relembrando: isso não é para iPods e outros tocadores de grife. Só funciona com tocadores xingue-lingues que vêm com um programa para Windows chamado TELBOOK.EXE.</p>

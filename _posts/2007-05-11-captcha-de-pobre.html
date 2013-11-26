@@ -1,0 +1,71 @@
+---
+author: aurelio
+layout: wordpress
+slug: captcha-de-pobre
+title: Técnica simples de anti-spam nos comentários (CAPTCHA de pobre)
+wordpress_id: 228
+categories:
+- nerd
+tags:
+- blog
+- CAPTCHA
+- PHP
+- spam
+prev_title: "Dias agitados em Curitiba II"
+prev_url: http://aurelio.net/blog/2007/05/09/dias-agitados-em-curitiba-ii/
+next_title: "Amigorama: Thais Araujo"
+next_url: http://aurelio.net/blog/2007/05/18/amigorama-thais-araujo/
+shortlink: http://wp.me/p1ABFN-3G
+---
+
+
+
+												<blockquote><p>Resumo: CAPTCHA de pobre, com texto ao invés de imagens, funciona para bloquear SPAM em comentários.</p></blockquote>
+<p>Desde os primeiros passos do <a href="http://aurelio.net">meu site</a>, ele já contava com um “<a href="http://aurelio.net/recados.php">livro de visitas</a>” onde os visitantes podiam deixar seu recado registrado. <a href="http://aurelio.net/doc/recados-antigos/2002.html">Os primeiros recados</a> datam de Junho de 1999!</p>
+<ul>
+<li>
+<p>O <strong>Pedro</strong> inaugurou. Naquela época ele me mandou de presente um CD da excelente coletânea Punkadaria, lançada pelos integrantes da <a href="http://www.submarino.com.br/busca?franq=215434&amp;q=tequila+baby">Tequila Baby</a> em 1998. Escuto até hoje, tem várias bandas muito boas do punk rock gaúcho. Ainda está por aqui Pedro?</li>
+<li>
+<p>O segundo foi o carioca <strong>Milhouse</strong>, amigo, parceiro e folgado de plantão com quem converso por MSN até hoje. Ele é meu fornecedor oficial de links para vídeos idiotas no YouTube. Lembra do <a href="http://aurelio.net/blog/2006/05/26/theyre-taking-the-hobbits-to-isengard/">They’re taking the Hobbits to Isengard</a>? Então, foi ele. O <a href="http://www.miurrause.com.br/nerdpride/">blog do Milhouse</a> é bem divertido, ele escreve com bastante bom-humor. Se você gosta dos textos daqui, é bem capaz que goste dos de lá também. Só falta arrumar esse Feed tosco né meu? Ah, deixe um comentário lá dizendo que o Rio é violento que ele vai A-DO-RAR.</li>
+<li>
+<p>Depois veio meu grande amigo, ex-colega de Conectiva e <a href="http://aurelio.net/viagem/atacama/">parceiro de Atacama</a> <strong>MárcioMan</strong>. Hoje ele é um respeitável pai de família que mora lá longe no Recife, continua trabalhando com nerdices e <a href="http://aurelio.net/blog/2007/04/28/por-que-tenho-um-blog/#comment-30723">aparece aqui no blog</a> de vez em quando. <a href="http://marciom.blogspot.com">Ele tem um blog também</a>, só falta tirar as teias de aranha :D</li>
+</ul>
+<p>Mas então, voltando ao tema, o livro de visitas é um programinha que começou como um <a href="http://aurelio.net/shell/">shell script</a> fuleiro. Depois foi crescendo e acabei rescrevendo em PHP (o LES vai fazer algum comentário com “toy language”) em 2001. A evolução continuou e hoje considero este um script maduro.</p>
+<p>À medida que o site crescia, começou a aumentar o número de SPAMs no livro de visitas.</p>
+<p>Um SPAM é um recado oportunista e indesejado, geralmente uma propaganda comercial ou links para sites pornográficos. Como se isso já não fosse irritante o suficiente, geralmente são programas que enviam estes recados automaticamente, então não adianta simplesmente apagar que ele vai ser enviado novamente. Alguns enviam <strong>diariamente</strong> esse lixo para o seu site, imagine o tamanho da dor de cabeça.</p>
+<p>Quando finalmente me enchi de ficar apagando os SPAMs manualmente, resolvi adicionar algumas checagens no programinha de livro de visitas, para que esses recados indesejados nem fossem registrados.</p>
+<p><strong>Fase 1 – A corrida de gato e rato</strong></p>
+<p>Comecei de maneira ingênua e no início até que funcionou. Cada vez que um recado indesejado chegada, eu cadastrava o e-mail de quem enviou (ou alguma outra palavra-chave) em uma lista. Assim, se no futuro esse cara tentasse enviar outro SPAM, seria impedido pois ele já estava na lista negra.</p>
+<p>Então meu trabalho era ficar aumentando essa lista com e-mails e palavras-chave cada vez que eu recebia um SPAM. Isso funcionou satisfatoriamente por quase um ano.</p>
+<p>Essa técnica funciona para os spammers (programas e indivíduos que enviam SPAM) mais pé-de-chinelo, que sempre enviam o mesmo texto. Mas alguns deles evoluíram e hoje usam e-mails e textos que mudam a cada envio, tornando minha lista quase inútil.</p>
+<p>Voltei a receber muito SPAM e eles estavam inundando o site. Droga, vão me fazer mexer no programa…</p>
+<p><strong>Fase 2 – A ilusão das cores</strong></p>
+<p>Entendi que a lista acabou tornando-se uma solução fraca e fácil de burlar, era preciso algo mais inteligente, ou usar outra abordagem.</p>
+<p>Tá, se eu não consigo diferenciar um spammer de um visitante comum pelo e-mail nem pelo texto, preciso pensar diferente. Ah, claro, o <a href="http://pt.wikipedia.org/wiki/Captcha">CAPTCHA</a>! Aquelas imagens distorcidas com palavras ou códigos quase impossíveis de ler que são um pé-no-saco.</p>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/6/69/Captcha.jpg" alt="CAPTCHA" /></p>
+<p>A idéia é simples: como são programas que enviam os SPAMs, essas imagens são barreiras que teoricamente somente um humano consegue burlar. Teoricamente. Hoje há programas que conseguem ler estes códigos, mesmo os mais distorcidos. Até aqueles que nem você consegue :D</p>
+<p>Como eu não gosto de ter que ficar adivinhando códigos quando vou em um site, não quis colocar isso no meu. Em uma manhã qualquer de devaneios, tive uma idéia “brilhante” para meu anti-spam de terceiro mundo: vou usar cores!</p>
+<p>Ao invés de um código distorcido, mostro uma cor qualquer na tela e o visitante vai dizer qual o nome dessa cor. Assim vou diferenciar humanos de robôs. Pareceu uma boa idéia e era simples de fazer.</p>
+<p>Só que para não ser mala de fazer o usuário ter que digitar o nome da cor (amarelo, verde, vermelho, etc), fiz um menu com os nomes das cores e bastava escolher o item correto.</p>
+<p><img src='http://aurelio.net/wp/wp-content/uploads/2007/05/captcha-cor.png' alt='CAPTCHA de pobre - Cores' /></p>
+<p>Santa inocência… Nos pouquíssimos dias que essa solução tosca ficou no ar, recebi dezenas de SPAMs. Esqueci do pequeno detalhe que estes programas de envio de recados usam técnicas de força bruta. Então eles ficam tentando todos os itens do menu, até acertar.</p>
+<p>Droga. Lá vamos nós de novo…</p>
+<p><strong>Fase 3 – Digite o número aí do lado</strong></p>
+<p>Tá, as cores não deram certo. Preciso de algo parecido com o CAPTCHA, mas que não seja tão mala. De repente, a idéia aparentemente inofensiva: e se eu simplesmente mostrasse um número qualquer para o visitante digitá-lo? Algo como:</p>
+<pre>Digite esse número (1234): [    ]</pre>
+<p>Mostrando os números na tela mesmo, como texto e não imagem, sem distorção. O visitante pode até copiar e colar se preferir. E os deficientes visuais também poderão deixar seu recado. Pareceu tão ridículo de simples que podia funcionar.</p>
+<p>Imediatamente após essa idéia, tive dois pensamentos:</p>
+<ul>
+<li>
+<p>Que mané. Os spammers vão ler o código e preenchê-lo automaticamente.</li>
+<li>
+<p>Mas ei! Eles mandam SPAM para <strong>milhares</strong> de sites, nem a pau que vão se dar o trabalho de incluir uma regra para o meu sitezinho.
+</li>
+</ul>
+<p>E apostando que eu era apenas mais um na multidão, fiz a barreira com os números. E não é que tem funcionado?</p>
+<p><a href="http://aurelio.net/recados.php"><img src='http://aurelio.net/wp/wp-content/uploads/2007/05/captcha-numero.png' alt='CAPTCHA de pobre - Numeros' /></a></p>
+<p>Vou completar um mês de calmaria no <a href="http://aurelio.net/recados.php">livro de visitas</a>, com alguns poucos SPAMs que parecem ter sido enviados por humanos que preencheram o código. Mas como eles são absoluta minoria no mundo spammer, é pouco para me incomodar. Agora até posso voltar a lista negra para pegar estes gatos pingados.</p>
+<p><strong>Conclusão:</strong> Técnicas “de pobre” também funcionam. Foram apenas alguns poucos minutos para escrever e testar o código e estou feliz, ganhei tempo. Ou melhor, parei de perder tempo apagando lixo.</p>
+<blockquote><p>Claro que com esse texto explicando tudo, corro o risco de algum mané querer burlar meu filtro tosco. Novamente vou acreditar nas probabilidades. É tão ridículo de fácil de quebrar meu filtro que qualquer “ráquer” estagiário vai rir do “desafio”. E os spammers profissionais não lêem meu blog. Acho…
+</p></blockquote>
+<blockquote><p>Tá, ainda não consegui não fazer um tutorial… Quando vi já foi. Fica pra próxima…</p></blockquote>
