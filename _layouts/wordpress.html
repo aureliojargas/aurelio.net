@@ -211,7 +211,7 @@
 					<!-- <div class="entry-meta">  -->
 											<!-- </div> --><!-- .entry-meta -->
 
-					 
+{% if site.production %}
 					<div class="ad-box-left"><script type="text/javascript"><!--
 	google_ad_client = "pub-0009608813278754";
 	/* Blog 300x250 */
@@ -222,7 +222,7 @@
 	</script><script type="text/javascript"
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script></div>
-
+{% endif %}
 					<div class="entry-content">
 					{{ content }}
 					</div><!-- .entry-content -->
@@ -238,6 +238,7 @@
 
 					<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">♥ Gostou? Compartilhe:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon no-text" href="http://aurelio.net{{ page.url }}/?share=facebook" target="_blank" title="Compartilhar no Facebook" id="sharing-facebook-{{ page.wordpress_id }}"><span></span></a></li><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon no-text" href="http://aurelio.net{{ page.url }}/?share=twitter" target="_blank" title="Clique para compartilhar no Twitter" id="sharing-twitter-{{ page.wordpress_id }}"><span></span></a></li><li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon no-text" href="http://aurelio.net{{ page.url }}/?share=google-plus-1" target="_blank" title="Compartilhe no Google+" id="sharing-google-{{ page.wordpress_id }}"><span></span></a></li><li class="share-end"></li></ul></div></div></div>
 
+{% if site.production %}
 <div class="ad-box-336"><script type="text/javascript"><!--
 	google_ad_client = "ca-pub-0009608813278754";
 	/* Blog 336x280 Image */
@@ -248,7 +249,7 @@
 	</script><script type="text/javascript"
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script></div>
-
+{% endif %}
 					<div class="linkwithin_div"></div>
 
 					<!-- verde: entry-author-info removed -->
