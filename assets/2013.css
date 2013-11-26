@@ -1,0 +1,307 @@
+/* AURELIO.NET styles, oct/2013 - Public domain */
+
+/* ------------------------------------  reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+	line-height: 1.5em;
+    background-color: #fff;
+	color: black;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------  basic */
+
+b, strong {
+	font-weight: bold;
+}
+i, em {
+	font-style: italic;
+}
+ul {
+	list-style-type: square;
+}
+hr {
+	border-style: solid;
+	border-width: 1px 0 0 0;
+}
+
+/* ------------------------------------  fonts */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #444;
+	line-height: 1.5em;
+}
+pre, code {
+	font-family: "Courier New", monospace;
+}
+blockquote {
+	font-style: italic;
+	color: gray;
+}
+
+/* ------------------------------------  links */
+
+a { color: blue; }
+a:visited { color: purple; }
+a:hover, a:visited:hover { color: red; }
+
+/* ------------------------------------  spacing */
+
+h1, h2, h3, h4, p, blockquote, ul, ol, dt, dd, pre, table, hr, div {
+	margin: 1em 0;
+}
+ul ul, ol ol, ul pre, ol pre {  /* nested */
+	margin-top: 0;
+	margin-bottom: 0;
+}
+ol, ul, dd {  /* lists */
+	margin-left: 2em;
+}
+blockquote {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+table {
+	margin: 1.5em auto;  /* 1em is not enough */
+}
+pre {
+	margin: 1.5em 0;
+}
+hr {
+	margin: 2em 0;
+}
+
+/* ------------------------------------  headers */
+
+h1, h2, h3 {
+	line-height: 1.2em;
+}
+h1, h2 {
+	color: #333;  /* darker */
+}
+h2, h3 {
+	margin-top: 1.5em;
+}
+
+/* ------------------------------------  code */
+
+code {
+	color: #a0f;
+}
+pre, pre code {
+	color: #fff;
+}
+pre {
+	font-size: 85%;
+	line-height: 1.5em;
+	padding: 0.5em 1em;
+	background-color: #222;
+	color: white;
+}
+
+/* ------------------------------------  footer */
+
+footer {
+	clear: both;
+	margin: 4em 0 4em 0;
+	border-top: 1px solid silver;
+	padding-top: 1.5em;
+	font-family: Arial, sans-serif;
+	color: gray;
+	font-size: 85%;
+	line-height: 130%;
+	text-align: center;
+}
+footer a,
+footer a:visited {
+	color: gray;
+	text-decoration: none;
+}
+footer:hover {
+	color: black;
+}
+footer:hover a {
+	color: blue;
+	text-decoration: underline;
+}
+footer:hover a:hover {
+	color: red;
+}
+
+/* ------------------------------------  nav */
+
+nav.index ul {
+	list-style-type: none;
+	margin-left: 0;
+}
+nav.index li {
+	margin-bottom: 1em;
+}
+nav.index a {
+	text-decoration: none;
+}
+
+/* ------------------------------------  special */
+
+pre {
+	overflow: auto;
+}
+tr:hover td {
+	background: #eee;
+}
+.unicode-char {
+	font-family: "Helvetica Neue", sans-serif;
+	/* Helvetica Neue is Mac-only */
+}
+
+/* ------------------------------------  article */
+
+body {
+	margin: 0 auto;
+	max-width: 35em;  /* @width */
+}
+td, th {
+	border-bottom: 1px solid #ccc;
+	padding: 0 4px;
+}
+th {
+	font-style: italic;
+	background-color: #eee;
+}
+table {
+/*	font-size: 15px;*/
+}
+
+header {
+	margin: 4em 0 2em 0;
+}
+header h1 {
+	margin: 0;
+}
+header .meta {
+	margin-top: 2em;
+}
+header .meta a {
+	color: blue;
+}
+
+article {
+	margin-bottom: 3em;
+}
+.read-more {
+	margin-bottom: 3em;
+	text-align: center;
+}
+.read-more .heart,
+footer:hover .heart {
+	color: #C00;
+}
+#disqus_thread {
+	border-top: 1em dotted #444;
+	border-bottom: 1em dotted #444;
+	padding: 2em 0;
+	margin: 3em 0;
+}
+
+/* ------------------------------------  home */
+
+#home .posts,
+#home .pages {
+	font-size: small;
+}
+#home .posts .date {
+	font-size: smaller;
+}
+#home ul {
+	margin-left: 0;
+	list-style-type: none;
+}
+
+/* ------------------------------------  custom */
+
+.mog {
+	color: #800000;
+	background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
+	padding: 0 58px 0 0;
+	min-height: 48px;
+}
+.youtube {
+	display: block;
+	margin: 1.5em auto;
+}
+.warning,
+.alert {
+	padding: 6px 9px;
+	background: #FFFBBC;
+	border: 1px solid #E6DB55;
+}
+.note {
+	padding: 6px 9px;
+	background: #EEE;
+	border: 1px solid #CCC;
+}
+.figure,
+.image {
+	text-align: center;
+}
+.figure img,
+.image img {
+	max-width: 35em;  /* @width */
+	display: block;
+	margin: 0 auto;
+}
+.figure span {
+	font-family: Arial, sans-serif;
+	font-size: 75%;
+	margin: 0;
+	display: block;
+	color: gray;
+}
+
+/* ------------------------------------  iPhone = 320x480 */
+
+@media screen and (max-width: 480px) {
+	body {
+		padding: 10px;
+		font-size: 100%;
+	}
+	header {
+		margin-top: 0;
+	}
+	header h1 {
+		font-size: 1.5em;
+	}
+	blockquote {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	.figure img,
+	.image img,
+	p img {
+		max-width: 100%;
+		padding: 0;
+		border-width: 0;
+	}
+	ul {
+		overflow: auto;
+	}
+	.aureliohead {
+		display: none;
+	}
+}

@@ -1,0 +1,15 @@
+	<div class="ad-300x600"{% unless site.production %} style="background-color:yellow"{% endunless%}>
+{% if site.production %}
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Aurelio 300x600 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:300px;height:600px"
+		     data-ad-client="ca-pub-0009608813278754"
+		     data-ad-slot="6382774374"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+{% else %}
+	DEV MODE: AdSense disabled
+{% endif %}
+	</div>

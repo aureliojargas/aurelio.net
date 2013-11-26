@@ -1,0 +1,16 @@
+---
+layout: 2013-main
+---
+
+	<header>
+		<h1>{{ page.title | escape }}</h1>
+	</header>
+
+	<article>
+{{ content }}
+	</article>
+
+	<!-- List all posts for this specific area (folder) -->
+	<nav class="index"><ul>
+{% include list-files-level-1.html %}
+	</ul></nav>

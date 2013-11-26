@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title_prefix }}{{ page.title | escape }} | Aurelio.net</title>
+	<link rel="shortcut icon" href="http://aurelio.net/favicon.ico" />
+
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="/assets/2013.css">
+{% if page.sub_layout == "2013-page-ads" %}
+	<link rel="stylesheet" href="/assets/2013-ads.css">
+{% else %}
+	<link rel="stylesheet" href="/assets/monokai.css">
+{% endif %}
+{% include analytics.html %}
+</head>
+<body>
+
+<div id="main">
+
+{{ content }}
+
+</div><!--main-->
+
+{% if page.sub_layout == "2013-page-ads" %}
+<div id="sidebar">
+{% include ad-300x600.html %}
+{% include ad-300x600.html %}
+{% include ad-300x600.html %}
+</div><!--sidebar-->
+{% endif %}
+
+{% include 2013-footer.html %}
+{% include aureliohead.html %}
+
+</body>
+</html>

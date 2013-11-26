@@ -1,0 +1,26 @@
+body {
+	max-width: 900px; /* overwrite */
+	width: 900px;
+}
+#main {
+	float: left;
+	width: 550px;  /* body - ad - spacing */
+	font-size: 90%;
+}
+#sidebar {
+	float: right;
+	padding-top: 4em;
+}
+.ad-300x600 {
+	width: 300px;
+	height: 600px;
+	margin: 0;
+}
+@media screen and (max-width: 480px) {
+	#main {
+		font-size: 150%;
+	}
+	#sidebar {
+		padding-top: 0;
+	}
+}
