@@ -29,7 +29,7 @@ permalink: /blog/:year/:month/:day/:title
 # Vale para a diretiva 'permalink' dentro do YAML de páginas.
 relative_permalinks: false
 
-
+# Used by category-pages plugin
 category_dir: blog/category
 
 ### Syntax Highlight
