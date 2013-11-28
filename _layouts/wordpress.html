@@ -208,8 +208,8 @@
 						<a href="http://aurelio.net{{ page.url }}/" rel="bookmark"><span class="entry-date">{{ page.date | date: "%d/%m/%Y" }}</span></a>
 						<span class="meta-sep">por</span>
 						<span class="author vcard"><a class="url fn n" href="http://aurelio.net/sobre/" title="Saiba mais sobre o autor">Aurelio Jargas</a></span>
-						e arquivado em <a href="http://aurelio.net/blog/category/" title="Ver todos os posts" rel="category tag">Meu querido diário</a>
-						com as tags <a href="http://aurelio.net/tag/recomendacao/" rel="tag">recomendação</a>.
+						e arquivado em {% include list-categories.html %}
+						com as tags {% include list-tags.html %}
 					</div><!-- .entry-utility -->
 
 					<div class="linkwithin_div"></div>
