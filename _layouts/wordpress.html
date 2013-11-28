@@ -14,7 +14,6 @@
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 <script type='text/javascript'>try{jQuery.noConflict();}catch(e){};</script>
 <script type='text/javascript' src='http://aurelio.net/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='http://aurelio.net/wp/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
 <link rel='prev' title='{{ page.prev_title | escape }}' href='{{ page.prev_url }}' />
 <link rel='next' title='{{ page.next_title | escape }}' href='{{ page.next_url }}' />
 <meta name="generator" content="WordPress 3.6" />
@@ -44,24 +43,6 @@
 	}
 </style>
 
-<!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
-<script type="text/javascript">
-	var analyticsFileTypes = ['pdf','zip','dmg','tgz'];
-	var analyticsEventTracking = 'enabled';
-</script>
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-280222-1']);
-        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
-        
-	_gaq.push(['_trackPageview']);
-
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-</script>
 {% unless site.production %}
 	<style>
 	.ad-box-336 { width: 336px; height: 280px; }
@@ -69,6 +50,7 @@
 	</style>
 {% endunless%}
 
+{% include analytics.html %}
 </head>
 
 <body class="single single-post postid-{{ page.wordpress_id }} single-format-standard custom-background">
