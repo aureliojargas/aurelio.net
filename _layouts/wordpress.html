@@ -2,25 +2,28 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<title>{{ page.title | escape }} | AURELIO.NET</title>
+<title>{{ page.title | escape }} | {{ site.name }}</title>
+
 <link rel="shortcut icon" href="http://aurelio.net/favicon.ico" />
 <meta name="author" content="Aurelio Jargas" />
 <link rel="stylesheet" type="text/css" media="all" href="http://aurelio.net/wp/wp-content/themes/twentyten-child/style.css" />
-<link rel="alternate" type="application/rss+xml" title="Feed de AURELIO.NET &raquo;" href="http://aurelio.net/feed/" />
-<link rel="alternate" type="application/rss+xml" title="AURELIO.NET &raquo;  Feed de comentários" href="http://aurelio.net/comments/feed/" />
+
+<link rel="alternate" type="application/rss+xml" title="Feed do site {{ site.name }}" href="http://aurelio.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed de comentários" href="http://aurelio.net/comments/feed/" />
+
+<link rel='canonical' href='{{ site.url }}{{ page.url }}/' />
+<link rel='shortlink' href='{{ page.shortlink }}' />
+
 <link rel='prev' title='{{ page.prev_title | escape }}' href='{{ page.prev_url }}' />
 <link rel='next' title='{{ page.next_title | escape }}' href='{{ page.next_url }}' />
 <meta name="generator" content="WordPress 3.6" />
-<link rel='canonical' href='http://aurelio.net{{ page.url }}/' />
-<link rel='shortlink' href='{{ page.shortlink }}' />
 
 <!-- Jetpack Open Graph Tags -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title | escape }}" />
-<meta property="og:url" content="http://aurelio.net{{ page.url }}/" />
-<meta property="og:site_name" content="AURELIO.NET" />
-
+<meta property="og:url" content="{{ site.url }}{{ page.url }}/" />
 <meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+<meta property="og:site_name" content="{{ site.name }}" />
 
 <style type="text/css" id="custom-background-css">
 	body.custom-background {
@@ -57,7 +60,7 @@
 			<div id="branding" role="banner">
 				<div id="site-title">
 					<span>
-						<a href="http://aurelio.net/" title="AURELIO.NET" rel="home">AURELIO.NET</a>
+						<a href="{{ site.url }}/" rel="home">{{ site.name }}</a>
 					</span>
 				</div>
 				<div id="site-description">Relaxe, leia com calma, aproveite a viagem.</div>
@@ -353,7 +356,7 @@
 	<div id="footer" role="contentinfo">
 		<div id="colophon">
 			<div id="site-info">
-				<a href="http://aurelio.net/" title="AURELIO.NET" rel="home">AURELIO.NET</a>
+				<a href="http://aurelio.net/" rel="home">{{ site.name }}</a>
 				é o site pessoal de
 				<a href="http://aurelio.net/sobre/">Aurelio Marinho Jargas</a>.<br>
 				<a href="http://aurelio.net/2009/06/27/10-anos-de-saite/">No ar desde 1999</a>,
