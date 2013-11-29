@@ -464,4 +464,9 @@ body.custom-background {
 .heart {
 	color: #C00;
 }
+.article-meta {
+	margin: 2em 0 12px 0;
+	font-style: italic;
+	line-height: 100%;
+}
 
