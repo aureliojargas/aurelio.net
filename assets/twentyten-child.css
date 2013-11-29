@@ -1,0 +1,452 @@
+/*
+Theme Name: Twenty Ten Child
+Description: Child theme for the Twenty Ten theme
+Author: Aurelio Jargas, 2011-02-26
+Template: twentyten
+
+Link colors: #06C #ff4b33 #743399 (link, hover, visited)
+*/
+
+/* import url("../twentyten/style.css"); */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{background:transparent;border:0;margin:0;padding:0;vertical-align:baseline}body{line-height:1}h1,h2,h3,h4,h5,h6{clear:both;font-weight:normal}ol,ul{list-style:none}blockquote{quotes:none}blockquote:before,blockquote:after{content:'';content:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}a img{border:0}#container{float:left;margin:0 -240px 0 0;width:100%}#content{margin:0 280px 0 20px}#primary,#secondary{float:right;overflow:hidden;width:220px}#secondary{clear:right}#footer{clear:both;width:100%}.one-column #content{margin:0 auto;width:640px}.single-attachment #content{margin:0 auto;width:900px}body,input,textarea,.page-title span,.pingback a.url{font-family:Georgia,"Bitstream Charter",serif}h3#comments-title,h3#reply-title,#access .menu,#access div.menu ul,#cancel-comment-reply-link,.form-allowed-tags,#site-info,#site-title,#wp-calendar,.comment-meta,.comment-body tr th,.comment-body thead th,.entry-content label,.entry-content tr th,.entry-content thead th,.entry-meta,.entry-title,.entry-utility,#respond label,.navigation,.page-title,.pingback p,.reply,.widget-title,.wp-caption-text{font-family:"Helvetica Neue",Arial,Helvetica,"Nimbus Sans L",sans-serif}input[type=submit]{font-family:"Helvetica Neue",Arial,Helvetica,"Nimbus Sans L",sans-serif}pre{font-family:"Courier 10 Pitch",Courier,monospace}code{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace}#access .menu-header,div.menu,#colophon,#branding,#main,#wrapper{margin:0 auto;width:940px}#wrapper{background:#fff;margin-top:20px;padding:0 20px}#footer-widget-area{overflow:hidden}#footer-widget-area .widget-area{float:left;margin-right:20px;width:220px}#footer-widget-area #fourth{margin-right:0}#site-info{float:left;font-size:14px;font-weight:bold;width:700px}#site-generator{float:right;width:220px}body{background:#f1f1f1}body,input,textarea{color:#666;font-size:12px;line-height:18px}hr{background-color:#e7e7e7;border:0;clear:both;height:1px;margin-bottom:18px}p{margin-bottom:18px}ul{list-style:square;margin:0 0 18px 1.5em}ol{list-style:decimal;margin:0 0 18px 1.5em}ol ol{list-style:upper-alpha}ol ol ol{list-style:lower-roman}ol ol ol ol{list-style:lower-alpha}ul ul,ol ol,ul ol,ol ul{margin-bottom:0}dl{margin:0 0 24px 0}dt{font-weight:bold}dd{margin-bottom:18px}strong{font-weight:bold}cite,em,i{font-style:italic}big{font-size:131.25%}ins{background:#ffc;text-decoration:none}blockquote{font-style:italic;padding:0 3em}blockquote cite,blockquote em,blockquote i{font-style:normal}pre{background:#f7f7f7;color:#222;line-height:18px;margin-bottom:18px;padding:1.5em}abbr,acronym{border-bottom:1px dotted #666;cursor:help}sup,sub{height:0;line-height:1;position:relative;vertical-align:baseline}sup{bottom:1ex}sub{top:.5ex}input[type="text"],textarea{background:#f9f9f9;border:1px solid #ccc;box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);padding:2px}a:link{color:#06c}a:visited{color:#743399}a:active,a:hover{color:#ff4b33}.screen-reader-text{position:absolute;left:-9000px}#header{padding:30px 0 0 0}#site-title{float:left;font-size:30px;line-height:36px;margin:0 0 18px 0;width:700px}#site-title a{color:#000;font-weight:bold;text-decoration:none}#site-description{clear:right;float:right;font-style:italic;margin:15px 0 18px 0;width:220px}#branding img{border-top:4px solid #000;border-bottom:1px solid #000;display:block;float:left}#access{background:#000;display:block;float:left;margin:0 auto;width:940px}#access .menu-header,div.menu{font-size:13px;margin-left:12px;width:928px}#access .menu-header ul,div.menu ul{list-style:none;margin:0}#access .menu-header li,div.menu li{float:left;position:relative}#access a{color:#aaa;display:block;line-height:38px;padding:0 10px;text-decoration:none}#access ul ul{box-shadow:0 3px 3px rgba(0,0,0,0.2);-moz-box-shadow:0 3px 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2);display:none;position:absolute;top:38px;left:0;float:left;width:180px;z-index:99999}#access ul ul li{min-width:180px}#access ul ul ul{left:100%;top:0}#access ul ul a{background:#333;line-height:1em;padding:10px;width:160px;height:auto}#access li:hover>a,#access ul ul:hover>a{background:#333;color:#fff}#access ul li:hover>ul{display:block}#access ul li.current_page_item>a,#access ul li.current-menu-ancestor>a,#access ul li.current-menu-item>a,#access ul li.current-menu-parent>a{color:#fff}* html #access ul li.current_page_item a,* html #access ul li.current-menu-ancestor a,* html #access ul li.current-menu-item a,* html #access ul li.current-menu-parent a,* html #access ul li a:hover{color:#fff}#main{clear:both;overflow:hidden;padding:40px 0 0 0}#content{margin-bottom:36px}#content,#content input,#content textarea{color:#333;font-size:16px;line-height:24px}#content p,#content ul,#content ol,#content dd,#content pre,#content hr{margin-bottom:24px}#content ul ul,#content ol ol,#content ul ol,#content ol ul{margin-bottom:0}#content pre,#content kbd,#content tt,#content var{font-size:15px;line-height:21px}#content code{font-size:13px}#content dt,#content th{color:#000}#content h1,#content h2,#content h3,#content h4,#content h5,#content h6{color:#000;line-height:1.5em;margin:0 0 20px 0}#content table{border:1px solid #e7e7e7;margin:0 -1px 24px 0;text-align:left;width:100%}#content tr th,#content thead th{color:#888;font-size:12px;font-weight:bold;line-height:18px;padding:9px 24px}#content tr td{border-top:1px solid #e7e7e7;padding:6px 24px}#content tr.odd td{background:#f2f7fc}.hentry{margin:0 0 48px 0}.home .sticky{background:#f2f7fc;border-top:4px solid #000;margin-left:-20px;margin-right:-20px;padding:18px 20px}.single .hentry{margin:0 0 36px 0}.page-title{color:#000;font-size:14px;font-weight:bold;margin:0 0 36px 0}.page-title span{color:#333;font-size:16px;font-style:italic;font-weight:normal}.page-title a:link,.page-title a:visited{color:#888;text-decoration:none}.page-title a:active,.page-title a:hover{color:#ff4b33}#content .entry-title{color:#000;font-size:21px;font-weight:bold;line-height:1.3em;margin-bottom:0}.entry-title a:link,.entry-title a:visited{color:#000;text-decoration:none}.entry-title a:active,.entry-title a:hover{color:#ff4b33}.entry-meta{color:#888;font-size:12px}.entry-meta abbr,.entry-utility abbr{border:0}.entry-meta abbr:hover,.entry-utility abbr:hover{border-bottom:1px dotted #666}.entry-content,.entry-summary{clear:both;padding:12px 0 0 0}#content .entry-summary p:last-child{margin-bottom:12px}.entry-content fieldset{border:1px solid #e7e7e7;margin:0 0 24px 0;padding:24px}.entry-content fieldset legend{background:#fff;color:#000;font-weight:bold;padding:0 24px}.entry-content input{margin:0 0 24px 0}.entry-content input.file,.entry-content input.button{margin-right:24px}.entry-content label{color:#888;font-size:12px}.entry-content select{margin:0 0 24px 0}.entry-content sup,.entry-content sub{font-size:10px}.entry-content blockquote.left{float:left;margin-left:0;margin-right:24px;text-align:right;width:33%}.entry-content blockquote.right{float:right;margin-left:24px;margin-right:0;text-align:left;width:33%}.page-link{clear:both;color:#000;font-weight:bold;margin:0 0 22px 0;word-spacing:.5em}.page-link a:link,.page-link a:visited{background:#f1f1f1;color:#333;font-weight:normal;padding:.5em .75em;text-decoration:none}.home .sticky .page-link a{background:#d9e8f7}.page-link a:active,.page-link a:hover{color:#ff4b33}body.page .edit-link{clear:both;display:block}#entry-author-info{background:#f2f7fc;border-top:4px solid #000;clear:both;font-size:14px;line-height:20px;margin:24px 0;overflow:hidden;padding:18px 20px}#entry-author-info #author-avatar{background:#fff;border:1px solid #e7e7e7;float:left;height:60px;margin:0 -104px 0 0;padding:11px}#entry-author-info #author-description{float:left;margin:0 0 0 104px}#entry-author-info h2{color:#000;font-size:100%;font-weight:bold;margin-bottom:0}.entry-utility{clear:both;color:#888;font-size:12px;line-height:18px}.entry-meta a,.entry-utility a{color:#888}.entry-meta a:hover,.entry-utility a:hover{color:#ff4b33}#content .video-player{padding:0}.home #content .format-aside p,.home #content .category-asides p{font-size:14px;line-height:20px;margin-bottom:10px;margin-top:0}.home .hentry.format-aside,.home .hentry.category-asides{padding:0}.home #content .format-aside .entry-content,.home #content .category-asides .entry-content{padding-top:0}.format-gallery .size-thumbnail img,.category-gallery .size-thumbnail img{border:10px solid #f1f1f1;margin-bottom:0}.format-gallery .gallery-thumb,.category-gallery .gallery-thumb{float:left;margin-right:20px;margin-top:-4px}.home #content .format-gallery .entry-utility,.home #content .category-gallery .entry-utility{padding-top:4px}.attachment .entry-content .entry-caption{font-size:140%;margin-top:24px}.attachment .entry-content .nav-previous a:before{content:'\2190\00a0'}.attachment .entry-content .nav-next a:after{content:'\00a0\2192'}img.size-auto,img.size-full,img.size-large,img.size-medium,.attachment img{max-width:100%;height:auto}.alignleft,img.alignleft{display:inline;float:left;margin-right:24px;margin-top:4px}.alignright,img.alignright{display:inline;float:right;margin-left:24px;margin-top:4px}.aligncenter,img.aligncenter{clear:both;display:block;margin-left:auto;margin-right:auto}img.alignleft,img.alignright,img.aligncenter{margin-bottom:12px}.wp-caption{background:#f1f1f1;line-height:18px;margin-bottom:20px;max-width:632px!important;padding:4px;text-align:center}.wp-caption img{margin:5px 5px 0}.wp-caption p.wp-caption-text{color:#888;font-size:12px;margin:5px}.wp-smiley{margin:0}.gallery{margin:0 auto 18px}.gallery .gallery-item{float:left;margin-top:0;text-align:center;width:33%}.gallery-columns-2 .gallery-item{width:50%}.gallery-columns-4 .gallery-item{width:25%}.gallery img{border:2px solid #cfcfcf}.gallery-columns-2 .attachment-medium{max-width:92%;height:auto}.gallery-columns-4 .attachment-thumbnail{max-width:84%;height:auto}.gallery .gallery-caption{color:#888;font-size:12px;margin:0 0 12px}.gallery dl{margin:0}.gallery img{border:10px solid #f1f1f1}.gallery br+br{display:none}#content .attachment img{display:block;margin:0 auto}.navigation{color:#888;font-size:12px;line-height:18px;overflow:hidden}.navigation a:link,.navigation a:visited{color:#888;text-decoration:none}.navigation a:active,.navigation a:hover{color:#ff4b33}.nav-previous{float:left;width:50%}.nav-next{float:right;text-align:right;width:50%}#nav-above{margin:0 0 18px 0}#nav-above{display:none}.paged #nav-above,.single #nav-above{display:block}#nav-below{margin:-18px 0 0 0}#comments{clear:both}#comments .navigation{padding:0 0 18px 0}h3#comments-title,h3#reply-title{color:#000;font-size:20px;font-weight:bold;margin-bottom:0}h3#comments-title{padding:24px 0}.commentlist{list-style:none;margin:0}.commentlist li.comment{border-bottom:1px solid #e7e7e7;line-height:24px;margin:0 0 24px 0;padding:0 0 0 56px;position:relative}.commentlist li:last-child{border-bottom:0;margin-bottom:0}#comments .comment-body ul,#comments .comment-body ol{margin-bottom:18px}#comments .comment-body p:last-child{margin-bottom:6px}#comments .comment-body blockquote p:last-child{margin-bottom:24px}.commentlist ol{list-style:decimal}.commentlist .avatar{position:absolute;top:4px;left:0}.comment-author cite{color:#000;font-style:normal;font-weight:bold}.comment-author .says{font-style:italic}.comment-meta{font-size:12px;margin:0 0 18px 0}.comment-meta a:link,.comment-meta a:visited{color:#888;text-decoration:none}.comment-meta a:active,.comment-meta a:hover{color:#ff4b33}.reply{font-size:12px;padding:0 0 24px 0}.reply a,a.comment-edit-link{color:#888}.reply a:hover,a.comment-edit-link:hover{color:#ff4b33}.commentlist .children{list-style:none;margin:0}.commentlist .children li{border:0;margin:0}.nopassword,.nocomments{display:none}#comments .pingback{border-bottom:1px solid #e7e7e7;margin-bottom:18px;padding-bottom:18px}.commentlist li.comment+li.pingback{margin-top:-6px}#comments .pingback p{color:#888;display:block;font-size:12px;line-height:18px;margin:0}#comments .pingback .url{font-size:13px;font-style:italic}input[type=submit]{color:#333}#respond{border-top:1px solid #e7e7e7;margin:24px 0;overflow:hidden;position:relative}#respond p{margin:0}#respond .comment-notes{margin-bottom:1em}.form-allowed-tags{line-height:1em}.children #respond{margin:0 48px 0 0}h3#reply-title{margin:18px 0}#comments-list #respond{margin:0 0 18px 0}#comments-list ul #respond{margin:0}#cancel-comment-reply-link{font-size:12px;font-weight:normal;line-height:18px}#respond .required{color:#ff4b33;font-weight:bold}#respond label{color:#888;font-size:12px}#respond input{margin:0 0 9px;width:98%}#respond textarea{width:98%}#respond .form-allowed-tags{color:#888;font-size:12px;line-height:18px}#respond .form-allowed-tags code{font-size:11px}#respond .form-submit{margin:12px 0}#respond .form-submit input{font-size:14px;width:auto}.widget-area ul{list-style:none;margin-left:0}.widget-area ul ul{list-style:square;margin-left:1.3em}.widget-area select{max-width:100%}.widget_search #s{width:60%}.widget_search label{display:none}.widget-container{margin:0 0 18px 0}.widget-title{color:#222;font-weight:bold}.widget-area a:link,.widget-area a:visited{text-decoration:none}.widget-area a:active,.widget-area a:hover{text-decoration:underline}.widget-area .entry-meta{font-size:11px}#wp_tag_cloud div{line-height:1.6em}#wp-calendar{width:100%}#wp-calendar caption{color:#222;font-size:14px;font-weight:bold;padding-bottom:4px;text-align:left}#wp-calendar thead{font-size:11px}#wp-calendar tbody{color:#aaa}#wp-calendar tbody td{background:#f5f5f5;border:1px solid #fff;padding:3px 0 2px;text-align:center}#wp-calendar tbody .pad{background:0}#wp-calendar tfoot #next{text-align:right}.widget_rss a.rsswidget{color:#000}.widget_rss a.rsswidget:hover{color:#ff4b33}.widget_rss .widget-title img{width:11px;height:11px}#main .widget-area ul{margin-left:0;padding:0 20px 0 0}#main .widget-area ul ul{border:0;margin-left:1.3em;padding:0}#footer{margin-bottom:20px}#colophon{border-top:4px solid #000;margin-top:-4px;overflow:hidden;padding:18px 0}#site-info{font-weight:bold}#site-info a{color:#000;text-decoration:none}#site-generator{font-style:italic;position:relative}#site-generator a{background:url(images/wordpress.png) center left no-repeat;color:#666;display:inline-block;line-height:16px;padding-left:20px;text-decoration:none}#site-generator a:hover{text-decoration:underline}img#wpstats{display:block;margin:0 auto 10px}pre{-webkit-text-size-adjust:140%}code{-webkit-text-size-adjust:160%}#access,.entry-meta,.entry-utility,.navigation,.widget-area{-webkit-text-size-adjust:120%}#site-description{-webkit-text-size-adjust:none}@media print{body{background:none!important}#wrapper{clear:both!important;display:block!important;float:none!important;position:relative!important}#header{border-bottom:2pt solid #000;padding-bottom:18pt}#colophon{border-top:2pt solid #000}#site-title,#site-description{float:none;line-height:1.4em;margin:0;padding:0}#site-title{font-size:13pt}.entry-content{font-size:14pt;line-height:1.6em}.entry-title{font-size:21pt}#access,#branding img,#respond,.comment-edit-link,.edit-link,.navigation,.page-link,.widget-area{display:none!important}#container,#header,#footer{margin:0;width:100%}#content,.one-column #content{margin:24pt 0 0;width:100%}.wp-caption p{font-size:11pt}#site-info,#site-generator{float:none;width:auto}#colophon{width:auto}img#wpstats{display:none}#site-generator a{margin:0;padding:0}#entry-author-info{border:1px solid #e7e7e7}#main{display:inline}.home .sticky{border:0}}
+
+
+/* Original 'baseline' breaks layout in parto-prematuro post */
+#content tr td {
+	vertical-align:middle;
+}
+
+/* Boxes - http://themehybrid.com/demo/hybrid/?p=92 (silver, green, yellow)*/
+.note            { padding:6px 9px; background:#EEEEEE; border:1px solid #CCC; }
+.download        { padding:6px 9px; background:#E7F7D3; border:1px solid #6C3; }
+.warning, .alert { padding:6px 9px; background:#FFFBBC; border:1px solid #E6DB55; }
+
+
+/****************************************************************/
+
+
+/*							=FONTS
+*/
+/* Originals:
+   Content: Georgia (not Unicode safe), "Bitstream Charter", serif
+   Code: "Courier 10 Pitch", Courier, monospace
+*/
+
+body, input, textarea, .page-title span, .pingback a.url {
+	font-family: Arial, sans-serif;  /* Unicode safe */
+}
+pre {
+	overflow:auto;
+	font-family: "Courier New", monospace;
+	font-size:14px;
+	color:#000;
+}
+code {
+	font-family: "Courier New", monospace;
+	font-size:15px;
+	background:#F7F7F7;
+}
+
+
+/****************************************************************/
+
+
+/*							=HEADER
+*/
+#site-title a:hover {
+	text-decoration:underline;
+}
+
+/* Description below title */
+#site-title {
+	margin-bottom:0;
+	clear:none;  /* avoids break in Home */
+}
+#site-description {
+	clear:left;
+	float:left;
+	width:400px;
+	margin-top:0;
+	font-size: 13px;
+}
+
+/* Surgery: hide img, add avatar, stretch menu, positioning */
+#header { padding-top: 20px; }
+#branding img { display:none; }
+#wrapper { background: white url(http://aurelio.net/img/icon/96/avatar.png) no-repeat 10px 5px; }
+#site-title, #site-description { margin-left:90px; }
+#social-icons img { width:64px !important; }
+#site-title { width:400px; }
+#site-description { margin-bottom:35px; }
+#access { margin-left:-20px;border-left:20px solid black;border-right:20px solid black;}
+
+
+
+/*							=SOCIAL
+*/
+#social-icons { float:right; }
+#social-icons img { width:40px; }
+#social-icons a:hover { background-color:#666; }
+
+
+/*							=SEARCH
+*/
+#aa-search { float:right; margin:5px 5px 0 0; }
+
+
+/*							=MENU
+*/
+/* More readable links */
+#access a { font-weight:bold; }
+#access a:hover { text-decoration:underline; }
+
+/* Main menu highlights: UPPER, bigger */
+#access .menu a { text-transform:uppercase; font-size:14px; }
+
+/* Restore submenus to defaults */
+#access .sub-menu a { text-transform:none; font-size:13px; }
+
+/* Change menu font color */
+/*#access li:hover > a, #access ul ul:hover > a {background:#f00; color:#f0f;}*/
+/*#access ul ul a {background:#0f0;}*/
+/*#access a {color:#00f;}*/
+
+
+/****************************************************************/
+
+
+/*							=POST TITLE
+*/
+/* Big and clean */
+#content .entry-title {
+	font-family:sans-serif;
+	font-size:2em;
+	line-height:1.1em;
+	margin:0.2em 0;
+}
+
+/* Always underline in hover */
+#content .entry-title a:hover {
+	text-decoration:underline;
+}
+
+/* Black hover in single */
+body.single #content .entry-title a:hover {
+	color:black;
+}
+
+/*							=POST CONTENT
+*/
+/* Image caption more readable */
+#content .wp-caption-text {
+	color:#333;
+	margin:5px;
+}
+
+/* Spaced list */
+ul.spaced li {
+	margin-bottom: 1em;
+}
+
+
+/*							=POST META
+*/
+/* No underline in post meta: index pages, after title */
+.entry-meta a {
+	text-decoration:none;
+}
+
+
+/*							=POST SHARE
+*/
+/* Open a box here... */
+.sharing {
+	background-color: #F8F8F8;
+	border-top: 1px solid #DDD;
+}
+/* ...and close it here. */
+.entry-utility {
+	background-color: #F8F8F8;
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 5px;
+}
+
+/* Single posts use a diff style */
+.single .entry-utility {
+	background-color: white;
+	border-width: 0;
+	padding-bottom: 0;
+	margin: 0 0 2em 0;
+}
+.page .sharing,
+.single .sharing {
+	padding: 0 0 0 1em;
+	background: #E7F7D3;  /* same colors as .download */
+	border: 1px solid #6C3;
+	margin: 2em 0;
+}
+
+/****************************************************************/
+
+
+/*							=COMMENTS
+*/
+/* Stronger separator lines */
+.commentlist li.comment,
+#comments .pingback,
+#respond {
+	border-color:#AAA;
+}
+
+/* spacing after social box */
+#comments {
+	margin-top:40px;
+}
+h3#comments-title {
+	padding-top:0;
+}
+
+/* highlight blog author comments */
+#comments li.comment-author-aurelio {
+	background:#E7F7D3 !important;
+}
+#comments li.comment-author-aurelio li.comment {
+	background:#fff;
+}
+
+
+
+/****************************************************************/
+
+
+/*							=SIDEBAR
+*/
+/* Sidebar is prettier in sans */
+#primary {
+	font-family:sans-serif;
+}
+
+/* Reformat links in mini bio */
+#primary .download a { color:#666; text-decoration:underline; }
+#primary .download a:hover { color:black; }
+
+
+/****************************************************************/
+
+
+/*							=FOOTER
+*/
+/* Transform left/right areas in one big area */
+#site-info {
+	text-align:center;
+	font-weight:normal;
+	float:none;
+	width:100%;
+}
+
+/* Spacing in CC image */
+#site-info img {
+	margin-top:15px;
+}
+
+/* Low contrast when not hover */
+#site-info,
+#site-info a { color:#888; text-decoration:none; }
+
+/* When hover, use default link attributes (order matters!) */
+#site-info:hover { color:black; }
+#site-info:hover a { text-decoration:underline; }
+#site-info:hover a:link { color:#06C; }
+#site-info:hover a:visited { color:#743399; }
+#site-info:hover a:hover,
+#site-info:hover a:active { color:#ff4b33; }
+
+
+/****************************************************************/
+
+
+/*							=HOME
+*/
+/* Hide page title */
+body.home #content .entry-title { display:none; }
+
+/* Icon Matrix made with CSS Sprites — faster! */
+#aa-matrix {
+	width:630px;
+}
+#aa-matrix a:hover,
+#aa-matrix a:hover i {
+	background-color:#333;
+}
+#aa-matrix a {
+	padding:8px;
+	display:block;
+	float:left;
+	border:1px solid #ccc;
+	background-color:#eee;
+	text-align:center;
+	margin:0 6px 6px 0;
+}
+#aa-matrix i {
+	background: url(/img/index-sprites.png) no-repeat top left;
+	background-color:#eee;
+	width:80px;
+	height:80px;
+	display:block;
+}
+#aa-matrix .sp-adiumbook{ background-position: 0 0; }
+#aa-matrix .sp-baterna{ background-position: 0 -81px; }
+#aa-matrix .sp-canivete{ background-position: 0 -162px; }
+#aa-matrix .sp-carve{ background-position: 0 -243px; }
+#aa-matrix .sp-codare{ background-position: 0 -324px; }
+#aa-matrix .sp-csssandbox{ background-position: 0 -405px; }
+#aa-matrix .sp-curso{ background-position: 0 -486px; }
+#aa-matrix .sp-dialog{ background-position: 0 -567px; }
+#aa-matrix .sp-doc{ background-position: 0 -648px; }
+#aa-matrix .sp-embriagueitor{ background-position: 0 -729px; }
+#aa-matrix .sp-engripeitor{ background-position: 0 -810px; }
+#aa-matrix .sp-er{ background-position: 0 -891px; }
+#aa-matrix .sp-fvm{ background-position: 0 -972px; }
+#aa-matrix .sp-livroregex3{ background-position: 0 -1053px; }
+#aa-matrix .sp-livroshell{ background-position: 0 -1134px; }
+#aa-matrix .sp-mac{ background-position: 0 -1215px; }
+#aa-matrix .sp-miguxeitor{ background-position: 0 -1296px; }
+#aa-matrix .sp-moneylog{ background-position: 0 -1377px; }
+#aa-matrix .sp-pogo{ background-position: 0 -1458px; }
+#aa-matrix .sp-sed{ background-position: 0 -1539px; }
+#aa-matrix .sp-sedsokoban{ background-position: 0 -1620px; }
+#aa-matrix .sp-shell{ background-position: 0 -1701px; }
+#aa-matrix .sp-subwaytor{ background-position: 0 -1782px; }
+#aa-matrix .sp-surf{ background-position: 0 -1863px; }
+#aa-matrix .sp-txt2tags{ background-position: 0 -1944px; }
+#aa-matrix .sp-umportugues{ background-position: -81px 0; }
+#aa-matrix .sp-viagem{ background-position: -81px -81px; }
+#aa-matrix .sp-vim{ background-position: -81px -162px; }
+#aa-matrix .sp-viravira{ background-position: -81px -243px; }
+#aa-matrix .sp-zz{ background-position: -81px -324px; }
+
+
+/* Links underlined in hover only */
+#aa-recent a { text-decoration:none; }
+#aa-recent a:hover { text-decoration:underline; }
+
+/* Recent posts special formatting */
+#aa-recent {
+	margin-top:35px;
+	margin-right:12px;
+}
+#aa-recent h3 {
+	margin-bottom:0;
+	line-height:200%;
+	padding-top:2em;
+}
+#aa-recent ul {
+	border-top:1px solid #eee;
+	list-style-type:none;
+	margin-left:0;
+}
+#aa-recent li {
+	line-height:200%;
+	border-bottom:1px solid #eee;
+}
+#aa-recent a {
+	display:block;
+}
+#aa-recent a:hover {
+	background:#eee;
+	color:black;
+}
+
+
+/****************************************************************/
+
+
+/*							=404
+*/
+body.error404 #container {
+	background:url(/img/icon/128/404.jpg) no-repeat right top;
+}
+
+
+/****************************************************************/
+
+
+/*							=ARCHIVES
+*/
+body.page-id-1877 .sya_container li {
+	color:#aaa;
+}
+
+
+/****************************************************************/
+
+
+/*							=ADS
+*/
+.ad-twins {
+	margin: 24px auto 12px auto !important; /* .entry-content 12px top */
+	border-width: 0 !important;
+}
+.ad-twins td {
+	padding: 0 !important;
+	border-width: 0 !important;
+}
+.ad-twin-right {
+	text-align: right;
+}
+.ad-blog-box-bottom {
+	margin: 2em auto;
+	width: 336px;
+}
+.ad-box-300 {
+	margin: 2em auto;
+	width: 300px;
+}
+.ad-blog-box-top {
+	float: right;
+	margin: 12px 0 5px 1em;  /* 12px = .entry-content:padding-top */
+}
+.ad-box-left {
+	float: left;
+	margin: 12px 1em 5px 0;  /* 12px = .entry-content:padding-top */
+}
+.entry-content {
+	clear: none;  /* needed by .ad-box-left, .ad-blog-box-top */
+}
+
+/****************************************************************/
+
+
+/*							=ARTICLES
+*/
+
+.zzpagenav li {  /* spaced */
+	line-height: 200%;
+}
+.zzpageback {
+	margin-top: 1em;
+}
+
+/* Artigos */
+.artigo .ad-twins {
+	margin-bottom: 50px !important;
+}
+.artigo .form-allowed-tags {
+	display: none;
+}
+
+/* Articles */
+.page-template-article-page-php .entry-content {
+	margin-top: 2em;
+}
+.ad-article-top {
+	float: right;
+	margin: 0 0 2em 2em;
+	width: 336px;
+}
+.ad-article-bottom {
+	margin: 2em auto;
+	width: 336px;
+}
+
+
