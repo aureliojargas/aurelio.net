@@ -449,4 +449,19 @@ body.page-id-1877 .sya_container li {
 	width: 336px;
 }
 
+/****************************************************************/
+
+body.custom-background {
+	background-color: #303030;
+	background-image: url('/assets/twentyten-child/bg-stripes.png');
+	background-repeat: repeat;
+	background-position: top left;
+	background-attachment: fixed;
+}
+.unicode-char { /* from 2013.css */
+	font-family: "Helvetica Neue", sans-serif;
+}
+.heart {
+	color: #C00;
+}
 
