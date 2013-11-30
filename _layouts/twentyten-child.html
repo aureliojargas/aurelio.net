@@ -187,18 +187,8 @@
 					{{ content }}
 					</div><!-- .entry-content -->
 
-					<!--
-					<div class="entry-utility">
-						<span class="meta-prep meta-prep-author">Publicado em</span>
-						<a href="http://aurelio.net{{ page.url }}/" rel="bookmark"><span class="entry-date">{{ page.date | date: "%d/%m/%Y" }}</span></a>
-						<span class="meta-sep">por</span>
-						<span class="author vcard"><a class="url fn n" href="http://aurelio.net/sobre/" title="Saiba mais sobre o autor">Aurelio Jargas</a></span>
-						e arquivado em {% include list-categories.html %}
-						com as tags {% include list-tags.html %}
-					</div> --><!-- .entry-utility -->
-
 					<div class="article-tags">
-						Tags: {% include list-categories.html %}{% unless page.tags == empty %}, {% include list-tags.html %}{% endunless %}
+						Tags: {% include page-tags.html %}
 					</div>
 
 {% include share.html %}
