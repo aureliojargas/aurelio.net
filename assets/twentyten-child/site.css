@@ -489,4 +489,9 @@ body.custom-background {
 .article-tags:hover a:hover {
 	color: red;
 }
-
+.mog { /* from 2013/site.css */
+	color: #800000;
+	background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
+	padding: 0 58px 0 0;
+	min-height: 48px;
+}
