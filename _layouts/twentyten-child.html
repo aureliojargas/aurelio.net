@@ -176,10 +176,7 @@
 				<div id="post-{{ page.wordpress_id }}" class="post-{{ page.wordpress_id }} post type-post status-publish format-standard hentry">
 					<h1 class="entry-title"><a href="" title="Link permanente para {{ page.title | escape }}" rel="bookmark">{{ page.title | escape }}</a></h1>
 
-					<div class="article-meta">
-						Escrito por <a class="author" href="{{ site.url }}">Aurelio Jargas</a>
-						em <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
-					</div>
+{% include page-byline.html %}
 
 {% include ad-300x250-blog1.html %}
 
