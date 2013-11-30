@@ -469,6 +469,9 @@ body.custom-background {
 	font-style: italic;
 	line-height: 100%;
 }
+.byline a {
+	color: blue;
+}
 .article-tags,
 .article-tags a {
 	color: #999;
