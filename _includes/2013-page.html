@@ -1,20 +1,6 @@
 	<header>
 		<h1>{{ page.title | escape }}</h1>
-		<p class="meta">
-{% unless page.hide_author %}
-{% case page.author %}
-{% when 'mog' %}
-			Escrito por <a class="author" href="http://www.moguinha.com.br">Mog</a>
-{% when 'aurelio+mog' %}
-			Escrito por <a class="author" href="http://www.moguinha.com.br">Mog</a>
-			      &amp; <a class="author" href="{{ site.url }}">Aurelio Jargas</a>
-{% else %}
-			Escrito por <a class="author" href="{{ site.url }}">Aurelio Jargas</a>
-{% endcase %}
-{% endunless %}
-{% unless page.hide_date %}
-			em <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>{% endunless %}
-		</p>
+{% include page-byline.html %}
 	</header>
 
 	<article>
