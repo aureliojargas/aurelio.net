@@ -194,10 +194,10 @@ header {
 header h1 {
 	margin: 0;
 }
-header .meta {
+header .byline {
 	margin-top: 2em;
 }
-header .meta a {
+header .byline a {
 	color: blue;
 }
 
