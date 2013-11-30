@@ -469,17 +469,20 @@ body.custom-background {
 	font-style: italic;
 	line-height: 100%;
 }
+.article-tags,
+.article-tags a {
+	color: #999;
+	border-color: #ccc;
+}
 .article-tags {
-	color: silver;
 	text-align: center;
 	font-size: 80%;
-	border: 1px solid silver;
 	border-width: 1px 0;
+	border-style: solid;
 	margin-bottom: 24px;
 	padding: 0 4em;
 }
 .article-tags a {
-	color: silver;
 	text-decoration: none;
 }
 .article-tags:hover a {
