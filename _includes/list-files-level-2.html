@@ -5,6 +5,4 @@
 	{% assign l_path = l_page.url | split: '/' %}
 	{% assign l_area = l_path[1] | append: '/' | append: l_path[2] %}
 	{% if l_area == area and l_page.url != index_html %}
-		<li><a href="{{ l_page.url | remove: 'index.html' }}">{{ l_page.title | escape }}</a></li>
-	{% endif %}
-{% endfor %}
+		<li><a href="{{ l_page.url | remove: 'index.html' }}">{{ l_page.title | escape }}</a></li>{% endif %}{% endfor %}
