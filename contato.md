@@ -5,8 +5,7 @@ layout: 2013-page
 slug: contato
 title: Contato
 wordpress_id: 217
-hide_author: true
-hide_date: true
+hide_byline: true
 hide_read_more: true
 hide_share: true
 hide_comments: true

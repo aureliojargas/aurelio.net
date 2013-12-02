@@ -45,6 +45,7 @@ redcarpet:
 
 ### Page config (to insert in Front Matter)
 # hide_prev_next: true
+# hide_byline: true
 # hide_author: true
 # hide_date: true
 # hide_ads: true

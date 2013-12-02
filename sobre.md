@@ -1,12 +1,10 @@
 ---
 author: aurelio
-date: 2007-05-03 20:34:53+00:00
 layout: 2013-page
 slug: sobre
 title: Sobre
 wordpress_id: 221
-hide_author: true
-hide_date: true
+hide_byline: true
 #hide_read_more: true
 hide_share: true
 hide_comments: true
