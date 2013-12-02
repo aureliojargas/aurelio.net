@@ -167,12 +167,12 @@
 
 		<div id="container">
 			<div id="content" role="main">
-
+{% unless page.hide_prev_next %}
 				<div id="nav-above" class="navigation">
 					<div class="nav-previous"><a href="{{ page.prev_url }}" rel="prev"><span class="meta-nav">&larr;</span> {{ page.prev_title | escape }}</a></div>
 					<div class="nav-next"><a href="{{ page.next_url }}" rel="next">{{ page.next_title | escape }} <span class="meta-nav">&rarr;</span></a></div>
 				</div><!-- #nav-above -->
-
+{% endunless %}
 				<div id="post-{{ page.wordpress_id }}" class="post-{{ page.wordpress_id }} post type-post status-publish format-standard hentry">
 					<h1 class="entry-title"><a href="" title="Link permanente para {{ page.title | escape }}" rel="bookmark">{{ page.title | escape }}</a></h1>
 
