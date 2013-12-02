@@ -15,10 +15,10 @@
 
 <link rel='canonical' href='{{ site.url }}{{ page.url }}' />
 <link rel='shortlink' href='{{ page.shortlink }}' />
-
+{% unless page.hide_prev_next %}
 <link rel='prev' title='{{ page.prev_title | escape }}' href='{{ page.prev_url }}' />
 <link rel='next' title='{{ page.next_title | escape }}' href='{{ page.next_url }}' />
-
+{% endunless%}
 <!-- Open Graph Tags - http://ogp.me/ -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title | escape }}" />
@@ -183,11 +183,11 @@
 					<div class="entry-content">
 					{{ content }}
 					</div><!-- .entry-content -->
-
+{% unless page.hide_tags %}
 					<div class="article-tags">
 						Tags: {% include page-tags.html %}
 					</div>
-
+{% endunless %}
 {% include article-footer.html more_url="http://aurelio.net/blog/sumario/" %}
 
 {% include ad-336x280-blog2.html %}
