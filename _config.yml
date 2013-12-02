@@ -16,6 +16,7 @@ production: false
 
 name: Aurelio.net
 url: http://aurelio.net
+description: "Relaxe, leia com calma, aproveite a viagem."
 
 ### permalink
 # A configuração de permalink aqui vale somente para posts.
