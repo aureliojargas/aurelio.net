@@ -1,13 +1,10 @@
-{% assign more_url = '..' %}
-{% unless include.more_url == empty %}{% assign more_url = include.more_url %}{% endunless %}
-
+{% assign more_url = '..' %}{% unless include.more_url == empty %}{% assign more_url = include.more_url %}{% endunless %}
 {% unless page.hide_read_more %}
 	<p class="read-more">
 		<span class="unicode-char heart">♥</span>
 		Gostou desse texto?
 		<a href="{{ more_url }}">Aqui tem mais</a>.
 	</p>{% endunless %}
-
 {% unless page.hide_share %}
 	<!-- http://www.sharelinkgenerator.com/ -->
 	<p class="share">
@@ -15,5 +12,4 @@
 		<a target="_blank" rel="nofollow" href="http://twitter.com/home?status={{ page.title | append: ' ' | append: site.url | append: page.url | append: '/' | uri_escape }}">Twitter</a>,
 		<a target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]={{ site.url | append: page.url | append: '/' | uri_escape }}&p[images][0]=&p[title]={{ page.title | uri_escape }}&p[summary]=">Facebook</a>,
 		<a target="_blank" rel="nofollow" href="https://plus.google.com/share?url={{ site.url | append: page.url | append: '/' | uri_escape }}">Google+</a>
-		<!-- <em>(links normais, sem JavaScript, iframe e rastreamento)</em> -->
 	</p>{% endunless %}
