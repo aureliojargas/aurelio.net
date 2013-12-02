@@ -49,31 +49,5 @@ redcarpet:
 # hide_share: true
 # hide_comments: true
 
-category_data:
-  amigorama:
-    name: Amigorama
-    desc: "Cada texto é uma homenagem a uma pessoa importante, inspiradora para mim, que eu gostaria que você conhecesse. Por que Amigorama? Ah, sei lá. Fliperama, autorama… Amigorama! :D"
-  barbada:
-    name: Barbada
-    desc: "Promoções, sorteios, descontos e concursos que faço de vez em quando aqui no blog. Às vezes você participa nos comentários, às vezes pelo twitter. Fique ligado(a) e aproveite!"
-  livro:
-    name: Livro
-    desc: "Notícias sobre os livros que escrevi. Aqui anuncio quando lanço um livro novo e quando sai uma edição nova. Também conto sobre os bastidores, as conquistas, as amarguras e as histórias desse mundo de escritor."
-  meu-querido-diario:
-    name: Meu querido diário
-    desc: "Textos pessoais, não-nerds, sobre meu cotidiano, minha vida e acontecimentos bizarros. Às vezes fazem rir, às vezes fazem refletir. Os melhores textos do blog estão aqui."
-  sitelog:
-    name: Mudanças no site
-    desc: "Mudanças no meu site/blog AURELIO.NET, como endereço novo, tema novo ou alguma novidade que afeta o site como um todo."
-  musica:
-    name: Música
-    desc: "Bandas, músicas, bateria e punk/hardcore."
-  nerd:
-    name: Nerd
-    desc: "Nerd power FTW! Hooray \o/"
-  software:
-    name: Software
-    desc: "Notícias sobre os programas (softwares) que crio: anúncio inicial, versão nova, atualizações, instruções e, é claro, muitas histórias por trás dos bits e bytes."
-  screencast:
-    name: Vídeo-aula (screencast)
-    desc: "Vídeo-aulas que gravei em meu computador (screencasts). Todos os vídeos foram gravados ao vivo, sem cortes nem edição posterior. É a experiência completa e sem frescura."
+# Use a pasta _data para guardar arquivos de dados
+# If there's a file members.yml under the directory, then you can access contents of the file through site.data.members.
