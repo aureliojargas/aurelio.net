@@ -1,3 +1,4 @@
+{% unless page.hide_comments %}
 	<!-- Disqus comments -->
 {% if site.production %}
 	<div id="disqus_thread"></div>
@@ -15,3 +16,4 @@
 	<div id="disqus_thread">DEV MODE: Disqus disabled</div>
 {% endif %}
 	<!-- /Disqus comments -->
+{% endunless %}
