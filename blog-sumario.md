@@ -7,8 +7,9 @@ title: Sumário
 wordpress_id: 1877
 hide_author: true 
 hide_date: true
-hide_comments: true
 hide_read_more: true
+hide_share: true
+hide_comments: true
 permalink: blog/sumario/
 ---
 

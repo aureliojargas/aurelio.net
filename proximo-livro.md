@@ -6,6 +6,7 @@ slug: proximo-livro
 title: Próximo Livro
 wordpress_id: 619
 hide_read_more: true
+hide_share: true
 permalink: proximo-livro/
 ---
 

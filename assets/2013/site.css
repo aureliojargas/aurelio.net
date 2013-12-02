@@ -204,9 +204,12 @@ header .byline a {
 article {
 	margin-bottom: 3em;
 }
-.read-more {
-	margin-bottom: 3em;
+.read-more,
+.share {
 	text-align: center;
+}
+.share {
+	margin-bottom: 3em;
 }
 .read-more .heart,
 footer:hover .heart {

@@ -9,7 +9,5 @@
 
 	</article>
 
-{% unless page.hide_read_more %}
-	<p class="read-more"><span class="unicode-char heart">♥</span> Gostou desse texto? <a href="..">Aqui tem mais</a>.</p>{% endunless %}
-	
+{% include article-footer.html more_url=".." %}
 {% unless page.hide_comments %}{% include disqus.html %}{% endunless %}

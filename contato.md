@@ -2,13 +2,14 @@
 author: aurelio
 date: 2007-04-26 20:38:27+00:00
 layout: 2013-page
-hide_comments: true
 slug: contato
 title: Contato
 wordpress_id: 217
-hide_date: true
 hide_author: true
+hide_date: true
 hide_read_more: true
+hide_share: true
+hide_comments: true
 permalink: contato/
 ---
 
