@@ -137,83 +137,11 @@ body.single #content .entry-title a:hover {
 
 /*							=POST CONTENT
 */
-/* Image caption more readable */
-#content .wp-caption-text {
-	color:#333;
-	margin:5px;
-}
 
 /* Spaced list */
 ul.spaced li {
 	margin-bottom: 1em;
 }
-
-
-/*							=POST META
-*/
-/* No underline in post meta: index pages, after title */
-.entry-meta a {
-	text-decoration:none;
-}
-
-
-/*							=POST SHARE
-*/
-/* Open a box here... */
-.sharing {
-	background-color: #F8F8F8;
-	border-top: 1px solid #DDD;
-}
-/* ...and close it here. */
-.entry-utility {
-	background-color: #F8F8F8;
-	border-bottom: 1px solid #DDD;
-	padding-bottom: 5px;
-}
-
-/* Single posts use a diff style */
-.single .entry-utility {
-	background-color: white;
-	border-width: 0;
-	padding-bottom: 0;
-	margin: 0 0 2em 0;
-}
-.page .sharing,
-.single .sharing {
-	padding: 0 0 0 1em;
-	background: #E7F7D3;  /* same colors as .download */
-	border: 1px solid #6C3;
-	margin: 2em 0;
-}
-
-/****************************************************************/
-
-
-/*							=COMMENTS
-*/
-/* Stronger separator lines */
-.commentlist li.comment,
-#comments .pingback,
-#respond {
-	border-color:#AAA;
-}
-
-/* spacing after social box */
-#comments {
-	margin-top:40px;
-}
-h3#comments-title {
-	padding-top:0;
-}
-
-/* highlight blog author comments */
-#comments li.comment-author-aurelio {
-	background:#E7F7D3 !important;
-}
-#comments li.comment-author-aurelio li.comment {
-	background:#fff;
-}
-
 
 
 /****************************************************************/
@@ -383,32 +311,13 @@ body.page-id-1877 .sya_container li {
 
 /*							=ADS
 */
-.ad-twins {
-	margin: 24px auto 12px auto !important; /* .entry-content 12px top */
-	border-width: 0 !important;
-}
-.ad-twins td {
-	padding: 0 !important;
-	border-width: 0 !important;
-}
-.ad-twin-right {
-	text-align: right;
-}
 .ad-blog-box-bottom {
 	margin: 2em auto;
 	width: 336px;
 }
-.ad-box-300 {
-	margin: 2em auto;
-	width: 300px;
-}
 .ad-blog-box-top {
 	float: right;
 	margin: 12px 0 5px 1em;  /* 12px = .entry-content:padding-top */
-}
-.ad-box-left {
-	float: left;
-	margin: 12px 1em 5px 0;  /* 12px = .entry-content:padding-top */
 }
 .entry-content {
 	clear: none;  /* needed by .ad-box-left, .ad-blog-box-top */
@@ -420,25 +329,7 @@ body.page-id-1877 .sya_container li {
 /*							=ARTICLES
 */
 
-.zzpagenav li {  /* spaced */
-	line-height: 200%;
-}
-.zzpageback {
-	margin-top: 1em;
-}
-
-/* Artigos */
-.artigo .ad-twins {
-	margin-bottom: 50px !important;
-}
-.artigo .form-allowed-tags {
-	display: none;
-}
-
 /* Articles */
-.page-template-article-page-php .entry-content {
-	margin-top: 2em;
-}
 .ad-article-top {
 	float: right;
 	margin: 0 0 2em 2em;
