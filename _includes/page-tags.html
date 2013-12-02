@@ -1,4 +1,4 @@
 {% for cat in page.categories %}
-	<a rel="category tag" href="/blog/category/{{ cat }}/">{{ cat }}</a>{% unless forloop.last and page.tags == empty %},{% endunless %}{% endfor %}
+	<a rel="category tag" href="http://aurelio.net/blog/category/{{ cat }}/">{{ cat }}</a>{% unless forloop.last and page.tags == empty %},{% endunless %}{% endfor %}
 {% for tag in page.tags %}
-	<a rel="tag" href="/tag/{{ tag }}/">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
+	<a rel="tag" href="http://aurelio.net/tag/{{ tag }}/">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
