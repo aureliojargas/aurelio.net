@@ -22,7 +22,7 @@ url: http://aurelio.net
 # Você pode usá-la no YAML de páginas individuais também.
 #
 # /blog/2009/04/29/slap-chop/index.html
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title/
 # permalink: /:title
 
 ### relative_permalinks
