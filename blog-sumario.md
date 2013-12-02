@@ -37,14 +37,14 @@ Para ver os artigos do site (e não do blog), volte para a [página principal](h
   <li><a href="http://aurelio.net/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
   <li><a href="http://aurelio.net/blog/2012/08/08/piazinho-no-facebook-e-sorteio/">Piazinho no Facebook (e sorteio!)</a></li>
   <li><a href="http://aurelio.net/blog/2012/07/13/entrei-no-facebook/">Entrei no Facebook</a></li>
-  <li><a href="http://aurelio.net/blog/2012/07/05/piazinho-4-a-missao/">Piazinho 4 &#8211; A missão</a></li>
+  <li><a href="http://aurelio.net/blog/2012/07/05/piazinho-4-a-missao/">Piazinho 4 – A missão</a></li>
   <li><a href="http://aurelio.net/blog/2012/05/10/o-jeito-shell-script-de-resolver-problemas-parte-3/">O jeito Shell Script de resolver problemas — Parte 3</a></li>
   <li><a href="http://aurelio.net/blog/2012/05/04/resumao-das-expressoes-regulares-numa-folha-a4-pdf/">Resumão das Expressões Regulares numa folha A4 (PDF)</a></li>
   <li><a href="http://aurelio.net/blog/2012/05/02/video-aula-como-aplicar-um-patch-diff/">Vídeo-aula: Como aplicar um patch (diff)</a></li>
   <li><a href="http://aurelio.net/blog/2012/04/19/arrumei-o-barulho-no-macbook-era-sujeira-na-ventoinha/">Arrumei o barulho no MacBook, era sujeira na ventoinha</a></li>
   <li><a href="http://aurelio.net/blog/2012/04/11/o-jeito-shell-script-de-resolver-problemas-parte-2/">O jeito Shell Script de resolver problemas — Parte 2</a></li>
   <li><a href="http://aurelio.net/blog/2012/03/23/a-mog-manja-de-linux/">A Mog manja de Linux</a></li>
-  <li><a href="http://aurelio.net/blog/2012/03/20/erro-404-na-web-api-rest-json-o-que-fazer/">Erro 404 na Web API REST/JSON &#8211; O que fazer?</a></li>
+  <li><a href="http://aurelio.net/blog/2012/03/20/erro-404-na-web-api-rest-json-o-que-fazer/">Erro 404 na Web API REST/JSON – O que fazer?</a></li>
   <li><a href="http://aurelio.net/blog/2012/03/16/10-anos-de-sedsokoban/">10 anos de SedSokoban</a></li>
   <li><a href="http://aurelio.net/blog/2012/03/15/moneylog-experience-5/">MoneyLog Experience 5</a></li>
   <li><a href="http://aurelio.net/blog/2012/03/02/lancar-software-e-um-saco/">Lançar software é um saco!</a></li>
