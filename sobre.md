@@ -1,11 +1,14 @@
 ---
 author: aurelio
-layout: 2013-page
+layout: twentyten-child
 slug: sobre
 title: Sobre
 wordpress_id: 221
+hide_prev_next: true
 hide_byline: true
-#hide_read_more: true
+hide_ads: true
+hide_tags: true
+hide_read_more: true
 hide_share: true
 hide_comments: true
 permalink: sobre/
@@ -80,5 +83,4 @@ Saiba mais: [Por que tenho um blog?](http://aurelio.net/blog/2007/04/28/por-que-
 
 ## Deixe sua opinião!
 
-Se tiver um tempinho, deixe sua opinião após ler cada texto. Além de me fazer feliz com seu comentário, poderei melhorar textos futuros baseado em suas percepções. O formulário está sempre no fim da página, é rápido e fácil de usar. [Aprenda como colocar sua foto nos comentários](http://aurelio.net/blog/2008/03/12/leitor-mostre-a-sua-cara-gravatar/).
- 
+Se tiver um tempinho, deixe sua opinião após ler cada texto. Além de me fazer feliz com seu comentário, poderei melhorar textos futuros baseado em suas percepções. O formulário está sempre no fim da página, é rápido e fácil de usar.
