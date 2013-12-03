@@ -310,13 +310,10 @@
 				<li id="recent-posts-3" class="widget-container widget_recent_entries">
 					<h3 class="widget-title">Textos Recentes</h3>
 					<ul>
-<li><a href="http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/" title="Novo coautor das Funções ZZ: Itamar Santos de Souza">Novo coautor das Funções ZZ: Itamar Santos de Souza</a></li>
-<li><a href="http://aurelio.net/blog/2013/05/10/video-aula-sorteio-no-facebook-usando-shell-script/" title="Vídeo-aula: Sorteio no Facebook usando shell script">Vídeo-aula: Sorteio no Facebook usando shell script</a></li>
-<li><a href="http://aurelio.net/blog/2013/04/04/livro-shell-5-anos/" title="Livro de shell comemora 5 anos!">Livro de shell comemora 5 anos!</a></li>
-<li><a href="http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/" title="13 anos de Funções ZZ">13 anos de Funções ZZ</a></li>
-<li><a href="http://aurelio.net/blog/2012/12/12/os-5-melhores-podcasts-que-escuto-hoje/" title="Os 5 melhores podcasts que escuto hoje">Os 5 melhores podcasts que escuto hoje</a></li>
-<li><a href="http://aurelio.net/blog/2012/10/31/piazinho4-pre-venda-autografada/" title="piazinho4: Pré-venda AUTOGRAFADA">piazinho4: Pré-venda AUTOGRAFADA</a></li>
-<li><a href="http://aurelio.net/blog/2012/09/28/eu-no-podcast-do-ruda/" title="Eu no podcast do Rudá">Eu no podcast do Rudá</a></li>
+{% for post in site.posts limit:10 %}
+						<li><a href="{{ site.url}}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+						<li><a href="http://aurelio.net/blog/sumario/">→ Veja mais…</a></li>
 					</ul>
 				</li>
 			</ul>
