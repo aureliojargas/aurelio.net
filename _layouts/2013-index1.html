@@ -1,16 +1,22 @@
 ---
 layout: 2013-main
+hide_date: true
+hide_comments: true
 ---
 
+	<div id="topbar">
 	<header>
 		<h1>{{ page.title | escape }}</h1>
+{% include page-byline.html %}
 	</header>
+	</div>
 
 	<article>
 {{ content }}
-	</article>
 
-	<!-- List all posts for this specific area (folder) -->
-	<nav class="index"><ul>
+		<!-- List all posts for this specific area (folder) -->
+		<nav class="index"><ul>
 {% include list-files-level-1.html %}
-	</ul></nav>
+		</ul></nav>
+
+	</article>
