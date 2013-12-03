@@ -122,7 +122,7 @@ code {
 	font-family:sans-serif;
 	font-size:2em;
 	line-height:1.1em;
-	margin:0.2em 0;
+	margin: 0.2em 0 1em 0;
 }
 
 /* Always underline in hover */
@@ -317,9 +317,10 @@ body.page-id-1877 .sya_container li {
 }
 .ad-blog-box-top {
 	float: right;
-	margin: 12px 0 5px 1em;  /* 12px = .entry-content:padding-top */
+	margin: 0 0 5px 1em;
 }
 .entry-content {
+	padding-top: 0 !important;
 	clear: none;  /* needed by .ad-box-left, .ad-blog-box-top */
 }
 
@@ -356,7 +357,7 @@ body.custom-background {
 	color: #C00;
 }
 .byline {
-	margin: 2em 0 12px 0 !important;
+	margin: 0 0 1.5em 0 !important;
 	font-style: italic;
 	line-height: 100%;
 }
