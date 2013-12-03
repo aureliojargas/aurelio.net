@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+}
+#main {
+	margin: 0;
+}
+#topbar {
+	background-color: #ded;
+	padding: 2em 0;
+	margin: 0 0 2em 0;
+}
+header,
+article {
+	max-width: 35em;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+header {
+	color: #050;
+}
+header h1 {
+	color: inherit;
+	margin: 0;
+}
+header .byline {
+	margin-top: 2em;
+}
+
+/* ------------------------------------  iPhone = 320x480 */
+
+@media screen and (max-width: 480px) {
+	body {
+		padding: 0;
+	}
+}
