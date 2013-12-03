@@ -1,10 +1,11 @@
 body {
 	max-width: 900px; /* overwrite */
 	width: 900px;
+	padding-left: 10px;
 }
 #main {
 	float: left;
-	width: 550px;  /* body - ad - spacing */
+	width: 540px;  /* body - ad - spacing */
 	font-size: 90%;
 }
 #sidebar {
@@ -16,11 +17,16 @@ body {
 	height: 600px;
 	margin: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
+	body {
+		width: auto;
+		max-width: 35em;
+	}
 	#main {
-		font-size: 150%;
+		width: auto;
+		float: none;
 	}
 	#sidebar {
-		padding-top: 0;
+		display: none;
 	}
 }
