@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-12-03 14:47:31+00:00
-layout: 2013-index2
+layout: 2013-index1
 slug: twentyten
 title: 'WordPress: Dicas para o tema Twenty Ten'
 wordpress_id: 3424
