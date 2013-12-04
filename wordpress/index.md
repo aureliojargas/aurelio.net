@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-04-06 12:40:11+00:00
-layout: 2013-index1
+layout: 2013-index
 slug: wordpress
 title: Dicas de WordPress
 wordpress_id: 2719
