@@ -1,0 +1,26 @@
+---
+author: aurelio
+layout: twentyten-child
+slug: blog
+title: Blog do Aurelio
+hide_prev_next: true
+hide_date: true
+hide_ads: true
+hide_tags: true
+hide_read_more: true
+hide_share: true
+hide_comments: true
+permalink: blog/
+---
+
+{% for post in site.posts limit:10 %}
+<h2 class="entry-title" style="margin: 1.5em 0 0.5em 0; font-size: 150%;">
+	<a href="{{ site.url}}{{ post.url }}"
+	   title="Link permanente para {{ post.title | escape }}"
+	   rel="bookmark">{{ post.title | escape }}</a>
+</h2>
+
+{{ post.content | strip_html | truncatewords: 60 }}
+→ <a href="{{ site.url}}{{ post.url }}">Veja o post completo</a>
+{% endfor %}
+
