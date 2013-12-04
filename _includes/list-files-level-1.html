@@ -1,6 +1,6 @@
-{% assign area = page.url | remove: '/' %}
-{% assign index_html = '/' | append: area | append: '/index.html' %}
+
+
 {% for l_page in site.pages %}
-	{% assign l_area = l_page.url | remove_first:'/' | split:'/' | first %}
-	{% if l_area == area and l_page.url != page.url %}
+	
+	{% if l_page.url contains page.url and l_page.url != page.url %}
 		<li><a href="{{ l_page.url }}">{{ l_page.title | escape }}</a></li>{% endif %}{% endfor %}
