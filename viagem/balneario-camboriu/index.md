@@ -6,6 +6,7 @@ slug: balneario-camboriu
 title: Balneário Camboriú - SC
 wordpress_id: 3778
 title_prefix: 'EU FUI: '
+permalink: viagem/balneario-camboriu/
 ---
 
 Em abril de 2012, passamos um ótimo final de semana em Balneário Camboriú.

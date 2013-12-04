@@ -5,6 +5,7 @@ layout: 2013-index2
 slug: twentyten
 title: 'WordPress: Dicas para o tema Twenty Ten'
 wordpress_id: 3424
+permalink: wordpress/twentyten/
 ---
 
 Em meus sites com [WordPress](http://aurelio.net/wordpress/), geralmente uso versões modificadas do tema padrão [Twenty Ten](http://wordpress.org/extend/themes/twentyten).

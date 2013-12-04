@@ -5,4 +5,5 @@ layout: 2013-index1
 slug: artigos
 title: Artigos
 wordpress_id: 3635
+permalink: artigos/
 ---

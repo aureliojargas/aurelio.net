@@ -5,5 +5,6 @@ layout: 2013-index1
 slug: viagem
 title: Viagem
 wordpress_id: 3696
+permalink: viagem/
 ---
 
