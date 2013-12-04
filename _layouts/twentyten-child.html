@@ -14,7 +14,9 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed de comentários" href="http://aurelio.net/comments/feed/" />
 
 <link rel='canonical' href='{{ site.url }}{{ page.url }}' />
-{% if page.shortlink %}<link rel='shortlink' href='{{ page.shortlink }}' />{% endif %}
+{% if page.shortlink %}
+<link rel='shortlink' href='{{ page.shortlink }}' />
+{% endif %}
 {% unless page.hide_prev_next %}
 <link rel='prev' title='{{ page.prev_title | escape }}' href='{{ page.prev_url }}' />
 <link rel='next' title='{{ page.next_title | escape }}' href='{{ page.next_url }}' />
