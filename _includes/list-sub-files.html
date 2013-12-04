@@ -1,6 +1,2 @@
-
-
-{% for l_page in site.pages %}
-	
-	{% if l_page.url contains page.url and l_page.url != page.url %}
-		<li><a href="{{ l_page.url }}">{{ l_page.title | escape }}</a></li>{% endif %}{% endfor %}
+{% for x in site.pages %}{% if x.url contains page.url and x.url != page.url %}
+		<li><a href="{{ x.url }}">{{ x.title | escape }}</a></li>{% endif %}{% endfor %}
