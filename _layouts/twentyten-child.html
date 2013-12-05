@@ -24,12 +24,7 @@
 <link rel='prev' title='{{ page.prev_title | escape }}' href='{{ page.prev_url }}' />
 <link rel='next' title='{{ page.next_title | escape }}' href='{{ page.next_url }}' />
 {% endunless%}
-<!-- Open Graph Tags - http://ogp.me/ -->
-<meta property="og:type" content="article" />
-<meta property="og:title" content="{{ page.title | escape }}" />
-<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
-<meta property="og:site_name" content="{{ site.name }}" />
+{% include head-open-graph.html %}
 
 {% unless site.production %}
 	<style>
