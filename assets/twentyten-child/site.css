@@ -387,6 +387,9 @@ body.custom-background {
 .article-tags:hover a:hover {
 	color: red;
 }
+.read-more {
+	margin-top: 2em;
+}
 .read-more,
 .share {
 	text-align: center;

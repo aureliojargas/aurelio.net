@@ -204,6 +204,9 @@ header .byline a {
 article {
 	margin-bottom: 3em;
 }
+.read-more {
+	margin-top: 2em;
+}
 .read-more,
 .share {
 	text-align: center;
