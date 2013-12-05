@@ -24,8 +24,6 @@
 <link rel='prev' title='{{ page.prev_title | escape }}' href='{{ page.prev_url }}' />
 <link rel='next' title='{{ page.next_title | escape }}' href='{{ page.next_url }}' />
 {% endunless%}
-{% include head-open-graph.html %}
-
 {% unless site.production %}
 	<style>
 	.ad-blog-box-top    { width: 300px; height: 250px; }
@@ -33,6 +31,7 @@
 	</style>
 {% endunless%}
 
+{% include head-open-graph.html %}
 {% include analytics.html %}
 </head>
 
