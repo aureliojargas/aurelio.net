@@ -234,6 +234,17 @@ ul.posts .date {
 	font-size: smaller;
 }
 
+/* ------------------------------------  table as grid */
+
+table.grid td {
+	border-style: none;
+	padding: 0;
+	vertical-align: top;
+}
+table.grid tr:hover td {
+	background: transparent;
+}
+
 /* ------------------------------------  custom */
 
 .mog {
