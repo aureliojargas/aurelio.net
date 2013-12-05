@@ -1,9 +1,9 @@
 {% case page.author %}
 {% when 'mog' %}
-			<a class="author" href="http://www.moguinha.com.br">Mog</a>
+			<a class="author" rel="author" href="http://www.moguinha.com.br">Mog</a>
 {% when 'aurelio+mog' %}
-			<a class="author" href="http://www.moguinha.com.br">Mog</a> &amp;
-			<a class="author" href="{{ site.url }}/aurelio.html">Aurelio Jargas</a>
+			<a class="author" rel="author" href="http://www.moguinha.com.br">Mog</a> &amp;
+			<a class="author" rel="author" href="{{ site.url }}/aurelio.html">Aurelio Jargas</a>
 {% else %}
-			<a class="author" href="{{ site.url }}/aurelio.html">Aurelio Jargas</a>
+			<a class="author" rel="author" href="{{ site.url }}/aurelio.html">Aurelio Jargas</a>
 {% endcase %}
