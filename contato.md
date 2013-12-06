@@ -45,4 +45,4 @@ O Google+ é outro canal que eu tentei usar, mas parei de acompanhar.
 
 ## E-mail
 
-O e-mail é meu canal de comunicação preferido: simples, confiável, não é em tempo real, pesquisável, permanente. Infelizmente, minha caixa de e-mails é bem lotada e eu não consigo responder a todos na velocidade que eu gostaria. Peço sua compreensão caso a resposta demore. Meu e-mail é verde arroba aurelio ponto net. Felizmente, somente pessoas como você, que realmente lêem todo o texto, perceberão o endereço de e-mail neste parágrafo. Obrigado pela atenção, você é o tipo de pessoa que eu gosto de me comunicar.
+O e-mail é meu canal de comunicação preferido: simples, confiável, não é em tempo real, pesquisável, permanente. Infelizmente, minha caixa de e-mails é bem lotada e eu não consigo responder a todos na velocidade que eu gostaria. Peço sua compreensão caso a resposta demore. Meu e-mail é aurelio arroba aurelio ponto net. Felizmente, somente pessoas como você, que realmente lêem todo o texto, perceberão o endereço de e-mail neste parágrafo. Obrigado pela atenção, você é o tipo de pessoa que eu gosto de me comunicar.
