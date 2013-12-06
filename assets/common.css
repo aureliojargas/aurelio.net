@@ -29,22 +29,21 @@ footer {
 	border-top: 1px solid silver;
 	padding-top: 1.5em;
 	font-family: Arial, sans-serif;
-	color: gray;
 	font-size: 85%;
-	line-height: 130%;
+	line-height: 150%;
 	text-align: center;
 }
+footer,
 footer a,
+footer a:link,
 footer a:visited {
 	color: gray;
-	text-decoration: none;
-}
-footer:hover {
-	color: black;
 }
 footer:hover a {
 	color: blue;
-	text-decoration: underline;
+}
+footer:hover a:visited {
+	color: purple;
 }
 footer:hover a:hover {
 	color: red;
