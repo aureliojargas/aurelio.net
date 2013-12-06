@@ -180,7 +180,7 @@ ul.spaced li {
 #site-info:hover a:hover,
 #site-info:hover a:active { color:#ff4b33; }
 
-footer {
+#footer {
 	border-top: 4px solid black;
 	padding-bottom: 2em;
 	font-size: 120%;

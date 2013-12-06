@@ -23,7 +23,7 @@ pre {
 .share {
 	text-align: center;
 }
-footer {
+#footer {
 	clear: both;
 	margin: 4em 0 4em 0;
 	border-top: 1px solid silver;
@@ -33,19 +33,19 @@ footer {
 	line-height: 150%;
 	text-align: center;
 }
-footer,
-footer a,
-footer a:link,
-footer a:visited {
+#footer,
+#footer a,
+#footer a:link,
+#footer a:visited {
 	color: gray;
 }
-footer:hover a {
+#footer:hover a {
 	color: blue;
 }
-footer:hover a:visited {
+#footer:hover a:visited {
 	color: purple;
 }
-footer:hover a:hover {
+#footer:hover a:hover {
 	color: red;
 }
 
@@ -71,6 +71,6 @@ footer:hover a:hover {
 	/* Helvetica Neue is Mac-only */
 }
 .read-more .heart,
-footer:hover .heart {
+#footer:hover .heart {
 	color: #C00;
 }
