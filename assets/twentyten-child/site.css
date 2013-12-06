@@ -213,7 +213,7 @@ body.home #content .entry-title { display:none; }
 	margin:0 6px 6px 0;
 }
 #aa-matrix i {
-	background: url(/img/index-sprites.png) no-repeat top left;
+	background: url(http://aurelio.net/img/index-sprites.png) no-repeat top left;
 	background-color:#eee;
 	width:80px;
 	height:80px;
