@@ -159,7 +159,7 @@ table {
 	margin: 0 0 1em 0;
 }
 
-article {
+#article-body {
 	margin-bottom: 3em;
 }
 .share {
@@ -232,7 +232,7 @@ table.grid tr:hover td {
 	#article-header h1 {
 		font-size: 1.5em;
 	}
-	article {
+	#article-body {
 		overflow: auto;  /* Long URLs in WordPress articles ending */
 	}
 	blockquote {

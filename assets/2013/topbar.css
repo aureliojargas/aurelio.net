@@ -11,20 +11,20 @@ body {
 	padding: 2em 0;
 	margin: 0 0 2em 0;
 }
-header,
-article {
+#article-header,
+#article-body {
 	max-width: 35em;
 	margin: 0 auto;
 	padding: 0 10px;
 }
-header {
+#article-header {
 	color: #050;
 }
-header h1 {
+#article-header h1 {
 	color: inherit;
 	margin: 0;
 }
-header .byline {
+#article-header .byline {
 	margin-top: 2em;
 }
 
