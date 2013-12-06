@@ -115,35 +115,6 @@ pre {
 	color: white;
 }
 
-/* ------------------------------------  footer */
-
-footer {
-	clear: both;
-	margin: 4em 0 4em 0;
-	border-top: 1px solid silver;
-	padding-top: 1.5em;
-	font-family: Arial, sans-serif;
-	color: gray;
-	font-size: 85%;
-	line-height: 130%;
-	text-align: center;
-}
-footer a,
-footer a:visited {
-	color: gray;
-	text-decoration: none;
-}
-footer:hover {
-	color: black;
-}
-footer:hover a {
-	color: blue;
-	text-decoration: underline;
-}
-footer:hover a:hover {
-	color: red;
-}
-
 /* ------------------------------------  nav */
 
 nav.index ul {
