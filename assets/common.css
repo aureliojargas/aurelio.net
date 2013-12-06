@@ -1,0 +1,51 @@
+/* AURELIO.NET, common styles between blog and site, dez/2013 - Public domain */
+
+
+/* ------------------------------------  Elements */
+
+pre {
+	overflow: auto;
+}
+
+
+/* ------------------------------------  Page structure */
+
+.byline {
+	margin: 0;
+}
+.byline a {
+	color: blue;
+}
+.read-more {
+	margin-top: 2em;
+}
+.read-more,
+.share {
+	text-align: center;
+}
+
+
+/* ------------------------------------  Boxes */
+
+.note            { padding:6px 9px; background:#EEEEEE; border:1px solid #CCC; }    /* silver */
+.download        { padding:6px 9px; background:#E7F7D3; border:1px solid #6C3; }    /* green  */
+.warning, .alert { padding:6px 9px; background:#FFFBBC; border:1px solid #E6DB55; } /* yellow */
+/* http://themehybrid.com/demo/hybrid/?p=92 */
+
+
+/* ------------------------------------  Special */
+
+.mog {
+	color: #800000;
+	background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
+	padding: 0 58px 0 0;
+	min-height: 48px;
+}
+.unicode-char {
+	font-family: "Helvetica Neue", sans-serif;
+	/* Helvetica Neue is Mac-only */
+}
+.read-more .heart,
+footer:hover .heart {
+	color: #C00;
+}

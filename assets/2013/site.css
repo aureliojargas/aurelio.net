@@ -159,15 +159,8 @@ nav.index a {
 
 /* ------------------------------------  special */
 
-pre {
-	overflow: auto;
-}
 tr:hover td {
 	background: #eee;
-}
-.unicode-char {
-	font-family: "Helvetica Neue", sans-serif;
-	/* Helvetica Neue is Mac-only */
 }
 
 /* ------------------------------------  article */
@@ -194,29 +187,12 @@ header {
 header h1 {
 	margin: 0 0 1em 0;
 }
-header .byline {
-	margin: 0;
-}
-header .byline a {
-	color: blue;
-}
 
 article {
 	margin-bottom: 3em;
 }
-.read-more {
-	margin-top: 2em;
-}
-.read-more,
-.share {
-	text-align: center;
-}
 .share {
 	margin-bottom: 3em;
-}
-.read-more .heart,
-footer:hover .heart {
-	color: #C00;
 }
 #disqus_thread {
 	border-top: 1em dotted #444;
@@ -250,26 +226,9 @@ table.grid tr:hover td {
 
 /* ------------------------------------  custom */
 
-.mog {
-	color: #800000;
-	background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
-	padding: 0 58px 0 0;
-	min-height: 48px;
-}
 .youtube {
 	display: block;
 	margin: 1.5em auto;
-}
-.warning,
-.alert {
-	padding: 6px 9px;
-	background: #FFFBBC;
-	border: 1px solid #E6DB55;
-}
-.note {
-	padding: 6px 9px;
-	background: #EEE;
-	border: 1px solid #CCC;
 }
 .figure,
 .image {
