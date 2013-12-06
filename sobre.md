@@ -49,7 +49,7 @@ Em 2007 a Mog começou a participar do meu blog também. Como a reação dos lei
 A Mog também é a Rainha da Oncinha (hehe), com sua loja temática online que vende tudo com estampa de oncinha: roupas, bolsas, acessórios, utensílios, entre outros: [Loja Coisas de Oncinha](http://www.coisasdeoncinha.com.br/).
 
 
-## Sobre o site AURELIO.NET
+## Sobre o site Aurelio.net
 
 Eu sou o Aurelio e este é meu site. Aqui coloco tudo aquilo que quero compartilhar com o mundo. Meu trabalho, softwares que crio, artigos técnicos, textos pessoais, fotos, enfim, um site pessoal. Ou, como dizia-se na época que o criei, minha _homepage_.
 

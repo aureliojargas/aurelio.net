@@ -29,7 +29,7 @@ Cada método tem suas vantagens.
 
 Com filosofias tão diferentes, na verdade opostas, é possível mesclar WordPress e site estático em um lugar só? Bem, é o que estou tentando fazer :)
 
-Meu site estático, AURELIO.NET, foi criado em 1999. Durante esses anos todos, ele cresceu, cresceu e se tornou um monstro com 3.746 arquivos e 369 pastas.
+Meu site estático, Aurelio.net, foi criado em 1999. Durante esses anos todos, ele cresceu, cresceu e se tornou um monstro com 3.746 arquivos e 369 pastas.
 
 Meu blog também nasceu em 1999, como [uma página](http://aurelio.net/blog-arquivo.html) dentro de meu site estático. Somente em 2006 que finalmente [migrei para o WordPress](http://aurelio.net/blog/2006/04/23/blog-novo-de-novo-dessa-vez-definitivo-e-bombado/) e o blog separou-se do site. Hoje, fevereiro de 2011, o blog conta com 245 posts e 7590 comentários.
 
