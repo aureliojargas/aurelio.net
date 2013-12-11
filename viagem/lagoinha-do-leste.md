@@ -54,7 +54,7 @@ A trilha já começou divertida, com mata fechada e pedras para subir. Nada comp
 
 ![Uau! (Campeche ao fundo)](http://aurelio.net/img/viagem/lagoinha-do-leste/mar.jpg)
 
-Lá pelos 40 minutos de caminhada chegamos no córrego que cruza a trilha, proporcionando sombra e água fresca, literalmente. Bem, era na verdade um filete d'água quase imperceptível que fazia algumas poças entre as pedras. Não sabíamos se aquela água era "bebível" ou não, mas como nossa garrafinha era pequena (300 ml) e ainda tínhamos mais de uma hora de trilha pela frente, melhor morrer intoxicado do que desidratado ;)
+Lá pelos 40 minutos de caminhada chegamos no córrego que cruza a trilha, proporcionando sombra e água fresca, literalmente. Bem, era na verdade um filete d’água quase imperceptível que fazia algumas poças entre as pedras. Não sabíamos se aquela água era "bebível" ou não, mas como nossa garrafinha era pequena (300 ml) e ainda tínhamos mais de uma hora de trilha pela frente, melhor morrer intoxicado do que desidratado ;)
 
 ![Camuflados: Kimie, Aurelio, Rafa, André](http://aurelio.net/img/viagem/lagoinha-do-leste/riacho.jpg)
 

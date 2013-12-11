@@ -116,11 +116,11 @@ Foram várias as noites chuvosas, tive bastante tempo para brincar. Fazia muito 
   * Road Fighter (mame)
   * Day of the Tentacle (scumm)
   * The Dig (scumm)
-  * Yoshi's Island (snes)
+  * Yoshi’s Island (snes)
 
 Os joguinhos do Arcade são legais, mas show de bola mesmo são os jogos de aventura da Lucas Games. _Day of the Tentacle_ é uma piração, um jogo criativo e divertido de jogar. O _The Dig_ é um filme: os diálogos, os cenários, os quebra-cabeças... Tudo é perfeito, simples, intuitivo. Nada precisa ser explicado, basta experimentar. Tem o dedo do Spielberg e do George Lucas.
 
-Outro que matou a pau foi o _Yoshi's Island_, a continuação do _Super Mario World_. Eu não conhecia e fiquei impressionado com a jogabilidade e efeitos de tela, nota 10 para os criadores. Um dos "chefes" você enfrenta num mini-mundo (tipo Pequeno Príncipe) e ao andar todo o cenário gira e você fica sempre no topo, muito massa. Outro é dentro do estômago dele, que fica se mexendo. É a evolução do Mario, show.
+Outro que matou a pau foi o _Yoshi’s Island_, a continuação do _Super Mario World_. Eu não conhecia e fiquei impressionado com a jogabilidade e efeitos de tela, nota 10 para os criadores. Um dos "chefes" você enfrenta num mini-mundo (tipo Pequeno Príncipe) e ao andar todo o cenário gira e você fica sempre no topo, muito massa. Outro é dentro do estômago dele, que fica se mexendo. É a evolução do Mario, show.
 
 
 ### Textoz

@@ -246,7 +246,7 @@ Para ver os artigos do site (e não do blog), use o menu acima.
   * [Coluna nova na Dicas-L: Desenvolverde](http://aurelio.net/blog/2006/12/06/coluna-nova-na-dicas-l-desenvolverde/)
   * [Como pintar o cabelo com papel crepom](http://aurelio.net/blog/2006/12/04/como-pintar-o-cabelo-com-papel-crepom/)
   * [Quem é o piá da capa do livro?](http://aurelio.net/blog/2006/12/01/quem-e-o-pia-da-capa-do-livro/)
-  * [Why Can't We Be Friends?](http://aurelio.net/blog/2006/11/30/why-cant-we-be-friends/)
+  * [Why Can’t We Be Friends?](http://aurelio.net/blog/2006/11/30/why-cant-we-be-friends/)
   * [Onde comprar o livro novo](http://aurelio.net/blog/2006/11/27/onde-comprar-o-livro-novo/)
   * [Baterna: Aula 2 – Reggae e Ska](http://aurelio.net/blog/2006/11/23/baterna-aula-2-reggae-e-ska/)
   * [Como ressuscitei meu tocador de mp3](http://aurelio.net/blog/2006/11/19/como-ressuscitei-meu-tocador-de-mp3/)
