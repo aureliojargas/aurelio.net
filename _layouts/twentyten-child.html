@@ -168,8 +168,8 @@
 			<div id="content" role="main">
 {% unless page.hide_prev_next %}
 				<div id="nav-above" class="navigation">
-{% if page.prev_url %}					<div class="nav-previous"><a href="{{ page.prev_url }}" rel="prev"><span class="meta-nav">&larr;</span> {{ page.prev_title | escape }}</a></div>{% endif %}
-{% if page.next_url %}					<div class="nav-next"><a href="{{ page.next_url }}" rel="next">{{ page.next_title | escape }} <span class="meta-nav">&rarr;</span></a></div>{% endif %}
+{% if page.prev_url %}					<div class="nav-previous"><a href="{{ page.prev_url }}" rel="prev"><span class="meta-nav">←</span> {{ page.prev_title | escape }}</a></div>{% endif %}
+{% if page.next_url %}					<div class="nav-next"><a href="{{ page.next_url }}" rel="next">{{ page.next_title | escape }} <span class="meta-nav">→</span></a></div>{% endif %}
 				</div><!-- #nav-above -->
 {% endunless %}
 				<div id="post-{{ page.wordpress_id }}" class="post-{{ page.wordpress_id }} post type-post status-publish format-standard hentry">
