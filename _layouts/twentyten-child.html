@@ -174,7 +174,7 @@
 {% endunless %}
 				<div id="post-{{ page.wordpress_id }}" class="post-{{ page.wordpress_id }} post type-post status-publish format-standard hentry">
 {% unless page.hide_title %}
-					<h1 class="entry-title"><a href="" title="Link permanente para {{ page.title | escape }}" rel="bookmark">{{ page.title | escape }}</a></h1>
+					<h1 class="entry-title">{{ page.title | escape }}</h1>
 {% endunless %}
 {% include page-byline.html %}
 
