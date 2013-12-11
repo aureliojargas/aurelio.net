@@ -21,7 +21,7 @@ shortlink: http://wp.me/p1ABFN-UX
 
 
 <p>Costumo prestar atenção aos detalhes e sou perfeccionista. Essa combinação, apesar de gerar resultados positivos, é um calvário para o praticante, pois às vezes perco muito tempo trabalhando em “coisas que ninguém vai perceber”.</p>
-<p>Quer um exemplo? Veja se você consegue perceber o problema no código JavaScript a seguir:</p>
+<p>Quer um exemplo? Veja se você consegue perceber o problema no código JavaScript a seguir:</p>
 <pre>function mySort(a, b) { 
 
 	if (a &lt; b) {
@@ -31,7 +31,7 @@ shortlink: http://wp.me/p1ABFN-UX
 	}
 	return 0;
 }</pre>
-<p>Olhando assim não tem como perceber, mas este pequeno trecho de código não possui apenas um, mas QUATRO PROBLEMAS GRAVÍSSIMOS!!! &lt;/drama&gt;</p>
+<p>Olhando assim não tem como perceber, mas este pequeno trecho de código não possui apenas um, mas QUATRO PROBLEMAS GRAVÍSSIMOS!!! &lt;/drama&gt;</p>
 <ol>
 <li>Um espaço em branco inútil no final da primeira linha</li>
 <li>Um Tab inútil na segunda linha, que era para ser vazia</li>
@@ -52,7 +52,7 @@ shortlink: http://wp.me/p1ABFN-UX
 <blockquote><p>Aleluia! Finalmente consegui chegar no assunto do post :)</p></blockquote>
 <h2>TextMate</h2>
 <div id="attachment_3533" class="wp-caption aligncenter" style="width: 406px"><img class="size-full wp-image-3533" title="TextMate highlight blank spaces" src="http://aurelio.net/wp/wp-content/uploads/2012/02/textmate-blanks.png" alt="" width="396" height="305" /><p class="wp-caption-text">Sabe quando você vê uma barata, dá aquele alerta interno e você tem que agir rápido? Tenho uma sensação parecida cada vez que vejo um vermelhinho destes em meus códigos. Apaga! Apaga! Apaga!</p></div>
-<p>Eu uso o TextMate, e é fácil configurá-lo para destacar estes espaços inúteis, usando a expressão regular mágica. Abra o Bundle Editor (⌃⌥⌘B), escolha a linguagem, e encontre o item cinza marcado com a letra L. No conteúdo dele, já no início tem um array chamado patterns. Ali dentro você vai colar as seguintes linhas:</p>
+<p>Eu uso o TextMate, e é fácil configurá-lo para destacar estes espaços inúteis, usando a expressão regular mágica. Abra o Bundle Editor (⌃⌥⌘B), escolha a linguagem, e encontre o item cinza marcado com a letra L. No conteúdo dele, já no início tem um array chamado patterns. Ali dentro você vai colar as seguintes linhas:</p>
 <pre>{	name = 'invalid.js';
 	match = '^(\t+ | +\t)|[\t ]+$';
 },</pre>

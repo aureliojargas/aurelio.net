@@ -22,7 +22,7 @@ shortlink: http://wp.me/p1ABFN-mP
 <blockquote><p><strong>Atenção:</strong> Este texto é para nerds, que gostam de saber como as coisas funcionam. Se você quer simplesmente ativar o AirPrint no seu Mac, use o programa <a href="http://netputing.com/airprintactivator/">AirPrint Activator</a>.</p></blockquote>
 <p><img class="aligncenter size-full wp-image-1428" title="ipad-printer" src="http://aurelio.net/wp/wp-content/uploads/2011/02/ipad-printer.jpg" alt="" width="500" height="375" /></p>
 <p><a href="http://www.apple.com/br/iphone/features/airprint.html">AirPrint</a> é o esquema da Apple para imprimir documentos direto de seu iPhone, iPod e iPad, para uma impressora da rede que traga embutido o suporte a tal tecnologia. Em outras palavras: impressão sem fio.</p>
-<p>Mas e se você já tem uma impressora (real ou <a href="http://aurelio.net/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/">virtual</a>) conectada ao seu Mac, mesmo que seja antiga, não seria legal poder usá-la também direto do iPhone? Isso é possível, basta ativar o suporte ao AirPrint em seu Mac.</p>
+<p>Mas e se você já tem uma impressora (real ou <a href="http://aurelio.net/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/">virtual</a>) conectada ao seu Mac, mesmo que seja antiga, não seria legal poder usá-la também direto do iPhone? Isso é possível, basta ativar o suporte ao AirPrint em seu Mac.</p>
 <p>O procedimento é simples e na internet você pode achar algumas maneiras de fazê-lo. Há tutoriais mais complicados e inclusive <a href="http://netputing.com/airprintactivator/">um programa</a> que automatiza o processo, mas saiba que a ativação pode ser feita com uma única linha mágica:</p>
 <pre>  image/urf urf string(0,UNIRAST&lt;00&gt;)</pre>
 <p>Só isso, mais nada.</p>
@@ -31,7 +31,7 @@ shortlink: http://wp.me/p1ABFN-mP
 <li>Incluir esta linha no final do arquivo <code>/usr/share/cups/mime/apple.types</code></li>
 <li>Criar um arquivo novo, digamos, <code>/usr/share/cups/mime/airprint.types</code> e colocar esta linha dentro dele</li>
 </ul>
-<p>A primeira é a mais fácil, pois basta editar um arquivo já existente. Mas a alteração pode ser perdida numa futura atualização do Mac OS X. Eu prefiro a segunda opção, que fica separada e é (teoricamente) imune a atualizações.</p>
+<p>A primeira é a mais fácil, pois basta editar um arquivo já existente. Mas a alteração pode ser perdida numa futura atualização do Mac OS X. Eu prefiro a segunda opção, que fica separada e é (teoricamente) imune a atualizações.</p>
 <blockquote><p>Nota: Você pode usar qualquer nome para o arquivo novo, desde que a extensão seja sempre “<code>.types</code>“.</p></blockquote>
 <p>Independente de qual alternativa você escolheu, uma vez adicionada a linha mágica, agora é preciso reiniciar o CUPS para que ele leia a nova configuração. Encontrei na internet vários comandos para fazer isso, entre eles:</p>
 <ul>
@@ -45,7 +45,7 @@ shortlink: http://wp.me/p1ABFN-mP
 <p><img class="aligncenter size-full wp-image-1430" title="ios-imprimir" src="http://aurelio.net/wp/wp-content/uploads/2011/02/ios-imprimir.jpg" alt="" width="410" height="306" /></p>
 <p>Detalhes:</p>
 <ul>
-<li>Pra poder usar o AirPrint você precisará do Mac OS X 10.6.5, iTunes 10.1 e iOS 4.2.</li>
+<li>Pra poder usar o AirPrint você precisará do Mac OS X 10.6.5, iTunes 10.1 e iOS 4.2.</li>
 <li>Não esqueça de compartilhar sua impressora na rede, senão não vai funcionar. Confira em <strong>Preferências do Sistema &gt; Impressão e Fax</strong>.</li>
 <li>A Apple pode mudar de ideia e ativar o suporte ao AirPrint ela mesma em uma próxima atualização. Aí você só vai lá e desfaz a sua alteração, para evitar conflitos com a solução oficial.</li>
 </ul>
@@ -54,7 +54,7 @@ shortlink: http://wp.me/p1ABFN-mP
 <li>A Apple iria ativar o AirPrint no Mac OS X 10.6.5, estava tudo funcionando nas versões beta da atualização.</li>
 <li>Na última hora, sem avisar, <a href="http://www.macrumors.com/2010/11/11/mac-os-x-10-6-5-notes-exfat-support-airprint-flash-player-vulnerability-fixes/">essa funcionalidade foi removida</a> quando lançaram a atualização oficial.</li>
 <li>O pessoal não perdeu tempo e descobriu como ativar o AirPrint “na mão”.</li>
-<li>Os <a href="http://blogdoiphone.com/2010/11/tutorial-aprenda-a-ativar-a-funcao-airprint-do-ios-4-2-no-mac-os-x/">primeiros</a> <a href="http://www.tuaw.com/2010/11/11/airprint-how-to-make-it-work-for-shared-printers/">tutoriais</a> instruíam a copiar três arquivos mágicos para seu computador.</li>
+<li>Os <a href="http://blogdoiphone.com/2010/11/tutorial-aprenda-a-ativar-a-funcao-airprint-do-ios-4-2-no-mac-os-x/">primeiros</a> <a href="http://www.tuaw.com/2010/11/11/airprint-how-to-make-it-work-for-shared-printers/">tutoriais</a> instruíam a copiar três arquivos mágicos para seu computador.</li>
 <li>Depois apareceu um programinha para fazer isso por você, o <a href="http://netputing.com/airprinthacktivator/">AirPrint Hacktivator</a>.</li>
 <li>Como este programa usava arquivos de propriedade da Apple, ele foi (<a href="http://netputing.com/2010/12/02/airprint-hacktivator-v1-0-to-v1-7-taken-down/">forçosamente</a>) descontinuado.</li>
 <li><a href="http://www.lisanet.de/?p=71">Um alemão descobriu</a> um jeito novo de ativar o AirPrint, usando uma única linha mágica.</li>
