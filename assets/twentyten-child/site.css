@@ -8,7 +8,7 @@ Link colors: #06C #ff4b33 #743399 (link, hover, visited)
 */
 
 
-/* Original 'baseline' breaks layout in parto-prematuro post */
+/* Original "baseline" breaks layout in parto-prematuro post */
 #content tr td {
 	vertical-align:middle;
 }
@@ -330,7 +330,7 @@ body.page-id-1877 .sya_container li {
 
 body.custom-background {
 	background-color: #303030;
-	background-image: url('/assets/twentyten-child/bg-stripes.png');
+	background-image: url("/assets/twentyten-child/bg-stripes.png");
 	background-repeat: repeat;
 	background-position: top left;
 	background-attachment: fixed;

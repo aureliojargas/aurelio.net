@@ -10,13 +10,13 @@
 <link rel="alternate" type="application/rss+xml" title="Feed do site {{ site.name }}" href="http://aurelio.net/feed/" />
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed de comentários" href="http://aurelio.net/comments/feed/" />
 
-<link rel='canonical' href='{{ site.url }}{{ page.url }}' />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 {% if page.shortlink %}
-<link rel='shortlink' href='{{ page.shortlink }}' />
+<link rel="shortlink" href="{{ page.shortlink }}" />
 {% endif %}
 {% unless page.hide_prev_next %}
-{% if page.previous.url %}<link rel='prev' title='{{ page.previous.title | escape }}' href='{{ site.url }}{{ page.previous.url }}' />{% endif %}
-{% if page.next.url %}<link rel='next' title='{{ page.next.title | escape }}' href='{{ site.url }}{{ page.next.url }}' />{% endif %}
+{% if page.previous.url %}<link rel="prev" title="{{ page.previous.title | escape }}" href="{{ site.url }}{{ page.previous.url }}" />{% endif %}
+{% if page.next.url %}<link rel="next" title="{{ page.next.title | escape }}" href="{{ site.url }}{{ page.next.url }}" />{% endif %}
 {% endunless%}
 {% unless site.production %}
 	<style>
