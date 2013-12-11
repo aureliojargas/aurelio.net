@@ -7,13 +7,6 @@
 production: false
 # production: true
 
-# Glob recursivo: assets/**/*.js
-# https://github.com/mojombo/jekyll/issues/906
-# exclude:
-#   - _posts
-#   - blog
-#   - viagem
-
 name: Aurelio.net
 url: http://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
@@ -42,6 +35,15 @@ redcarpet:
   extensions: ["fenced_code_blocks"]
 # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
+# Do not use the smart related-posts feature (takes forever to generate the site)
+lsi: false
+
+# Glob recursivo: assets/**/*.js
+# https://github.com/mojombo/jekyll/issues/906
+# exclude:
+#   - _posts
+#   - blog
+#   - viagem
 
 ### Page config (to insert in Front Matter)
 # hide_prev_next: true
