@@ -363,3 +363,6 @@ body.custom-background {
 .article-tags:hover a:hover {
 	color: red;
 }
+#content img {
+	max-width: 630px;
+}
