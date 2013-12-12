@@ -23,13 +23,13 @@ shortlink: http://wp.me/p1ABFN-UX
 <p>Costumo prestar atenção aos detalhes e sou perfeccionista. Essa combinação, apesar de gerar resultados positivos, é um calvário para o praticante, pois às vezes perco muito tempo trabalhando em “coisas que ninguém vai perceber”.</p>
 <p>Quer um exemplo? Veja se você consegue perceber o problema no código JavaScript a seguir:</p>
 <pre>function mySort(a, b) { 
-
+	
 	if (a &lt; b) {
 		return -1;
 	} else if (a &gt; b) {
 	 	return 1;
 	}
-	return 0;
+	return 0;	
 }</pre>
 <p>Olhando assim não tem como perceber, mas este pequeno trecho de código não possui apenas um, mas QUATRO PROBLEMAS GRAVÍSSIMOS!!! &lt;/drama&gt;</p>
 <ol>
@@ -39,7 +39,7 @@ shortlink: http://wp.me/p1ABFN-UX
 <li>Um Tab inútil no final da penúltima linha</li>
 </ol>
 <p>Vai selecionando devagar com o mouse que você verá.</p>
-<blockquote><p><strong>Atualização:</strong> O chato do WordPress estragou minha brincadeira. Ele removeu do código os Tabs inúteis na hora de salvar o post. Tentei colocar de novo, mas ele sempre tira. Viu como não sou só eu que não gosta deles?</p></blockquote>
+<blockquote><p><strong>Atualização:</strong> <del 2013-12-12T12:00:00+00:00>O chato do WordPress estragou minha brincadeira. Ele removeu do código os Tabs inúteis na hora de salvar o post. Tentei colocar de novo, mas ele sempre tira. Viu como não sou só eu que não gosta deles?</del> — WordPress removido, problema resolvido :)</p></blockquote>
 <p>Tá, eu sei. Estes espaços excedentes não influem em nada no funcionamento do programa e removê-los não vai fazer diferença. Até a economia de bytes, que poderia ser um argumento para a limpeza, é irrisória.</p>
 <blockquote><p>Irrisória! Faz anos que eu não digito essa palavra. Irrisória. Irrisória. Irrisória. Pronto, matei a saudade :)</p></blockquote>
 <p>Mas eu detesto ter qualquer coisa “sobrando” em meus códigos, então estes espaços em branco são inadmissíveis. Geralmente uso uma <a href="http://aurelio.net/regex/">expressão regular</a> para vasculhar o código e remover todos estes espaços:</p>
@@ -56,13 +56,13 @@ shortlink: http://wp.me/p1ABFN-UX
 <pre>{	name = 'invalid.js';
 	match = '^(\t+ | +\t)|[\t ]+$';
 },</pre>
-<p style="text-align: center;"><img class="aligncenter size-large wp-image-3534" title="TextMate Bundle Editor - Show blanks" src="http://aurelio.net/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks-500x384.png" alt="" /></p>
+<p><img class="aligncenter" title="TextMate Bundle Editor - Show blanks" src="http://aurelio.net/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" width="500" height="384"/></p>
 <p>Aperte o botão Test para salvar, os vermelhinhos já vão aparecer em seus códigos. Você pode fazer isso para outras linguagens, basta repetir o procedimento, trocando js pelo identificador da outra linguagem.</p>
 <h2>Vim</h2>
 <p>Já faz alguns anos que parei de usar o Vim, mas ainda tenho aqui no <a href="http://aurelio.net/doc/dotfiles/vimrc.txt">meu vimrc</a> a linha mágica que eu usava para mostrar os espaços inúteis:</p>
 <pre>" Mostra os espaços em branco inúteis no final da linha
 au BufNewFile,BufRead * syn match brancomala '\s\+$' | hi brancomala ctermbg=red</pre>
-<p><img class="aligncenter size-large wp-image-3535" title="Vim highlight blank spaces" src="http://aurelio.net/wp/wp-content/uploads/2012/02/vim-blanks-500x379.png" alt="" width="500" height="379" /></p>
+<p><img class="aligncenter" title="Vim highlight blank spaces" src="http://aurelio.net/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="" width="500" height="379" /></p>
 <p>Fica como lição de casa para o leitor atualizar a expressão regular para também pegar os espaços no meio dos Tabs do início da linha ;)</p>
 <h2>Outros</h2>
 <p>E você, usa algum outro editor de textos?</p>
