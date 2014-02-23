@@ -8,6 +8,7 @@ wordpress_id: 619
 hide_read_more: true
 hide_share: true
 hide_ads: true
+hide_tags: true
 permalink: proximo-livro/
 ---
 

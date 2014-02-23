@@ -5,6 +5,7 @@ layout: twentyten-child
 slug: pogo
 title: Roda de Pogo – A Dança Punk
 wordpress_id: 2392
+hide_tags: true
 permalink: pogo/
 ---
 

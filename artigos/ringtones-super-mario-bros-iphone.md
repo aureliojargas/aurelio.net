@@ -2,10 +2,11 @@
 author: aurelio
 date: 2012-05-11 14:13:36+00:00
 layout: twentyten-child
+wordpress_id: 4008
 slug: ringtones-super-mario-bros-iphone
 permalink: artigos/ringtones-super-mario-bros-iphone/
 title: Toques (ringtones) do Super Mario Bros no iPhone e iPad
-wordpress_id: 4008
+hide_tags: true
 ---
 
 Que tal ter o som da moedinha do [Super Mario](http://pt.wikipedia.org/wiki/Super_Mario_Bros.) cada vez que chega um SMS, ou tocar a música do jogo cada vez que alguém te telefona ou quando toca o alarme? Vou te ensinar como fazer.
