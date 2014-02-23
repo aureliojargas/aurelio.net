@@ -117,14 +117,14 @@ pre {
 
 /* ------------------------------------  nav */
 
-nav.index ul {
+#nav ul {
 	list-style-type: none;
 	margin-left: 0;
 }
-nav.index li {
+#nav li {
 	margin-bottom: 1em;
 }
-nav.index a {
+#nav a {
 	text-decoration: none;
 }
 

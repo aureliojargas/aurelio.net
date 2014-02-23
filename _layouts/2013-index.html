@@ -5,18 +5,18 @@ hide_comments: true
 ---
 
 	<div id="topbar">
-	<header>
+	<div id="article-header">
 		<h1>{{ page.title | escape }}</h1>
 {% include page-byline.html %}
-	</header>
+	</div>
 	</div>
 
-	<article>
+	<div id="article-body">
 {{ content }}
 
 		<!-- List all posts for this specific area (folder) -->
-		<nav class="index"><ul>
+		<div id="nav"><ul>
 {% include list-sub-files.html %}
-		</ul></nav>
+		</ul></div>
 
-	</article>
+	</div>
