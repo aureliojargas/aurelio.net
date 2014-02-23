@@ -303,6 +303,7 @@ body.page-id-1877 .sya_container li {
 .ad-blog-box-top {
 	float: right;
 	margin: 0 0 5px 1em;
+	border: 1px solid silver;  /* to clearly separate from article text */
 }
 .entry-content {
 	padding-top: 0 !important;
