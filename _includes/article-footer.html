@@ -1,3 +1,4 @@
+{% unless page.hide_read_more %}
 {% if include.more_url %}
 	{% assign more_url = include.more_url %}
 {% elsif page.url contains '/blog/' %}
@@ -5,7 +6,6 @@
 {% else %}
 	{% assign more_url = '..' %}
 {% endif %}
-{% unless page.hide_read_more %}
 	<p class="read-more">
 		<span class="unicode-char heart">♥</span>
 		Gostou desse texto?
