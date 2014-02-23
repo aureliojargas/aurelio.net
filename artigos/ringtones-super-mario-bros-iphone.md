@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2012-05-11 14:13:36+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: ringtones-super-mario-bros-iphone
 permalink: artigos/ringtones-super-mario-bros-iphone/
 title: Toques (ringtones) do Super Mario Bros no iPhone e iPad
