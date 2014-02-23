@@ -7,6 +7,9 @@ title: Texto do Leitor
 wordpress_id: 222
 hide_author: true
 hide_date: true
+hide_read_more: true
+hide_share: true
+hide_ads: true
 permalink: texto-do-leitor/
 ---
 
