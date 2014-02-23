@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2012-05-16 19:06:19+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: comment-meta-akismet
 permalink: wordpress/comment-meta-akismet/
 title: 'WordPress: Remover dados do Akismet da tabela wp_commentmeta'

@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-04-15 18:12:04+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: remover-campos-formulario-comentarios
 permalink: wordpress/remover-campos-formulario-comentarios/
 title: 'WordPress: Como remover campos do formulário de comentários'

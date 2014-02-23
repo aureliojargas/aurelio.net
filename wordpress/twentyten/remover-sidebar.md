@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-12-03 14:49:11+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: remover-sidebar
 permalink: wordpress/twentyten/remover-sidebar/
 title: 'Wordpress: Remover a barra lateral (sidebar) no tema Twenty Ten'

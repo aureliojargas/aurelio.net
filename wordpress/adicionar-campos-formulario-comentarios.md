@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-04-15 21:19:34+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: adicionar-campos-formulario-comentarios
 permalink: wordpress/adicionar-campos-formulario-comentarios/
 title: 'WordPress: Como adicionar campos no formulário de comentários'

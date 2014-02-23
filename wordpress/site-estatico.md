@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-04-07 15:37:58+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: site-estatico
 permalink: wordpress/site-estatico/
 title: Site estático e WordPress juntos na raiz do domínio

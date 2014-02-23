@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2007-05-03 21:19:10+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: texto-do-leitor
 title: Texto do Leitor
 wordpress_id: 222

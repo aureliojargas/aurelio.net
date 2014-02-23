@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2012-04-12 20:49:02+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: jetpack-sharing-posicao
 permalink: wordpress/jetpack-sharing-posicao/
 title: 'WordPress: Jetpack: Mudar a posição dos botões de compartilhamento (sharing)'

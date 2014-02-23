@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2012-05-16 19:32:31+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: comment-meta-orfaos
 permalink: wordpress/comment-meta-orfaos/
 title: 'WordPress: Remover dados órfãos da tabela wp_commentmeta'

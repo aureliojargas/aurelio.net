@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2005-01-15 15:00:25+00:00
-layout: 2013-page
+layout: twentyten-child
 slug: pogo
 title: Roda de Pogo – A Dança Punk
 wordpress_id: 2392
