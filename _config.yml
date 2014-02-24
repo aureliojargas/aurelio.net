@@ -8,8 +8,8 @@
 ### /!\ MUST RESTART jekyll --watch FOR CHANGES TO TAKE EFFECT /!\
 
 # True para ligar Disqus, Analytics, etc.
-production: false
-# production: true
+# production: false
+production: true
 
 name: Aurelio.net
 url: http://aurelio.net
