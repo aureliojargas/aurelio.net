@@ -1,2 +1,2 @@
-{% for tag in page.tags %}
+{% assign sorted_tags = page.tags | sort %}{% for tag in sorted_tags %}
 	<a rel="tag" href="http://aurelio.net/tag/{{ tag }}/">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
