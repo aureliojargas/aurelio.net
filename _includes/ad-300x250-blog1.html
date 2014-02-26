@@ -1,4 +1,4 @@
-{% unless page.hide_ads %}
+{% unless page.hide_ads or page.hide_ad_top %}
 	<div class="ad-blog-box-top"{% unless site.production %} style="background-color:yellow"{% endunless%}>
 {% if site.production %}
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

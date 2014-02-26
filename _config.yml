@@ -55,6 +55,7 @@ lsi: false
 # hide_author: true
 # hide_date: true
 # hide_ads: true
+# hide_ad_top: true
 # hide_tags: true
 # hide_read_more: true
 # hide_share: true
