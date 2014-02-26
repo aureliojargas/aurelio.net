@@ -21,6 +21,8 @@ hide_comments: true
     <li><a href="#{{ this_word | cgi_escape }}">{{ this_word }}</a> <span class="count">({{ site.tags[this_word].size }})</span></li>{% endunless %}{% endfor %}
   </ul>
 
+  <p>Veja também: <a href="http://aurelio.net/blog/sumario/">Lista completa</a> de textos do blog, em ordem cronológica.</p>
+
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
   <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>

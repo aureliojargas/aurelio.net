@@ -20,6 +20,8 @@ permalink: blog/sumario/
 	
 Aqui está a lista completa de todos os textos que já escrevi aqui no blog.
 
+Se preferir ver os textos agrupados por assunto, vá na [página de tags](http://aurelio.net/tags.html).
+
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
