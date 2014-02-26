@@ -14,6 +14,10 @@ hide_comments: true
 permalink: blog/sumario/
 ---
 
+<style>
+.entry-content ul { font-size: small; }
+</style>
+	
 Aqui está a lista completa de todos os textos que já escrevi aqui no blog.
 
 Para ver os artigos do site (e não do blog), use o menu acima.
