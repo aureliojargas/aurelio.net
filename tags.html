@@ -23,6 +23,6 @@ hide_comments: true
   <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
   <ul class="posts no-bullet">
     {% for post in site.tags[this_word] reversed %}
-    <li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+    <li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ post.url }}">{{ post.title | escape }}</a></li>{% endfor %}
   </ul>
   {% endunless %}{% endfor %}
