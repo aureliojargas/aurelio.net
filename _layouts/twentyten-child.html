@@ -180,11 +180,11 @@
 					<div class="entry-content">
 {{ content }}
 					</div><!-- .entry-content -->
-{% unless page.hide_tags %}
+{% unless page.hide_tags %}{% if page.tags %}
 					<div class="article-tags">
 						Tags: {% include page-tags.html %}
 					</div>
-{% endunless %}
+{% endif %}{% endunless %}
 {% include article-footer.html %}
 
 {% include ad-336x280-blog2.html %}
