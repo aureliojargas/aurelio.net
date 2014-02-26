@@ -26,7 +26,7 @@
 {% include analytics.html %}
 </head>
 
-<body class="single single-post postid-{{ page.wordpress_id }} single-format-standard custom-background">
+<body class="single single-post single-format-standard custom-background">
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<div id="masthead">
@@ -169,7 +169,7 @@
 {% if page.next.url %}					<div class="nav-next"><a href="{{ site.url }}{{ page.next.url }}" rel="next">{{ page.next.title | escape }} <span class="meta-nav">→</span></a></div>{% endif %}
 				</div><!-- #nav-above -->
 {% endunless %}
-				<div id="post-{{ page.wordpress_id }}" class="post-{{ page.wordpress_id }} post type-post status-publish format-standard hentry">
+				<div class="post type-post status-publish format-standard hentry">
 {% unless page.hide_title %}
 					<h1 class="entry-title">{{ page.title | escape }}</h1>
 {% endunless %}
