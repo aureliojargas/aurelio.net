@@ -51,7 +51,7 @@ hide_comments: true
 
 <h2 style="margin-top:1.5em;">Textos recentes no blog</h2>
 
-<ul class="posts" style="list-style-type:none; margin-left:0; line-height:185%;">
+<ul class="no-bullet" style="margin-left:0; line-height:185%;">
 {% for post in site.posts limit:10 %}
 	<li><a href="{{ site.url}}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
