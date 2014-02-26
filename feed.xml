@@ -14,13 +14,13 @@ layout: none
 		</image>
 		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
-			<item>
-				<title>{{ post.title | xml_escape }}</title>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y 12:00:00 +0000" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-				<description>{{ post.content | xml_escape }}</description>
-			</item>
+		<item>
+			<title>{{ post.title | xml_escape }}</title>
+			<pubDate>{{ post.date | date: "%a, %d %b %Y 12:00:00 +0000" }}</pubDate>
+			<link>{{ site.url }}{{ post.url }}</link>
+			<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+			<description>{{ post.content | xml_escape }}</description>
+		</item>
 		{% endfor %}
 	</channel>
 </rss>
