@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-04-15 18:12:04+00:00
+date: 2011-04-15
 layout: twentyten-child
 slug: remover-campos-formulario-comentarios
 permalink: wordpress/remover-campos-formulario-comentarios/

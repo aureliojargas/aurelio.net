@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2004-11-14 15:00:48+00:00
+date: 2004-11-14
 layout: 2013-page-ads
 slug: matinhos-bike-2004
 permalink: viagem/matinhos-bike-2004/

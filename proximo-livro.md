@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2008-11-04 22:29:41+00:00
+date: 2008-11-04
 layout: twentyten-child
 slug: proximo-livro
 title: Próximo Livro

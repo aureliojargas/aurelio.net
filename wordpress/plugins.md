@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-04-06 12:44:24+00:00
+date: 2011-04-06
 layout: twentyten-child
 slug: plugins
 permalink: wordpress/plugins/

@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-04-12 20:49:02+00:00
+date: 2012-04-12
 layout: twentyten-child
 slug: jetpack-sharing-posicao
 permalink: wordpress/jetpack-sharing-posicao/

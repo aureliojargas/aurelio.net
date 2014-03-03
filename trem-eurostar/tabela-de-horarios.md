@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-08-25 20:28:41+00:00
+date: 2011-08-25
 layout: 2013-page-ads
 slug: tabela-de-horarios
 permalink: trem-eurostar/tabela-de-horarios/

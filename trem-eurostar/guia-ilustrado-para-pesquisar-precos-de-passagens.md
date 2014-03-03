@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-08-25 20:42:48+00:00
+date: 2011-08-25
 layout: 2013-page-ads
 slug: guia-ilustrado-para-pesquisar-precos-de-passagens
 permalink: trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/

@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-08-17 23:38:19+00:00
+date: 2012-08-17
 layout: twentyten-child
 wordpress_id: 4152
 slug: notebook-suporte-pvc

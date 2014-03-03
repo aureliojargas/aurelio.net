@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-07-10 22:57:20+00:00
+date: 2012-07-10
 layout: twentyten-child
 slug: ios-comentarios-meta
 permalink: wordpress/ios-comentarios-meta/

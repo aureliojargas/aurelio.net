@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-04-12 15:18:23+00:00
+date: 2012-04-12
 layout: twentyten-child
 wordpress_id: 3638
 slug: icloud-copiar-dados-iphone-novo

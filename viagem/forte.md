@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2008-01-01 15:00:51+00:00
+date: 2008-01-01
 layout: 2013-page-ads
 slug: forte
 permalink: viagem/forte/

@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2006-09-13 04:31:24+00:00
+date: 2006-09-13
 layout: 2013-page-ads
 slug: farol-de-santa-marta
 permalink: viagem/farol-de-santa-marta/

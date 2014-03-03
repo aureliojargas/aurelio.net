@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2005-02-09 15:00:09+00:00
+date: 2005-02-09
 layout: 2013-page-ads
 slug: matinhos-2005
 permalink: viagem/matinhos-2005/

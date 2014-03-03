@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-04-07 15:37:58+00:00
+date: 2011-04-07
 layout: twentyten-child
 slug: site-estatico
 permalink: wordpress/site-estatico/

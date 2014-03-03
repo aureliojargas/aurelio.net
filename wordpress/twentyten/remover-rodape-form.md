@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-04-12 16:02:56+00:00
+date: 2012-04-12
 layout: twentyten-child
 slug: remover-rodape-form
 permalink: wordpress/twentyten/remover-rodape-form/

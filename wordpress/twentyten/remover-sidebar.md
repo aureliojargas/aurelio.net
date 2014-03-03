@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-12-03 14:49:11+00:00
+date: 2011-12-03
 layout: twentyten-child
 slug: remover-sidebar
 permalink: wordpress/twentyten/remover-sidebar/

@@ -1,6 +1,6 @@
 ---
 author: aurelio+mog
-date: 2007-11-01 15:00:01+00:00
+date: 2007-11-01
 layout: 2013-page-ads
 slug: caxambu
 permalink: viagem/caxambu/

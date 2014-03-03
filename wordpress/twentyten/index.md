@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-12-03 14:47:31+00:00
+date: 2011-12-03
 layout: 2013-index
 slug: twentyten
 title: 'WordPress: Dicas para o tema Twenty Ten'

@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-04-15 21:19:34+00:00
+date: 2011-04-15
 layout: twentyten-child
 slug: adicionar-campos-formulario-comentarios
 permalink: wordpress/adicionar-campos-formulario-comentarios/

@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-05-16 21:12:04+00:00
+date: 2012-05-16
 layout: twentyten-child
 slug: revisoes-remover-desativar
 permalink: wordpress/revisoes-remover-desativar/

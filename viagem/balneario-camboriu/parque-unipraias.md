@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-04-30 01:51:52+00:00
+date: 2012-04-29
 layout: 2013-page-ads
 slug: parque-unipraias
 permalink: viagem/balneario-camboriu/parque-unipraias/

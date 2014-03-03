@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-05-16 19:06:19+00:00
+date: 2012-05-16
 layout: twentyten-child
 slug: comment-meta-akismet
 permalink: wordpress/comment-meta-akismet/

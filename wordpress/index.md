@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2011-04-06 12:40:11+00:00
+date: 2011-04-06
 layout: 2013-index
 slug: wordpress
 title: Dicas de WordPress

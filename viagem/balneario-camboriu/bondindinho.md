@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-04-30 01:20:54+00:00
+date: 2012-04-29
 layout: 2013-page-ads
 slug: bondindinho
 permalink: viagem/balneario-camboriu/bondindinho/

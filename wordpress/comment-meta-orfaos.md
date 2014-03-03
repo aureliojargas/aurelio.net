@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-05-16 19:32:31+00:00
+date: 2012-05-16
 layout: twentyten-child
 slug: comment-meta-orfaos
 permalink: wordpress/comment-meta-orfaos/

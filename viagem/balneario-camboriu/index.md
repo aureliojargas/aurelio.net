@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2012-04-29 23:23:11+00:00
+date: 2012-04-29
 layout: 2013-page-ads
 slug: balneario-camboriu
 title: Balneário Camboriú - SC

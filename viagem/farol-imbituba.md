@@ -1,6 +1,6 @@
 ---
 author: aurelio
-date: 2001-01-26 15:00:10+00:00
+date: 2001-01-26
 layout: 2013-page-ads
 slug: farol-imbituba
 permalink: viagem/farol-imbituba/
