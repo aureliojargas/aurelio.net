@@ -38,7 +38,7 @@ Eu tentei usar, mas realmente Facebook realmente não é a minha praia. Eu parei
 
 ## Google+
 
-<https://plus.google.com/u/0/109816595539181258628/>
+<https://plus.google.com/u/0/+AurelioJargas77/>
 
 O Google+ é outro canal que eu tentei usar, mas parei de acompanhar.
 
