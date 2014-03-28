@@ -1,4 +1,5 @@
-_admin
-_drafts
+_admin/
+_drafts/
 _site/assets/
 jekyll
+_site/
