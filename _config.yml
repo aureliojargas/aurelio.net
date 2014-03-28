@@ -7,7 +7,7 @@
 ### /!\ MUST RESTART jekyll --watch FOR CHANGES TO TAKE EFFECT /!\
 ### /!\ MUST RESTART jekyll --watch FOR CHANGES TO TAKE EFFECT /!\
 
-# True para ligar Disqus, Analytics, etc.
+# True to turn on Disqus, Analytics, etc.
 # production: false
 production: true
 
@@ -16,15 +16,15 @@ url: http://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
 
 ### permalink
-# A configuração de permalink aqui vale somente para posts.
-# Você pode usá-la no YAML de páginas individuais também.
+# This config is valid for posts only.
+# But you can use it in individual pages YAML.
 #
 # /blog/2009/04/29/slap-chop/index.html
 permalink: /blog/:year/:month/:day/:title/
 # permalink: /:title
 
 ### relative_permalinks
-# Vale para a diretiva 'permalink' dentro do YAML de páginas.
+# Used by the 'permalink' config inside pages' YAML.
 relative_permalinks: false
 
 # Used by category-pages plugin
@@ -42,7 +42,7 @@ redcarpet:
 # Do not use the smart related-posts feature (takes forever to generate the site)
 lsi: false
 
-# Glob recursivo: assets/**/*.js
+# Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
 # exclude:
 #   - _posts
@@ -63,5 +63,5 @@ lsi: false
 # hide_share: true
 # hide_comments: true
 
-# Use a pasta _data para guardar arquivos de dados
+# Use _data folder to store data files
 # If there's a file members.yml under the directory, then you can access contents of the file through site.data.members.
