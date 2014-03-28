@@ -29,23 +29,23 @@
 #   Plugin:   <p class="figure"><a href="http://example.com"><img src="http://example.com/image.jpg" alt="caption2"></a><span>caption2</span></p>
 
 module Jekyll
-  module ImgcaptionFilter
-    def imgcaption(input)
-      input.gsub(
-        /<p>(<img src=".+?" alt="">)<\/p>/,
-        '<p class="image">\1</p>'
-        ).gsub(
-        /<p>(<a href=".*?"><img src=".+?" alt=""><\/a>)<\/p>/,
-        '<p class="image">\1</p>'
-        ).gsub(
-        /<p>(<img src=".+?" alt="(.+)">)<\/p>/,
-        '<p class="figure">\1<span>\2</span></p>'
-        ).gsub(
-        /<p>(<a href=".*?"><img src=".+?" alt="(.+)"><\/a>)<\/p>/,
-        '<p class="figure">\1<span>\2</span></p>'
-        )
-    end
-  end
+	module ImgcaptionFilter
+		def imgcaption(input)
+			input.gsub(
+				/<p>(<img src=".+?" alt="">)<\/p>/,
+				'<p class="image">\1</p>'
+			).gsub(
+				/<p>(<a href=".*?"><img src=".+?" alt=""><\/a>)<\/p>/,
+				'<p class="image">\1</p>'
+			).gsub(
+				/<p>(<img src=".+?" alt="(.+)">)<\/p>/,
+				'<p class="figure">\1<span>\2</span></p>'
+			).gsub(
+				/<p>(<a href=".*?"><img src=".+?" alt="(.+)"><\/a>)<\/p>/,
+				'<p class="figure">\1<span>\2</span></p>'
+			)
+		end
+	end
 end
 
 Liquid::Template.register_filter(Jekyll::ImgcaptionFilter)
