@@ -50,6 +50,7 @@ lsi: false
 #   - viagem
 
 ### Page config (to insert in Front Matter)
+# hide_heading: true
 # hide_prev_next: true
 # hide_byline: true
 # hide_author: true
