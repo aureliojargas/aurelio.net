@@ -25,6 +25,11 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
+## 2014 (1)
+
+  * [O jeito Shell Script de resolver problemas – Episódio 4](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/)
+
+
 ## 2013 (4)
 
   * [Novo coautor das Funções ZZ: Itamar Santos de Souza](http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/)
