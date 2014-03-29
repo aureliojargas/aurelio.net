@@ -15,7 +15,7 @@ permalink: blog/sumario/
 ---
 
 <style>
-.entry-content ul { font-size: small; }
+	.entry-content ul { font-size: small; }
 </style>
 	
 Aqui está a lista completa de todos os textos que já escrevi aqui no blog.
