@@ -42,6 +42,7 @@ redcarpet:
 #   - _posts
 #   - blog
 #   - viagem
+exclude: [README.md]
 
 ### Page config (to insert in Front Matter)
 # hide_title_suffix: true
