@@ -27,9 +27,6 @@ permalink: /blog/:year/:month/:day/:title/
 # Used by the 'permalink' config inside pages' YAML.
 relative_permalinks: false
 
-# Used by category-pages plugin
-category_dir: blog/category
-
 ### Syntax Highlight
 pygments: true
 
@@ -38,9 +35,6 @@ markdown: redcarpet
 redcarpet:
   extensions: ["fenced_code_blocks"]
 # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-
-# Do not use the smart related-posts feature (takes forever to generate the site)
-lsi: false
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
