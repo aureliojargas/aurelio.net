@@ -383,3 +383,10 @@ ul.posts .date {
 .no-bullet {
 	list-style-type: none;
 }
+
+#content div.warning,
+#content div.alert,
+#content div.note,
+#content div.download {
+	margin-bottom: 24px;  /* p.warning was already OK, but div.warning not */
+}
