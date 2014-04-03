@@ -1,0 +1,63 @@
+---
+layout: 2013-articles
+author: aurelio
+worked: "3:00"
+date: 2012-12-03
+title: "Dropbox: Selective Sync Pitfalls"
+tags: [Dropbox]
+---
+
+
+%!includeconf: /a/jekyll/aurelio.net/articles/_config.t2t
+
+
+The [Selective Sync https://www.dropbox.com/help/175/en] feature of Dropbox allows you to select which folders will be synced to your computer.
+
+% If you're installing Dropbox for the first time in a new computer, using this feature before the initial download will be a huge saving in disk space and bandwidth when you uncheck the biggest folders.
+
+% But if you already use Dropbox and have all your files synced, it's important to understand how this feature works before using it, to avoid problems.
+
+You're safe using this feature when installing Dropbox in a second computer, to speed up the initial download of your files by excluding the big folders. But in your working computer, with all your files already synced, it's important to understand how this feature works before using it, to avoid problems.
+
+
+== The local folder is removed ==[removed]
+
+When you open the Selective Sync settings, you have the option to uncheck any of your folders, to stop syncing them. This is the exact wording Dropbox provides at the top of the window:
+
+	Only checked folders will sync to this computer.
+
+So, what happens when you uncheck a folder and confirm? Some may think that the local copy will be left alone and Dropbox will ignore all future changes to that folder. But no, in this case "not syncing" a folder really means that **the folder will be removed from your computer**. The remote copy in the server will be left untouched. The confirmation message that follows tries to explain that:
+
+	Update Selective Sync settings? — Unchecked folders will stop syncing to this computer. Updating your settings will remove them from this computer's Dropbox.
+
+In my opinion Dropbox does not make it as clear as it should be, since we're talking about deleting user data. In this case it's only local data, but when symlinks are involved, even remote data can be deleted. We'll talk about it later.
+
+
+== Recreated unchecked folders are ignored ==[ignored]
+
+When you uncheck a folder in Selective Sync, that folder is removed from your computer. But if you recreate that folder locally, in the same location with the same name, Dropbox will ignore it. You can add files to that folder and modify them, but Dropbox won't sync those changes to the server.
+
+This behavior is handy to [ignore folders with temporary files http://aurelio.net/articles/dropbox-ignore-folder.html] (caches, builds) that reside inside your Dropbox. But note that if you check again that same folder in the Selective Sync settings, you will get a [conflicted copy https://www.dropbox.com/help/36/en].
+
+
+% == Symlink nightmare ==
+== Unchecked symlink remove original folder contents ==[symlink]
+
+Unix geeks, beware:
+
+```
+$ cd ~/Dropbox
+$ mkdir a
+$ touch a/foo.txt
+$ ln -s a b
+```
+
+Now uncheck "b" in Selective Sync. As you expect, the symlink "b" will be removed. As you do not expect, the folder "a" is now empty.
+
+% In the server, now "a" is also empty and "b" is a plain folder with foo.txt
+
+Since [Dropbox does not preserve symlinks http://aurelio.net/articles/dropbox-symlinks.html], "b" is handled as a folder. So the Selective Sync unchecking first remove the folder contents before removing the folder itself. This is a dangerous combination for symlinked folders :(
+
+% I'm sorry to hear about your problems, but deleting the symlinks themselves shouldn't have deleted the pictures themselves. That is, unless you tried to delete the symlinks from the web interface?
+% You need to delete them from the computer which they were first added, as for Dropbox they are simply folders. And, as always with folders when they're deleted, the files will be deleted first.
+

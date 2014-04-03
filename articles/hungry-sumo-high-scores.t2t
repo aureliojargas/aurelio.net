@@ -1,0 +1,46 @@
+---
+layout: 2013-articles
+author: aurelio
+worked: "2:00"
+date: 2012-09-24
+title: Tips for high scores in Hungry Sumo for iOS (iPhone, iPad)
+tags: [Games, iOS]
+---
+
+% 2012-09-24 1h30 created inside Wordpress for /articles
+% 2012-12-05 0h30 moved to txt2tags for /articles/
+
+
+%!includeconf: /a/jekyll/aurelio.net/articles/_config.t2t
+
+
+[Hungry Sumo http://itunes.apple.com/us/app/hungry-sumo/id467006009?mt=8] is a fast paced sumo-bouncing [Osmos http://www.hemispheregames.com/osmos/]-like game for iOS. You grow your characters (the sumos) to make them bigger than the enemies, then bounce to convert them to your team. The gameplay is simple, but you need to think fast and make precise touches.
+
+I've played that game for hours and had lots of fun. Highly recommended. Today (2012-09-24), I'm the #2 in the Game Center ranking with 15.396.420 points, username oreio77. I want to share some tips to make high scores in this game.
+
+ [IMG_FOLDER/hungry-sumo-ranking.jpg] 
+
++ Prefer to play on the iPad, because of the larger screen. You will get better results using both hands and multiple fingers.
+
++ Bigger is better, hold the sumo and grow it until the last second before bouncing into an enemy.
+
++ Just hold the finger on the sumo, instead of touching it repeatedly. He will grow faster this way. — Unfortunately for me, I just "discovered" that I could hold it when I was in level 86!
+
++ You won't get bonus points for reaching the maximum size of a single sumo. It's better to grow multiple sumos at the same time. Use multiple fingers!
+
++ It doesn't matter how many sumos you grow. What matters is the total area they take. Always try to to fill all the screen to get more points.
+
++ The time is not important. Finishing the level in a few seconds won't give you a high score. Prefer to grow your sumos to gigantic sizes, this gives you more points. But of course, the sooner you can do it, you will also win more time points.
+
++ Repeat the same level over an over again until you can finish it with HUGE sumos, filling all the screen.
+
++ Try to grow around 1.500 lbs at each level. You can grow over 2.000 lbs in levels with lots of sumos (except levels with the annoying Statue Sumo).
+
++ At the start of each level, the initial direction every character moves is random. Repeat the same level until you get an initial state that is favorable to you.
+
++ It's easier to get gigantic when you have multiple fellow sumos protecting you from the enemies. Prefer to grow huge those sumos at the corners.
+
++ The most important powerup is the Zen Time, for the temporary slow motion. Grow all your sumos as huge as possible before the time gets back to normal.
+
++ The more you play, the better you get at becoming huge. After finishing the game, replay past levels to try to improve your score. You'll be surprised how better you got!
++

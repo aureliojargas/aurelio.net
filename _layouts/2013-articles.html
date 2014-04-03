@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ page.title | escape }}, by Aurelio Jargas</title>
+	<meta name="author" content="Aurelio Jargas">
+	<link rel="shortcut icon" href="http://aurelio.net/favicon.ico">
+
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="/assets/reset.css">
+	<link rel="stylesheet" href="/assets/articles.css">
+	<link rel="stylesheet" href="/assets/bars.css">
+	<link rel="stylesheet" href="/assets/monokai.css">
+
+{% include analytics.html %}
+</head>
+
+<body id="{{ page.url | remove:'/articles/' | remove:'.html' }}">
+
+	<div class="bar">
+		<div id="article-header">
+
+			<h1><a href="{{ site.url }}{{ page.url }}" title="Permalink" rel="bookmark">{{ page.title | escape }}</a></h1>
+
+			{% unless page.hide_byline %}
+			<p class="byline">
+				Written by
+				<a class="name" rel="author" href="http://aurelio.net/about.html">Aurelio Jargas</a>
+				{% unless page.hide_date %}
+					on <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+				{% endunless %}
+			</p>
+{% endunless %}
+		</div>
+	</div>
+
+{% unless page.hide_content %}
+	<div class="bar bar-transparent">
+		<div id="article-body">
+
+{{ content | imgcaption }}
+
+			<div id="eof">— EOF —</div>
+
+		</div><!--article-body-->
+	</div><!--bar-->
+{% endunless %}
+
+	<div class="bar{% if page.url == '/articles/' %} bar-transparent{% endif %}">
+{% include nav-articles.html %}
+	</div>
+
+	<div class="bar bar-transparent">
+{% include disqus.html %}
+	</div>
+
+{% include aureliohead-en.html %}
+
+</body>
+</html>
