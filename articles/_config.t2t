@@ -12,3 +12,7 @@
 
 % HTML5: Remove hr atributes
 %!postproc: '<hr class=.*>'	<hr>
+
+% HTML5: get back <nav> to <div id="toc"> for now
+%!postproc: <nav>	<div id="toc">
+%!postproc: </nav>	</div><!--toc-->
