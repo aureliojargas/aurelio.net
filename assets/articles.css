@@ -103,6 +103,14 @@ code {
 #shell-reference code { color: inherit; font-weight: normal; }
 
 
+/* ------------------------------------  iPad = 1024x768 */
+
+@media screen and (max-width: 767px) {
+	.github-fork-ribbon-wrapper {
+		display: none;
+	}
+}
+
 /* ------------------------------------  iPhone = 320x480 */
 
 @media screen and (max-width: 480px) {

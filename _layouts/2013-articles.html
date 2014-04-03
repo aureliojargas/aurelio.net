@@ -14,6 +14,12 @@
 	<link rel="stylesheet" href="/assets/bars.css">
 	<link rel="stylesheet" href="/assets/monokai.css">
 
+	<!-- Fork me -->
+	<link rel="stylesheet" href="/assets/gh-fork-ribbon.css">
+	<!--[if lt IE 9]>
+		<style>.github-fork-ribbon-wrapper { display: none; }</style>
+	<![endif]-->
+
 {% include analytics.html %}
 </head>
 
@@ -54,6 +60,13 @@
 
 	<div class="bar bar-transparent">
 {% include disqus.html %}
+	</div>
+
+	<!-- Fork me -->
+	<div class="github-fork-ribbon-wrapper right">
+		<div class="github-fork-ribbon">
+			<a href="https://github.com/aureliojargas/aurelio.net/tree/master{{ page.url | replace:'.html','.t2t' }}">GitHub</a>
+		</div>
 	</div>
 
 {% include aureliohead-en.html %}
