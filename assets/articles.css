@@ -99,6 +99,7 @@ code {
 #iphoto-symlinks th { text-align: left; }
 #sed-abc .patt { color: lime; }
 #sed-abc .hold { color: yellow; }
+#shell-reference #toc li { margin-bottom: 0; }
 #shell-reference table { width: 100%; }
 #shell-reference code { color: inherit; font-weight: normal; }
 
