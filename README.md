@@ -21,4 +21,4 @@ But the majority of the site (1000+ files) still remains as [txt2tags](http://tx
 
 Jekyll-related and Liquid codes are Public Domain.
 
-Site contents (my texts) are [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/).
+Site contents (my texts, images and videos) are [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/).
