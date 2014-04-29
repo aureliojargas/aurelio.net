@@ -25,8 +25,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
-## 2014 (2)
+## 2014 (3)
 
+  * [Ressuscitei o sedsed](http://aurelio.net/blog/2014/04/29/ressuscitei-o-sedsed/)
   * [Meu cérebro me enganou](http://aurelio.net/blog/2014/04/12/meu-cerebro-me-enganou/)
   * [O jeito Shell Script de resolver problemas – Episódio 4](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/)
 
