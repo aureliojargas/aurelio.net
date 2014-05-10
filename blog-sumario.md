@@ -5,7 +5,7 @@ slug: sumario
 title: Sumário
 wordpress_id: 1877
 hide_prev_next: true
-hide_byline: true 
+hide_byline: true
 hide_ads: true
 hide_tags: true
 hide_read_more: true
@@ -17,7 +17,7 @@ permalink: blog/sumario/
 <style>
 	.entry-content ul { font-size: small; }
 </style>
-	
+
 Aqui está a lista completa de todos os textos que já escrevi aqui no blog.
 
 Se preferir ver os textos agrupados por assunto, vá na [página de tags](http://aurelio.net/tags.html).
@@ -25,8 +25,10 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
-## 2014 (3)
+## 2014 (5)
 
+  * [Reaprendendo meu próprio código](http://aurelio.net/blog/2014/05/10/reaprendendo-meu-codigo/)
+  * [Cápsula do tempo: o Aurelio de 2004](http://aurelio.net/blog/2014/05/01/capsula-do-tempo/)
   * [Ressuscitei o sedsed](http://aurelio.net/blog/2014/04/29/ressuscitei-o-sedsed/)
   * [Meu cérebro me enganou](http://aurelio.net/blog/2014/04/12/meu-cerebro-me-enganou/)
   * [O jeito Shell Script de resolver problemas – Episódio 4](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/)
@@ -355,4 +357,3 @@ Para ver os artigos do site (e não do blog), use o menu acima.
 
   * [Jacaré do Parque Barigüi](http://aurelio.net/blog/2004/09/05/jacare-do-parque-barigui/)
   * [Vida de piá](http://aurelio.net/blog/2004/08/08/vida-de-pia/)
-
