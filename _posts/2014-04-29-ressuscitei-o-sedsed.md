@@ -5,7 +5,7 @@ slug: ressuscitei-o-sedsed
 title: Ressuscitei o sedsed
 wp_categories:
 - software
-tags: [programador]
+tags: [app, programador]
 hide_ads: true
 worked: 2:15
 ---

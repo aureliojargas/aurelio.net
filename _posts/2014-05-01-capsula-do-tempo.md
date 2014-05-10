@@ -5,7 +5,7 @@ slug: capsula-do-tempo
 title: "Cápsula do tempo: o Aurelio de 2004"
 wp_categories:
 - meu-querido-diario
-tags: [meu-querido-diario]
+tags: [meu-querido-diario, programador]
 hide_ads: true
 worked: 3:00
 ---
