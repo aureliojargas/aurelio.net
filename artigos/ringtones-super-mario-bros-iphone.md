@@ -48,7 +48,7 @@ Além do iPhone, você também pode usar estes sons no seu iPod e iPad, para avi
 
 ## Download
 
-Baixe o pacote que traz todos os ringtones: arquivo **iTones-Super-Mario-Bros.zip**. O link para download está lá no [post original do autor do pacote](http://itones.posterous.com/nes-super-mario-bros-iphone-sound-pack).
+Baixe o pacote que traz todos os ringtones: arquivo **iTones-Super-Mario-Bros.zip**. O link para download está lá no <del>[post original do autor do pacote](http://itones.posterous.com/nes-super-mario-bros-iphone-sound-pack)</del> (quebrou, [aqui tem outro post com link pro pacote](http://www.nintendofuse.com/2011/10/26/nes-super-mario-bros-iphone-ring-tone-sound-pack/)).
 
 Uma vez baixado, dê um clique duplo no arquivo ZIP para descompactá-lo. Será criada a pasta **iTones - Super Mario Bros**. Ali dentro estarão todos os ringtones.
 
