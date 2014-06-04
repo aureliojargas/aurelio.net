@@ -12,7 +12,7 @@ worked: 3:30
 
 Ontem a Apple lançou a linguagem [Swift](https://developer.apple.com/swift/) na WWDC 2014. Como nunca gostei da jurássica Objective-C (feia boba chata cara-de-melão), fiquei muito empolgado com a novidade. Finalmente uma linguagem moderna para se programar para Mac e iOS!
 
-É uma linguagem com sintaxe moderna, limpa, prazerosa de programar, lembrando a sintaxe de linguagens interpretadas como Ruby, Python e JavaScript. Mas diferentemente dessas, a Swift é uma linguagem compilada e de tipagem forte, que te força a sempre informar qual o tipo de conteúdo das variáveis, argumentos e retorno de funções: inteiro, string, array?
+É uma linguagem com sintaxe moderna, limpa, prazerosa de programar, lembrando a sintaxe de linguagens interpretadas como Ruby, Python e JavaScript. Mas diferentemente dessas, a Swift é uma linguagem compilada e de tipagem <del title="Obrigado Ulysses Almeida pela correção.">forte</del> [estática](http://fgsl.eti.br/blog/?p=118), que te força a sempre informar qual o tipo de conteúdo das variáveis, argumentos e retorno de funções: inteiro, string, array?
 
 Essa obrigação de informar o tipo traz uma grande vantagem: seus erros serão detectados já pelo compilador, e não pelo usuário. Te força a fazer um código mais previsível e robusto, e o compilador ainda pode fazer otimizações para que o código rode mais rápido.
 
