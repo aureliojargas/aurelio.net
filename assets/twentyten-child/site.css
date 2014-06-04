@@ -28,12 +28,12 @@ body, input, textarea, .page-title span, .pingback a.url {
 	font-family: Arial, sans-serif;  /* Unicode safe */
 }
 pre {
-	font-family: "Courier New", monospace;
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 	font-size:14px;
 	color:#000;
 }
 code {
-	font-family: "Courier New", monospace;
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 	font-size:15px;
 	background:#F7F7F7;
 }
@@ -267,7 +267,7 @@ body.home #content .entry-title { display:none; }
 #index-english ul {
 	line-height: 135%;
 	list-style-type: none;
-	
+
 }
 
 
