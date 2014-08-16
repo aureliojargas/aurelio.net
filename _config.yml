@@ -43,6 +43,7 @@ redcarpet:
 exclude: [README.md]
 
 ### Page config (to insert in Front Matter)
+# published: false   # means: ignore this file
 # hide_title_suffix: true
 # hide_heading: true
 # hide_prev_next: true
