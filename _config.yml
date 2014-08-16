@@ -1,5 +1,3 @@
-# http://jekyllrb.com/docs/configuration/
-
 # Do not use tabs in configuration files
 # This will either lead to parsing errors, or Jekyll will revert to the default settings. Use spaces instead.
 
