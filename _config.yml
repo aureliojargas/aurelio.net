@@ -40,7 +40,7 @@ redcarpet:
 #   - _posts
 #   - blog
 #   - viagem
-exclude: [README.md]
+exclude: [README.md, articles/README.md]
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
