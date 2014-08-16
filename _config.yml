@@ -26,7 +26,7 @@ permalink: /blog/:year/:month/:day/:title/
 relative_permalinks: false
 
 ### Syntax Highlight
-pygments: true
+highlighter: pygments
 
 ### Markdown
 markdown: redcarpet
