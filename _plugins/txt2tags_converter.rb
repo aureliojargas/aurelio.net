@@ -23,7 +23,7 @@ module Jekyll
 
 			tmpfile = '/tmp/jekyll.t2t'
 			File.open(tmpfile, 'w') { |f| f.write("\n" + content) }
-			`txt2tags -t html5 --no-headers --css-sugar -i #{tmpfile} -o -`
+			`txt2tags-2.6.1102 -t html5 --no-headers --css-sugar -i #{tmpfile} -o -`
 		end
 	end
 end
