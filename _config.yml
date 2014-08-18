@@ -9,6 +9,9 @@
 # production: false
 production: true
 
+# Save the final HTMLs here
+destination: ~/aurelio.net
+
 name: Aurelio.net
 url: http://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
