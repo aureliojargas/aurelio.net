@@ -8,7 +8,7 @@ tags: [AppleScript, Python]
 ---
 
 
-%!includeconf: /a/jekyll/aurelio.net/articles/_config.t2t
+%!includeconf: /a/github/aureliojargas/aurelio.net/articles/_config.t2t
 
 %%% Table formatting
 % Tabs to | bars |

@@ -8,7 +8,7 @@ tags: [sed, reference]
 ---
 
 
-%!includeconf: /a/jekyll/aurelio.net/articles/_config.t2t
+%!includeconf: /a/github/aureliojargas/aurelio.net/articles/_config.t2t
 
 %!postproc: (\[PATT\])	<span class="patt">\1</span>
 %!postproc: (\[HOLD\])	<span class="hold">\1</span>

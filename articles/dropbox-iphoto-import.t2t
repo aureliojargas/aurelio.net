@@ -15,7 +15,7 @@ tags: [Dropbox, iPhoto]
 % 2014-03-17 2:00
 
 
-%!includeconf: /a/jekyll/aurelio.net/articles/_config.t2t
+%!includeconf: /a/github/aureliojargas/aurelio.net/articles/_config.t2t
 
 %!options: --toc
 %!postvoodoo: '<ul>\n *<li><a href="#toc1">.*?</a>' ''

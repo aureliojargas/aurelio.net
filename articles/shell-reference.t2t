@@ -14,7 +14,7 @@ tags: [shell, unix, reference]
 % 2012-12-19 moved to /articles/shell-reference.html
 
 
-%!includeconf: /a/jekyll/aurelio.net/articles/_config.t2t
+%!includeconf: /a/github/aureliojargas/aurelio.net/articles/_config.t2t
 
 %!options: --toc --toc-level 2 --enum-title
 
