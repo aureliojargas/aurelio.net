@@ -25,8 +25,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
-## 2014 (6)
+## 2014 (7)
 
+  * [Uso o Plant Nanny pra tomar 2L/dia de água](http://aurelio.net/blog/2014/09/20/plant-nanny/)
   * [Minhas primeiras impressões da linguagem Swift](http://aurelio.net/blog/2014/06/03/swift-primeiro-contato/)
   * [Reaprendendo meu próprio código](http://aurelio.net/blog/2014/05/10/reaprendendo-meu-codigo/)
   * [Cápsula do tempo: o Aurelio de 2004](http://aurelio.net/blog/2014/05/01/capsula-do-tempo/)
