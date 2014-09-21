@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{ page.title_prefix }}{{ page.title | escape }}{% unless page.hide_title_suffix %} | {{ site.name }}{% endunless %}</title>
+
+	<link rel="shortcut icon" href="http://aurelio.net/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+    <!-- Bootstrap -->
+    <link href="/assets/2014/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+{% if page.sub_layout == "2013-page-ads" %}
+	<link rel="stylesheet" href="/assets/2013/ads.css">
+{% else %}
+	<link rel="stylesheet" href="/assets/monokai.css">
+{% endif %}
+{% include head-open-graph.html %}
+{% include analytics.html %}
+</head>
+<body>
+
+<div id="main">
+
+{{ content }}
+
+</div><!--main-->
+
+{% if page.sub_layout == "2013-page-ads" %}
+<div id="sidebar">
+{% include ad-300x600.html %}
+{% include ad-300x600.html %}
+{% include ad-300x600.html %}
+</div><!--sidebar-->
+{% endif %}
+
+{% include footer.html %}
+{% include aureliohead.html %}
+
+</body>
+</html>
