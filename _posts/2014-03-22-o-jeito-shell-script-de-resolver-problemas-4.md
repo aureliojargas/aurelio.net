@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: o-jeito-shell-script-de-resolver-problemas-4
 title: O jeito Shell Script de resolver problemas – Episódio 4
 wp_categories:
