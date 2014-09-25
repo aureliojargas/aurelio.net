@@ -1,5 +1,5 @@
 ---
-layout: twentyten-child
+layout: "2014"
 author: aurelio
 title: 'Aurelio.net'
 hide_title_suffix: true
@@ -13,6 +13,65 @@ hide_read_more: true
 hide_share: true
 hide_comments: true
 ---
+
+<style>
+	#article-header { display:none; }
+
+	/* Icon Matrix made with CSS Sprites — faster! */
+	#aa-matrix {
+		width: 630px;
+	}
+	#aa-matrix a:hover,
+	#aa-matrix a:hover i {
+		background-color: #333;
+	}
+	#aa-matrix a {
+		padding: 8px;
+		display: block;
+		float: left;
+		border: 1px solid #ccc;
+		background-color: #eee;
+		text-align: center;
+		margin: 0 6px 6px 0;
+	}
+	#aa-matrix i {
+		background: url(http://aurelio.net/img/index-sprites.png) no-repeat top left;
+		background-color: #eee;
+		width: 80px;
+		height: 80px;
+		display: block;
+	}
+	#aa-matrix .sp-adiumbook{ background-position: 0 0; }
+	#aa-matrix .sp-baterna{ background-position: 0 -81px; }
+	#aa-matrix .sp-canivete{ background-position: 0 -162px; }
+	#aa-matrix .sp-carve{ background-position: 0 -243px; }
+	#aa-matrix .sp-codare{ background-position: 0 -324px; }
+	#aa-matrix .sp-csssandbox{ background-position: 0 -405px; }
+	#aa-matrix .sp-curso{ background-position: 0 -486px; }
+	#aa-matrix .sp-dialog{ background-position: 0 -567px; }
+	#aa-matrix .sp-doc{ background-position: 0 -648px; }
+	#aa-matrix .sp-embriagueitor{ background-position: 0 -729px; }
+	#aa-matrix .sp-engripeitor{ background-position: 0 -810px; }
+	#aa-matrix .sp-er{ background-position: 0 -891px; }
+	#aa-matrix .sp-fvm{ background-position: 0 -972px; }
+	#aa-matrix .sp-livroregex3{ background-position: 0 -1053px; }
+	#aa-matrix .sp-livroshell{ background-position: 0 -1134px; }
+	#aa-matrix .sp-mac{ background-position: 0 -1215px; }
+	#aa-matrix .sp-miguxeitor{ background-position: 0 -1296px; }
+	#aa-matrix .sp-moneylog{ background-position: 0 -1377px; }
+	#aa-matrix .sp-pogo{ background-position: 0 -1458px; }
+	#aa-matrix .sp-sed{ background-position: 0 -1539px; }
+	#aa-matrix .sp-sedsokoban{ background-position: 0 -1620px; }
+	#aa-matrix .sp-shell{ background-position: 0 -1701px; }
+	#aa-matrix .sp-subwaytor{ background-position: 0 -1782px; }
+	#aa-matrix .sp-surf{ background-position: 0 -1863px; }
+	#aa-matrix .sp-txt2tags{ background-position: 0 -1944px; }
+	#aa-matrix .sp-umportugues{ background-position: -81px 0; }
+	#aa-matrix .sp-viagem{ background-position: -81px -81px; }
+	#aa-matrix .sp-vim{ background-position: -81px -162px; }
+	#aa-matrix .sp-viravira{ background-position: -81px -243px; }
+	#aa-matrix .sp-zz{ background-position: -81px -324px; }
+</style>
 
 <div id="aa-matrix">
 <a title="UmPortugues.com" href="http://umportugues.com"><i class="sp-umportugues"></i></a>
@@ -46,24 +105,20 @@ hide_comments: true
 <a title="CSS Sandbox" href="http://aurelio.net/projects/css-sandbox/"><i class="sp-csssandbox"></i></a>
 <a title="txt2tags" href="http://txt2tags.org/pt/"><i class="sp-txt2tags"></i></a>
 </div>
-
 <div style="clear:both;"></div>
 
-
-<h2 style="margin-top:1.5em;">Textos recentes no blog</h2>
-
-<ul class="no-bullet" style="margin-left:0; line-height:185%;">
-{% for post in site.posts limit:10 %}
-	<li><a href="{{ site.url}}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-	<li>→ <a href="http://aurelio.net/blog/sumario/">Veja a lista completa de todos os posts</a></li>
-</ul>
-
-
-<p class="alert" style="margin-top:3em; text-align:center;">
+<p class="alert" style="margin: 2em 0; text-align: center;">
 	<strong>Aurelio.net in english:</strong>
 	<a href="http://aurelio.net/articles/">Articles</a> |
 	<a href="http://aurelio.net/projects/">Projects</a> |
 	<a href="http://aurelio.net/about.html">About</a>
 </p>
 
+<h2>Textos recentes no blog</h2>
+
+<ul class="no-bullet" style="margin-left:0">
+{% for post in site.posts limit:10 %}
+	<li><a href="{{ site.url}}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+	<li>→ <a href="http://aurelio.net/blog/sumario/">Veja a lista completa de todos os posts</a></li>
+</ul>
