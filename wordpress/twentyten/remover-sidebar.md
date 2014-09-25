@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-12-03
-layout: twentyten-child
+layout: "2014"
 slug: remover-sidebar
 permalink: wordpress/twentyten/remover-sidebar/
 title: 'Wordpress: Remover a barra lateral (sidebar) no tema Twenty Ten'
@@ -33,7 +33,7 @@ A maneira mais limpa seria remover todas as chamadas à função get_sidebar() d
 
 Mas como a sidebar aparece em todo o site, você teria que alterar muitos arquivos em seu [tema filho](http://codex.wordpress.org/pt-br:Temas_Filhos):
 
-```
+```console
 $ grep get_sidebar twentyten/*
 twentyten/archive.php:<?php get_sidebar(); ?>
 twentyten/author.php:<?php get_sidebar(); ?>

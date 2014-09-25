@@ -1,5 +1,5 @@
 ---
-layout: twentyten-child
+layout: "2014"
 title: Tags
 hide_ads: true
 hide_byline: true
@@ -10,13 +10,15 @@ hide_comments: true
 permalink: tags/
 ---
 
+<style>#article-body li a { text-decoration: none; }</style>
+
 <!-- Thanks for the Liquid code: http://blog.lanyonm.org/articles/2013/11/21/alphabetize-jekyll-page-tags-pure-liquid.html -->
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 
 	<!-- List of tags, with count -->
-	<ul class="tags">
+	<ul class="tags compact small">
 	{% for item in (0..site.tags.size) %}{% unless forloop.last %}
 		{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
 		<li><a href="#{{ this_word | cgi_escape }}">{{ this_word }}</a> <span class="count">({{ site.tags[this_word].size }})</span></li>{% endunless %}{% endfor %}
@@ -28,7 +30,7 @@ permalink: tags/
 	{% for item in (0..site.tags.size) %}{% unless forloop.last %}
 		{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
 	<h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
-	<ul class="posts no-bullet">
+	<ul class="posts no-bullet compact">
 		{% for post in site.tags[this_word] reversed %}
 		<li><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ post.url }}">{{ post.title | escape }}</a></li>{% endfor %}
 	</ul>

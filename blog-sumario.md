@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: sumario
 title: Sumário
 wordpress_id: 1877
@@ -15,7 +15,7 @@ permalink: blog/sumario/
 ---
 
 <style>
-	.entry-content ul { font-size: small; }
+	#article-body li { font-size: small; margin-bottom: 0.3em; }
 </style>
 
 Aqui está a lista completa de todos os textos que já escrevi aqui no blog.

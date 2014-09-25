@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2008-11-04
-layout: twentyten-child
+layout: "2014"
 slug: proximo-livro
 title: Próximo Livro
 wordpress_id: 619

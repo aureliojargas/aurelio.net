@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: sobre
 title: Sobre
 wordpress_id: 221
