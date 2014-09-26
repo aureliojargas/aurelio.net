@@ -379,34 +379,38 @@ a.camouflage:hover {
 
 @media (min-width: 990px) {
 
-	/* page surgery: move sidebar to the left */
-	.bar > * {
-		margin-left: 320px;  /* $sidebar_width + 50px */
-	}
-	#sidebar.bar > * {
-		margin-left: 0;
+	/* page surgery: move sidebar to the right */
+	#pane-left {
+		float: left;
+		padding-left: 3em;
 	}
 	#sidebar {
-		position: absolute;
-		top: 100px;    /* $header_height */
+		float: right;
 		width: 270px;  /* $sidebar_width */
 		padding-top: 1em;
 	}
 	#content {
-		float: left;
 		padding-top: 3em;
-	}
-	#content-action {
-		clear: left;
 	}
 	#ad-bottom {
 		padding-bottom: 0;
+	}
+	#comments,
+	#footer {
+		clear: both;
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+	#comments > *,
+	#footer > * {
+		width: 100%;
+		max-width: 100%;
 	}
 
 	/* Title at far left, icons at far right */
 	#header > * {
 		max-width: 100%;
-		margin-left: 25px;
+		margin-left: 3em;
 		padding-right: 30px;
 	}
 
@@ -425,6 +429,9 @@ a.camouflage:hover {
 	#sidebar #recentes a {
 		display: block;  /* bigger click area */
 	}
+	#footer {
+		text-align: center;
+	}
 }
 
 @media (min-width: 1100px) {
@@ -436,11 +443,5 @@ a.camouflage:hover {
 		width: 1024px;
 		margin: 50px auto 100px auto;
 		border: 1px solid #aaa;
-	}
-	#header {
-		line-height: 100px;
-	}
-	#sidebar {
-		top: 150px;  /* header + top-margin */
 	}
 }
