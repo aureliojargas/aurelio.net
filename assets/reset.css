@@ -109,7 +109,7 @@ h1 a:hover {
 /* ------------------------------------  code */
 
 code {
-	color: #a0f;
+	color: orange;  /* old: #a0f */
 }
 pre, pre code {
 	color: #fff;

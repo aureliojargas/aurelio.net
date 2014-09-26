@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: plant-nanny
 title: Uso o Plant Nanny pra tomar 2L/dia de água
 tags: [meu-querido-diario]

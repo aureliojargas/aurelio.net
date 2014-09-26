@@ -1,0 +1,446 @@
+/* http://aurelio.net 2014 theme */
+/* by Aurelio Jargas, 2014-09-21, MIT licensed */
+
+
+/* ------------------------------------ From common.css */
+
+.note            { padding:6px 9px; background:#EEEEEE; border:1px solid #CCC; }    /* silver */
+.download        { padding:6px 9px; background:#E7F7D3; border:1px solid #6C3; }    /* green  */
+.warning, .alert { padding:6px 9px; background:#FFFBBC; border:1px solid #E6DB55; } /* yellow */
+
+pre {
+	overflow: auto;
+}
+.mog {
+	color: #800000;
+	background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
+	padding: 0 58px 0 0;
+	min-height: 48px;
+}
+.unicode-char {
+	font-family: Arial, sans-serif;  /* most Unicode chars available */
+}
+.read-more .heart,
+#footer:hover .heart {
+	color: #C00;
+}
+
+#footer,
+#footer a,
+#footer a:link,
+#footer a:visited {
+	color: gray;
+}
+#footer:hover a {
+	color: blue;
+}
+#footer:hover a:visited {
+	color: purple;
+}
+#footer:hover a:hover {
+	color: red;
+}
+
+/* ------------------------------------ From articles.css */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #444;
+}
+blockquote {
+	font-size: 90%;
+}
+li {
+	margin-bottom: 0.5em;
+}
+table, tr, td, th {
+	border: 0 solid #ccc;
+}
+table {
+	border-collapse: collapse;
+	margin: 2em auto;
+}
+td, th {
+	line-height: 1.2em;
+	font-size: 80%;
+}
+th {
+	padding: 0.7em 5px;
+	background-color: #eee;
+	font-weight: bold;
+}
+td {
+	padding: 4px 5px;
+}
+td.center { text-align: center; }
+td.right  { text-align: right; }
+
+table.tableborder td,
+table.tableborder th {
+	border-width: 1px;
+}
+
+img {
+	max-width: 100%;
+}
+img.center {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+img.right {
+	float: right;
+	margin-left: 1em;
+}
+
+/* ------------------------------------ From twentyten.css */
+
+.aligncenter, img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.no-bullet {
+	list-style-type: none;
+}
+ul.tags .count {
+	font-size: small;
+}
+ul.posts {
+	margin-left: 0;
+	font-size: small;
+}
+ul.posts .date {
+	font-size: smaller;
+	margin-right: 0.5em;
+}
+
+/* ------------------------------------ From 2013/site.css */
+
+table.grid td {
+	border-style: none;
+	padding: 0;
+	vertical-align: top;
+}
+table.grid tr:hover td {
+	background: transparent;
+}
+
+.youtube {
+	display: block;
+	margin: 1.5em auto;
+}
+.figure,
+.image {
+	text-align: center;
+}
+.figure img,
+.image img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.figure span {
+	font-family: Arial, sans-serif;
+	font-size: 75%;
+	margin: 0;
+	display: block;
+	color: gray;
+}
+
+/* ------------------------------------------ bar colors */
+
+#header {
+	background-color: #27ae60;  /* flatuicolors.com */
+	color: white;
+}
+#content-action {
+	background-color: #eee;
+}
+#sidebar {
+	background-color: #333;
+	color: #aaa;
+}
+#footer {
+	background-color: #eee;
+}
+
+/* ----------------------------------------------------- */
+
+#header {
+	text-align: center;
+}
+#site-title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 200%;
+	line-height: 1.3em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+#site-title a {
+	text-decoration: none;
+	color: inherit;
+}
+#site-title a:hover {
+	text-decoration: underline;
+}
+#social-icons {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#social-icons li {
+	display: inline;
+	padding: 0;
+}
+#social-icons .fa-stack-1x {
+	color: #27ae60;
+}
+#social-icons .fa-stack-2x {
+	color: white;
+}
+
+/* ----------------------------------------------------- */
+
+#content {
+	overflow: auto;  /* Wide tables */
+}
+#content #article-header {
+	margin-bottom: 2em;
+}
+#content h1 {
+	margin: 0;
+	line-height: 1.1em;
+	font-size: 1.5em;
+	font-weight: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#content .byline {
+	margin: 0.5em 0 0 0;
+	font-size: small;
+	color: gray;
+}
+#content .byline a {
+	text-decoration: none;
+	color: blue;  /* always blue, even when visited */
+}
+#content .byline a:hover {
+	text-decoration: underline;
+	color: red;
+}
+#content li {
+	margin-bottom: 1em;
+}
+#content pre {
+	padding: 1.5em;
+}
+pre, code {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+	color: inherit;
+	background-color: #e8e8e8;
+}
+ul.compact li,
+#content ul.compact li {
+	margin-bottom: 0;
+}
+.small {
+	font-size: small;
+}
+a.camouflage {
+	text-decoration: none;
+	color: inherit;
+}
+a.camouflage:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+
+/* ----------------------------------------------------- */
+
+#eof {
+	text-align: center;
+	color: #ddd;
+	margin-top: 2em;
+}
+
+/* ----------------------------------------------------- */
+
+#content-action {
+	text-align: center;
+}
+
+/* ----------------------------------------------------- */
+
+#prev-next {
+	line-height: 18px;
+}
+#prev-next a:link {
+	font-size: 12px;
+	font-size: small;
+	text-decoration: none;
+}
+#prev-next .nav-previous {
+	float: left;
+	width: 45%;
+}
+#prev-next .nav-next {
+	float: right;
+	width: 45%;
+	text-align: right;
+}
+
+/* ----------------------------------------------------- */
+
+#ad-bottom {
+	padding-top: 0;
+}
+.ad-blog-box-top {
+	float: right;
+	margin: 0 0 5px 1em;
+	border: 1px solid silver;  /* to clearly separate from article text */
+}
+.ad-blog-box-bottom {
+	margin: 0 auto;
+	width: 336px;
+}
+
+/* ----------------------------------------------------- */
+
+.sidebar-box {
+	margin-top: 1em;
+}
+.sidebar-box:first-child {
+	margin-top: 0;
+}
+
+#sidebar a {
+	text-decoration: none;
+	color: #27ae60;
+}
+#sidebar a:hover {
+	text-decoration: underline;
+	color: red;
+}
+#sidebar ul {
+	margin-left: 1em;
+}
+#sidebar #bio p {
+	padding: 6px 9px 6px 2px;
+}
+#sidebar #bio img {
+	float: left;
+	width: 64px;
+	height: 64px;
+}
+#sidebar #meus-livros {
+	clear: left;
+	margin-top: 2em;
+}
+#sidebar #jaba ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+/* ----------------------------------------------------- */
+
+#footer {
+	clear: both;
+}
+
+
+/* ----------------------------------------------------- */
+/* --------------------------------------- iPad 1024x768 */
+/* -------------------------------------- iPhone 320x480 */
+
+@media (min-width: 600px) {
+
+	/* header rearranged: title & icons at the same line */
+	#header {
+		padding: 0;
+		line-height: 100px;  /* $header_height */
+	}
+	#site-title {
+		float: left;
+		margin-bottom: 0;
+		line-height: 100px;  /* $header_height */
+	}
+	#social-icons {
+		float: right;
+	}
+	/* bigger heading */
+	#content h1 {
+		font-size: 2em;
+	}
+}
+
+@media (min-width: 990px) {
+
+	/* page surgery: move sidebar to the left */
+	.bar > * {
+		margin-left: 320px;  /* $sidebar_width + 50px */
+	}
+	#sidebar.bar > * {
+		margin-left: 0;
+	}
+	#sidebar {
+		position: absolute;
+		top: 100px;    /* $header_height */
+		width: 270px;  /* $sidebar_width */
+		padding-top: 1em;
+	}
+	#content {
+		float: left;
+		padding-top: 3em;
+	}
+	#content-action {
+		clear: left;
+	}
+	#ad-bottom {
+		padding-bottom: 0;
+	}
+
+	/* Title at far left, icons at far right */
+	#header > * {
+		max-width: 100%;
+		margin-left: 25px;
+		padding-right: 30px;
+	}
+
+	/* tweaks */
+	#sidebar {
+		font-size: small;
+		line-height: normal;
+	}
+	#sidebar h4 {
+		margin-bottom: -0.8em;
+	}
+	#sidebar li {
+		margin-bottom: 0;
+	}
+	#sidebar #top-15 a,
+	#sidebar #recentes a {
+		display: block;  /* bigger click area */
+	}
+}
+
+@media (min-width: 1100px) {
+	/* fixed-width, centered body */
+	html {
+		background-color: #ddd;
+	}
+	body {
+		width: 1024px;
+		margin: 50px auto 100px auto;
+		border: 1px solid #aaa;
+	}
+	#header {
+		line-height: 100px;
+	}
+	#sidebar {
+		top: 150px;  /* header + top-margin */
+	}
+}

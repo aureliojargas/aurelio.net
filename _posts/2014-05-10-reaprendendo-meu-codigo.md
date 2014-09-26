@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: reaprendendo-meu-codigo
 title: Reaprendendo meu próprio código
 wp_categories:

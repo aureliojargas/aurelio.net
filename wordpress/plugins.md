@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2011-04-06
-layout: twentyten-child
+layout: "2014"
 slug: plugins
 permalink: wordpress/plugins/
 title: 'WordPress: Plugins que uso e recomendo'

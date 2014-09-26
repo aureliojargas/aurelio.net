@@ -1,7 +1,7 @@
 ---
 author: aurelio
 date: 2012-05-16
-layout: twentyten-child
+layout: "2014"
 slug: revisoes-remover-desativar
 permalink: wordpress/revisoes-remover-desativar/
 title: 'WordPress: Remover e desativar revisões de posts'

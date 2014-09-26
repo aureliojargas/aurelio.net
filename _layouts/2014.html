@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+{% include head-base.html %}
+
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed RSS" href="http://aurelio.net/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed RSS de comentários" href="http://aurelio.net/comments/feed/" />
+
+	<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+{% unless page.hide_prev_next %}
+{% if page.previous.url %}	<link rel="prev" title="{{ page.previous.title | escape }}" href="{{ site.url }}{{ page.previous.url }}" />{% endif %}
+{% if page.next.url     %}	<link rel="next" title="{{ page.next.title     | escape }}" href="{{ site.url }}{{ page.next.url }}" />{% endif %}
+{% endunless%}
+
+{% include head-open-graph.html %}
+{% include analytics.html %}
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="http://aurelio.net/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://plus.google.com/+AurelioJargas77" title="Siga-me no Google+"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-google-plus fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="http://aurelio.net/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="{{ site.url }}{{ page.url }}" title="Permalink" rel="bookmark">{{ page.title | escape }}</a></h1>
+
+			{% include page-byline.html %}
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			{% include ad-300x250-blog1.html %}
+			{{ content | imgcaption }}
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+{% unless page.hide_read_more and page.hide_share and page.hide_tags %}
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+{% unless page.hide_read_more %}
+	{% if page.more_url                 %}{% assign more_url = page.more_url %}
+	{% elsif page.url contains '/blog/' %}{% assign more_url = 'http://aurelio.net/blog/sumario/' %}
+	{% else                             %}{% assign more_url = '..' %}{% endif %}
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="{{ more_url }}">Aqui tem mais</a>.
+		</p>
+{% endunless %}
+
+{% unless page.hide_share %}
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="http://twitter.com/home?status={{ page.title | append: ' ' | append: site.url | append: page.url | uri_escape }}">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]={{ site.url | append: page.url | uri_escape }}&amp;p[images][0]=&amp;p[title]={{ page.title | uri_escape }}&amp;p[summary]=">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://plus.google.com/share?url={{ site.url | append: page.url | uri_escape }}">Google+</a>
+		</p>
+{% endunless %}
+
+{% unless page.hide_tags %}{% if page.tags %}
+		<p class="article-tags">
+			Tags: {% include page-tags.html %}
+		</p>
+{% endif %}{% endunless %}
+
+	</div>
+</div><!--#content-action-->
+{% endunless %}
+
+
+
+{% unless page.hide_prev_next %}{% if page.previous.url or page.next.url %}
+<div id="prev-next" class="bar">
+	<div class="wrapper">
+		{% if page.previous.url %}<div class="nav-previous"><a href="{{ site.url }}{{ page.previous.url }}" rel="prev">← {{ page.previous.title | escape }}</a></div>{% endif %}
+		{% if page.next.url     %}<div class="nav-next"><a href="{{ site.url }}{{ page.next.url }}" rel="next">{{ page.next.title | escape }} →</a></div>{% endif %}
+		<div style="clear:both;"></div>
+	</div>
+</div>
+{% endif %}{% endunless %}
+
+
+
+{% unless page.hide_ads %}
+<div id="ad-bottom" class="bar">
+	<div class="wrapper">
+		{% include ad-336x280-blog2.html %}
+	</div>
+</div>
+{% endunless %}
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+		{% include sidebar.html %}
+	</div>
+</div><!--#sidebar-->
+
+
+
+{% unless page.hide_comments %}
+<div id="comments" class="bar">
+	<div class="wrapper">
+		{% include disqus.html %}
+	</div>
+</div><!--#comments-->
+{% endunless %}
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="http://aurelio.net">Aurelio.net</a> é o site pessoal de
+		<a href="http://aurelio.net/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org/pt/">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

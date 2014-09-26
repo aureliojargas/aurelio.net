@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: ressuscitei-o-sedsed
 title: Ressuscitei o sedsed
 wp_categories:

@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: capsula-do-tempo
 title: "Cápsula do tempo: o Aurelio de 2004"
 wp_categories:

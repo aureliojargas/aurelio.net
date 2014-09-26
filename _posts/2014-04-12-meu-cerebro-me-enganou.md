@@ -1,6 +1,6 @@
 ---
 author: aurelio
-layout: twentyten-child
+layout: "2014"
 slug: meu-cerebro-me-enganou
 title: Meu cérebro me enganou
 wp_categories:
