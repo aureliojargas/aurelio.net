@@ -137,7 +137,7 @@
 
 
 
-{% unless page.hide_prev_next %}
+{% unless page.hide_prev_next %}{% if page.previous.url or page.next.url %}
 <div id="prev-next" class="bar">
 	<div class="wrapper">
 		{% if page.previous.url %}<div class="nav-previous"><a href="{{ site.url }}{{ page.previous.url }}" rel="prev">← {{ page.previous.title | escape }}</a></div>{% endif %}
@@ -145,7 +145,7 @@
 		<div style="clear:both;"></div>
 	</div>
 </div>
-{% endunless %}
+{% endif %}{% endunless %}
 
 
 
