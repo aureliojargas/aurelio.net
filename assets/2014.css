@@ -382,6 +382,7 @@ a.camouflage:hover {
 	/* page surgery: move sidebar to the left */
 	.bar > * {
 		margin-left: 320px;  /* $sidebar_width + 50px */
+		max-width: 100%;
 	}
 	#sidebar.bar > * {
 		margin-left: 0;
@@ -393,11 +394,8 @@ a.camouflage:hover {
 		padding-top: 1em;
 	}
 	#content {
-		float: left;
 		padding-top: 3em;
-	}
-	#content-action {
-		clear: left;
+		padding-right: 3em;
 	}
 	#ad-bottom {
 		padding-bottom: 0;
