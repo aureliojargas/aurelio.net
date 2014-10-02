@@ -232,7 +232,12 @@ table.grid tr:hover td {
 #content li {
 	margin-bottom: 1em;
 }
+#content p.image {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
 #content pre {
+	margin: 2em 0;
 	padding: 1.5em;
 }
 pre, code {
