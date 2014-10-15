@@ -27,6 +27,7 @@ Para ver os artigos do site (e não do blog), use o menu acima.
 
 ## 2014 (8)
 
+  * [Mudei do iOS pro Android e estou feliz](http://aurelio.net/blog/2014/10/15/ios-android/)
   * [Refiz o site usando mobile first](http://aurelio.net/blog/2014/10/02/mobile-first/)
   * [Uso o Plant Nanny pra tomar 2L/dia de água](http://aurelio.net/blog/2014/09/20/plant-nanny/)
   * [Minhas primeiras impressões da linguagem Swift](http://aurelio.net/blog/2014/06/03/swift-primeiro-contato/)
