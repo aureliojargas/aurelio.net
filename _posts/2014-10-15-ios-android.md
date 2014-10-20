@@ -73,4 +73,4 @@ E qual é o melhor, Android ou iOS? **Ambos.**
 Android e iOS têm suas características distintas, mas no geral, no uso do dia a dia, é tudo a mesma coisa. Os principais aplicativos estão em ambos, os dados estão na nuvem e os dois sistemas são fáceis e simples de usar.
 
 
-**Atualização em 2014-10-18:** Se você se interessou pelo assunto, indico mais dois relatos similares: [o do Lucas Canton](http://blog.lucascaton.com.br/index.php/2013/09/28/ha-um-mes-eu-troquei-o-ios-pelo-android/) com bastante detalhes e fotos e [o do Paul Stamatiou](http://paulstamatiou.com/android-is-better/) que num longo artigo conclui que o Android é melhor.
+**Atualização em 2014-10-18:** Se você se interessou pelo assunto, indico mais dois relatos similares: [o do Lucas Caton](http://blog.lucascaton.com.br/index.php/2013/09/28/ha-um-mes-eu-troquei-o-ios-pelo-android/) com bastante detalhes e fotos e [o do Paul Stamatiou](http://paulstamatiou.com/android-is-better/) que num longo artigo conclui que o Android é melhor.
