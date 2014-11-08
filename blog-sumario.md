@@ -25,8 +25,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
-## 2014 (8)
+## 2014 (10)
 
+  * [Funcionário Público](http://aurelio.net/blog/2014/11/08/funcionario-publico/)
   * [Mudei do iOS pro Android e estou feliz](http://aurelio.net/blog/2014/10/15/ios-android/)
   * [Refiz o site usando mobile first](http://aurelio.net/blog/2014/10/02/mobile-first/)
   * [Uso o Plant Nanny pra tomar 2L/dia de água](http://aurelio.net/blog/2014/09/20/plant-nanny/)
