@@ -17,7 +17,7 @@ permalink: sobre/
 
 ## Sobre o Aurelio
 
-Oi, meu nome é Aur[e](http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/)lio Marinho Jargas, tenho 36 anos. Nasci e cresci em Curitiba, já morei em Floripa e Matinhos, e desde 2009 moro em Joinville com minha amada esposa Mog.
+Oi, meu nome é Aur[e](http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/)lio Marinho Jargas, tenho 37 anos. Nasci e cresci em Curitiba, já morei em Floripa e Matinhos, e desde 2009 moro em Joinville com minha amada esposa Mog.
 
 Já fui operário-padrão da indústria de informática, quando era programador e redator técnico na Conectiva (hoje Mandriva), empresa de Linux que vi crescer e se tornar referência nacional.
 
