@@ -341,7 +341,7 @@ Cygwin roda inteiro ali dentro, construindo e modificando seu próprio
 "mundinho" num canto isolado do sistema de arquivos de seu maior
 rival.
 
-  | O diretório raiz ``/`` do Cygwin é a pasta ``C:\cygwin`` do Windows. |
+	O diretório raiz ``/`` do Cygwin é a pasta ``C:\cygwin`` do Windows.
 
 Num teste rápido dessa integração transparente, vá até a janela do
 Cygwin que está aberta ("shell") e digite os seguintes comandos:
@@ -387,7 +387,7 @@ sistema do Cygwin. Pode-se abrir no Internet Explorer uma página
 local, fazer uma imagem no Paint e gravar no seu HOME, limpar o /tmp,
 e todo tipo de tarefa normal.
 
-   | Para o Windows, ``C:\cygwin`` é uma pasta normal, como qualquer outra. |
+	Para o Windows, ``C:\cygwin`` é uma pasta normal, como qualquer outra.
 
 [winexplorer.png]
 
@@ -479,7 +479,7 @@ existentes, basta executar novamente o ``setup.exe``.
 As mesmas recomendações de desativar o antivírus e fechar todas as
 janelas antes de começar continuam valendo!
 
- | **MUITO IMPORTANTE:** Feche todas as janelas do Cygwin antes de começar |
+	**MUITO IMPORTANTE:** Feche todas as janelas do Cygwin antes de começar
 
 O procedimento é o mesmo da instalação, exatamente igual, até chegar
 na tela da escolha dos pacotes. Relembrando:
@@ -533,9 +533,9 @@ Depois de escolher todos os pacotes desejados, clique no botão "View"
 até chegar na visão "Partial", para conferir que pacotes serão
 instalados ou removidos. Ainda dá tempo de arrumar alguma coisa.
 
-IMPORTANTE: Ao lado do botão "View" há quatro opções: Keep, Prev, Curr
-e Exp. Deixe o "Curr" selecionado. Se você escolher outra opção, toda
-a sua escolha de pacotes já feita será perdida.
+	IMPORTANTE: Ao lado do botão "View" há quatro opções: Keep, Prev, Curr
+	e Exp. Deixe o "Curr" selecionado. Se você escolher outra opção, toda
+	a sua escolha de pacotes já feita será perdida.
 
 Como dica geral, ignore os pacotes que começam com "lib", como
 "libintl", "libpng" e "libungif". Eles são bibliotecas auxiliares,
@@ -860,9 +860,9 @@ um "``rm -rf /``" despreocupado?
 
 [rm-rf.png]
 
-Mensagem aos puristas:
-Tecnicamente, o Cygwin não é um Linux e sim um ambiente POSIX.
-A apologia foi usada para fins didáticos.
+	**Mensagem aos puristas:**
+	Tecnicamente, o Cygwin não é um Linux e sim um ambiente POSIX.
+	A apologia foi usada para fins didáticos.
 
 
 == Para saber mais ==

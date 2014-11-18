@@ -222,8 +222,9 @@ syntax on
 Esses dias eu estava brincando com o Cygwin para escrever um artigo.
 Olha que massa o que dá pra fazer:
 
- | //Máquina 1// (Windão): | Desktop PC com Windows 2000 e Cygwin
- | //Máquina 2// (iBook):  | Notebook PowerPC (Macintosh) com Linux
+- //Máquina 1// (Windão): Desktop PC com Windows 2000 e Cygwin
+- //Máquina 2// (iBook): Notebook PowerPC (Macintosh) com Linux
+
 
 Ambiente de testes:
 
