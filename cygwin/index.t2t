@@ -1,12 +1,9 @@
-Cygwin
-Tornando o Windão usável
-%%infile(%d)
-
-%!postproc: (</TITLE>)	' - O Linux no Windows\1'
-
-%!includeconf:		../include/kiwi/config.t2t
-%!postproc: SITEROOT 	..
-%!postproc: (<BODY)	\1 class="cygwin"
+---
+title: Cygwin – Portal brasileiro
+author: aurelio
+layout: "2014"
+hide_date: true
+---
 
 %!options: --toc
 
@@ -267,5 +264,3 @@ Não acredita? Então veja:
          |  //Clique na imagem para ampliar//  
 
 Quem disse que a informática não é divertida? &;)
-
-%!include: ../include/kiwi/footer.t2t
