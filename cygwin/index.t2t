@@ -81,11 +81,11 @@ vida vai mudar, o Windows vai até ficar "legal" de usar.
     texinfo, which, zlib, _update-info-dir
 
 
-=== ISO do Cygwin Completo ===
-
-Se você quiser tem um CD com o Cygwin completo, pronto para instalar,
-acesse [este site http://www-inst.eecs.berkeley.edu/~instcd/iso/] e
-baixe a imagem ISO mais atual.
+%=== ISO do Cygwin Completo ===
+%
+%Se você quiser tem um CD com o Cygwin completo, pronto para instalar,
+%acesse [este site http://www-inst.eecs.berkeley.edu/~instcd/iso/] e
+%baixe a imagem ISO mais atual.
 
 === Artigo sobre Cygwin na Revista do Linux ===
 
