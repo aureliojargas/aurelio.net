@@ -2,6 +2,7 @@
 title: Cygwin – Portal brasileiro
 author: aurelio
 layout: "2014"
+hide_ads: true
 hide_date: true
 ---
 
@@ -15,12 +16,6 @@ hide_date: true
 % Valeu:
 % Nov-2005: Sergio Luiz Araújo Silva - link p/o cygnome2
 
-
-%%!include: ''../include/google-ads-links-horizontal.html''
-%%!include: ''../include/google-ads-faixa.html''
-%!include: ''../include/kiwi/ads-twins.html''
-
-''' <div style="width:620px; margin:0 auto 2em auto;"><a href="http://www.piazinho.com.br/"><img src="http://aurelio.net/img/banner-piazinho4.png" style="padding:0;border:1px solid black;"></a></div>
 
 Bem-vindo ao portal brasileiro de Cygwin.
 

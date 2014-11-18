@@ -3,6 +3,7 @@ title: "Cygwin – O Linux no Windows (artigo de capa, Revista do Linux #47)"
 author: aurelio
 date: 2003-11-01
 layout: "2014"
+hide_ads: true
 ---
 
 % Artigo publicado na Revista do Linux #47, Novembro 2003
@@ -23,7 +24,6 @@ layout: "2014"
 %% 25set2003 09:30 1h   action.bmp, mini currículo, revisão final
 %%     TOTAL      27h30
 
-%!include: ''../../include/kiwi/ads-twins.html''
 
 Este é o artigo sobre Cygwin que foi publicado na Revista do Linux edição 47, de Novembro de 2003. Ele também foi disponibilizado no site da revista,
 %  http://www.revistadolinux.com.br/ed/047/assinantes/capa.php
@@ -874,8 +874,6 @@ A apologia foi usada para fins didáticos.
 - Página do Cygwin:
   http://cygwin.com
 -
-
-%%!include: ''../../include/google-ads-faixa.html''
 
 **Aurelio Marinho Jargas** é programador e pesquisador. Já escreveu um
 livro sobre Expressões Regulares, é autor de vários artigos na Revista
