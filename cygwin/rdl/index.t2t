@@ -55,7 +55,7 @@ aplicativos GNU funcionassem no sistema da Microsoft.
 
 Isso é o Cygwin.
 
-          [sshot.png]          
+[sshot.png]
 
 Uma casca de APIs e códigos complicados que fazem o Windows responder
 as chamadas de um sistema Linux. Além disso, há dezenas de aplicativos
@@ -177,13 +177,13 @@ mas funciona.
 %
 %Para os que gostam dos detalhes, aqui está a instalação passo a passo.
 
-          [tela1.png]          
+[tela1.png]
 
 Esta é a primeira tela do programa de instalação. Além das
 boas-vindas, serve para checar qual a versão do ``setup.exe``.
 Clique no botão "Avançar" para continuar a instalação.
 
-          [tela2.png]          
+[tela2.png]
 
 Aqui escolhemos uma das três tarefas que o setup pode fazer:
 
@@ -201,7 +201,7 @@ Cygwin já foram baixados e estão no CD-ROM desta edição. Com isso,
 escolha a última opção, para instalar a partir do CD, e aperte o botão
 "Avançar".
 
-          [tela3.png]          
+[tela3.png]
 
 De todo o proceso de instalação, essa é única tela de "configuração".
 É extremamente aconselhável que nada seja alterado, e simplesmente se
@@ -222,14 +222,14 @@ O item "Default Text File Type" indica o tipo de texto padrão para
 leitura e gravação de arquivos, se será o do Windows o do Unix.
 Deixe como "Unix", sempre.
 
-          [tela4.png]          
+[tela4.png]
 
 Nesta tela é escolhida a pasta onde estão os arquivos de instalação do
 Cygwin e seus programas. Os arquivos estão no CD da revista, dentro do
 mesmo diretório do setup.exe. O local já selecionado é o correto.
 Basta apertar o botão "Avançar".
 
-          [tela5.png]          
+[tela5.png]
 
 Nesta tela não há nada a se fazer a não ser esperar. O programa de
 instalação está fazendo uma checagem de todos os programas
@@ -238,7 +238,7 @@ Dependendo da velocidade de seu computador, este procedimento pode
 demorar um pouco. Aproveite para já ir pensando em como o Cygwin
 mudará a sua vida :).
 
-          [tela6.png]          
+[tela6.png]
 
 Esta é a tela mais divertida, onde se escolhe quais "pacotes" serão
 instalados. Quem nunca usou um Linux, pode encarar pacotes como se
@@ -250,7 +250,7 @@ Mas não vamos brincar de escolher pacotes agora. Simplesmente aperte o
 botão "Avançar" para que seja feita uma instalação mínima. Depois
 voltaremos a essa tela para escolher os pacotes um a um.
 
-          [tela7.png]          
+[tela7.png]
 
 Mais uma tela para somente esperar que o setup faça seu trabalho.
 Aqui, ele está instalando um a um os pacotes com os programas
@@ -258,14 +258,14 @@ escolhidos no passo anterior. Como estamos fazendo a instalação
 mínima, são poucos e não demora muito. Aproveite para acompanhar e
 conferir o que está sendo instalado.
 
-          [tela8.png]          
+[tela8.png]
 
 Os pacotes já foram instalados no Cygwin. Antes de apertar o botão
 "Concluir", note que você tem a chance de escolher criar ou não os
 atalhos no Desktop (Área de Trabalho) e no menu Iniciar. Deixe as duas
 opções marcadas para que os atalhos sejam criados.
 
-          [tela9.png]          
+[tela9.png]
 
 Não se assuste! Vão pipocar e desaparecer várias janelas pretas com
 textos, tão rapidamente que não vai dar tempo de ler.
@@ -273,7 +273,7 @@ textos, tão rapidamente que não vai dar tempo de ler.
 antes de finalmente aparecer a janelinha tão esperada, informando que
 a instalação foi concluída:
 
-          [tela10.png]          
+[tela10.png]
 
 Tudo certo! O Cygwin foi instalado com sucesso e já está pronto para
 usar. Atenção: não é necessário reiniciar a máquina! Clique no ícone
@@ -285,7 +285,7 @@ do Cygwin na Área de Trabalho ou acesse o menu
 
 Senhoras e senhores, este é o Cygwin:
 
-          [primeiro.png]          
+[primeiro.png]
 
 Uma janela preta, com letras em cinza. Quem já conhece o Linux no modo
 texto (console) está em casa. Quem conhece o Linux no modo gráfico (X)
@@ -389,7 +389,7 @@ e todo tipo de tarefa normal.
 
    | Para o Windows, ``C:\cygwin`` é uma pasta normal, como qualquer outra. |
 
-          [winexplorer.png]          
+[winexplorer.png]
 
 Mas e o caminho inverso, será que o Cygwin consegue acessar os
 arquivos do Windows, que estão acima do seu diretório raiz? Sim!
@@ -453,7 +453,7 @@ Ou simplesmente:
 
 Não tem comparação :)
 
-          [camera.png]          
+[camera.png]
 
 Esta pequena demonstração serviu para confirmar que, realmente, os
 dois sistemas funcionam de maneira totalmente integrada. As
@@ -505,7 +505,7 @@ mesmo botão mais vezes, outras visões serão ativadas:
   |   //Up to Date//   | lista dos pacotes que já estão instalados
   |  //Not Installed// | lista dos pacotes ainda não instalados
 
-          [view.png]          
+[view.png]
 
 Como a idéia é instalar pacotes novos, fique com a visão "Not
 Installed". Para cada pacote que você quiser instalar, clique na
@@ -527,7 +527,7 @@ clique em "Keep" até mudar para "Uninstall".
   | //Reinstall// | Reinstalar este pacote       |
   | //Uninstall// | Remover este pacote          |
 
-          [action.png]          
+[action.png]
 
 Depois de escolher todos os pacotes desejados, clique no botão "View"
 até chegar na visão "Partial", para conferir que pacotes serão
@@ -557,7 +557,7 @@ completar o ambiente. São eles:
 - **wget** - Baixa arquivos da Internet
 
 
-          [update.png]          
+[update.png]
 
 Além destes, usuários com necessidades específicas podem escolher
 outros pacotes.
@@ -660,7 +660,7 @@ melhor com caracteres acentuados. Basta instalar o pacote ``rxvt`` e
 editar o arquivo ``C:\cygwin\cygwin.bat``, alterando a última linha
 para: ``rxvt -e bash --login -i``
 
-          [rxvt.png]          
+[rxvt.png]
 
 === Barra pra cá ou barra pra lá? ===
 
@@ -858,7 +858,7 @@ Vai dizer que você leu até aqui e ainda não se convenceu a usar o
 Cygwin? Que tal instalar só para ter o prazer de uma vez na vida dar
 um "``rm -rf /``" despreocupado?
 
-          [rm-rf.png]          
+[rm-rf.png]
 
 Mensagem aos puristas:
 Tecnicamente, o Cygwin não é um Linux e sim um ambiente POSIX.
