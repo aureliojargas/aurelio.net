@@ -24,10 +24,9 @@ hide_ads: true
 %% 25set2003 09:30 1h   action.bmp, mini currículo, revisão final
 %%     TOTAL      27h30
 
+Este é o artigo sobre Cygwin que foi publicado na Revista do Linux edição 47, de Novembro de 2003. Ele também foi disponibilizado no [site da revista http://www.revistadolinux.com.br/ed/047/assinantes/capa.php], porém sem formatação e sem as imagens. Aqui está a versão completa, formatada e cheia de imagens para um melhor entendimento. O texto é o mesmo em ambos.
 
-Este é o artigo sobre Cygwin que foi publicado na Revista do Linux edição 47, de Novembro de 2003. Ele também foi disponibilizado no site da revista,
-%  http://www.revistadolinux.com.br/ed/047/assinantes/capa.php
-porém sem formatação e sem as imagens. Aqui está a versão completa, formatada e cheia de imagens para um melhor entendimento. O texto é o mesmo em ambos.
+Apesar de ser um texto antigo, o Cygwin não mudou muito com o passar dos anos, então a maioria das informações aqui descritas ainda são válidas.
 
 %%TOC
 
