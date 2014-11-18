@@ -599,9 +599,11 @@ configurações sejam salvas. Uma alternativa é usar o terminal ``rxvt``
 === Como copiar e colar textos com o mouse? ===
 
 Usando o terminal padrão:
+
 - **Copiar:** Selecione com o botão esquerdo pressionado, solte-o e aperte o direito
 - **Colar:** Aperte o botão direito
 -
+
 Usando o rxvt:
 - **Copiar:** Selecione com o botão esquerdo pressionado
 - **Colar:** Aperte o botão do meio
@@ -829,7 +831,7 @@ set smooth      # rolar texto linha a linha
 
 ```
 set textwidth=70 background=dark
-set is hls ic scs aw ruler ls=2 
+set is hls ic scs aw ruler ls=2
 syntax on
 ```
 

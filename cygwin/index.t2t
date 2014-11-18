@@ -33,8 +33,8 @@ telinha preta do Linux para o sistema das janelas. Não é preciso "dual
 boot" ou instalar o Linux, pois o Cygwin roda junto com o Windows. É
 mágica!
 
-     |  //Arquivos da câmera digital mostradas no Windows Explorer e no prompt do Cygwin (bash)//  
-     |  [rdl/camera.png]  
+     |  //Arquivos da câmera digital mostradas no Windows Explorer e no prompt do Cygwin (bash)//
+     |  [rdl/camera.png]
 
 Sendo apenas mais uma janela no ambiente, você continua usando seu
 Windows normalmente, e com um simples ``Alt+TAB``, terá toda a
@@ -125,7 +125,7 @@ basta usar o mesmo comando do Linux:
 
 === Dialog no Cygwin! ===
 
-O Rodrigo Nakabashi disponibilizou em seu site uma 
+O Rodrigo Nakabashi disponibilizou em seu site uma
 [versão do Dialog compilada para o Cygwin http://codigolivre.org.br/projects/dialogcyg/].
 Veja a [mensagem completa do Rodrigo http://br.groups.yahoo.com/group/cygwin-br/message/128]
 com instruções de instalação.
@@ -194,7 +194,7 @@ set smooth      # rolar texto linha a linha
 
 ```
 set textwidth=70 background=dark
-set is hls ic scs aw ruler ls=2 
+set is hls ic scs aw ruler ls=2
 syntax on
 ```
 
@@ -226,6 +226,7 @@ Olha que massa o que dá pra fazer:
  | //Máquina 2// (iBook):  | Notebook PowerPC (Macintosh) com Linux
 
 Ambiente de testes:
+
 - As duas máquinas estão ligadas (ah, sério?)
 - As duas máquinas estão conectadas via rede local, com um cabo
   crossover.
@@ -236,6 +237,7 @@ Ambiente de testes:
 
 
 Procedimento:
+
 + Do Windão, abri uma janela do Cygwin.
 + Chamei o XFree com os parâmetros "-query IP-do-iBook"
 + O XFree do iBook respondeu, mandando a tela de login (KDM)
@@ -243,6 +245,7 @@ Procedimento:
 
 
 Resultado:
+
 - Do Windão, acessei o WindowMaker de uma máquina Linux remota,
   disparei programas, o usei como se estivesse na própria máquina
   remota. Com um Alt+TAB, estava de volta no Windows
@@ -255,7 +258,7 @@ Resultado:
 
 Não acredita? Então veja:
 
-         |  [[salada-mini.jpg] salada.png]  
-         |  //Clique na imagem para ampliar//  
+         |  [[salada-mini.jpg] salada.png]
+         |  //Clique na imagem para ampliar//
 
 Quem disse que a informática não é divertida? &;)
