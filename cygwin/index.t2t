@@ -27,8 +27,8 @@ A idéia dessa página é centralizar todas as informações disponíveis em por
 
 O Cygwin é um programa que se instala no Windows, trazendo o poder da telinha preta do Linux para o sistema das janelas. Não é preciso "dual boot" ou instalar o Linux, pois o Cygwin roda junto com o Windows. É mágica!
 
-     |  //Arquivos da câmera digital mostradas no Windows Explorer e no prompt do Cygwin (bash)//
-     |  [rdl/camera.png]
+    |  [rdl/camera.png]
+    |  //Arquivos da câmera digital mostrados no Windows Explorer e no prompt do Cygwin (bash)//  |
 
 Sendo apenas mais uma janela no ambiente, você continua usando seu Windows normalmente, e com um simples ``Alt+TAB``, terá toda a flexibilidade e poder dos comandos do Linux, como bash, ls, grep, find, awk e amigos.
 
@@ -168,9 +168,9 @@ syntax on
 
 === Cygwin no IRC ===
 
-||   Idioma   |       Servidor     | Canal |
-|  Português  |  irc.brasnet.org   | #cygwin
-|   Inglês    |  irc.freenode.net  | #cygwin
+- Português: ``irc.brasnet.org``, canal ``#cygwin``
+- Inglês: ``irc.freenode.net``, canal ``#cygwin``
+
 
 === Salada de Frutas: PC/PPC/Windows/Cygwin/Linux ===
 
@@ -206,7 +206,7 @@ Resultado:
 
 Não acredita? Então veja:
 
-         |  [[salada-mini.jpg] salada.png]
-         |  //Clique na imagem para ampliar//
+    |  [[salada-mini.jpg] salada.png]
+    |  //Clique na imagem para ampliar//  |
 
 Quem disse que a informática não é divertida? &;)
