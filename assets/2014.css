@@ -446,4 +446,13 @@ a.camouflage:hover {
 	#sidebar {
 		top: 150px;  /* header + top-margin */
 	}
+
+	/* Less space between TOC items */
+	/* Ex.: cygwin */
+	#article-body nav li {
+		margin-bottom: 0;
+	}
+	#article-body nav li ul {
+		margin-top: 0;
+	}
 }
