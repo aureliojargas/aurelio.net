@@ -48,7 +48,7 @@ interface gráfica (XFree86 e X.org)! É possível rodar o WindowMaker,
 KDE ou Gnome, dentro de uma janelinha do Windows!
 
 Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua
-vida vai mudar, o Windows vai até ficar "legal" de usar.
+vida vai mudar, o Windows vai até ficar “legal” de usar.
 
 == Instalação ==
 
@@ -62,7 +62,7 @@ vida vai mudar, o Windows vai até ficar "legal" de usar.
 - Deixe sempre as opções padrão já selecionadas, não mude:
   ``C:\cygwin``, ``All Users``, ``UNIX``.
 
-- Faça a instalação mínima primeiro, apertando "Avançar" na tela da
+- Faça a instalação mínima primeiro, apertando “Avançar” na tela da
   escolha de pacotes, SEM SELECIONAR NADA. Depois que o Cygwin estiver
   instalado e funcionando, use o Setup novamente para instalar os
   pacotes extras que desejar (uma coisa de cada vez pequeno gafanhoto).
@@ -240,7 +240,7 @@ Ambiente de testes:
 Procedimento:
 
 + Do Windão, abri uma janela do Cygwin.
-+ Chamei o XFree com os parâmetros "-query IP-do-iBook"
++ Chamei o XFree com os parâmetros “-query IP-do-iBook”
 + O XFree do iBook respondeu, mandando a tela de login (KDM)
 + Entrei com meu usuário e senha do Linux, e...
 
