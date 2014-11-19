@@ -697,8 +697,8 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 - O arquivo especial ``/dev/clipboard`` representa a "Área de
   Transferência". Confira também os programas ``getclip`` e ``putclip``.
 
-- Para saber o que faz um comando, digite "``man comando``" ou
-  "``comando --help``".
+- Para saber o que faz um comando, digite ``man comando`` ou
+  ``comando --help``.
 
 - Pode continuar usando o Bloco de Notas, EDIT.EXE, WinWord ou
   qualquer outro editor para criar seus textos. Lembre-se de usar o
@@ -706,7 +706,7 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
   editores já possuem uma opção para gravar no formato UNIX.
 
 - Instale o editor ``nano`` se quiser um editor de textos amigável no
-  Cygwin. Use "``nano arquivo.txt``", Ctrl+O salva e Ctrl+X sai.
+  Cygwin. Use ``nano arquivo.txt``, Ctrl+O salva e Ctrl+X sai.
 
 - Algum comando do Cygwin “congelou” e o prompt não volta mais? Quer
   matar um programa que está rodando? Aperte Ctrl+C. Caso não seja
@@ -716,7 +716,7 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 - Use o comando ``cygstart`` como substituto para o comando ``start``.
 
 - O Windows não gosta dos arquivos ocultos do Cygwin, que iniciam com
-  um ponto (.) no nome. Use o comando "``mv arquivo .arquivo``" para
+  um ponto (.) no nome. Use o comando ``mv arquivo .arquivo`` para
   renomear um arquivo, colocando um ponto no início.
 
 - Os arquivos especiais como PRN, LPT1, COM1 também funcionam como no
@@ -778,7 +778,7 @@ o Cygwin fique bem configurado.
 
 Se for criar estes arquivos em algum editor de textos do Windows,
 lembre-se de depois remover a extensão .txt com o comando
-"``mv .arquivo.txt .arquivo``" e usar o comando ``dos2unix`` para
+``mv .arquivo.txt .arquivo`` e usar o comando ``dos2unix`` para
 convertê-los para o formato UNIX.
 
 Nota: Há uma cópia destes arquivos em http://aurelio.net/cygwin.
@@ -855,7 +855,7 @@ partir do Windows? Mas isso fica para uma outra conversa...
 
 Vai dizer que você leu até aqui e ainda não se convenceu a usar o
 Cygwin? Que tal instalar só para ter o prazer de uma vez na vida dar
-um "``rm -rf /``" despreocupado?
+um ``rm -rf /`` despreocupado?
 
 [rm-rf.png]
 

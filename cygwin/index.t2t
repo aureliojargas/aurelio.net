@@ -41,11 +41,11 @@ Windows normalmente, e com um simples ``Alt+TAB``, terá toda a
 flexibilidade e poder dos comandos do Linux, como bash, ls, grep,
 find, awk e amigos.
 
-Basta baixar o setup.exe do Cygwin (cerca de 300Kb), escolher quais os
-pacotes que quer instalar e turbinar seu Windows. Tem de tudo: python,
-perl, man pages, VI, emacs, mutt, pine, apache, postgres e inclusive a
+Basta baixar o ``setup.exe`` do Cygwin, escolher quais os
+pacotes que quer instalar e turbinar seu Windows. Tem de tudo: Python,
+Perl, man pages, VI, Emacs, mutt, pine, Apache, PostgreSQL e inclusive a
 interface gráfica (XFree86 e X.org)! É possível rodar o WindowMaker,
-KDE ou Gnome, dentro de uma janelinha do Windows!
+KDE ou Gnome, tudo dentro de uma janelinha do Windows!
 
 Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua
 vida vai mudar, o Windows vai até ficar “legal” de usar.
@@ -56,7 +56,7 @@ vida vai mudar, o Windows vai até ficar “legal” de usar.
 
 - Baixe o [setup.exe http://cygwin.com/setup.exe] e execute-o.
 
-- Escolha "//Install from Internet//", para o instalador baixar os
+- Escolha ``Install from Internet``, para o instalador baixar os
   pacotes e já instalá-los.
 
 - Deixe sempre as opções padrão já selecionadas, não mude:
