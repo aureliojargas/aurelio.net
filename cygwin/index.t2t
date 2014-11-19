@@ -19,36 +19,22 @@ hide_date: true
 
 Bem-vindo ao portal brasileiro de Cygwin.
 
-A idéia dessa página é centralizar todas as informações
-disponíveis em português sobre o Cygwin. Dicas, links,
-artigos, tutoriais, FAQ, imagens, depoimentos, se for sobre
-Cygwin, o lugar é aqui.
+A idéia dessa página é centralizar todas as informações disponíveis em português sobre o Cygwin. Dicas, links, artigos, tutoriais, FAQ, imagens, depoimentos, se for sobre Cygwin, o lugar é aqui.
 
 %%TOC
 
 == O que é Cygwin? ==
 
-O Cygwin é um programa que se instala no Windows, trazendo o poder da
-telinha preta do Linux para o sistema das janelas. Não é preciso "dual
-boot" ou instalar o Linux, pois o Cygwin roda junto com o Windows. É
-mágica!
+O Cygwin é um programa que se instala no Windows, trazendo o poder da telinha preta do Linux para o sistema das janelas. Não é preciso "dual boot" ou instalar o Linux, pois o Cygwin roda junto com o Windows. É mágica!
 
      |  //Arquivos da câmera digital mostradas no Windows Explorer e no prompt do Cygwin (bash)//
      |  [rdl/camera.png]
 
-Sendo apenas mais uma janela no ambiente, você continua usando seu
-Windows normalmente, e com um simples ``Alt+TAB``, terá toda a
-flexibilidade e poder dos comandos do Linux, como bash, ls, grep,
-find, awk e amigos.
+Sendo apenas mais uma janela no ambiente, você continua usando seu Windows normalmente, e com um simples ``Alt+TAB``, terá toda a flexibilidade e poder dos comandos do Linux, como bash, ls, grep, find, awk e amigos.
 
-Basta baixar o ``setup.exe`` do Cygwin, escolher quais os
-pacotes que quer instalar e turbinar seu Windows. Tem de tudo: Python,
-Perl, man pages, VI, Emacs, mutt, pine, Apache, PostgreSQL e inclusive a
-interface gráfica (XFree86 e X.org)! É possível rodar o WindowMaker,
-KDE ou Gnome, tudo dentro de uma janelinha do Windows!
+Basta baixar o ``setup.exe`` do Cygwin, escolher quais os pacotes que quer instalar e turbinar seu Windows. Tem de tudo: Python, Perl, man pages, VI, Emacs, mutt, pine, Apache, PostgreSQL e inclusive a interface gráfica (XFree86 e X.org)! É possível rodar o WindowMaker, KDE ou Gnome, tudo dentro de uma janelinha do Windows!
 
-Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua
-vida vai mudar, o Windows vai até ficar “legal” de usar.
+Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua vida vai mudar, o Windows vai até ficar “legal” de usar.
 
 == Instalação ==
 
@@ -56,51 +42,26 @@ vida vai mudar, o Windows vai até ficar “legal” de usar.
 
 - Baixe o [setup.exe http://cygwin.com/setup.exe] e execute-o.
 
-- Escolha ``Install from Internet``, para o instalador baixar os
-  pacotes e já instalá-los.
+- Escolha ``Install from Internet``, para o instalador baixar os pacotes e já instalá-los.
 
-- Deixe sempre as opções padrão já selecionadas, não mude:
-  ``C:\cygwin``, ``All Users``, ``UNIX``.
+- Deixe sempre as opções padrão já selecionadas, não mude: ``C:\cygwin``, ``All Users``, ``UNIX``.
 
-- Faça a instalação mínima primeiro, apertando “Avançar” na tela da
-  escolha de pacotes, SEM SELECIONAR NADA. Depois que o Cygwin estiver
-  instalado e funcionando, use o Setup novamente para instalar os
-  pacotes extras que desejar (uma coisa de cada vez pequeno gafanhoto).
+- Faça a instalação mínima primeiro, apertando “Avançar” na tela da escolha de pacotes, SEM SELECIONAR NADA. Depois que o Cygwin estiver instalado e funcionando, use o Setup novamente para instalar os pacotes extras que desejar (uma coisa de cada vez pequeno gafanhoto).
 
-- Como referência, o
-  [Adolfo da lista cygwin-br http://br.groups.yahoo.com/group/cygwin-br/message/110]
-  anotou quais os pacotes que vêm na instalação básica do Cygwin, são
-  eles:
+- Como referência, o [Adolfo da lista cygwin-br http://br.groups.yahoo.com/group/cygwin-br/message/110] anotou quais os pacotes que vêm na instalação básica do Cygwin, são eles:
 
-  - ash, base-files, base-passwd, bash, bzip2, cygwin, diffutils,
-    editrights, fileutils, findutils, gawk, gdbm, grep, groff, gzip,
-    less, libgdbm, libgdm-devel, libgbm3, libgbm4, libgettextpo0,
-    libiconv2, libintl1, libintl2, libncurses5, libncurses6,
-    libncurses7, libpcre, libreadline4, libreadline2, login, man,
-    mktemp, ncurses, readline, sed, sh-utils, tar, termcap, terminfo,
-    texinfo, which, zlib, _update-info-dir
+   - ash, base-files, base-passwd, bash, bzip2, cygwin, diffutils, editrights, fileutils, findutils, gawk, gdbm, grep, groff, gzip, less, libgdbm, libgdm-devel, libgbm3, libgbm4, libgettextpo0, libiconv2, libintl1, libintl2, libncurses5, libncurses6, libncurses7, libpcre, libreadline4, libreadline2, login, man, mktemp, ncurses, readline, sed, sh-utils, tar, termcap, terminfo, texinfo, which, zlib, _update-info-dir
 
-
-%=== ISO do Cygwin Completo ===
-%
-%Se você quiser tem um CD com o Cygwin completo, pronto para instalar,
-%acesse [este site http://www-inst.eecs.berkeley.edu/~instcd/iso/] e
-%baixe a imagem ISO mais atual.
 
 === Artigo sobre Cygwin na Revista do Linux ===
 
-Escrevi um artigo completo de 9 páginas sobre o Cygwin, que foi
-publicado na Revista do Linux edição 47, de Novembro de 2003.
+Escrevi um artigo completo de 9 páginas sobre o Cygwin, que foi publicado na Revista do Linux edição 47, de Novembro de 2003.
 
-Este artigo apresenta o Cygwin, ensina como instalá-lo no Windows a
-partir do CD da revista e dá várias dicas de configuração e uso do
-sistema. Leia na íntegra: [Cygwin - O Linux no Windows rdl/].
+Este artigo apresenta o Cygwin, ensina como instalá-lo no Windows a partir do CD da revista e dá várias dicas de configuração e uso do sistema. Leia na íntegra: [Cygwin - O Linux no Windows rdl/].
 
 === Artigo sobre instalação do Cygwin via Internet ===
 
-Wagner Ronieri França Costa escreveu um
-[artigo sobre o Cygwin http://www.vivaolinux.com.br/artigos/verArtigo.php?codigo=2011&pagina=1]
-explicando como instalá-lo e também dá dicas de uso.
+Wagner Ronieri França Costa escreveu um [artigo sobre o Cygwin http://www.vivaolinux.com.br/artigos/verArtigo.php?codigo=2011&pagina=1] explicando como instalá-lo e também dá dicas de uso.
 
 === Como instalar e rodar o Cygwin direto de um pendrive ===
 
@@ -110,30 +71,24 @@ Veja o artigo [Cygwin no pendrive http://mdicas.blogspot.com/2008/06/cygwin-no-p
 
 === Como Rodar o WindowMaker ===
 
-Basta criar um arquivo .xinitrc (X init RC) no seu $HOME e torná-lo
-executável. Seguem os comandos necessários para fazer isso:
+Basta criar um arquivo .xinitrc (X init RC) no seu $HOME e torná-lo executável. Seguem os comandos necessários para fazer isso:
 
 ```
 prompt$ echo wmaker >> ~/.xinitrc
 prompt$ chmod +x ~/.xinitrc
 ```
 
-Só é preciso fazer isso uma vez. Para chamar a interface gráfica,
-basta usar o mesmo comando do Linux:
+Só é preciso fazer isso uma vez. Para chamar a interface gráfica, basta usar o mesmo comando do Linux:
 
 ``` prompt$ startx
 
 === Dialog no Cygwin! ===
 
-O Rodrigo Nakabashi disponibilizou em seu site uma
-[versão do Dialog compilada para o Cygwin http://codigolivre.org.br/projects/dialogcyg/].
-Veja a [mensagem completa do Rodrigo http://br.groups.yahoo.com/group/cygwin-br/message/128]
-com instruções de instalação.
+O Rodrigo Nakabashi disponibilizou em seu site uma [versão do Dialog compilada para o Cygwin http://codigolivre.org.br/projects/dialogcyg/]. Veja a [mensagem completa do Rodrigo http://br.groups.yahoo.com/group/cygwin-br/message/128] com instruções de instalação.
 
 === Sinais pra usar com o Trap ===
 
-Os sinais no Cygwin são diferentes dos do Linux. O comando ``trap -l``
-lista quais são eles. Para sua comodidade, aqui estão:
+Os sinais no Cygwin são diferentes dos do Linux. O comando ``trap -l`` lista quais são eles. Para sua comodidade, aqui estão:
 
  ||  # | Nome    |  # | Nome     |  # | Nome      |  # | Nome    |
   |  1 | SIGHUP  |  9 | SIGKILL  | 17 | SIGSTOP   | 25 | SIGXFSZ
@@ -219,8 +174,7 @@ syntax on
 
 === Salada de Frutas: PC/PPC/Windows/Cygwin/Linux ===
 
-Esses dias eu estava brincando com o Cygwin para escrever um artigo.
-Olha que massa o que dá pra fazer:
+Esses dias eu estava brincando com o Cygwin para escrever um artigo. Olha que massa o que dá pra fazer:
 
 - //Máquina 1// (Windão): Desktop PC com Windows 2000 e Cygwin
 - //Máquina 2// (iBook): Notebook PowerPC (Macintosh) com Linux
@@ -229,11 +183,9 @@ Olha que massa o que dá pra fazer:
 Ambiente de testes:
 
 - As duas máquinas estão ligadas (ah, sério?)
-- As duas máquinas estão conectadas via rede local, com um cabo
-  crossover.
+- As duas máquinas estão conectadas via rede local, com um cabo crossover.
 - O Cygwin está com o XFree86 instalado
-- O iBook está com o Yellow Dog Linux (tipo RedHat) instalado e
-  funcionando
+- O iBook está com o Yellow Dog Linux (tipo RedHat) instalado e funcionando
 - O XFree86 do Linux foi configurado para aceitar logins remotos
 
 
@@ -247,14 +199,9 @@ Procedimento:
 
 Resultado:
 
-- Do Windão, acessei o WindowMaker de uma máquina Linux remota,
-  disparei programas, o usei como se estivesse na própria máquina
-  remota. Com um Alt+TAB, estava de volta no Windows
-- Tive um sistema Linux que roda num hardware PPC, funcionando numa
-  janela de uma API POSIX (Cygwin), funcionando sobre um Windows em um
-  hardware PC.
-- Salada de conceitos, plataformas, sistemas operacionais e softwares
-  &:)
+- Do Windão, acessei o WindowMaker de uma máquina Linux remota, disparei programas, o usei como se estivesse na própria máquina remota. Com um Alt+TAB, estava de volta no Windows
+- Tive um sistema Linux que roda num hardware PPC, funcionando numa janela de uma API POSIX (Cygwin), funcionando sobre um Windows em um hardware PC.
+- Salada de conceitos, plataformas, sistemas operacionais e softwares &:)
 
 
 Não acredita? Então veja:
