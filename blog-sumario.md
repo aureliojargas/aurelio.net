@@ -25,8 +25,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
-## 2014 (10)
+## 2014 (11)
 
+  * [Campo sem validação == Caos](http://aurelio.net/blog/2014/11/22/campo-sem-validacao/)
   * [Funcionário Público](http://aurelio.net/blog/2014/11/08/funcionario-publico/)
   * [Mudei do iOS pro Android e estou feliz](http://aurelio.net/blog/2014/10/15/ios-android/)
   * [Refiz o site usando mobile first](http://aurelio.net/blog/2014/10/02/mobile-first/)
