@@ -13,7 +13,7 @@ hide_comments: true
 permalink: blog/
 ---
 
-{% for post in site.posts limit:10 %}
+{% for post in site.posts limit:20 %}
 	<h2 style="margin: 1.5em 0 0.5em 0; font-size: 150%;">
 		<a href="{{ site.url}}{{ post.url }}"
 		   title="Link permanente para {{ post.title | escape }}"
@@ -22,7 +22,7 @@ permalink: blog/
 	</h2>
 
 	<p>
-		{{ post.content | strip_html | truncatewords: 60 }}
+		{{ post.content | strip_html | truncatewords: 70 }}
 		→ <a href="{{ site.url}}{{ post.url }}">Veja o post completo</a>
 	</p>
 {% endfor %}
