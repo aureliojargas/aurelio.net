@@ -1,0 +1,3377 @@
+---
+author: aurelio
+layout: "2014"
+title: "Blog do Aurelio - Textos antigos, de 1999 a 2005"
+hide_prev_next: true
+hide_date: true
+hide_tags: true
+hide_share: true
+hide_comments: true
+---
+
+% Blog Verde - Arquivo Morto
+
+%!includeconf: /a/www/include/urls.t2t
+%!postproc: SITEROOT 	.
+
+%%!style: blog.css
+
+%%!preproc: '(^| )(txt2tags)'		'\1[\2 _TXT2TAGS_URL]'
+%!preproc: '(^| )(txt2regex)'		'\1[\2 _TXT2REGEX_URL]'
+%!preproc: '(^| )(sedsed)'		'\1[\2 _SEDSED_URL]'
+%!preproc: '(^| )(Funções ZZ)'		'\1[\2 _ZZ_URL]'
+%!preproc: '(^| )(Adium Book)'		'\1[\2 _ADIUMBOOK_URL]'
+%!preproc: '(^| )(RAC)\b'		'\1[\2 _RAC_URL]'
+%!preproc: '(^| )(CORRERIA)'		'\1[\2 _CORRERIA_URL]'
+%!preproc: '(^| )(DUMBS)'		'\1[\2 _DUMBS_URL]'
+%!preproc: '(^| )(Carve(board)?)\b'	'\1[\2 _CARVE_PATH]'
+%!preproc: '(^| )(Cygwin)'		'\1[\2 _CYGWIN_PATH]'
+
+% Insert blank line after post date
+%!postproc: '^\(([0123][0-9] ... (199|20[01])[0-9])\)$'	'\1<br><br>'
+
+% Nice shortcuts to add links to post buttons
+%!preproc: '^(\[/img/zz.png])$'			'[\1 _ZZ_URL]'
+%!preproc: '^(\[/img/as.png])$'			'[\1 _APPLESCRIPT_URL]'
+%!preproc: '^(\[/img/minioctus.jpg])$'		'[\1 _TXT2TAGS_URL]'
+%!preproc: '^(\[/img/carveboard.png])$'		'[\1 _CARVE_PATH]'
+%!preproc: '^(\[/img/linux-apple.png])$'		'[\1 /mac/]'
+%!preproc: '^(\[/img/adiumbook-logo.png])$'	'[\1 _ADIUMBOOK_URL]'
+
+% %s/^- \*\*\(2005\)-\(..\)-\(..\):\*\* \*\*\(.*\)\*\*:/: \4^M(\3 ::\2:: \1)/
+% %s/^- \*\*\(2005\)-\(..\)-\(..\):\*\* \*\*\(.*\):\*\*/: \4^M(\3 ::\2:: \1)/
+% %s/^- \*\*\(2005\)-\(..\)-\(..\):\*\* \(\[.*\]\):*/: \4^M(\3 ::\2:: \1)/
+
+%%% Retire o espaço!
+% %s/::0 1::/Jan/e | %s/::0 2::/Fev/e | %s/::0 3::/Mar/e | %s/::0 4::/Abr/e
+% %s/::0 5::/Mai/e | %s/::0 6::/Jun/e | %s/::0 7::/Jul/e | %s/::0 8::/Ago/e
+% %s/::0 9::/Set/e | %s/::1 0::/Out/e | %s/::1 1::/Nov/e | %s/::1 2::/Dez/e
+
+% tira o link do raiz
+% %s,\(\[[^]]* \)/\([^]]*]\),\1\2,cg
+
+% Remove o 'z' das âncoras
+%!postproc: '#z(200|199)'	'#\1'
+
+
+'''
+<style>
+	#article-body dt {
+		font-size: 130%;
+		font-weight: bold;
+		padding-top: 1em;
+		padding-bottom: .7em;
+	}
+	#article-body dt a {
+		color: black;
+	}
+	#article-body td {
+		text-align: center;
+		font-style: italic;
+	}
+	#article-body td img {
+		border: 1px solid gray;
+	}
+	#article-body td img.noborder {
+		border: none;
+	}
+	#article-body dd img {
+		float: right;
+	}
+</style>
+'''
+
+
+Aqui só tem velharia. As notícias recentes estão [no Blog _MYBLOG].
+
+Atalhos: [2004 #z2004] [2003 #z2003] [2002 #z2002] [2001 #z2001] [2000 #z2000] [1999 #z1999]
+
+% ^ O z é pra contornar bug do t2t de requerer que a âncora inicie em letra. Veja postproc
+
+== 2005 ==[2005]
+
+: Mensagem de fim de ano
+(31 Dez 2005)
+Te desejo em dobro tudo aquilo que você me deseja.
+
+: Vou pra praia
+(30 Dez 2005)
+Tchau Curitiba, até Fevereiro. Oi Matinhos, lembra do
+[Janeiro passado /viagem/matinhos-2005/]? Vamos fazer de novo?
+
+: Uma notícia emo (ouvindo Yellowcard)
+(15 Dez 2005)
+Sim, ainda existe um coração aqui dentro. Pensei tê-lo perdido, mas
+não. Se bem me lembro, a última vez que ele se manifestou já faz quase
+dois anos. Então calou-se. Ou melhor, foi calado. Uma medida drástica,
+porém necessária para mantê-lo seguro, longe de problemas. Desde então
+tentaram libertá-lo, dominá-lo, conquistá-lo, possuí-lo, mas as
+defesas estavam bem posicionadas e nada o atingiu. Após 17 meses de
+resistência obstinada, um acordo foi proposto e uma trégua foi
+estabelecida. Ele estava livre novamente. Mas algo estava errado.
+Apesar de livre, continuava inerte. Vá! Viva! Ame! E nada. Como um
+pássaro que permanece na gaiola mesmo após aberta a porta, agora ele
+não sabia mais o que fazer. O preço do cárcere foi alto demais. O
+acordo foi então desfeito, porém já não haviam mais motivos para
+retomar as defesas. Seguiu-se um período de paz inquietante. Iria ele
+voltar à vida algum dia? Felizmente voltou. Hoje. É bom sentir
+novamente. A alegria, a euforia, a energia, o bem-estar, a paz. A
+ansiedade, a insegurança, a incerteza, a decepção. Tudo em um só dia,
+tudo muito intenso. Perfeito. Ela é de outro alguém, mas dessa vez a
+posse não importa. Gostar sem beijar, desejar sem ter. Obrigado, B.
+
+: Quero ser o Dhalsim
+[/img/dhalsim.png]
+(12 Dez 2005)
+Já tentei duas vezes, sem sucesso, "fazer academia". Uma lá pelos 16
+anos e outra lá pelos 23. Meu recorde de permanência foi dois meses.
+Musculação é simplesmente chato. É um esforço repetitivo e entediante
+que não parece levar a lugar algum. Praticando esportes como surfe ou
+skate, a motivação é o prazer imediato gerado pelo movimento, sendo o
+esforço um mero requisito mecânico. Você não surfa para "ficar forte",
+você surfa por prazer e acaba ganhando definição muscular. Na
+musculação não há prazer, o esforço contínuo é o único meio de atingir
+um objetivo de looongo prazo. Certo, musculação é chato e pronto.
+
+Porém, contrariando a lógica e ignorando as tentativas anteriores, lá
+fui eu fazer a inscrição na academia... Isso foi no início de Outubro.
+Além de ter quebrado meu recorde de permanência, surpreendo-me ao
+perceber que estou gostando. A musculação em si continua chata como
+sempre, mas os instrutores são legais, estou ampliando o círculo de
+amizades e de brinde ainda tem a "paisagem florida". Ah, também tem
+uma bicicleta com monitorzão, tipo fliperama, com um joguinho de
+tanques de guerra. Você pedala e o tanque anda. Tem dois manches para
+controlar a direção e atirar mísseis. Desnecessário comentar que é meu
+exercício preferido.
+
+Além da rotina diária de cargas, séries e repetições, para relaxar
+também estou fazendo Yôga lá na academia. Nunca tinha feito antes, mas
+achei muito massa. Estica daqui, alcança dali, faz força, treme, tenta
+manter o equilíbrio, respira e sorriso no rosto! Saio da aula leve,
+tranqüilo, anestesiado. Volto para casa Zen, dirigindo a 20 km/h,
+assobiando e achando que a vida é bela. Bem, toda essa história foi
+para dizer que meu objetivo de vida agora é virar o Dhalsim. Ainda
+falta aprender pirofagia, raspar a cabeça e ficar marrom.
+Yôga-fáááier!
+
+: O Cheiro do Ralo
+(04 Dez 2005)
+Reli o melhor livro nacional que já li. O Cheiro do Ralo, de Lourenço
+Mutarelli. Recomendo. O cara trabalha na loja de antigüidades. Ele é o
+dono. O ralo do banheiro fede. O cheiro de merda causa alucinações. Ou
+serão os remédios? Não, não esse remédio. Esse a mãe deixou tomar. Eu
+não gosto dela. Eu não gosto de ninguém. Fome. Hora de ver a bunda.
+Gorda e disforme, é perfeita. Eu pagaria para ver aquela bunda. Será
+que o olho vai gostar dela? Tenho que cimentar esse ralo, o portal dos
+infernos. E então, de onde vem o cheiro?
+
+: Não fazem mais jogos como antigamente
+[/img/fullthrottle.png]
+[/img/sf2-menu.png]
+(03 Dez 2005)
+Esse sábado o Nissin (guitarrista da banda) veio aqui em casa e
+papeando sobre jogos, fui mostrar para ele o Full Throttle. A última
+vez que joguei já fez aniversário de 10 anos, não lembrava de
+absolutamente nada. Assistimos a introdução e sem dar dicas, deixei
+que ele experimentasse o jogo. Não há instruções, não tem help, não
+tem Clippy. E nem precisa! Somente com desenhos, sons e diálogos o
+jogo "se explica" e o controle é feito com o mouse. Nada de joystick
+ou teclado. Saiu da lata de lixo, falou com o cara do bar, pegou a
+chave da moto, ... e cinco horas depois, chegamos na porta da fábrica
+da Corley Motors.
+
+Já passava da meia-noite e o que era para ser um "Olha que legal esse
+jogo. Massa. Pode crer." virou uma jogatina divertida de horas a fio.
+Impossível algo parecido com esses jogos novos joiados 3D palhas de
+PlayStation e assemelhados. Seu realismo é plástico, a jogabilidade é
+complicada e as personagens são vazias e sem carisma. Eu parei no
+Super Nintendo, dali para frente os jogos ficaram chatos. Deixaram de
+ser lúdicos para ficar tentando imitar o mundo real. Prezam o primor
+visual e qualidades técnicas, deixando o conteúdo de lado.
+
+A realidade virtual poligonal e multiprocessada não consegue fazer
+jogos gostosos de jogar como um Street Fighter II (original, 8
+personagens para escolher, sem mods), um Super Mario World ou qualquer
+adventure da Lucas Arts (Full Throttle, The Dig, Day Of The Tentacle,
+Monkey Island e outros). Todos estes jogos rodam no computador (Mac,
+Linux, Windows), basta instalar os emuladores
+%
+[Snes9x http://www.snes9x.com] e [ScummVM http://www.scummvm.org]. Ah,
+por falar em SFII, uma vez eu e o Nissin nos quebramos durante horas
+em 79 lutas seguidas, terminando com empate técnico de 40 a 39. Mas
+essa é outra história...
+
+: II Test-drive de Carveboard
+[/img/carveboard.png]
+(03 Dez 2005)
+Hoje aconteceu o segundo test-drive de [carveboard _CARVE_PATH] daqui de
+Curitiba, uma reunião descontraída que tem como objetivo mostrar o
+carrinho ao público e incentivá-los a experimentar, dar uma volta.
+Dessa vez o ponto de encontro foi em uma loja de surfe e andamos na
+rua ao lado. Vieram bastante visitantes e a reação ao dar a primeira
+volta é a mesma de sempre: o sorrisão no rosto e o palavrão na boca:
+"Caral..., que massa!", ou "Cara, que tesã...!", ou "Tesã... pra
+caral...!", ou variações :)
+
+Abel, surfista e longboarder, testou os limites do carve descendo a
+rua no gás e fazendo manobras típicas de long. Kauê, de 10 anos,
+também se jogou na ladeira sem medo, descendo junto com seu pai
+(Batata, dono da loja) e sua mãe (Keila, surfista). Foi um drop em
+família, bonito de ver. E assim foi, uma tarde de diversão surfando no
+asfalto.
+
+O ânimo deu lugar à apreensão no fim do dia quando a Keila (que estava
+mandando bem nas descidas) se desequilibrou em uma curva, caiu do
+carve e fraturou o pulso. Dali foi direto para o hospital e foi
+preciso fazer cirurgia. Este foi o primeiro acidente grave em mais de
+um ano de carve em Curitiba :(
+
+: Processo de desnerdização
+(30 Nov 2005)
+Foram 8 anos trabalhando com informática, em funções que exigem
+concentração extrema e atualização constante: programador, redator
+técnico e administrador de sistemas. Nas horas vagas mais computador,
+escrevendo guias, apostilas, livros, programas e sites. O imediatismo
+e obsolescência rápida do conhecimento me deixam com a sensação de que
+muito do que construí tinha prazo de validade. Diferente de um quadro
+que é eterno, um programa ou um documento técnico precisam de
+manutenção vitalícia. E quando o cara possui dezenas de documentos e
+programas para cuidar (meu caso), a vida se torna uma escravidão de
+atualizações. Sabe aqueles artistas circenses que equilibram vários
+pratos em varetas? Sempre devem estar atentos a todos os pratos e ir
+lá arrumar aquele que está quase caindo. Assim é a minha rotina de
+nerd. E para piorar, o mais divertido é criar coisas novas,
+materializar idéias (mesmo que eletronicamente). Então de tempos em
+tempos lá vou eu colocar um prato novo para rodar, aumentando a carga
+geral.
+
+Cansei. É preciso mudar. Não quero parar totalmente pois gosto muito
+de programar e escrever. Mas definitivamente é preciso conter essa
+proliferação descontrolada de demandas. Quero ter a informática como
+hobby em minha vida, algo que faça esporadicamente por prazer, quando
+estiver afim e não por obrigação. A ditadura dos bugs e dos usuários
+é pesada. O objetivo é passar de meganerd a entusiasta. Uma involução
+necessária para manter a sanidade.
+
+Minhas férias já completaram dois meses. Achei que seria bem
+complicado o processo de desnerdização, mas me enganei. A vida está
+mais tranqüila do que nunca. Mudei rotinas, estou adquirindo hábitos
+novos e o computador cada vez mais perde espaço na alocação de tempo.
+Para mim é como uma libertação, sem culpa e sem remorso. Ainda há
+muito a fazer e muitas obrigações para delegar ou abandonar. O número
+de pratos rodando deve cair drasticamente.
+
+A carreira profissional ainda é uma incógnita. O que sei é que não
+quero mais brincar de informática. Quem sabe fazer algo relacionado à
+música ou ao esporte, ou algum trabalho de criação onde a "obra" não
+exija manutenção posterior constante. A mente está aberta à espera da
+idéia. Quando ela vier, o ciclo recomeça: aprender e produzir.
+
+: Livro novo - Dominando o SED
+[[/img/capa_sed.png] /sed/livro/]
+(17 Nov 2005)
+"Novo" é maneira de falar e na verdade é um meio livro :) Escrevi este
+livro em 2002, entre os meses de Março e Setembro. É uma obra
+inacabada, que contém cerca de 60% do conteúdo planejado. Depois de
+mais de 3 anos mofando aqui no meu disco, resolvi dar-lhe um destino
+mais nobre. Até pensei em continuar a escrita, mas não deu tesão.
+Então fiz o PDF do texto como estava, resultando em mais de 100
+páginas de puro SED, cobrindo tópicos comuns e avançados. O livro é
+livre (gratuito e copyleft), [baixe-o agora mesmo! /sed/livro/]
+
+: "Vamos tomar água lá no pedágio?"
+(15 Nov 2005)
+Feriadão com sol em Curitiba, coisa rara! Eu e o Gabriel (padrasto)
+decidimos dar um passeio de bicicleta, coisa rápida, ir "ali" na praça
+de pedágio da saída das praias. Antes das 8 da manhã já estávamos na
+rua, saindo do parque Barigüi. Cinco horas depois, com 70 km
+pedalados, estávamos em casa novamente. Diferente do dia em que
+[descemos até a praia /viagem/matinhos-bike-2004/], hoje estava com
+sol e calor fortes, foi massa. É quase uma hora para atravessar a
+cidade até chegar na rodovia (12 km) e depois é só seguir pelo
+acostamento até o pedágio (22 km). Chega lá, bate a foto, toma água e
+volta :)
+ | [/img/blog-arquivo/pedagio.jpg]
+ | Curitiba está láááá atrás...
+
+: /mac
+[/img/linux-apple.png]
+(14 Nov 2005)
+[Área nova /mac/] no site, para centralizar as dicas de Mac. Útil se
+você usa Mac, ou está curioso para saber quais as diferenças mais
+perceptíveis no uso, sob a ótica de um linuxeiro.
+
+: Contatos do CSV para o tocador de MP3
+[[/img/mp3player.jpg] _APPLESCRIPT_ROOT/export-contacts-to-mp3-player/]
+(09 Nov 2005)
+No final da notícia anterior eu citei que seria fácil adaptar o script
+Python para ler os contatos de um arquivo CSV. Está feito. Agora
+usuários de Linux e Windows também podem copiar seus contatos para o
+tocador de MP3. Basta ir no seu programa favorito (MS Outlook,
+Kontact, Yahoo!, ...) e exportar os contatos para o formato CSV. Então
+rode [este script /bin/python/s1mp3-import-contacts.py] e ele gerará o
+arquivo binário que o tocador entende. Copie este arquivo para o
+tocador e use a sua função "Import" para carregar os contatos.
+Exemplo: ``python s1mp3-import-contacts.py -v 2.0 -o outlook contacts.csv``.
+Há três formatos diferentes suportados (-v), tente todos que um deve
+funcionar no seu tocador. Se o seu CSV precisar de um offset (-o)
+diferente, avise-me para que eu possa inclui-lo em versões futuras.
+Relembrando: isso não é para iPods e outros tocadores de grife. Só
+funciona com tocadores xingue-lingues que vêm com um programa para
+Windows chamado TELBOOK.EXE.
+
+: Uma vez nerd...
+[[/img/mp3player.jpg] _APPLESCRIPT_ROOT/export-contacts-to-mp3-player/]
+(29 Out 2005)
+Estou tentando. Estava indo bem até. Já ia completar um mês sem
+nerdices. Só ligando o computador esporadicamente para baixar e-mails.
+Mas uma coisa puxa outra...
+
+Com o roubo do toca-fitas, meu último reduto sagrado de audição de
+fitas k7 foi maculado. Era o empurrão que faltava para eu entrar de
+vez na era da música digital. Ao invés de gastar em som automotivo,
+comprei um tocador de MP3 xingue-lingue. Bacana, gostei. Entre outras
+firulas, ele tem uma agendinha simples. Os contatos (nome, telefone,
+e-mail) são editados em um programa tosco no Windows. Primeiro
+pensamento: "Palha, nem vou usar". Segundo pensamento: "Poderia ser
+útil ter os telefones à mão...". Terceiro: "Ah, mas não tenho como
+usar isso no... EI! Será que..." Pronto, o nerd voltou à tona.
+
+Foram horas de puro deleite programativo. Iniciei com análise e
+experimentações para descobrir o formato usado no arquivo binário que
+guarda os contatos (santo od). Depois fiz um programinha em Python
+para gerar arquivos neste formato e finalmente um AppleScript para
+arrematar, importando todos os meus contatos, já cadastrados na agenda
+do Mac. Acompanhe o fluxo: o AppleScript extrai e passa meus contatos
+para o Python, que gera o arquivo binário, que é então copiado para o
+tocador de MP3 e finalmente importado na agendinha.
+
+Como já havia feito todo o trabalho sujo, acabei fazendo também a
+página com instruções e pari [mais um filho _APPLESCRIPT_ROOT/export-contacts-to-mp3-player/]
+:) Ah, se você tem um tocador parecido mas não tem um Mac, é fácil
+adaptar o script em Python (está embutido no AppleScript) para ler os
+dados de um arquivo CSV ou similar.
+
+: Uno arrombado
+(22 Out 2005)
+Sabadão, carro amanhecido na rua, próximo ao centro da cidade. Ao me
+aproximar do bólido prateado, uma surpresa indigesta: **(1)** cacos de
+vidro na rua, nos bancos e no assoalho do carro **(2)** fios coloridos
+e retorcidos onde antes costumava ficar o toca-fitas **(3)**
+porta-luvas aberto. Uau, um ladrão pé-de-chinelo desesperado roubou
+meu toca-fitas tosco!
+
+Reconstituição do crime: Um ser humano está precisando de grana e vê
+em meu Uno uma possível fonte de renda. Rua escura, sem movimento,
+parece fácil. Primeiro, estoura o vidro do motorista com a própria mão
+(havia sangue no banco). Seu amadorismo é gritante, pois qualquer mané
+micha um Uno. Uma vez dentro do carro, o ser finalmente percebe que
+não há absolutamente nada de valor para ser levado. Para não perder a
+viagem, resolveu levar o toca-fitas mesmo, que deve valer 5 ou 10
+reais no mercado paralelo. Com a delicadeza de um mamute, arrancou
+todo o painel central, com rádio, ventoinhas e controles do ar,
+limpador e desembaçador. Ainda insaciado(a), resolveu levar também o
+meu porta-fitas (com 12 das minhas melhores fitas) que estava no
+porta-luvas. De brinde, levou o paninho laranja (provavelmente para
+estancar o sangue). Lastimável, patético. Eu torço para que ele/ela
+arranje uma fonte de 12V e ligue o toca-fitas em seu quarto. Além das
+rádios, vai ouvir um hardcore de boa qualidade :)
+ | [/img/blog-arquivo/uno-arrombado.jpg]
+ | Onde antes o som aflorava, agora reside um vazio silencioso...
+
+: Aurelio v2.8
+(07 Out 2005)
+Essa versão marca o início da reescrita do código, necessária para
+comportar as funcionalidades novas a serem implementadas. O escopo do
+programa sofreu alterações significativas que serão percebidas pelos
+usuários. Várias funcionalidades atuais serão obsoletadas e a
+compatibilidade com versões anteriores não será mantida. Será um
+trabalho demorado cujo resultado será incorporado na versão 2.9, sendo
+que somente a 3.0 será a versão estável. Evolução? Regressão? Mudança.
+
+: Um ano sem Linux
+[/img/linux-apple.png]
+(02 Out 2005)
+Após 7 anos de militância ativa pró-pingüim, hoje completo 365 dias
+sem usar o Linux. E estou feliz :)
+
+A história é inusitada. Em outubro do ano passado eu comprei um
+[iBook _X_IBOOK_URL] para colocar Linux nele. Em um raro acesso de
+não-conservadorismo, resolvi experimentar um pouco o tal do
+[Mac OS X _X_MACOSX_URL] fru-fru, para poder falar mal depois. Os dias
+passaram e quando fui me dar conta já estava usando o sistema há mais
+de uma semana, em casa e no trabalho. E o pior: estava gostando,
+muito.
+
+Era tudo diferente, porém estranhamente natural e instintivo. Foi um
+mundo que se revelou, soluções diferentes para problemas conhecidos.
+Então entendi o slogan da Apple: "think different". É bem isso mesmo,
+pensar diferente. Foi muito difícil se libertar dos vícios do Linux de
+sempre querer editar .conf, reiniciar serviços, ler
+manpages/README/HOWTO, monitorar processos, se preocupar com
+dependências de pacotes e ter sempre aquela incredulidade que algo vá
+funcionar de primeira. Foram alguns meses para eu me acostumar com
+esse negócio estranho de tudo simplesmente funcionar. O "just works"
+nunca fez tanto sentido.
+
+São doze meses de uso diário e intenso e ainda não sei quase nada
+sobre o seu kernel, drivers, serviços, daemons, subsistemas... E nem
+quero saber! Quero é dirigir o carro, e não aprender mecânica. Assim
+posso ocupar todo o meu tempo na máquina com as coisas que gosto de
+fazer. Isso parece tão simples agora, mas foi necessário eu me sujar
+de graxa primeiro, para hoje perceber como é bom ser um "usuário
+final".
+
+: 5 anos de Funções ZZ - Site novo e camiseta
+[[/img/camiseta-zz-mini.png] _ZZ_ROOT/camiseta.html]
+(30 Set 2005)
+Exatamente 3 meses após ter anunciado que "grandes mudanças" iriam
+ocorrer nas Funções ZZ, aqui estão elas. Primeiro, as funções ficaram
+chiques e agora possuem um domínio próprio na Internet:
+[FUNCOESZZ.NET _ZZ_URL]. O site também foi melhorado: ampliado,
+organizado, redesenhado e enjoiado. Um destaque especial vai para a
+seção "Extras", onde estão as funções feitas pelos usuários. Faça a
+sua própria ZZ você também! E por último, resolvemos expandir os
+negócios da firma e entramos no ramo têxtil :) Foram feitas 50
+[camisetas ZZ _ZZ_ROOT/camiseta.html], edição limitadíssima. Não é
+colorida nem "antenada", é uma camiseta de nerds para nerds, feita
+apenas com caracteres e tem screenshot das funções em ação. É uma
+camiseta-console :D
+
+: Funções ZZ v5.9
+[/img/zz.png]
+(30 Set 2005)
+São duas funções novas nessa versão: zzcalculaip (calcula os endereços
+de rede e broadcast de um número IP/rede) e zzipinternet (mostra o seu
+número IP na Internet). Também foram arrumados os filtros e endereços
+de várias outras funções. Ah, agora o número das versões está mais
+simples: Ano.Mês (5.9 é 2005-09). Captou a mensagem subliminar? Nosso
+objetivo é fazer uma versão nova por mês.
+
+: Free as in BIRD
+(23 Set 2005)
+Faz um mês que pedi as contas na Conectiva, digo, Mandriva. Hoje é meu
+último dia de trabalho e é também o fim de uma era para mim. Entrei na
+empresa em 1997, quando ela funcionava em um sobrado e não era
+conhecida. Comecei como estagiário de meio período, ganhando 150
+reais + VT. Eu nem sequer sabia o que era Linux. O Arnaldo (acme) foi
+meu guru e guiou meus passos, me iniciando em Linux, VI, shell script
+e mais tarde em Python. A empresa cresceu e eu cresci junto, a
+Conectiva se tornou parte importante de minha história. Passados 8
+anos, o fim chegou. Eu desencantei do Linux, trocando-o pelo Mac OS X
+e a Conectiva foi comprada pela Mandrake. Não é triste, é uma história
+que se acaba para poder iniciar outra. Os planos agora são bem
+simples: **não há planos**. Tudo o que quero é parar, limpar a mente e
+viver livre um pouco.
+
+: 2 filhos de Francisco - A história de Zezé di Camargo e Luciano
+(16 Set 2005)
+[Filmaço http://www.omelete.com.br/cinema/artigos/base_para_artigos.asp?artigo=2723]. Mesmo. Ignore temporariamente o preconceito e vá vê-lo no cinema. Continuo não gostando de sertanejo nem da dupla, mas o filme é 10.
+
+: Adium Book v1.1
+[/img/adiumbook-logo.png]
+(14 Set 2005)
+Versão nova do programinha bonitinho. As novidades são o suporte a
+Jabber, interface melhorada, botões para definir o IM e adicionar
+cartão na Agenda. Os screenshots na página do programa agora têm setas
+coloridas fashion que demonstram o uso. Ah, agora todos os botões têm
+figurinhas, que fófi né? :D
+
+: Arquivo RSS melhorado
+(06 Set 2005)
+Agora cada notícia vem com a data definida, acabando com os problemas
+em alguns agregadores. Valeu gwm por me importunar para arrumar :)
+Também coloquei tempo padrão de refresh (1 dia) e uma fotinha para o
+feed. Ah, o PHP foi aposentado e agora é um [SED macho /bin/sed/rss.sed]
+que gera o arquivo RSS.
+
+: Linuxers no Mac OS X
+[/img/linux-apple.png]
+(05 Set 2005)
+Foi criada uma lista de discussão ([linux2macosx _X_MLLINUXOSX_URL]) para
+servir de ponto de encontro para os usuários de Linux que hoje também
+são usuários do Mac OS X. Diferente de usuários clássicos de Mac,
+pessoas com conhecimento em Linux possuem outras necessidades e
+usufruem melhor do BSD que roda sob o sistema. Sei que a "comunidade"
+ainda é minúscula, mas a idéia da lista é juntar os poucos para um dia
+quem sabe sermos vários. Se você se encaixa no perfil, junte-se a nós!
+
+: Não tem preço
+(27 Ago 2005)
+Acordar cedo em um sábado ensolarado, ligar o "3 em 1" antigão (com
+caixonas grandes de madeira), colocar o CD com mp3 de todos os álbuns
+do RAMONES, ligar o modo aleatório (shuffle) e aumentar o volume.
+
+: Programa novo Adium Book
+[/img/adiumbook-logo.png]
+(23 Ago 2005)
+Mais um degrau vencido na escada que leva à perdição, agora cruzei a
+fronteira dos aplicativos gráficos. Brinquei de fazer janelinha,
+botõezinhos, menus, tela About, tratar de eventos e cliques, arrasta
+daqui, arruma dali... O Adium Book é um programa para Mac OS X que
+serve para manter sincronizados os contatos da Agenda e do Adium
+(cliente ICQ/MSN/*). O programa foi feito no Xcode (IDE do Mac), a
+interface Cocoa foi feita no Interface Builder e o código é
+AppleScript puro. Mas ainda não sou um vendido total, os planos para o
+futuro são aprender [Inkscape http://inkscape.org],
+[SVG http://www.w3.org/Graphics/SVG/] e JavaScript, para fazer
+joguinhos bonitinhos no navegador (tipo Flash). É. Pois é...
+
+: Sou um e-mendigo!
+(18 Ago 2005)
+Semana passada resolvi ligar a opção de doação de $$$ para o projeto
+txt2tags no [SourceForge http://sf.net]. Tudo muito fácil,
+bastou criar uma conta no tal do [PayPal http://www.paypal.com] e
+pronto. Na minha visão nerd-cético das coisas, no máximo iam me chamar
+de **vendido** (de novo?) e o total de doações ia estabilizar em zero.
+Mas... hoje recebi um e-mail dizendo que um anônimo caridoso doou 5
+dólares! :) Descontando as taxas do PayPal e do SourceForge,
+fiquei com US$ 3,54. Uau, então Software Livre pode render dinheiro
+assim? Legal! Agora é só esperar uma epidemia de doações, chutar o
+emprego e me tornar um e-mendigo profissional. VERDEJANTE III, me
+aguarde!
+
+: Dicas para atrair colaboradores ao seu projeto
+(16 Ago 2005)
+[Artigo meu publicado na Dicas-L http://www.dicas-l.com.br/dicas-l/20050816.php].
+É um texto rápido, curto, que enumera ações que você pode tomar em seu
+projeto de software para conseguir colaborações da comunidade. Não é
+achismo, ele é uma análise da recente chuva de contribuições que o
+projeto txt2tags obteve, motivada por atitudes simples, mas que fazem
+a diferença.
+
+: Novidades legais no txt2tags
+[/img/minioctus.jpg]
+(05 Ago 2005)
+Tem três novidades legais relacionadas ao txt2tags: **(1)** Documento
+novo Referência Rápida, um PDF de uma página pronto para imprimir e te
+ajudar a escrever os arquivos .t2t mais rapidamente **(2)** Agora as
+notícias do site podem ser obtidas via RSS **(3)**
+[Galeria de Fotos _TXT2TAGS_ROOT/team.html] do nerds que fazem parte do time. Tem
+quase 30 cabeças lá, um timão!
+
+: AppleScript for Python Programmers
+[/img/as.png]
+(25 Jul 2005)
+Durante meu aprendizado de AppleScript, eu freqüentemente comparava as
+suas estruturas com aquelas que eu já conhecia no Python. Acho mais
+fácil de fixar assim. Comecei a anotar e quando percebi, tinha um
+documento extenso em mãos. Assim nasceu o
+[AppleScript for Python Programmers /doc/as4pp.html], que serve para
+programadores Python aprenderem AppleScript, o "shell" do Mac OS X.
+Talvez sirva o caminho inverso também, mas não garanto :)
+
+: Lar, doce lar
+(23 Jul 2005)
+ | [/img/blog-arquivo/cidade-verde.jpg]
+ | Foto de Gustavo Roberto Rodrigues Gonçalves
+
+: Tudo diferente
+(15 Jul 2005)
+Nenhum programa novo, nenhum documento novo, nenhum vídeo novo,
+nenhuma foto nova, nenhuma histórinha nova, nenhum ensaio com a banda,
+nenhuma viagem. Mas o Inbox, esse continua crescendo que é bonito de
+ver... Ah, [o d00dz voltou http://d00dzers.blogspot.com].
+
+: Funções ZZ v5.0630
+[/img/zz.png]
+(30 Jun 2005)
+Essa versão traz como novidade a zzlocale, que procura códigos de
+idiomas (de, it, pt_BR, etc). Também tem várias correções em funções
+que tinham parado de funcionar. Essa é a última versão antes das
+grandes mudanças que estamos (eu e o Thobias) fazendo. Conforme
+aprendi na Escola de Marketing Avançado em Chug-Chug, não devo contar
+nada sobre as novidades, apenas fazer suspense e dizer que vai ser
+muito legal, fantástico e massa. Ah, quase me esqueço. Previsão de
+lançamento: em breve.
+
+: iCoisas (momento "Apple é massa")
+[[/img/carve-video.jpg] _CARVE_PATH]
+(26 Jun 2005)
+Sabadão frio em Curitiba, dia de produzir algo. Dessa vez fui brincar
+com o tal de **iPhoto**, o programa de fotos do Mac OS X. Adicionei
+umas fotos e fui ver o esquema de show de slides. É tão fácil que nem
+tem graça: escolhe a música de fundo, o efeito de transição entre as
+fotos, o tempo de exposição e seleciona as fotos. Pronto. Aperta um
+botão e ele exporta para um vídeo Quicktime. Fiz uma coletânea das
+fotos da galera andando de Carveboard com a sonzeira do Tequila Baby
+de fundo, ficou legal.
+
+Além das fotos, também tenho vários vídeos que a gente gravou andando
+com o carrinho. Então fui no **iMovie** e com a "I Don't Want To Grow
+Up" do RAMONES de fundo, fiz um "clipe". Tudo muito fácil, arrasta
+daqui, escolhe opções dali, aplica uns efeitos acolá... e saiu um
+vídeo de 3 minutos. [Veja o vídeo e os slides _CARVE_PATH].
+
+Pra finalizar, abri o tal **iDVD**, escolhi um "tema", arrastei o
+vídeo e os slides no menu e surpresa! Estava pronto um DVD de
+Carveboard, com fotos, vídeo e sonzeira. O pior é que funcionou mesmo
+e vi tudo na TV, em tela cheia, como se fosse um DVD comercial
+qualquer.
+
+Incrível como o cuidado na construção das interfaces dos programas,
+aliado à integração total entre aplicativos faz coisas complexas
+ficarem simples: um leigo em multimídia fez um DVD. Agora já posso
+trabalhar em casamentos! :D
+
+: FAQ VERDE
+(23 Jun 2005)
+Um documento novo, mas que eu já vinha escrevendo há tempos. Juntei
+nele algumas das respostas mais comuns que mando por e-mail, na
+esperança de que isso ajude a minha caixa postal a voltar a ser
+"normal". Já faz muito tempo que não consigo responder e-mails em um
+prazo razoável e a fila só cresce, cresce...
+[Lê lá /doc/faq.html].
+
+: Livro de visitas atualizado
+(19 Jun 2005)
+Melhorado o [script PHP /bin/php/recados.phps] de livro de visitas. A
+formatação dos recados agora usa estilos (CSS) e está mais flexível. O
+nome do autor do recado está em destaque e internamente está sendo
+usada uma lista de definições (<DL>) para o armazenamento.
+
+: txt2tags v2.3
+[/img/minioctus.jpg]
+(17 Jun 2005)
+Versão nova do polvo vermelho. Essa já fazia meses que estava pronta,
+mas demorou bastante para eu conseguir fechar o lançamento. Esse
+programa já ficou grande, são muitos detalhes para acertar antes de
+lançar cada versão. Tá, chega de choro. As novidades são: a
+possibilidade de juntar as colunas de uma tabela (//colspan//),
+incluir um arquivo de configuração via linha de comando (-C,
+--config-file) e a suíte de testes que agora acompanha o programa. Ah!
+Importantíssimo para as relações comerciais do Brasil: parte da
+documentação do txt2tags foi traduzida para Chinês! :D
+
+: TOC, TOC, TOC... Tem alguém aí?
+(10 Jun 2005)
+Nas últimas semanas as atividades nerds ficaram estacionadas e o site
+sem notícias novas. Não fiquei doente nem morri, mas cometi o pecado
+de ligar a televisão.
+
+A produtividade despencou quando descobri a existência do programa
+"[Guinness, O Mundo do Recordes http://www.rederecord.com.br/programas/guinness/]"
+na Rede Record. Que BBB que nada, aquilo sim é Reality Freak Show.
+Pessoas estranhas fazendo coisas estranhas. Uma mistura de "Se vira
+nos 30" com "Jack Ass". Os três melhores que já vi foram: **(1)** O
+Regurgitador Humano, que engole coisas, as manipula no estômago e traz
+de volta (tipo engolir um cadeado fechado, depois a chave e um anel e
+trazer de volta o anel dentro do cadeado) **(2)** O hindu que rolou
+(no chão) 4 mil quilômetros em 8 meses (rolando 12 horas por dia,
+todos os dias), além de já ter ficado em pé numa praça comendo grama
+durante 7 anos **(3)** O nerd que resolveu o cubo mágico (aquele dos
+quadradinhos coloridos, difícil) de olhos vendados (foram 5 minutos
+analisando o cubo misturado e 5 minutos às cegas girando o cubo até
+alinhar as cores).
+
+Para piorar a minha situação, antes do programa do Guinness tem um
+outro parecido, o "**As Maiores Curiosidades do Mundo**" que segue a
+linha Freak Show mostrando esquisitices de outros países. E para
+fechar o pacote Produtividade Zero, antes desse programa tem a novela
+"[Floribella http://www.band.com.br/floribella/]" na Band, que me
+cativou devido a sua tosquice inspirada no Chaves (atuações
+exageradas, situações previsíveis e repetitivas).
+
+É, TV afeta a nerdice, aprendam com os meus erros. Ou não: Floribella
+(Band 20h10), Curiosidades (Record 21h00), Guinness (Record 21h40),
+diariamente.
+
+: Funções ZZ v5.0519
+[/img/zz.png]
+(19 Mai 2005)
+Essa versão não traz funções novas, mas duas novidades grandes. A
+primeira é a leitura do arquivo opcional ~/.zzextra, usado para
+guardar funções extras feitas pelo usuário ou por terceiros, que são
+integradas no "ambiente ZZ". A segunda novidade é a adapatação de
+diversas funções para funcionarem em UNIXes e outros sistemas com
+versões limitadas do SED. Se você usa Solaris, AIX e similares, várias
+funções passarão a funcionar agora. Ah, zzloteria mostrando quando o
+prêmio ficou acumulado e zzconverte com temperaturas em Kelvin são
+outras novidades.
+
+: Adium Buddy Icon to Address Book
+[/img/as.png]
+(18 Mai 2005)
+Mais um programelho novo. Esse serve para brincar com fotinhos. Ele
+coloca no Address Book (agenda) as fotos das pessoas, usando (via
+Adium) as fotos que o pessoal coloca no ICQ/MSN/etc. Os contatos da
+agenda devem estar com os campos de ICQ/MSN/etc já preenchidos.
+**ATUALIZAÇÃO:** Este programa foi aposentado pelo Adium Book.
+
+: Arkanoid.sed
+[[/img/arkanoid.png] /bin/sed/arkanoid/]
+(13 Mai 2005)
+A sexta-feira 13 não podia passar em branco. Fiz uma reforma no
+[Arkanoid em SED /bin/sed/arkanoid/] (primo do
+[SedSokoban _SEDSOKOBAN_PATH]), que já estava há quase 3 anos intocado
+desde sua criação. Foi uma mudança interna apenas, agora ele também
+funciona em versões antigas e limitadas do SED (como a do FreeBSD). O
+código está bem comentado caso alguém queira entender como foi feito
+;)
+
+: iTunes Rename Disk File
+[/img/as.png]
+(10 Mai 2005)
+Um programinha novo em AppleScript para usar no iTunes. Ele renomeia
+arquivos de música com base nas informações das tags ID3. Também
+remove caracteres estranhos e (opcionalmente) espaços em branco. É
+tipo um [zzarrumanome _ZZ_URL] gráfico :) Aproveitando o embalo, fiz
+[uma página mega gay /bin/as/] para centralizar os scripts (em
+inglês).
+
+: txt2regex - Site e manual em Português
+(05 Mai 2005)
+O Gustavo Roberto Rodrigues Gonçalves fez um trabalho voluntário de
+traduzir todo o site do programa e seu manual para o Português. Aí
+está um exemplo de ação positiva, onde ao invés de me mandar um e-mail
+reclamando que não havia documentação em Português, ele foi lá e
+traduziu. Valeu Gustavo! Já está tudo no ar. Se você ainda não conhece
+o programa, [aproveite a oportunidade _TXT2REGEX_ROOT/index-pt.html].
+
+: Roda de Pogo - A Dança Punk
+[[/img/pogando.jpg] _POGO_URL]
+(04 Mai 2005)
+[Roda de Pogo - A Dança Punk _POGO_URL] é um artigo que explica
+para os não iniciados como é o "pogo", aquela aparente batalha campal
+que ocorre na frente do palco em shows de punkrock e hardcore. Longe
+de ser uma briga, é a dança amigável (porém vigorosa) de amantes da
+música punk. Escrevi em Janeiro, durante as férias, mas publiquei só
+agora porque ainda não tinha tido tempo de fazer o esquema de
+[comentários dos leitores /bin/php/opine.phps] que ficou bem simples e
+legal.
+
+: Export Contacts to Yahoo CSV v1.2
+[/img/as.png]
+(18 Abr 2005)
+Lançada a [terceira versão _APPLESCRIPT_ROOT/export-contacts-to-yahoo-csv/] do meu primero AppleScript, que
+hoje também ganhou uma pagininha própria, com direito a screenshots.
+Ele já conquistou alguns usuários na comunidade Apple e parece que vai
+se tornar mais um filho para eu cuidar... Ainda não me decidi se isso
+vai ser bom ou ruim :)
+
+: Air Carve
+(17 Abr 2005)
+Esse domingo fizemos experimentações com uma nova modalidade de
+Carveboard, desafiando as leis da gravidade e a resistência do corpo
+humano. Depois de algumas tentativas os dedos foram ralados e os
+pulsos ficaram doendo. Ainda bem que o Nissin conseguiu bater essa
+foto mágica antes de um pacote mais feio. É engraçado que na
+aterrissagem os pneus cheios quicam, apertando o botão EJECT do
+carrinho :D
+ | [/img/blog-arquivo/aircarve.jpg]
+ | Pro alto e avante!
+
+: RAC v1.3
+(11 Abr 2005)
+Versão nova do programa agora com suporte a Expressões Regulares!
+Também tem a opção nova -i para ignorar a diferença entre letras
+maiúsculas e minúsculas. Já passamos de metade da especificação
+prevista, o RAC está chegando lá.
+
+: CORRERIA no estúdio
+(01 Abr 2005)
+Dia primeiro de Abril pareceu um bom dia para fazer algo novo. Fomos
+ao estúdio dos amigos Lucas e Sid na hora do almoço e lá gravamos
+nossas musiquetas com uma qualidade melhor do que os ensaios. Continua
+tosco, é claro, mas agora até é possível entender alguma coisa do que
+o vocal berra. Todos
+[os MP3 do site foram renovados _CORRERIA_ROOT/mp3.html]
+e agora estão no site Trama Virtual, que tem streaming e download
+rápido.
+
+: Artigo - Editando arquivos do OpenOffice.org no VI
+(24 Mar 2005)
+Esse eu escrevi em Novembro do ano passado, mas acabou ficando no
+limbo do meu $HOME, agora o reencontrei. É um artigo que analisa a
+estrutura de um arquivo .SXW (do OpenOffice) e ensina como editá-lo
+usando o VI. Desvende os segredos do sxw, impressione seus amiguinhos!
+[Leia agora /vim/ooo-vi.html].
+
+: Funções ZZ v5.0318
+[/img/zz.png]
+(18 Mar 2005)
+Versão nova que traz correções para várias funções que estavam
+quebradas devido a mudanças nos sites de consulta.
+
+: DORT - Usando o Computador Sem Se Machucar
+(13 Mar 2005)
+Reuni num único documento todas as dicas que eu sigo para ficar horas
+usando o computador sem cansar nem sentir dores. É experiência
+pessoal, não é achismo mas também não tem nenhum embasamento médico.
+[Leia agora /doc/misc/dort.html].
+
+: Meu primeiro AppleScript
+[/img/as.png]
+(12 Mar 2005)
+Nerd é uma m* mesmo, não tem jeito. Precisei sincronizar meus contatos
+do Yahoo! com a Agenda do Mac OS X (Address Book) e não tinha
+nenhum programa pronto para fazer isso. Deixando de lado todas as
+outras tarefas e fingindo que eu tinha tempo livre, aprendi a
+programar em [AppleScript http://www.apple.com/applescript/]. A
+linguagem é bem limitada se comparada ao Python ou Bash, usada
+principalmente para interagir com aplicativos do Mac OS. Mas é gostosa
+de programar, é textual. São dois programas, o que migra
+[da Agenda para o Yahoo /soft/export-contacts-to-yahoo-csv/]
+e o que migra
+[do Yahoo para a Agenda /bin/as/ImportContactsFromYahooCSV.py].
+Esse segundo é um Python que gera um AppleScript (tosco!).
+
+: Bate papo no IRC
+(09 Mar 2005)
+Fui convidado para um bate papo via IRC nessa quarta-feira. Começou às
+11 da noite e só terminou depois da uma da manhã. Foram vários
+assuntos como Madrake+Conectiva, certificação, programação, Linux
+versus Mac OS X e como arranjar tempo livre.
+[Leia o histórico /doc/misc/irc-mar2005.html].
+
+: CORRERIA - Mais vídeos
+[[/img/video-opiniao.jpg] _CORRERIA_ROOT/video.html]
+(05 Mar 2005)
+[Três vídeos novos _CORRERIA_ROOT/video.html] feitos no ensaio
+desse sábado. A qualidade tosca continua a mesma, porém agora a câmera
+ficou parada, enquandrando a banda toda de uma vez. O som **parece**
+ter melhorado um pouco com as lonas pretas do MST colocadas na parede
+:)
+
+: Faxina terminada
+(03 Mar 2005)
+Deu trabalho, mas finalmente terminou a faxina geral no site. A página
+principal foi limpa e resumida, o conteúdo do site foi organizado em
+áreas distintas e agora a maioria das páginas e documentos possui uma
+aparência padrão (usam o mesmo CSS). Depois de mais de 5 anos só
+entulhando coisas aqui, estava mesmo na hora de colocar a casa em
+ordem.
+
+: CORRERIA - Vídeo da banda
+[[/img/video-pasto.jpg] _CORRERIA_ROOT/video.html]
+(25 Fev 2005)
+Essa semana descobri o tal do iMovie, programa para editar vídeos no
+Mac OS X. É tão ridículo de fácil de usar que eu 100% leigo em vídeo
+consegui fazer um mini-clip com legenda em poucos minutos. Usei um
+pedaço do ensaio de sábado passado, filmado numa câmera fotográfica
+digital. Já sentiu a tosqueira né?
+[Então confira _CORRERIA_ROOT/video.html]!
+
+: Mandrakização da Conectiva
+(24 Fev 2005)
+Hoje foi [anunciada http://br-linux.org/linux/?q=node/288] a compra da
+Conectiva pela MandrakeSoft, empresa francesa de Linux.
+[Mais informações http://br-linux.org/linux/?q=node/289],
+[e outras http://br-linux.org/linux/?q=node/294],
+[e mais outras _X_LINUXMAG_URL/Magazine/OnlineExclusive/MandrakeConectiva].
+
+**FAQ:** Achei massa. Ninguém foi demitido. Os funcionários estão
+otimistas. Continuaremos em Curitiba. O salário continua em Reais.
+Haverá apenas uma distro até o fim do ano (CL+MDK), ainda sem nome
+definido. Je ne parle pas Français.
+
+: Faxina nos Programas
+(22 Fev 2005)
+Assim como feito com os documentos, os programas também foram
+organizados e centralizados no [/bin /bin/]. Textos, figurinhas e
+causos, além de uma mini ficha técnica para os mais-mais. A faxina
+geral no site está quase terminando, falta pouco.
+
+: CORRERIA - De volta das férias
+(19 Fev 2005)
+Nesse sábado foi o primeiro ensaio de 2005 da CORRERIA. Um calor
+animal em Curitiba e nós no cubículo hermeticamente fechado produzindo
+fedentina. Foi gravado em fita k7, agora melhorou a qualidade do
+[MP3 da música nova _CORRERIA_ROOT/mp3/CORRERIA-1-correria.mp3].
+Depois a banda toda foi andar de Carve para relaxar.
+ | [/img/blog-arquivo/fejao.jpg]
+ | Waaaaaaaaaaaaaaaaaaaaaaaaaarrrrrrrgggggghhhhhhh
+
+: Faxina nos Documentos
+(16 Fev 2005)
+Onde antes era o caos, agora há uma ordem. Todos os documentos do site
+foram agrupados e organizados no [/doc /doc/]. Em especial, agora há um
+[índice centralizado /doc/nerd.html] para todos os textos técnicos que
+já escrevi, contando com descrição e história. Agora ficou fácil de
+achar!
+
+: Área nova sobre Música
+(13 Fev 2005)
+O [/musica /musica/] é o lugar novo para tudo sobre bateria, as bandas,
+os shows e qualquer coisa relacionada à música que antes estavam
+espalhadas pelas esquinas do site. Há bastante conteúdo novo também,
+fotos e uma versão resumida do antigo site da DDD.
+
+: Faça-Você-Mesmo - Tirar os pontos
+(12 Fev 2005)
+Retirei os pontos do pé em casa mesmo e registrei o procedimento com
+[fotos explícitas /fvm/index.html#pontos]. Rápido e fácil.
+ | [[/img/blog-arquivo/tirando-pontos.jpg] /fvm/index.html#pontos]
+ | É só puxar!
+
+: print "Hello Word"
+(10 Fev 2005)
+Cá estou eu de volta ao mundo digital. As férias foram reavivantes. Os
+objetivos de surfe e bicicleta foram cumpridos. As energias foram
+recarregadas. O único ponto negativo foram 3 pontos no pé por causa de
+um corte com a prancha. O site também passou por uma reforma geral
+visando uma melhor organização do conteúdo (que está imenso) e será
+alterado gradualmente nos próximos dias. Para não perder o costume,
+[fotos e relato disponíveis /viagem/matinhos-2005/].
+ | [[/img/blog-arquivo/matinhos-2005.jpg] /viagem/matinhos-2005/]
+ | Solzeira em Matinhos
+
+: FÉRIAS
+(09 Jan 2005)
+Hoje estou me desconectando. Serão 30 dias sem trabalho, sem telefone,
+sem internet, sem e-mails e sem nerdices. Vou para a praia virar
+nativo: surfar e andar de bicicleta. Aliás, fui!
+
+: Ano novo, site novo
+(04 Jan 2005)
+Troca de cores, mais informações na introdução,
+[Campanha Trilhardário /1000000000000.html] colocada no final. Quanto
+mais simples e mais direto ao ponto, melhor.
+
+
+
+== 2004 ==[2004]
+
+: Retrospectiva 2004
+(31 Dez 2004)
+Momento zen de reflexão e nostalgia
+
+No lado nerdz, este foi o ano das palestras e eventos, tendo viajado
+para 6 cidades e participado de 8 eventos, conhecendo amigos e lugares
+novos, me divertindo bastante. Também continuei lançando versões novas
+de todos os meus programinhas e documentos (destaque para Dezembro com
+4 lançamentos!) e a venda de apostilas em PDF foi um sucesso total. Me
+converti para a legião de usuários fanáticos do Mac OS X.
+
+Na Conectiva, programei, trabalhei com a tradução do OpenOffice,
+escrevi uma apostila para a nova linha de treinameto da empresa e fiz
+perguntas para a Certificação nova.
+
+No lado pessoal, comprei um Fiat Uno, o orkut me trouxe vários amigos
+que há tempos não via, tive gastrite, diminuí bastante meu consumo de
+carne, meu casamento terminou e voltei a morar com a mamãe e viver a
+vida de solteiro.
+
+Nas atividades suadouras, comecei a escalar indoor, virei
+carveboarder, voltamos a ensaiar com a banda e voltei a pedalar com
+mais freqüência (viajando inclusive).
+
+Colocados os pesos na balança, posso dizer que 2004 foi um ano
+**MUITO MASSA** e agradeço a todos que de uma forma ou de outra
+contribuíram com isso.
+
+: txt2tags v2.2
+[/img/minioctus.jpg]
+(30 Dez 2004)
+Versão nova com formato novo de documento: Lout. Opção nova
+--css-inside e traduzido para alemão, francês e espanhol.
+
+: txt2regex na Revista Linux Magazine
+[/img/linuxmag04.jpg]
+(28 Dez 2004)
+Um gringo fez um artigo de duas páginas sobre o txt2regex que saiu na
+Revista alemã [Linux User http://www.linux-user.de/ausgabe/2004/09] em
+Setembro. Este artigo foi traduzido para o inglês e saiu na revista
+[Linux Magazine internacional http://www.linux-magazine.com/issue/47/txt2regex.pdf]
+em Outubro. Agora o artigo foi traduzido para o português e saiu na
+nossa Linux Magazine nacional. Legal que o artigo já está disponível
+para leitura no site da revista
+([HTML _X_LINUXMAG_URL/issue/04/feiticeiro_shell.html],
+[PDF _X_LINUXMAG_URL/issue/04/feiticeiro_shell.pdf]).
+
+: Natal Aurelio & Thobias - Funções ZZ e RAC
+(23 Dez 2004)
+Fim de ano, época de presentes, então hoje eu e o
+[Thobias http://thobias.org] resolvemos presentear os usuários com
+dois lançamentos de peso: versão 4.1223 das Funções ZZ com 5 funções
+novas: zznatal, zzcpf, zzcnpj, zzsecurity, zzlinha e versão 1.2 do RAC
+com suporte a endereçamento usando strings. HO! HO! HO!
+
+: Eu no vídeo do ITI
+(20 Dez 2004)
+O Instituto Nacional de Tecnologia da Informação (ITI) lançou
+[um vídeo de 15 minutos http://www.iti.br/twiki/pub/Main/WebHome/Versao_Port_Legendada.mpg]
+(mpeg 157Mb) sobre Software Livre e Certificação Digital. Tá, e daí? E
+daí que eu faço uma rápida aparição nele :) Também tem outros amigos
+no vídeo, como o Rubens Queiroz, Anahuac e Julio Neves. A entrevista
+foi em Março de 2004, quando fui para Brasília dar cursos num evento
+do governo. Era de noite, eu estava cansado. Engraçado que eu falei
+uns 30 minutos, várias coisas legais sobre o desenvolvimento de
+software livre, a ajuda da comunidade, os bastidores, mas colocaram no
+vídeo somente duas frases batidas e sem sal (minutos 7 e 8). Bem, tá
+lá :)
+ | [/img/blog-arquivo/iti.jpg]
+ | Blablablablaestoucomsonoblablabla
+
+: sedsed v1.0
+(09 Dez 2004)
+Após um ano sem atualizações, o depurador/embelezador/HTMLizador de
+scripts SED ganhou uma versão nova. A novidade é que ficou mais
+eficiente e conservador, funcionando em SEDs antigões e palhas.
+
+: Mudanças no RSS
+(01 Dez 2004)
+A formatação foi melhorada e o link mudou. Por favor, não abuse do
+refresh, esse site é atualizado somente uma ou duas vezes por
+SEMANA.
+
+: Viagem de bicicleta
+(14 Nov 2004)
+Hoje foi o dia da intrépida viagem ciclística de cinco sedentários
+para a praia. Conseguimos!
+[Leia o relato completo /viagem/matinhos-bike-2004/].
+ | [/img/blog-arquivo/matinhos-bike.jpg]
+ | Curitiba -> Matinhos, 120Km, 10 horas, chuva, frio.
+
+: txt2tags v2.1
+[/img/minioctus.jpg]
+(13 Nov 2004)
+Versão nova, com várias macros novas
+(""%%mtime, %%infile, %%outfile, %%toc""), traduzido para húngaro e
+italiano, documentação incrementada e opção nova --quiet.
+
+: Funções ZZ v4.1111
+[/img/zz.png]
+(11 Nov 2004)
+Versão nova com zznomefoto.
+
+: !nerd
+(08 Nov 2004)
+Fim de semana agitado: sexta de noite foram 3h30 de
+[escalada indoor http://www.campobase.esp.br] com os amigos, sábado 4h
+de ensaio com a CORRERIA (fizemos uma música nova!) e para finalizar,
+no domingo um passeio de 40Km de bicicleta sob frio e chuva com a
+parentada. O passeio foi um "aquecimento" para a tentativa de descer
+até a praia de bike no próximo domingo dia 14. Vamos ver no que dá.
+ | [/img/blog-arquivo/escalada.jpg]
+ | Lagartixa-mode: ON
+ | [/img/blog-arquivo/matinhos-aquecimento.jpg]
+ | Friiiiiio na volta de Campo Largo
+
+: Mac OS X (ou VENDIDO - Parte 5)
+(02 Nov 2004)
+Hoje completa um mês que estou usando unicamente o [Mac OS X _X_MACOSX_URL]
+da Apple. Nada de Linux, nada de Windows, nada de Cygwin. E sabe?
+Gostei. Gostei não, gostei MUITO.
+
+Tem todas as ferramentas que preciso para trabalhar e para me divertir
+(Vim, Bash, SED, Python, Firefox, ImageMagick) e apesar de
+afrescalhado e com um apelo visual joiado, é simples de usar e bem
+estável e responsivo. Também tem um jeito diferente de trabalhar com
+janelas, inteligente e prático, usando miniaturização e agrupamento
+por aplicativo, contando também com uma interface polida ao extremo,
+sem gordura, realmente limpa.
+
+Após 30 dias de uso intensivo e diário, continuo satisfeito e
+empolgado, então já posso emitir minha opinião sobre ele: **é massa**.
+Ah, não é GPL, não é gratuito, não é abençoado pelo santo Stallman.
+Acho que queimarei no inferno por usá-lo.
+ | [[/img/blog-arquivo/macosx-mini.jpg] /img/blog-arquivo/macosx.png]
+ | Foto da tela em um dia normal de uso (clique para ampliar)
+
+: Funções ZZ v4.1029
+[/img/zz.png]
+(29 Out 2004)
+Versão nova com zzwikipedia, notícias do Yahoo Linux e bugs corrigidos.
+
+: Sobre o site
+(26 Out 2004)
+[Link novo /sobre.html] (fica lá no fim da página), listando as
+ferramentas e serviços que uso no AURELIO.NET.
+
+: Melhorias nas fotos
+(26 Out 2004)
+[Área de fotos /foto/] ajeitada, renovada e enjoiada.
+
+: I Semana de Informática da FAC
+(22 Out 2004)
+Fui até Campinas (SP) para ministrar a palestra sobre desenvolvimento
+de Software Livre, aos alunos da Faculdade Comunitária.
+[Confira o relato e as fotos /curso/fac/]!
+
+: O $$$ da Apostila de Shell está rendendo
+(15 Out 2004)
+[A apostila _APOSTILA_URL] continua vendendo firme e forte, a
+arrecadação total está chegando nos 2.000 reais! Parte dessa grana
+usei para comprar o Carveboard e para o resto, liguei o modo Papai
+Noel e vou investir na comunidade nacional de desenvolvedores de
+Software Livre. Hoje já saiu 150 reais de premiação a um membro do
+time de desenvolvimento do txt2tags. Quem sabe você não ganha uma
+bufunfa também? Veja os detalhes na
+[página da apostila _APOSTILA_URL].
+
+: Área nova sobre Carveboard
+[/img/carveboard.png]
+(15 Out 2004)
+Área nova no site, para centralizar as fotos, picos e nerdices sobre
+o carrinho. Quer saber o que é um Carveboard, como funciona, ver
+muitas fotos? Clique no link.
+
+: Artigo sobre VI na Linux Magazine
+[/img/linuxmag02.jpg]
+(14 Out 2004)
+Hoje ganhei de presente da Conectiva o número 2 da revista (Setembro),
+que tem uma matéria minha chamada "Seleção VI-sual" nas páginas 82 e
+83. O artigo dá várias dicas de uso do modo visual do editor de textos
+Vim. O artigo está disponível
+[no site da revista _X_LINUXMAG_URL/issue/02/selecao_visual.pdf].
+
+: II Congresso Catarinense de Software Livre
+(09 Out 2004)
+Fui passear em Joinville para dar duas palestras no evento, com
+direito a uma esticada para Enseada, uma das praias que mais gosto em
+Santa Catarina. [Leia o relato /curso/ccsl/].
+
+: Aurelio versão nova 2.7
+(07 Out 2004)
+Agora mais maduro e estável. Ah tá, até parece :D
+
+: Conectiva - Linha de Treinamento lançada
+(05 Out 2004)
+Foram 5 meses de trabalho pesado, mas finalmente o parto aconteceu:
+[Lançamento da nova linha de treinamento http://www.conectiva.com.br/cpub/body.php?newcod=1320].
+Eu escrevi a apostila de "Administração de Sistemas Linux I", além de
+ter feito a diagramação final e fechamento das outras 3 apostilas. Foi
+de "virar os zoínho", como diria o mestre Ratinho. Agora é hora de
+atacar a Certificação, volto daqui alguns meses...
+
+: Marinho perdeu
+(03 Out 2004)
+Apesar de ter sido bem votado até (1.011), meu tio não foi eleito
+vereador em Curitiba. Minha entrada na política vai ter que ser adiada
+;)
+
+: iBook, a reincarnação
+[/img/ibookg4.jpg]
+(02 Out 2004)
+Após 45 dias de abstinência total em virtude da pifada do iBook,
+acabaram os dias cinzas, tediosos e torturantes: estou novamente
+computadorizado :) As atividades nerds serão retomadas em breve e a
+fila interminável de e-mails pra responder também andará. Tomara...
+
+: txt2regex v0.8
+(28 Set 2004)
+Após dois anos e meio sem atualização, saiu a versão 0.8 do assistente
+de criação de Expressões Regulares. Foi corrigido o bug que não
+deixava ele funcionar na versão mais nova do bash (3.x) e foi
+adicionado suporte às Expressões Regulares do OpenOffice.org. Ah,
+também foi traduzido para italiano, espanhol e romeno.
+
+: SED falado
+(22 Set 2004)
+O amigo Fernando Rodrigues me enviou mandou uma colaboração que há
+tempos eu queria fazer: ele converteu de Real Audio para MP3 os dois
+trechos de uma palestra sobre o SED que eu fiz na Conectiva em 1999.
+Não que o conteúdo seja um primor de dicção ou qualidade, mas é
+engraçado de se ouvir. [Confira /sed/].
+
+: Google é legal - Parte 2
+(15 Set 2004)
+Essa dica veio do amigo Mauricio L. S. Ramos: Se digitar "aurelio" na
+pesquisa de imagens do Google, adivinha quem é o primeiro cabeção que
+aparece? :D E isso tanto faz se é no Google Brasil ou no gringo, ou se
+o nome foi digitado com ou sem acento. Massa!
+[Tenta lá http://images.google.com/images?q=aurelio&ie=UTF-8&hl=en&btnG=Google+Search].
+
+: Reformas no Faça Você Mesmo
+(12 Set 2004)
+[Seção reformada /fvm/], com fotos e textos novos, mais completa e
+melhor organizada. Porém nenhum tópico novo, isso fica para uma
+próxima atualização.
+
+: Comprei o Carveboard!
+[/img/carveboard.png]
+(07 Set 2004)
+A venda das [apostilas de Shell _APOSTILA_URL] foi um sucesso e
+consegui juntar os 700 reais para comprar o [esqueitão _CARVE_PATH].
+Valeu galera que contribuiu! Como continuo sem computador, o feriado
+foi uma overdose de carveboarding.
+ | [/img/blog-arquivo/carving-1.jpg]
+ | [/img/blog-arquivo/carving-2.jpg]
+ | Carve == Cavada == Surfar no asfalto == Massa
+
+: Jacaré do Parque Barigüi
+(05 Set 2004)
+Sim, ele existe! O Barigüi é o parque mais movimentado de Curitiba,
+está sempre lotado de gente andando a pé, de bicicleta, fazendo
+cooper, entre outros. Tem uma lenda que um dia, muitos anos atrás, um
+cara jogou um jacarezinho jovem no lago do parque e ele foi comendo os
+peixes (ou sei lá o quê), cresceu e ficou morando ali. Eu nunca tinha
+visto e achava que era balela, mas hoje, dia quente de sol, eu estava
+tranqüilamente andando de bicicleta no parque quando de repente:
+ | [/img/blog-arquivo/jacare1.jpg]
+ | [/img/blog-arquivo/jacare2.jpg]
+ | Parque + jacaré + criancinhas, coisas de Curitiba
+
+: Vote Marinho 11 mil
+[/img/blog-arquivo/marinho11mil.jpg]
+(03 Set 2004)
+Faltando um mês para as eleições, decidi ajudar na campanha do meu tio
+para vereador de Curitiba. Como tem muitos desocupados que ficam
+acessando esse site ao invés de trabalhar ou dar atenção para os
+filhos, vou aproveitar a audiência :) Se ainda não tiver candidato,
+vote no meu tio. Daí ele vai poder me dar um cabidão e eu ingressarei
+na política! ;)
+
+: Churrasco, voltei
+(29 Ago 2004)
+Foram quase 3 meses sem carne para aquietar meu estômago instável e o
+fim dessa era foi celebrado com um almoço glutão na churrascaria. O
+período vegetariano foi tranqüilo e instrutivo. Vou diminuir
+drasticamente o consumo de pobres-animaizinhos-coitadinhos daqui pra
+frente. Nesse meio tempo fui no médico, que me diagosnosticou com
+gastrite e me passou um tal de Omeprazol pra tomar que parece estar
+funcionando, pelo menos no teste da carne ele passou.
+
+: www.CORRERIA.org
+(23 Ago 2004)
+Comprado o domínio e colocada no ar o site da banda. Lá tem MP3,
+letras das músicas e alguns textos breves que crescerão com o tempo. O
+site foi feito com o txt2tags, sendo o primeiro que fiz com um
+design um pouco mais decente ;) Santo CSS!
+
+: iBook pifou
+(19 Ago 2004)
+Conector da fonte com mau contato, depois partiu o fio da fonte,
+depois ele morreu. Entrei para o MSC, o Movimento dos Sem Computador.
+Todas as atividades nerds sofrerão atrasos, senão parada total, até
+que a situação seja resolvida... chuinf...
+
+: II Semana de Software Livre da UFPR
+(17 Ago 2004)
+Hoje ministrei uma palestra de 2 horas sobre desenvolvimento de
+Software Livre no Centro Politécnico da UFPR. Tinha umas 90 cabeças,
+entre elas algumas pessoas queridas do meu círculo pessoal, como meus
+pais, minha irmã Karla, o Groo (amigo dos tempos de CEFET) e o Nissin
+(guitarrista da banda). Legal! [Leia o relato /curso/ufpr/ii/].
+
+: [Dialog --tudo /shell/dialog/] v5
+(13 Ago 2004)
+Após um ano sem atualizações, saiu a versão 5 do
+[Dialog --tudo /shell/dialog/], o guia completo do dialog, o desenhador
+de janelas e botões do modo texto. Agora com exemplos de uso da barra
+de progresso (gauge) e menu com itens dinâmicos. A lista com todas as
+novidades está no [Changelog /shell/dialog/index.html#changelog].
+
+: txt2tags - Site novo
+[/img/minioctus.jpg]
+[/img/madeinbr.png]
+(11 Ago 2004)
+Site remodelado, abusando de CSS para fazer o menu à esquerda e outras
+frescurites. Ah, bastante gráficos gratuitos também, screenshots e um
+botãozinho bacana "Made in Brazil".
+
+: Vida de Piá
+(08 Ago 2004)
+Na quinta-feira ensaio de 2h com o NO SNACKS. Na sexta
+escalada indoor de 3h. Sábado ensaio de 2h com o CORRERIA, depois
+direto para o show do [CÓLERA http://colera.org] com os amigos, com
+direito a 2h de pogo animado, como há anos eu não curtia. Domingo
+cansado, quebrado, com hematomas e um sorrisão no rosto :D O show do
+CÓLERA foi simplesmente animal, os caras ficam mais velhos e cada vez
+melhores. São 25 anos de estrada, uma das primeiras bandas punk do
+Brasil. Ah, perdi minha camiseta (!!!) no meio do agito.
+ | [/musica/img/colera.jpg]
+ | Pogo nervoso no show do Cólera
+
+: Finalmente, notícias em RSS!
+(06 Ago 2004)
+O amigo Deivison Alves Elias do site
+[Notícias Linux http://www.noticiaslinux.com.br] me mandou
+[um script em PHP /bin/php/rss-old.phps] que extrai as notícias do
+AURELIO.NET para o formato [RSS http://rssficado.com.br/]. Então, se
+você já usa o tal do RSS pra ler notícias, aproveite!
+
+: txt2tags v2.0
+[/img/minioctus.jpg]
+(25 Jul 2004)
+O programa completou 3 anos de vida e foi lançada a tão aguardada
+versão 2.0! Clica! Clica! Ah, também dei
+[uma entrevista http://linuxreviews.org/features/2004-07-26_verde/]
+ao site "Linux Reviews" falando sobre o programa.
+
+: Semana do Aurelio na Dicas-L
+(25 Jul 2004)
+Terminou hoje a "Semana do Aurelio" na lista
+[Dicas-L http://www.dicas-l.com.br]. O Rubens Queiroz, amigão de
+tempos que sempre me apoiou ajudando a divulgar meus programinhas,
+resolveu dedicar uma semana inteira de sua famosa lista para reunir
+links sobre alguns assuntos, um tema por dia. Valeu Rubens! Confira as
+dicas:
+[Expressões Regulares http://www.dicas-l.com.br/dicas-l/20040719.php],
+[SED http://www.dicas-l.com.br/dicas-l/20040720.php],
+[Shell Script http://www.dicas-l.com.br/dicas-l/20040721.php],
+[Cygwin http://www.dicas-l.com.br/dicas-l/20040722.php],
+[VI http://www.dicas-l.com.br/dicas-l/20040723.php],
+[Software Livre http://www.dicas-l.com.br/dicas-l/20040724.php] e
+[txt2tags v2.0 http://www.dicas-l.com.br/dicas-l/20040725.php].
+
+: s/DUMBS/CORRERIA/
+(24 Jul 2004)
+Mais um ensaio megatosco de 3 horas nesse sábado. No final decidimos
+trocar o nome da banda para CORRERIA. Foi uma decisão difícil, com uma
+longa conversação que transcrevo aqui:
+  - (Fejão) Tava pensando, a gente podia mudar o nome da banda pra Correria
+  - (Aurelio) Massa!
+  - (Nissin) Massa!
+  -
+E pronto, trocamos de nome :) O som hoje é diferente, mais tosco que o
+antigo, então convém mudar. Também gravamos o ensaio e fizemos uns
+mp3. A qualidade sonora é horrível e tem vários erros, mas lá vão duas
+amostras recentes deste primor de tosqueira e falta de bom gosto que é
+o nosso trio:
+[PASTO _CORRERIA_ROOT/mp3/CORRERIA-3-pasto.mp3]
+(nunca antes gravada, inspirada nos amigos sXe),
+[OPINIÃO _CORRERIA_ROOT/mp3/CORRERIA-5-opiniao.mp3]
+(simples, dançante, boca-suja),
+[letras das duas músicas _CORRERIA_ROOT/letras.html].
+
+: III SDSL - Seminário de Desenvolvimento em Software Livre
+(21 Jul 2004)
+Hoje estive em Lajeado - RS (cerca de 100Km de Porto Alegre), onde fui
+ministrar um [curso de Expressões Regulares /curso/sdsl/iii/] no
+evento. O curso foi show, o pessoal aprendeu rápido e no final, ao
+avaliar es expressões feitas pelo alunos nos exercícios, estávamos
+discutindo se
+\<((0?[1-9]|1[0-9]|2[0-8])/(0?[1-9]|1[012])|(29|30)/(0?[13-9]|1[012])|31/(0?[13578]|1[02]))/[012][0-9]{3}\>
+era melhor que
+\<((0?[1-9]|[12][0-9]|3[01])/(0?[13578]|1[02])|(0?[1-9]|[12][0-9]|30)/(0?[469]|11)|(0?[1-9]|1[0-9]|2[0-8])/0?2)/[012][0-9]{3}\>.
+O que você acha? :)
+ | [/img/blog-arquivo/erquadro.jpg]
+ | Veja como expressões regulares são intuitivas!
+
+: Pisando fundo
+(18 Jul 2004)
+Final de semana agitado, teve ensaio com as duas bandas pra espantar o
+frio. No ensaio com o DUMBS uma peculiaridade: a empolgação foi tanta
+que após 2 horas de barulheira, no meio de uma música, de repente o
+pedal do bumbo foi e não voltou mais. Furou. Coisa de pedreiro que não
+sabe tocar... Mas de repente ainda rola fazer um remendão tosco hehehe
+ | [/musica/img/bumbo.jpg]
+ | Ooooooops!
+
+: Mudança de hábitos
+(16 Jul 2004)
+Faz mais ou menos um mês que comecei fazer duas coisas diferentes: (1)
+brincar de **escalada indoor**, fazendo travessias e boulder (ou algo
+assim :), sem cordas e outras viadagens e (2) como parte de uma
+experiência científica com meu próprio estômago, parei de comer
+**carne**. A primeira semana foi braba, mas agora já estou tranqüilo.
+ | [/img/blog-arquivo/veg.jpg]
+ | Prato de pião com "tema" vegetariano
+
+: Conectiva Linux 10 saiu!
+(05 Jul 2004)
+O melhor CL de todos os tempos? Confira!
+[Anúncio http://www.conectiva.com.br/cpub/body.php?newcod=1276],
+[Versão Desktop http://www.conectiva.com.br/cpub/pt/produtossistemaoperacionalcl10/cl10desktop.php],
+[Comprar http://www.ciadosoftware.com.br/?ass=21775],
+[Download http://brlinux.linuxsecurity.com.br/noticias/002806.html].
+Aproveito para destacar, numa opinião imparcial e impessoal, os três
+melhores programas do CL 10:
+[funcoeszz-4.0518 ftp://ftp.conectiva.com.br/pub/conectiva/10/cd2/conectiva/RPMS.002/funcoeszz-4.0518-61042cl.noarch.rpm],
+[txt2tags-1.7 ftp://ftp.conectiva.com.br/pub/conectiva/10/cd3/conectiva/RPMS.003/txt2tags-1.7-61196cl.noarch.rpm] e
+[txt2regex-0.7 ftp://ftp.conectiva.com.br/pub/conectiva/10/cd3/conectiva/RPMS.003/txt2regex-0.7-47624cl.i386.rpm]
+;)
+Ah, e a caixa também é a melhor de todos os tempos, é verde!
+
+: txt2tags v2.0 BETA 3
+[/img/minioctus.jpg]
+(01 Jul 2004)
+Saiu o terceiro e último (assim espero) beta da aguardadíssima versão
+2.0. Está tudo nos finalmentes, só mais alguns dias de trabalho e
+depois é só correr para o abraço.
+
+: Revival no 92
+(26 Jun 2004)
+Mais um ensaio hoje, pelas minhas contas já é o quarto do ano, um
+recorde absoluto. Logo depois fomos todos no
+[92 http://www.92graus.com] curtir um show de hardcore com 5 bandas.
+Foi emocionante até. Ir juntos em shows antes era rotina, mas a última
+vez deve fazer uns 5 anos... Ver as bandas, sentir a energia do palco,
+tudo isso nos deu um gás e agora acho que finalmente a banda volta de
+vez à ativa. Estranho foi se sentir um velho, no meio da gurizada de
+no máximo 18 anos que era a maioria no lugar...
+
+: O Conectiva Linux versão 10
+(25 Jun 2004)
+Foi finalizado esta semana, com os CDs master gravados. Ainda leva uns
+dias para chegar nas lojas. Para comemorar, os funcionários ganharam
+essa camiseta legal e hoje o Homem Pizza foi até a empresa abastecer
+a festa. Para quem não conhece, é um cara que vai com forno, massa e
+ingredientes e faz as pizzas na hora, no lugar que você chamar.
+ | [/img/blog-arquivo/cl10-1.jpg]
+ | Eu te-nho!
+ | [/img/blog-arquivo/cl10-2.jpg]
+ | Você não te-em! :P
+
+: NO SNACKS também renasce
+(20 Jun 2004)
+Incrível! Além do DUMBS que está sendo ressucitado, hoje reunimos a
+outra banda (NO SNACKS) para um ensaio depois de mais de
+dois anos de total inatividade. Foi difícil lembrar das músicas que
+são meio complicadas, mas no final até que saiu. Como é bom estar de
+volta com os amigos, tocando um hardcore e se divertindo.
+
+: Subida do Anhangava
+(13 Jun 2004)
+Anhangava é o nome do morro de 1420 metros que brinquei de subir nesse
+domingo com um grupo de amigos. Fica aqui pertinho, uns 40 Km de
+Curitiba e a subida é rápida, menos de duas horas. A vista do cume é
+fantástica, o ceú estava 100% limpo com vista do horizonte em 360
+graus. Vi tudo: Curitiba, a Serra do Mar, o pico Marumbi, a represa do
+Iraí (lado direito na foto), Paranaguá e o litoral.
+ | [/img/blog-arquivo/anhangava.jpg]
+ | ./~ Flight own your way like an eagle ./~
+ | ./~ Flight as high as the sun ./~
+
+: 100.000 visitas no AURELIO.NET
+(12 Jun 2004)
+Tenho um contador de acessos que marca o número de visitas à página
+principal do AURELIO.NET. Hoje ele bateu na marca dos 100 mil
+visitantes. Até me assustei com o número pois quando tudo começou não
+imaginei que um dia chegaria a tanto, afinal, isso aqui é um site
+pessoal e não de utilidade pública. O site no início (em 1999) era
+apenas uma única página, com poucos textos e poucos acessos no mês,
+hoje é um monstro com vários megas de textos e fotos e uma média de
+250 acessos por dia!
+
+: No ar artigo sobre Cygwin
+(12 Jun 2004)
+Adicionadas mais informações na área do Cygwin e colocado no ar
+[o artigo completo /cygwin/rdl/] que saiu na Revista do Linux, com
+todas as imagens e formatação agradável.
+
+: V FISL - Fórum Internacional de Software Livre
+(07 Jun 2004)
+Aconteceu, e foi MUITO massa. [Siga este link /curso/fisl/] para ver as
+fotos e ler o relato de como foi a viagem até Porto Alegre, o encontro
+com os amigos e a palestra sobre Expressões Regulares que ministrei
+para cerca de 150 pessoas! Ser você tirou uma foto em que eu apareço,
+me mande!
+
+: txt2tags v2.0 BETA 2
+[/img/minioctus.jpg]
+(30 Mai 2004)
+Na cola do primeiro, já saiu o segundo BETA do programa, que agora foi
+internacionalizado (i18n) e traduzido para o Português!
+[Veja o screenshot _TXT2TAGS_ROOT/../img/gui-pt_BR.png] da interface gráfica e
+leia tudo sobre [as novidades da versão 2.0 _TXT2TAGS_ROOT/v2-novidades.html].
+
+: Novidades sobre o Guia de Expressões Regulares
+[/img/capa_er.gif]
+(25 Mai 2004)
+Foram adicionadas duas páginas novas na área do Guia de Expressões
+Regulares. Uma é o [Histórico de Vendas _GUIAREGEX_ROOT/vendas.html] do
+livro, com detalhes sobre quanto vende por mês e o quanto eu já ganhei
+de dindin nessa brincadeira (tem gráficozinho). A outra é a
+[Galeria de Fotos dos Leitores _GUIAREGEX_ROOT/galeria/], que pretende
+mostrar ao mundo que tipo de malucos gostam de Expressões Regulares.
+Mande a sua foto!
+
+: txt2tags v2.0 BETA 1
+[/img/minioctus.jpg]
+(23 Mai 2004)
+Depois de muuuuuuuuita espera, finalmente foi lançado o primeiro BETA
+da tão aguardada versão 2.0 do txt2tags, que é um marco no seu
+desenvolvimento. As novidades são muitas: XHTML, ~/.txt2tagsrc,
+ %!includeconf e muitos outros esqueminhas bacanas.
+
+: DUMBS ensaiando
+(22 Mai 2004)
+Terceiro ensaio do ano. Definitivamente este é o ano mais frenético e
+agitado dos último tempos :D
+
+: Funções ZZ v4.0518
+[/img/zz.png]
+(18 Mai 2004)
+Versão nova com zzbovespa e zzloteria.
+
+: Página nova sobre Expressões Regulares
+(11 Mai 2004)
+Depois de muito tempo jogada às traças, a [página sobre ERs /er/] foi
+totalmente remodelada. É vergonhoso admitir, mas sofri uma recaída e o
+lado designer/fresco tomou conta. Muitos gráficos gratuitos e cores
+joiadas. Mas o objetivo é, assim como as páginas de [VI _VIM_PATH],
+[SED /sed/], [Shell /shell/] e Cygwin, centralizar todos os links e
+documentos sobre o assunto.
+
+: Repeteco de ensaio do DUMBS
+(08 Mai 2004)
+Caramba! **Dois** ensaios no mesmo ano!!! Isso é um marco na história
+da banda :) Será que finalmente dessa vez voltamos à ativa? A
+barulheira foi num quartinho lá em casa, vida longa ao roque pauleira!
+Valeu Gra pela presença e pelas fotos.
+ | [/img/blog-arquivo/correria.jpg]
+ | A volta dos mortos-vivos
+
+: Google é legal
+(06 Mai 2004)
+Interessante, hoje descobri que se digitar "aurelio" no Google,
+adivinha qual a primeira página que aparece? :) Assim, se você
+esquecer o endereço deste site - que é muito complicado e extenso -
+basta fazer: ``http://google.com.br --> aurelio --> Estou com sorte``
+
+: E na Conectiva, é OpenOffice na cabeça
+(05 Mai 2004)
+Após um tempo brincando de aplicar revisões no OpenOffice, agora mudei
+de projeto aqui dentro e **continuo** tendo que usar o OpenOffice...
+Já está parecendo perseguição... Estou oficialmente atolado de
+trabalho até não sei quando, escrevendo a nova linha de apostilas de
+treinamento da empresa e tentando gerenciar o processo ao mesmo tempo.
+
+: Vou pro FISL!
+(02 Mai 2004)
+Minha palestra foi aprovada para o
+[V FISL - Fórum Internacional de Software Livre http://www.softwarelivre.org/forum2004/news/2079].
+Aí vamos nós! É uma emoção especial participar deste fórum. Ano
+passado eu fui como "visita" e gostei muito do evento. Foi o primeiro
+evento de Software Livre que fui, onde conheci pessoalmente o Julio
+Neves e onde ele e o Rubens Queiroz encheram minha cabeça para começar
+a fazer palestras também. Gostei da idéia e comentei com meus amigos
+Rudá e Leslie que no próximo ano, eu iria voltar ali como palestrante.
+Aconteceu! Chuinf, Chuinf... A palestra será sobre Expressões
+Regulares, no dia 5 de Junho, sábado, horário indefinido ainda.
+
+: II Encontro LinuxChix-BR
+(01 Mai 2004)
+Dia do Trabalho, tem que trabalhar! Hoje fiz
+[minha palestrinha /curso/linuxchix/] de Desenvolvedor de Software
+Livre no evento das LinuxChix, em São Paulo. Foi show, casa cheia
+(200!), palestra animada, galera dizendo que curtiu, amigos por lá,
+muito massa.
+
+: I SCSL - Semana de Capacitação e Desenvolvimento em Software Livre
+(28 Abr 2004)
+Fui pela primeira vez a Brasília, para participar
+como instrutor no mega treinamento do governo para mais de 2.000
+funcionários públicos. Ministrei os cursos de Expressões Regulares, VI,
+Python e Shell. [Leia o relato /curso/scsl/].
+
+: 'aurelio+milene'.split('+')
+(27 Abr 2004)
+Passados exatos 30 dias do ocorrido, creio que já é hora de torná-lo
+público para evitar confusões. Após 4 anos de união (2+2), meu
+casamento com a Milene foi terminado. Os detalhes permanecerão na
+intimidade, então simplesmente não pergunte.
+
+: RAC v1.1
+(20 Abr 2004)
+Versão nova do vaporware mais comentado e badalado dos últimos anos,
+com centenas de milhares de dólares gastos em marketing!
+
+: Passeios em Brasília e São Paulo
+(10 Abr 2004)
+Agora no fim do mês dia 26 vou dar uma voadinha para perto do Lula
+participar de um mega evento de treinamento em Linux lá. Depois vai
+ter o evento das LinuxChix em São Paulo no dia do trabalho. Vai ser
+uma semana agitada e divertida!
+
+: I Semana de Software Livre na UFPR
+(30 Mar 2004)
+Hoje foi o dia da maior palestra que já ministrei até hoje, num
+auditório lotadão com 150 pessoas. Foi bem animada, com quase duas
+horas de falatório. Foi a palestra Como Ser um Desenvolvedor de
+Software Livre. [Leia o relato /curso/ufpr/i/].
+
+: Funções ZZ v4.0329
+[/img/zz.png]
+(29 Mar 2004)
+Versão nova com zzhoracerta e zzmoeda.
+
+: Instalador do Direto GNU para o CL
+(19 Mar 2004)
+Uma tarefa que tive na Conectiva em novembro do ano passado foi fazer
+o Direto GNU funcionar no CL 9. Depois de funcionar, comecei a
+modificar o instalador dele também. O projeto foi abortado e a
+Conectiva decidiu LIBERAR o resultado deste trabalho para a
+comunidade, caso alguém queira continuá-lo. Os arquivos estão
+armazenados [aqui no meu site /doc/direto/], que é o destino
+definitivo de todos os tipos de arquivos aleatórios :)
+
+: Revisão da ajuda do OpenOffice
+(10 Mar 2004)
+Você está afim de ajudar a adoção do OpenOffice no governo, escolas e
+instituições? Quer mostrar para os seus amigos que existe uma
+alternativa livre ao MS Office, totalmente em Português do Brasil?
+Então colabore no [processo de revisão /ooo/] da tradução dos textos de
+Ajuda (Help) do OOo. É só ler e axar herros, maiz nada!
+
+: VERDEMÓVEL versão 4.0
+(06 Mar 2004)
+Hoje finalmente comprei o sucessor da TOYOTA, um UNO 96 1.0 gasolina
+por 7k7 reais. É frustrante? É claro que é! Nem se compara. Mas dos
+usados baratos e não muito velhos, o Uno foi que mais se aproximou do
+que eu queria. E tem muitas semelhanças com a Bandeirante: espaço
+interno (sou alto, perna comprida), visão panorâmica (vidros grandes,
+colunas estreitas), faz barulho (carros que não fazem barulho são
+brochantes), mecânica simples e principalmente: **É TOSCO** :)
+ | [/img/blog-arquivo/uno.jpg]
+ | Carro bom é carro tosco
+
+: Entrevista para o Br-Linux
+(05 Mar 2004)
+Fui entrevistado pelo amigo Augusto Campos (brain) e ele colocou
+[meu blablabla http://br-linux.org/noticias/002023.html] no newsletter
+semanal do site dele, o acessadíssimo [Br-Linux http://br-linux.org],
+que foi enviado aos assinantes hoje. Assine o news para receber as
+próximas edições que é filézão.
+
+: Sucesu - Palestra Como ser um Desenvolvedor de Software Livre
+(03 Mar 2004)
+Hoje foi o dia de mais uma "palestrinha" na Sucesu. Mais uma vez não
+consegui controlar a língua e tagarelei durante as 4 horas da
+palestra, ainda tendo que acelerar no final pois ainda precisava de
+mais uma meia hora pra falar tudo :D [Leia o relato /curso/sucesu/].
+
+: Mudança de tarefa - De programador a escrevedor
+(26 Fev 2004)
+Na Conectiva, finalmente vou variar um pouquinho e mudar a rotina de
+passar o dia no VI codificando algum programa. Agora o lance é ajudar
+a escrever a nova linha de apostilas de treinamento. Escrever é legal!
+
+: Funções ZZ v4.0219
+[/img/zz.png]
+(19 Fev 2004)
+Versão nova com zztempo.
+
+: Sucesu - Palestra de SED e Expressões Regulares
+(18 Fev 2004)
+Hoje foi o dia de falar sobre esses assuntos legais para uma turminha
+de 20 pessoas. SED, ERs, quer assunto melhor pra conversar? Foi massa!
+[Leia o relato /curso/sucesu/].
+
+: Artigo sobre o VI na Revista do Linux
+(16 Fev 2004)
+Saiu na [Revista do Linux _X_RDL_URL] desse mês um artigo que escrevi
+sobre o VI, páginas 58 e 59. O texto
+[Pulando com o VI _VIM_ROOT/pulando.html] mostra como fazer um uso ágil
+do VI, abolindo as setinhas e a tecla Delete, usando os comandos do
+editor para movimentar o cursor para qualquer lugar do arquivo.
+
+: DUMBS renascido das trevas
+(14 Fev 2004)
+Após 3 anos de total inatividade, FIZEMOS UM ENSAIO!!! O Nissin
+(guitarra) voltou a morar em Curitiba, então conseguimos nos reunir e
+ficar 2 horas trancados num estúdio suando, fazendo barulho e se
+divertindo! Pá tu pá tu pá tu pá tu, ahhhhhh que saudades... Será que
+agora finalmente a banda ressurgirá do limbo?
+
+: Apostila de Shell - O Retorno
+(10 Fev 2004)
+Agora como PDF ao invés de impressa no papel e com preço reduzido para
+20ão. Tá esperando o que? [Aproveita _APOSTILA_URL]!
+
+: Iogurte
+(09 Fev 2004)
+Seguindo a modinha e entrando na guerra do "eu tenho mais amigos que
+você", fiz [meu cadastro no orcute _MYORKUT]. Numa descrição rápida, o
+Yakult é um sistema de amigos e comunidades patrocinado pelo Google,
+onde você diz quem são seus amigos e pode ver todos com suas
+respectivas fotinhos engraçadinhas de uma vez só. Algo como um ICQ
+misturado com agenda e fórum. 100% fútil, mas serve como um
+centralizador de contatos.
+
+: Palestras em Curitiba!
+(06 Fev 2004)
+Foram marcadas quatro palestras minhas na sede da Sucesu-PR, uma dia
+18 agora, outras duas em Março e a última em Abril. Os temas são SED,
+Expressões Regulares, VI, Shell Script e Desenvolvimento de Software
+Livre. Todas noturnas, das 19 às 22 horas. Mais informações e
+inscrições no [site da Sucesu http://www.prsucesu.org.br/].
+
+: Apostila de Shell impressa - CHEGA!
+(29 Jan 2004)
+Hoje a **última apostila foi finalmente enviada**. Foram 77 no total,
+agora não quero nem mais ver espirais, envelopes e Correios na frente
+:) Ainda estou finalizando o esquema novo de venda, espera só mais uns
+dias...
+
+: Funções ZZ v4.0128
+[/img/zz.png]
+(28 Jan 2004)
+Versão nova com zzhora.
+
+: Brincando com quatro joysticks no PC
+(13 Jan 2004)
+Consegui ligar vários joysticks de videogame na porta paralela do PC
+para usá-los em jogos. O driver do Linux suporta até 5 joysticks
+pendurados na mesma paralela. Pendurei quatro e fiquei satisfeito: 2
+de Super Nintendo, 1 de Nintendo (tipo arcade) e outro de PlayStation
+(made in camelô). O Xmame se garantiu na boa e pudemos jogar, er,
+digo, testar os 4 joysticks no jogo das Tartarugas Ninja. A
+experiência vai render um artigão pra [Revista do Linux _X_RDL_URL], então
+nem perca tempo me perguntando como é que faz, espera pra ler o artigo
+completo e detalhado. MKT++ ;)
+ | [/img/blog-arquivo/joy1.jpg][/img/blog-arquivo/joy2.jpg]
+ | A maçaroca é feia, mas funciona!
+
+: Fim de ano massa
+(05 Jan 2004)
+No natal demos uma volta rápida em Floripa e Balneário Camboriú,
+depois sossegamos em Enseada (São Chico). No Ano Novo fomos direto pra
+Balneário. Como sempre entupida de gente e com um mega engarrafamento
+na volta, mas os fogos na virada detonaram. Se contei direito, foram
+45 minutos de luz e barulho, massa! Agora de volta ao frio de cinza de
+Curitiba, quilos de email pra ler, saudades da praia...
+
+
+== 2003 ==[2003]
+
+: II SDSL - Seminário de Desenvolvimento em Software Livre
+(22 Dez 2003)
+Coloquei no ar [fotos e textos /curso/sdsl/ii/] contando como foi a
+viagem até Campinas para participar do evento, onde ministrei um curso
+de Expressões Regulares e palestrei sobre desenvolvimento de Software
+Livre.
+
+: Prompt Doc - Introdução às Expressões Regulares
+(17 Dez 2003)
+Mais um "prompt-doc", uma proposta de formato novo para documentação
+de conceitos práticos. Dia 4 foi um de Shell, agora é a vez das ERs.
+Este documento é o
+[histórico da linha de comando /curso/conectiva/conectiva-er-prompt.html]
+de uma palestra sobre o assunto que ministrei hoje para alguns
+funcionários da Conectiva.
+
+: txt2regex - Site novo
+(16 Dez 2003)
+O site do txt2regex foi remodelado. Aquela coisa marrom horrorosa
+foi trocada por cores mais leves e o design geral também foi
+simplificado. Versão nova do programa? Bem, aí já é outra história...
+:)
+
+: RAC v1.0 lançado!
+(12 Dez 2003)
+O maior hype de todos os tempos, o vapourware mais divulgado na mídia,
+a maior campanha de marketing do software livre nacional, finalmente
+foi lançado! Se empolgue ou se decepcione, mas não deixe de acessar o
+[site do programa _RAC_URL]!
+
+: II SDSL - Meu dia de trabalhar
+(12 Dez 2003)
+O despertador não tocou, acordei atrasado para o curso de Expressões
+Regulares :/ Mas cheguei na sala antes da 9 ainda e o curso seguiu até
+às 18 horas, com pausas para lanche e almoço. Tinha cerca de 30 alunos
+e foi muito bacana, com 100% de aprovação nas fichas de avaliação
+entregues pelos alunos! Depois fui para a outra sala para a palestra
+"Experiências de um Desenvolvedor de Software Livre", que foi
+encurtada para 45 minutos e tive que acelerar a fala :) No final, o
+lançamento do hypeado RAC. O evento foi sensacional, nota 10 para o
+Rubens Queiroz e sua equipe! [Leia o relato completo /curso/sdsl/ii/].
+
+: II SDSL - Cheguei
+(10 Dez 2003)
+Aqui estou, peguei o aviãozinho e vim pra Campinas. Hotel show de
+bola, com Internet na faixa no quarto, banheira, piscina e tudo isso
+dentro do próprio campus da Unicamp! Hoje pude assistir às palestras
+de três grandes amigos: Rubens Queiroz, Julio Neves e Franklin
+Carvalho, e finalmente falei com o conhecido virtual César Brod "ao
+vivo". As palestras foram muito boas, tão boas que a última foi
+terminar mais de 10 da noite, uma hora depois do horário previsto. E
+daqui dois dias... RAC! [Leia o relato completo /curso/sdsl/ii/]
+
+: TOYOTA is no more &:(
+(08 Dez 2003)
+Hoje assisti um completo estranho levando ela embora. Acompanhei até o
+último pontinho azul sumir no horizonte. E ela se foi, para sempre.
+Após 4 anos de união, foi duro vê-la partir. O motivo é simples: não
+dava para encarar uma reforma de 5, 6 mil reais e a ferrugem já não
+podia mais ser ignorada. Tive que vender. O próximo verdemóvel? Sei
+lá...
+ | [/img/blog-arquivo/toyota.jpg]
+ | Chuinf...
+
+: Prompt Doc - Tira dúvidas de Shell
+(04 Dez 2003)
+Documento novo, que é o
+[histórico da linha de comando /curso/conectiva/conectiva-shell-prompt.html]
+de uma palestra sobre Shell que ministrei hoje para alguns
+funcionários da Conectiva.
+
+: txt2tags v1.7
+[/img/minioctus.jpg]
+(30 Nov 2003)
+Versão nova com o comando %!include.
+
+: 50 apostilas vendidas!
+(27 Nov 2003)
+Exatamente 3 meses após o início das vendas, atingi a minha meta
+pessoal de vender 50 [apostilas do curso do Shell _APOSTILA_URL].
+Ainda tenho mais umas 20 e poucas "no estoque", porém estas serão as
+últimas. Sabe que cansa esse negócio de fazer uma por uma, envelopar,
+ir no correio, etc? :)
+
+: Funções ZZ v3.1124
+[/img/zz.png]
+(24 Nov 2003)
+Versão nova com faxina geral, pois vários sites mudaram.
+
+: sem-mouse-HOWTO
+(23 Nov 2003)
+Coloquei no ar esse documento antigão, de 1999, que estava escondido
+num diretório aleatório do meu $HOME.
+O [sem-mouse-HOWTO /doc/sem-mouse-HOWTO.html] é um guia que ensina
+dicas de como usar o Linux sem o mouse. Somente para meganerds :)
+
+: sedsed v0.8
+(15 Nov 2003)
+Versão nova com as opções -n e -H, além de uma limpeza geral no
+código.
+
+: II SDSL - Seminário de Desenvolvimento em Software Livre
+(14 Nov 2003)
+Nos dias 11 e 12 de Dezembro, estarei participando do evento em
+Campinas (SP). No dia 12 vou ministrar a palestra "Experiências de um
+Desenvolvedor de Software Livre" (duração: 1h30min) e o mini-curso
+"Expressões Regulares" (duração: 8 horas). No dia 11 vou assistir o
+mini-curso de Shell Script do amigo Julio. Vai ser massa, chega lá
+você também!
+
+: Matéria de capa sobre Cygwin na Revista do Linux
+[[/doc/img/capa-rdl-cygwin.jpg] _CYGWIN_ROOT/rdl/]
+(06 Nov 2003)
+Além de ter voltado para a Conectiva, também voltei para a
+[Revista do Linux _X_RDL_URL]. Na edição desse mês tem uma matéria de capa
+sobre o Cygwin com 9 páginas escritas por este que vos escreve. Além
+disso no CD está o Cygwin, completo e atualizado. Uma boa alternativa
+pra quem não quer baixar 300 megas de pacotes pela Internet.
+
+: Palestra em Recife?
+(30 Out 2003)
+Hoje à noite era para eu estar em Recife, para dar uma palestra sobre
+Software Livre. Mas como essa palestra acabou ficando bem no meio da
+minha bagunça de se mudar de cidade, emprego novo, procura de casa pra
+morar, etc, o organizador achou melhor adiá-la. Por enquanto, ainda
+não há uma nova data.
+
+: Reconectivizado!
+(27 Out 2003)
+Hoje é meu primeiro dia de trabalho na Conectiva. De novo :) Engraçado
+isso né? Voltar para a mesma cidade, para a mesma empresa... A
+impressão que fica é que tirei umas "férias" de um ano e meio em
+Floripa.
+
+: Info sobre a venda das Apostila de Shell
+(22 Out 2003)
+Para saciar a curiosidade alheia, [coloquei no ar _APOSTILA_URL] os
+dados sobre a venda das apostilas.
+
+: Enfim, Curitiba.
+(20 Out 2003)
+Mais uma vez a TOYOTA veio
+[completamente entupida /foto/tosco/freteverde.jpg], sem espaço livre
+para colocar uma caixa de sapatos. Até um sofá de três lugares veio lá
+dentro. A recepção não podia ser mais curitibana: CHUVA, FRIO e CINZA
+:)
+
+: Gramado? Massa!
+(17 Out 2003)
+Contrariando todas as expectativas, **Gramado** é massa! Também foi
+muito legal o caminho, passando na ida por **Urubici** (SC) e descendo
+a **Serra do Rio do Rastro** com visibilidade 0%. Na volta passamos
+pelo **Canyon do Itambézinho** e descemos a **Serra do Faxinal** até
+**Praia Grande** (SC). Pra variar, uma passada rápida em **Torres**
+(RS) para relembrar que a única praia legal do RS é palha :P
+ | [/img/blog-arquivo/gramado-serra.jpg]
+ | Cadê a Serra do Rio do Rastro?
+ | [/img/blog-arquivo/gramado-cascata.jpg]
+ | Teleférico da Cascata em Canela
+
+: Gramado? Eca!
+(11 Out 2003)
+Amanhã cedo indo pra Gramado no RS. Ainda não sei o tem pra fazer lá,
+parece ser mega chato. Vamos ver. Sem e-mails até quinta-feira.
+
+: [SedSokoban _SEDSOKOBAN_PATH] v0.3
+(11 Out 2003)
+Versão nova (e agora espero que seja a última). O código foi mudado
+para ficar mais conservador e funcionar em qualquer versão de SED.
+Viva o [sedcheck.sed http://lvogel.free.fr/sed/sedcheck.sed] que
+indica o que alterar.
+
+: O site do DUMBS foi atualizado
+(10 Out 2003)
+Isso mesmo, depois de séculos jogada às traças, o site da banda foi
+atualizada. Os gráficos gratuitos foram retirados e os links quebrados
+foram arrumados.
+
+: Meu aniversário
+(07 Out 2003)
+Fomos pra Curitiba. Festinha, família, procurando casa pra morar,
+essas coisas... A TOYOTA bravamente já levou 1/3 de nossas tralhas,
+foi entupida.
+
+: Reconstrução da área de fotos
+(02 Out 2003)
+Fiz uma mega-ultra-hiper atualização na [página de fotos /foto/], agora
+uma dedicação completa ao tema "//Ser tosco é...//"
+
+: Funções ZZ v3.1002
+[/img/zz.png]
+(02 Out 2003)
+Versão nova com zzconverte e zzcontapalavra.
+
+: Mudança de volta para Curitiba!
+(26 Set 2003)
+Após quase um ano e meio de sol, suor e praia em Floripa, resolvemos
+voltar pra terrinha. Sabe como é, saudades daquele céu cinza e
+chuvoso, trânsito parado, estresse... Esse negócio de morar em lugar
+paradisíaco é muito chato, o estômago já está rejeitando água de côco
+;) A previsão é de se mudar lá pelo meio do Outubro.
+
+: Campanha Aurelio Trilhardário
+(26 Set 2003)
+Leves mudanças estéticas na página principal e o lançamento da
+campanha [Aurelio Trilhardário /1000000000000.html] :D
+
+: Área nova para o Cygwin
+(25 Set 2003)
+Nasceu uma área nova no site para falar sobre o
+incrível/fantástico/extraordinário sistema que traz os poderes do
+Linux para o fru-fru do Windão.
+
+: Sem mais para o momento
+(23 Set 2003)
+Esse mês foi bem parado de novidades, só brincando de enviar apostilas
+pelo correio e dando um gás nova versão 2.0 do txt2tags.
+
+: Txt2tags na Revista do Linux
+[/img/minioctus.jpg]
+(20 Set 2003)
+O txt2tags apareceu na [Revista do Linux _X_RDL_URL] de Setembro! O amigo
+Rubens Queiroz (Dicas-L) escreveu um artigo de duas páginas sobre o
+meu programinha, massa!
+
+: Apostila de Shell à venda
+(27 Ago 2003)
+Não teve jeito, era tanta gente perguntando que arranjei um esquema
+para vender a apostila e enviar pelo correio.
+[Compre a sua _APOSTILA_URL]!
+
+: Polvo joiado para o txt2tags (ou VENDIDO - Parte 4)
+(24 Ago 2003)
+A mulher deixou o windão ligado e tinha um tal de Flash MX aberto...
+Como não tinha ninguém olhando, comecei a apertar uns botões e ele foi
+desenhando sozinho! Quando fui ver, ele tinha feito um mascote para o
+txt2tags! Coisa de louco estes programas gráficos... ;)
+ | [[/img/blog-arquivo/octus.gif] http://txt2tags.sf.net/img/octus.gif]
+
+: Site do txt2tags em Português
+[/img/minioctus.jpg]
+(23 Ago 2003)
+Este é apenas o início da ofensiva de dominação nacional do polvo
+vermelho mutante! :)
+
+: Curso de Shell em Sampa
+(08 Ago 2003)
+Após uma semana de aulas, acabou o curso. Foi uma experiência muito
+massa, tranqüila. A turma tinha 7 alunos e foram praticamente 9 horas
+de aula por dia. Agradecimentos ao pessoal da 4linux por ter tornado
+isso possível! [Leia o relato completo /curso/4linux/].
+
+: Cheguei em Sum Paulo
+(03 Ago 2003)
+Pois é, depois de mais de 10 anos sem "tirar os pés do chão", avuei de
+vião nesse domingão. Ter visto a ilha lá de cima foi fantástico,
+incrível mesmo. Amanhã começa o curso de Shell. O hotel em São Paulo é
+massa, tem Internet 8)
+
+: iBook com Linux (ou VENDIDO - Parte 3)
+(31 Jul 2003)
+Com essa história de curso, surgiu a necessidade de ter um notebook
+para levar os dados e poder se manter conectado. Olhei para o lado, lá
+estava o iBook empoeirando com seu Mac OS 8.6 palha. Após consultar os
+amigos "entendidos" em Apple, instalei o
+[Yellow Dog Linux http://www.yellowdoglinux.com]
+nele e agora sou um nerd antenado :D
+ | [/img/blog-arquivo/ibook-linux.jpg]
+ | Window Maker joiado powered by Kojima's Software Foundation
+
+: Ufa, terminei a apostila
+(30 Jul 2003)
+Finalmente terminada a apostila do curso. Foram 85 horas de escrita, que
+se desenrolaram em 21 dias. Os fontes foram escritos em texto puro,
+convertido para HTML pelo txt2tags e finalmente para PDF pelo
+[htmldoc _X_HTMLDOC_URL].
+
+: txt2tags v1.6
+[/img/minioctus.jpg]
+(23 Jul 2003)
+Versão nova com filtros %!preproc e %!postproc.
+
+: CSS é massa (ou VENDIDO - Parte 2)
+(21 Jul 2003)
+Definitivamente CSS é massa. Eu sempre xinguei, disse que era palha,
+que era fru-fru, mas agora tenho que morder a língua e admitir que é
+massa. Acabei de CSSzar o site do txt2tags e também já tinha usado o
+esquema no [Dialog --tudo /shell/dialog/] e no site das Funções ZZ.
+Bem, já estou usando Windão com mouse, que diferença vai fazer um
+CSSzinho? :)
+
+: Mudanças na página principal
+(21 Jul 2003)
+Leves mudanças no visual na página principal e adicionada uma foto
+minha trabalhando em meu escritório em Canasvieiras :D Também coloquei
+um "Jogo Rápido" no final da página, com um resumão de tudo.
+
+: Funções ZZ v3.0713
+[/img/zz.png]
+(13 Jul 2003)
+Versão nova com zznoticiassec.
+
+: Aurelio, versão Instrutor Linux
+(11 Jul 2003)
+Nesses 45 dias sem emprego aconteceram tantas coisas boas que eu hoje
+agradeço por estar em casa :) Muitas coisas mudaram nesse mês e pouco
+e hoje anuncio outra mudança radical na minha vida: nada de emprego.
+Vou tentar trilhar o tortuoso e incerto caminho do
+[Instrutor de Cursos /curso/] e ver no que dá. Se for massa, beleza.
+Senão, imprimo meu currículo e volto bater na porta das empresas. :)
+
+: Shell Script - Área nova e Canivete Suíço
+(09 Jul 2003)
+Finalmente, após mais de 5 anos programando em Shell, criei vergonha
+na cara e fiz uma [pagininha pra linguagem /shell/]. Tá podre ainda,
+pequena, mas tende a crescer muito. Em especial tem um doc muito
+bacana pra quem é programador, o
+[Canivete Suíço do Programador Shell /shell/canivete.html].
+
+: LIBERDADE e ABUSO
+[/img/capa_er.gif]
+(02 Jul 2003)
+Após quase dois anos de experiência na causa do Conhecimento Livre,
+tive que restringir um pouco as condições de uso da versão online do
+[Guia de Expressões Regulares _GUIAREGEX_URL]. Acesse a página e por
+favor leia com atenção o desabafo e as "regras". Se você tem bom
+senso, nada muda. O aviso é para os manézões.
+
+: Logotipo para as Funções ZZ
+[/img/zz.png]
+(02 Jul 2003)
+O site das Funções ZZ atualizada e agora as funções têm um logotipo,
+ou algo parecido... O Sr. Paintbrush foi chamado para me ajudar. Além
+do logo agora também tem o novíssimo livro de visitas das funções,
+para os usuários fazerem declarações de amor ao programa :)
+
+: [Dialog --tudo /shell/dialog/] lançado!
+(25 Jun 2003)
+Documento novo que propõe a explicar como usar o Dialog, o programa
+que faz interfaces com botões e caixinhas no modo texto. É a primeira
+documentação completa sobre ele já escrita, [leia lá /shell/dialog/].
+
+: Changelog Nerd
+(17 Jun 2003)
+O [Changelog Nerd /doc/changelog-nerd.html] é um documento novo que
+reune num lugar só todas as versões de programas e textos que eu fiz.
+É como uma foto que resume 3 anos de desenvolvimento de software
+livre. Ufa, é coisa pra caramba...
+
+: Funções ZZ v3.0612
+[/img/zz.png]
+(12 Jun 2003)
+Versão nova com zzss, zzm(ai|in)usculas.
+
+: FISL 2003 em Porto Alegre
+(10 Jun 2003)
+Eu, o Rudá e o Leslie (amigos e conectivos) fomos de TOYOTA até Porto
+Alegre para participar do FISL, o Fórum Internacional de Software
+Livre. É um mega-evento que reúne nerds de todo o país, além de
+gringos. Estava massa, reencontrei vários amigos, conheci outros
+"amigos virtuais" e nos divertimos bastante.
+[Leia o relato /viagem/fisl-2003/].
+ | [[/viagem/fisl-2003/fim.gif] /viagem/fisl-2003/]
+
+: Fotos da época do Epa
+(01 Jun 2003)
+Esse final de semana minha família veio nos visitar e minha mãe trouxe
+a minha caixa gigante de fotos que tinha ficado em Curitiba. Então
+aguardem, pois dentro em breve a sessão de fotos ficará muito mais
+recheada de tosquices :)
+
+: Techlink is no more
+(30 Mai 2003)
+Hoje recebi o aviso prévio na Techlink. Foi uma surpresa. Saíram 3 do
+time... Quando a grana aperta, não restam outras opções... Veja
+[meu currículo /doc/cv-aurelio.html], estou solto.
+
+: txt2tags v1.5
+[/img/minioctus.jpg]
+(09 Mai 2003)
+Versão nova com %!cmdline.
+
+: Fotos fotos fotos
+(08 Mai 2003)
+Tchan, Tchan, Tchan... As organizações Verde têm o orgulho de
+apresentar mais uma novidade que será um sucesso empresarial absoluto:
+[a nova área de fotos /foto/]. Totalmente remodelada, agora contando
+com diversas fotos inéditas do Aurelio em poses obscenas.
+
+: Funções ZZ v3.0507
+[/img/zz.png]
+(07 Mai 2003)
+Versão nova e site novo!
+
+: Reforma na página do Vim
+(05 Mai 2003)
+Aproveitando o embalo, a [página sobre o Vim _VIM_PATH] também foi
+reescrita. Aaaaah, também atualizei o arquivo de sintaxe
+[txt.vim /vim/txt.vim], ficou show!
+
+: Reforma na página do SED
+(25 Abr 2003)
+Finalmente depois de séculos, dei uma ajeitada na
+[página sobre o Sed /sed/], que estava empoeirada e desatualizada.
+
+: [SedSokoban _SEDSOKOBAN_PATH] v0.2
+(16 Abr 2003)
+Versão nova, que é uma mera limpeza de código.
+
+: Versão nova do sed-HOWTO
+(15 Abr 2003)
+Incrível! Após um ano e meio jogado às traças, o
+[sed-HOWTO _SEDHOWTO_URL] foi atualizado!
+
+: O verde666.org vai morrer
+(10 Abr 2003)
+Depois de quase 3 anos de uso, o **""www.verde666.org""** vai ser
+aposentado e entrará agora o **""www.aurelio.net""** em seu lugar.
+Isso mesmo! Hoje os dois endereços funcionam, mas o verde666 sairá do
+ar em alguns dias. Conte para os amigos, atualize seus bookmarks,
+corrija os links de suas páginas! Mais detalhes em breve.
+
+: Cuidado, invasão de gráficos gratuitos!
+(03 Abr 2003)
+Ó não! A frescurite tomou conta de mim! Agora as páginas MIM e NERD
+que anteriormente eram somente texto ganharam vários gráficos
+gratuitos! Todos leves, rápidos de carregar, mas é frescura! Será este
+o fim do império dos caracteres? Será que os gráficos irão invadir o
+site todo? Será que a página do aurelio ficará fru-fru?
+
+: Funções ZZ v3.0403
+[/img/zz.png]
+(03 Abr 2003)
+Versão nova com zzgoogle.
+
+: Show da Monas Indignadas
+(02 Abr 2003)
+Você está acompanhando o [Livro de Visitas /recados.php]?
+Várias MONAS INDIGNADAS estão desabafando sua ira no Consultório
+Virtual Verde. Aproveite! É grátis! ;)
+
+: Dia da Mentira é PALHA
+(01 Abr 2003)
+É.
+
+: Dicas anti-LER
+(19 Mar 2003)
+Seção nova na página nerd: "//Usando o Computador Sem se Machucar//",
+com dicas de como evitar dores no pulso, braço, olhos e coluna ao usar
+o computador (e tem foto! hehehehe).
+
+: Funções ZZ v3.0317
+[/img/zz.png]
+(17 Mar 2003)
+Versão nova com zzzz --tcshrc.
+
+: Fotos explícitas da TOYOTA
+(12 Mar 2003)
+Primeiro reflexo da câmera digital: me acabei de tirar fotos da TOYOTA
+:) Juntando com mais algumas dicas que eu coletei na lista TOYOTEIROS,
+mais meus arquivos de histórico de reparos e consumo de diesel, tem
+uma área nova no site: [TOYOTA /doc/misc/toyota/].
+
+: Carnaval sem deserto dessa vez
+(05 Mar 2003)
+Carnaval. A única coisa que presta é a folga de 4 dias e meio. Dessa
+vez nada de Atacama. Aproveitamos para dar uma esticada
+até **Foz do Iguaçú**. Daqui de Floripa fica longinho até, deu 2.000
+Km ida e volta, rodados na maciez e conforto característicos da TOYOTA
+:)
+
+É claro, aproveitamos para dar uma voltinha no lixão do **Paraguai**:
+passar medo, ouvir histórias de assalto, ficar inseguro, deixar o
+carro em estacionamentos suspeitos (na lado brasileiro) e ficar na
+expectativa de não ser pego na fiscalização da Aduana. Tudo isso pra
+comprar porcarias a preços melhores, mas sinceramente, o estresse não
+compensa. Prometi a mim mesmo nunca mais pisar em Ciudad del Este,
+vale muito mais a pena pagar os 20% do muambeiro e deixar que ele se
+estresse e faça todo o serviço sujo.
+
+A notícia boa é que comprei uma **câmera fotográfica** digital.
+Finalmente, após quase 2 anos de namoro, criei coragem e abri o bolso.
+Quase milão gastos numa SONY P-51. É muito dinheiro num trocinho tão
+pequeno e frágil, mas a longo prazo compensa a grana economizada em
+filmes e revelações. Mas o melhor é que agora vou poder tirar fotos de
+todas as inutilidades que eu sempre quiz mas não fazia pra não gastar
+dinheiro! Digamos que o site agora tende a ficar mais "visual". Ó não,
+estou me vendendo novamente...
+
+: Funções ZZ v3.0226
+[/img/zz.png]
+(26 Fev 2003)
+Versão nova com zzdicportugues.
+
+: txt2tags v1.4
+[/img/minioctus.jpg]
+(18 Fev 2003)
+Versão nova com alinhamento nas tabelas e CSS!
+
+: Cygwin? Mas hein?
+(14 Fev 2003)
+Criada uma seção nova para o Cygwin na página nerd. Ainda vou botar
+mais umas dicas lá, mas agora o mais importante é o link para
+[este arquivo /doc/cygwin-config.txt], que tem dicas de como "turbinar"
+o sistema.
+
+: txt2tags no FreeBSD
+[/img/minioctus.jpg]
+(12 Fev 2003)
+Massa! O txt2tags foi "portado" para o
+[FreeBSD http://www.freebsd.org/ports/textproc.html]!
+
+: Funções ZZ v3.0211
+[/img/zz.png]
+(11 Fev 2003)
+Versão nova, faxina geral.
+
+: A zzdata ficou show
+(07 Fev 2003)
+Eu gostaria de deixar registrada a minha satisfação em ter feito a
+zzdata, recém adicionada ao pacote das Funções ZZ. Inspirado por
+scripts do amigo Julio Cezar Neves (aquele, do livro de shell), essa
+função deu um trabalhão pra fazer, mas o resultado foi muito
+gratificante: toneladas de caracteres amontoados em 20 e poucas linhas
+num código enxuto porém não mantenível :)
+
+: Funções ZZ v3.0207
+[/img/zz.png]
+(07 Fev 2003)
+Versão nova com zzdata.
+
+: Funções ZZ v3.0124
+[/img/zz.png]
+(24 Jan 2003)
+Versão nova com zzletrademusica.
+
+: sedsed v0.7
+(21 Jan 2003)
+Versão nova que traz ajustes para funcionar direito no Windows.
+
+: Fotos do casório
+(14 Jan 2003)
+Finalmente, após dias de trabalho maçante de digitalizar, editar e
+organizar as fotos do casamento, terminei! O resultado é um álbum de
+fotos online com 23 fotos, que resumem a cerimônia.
+
+: Massa / Palha
+(08 Jan 2003)
+Novíssima seção [Massa / Palha /mim.html#massa-palha] na página MIM,
+que será constantemente atualizada com meus gostos e desgostos. 100%
+inútil, mas é divertido de escrever :D
+
+: Festas de fim de ano
+(07 Jan 2003)
+Ahhhhhh, como é bom viver de verdade por alguns dias... Passada rápida
+em Curitiba, Natal no interiorrrr (Barra do Turvo - SP), Ano Novo na
+praia (São Chico - SC). Nada de computadores, só sossego, surfe e
+alegria.
+
+O sossego só foi atrapalhado pela trilha sonora trash oficial do
+verão, repetida à exaustão por todos os lados:
+ - ``./~`` Dá beijinho nas meninas, DÁ DÁ DÁ ``./~``
+ - ``./~`` Quem gosta de rodeio bate forte com a mão ``./~``
+ - ``./~`` The roof, the roof, the roof is on fire! ``./~``
+
+
+
+
+== 2002 ==[2002]
+
+- **2002-12-20:** txt2tags:
+versão nova 1.3
+(versão faxina)
+
+- **2002-12-18:**
+AH! Pode ser que durante a folga minha cota de emails no Yahoo!
+Mail! estoure, então se o email que você mandou pra mim
+retornar, ou eu não responder até 10 de janeiro, mande de novo!
+
+- **2002-12-18:**
+**FOLGA!** Nesse fim de ano vou estar de folga do trampo do
+dia 21 de dezembro até 5 de janeiro. Nesse período não vou mexer
+em nada da página/livro/txt2tags/funçõeszz/*. Os e-mails também
+ficarão às moscas. Se você tem algo urgente pra me falar,
+corra! :)
+
+- **2002-12-10:**
+Código do livro de visitas atualizado, agora mostra o total de
+mensagens e a configuração foi facilitada.
+
+- **2002-12-06:**
+Funções ZZ: versão nova 2.1206 (zzascii!)
+
+- **2002-12-05:**
+Textos novos na [página MIM /mim.html], um falando
+sobre minha história como programador ("Aurelio & Linux
+& Programação") e outro contando toda a história de "Como o
+Aurelio Se Vendeu" e hoje usa **Windows2000+Cygwin**. Leia e
+torça o nariz dizendo: //"isso nunca vai acontecer comigo"//
+ou fique **INDIGNADA** e poste uma mensagem no livro de
+visitas.
+
+- **2002-12-03:**
+txt2tags: versão nova 1.2
+(agora com suporte a LaTeX!)
+
+- **2002-11-19:**
+sedsed: versão nova 0.6
+(agora para windão também)
+
+- **2002-11-13:**
+E aí, curtiu a versão nova da página? Odiou? Dê a sua opinião no
+novíssimo [Livro de Visitas /recados.php]!
+
+- **2002-11-13:**
+**"Forest Gump"** - Falando mais sobre as novidades da
+página, agora a página principal é bem pequeninha, só com as
+últimas notícias e links pra todos os cantos. E tem duas
+mega-páginas novas cheias de histórias sobre mim e sobre as
+nerdices que faço (links na tabelinha ao lado da minha foto).
+Histórias, histórias e histórias, a página do aurelio agora é
+uma página de histórias.
+
+- **2002-11-13:**
+A página do aurelio foi **completamente reescrita!** Motivado
+por um sentimento de repulsa a minha própria versão nova
+frustada da página, agora deixei a página ainda **mais simples**. E estava inspirado para escrever, então tem quilos
+de informações novas e mais detalhadas sobre tudo. Mesmo que
+você já tenha lido a página inteira no passado, agora vai ter
+que fazer tudo de novo que está diferente :D
+
+- **2002-11-08:**
+Argh! Ainda nem coloquei no ar a "versão gay" da página e já
+estou a odiando. Enjoei. É ridícula. É ridículo fazer páginas
+"bonitinhas". Ainda bem que voltei ao normal logo, que esta
+recaída sirva de lição!
+
+- **2002-11-07:**
+Funções ZZ: versão nova 2.1107
+
+- **2002-11-06:**
+txt2tags: versão nova 1.1
+
+- **2002-11-05:**
+Atenção: a página do aurelio vai ficar GAY. a falta de ter o que
+fazer enquanto a mulher assiste novela me fez "redesenhar" o
+"conceito" da página - que hoje se resume a não ter design nem
+conceito :D daqui uns dias boto no ar.
+
+- **2002-10-30:**
+Funções ZZ: versão nova 2.1030
+
+- **2002-10-29:**
+**CASA!** hoje fechamos contrato com a BlockHaus, uma empresa
+que faz casas de madeira bem legais. então daqui uns 6 meses, se
+tudo der certo, nos mudaremos de novo, dessa vez pra algo mais
+definitivo :D
+
+- **2002-10-27:**
+**MUDANÇA** de casa novamente. temporada está chegando e
+tivemos que sair do apartamento. agora estamos num sobrado,
+morando na parte de cima e a família dona da casa mora embaixo.
+cômodos espaçosos, massa.
+
+- **2002-10-22:**
+**COMPRAMOS UM TERRENO!** em canasvieiras, umas 4 quadras do mar.
+como as casas já prontas têm um preço ilusório aqui (uma
+verdadeira alucinação coletiva), a jeito foi comprar um terreno
+e fazermos nossa casinha que vai sair mais barato.
+
+- **2002-09-30:**
+fiz um programelho aqui no trabalho para simular uma urna
+eletrônica via web e fazermos uma "prévia" das eleições para
+presidente. é um script python que funciona como CGI. se alguém
+mais quiser usá-lo pra brincar ou fazer outras enquetes,
+[pegue-o aqui /bin/python/urna.py].
+
+- **2002-09-25:**
+txt2tags: versão nova 1.0
+(agora com interface gráfica joiada hehehe)
+
+- **2002-09-06:**
+colocada mais uma viagem na seção de [viagens /viagem/]! na verdade foi uma trilha de jipe
+feita em 2001, mas só agora tive tempo/saco de digitalizar as
+fotos...
+
+- **2002-08-27:**
+Funções ZZ: versão nova 2.0827
+
+- **2002-08-23:**
+txt2tags: versão nova 0.9
+
+- **2002-08-14:**
+retirado o FAQ verde e entra em cena agora o mini-FAQ verde com
+as quentinhas e fofocas dos últimos meses sobre a vida do
+aurelio (incrível como há desocupados que se interessam por
+isso...)
+
+- **2002-08-14:**
+as notícias de 2001 também foram movidas para a área de "Documentos
+Diversos".
+
+- **2002-08-14:**
+é isso. casamento, mudança e lua-de-mel feitos, é hora de
+voltar ao trabalho. a festa foi muito massa, a casa nova
+(alugada) é massa, viajamos pra laguna (SC) pra ver as
+baleias-francas e agora resta a deliciosa rotina do casal
+recém-casado :D
+
+- **2002-07-25:**
+contagem regressiva de dois dias pro casamento no religioso. NÃO
+esperem que eu responda e-mails ou que qualquer dos meus
+programinhas sofram atualizações nas próximas duas semanas. FUI!
+:D
+
+- **2002-07-03:**
+txt2tags: versão nova 0.8
+
+- **2002-07-01:**
+ei, faz quase um mês que a página do aurelio completou 3 anos de
+existência! HAJA SACO.
+
+- **2002-06-29:**
+tan tan tantan... o aurelio e a milene se casaram no cartório
+hoje. sensação estranha...    me sinto tão...
+PRESO! ;)
+
+- **2002-06-26:**
+casa de ferreiro... finalmente agora considero o txt2tags uma ferramenta madura
+e flexível, que abrange a maioria das necessidades de
+documentação simples (principalmente em HTML). assim sendo,
+estou migrando várias páginas minhas para o formato txt,
+deixando que o conversor faça o trabalho sujo de gerar o código
+HTML. algumas que já foram mudadas são: Funções ZZ e [expressões regulares /er/]. a do txt2regex
+já está pronta só esperando a próxima versão do programa e o
+objetivo é conseguir fazer esta página (do aurelio) também
+entrar no esquemão TXTzão, mantendo a mesma aparência.
+
+- **2002-06-24:**
+em homenagem ao dia 24, criada a seção nova "Amigos", para expor ao
+mundo estas criaturas nerds de petulância irritante ;)
+
+- **2002-06-22:**
+Funções ZZ: versão nova 2.0622
+
+- **2002-06-20:**
+txt2tags: versão nova 0.7
+
+- **2002-06-11:**
+Funções ZZ: versão nova 2.0611
+
+- **2002-06-05:**
+Funções ZZ: versão nova 2.0605
+
+- **2002-05-09:**
+grandes mudanças estruturais na página do aurelio.
+após 3 anos no ar acreditando no formato tudo-em-um, colocando
+todos os textos direto na primeira página, beneficiando as
+conexões lentas onde você podia carregar a página e ler os
+textos sossegado offline, resolvi mudar. a página já estava com
+200Kb (grande!) e demorava demais para atualizar/baixar. tiradas
+daqui as seções "Calendário", "Shows", "Textos" e as "Notícias"
+de 1999 e 2000. Elas foram movidas para o subdiretório "doc" (área
+"Documentos Diversos") de 200 esta página caiu para 50Kb. ufa!
+
+- **2002-05-08:**
+sedsed: versão nova 0.5
+
+- **2002-05-07:**
+aurelio**@floripa**: hoje é meu primeiro dia na ilha e também
+o primeiro dia no emprego novo.
+
+- **2002-04-24:**
+aurelio **FORA da conectiva**. hoje é o último dia de
+trabalho na empresa que me concedeu o primeiro emprego e nele
+permaneci por 4 anos e meio.
+
+- **2002-04-19:**
+Funções ZZ: versão nova 2.0419
+
+- **2002-04-10:**
+txt2tags: versão nova 0.6
+
+- **2002-03-27:**
+sedsed: versão nova 0.3
+
+- **2002-03-22:**
+txt2tags: versão nova 0.5
+
+- **2002-03-22:**
+hoje apareci no **slashdot.org** por causa do sokoban.sed. esse site
+é a central nerd de notícias e imagino que ter aparecido lá deva
+ser algo grande pela quantidade de acessos, e-mails e
+parabenizações que recebi. a notícia teve cerca de 150
+comentários. [dê uma olhada http://developers.slashdot.org/article.pl?sid=02/03/21/0217219].
+
+- **2002-03-18:**
+projetinho novo: sokoban.sed. isso mesmo! o jogo clássico
+sokoban escrito inteiro em sed!!! [veja lá! _SEDSOKOBAN_PATH]
+
+- **2002-03-18:**
+esse domingão teve show com o NO SNACKS num bar no
+bairro santa quitéria. tocaram outras 4 bandas também. ahhhhh, nada
+como uma suadeira num domingão ensolarado :)
+
+- **2002-03-15:** Funções ZZ:
+versão nova 2.0315
+
+- **2002-03-13:** Funções ZZ:
+versão nova 2.0313
+
+- **2002-03-11:** txt2tags:
+versão nova 0.4
+
+- **2002-03-07:**
+o contador e o aleatorizador-de-cores da página do aurelio que
+eram scripts bash executados como SSI do apache foram migrados
+para PHP e fonte de ambos está aqui, para qualquer um que queira
+utilizar! confira na seção de "Programas".
+
+- **2002-03-04:** txt2regex:
+versão nova 0.7
+
+- **2002-02-28:** Funções ZZ:
+versão nova 2.0228
+
+- **2002-02-27:** **?**
+página do DUMBS de volta ao ar!
+
+- **2002-02-22:** sedsed:
+versão nova 0.3
+
+- **2002-02-22:** Funções ZZ:
+versão nova 2.0222
+
+- **2002-02-21:** **?**
+seção nova "As Frases"
+
+- **2002-02-19:** Funções ZZ:
+versão nova 2.0219
+
+quer saber o que vai passar na TV hoje? zztv!!!
+
+- **2002-02-18:** **?**
+o único currículo que fiz na vida foi em 1997 pra entrar na
+conectiva. agora que o RH da mesma conectiva veio e me pediu uma
+cópia do meu currículo (??!?), lembrei que eu não tinha! então a
+seção "mim" acima acaba de ganhar um item ilustre:
+[Currículo /doc/cv-aurelio.html].
+
+- **2002-02-18:** Funções ZZ:
+versão nova 2.0218
+
+agora com o fantástico e exclusivo zz Casa dos Artistas!!!.
+acompanhe no modo texto toda a chinelagem de um dos melhores
+programas-lixo já inventados. o sílvio santos simplesmente
+**DESTRUIU** a globo.
+
+``mv bbb /dev/null``
+
+- **2002-02-15:** **voltei!!!**
+pilhas recarregadas. novidades: cortei o cabelo (tou
+com cara de piá) e fiz viagens pequenas com a namorada: são chico (SC),
+camboriú (SC), porto belo (SC), barra do turvo (SP). também estou
+cheio de idéias de mais lixo pra botar aqui na página, aguardem!
+
+- **2002-01-11:** **?**
+FÉRIAS!!!! fui.
+
+- **2002-01-07:** Funções ZZ:
+versão nova 2.0107
+
+- **2002-01-04:** **?**
+fiz um depurador (debugger) pra linguagem sed. ainda não tive tempo
+de fazer a documentação e um anúncio formal, mas já está funcionando
+e depura inclusive a lendária calculadora dc.sed!
+[tá aqui _SEDSED_URL].
+
+
+
+== 2001 ==[2001]
+
+- **2001-12-28:** Funções ZZ:
+atualizadas com zzwhoisbr e
+**zznoticiaslinux**, que consulta os saites revista do linux,
+olinux, ponto br, cipsga, linux in brazil e infoexame
+
+- **2001-12-11:** **?**
+super-mega-ultra atualização na [seção de fotos /foto/],
+confira!
+
+- **2001-12-11:** Funções ZZ:
+atualizadas com zzcores e
+**zzdetranSP** - atenção paulistas! me avisem em caso de problemas
+
+- **2001-12-10:** **?**
+pois é, após um mês sem atualização, aqui estamos novamente. entrei em
+outra banda, o NO SNACKS. eu já conhecia os caras, já
+fizemos shows juntos (com o _VALETA_LINK), o batera deles saiu e me
+convidaram pra substitui-lo. como o DUMBS e o _VALETA_LINK estão meio
+parados: bandas+=1; ah! depois de 3 ensaios já rolou até um show,
+massa (tá lá nas [resenhas /musica/shows.html])!
+
+- **2001-11-09:** txt2tags:
+versão nova 0.3
+
+- **2001-11-09:** [Coluna do Aurelio /doc/coluna/]:
+do mês de novembro no ar:
+lynx (navegação turbinada)
+
+- **2001-11-06:** **?**
+foto nova na página principal. tirada recentemente, quando eu ainda
+cursava o "Jardim de Infância Naviozinho", de onde fui expulso por
+divergências quanto a padronizações capilares.
+- **2001-10-15:** **?**
+feriadão, 12 de outubro, roubaram meu computador de casa. será este
+um sinal divino que eu devo abandonar de vez essa vida palha de nerd,
+dor nas costas, olhos ardendo e noites em claro?
+
+- **2001-10-04:** **?**
+uêba, a página do aurelio está definitivamente de endereço novo,
+buquemarqueie, buquemarqueie, buquemarqueie, buquemarqueie:
+**http://verde666.org**, este é definitivo.
+
+- **2001-10-01:** txt2tags:
+versão nova 0.2
+
+- **2001-09-26:** **?**
+começou o processo de mudança da página do aurelio para um outro
+servidor. alguns links estarão aqui, outros lá, ficará uma bagunça
+por alguns dias. o endereço novo será http://verde666.org
+buquemarqueie já pois o http://conectiva.com.br/~aurelio vai sumir!!!
+
+- **2001-09-05:** txt2regex:
+versão nova 0.6
+
+- **2001-08-28:** txt2regex:
+versão nova 0.5
+
+- **2001-08-27:** [Coluna do Aurelio /doc/coluna/]:
+do mês de julho no ar:
+caracteres de controle (não fuja, domine-os) - incrível, consegui
+fazer duas no mesmo mês. um dia vou conseguir alcançar o mês
+corrente...
+
+- **2001-08-13:** [Coluna do Aurelio /doc/coluna/]:
+do mês de junho no ar: mpage
+(impressão ágil em postscript)
+
+- **2001-08-09:** Funções ZZ:
+atualizadas! novidades: zzdicasl
+(pra pesquisar na lista Dicas-L) e zzirpf (pra pesquisar o lote da
+restituição do imposto de renda!)
+
+- **2001-08-07:** **?**
+bem, como esperado, a feira tava palha como e sempre. o livrinho
+estava lá nos estandes da temporeal e da linuxmall. o que valeu mesmo
+foi o almoço e o passeio de carro de 2 horas por são paulo que o
+rubens (dono da editora novatec), proporcionou (na faixa). o cara é
+muito gente boa.
+
+- **2001-08-02:** **?**
+FENASOFT - mais uma vez vai rolar a chinelagem de ir ver o último dia
+(sábado) da fenasoft em sp. então se você me deve alguma grana, me
+pague lá na feira sabadão :)
+
+- **2001-08-02:** txt2regex:
+versão nova 0.4
+
+- **2001-07-30:** **?**
+ [/img/capa_er.gif]
+ei, atenção mundo: **EU ESCREVI UM LIVRO!** é um guia sobre
+expressões regulares e foi lançado pela editora novatec. falando em
+lançamento, esse marco memorável da minha história será amanhã dia 31
+na fenasoft(sp), no "stand" da livraria tempo real, que venderá o guia.
+eu só vou dar um chego na feira sábado dia 4. vou levar um carimbo
+para os **trilhares** de autógrafos pois não sei escrever sem um
+teclado ;) mais informações [aqui _GUIAREGEX_URL].
+
+- **2001-07-26:** **?**
+filhote novo: txt2tags,
+um conversor genérico de texto para formatos como HTML, sgml,
+PageMaker, Magic Point e MoinMoin.
+
+- **2001-07-23:** Funções ZZ:
+atualizadas novamente com
+zzarrumanome e zzdiffpalavra e a utilíssima **zzramones**, que dá
+frases aleatórias (fortunes) das letras da banda.
+
+- **2001-07-18:** **?**
+FINALMENTE consegui colocar no ar as [fotos da viagem /viagem/atacama/] ao deserto do atacama de 2001. foi criado um álbum de
+fotos, das duas viagens num só, ficou massa.
+
+- **2001-07-16:** **?**
+novamente o yahoogroups mala mudou o formato da sua assinatura
+propaganda, então o [matador /sed/] foi atualizado.
+
+- **2001-07-13:** Funções ZZ:
+atualizadas, já que apareceu na
+RdL e vai chover acessos (e tava precisando mesmo).
+
+- **2001-07-02:** **?**
+esse sabadão rolou um trilha de jipe da sopa do pinhão, com quase 100
+Km feitos em 8 horas e quase 100 jipes no comboio, muito massa.
+fotos logo, na sessão viagem.
+
+- **2001-06-28:** [Coluna do Aurelio /doc/coluna/]:
+do mês de maio (é, maio...) no
+ar: vim (um vimrc diferente)
+
+- **2001-06-26:** txt2regex:
+versão nova 0.3.1
+
+- **2001-06-19:** **?**
+na seção viagem, fotos da subida do marumbi da última semana.
+
+- **2001-06-15:** **?**
+mais um showzinho do DUMBS em camboriu domingo que vem.
+
+- **2001-06-13:** **?**
+o txt2regex tem versão nova (0.3) e foi
+["sourceforgeado" _TXT2REGEX_URL]
+
+- **2001-06-06:** **?**
+dois anos de página do aurelio!!!!! e em comemoração ao aniversário,
+mm.m.m.mmmmmm, nada, porque eu não tenho tempo de ficar inventando
+mais bobagens...
+
+- **2001-06-05:** **?**
+pela primeira vez na vida achei uma utilidade pra lista de definições
+do HTML! a tag <dl> que agora domina a seção "Referências".
+massa.
+
+- **2001-05-29:** **?**
+atualizações diversas nas seções trabalho e hoje/amanhã
+
+- **2001-05-26:** **?**
+show do DUMBS!!! incrível, fantástico, extraordinário, renascido das
+trevas. foi em camboriú-SC.
+
+- **2001-05-10:** [Coluna do Aurelio /doc/coluna/]:
+do mês de abril no ar:
+screen (parte 2)
+
+- **2001-05-07:** **?**
+programinha novo: aass (Ascii Art Screen Saver). seção Programas.
+
+- **2001-04-30:** **?**
+ontem foi o primeiro show da _VALETA_LINK do ano! pra variar, seção Shows.
+
+- **2001-04-23:** **?**
+seção nova de links-lixo. confira!
+
+- **2001-04-12:** [Coluna do Aurelio /doc/coluna/]:
+do mês de março no ar:
+screen (parte 1)
+
+- **2001-04-12:** **?**
+atualizações dos arquivos de sintaxe do vim: spec.vim e txt666.vim.
+veja [lá _VIM_PATH]
+
+- **2001-03-14:** **?**
+de volta à vida nerd, a viagem foi tesão pra caralho e logo logo
+coloco aqui as fotos e histórias. o deserto detona mesmo.
+
+- **2001-02-23:** **?**
+último dia digital antes da viagem pro ATACAMA. só o que tenho a
+dizer é: se eu voltar, eu volto.
+
+- **2001-02-23:** **?**
+o txt2regex foi
+["freshmeatizado" http://freshmeat.net/projects/txt2regex]
+
+- **2001-02-23:** txt2regex:
+agora com i18n.
+
+- **2001-02-22:**
+[Coluna do Aurelio /doc/coluna/]:
+do mês de fevereiro no ar:
+arte ascii
+
+- **2001-02-21:** **?**
+seção [textos /doc/misc/meustextos.txt] atualizada com
+comentários sobre minha maneira de conduzir um veículo
+automotor.
+
+- **2001-02-16:** **?**
+[ATACAMA 2001 /viagem/atacama/] já engrenado, com data
+marcada de saída e lotação ocupada. agora é só esperar chegar o lixo
+do carnaval e sair fora.
+
+- **2001-02-06:** **?**
+criada a seção [Viagens /viagem/], pra registrar os
+passeios automobilísticos.
+
+- **2001-02-06:** **?**
+o egroups foi comprado pelo yahoo! e as listas mudaram. portanto, o
+matador da assinatura-propaganda foi atualizado, confira na seção [sed /sed/].
+
+- **2001-02-01:** **?**
+de volta à vida nerd, farol/itapirubá/imbituba ficam na lembrança.
+fotos? [claro! /viagem/farol-imbituba]
+
+- **2001-01-12:** **?**
+mini-férias. hoje é meu último dia de internet nas próximas 2 semanas.
+uma viagem solitária surfística (água e areia) para o litoral sul de
+santa catarina me aguarda. e que venham as morras.
+
+- **2001-01-04:** [Coluna do Aurelio /doc/coluna/]:
+do mês de janeiro no ar
+
+
+
+== 2000 ==[2000]
+
+- **2000-12-30:**
+Funções ZZ atualizadas
+
+- **2000-12-19:**
+o SCARECROW agora se chama _VALETA_LINK. a página também mudou de endereço,
+é claro: _VALETA_URL
+
+- **2000-12-04:**
+[sed-HOWTO v0.3 _SEDHOWTO_URL] - mega atualização no
+documento, confira!
+
+- **2000-12-02:**
+[Coluna do Aurelio /doc/coluna/] do mês de dezembro no ar
+
+- **2000-11-27:**
+[MP3 das músicas novas _VALETA_URL] da
+VALETA gravadas do ensaio
+
+- **2000-11-22:**
+fotos "explícitas" novas, além do melhor vídeo já feito: dedo.avi
+
+- **2000-11-20:**
+[ATACAMA2001 /viagem/atacama/] - a pira continua
+
+- **2000-11-08:**
+Funções ZZ atualizadas, na seção "Programas"
+
+- **2000-11-03:**
+era uma vez a coluna do aurelio na Revista do
+Linux &:(, e agora nasce uma seção nova aqui na página:
+[Coluna do Aurelio /doc/coluna/] (não, não é a foto das minhas
+costas) :)
+
+- **2000-11-02:**
+vamos colocar um nome em português para minha banda SCARECROW, se
+você quiser ajudar e sugerir algum, acesse a
+[página do SCARECROW _VALETA_URL] e
+veja os detalhes. se o nome que você sugeriu foi o escolhido, você
+ganha uma camiseta do DUMBS e outra do SCARECROW.
+
+- **2000-11-02:**
+primeiro programa em bash-2.x, é um projeto um pouco ambicioso, um
+assistente para se fazer expressões regulares em vários programas
+conhecidos. veja mais detalhes na seção [Programas /bin/].
+
+- **2000-10-23:**
+finalmente o SCARECROW (minha outra banda) ganhou uma pagininha na
+internet: http://scarecrow.verde666.org (mudou para valeta)
+
+- **2000-10-17:**
+seção nova [L.E.R. /doc/misc/dort.html], com informações, dicas e
+alongamentos para se evitar esta doença. especialmente útil para quem
+trabalha com informática.
+
+- **2000-10-03:**
+arquivo de sintaxe para .spec na parte do [vim _VIM_PATH]
+
+- **2000-09-16:**
+item novo "adesivo externo para carro" na seção "Faça-Você-Mesmo"
+
+- **2000-09-16:**
+finalmente colocadas as fotos da última sessão do [pé /foto/pe/].
+
+- **2000-09-16:**
+o [sed-HOWTO _SEDHOWTO_URL] foi divulgado na
+[dicas-l http://www.dicas-l.com.br/dicas-l/20000913.shtml],
+[Revista do Linux _X_RDL_URL/noticias/968855828/index_html]
+e [.BR http://www.pontobr.org/noticia.php3?nid=1216] -
+massa :)
+
+- **2000-09-12:**
+como hoje tem bastante novidades, tem uma que está ultra-atrasada. só
+pra constar, a página do aurelio completou um ano no dia 6 de junho.
+
+- **2000-09-12:**
+algumas pequenas mudanças estéticas na página que ninguém nota...
+
+- **2000-09-12:**
+o aurelio agora é colunista da [Revista do Linux _X_RDL_URL].
+agora todo mês tem uma página com as abobrinhas que falo sobre o
+linux no modo texto. a primeira a sair com a coluna é a número 8, de
+setembro/2000. compre, leia e mande seus xingamentos pra seção de
+cartas :)
+
+- **2000-09-12:**
+a seção "Estudos" foi trocada pela recém-criada "Programas", e
+novidades na seção "Hoje/Amanhã".
+
+- **2000-09-11:**
+feriadão de 7 de setembro rolou uma guarda do embaú (sc) com o
+pessoal do trampo. estrada, água gelada, andar na pedra, sandboard,
+sol, remar, churrasco, vento, festa, árvore, hematomas. massa pra
+caralho.
+
+- **2000-09-01:**
+colocada foto nova do cara com a cara lotada de piercings
+
+- **2000-08-21:**
+nessa segunda foi a festa de 5 anos da conectiva no café curaçao.
+levamos uns instrumentos lá e os funcionários improvisaram uma banda
+na hora. tocamos de tudo, roupa nova, lobão, xuxa, titãs, paralamas,
+blues, kib abelha e por aí vai... ah! eu toquei bateria :)
+
+- **2000-08-26:**
+mudança de leiaute e inclusão do sed-HOWTO e txt2sgml.sed na
+[página de sed /sed/]
+
+- **2000-08-22:**
+artigo novo publicado na Revista do Linux disponível na seção
+[Artigos Publicados /doc/nerd.html]
+
+- **2000-08-18:**
+mais um showzinho do SCARECROW neste sábado
+
+- **2000-08-14:**
+FINALMENTE sentei para escrever todas as histórias da viagem ao
+deserto do atacama (que eu lembrei). e também digitalizei mais umas
+25 fotos onde no meio dos textos tem os links. também coloquei as
+granas que gastamos com tudo. [veja lá /viagem/atacama/],
+ficou massa.
+
+- **2000-08-14:**
+coloquei [aqui /doc/guerra-editores.html] a análise e
+resultado de uma pesquisa antropológica (nem tanto) que fiz pra
+faculdade, sobre a guerra entre usuários de vi e emacs.
+
+- **2000-08-14:**
+texto novo (curto) sobre religião na
+[seção de Textos /doc/misc/meustextos.txt]
+- **2000-08-14:**
+criada seção nova: [Os Documentos /doc/]
+
+- **2000-08-09:**
+criada a [seção Besteiras /doc/misc/besteiras/], com as melhores piadinhas
+idiotas que circulam na internet
+
+- **2000-08-02:**
+showzinho do SCARECROW nesta sexta
+
+- **2000-07-28:**
+fenasoft. hoje à meia-noite sai o buso e vamos lá pra sumpaulo
+visitar a feira, passar o sábado lá marcando e voltar de noite.
+programa de índio. se você ver um mané alto, magro e de cabelo verde
+perto do estande da conectiva, dê 10zão pra ele :)
+
+- **2000-07-28:**
+foto nova, do cara que explodiu o charuto na cara
+
+- **2000-07-26:**
+ah! só pra constar, hoje de manhã fiz minha primera música inteira,
+com letra e melodia. estou aprendendo a tocar baixo, então foi um
+marco na minha história :) vou mostrar pros malas do DUMBS amanhã no
+ensaio (ah é! esqueci de avisar, voltamos a ensaiar) quem sabe não
+vira uma música de verdade? ah! a letra fala sobre o meu amor por uma
+caneta &:I
+
+- **2000-07-26:**
+programinhas novos na página de [sed /sed/]
+
+- **2000-07-20:**
+essa notícia é velha, mas eu tinha esquecido de colocar aqui
+&:|
+desde o dia 14 de junho de 2000, os relatos de shows escritos aqui
+na página também estão sendo colocados na seção "underground" de um
+sítio muito bacana de informações sobre bandas paranaenses, o
+[arromba curitiba http://www.arrombacuritiba.com.br], que
+é feito pelo roberto janiszewski, vocalista da CHATEAU LUNAR. dê uma
+chegada lá.
+
+- **2000-07-15:**
+notícia MUITO triste. neste sábado, cerca de 21:00 horas morreu
+o amigo e colega de trabalho diego gonzález lopes &:(((
+foi
+um acidente de carro em ibirama-SC. outro amigo e colega de
+equipe de trabalho carlos estevan milek que estava junto foi
+levado com ferimentos para o hospital mas foi liberado após
+exames. foi-se um grande amigo, de quem eu tinha contato
+constante e que era merecedor de elogios. que fiquem as
+lembranças boas de trabalho, saídas à noite e viagens à praia.
+valeu gonzález.
+
+- **2000-07-11:**
+um marco na história da internet, hoje nasceu o sítio
+**""http://www.verde666.org""** para centralizar todos os lixos
+que o aurelio pode disponibilizar pra você. atenção, aqui começa
+a dominação mundial.
+
+- **2000-07-11:**
+finalmente dei um trato na [página do vim _VIM_PATH] e foi
+atualizada a seção "Hoje/Amanhã" também.
+
+- **2000-07-11:**
+ah! só pra constar. das 5 matérias que eu comecei a cursar neste
+1º período de faculdade, economia eu tranquei pois já fiz em
+outro curso, história foi cancelada pois a professora matou
+muita aula, antropologia passei direto, sociologia passei só na
+final e política reprovei na final, mas fiz um trabalho sobre a
+matéria e fui aprovado. êta periodozinho conturbado...
+
+- **2000-07-09:**
+2º ensaio do DUMBS no ano de 2000! aleluia! parece que vamos voltar a
+ativa nestas férias. já era hora mesmo...
+
+- **2000-07-07:**
+show de última hora do SCARECROW no domingo
+
+- **2000-07-06:**
+fotos novas, dos caras que gostam de furar as bochechas
+
+- **2000-07-03:**
+sábado ocioso, fiz um documento sobre o
+[labirinto do jogo adventure /doc/misc/adventure-mapa.txt]
+
+- **2000-06-27:**
+coloquei mais umas coisinhas na [página do sed /sed/]
+
+- **2000-06-14:**
+mais um showzinho do SCARECROW nesse sábado! vai ser massa tocar
+com os amigos, alexandre, felipe, preto, nilo, bráulio,
+quinho...
+
+- **2000-06-08:**
+incrível. o contador dessa página chegou no 1000. tem gente que
+não tem o que fazer mesmo... :)
+
+- **2000-06-01:**
+comentários dos [shows /musica/shows.html] de maio: RATOS, AÇÃO
+DIRETA e G.B.H.
+
+- **2000-06-01:**
+finalmente vai rolar o primeiro show do ano!!! vai ser este domingo,
+um "toque 5" no 92°, com o SCARECROW e mais 4 bandas
+
+- **2000-05-18:**
+criada uma seção nova [Faça-Você-Mesmo /fvm/], com a
+descrição detalhada de vários procedimentos de criação artesanais
+
+- **2000-05-17:**
+criada uma seção nova [Artigos Publicados /doc/nerd.html], com os
+artigos que escrevi pra Revista do Linux
+
+- **2000-05-03:**
+colocados mapas do roteiro da viagem ao atacama
+
+- **2000-05-02:**
+coloquei aqui uma biblioteca bash/dialog para facilitar a criação de
+roteiros, [veja lá /bin/bash/lib/]
+
+- **2000-04-27:**
+atualizadas as seções "Diversão", "Meu Trabalho" e "Minhas Obras"
+
+- **2000-04-27:**
+atualizada a seção futuro, que agora se chama "Hoje/Amanhã", visto
+que ali têm coisas atuais e futuras.
+
+- **2000-04-25:**
+[A T A C A M A   2 0 0 0 ! /viagem/atacama/] finalmente
+arranjei um tempo pra fazer a página da viagem. ainda tem muita coisa
+pra por, mas já dá pra ver umas fotos.
+
+- **2000-04-19:**
+uma foto nova (chutenosaco.jpg) na seção de fotos.
+não, ainda não tive tempo de fazer a maldita página da viagem...
+&:(
+
+- **2000-04-10:**
+de volta. pouco mais de um mês após, voltei ao mundo digital.
+férias arregadas. viagem massa. 9.000 km, 25 dias, 4 países, roteiro
+proposto cumprido. mais além eu vou colocar mais detalhes da viagem
+aqui, fotos, etc.
+
+- **2000-03-02:**
+amanhã é meu último dia de trabalho/internet/televisão/computador
+antes das férias de 1 mês que vou tirar, e se tudo der certo, agora
+neste domingo de ecacarnaval dia 5, vamos (eu, um colega de trabalho
+e outras 3 amigas) iniciar a tão sonhada viagem ao deserto do ATACAMA,
+no chile. o roteiro, que faremos na
+[toyota /img/blog-arquivo/toyota.jpg], sai de curitiba e passa por
+corrientes, salta, atacama, santiago, buenos aires, montevideo, chuí
+e litoral sul do Brasil, num total de aproximadamente 25 dias de
+viagem. massa!
+
+- **2000-03-02:**
+atualização da seção Futuro e da Fotos, agora com comentários.
+
+- **2000-02-25:**
+começaram as aulas da faculdade então mudou tudo. agora de manhã
+tenho aula e de tarde e de noite, trabalho.
+
+- **2000-02-17:**
+atualização da seção Futuro. tirada foto do cara de cabeça
+enterrada, palha.
+
+- **2000-02-15:**
+ah! me formei na [faculdade http://www.spet.br],
+como tecnólogo em processamento de dados. não que ter um diploma
+fosse o sonho da minha vida ou meu emprego dependesse disso, mas
+pelo menos a mãe fica feliz :)
+
+- **2000-02-14:**
+fotos novas. cara da cabeça enterrada e bicho morto pintado na
+estrada.
+
+- **2000-02-01:**
+me mudei. após 10 anos morando em prédio, finalmente voltei a
+morar numa casa. o endereço mudou, o telefone mudou. qualquer
+coisa entra em contato via correio eletrônico.
+
+- **2000-01-11:**
+putz! acabei passando no vestibular... &:I pra
+[ciências sociais http://www.cccv.ufpr.br], ficar lá
+viajando... mais uma vez provado que cursinhos são palha. a tática
+ninja de ir de cabeça fria e chutar com confiança detona! :)
+
+- **2000-01-03:**
+essa notícia é velha, mas só agora lembrei de pôr: finalmente
+tive saco/tempo de colocar no ar as fotos da terceira sessão de
+tatuagem no pé, que foi a 1ª sessão de pintura. e mais uma vez,
+lembrando a morte do amigo pica-pau, que ainda está
+não-solucionada &:(
+
+
+
+== 1999 ==[1999]
+
+- **1999-12-21:**
+hoje fiz a última prova do vestibular da UFPR (sim, de novo...)
+fiz para ciências sociais, para desvirtuar um pouco a cabeça
+desse lance de tecnologias (4 anos de eletrônica no cefet, 4
+anos de informática na faculdade, 2 anos de trabalho em
+informática). totalmente porra-loca, estudei 3 horas cada
+matéria um dia antes da prova, se passar é lucro :)
+
+- **1999-12-17:**
+criada uma seção nova Linux. algumas informações da seção "Meu
+Trabalho" foram migradas para esta seção nova, que tem sub-áreas como
+sed e vi.
+
+- **1999-12-17:**
+showzinho do DUMBS hoje. bem poser, com 3 guitarras :)
+
+- **1999-12-14:**
+notícia triste: ontem o pica-pau, tatuador mais camarada de
+curitiba foi assassinado em seu atelier &:(
+
+- **1999-12-13:**
+fim de semana de shows furados. veja nos relatos &:(
+
+- **1999-12-09:**
+nesse final de semana tem 4 shows pra fazer! dobradinha
+DUMBS+SCARECROW na sexta e no domingo. vai ser foda :)
+
+- **1999-12-07:**
+[T O Y O T A ! /img/blog-arquivo/toyota.jpg]
+finalmente achei a caminhonete que sonhava há alguns meses... azul,
+89. o niva foi como parte de pagamento, então agora o DUMBmóvel já
+está na sua 3ª geração :)
+
+- **1999-12-07:**
+criei uma lista brasileira de discussão sobre vi. para se inscrever,
+veja instruções [aqui _VIM_PATH].
+
+- **1999-11-30:**
+fim de semana massa com shows com as 2 bandas, sábado DUMBS no
+dce e domingo SCARECROW no beatnick
+
+- **1999-11-29:**
+hoje foi o último dia de aula mala do último período mala na
+faculdade mala. ainda tenho que acabar o trabalho de graduação
+em dezembro aí, mas depois disso vai rolar mais tempo pra se
+dedicar à DDD e às bandas, então, novidades estão a caminho!
+
+- **1999-11-26:**
+colocado um contador mala na página
+
+- **1999-11-25:**
+novidades na seção Trabalho, com .fvwmrc e subseções novas de
+expressões regulares e sed (este com um
+[curso em Real Audio /sed/])
+
+- **1999-11-19:**
+festival de bandas nesse domingão, com o DUMBS tocando também!
+
+- **1999-10-18:**
+comprei um tocador/gravador de MD. isso refletirá em várias mudanças:
+qualidade das fitas matrizes da DDD, disponibilização de cursos em
+mp3 (em breve!), gravação das próximas demos das minhas bandas de
+maneira totalmente caseira, sem precisar enriquecer estúdios de
+gravação e também poderei começar um coleção de MDs, mais baratos e
+eficientes que CDs :)
+
+- **1999-10-18:**
+deu merda no show de sexta... detalhes na seção Shows
+
+- **1999-10-14:**
+dois shows com o DUMBS nesse final de semana! veja na seção Calendário
+
+- **1999-10-13:**
+F I N A L M E N T E atualizada a página do DUMBS!
+
+- **1999-10-08:**
+ontem foi mais 1 hora e meia de trabalho no pé e FINALMENTE acabou!
+tão logo cicatrize e eu arranje o diabo da câmera fotográfica
+digital, eu colocarei as fotos aqui
+
+- **1999-10-07:**
+hoje é o dia da última sessão no pé. ah! também faço 22 anos hoje...
+
+- **1999-10-04:**
+referência nova: Fotos
+
+- **1999-10-04:**
+estou colocando no ar quase que diariamente a "versão beta" da página
+nova do DUMBS, espero acabá-la essa semana ainda...
+
+- **1999-09-28:**
+showzinho sabadão a tarde com o SCARECROW e com o DUMBS!
+
+- **1999-09-18:**
+finalmente estou trabalhando na atualização da página do DUMBS. ela
+já completou 1 ano sem atualização! (uma vergonha) :) talvez em uma
+semana ou duas esteja pronta
+
+- **1999-09-14:**
+atualização grande na página. novidades nas seções Shows, Textos e
+Futuro
+
+- **1999-09-10:**
+fim de semana de shows, uêba!
+
+- **1999-09-09:**
+feriadão arregado, viagem para SC. surfe e sandboard. animal
+
+- **1999-08-30:**
+a miniturnê no paraná que ia rolar com o MILHOUSE no 7 de setembro
+melou, infelizmente. mas no fim de semana seguinte irá rolar dia 10
+SCARECROW e dia 11 DUMBS!
+
+- **1999-08-29:**
+a "nissin miojo corporation"® decidiu montar um TOY DOLLS cover.
+hoje foi o 1º ensaio. aguarde novidades
+
+- **1999-08-28:**
+hoje tem show com o SCARECROW
+
+- **1999-08-26:**
+criei uma lista brasileira de discussão sobre sed. para se inscrever,
+veja instruções [aqui /sed/].
+
+- **1999-08-15:**
+aê! finalmente o DUMBS voltou à ativa!! confira o relato do show
+desse sábado na seção Shows
+
+- **1999-08-08:**
+putz, pela segunda vez não rolou o show. domingão, frio pra caralho,
+tinham marcado com as bandas às 18:00 no bar e foi combinado do show
+começar cedo (pois era domingo). chegamos lá no horário. os caras do
+bar chegaram às 20:00. os caras das bandas chegaram 21:00. era 21:30
+e a bateria ainda nem tinha chegado. como temos que trabalhar na
+segunda e já estávamos feio otários lá no frio há quase 4 horas
+saímos fora. nem sei se a batera chegou e o show rolou...
+
+- **1999-08-06:**
+confirmado hoje o 1º show do DUMBS depois de um jejum de mais de um
+ano e meio. será dia 14, no café beatnick reformado (ficou muito
+massa), abrindo para o ACABOU LA TEQUILA
+
+- **1999-08-03:**
+rolou hoje a 4ª sessão de pintura no pé. das 15:00 à 18:30 (ufa!)
+ainda ficou faltando acabar as pontas, mas depois de 3 horas e ½
+direto picando o pé não rolou, fica pra próxima sessão...
+
+- **1999-07-31:**
+nem teve o show ontem &:( os malas adiaram e não nos avisaram. ficou
+para o domingo próximo dia 8
+
+- **1999-07-30:**
+hoje tem show com o SCARECROW
+
+- **1999-07-28:**
+a página da DDD foi atualizada
+
+- **1999-07-15:**
+referência nova: Textos
+
+- **1999-07-12:**
+nesse domingão dia 11 finalmente o niva sujou os pés de lama! um
+pouco depois do detran, tem uma pista "particular" exclusiva para
+jipes, com poças, rampas e muita lama. e como sábado à noite deu uma
+chovidinha legal, foi diversão garantida, com 2 carros, o niva e a
+toyota do meu tio roberval. infelizmente, não tem fotos &:(
+
+- **1999-06-25:**
+txt2sgml: roteiro em bash apenas usando sed para transformar arquivos
+texto em arquivos sgml (tendo o sgml, transforme-o para vários outros
+formatos com o sgmltools).
+
+- **1999-06-24:**
+ai... o pé dói... ontem foi foda. 2h30 pintando o pé, enquanto
+passava "independence day" na tv. deu pra ver o filme inteiro
+:)
+
+- **1999-06-23:**
+ôba2! hoje é dia de pintar o pé!! a 3ª sessão vai rolar hoje, então
+logo logo terá mais fotos
+
+- **1999-06-23:**
+ôba! mais um showzinho nesse final de semana! sabadão dia 26, veja
+abaixo no Calendário e relato em Shows.
+
+- **1999-06-12:**
+referência nova: Calendário
+
+referência nova: Jaguaras
+
+- **1999-06-11:**
+[protesto anti-tecnoescravatura /foto/tosco/tecnoescravo.jpg]
+materiais: estilete e pele. aguarde texto explicativo.
+
+- **1999-06-11:**
+colocada foto da camiseta na seção "Meu Trabalho"
+
+- **1999-06-10:**
+referência nova: Estudos
+
+- **1999-06-10:**
+o aurelio saiu numa revista de circulação nacional! veja revista
+InfoExame, ano 14, nº159, junho/1999, página 119, última coluna, 1º
+parágrafo. é uma reportagem sobre como se vestir/portar num emprego.
+ali comenta-se de um programador de cabelos verdes que entrou na
+conectiva... :) veja a
+[página digitalizada /foto/tosco/infovexame.jpg].
+
+- **1999-06-05:**
+está para sair, em alguns dias, mais uma atualização da página da DDD,
+com três bandas novas! são elas: IMORTAL, IMPATRIÓTICOS e LONG WAY.
+
+- **1999-06-03:**
+o próximo show está marcado agora para este domingo, dia 06jun99, com
+[SCARECROW _VALETA_URL],
+EX-CAMA e NO CROWD. mais um show do festival local independente
+Pé Sujo II.
