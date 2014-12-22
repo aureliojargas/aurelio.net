@@ -25,8 +25,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 Para ver os artigos do site (e não do blog), use o menu acima.
 
 
-## 2014 (11)
+## 2014 (12)
 
+  * [Expressões regulares em bancos de dados SQL](http://aurelio.net/blog/2014/12/21/regex-sql/)
   * [Campo sem validação == Caos](http://aurelio.net/blog/2014/11/22/campo-sem-validacao/)
   * [Funcionário Público](http://aurelio.net/blog/2014/11/08/funcionario-publico/)
   * [Mudei do iOS pro Android e estou feliz](http://aurelio.net/blog/2014/10/15/ios-android/)
