@@ -1,0 +1,12 @@
+Em 2015-01-20 usei a ferramenta do Google para adicionar atributos
+relacionados a meta dados do artigo: autor, data de publicação, essas
+coisas.
+
+https://www.google.com/webmasters/markup-helper/tagger?sourceId=4906613&hl=pt_BR
+
+Porém, isso foi aplicado pra TODAS as páginas geradas, quando deveria ser
+somente pros artigos.
+
+Tem que fazer mais uns condicionais e aplicar somente onde relevante.
+
+Estas tags audam a indexação do Google a encontrar meta dados.

@@ -77,16 +77,16 @@
 
 
 
-<div id="content" class="bar">
+<div id="content" class="bar" itemscope itemtype="http://schema.org/Article">
 	<div class="wrapper">
 
 		<div id="article-header">
-			<h1><a href="{{ site.url }}{{ page.url }}" title="Permalink" rel="bookmark">{{ page.title | escape }}</a></h1>
+			<h1><a href="{{ site.url }}{{ page.url }}" title="Permalink" rel="bookmark" itemprop="name">{{ page.title | escape }}</a></h1>
 
 			{% include page-byline.html %}
 		</div><!--#article-header-->
 
-		<div id="article-body">
+		<div id="article-body" itemprop="articleBody">
 			{% include ad-300x250-blog1.html %}
 			{{ content | imgcaption }}
 		</div><!--article-body-->
