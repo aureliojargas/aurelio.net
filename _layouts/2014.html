@@ -3,14 +3,6 @@
 <head>
 {% include head-base.html %}
 
-{% css_asset_tag global %}
-- /assets/reset.css
-- /assets/bars2.css
-- /assets/2014.css
-- /assets/monokai.css
-{% endcss_asset_tag %}
-	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed RSS" href="http://aurelio.net/feed/" />
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed RSS de comentários" href="http://aurelio.net/comments/feed/" />
 
@@ -200,6 +192,15 @@
 		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
 	</div>
 </div><!--#footer-->
+
+<!-- CSS files down here to make https://developers.google.com/speed/pagespeed/insights/ happy -->
+{% css_asset_tag global %}
+- /assets/reset.css
+- /assets/bars2.css
+- /assets/2014.css
+- /assets/monokai.css
+{% endcss_asset_tag %}
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 </body>
 </html>
