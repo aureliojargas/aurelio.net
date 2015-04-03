@@ -24,8 +24,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 
 Para ver os artigos do site (e não do blog), use o menu acima.
 
-## 2015 (2)
+## 2015 (3)
 
+  * [Resposta rápida do desenvolvedor](http://aurelio.net/blog/2015/04/03/resposta-rapida-dev/)
   * [Os melhores podcasts que escuto hoje (edição 2015)](http://aurelio.net/blog/2015/03/17/top-podcasts-2015/)
   * [O robô da NET me atendeu muito bem](http://aurelio.net/blog/2015/01/21/robo-da-net/)
 
