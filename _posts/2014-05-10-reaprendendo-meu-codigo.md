@@ -1,5 +1,4 @@
 ---
-slug: reaprendendo-meu-codigo
 title: Reaprendendo meu próprio código
 wp_categories:
 - meu-querido-diario

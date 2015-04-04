@@ -1,6 +1,5 @@
 ---
 date: 2011-04-06
-slug: plugins
 permalink: wordpress/plugins/
 title: 'WordPress: Plugins que uso e recomendo'
 wordpress_id: 2724

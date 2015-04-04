@@ -1,5 +1,4 @@
 ---
-slug: contato
 title: Contato
 wordpress_id: 217
 hide_prev_next: true

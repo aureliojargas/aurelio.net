@@ -1,7 +1,6 @@
 ---
 date: 2005-02-09
 layout: 2013-page-ads
-slug: matinhos-2005
 permalink: viagem/matinhos-2005/
 title: Férias e Surfe em Matinhos - PR
 wordpress_id: 3735

@@ -1,7 +1,6 @@
 ---
 date: 2006-09-13
 layout: 2013-page-ads
-slug: farol-de-santa-marta
 permalink: viagem/farol-de-santa-marta/
 title: Farol de Santa Marta - SC
 wordpress_id: 126

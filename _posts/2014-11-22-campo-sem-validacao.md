@@ -1,5 +1,4 @@
 ---
-slug: campo-sem-validacao
 title: "Campo sem validação == Caos"
 tags: [programador]
 hide_ads: true

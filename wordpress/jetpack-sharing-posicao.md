@@ -1,6 +1,5 @@
 ---
 date: 2012-04-12
-slug: jetpack-sharing-posicao
 permalink: wordpress/jetpack-sharing-posicao/
 title: 'WordPress: Jetpack: Mudar a posição dos botões de compartilhamento (sharing)'
 wordpress_id: 3667

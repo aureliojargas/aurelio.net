@@ -2,7 +2,6 @@
 author: aurelio+mog
 date: 2007-11-01
 layout: 2013-page-ads
-slug: caxambu
 permalink: viagem/caxambu/
 title: Caxambu - MG
 wordpress_id: 3759

@@ -1,7 +1,6 @@
 ---
 date: 2001-06-30
 layout: 2013-page-ads
-slug: trilha-do-pinhao
 permalink: viagem/trilha-do-pinhao/
 title: Trilha do Pinhão - PR (Jipe 4×4)
 wordpress_id: 3714

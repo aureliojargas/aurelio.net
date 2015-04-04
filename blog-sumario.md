@@ -1,5 +1,4 @@
 ---
-slug: sumario
 title: Sumário
 wordpress_id: 1877
 hide_prev_next: true

@@ -1,7 +1,6 @@
 ---
 date: 2012-04-29
 layout: 2013-page-ads
-slug: balneario-camboriu
 title: Balneário Camboriú - SC
 wordpress_id: 3778
 title_prefix: 'EU FUI: '

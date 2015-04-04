@@ -2,7 +2,6 @@
 author: aurelio+mog
 date: 2007-11-01
 layout: 2013-page-ads
-slug: mariana
 permalink: viagem/mariana/
 title: Mariana - MG
 wordpress_id: 3748

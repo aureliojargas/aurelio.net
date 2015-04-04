@@ -1,7 +1,6 @@
 ---
 date: 2012-08-17
 wordpress_id: 4152
-slug: notebook-suporte-pvc
 permalink: artigos/notebook-suporte-pvc/
 title: Suporte para notebook 13" feito com cano de PVC
 hide_tags: true

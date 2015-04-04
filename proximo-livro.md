@@ -1,6 +1,5 @@
 ---
 date: 2008-11-04
-slug: proximo-livro
 title: Próximo Livro
 wordpress_id: 619
 hide_byline: true

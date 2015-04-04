@@ -2,7 +2,6 @@
 date: 2011-08-25
 layout: 2013-page-ads
 hide_comments: true
-slug: trem-eurostar
 title: Trem Eurostar - Central de informações em português
 wordpress_id: 3052
 ---

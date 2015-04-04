@@ -1,5 +1,4 @@
 ---
-slug: funcionario-publico
 title: Funcionário Público
 tags: [meu-querido-diario]
 hide_ads: true

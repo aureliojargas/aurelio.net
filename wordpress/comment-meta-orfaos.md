@@ -1,6 +1,5 @@
 ---
 date: 2012-05-16
-slug: comment-meta-orfaos
 permalink: wordpress/comment-meta-orfaos/
 title: 'WordPress: Remover dados órfãos da tabela wp_commentmeta'
 wordpress_id: 4057

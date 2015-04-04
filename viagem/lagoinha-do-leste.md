@@ -1,7 +1,6 @@
 ---
 date: 2007-01-01
 layout: 2013-page-ads
-slug: lagoinha-do-leste
 permalink: viagem/lagoinha-do-leste/
 title: Lagoinha do Leste - Floripa - SC
 wordpress_id: 3706

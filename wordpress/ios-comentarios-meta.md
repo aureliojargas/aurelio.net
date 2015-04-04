@@ -1,6 +1,5 @@
 ---
 date: 2012-07-10
-slug: ios-comentarios-meta
 permalink: wordpress/ios-comentarios-meta/
 title: 'WordPress para iOS: Mostrar campos adicionais (meta) nos comentários'
 wordpress_id: 4110

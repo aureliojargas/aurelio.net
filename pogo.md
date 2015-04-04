@@ -1,6 +1,5 @@
 ---
 date: 2005-01-15
-slug: pogo
 title: Roda de Pogo – A Dança Punk
 wordpress_id: 2392
 hide_tags: true

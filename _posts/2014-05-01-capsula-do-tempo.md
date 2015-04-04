@@ -1,5 +1,4 @@
 ---
-slug: capsula-do-tempo
 title: "Cápsula do tempo: o Aurelio de 2004"
 wp_categories:
 - meu-querido-diario

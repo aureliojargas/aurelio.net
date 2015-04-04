@@ -1,6 +1,5 @@
 ---
 date: 2012-05-16
-slug: revisoes-remover-desativar
 permalink: wordpress/revisoes-remover-desativar/
 title: 'WordPress: Remover e desativar revisões de posts'
 wordpress_id: 4067

@@ -1,7 +1,6 @@
 ---
 date: 2012-04-29
 layout: 2013-page-ads
-slug: bondindinho
 permalink: viagem/balneario-camboriu/bondindinho/
 title: Bondindinho - Balneário Camboriú - SC
 wordpress_id: 3782

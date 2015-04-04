@@ -1,5 +1,4 @@
 ---
-slug: mobile-first
 title: Refiz o site usando mobile first
 tags: [site]
 hide_ads: true

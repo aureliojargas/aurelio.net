@@ -1,7 +1,6 @@
 ---
 date: 2004-11-14
 layout: 2013-page-ads
-slug: matinhos-bike-2004
 permalink: viagem/matinhos-bike-2004/
 title: De Curitiba até Matinhos de Bicicleta (120 Km pedalando)
 wordpress_id: 3742

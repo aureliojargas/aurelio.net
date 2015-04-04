@@ -2,7 +2,6 @@
 author: aurelio+mog
 date: 2007-11-01
 layout: 2013-page-ads
-slug: ouro-preto
 permalink: viagem/ouro-preto/
 title: Ouro Preto - MG
 wordpress_id: 3766

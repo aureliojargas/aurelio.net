@@ -1,7 +1,6 @@
 ---
 date: 2011-08-25
 layout: 2013-page-ads
-slug: guia-ilustrado-para-pesquisar-precos-de-passagens
 permalink: trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/
 title: 'Trem Eurostar: Guia ilustrado para pesquisar preços de passagens'
 wordpress_id: 3068

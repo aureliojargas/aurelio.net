@@ -1,5 +1,4 @@
 ---
-slug: sobre
 title: Sobre
 wordpress_id: 221
 hide_prev_next: true
