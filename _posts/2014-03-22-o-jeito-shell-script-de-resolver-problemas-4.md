@@ -4,7 +4,6 @@ wp_categories:
 - nerd
 - screencast
 tags: [screencast]
-hide_ads: true
 ---
 
 

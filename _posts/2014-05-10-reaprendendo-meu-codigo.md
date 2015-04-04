@@ -3,7 +3,6 @@ title: Reaprendendo meu próprio código
 wp_categories:
 - meu-querido-diario
 tags: [meu-querido-diario, programador]
-hide_ads: true
 worked: 3:40
 ---
 

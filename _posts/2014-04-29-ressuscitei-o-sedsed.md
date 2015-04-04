@@ -3,7 +3,6 @@ title: Ressuscitei o sedsed
 wp_categories:
 - software
 tags: [app, programador]
-hide_ads: true
 worked: 2:15
 ---
 
