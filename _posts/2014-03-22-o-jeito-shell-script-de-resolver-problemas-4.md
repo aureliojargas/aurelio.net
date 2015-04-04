@@ -44,7 +44,7 @@ Resumo dos comandos:
 
 Histórico resumido:
 
-```
+```bash
 cat cidades.csv | tr -d \" | tr , '\t' > cidades.txt
 cat cidades.txt | cut -f 2 | zzarrumacidade > cidades-ok.txt
 paste cidades.txt cidades-ok.txt | cut -f 1,3 | sed 's/\(.*\)	\(.*\)/UPDATE wp_commentmeta SET meta_value = "\2" 	WHERE meta_id = \1;/' | expand -t 15
@@ -52,7 +52,7 @@ paste cidades.txt cidades-ok.txt | cut -f 1,3 | sed 's/\(.*\)	\(.*\)/UPDATE wp_c
 
 Histórico completo:
 
-```
+```bash
 zzarrumacidade -h
 zzarrumacidade floriPA
 zzarrumacidade sao PAUlo
