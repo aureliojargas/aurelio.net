@@ -2,7 +2,6 @@
 date: 2011-04-07
 permalink: wordpress/site-estatico/
 title: Site estático e WordPress juntos na raiz do domínio
-wordpress_id: 2754
 ---
 
 Estou num esforço contínuo para integrar meu site (estático) e meu blog (WordPress) em uma coisa só. **A ideia é que ambos funcionem ao mesmo tempo, na raiz do domínio**. Este texto detalha minhas experiências nessa brincadeira.

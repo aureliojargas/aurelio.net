@@ -2,7 +2,6 @@
 date: 2011-12-03
 permalink: wordpress/twentyten/remover-sidebar/
 title: 'Wordpress: Remover a barra lateral (sidebar) no tema Twenty Ten'
-wordpress_id: 3426
 ---
 
 Em um blog com o tema Twenty Ten, eu precisei remover a barra lateral (sidebar) de todo o site, pois eu queria dar destaque ao conteúdo, fazendo ele ocupar toda a largura disponível. Os widgets ficaram somente lá embaixo no rodapé.

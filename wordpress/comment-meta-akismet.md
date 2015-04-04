@@ -2,7 +2,6 @@
 date: 2012-05-16
 permalink: wordpress/comment-meta-akismet/
 title: 'WordPress: Remover dados do Akismet da tabela wp_commentmeta'
-wordpress_id: 4051
 ---
 
 O [plugin Akismet](http://akismet.com/) é uma maravilha, funciona muito bem para pegar os malditos SPAMs de comentários que insistem em aparecer aos montes em meus sites. Porém, descobri que um grande problema dele, é entupir o banco de dados do WordPress com dados (inúteis) na tabela **wp_commentmeta**. Ele adiciona as seguintes chaves para os comentários:

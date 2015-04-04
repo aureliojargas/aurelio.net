@@ -1,6 +1,5 @@
 ---
 title: Sumário
-wordpress_id: 1877
 hide_prev_next: true
 hide_byline: true
 hide_ads: true

@@ -1,7 +1,6 @@
 ---
 date: 2007-05-03
 title: Texto do Leitor
-wordpress_id: 222
 hide_author: true
 hide_date: true
 hide_read_more: true

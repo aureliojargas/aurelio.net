@@ -2,7 +2,6 @@
 date: 2011-12-03
 layout: 2013-index
 title: 'WordPress: Dicas para o tema Twenty Ten'
-wordpress_id: 3424
 permalink: wordpress/twentyten/
 ---
 

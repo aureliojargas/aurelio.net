@@ -2,7 +2,6 @@
 date: 2012-05-16
 permalink: wordpress/comment-meta-orfaos/
 title: 'WordPress: Remover dados órfãos da tabela wp_commentmeta'
-wordpress_id: 4057
 ---
 
 Com o tempo, conforme você apaga posts e comentários, é possível que alguns meta dados de comentários já removidos acabem sobrando na tabela **wp_commentmeta**.

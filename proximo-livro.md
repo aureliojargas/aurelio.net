@@ -1,7 +1,6 @@
 ---
 date: 2008-11-04
 title: Próximo Livro
-wordpress_id: 619
 hide_byline: true
 hide_read_more: true
 hide_share: true

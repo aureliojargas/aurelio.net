@@ -3,7 +3,6 @@ date: 2011-08-25
 layout: 2013-page-ads
 hide_comments: true
 title: Trem Eurostar - Central de informações em português
-wordpress_id: 3052
 ---
 
 > O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha.

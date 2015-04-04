@@ -3,7 +3,6 @@ date: 2008-01-01
 layout: 2013-page-ads
 permalink: viagem/forte/
 title: Praia do Forte - São Francisco do Sul - SC
-wordpress_id: 3698
 title_prefix: 'EU FUI: '
 ---
 

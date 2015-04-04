@@ -1,6 +1,5 @@
 ---
 title: Sobre
-wordpress_id: 221
 hide_prev_next: true
 hide_byline: true
 hide_ads: true

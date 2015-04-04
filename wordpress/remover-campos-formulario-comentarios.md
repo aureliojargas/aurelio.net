@@ -2,7 +2,6 @@
 date: 2011-04-15
 permalink: wordpress/remover-campos-formulario-comentarios/
 title: 'WordPress: Como remover campos do formulário de comentários'
-wordpress_id: 2801
 ---
 
 Já teve a necessidade de simplificar o formulário de comentários de seu blog? Que tal remover alguns campos para que o leitor não precise preencher muitos dados?

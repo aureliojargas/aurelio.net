@@ -3,7 +3,6 @@ date: 2011-08-25
 layout: 2013-page-ads
 permalink: trem-eurostar/tabela-de-precos-tarifas/
 title: 'Trem Eurostar: Tabela de preços (tarifas)'
-wordpress_id: 3060
 ---
 
 > O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](http://aurelio.net/trem-eurostar/)

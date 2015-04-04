@@ -4,7 +4,6 @@ date: 2007-11-01
 layout: 2013-page-ads
 permalink: viagem/mariana/
 title: Mariana - MG
-wordpress_id: 3748
 title_prefix: 'EU FUI: '
 ---
 

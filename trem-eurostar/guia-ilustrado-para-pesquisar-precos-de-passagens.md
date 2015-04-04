@@ -3,7 +3,6 @@ date: 2011-08-25
 layout: 2013-page-ads
 permalink: trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/
 title: 'Trem Eurostar: Guia ilustrado para pesquisar preços de passagens'
-wordpress_id: 3068
 ---
 
 > O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](http://aurelio.net/trem-eurostar/)

@@ -4,7 +4,6 @@ date: 2007-11-01
 layout: 2013-page-ads
 permalink: viagem/caxambu/
 title: Caxambu - MG
-wordpress_id: 3759
 title_prefix: 'EU FUI: '
 ---
 

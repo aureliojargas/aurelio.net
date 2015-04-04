@@ -2,7 +2,6 @@
 date: 2012-07-10
 permalink: wordpress/ios-comentarios-meta/
 title: 'WordPress para iOS: Mostrar campos adicionais (meta) nos comentários'
-wordpress_id: 4110
 ---
 
 > **Atualização importante em 2013-07-17:** Só muito tempo depois fui descobrir que esta dica traz um efeito colateral indesejado. Ao aprovar o comentário pelo aplicativo do WordPress no iOS, a linha adicional com os campos meta é inserida como se fosse parte do comentário original. Para o meu uso, isso invalida a esta dica :(

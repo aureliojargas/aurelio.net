@@ -3,7 +3,6 @@ date: 2001-01-26
 layout: 2013-page-ads
 permalink: viagem/farol-imbituba/
 title: Farol de Santa Marta à Imbituba - SC
-wordpress_id: 3726
 title_prefix: 'EU FUI: '
 ---
 

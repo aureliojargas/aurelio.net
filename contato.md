@@ -1,6 +1,5 @@
 ---
 title: Contato
-wordpress_id: 217
 hide_prev_next: true
 hide_byline: true
 hide_ads: true

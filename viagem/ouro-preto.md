@@ -4,7 +4,6 @@ date: 2007-11-01
 layout: 2013-page-ads
 permalink: viagem/ouro-preto/
 title: Ouro Preto - MG
-wordpress_id: 3766
 title_prefix: 'EU FUI: '
 ---
 

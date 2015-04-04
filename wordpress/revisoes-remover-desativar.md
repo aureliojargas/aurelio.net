@@ -2,7 +2,6 @@
 date: 2012-05-16
 permalink: wordpress/revisoes-remover-desativar/
 title: 'WordPress: Remover e desativar revisões de posts'
-wordpress_id: 4067
 ---
 
 Desde a versão 2.6 do WordPress, há o mecanismo de revisões, que guarda na base de dados uma cópia do post (ou página) cada vez que você o salva. Isso é bom caso você precise recuperar uma versão anterior do post, para desfazer uma alteração indesejada.

@@ -2,7 +2,6 @@
 date: 2011-04-15
 permalink: wordpress/adicionar-campos-formulario-comentarios/
 title: 'WordPress: Como adicionar campos no formulário de comentários'
-wordpress_id: 2812
 ---
 
 É possível adicionar campos novos no formulário de comentários do WordPress, além dos tradicionais Nome, Email, Site e Comentário. Que outro tipo de informação você quer saber sobre os seus leitores? Pode ser o login do twitter, a idade, o sexo, número do telefone residencial, celular, ou cidade e o estado onde moram.

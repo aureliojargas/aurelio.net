@@ -2,7 +2,6 @@
 date: 2012-04-12
 permalink: wordpress/jetpack-sharing-posicao/
 title: 'WordPress: Jetpack: Mudar a posição dos botões de compartilhamento (sharing)'
-wordpress_id: 3667
 ---
 
 ![](http://aurelio.net/wp/wp-content/uploads/2012/04/jetpack-sharing-panel.png)

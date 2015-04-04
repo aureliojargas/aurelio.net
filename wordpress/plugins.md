@@ -2,7 +2,6 @@
 date: 2011-04-06
 permalink: wordpress/plugins/
 title: 'WordPress: Plugins que uso e recomendo'
-wordpress_id: 2724
 ---
 
 Esta é minha lista dos plugins indispensáveis para o WordPress. Todos eles estão em uso aqui neste site e me deixaram muito satisfeito. Recomendo. Pretendo deixar esta lista atualizada, então conforme eu mudar ou gostar muito de um plugin novo, colocarei aqui.

@@ -3,7 +3,6 @@ date: 2011-08-25
 layout: 2013-page-ads
 permalink: trem-eurostar/tabela-de-horarios/
 title: 'Trem Eurostar: Tabela de horários'
-wordpress_id: 3054
 ---
 
 > O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](http://aurelio.net/trem-eurostar/)
