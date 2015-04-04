@@ -20,7 +20,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - Para melhorar a legibilidade dos **números** no código, é permitido colocar zeros à esquerda livremente (zero padding), inserir `_` para separar grupos de números e adicionar sinais de `+` na frente. Tudo isso não altera em nada o valor do número, serve apenas para melhorar sua leitura pelo programador.
 
-    ```
+    ```swift
     // normal
     let um_milhao = 1000000
     let seis_casas_decimais = 0.000001
@@ -34,7 +34,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - Pode usar **caracteres Unicode em nomes de variáveis**. Inclusive na documentação eles mostram exemplos que usam Emojis (veja The Basics → Naming Constants and Variables). A única exceção são os caracteres de setas (como ← e →) que estão reservados. Imagino que poderão ser operadores no futuro, no lugar do feioso `->` que é hoje usado nas funções.
 
-    ```
+    ```swift
     let π = 3.14159
     let 🐶🐮 = "dogcow"  # Os Emojis podem não aparecer no seu navegador
     ```
@@ -43,7 +43,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - **Interpolação de strings** (expandir variáveis e expressões dentro de strings) achei bem estranho ser `\(assim)`. Parênteses escapados? Fala sério! Se bem que não há um padrão estabelecido, cada linguagem faz diferente: `$shell`, `{$php}`, `#{ruby}`, `%(python)s`. Mas depois de ver bastante exemplos na documentação comecei a me acostumar. E se pensar que já tem `\t` e `\n` que significam “coisas especiais” no meio de uma string, usar `\(…)` é uma escolha que faz sentido.
 
-    ```
+    ```swift
     var nome_completo = "Fulano da Silva"
     var idade = 77
     println "Olá \(nome_completo), você tem \(idade) anos."
@@ -66,7 +66,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - A linha da declaração de uma função é um mundo à parte. Pode ser simples e concisa, mas também pode ser um caminhão de informações ao especificar, para cada argumento: nome externo, nome interno, tipo e valor default. E o tipo do argumento ainda pode ser um “function type” como por exemplo `(Int, Int) -> Int`. E no final da linha, ainda tem o operador `->` e o retorno da função, sendo que este retorno pode ser uma tupla com vários elementos, onde é preciso especificar o tipo e opcionalmente o nome de cada um.
 
-    ```
+    ```swift
     // Exemplo de declaração de função que recebe 3 argumentos
     // e retorna uma tupla com 3 elementos.
     //
