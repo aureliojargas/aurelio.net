@@ -1,7 +1,6 @@
 ---
 author: aurelio
 date: 2012-04-12
-layout: "2014"
 slug: remover-rodape-form
 permalink: wordpress/twentyten/remover-rodape-form/
 title: 'WordPress: Remover a mensagem "Você pode usar estas tags e atributos de HTML"'

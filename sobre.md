@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: sobre
 title: Sobre
 wordpress_id: 221

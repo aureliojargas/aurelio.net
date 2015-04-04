@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: mobile-first
 title: Refiz o site usando mobile first
 tags: [site]

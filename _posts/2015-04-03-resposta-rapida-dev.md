@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: resposta-rapida-dev
 title: Resposta rápida do desenvolvedor
 tags: [meu-querido-diario, programador]

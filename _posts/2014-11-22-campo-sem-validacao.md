@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: campo-sem-validacao
 title: "Campo sem validação == Caos"
 tags: [programador]

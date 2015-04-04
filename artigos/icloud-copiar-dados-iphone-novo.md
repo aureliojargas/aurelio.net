@@ -1,7 +1,6 @@
 ---
 author: aurelio
 date: 2012-04-12
-layout: "2014"
 wordpress_id: 3638
 slug: icloud-copiar-dados-iphone-novo
 permalink: artigos/icloud-copiar-dados-iphone-novo/

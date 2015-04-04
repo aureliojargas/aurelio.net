@@ -1,7 +1,6 @@
 ---
 author: aurelio
 date: 2012-05-11
-layout: "2014"
 wordpress_id: 4008
 slug: ringtones-super-mario-bros-iphone
 permalink: artigos/ringtones-super-mario-bros-iphone/

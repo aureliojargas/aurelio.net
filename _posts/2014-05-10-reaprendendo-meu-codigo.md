@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: reaprendendo-meu-codigo
 title: Reaprendendo meu próprio código
 wp_categories:

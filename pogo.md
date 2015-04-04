@@ -1,7 +1,6 @@
 ---
 author: aurelio
 date: 2005-01-15
-layout: "2014"
 slug: pogo
 title: Roda de Pogo – A Dança Punk
 wordpress_id: 2392

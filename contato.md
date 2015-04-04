@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: contato
 title: Contato
 wordpress_id: 217

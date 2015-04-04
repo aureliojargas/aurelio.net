@@ -1,6 +1,5 @@
 ---
 author: aurelio
-layout: "2014"
 slug: funcionario-publico
 title: Funcionário Público
 tags: [meu-querido-diario]

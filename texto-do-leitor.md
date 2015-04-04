@@ -1,7 +1,6 @@
 ---
 author: aurelio
 date: 2007-05-03
-layout: "2014"
 slug: texto-do-leitor
 title: Texto do Leitor
 wordpress_id: 222

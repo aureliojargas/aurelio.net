@@ -54,6 +54,13 @@ asset_pipeline:
   output_path: assets
   gzip: false
 
+defaults:
+  -
+    scope:
+      path: ""  # all files in the project
+    values:
+      layout: "2014"
+
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
 # hide_title_suffix: true
