@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-04-15
 slug: adicionar-campos-formulario-comentarios
 permalink: wordpress/adicionar-campos-formulario-comentarios/

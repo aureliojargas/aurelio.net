@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2012-05-16
 slug: comment-meta-akismet
 permalink: wordpress/comment-meta-akismet/

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: sobre
 title: Sobre
 wordpress_id: 221

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2007-05-03
 slug: texto-do-leitor
 title: Texto do Leitor

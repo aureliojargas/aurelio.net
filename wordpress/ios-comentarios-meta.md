@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2012-07-10
 slug: ios-comentarios-meta
 permalink: wordpress/ios-comentarios-meta/

@@ -60,6 +60,7 @@ defaults:
       path: ""  # all files in the project
     values:
       layout: "2014"
+      author: aurelio
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: ios-android
 title: Mudei do iOS pro Android e estou feliz
 tags: [meu-querido-diario]

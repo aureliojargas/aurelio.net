@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2008-11-04
 slug: proximo-livro
 title: Próximo Livro

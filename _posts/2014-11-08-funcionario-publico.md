@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: funcionario-publico
 title: Funcionário Público
 tags: [meu-querido-diario]

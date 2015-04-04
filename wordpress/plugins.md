@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-04-06
 slug: plugins
 permalink: wordpress/plugins/

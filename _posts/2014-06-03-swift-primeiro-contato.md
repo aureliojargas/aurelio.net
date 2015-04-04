@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: swift-primeiro-contato
 title: Minhas primeiras impressões da linguagem Swift
 wp_categories:

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2012-05-16
 slug: revisoes-remover-desativar
 permalink: wordpress/revisoes-remover-desativar/

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2005-02-09
 layout: 2013-page-ads
 slug: matinhos-2005

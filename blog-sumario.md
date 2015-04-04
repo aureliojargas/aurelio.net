@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: sumario
 title: Sumário
 wordpress_id: 1877

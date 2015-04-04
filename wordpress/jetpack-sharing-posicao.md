@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2012-04-12
 slug: jetpack-sharing-posicao
 permalink: wordpress/jetpack-sharing-posicao/

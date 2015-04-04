@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2012-08-17
 wordpress_id: 4152
 slug: notebook-suporte-pvc

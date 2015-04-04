@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2001-06-30
 layout: 2013-page-ads
 slug: trilha-do-pinhao

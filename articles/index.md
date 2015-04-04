@@ -1,6 +1,5 @@
 ---
 layout: 2013-articles
-author: aurelio
 title: Articles
 permalink: articles/
 hide_comments: true

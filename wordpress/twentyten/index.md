@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-12-03
 layout: 2013-index
 slug: twentyten

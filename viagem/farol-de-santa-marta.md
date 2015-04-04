@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2006-09-13
 layout: 2013-page-ads
 slug: farol-de-santa-marta

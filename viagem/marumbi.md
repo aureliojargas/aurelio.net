@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2001-06-14
 layout: 2013-page-ads
 slug: marumbi

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: robo-da-net
 title: O robô da NET me atendeu muito bem
 tags: [meu-querido-diario]

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2001-01-26
 layout: 2013-page-ads
 slug: farol-imbituba

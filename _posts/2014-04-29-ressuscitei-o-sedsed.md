@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: ressuscitei-o-sedsed
 title: Ressuscitei o sedsed
 wp_categories:

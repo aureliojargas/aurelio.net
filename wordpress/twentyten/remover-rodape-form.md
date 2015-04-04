@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2012-04-12
 slug: remover-rodape-form
 permalink: wordpress/twentyten/remover-rodape-form/

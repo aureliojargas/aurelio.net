@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-12-03
 slug: remover-sidebar
 permalink: wordpress/twentyten/remover-sidebar/

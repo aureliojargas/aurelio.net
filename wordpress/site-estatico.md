@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-04-07
 slug: site-estatico
 permalink: wordpress/site-estatico/

@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2008-01-01
 layout: 2013-page-ads
 slug: forte

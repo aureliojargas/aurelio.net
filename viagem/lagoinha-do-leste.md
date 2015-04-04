@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2007-01-01
 layout: 2013-page-ads
 slug: lagoinha-do-leste

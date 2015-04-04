@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-08-25
 layout: 2013-page-ads
 slug: tabela-de-precos-tarifas

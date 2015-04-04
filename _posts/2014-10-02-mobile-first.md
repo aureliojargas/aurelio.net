@@ -1,5 +1,4 @@
 ---
-author: aurelio
 slug: mobile-first
 title: Refiz o site usando mobile first
 tags: [site]

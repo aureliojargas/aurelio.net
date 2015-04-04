@@ -1,5 +1,4 @@
 ---
-author: aurelio
 date: 2011-04-06
 layout: 2013-index
 slug: wordpress
