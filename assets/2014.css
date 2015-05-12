@@ -20,12 +20,13 @@ pre {
 .unicode-char {
 	font-family: Arial, sans-serif;  /* most Unicode chars available */
 }
-.read-more .heart,
+.heart,
 #footer:hover .heart {
 	color: #C00;
 }
 
 #footer,
+#footer .heart,
 #footer a,
 #footer a:link,
 #footer a:visited {
