@@ -136,7 +136,7 @@ Para ver os artigos do site (e não do blog), use o menu acima.
   * [Expressões Regulares – 3ª Edição](http://aurelio.net/blog/2009/10/03/expressoes-regulares-3a-edicao/)
   * [Escritor](http://aurelio.net/blog/2009/09/24/escritor/)
   * [2.000 conchinhas vendidas](http://aurelio.net/blog/2009/09/18/2000-conchinhas-vendidas/)
-  * [miniman](http://aurelio.net/blog/2009/08/26/miniman/)
+  * [Documento novo: miniman](http://aurelio.net/blog/2009/08/26/miniman/)
   * [Queimem, queimem, queimem](http://aurelio.net/blog/2009/08/24/queimem-queimem-queimem/)
   * [MoneyLog Experience 4](http://aurelio.net/blog/2009/08/15/moneylog-experience-4/)
   * [Barbearia Morgana](http://aurelio.net/blog/2009/08/05/barbearia-morgana/)
