@@ -25,11 +25,11 @@ Se você quer falar comigo ou perguntar algo, use o twitter. Meu perfil é o [@o
 Se você quer contribuir com algum software meu, informando algum problema, dando uma sugestão ou enviando código, use o GitHub.
 
 
-## Facebook
+## LinkedIn
 
-<http://www.facebook.com/aurelio.jargas>
+<http://www.linkedin.com/in/aureliojargas>
 
-Eu tentei usar, mas realmente Facebook realmente não é a minha praia. Eu parei de acompanhar.
+Tenho um perfil (currículo) no LinkedIn, lotado de informações profissionais, caso isso te interesse.
 
 
 ## Google+
@@ -39,11 +39,11 @@ Eu tentei usar, mas realmente Facebook realmente não é a minha praia. Eu parei
 Estou tentando acompanhar o Google+, por enquanto sem muito sucesso.
 
 
-## LinkedIn
+## Facebook
 
-<http://www.linkedin.com/in/aureliojargas>
+<http://www.facebook.com/aurelio.jargas>
 
-Tenho um perfil (currículo) no LinkedIn, lotado de informações profissionais, caso isso te interesse.
+Eu tentei usar, mas realmente Facebook não é a minha praia. Eu parei de acompanhar.
 
 
 ## E-mail
