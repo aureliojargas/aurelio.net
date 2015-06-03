@@ -38,7 +38,7 @@ Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua vida vai mud
 
 === Dicas Rápidas para a Instalação do Cygwin ===
 
-- Baixe o [setup.exe http://cygwin.com/setup.exe] e execute-o.
+- Baixe o [setup.exe https://cygwin.com/install.html] e execute-o.
 
 - Escolha ``Install from Internet``, para o instalador baixar os pacotes e já instalá-los.
 
