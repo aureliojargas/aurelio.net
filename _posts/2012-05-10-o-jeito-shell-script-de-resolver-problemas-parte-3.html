@@ -81,7 +81,7 @@ ls
 sed -n -f foo.sed 20.txt
 ls
 cat linhas-1-5.txt
-cat linhas-16-20.txt&lt;
+cat linhas-16-20.txt
 
 ### recapitulando: estes são os dois comandos
 paste -d , &lt;(seq 1 5 20) &lt;(seq 5 5 20) | sed 's/.*/&amp; w linhas-&amp;.txt/ ; s/,/-/2' &gt; foo.sed
