@@ -50,6 +50,8 @@ O [episódio 7](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resol
 
 * **Identidade visual:** Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.
 
+    ![](/img/tela-preta-capas-4.png)
+
 * **Playlist do YouTube:** Esta série conta com uma [playlist própria](https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1), que serve para agrupar todos os vídeos em um único lugar, além de aparecer aquela interface bacana no YouTube para você poder ver todos os vídeos em sequência.
 
     ![](/img/tela-preta-playlist.png)
