@@ -1,4 +1,4 @@
-_admin/
-_drafts/
-_site/
-jekyll
+/_admin/
+/_drafts/
+/_site/
+/jekyll
