@@ -80,6 +80,10 @@ table.tableborder td,
 table.tableborder th {
 	border-width: 1px;
 }
+table.caderno td,
+table.caderno th {
+	border-width: 0 0 1px 0;
+}
 
 img {
 	max-width: 100%;
@@ -251,6 +255,11 @@ code {
 ul.compact li,
 #content ul.compact li {
 	margin-bottom: 0;
+}
+#content table.compact {
+	font-size: 85%;
+	line-height: 125%;
+	font-family: Arial;
 }
 .small {
 	font-size: small;

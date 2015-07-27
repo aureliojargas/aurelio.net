@@ -1,0 +1,266 @@
+# Se participantes > 0, indica que o curso já aconteceu.
+
+- data: 2003-08-04
+  duracao: 40
+  tema: Shell Script Profissional
+  evento: Empresa 4linux
+  cidade: São Paulo
+  estado: SP
+  participantes: 7
+  relato: http://aurelio.net/curso/4linux/
+
+- data: 2003-12-04
+  duracao: 2
+  tema: Shell Script Básico
+  evento: Treinamento Interno - Conectiva
+  cidade: Curitiba
+  estado: PR
+  participantes: 10
+  relato: http://aurelio.net/curso/conectiva/
+
+- data: 2003-12-12
+  duracao: 8
+  tema: Expressões Regulares
+  evento: II SDSL - Seminário de Desenvolvimento em Software Livre
+  cidade: Campinas
+  estado: SP
+  participantes: 30
+  relato: http://aurelio.net/curso/sdsl/ii/
+
+- data: 2003-12-12
+  duracao: 1
+  tema: Desenvolvedor Software Livre
+  evento: II SDSL - Seminário de Desenvolvimento em Software Livre
+  cidade: Campinas
+  estado: SP
+  participantes: 30
+  relato: http://aurelio.net/curso/sdsl/ii/
+
+- data: 2003-12-17
+  duracao: 2
+  tema: Expressões Regulares
+  evento: Treinamento Interno - Conectiva
+  cidade: Curitiba
+  estado: PR
+  participantes: 12
+  relato: http://aurelio.net/curso/conectiva/
+
+- data: 2004-02-18
+  duracao: 4
+  tema: Expressões Regulares
+  evento: Sucesu
+  cidade: Curitiba
+  estado: PR
+  participantes: 20
+  relato: http://aurelio.net/curso/sucesu/
+
+- data: 2004-03-03
+  duracao: 4
+  tema: Desenvolvedor Software Livre
+  evento: Sucesu
+  cidade: Curitiba
+  estado: PR
+  participantes: 12
+  relato: http://aurelio.net/curso/sucesu/
+
+- data: 2004-03-30
+  duracao: 2
+  tema: Desenvolvedor Software Livre
+  evento: I Semana de Software Livre da UFPR
+  cidade: Curitiba
+  estado: PR
+  participantes: 150
+  relato: http://aurelio.net/curso/ufpr/i/
+
+- data: 2004-04-26
+  duracao: 4
+  tema: Editor VI
+  evento: I SCSL - Semana de Capacitação e Desenvolvimento em Software Livre
+  cidade: Brasília
+  estado: DF
+  participantes: 15
+  relato: http://aurelio.net/curso/scsl/
+
+- data: 2004-04-26
+  duracao: 4
+  tema: Expressões Regulares
+  evento: I SCSL - Semana de Capacitação e Desenvolvimento em Software Livre
+  cidade: Brasília
+  estado: DF
+  participantes: 15
+  relato: http://aurelio.net/curso/scsl/
+
+- data: 2004-04-27
+  duracao: 4
+  tema: Python Básico
+  evento: I SCSL - Semana de Capacitação e Desenvolvimento em Software Livre
+  cidade: Brasília
+  estado: DF
+  participantes: 9
+  relato: http://aurelio.net/curso/scsl/
+
+- data: 2004-04-28
+  duracao: 8
+  tema: Shell Script Básico
+  evento: I SCSL - Semana de Capacitação e Desenvolvimento em Software Livre
+  cidade: Brasília
+  estado: DF
+  participantes: 8
+  relato: http://aurelio.net/curso/scsl/
+
+- data: 2004-05-01
+  duracao: 3
+  tema: Desenvolvedor Software Livre
+  evento: II Encontro Nacional LinuxChix-BR
+  cidade: São Paulo
+  estado: SP
+  participantes: 200
+  relato: http://aurelio.net/curso/linuxchix/
+  video: https://www.youtube.com/watch?v=MvgBL6zZl8w
+
+- data: 2004-06-05
+  duracao: 1
+  tema: Expressões Regulares
+  evento: V FISL - Fórum Internacional de Software Livre
+  cidade: Porto Alegre
+  estado: RS
+  participantes: 150
+  relato: http://aurelio.net/curso/fisl/
+
+- data: 2004-07-21
+  duracao: 7
+  tema: Expressões Regulares
+  evento: III SDSL - Seminário de Desenvolvimento em Software Livre
+  cidade: Lajeado
+  estado: RS
+  participantes: 14
+  relato: http://aurelio.net/curso/sdsl/iii/
+
+- data: 2004-08-17
+  duracao: 2
+  tema: Desenvolvedor Software Livre
+  evento: II Semana de Software Livre da UFPR
+  cidade: Curitiba
+  estado: PR
+  participantes: 90
+  relato: http://aurelio.net/curso/ufpr/ii/
+
+- data: 2004-10-09
+  duracao: 1
+  tema: Expressões Regulares
+  evento: II Congresso Catarinense de Software Livre
+  cidade: Joinville
+  estado: SC
+  participantes: 70
+  relato: http://aurelio.net/curso/ccsl/
+
+- data: 2004-10-09
+  duracao: 1
+  tema: Desenvolvedor Software Livre
+  evento: II Congresso Catarinense de Software Livre
+  cidade: Joinville
+  estado: SC
+  participantes: 50
+  relato: http://aurelio.net/curso/ccsl/
+
+- data: 2004-10-22
+  duracao: 2
+  tema: Desenvolvedor Software Livre
+  evento: I Semana de Informática da FAC
+  cidade: Campinas
+  estado: SP
+  participantes: 270
+  relato: http://aurelio.net/curso/fac/
+
+- data: 2007-08-31
+  duracao: 1
+  tema: Tutorial de PyObjC
+  evento: PyCon Brasil [3]
+  cidade: Joinville
+  estado: SC
+  participantes: 50
+  material: http://aurelio.net/mac/dev/tutorial-pyobjc/
+  video: https://www.youtube.com/watch?v=YnUZiHTSbvE
+
+- data: 2007-10-22
+  duracao: 20
+  tema: Shell Script Avançado
+  evento: Prodemge
+  cidade: Belo Horizonte
+  estado: MG
+  participantes: 10
+
+- data: 2007-10-22
+  duracao: 8
+  tema: Shell Script Básico
+  evento: Prodemge
+  cidade: Belo Horizonte
+  estado: MG
+  participantes: 10
+
+- data: 2007-10-24
+  duracao: 8
+  tema: Shell Script Básico
+  evento: Prodemge
+  cidade: Belo Horizonte
+  estado: MG
+  participantes: 10
+
+- data: 2008-09-26
+  duracao: 8
+  tema: Expressões Regulares
+  evento: Griffon
+  cidade: São Paulo
+  estado: SP
+  participantes: 10
+
+- data: 2008-11-08
+  duracao: 2
+  tema: $oftware Livre como fonte de renda
+  evento: Tchelinux 2008
+  cidade: Porto Alegre
+  estado: RS
+  participantes: 200
+  relato: http://aurelio.net/blog/2008/11/14/e-nois-no-tchelinux-2008/
+  # video: https://www.youtube.com/watch?v=ZMXDXEdDwSY
+
+- data: 2009-05-12
+  duracao: 2
+  tema: Expressões Regulares
+  evento: Semana Acadêmica de Exatas - UFPR
+  cidade: Curitiba
+  estado: PR
+  participantes: 50
+
+- data: 2014-08-28
+  duracao: 1
+  tema: Expressões Regulares
+  evento: Semana de Informática - UNIVILLE
+  cidade: Joinville
+  estado: SC
+  participantes: 100
+
+- data: 2015-07-18
+  duracao: 1
+  tema: Expressões Regulares em JavaScript
+  evento: 7º FloripaJS Devs Meetup
+  site: http://www.meetup.com/pt/floripajs/events/223586762/
+  cidade: Joinville
+  estado: SC
+  participantes: 35
+
+- data: 2015-07-22
+  duracao: 3
+  tema: Git e GitLab
+  evento: Treinamento Interno - Prefeitura de Joinville
+  cidade: Joinville
+  estado: SC
+  participantes: 7
+
+- data: 2015-08-08
+  duracao: 1
+  tema: Migração Rails 1→4
+  evento: 1º Tech Day do GURU-PR
+  cidade: Curitiba
+  estado: PR
+  participantes: 0
