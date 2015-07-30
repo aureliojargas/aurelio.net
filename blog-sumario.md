@@ -20,8 +20,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 
 Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
 
-## 2015 (7)
+## 2015 (8)
 
+  * [Saindo da caverna: darei cursos em São Paulo](http://aurelio.net/blog/2015/07/29/cursos-novatec/)
   * [Tela Preta #8: Trocar a extensão de arquivos com find|sed|sed|sh](http://aurelio.net/blog/2015/06/06/tela-preta-8/)
   * [15 anos de Funções ZZ](http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/)
   * [Como usar Unicode (→★♥♪) no teclado do Android](http://aurelio.net/blog/2015/05/27/unicode-teclado-android/)
