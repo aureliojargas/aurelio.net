@@ -243,7 +243,7 @@
 - data: 2015-07-18
   duracao: 1
   tema: Expressões Regulares em JavaScript
-  evento: 7º FloripaJS Devs Meetup
+  evento: 7º FloripaJS Devs Meetup @ SoftExpert
   site: http://www.meetup.com/pt/floripajs/events/223586762/
   cidade: Joinville
   estado: SC
@@ -260,7 +260,9 @@
 - data: 2015-08-08
   duracao: 1
   tema: Migração Rails 1→4
-  evento: 1º Tech Day do GURU-PR
+  evento: 1º Tech Day do GURU-PR @ Ebanx
+  site: http://www.gurupr.org/eventos/1-tech-day-do-guru-pr
+  slides: https://speakerdeck.com/aureliojargas/a-hora-do-pesadelo-migracao-rails-1-nil-4
   cidade: Curitiba
   estado: PR
-  participantes: 0
+  participantes: 40
