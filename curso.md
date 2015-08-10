@@ -57,10 +57,14 @@ Estes são os cursos e palestras que já ministrei:
             <!-- <td>{{ curso.cidade }} - {{ curso.estado }}</td> -->
             <td style="text-align:center;">{{ curso.participantes }}</td>
             <td>
+                {% if curso.site %}
+                    <a href="{{ curso.site }}">site</a>{% endif %}
                 {% if curso.relato %}
                     <a href="{{ curso.relato }}">relato</a>{% endif %}
                 {% if curso.material %}
                     <a href="{{ curso.material }}">material</a>{% endif %}
+                {% if curso.slides %}
+                    <a href="{{ curso.slides }}">slides</a>{% endif %}
                 {% if curso.video %}
                     <a href="{{ curso.video }}">vídeo</a>{% endif %}
             </td>
