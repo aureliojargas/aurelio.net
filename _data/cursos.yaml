@@ -266,3 +266,48 @@
   cidade: Curitiba
   estado: PR
   participantes: 40
+
+- data: 2015-08-19
+  duracao: 8
+  tema: "Expressões Regulares: Imersão"
+  evento: Centro de Treinamento da Novatec
+  site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+  cidade: São Paulo
+  estado: SP
+  participantes: 0
+
+- data: 2015-08-20
+  duracao: 8
+  tema: Shell Script Fundamental
+  evento: Centro de Treinamento da Novatec
+  site: http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/
+  cidade: São Paulo
+  estado: SP
+  participantes: 0
+
+- data: 2015-08-21
+  duracao: 8
+  tema: Shell Script para Programadores
+  evento: Centro de Treinamento da Novatec
+  site: http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/
+  cidade: São Paulo
+  estado: SP
+  participantes: 0
+
+- data: 2015-08-22
+  duracao: 4
+  tema: Expressões Regulares em Python
+  evento: Centro de Treinamento da Novatec
+  site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/
+  cidade: São Paulo
+  estado: SP
+  participantes: 0
+
+- data: 2015-08-22
+  duracao: 4
+  tema: Expressões Regulares em JavaScript
+  evento: Centro de Treinamento da Novatec
+  site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-javascript/
+  cidade: São Paulo
+  estado: SP
+  participantes: 0
