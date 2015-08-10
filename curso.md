@@ -1,5 +1,5 @@
 ---
-title: Eventos, cursos e palestras
+title: Cursos e palestras de Aurelio Jargas
 tags: [evento, programador, regex, shell]
 hide_ads: true
 hide_byline: true
@@ -9,24 +9,61 @@ permalink: curso/
 ---
 
 <style>
-    #ministrados th {
+    #article-body table {
+        width: 100%;
+    }
+    #article-body th {
         text-align: left;
     }
-    #ministrados td {
+    #article-body td {
         padding-top: 8px;
         padding-bottom: 8px;
     }
-    #ministrados .evento {
+    #article-body .evento {
         color: orange;
         font-style: italic;
     }
 </style>
 
-por [Aurelio Jargas](http://aurelio.net/aurelio/)
 
-Estes são os cursos e palestras que já ministrei:
+{% assign proximos = site.data.cursos | where: "participantes",0 %}
 
-<!-- ## Cursos e palestras que já ministrei -->
+{% if proximos.size > 0 %}
+Próximos cursos/palestras que farei:
+
+<table id="futuros" class="compact caderno">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Dur.</th>
+            <th>Tema</th>
+            <th>Local / Evento</th>
+            <th>Inscrições</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for curso in proximos %}
+        <tr>
+            <td>{{ curso.data | date: "%d.%m.%Y" }}</td>
+            <td>{{ curso.duracao }}h</td>
+            <td>{{ curso.tema }}</td>
+            <td>
+                {{ curso.cidade }} - {{ curso.estado }}
+                <br>
+                <span class="evento">{{ curso.evento }}</span>
+            </td>
+            <td>
+                {% if curso.site %}
+                    <a href="{{ curso.site }}">site</a>{% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+Já ministrados:
+{% endif %}
 
 <table id="ministrados" class="compact caderno">
     <thead>
@@ -34,7 +71,7 @@ Estes são os cursos e palestras que já ministrei:
             <th>Data</th>
             <th>Dur.</th>
             <th>Tema</th>
-            <th>Local/Evento</th>
+            <th>Local / Evento</th>
             <!-- <th>Cidade</th> -->
             <th>Público</th>
             <th>Info</th>
@@ -73,12 +110,13 @@ Estes são os cursos e palestras que já ministrei:
     </tbody>
 </table>
 
+<!-- Removido em 2015-08-10. Because.
 Detalhes:
 
  * Clique nos links "Relato" para ver as fotos, histórias e informações de cada evento.
 
  * As apostilas e slides das palestras e cursos que ministro estão aqui: [http://aurelio.net/curso/material](http://aurelio.net/curso/material/). Veja o arquivo LEIAME.txt caso queira utilizar o material em outros trabalhos.
-
+ -->
 
 <!-- Removido em ?
 Em 2003 comecei a ministrar cursos e palestras sobre os assuntos que eu domino em informática e gostei da experiência. Em 2004 foram vários eventos, viajei
