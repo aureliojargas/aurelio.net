@@ -25,6 +25,9 @@ h2 { font-size:150%; font-weight:normal; }
 /* Não grude os anúncios com o conteúdo */
 #content { padding:15px; }
 
+/* For mobile screens */
+#content img { max-width: 100%; }
+
 /* Tabela do tradutor: th, textarea */
 table#tradutor { clear:both; }
 table#tradutor td { vertical-align:top; padding:0 2px; }
