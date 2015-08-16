@@ -32,29 +32,30 @@
 		color:black;
 	}
 	#header {
-		margin:0 0 1em 0;
-		padding:2em .5em 2em 2em;
+		padding:2em 0;
 		background:#008100;
 		color:#fff;
+		text-align:center;
 	}
 	#header h1 {
 		display:none;
 	}
+	#header img {
+		max-width: 100%;  /* mobile */
+	}
 	#content {
-		padding:1em 3em 3em 3em;
+		max-width: 40em;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#carregar {
 		font-size:85%;
-	}
-	#adbox-inside {
-		float: right;
-		padding: 0 20px 20px 20px;
 	}
 	.loading {
 		color:green;
 		font-weight:bold;
 	}
-	img#foto {
+	#foto {
 		border:1px solid green;
 	}
 	.numero {
@@ -63,12 +64,9 @@
 		padding:0 0.5em;
 		font-weight:bold;
 	}
-	td {
-		vertical-align:top;
-	}
-	table.receita td#quadrofoto {
+	#quadrofoto {
 		text-align:center;
-		width:350px;
+		margin-bottom: 2em;
 	}
 	table.ingredientes {
 		border-collapse:collapse;
@@ -82,6 +80,9 @@
 		font-variant:small-caps;
 		text-transform:lowercase;
 		font-weight:bold;
+	}
+	.facebook {
+		margin: 2em 0;
 	}
 	#disclaimer {
 		margin:0;
@@ -282,7 +283,7 @@
 </div>
 
 <div id="header">
-	<img alt="SUBWAYTOR" src="subwaytor.png">
+	<img alt="SUBWAYTOR" title="SUBWAYTOR" src="subwaytor.png">
 	<h1>Subwaytor</h1>
 	<h2>Gerador online de sanduíches do Subway!</h2>
 </div>
@@ -305,14 +306,14 @@
 <p><strong>Experimente o SUBWAYTOR agora mesmo:</strong></p>
 </div> <!-- intro -->
 
-<table class="receita">
-<tr>
-	<td id="quadrofoto" class="noprint" style="display:none">
-	<img id="foto" src="" border="0" onClick="javascript:roda()">
-	<br><a id="carregar" href="javascript:roda()">Quero outro!</a>
-	</td>
+<div class="receita">
 
-	<td id="quadroreceita" valign="top">
+	<div id="quadrofoto" class="noprint" style="display:none">
+		<img id="foto" src="" border="0" onClick="javascript:roda()">
+		<br><a id="carregar" href="javascript:roda()">Quero outro!</a>
+	</div>
+
+	<div id="quadroreceita">
 		<span class="loading">AGUARDE, preparando os sanduíches...</span>
 		<!-- <img src="carregando.gif"> -->
 		<br><br>
@@ -330,17 +331,14 @@
 			src="subway-11.jpg" width="16" height="16"><img
 			src="subway-12.jpg" width="16" height="16">
 		</div>
-	</td>
-</tr>
-<tr>
-	<td colspan="2" style="padding: 20px 0 0 30px;">
-		<!-- Facebook Like button -->
-		<div class="noprint fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
-	</td>
-</tr>
-</table>
+	</div>
+</div>
 
-<br>
+<div class="facebook">
+	<!-- Facebook Like button -->
+	<div class="noprint fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
+</div>
+
 <p class="noprint"><strong>Imprima esta página</strong> e passe para a atendente do Subway, que fará seu sanduíche em tempo recorde. Chega de ser um empaca-fila!</p>
 
 <div id="disclaimer">
