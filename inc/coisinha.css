@@ -56,19 +56,15 @@ table#tradutor th.traduzido { width:50%; }
 	font-weight:normal;
 }
 .copyright {
-	padding:5px 165px 5px 0;
 	text-align:right;
 	font-style:italic;
-/*	font-size:85%;*/
+	padding-right:10px;
 }
 .copyright img {
 	width:20px;
 	height:25px;
 	vertical-align:middle;
 	padding-left:5px;
-}
-body#miguxeitor .copyright {
-	padding-right:10px;
 }
 
 /* Aviso de JavaScript desligado */
