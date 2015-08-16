@@ -17,18 +17,23 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link rel="alternate" href="http://feeds.feedburner.com/coisinha" type="application/rss+xml">
 <link rel="icon" type="image/gif" href="../img/favicon.gif">
+<link rel="stylesheet" type="text/css" href="../inc/yui-2.7.0.css">
+<link rel="stylesheet" type="text/css" href="../inc/coisinha.css">
+<link rel="stylesheet" type="text/css" href="../inc/nav3.css">
+<script type="text/javascript" charset="utf-8" src="../inc/coisinha.js"></script>
 
 <meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
 <meta name="keywords" content="moeda, cara, coroa, sorte, real, centavo, centavos">
 <meta name="description" content="Cara ou coroa online, com moedas de: R$ 1,00 / R$ 0,50 / R$ 0,25 / R$ 0,10 / R$ 0,01.">
 
-<title>Cara ou Coroa? — Jogue Online agora</title>
+<title>Cara ou Coroa? - Jogue Online agora</title>
 
 <style type="text/css">
-	body {
-		background:#fff no-repeat center;
-		height:100%;
-		overflow:hidden; /* no scrollbars */
+	#content {
+		height: 500px;
+		/* The coin image is the background */
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 </style>
 
@@ -48,7 +53,7 @@
 		}
 	}
 	function gira () {
-		document.body.style.backgroundImage = 'url(' + moeda + '-' + giro_last + '.gif)';
+		document.getElementById('content').style.backgroundImage = 'url(' + moeda + '-' + giro_last + '.gif)';
 		giro_last = (giro_last === 0) ? 1 : 0; // 0 ou 1, alternado
 	}
 	function para () {
@@ -73,7 +78,6 @@
 	}
 </script>
 
-
 <!-- Google Analytics -->
 <script type="text/javascript">window.google_analytics_uacct = "UA-280222-8";</script>
 <script type="text/javascript">
@@ -91,7 +95,6 @@
 
 </script>
 </head>
-
 
 <body id="caraoucoroa">
 
@@ -116,23 +119,20 @@
 </noscript>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
 
-<div style="float:left;">
-	<!-- Google AdSense -->
-	<script type="text/javascript"><!--
-	google_ad_client = "pub-0009608813278754";
-	/* Coisinha Sky 160 */
-	google_ad_slot = "7979021613";
-	google_ad_width = 160;
-	google_ad_height = 600;
-	//-->
-	</script>
-	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+<div id="ad-top-resp">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Coisinha responsive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-0009608813278754"
+	     data-ad-slot="1073874771"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 </div>
 
-<!-- Melhor deixar fora para não estragar o leiaute -->
-<!-- <div style="float:left;">« <a href="http://www.coisinha.com.br">www.coisinha.com.br</a></div> -->
+<div id="content" onclick="taca()">
 
 <!-- Facebook Like button -->
 <div style="float:right;"><div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div></div>
@@ -161,8 +161,31 @@
 <!-- <audio id="sound1ogg" src="coin_flip.ogg"></audio> -->
 <!-- <audio id="sound2ogg" src="coin2.ogg"></audio> -->
 
-<!-- DIVão pra poder clicar na tela toda. Com o onclick no body não funcionou no iPhone -->
-<div id="clickme" style="height:100%;" onclick="taca()"> </div>
+</div> <!-- content -->
+
+<div id="footer">
+<div id="nav-intro">O site www.COISINHA.com.br orgulhosamente apresenta:</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav3 -->
+<div id="nav">
+<a href="/miguxeitor/" title="Migux@s Fofux@s Lindux@s!!!!!"><img src="../img/icon/miguxeitor.jpg" alt=""> MiGuXeiToR</a>
+<a href="/embriagueitor/" title="Tá zuzu bem (ic!) Tô zóbrio"><img src="../img/icon/embriagueitor.gif" alt=""> Embriagueitor</a>
+<a href="/engripeitor/" title="Ezdou beio gribado... A-A-A-Atchô!"><img src="../img/icon/engripeitor.png" alt=""> Engripeitor</a>
+<a href="/subwaytor/" title="Gerador de sanduíches do Subway"><img src="../img/icon/subwaytor.png" alt=""> Subwaytor</a>
+<a href="/tabuada/" title="Tabuada interativa do 1 ao 10"><img src="../img/icon/tabuada.jpg" alt=""> Tabuada</a>
+<a href="/relogio/" title="Um relógio diferente, feito com palavras!"><img src="../img/icon/relogio.gif" alt=""> Relógio</a>
+<a href="/caraoucoroa/" title="Não tem uma moeda? Use essa!"><img src="../img/icon/caraoucoroa.gif" alt=""> Cara ou Coroa?</a>
+<a href="/viravira/" title="Porque um texto opɐɹıʌ é mais divertido :)"><img src="../img/icon/viravira.png" alt=""> vira|ɐɹıʌ</a>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav3 -->
+
+<div class="copyright">
+	Copyright © 2008-2015
+	<a href="http://aurelio.net">Aurelio Jargas</a>
+	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<img alt="" src="../img/aureliohead.gif">
+</div>
+</div><!-- footer -->
 
 </body>
 </html>
