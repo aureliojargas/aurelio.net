@@ -106,6 +106,13 @@ body#miguxeitor .copyright {
 .adcenter   { margin-right:auto; margin-left:auto; }
 .adbottom   { margin-top:25px; margin-bottom:25px; }
 .adtop      { margin-top: 5px; margin-bottom:25px; }  /* 20px é padding-top do #content */
+#ad-top-resp {
+	background-color: black;
+	color: silver;
+	margin: 0;
+	text-align: center;
+	padding: 30px 0;
+}
 
 /* Tema preto e amarelo */
 body               { color:#ccc  ; background-color:black; }
