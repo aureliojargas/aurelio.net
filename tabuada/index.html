@@ -34,9 +34,8 @@
 	}
 	#tabelona {
 		margin:15px auto;
-		font-size:150%;
+		width: auto;
 		text-align:center;
-		width:80%;
 		color:black;
 	}
 	#tabelona td,
@@ -62,6 +61,10 @@
 		font-size:300%;
 		margin:0 0 15px 0;
 	}
+	@media (min-width: 600px) {
+		#tabelona { font-size:150%; }
+	}
+
 </style>
 
 <script type="text/javascript">
