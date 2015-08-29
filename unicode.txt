@@ -1,0 +1,41 @@
+“ ” ‘ ’ « »
+ª º ° ¹ ² ³ ⁴
+½ ⅓ ¼ ⅕ ⅔ ⅖ ¾ ⅗ ⅘
+- – — ¯ …
+© ® ™
+€ £ ¥ ¢
+§ ¶ † ‡ ¿ ¡ ❦ ❧
+α β µ Ω
+× ÷ ≠ ≤ ≥ ± ∞ π ∑ Δ
+♣ ♥ ♠ ♦
+★ ☆ ❖ ◆ ◇ • ·
+✓ ✗ ☑ ☒
+⌨ ⇧ ⌃ ⌥ ⌘ ⌫ ⌦ ⏏ ⎋ ⌅ ⇥ ⇤
+⏎ ↵ ↩
+↑ ↓ ← → ↖ ↘ ↔︎ ⇔
+▲ ▼ ◀ ▶
+➤ ➔ ⇉ ⇶
+♪ ♫ ♡ ♻ ♲ ♺ ☎ ☏ ✉ ✎ ☹ ☺ ☻ ☠ ⚠ ☯ ☮ ♀ ♂ ☁ ☀ 
+
+Exemplos de uso:
+1ª classe
+3º colocado
+27°C
+“aspas”
+3² = 9
+— Travessão
+Reticências…
+€123
+µtorrent
+2 × 3 ÷ 4 ≠ 5
+Eu ♥ Unicode
+✓ certo
+✗ errado
+• bolota
+Avaliação (4/5): ★★★★☆
+↓ ↘ → + soco forte
+♪ Mas eu me mordo de ciúúúúme ♫
+Aperte ⇧⌥⌘C para colar
+Clique no menu Arquivo→Exportar→HTML
+⚠ Arquivo não encontrado
+Resolução: 1024×768
