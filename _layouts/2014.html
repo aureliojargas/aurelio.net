@@ -84,7 +84,9 @@
 
 		<div id="article-header">
 			<h1><a href="{{ site.url }}{{ page.url }}" title="Permalink" rel="bookmark">{{ page.title | escape }}</a></h1>
-
+{% if page.subtitle %}
+			<h2>{{ page.subtitle | escape }}</h2>
+{% endif %}
 			{% include page-byline.html %}
 		</div><!--#article-header-->
 

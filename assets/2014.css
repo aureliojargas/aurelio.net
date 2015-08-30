@@ -214,6 +214,12 @@ table.grid tr:hover td {
 #article-header {
 	margin-bottom: 2em;
 }
+#article-header h2 {  /* page.subtitle */
+	margin: 0.25em 0 0 0;
+	font-size: 100%;
+	font-weight: normal;
+	color: gray;
+}
 #content h1 {
 	margin: 0;
 	line-height: 1.1em;
