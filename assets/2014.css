@@ -211,7 +211,7 @@ table.grid tr:hover td {
 #content {
 	overflow: auto;  /* Wide tables */
 }
-#content #article-header {
+#article-header {
 	margin-bottom: 2em;
 }
 #content h1 {
@@ -343,19 +343,19 @@ a.camouflage:hover {
 #sidebar ul {
 	margin-left: 1em;
 }
-#sidebar #bio p {
+#bio p {
 	padding: 6px 9px 6px 2px;
 }
-#sidebar #bio img {
+#bio img {
 	float: left;
 	width: 64px;
 	height: 64px;
 }
-#sidebar #meus-livros {
+#meus-livros {
 	clear: left;
 	margin-top: 2em;
 }
-#sidebar #jaba ul {
+#jaba ul {
 	list-style: none;
 	margin-left: 0;
 }
@@ -434,8 +434,8 @@ a.camouflage:hover {
 	#sidebar li {
 		margin-bottom: 0;
 	}
-	#sidebar #top-15 a,
-	#sidebar #recentes a {
+	#top-15 a,
+	#recentes a {
 		display: block;  /* bigger click area */
 	}
 }
