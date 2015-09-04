@@ -100,6 +100,8 @@ Já ministrados:
                     <a href="{{ curso.material }}">material</a>{% endif %}
                 {% if curso.slides %}
                     <a href="{{ curso.slides }}">slides</a>{% endif %}
+                {% if curso.fotos %}
+                    <a href="{{ curso.fotos }}">fotos</a>{% endif %}
                 {% if curso.video %}
                     <a href="{{ curso.video }}">vídeo</a>{% endif %}
             </td>
