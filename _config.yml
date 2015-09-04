@@ -61,6 +61,17 @@ defaults:
     values:
       layout: "2014"
       author: aurelio
+  -
+    scope:
+      path: "curso"   # curso/*, including curso/index.md
+      #path: "curso/" # curso/*, excluding curso/index.md
+    values:
+      title_prefix: "Evento: "
+      hide_ads: true
+      hide_date: true
+      hide_tags: true
+      hide_share: true
+      hide_comments: true
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file

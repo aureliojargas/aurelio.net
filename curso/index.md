@@ -1,13 +1,9 @@
 ---
 title: Cursos e palestras de Aurelio Jargas
+title_prefix:
 tags: [evento, programador, regex, shell]
-hide_ads: true
 hide_byline: true
-hide_tags: true
 hide_read_more: true
-hide_share: true
-hide_comments: true
-permalink: curso/
 ---
 
 <style>
