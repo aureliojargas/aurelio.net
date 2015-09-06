@@ -1,4 +1,5 @@
 ---
+permalink: curso/
 title: Cursos e palestras de Aurelio Jargas
 title_prefix:
 tags: [evento, programador, regex, shell]
