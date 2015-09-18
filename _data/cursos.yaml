@@ -12,7 +12,7 @@
 - data: 2003-12-04
   duracao: 2
   tema: Shell Script Básico
-  evento: Treinamento Interno - Conectiva
+  evento: Conectiva
   cidade: Curitiba
   estado: PR
   participantes: 10
@@ -39,7 +39,7 @@
 - data: 2003-12-17
   duracao: 2
   tema: Expressões Regulares
-  evento: Treinamento Interno - Conectiva
+  evento: Conectiva
   cidade: Curitiba
   estado: PR
   participantes: 12
@@ -252,7 +252,7 @@
 - data: 2015-07-22
   duracao: 3
   tema: Git e GitLab
-  evento: Treinamento Interno - Prefeitura de Joinville
+  evento: Prefeitura de Joinville
   cidade: Joinville
   estado: SC
   participantes: 7
