@@ -85,7 +85,19 @@ Os exercícios também foram bons para lidar com uma turma heterogênea como est
 
 ![Expressões Regulares para casar uma data](regex-data.jpg)
 
-Para fechar o dia, terminamos o curso fazendo juntos a já tradicional expressão para casar uma data no formato brasileiro dd/mm/aaaa. Ela pode ser simples, ou muito complexa. Qual o ponto certo entre precisão e legibilidade?
+Para fechar o dia, terminamos o curso fazendo juntos a já tradicional expressão para casar uma data no formato brasileiro dd/mm/aaaa. Ela pode ser simples, ou muito complexa. Qual o ponto certo entre precisão e legibilidade? Veja a evolução:
+
+```
+# Regex para datas, cada vez mais precisa (e menos legível)
+
+^(\d\d)/(\d\d)/(\d{4})$
+
+^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)[0-9]{2})$
+
+^((0[1-9]|[12][0-9])/02|(0[1-9]|[12][0-9]|30)/(0[469]|11)|(0[1-9]|[12][0-9]|3[01])/(0[13578]|1[02]))/((19|20)[0-9]{2})$
+
+^((0[1-9]|[12][0-9])/(0[1-9]|1[0-2])|30/(0[13456789]|1[02])|31/(0[13578]|1[02]))/((19|20)[0-9]{2})
+```
 
 ![Turma do curso de Expressões Regulares](turma-regex.jpg)
 
