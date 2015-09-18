@@ -316,3 +316,19 @@
   estado: SP
   participantes: 3
   relato: http://aurelio.net/curso/novatec/
+
+- data: 2015-09-16
+  duracao: 5
+  tema: Linha de comando do Unix
+  evento: Prefeitura de Joinville
+  cidade: Joinville
+  estado: SC
+  participantes: 7
+
+- data: 2015-09-17
+  duracao: 5
+  tema: Linha de comando do Unix
+  evento: Prefeitura de Joinville
+  cidade: Joinville
+  estado: SC
+  participantes: 9
