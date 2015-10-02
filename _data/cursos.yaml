@@ -332,3 +332,31 @@
   cidade: Joinville
   estado: SC
   participantes: 9
+
+- data: 2015-10-14
+  duracao: 1
+  tema: Expressões Regulares
+  evento: Latinoware 2015 (Espaço Paraguai às 12:00)
+  site: http://2015.latinoware.org
+  cidade: Foz do Iguaçu
+  estado: PR
+  participantes: 0
+  
+- data: 2015-10-15
+  duracao: 4
+  tema: "Expressões Regulares: Imersão"
+  evento: Latinoware 2015 (LAB2 às 14:00)
+  site: http://2015.latinoware.org
+  cidade: Foz do Iguaçu
+  estado: PR
+  participantes: 0
+
+- data: 2015-10-24
+  duracao: 1
+  tema: Expressões Regulares
+  evento: 3º Café com Software Livre
+  site: http://blusol.org
+  cidade: Blumenau
+  estado: SC
+  participantes: 0
+  
