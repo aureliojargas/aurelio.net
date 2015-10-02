@@ -261,8 +261,10 @@
   duracao: 1
   tema: Migração Rails 1→4
   evento: 1º Tech Day do GURU-PR @ Ebanx
-  site: http://www.gurupr.org/eventos/1-tech-day-do-guru-pr
+  # site: http://www.gurupr.org/eventos/1-tech-day-do-guru-pr
   slides: https://speakerdeck.com/aureliojargas/a-hora-do-pesadelo-migracao-rails-1-nil-4
+  fotos: https://picasaweb.google.com/100371365856993139231/1TechDayDoGURUPR
+  # fotos: https://www.facebook.com/media/set/?set=a.859424517467421.1073741826.267374080005804&type=3
   cidade: Curitiba
   estado: PR
   participantes: 40
