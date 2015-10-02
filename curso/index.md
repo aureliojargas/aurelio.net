@@ -86,8 +86,8 @@ Já ministrados:
         </tr>
     </tfoot>
     <tbody>
-        {% for curso in site.data.cursos %}
-        {% if curso.participantes == 0 %}{% break %}{% endif %}
+        {% for curso in site.data.cursos reversed %}
+        {% if curso.participantes == 0 %}{% continue %}{% endif %}
         <tr>
             <td>{{ curso.data | date: "%d.%m.%Y" }}</td>
             <td>{{ curso.duracao }}h</td>
