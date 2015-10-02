@@ -71,17 +71,24 @@ Já ministrados:
             <th>Dur.</th>
             <th>Tema</th>
             <th>Local / Evento</th>
-            <!-- <th>Cidade</th> -->
             <th>Público</th>
             <th>Info</th>
         </tr>
     </thead>
+    <tfoot>
+        <tr>
+            <th>Data</th>
+            <th>Dur.</th>
+            <th>Tema</th>
+            <th>Local / Evento</th>
+            <th>Público</th>
+            <th>Info</th>
+        </tr>
+    </tfoot>
     <tbody>
         {% for curso in site.data.cursos %}
         {% if curso.participantes == 0 %}{% break %}{% endif %}
         <tr>
-            <!-- <td>{{ curso.data | date: "%Y-%m-%d" }}</td> -->
-            <!-- <td>{{ curso.data | date: "%d/%m/%Y" }}</td> -->
             <td>{{ curso.data | date: "%d.%m.%Y" }}</td>
             <td>{{ curso.duracao }}h</td>
             <td>{{ curso.tema }}</td>
@@ -90,7 +97,6 @@ Já ministrados:
                 <br>
                 <span class="evento">{{ curso.evento }}</span>
             </td>
-            <!-- <td>{{ curso.cidade }} - {{ curso.estado }}</td> -->
             <td style="text-align:center;">{{ curso.participantes }}</td>
             <td>
                 {% if curso.site %}
