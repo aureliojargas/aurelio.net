@@ -338,20 +338,21 @@
 - data: 2015-10-14
   duracao: 1
   tema: Expressões Regulares
-  evento: Latinoware 2015 (Espaço Brasil às 12:00)
+  evento: Latinoware 2015
   site: http://2015.latinoware.org
+  slides: https://speakerdeck.com/aureliojargas/expressoes-regulares-latinoware-2015
   cidade: Foz do Iguaçu
   estado: PR
-  participantes: 0
+  participantes: 60
   
 - data: 2015-10-15
   duracao: 4
   tema: "Expressões Regulares: Imersão"
-  evento: Latinoware 2015 (LAB2 às 14:00)
+  evento: Latinoware 2015
   site: http://2015.latinoware.org
   cidade: Foz do Iguaçu
   estado: PR
-  participantes: 0
+  participantes: 5
 
 - data: 2015-10-24
   duracao: 1
