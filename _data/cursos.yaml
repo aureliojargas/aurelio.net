@@ -340,11 +340,11 @@
   tema: Expressões Regulares
   evento: Latinoware 2015
   site: http://2015.latinoware.org
-  slides: https://speakerdeck.com/aureliojargas/expressoes-regulares-latinoware-2015
+  slides: https://speakerdeck.com/aureliojargas/expressoes-regulares
   cidade: Foz do Iguaçu
   estado: PR
   participantes: 60
-  
+
 - data: 2015-10-15
   duracao: 4
   tema: "Expressões Regulares: Imersão"
@@ -359,7 +359,7 @@
   tema: Expressões Regulares
   evento: 3º Café com Software Livre
   site: http://blusol.org
+  slides: https://speakerdeck.com/aureliojargas/expressoes-regulares
   cidade: Indaial
   estado: SC
-  participantes: 0
-  
+  participantes: 90
