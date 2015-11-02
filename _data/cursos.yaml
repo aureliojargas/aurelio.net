@@ -206,6 +206,14 @@
   estado: MG
   participantes: 10
 
+- data: 2008-05-12
+  duracao: 2
+  tema: Google AdSense
+  evento: Faculdade IESVILLE
+  cidade: Joinville
+  estado: SC
+  participantes: 70
+
 - data: 2008-09-26
   duracao: 8
   tema: Expressões Regulares
