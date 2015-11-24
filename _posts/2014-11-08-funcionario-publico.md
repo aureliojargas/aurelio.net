@@ -77,6 +77,8 @@ Me orgulho de ter conseguido migrar o seu enorme banco de dados de [Oracle](http
 
 > Atualizar a versão do Rails (1→4) seria um sonho, mas… complicado.
 
+> **Atualização:** Em 2015, após meses de estudos e trabalho e mais de 300 commits, consegui fazer a migração do sistema para o Rails 4.2! Fiz uma palestra sobre a migração, [aqui estão os slides](https://speakerdeck.com/aureliojargas/a-hora-do-pesadelo-migracao-rails-1-nil-4).
+
 <p align="center">— ∞ —</p>
 
 **Em agosto de 2014 fui convidado para ser o coordenador do meu setor.**
@@ -84,6 +86,8 @@ Me orgulho de ter conseguido migrar o seu enorme banco de dados de [Oracle](http
 Ser chefe não é o meu perfil (eu gosto de executar, não delegar), mas aceitei pelo desafio e pelo aprendizado. O cargo mudou, o salário aumentou e passei a trabalhar 8h (ou mais) por dia.
 
 Até hoje estou lá, aprendendo a gerenciar chamados, pessoas e projetos. Não estou feliz nessa nova rotina, mas vale pela experiência.
+
+> **Atualização:** Não durou muito… Fiquei 5 meses como coordenador, então pedi pra sair. Eu estava infeliz e estressado, sem tempo para programar, somente lidando com pessoas e reuniões. Voltei ao meu cargo normal de programador e o mundo voltou a ficar colorido.
 
 <p align="center">— ∞ —</p>
 
