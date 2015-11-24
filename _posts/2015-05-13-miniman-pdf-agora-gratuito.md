@@ -37,7 +37,7 @@ Não sei se isso servirá para a pesquisa de alguém, ou se é mera curiosidade 
 
 * Assim ficou a divisão dos tipos de pagamentos que recebi:
 
-![](/img/blog/miniman-pagamentos.png)
+![](http://aurelio.net/img/blog/miniman-pagamentos.png)
 
 * Minha meta foi parar quando o número de vendas superasse o número de PDFs doados. Isso aconteceu em 30/10/2013, então encerrei as vendas.
 
