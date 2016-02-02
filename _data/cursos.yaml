@@ -371,3 +371,21 @@
   cidade: Indaial
   estado: SC
   participantes: 90
+
+- data: 2016-01-26
+  duracao: 1
+  tema: Expressões Regulares
+  evento: ContaAzul
+  slides: https://speakerdeck.com/aureliojargas/expressoes-regulares
+  cidade: Joinville
+  estado: SC
+  participantes: 20
+
+- data: 2016-02-20
+  duracao: 8
+  tema: "Expressões Regulares: Imersão"
+  evento: Centro de Treinamento da Novatec
+  site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+  cidade: São Paulo
+  estado: SP
+  participantes: 0
