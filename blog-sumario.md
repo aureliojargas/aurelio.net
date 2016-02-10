@@ -20,6 +20,11 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 
 Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
 
+## 2016 (1)
+
+  * [Sed salva o dia novamente](http://aurelio.net/blog/2016/02/09/sed-salva/)
+
+
 ## 2015 (10)
 
   * [Fiz a prova POSCOMP](http://aurelio.net/blog/2015/10/03/poscomp/)
