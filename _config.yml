@@ -45,15 +45,6 @@ redcarpet:
 #   - viagem
 exclude: [README.md, articles/README.md]
 
-# _plugins/jekyll_asset_pipeline.rb
-# no compress because yui-compressor requires Java :(
-# no gzip because already using DEFLATE in .htaccess
-asset_pipeline:
-  bundle: true
-  compress: false
-  output_path: assets
-  gzip: false
-
 defaults:
   -
     scope:
