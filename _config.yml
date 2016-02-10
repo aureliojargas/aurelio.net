@@ -24,10 +24,6 @@ description: 'Relaxe, leia com calma, aproveite a viagem.'
 permalink: /blog/:year/:month/:day/:title/
 # permalink: /:title
 
-### relative_permalinks [DEPRECATED in 2.0.0]
-# Used by the 'permalink' config inside pages' YAML.
-relative_permalinks: false
-
 ### Syntax Highlight
 highlighter: pygments
 
