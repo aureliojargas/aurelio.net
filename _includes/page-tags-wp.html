@@ -1,4 +1,0 @@
-{% for cat in page.wp_categories %}
-	<a rel="category tag" href="http://aurelio.net/blog/category/{{ cat }}/">{{ cat }}</a>{% unless forloop.last and page.wp_tags == empty %},{% endunless %}{% endfor %}
-{% for tag in page.wp_tags %}
-	<a rel="tag" href="http://aurelio.net/tag/{{ tag }}/">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
