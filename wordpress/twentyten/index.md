@@ -3,6 +3,8 @@ date: 2011-12-03
 layout: 2013-index
 title: 'WordPress: Dicas para o tema Twenty Ten'
 permalink: wordpress/twentyten/
+hide_date: true
+hide_comments: true
 ---
 
 Em meus sites com [WordPress](http://aurelio.net/wordpress/), geralmente uso versões modificadas do tema padrão [Twenty Ten](http://wordpress.org/extend/themes/twentyten).
