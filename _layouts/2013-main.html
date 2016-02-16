@@ -5,7 +5,7 @@
 
 	<link rel="stylesheet" href="/assets/common.css">
 	<link rel="stylesheet" href="/assets/2013/site.css">
-{% if page.sub_layout == "2013-page-ads" %}
+{% if layout.sub_layout == "2013-page-ads" %}
 	<link rel="stylesheet" href="/assets/2013/ads.css">
 {% else %}
 	<link rel="stylesheet" href="/assets/2013/topbar.css">
@@ -22,7 +22,7 @@
 
 </div><!--main-->
 
-{% if page.sub_layout == "2013-page-ads" %}
+{% if layout.sub_layout == "2013-page-ads" %}
 <div id="sidebar">
 {% include ad-300x600.html %}
 {% include ad-300x600.html %}
