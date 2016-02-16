@@ -50,8 +50,7 @@ defaults:
       author: aurelio
   -
     scope:
-      path: "curso"   # curso/*, including curso/index.md
-      #path: "curso/" # curso/*, excluding curso/index.md
+      path: "curso"
     values:
       title_prefix: "Evento: "
       hide_ads: true
