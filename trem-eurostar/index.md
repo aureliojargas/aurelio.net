@@ -1,6 +1,6 @@
 ---
 date: 2011-08-25
-layout: 2013-page-ads
+layout: 2013-page
 hide_comments: true
 title: Trem Eurostar - Central de informações em português
 ---

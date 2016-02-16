@@ -1,6 +1,6 @@
 ---
 date: 2012-04-29
-layout: 2013-page-ads
+layout: 2013-page
 title: Balneário Camboriú - SC
 title_prefix: 'EU FUI: '
 permalink: viagem/balneario-camboriu/

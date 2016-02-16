@@ -1,6 +1,6 @@
 ---
 date: 2012-04-29
-layout: 2013-page-ads
+layout: 2013-page
 permalink: viagem/balneario-camboriu/bondindinho/
 title: Bondindinho - Balneário Camboriú - SC
 title_prefix: 'EU FUI: '

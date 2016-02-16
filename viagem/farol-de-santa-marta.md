@@ -1,6 +1,6 @@
 ---
 date: 2006-09-13
-layout: 2013-page-ads
+layout: 2013-page
 permalink: viagem/farol-de-santa-marta/
 title: Farol de Santa Marta - SC
 title_prefix: 'EU FUI: '

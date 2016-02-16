@@ -1,6 +1,6 @@
 ---
 date: 2001-06-14
-layout: 2013-page-ads
+layout: 2013-page
 permalink: viagem/marumbi/
 title: Subida ao Pico Abrolhos - Morro Marumbi - PR
 title_prefix: 'EU FUI: '
