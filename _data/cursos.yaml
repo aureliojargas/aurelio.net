@@ -385,6 +385,14 @@
   duracao: 8
   tema: "Expressões Regulares: Imersão"
   evento: Centro de Treinamento da Novatec
+  cidade: São Paulo
+  estado: SP
+  participantes: 21
+
+- data: 2016-04-09
+  duracao: 8
+  tema: "Expressões Regulares: Imersão"
+  evento: Centro de Treinamento da Novatec
   site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
   cidade: São Paulo
   estado: SP
