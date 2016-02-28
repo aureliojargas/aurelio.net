@@ -1,5 +1,5 @@
 ---
-permalink: curso/novatec/
+permalink: curso/novatec/i/
 title: Maratona de cursos na Novatec
 subtitle: 19 a 22 de agosto de 2015, São Paulo - SP
 tags: [evento, programador, regex, shell]
