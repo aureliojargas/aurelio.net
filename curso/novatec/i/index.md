@@ -1,6 +1,6 @@
 ---
 permalink: curso/novatec/i/
-title: Maratona de cursos na Novatec
+title: Maratona de 5 cursos em 4 dias no CT da Novatec
 subtitle: 19 a 22 de agosto de 2015, São Paulo - SP
 tags: [evento, programador, regex, shell]
 ---
