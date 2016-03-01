@@ -62,6 +62,7 @@ defaults:
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
+# css_extra: foo.css
 # hide_title_suffix: true
 # hide_heading: true
 # hide_prev_next: true
