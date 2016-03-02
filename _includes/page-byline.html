@@ -1,6 +1,6 @@
 {% unless page.hide_byline %}
 		<p class="byline">{% unless page.hide_author %}
-			Escrito por {% include page-authors.html %}{% endunless %}{% unless page.hide_date %}
-			em <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>{% endunless %}
+			Escrito por {% include page-authors.html %}{% endunless %}{% unless page.hide_date %}{% if page.date %}
+			em <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>{% endif %}{% endunless %}
 		</p>
 {% endunless %}
