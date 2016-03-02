@@ -96,6 +96,9 @@
 
 		<div id="article-footer">
 			<div id="eof">— EOF —</div>
+{% if page.article_footer_after %}
+{% include {{ page.article_footer_after }} %}
+{% endif %}
 		</div>
 
 	</div>

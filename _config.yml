@@ -63,6 +63,7 @@ defaults:
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
 # css_extra: foo.css
+# article_footer_after: include-file.html
 # hide_title_suffix: true
 # hide_heading: true
 # hide_prev_next: true
