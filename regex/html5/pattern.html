@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5: Testes do atributo pattern (input)</title>
+
+	<script>
+		function valida() {
+			if (document.cadastro3.cpf.validity.patternMismatch) {
+				alert("O CPF está incorreto");
+			} else {
+				alert("O CPF está correto");
+			}
+			return false;
+		}
+		function cpf_incorreto(el) {
+			alert("O valor " + el.value + " não é um CPF");
+			return false;
+			// ^ Evita processamento padrão do Opera (mostrar erro em vermelho)
+		}
+	</script>
+
+	<style>
+		/* Campos normais são brancos, campos com erro são vermelhos */
+		input[type="text"] { background-color: white; color: black; }
+		input:invalid      { background-color: #fcc ; color: red; }
+
+		/* Formatação desta página, pode ignorar */
+		body { font-family: sans-serif; padding-bottom: 2em; }
+		table { border-collapse: collapse; width: 100%; margin-bottom: 1.5em; }
+		td { padding: 10px 0; vertical-align: top; }
+		td { width: 50%; border: 1px solid #aaa; border-width: 3px 0; }
+		pre { padding-left: 20px; }
+		td p, td li { font-size: 85%; }
+		td strong { color: blue; font-weight: normal; }
+	</style>
+</head>
+
+<body>
+
+<h1>HTML5: Testes do atributo pattern (input)</h1>
+
+<table>
+<tr><td>
+
+<pre>
+&lt;form name=&quot;cadastro1&quot;&gt;
+   CPF:
+   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
+      <strong>pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;&gt;</strong>
+   &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</pre>
+
+</td><td>
+
+<h3>Sem atributo title</h3>
+<form name="cadastro1">
+   CPF:
+   <input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+   <input type="submit">
+</form>
+
+<!-- <p>O input deve ficar vermelho ao digitar um CPF inválido.</p> -->
+
+<p>Ao digitar um CPF inválido como "abc", o input deve ficar com fundo e letra vermelhos. Ao tentar enviar o CPF inválido:</p>
+<ul>
+	<li>O formulário não deve ser enviado.</li>
+	<li>Deve aparecer uma mensagem de erro padrão, perto do input.</li>
+</ul>
+
+</td></tr>
+<tr><td>
+
+<pre>
+&lt;form name=&quot;cadastro2&quot;&gt;
+   CPF:
+   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
+      pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;
+      <strong>title=&quot;Digite o CPF no formato nnn.nnn.nnn-nn&quot;&gt;</strong>
+   &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</pre>
+
+</td><td>
+
+<h3>Com atributo title</h3>
+<form name="cadastro2">
+   CPF:
+   <input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn">
+   <input type="submit">
+</form>
+
+<!-- <p>Não envia se CPF inválido e mostra o conteúdo de <strong>title</strong>.</p> -->
+
+<p>Ao digitar um CPF inválido como "abc", o input deve ficar com fundo e letra vermelhos. Ao tentar enviar o CPF inválido:</p>
+<ul>
+	<li>O formulário não deve ser enviado.</li>
+	<li>Deve aparecer uma mensagem de erro padrão, perto do input.</li>
+	<li>Na mensagem de erro também deve aparecer o conteúdo de <strong>title</strong>.</li>
+</ul>
+
+</td></tr>
+<tr><td>
+
+<pre>
+&lt;form name=&quot;cadastro3&quot; <strong>onsubmit=&quot;return valida()&quot;</strong>&gt;
+   CPF:
+   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
+      pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;
+      title=&quot;Digite o CPF no formato nnn.nnn.nnn-nn&quot;&gt;
+   &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+   function valida() {
+      if (document.cadastro3.cpf.<strong>validity.patternMismatch</strong>) {
+         alert(&quot;O CPF est&aacute; incorreto&quot;);
+      } else {
+         alert(&quot;O CPF est&aacute; correto&quot;);
+      }
+      return false;
+   }
+&lt;/script&gt;
+
+</pre>
+
+</td><td>
+
+<h3>JavaScript: validity.patternMismatch</h3>
+<form name="cadastro3" onsubmit="return valida()">
+   CPF:
+   <input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn">
+   <input type="submit">
+</form>
+
+<!-- <p>Se CPF inválido, não envia ou chama <strong>valida()</strong>?</p>
+
+<p>Não envia: Chrome, Firefox.
+<br>valida(): Safari, Opera.</p> -->
+
+<p>Ao digitar um CPF inválido como "abc", o input deve ficar com fundo e letra vermelhos. Ao tentar enviar o CPF inválido, há dois comportamentos, não sei qual é o correto:</p>
+
+<p>Chrome, Firefox:</p>
+<ul>
+	<li>O formulário não deve ser enviado.</li>
+	<li>Deve aparecer uma mensagem de erro padrão, perto do input.</li>
+	<li>Na mensagem de erro também deve aparecer o conteúdo de <strong>title</strong>.</li>
+	<li>A função <strong>valida()</strong> não é chamada.</li>
+</ul>
+<p>Safari, Opera:</p>
+<ul>
+	<li>O formulário não deve ser enviado.</li>
+	<li>Vai aparecer um alerta com a mensagem "O CPF está incorreto"</li>
+</ul>
+
+</td></tr>
+<tr><td>
+
+<pre>
+&lt;form name=&quot;cadastro4&quot;&gt;
+   CPF:
+   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
+      pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;
+      title=&quot;Digite o CPF no formato nnn.nnn.nnn-nn&quot;
+      <strong>oninvalid=&quot;return cpf_incorreto(this);&quot;</strong>&gt;
+   &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+   function cpf_incorreto(<strong>el</strong>) {
+      alert(&quot;O valor &quot; + <strong>el.value</strong> + &quot; n&atilde;o &eacute; um CPF&quot;);
+      return false;
+   }
+&lt;/script&gt;
+
+</pre>
+
+</td><td>
+
+<h3>JavaScript: Evento onvalid</h3>
+<form name="cadastro4">
+   CPF:
+   <input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn"
+      oninvalid="return cpf_incorreto(this);">
+   <input type="submit">
+</form>
+
+<!-- <p>Se CPF inválido, mostra um alerta.</p> -->
+
+<p>Ao digitar um CPF inválido como "abc", o input deve ficar com fundo e letra vermelhos. Ao tentar enviar o CPF inválido:</p>
+<ul>
+	<li>O formulário não deve ser enviado.</li>
+	<li>Deve aparecer um alerta com a mensangem: "O valor abc não é um CPF".</li>
+</ul>
+
+</td></tr>
+</table>
+
+<h3>Resultados em 2012-09-05:</h3>
+<ul>
+	<li>Google Chrome, Firefox e Opera funcionam 100%.</li>
+	<li>Safari quase OK, porém não bloqueia o envio do formulário em caso de input inválido (e deveria).</li>
+	<li>Internet Explorer 9 não funciona nada.</li>
+</ul>
+
+<p>Estes testes complementam o conteúdo do livro <a href="http://www.piazinho.com.br/">Expressões Regulares - Uma abordagem divertida</a>, de <a href="http://aurelio.net">Aurelio Jargas</a>.</p>
+
+<p>← Voltar para a <a href=".">referência sobre expressões regulares em HTML5</a></p>
+
+</body>
+</html>

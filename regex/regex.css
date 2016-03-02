@@ -1,0 +1,16 @@
+/* Link lists with description */
+#content li > p > a:first-child {
+  display: block;
+}
+
+/* by John Doe */
+#content li em {
+  display: block;
+  color: gray;
+  font-size: 85%;
+}
+
+/* Links in reference tables */
+#content td a {
+  text-decoration: none;
+}

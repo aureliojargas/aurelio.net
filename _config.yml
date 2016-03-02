@@ -58,6 +58,14 @@ defaults:
       hide_tags: true
       hide_share: true
       hide_comments: true
+  -
+    scope:
+      path: "regex"
+    values:
+      css_extra: /regex/regex.css
+      article_footer_after: regex-footer.html
+      hide_ads: true
+      hide_read_more: true
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 regex test</title>
+
+<style>
+input[type="text"] { background-color: white }
+input:invalid { background-color: #fdd; /*rgb(255,230,245)*/ color: red }
+Xinput:required { background-color: rgb(255,230,245); color: red }
+</style>
+
+<script>
+function update () {
+	// alert(document.getElementById('number2').validity.patternMismatch);
+	// alert(document.getElementById('myform').validity.valid);
+	alert(document.getElementById('number2').checkValidity());
+}
+function isinvalid (el) {
+	// alert("invalid!");
+}
+
+</script>
+
+</head>
+  <body>
+    <h1>Example</h1>
+    <p>This is an example HTML document.</p>
+
+<form name="form1" id="myform" onsubmit="javascript:update()">
+<fieldset>
+	<p>
+	CPF:
+	<input type="text" name="cpf" Xrequired="required"
+	pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+	title="foo" />
+	</p>
+
+	<p>
+	URL:
+	<input type="url" name="url" required="required"
+	title="foo" />
+	</p>
+
+	<p>
+	Number:
+	<input type="number" name="number" required="required"
+	title="foo" />
+
+	regex: <input type="text" name="number2" id="number2" Xrequired="required"
+	pattern="^\d"
+	XXoninvalid="isinvalid(this); return false;"
+	title="foo" />
+	<!-- oninvalid triggered at form submit -->
+
+
+	</p>
+
+	<p>
+	Enter a date: <input type="date" name="day"
+	required="required"
+	title="Use format yyyy-mm-dd" />
+	</p>
+
+	<p>
+	Enter a US or Canadian Postal Code:
+	<input type="text" name="postCode"
+	required="required"
+	pattern="^([0-9]{5}(-[0-9]{4})?)|([0-9][A-Z][0-9]\s+[A-Z][0-9][A-Z])$"
+	title="US: 99999-1234; Canadian: 0A1&#160;B2C" />
+	</p>
+
+	<input type="submit">
+	<!-- <input type="submit"> -->
+	</fieldset>
+	</form>
+
+  </body>
+</html>
