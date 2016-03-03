@@ -285,7 +285,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 18
-  relato: http://aurelio.net/curso/novatec/
+  relato: http://aurelio.net/curso/novatec/i/
 
 - data: 2015-08-20
   duracao: 8
@@ -295,7 +295,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 14
-  relato: http://aurelio.net/curso/novatec/
+  relato: http://aurelio.net/curso/novatec/i/
 
 - data: 2015-08-21
   duracao: 8
@@ -305,7 +305,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 10
-  relato: http://aurelio.net/curso/novatec/
+  relato: http://aurelio.net/curso/novatec/i/
 
 - data: 2015-08-22
   duracao: 4
@@ -315,7 +315,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 5
-  relato: http://aurelio.net/curso/novatec/
+  relato: http://aurelio.net/curso/novatec/i/
 
 - data: 2015-08-22
   duracao: 4
@@ -325,7 +325,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 3
-  relato: http://aurelio.net/curso/novatec/
+  relato: http://aurelio.net/curso/novatec/i/
 
 - data: 2015-09-16
   duracao: 5
@@ -388,6 +388,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 21
+  relato: http://aurelio.net/curso/novatec/ii/
 
 - data: 2016-04-09
   duracao: 8
