@@ -8,7 +8,7 @@ worked: 3:00
 
 Expressões regulares é um assunto que dá medo em muita gente. O cara olha aquela mistura aleatória de símbolos, não entende nada e sai xingando quem inventou aquela porcaria :)
 
-Mas depois que você “vê a luz” e aprende a ler e criar suas próprias expressões, um novo mundo mundo de possibilidades se abre e você passa a querer usar expressões regulares em tudo! Do ódio ao vício, o que era trevas vira ferramenta indispensável.
+Mas depois que você “vê a luz” e aprende a ler e criar suas próprias expressões, um novo mundo de possibilidades se abre e você passa a querer usar expressões regulares em tudo! Do ódio ao vício, o que era trevas vira ferramenta indispensável.
 
 
 ## Eu uso expressões regulares todos os dias
