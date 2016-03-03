@@ -20,8 +20,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 
 Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
 
-## 2016 (1)
+## 2016 (2)
 
+  * [Aprenda expressões regulares em um dia](http://aurelio.net/blog/2016/03/02/aprender-regex/)
   * [Sed salva o dia novamente](http://aurelio.net/blog/2016/02/09/sed-salva/)
 
 
