@@ -243,6 +243,10 @@ table.grid tr:hover td {
 #content li {
 	margin-bottom: 1em;
 }
+#content li ul,
+#content li ol {
+	margin-top: 1em;
+}
 #content p.image {
 	margin-top: 2em;
 	margin-bottom: 2em;
