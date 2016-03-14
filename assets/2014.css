@@ -2,6 +2,10 @@
 /* by Aurelio Jargas, 2014-09-21, MIT licensed */
 
 
+.clearfix {
+	clear: both
+}
+
 /* ------------------------------------ From common.css */
 
 .note            { padding:6px 9px; background:#EEEEEE; border:1px solid #CCC; }    /* silver */
