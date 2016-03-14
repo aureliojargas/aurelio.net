@@ -8,7 +8,7 @@
 <!-- Título original: ER para casar um número IP -->
 
 <h2>Como casar um número IP (regex)</h2>
-<i>12/dez/1999, por <a href="http://aurelio.net">Aurelio Marinho Jargas</a></i>
+<i>12/dez/1999, por <a href="http://aurelio.net/aurelio/">Aurelio Marinho Jargas</a></i>
 
 <hr>
 
@@ -54,7 +54,7 @@ casa:   0-9,10-99 |  100-199  |   200-249  |250-255
 
 <p>Novamente, percebemos um <b>[0-9]</b> repetido no final dos intervalos
 0-9,10-99 e 100-199. Vamos isolá-lo. SIM! É igual a matemática lá no
-primário! <b>xa+xb = x(a+b)</b> 
+primário! <b>xa+xb = x(a+b)</b>
 
 <pre>
 ER  : (<b>(1[0-9]|[1-9]?)[0-9]</b>|2([0-4][0-9]|5[0-5]))
@@ -102,7 +102,7 @@ while [ $a -lt 300 ]                     # limitando a amostragem até 300
 do echo $a |
    egrep -x '((1[0-9]|[1-9]?)[0-9]|2([0-4][0-9]|5[0-5]))'
    a=$((a+1))                            # incrementan a contagem
-done 
+done
 </pre>
 <hr>
 
@@ -231,7 +231,7 @@ ajudarão nessa tarefa, como o <b>laço</b> e o "<b>split</b>".</p>
 
 <hr>
 
-<p><a href="/er">Saiba mais sobre Expressões Regulares</a></p>
+<p><a href="/regex/">Saiba mais sobre Expressões Regulares</a></p>
 
 </body>
 </html>
