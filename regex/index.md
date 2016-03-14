@@ -27,7 +27,7 @@ article_footer_after: false
 
 <img style="float:right" src="/img/icon/128/er.png">
 
-<div style="background:#F6E568;padding-left: 2em;" class="banner">
+<div style="background:#F6E568; padding:1em 1em 2em 2em;" class="banner">
     <h3 style="margin: 1em 0">Avisos importantes</h3>
     <p>Saiu a <a href="http://piazinho.com.br/">5ª edição do livro de Expressões Regulares</a>, em papel e e-book!</p>
     <p>Vou dar um <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">curso presencial de imersão em Expressões Regulares</a> em São Paulo, dia 09/04/2016, aproveite!
