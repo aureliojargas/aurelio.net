@@ -66,6 +66,14 @@ defaults:
       article_footer_after: regex-footer.html
       hide_ads: true
       hide_read_more: true
+  -
+    scope:
+      path: "shell"
+    values:
+      css_extra: /shell/shell.css
+      article_footer_after: shell-learn-more.html
+      hide_ads: true
+      hide_read_more: true
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
