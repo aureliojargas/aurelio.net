@@ -1,5 +1,4 @@
 ---
-title: Dá pra aprender expressões regulares em um dia
 title: Aprenda expressões regulares em um dia
 tags: [regex]
 hide_ads: true
