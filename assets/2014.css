@@ -373,6 +373,9 @@ a.camouflage:hover {
 	list-style: none;
 	margin-left: 0;
 }
+.twitter-tweet {  /* embedded tweet */
+	margin: 2em auto !important;
+}
 
 /* ----------------------------------------------------- */
 
