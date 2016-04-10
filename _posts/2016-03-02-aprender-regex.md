@@ -56,6 +56,8 @@ Pra mim, é muito gratificante perceber essa enorme evolução em tão pouco tem
 
 [![](http://aurelio.net/curso/novatec/ii/turma-800.jpg)](http://aurelio.net/curso/novatec/ii/)
 
+[![](http://aurelio.net/curso/novatec/iii/turma-800.jpg)](http://aurelio.net/curso/novatec/iii/turma.jpg)
+
 Quer aprender também? [Veja as datas dos próximos cursos](http://aurelio.net/curso/).
 
 Convido a quem já foi aluno deixar aqui seu comentário. Gostou do curso? Aprendeu de verdade? Está usando regex no seu dia a dia? Tem alguma dica pra quem quer aprender também?
