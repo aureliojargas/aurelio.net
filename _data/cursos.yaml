@@ -397,3 +397,12 @@
   cidade: São Paulo
   estado: SP
   participantes: 24
+
+- data: 2016-05-21
+  duracao: 1
+  tema: O poder da linha de comando
+  evento: SC Dev Summit 2016
+  site: http://scdevsummit.com.br/
+  cidade: Joinville
+  estado: SC
+  participantes: 0
