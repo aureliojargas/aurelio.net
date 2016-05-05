@@ -406,3 +406,12 @@
   cidade: Joinville
   estado: SC
   participantes: 0
+
+- data: 2016-07-15
+  duracao: 1
+  tema: Shell Script Moderno
+  evento: FISL 2016
+  site: http://softwarelivre.org/fisl17
+  cidade: Porto Alegre
+  estado: RS
+  participantes: 0
