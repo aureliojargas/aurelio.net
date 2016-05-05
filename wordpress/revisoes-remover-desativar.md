@@ -13,13 +13,17 @@ A grande desvantagem das revisões, é que cada cópia do post que é salva na b
 Se você gosta das revisões, pelo menos limite o número máximo de revisões que são guardadas para cada post. Você pode dizer para o WordPress guardar somente 5 versões de cada post, que deve ser um número suficiente. Coloque esta linha no seu **wp-config.php**:
 
 ```php
+<?php
 define('WP_POST_REVISIONS', 5);  // máx. de 5 revisões por post
+?>
 ```
 
 Agora, se você nunca usa as revisões, é bom desativá-las de uma vez por todas. Assim, nenhuma cópia adicional do post será guardada na base de dados. Basta usar a mesma linha do exemplo anterior, porém troque o número por `false`:
 
 ```php
+<?php
 define('WP_POST_REVISIONS', false);  // revisões desligadas
+?>
 ```
 
 Tudo bem, você desligou tudo. Mas a sua base de dados ainda está cheia de revisões de todos os posts que você escreveu até hoje. É preciso removê-las para liberar espaço.
@@ -58,4 +62,3 @@ Eu executei agora estes comandos aqui no meu blog. Veja os resultados:
   * Tabela wp_posts caiu de 3.8 MB para 1.5 MB (-40%)
 
 E aí no teu blog, como foi?
-

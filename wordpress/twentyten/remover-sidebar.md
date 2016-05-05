@@ -94,6 +94,7 @@ Depois:
 Basta colocar o código seguinte no functions.php de seu tema filho e pronto.
 
 ```php
+<?php
 // functions.php
 
 // Remove sidebar widgets from the backend
@@ -102,6 +103,7 @@ function remove_widgets() {
     unregister_sidebar('secondary-widget-area');
 }
 add_action('admin_init', 'remove_widgets');
+?>
 ```
 
 

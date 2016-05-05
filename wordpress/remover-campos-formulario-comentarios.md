@@ -18,6 +18,7 @@ Por exemplo, você pode remover somente o campo Site, que não é tão important
 Veja como é simples, basta adicionar este código no arquivo functions.php de seu tema:
 
 ```php
+<?php
 add_filter('comment_form_default_fields', 'remove_campos');
 
 function remove_campos($campos) {
@@ -28,6 +29,7 @@ function remove_campos($campos) {
 
     return $campos;
 }
+?>
 ```
 
 A primeira linha liga a nossa função remove_campos() com o filtro responsável por alterar os campos padrão do formulário. A função recebe e retorna um array $campos, que contém os campos do formulário. Mas antes de retornar o array, é claro, faremos a mágica de desaparecer com alguns campos: basta esvaziar a chave do campo em questão.

@@ -23,7 +23,9 @@ Assim como outros clientes para WordPress, o app para iOS comunica-se com o seu 
 Fuçando no [código do servidor XML-RPC](http://core.trac.wordpress.org/browser/tags/3.4.1/wp-includes/class-wp-xmlrpc-server.php), descobri o método `wp_getComment()`, que chama o método `_prepare_comment()` que por sua vez tem esta linha mágica no final:
 
 ```php
+<?php
 return apply_filters( 'xmlrpc_prepare_comment', $_comment, $comment );
+?>
 ```
 
 Maravilha! Essa foi a luz no fim do túnel.
@@ -33,6 +35,7 @@ Essa linha me disse que há um filtro não-documentado do WordPress, chamado `xm
 Este filtro trabalha com um array `$_comment`, que é uma belezura, trazendo já mastigados todos os dados do comentário em questão:
 
 ```php
+<?php
 $_comment = array(
     'date_created_gmt' => $comment_date_gmt,
     'user_id'          => $comment->user_id,
@@ -49,11 +52,13 @@ $_comment = array(
     'author_ip'        => $comment->comment_author_IP,
     'type'             => $comment->comment_type,
 );
+?>
 ```
 
 Para resolver o meu problema, basta eu catar este array, enfiar os campos cidade/estado no começo (ou final) do conteúdo do comentário e devolver o array modificado. Traduzindo isso para código:
 
 ```php
+<?php
 // functions.php
 // Mostra os campos Cidade e Estado nos comentários
 // do app do WordPress para iOS
@@ -72,6 +77,7 @@ function ios_comentarios_completos($dados) {
   // Devolvo o array modificado
   return $dados;
 }
+?>
 ```
 
 Só isso e pronto. Agora é só recarregar os comentários no iPhone que eles já aparecerão com os dados novos.
