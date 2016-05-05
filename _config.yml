@@ -28,10 +28,22 @@ permalink: /blog/:year/:month/:day/:title/
 highlighter: rouge  # Default since Jekyll 3.0
 
 ### Markdown
-markdown: redcarpet
-redcarpet:
-  extensions: ["fenced_code_blocks", "autolink"]
-# extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+# http://jekyllrb.com/docs/configuration/#default-configuration
+# http://kramdown.gettalong.org/rdoc/Kramdown/Options.html
+markdown: kramdown  # Default since Jekyll 3.0
+kramdown:
+  input: GFM  # Jekyll extension
+  hard_wrap: false
+  auto_ids: false
+  # entity_output: ':symbolic'
+  # auto_link: true  # do not exist :(
+
+# espaços em branco adicionais (git diff -w)
+# meu ajuste pra imagens centralizadas perdeu :(
+# idem meu esquema de colocar caption nas imagens :(
+# code highlighter perde classes como o nome da linguagem, mas não afeta as cores
+# Não está fazendo autolink de URLs coladas as is (blog/2016/02/09/sed-salva/index.html, no final)
+
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
