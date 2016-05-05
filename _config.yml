@@ -25,7 +25,7 @@ permalink: /blog/:year/:month/:day/:title/
 # permalink: /:title
 
 ### Syntax Highlight
-# highlighter: rouge  # Default since Jekyll 3.0
+highlighter: rouge  # Default since Jekyll 3.0
 
 ### Markdown
 markdown: redcarpet
