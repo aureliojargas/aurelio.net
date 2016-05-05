@@ -35,7 +35,7 @@ Tudo bem, você desligou tudo. Mas a sua base de dados ainda está cheia de revi
 Primeiro, um comando para listar todas as revisões de posts e páginas que estão entulhando a sua querida tabela `wp_posts`:
 
 ```sql
-SELECT * FROM wp_posts WHERE post_type = "revision"
+SELECT * FROM wp_posts WHERE post_type = 'revision'
 ```
 
 Para remover todas estas revisões, há vários sites que recomendam usar uma variação do comando SQL anterior, apenas trocando `select *` por `delete`. Vai funcionar, porém não vai remover todos os meta dados que estão relacionados com estas revisões, pois eles estão em outras tabelas: `wp_postmeta` e `wp_term_relationships`.
