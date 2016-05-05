@@ -36,7 +36,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
     ```swift
     let π = 3.14159
-    let 🐶🐮 = "dogcow"  # Os Emojis podem não aparecer no seu navegador
+    let 🐶🐮 = "dogcow"  // Os Emojis podem não aparecer no seu navegador
     ```
 
 - **Comentários multilinha** podem ser aninhados. Já tentou comentar um trecho grande de código que já possuía alguns comentários multilinha com `/* … */`? Pois é. Na Swift rola.
