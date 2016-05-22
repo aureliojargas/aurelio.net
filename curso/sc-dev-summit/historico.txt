@@ -1,0 +1,98 @@
+  505  cd palestra/
+  506  l
+  507  ls -la
+  508  alias l='ls -la'
+  509  cat lorem.txt
+  510  cat hino.txt
+  511  cat hino.txt
+  512  echo $PS1
+  513  PS1='$ '
+  514  PS1='--------------------------------------------------------------------------------\n$ '
+  515  ls
+  516  cat hino.txt
+  517  cat hino.txt > arquivo.txt
+  518  cat arquivo.txt
+  519  cat hino.txt
+  520  cat hino.txt | head -n 3
+  521  cat hino.txt | head -n 3 > tres.txt
+  522  cat tres.txt
+  523  cat hino.txt | head -n 3
+  524  cat hino.txt | head -n 3 | tail -n 1
+  525  cat hino.txt | head -n 3 | tail -n 1 | cut -d , -f 1
+  526  cat hino.txt | head -n 3 | tail -n 1 | cut -d , -f 1 | tr a-z A-z
+  527  ls
+  528  cd bootstrap/
+  529  ls
+  530  find . -name "*.css"
+  531  find . -name "*.css" | wc -l
+  532  find . -name "*.css" | wc
+  533  find . -name "*.css" | wc -l
+  534  find . -name "*.js" | wc -l
+  535  find . -name "*.css"
+  536  find . -name "*.css" | sed 's/.*/& &/'
+  537  find . -name "*.css" | sed 's/.*/& &/' | head -n 5
+  538  find . -name "*.css" | sed 's/.*/mv & &/' | head -n 5
+  539  find . -name "*.css" | sed 's/.*/mv & &/' | sed 's/css$/sass/' | head -n 5
+  540  find . -name "*.css" | sed 's/.*/mv & &/' | sed 's/css$/sass/'
+  541  find . -name "*.css" | sed 's/.*/mv & &/' | sed 's/css$/sass/' | sh
+  542  git status
+  543  alias gs='git status'
+  544  gs
+  545  gs
+  546  alias reset='git reset --hard HEAD'
+  547  reset
+  548  gs
+  549  alias reset='git reset --hard ^HEAD'
+  550  reset
+  551  git reset --hard RESET
+  552  git reset --hard HEAD
+  553  ls
+  554  gs
+  555  find . -name "*.sass"
+  556  find . -name "*.sass" -delete
+  557  gs
+  558  find . -name "*.css" | sed 's/.*/git mv & &/' | sed 's/css$/sass/'  #| sh
+  559  find . -name "*.css" | sed 's/.*/git mv & &/' | sed 's/css$/sass/' | sh
+  560  gs
+  561  cat LICENSE
+  562  cat LICENSE | wc -w
+  563  egrep '\d+'
+  564  egrep '\d+' LICENSE
+  565  egrep -o '\d+' LICENSE
+  566  alias numeros="egrep -o '\d+'"
+  567  cat LICENSE | numeros
+  568  cat LICENSE | egrep '\w+'
+  569  cat LICENSE | egrep -o '\w+'
+  570  cat LICENSE | egrep -o '\w+' | tr A-Z a-z
+  571  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort
+  572  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c
+  573  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort
+  574  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n
+  575  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n | tac
+  576  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n | tail -r
+  577  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n -r
+  578  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n -r | head -n 5
+  579  cat LICENSE | egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n -r | head -n 5 | numeros
+  580  alias conta="egrep -o '\w+' | tr A-Z a-z | sort | uniq -c | sort -n -r | head -n 5"
+  581  cat LICENSE | conta
+  582  cat LICENSE | conta | numeros
+  583  cat README.md | conta
+  584  sed --help
+  585  cat LICENSE | conta | numeros
+  586  cat LICENSE | conta | numeros | pbcopy
+  587  echo $RANDOM
+  588  echo $RANDOM
+  589  echo $RANDOM
+  590  echo $RANDOM
+  591  echo $RANDOM
+  592  echo $RANDOM
+  593  echo $RANDOM
+  594  echo $RANDOM
+  595  echo $RANDOM
+  596  echo $RANDOM
+  597  echo $RANDOM
+  598  echo $((RANDOM % 99999))
+  599  echo $((RANDOM % 9999))
+  600  echo $((RANDOM % 999))
+  601  echo $((RANDOM % 9999))
+  602  history > historico.txt

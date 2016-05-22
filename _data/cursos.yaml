@@ -402,10 +402,11 @@
   duracao: 1
   tema: O poder da linha de comando
   evento: SC Dev Summit 2016
-  site: http://scdevsummit.com.br/
   cidade: Joinville
   estado: SC
-  participantes: 0
+  participantes: 150
+  slides: https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando
+  material: http://aurelio.net/curso/sc-dev-summit/
 
 - data: 2016-07-15
   duracao: 1
