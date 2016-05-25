@@ -175,4 +175,4 @@ E agora repetido doze anos depois, fazendo o pessoal vasculhar suas carteiras:
 
 ![](sorteio-3.jpg)
 
-Doze. Anos. 😯
+Doze. Anos. 😮
