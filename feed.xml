@@ -13,6 +13,175 @@ layout: null
 			<link>http://aurelio.net</link>
 		</image>
 		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Palestra “O poder da linha de comando” no SC Dev Summit 2016</title>
+			<pubDate>Sat, 21 May 2016 12:00:00 +0000</pubDate>
+			<link>http://aurelio.net/curso/sc-dev-summit/</link>
+			<guid isPermaLink="true">http://aurelio.net/curso/sc-dev-summit/</guid>
+			<description>&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/cartaz.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Palestra: O poder da linha de comando&lt;/li&gt;
+&lt;li&gt;Evento: &lt;a href=&quot;http://scdevsummit.com.br/&quot;&gt;SC Dev Summit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Local: Univille Universidade, Joinville - SC&lt;/li&gt;
+&lt;li&gt;Data: 21/05/2016&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/media/set/?set=a.234931120219968.1073741832.155677364812011&amp;amp;type=3&quot;&gt;Fotos do evento (Facebook)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Essa foi uma palestra nova, que fiz especialmente para o evento.&lt;/p&gt;
+
+&lt;p&gt;O evento aconteceu em dois dias, sendo o primeiro com palestras temáticas de back-end e segundo para front-end. Eu me identifico mais com o back-end, mas como eu só tinha disponibilidade no sábado, que era o dia do front-end, então aceitei o desafio de fazer uma palestra para um público diferente.&lt;/p&gt;
+
+&lt;p&gt;Pensei comigo, esses caras hoje precisam ir para a linha de comando de vez em quando pra instalar e rodar as ferramentas que manipulam os arquivos CSS e HTML: pré-processadores, minificadores, e tudo mais. Já “molharam o pé” na tela preta, então eu poderia fazer uma demonstração do poder das ferramentas do Unix, estilo os vídeos que faço na série &lt;a href=&quot;http://aurelio.net/tela-preta/&quot;&gt;Tela Preta&lt;/a&gt;, para despertar a curiosidade de eles explorarem e ficarem mais tempo no prompt.&lt;/p&gt;
+
+&lt;p&gt;Esta foi a chamada da palestra:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Linha de comando é lugar para dev frontend? Com certeza! Vamos desvendar juntos os mistérios da tela preta. São ideias simples, numa interface textual, que trazem um enorme poder ao seu arsenal de ferramentas.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Estudando as ferramentas de front-end&lt;/h2&gt;
+
+&lt;p&gt;Apesar de eu já ter criado vários sites “na mão”, e saber bem HTML e CSS, não estou por dentro das ferramentas de front que foram criadas nos últimos anos, que agilizam o processo.&lt;/p&gt;
+
+&lt;p&gt;Meu primeiro passo, antes mesmo de definir o escopo e roteiro da palestra, foi saber mais sobre o público: estudar sobre o que é ser front-end hoje, e quais ferramentas de linha de comando eles costumam utilizar.&lt;/p&gt;
+
+&lt;p&gt;Dos vários artigos que li, estes foram os mais úteis:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://alistapart.com/event/front-end-dev&quot;&gt;The State of Front-End Dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers&quot;&gt;A Baseline for Front-End Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://seesparkbox.com/foundry/command_line_tools_for_frontend_developers&quot;&gt;Command Line Tools for Frontend Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://webdesign.tutsplus.com/tutorials/the-command-line-for-web-design-powering-up-front-end-code--cms-23453&quot;&gt;The Command Line for Web Design: Powering Up Front End Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Foi bom ter feito isso, assim eu pude entender melhor a rotina deles, conheci as ferramentas principais e pude fazer exemplos mais próximos de sua realidade em vez de exemplos genéricos.&lt;/p&gt;
+
+&lt;h2&gt;Os slides&lt;/h2&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;68bcded4481a4da9bbcf2749b70410e0&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando&quot;&gt;https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sei que a galera do front é mais ligada no visual do que os back-ends, e imaginei que os slides dos demais palestrantes seriam bem chamativos, com muitas imagens e vídeos (acertei 😁). Porém, segui o outro caminho e fiz slides espartanos, somente texto e fundo preto, pro pessoal já entrar no clima da linha de comando.&lt;/p&gt;
+
+&lt;p&gt;O assunto linha de comando é vasto e eu poderia &lt;a href=&quot;http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/&quot;&gt;ficar um dia todo falando só sobre o básico&lt;/a&gt;. Então decidi focar em pontos-chave que julguei serem importantes de saber, acima de tudo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unix é de 1970 e permanece praticamente igual até hoje (total oposto da web atual com seus frameworks da moda que mudam semanalmente).&lt;/li&gt;
+&lt;li&gt;Filosofia do Unix de poder e simplicidade.&lt;/li&gt;
+&lt;li&gt;Sintaxe de um comando: comando, subcomandos, opções, argumentos.&lt;/li&gt;
+&lt;li&gt;Redirecionamento de entrada e saída.&lt;/li&gt;
+&lt;li&gt;Aliases para criar comandos.&lt;/li&gt;
+&lt;li&gt;Pipe para combinar comandos.&lt;/li&gt;
+&lt;li&gt;Comandos de manipulação de texto: extrair, apagar, editar, ordenar, combinar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Apesar da simplicidade dos slides e do escopo reduzido, ainda assim fazê-los me tomou mais de 10 horas de trabalho. É um processo constante de lapidação e melhoria até chegar no resultado final. Uso o Google Slides, acho excelente.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;A palestra&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/aurelio.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Felizmente, o evento foi aqui na minha cidade, Joinville. Não precisei me estressar com aeroportos, voos, hotéis e toda a burocracia normalmente envolvida. Que alívio.&lt;/p&gt;
+
+&lt;p&gt;Eu e a Mog almoçamos e fomos pro evento, simples assim :)&lt;/p&gt;
+
+&lt;p&gt;O evento foi na Univille, universidade particular que tem uma estrutura excelente. Salão grande, equipamento de som de alta qualidade, dois telões, show de bola.&lt;/p&gt;
+
+&lt;p&gt;Tinha cerca de 150 pessoas durante minha palestra.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/publico.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;O início, pra mim, é sempre a pior parte. Fora aquele nervosismozinho besta que sempre dá nos primeiros momentos, eu já quero ir logo pro assunto, que é o que interessa. Assim, a parte de me apresentar, falar um pouco sobre o que faço, sempre sai ruim e esquisita.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A Mog vive me falando que eu devia praticar antes, pensar sobre o que vou dizer na hora de me apresentar. Que eu devia falar um pouco do site, dos livros, do meu trabalho, da minha história. Fazer alguma piadinha pra quebrar o gelo. Eu concordo com ela. Eu tento. Mas na hora não sai. Não fico confortável falando de mim, parece autopromoção, sei lá. Bobeira minha.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fora a apresentação estranha, dali pra frente tudo fluiu bem. Consegui trazer bastante informações e dicas enquanto passava os slides. O pessoal estava prestando atenção, então fiquei tranquilo. Só não teve muita piadinha, acho que estou perdendo a veia humorística (ou só ficando véio chato mesmo).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Eu nunca faço scripts ou ensaios para as palestras, é sempre de improviso. Tenho uma ideia geral, uma lista de tópicos que quero abordar e é isso. Os slides servem de guia e falo o que vem na cabeça.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;A demonstração ao vivo&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/demo.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Terminados os slides, era a hora de demonstrar ali ao vivo como é usar a linha de comando para resolver problemas, exatamente como faço nos vídeos do &lt;a href=&quot;http://aurelio.net/tela-preta/&quot;&gt;Tela Preta&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Abri um terminal em tela cheia, aumentei bem a fonte, coloquei um prompt (&lt;code&gt;$PS1&lt;/code&gt;) bem amigável e comecei a digitar comandos e fazer a locução esportiva, descrevendo o que eu estava fazendo :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aurelio.net/curso/sc-dev-summit/historico.txt&quot;&gt;Aqui está o histórico completo dos comandos executados&lt;/a&gt;. Vou destacar a seguir algumas partes dele.&lt;/p&gt;
+
+&lt;p&gt;Ajustando prompt:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PS1&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;PS1=&#39;$ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;
+PS1=&#39;&lt;/span&gt;--------------------------------------------------------------------------&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Mostrando como combinar comandos para ir filtrando um texto:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat hino.txt
+cat hino.txt | head -n 3
+cat hino.txt | head -n 3 | tail -n 1
+cat hino.txt | head -n 3 | tail -n 1 | cut -d , -f 1
+cat hino.txt | head -n 3 | tail -n 1 | cut -d , -f 1 | tr a-z A-z
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Trocar a extensão de todos os arquivo de &lt;code&gt;.css&lt;/code&gt; para &lt;code&gt;.sass&lt;/code&gt; (&lt;a href=&quot;http://aurelio.net/blog/2015/06/06/tela-preta-8/&quot;&gt;veja um vídeo similar&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt;
+find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/.*/&amp;amp; &amp;amp;/&#39;&lt;/span&gt;
+find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/.*/mv &amp;amp; &amp;amp;/&#39;&lt;/span&gt;
+find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/.*/mv &amp;amp; &amp;amp;/&#39;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/css$/sass/&#39;&lt;/span&gt;
+find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/.*/git mv &amp;amp; &amp;amp;/&#39;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/css$/sass/&#39;&lt;/span&gt;
+find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/.*/git mv &amp;amp; &amp;amp;/&#39;&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;&#39;s/css$/sass/&#39;&lt;/span&gt; | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Contar o número de vezes que cada palavra aparece em um texto:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat LICENSE | egrep &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt;
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt;
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt; | tr A-Z a-z
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt; | tr A-Z a-z | sort
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt; | tr A-Z a-z | sort | uniq -c
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt; | tr A-Z a-z | sort | uniq -c | sort
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt; | tr A-Z a-z | sort | uniq -c | sort -n
+cat LICENSE | egrep -o &lt;span class=&quot;s1&quot;&gt;&#39;\w+&#39;&lt;/span&gt; | tr A-Z a-z | sort | uniq -c | sort -n -r
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Usar aliases para criar comandos, e utilizá-los:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;numeros&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;egrep -o &#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+&#39;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;conta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;egrep -o &#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+&#39; | tr A-Z a-z | sort | uniq -c | sort -n -r | head -n 5&quot;&lt;/span&gt;
+cat LICENSE | conta
+cat LICENSE | conta | numeros
+cat LICENSE | conta | numeros | pbcopy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pra quem usa Mac, o &lt;code&gt;pbcopy&lt;/code&gt; copia a saída do comando anterior para a Área de Transferência. Aí é só colar (&lt;code&gt;Command-V&lt;/code&gt;) em outra janela, ou usar o &lt;code&gt;pbpaste&lt;/code&gt; em outro terminal.&lt;/p&gt;
+
+&lt;h2&gt;O sorteio dos livros, usando shell&lt;/h2&gt;
+
+&lt;p&gt;No final da palestra, sorteei dois livros meus, o &lt;a href=&quot;http://www.shellscript.com.br&quot;&gt;Shell Script Profissional&lt;/a&gt; que eu levei um exemplar que eu tinha aqui em casa, e o &lt;a href=&quot;http://www.piazinho.com.br&quot;&gt;Expressões Regulares&lt;/a&gt;, que a Novatec Editora enviou de cortesia para os organizadores do evento.&lt;/p&gt;
+
+&lt;p&gt;Reaproveitei uma ideia que tive lá em 2004, numa &lt;a href=&quot;http://aurelio.net/curso/linuxchix/&quot;&gt;palestra de 3h&lt;/a&gt; 😱 que dei no II Encontro Nacional LinuxChix-BR: usar a shell para gerar um número aleatório e ganha o sorteio quem tiver aquele número &lt;strong&gt;impresso&lt;/strong&gt; em algum documento, cartão, papel, o que for. Foi bem divertido!&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;RANDOM &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;99999&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# 5 dígitos&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;RANDOM &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9999&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# 4 dígitos&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;RANDOM &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# 3 dígitos&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Essa é uma foto &lt;a href=&quot;http://aurelio.net/curso/linuxchix/&quot;&gt;lá de 2004&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/linuxchix/papeis.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;E agora repetido doze anos depois, fazendo o pessoal vasculhar suas carteiras:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/sorteio-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/sorteio-2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://aurelio.net/curso/sc-dev-summit/sorteio-3.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Doze. Anos. 😮&lt;/p&gt;
+			</description>
+		</item>
 		{% for post in site.posts limit:10 %}
 		<item>
 			<title>{{ post.title | xml_escape }}</title>
