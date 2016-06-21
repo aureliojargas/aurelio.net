@@ -7,7 +7,7 @@ hide_comments: false
 worked: 3:30
 ---
 
-![](cartaz.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/cartaz.jpg)
 
 * Palestra: O poder da linha de comando
 * Evento: [SC Dev Summit](http://scdevsummit.com.br/)
@@ -65,7 +65,7 @@ O assunto linha de comando é vasto e eu poderia [ficar um dia todo falando só 
 
 ## A palestra
 
-![](aurelio.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/aurelio.jpg)
 
 Felizmente, o evento foi aqui na minha cidade, Joinville. Não precisei me estressar com aeroportos, voos, hotéis e toda a burocracia normalmente envolvida. Que alívio.
 
@@ -75,7 +75,7 @@ O evento foi na Univille, universidade particular que tem uma estrutura excelent
 
 Tinha cerca de 150 pessoas durante minha palestra.
 
-![](publico.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/publico.jpg)
 
 O início, pra mim, é sempre a pior parte. Fora aquele nervosismozinho besta que sempre dá nos primeiros momentos, eu já quero ir logo pro assunto, que é o que interessa. Assim, a parte de me apresentar, falar um pouco sobre o que faço, sempre sai ruim e esquisita.
 
@@ -88,13 +88,13 @@ Fora a apresentação estranha, dali pra frente tudo fluiu bem. Consegui trazer 
 
 ## A demonstração ao vivo
 
-![](demo.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/demo.jpg)
 
 Terminados os slides, era a hora de demonstrar ali ao vivo como é usar a linha de comando para resolver problemas, exatamente como faço nos vídeos do [Tela Preta](http://aurelio.net/tela-preta/).
 
 Abri um terminal em tela cheia, aumentei bem a fonte, coloquei um prompt (`$PS1`) bem amigável e comecei a digitar comandos e fazer a locução esportiva, descrevendo o que eu estava fazendo :)
 
-[Aqui está o histórico completo dos comandos executados](historico.txt). Vou destacar a seguir algumas partes dele.
+[Aqui está o histórico completo dos comandos executados](http://aurelio.net/curso/sc-dev-summit/historico.txt). Vou destacar a seguir algumas partes dele.
 
 Ajustando prompt:
 
@@ -169,10 +169,10 @@ Essa é uma foto [lá de 2004](http://aurelio.net/curso/linuxchix/):
 
 E agora repetido doze anos depois, fazendo o pessoal vasculhar suas carteiras:
 
-![](sorteio-1.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/sorteio-1.jpg)
 
-![](sorteio-2.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/sorteio-2.jpg)
 
-![](sorteio-3.jpg)
+![](http://aurelio.net/curso/sc-dev-summit/sorteio-3.jpg)
 
 Doze. Anos. 😮
