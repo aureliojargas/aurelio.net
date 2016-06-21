@@ -115,7 +115,7 @@ hide_comments: true
 <h2>Textos recentes no blog</h2>
 
 <ul class="no-bullet" style="margin-left:0">
-{% for post in site.posts limit:10 %}
+{% for post in site.data.recent %}
 	<li><a href="{{ site.url}}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 	<li>→ <a href="http://aurelio.net/blog/sumario/">Veja a lista completa de todos os posts</a></li>

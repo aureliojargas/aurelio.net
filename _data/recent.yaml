@@ -1,0 +1,35 @@
+# Hand made, so I can include posts and pages
+# Used in main index, sidebar, feed
+
+- title: "Raridade: teve ensaio da banda"
+  url: /blog/2016/06/18/ensaio-banda/
+
+- title: "Palestra “O poder da linha de comando” no SC Dev Summit 2016"
+  url: /curso/sc-dev-summit/
+
+- title: "Tenho três empregos"
+  url: /blog/2016/04/02/tres-empregos/
+
+- title: "Aprenda expressões regulares em um dia"
+  url: /blog/2016/03/02/aprender-regex/
+
+- title: "Sed salva o dia novamente"
+  url: /blog/2016/02/09/sed-salva/
+
+- title: "Fiz a prova POSCOMP"
+  url: /blog/2015/10/03/poscomp/
+
+- title: "Eu no podcast Castálio"
+  url: /blog/2015/09/18/eu-no-podcast-castalio/
+
+- title: "Saindo da caverna: darei cursos em São Paulo"
+  url: /blog/2015/07/29/cursos-novatec/
+
+- title: "Tela Preta episódio 8: Trocar a extensão de arquivos com find|sed|sed|sh"
+  url: /blog/2015/06/06/tela-preta-8/
+
+- title: "15 anos de Funções ZZ"
+  url: /blog/2015/05/30/15-anos-de-funcoes-zz/
+
+- title: "Como usar Unicode (→★♥♪) no teclado do Android"
+  url: /blog/2015/05/27/unicode-teclado-android/
