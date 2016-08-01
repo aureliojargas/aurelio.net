@@ -415,4 +415,6 @@
   site: http://softwarelivre.org/fisl17
   cidade: Porto Alegre
   estado: RS
-  participantes: 0
+  participantes: 200
+  slides: https://speakerdeck.com/aureliojargas/shell-script-moderno
+  video: https://www.youtube.com/watch?v=XBkBnKmu94U
