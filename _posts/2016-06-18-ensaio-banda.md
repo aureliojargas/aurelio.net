@@ -31,7 +31,7 @@ Lembrar é uma coisa, mas e **conseguir tocar**? Afinal, já não somos mais aqu
 
 Antes do ensaio, duvidosos, até combinamos de tocar mais devagar e tal. Mas que nada! A primeira música já saiu “no gás” e dali pra frente foi aquela correria de sempre, pisando fundo ladeira abaixo. Os quase-quarentões ainda rockam! 🤘
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MXUxBgz4CU8" frameborder="0" allowfullscreen></iframe>
+<iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/MXUxBgz4CU8" frameborder="0" allowfullscreen></iframe>
 
 Dica: Ligue a legenda (CC) para ver a letra da música.
 
@@ -41,4 +41,4 @@ Dica: Ligue a legenda (CC) para ver a letra da música.
 <blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr"><a href="https://twitter.com/oreio">@oreio</a> teve ensaio da banda, depois de 2 anos parados. Muita energia, muita porrada na batera (e bolhas na mão) 😁 <a href="https://t.co/Fj67P8b0ZZ">pic.twitter.com/Fj67P8b0ZZ</a></p>&mdash; Aurelio Jargas (@oreio) <a href="https://twitter.com/oreio/status/739576693950676994">June 5, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mOR6sBvOhWU" frameborder="0" allowfullscreen></iframe>
+<iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/mOR6sBvOhWU" frameborder="0" allowfullscreen></iframe>
