@@ -413,9 +413,9 @@
   duracao: 1
   tema: Shell Script Moderno
   evento: FISL 2016
-  site: http://softwarelivre.org/fisl17
   cidade: Porto Alegre
   estado: RS
   participantes: 200
+  relato: http://aurelio.net/curso/fisl-17/
   slides: https://speakerdeck.com/aureliojargas/shell-script-moderno
   video: https://www.youtube.com/watch?v=XBkBnKmu94U
