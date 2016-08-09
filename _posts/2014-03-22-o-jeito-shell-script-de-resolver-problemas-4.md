@@ -3,7 +3,7 @@ title: O jeito Shell Script de resolver problemas – Episódio 4
 wp_categories:
 - nerd
 - screencast
-tags: [screencast]
+tags: [screencast, tela-preta]
 ---
 
 

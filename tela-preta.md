@@ -1,6 +1,6 @@
 ---
 title: 'Série Tela Preta: Aprenda o “jeito shell script” de resolver problemas'
-tags: [screencast]
+tags: [screencast, tela-preta]
 hide_ads: true
 hide_byline: true
 hide_read_more: true
