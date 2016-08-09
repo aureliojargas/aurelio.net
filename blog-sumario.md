@@ -20,8 +20,9 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 
 Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
 
-## 2016 (4)
+## 2016 (5)
 
+  * [Tela Preta episódio 9: Contar palavras com egrep|sort|uniq](http://aurelio.net/blog/2016/08/09/tela-preta-9/)
   * [Raridade: teve ensaio da banda](http://aurelio.net/blog/2016/06/18/ensaio-banda/)
   * [Tenho três empregos](http://aurelio.net/blog/2016/04/02/tres-empregos/)
   * [Aprenda expressões regulares em um dia](http://aurelio.net/blog/2016/03/02/aprender-regex/)

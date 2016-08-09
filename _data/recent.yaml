@@ -1,6 +1,9 @@
 # Hand made, so I can include posts and pages
 # Used in main index, sidebar, feed
 
+- title: "Tela Preta episódio 9: Contar palavras com egrep|sort|uniq"
+  url: /blog/2016/08/09/tela-preta-9/
+
 - title: "Palestra “Shell Script Moderno” no FISL17"
   url: /curso/fisl-17/
 
@@ -25,14 +28,5 @@
 - title: "Eu no podcast Castálio"
   url: /blog/2015/09/18/eu-no-podcast-castalio/
 
-- title: "Saindo da caverna: darei cursos em São Paulo"
-  url: /blog/2015/07/29/cursos-novatec/
-
-- title: "Tela Preta episódio 8: Trocar a extensão de arquivos com find|sed|sed|sh"
-  url: /blog/2015/06/06/tela-preta-8/
-
 - title: "15 anos de Funções ZZ"
   url: /blog/2015/05/30/15-anos-de-funcoes-zz/
-
-- title: "Como usar Unicode (→★♥♪) no teclado do Android"
-  url: /blog/2015/05/27/unicode-teclado-android/
