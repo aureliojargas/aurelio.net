@@ -65,17 +65,17 @@ O [episódio 7](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resol
 
 * **Prompt otimizado:** Já tentei vários formatos diferentes de prompt em meus vídeos, mas acho que agora consegui criar um que é ideal para esse tipo de vídeoaula na linha de comando. A linha separadora na cor verde deixa claro onde terminou a saída do comando anterior. O prompt simples ▶, também em verde e sem nenhuma informação adicional (username, path, …) chama a atenção e não distrai, deixando que os comandos brilhem sozinhos.
 
-    ![](/img/tela-preta-prompt.png)
+    ![](http://aurelio.net/img/tela-preta-prompt.png)
 
 * **Legendas em português:** As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.
 
 * **Identidade visual:** Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.
 
-    ![](/img/tela-preta-capas-4.png)
+    ![](http://aurelio.net/img/tela-preta-capas-4.png)
 
 * **Playlist do YouTube:** Esta série conta com uma [playlist própria](https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1), que serve para agrupar todos os vídeos em um único lugar, além de aparecer aquela interface bacana no YouTube para você poder ver todos os vídeos em sequência.
 
-    ![](/img/tela-preta-playlist.png)
+    ![](http://aurelio.net/img/tela-preta-playlist.png)
 
 
 Infelizmente, os vídeos mais antigos (os primeiros da série) não contam com todas as características dos mais recentes. Foi um processo de evolução até chegar no formato atual.
