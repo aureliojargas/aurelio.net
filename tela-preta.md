@@ -19,6 +19,27 @@ por [Aurelio Jargas](http://aurelio.net/aurelio/)
 > Os vídeos que mais gosto de fazer são os de linha de comando. Somente a tela preta, o prompt ali piscando e os comandos que vão surgindo um atrás do outro. Este é o ambiente que mais me sinto à vontade, então posso gravar bem relaxado, sem medo de errar.
 
 
+## Os vídeos
+
+O jeito mais prático de ver os vídeos é abrir a [playlist no YouTube](https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1).
+
+Mas se preferir, aqui está a lista completa de todos os episódios, com links para o vídeo no YouTube e para o post no blog onde explico melhor os comandos utilizados em cada vídeo:
+
+<ol>
+{% for video in site.data.telapreta %}
+    <li>
+        {{ video.youtube.title }}
+        <br>
+        <small>
+            <a href="{{ site.url }}{{ video.blog.url }}">Blog</a>,
+            <a href="https://www.youtube.com/watch?v={{ video.youtube.id }}&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            {{ video.date | date: "%d/%m/%Y"}}
+        </small>
+    </li>
+{% endfor %}
+</ol>
+
 ## O jeito shell script
 
 Sou programador, então estou acostumado a usar loops, condicionais e algoritmos para resolver problemas. Porém, a linha de comando é um outro mundo, com suas próprias regras e ferramentas, então é preciso enxergar seus problemas de maneira diferente para poder resolvê-los com facilidade neste ambiente.
