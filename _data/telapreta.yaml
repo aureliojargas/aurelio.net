@@ -1,0 +1,62 @@
+- blog:
+    title: 'Datas, fotos e shell'
+    url: /blog/2010/05/15/datas-fotos-e-shell/
+  youtube:
+    title: 'Datar JPG com data da foto (EXIF) em shell script (exiftool touch grep cut tr sed)'
+    id: 'N15r3NCgIPA'
+
+- blog:
+    title: 'O jeito Shell Script de resolver problemas – Episódio 1'
+    url: /blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/
+  youtube:
+    title: 'Extrair tag de arquivo XML com shell script (grep sed sort uniq expand)'
+    id: 'jKkEoHXfmA4'
+
+- blog:
+    title: 'Usando Smush.it e shell script para otimizar imagens de um site'
+    url: /blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/
+  youtube:
+    title: 'Otimizar imagens com shell script e Smush.it (find sed grep sh pbcopy)'
+    id: 'GqV3psNyzy8'
+
+- blog:
+    title: 'O jeito Shell Script de resolver problemas – Episódio 2'
+    url: /blog/2012/04/11/o-jeito-shell-script-de-resolver-problemas-parte-2/
+  youtube:
+    title: 'Extrair dados de arquivo texto com shell script (grep cut sed tr)'
+    id: '6i3I0vKHtO8'
+
+- blog:
+    title: 'O jeito Shell Script de resolver problemas – Episódio 3'
+    url: /blog/2012/05/10/o-jeito-shell-script-de-resolver-problemas-parte-3/
+  youtube:
+    title: 'Dividir arquivo a cada N linhas com shell script (split paste sed)'
+    id: 'usjTrYwIZCo'
+
+- blog:
+    title: 'Vídeo-aula: Sorteio no Facebook usando shell script'
+    url: /blog/2013/05/10/video-aula-sorteio-no-facebook-usando-shell-script/
+  youtube:
+    title: 'Sorteio no Facebook com shell script (grep cut sed $RANDOM)'
+    id: '2cELY-UG_VQ'
+
+- blog:
+    title: 'O jeito Shell Script de resolver problemas – Episódio 4'
+    url: /blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/
+  youtube:
+    title: 'Editar database do WordPress com shell script, CSV→SQL (tr cut paste sed expand)'
+    id: 'woN4BZjr0Os'
+
+- blog:
+    title: 'Tela Preta episódio 8: Trocar a extensão de arquivos com find|sed|sed|sh'
+    url: /blog/2015/06/06/tela-preta-8/
+  youtube:
+    title: 'Trocar a extensão de arquivos com shell script (find sed sh)'
+    id: 'dOUTr8epomM'
+
+- blog:
+    title: 'Tela Preta episódio 9: Contar palavras com egrep|sort|uniq'
+    url: /blog/2016/08/09/tela-preta-9/
+  youtube:
+    title: 'Contar palavras com shell script (egrep sort uniq)'
+    id: 'BYYyt6Ag3Kc'
