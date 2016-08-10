@@ -67,6 +67,12 @@ O [episódio 7](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resol
 
     ![](http://aurelio.net/img/tela-preta-prompt.png)
 
+    Ficou curioso(a) como faz esse prompt? É bem simples, na verdade. Os hífens são colocados na quantidade exata para encher o tamanho da janela. Depois vem uma quebra de linha `\n` e o triângulo, que é um caractere Unicode. Assim:
+
+    ```bash
+    PS1="----------------------------------------\n▶"
+    ```
+
 * **Legendas em português:** As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.
 
 * **Identidade visual:** Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.
