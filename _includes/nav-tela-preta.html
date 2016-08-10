@@ -1,0 +1,5 @@
+<p class="warning">★ Lista de episódios da série Tela Preta:
+	{% for video in site.data.telapreta %}
+		<a title="{{ video.youtube.title }}" href="{{ site.url }}{{ video.blog.url }}">{{ forloop.index }}</a>
+	{% endfor %}
+</p>

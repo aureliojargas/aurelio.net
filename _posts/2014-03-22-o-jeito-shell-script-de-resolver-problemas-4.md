@@ -6,8 +6,7 @@ wp_categories:
 tags: [screencast, tela-preta]
 ---
 
-
-{% include nav-jeito-shell.html %}
+{% include nav-tela-preta.html %}
 
 O problema é o seguinte: tenho um site no WordPress, e peço que os visitantes preencham o nome de sua cidade ao deixar comentários. Como é um campo de texto livre, uma cidade tão conhecida como São Paulo acaba sendo digitada como:
 
