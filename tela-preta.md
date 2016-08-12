@@ -70,7 +70,20 @@ O [episódio 7](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resol
     Ficou curioso(a) como faz esse prompt? É bem simples, na verdade. Os hífens são colocados na quantidade exata para encher o tamanho da janela. Depois vem uma quebra de linha `\n` e o triângulo, que é um caractere Unicode. Assim:
 
     ```bash
-    PS1="----------------------------------------\n▶"
+    PS1='----------------------------------------\n▶ '
+    ```
+
+    As cores você pode colocar com caracteres ANSI, veja referência no [Canivete Suíço do Shell](http://aurelio.net/shell/canivete/#cores):
+
+    ```bash
+    PS1='\[\e[32;1m\]----------------------------------------\n▶ \[\e[m\]'
+    ```
+
+    Se preferir algo mais sofisticado, que calcule o tamanho da janela automaticamente, dá pra fazer mágica usando o `tput` e o `printf`.
+
+    ```bash
+    PROMPT_COMMAND='printf "%-$(tput cols)s" - | tr " " -'
+    PS1='▶ '
     ```
 
 * **Legendas em português:** As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.
