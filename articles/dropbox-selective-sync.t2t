@@ -8,7 +8,7 @@ permalink: articles/dropbox-selective-sync.html
 ---
 
 
-%!includeconf: /a/github/aureliojargas/aurelio.net/articles/_config.t2t
+%!includeconf: /Users/aurelio/github/aureliojargas/aurelio.net/articles/_config.t2t
 
 
 The [Selective Sync https://www.dropbox.com/help/175/en] feature of Dropbox allows you to select which folders will be synced to your computer.

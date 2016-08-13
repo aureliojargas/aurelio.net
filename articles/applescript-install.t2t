@@ -10,7 +10,7 @@ permalink: articles/applescript-install.html
 % 2012-12-05 moved from /soft to /articles/
 
 
-%!includeconf: /a/github/aureliojargas/aurelio.net/articles/_config.t2t
+%!includeconf: /Users/aurelio/github/aureliojargas/aurelio.net/articles/_config.t2t
 
 
 == 1. Launch AppleScript Utility ==
