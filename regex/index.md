@@ -470,6 +470,12 @@ Aproveite para [visitar o site do Nerdson](http://hacktoon.com/grandware/courses
 
 [![](/regex/img/xkcd.png)](http://xkcd.com/208/)
 
+[![](/regex/img/xkcd-regex-golf.png)](https://xkcd.com/1313/)
+
+### Autor desconhecido
+
+![](/regex/img/mastering.jpg)]
+
 ### Regex-cruzadas
 
 [![](/regex/img/regex-crosswords.png)](http://regexcrossword.com)
