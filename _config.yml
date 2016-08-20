@@ -70,7 +70,7 @@ defaults:
     scope:
       path: "shell"
     values:
-      css_extra: /shell/shell.css
+      css_extra: /regex/regex.css
       article_footer_after: shell-learn-more.html
       hide_ads: true
       hide_read_more: true
