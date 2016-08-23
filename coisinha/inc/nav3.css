@@ -1,0 +1,45 @@
+/*
+	www.COISINHA.com.br navigation bar 2013
+	(at bottom, similar to iOS icons)
+*/
+
+#footer {
+	padding: 40px 0 30px 0;
+	background-color: black;
+	color: silver;
+	text-align: center;
+}
+
+#nav {
+	margin: 10px auto 30px auto;
+	text-align: center;
+}
+#nav a {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 8px;
+	font-size: 12px;
+	line-height: 12px;
+	background: #eee;
+	color: blue;
+	text-align: center;
+}
+#nav a:hover {
+	background-color: #658AB1;
+	color: white;
+}
+#nav img {
+	height: 64px;
+	width: 64px;
+	border-width: 0;
+	display: block;
+	margin: 10px auto 5px auto;
+}
+
+.copyright {
+	color: inherit;
+}
+.copyright a {
+	color: yellow;
+}

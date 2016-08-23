@@ -1,0 +1,316 @@
+<html>
+<!--
+	EMBRIAGUEITOR
+	www.coisinha.com.br/embriagueitor
+
+	Criado por Aurelio Jargas (www.aurelio.net)
+	Julho de 2008
+
+	Valeu Patricia Valduga pela idéia!
+-->
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/gif" href="../img/favicon.gif">
+<link rel="stylesheet" type="text/css" href="../inc/yui-2.7.0.css">
+<link rel="stylesheet" type="text/css" href="../inc/coisinha.css">
+<link rel="stylesheet" type="text/css" href="../inc/nav3.css">
+<script type="text/javascript" charset="utf-8" src="../inc/coisinha.js"></script>
+
+<meta name="author" content="Aurelio Jargas www.aurelio.net">
+<meta name="keywords" content="embriagueitor, embriagator, embriaguez, bêbado, bebida, cerveja, pinga, cachaça, álcool, alcoolizado, bebum, gerador, conversor, online">
+<meta name="description" content="Embriagueitor - A maneira segura de burlar a Lei Seca, fique bêbado online! Maz num vai zair (ic!) djiriginu depoiz...">
+
+<title>Embriagueitor - A maneira segura de burlar a Lei Seca, fique bêbado na internet!</title>
+
+
+<style type="text/css">
+	h1 { margin-bottom:0.5em; }
+	#content { background:white url(rei.gif) no-repeat right top; }
+	table#tradutor { margin-top:1em; }
+	th.original,  td.original  { color:white; background-color:green; }
+	th.traduzido, td.traduzido { color:white; background-color:red  ; }
+	td.traduzido a { color:white !important; font-weight:bold; }
+	#texto-original  { color:green; }
+	#texto-traduzido { color:red;   }
+	textarea { border-width:0; margin-bottom:2px; }
+	#instrucoes { padding:1em 0; color:#555; font-size:85%; }
+	#instrucoes ol { margin:1em; padding:0 1em; }
+</style>
+
+<script type="text/javascript"> // src="admin/script.js">
+	function roda() {
+		var t = document.getElementById('texto-original').value;
+
+		// linguagem escrita mais próxima da falada
+		t = t.replace(/\bes(t(á|ar|ou|ava|ariam?|ão|iver?|ivessem?))([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,		'$1$3');	// verbo estar
+		t = t.replace(/((s )?|\b)olhos\b/gi,				'$1zóio');	// meuS OLHOS, olhos
+		t = t.replace(/\boolhos\b/gi,					'zóio');	// olhos
+		t = t.replace(/(n)ão ([a-zA-ZáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ])/gi,	'$1um $2');	// não é, !não.
+		// t = t.replace(/\b(d)e (uma?)\b/gi,				'$1$2');	// de uma -> duma
+		t = t.replace(/\b(p)a(r)a ([ao]s?)\b/gi,			'$1$2$3');	// para a -> pra
+		// t = t.replace(/\b(p)a(ra)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ-]|$)/gi,	'$1$2$3');	// para -> pra, !!para de girar
+		t = t.replace(/\bser([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'cê$1'); 	// ser
+		t = t.replace(/\bvo(cê(s?))/gi,					'$1'); 		// você -> cê
+		t = t.replace(/\b(ve)z\b/gi,					'$1iz');	// vez
+		t = t.replace(/\bentão\b/g,					'intão'); 	// então
+		t = t.replace(/\bE(ntão)\b/gi,					'I$1'); 	// ^
+		t = t.replace(/\ba(inda)\b/gi,					'$1'); 		// ainda
+		t = t.replace(/([ \n\r!?:;,.()]|$)e([ \n\r!?:;,.()]|$)/g,	'$1i$2');	// e (artigo)
+		t = t.replace(/([ \n\r!?:;,.()]|$)o([ \n\r!?:;,.()]|$)/g,	'$1u$2');	// o (artigo)
+		t = t.replace(/([ \n\r!?:;,.()]|$)E([ \n\r!?:;,.()]|$)/g,	'$1I$2');	// ^
+		t = t.replace(/([ \n\r!?:;,.()]|$)O([ \n\r!?:;,.()]|$)/g,	'$1U$2');	// ^
+		t = t.replace(/\btudo\b/g,					'zuzu');	// tudo
+		t = t.replace(/\bTudo\b/g,					'Zuzu');	// ^
+		t = t.replace(/\bTUDO\b/g,					'ZUZU');	// ^
+
+		// fala presa (predominância do Z)
+		t = t.replace(/[sç]+/g,						'z');		// engraÇado
+		t = t.replace(/[SÇ]+/g,						'Z');		// ^
+		t = t.replace(/([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|^)zo/g,		'$1ssso');	// sozinho
+		t = t.replace(/\bce/g,						'ze');		// CErveja
+		t = t.replace(/\bCE/g,						'ZE');		// ^
+		t = t.replace(/\bCe/g,						'Ze');		// ^
+		t = t.replace(/ci/g,						'zi');		// infânCIa
+		t = t.replace(/Ci/g,						'Zi');		// ^
+		t = t.replace(/CI/g,						'ZI');		// ^
+
+		// terminações fonéticas
+		t = t.replace(/\b(qu)e\b/gi,					'$1i'); 	// que
+		t = t.replace(/\b([dmt])e\b/gi,					'$1i'); 	// me, de
+		t = t.replace(/te(z?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'tchi$1$2');	// noiTE
+		t = t.replace(/to(z?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'tchu$1$2');	// muiTO
+		t = t.replace(/(d)e(z?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'$1ji$2$3');	// idaDE
+		t = t.replace(/êz([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'eis$1');	// trÊS
+		t = t.replace(/([aeiu])(n)d(o)\b/gi,				'$1$2$3');	// andando(andano), comendo(comeno)
+		t = t.replace(/([bcdfghjklmnpqrstvwxyz])o(z?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,	'$1u$2$3'); // mundO todO !não !tédio
+		t = t.replace(/([BCDFGHJKLMNPQRSTVWXYZ])O(Z?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,	'$1U$2$3'); // ^
+
+		// terminações abreviadas
+		t = t.replace(/ar([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'á$1');		// tomAR
+		t = t.replace(/er([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'ê$1');		// sabER
+		t = t.replace(/ou([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'ô$1');		// vOU sacOU
+		t = t.replace(/ei(ruz?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,	'ê$1$2');	// chiquEIRO
+		t = t.replace(/AR([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'Á$1');		// ^
+		t = t.replace(/ER([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'Ê$1');		// ^
+		t = t.replace(/OU([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'Ô$1');		// ^
+		t = t.replace(/EI(RUZ?)([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,	'Ê$1$2');	// ^
+
+		// fala arrastada
+		t = t.replace(/ch/g,						'sshhh');	// caCHaça
+		t = t.replace(/CH/g,						'SSHHH');	// ^
+		t = t.replace(/Ch/g,						'Sshhh');	// ^
+		t = t.replace(/x([aeou])/g,					'sshhh$1');	// caiXA
+		t = t.replace(/X([aeou])/g,					'SSHHH$1');	// ^
+		t = t.replace(/zh/g,						'sshhh');	// show
+		t = t.replace(/ZH/g,						'SSHHH');	// ^
+		t = t.replace(/Zh/g,						'Sshhh');	// ^
+		// t = t.replace(/xi/g,						'zi');		// eXIste, XIXI
+		t = t.replace(/di/g,						'dji');		// dias
+		t = t.replace(/DI/g,						'DJI');		// ^
+		t = t.replace(/Di/g,						'Dji');		// ^
+		t = t.replace(/(rr)/gi,						'$1$1');	// rr
+		t = t.replace(/([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|^)r/g,		'$1rrr');	// Rindo
+		t = t.replace(/([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|^)R/g,		'$1RRR');	// ^
+		// t = t.replace(/z([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/g,		'zzz$1');	// todaZ
+
+		// correções da tradução
+		t = t.replace(/\bbotecu(s?)\b/gi,				'buteco$1');	// boteco
+		t = t.replace(/\bbá([^\wáéíóúâêôãõûüçÁÉÍÓÚÂÊÔÃÕÛÜÇ]|$)/gi,	'bar$1');	// bar
+		t = t.replace(/(meu)z( zóio)/gi,				'$1$2');	// meu zóio
+
+		// soluços a cada pausa (vírgula)
+		t = t.replace(/,([ \n\r]|$)/g,					' (ic!)$1');
+
+		// sonolento quando reticente
+		t = t.replace(/\.\.\./g,					'... zZzzZzZzz');
+
+		document.getElementById('texto-traduzido').value = t;
+
+		// Atualiza o link do botão tweet this
+		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/BeBuM');
+		document.getElementById('tuitar').style.display = '';
+	}
+	function carrega() {
+		document.getElementById('texto-original').value = ''+
+			'Tomei todas esta noite.\n'+
+			'Fechei o boteco!\n'+
+			'Por que está todo mundo rindo de mim?\n'+
+			'Não posso voltar dirigindo pra casa.\n'+
+			'Tudo bem, vou deitar por aqui...\n'+
+			'Ei, não varre eu não!';
+		roda();
+	}
+	function foco() {
+		document.getElementById('texto-original').focus();
+	}
+	function init() {
+		_init();
+		foco();
+	}
+	window.onload = init;
+</script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-8";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-8']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- AdSense Page-level ads (mobile) -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-0009608813278754",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+<body id="embriagueitor">
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /Facebook SDK -->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
+<noscript>
+	<div id="noscript">
+	<h3>JavaScript DESLIGADO</h3>
+	Você tem que <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">ligar o JavaScript</a> em seu navegador,<br>
+	pois as coisinhas precisam dele!
+	</div>
+</noscript>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
+
+<div id="ad-top-resp">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Coisinha responsive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-0009608813278754"
+	     data-ad-slot="1073874771"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+<div id="content">
+
+<h1>Embriagueitor</h1>
+
+<!-- Facebook Like button -->
+<div class="fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
+<br>
+<img src="verde.gif" alt="">
+
+<!--
+<div class="banner">
+	<h3><a href="http://www.UmPortugues.com">Acordo Ortográfico</a></h3>
+	<p>Saiba tudo sobre o acordo e confira seu texto com a ferramenta online!<br>
+	<a href="http://www.UmPortugues.com">http://www.UmPortugues.com</a></p>
+</div>
+-->
+
+<table id="tradutor">
+	<tr>
+		<th class="original" width="50%">Sóbrio</th>
+		<th>&nbsp;&nbsp;</th> <!-- spacer -->
+		<th class="traduzido" width="50%">Torto</th>
+	</tr>
+	<tr>
+		<td class="original">
+		<textarea id="texto-original" rows="12" onKeyUp="roda()"> </textarea>
+		</td>
+
+		<td></td>
+
+		<td class="traduzido">
+		<textarea id="texto-traduzido" rows="12"> </textarea>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td class="traduzido">
+			<a id="tuitar" href="" style="display:none;"><img src="../img/tweet.png"> Clique aqui para tuitar isso!!!</a>
+		</td>
+	</tr>
+</table>
+
+
+<img align="right" src="cabeca.gif" alt="">
+
+
+<div id="instrucoes">
+	Instruções:
+	<ol>
+		<li>Digite o texto na caixa verde (<a href="javascript:carrega()">exemplo</a>)</li>
+		<li>Veja o resultado na caixa vermelha</li>
+		<li>Não beba e dirija (<a href="http://www.cnt.org.br/servicos/dicas_05.asp">texto</a>, <a href="http://images.google.com/images?q=acidente+transito+morte+alcool">fotos</a>, <a href="http://www.cisa.org.br/categoria.html?FhIdCategoria=88e1d43599bed2387ccd27f78d5340b3">vídeo</a>)</li>
+	</ol>
+</div>
+
+<a href="http://images.google.com/images?q=acidente+transito+morte+alcool"><img style="display:block;margin:auto;text-align:center" src="beber-e-dirigir.jpg" alt="Beber e Dirigir é morte na certa" border="0"></a>
+
+<div class="links">
+	<a href="http://blog.aurelio.net/2008/07/07/embriagueitor/">Comentários</a> |
+	<a href="http://www.piazinho.com.br">Feito com expressões regulares</a>
+</div>
+
+<div class="warning">
+	ATENÇÃO: Este site não apóia nem incentiva a ingestão de bebidas alcoólicas. Muito pelo contrário, esta ferramenta é uma sátira às pessoas que abusam da bebida, agindo como bobos da corte para os que estão ao redor.
+</div>
+
+</div> <!-- content -->
+
+<div id="footer">
+<div id="nav-intro">O site www.COISINHA.com.br orgulhosamente apresenta:</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav3 -->
+<div id="nav">
+<a href="../miguxeitor/" title="Migux@s Fofux@s Lindux@s!!!!!"><img src="../img/icon/miguxeitor.jpg" alt=""> MiGuXeiToR</a>
+<a href="../embriagueitor/" title="Tá zuzu bem (ic!) Tô zóbrio"><img src="../img/icon/embriagueitor.gif" alt=""> Embriagueitor</a>
+<a href="../engripeitor/" title="Ezdou beio gribado... A-A-A-Atchô!"><img src="../img/icon/engripeitor.png" alt=""> Engripeitor</a>
+<a href="../subwaytor/" title="Gerador de sanduíches do Subway"><img src="../img/icon/subwaytor.png" alt=""> Subwaytor</a>
+<a href="../tabuada/" title="Tabuada interativa do 1 ao 10"><img src="../img/icon/tabuada.jpg" alt=""> Tabuada</a>
+<a href="../relogio/" title="Um relógio diferente, feito com palavras!"><img src="../img/icon/relogio.gif" alt=""> Relógio</a>
+<a href="../caraoucoroa/" title="Não tem uma moeda? Use essa!"><img src="../img/icon/caraoucoroa.gif" alt=""> Cara ou Coroa?</a>
+<a href="../viravira/" title="Porque um texto opɐɹıʌ é mais divertido :)"><img src="../img/icon/viravira.png" alt=""> vira|ɐɹıʌ</a>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav3 -->
+
+<div class="copyright">
+	Copyright © 2008-2016
+	(<a href="https://github.com/aureliojargas/coisinha.com.br">fontes</a>)
+	<a href="http://aurelio.net">Aurelio Jargas</a>,
+	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<img alt="" src="../img/aureliohead.gif">
+</div>
+</div><!-- footer -->
+
+</body>
+</html>

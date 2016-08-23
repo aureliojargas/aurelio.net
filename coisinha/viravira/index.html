@@ -1,0 +1,399 @@
+<html>
+<!--
+	vira|ɐɹıʌ
+	www.coisinha.com.br/viravira
+
+	Criado por Aurelio Jargas (www.aurelio.net)
+	Maio de 2010
+
+	Original idea and code snippets from Reverse Fad Productions
+	http://www.revfad.com/flip.html
+
+	Valeu @andersonrizada pela dica!
+	http://twitter.com/andersonrizada/status/14627432725
+
+	Obrigado pela ajuda: Mog, @vyper, @dsracoon, @BrunoAssis, @stulzer
+	@drjackstraw, @dj_spark, @parazito, @dericklemos, @denilsonsa
+	@phpunion, @willianmsilva, @MarioRinaldi, Vinicius Dias
+-->
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/gif" href="../img/favicon.gif">
+<link rel="stylesheet" type="text/css" href="../inc/yui-2.7.0.css">
+<link rel="stylesheet" type="text/css" href="../inc/coisinha.css">
+<link rel="stylesheet" type="text/css" href="../inc/nav3.css">
+<script type="text/javascript" charset="utf-8" src="../inc/coisinha.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<meta name="author" content="Aurelio Jargas www.aurelio.net">
+<meta name="keywords" content="vira, viravira, flip, texto, letras, invertido, inverte, ponta-cabeça, contrário, diversão, avesso, rev, tac, conversor, online, twitter, orkut, chat">
+<meta name="description" content="vira|ɐɹıʌ - Vira seu texto ao oirártnoc e de ɐɔǝqɐɔ-ɐʇuod, experimente!">
+
+<title>vira|ɐɹıʌ - Porque um texto opɐɹıʌ é bem mais divertido :)</title>
+
+<style type="text/css">
+	#content { background-color:white; padding:15px 5% 10em 5%; }
+	#content h1 { margin:1em 0 0.2em 0; text-align:center; }
+	#original, #traduzido { color:#444; margin:0 auto; }
+	#flip, #rev { display:none; }
+	#flip .content, #rev .content, textarea { font-size:125%; color:black; }
+	#blank { color:red;}
+	.result { padding:0 0 2em 0; }
+	.result .content { white-space:pre-wrap; }
+	.result .content i { color:#1A6690; font-style:normal ;} /* URL */
+	.result .twitter-button img { width:24px; height:24px; }
+	.result .twitter-button, .result .count { clear:right; float:right; }
+	#options { text-align:right; }
+	#twitter-mkt { display:none; clear:both; font-size:100%; margin:3em 0 0 0; text-align:center; }
+	#twitter-mkt a { text-decoration:none !important; }
+	#twitter-mkt a:hover { background-color:#C3D9FF; }
+</style>
+
+<script type="text/javascript">
+
+var twitterMode = false;
+
+String.prototype.strip = function () {
+	return this.replace(/^\s+/, '').replace(/\s+$/, '');
+};
+String.prototype.reverse = function () {
+	return this.split('').reverse().join('');
+};
+function tac(txt) {
+	return txt.split('\n').reverse().join('\n');
+}
+function rev(txt) {
+	return $.map(txt.split(/\r*\n/), function (t, i) {
+		return t.reverse();
+	}).join('\n');
+}
+// Apply a character translation table to a string (y///)
+function applyTable(table, text) {
+	var i, c, r, result;
+	result = new Array(text.length);
+	for (i = 0; i < text.length; i++) {
+		c = text.charAt(i);
+		r = table[c];
+		result[i] = r ? r : c;
+	}
+	return result.join('');
+}
+
+var unaccentTable = {
+	'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
+	'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E',
+	'Ì': 'I', 'Í': 'I',	'Î': 'I', 'Ï': 'I',
+	'Ò': 'O', 'Ó': 'O', 'Ô': 'O', 'Õ': 'O',	'Ö': 'O', 'Ő': 'O', 'Ø': 'O',
+	'Ù': 'U', 'Ú': 'U', 'Û': 'U', 'Ü': 'U',	'Ű': 'U',
+	'Ç': 'C', 'Ñ': 'N', 'Ý': 'Y',
+
+	'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae',
+	'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
+	'ì': 'i', 'í': 'i',	'î': 'i', 'ï': 'i',
+	'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o',	'ö': 'o', 'ő': 'o', 'ø': 'o',
+	'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',	'ű': 'u',
+	'ç': 'c', 'ñ': 'n', 'ý': 'y',
+
+	'Þ': 'P', 'þ': 'p', 'Ð': 'D', 'ð': 'd', 'ß': 'B', '§': 'S', 'µ': 'u',
+	'¢': 'c', '£': 'L', '¥': 'Y',
+	'ª': 'a', 'º': 'o'
+};
+var flipTable = {
+	a : 'ɐ',
+	b : 'q',
+	c : 'ɔ',
+	d : 'p',
+	e : 'ǝ',
+	f : 'ɟ',
+	g : 'ƃ',
+	h : 'ɥ',
+	i : 'ı',
+	j : 'ɾ',
+	k : 'ʞ',
+	//l : 'ʃ', //ן
+	m : 'ɯ',
+	n : 'u',
+	r : 'ɹ',
+	t : 'ʇ',
+	v : 'ʌ',
+	w : 'ʍ',
+	y : 'ʎ',
+	'.' : '˙',
+	'[' : ']',
+	'(' : ')',
+	'{' : '}',
+	'?' : '¿',
+	'!' : '¡',
+	"\'" : ',',
+	'"' : '„',
+	'<' : '>',
+	'_' : '‾',
+	'‿' : '⁀',
+	'⁅' : '⁆',
+	'∴' : '∵'
+};
+// Compose the inverted table, to unflip the text
+$.each(flipTable, function (key, value) {
+	flipTable[value] = key;
+});
+
+//// URL regex, to auto-link URLs at the reversed text
+//
+// Format:  [ http:// | www. ]        domain.com        [ / ]         [ ?form=data ]            [ #anchor ]
+// Regex: (https?:\/\/|www\.)[A-Za-z0-9%._\/~:,=$@&+-]+\b\/*(\?[A-Za-z0-9\/%&=+:;.,$@*_-]+)?(#[A-Za-z0-9%._-]*)?
+//
+// I've removed the = char from the 'domain.com' part, to extract protected
+// (reversed) URLs in this format: http://...?url=...//:ptth
+// Example: http://easy-sharee.com/download/link/?url=lmth.oviuqra/e1c5ab19/2551684/elif/moc.derahs2.www//:ptth
+//
+var url_regex = /(https?:\/\/|www\.)[A-Za-z0-9%._\/~:,$@&+-]+\b\/*(\?[A-Za-z0-9\/%&=+:;.,$@*_-]+)?(#[A-Za-z0-9%._-]*)?/gi;
+
+
+function vira() {
+	var url, txt, r1, r2;
+
+	url = 'http://bit.ly/viravira';
+	txt = $('#texto-original').val();
+
+	// Hide results when input is empty
+	if (txt.strip().length === 0) {
+		$('#rev, #flip').hide();
+		$('#twitter-mkt').hide();
+		$('#blank').show();
+		return;
+	} else {
+		$('#blank').hide();
+		// Just show mkt message for those who really used the tool
+		if (twitterMode && txt.length > 20) {
+			$('#twitter-mkt').fadeIn(1200);
+		}
+	}
+
+	// Action!
+	r1 = rev(txt);
+	r2 = applyTable(flipTable, applyTable(unaccentTable, tac(rev(txt.toLowerCase()))));
+	// lower | rev | tac | unaccent | flip
+
+	// Twitter?
+	if (twitterMode) {
+
+		// Strip, unbreak, squeeze
+		r1 = r1.strip().replace(/\r|\n/g, ' ').replace(/\s\s+/g, ' ');
+		r2 = r2.strip().replace(/\r|\n/g, ' ').replace(/\s\s+/g, ' ');
+
+		// Update char count (same for both results)
+		$('.result .count').text(140 - r1.length - url.length - 1);
+
+		// Compose twitter message URI
+		$('#rev .twitter-button')
+			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r1 + ' ' + url));
+		$('#flip .twitter-button')
+			.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent(r2 + ' ' + url));
+	}
+
+	// Show results
+	$('#rev, #flip').fadeIn();
+	$('#rev .content').text(r1);
+	$('#flip .content').text(r2);
+
+	// Auto-link protected (reversed) URLs
+	if (url_regex.test(r1)) {
+		r1 = r1.replace(url_regex, '<a href="$&">$&</a>');
+		r1 = r1.replace(/<a href="www/gi, '<a href="http://www');  // add http: prefix for www.foo.com URLs
+		$('#rev .content').html(r1);
+	}
+
+	if (twitterMode) {
+		// Append app URL (styled)
+		$('#flip .content').append(' <i>' + url + '<\/i>');
+		$('#rev .content').append(' <i>' + url + '<\/i>');
+	}
+}
+
+// init
+$(document).ready(function () {
+
+	// Interface elements
+	$('.result .twitter-button')
+		.attr('title', 'Enviar esta mensagem pelo twitter')
+		.html('<img src="../img/twitter.png">');
+	$('#rev, #flip')
+		.attr('title', 'Dica: o vira|ɐɹıʌ também serve para DESVIRAR textos, experimente!');
+	$('#retweet')
+		.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent($('#retweet').text()));
+	$('#retweet2')
+		.attr('href', 'http://twitter.com/home?status=' + encodeURIComponent($('#retweet2').text()));
+
+	// Convert as you type. Buttons are so '90...
+	$('#texto-original').keyup(vira);
+
+	// Twitter mode on/off
+	$('#opt-twitter').click(function () {
+
+		if (!twitterMode)
+		{
+			// ON
+			$('#texto-original').attr('rows', 3);
+			$('#rev').css('background-color','#DDEEF6');
+			$('#flip').css('background-color','#C3D9FF');
+			$('.result .twitter-button, .result .count').fadeIn();
+			$('.result .content').css('padding-right', $('a.twitter-button img').css('width'));
+		} else {
+			// OFF
+			$('#texto-original').attr('rows', 7);
+			$('#rev').css('background-color','#ffc');
+			$('#flip').css('background-color','#ff6');
+			$('.result .twitter-button, .result .count, #twitter-mkt').hide();
+			$('.result .content').css('padding-right', 0);
+		}
+		twitterMode = !twitterMode; // switch
+		vira();
+		return true;
+	});
+
+	// Start with twitter mode ON
+	twitterMode = false;
+	$('#opt-twitter').attr('checked', '');
+	$('#opt-twitter').click(); // on
+
+	$('#texto-original').focus();
+});
+</script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-8";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-8']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- AdSense Page-level ads (mobile) -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-0009608813278754",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+<body id="viravira">
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /Facebook SDK -->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
+<noscript>
+	<div id="noscript">
+	<h3>JavaScript DESLIGADO</h3>
+	Você tem que <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">ligar o JavaScript</a> em seu navegador,<br>
+	pois as coisinhas precisam dele!
+	</div>
+</noscript>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
+
+<div id="ad-top-resp">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Coisinha responsive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-0009608813278754"
+	     data-ad-slot="1073874771"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+<div id="content">
+
+<!-- Facebook Like button -->
+<div class="fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
+
+<h1>vira|ɐɹıʌ</h1>
+
+<div id="app">
+	<div id="original">
+		<div id="options">
+			<input type="checkbox" name="opt-twitter" value="" id="opt-twitter">
+			<label for="opt-twitter">twitter</label>
+		</div>
+		<textarea id="texto-original"></textarea>
+	</div>
+	<div id="traduzido">
+		<div id="blank">
+			↑ Digite seu texto na caixinha e prepare-se para a mágica!
+		</div>
+		<div id="rev" class="result">
+			<a class="twitter-button"></a>
+			<span class="count"></span>
+			<div class="content"></div>
+		</div>
+		<div id="flip" class="result">
+			<a class="twitter-button"></a>
+			<span class="count"></span>
+			<div class="content"></div>
+		</div>
+	</div> <!-- traduzido -->
+</div> <!-- app -->
+
+<div id="twitter-mkt">
+	<p>Ajude a divulgar no twitter:<br>
+		<a id="retweet">(: opıʇɹǝʌıp sıɐɯ ɯǝq ǝ opɐɹıʌ oʇxǝʇ ɯn ǝnbɹod — vira|ɐɹıʌ http://bit.ly/viravira</a>
+		<!-- <br>ou<br> --><br>
+		<a id="retweet2">!oditrevid siam meb é oirártnoc oa otxet mU — vira|ɐɹıʌ http://bit.ly/viravira</a>
+	</p>
+	<!-- vira|ɐɹıʌ - Porque um texto opɐɹıʌ é bem mais opıʇɹǝʌıp :) http://bit.ly/viravira -->
+</div>
+
+</div> <!-- content -->
+
+<div id="footer">
+<div id="nav-intro">O site www.COISINHA.com.br orgulhosamente apresenta:</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav3 -->
+<div id="nav">
+<a href="../miguxeitor/" title="Migux@s Fofux@s Lindux@s!!!!!"><img src="../img/icon/miguxeitor.jpg" alt=""> MiGuXeiToR</a>
+<a href="../embriagueitor/" title="Tá zuzu bem (ic!) Tô zóbrio"><img src="../img/icon/embriagueitor.gif" alt=""> Embriagueitor</a>
+<a href="../engripeitor/" title="Ezdou beio gribado... A-A-A-Atchô!"><img src="../img/icon/engripeitor.png" alt=""> Engripeitor</a>
+<a href="../subwaytor/" title="Gerador de sanduíches do Subway"><img src="../img/icon/subwaytor.png" alt=""> Subwaytor</a>
+<a href="../tabuada/" title="Tabuada interativa do 1 ao 10"><img src="../img/icon/tabuada.jpg" alt=""> Tabuada</a>
+<a href="../relogio/" title="Um relógio diferente, feito com palavras!"><img src="../img/icon/relogio.gif" alt=""> Relógio</a>
+<a href="../caraoucoroa/" title="Não tem uma moeda? Use essa!"><img src="../img/icon/caraoucoroa.gif" alt=""> Cara ou Coroa?</a>
+<a href="../viravira/" title="Porque um texto opɐɹıʌ é mais divertido :)"><img src="../img/icon/viravira.png" alt=""> vira|ɐɹıʌ</a>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav3 -->
+
+<div class="copyright">
+	Copyright © 2008-2016
+	(<a href="https://github.com/aureliojargas/coisinha.com.br">fontes</a>)
+	<a href="http://aurelio.net">Aurelio Jargas</a>,
+	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<img alt="" src="../img/aureliohead.gif">
+</div>
+</div><!-- footer -->
+
+</body>
+</html>

@@ -1,0 +1,571 @@
+<html>
+<!--
+	MiGuXeiToR
+	www.coisinha.com.br/miguxeitor
+
+	Criado por Aurelio Jargas (www.aurelio.net)
+	Maio de 2007
+
+	..............................................................................
+
+	Leitores de código-fonte, sejam bem-vindos!
+
+	O MiGuXeiToR (dói cada vez que escrevo isso) é uma página HTML com Javascript.
+	Mais nada. O código faz uso intensivo de expressões regulares para tentar
+	reproduzir o comportamento miguxês na escrita de textos.
+
+	Por falar em expressões regulares, escrevi um livro sobre o assunto. Se quiser
+	saber mais sobre elas, para poder entender exatamente o que faz cada linha
+	desse script, acesse http://www.piazinho.com.br
+
+	Use TAB com 8 posições para ver o código bem alinhado. No navegador vai ficar
+	feio porque eles usam 6, às vezes 4, às vezes...
+
+	Ah sim, antes que você me xingue, a aparência tosca anos 90 é proposital ;)
+
+	Para saber mais sobre como o Miguxeitor foi feito (Making Of):
+		http://blog.aurelio.net/2007/05/22/miguxeitor
+		http://blog.aurelio.net/2008/05/22/um-ano-de-miguxeitor
+
+	Para saber mais sobre o Miguxês:
+		http://pt.wikipedia.org/wiki/Internetês
+		http://pt.wikipedia.org/wiki/Miguxês
+		http://desciclo.pedia.ws/wiki/Miguxês
+
+	A licença de uso desse código é bem simples: se for usar qualquer trecho ou
+	expressão regular dele, faça um link para o original em:
+	http://www.coisinha.com.br/miguxeitor
+
+	Falou,
+	Aurelio
+-->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/gif" href="../img/favicon.gif">
+<link rel="stylesheet" type="text/css" href="../inc/yui-2.7.0.css">
+<link rel="stylesheet" type="text/css" href="../inc/coisinha.css">
+<link rel="stylesheet" type="text/css" href="../inc/nav3.css">
+<script type="text/javascript" charset="utf-8" src="../inc/coisinha.js"></script>
+
+<meta name="author" content="Aurelio Jargas www.aurelio.net">
+<meta name="keywords" content="jovem, adolescente, criança, emo, orkut, msn, chat, blog, linguagem, dialeto, idioma, internet, miguxator, miguxo, miguxês, fofolês, internetês, tradutor, conversor, dicionário">
+<meta name="description" content="MiGuXeiToR - Tradutor Online de Português para Miguxês (Internetês). Veja como fica o seu texto nos dialetos Miguxês Arcaico (ICQ), Moderno (MSN) e Neo-Miguxês (Orkut, Fotolog)">
+
+<title>MiGuXeiToR - Tradutor Online de Português para Miguxês</title>
+
+
+<style type="text/css">
+	body { background:#FFEEFF url(fundo-miguxa.gif); color:black; }
+	#main a { font-weight:bold; }
+	#content { background-color:transparent; }
+</style>
+
+<script type="text/javascript">
+
+	var icons = ['icq.gif','msn.gif','hello-kitty.jpg'];
+	var kwords = ['xuxa','barbie','hello kitty'];
+	var epochNames = [
+		'Miguxês Arcaico - Dialeto ICQ',
+		'Miguxês Moderno - Dialeto MSN',
+		'Neo-Miguxês - Dialeto Orkut, Fotolog, ...'
+	];
+	var defaultTexts = [
+	'- Você tem ICQ?\n- Não, isso é coisa do passado.\n- Então vou te adicionar no MSN!\n- Tudo bem.\n- Daí você me passa o teu Orkut?\n- O endereço está no meu blog.\n- Tem muitas fotos no álbum?\n- Deve ter umas nove mais ou menos.\n- Beleza, depois teclamos, tchau!\n- Falou, até mais.',
+	'Hoje estou me sentindo meio mal. Acordei e não vi a Emuxa, minha coruja de pelúcia fofa. Cadê você? Coitada, deve ter caído da cama, de novo. Só de pensar nisso já chorei. Que vida cruel. Não posso deixar ela sozinha nem por um segundo... Ufa, que alívio! Ela estava aqui, embaixo do meu cheirinho :)',
+	'duas vezes e meio mais ou menos\npor que quando quanto muito para que\nvocê vocês hoje está cadê comigo\ninternet e-mail teclar\nqualquer mesmo com quem\nbeijos beleza firmeza\nvaleu falou tchau até mais demais\nquarta-feira sétimo dezoito\nduas horas 24 horas quinze minutos\ndinheiro novidade'
+	];
+
+	function carrega(nr) {
+		document.getElementById('texto-original').value = defaultTexts[nr];
+		document.getElementById('texto-traduzido').value = '';
+		document.getElementById('miguxesheading').innerHTML = 'Miguxês';
+		document.getElementById('icon').style.display = 'none';
+	}
+
+	// Cameliza as letras aleatoriamente (ai ai... essa meninada...)
+	function camelize(text) {
+		var letters = text.toLowerCase().split('');
+		for (var i=0; i < letters.length; i++) {
+			if (Math.floor(Math.random()*2) == 1) {
+				letters[i] = letters[i].toUpperCase();
+			}
+		}
+		return letters.join('');
+	}
+
+	// Level 1: ICQ - Abreviações entendíveis, pouca ênfase (!!) e poucos erros de português
+	// Level 2: MSN - Abreviações ilegíveis, muita ênfase (!!!!) e muitos erros
+	// Level 3: Orkut - Menos abreviações, CaMeLCaSe e muitos X por toda parte
+	//
+	function roda(level) {
+		var t = document.getElementById('texto-original').value;
+		// Números
+		t = t.replace(/\buma?\b/gi,			'1');
+		t = t.replace(/\b(dois|duas)\b/gi,		'2');
+		t = t.replace(/\btrês\b/gi,			'3');
+		t = t.replace(/\bquatro\b/gi,			'4');
+		t = t.replace(/\bcinco\b/gi,			'5');
+		t = t.replace(/\bseis\b/gi,			'6');
+		t = t.replace(/\bsete\b/gi,			'7');
+		t = t.replace(/\boito\b/gi,			'8');
+		t = t.replace(/\bnove\b/gi,			'9');
+		t = t.replace(/\bdez\b/gi,			'10');
+		t = t.replace(/\bonze\b/gi,			'11');
+		t = t.replace(/\bdoze\b/gi,			'12');
+		t = t.replace(/\btreze\b/gi,			'13');
+		t = t.replace(/\b(c|qu)atorze\b/gi,		'14');
+		t = t.replace(/\bquinze\b/gi,			'15');
+		t = t.replace(/\bdezesseis\b/gi,		'16');
+		t = t.replace(/\bdezessete\b/gi,		'17');
+		t = t.replace(/\bdezoito\b/gi,			'18');
+		t = t.replace(/\bdezenove\b/gi,			'19');
+		// Repetições
+		t = t.replace(/\b([0-9]+) vez(es)?\b/gi, 	'$1x');
+		// Horas, minutos
+		t = t.replace(/\b(\d+) horas?\b/gi, 		'$1h');
+		t = t.replace(/\b(\d+) minutos?\b/gi, 		'$1min');
+	if (level<3) {
+		t = t.replace(/\b(\d+) segundos?\b/gi, 		'$1s'); // ! 2xXx
+	}
+		// Dias da semana
+		t = t.replace(/\bsegunda-feira\b/gi, 		'2a');
+		t = t.replace(/\bterça-feira\b/gi, 		'3a');
+		t = t.replace(/\bquarta-feira\b/gi, 		'4a');
+		t = t.replace(/\bquinta-feira\b/gi, 		'5a');
+		t = t.replace(/\bsexta-feira\b/gi, 		'6a');
+	if (level<3) {
+		// Ordinais
+		t = t.replace(/\bprimeir([ao])\b/gi, 		'1$1');
+		t = t.replace(/\bsegund([ao])\b/gi, 		'2$1');
+		t = t.replace(/\bterceir([ao])\b/gi, 		'3$1');
+		t = t.replace(/\bquart([ao])\b/gi, 		'4$1');
+		t = t.replace(/\bquint([ao])\b/gi, 		'5$1');
+		t = t.replace(/\bsext([ao])\b/gi, 		'6$1');
+		t = t.replace(/\bsétim([ao])\b/gi, 		'7$1');
+		t = t.replace(/\boitav([ao])\b/gi, 		'8$1');
+		t = t.replace(/\bnon([ao])\b/gi, 		'9$1');
+		t = t.replace(/\bdécim([ao])\b/gi, 		'10$1');
+		// Abreviações não miguxas
+		t = t.replace(/\bfi(m|nal) de semana\b/gi,	'fds');
+	}
+		// Símbolos
+		t = t.replace(/\baté mais\b/gi,			't+');
+		t = t.replace(/\bdemais\b/gi,			'd+');
+		t = t.replace(/\bmais ou menos\b/gi,		'+-');
+		t = t.replace(/\bmais\b/gi,			'+');
+		t = t.replace(/\bmenos\b/gi,			'-');
+		t = t.replace(/\bmei[ao]\b/gi,			'1/2');
+		// Abreviações simples
+		t = t.replace(/\bpor\s?qu[eê]/gi,		'pq');
+		t = t.replace(/\bhoje\b/gi,			'hj');
+		t = t.replace(/\btambém\b/gi,			'tb');
+		t = t.replace(/\bbeleza\b/gi,			'blz');
+		t = t.replace(/\bfirmeza\b/gi,			'fmz');
+		t = t.replace(/\bquando\b/gi,			'qdo');
+		t = t.replace(/\bquant([ao])(s?)\b/gi,		'qt$1$2');
+		t = t.replace(/\bmuit([ao])(s?)\b/gi,		'mt$1$2');
+		t = t.replace(/\bbeij(o|ão)\b/gi,		'bj$1');
+		t = t.replace(/\bbeijos\b/gi,			'bjs');
+	if (level==1) {
+		t = t.replace(/\bcom([^\wáéíóúàâêôãõüç]|$)/gi,	'c/$1');
+	} else if (level==3) {
+		t = t.replace(/\bcom([^\wáéíóúàâêôãõüç]|$)/gi,	'cum$1');
+		if (t.replace(' ','').toLowerCase().split('').reverse().join('')=='ohcamome'){ // ee1
+		window.location = 'http://i128.photobucket.com/albums/p185/nagado/emomiguxo.jpg';
+		}
+		if (t.replace(' ','').toLowerCase().split('').reverse().join('')=='oneuqepéz'){ // ee2
+		window.location = 'http://www.blogodorium.net/uploads/miguxes.jpg';
+		}
+	}
+	if (level>1) {
+		// Abreviações avançadas
+		t = t.replace(/\bmesm[ao](s?)\b/gi,		'msm$1');
+		t = t.replace(/\bdepois\b/gi,			'dpois');
+		t = t.replace(/\bquem\b/gi,			'qm');
+		t = t.replace(/\bcomigo\b/gi,			'cmg');
+		t = t.replace(/\bcadê/gi,			'kd');
+		t = t.replace(/\bqualquer\b/gi,			'qq');
+		t = t.replace(/\bfalou\b/gi,			'flw');
+		t = t.replace(/\bvaleu\b/gi,			'vlw');
+		t = t.replace(/\btchau\b/gi,			'xau');
+	}
+	if (level==1) {
+		t = t.replace(/\bque\b/gi,			'q');
+		t = t.replace(/\bvocê/gi,			'vc');
+		t = t.replace(/\be-?mail(s?)\b/gi,		'mail$1');
+	} else if (level==2) {
+		t = t.replace(/\bque\b/gi,			'ke');
+		t = t.replace(/\bvocês\b/gi,			'6');
+		t = t.replace(/\bvocê/gi,			'vc'); // c fica estranho em kd c?
+	} else {
+		t = t.replace(/\bque\b/gi,			'ki');
+		t = t.replace(/\b(adoro você|te adoro)/gi,	'adoluxê');
+		t = t.replace(/\bamo vocês\b/gi,		'amodolu vocês');
+		t = t.replace(/\b(amo você|te amo)/gi,		'te amodolu');
+		t = t.replace(/\bvocê/gi,			'vuxê');
+	}
+		// Glossário
+		t = t.replace(/\btecl(e|ar|ou|amos)\b/gi,	'tc');
+		t = t.replace(/\binternet\b/gi,			'net');
+		t = t.replace(/\be-?mail(s?)\b/gi,		'meio$1');
+		t = t.replace(/\b(grana|dinheiro)\b/gi,		'$$$$$$'); // $$$
+	if (level==2) {
+		t = t.replace(/\badicion/gi,			'adde'); // Tou t addeando
+		t = t.replace(/\bamig([ao])\b/gi,		'mig$1'); // miga
+		t = t.replace(/\blind([ao])\b/gi,		'leend$1'); // leenda
+		t = t.replace(/\bnovidade(s?)\b/gi,		'9dad$1');
+	} else if (level==3) {
+		t = t.replace(/\badicion[\wáí]+/gi,		'add'); // Tou t add
+		t = t.replace(/\bamig([ao]s?)\b/gi,		'migux$1'); // miguxa
+		t = t.replace(/\blind([ao]s?)\b/gi,		'lindux$1'); // linduxa
+		t = t.replace(/\bfof([ao]s?)\b/gi,		'fofux$1'); // fofuxa
+		t = t.replace(/\bdormir\b/gi,			'mimir');
+		t = t.replace(/\bnome(s?)\b/gi,			'nominho$1');
+		t = t.replace(/\besposa\b/gi,			'marida');
+		t = t.replace(/\b(de novo|novamente)\b/gi,	'dinovo');
+		t = t.replace(/\b(aliás|por exemplo)\b/gi,	'tipo assim');
+	}
+		// tou, tava, tar
+		t = t.replace(/\best(ar|ou|ava|ive|aria|ão)\b/gi,	't$1');
+		t = t.replace(/\bestá([^\wáéíóúàâêôãõüç]|$)/gi,	'tah$1');
+		// para
+		t = t.replace(/\bpara ([ao]s?)\b/gi,		'pr$1');
+		t = t.replace(/\bpara([^\wáéíóúàâêôãõüç-]|$)/gi,	'pra$1');
+	if (level==2) {
+		t = t.replace(/\bpr[ao]([^\wáéíóúàâêôãõüç]|$)/gi,	'p$1');
+	}
+		// Simplifiq: irmos -> ir, acabou -> cabou
+		t = t.replace(/([aei]r)mos\b/gi,		'$1');
+		t = t.replace(/\bacab/gi,			'cab');
+	if (level>1) {
+		// entaum, naum
+		t = t.replace(/ão\b/gi,				'aum');
+		// andando -> andano, comendo -> comeno (depois fica melhor: andanu, comenu)
+		t = t.replace(/(\w[aei])ndo\b/gi,		'$1no');
+		// tada$ -> tadeenha (e alguns outros casos), foto -> foteenha, gatinha -> gateenha
+		t = t.replace(/(\w[crt]ad)([ao])\b/gi,		'$1eenh$2');
+		t = t.replace(/foto(s?)\b/gi,			'foteenha$1');
+		t = t.replace(/(\w)tinh([ao])\b/gi,		'$1teenh$2');
+		if (level>2) {
+		// No Orkut é mais fófi terminar em i
+		t = t.replace(/\bse\b/gi,			'si');
+		t = t.replace(/\bde\b/gi,			'di');
+		t = t.replace(/\bte\b/gi,			'ti');
+		} else {
+		// No MSN o som da letra vira a palavra
+		t = t.replace(/\bse\b/gi,			'c');
+		t = t.replace(/\bde\b/gi,			'd');
+		t = t.replace(/\bte\b/gi,			't');
+		}
+		// CH, SH e QU não existem
+		t = t.replace(/ch/gi,				'x');
+		t = t.replace(/sh/gi,				'x');
+		t = t.replace(/qu/gi,				'k');
+		// e -> i (alguns casos)
+		t = t.replace(/(\w(ss|[cdgtv]))e(s?)m?\b/gi,	'$1i$3');
+		t = t.replace(/\bseg/gi,			'sig');
+		t = t.replace(/\bdes([^s])/gi,			'dis$1');
+	}
+		// ei -> i (alguns casos) deixa -> dexa
+		t = t.replace(/eix/gi,				'ex');
+	if (level>1) {
+		// o -> u (alguns casos)
+		t = t.replace(/\bbonit/gi,			'bunit');
+		// e sozinho -> i
+		t = t.replace(/\be\b/gi,			'i');
+		if (level>2) {
+		// inglês -> ingleix
+		t = t.replace(/ês\b/gi,				'eix');
+		// atrás -> atraix
+		t = t.replace(/(\w)(ás|az)\b/gi,		'$1aix');
+		}
+	}
+		// Acento no final eh moh uoh
+		t = t.replace(/á([^\wáéíóúàâêôãõüç]|$)/gi,	'ah$1');
+		t = t.replace(/é([^\wáéíóúàâêôãõüç]|$)/gi,	'eh$1');
+		t = t.replace(/í([^\wáéíóúàâêôãõüç]|$)/gi,	'ih$1');
+		t = t.replace(/ó([^\wáéíóúàâêôãõüç]|$)/gi,	'oh$1');
+		t = t.replace(/ú([^\wáéíóúàâêôãõüç]|$)/gi,	'uh$1');
+		// Acentuação? Nunca.
+		t = t.replace(/[áàâãä]/gi,			'a');
+		t = t.replace(/[éèêë]/gi,			'e');
+		t = t.replace(/[íìîï]/gi,			'i');
+		t = t.replace(/[óòôõö]/gi,			'o');
+		t = t.replace(/[úùûü]/gi,			'u');
+	if (level==1) {
+		t = t.replace(/[ç]/gi,				'c');
+	} else {
+		t = t.replace(/[ç]/gi,				'ss');
+	}
+	if (level>1) {
+		// l$ -> u
+		t = t.replace(/(\w[a-z])l\b/gi,			'$1u');
+		// amo -> amu, todo -> todu (plural também)
+		t = t.replace(/o(s?)\b/gi,			'u$1');
+		t = t.replace(/\b(\d+)u\b/gi,			'$1o'); // fix 1u > 1o (primeiro)
+		// ou -> o (se for parte de palavra)
+		if (level==3) {
+		t = t.replace(/(\w)ou\b/gi,			'$1ow'); // Orkut
+		} else {
+		t = t.replace(/(\w)ou\b/gi,			'$1o'); // bug: 2)sol>sou>so
+		}
+		t = t.replace(/\bou(\w)/gi,			'o$1');
+		t = t.replace(/(\w)ou(\w)/gi,			'$1o$2');
+		// ^c -> k (exceções: certo,cidade,c)
+		t = t.replace(/\bc([^ei\W])/gi,			'k$1');
+		// andar -> andah, comer -> come, sentir -> senti
+		t = t.replace(/ar\b/gi,				'ah');
+		t = t.replace(/er\b/gi,				'e');
+		t = t.replace(/ir\b/gi,				'i');
+		// eira$ -> era  (sonzera, ladera)
+		t = t.replace(/eira\b/gi,			'era');
+		// sa$ -> za, casa -> caza
+		t = t.replace(/([^s\W])sa\b/gi,			'$1za');
+		// TODO muZica e assemelhados
+		// Certas palavras não precisam de plural (mmmmm, deixe quieto)
+		// t = t.replace(/(dia)s\b/gi,			'$1');
+	}
+	if (level>2) {
+		// O abominável X no fim das palavras no plural
+		t = t.replace(/([^\Ws])s\b/gi,			'$1x');
+		// O abominável H no fim de certas palavras
+		t = t.replace(/(\w)a\b/gi,			'$1ah');
+	}
+		// Risada
+	if (level==1) {
+		t = t.replace(/\b(he|ha|hi|ho|hua){2,}h?\b/gi,		'rsrsrs');
+	} else if (level==2) {
+		t = t.replace(/\b(he|ha|hi|ho|hua|rs){2,}h?\b/gi,	'huahuahua');
+		t = t.replace(/[8:][-o]?[D)]/g,				'huahuahua');
+	} else {
+		t = t.replace(/\b(he|ha|hi|ho|hua|rs){2,}h?\b/gi,	'kkkkkkkkkkk');
+		t = t.replace(/[8:][-o]?[D)]/g,				'kkkkkkkkkkk');
+	}
+	if (level>1) {
+		// Somente um ponto final é muito pouco
+		t = t.replace(/\./g,				'......');
+		// Pra que vírgula? Pontos são mais legais... vários...
+		t = t.replace(/, /g,				'...');
+		t = t.replace(/,(\n|$)/g,			'...$1');
+	}
+		// Sejamos enfáticos!!!
+	if (level==1) {
+		t = t.replace(/!/g,				'!!');
+		t = t.replace(/\?/g,				'??');
+	} else {
+		t = t.replace(/!/g,				'!!!!!');
+		t = t.replace(/\?/g,				'??!?!');
+	}
+	if (level<3) {
+		// Maiúsculas não existem
+		t = t.toLowerCase();
+	} else {
+		// Alternância aLEaTóRIa de maiúsculas e minúsculas
+		t = camelize(t);
+		// E uns ajustes finais para ficar ainda mais fofuxu
+		t = t.replace(/x/gi,				'xXx');
+		t = t.replace(/ss/gi,				'XX');
+	}
+		// Mostra o texto miguxado na tela
+		document.getElementById('texto-traduzido').value = t;
+		// Atualiza o título do texto para refletir o dialeto usado
+		document.getElementById('miguxesheading').innerHTML = epochNames[level-1];
+		// Mostra a figurinha do tipo do texto
+		document.getElementById('icon').src = icons[level-1];
+		document.getElementById('icon').style.display = '';
+		document.getElementById('iconlink').href = 'http://www.submarino.com.br/HomeCache/AllSearchResult.aspx?Query='+ kwords[level-1]+ '&PageHits=50&franq=&OrderBy=sortordersell';
+		// Atualiza o link do botão tweet this
+		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/MIGUXO');
+		document.getElementById('tuitar').style.display = '';
+
+	}
+	window.onload = _init;
+</script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-8";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-8']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- AdSense Page-level ads (mobile) -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-0009608813278754",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+<body id="miguxeitor">
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /Facebook SDK -->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
+<noscript>
+	<div id="noscript">
+	<h3>JavaScript DESLIGADO</h3>
+	Você tem que <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">ligar o JavaScript</a> em seu navegador,<br>
+	pois as coisinhas precisam dele!
+	</div>
+</noscript>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
+
+<div id="ad-top-resp">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Coisinha responsive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-0009608813278754"
+	     data-ad-slot="1073874771"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+<div id="content">
+
+	<h1>MiGuXeiToR &copy; &reg; &trade;</h1>
+	<h2>Tradutor Online de Português para <a href="http://desciclo.pedia.ws/wiki/Miguxês">Miguxês/Fofolês</a></h2>
+
+	<!-- Facebook Like button -->
+	<div style="padding-top:20px;"><div class="fb-like" data-send="true" data-width="500" data-show-faces="true"></div></div>
+
+	<br>
+<!--
+	<center><a href="http://www.nadaver.com/emo-day-2008/"><img alt="" src="emoday.gif" width="277" height="300"></a></center>
+	<hr>
+-->
+
+<!--
+<table align="center">
+<tr><td align="center" style="background:yellow;padding:1em 5px;border:7px dashed black;">
+<h2>Ei migux@!</h2>
+<p>Aqui quem fala é o Aurelio, o criador do MiGuXeiToR.</p>
+<p>Já ouviu falar do tal <b>Acordo Ortográfico</b>?</p>
+<p>Eu fiz um <b>site novo</b> que te ensina tudo sobre o acordo!</p>
+	<p>Sabia que já tem um site que te ensina as regras novas?</p>
+<p>E melhor ainda, ele tem um programinha que <b>confere seu texto</b>!</p>
+<p>É tipo o MiGuXeiToR, você digita na caixinha e ele confere.</p>
+<p>Tá esperando o quê? <b>Acesse agora, é tudo GRÁTIS!</b></p>
+<p><a href="http://www.UmPortugues.com">http://www.UmPortugues.com</a></p>
+</td></tr>
+</table>
+-->
+
+<!-- <hr> -->
+
+<table id="tradutor">
+	<tr>
+		<th align="left">Português</th>
+		<th align="right" colspan="2" id="miguxesheading">Miguxês</th>
+	</tr>
+	<tr>
+		<td width="40%">
+		<textarea id="texto-original" rows="8" cols="20">Digite aqui seu texto, em Português correto. Depois aperte os botões para vê-lo deturpado, digo, traduzido para Miguxês.</textarea>
+		</td>
+
+		<td align="center">
+		<input type="button" value="Miguxês Arcaico" onclick="roda(1)"><br><br>
+		<input type="button" value="Miguxês Moderno" onclick="roda(2)"><br><br>
+		<input type="button" value="Neo-Miguxês"     onclick="roda(3)">
+		</td>
+
+		<td align="right" width="40%">
+		<textarea id="texto-traduzido" rows="8" cols="20"> </textarea>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td><a id="tuitar" href="" style="display:none;"><img src="../img/tweet.png"> Clique aqui para tuitar isso!!!</a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<p><br>Está sem criatividade? Carregue estes textos:</p>
+
+		<font size="+1">
+			<a href="javascript:carrega(0)">Paquera moderna</a><br><br>
+			<a href="javascript:carrega(1)">Diário de um EMO</a><br><br>
+			<a href="javascript:carrega(2)">Show de abreviações</a>
+		</font>
+		</td>
+
+		<td align="right">
+			<br><a id="iconlink" href="http://www.submarino.com.br/HomeCache/AllSearchResult.aspx?Query=hello%20kitty&amp;PageHits=50&amp;franq=&amp;OrderBy=sortordersell"><img alt="" id="icon" src="hello-kitty.jpg" border="0"></a>
+		</td>
+	</tr>
+</table>
+
+<hr>
+
+<ul>
+<li><p>Ei miguxo, que tal <a href="http://www.UmPortugues.com">aprender o Acordo Ortográfico</a> agora?</p></li>
+<li><p>Leia o <a href="http://blog.aurelio.net/2007/05/22/miguxeitor">anúncio original</a> do MiGuXeiToR (feito em 2007!)</p></li>
+<li><p>Este software faz uso intensivo de <a href="http://www.piazinho.com.br">expressões regulares</a>.</p></li>
+</ul>
+
+<!-- <a href="http://aurelio.net"><img alt="" align="middle" src="../img/aureliohead.gif" width="39" height="49" border="0"> +1 produto das Organizações Verde Inc.</a> -->
+
+<!-- <hr>
+
+<a href="mailto:?subject=MiGuXeiToR&amp;body=Oi%21%0A%0AnAuM%20tAh%20eNtendENU%20NADaH%20dU%20KI%20TaH%20esCRITu%3F%3F%21%3F%21%0AEu%20tB%20NAuM%21%21%21%21%21%20kKKkKKkKkKk%0A%0AEntAuM%20uSe%20U%20MiGuXeiToR%21%21%21%21%21%0A%0Ahttp%3A%2F%2Fwww.coisinha.com.br%2Fmiguxeitor%0A%0Aflw%0A"><img alt="" align="middle" src="email.jpg" border="0"> Avise seus amigos!</a> -->
+
+<!-- Caiçara Soft -->
+<!-- <a href="http://pt.wikipedia.org/wiki/Matinhos"><img alt="" align="right" src="../img/made-in-matinhos.png" border="0"></a> -->
+
+</div> <!-- content -->
+
+<div id="footer">
+<div id="nav-intro">O site www.COISINHA.com.br orgulhosamente apresenta:</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - Nav3 -->
+<div id="nav">
+<a href="../miguxeitor/" title="Migux@s Fofux@s Lindux@s!!!!!"><img src="../img/icon/miguxeitor.jpg" alt=""> MiGuXeiToR</a>
+<a href="../embriagueitor/" title="Tá zuzu bem (ic!) Tô zóbrio"><img src="../img/icon/embriagueitor.gif" alt=""> Embriagueitor</a>
+<a href="../engripeitor/" title="Ezdou beio gribado... A-A-A-Atchô!"><img src="../img/icon/engripeitor.png" alt=""> Engripeitor</a>
+<a href="../subwaytor/" title="Gerador de sanduíches do Subway"><img src="../img/icon/subwaytor.png" alt=""> Subwaytor</a>
+<a href="../tabuada/" title="Tabuada interativa do 1 ao 10"><img src="../img/icon/tabuada.jpg" alt=""> Tabuada</a>
+<a href="../relogio/" title="Um relógio diferente, feito com palavras!"><img src="../img/icon/relogio.gif" alt=""> Relógio</a>
+<a href="../caraoucoroa/" title="Não tem uma moeda? Use essa!"><img src="../img/icon/caraoucoroa.gif" alt=""> Cara ou Coroa?</a>
+<a href="../viravira/" title="Porque um texto opɐɹıʌ é mais divertido :)"><img src="../img/icon/viravira.png" alt=""> vira|ɐɹıʌ</a>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /Nav3 -->
+
+<div class="copyright">
+	Copyright © 2008-2016
+	(<a href="https://github.com/aureliojargas/coisinha.com.br">fontes</a>)
+	<a href="http://aurelio.net">Aurelio Jargas</a>,
+	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<img alt="" src="../img/aureliohead.gif">
+</div>
+</div><!-- footer -->
+
+</body>
+</html>
+<!-- AJAX? Cuá Cuá. -->
