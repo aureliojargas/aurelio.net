@@ -136,6 +136,9 @@ Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular
 
 <iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
 
+## Grupo no Telegram
+
+Quer trocar uma ideia em português sobre regex? Junte-se a nós no https://web.telegram.org/#/im?p=@ExpressoesRegulares
 
 ## Lista de discussão
 
