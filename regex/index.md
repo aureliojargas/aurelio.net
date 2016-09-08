@@ -30,7 +30,7 @@ article_footer_after: false
 <div style="background:#F6E568; padding:1em 1em 2em 2em;" class="banner">
     <h3 style="margin: 1em 0">Avisos importantes</h3>
     <p>Saiu a <a href="http://piazinho.com.br/">5ª edição do livro de Expressões Regulares</a>, em papel e <a href="http://piazinho.com.br/#comprar">e-book</a>!</p>
-    <p>Vou dar um <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">curso presencial de imersão em Expressões Regulares</a> em São Paulo, sábado dia 03/09/2016, aproveite!
+<!--    <p>Vou dar um <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">curso presencial de imersão em Expressões Regulares</a> em São Paulo, sábado dia 03/09/2016, aproveite! -->
 </div>
 
 **Expressão Regular:** Um método formal de se especificar um padrão de texto.
