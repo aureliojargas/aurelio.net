@@ -428,3 +428,13 @@
   estado: SP
   participantes: 17
   site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+
+- data: 2016-09-22
+  duracao: 1
+  tema: Expressões Regulares
+  evento: XVIII Semana da Computação UDESC
+  cidade: Joinville
+  estado: SC
+  participantes: 50
+  site: http://www.semanadacomputacao.joinville.udesc.br
+  slides: https://speakerdeck.com/aureliojargas/expressoes-regulares
