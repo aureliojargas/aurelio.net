@@ -138,7 +138,7 @@ Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular
 
 ## Grupo no Telegram
 
-Quer trocar uma ideia em português sobre regex? Junte-se a nós no https://web.telegram.org/#/im?p=@ExpressoesRegulares
+Quer trocar uma ideia em português sobre regex? Junte-se a nós no https://telegram.me/ExpressoesRegulares
 
 ## Lista de discussão
 
