@@ -9,6 +9,11 @@
 # production: false
 production: true
 
+# Custom gems required by the site
+gems:
+  # https://help.github.com/articles/redirects-on-github-pages/
+  - jekyll-redirect-from
+
 # Save the final HTMLs here
 destination: /Users/aurelio/aurelio.net
 
