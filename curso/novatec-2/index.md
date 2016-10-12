@@ -1,5 +1,5 @@
 ---
-permalink: curso/novatec/ii/
+permalink: curso/novatec-2/
 #title: "Curso Expressões Regulares: Imersão no CT da Novatec"
 title: "Curso de Imersão em Expressões Regulares no CT da Novatec"
 subtitle: 20 de fevereiro de 2016, São Paulo - SP

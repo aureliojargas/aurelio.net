@@ -30,11 +30,11 @@ Como posso afirmar isso? Porque vi acontecendo na minha frente, várias vezes, n
 
 ## Curso de expressões regulares
 
-[O primeiro curso de regex que dei](http://aurelio.net/curso/sdsl/ii/#toc6) foi em 2003 (faz tempo!), e o mais recente foi agora, [semana passada](http://aurelio.net/curso/novatec/ii/). Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.
+[O primeiro curso de regex que dei](http://aurelio.net/curso/sdsl/ii/#toc6) foi em 2003 (faz tempo!), e o mais recente foi agora, [semana passada](http://aurelio.net/curso/novatec-2/). Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.
 
 Para ter algum tipo de métrica, no início do curso eu peço para cada aluno dar uma nota de zero a dez para o que ele/ela julga ser o seu conhecimento atual em expressões regulares. No fim do curso, mesma pergunta. Meu objetivo é que todos saiam melhores do que entraram, e felizmente isso sempre aconteceu.
 
-![](http://aurelio.net/curso/novatec/ii/notas.jpg)
+![](http://aurelio.net/curso/novatec-2/notas.jpg)
 
 Em geral, no final do curso, todos já estão tão imersos no assunto, que surgem discussões abstratas sobre eficiência ou qual a melhor maneira de fazer uma expressão complexa, como a do IP ou a da data.
 
@@ -52,11 +52,11 @@ Pra mim, é muito gratificante perceber essa enorme evolução em tão pouco tem
 
 [![](http://aurelio.net/curso/sdsl/iii/turma-quadro.jpg)](http://aurelio.net/curso/sdsl/iii/)
 
-[![](http://aurelio.net/curso/novatec/i/turma-regex.jpg)](http://aurelio.net/curso/novatec/i/)
+[![](http://aurelio.net/curso/novatec-1/turma-regex.jpg)](http://aurelio.net/curso/novatec-1/)
 
-[![](http://aurelio.net/curso/novatec/ii/turma-800.jpg)](http://aurelio.net/curso/novatec/ii/)
+[![](http://aurelio.net/curso/novatec-2/turma-800.jpg)](http://aurelio.net/curso/novatec-2/)
 
-[![](http://aurelio.net/curso/novatec/iii/turma-800.jpg)](http://aurelio.net/curso/novatec/iii/turma.jpg)
+[![](http://aurelio.net/curso/novatec-3/turma-800.jpg)](http://aurelio.net/curso/novatec-3/turma.jpg)
 
 Quer aprender também? [Veja as datas dos próximos cursos](http://aurelio.net/curso/).
 
