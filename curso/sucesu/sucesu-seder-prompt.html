@@ -1,0 +1,582 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../prompt-doc.css">
+<TITLE>Prompt-doc: SED e Expressões Regulares</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<CENTER>
+<H1>Prompt-doc: SED e Expressões Regulares</H1>
+<FONT SIZE="4"><I>Aurelio Marinho Jargas</I></FONT><BR>
+<FONT SIZE="4">Sucesu - Curitiba, 18 de Fevereiro de 2003</FONT>
+</CENTER>
+
+<P></P>
+<HR NOSHADE SIZE=1>
+<P></P>
+
+  <UL>
+  <LI><A HREF="#toc1">SED</A>
+    <UL>
+    <LI><A HREF="#toc2">O Arquivo de dados</A>
+    <LI><A HREF="#toc3">As origens do SED</A>
+    <LI><A HREF="#toc4">O comando que todos conhecem: s///</A>
+    <LI><A HREF="#toc5">O comando d (delete)</A>
+    <LI><A HREF="#toc6">O comando y (transliterate)</A>
+    <LI><A HREF="#toc7">O comando p (print)</A>
+    <LI><A HREF="#toc8">Brincando com a opção -n</A>
+    <LI><A HREF="#toc9">Começando a endereçar</A>
+    <LI><A HREF="#toc10">Múltiplos comandos!</A>
+    <LI><A HREF="#toc11">Os comandos são seqüenciais</A>
+    <LI><A HREF="#toc12">Para "debug", mostre a linha com o 'p'</A>
+    <LI><A HREF="#toc13">Dois comandos diferentes, mesmo resultado</A>
+    <LI><A HREF="#toc14">A ordem dos fatores NÃO altera o resultado</A>
+    <LI><A HREF="#toc15">Endereçando pelo texto da linha</A>
+    <LI><A HREF="#toc16">Negando um endereço</A>
+    <LI><A HREF="#toc17">Misturando os tipos de endereço</A>
+    <LI><A HREF="#toc18">Endereço especial: ~ (step)</A>
+    <LI><A HREF="#toc19">\n, \t e amigos</A>
+    <LI><A HREF="#toc20">O comando q (quit)</A>
+    <LI><A HREF="#toc21">Aplicando o s/// num intervalo de linhas</A>
+    <LI><A HREF="#toc22">Use qualquer caractere como delimitador do s///</A>
+    <LI><A HREF="#toc23">Use qualquer caractere como delimitador do endereço</A>
+    <LI><A HREF="#toc24">Agrupando vários comandos em bloco num mesmo endereço</A>
+    <LI><A HREF="#toc25">Os modificadores do comando s///</A>
+    <LI><A HREF="#toc26">O comando l - list</A>
+    <LI><A HREF="#toc27">O comando n - next</A>
+    <LI><A HREF="#toc28">O comando N - next</A>
+    <LI><A HREF="#toc29">Os comandos de pulo : b t - label &amp; branch</A>
+    <LI><A HREF="#toc30">Os comandos de buffer h g x - hold, get e eXchange</A>
+    <LI><A HREF="#toc31">Um arquivo só de comandos SED</A>
+    <LI><A HREF="#toc32">O comando =</A>
+    </UL>
+  <LI><A HREF="#toc33">Expressões Regulares</A>
+    <UL>
+    <LI><A HREF="#toc34">As âncoras ^ e $ para começo e fim de linha</A>
+    <LI><A HREF="#toc35">O ou de caracteres [] (lista)</A>
+    <LI><A HREF="#toc36">O repetidor {} (chaves)</A>
+    <LI><A HREF="#toc37">O curinga . (ponto)</A>
+    <LI><A HREF="#toc38">Os atalhos ? * +</A>
+    <LI><A HREF="#toc39">O agrupador ()</A>
+    <LI><A HREF="#toc40">ER para casar endereço IP (N.N.N.N)</A>
+    <LI><A HREF="#toc41">ER de zero a 255</A>
+    <LI><A HREF="#toc42">ER do IP mais precisa (N.N.N.N onde N de 0 a 255)</A>
+    <LI><A HREF="#toc43">O ou de palavras |</A>
+    <LI><A HREF="#toc44">O curinga .*, o tudo e o nada</A>
+    <LI><A HREF="#toc45">Os retrovisores \1, \2 ... \9</A>
+    <LI><A HREF="#toc46">ER para casar números repetidos 11, 22, 33, ...</A>
+    <LI><A HREF="#toc47">ER para casar palavras repetidas</A>
+    </UL>
+  </UL>
+
+<P></P>
+<HR NOSHADE SIZE=1>
+<P></P>
+<P>
+Este é o histórico da linha de comando de uma palestra que fiz
+na Sucesu-PR para uma turma de 20 alunos, sobre SED e Expressões
+Regulares.
+</P>
+
+<UL>
+<LI><B>Data:</B> 18-Fev-2004
+<LI><B>Horário:</B> 18:30
+<LI><B>Duração:</B> 4 horas
+<LI><B>Local:</B> Auditório da Sucesu-PR
+<LI><B>Participantes:</B> 20 pessoas
+<LI><B>Requisitos:</B> Nenhum
+</UL>
+
+<HR NOSHADE SIZE=1>
+
+<H1 ID="toc1">SED</H1>
+
+<P>
+O SED é o Stream EDitor, um editor de textos não interativo,
+automático, um filtro.
+</P>
+
+<H2 ID="toc2">O Arquivo de dados</H2>
+
+<PRE>
+    $ seq 12 &gt; numeros.txt
+    $ vi numeros.txt 
+    $ cat numeros.txt
+    1:um:one
+    2:dois:two
+    3:tres:three
+    4:quatro:four
+    5:cinco:five
+    6:seis:six
+    7:sete:seven
+    8:oito:eight
+    9:nove:nine
+    10:dez:ten
+    11:onze:eleven
+    12:doze:twelve
+</PRE>
+
+<H2 ID="toc3">As origens do SED</H2>
+
+<PRE>
+    $ ed
+    $ ed numeros.txt 
+</PRE>
+
+<H2 ID="toc4">O comando que todos conhecem: s///</H2>
+
+<PRE>
+    $ echo aula
+    $ echo aula | sed s/a/A/
+    $ cat numeros.txt 
+    $ sed s/e/E/ numeros.txt
+    $ sed s/e/E/g numeros.txt   # modificador 'g' de Global (troca todas)
+</PRE>
+
+<H2 ID="toc5">O comando d (delete)</H2>
+
+<PRE>
+    $ cat numeros.txt | sed 5d
+    $ cat numeros.txt | sed 1d
+    $ cat numeros.txt | sed 10d
+    $ cat numeros.txt | sed $d                     # ERRO! variável $d
+    $ cat numeros.txt | sed '$d'                   # _sempre_ usar aspas no shell
+</PRE>
+
+<H2 ID="toc6">O comando y (transliterate)</H2>
+
+<PRE>
+    $ cat numeros.txt | sed 'y/aeiou/AEIOUL/'
+    $ cat numeros.txt | sed 'y/aeiou/AEIOU/'
+    $ cat numeros.txt | tr a-z A-Z
+    $ cat numeros.txt | sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'
+    $ cat numeros.txt | sed 'y/abcdefghi/iejsyfnch/'    # mini encriptador
+    $ cat numeros.txt | sed 'y/abcdefghi/iejsyfnch/' | sed 'y/iejsyfnch/abcdefghi/'
+    $ cat numeros.txt | tr abcdefghi iejsyfnch
+</PRE>
+
+<H2 ID="toc7">O comando p (print)</H2>
+
+<PRE>
+    $ cat numeros.txt | sed 5p                     # duplica
+    $ cat numeros.txt | sed -n 5p                  # só mostra a 5a linha
+</PRE>
+
+<H2 ID="toc8">Brincando com a opção -n</H2>
+
+<PRE>
+    $ cat numeros.txt | sed -n s/nove/nnn/
+    $ cat numeros.txt | sed -n s/nove/nnn/p
+    $ cat numeros.txt | sed -n p
+    $ cat numeros.txt | sed -n 5p
+</PRE>
+
+<H2 ID="toc9">Começando a endereçar</H2>
+
+<PRE>
+    $ cat numeros.txt | sed s/nove/nnn/
+    $ cat numeros.txt | sed 5s/nove/nnn/
+    $ cat numeros.txt | sed '5 s/nove/nnn/'        # endereço junto ou separado
+    $ cat numeros.txt | sed '5      s/nove/nnn/'   # vários espaços e/ou TAB
+    $ cat numeros.txt | sed '999s/nove/nnn/'
+    $ cat numeros.txt | sed '5d'
+    $ cat numeros.txt | sed '5,8 d'                # um intervalo de 4 linhas
+</PRE>
+
+<H2 ID="toc10">Múltiplos comandos!</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '5d 7d 9d'             # errado
+    $ cat numeros.txt | sed '5d ; 7d ; 9d'         # certo
+</PRE>
+
+<H2 ID="toc11">Os comandos são seqüenciais</H2>
+
+<PRE>
+    $ cat numeros.txt | sed -n 's/nove/nnn/p'  
+    $ cat numeros.txt | sed -n 's/nove/nnn/p ; s/nove/NNN/p'  
+    $ cat numeros.txt | sed -n 's/XXXX/nnn/p ; s/nove/NNN/p'  
+    $ cat numeros.txt | sed -n 's/nove/nnn/p ; s/nnn/NNN/p'  
+    $ cat numeros.txt | sed -n 's/nove/nnn/ ; s/nnn/NNN/p'  
+</PRE>
+
+<H2 ID="toc12">Para "debug", mostre a linha com o 'p'</H2>
+
+<PRE>
+    $ cat numeros.txt | sed -n 's/nove/nnn/ ; s/nnn/NNN/; 9p'  
+    $ cat numeros.txt | sed -n 's/nove/nnn/ ; 9p; s/nnn/NNN/; 9p'  
+    $ cat numeros.txt | sed -n '9p; s/nove/nnn/ ; 9p; s/nnn/NNN/; 9p'  
+</PRE>
+
+<H2 ID="toc13">Dois comandos diferentes, mesmo resultado</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '5,$ d'                # da 5a linha ao final
+    $ cat numeros.txt | sed -n '1,4 p'             # idem anterior
+</PRE>
+
+<H2 ID="toc14">A ordem dos fatores NÃO altera o resultado</H2>
+
+<PRE>
+    $ cat numeros.txt | sed -n '5p;5p;5p;5p'
+    $ cat numeros.txt | sed '9d ; 7d ; 5d'
+    $ cat numeros.txt | sed -n '9p ; 7p ; 5p'
+</PRE>
+
+<H2 ID="toc15">Endereçando pelo texto da linha</H2>
+
+<PRE>
+    $ cat numeros.txt | sed -n '/quatro/ p'
+    $ cat numeros.txt | sed -n '/o/ p'             # emulando o grep!
+    $ cat numeros.txt | grep o
+    $ l -l /bin/sed /bin/grep                      # quem é menor?
+    $ l -l /bin/sed /bin/gawk                      # e agora? :)
+    $ cat numeros.txt | sed -n '/o/ p'
+    $ cat numeros.txt | sed -n '/quatro/ p'
+    $ cat numeros.txt | sed -n '/quatro/ d'
+    $ cat numeros.txt | sed '/quatro/ d'
+    $ cat numeros.txt | sed '/:/ d'
+</PRE>
+
+<H2 ID="toc16">Negando um endereço</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '/o/ d'                # apaga as linhas 'o'
+    $ cat numeros.txt | sed '/o/! d'               # não apaga as linhas 'o'
+</PRE>
+
+<H2 ID="toc17">Misturando os tipos de endereço</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '/dois/,/cinco/ d'
+    $ cat numeros.txt | sed '/dois/,6 d'
+    $ cat numeros.txt | sed '8,6 d'
+    $ cat numeros.txt | sed 'd'                    # sem endereço == todas
+    $ cat numeros.txt | sed '1,/dois/ d'
+    $ cat numeros.txt | sed '/dois/,$ d'
+    $ cat numeros.txt | sed '/4/,$ d'              # o $ é a última linha
+</PRE>
+
+<H2 ID="toc18">Endereço especial: ~ (step)</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '4~2 d'                # não funciona no UNIX!
+    $ cat numeros.txt | sed '1~2 d'                # linhas ímpares
+    $ cat numeros.txt | sed '2~2 d'                # linhas pares
+    $ cat numeros.txt | sed '1~5 d'                # pule de 5 em 5
+</PRE>
+
+<H2 ID="toc19">\n, \t e amigos</H2>
+
+<PRE>
+    $ sed -V                                       # dependendo da versão
+    $ echo aaa | sed 's/a/a\n/g'                   # aceita \n, \t, ...
+    $ echo aaa | sed 's/a/a\t/g'
+    $ echo aaa | sed 's/a/a	/g'              # quando não, Ctrl+V TAB
+    $ cat /etc/passwd 
+    $ cat /etc/passwd | sed -n '/edival/ p'
+    $ cat /etc/passwd | sed -n '/edival/ p' | sed 's/:/\n/g'
+</PRE>
+
+<H2 ID="toc20">O comando q (quit)</H2>
+
+<PRE>
+    $ cat numeros.txt | sed q
+    $ cat numeros.txt | head -n 4                  # as 4 primeiras
+    $ cat numeros.txt | sed 4q                     # idem anterior
+</PRE>
+
+<H2 ID="toc21">Aplicando o s/// num intervalo de linhas</H2>
+
+<PRE>
+    $ cat numeros.txt | sed 's/e/___/g'
+    $ cat numeros.txt | sed '4,6 s/e/___/g'
+    $ cat numeros.txt | sed '/dois/,/cinco/ s/e/___/g'
+    $ cat numeros.txt | sed '/dois/,/cinco/s/e/___/g'
+</PRE>
+
+<H2 ID="toc22">Use qualquer caractere como delimitador do s///</H2>
+
+<PRE>
+    $ echo a/a/a | sed 's/a/A/g'
+    $ echo a/a/a | sed 's///@/g'                   # erro
+    $ echo a/a/a | sed 's/\//@/g'                  # ok
+    $ echo a/a/a | sed 's^/^@^g'                   # ^
+    $ echo a/a/a | sed 's4/4@4g'                   # 4
+    $ echo a/a/a | sed 's / @ g'                   # espaço
+    $ echo a/a/a | sed 'ss/s@sg'                   # s
+    $ echo a/a/a | sed 's	/	@	g'       # TAB
+    $ echo a/a/a | sed 's§/§@§g'                   # §
+    $ echo a/a/a | sed 's¢/¢@¢g'                   # ¢
+    $ echo a/a/a | sed 's
+    &gt; /
+    &gt; @
+    &gt; g                                            # Enter
+</PRE>
+
+<H2 ID="toc23">Use qualquer caractere como delimitador do endereço</H2>
+
+<PRE>
+    $ echo a/a/a | sed '/\// s^/^@^g'              
+    $ echo a/a/a | sed '\@/@ s^/^@^g'              # \@end@
+    $ echo a/a/a | sed '\ /  s / @ g'              # espaço
+</PRE>
+
+<H2 ID="toc24">Agrupando vários comandos em bloco num mesmo endereço</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '5s/:/_/g ; 5s/i/X/g'
+    $ cat numeros.txt | sed '5 { s/:/_/g ; s/i/X/g ; }'
+</PRE>
+
+<H2 ID="toc25">Os modificadores do comando s///</H2>
+
+<PRE>
+    $ echo aaaaa | sed 's/a/X/'                    # nenhum
+    $ echo aaaaa | sed 's/a/X/g'                   # g - global
+    $ echo aaaaa | sed -n 's/a/X/gp'               # p - print
+    $ echo aaaaa | sed 's/a/X/3'                   # número
+    $ echo aaaaa | sed 's/a/X/9'
+    $ echo aaaaa | sed 's/a/X/w foo'               # w - write
+    $ cat foo
+</PRE>
+
+<H2 ID="toc26">O comando l - list</H2>
+
+<PRE>
+    $ echo -e "\aXX\tXX"
+    $ echo -e "\aXX\tXX" | sed -n l                # mostra invisíveis
+    $ echo -e "\aXX\tXX " | sed -n l               # $ indica fim da linha
+    $ echo -e "\aXX\tXX " | od -c                  # comando similar
+</PRE>
+
+<H2 ID="toc27">O comando n - next</H2>
+
+<PRE>
+    $ cat numeros.txt | sed 'n'                    # faz nada
+    $ cat numeros.txt | sed 'n;d'                  # apaga linhas pares
+    $ cat numeros.txt | sed '1d;n;d'               # apaga linhas ímpares
+    $ cat numeros.txt | grep -A1 oito
+    $ cat numeros.txt | sed -n '/oito/{p;n;p;}'    # similar do grep -A1
+</PRE>
+
+<H2 ID="toc28">O comando N - next</H2>
+
+<PRE>
+    $ cat numeros.txt | sed -n '/um/{N;l;}'        # junta e separa com \n
+    $ cat numeros.txt | sed -n '/um/{N; s/\n/@/p ;}'
+    $ cat numeros.txt | sed -n '/um/{N;N;N;s/\n/@/gp ;}'
+    $ cat numeros.txt | sed -n 'N;N;s/\n/@@@/gp'   # junta de 3 em 3
+</PRE>
+
+<H2 ID="toc29">Os comandos de pulo : b t - label &amp; branch</H2>
+
+<PRE>
+    $ cat numeros.txt | sed ':a'                   # marca a posição 'a'
+    $ cat numeros.txt | sed :                      # comando nulo == cat
+    $ cat numeros.txt | sed ':a ; N ; b a'         # loop, erro no UNIX
+    $ cat numeros.txt | sed ':a ; N ; s/\n/@@@/; b a'
+    $ cat numeros.txt | sed ':a ; $!N ; s/\n/@@@/; t a' # tudo numa linha
+    $ cat numeros.txt | sed ':a ; $!N ; s/\n/@@@/; t a ; s/@@@/###/g'
+    $ cat numeros.txt | tr -d '\n'
+    $ cat numeros.txt | tr '\n' @
+</PRE>
+
+<H2 ID="toc30">Os comandos de buffer h g x - hold, get e eXchange</H2>
+
+<PRE>
+    $ cat numeros.txt | sed '1h;$g'                # troque a última pela 1a
+    $ cat numeros.txt | sed '1h;$G'                # repete a 1a no final
+    $ cat numeros.txt | sed '1s/:/@/;1h;$G'
+    $ cat numeros.txt | sed '1{h;s/:/@/g;x;} ; $G'
+</PRE>
+
+<H2 ID="toc31">Um arquivo só de comandos SED</H2>
+
+<PRE>
+    $ echo '1{h;s/:/@/g;x;} ; $G' &gt; script.sed
+    $ vi script.sed                                # pode alinhar, comentar
+    $ cat numeros.txt | sed -f script.sed          # usar o -f
+    $ sed -f script.sed numeros.txt                # com ou sem o cat
+    $ chmod +x script.sed                          # pode ser executável
+    $ ./script.sed numeros.txt                     # coloque #!/bin/sed -f
+    $ mv script.sed meuprog                        # extensão é opcional
+    $ ./meuprog numeros.txt 
+</PRE>
+
+<H2 ID="toc32">O comando =</H2>
+
+<PRE>
+    $ cat numeros.txt | sed =                      # mostra número da linha
+    $ cat numeros.txt | sed 5=
+    $ cat numeros.txt | wc  -l
+    $ cat numeros.txt | sed -n '$='                # idem anterior
+</PRE>
+
+<HR NOSHADE SIZE=1>
+
+<H1 ID="toc33">Expressões Regulares</H1>
+
+<P>
+As Expressões Regulares são uma simbologia, um método de se descrever
+padrões de texto complicados ou posicionais, como "números no final da
+linha" ou "palavras repetidas na mesma linha".
+</P>
+
+<H2 ID="toc34">As âncoras ^ e $ para começo e fim de linha</H2>
+
+<PRE>
+    $ cat numeros.txt | grep e                     # procure e
+    $ cat numeros.txt | grep 'e$'                  # procure e no fim
+    $ cat numeros.txt | grep '^1'                  # procure 1 no início
+    $ cat numeros.txt | grep '^$'                  # linhas em branco
+</PRE>
+
+<H2 ID="toc35">O ou de caracteres [] (lista)</H2>
+
+<PRE>
+    $ cat numeros.txt | grep '[eo]$'               # e ou o no fim
+    $ cat numeros.txt | grep '[aeiou]$'            # vogais no fim
+    $ cat numeros.txt | grep '^[aeiou]'            # vogais no início
+    $ cat numeros.txt | cut -d: -f2-               # só as palavras
+    $ cat numeros.txt | cut -d: -f2- | grep '^[aeiou]'
+    $ cat numeros.txt | cut -d: -f2- | grep '^[aeiouuifduieuifg]'
+    $ cat numeros.txt | cut -d: -f2- | grep '^[aaaa]'
+    $ cat numeros.txt | cut -d: -f2- | grep '^[a-z]' # intervalo
+    $ cat numeros.txt | cut -d: -f2- | grep '^[#-@]'
+    $ cat numeros.txt | grep '^[a-z]'              # letras no início
+    $ cat numeros.txt | grep '^[0-9]'              # números no início
+    $ cat numeros.txt | grep '^[0-9][0-9]'         # dois números no início
+    $ cat numeros.txt | grep '^[0-9]:[aeiou]'      # número:vogal
+    $ cat numeros.txt | grep '^[0-9]:[^aeiou]'     # número:não vogal
+    $ cat numeros.txt | grep '^[0-9]:[aeiou^-]'    # número:vogal ou ^ ou -
+</PRE>
+
+<H2 ID="toc36">O repetidor {} (chaves)</H2>
+
+<PRE>
+    $ cat numeros.txt | egrep '^[0-9]{1,}:'        # um ou mais números
+    $ cat numeros.txt | egrep '^[0-9]{1,5}:'       # de 1 a 5 números
+    $ cat numeros.txt | egrep '^[0-9]{2}:'         # exatamente 2 números
+    $ cat numeros.txt | grep '^[0-9]\{2\}:'        # _e_grep não escapa
+</PRE>
+
+<H2 ID="toc37">O curinga . (ponto)</H2>
+
+<PRE>
+    $ cat numeros.txt | grep '^[0-9]:.[aeiou]'     # núm : qqr vogal
+    $ cat numeros.txt | grep '^[0-9]:..[aeiou]'    # núm : qqr qqr vogal
+    $ cat numeros.txt | grep '^[0-9]:...[aeiou]'   # núm : qqr qqr qqr vogal
+    $ cat numeros.txt | grep '\.'                  # ponto literal
+    $ cat numeros.txt | grep '^.........[aeiou]'   # vários pontos
+    $ cat numeros.txt | egrep '^.{9}[aeiou]'       # 10a é vogal
+    $ cat numeros.txt | egrep '^.{7,9}[aeiou]'     # 8a, 9a ou 10a é vogal
+    $ cat numeros.txt | egrep '^.{9,}[aeiou]'      # 10a em diante é vogal
+    $ cat numeros.txt | egrep '^.{10}$'            # linha com 10 letras
+    $ cat numeros.txt | egrep '^.{1,10}$'          # linha com até 10 letras
+    $ cat numeros.txt | egrep '^.{10,}$''          # linha com mín 10 letras
+    $ cat numeros.txt | egrep '[aeiou]..$'         # antepenúltima é vogal
+</PRE>
+
+<H2 ID="toc38">Os atalhos ? * +</H2>
+
+<PRE>
+    $       ? == {0,1}       * == {0,}       + == {1,}
+    $ cat numeros.txt | egrep 'X'                  # X uma vez
+    $ cat numeros.txt | egrep 'X*'                 # X zero ou mais vezes
+    $ cat numeros.txt | egrep 'X+'                 # X uma ou mais vezes
+    $ cat numeros.txt | egrep 'X?'                 # X opcional (0 ou 1)
+    $ echo aulas | egrep 'aulas?$'                 # aula ou aulas no fim
+    $ echo aula | egrep 'aulas?$'
+</PRE>
+
+<H2 ID="toc39">O agrupador ()</H2>
+
+<PRE>
+    $ echo aulas | egrep '(aulas)?$'               # aulas no fim ou não
+</PRE>
+
+<H2 ID="toc40">ER para casar endereço IP (N.N.N.N)</H2>
+
+<PRE>
+    $ cat ip                                       # ER pra casar IP
+    10.0.0.1
+    192.168.255.255
+    $ cat ip | egrep '^([0-9]{1,3}\.){4}$'         # não funciona
+    $ cat ip | egrep '^([0-9]{1,3}\.){3}[0-9]{3}$' # quase
+    $ cat ip | egrep '^([0-9]{1,3}\.){3}[0-9]{1,3}$' # ok!
+</PRE>
+
+<H2 ID="toc41">ER de zero a 255</H2>
+
+<PRE>
+    $ seq 260                                      # olhe a evolução
+    $ seq 260 | egrep -v '^[0-9]$'
+    $ seq 260 | egrep -v '^[0-9]{2}$'
+    $ seq 260 | egrep -v '^[0-9]{1,2}$'
+    $ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9])$'
+    $ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9]|2[0-5][0-5])$'
+    $ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9])$'
+    $ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$'
+</PRE>
+
+<H2 ID="toc42">ER do IP mais precisa (N.N.N.N onde N de 0 a 255)</H2>
+
+<PRE>
+    $ cat ip | egrep '^(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$'
+    $ ##### usando variáveis fica mais claro
+    $ de0a255='([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+    $ cat ip | egrep "^($de0a255\.){3}$de0a255$'
+</PRE>
+
+<H2 ID="toc43">O ou de palavras |</H2>
+
+<PRE>
+    $ echo isso | sed 's/isso|aquilo/XXX/'         # isso ou aquilo
+    $ echo aquilo| sed 's/isso|aquilo/XXX/' 
+    $ echo aquilo| sed 's/\(iss\|aquil\)o/XXX/'    # isso ou aquilo
+    $ echo aquilo| sed -r 's/(iss|aquil)o/XXX/'    # com -r, não escapa
+</PRE>
+
+<H2 ID="toc44">O curinga .*, o tudo e o nada</H2>
+
+<PRE>
+    $ echo a:a:a:a:a:a | sed 's/a:.*:/X/'
+    $ echo "&lt;b&gt;abc&lt;/b&gt; foo bar &lt;b&gt;xyz&lt;/b&gt; XXX" | sed 's,&lt;b&gt;.*&lt;/b&gt;,,'
+</PRE>
+
+<H2 ID="toc45">Os retrovisores \1, \2 ... \9</H2>
+
+<PRE>
+    $ echo abcdefg | sed -r 's/(a)(b)(c)/\3:\2:\1/'
+    $ echo abcdefg | sed -r 's/(a)(b)(c).*/\1:\2:\3/'
+    $ echo abcdefg | sed -r 's/(a)(b)(c).*/\3:\2:\1/'
+    $ cat numeros.txt | sed -r 's/^(.*):(.*):(.*)/\3 \2 \1/'
+</PRE>
+
+<H2 ID="toc46">ER para casar números repetidos 11, 22, 33, ...</H2>
+
+<PRE>
+    $ seq 99 | egrep '[0-9]{2}'                    # não é isso
+    $ seq 99 | egrep '([0-9])\1'                   # ok!
+</PRE>
+
+<H2 ID="toc47">ER para casar palavras repetidas</H2>
+
+<PRE>
+    $ echo quero quero | egrep '([a-z]+) \1'       # casou
+    $ echo quero aula | egrep '([a-z]+) \1'        # não casa
+    $ echo quero aula agora, eu quero | egrep '([a-z]{3,}) .*\1' 
+</PRE>
+
+<HR NOSHADE SIZE=1>
+
+<P>
+ <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
+<A HREF=".">Voltar para a página dos cursos na Sucesu</A>
+</P>
+
+<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags sucesu-seder-prompt.t2t -->
+</BODY></HTML>

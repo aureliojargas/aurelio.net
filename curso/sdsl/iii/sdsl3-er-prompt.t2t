@@ -1,0 +1,160 @@
+Prompt-doc: Expressões Regulares
+Aurelio Marinho Jargas
+III SDSL - Lajeado, 21 de Julho de 2004
+
+%!target: html
+%!encoding: UTF-8
+%!options: --toc --style ../../prompt-doc.css
+
+Este é o histórico da linha de comando do curso de Expressões
+Regulares que ministrei no III SDSL em Lajeado - RS.
+
+- **Data:** 21-Jul-2004
+- **Horário:** 09:00
+- **Duração:** 7 horas
+- **Local:** Laboratório Univates
+- **Participantes:** 14 pessoas
+- **Requisitos:** Nenhum
+
+
+---------------------------------------------------------------
+
+= Expressões Regulares =
+
+As Expressões Regulares são uma simbologia, um método de se descrever
+padrões de texto complicados ou posicionais, como "números no final da
+linha" ou "palavras repetidas na mesma linha".
+
+
+== Usando o cat para que a ER fique no final da linha ==
+```
+  $ grep root /etc/passwd
+  $ cat /etc/passwd | grep root
+```
+
+== As âncoras ^ e $ para começo e fim de linha ==
+```
+  $ cat /etc/passwd | grep ^root                 # root no início
+  $ cat /etc/passwd | grep bash$                 # bash no fim
+  $ cat /etc/passwd | grep ^$                    # linhas em branco
+```
+
+== O ou de caracteres [] (lista) ==
+```
+  $ cat /etc/passwd | grep adm
+  $ cat /etc/passwd | grep Adm
+  $ cat /etc/passwd | grep '[Aa]dm'              # Adm ou adm
+  $ cat /etc/passwd | grep '[aeiou]'             # vogais
+  $ cat /etc/passwd | grep '^[aeiou]'            # vogais no início
+  $ cat /etc/passwd | grep '^[aeiouAEIOU]'       # vogais minú/MAIÚ
+```
+
+== O curinga . (ponto) ==
+```
+  $ cat /etc/passwd | grep '^.[aeiou]'           # vogal na segunda
+  $ cat /etc/passwd | grep '^..[aeiou]'          # vogal na terceira
+  $ cat /etc/passwd | grep '^....[aeiou]'        # vogal na sexta
+```
+
+== O repetidor {} (chaves) ==
+```
+  $ cat /etc/passwd | grep '^.\{10\}[aeiou]'     # vogal na 10a
+  $ cat /etc/passwd | egrep '^.{10}[aeiou]''     # vogal na 10a (egrep)
+  
+  $ cat /etc/passwd | egrep '[aeiou][aeiou][aeiou][aeiou]'
+  $ cat /etc/passwd | egrep '[aeiou]{4}'         # repetindo listas
+  
+  $ cat /etc/passwd | egrep '^.{1,4}[aeiou]'     # de 1 a 4
+  $ cat /etc/passwd | egrep '^.{0,4}[aeiou]'     # de 0 a 4
+  $ cat /etc/passwd | egrep '^.{4,}[aeiou]'      # no mínimo 4
+```
+
+== Com sistema em pt_BR, a-z casa acentos ==
+```
+  $ echo áéíóú | grep [a-z]                      # casa, sistema pt_BR
+  $ LANG= LC_ALL= ; echo áéíóú | grep [a-z]      # não casa, sistema en
+```
+
+== Intervalos em listas [] ==
+```
+  $ cat /etc/passwd | egrep '^[a-z]'             # começa com letras
+  $ cat /etc/passwd | egrep '^[aeiou]'           # começa com vogais
+  $ cat /etc/passwd | egrep '^[b-df-hj-np-tv-z]' # começa com consoantes
+  $ cat /etc/passwd | egrep '^[^aeiou]'          # começa com não vogal
+```
+
+== Os atalhos ? * + ==
+```
+  $ cat txt | egrep '^a{0,1}$'                   # a 0 ou 1 vez
+  $ cat txt | egrep '^a?$'                       # a 0 ou 1 vez
+  $ cat txt | egrep '^a{0,}$'                    # a 0 ou mais vezes
+  $ cat txt | egrep '^a*$'                       # a 0 ou mais vezes
+  $ cat txt | egrep '^aa{1,}$'                   # a 1 ou mais vezes
+  $ cat txt | egrep '^a+$'                       # a 1 ou mais vezes
+```
+
+== O curinga .*, o tudo e o nada ==
+```
+  $ echo abc | grep a.*bc                        # .* casa nada
+  $ echo a------bc | grep a.*bc                  # .* casa -------
+```
+
+== O curinga .* é guloso ==
+```
+  $ echo "um negrito <b>aqui</b> e <i>aqui</i>" | sed 's/<.*>//g'
+  $ echo "um negrito <b>aqui</b> e <i>aqui</i>" | sed 's/<[^>]*>//g'
+```
+
+== O ou de palavras | ==
+```
+  $ cat /etc/passwd | egrep '^(root|adm|ftp)'
+  $ cat /etc/passwd | egrep '^(root|adm|ftp):'
+  $    #  (supermercado|hipermercado|mercado|minimercado)
+  $    #  (super|hiper|mini)?mercado
+```
+
+== Os retrovisores \1, \2 ... \9 ==
+```
+  $     #    (quero)-\1
+  $ cat numeros.txt | egrep '([0-9])\1\1'        # casa 444, 555, 777
+```
+
+== ER para casar palavras repetidas ==
+```
+  $ cat txt | egrep '([a-z]+) \1'                # espaço entre palavras
+  $ cat txt | egrep ' ([a-z]+) \1'               # espaço antes
+  $ cat txt | egrep '(^| )([a-z]+) \2'           # espaço ou início
+  $ cat txt | egrep '(^| )([a-z]+) \2( |$)'      # espaço ou final
+  $ cat txt | egrep '(^| )([a-z]+) \2([ .]|$)'   # espaço ou ponto ou final
+  $ cat txt | egrep '\<([a-z]+) \1\>'            # usando borda de palavra
+  $ cat txt | egrep '\b([a-z]+) \1\b'            # com \b também funciona
+```
+
+== ER de zero a 255 ==
+```
+  $ seq 260 > numeros2.txt
+  $ cat numeros2.txt | egrep '[0-9]{1,3}'
+  $ cat numeros2.txt | egrep '^[0-9]{1,3}$'
+  $ cat numeros2.txt | egrep '^[0-9]{1,2}$'
+  $ cat numeros2.txt | egrep '^([0-9]{1,2}|1[0-9][0-9])$'
+  $ cat numeros2.txt | egrep '^([0-9]{1,2}|1[0-9][0-9]|2[0-5][0-5])$'
+  $ cat numeros2.txt | egrep '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9])$'
+  $ cat numeros2.txt | egrep '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$'
+```
+
+== ER para casar IP (N.N.N.N onde N de 0 a 255) ==
+```
+  $ cat ips | egrep '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.\1\.\1\.\1$'
+  $ cat ips | egrep '^(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\.|$)){4}$'
+  $ cat ips | sed 's/$/./' | egrep '^(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){4}$'
+  $ ### usando uma variável
+  $ NUM='([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+  $ cat ips | egrep "^($NUM\.){3}($NUM)$"
+  $ ### o monstro expandido
+  $ cat ips | egrep "^(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))$"
+  $ cat ips | egrep "\<(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))\>"
+```
+
+----------------------------------------------------------------
+ [../../../img/t2tpowered.png]
+[Voltar para a página do relato do curso .]
