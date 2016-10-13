@@ -439,6 +439,14 @@
   relato: http://aurelio.net/curso/udesc/
   slides: https://speakerdeck.com/aureliojargas/expressoes-regulares
 
+- data: 2016-10-13
+  duracao: 3
+  tema: Docker, GitLab CI/CD
+  evento: Prefeitura de Joinville
+  cidade: Joinville
+  estado: SC
+  participantes: 12
+
 - data: 2016-11-26
   duracao: 8
   tema: "Expressões Regulares: Imersão"
