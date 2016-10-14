@@ -27,11 +27,11 @@ Links para os materiais:
 
  * [Slides da Palestra Desenvolvedor de Software Livre](desenvolvedor/)
 
-          ![](img/credencial.png)          
+          ![](img/credencial.png)
 
 Tópicos deste relato:
 
-## A Ida 
+## A Ida
 
 Primeiramente, meus sinceros agradecimentos à Conectiva, empresa onde
 trabalho, por ter me liberado para ir ao evento.
@@ -52,7 +52,7 @@ Recapitulando:
 
 |`Conectiva -> táxi -> ônibus -> avião -> carro -> Unicamp`|
 
-## A Unicamp 
+## A Unicamp
 
 Pô, ninguém tinha me avisado que a Unicamp era tão grande!
 
@@ -60,7 +60,7 @@ Caramba, aquilo é um bairro cercado. Tem um monte de ruas, prédios,
 ônibus, movimento, até posto de gasolina tem! E para meu espanto, até
 o hotel em que me hospedei era lá dentro. E que hotel!
 
-          ![](img/hotel.jpg)          
+          ![](img/hotel.jpg)
 
 Lá fora, uma piscinona (que infelizmente não tive tempo de "testar").
 Dentro do quarto, tudo novinho e impecável, sem luxo, mas com muito
@@ -70,7 +70,7 @@ E o melhor de tudo: rede local com **acesso liberado à Internet**.
 Tudo o que um nerd precisa para ser feliz. Foi só plugar o cabão de
 rede, configurar o IP e pronto, o iBook estava conectado com o mundo.
 
-## O Primeiro Dia - Palestra do Franklin 
+## O Primeiro Dia - Palestra do Franklin
 
 Como não fui lá pra ficar coçando, nem desfiz a mala e já fui direto
 para o local das palestras. Aliás, o Rubens mandou um carro pra vir me
@@ -115,7 +115,7 @@ Depois da palestra, papo vem, papo vai e perdi o bonde para o hotel...
 Muito obrigado ao Alexandre Oliva por me dar uma carona! Quando
 finalmente pus os pés no quarto já era mais de 11 da noite.
 
-## O Segundo Dia - Curso do Julio 
+## O Segundo Dia - Curso do Julio
 
 Acordei cedo, às 07:30. Cafézão da manhã no hotel e voltei para o
 quarto. Hoje é o dia do curso de Shell Script do Julio Neves, que irei
@@ -125,7 +125,7 @@ Mas, como anunciei há tempos o lançamento de um software novo durante
 a minha palestra de amanhã, acabei passando a manhã toda trancado no
 quarto com o iBook, finalizando os detalhes desse lançamento.
 
-          ![](img/codando.jpg)          
+          ![](img/codando.jpg)
 
 O tal programa é o [RAC](http://aurelio.net/rac), feito em parceria com
 meu amigo gaúcho [Thobias](http://thobias.org). O software já estava
@@ -160,7 +160,7 @@ A peculiaridade do curso foi o Fábio ter conseguido um mega crash em
 uma das máquinas Digital, com um simples comando "trap". As máquinas
 rodavam em esquema de Terminal Server com o Red Hat Linux.
 
-          ![](img/pau.jpg)          
+          ![](img/pau.jpg)
 
 Depois do curso, um intervalo rápido regado com uma chuva forte de
 verão e depois as vieram as palestras. Nessa noite assisti a do Djalma
@@ -173,7 +173,7 @@ pisando no quarto. Como estava pregadaço, deixei para tomar banho e
 arrumar as coisas do curso e palestra no dia seguinte. Péssima
 decisão...
 
-## O Terceiro Dia - Minha Vez de Ministrar Curso e Palestra 
+## O Terceiro Dia - Minha Vez de Ministrar Curso e Palestra
 
 Como diz o ditado: "Nunca deixe para amanhã o que se pode fazer hoje".
 Eu sempre sigo isso, mas dessa vez falhei e me arrependi.
@@ -186,7 +186,7 @@ Tomei um banho ultra rápido, arrumei as coisas na pressa e não pude
 tomar café da manhã, chegando na sala do curso às 08:50. Mas fora esse
 pequeno deslize, o resto do dia foi tranquilo e gratificante.
 
-## Curso de Expressões Regulares 
+## Curso de Expressões Regulares
 
 |![](img/turma-er.jpg)|
 |Turma do curso, foto tirada ao meio-dia|
@@ -254,7 +254,7 @@ nove [Apostilas de Shell](http://aurelio.net/shell/apostila/). Um estrondo de ve
 apostila vendida, duas alegrias: o dinheiro que chega, e o peso da
 mala que diminui :D
 
-## Palestra Experiências de um Desenvolvedor de Software Livre 
+## Palestra Experiências de um Desenvolvedor de Software Livre
 
 Do laboratório do curso direto para o auditório de palestras.
 
@@ -263,7 +263,7 @@ tão volumoso para encher três auditórios, minha palestra e a do
 Felipe sobre o Kernel 2.6 foram unidas. Cada um usaria 45 minutos, e
 compartilharíamos do mesmo público. Uma ótima idéia!
 
-          ![](img/plateia-geral.jpg)          
+          ![](img/plateia-geral.jpg)
 
 Eu fui o primeiro, e o tema da palestra era contar as minhas
 experiências como um desenvolvedor de software livre há alguns anos.
@@ -282,7 +282,7 @@ para escrever um software, mas o fato de se mostrar e publicar seu
 trabalho para que todos vejam, atrai contatos, oportunidades,
 admiradores e esse networking todo gera muitos frutos.
 
-          ![](img/plateia-perto.jpg)          
+          ![](img/plateia-perto.jpg)
 
 Também foram passadas várias dicas de **como** lançar o software e
 como divulgá-lo, fazendo marketing que funciona sem gastar um tostão
@@ -297,14 +297,14 @@ textos e que o endereço da página dele era http://aurelio.net/rac. E
 não é que isso gerou ansiedade e curiosidade e também serviu como um
 marketing pesado para o programa? Vivendo e aprendendo... :)
 
-          ![](img/aplausos.jpg)          
+          ![](img/aplausos.jpg)
 
 Confira a [apresentação completa](desenvolvedor/),
 para saber mais sobre todos estes assuntos.
 
-## Aleatoriedades 
+## Aleatoriedades
 
-### O famigerado piá de 12 anos 
+### O famigerado piá de 12 anos
 
 Destaque para o mito do momento, que aterroriza a vida dos empresários
 de software. Citado em quase todas as palestras, o vil, o meliante
@@ -314,7 +314,7 @@ pois é sustentado pelos pais, o "**piá de 12 anos**" tira o sono dos
 profissionais de verdade, roubando seu mercado! Cuidado! Se vir um
 desses por aí, chame a ABES!
 
-### A super GNU/Kombi 
+### A super GNU/Kombi
 
 O veículo oficial do evento, que fazia o leva e trás dos palestrantes
 e instrutores entre o hotel e as salas, era a GNU/Kombi, uma Kombi da
@@ -323,12 +323,12 @@ Unicamp pilotada insandecidamente pelo Rubens Queiroz, que garantia a
 de dentro do veículo, durante uma curva fechada onde cantando pneu, a
 Kombi ficou com apenas duas rodas no chão!
 
-          ![](img/kombi.jpg)          
+          ![](img/kombi.jpg)
 
 OK, ok, o Rubens dirigia direitinho, mas é sempre mais legal sacanear
 um pouco &;)
 
-### Palestra de última hora 
+### Palestra de última hora
 
 O amigo e também Conectivo Helio chegou no último dia do evento para
 dar uma palestra sobre o KDE. Mas Murphy foi muito duro com ele e além
@@ -338,12 +338,12 @@ do ar... Mesmo com todo esse imprevisto, nosso bravo amigo não
 desistiu e **durante** a minha palestra, ele conseguiu escrever uma
 apresentação novinha em folha, do zero.
 
-          ![](img/palestrante.jpg)          
+          ![](img/palestrante.jpg)
 
 O Felipe estava ao seu lado, não acreditando que aquilo estava mesmo
 acontecendo :)
 
-### Eles, sempre eles... 
+### Eles, sempre eles...
 
 No IV FISL em Porto Alegre, foi a grande placa do "
 [Rio Veadinho](http://aurelio.net/viagem/fisl-2003/rio_veadinho.jpg)"
@@ -351,7 +351,7 @@ que dá as boas-vindas aos visitantes que entram no Rio Gande do Sul
 pela BR-101. Em Campinas, no mural da Engenharia Elétrica, dentro da
 Unicamp...
 
-          ![](img/cartaz.jpg)          
+          ![](img/cartaz.jpg)
 
 <!-- BOX -->
 <div class="ad-box-300">
@@ -382,7 +382,7 @@ Unicamp...
 	</script>
 </div>
 
-### Relatos de outros cursos que ministrei: 
+### Relatos de outros cursos que ministrei:
 
  * [IV FISL - Fórum Internacional de Software Livre — Porto Alegre-RS (2003)](../../../viagem/fisl-2003/) (passeio)
  * [Treinamento na 4linux — São Paulo-SP (2003)](../../../curso/4linux/)
@@ -425,4 +425,3 @@ Unicamp...
   })();
 
 </script>
-

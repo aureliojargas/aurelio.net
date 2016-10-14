@@ -14,7 +14,7 @@ prazer de participar de um evento de nerds para nerds.
 Um obrigado à Sula pela oportunidade, ao RootSh e ao gar0t0
 pelas caronas, e aos amigos pela camaradagem e apoio.
 
-## Alguns Links 
+## Alguns Links
 
  * [Página do LinuxChix-BR](http://www.linuxchix.org.br)
 
@@ -22,7 +22,7 @@ pelas caronas, e aos amigos pela camaradagem e apoio.
 
  * [Relato da Sulamita sobre o evento](http://brlinux.linuxsecurity.com.br/noticias/002360.html)
 
-## A Viagem de Ida 
+## A Viagem de Ida
 
 Saída marcada de Curitiba para sexta à meia-noite, fui até a
 Rodoferroviária para pegar o ônibus. A Sula já tinha pago em São
@@ -49,7 +49,7 @@ depois ir para o evento.
 O dia foi bem **descontraído**, (re)encontrando vários amigos, batendo
 papo, assistindo às palestras, aquele social massa.
 
-## 01.Mai.2004 ::: Experiências de um Desenvolvedor de Software Livre 
+## 01.Mai.2004 ::: Experiências de um Desenvolvedor de Software Livre
 
 |![](palestrante.jpg)|
 
@@ -100,7 +100,7 @@ outras batendo na cadeira de madeira, senti que o pessoal realmente
 gostou das minhas historinhas. Isso foi muito gratificante. Valeu
 mesmo.
 
-## Aleatoriedades 
+## Aleatoriedades
 
  * Depois da palestra fomos para uma pizzaria, se entupir de comida e
 falar de coisas nerds durante horas. Depois o pessoal ainda foi para

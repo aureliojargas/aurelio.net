@@ -4,7 +4,7 @@ subtitle: 8 e 9 de outubro de 2004, Joinville - SC
 date: 2004-10-08
 ---
 
-  ![](img/diploma.jpg) 
+  ![](img/diploma.jpg)
 
 Nessa sexta e sábado dias 8 e 9 de Outubro teve
 [um evento de Linux](http://www.softwarelivresc.org.br/congresso/2004/)
@@ -27,7 +27,7 @@ Links para os materiais:
 
  * [Desenvolvimento de Software Livre - Slides](http://aurelio.net/curso/material/desenvolvedor/)
 
-## Fui e Cheguei 
+## Fui e Cheguei
 
 Como o evento foi aqui perto de Curitiba (+- 120 Km), fui com o meu
 *Power Uno 1.0 Ie Turbo Intercooler Flex GLS XR3 Luxo*. Para minha
@@ -49,7 +49,7 @@ a entrada de cidade, não tive como errar.
 |![](img/centreventos.jpg)|
 |Centreventos: bonito e grande, tudo novo e bem cuidado, legal|
 
-## Expressões Regulares 
+## Expressões Regulares
 
 A minha primeira palestra, a de Expressões Regulares, começou às 10 da
 manhã. Na sala cabiam umas 120 pessoas, no momento de pico deve ter
@@ -77,7 +77,7 @@ MrPrompt (Floripa). Valeu a presença!
 Ah! Galera que tirou foto durante a palestra, ou depois no bate-papo,
 me mandem pra eu ver!
 
-## Foooooooome 
+## Foooooooome
 
 O almoço foi ali do lado, no supermercado BIG. Foi um encontro de
 titãs, uma caravana de palestrantes e personalidades indo comer no
@@ -102,7 +102,7 @@ Internet, água, refri, bolachas e frutas. Mordomia né?
 > resolveu, fui palestrar cansado. Nota mental 1: não esqueitar
 > antes de palestrar.
 
-## Desenvolvedor de Software Livre 
+## Desenvolvedor de Software Livre
 
 Nessa palestra, um dilema: eu tinha apenas uma hora para ministrar uma
 palestra que dura 4 horas :/ Eu achei que ia ser um completo desastre,
@@ -129,7 +129,7 @@ dessa vez Bruder :D
 **Ah2!** Valeu Adilson pela pilotagem do mouse nos slides, e desculpe
 pelos "*Passa, passa... Não! Volta!*" :D
 
-## s/Nerds/Praia/ 
+## s/Nerds/Praia/
 
 Como a praia de Enseada (São Francisco do Sul) é ali do lado de
 Joinville, também levei a minha prancha de surfe, e logo depois da

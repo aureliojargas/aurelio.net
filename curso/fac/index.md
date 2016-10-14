@@ -4,7 +4,7 @@ subtitle: 22 de outubro de 2004, Campinas - SP
 date: 2004-10-22
 ---
 
-  ![](logo.jpg) 
+  ![](logo.jpg)
 
 Na sexta dia 22 de Outubro de 2004 voei até Campinas para
 dar a palestra de desenvolvimento de Software Livre num evento
@@ -23,7 +23,7 @@ Links:
 [Slides da Palestra](http://aurelio.net/curso/material/desenvolvedor/),
 [Fotos oficiais do evento](http://www.auri.com.br/semana/fotos.php)
 
-## Curitiba -> Campinas -> Hotel -> Academia 
+## Curitiba -> Campinas -> Hotel -> Academia
 
 O avião saiu de Curitiba perto das 16h30 e com menos de uma hora de
 viagem estavam eu e minha mochila em Campinas. O professor Miglinski
@@ -39,7 +39,7 @@ parece que por ter sido feita com óleo de baleia ou algo assim.
 |![](academia.jpg)|
 |Academia de Cadetes do Exército|
 
-## A Palestra 
+## A Palestra
 
 O auditório era bem grande, com uma banca superior inclusive (dois
 andares). Parece que cabiam 300 pessoas sentadas, e no momento de pico
@@ -78,7 +78,7 @@ rola.
 |![](staff.jpg)|
 |André Déo, Anselmo Zago, Carlos Miglinski, Moça Bonita, eu, Adriano Pila|
 
-## O Depois 
+## O Depois
 
 Depois fomos jantar num restaurante português, onde comi o tal do
 bacalhau pela primeira vez na vida. Sempre achei que bacalhau era

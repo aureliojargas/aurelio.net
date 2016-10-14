@@ -15,7 +15,7 @@ primeira vez me ver falando.
 Meus agradecimentos ao Paulo Henrique Santana pela
 oportunidade.
 
-## Desenvolvedor de Software Livre 
+## Desenvolvedor de Software Livre
 
  * [Divulgação Oficial](http://www.inf.ufpr.br/ssl/)
 
@@ -91,7 +91,7 @@ falar e ir embora, sem aquela embassação de viagem, hotel, translado,
 	</script>
 </div>
 
-### Relatos de outros cursos que ministrei: 
+### Relatos de outros cursos que ministrei:
 
  * [IV FISL - Fórum Internacional de Software Livre — Porto Alegre-RS (2003)](../../../viagem/fisl-2003/) (passeio)
  * [Treinamento na 4linux — São Paulo-SP (2003)](../../../curso/4linux/)
@@ -134,4 +134,3 @@ falar e ir embora, sem aquela embassação de viagem, hotel, translado,
   })();
 
 </script>
-

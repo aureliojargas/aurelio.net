@@ -16,7 +16,7 @@ Como eu gosto de Shell e Expressões Regulares, ministrei duas
 palestrinhas, e esta página serve para guardar as linhas de
 comando utilizadas.
 
-## 04.Dez.2004 ::: Tira dúvidas de Shell 
+## 04.Dez.2004 ::: Tira dúvidas de Shell
 
 O objetivo não era ensinar Shell, mas sim passar dicas e sanar as
 dúvidas dos participantes, que já conheciam a linguagem e já faziam
@@ -34,7 +34,7 @@ aí já viu :)
 
 [Histórico da linha de comando](conectiva-shell-prompt.html)
 
-## 17.Dez.2004 ::: Expressões Regulares 
+## 17.Dez.2004 ::: Expressões Regulares
 
 O objetivo era apresentar todos os metacaracteres básicos e sua utilidade.
 

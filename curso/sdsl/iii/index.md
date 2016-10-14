@@ -26,7 +26,7 @@ Links para os materiais:
 
  * [Mais informações sobre o assunto](http://aurelio.net/regex/)
 
-## Cheguei, Falei, Voltei 
+## Cheguei, Falei, Voltei
 
 O vôo era cedo, às 19h30, então fui direto da Conectiva para o
 Aeroporto. Trânsito tranquilo, tempo de sobra. Como é bom levar apenas
@@ -55,7 +55,7 @@ Pensei que ia pro Rio Grande sentir bastante frio, mas estava como em
 Curitiba. Frio, mas nem tanto. O dia seguinte amanheceu clássico
 serrano:
 
-  ![](neblina.jpg)  
+  ![](neblina.jpg)
 
 Encontrei com o Luciano Ramalho no café da manhã, ele ia ministrar o
 curso de Python. Fomos juntos papeando para a Univates, a pé. Deu uma
@@ -112,8 +112,8 @@ Para facilitar a leitura, as expressões espaçadas:
          31                         / (0?[13578] | 1[02] )
       ) / [012][0-9]{3}
     \>
-    
-    
+
+
     \<
       ( (0?[1-9] | [12][0-9] | 3[01])  / (0?[13578] | 1[02]) |
         (0?[1-9] | [12][0-9] | 30)     / (0?[469]   | 11   ) |
@@ -182,7 +182,7 @@ surfe que lançou sua biografia, show de bola.
 	</script>
 </div>
 
-### Relatos de outros cursos que ministrei: 
+### Relatos de outros cursos que ministrei:
 
  * [IV FISL - Fórum Internacional de Software Livre — Porto Alegre-RS (2003)](../../../viagem/fisl-2003/) (passeio)
  * [Treinamento na 4linux — São Paulo-SP (2003)](../../../curso/4linux/)
@@ -225,4 +225,3 @@ surfe que lançou sua biografia, show de bola.
   })();
 
 </script>
-

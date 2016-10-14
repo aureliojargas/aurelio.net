@@ -27,7 +27,7 @@ luta.
 [Site Oficial do Evento](http://www.softwarelivre.org/forum2004/),
 [Outros Álbuns de Fotos do Evento](http://brlinux.linuxsecurity.com.br/noticias/002585.html)
 
-## Prefácio Sentimentalóide 
+## Prefácio Sentimentalóide
 
 Este trecho do relato é gay. Só leia se gostar de divagações emotivas
 e sentimentalismo barato.
@@ -89,7 +89,7 @@ caras. **VALEU MESMO**.
 |![](juliorubens.jpg)|
 |Meus padrinhos Julio Neves e Rubens Queiroz, no FISL de 2003|
 
-## A Ida 
+## A Ida
 
 O fórum começou na quarta-feira, mas eu só saí de **Curitiba** na
 quinta de noite, às 22:30 horas. Estava cheio de trabalho na
@@ -118,16 +118,16 @@ direto para a **gandaia**! Fomos a pé eu, ela, o Sandro (4 Linux) e a
 Maureen (irlandesa que também falava português) para o tal de
 Barbazul. Chegando lá, que surpresa: toda a turminha estava lá!
 
-   ![](barbazul.jpg)    
+   ![](barbazul.jpg)
 
 Parece que a noite era exclusiva dos participantes do fórum, então foi
 no mínimo bizarro ver tantos nerds juntos numa casa noturna com banda
 ao vivo, fazendo um social. A festa foi longe, até altas horas...
 **Nerds também dançam!**
 
-   ![](galera_barbazul.jpg)    
+   ![](galera_barbazul.jpg)
 
-## A Sexta 
+## A Sexta
 
 Depois da gandaia, difícil acordar cedo, até o café da manhã do hotel
 eu perdi. Meu **companheiro de quarto** ainda não apareceu, parece que
@@ -137,7 +137,7 @@ O evento foi no mesmo lugar do ano passado, a PUC. **As instalações**
 estavam iguais as do ano passado, com estandes, salas de palestra,
 máquinas com Internet e mesas de grupos de usuários.
 
-   ![](corredor.jpg)    
+   ![](corredor.jpg)
 
 Já na entrada, muitos, mas **MUITOS amigos** por lá. Acho que foram
 umas 3 horas seguidas de "*Oi, quanto tempo!*", "*E aí, beleza?*",
@@ -152,9 +152,9 @@ Rudá Moura e Osvaldo Santana, foi um sucesso. Uma pena que não pude
 assistir. E as camisetas de Python que o Osvaldo fez venderam como
 água!
 
-   ![](pythonpower.jpg)   
+   ![](pythonpower.jpg)
 
-## A Mesa Redonda 
+## A Mesa Redonda
 
 Na sexta de tarde teve uma mesa redonda, na verdade um palco quadrado,
 organizado pelo gente-que-faz Leonardo Vaz. Foram quase 20 pessoas que
@@ -164,7 +164,7 @@ politização parasita, as guerras entre distros e o reduzido número de
 desenvolvedores brasileiros, aqueles nerds que realmente produzem
 código.
 
-   ![](mesa_redonda.jpg)   
+   ![](mesa_redonda.jpg)
 
 Foi interessante estar lá dividindo o palco com tanta gente boa, vou
 tentar lembrar de todos:
@@ -189,7 +189,7 @@ tentar lembrar de todos:
  * Rudá Moura (Haxent)
  * Sulamita Garcia (LinuxChix)
 
-   ![](mesa_plateia.jpg)   
+   ![](mesa_plateia.jpg)
 
 Como meu amigo Rudá não gosta de mim e me cortou na hora que eu estava
 falando &;), vou colocar aqui o meu pensamento sobre o assunto:
@@ -215,7 +215,7 @@ falando &;), vou colocar aqui o meu pensamento sobre o assunto:
 > dias, assim como continuarão os ruídos, as brigas e as modas.
 > Enquanto isso, aqueles que fazem, **continuarão fazendo**.
 
-## O Fim de Sexta 
+## O Fim de Sexta
 
 No fim da tarde, um lanche na lanchonete da PUC, para conhecer e
 analisar a "**flora local**". Não há muito o que dizer, aliás não há
@@ -234,13 +234,13 @@ A comilança aconteceu na sede do Serpro, mas como eu estava com pouca
 blusa e o frio naquela noite resolveu dar as caras, **fui embora cedo**
 para tentar recuperar o sono não dormido da noite passada.
 
-   ![](churrasco.jpg)   
+   ![](churrasco.jpg)
 
 Ao chegar no quarto do hotel uma surpresa! Havia **uma mala no quarto**
 que não era a minha, então meu companheiro tinha chegado, porém só vi
 mesmo a mala.
 
-## O Sábado 
+## O Sábado
 
 Dia seguinte, a mala continuava lá, mas a cama ao lado estava
 desarrumada, o que significava que alguém tinha de fato dormido ali.
@@ -259,9 +259,9 @@ Real levou já tinham sido vendidos, então **não precisei pagar o mico**.
 Ufa! Durante o evento várias pessoas chegaram com o livrinho na mão e
 eu autografei, assim é melhor, mais pessoal.
 
-   ![](autografando.jpg)   
+   ![](autografando.jpg)
 
-## A Palestra 
+## A Palestra
 
 E 12:45, concorrendo com o almoço, começou a minha palestra sobre
 Expressões Regulares. A sala tinha capacidade para +- 150 pessoas, e
@@ -315,7 +315,7 @@ contente:
 > no Windows, agora tá interessado em fuçar no Linux e com regex
 > ..."
 
-## O Fim de Sábado 
+## O Fim de Sábado
 
 Lá pelas 6 da tarde teve a cerimônia de **encerramento** do evento,
 com direito a hino nacional e côros de "Software Livre". Também
@@ -328,7 +328,7 @@ Outra parte do pessoal foi para o CTG 35, comer churrasco. Nós não
 fomos lá porque o taxista disse que era mega caro, e no fim nem era
 :/
 
-## O Domingo 
+## O Domingo
 
 Depois do café no hotel, eu e o Diego saímos para um passeio à pé
 pelas redondezas, e fomos até uma **praça** onde os gaúchos vão andar,
@@ -355,7 +355,7 @@ tinha visto antes, é **meu vizinho**, de poucas quadras, então ainda
 ganhei uma carona na faixa até a porta de casa. Cada coisa né, tem que
 ir até Porto Alegre para conhecer o cara que mora aqui pertinho...
 
-## Relatório Pop 
+## Relatório Pop
 
 O medidor pop nesse evento acusou altos indíces de popismo, devido ao
 grande número de incidências de ocorrências pop. Segue o relatório.
@@ -381,7 +381,7 @@ Depois que fui ver que foi de uma entrevista que dei lá em Brasília,
 no evento de capacitação. Falei uns 30 minutos e no vídeo apareceram
 somente duas frases sem graça e sem sal. Fazer o quê...
 
-## A Galera 
+## A Galera
 
 |![](thobias.jpg) |![](morimoto.jpg)|
 |Thobias Salazar Trevisan (ZZ, RAC) |Carlos Morimoto (Kurumin)|

@@ -17,7 +17,7 @@ auditório estava LOTADO!
 Meus agradecimentos ao PSL-PR, ao Paulo Henrique Santana e ao
 Eduardo "gaúcho" pela oportunidade e apoio.
 
-## 30.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre 
+## 30.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre
 
  * [Divulgação Oficial](http://psl-pr.softwarelivre.org/semana-sl-ufpr/)
 
@@ -36,7 +36,7 @@ e encheu. Caramba, 120 pessoas! E melhor, continuou chegando gente e
 foram se amontoando, sentando no chão, no palco, e somando tudo a
 organização contou **150 pessoas**!
 
-                         ![](geral-direita.jpg)   
+                         ![](geral-direita.jpg)
 
 No final, conversando com os organizadores, fiquei sabendo que tinha
 muita gente de fora, como da PUC e do Estadual, e pessoas de outros
@@ -48,7 +48,7 @@ depois. É que alguns professores estavam liberando suas turmas para
 assistir a palestra, então tinha que dar um tempinho para que eles
 pudessem chegar até o auditório.
 
-                         ![](geral-centro.jpg)   
+                         ![](geral-centro.jpg)
 
 Infelizmente, depois fiquei sabendo que muitas pessoas não puderam
 assistir porque simplesmente não tinha mais espaço e
@@ -60,7 +60,7 @@ Até deu um frio na barriga e um **nervosismo** inicial. Também pela
 primeira vez usei um microfone (óóóóóó), e posso afirmar que prefiro
 ficar gritando do que me enrolando nos fios...
 
-                         ![](geral-esquerda.jpg)   
+                         ![](geral-esquerda.jpg)
 
 Mas logo que comecei a falar o nervosismo já foi embora e língua
 descontrolada tomou conta do corpo, só parando quase duas horas
@@ -74,7 +74,7 @@ os slides da palestra. Mas o conteúdo é muito extenso e duas horas é
 pouco. Acabei deixando os **slides** de lado e falei tudo na ordem em
 que os temas apareciam, ficou mais dinâmico e consegui falar tudo.
 
-                         ![](geral-esquerda2.jpg)   
+                         ![](geral-esquerda2.jpg)
 
 É muito fácil falar sobre as próprias experiências, me sinto o próprio
 **Forest Gump**, só contando histórias. E ao mesmo tempo acho que o
@@ -85,12 +85,12 @@ O pessoal parece **ter gostado**. Deram bastante risadas nas
 piadinhas, o que demonstra que pelo menos estavam prestando atenção e
 ficaram até o final, não havendo aquela evacuação gradual.
 
-                         ![](geral-fundo.jpg)   
+                         ![](geral-fundo.jpg)
 
 No dia seguinte recebi o retorno de que o pessoal realmente tinha
 gostado e se empolgou com o tema. **Beleza!** Missão cumprida.
 
-                         ![](eu.jpg)   
+                         ![](eu.jpg)
 
 <!-- BOX -->
 <div class="ad-box-300">
@@ -121,7 +121,7 @@ gostado e se empolgou com o tema. **Beleza!** Missão cumprida.
 	</script>
 </div>
 
-### Relatos de outros cursos que ministrei: 
+### Relatos de outros cursos que ministrei:
 
  * [IV FISL - Fórum Internacional de Software Livre — Porto Alegre-RS (2003)](../../../viagem/fisl-2003/) (passeio)
  * [Treinamento na 4linux — São Paulo-SP (2003)](../../../curso/4linux/)
@@ -164,4 +164,3 @@ gostado e se empolgou com o tema. **Beleza!** Missão cumprida.
   })();
 
 </script>
-

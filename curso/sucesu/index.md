@@ -18,7 +18,7 @@ nos trâmites procedurais.
 
 Boa leitura!
 
-## 18.Fev.2004 ::: SED e Expressões Regulares 
+## 18.Fev.2004 ::: SED e Expressões Regulares
 
  * [Divulgação Oficial](http://www.prsucesu.org.br/Palestras/MostrarCurso.Asp?Curso=16)
 
@@ -72,7 +72,7 @@ Moçada, VALEU a presença e até a próxima!
 |![](sucesu-seder-turma.jpg)|
 |Galera que agora sabe tudo de SED e ERs|
 
-## 03.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre 
+## 03.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre
 
  * [Divulgação Oficial](http://www.prsucesu.org.br/Palestras/MostrarCurso.Asp?Curso=22)
 

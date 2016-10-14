@@ -13,7 +13,7 @@ Este documento descreve como foi essa experiência. É uma
 história, um depoimento pessoal, e não um documento técnico ou
 descritivo do curso.
 
-## O Início 
+## O Início
 
 Tudo começou 2 meses antes, no início de maio, no IV Fórum
 Internacional de Software Livre em Porto Alegre. Ou melhor, começou
@@ -34,7 +34,7 @@ e quer realmente dominar o assunto. Ficou acertado um total de 40
 horas em 10 aulas, a serem ministradas de manhã e à tarde na semana
 dos dias 4 a 8 de Agosto de 2003.
 
-## A Apostila 
+## A Apostila
 
 Tive que escrever do zero uma apostila completa, que após 85 horas de
 trabalho ficou pronta. A ferramenta utilizada no processo foi o
@@ -70,7 +70,7 @@ conteúdo. Parece que meu tiro acertou algo :)
 Todos os detalhes sobre a apostila, índice, amostra e informações de
 venda avulsa estão [nesta outra página](../../shell/apostila/).
 
-## A Viagem 
+## A Viagem
 
 Já fazia mais de 10 anos que eu não viajava de avião. De repente lá
 estava eu no aeroporto da ilha, num domingo ensolarado, tendo que me
@@ -90,7 +90,7 @@ Chegando em São Paulo, fui direto ao Hotel Century Paulista que (ainda
 bem!) ficava na frente da 4Linux, mas na frente mesmo, bastando
 atravessar a rua para "ir ao trabalho".
 
-## A Turma 
+## A Turma
 
 Primeiro dia. O curso estava marcado para começar às 09:00, mas
 cheguei antes para conhecer o local, as instalações, etc. Uma sala
@@ -106,7 +106,7 @@ conhecido nenhuma mulher que 1) usasse a linha de comando e 2)
 gostasse de programar em Shell, e de repente estava com duas dessa
 espécie em minha turma. Vida longa aos nerds de todas as espécies!
 
-                         ![](4linux-turma.jpg)   
+                         ![](4linux-turma.jpg)
 
 Outros alunos me chamaram a atenção por sua grande vontade de fazer o
 curso. Um veio láááááá de longe, de Fortaleza, enfrentando mais de 5
@@ -119,7 +119,7 @@ poucos anos. As motivações que os levaram a fazer o curso eram
 variadas, mas todos usariam o conhecimento adquirido em Shell em seu
 trabalho.
 
-## A Mudança 
+## A Mudança
 
 Já na primeira aula após a conversa inicial com a turma, algo
 inesperado: a maioria ainda não tinha o conhecimento básico necessário
@@ -151,7 +151,7 @@ completo e apresentá-lo à turma. Novamente foi conversado com os
 alunos e eles decidiram que ver todo o conteúdo da apostila era mais
 importante que o programa final.
 
-## O Decorrer 
+## O Decorrer
 
 Nos dois primeiros dias foi feita a revisão do básico. Mas foi uma
 revisão diferente.
@@ -202,7 +202,7 @@ Como o tempo estava acabando, o último assunto a ser visto: Banco de
 Dados em Arquivos Texto, foi prejudicado e teve que ser passado de
 maneira rápida, sem tempo de prática para os alunos.
 
-## O Desfecho 
+## O Desfecho
 
 Sexta-feira, fim do dia, cada aluno ganhou uma folha em branco e foi
 pedido para que escrevessem de maneira sincera qual foi a opinião sobre o
@@ -257,7 +257,7 @@ Seguem trechos dos depoimentos:
 > cansativo por causa do alunos MUITO atrasados!!! Resultado:
 > Adorei o curso!!! Até comecei a achar que posso PROGRAMAR..."
 
-## A Conclusão 
+## A Conclusão
 
 Eu considero que este curso foi um sucesso total.
 
@@ -270,7 +270,7 @@ a conduta, manifestando interesse em outros cursos no futuro;
  * Eu gostei da experiência, me senti à vontade como "professor", e
 pude até aprender junto com os alunos, que considero novos amigos.
 
-## Curiosidades 
+## Curiosidades
 
  * As aulas foram feitas escrevendo no quadro-branco com minha letra
 horrível e a saída do meu computador aparecia numa televisão (acho que

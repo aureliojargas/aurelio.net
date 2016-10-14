@@ -23,7 +23,7 @@ oportunidade, presteza e apoio. Agradecimentos também à
 Conectiva por ter me liberado para viajar e participar do
 evento.
 
-## A Viagem de Ida 
+## A Viagem de Ida
 
 Domingão, dia de sol em Curitiba. De malas prontas, às 15:30 começou a
 minha jornada, com o táxi até a Rodoferroviária. Lá encontrei o amigo
@@ -42,7 +42,7 @@ caminho até o hotel.
 |![](van.jpg)|
 |Galera na van, recém-chegada em Brasília|
 
-## A Chegada (Ou Seria Ralada? :) 
+## A Chegada (Ou Seria Ralada? :)
 
 Chegando no Hotel Nacional, nem descemos da van. Apenas descarregaram
 as malas e já fomos direto para a **Universidade dos Correios**, local
@@ -68,7 +68,7 @@ laboratórios até às **3 da manhã**!
 Mais passeio de van e a tão desejada chegada no hotel aconteceu.
 Aleluia irmãos. Eu e o Helio dividimos o quarto 332.
 
-## A Abertura do Evento 
+## A Abertura do Evento
 
 Após preciosíssimas **3 horas de sono**, acordamos às 6 e meia da
 manhã, café no hotel e van novamente para ir até o evento. Zumbis por
@@ -84,7 +84,7 @@ após todos terem dito suas falas, os cursos começaram.
 |![](abertura2.jpg)|
 |Ministro José Dirceu, Senadora Serys, ITI, Serpro, Anatel, Correios, UnB, ...|
 
-## 26.Abr.2004 ::: O Editor VI 
+## 26.Abr.2004 ::: O Editor VI
 
  * [Material de Apoio](../material/vim-ref.html)
 
@@ -99,7 +99,7 @@ e gravação de comandos. Aí eles realmente gostaram do VI :)
 
 Infelizmente me esqueci de tirar foto com a turma :/
 
-## 26.Abr.2004 ::: Expressões Regulares 
+## 26.Abr.2004 ::: Expressões Regulares
 
  * [Apostila](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
 
@@ -117,7 +117,7 @@ Foi muito gratificante, eles realmente aprenderam.
 |![](turma-er1.jpg)![](turma-er2.jpg)|
 |Turma do curso de Expressões Regulares|
 
-## 27.Abr.2004 ::: Python Básico 
+## 27.Abr.2004 ::: Python Básico
 
 A terça-feira era meu dia de folga, então aproveitei o ônibus do
 evento para ir conhecer a UnB, a **Universidade de Brasília**, o outro
@@ -146,7 +146,7 @@ conhecer NADA....
 |![](turma-python.jpg)|
 |Turma do curso de Python|
 
-## 28.Abr.2004 ::: Introdução ao Shell Script 
+## 28.Abr.2004 ::: Introdução ao Shell Script
 
  * [Apostila](http://aurelio.net/curso/material/apostila-shell-intro.pdf)
 
@@ -161,7 +161,7 @@ fixar. Se bateram, mas foram progredidndo e fazendo um por um.
 |![](turma-shell.jpg)|
 |Turma do curso de Shell|
 
-## A Viagem de Volta 
+## A Viagem de Volta
 
 Meu vôo de volta para casa era às 19:40, e como ainda teria que voltar
 para o Hotel e só depois ir ao aeroporto, tive que sair antes do
@@ -178,7 +178,7 @@ aviãozinho. Só correria...
 Felizmente voltei direto, sem escalas e menos de duas horas depois já
 estava pousando em Curitiba.
 
-## Aleatoriedades 
+## Aleatoriedades
 
 |![](pagodeiros.jpg)|
 |Grupo de pagodeiros que apareceu no evento (kov, verde, lucas)|
