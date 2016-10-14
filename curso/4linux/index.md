@@ -106,7 +106,7 @@ conhecido nenhuma mulher que 1) usasse a linha de comando e 2)
 gostasse de programar em Shell, e de repente estava com duas dessa
 espécie em minha turma. Vida longa aos nerds de todas as espécies!
 
-                         ![](4linux-turma.jpg)
+![](4linux-turma.jpg)
 
 Outros alunos me chamaram a atenção por sua grande vontade de fazer o
 curso. Um veio láááááá de longe, de Fortaleza, enfrentando mais de 5

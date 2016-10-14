@@ -120,14 +120,14 @@ direto para a **gandaia**! Fomos a pé eu, ela, o Sandro (4 Linux) e a
 Maureen (irlandesa que também falava português) para o tal de
 Barbazul. Chegando lá, que surpresa: toda a turminha estava lá!
 
-   ![](barbazul.jpg)
+![](barbazul.jpg)
 
 Parece que a noite era exclusiva dos participantes do fórum, então foi
 no mínimo bizarro ver tantos nerds juntos numa casa noturna com banda
 ao vivo, fazendo um social. A festa foi longe, até altas horas...
 **Nerds também dançam!**
 
-   ![](galera_barbazul.jpg)
+![](galera_barbazul.jpg)
 
 ## A Sexta
 
@@ -139,7 +139,7 @@ O evento foi no mesmo lugar do ano passado, a PUC. **As instalações**
 estavam iguais as do ano passado, com estandes, salas de palestra,
 máquinas com Internet e mesas de grupos de usuários.
 
-   ![](corredor.jpg)
+![](corredor.jpg)
 
 Já na entrada, muitos, mas **MUITOS amigos** por lá. Acho que foram
 umas 3 horas seguidas de "*Oi, quanto tempo!*", "*E aí, beleza?*",
@@ -154,7 +154,7 @@ Rudá Moura e Osvaldo Santana, foi um sucesso. Uma pena que não pude
 assistir. E as camisetas de Python que o Osvaldo fez venderam como
 água!
 
-   ![](pythonpower.jpg)
+![](pythonpower.jpg)
 
 ## A Mesa Redonda
 
@@ -166,7 +166,7 @@ politização parasita, as guerras entre distros e o reduzido número de
 desenvolvedores brasileiros, aqueles nerds que realmente produzem
 código.
 
-   ![](mesa_redonda.jpg)
+![](mesa_redonda.jpg)
 
 Foi interessante estar lá dividindo o palco com tanta gente boa, vou
 tentar lembrar de todos:
@@ -191,7 +191,7 @@ tentar lembrar de todos:
 * Rudá Moura (Haxent)
 * Sulamita Garcia (LinuxChix)
 
-   ![](mesa_plateia.jpg)
+![](mesa_plateia.jpg)
 
 Como meu amigo Rudá não gosta de mim e me cortou na hora que eu estava
 falando &;), vou colocar aqui o meu pensamento sobre o assunto:
@@ -236,7 +236,7 @@ A comilança aconteceu na sede do Serpro, mas como eu estava com pouca
 blusa e o frio naquela noite resolveu dar as caras, **fui embora cedo**
 para tentar recuperar o sono não dormido da noite passada.
 
-   ![](churrasco.jpg)
+![](churrasco.jpg)
 
 Ao chegar no quarto do hotel uma surpresa! Havia **uma mala no quarto**
 que não era a minha, então meu companheiro tinha chegado, porém só vi
@@ -261,7 +261,7 @@ Real levou já tinham sido vendidos, então **não precisei pagar o mico**.
 Ufa! Durante o evento várias pessoas chegaram com o livrinho na mão e
 eu autografei, assim é melhor, mais pessoal.
 
-   ![](autografando.jpg)
+![](autografando.jpg)
 
 ## A Palestra
 

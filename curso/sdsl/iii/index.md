@@ -56,7 +56,7 @@ Pensei que ia pro Rio Grande sentir bastante frio, mas estava como em
 Curitiba. Frio, mas nem tanto. O dia seguinte amanheceu clássico
 serrano:
 
-  ![](neblina.jpg)
+![](neblina.jpg)
 
 Encontrei com o Luciano Ramalho no café da manhã, ele ia ministrar o
 curso de Python. Fomos juntos papeando para a Univates, a pé. Deu uma

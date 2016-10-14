@@ -4,7 +4,7 @@ subtitle: 22 de outubro de 2004, Campinas - SP
 date: 2004-10-22
 ---
 
-  ![](logo.jpg)
+![](logo.jpg)
 
 Na sexta dia 22 de Outubro de 2004 voei até Campinas para
 dar a palestra de desenvolvimento de Software Livre num evento

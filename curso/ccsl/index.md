@@ -4,7 +4,7 @@ subtitle: 8 e 9 de outubro de 2004, Joinville - SC
 date: 2004-10-08
 ---
 
-  ![](img/diploma.jpg)
+![](img/diploma.jpg)
 
 Nessa sexta e sábado dias 8 e 9 de Outubro teve
 [um evento de Linux](http://www.softwarelivresc.org.br/congresso/2004/)
