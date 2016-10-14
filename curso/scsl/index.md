@@ -86,7 +86,7 @@ após todos terem dito suas falas, os cursos começaram.
 
 ## 26.Abr.2004 ::: O Editor VI
 
- * [Material de Apoio](../material/vim-ref.html)
+* [Material de Apoio](../material/vim-ref.html)
 
 Com o início atrasado por causa da cerimônia de abertura, o curso de
 VI não durou as 4 horas previstas, indo das 11 às 14 horas. Eram 15
@@ -101,7 +101,7 @@ Infelizmente me esqueci de tirar foto com a turma :/
 
 ## 26.Abr.2004 ::: Expressões Regulares
 
- * [Apostila](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
+* [Apostila](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
 
 Após uma rápida pausa para meu almoço, às 14:40 começou o curso da
 tarde, de Expressões Regulares. Foi na mesma sala do curso matutino,
@@ -148,7 +148,7 @@ conhecer NADA....
 
 ## 28.Abr.2004 ::: Introdução ao Shell Script
 
- * [Apostila](http://aurelio.net/curso/material/apostila-shell-intro.pdf)
+* [Apostila](http://aurelio.net/curso/material/apostila-shell-intro.pdf)
 
 Meu último dia em Brasília, foi o mais corrido. O dia todo era o curso
 de Introdução ao Shell Script, de 8 horas.

@@ -25,12 +25,12 @@ scripts.
 Era para ser apenas uma hora de duração, mas falando eu me empolgo e
 aí já viu :)
 
- * **Data:** 04-Dez-2003
- * **Horário:** 15:00
- * **Duração:** 2 horas
- * **Local:** Auditório da Conectiva, Curitiba
- * **Participantes:** +- 10 pessoas
- * **Requisitos:** Conhecer o shell, já ter feito scripts
+* **Data:** 04-Dez-2003
+* **Horário:** 15:00
+* **Duração:** 2 horas
+* **Local:** Auditório da Conectiva, Curitiba
+* **Participantes:** +- 10 pessoas
+* **Requisitos:** Conhecer o shell, já ter feito scripts
 
 [Histórico da linha de comando](conectiva-shell-prompt.html)
 
@@ -40,11 +40,11 @@ O objetivo era apresentar todos os metacaracteres básicos e sua utilidade.
 
 Novamente me empolguei e foram 2 horas de falatório :)
 
- * **Data:** 17-Dez-2003
- * **Horário:** 16:00
- * **Duração:** 2 horas
- * **Local:** Auditório da Conectiva, Curitiba
- * **Participantes:** +- 12 pessoas
- * **Requisitos:** Nenhum
+* **Data:** 17-Dez-2003
+* **Horário:** 16:00
+* **Duração:** 2 horas
+* **Local:** Auditório da Conectiva, Curitiba
+* **Participantes:** +- 12 pessoas
+* **Requisitos:** Nenhum
 
 [Histórico da linha de comando](conectiva-er-prompt.html)

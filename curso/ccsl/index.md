@@ -21,11 +21,11 @@ Ana e o pessoal da organização pelo apoio.
 
 Links para os materiais:
 
- * [Expressões Regulares - Apostila Introdutória](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
- * [Expressões Regulares - Meu Livro, versão online](http://aurelio.net/regex/guia/)
- * [Expressões Regulares - Histórico da Linha de Comando](ccsl2-er-prompt.html)
+* [Expressões Regulares - Apostila Introdutória](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
+* [Expressões Regulares - Meu Livro, versão online](http://aurelio.net/regex/guia/)
+* [Expressões Regulares - Histórico da Linha de Comando](ccsl2-er-prompt.html)
 
- * [Desenvolvimento de Software Livre - Slides](http://aurelio.net/curso/material/desenvolvedor/)
+* [Desenvolvimento de Software Livre - Slides](http://aurelio.net/curso/material/desenvolvedor/)
 
 ## Fui e Cheguei
 

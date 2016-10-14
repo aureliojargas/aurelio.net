@@ -19,9 +19,9 @@ Eduardo "gaúcho" pela oportunidade e apoio.
 
 ## 30.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre
 
- * [Divulgação Oficial](http://psl-pr.softwarelivre.org/semana-sl-ufpr/)
+* [Divulgação Oficial](http://psl-pr.softwarelivre.org/semana-sl-ufpr/)
 
- * [Slides da palestra](desenvolvedor/)
+* [Slides da palestra](desenvolvedor/)
 
 Estudei na UFPR em 1997, e agora, **sete anos depois**, lá estava eu
 novamente no Centro Politécnico. Ainda bem que dessa vez sem precisar

@@ -21,11 +21,11 @@ Esta página é meu relato de como foi essa experiência.
 
 Links para os materiais:
 
- * [Apostila de Expressões Regulares](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
+* [Apostila de Expressões Regulares](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
 
- * [Avaliação dos Alunos para o Curso de Expressões Regulares](avaliacao-expressoes.html)
+* [Avaliação dos Alunos para o Curso de Expressões Regulares](avaliacao-expressoes.html)
 
- * [Slides da Palestra Desenvolvedor de Software Livre](desenvolvedor/)
+* [Slides da Palestra Desenvolvedor de Software Livre](desenvolvedor/)
 
           ![](img/credencial.png)
 

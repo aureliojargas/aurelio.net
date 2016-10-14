@@ -169,25 +169,25 @@ código.
 Foi interessante estar lá dividindo o palco com tanta gente boa, vou
 tentar lembrar de todos:
 
- * Alex Laner - rootsh (Debian)
- * Alfredo Kojima (Window Maker)
- * Aurelio Marinho Jargas (Desenvolvedor de Softwre Livre)
- * Augusto Campos (br-linux.org)
- * Deivi Lopes Kuhn (Organização FISL)
- * Gustavo Noronha - kov (Gnome)
- * Helio Castro (KDE)
- * Jambrão (TcheLinux)
- * Julio Cezar Neves (livro Shell Script)
- * Leonardo Vaz (Guevara Tchê!)
- * Marcelo Gondim (Desenvolvedor de Software Livre)
- * Osvaldo Santana (pythonbrasil.com.br)
- * Piter Punk (Slackware)
- * Rafael Jeffman (GoboLinux)
- * Ricardo Felipo (Abrasol RJ)
- * Roberto Selbach - maragato (KDE)
- * Rubens Queiroz (Dicas-L)
- * Rudá Moura (Haxent)
- * Sulamita Garcia (LinuxChix)
+* Alex Laner - rootsh (Debian)
+* Alfredo Kojima (Window Maker)
+* Aurelio Marinho Jargas (Desenvolvedor de Softwre Livre)
+* Augusto Campos (br-linux.org)
+* Deivi Lopes Kuhn (Organização FISL)
+* Gustavo Noronha - kov (Gnome)
+* Helio Castro (KDE)
+* Jambrão (TcheLinux)
+* Julio Cezar Neves (livro Shell Script)
+* Leonardo Vaz (Guevara Tchê!)
+* Marcelo Gondim (Desenvolvedor de Software Livre)
+* Osvaldo Santana (pythonbrasil.com.br)
+* Piter Punk (Slackware)
+* Rafael Jeffman (GoboLinux)
+* Ricardo Felipo (Abrasol RJ)
+* Roberto Selbach - maragato (KDE)
+* Rubens Queiroz (Dicas-L)
+* Rudá Moura (Haxent)
+* Sulamita Garcia (LinuxChix)
 
    ![](mesa_plateia.jpg)
 
@@ -360,14 +360,14 @@ ir até Porto Alegre para conhecer o cara que mora aqui pertinho...
 O medidor pop nesse evento acusou altos indíces de popismo, devido ao
 grande número de incidências de ocorrências pop. Segue o relatório.
 
- * Uns 12 livrinhos verdes autografados
+* Uns 12 livrinhos verdes autografados
 
- * Umas 15 fotos com pessoas que nunca vi antes (me mandem as fotos!)
+* Umas 15 fotos com pessoas que nunca vi antes (me mandem as fotos!)
 
- * Uma entrevista rápida para um pessoal que estava registrando o
+* Uma entrevista rápida para um pessoal que estava registrando o
 evento (depois quero ver como ficou!)
 
- * Eu me vi no telão do ITI :)
+* Eu me vi no telão do ITI :)
 
 Essa última foi engraçada, eu estava lá fazendo pose para uma foto com
 o Fernando Aires, quando vi meu cabeção no telão do estande do ITI

@@ -46,16 +46,16 @@ Só que me empolguei, e no final a "apostila" acabou se tornando um
 quase-livro de 108 páginas no tamanho A4 :) Este é o resumo de seu
 conteúdo:
 
- * Revisão do Básico
- * Programas Não São Scripts
- * Explorando as Possibilidades do Shell
- * As Ferramentas do Sistema
- * Caracteres de Controle
- * Expressões Regulares
- * Arquivos de Configuração
- * Banco de Dados com Arquivos Texto
- * Interfaces Amigáveis com o Dialog
- * CGI em Shell
+* Revisão do Básico
+* Programas Não São Scripts
+* Explorando as Possibilidades do Shell
+* As Ferramentas do Sistema
+* Caracteres de Controle
+* Expressões Regulares
+* Arquivos de Configuração
+* Banco de Dados com Arquivos Texto
+* Interfaces Amigáveis com o Dialog
+* CGI em Shell
 
 Os assuntos foram descritos de maneira completa, e não como uma
 simples lista de tópicos. A idéia é o aluno poder usar a apostila como
@@ -264,58 +264,58 @@ Eu considero que este curso foi um sucesso total.
 A viagem e o dinheiro que ganhei foram bons, mas o principal foi ter
 um desafio vencido com aprovação total dos interessados.
 
- * Os alunos disseram ter gostado e saído satisfeitos;
- * O pessoal da 4Linux me tratou super bem, elogiou a apostila e
+* Os alunos disseram ter gostado e saído satisfeitos;
+* O pessoal da 4Linux me tratou super bem, elogiou a apostila e
 a conduta, manifestando interesse em outros cursos no futuro;
- * Eu gostei da experiência, me senti à vontade como "professor", e
+* Eu gostei da experiência, me senti à vontade como "professor", e
 pude até aprender junto com os alunos, que considero novos amigos.
 
 ## Curiosidades
 
- * As aulas foram feitas escrevendo no quadro-branco com minha letra
+* As aulas foram feitas escrevendo no quadro-branco com minha letra
 horrível e a saída do meu computador aparecia numa televisão (acho que
 18").
 
- * Eu falo a palavra "então" toda hora, não tem jeito, quando vejo ela
+* Eu falo a palavra "então" toda hora, não tem jeito, quando vejo ela
 já saiu :)
 
- * Houve um problema chato de troca de HDs durante o curso pois todos
+* Houve um problema chato de troca de HDs durante o curso pois todos
 eram "plugáveis" e cada dia eles apareciam em máquinas diferentes.
 Nesse troca-troca alguns scripts feitos pelos alunos durante o curso
 simplesmente sumiram :(
 
- * Outro problema chato é que as máquinas da sala não eram idênticas.
+* Outro problema chato é que as máquinas da sala não eram idênticas.
 Era Red Hat numa, Debian na outra, o Vi funcionava com sintaxe aqui,
 ali não... Perdeu-se tempo com configurações e trocas de máquina.
 
- * O incrível é que mesmo para os exercícios mais simples, praticamente
+* O incrível é que mesmo para os exercícios mais simples, praticamente
 cada aluno fazia uma solução distinta, fazendo com que todos
 aprendessem várias maneiras de se pensar e resolver um problema.
 
- * O maior tropeço no aprendizado de Shell, o que dá o maior nó na
+* O maior tropeço no aprendizado de Shell, o que dá o maior nó na
 cabeça de todos, é sem dúvida as aspas 'simples', "duplas" e as
 `crases`, é uma confusão só.
 
- * Machistas, revoltai-vos! No dia de fazer o "parser" para arquivos de
+* Machistas, revoltai-vos! No dia de fazer o "parser" para arquivos de
 configuração e o aplicativo, que foi a tarefa mais complexa de todo
 o curso, as duas meninas foram as primeiras da turma a terminar.
 
- * Haviam dois "coffee breaks" todos os dias fornecidos pela 4Linux. Os
+* Haviam dois "coffee breaks" todos os dias fornecidos pela 4Linux. Os
 sanduíches e salgados eram muito saborosos. E o melhor: à tarde
 tinha sorvete de palito, massa!
 
- * Ganhei de um aluno um CD com vários mp3 e clipes de bandas novas, do
+* Ganhei de um aluno um CD com vários mp3 e clipes de bandas novas, do
 chamado New Metal, como Korn e Linking Park, pois estou muito
 desatualizado musicalmente. Ganhei também dois broches do grupo
 LinuxChix!
 
- * No final do curso, foi lançado um desafio aos alunos, em que o
+* No final do curso, foi lançado um desafio aos alunos, em que o
 primeiro que me mandasse por e-mail todos os 10 primeiros exercícios
 resolvidos em menos de 80 caracteres, ganharia um exemplar do meu
 livro de Expressões Regulares. Machistas, revoltai-vos novamente! O
 vencedor do desafio foi uma aluna.
 
- * A muié me fez comprar duas calças "ajeitadas" para
+* A muié me fez comprar duas calças "ajeitadas" para
 dar o curso, pois disse que minhas calças de agasalho toscas
 poderiam prejudicar minha imagem perante os alunos. Levei e tive que
 usar, fazer o quê... :)

@@ -20,11 +20,11 @@ Boa leitura!
 
 ## 18.Fev.2004 ::: SED e Expressões Regulares
 
- * [Divulgação Oficial](http://www.prsucesu.org.br/Palestras/MostrarCurso.Asp?Curso=16)
+* [Divulgação Oficial](http://www.prsucesu.org.br/Palestras/MostrarCurso.Asp?Curso=16)
 
- * [Material de apoio](sucesu-seder-apoio.html)
+* [Material de apoio](sucesu-seder-apoio.html)
 
- * [Histórico da linha de comando](sucesu-seder-prompt.html)
+* [Histórico da linha de comando](sucesu-seder-prompt.html)
 
 O lugar fica num prédio bem no centro de Curitiba, e o local da
 palestra era uma sala com cadeiras para cerca de 30 pessoas. O legal
@@ -74,11 +74,11 @@ Moçada, VALEU a presença e até a próxima!
 
 ## 03.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre
 
- * [Divulgação Oficial](http://www.prsucesu.org.br/Palestras/MostrarCurso.Asp?Curso=22)
+* [Divulgação Oficial](http://www.prsucesu.org.br/Palestras/MostrarCurso.Asp?Curso=22)
 
- * [Material de apoio](sucesu-desenvolvedor-apoio.html)
+* [Material de apoio](sucesu-desenvolvedor-apoio.html)
 
- * [Slides da palestra](http://aurelio.net/curso/material/desenvolvedor/)
+* [Slides da palestra](http://aurelio.net/curso/material/desenvolvedor/)
 
 Segunda palestra, no mesmo prédio, mas dessa vez numa sala maior, mais
 ampla. Como foram poucas pessoas (12), ela ficou parecendo maior

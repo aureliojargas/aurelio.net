@@ -16,11 +16,11 @@ pelas caronas, e aos amigos pela camaradagem e apoio.
 
 ## Alguns Links
 
- * [Página do LinuxChix-BR](http://www.linuxchix.org.br)
+* [Página do LinuxChix-BR](http://www.linuxchix.org.br)
 
- * [Slides da minha palestra](http://aurelio.net/curso/material/desenvolvedor/)
+* [Slides da minha palestra](http://aurelio.net/curso/material/desenvolvedor/)
 
- * [Relato da Sulamita sobre o evento](http://brlinux.linuxsecurity.com.br/noticias/002360.html)
+* [Relato da Sulamita sobre o evento](http://brlinux.linuxsecurity.com.br/noticias/002360.html)
 
 ## A Viagem de Ida
 
@@ -102,25 +102,25 @@ mesmo.
 
 ## Aleatoriedades
 
- * Depois da palestra fomos para uma pizzaria, se entupir de comida e
+* Depois da palestra fomos para uma pizzaria, se entupir de comida e
 falar de coisas nerds durante horas. Depois o pessoal ainda foi para
 a balada, numa cachaçaria ou algo assim, mas eu como estava sem
 dormir e cansado da palestra, fui dormir.
 
- * Dividi o quarto com o Julio Neves (livro de Shell), agora já posso
+* Dividi o quarto com o Julio Neves (livro de Shell), agora já posso
 falar por aí que "dormi com o Julio" hehehehe
 
- * Me pediram para tirar fotos, autografar o guia de Expressões
+* Me pediram para tirar fotos, autografar o guia de Expressões
 Regulares e conheci várias pessoas que já tinham visitado minha
 página ou usado alguns de meus programas. É constrangedor de
 admitir, mas acho que realmente estou virando pop &;)
 
- * A viagem de volta foi Classe A, na parte vip do ônibus de dois
+* A viagem de volta foi Classe A, na parte vip do ônibus de dois
 andares, com espaço, poltrona que vira quase uma cama, TV com filme,
 ar condicionado, travesseiro, coberta, água... Vou me acostumar mal
 desse jeito.
 
- * Quero deixar registrado aqui os nomes dos camaradas que encontrei (e
+* Quero deixar registrado aqui os nomes dos camaradas que encontrei (e
 consegui lembrar agora): Sula, Lucas, Santos, Gondim, Ramoni, Julio,
 Léo, Root, Garoto, Caio, Priscila, Piter Punk, Márcio, Ralf, Toledo,
 Claudinei, Blanes, Sobral, Spy, Renata, Paulo Cubo-Mágico, Acme,
