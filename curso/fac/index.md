@@ -23,7 +23,7 @@ Links:
 [Slides da Palestra](http://aurelio.net/curso/material/desenvolvedor/),
 [Fotos oficiais do evento](http://www.auri.com.br/semana/fotos.php)
 
-## Curitiba -> Campinas -> Hotel -> Academia
+## Curitiba → Campinas → Hotel → Academia
 
 O avião saiu de Curitiba perto das 16h30 e com menos de uma hora de
 viagem estavam eu e minha mochila em Campinas. O professor Miglinski

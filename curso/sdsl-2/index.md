@@ -48,7 +48,7 @@ finalmente: Unicamp.
 
 Recapitulando:
 
-- Conectiva -> táxi -> ônibus -> avião -> carro -> Unicamp
+- Conectiva → táxi → ônibus → avião → carro → Unicamp
 
 ## A Unicamp
 
