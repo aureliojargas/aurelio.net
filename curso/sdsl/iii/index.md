@@ -84,11 +84,13 @@ Na volta, vimos a parte avançada do assunto e esmiuçamos a já
 tradicional ER para casar números IP. Vou colocá-la aqui, com espaços
 para ficar mais fácil de entender:
 
-    # Expressão Regular para casar números IP: N.N.N.N, onde 0 <= N <= 255
-    \<
-       ( [0-9]{1,2} | 1[0-9][0-9] | 2[0-4][0-9] | 25[0-5] ) \.){3}
-       ( [0-9]{1,2} | 1[0-9][0-9] | 2[0-4][0-9] | 25[0-5] )
-    \>
+```
+# Expressão Regular para casar números IP: N.N.N.N, onde 0 <= N <= 255
+\<
+   ( [0-9]{1,2} | 1[0-9][0-9] | 2[0-4][0-9] | 25[0-5] ) \.){3}
+   ( [0-9]{1,2} | 1[0-9][0-9] | 2[0-4][0-9] | 25[0-5] )
+\>
+```
 
 Como o pessoal estava afiado, lasquei exercícios neles, e fizeram
 sozinhos a expressão para casar horários e no final a temida expressão
@@ -108,20 +110,22 @@ melhor solução. **MEGA NERD**.
 
 Para facilitar a leitura, as expressões espaçadas:
 
-    \<
-      ( (0?[1-9] | 1[0-9] | 2[0-8]) / (0?[1-9]   | 1[012]) |
-        (29 | 30)                   / (0?[13-9]  | 1[012]) |
-         31                         / (0?[13578] | 1[02] )
-      ) / [012][0-9]{3}
-    \>
+```
+\<
+  ( (0?[1-9] | 1[0-9] | 2[0-8]) / (0?[1-9]   | 1[012]) |
+    (29 | 30)                   / (0?[13-9]  | 1[012]) |
+     31                         / (0?[13578] | 1[02] )
+  ) / [012][0-9]{3}
+\>
 
 
-    \<
-      ( (0?[1-9] | [12][0-9] | 3[01])  / (0?[13578] | 1[02]) |
-        (0?[1-9] | [12][0-9] | 30)     / (0?[469]   | 11   ) |
-        (0?[1-9] |  1  [0-9] | 2[0-8]) /  0?2
-      ) / [012][0-9]{3}
-    \>
+\<
+  ( (0?[1-9] | [12][0-9] | 3[01])  / (0?[13578] | 1[02]) |
+    (0?[1-9] | [12][0-9] | 30)     / (0?[469]   | 11   ) |
+    (0?[1-9] |  1  [0-9] | 2[0-8]) /  0?2
+  ) / [012][0-9]{3}
+\>
+```
 
 Assim como no curso de ERs do II SDLSL em Campinas, no início eu
 pedi para cada aluno dar um valor de 1 a 10 sobre o nível do

@@ -48,7 +48,7 @@ finalmente: Unicamp.
 
 Recapitulando:
 
-|`Conectiva -> táxi -> ônibus -> avião -> carro -> Unicamp`|
+- Conectiva -> táxi -> ônibus -> avião -> carro -> Unicamp
 
 ## A Unicamp
 
@@ -145,6 +145,7 @@ fotos:
 
 > Nota 1: Me desculpe pelo "Não sei", mas eu realmente não sei
 > seu nome. Me mande e-mail avisando!
+>
 > Nota 2: O Ribamar da foto, é o "Accipitris Amici" que me
 > convidou formalmente para integrar o Movimento Neofeudalista e
 > ser o responsável pelo Meio Ambiente. Vida longa ao balde de
@@ -359,8 +360,7 @@ acontecendo :)
 
 ### Eles, sempre eles...
 
-No IV FISL em Porto Alegre, foi a grande placa do "
-[Rio Veadinho](http://aurelio.net/viagem/fisl-2003/rio_veadinho.jpg)"
+No IV FISL em Porto Alegre, foi a grande placa do “[Rio Veadinho](http://aurelio.net/viagem/fisl-2003/rio_veadinho.jpg)”
 que dá as boas-vindas aos visitantes que entram no Rio Gande do Sul
 pela BR-101. Em Campinas, no mural da Engenharia Elétrica, dentro da
 Unicamp...

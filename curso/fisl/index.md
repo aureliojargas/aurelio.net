@@ -26,8 +26,8 @@ recursos, ao Deivi Kuhn pelo apoio, à Conectiva pela liberação
 e um obrigado muito especial à Sulamita Garcia, pela força e
 luta.
 
-[Site Oficial do Evento](http://www.softwarelivre.org/forum2004/),
-[Outros Álbuns de Fotos do Evento](http://brlinux.linuxsecurity.com.br/noticias/002585.html)
+- [Site oficial do evento](http://www.softwarelivre.org/forum2004/)
+- [Outros álbuns de fotos do evento](http://brlinux.linuxsecurity.com.br/noticias/002585.html)
 
 ## Prefácio Sentimentalóide
 
@@ -197,22 +197,26 @@ Como meu amigo Rudá não gosta de mim e me cortou na hora que eu estava
 falando &;), vou colocar aqui o meu pensamento sobre o assunto:
 
 > **Software Livre: Desenvolvedores e os outros**
+>
 > Muito antes da onda recente de politização do Software Livre,
 > inclusão digital, liberdade tecnológica, ONGs digitais,
 > certificação em Linux, representantes oficiais, porta-vozes da
 > comunidade, paladinos, comitês, movimentos e comissões
 > parlamentares, os desenvolvedores já estavam lá, sentados e
 > produzindo códigos.
+>
 > Muito antes do Software Livre ser sexy e estar na moda, virar
 > buzzword, aparecer na mídia, virar bandeira política, ganhar
 > revistas especializadas, sites, fórums e listas de discussão,
 > os desenvolvedores já estavam lá, sentados e produzindo
 > códigos.
+>
 > Muito antes das intermináveis discussões de qual a melhor
 > distro, da fragmentação de comunidades, das ofensas pessoais
 > em canais públicos, da batalha de egos, das brigas internas de
 > um mesmo time e da crítica gratuita, os desenvolvedores já
 > estavam lá, sentados e produzindo códigos.
+>
 > O mundo vai continuar girando e o sol vai nascer todos os
 > dias, assim como continuarão os ruídos, as brigas e as modas.
 > Enquanto isso, aqueles que fazem, **continuarão fazendo**.
