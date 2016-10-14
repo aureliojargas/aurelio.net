@@ -30,7 +30,7 @@ Como posso afirmar isso? Porque vi acontecendo na minha frente, várias vezes, n
 
 ## Curso de expressões regulares
 
-[O primeiro curso de regex que dei](http://aurelio.net/curso/sdsl/ii/#toc6) foi em 2003 (faz tempo!), e o mais recente foi agora, [semana passada](http://aurelio.net/curso/novatec-2/). Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.
+[O primeiro curso de regex que dei](http://aurelio.net/curso/sdsl-2/#toc6) foi em 2003 (faz tempo!), e o mais recente foi agora, [semana passada](http://aurelio.net/curso/novatec-2/). Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.
 
 Para ter algum tipo de métrica, no início do curso eu peço para cada aluno dar uma nota de zero a dez para o que ele/ela julga ser o seu conhecimento atual em expressões regulares. No fim do curso, mesma pergunta. Meu objetivo é que todos saiam melhores do que entraram, e felizmente isso sempre aconteceu.
 
@@ -40,17 +40,17 @@ Em geral, no final do curso, todos já estão tão imersos no assunto, que surge
 
 > Qualquer um que entre na sala nesse momento, ficará chocado com o “papo de louco” :)
 
-![](http://aurelio.net/curso/sdsl/iii/quadro.jpg)
+![](http://aurelio.net/curso/sdsl-3/quadro.jpg)
 
 Pra mim, é muito gratificante perceber essa enorme evolução em tão pouco tempo. Ter essa confirmação de que consegui passar esse conhecimento adiante, e que agora mais pessoas poderão usufruir dos benefícios das expressões, e quem sabe no futuro também passar isso adiante.
 
-[![](http://aurelio.net/curso/sdsl/ii/img/turma-er.jpg)](http://aurelio.net/curso/sdsl/ii/)
+[![](http://aurelio.net/curso/sdsl-2/img/turma-er.jpg)](http://aurelio.net/curso/sdsl-2/)
 
 [![](http://aurelio.net/curso/sucesu/sucesu-seder-turma.jpg)](http://aurelio.net/curso/sucesu/)
 
 [![](http://aurelio.net/curso/scsl/turma-er1.jpg)](http://aurelio.net/curso/scsl/)
 
-[![](http://aurelio.net/curso/sdsl/iii/turma-quadro.jpg)](http://aurelio.net/curso/sdsl/iii/)
+[![](http://aurelio.net/curso/sdsl-3/turma-quadro.jpg)](http://aurelio.net/curso/sdsl-3/)
 
 [![](http://aurelio.net/curso/novatec-1/turma-regex.jpg)](http://aurelio.net/curso/novatec-1/)
 
