@@ -1,6 +1,8 @@
-Palestras na Conectiva
-Curitiba, Dezembro de 2003
-Aurelio Jargas
+---
+title: Palestras na Conectiva
+subtitle: 4 e 17 de dezembro de 2003, Curitiba - PR
+date: 2003-12-04
+---
 
 Num programa interno de aperfeiçoamento de funcionários, a
 empresa onde trabalho ([Conectiva](http://www.conectiva.com.br))

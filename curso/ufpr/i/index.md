@@ -1,6 +1,8 @@
-I Semana de Software Livre na UFPR
-Curitiba, 30 de Março de 2004
-Aurelio Jargas
+---
+title: I Semana de Software Livre na UFPR
+subtitle: 30 de março de 2004, Curitiba - PR
+date: 2004-03-30
+---
 
 Fui convidado a participar da I Semana de Software Livre na
 [UFPR](http://www.ufpr.br), a Universidade Federal do Paraná.

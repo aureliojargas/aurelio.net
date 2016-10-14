@@ -1,5 +1,8 @@
-V FISL - Fórum Internacional de Software Livre
-Porto Alegre, 02 a 05 de Junho de 2004
+---
+title: V FISL - Fórum Internacional de Software Livre
+subtitle: 2 a 5 de junho de 2004, Porto Alegre - RS
+date: 2004-06-02
+---
 
 O fórum de Porto Alegre é sem dúvida o maior evento nacional
 de Software Livre, e este ano tive a honra de participar como

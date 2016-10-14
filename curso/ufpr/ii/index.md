@@ -1,6 +1,8 @@
-II Semana de Software Livre na UFPR
-Curitiba, 17 de Agosto de 2004
-Aurelio Jargas
+---
+title: II Semana de Software Livre na UFPR
+subtitle: 17 de agosto de 2004, Curitiba - PR
+date: 2004-08-17
+---
 
 Fui novamente convidado a participar da Semana de Software
 Livre na [UFPR](http://www.ufpr.br), que está na sua segunda

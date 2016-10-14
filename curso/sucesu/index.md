@@ -1,6 +1,8 @@
-Palestras na Sucesu-PR
-Curitiba, Fevereiro e Março de 2004
-Aurelio Jargas
+---
+title: Palestras na Sucesu-PR
+subtitle: Fevereiro e março de 2004, Curitiba - PR
+date: 2004-02-18
+---
 
 Fui convidado pelo amigo Alessandro Binhara a ministrar
 palestras na [Sucesu-PR](http://www.prsucesu.org.br), uma

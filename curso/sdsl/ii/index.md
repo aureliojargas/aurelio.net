@@ -1,6 +1,8 @@
-II SDSL - Seminário de Desenvolvimento em Software Livre
-Campinas, 9 a 12 de Dezembro de 2003
-Aurelio Jargas
+---
+title: II SDSL - Seminário de Desenvolvimento em Software Livre
+subtitle: 9 a 12 de dezembro de 2003, Campinas - SP
+date: 2003-12-09
+---
 
 Durante os dias 9, 10, 11 e 12 de Dezembro de 2003 aconteceu em
 Campinas, na Unicamp, o

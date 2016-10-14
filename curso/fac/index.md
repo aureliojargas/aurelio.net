@@ -1,6 +1,8 @@
-I Semana de Informática da FAC
-22 de Outubro de 2004, Campinas - SP
-Aurelio Jargas
+---
+title: I Semana de Informática da FAC
+subtitle: 22 de outubro de 2004, Campinas - SP
+date: 2004-10-22
+---
 
   ![](logo.jpg) 
 

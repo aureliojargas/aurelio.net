@@ -1,6 +1,8 @@
-I Semana de Capacitação e Desenvolvimento em Software Livre
-Brasília, 26 a 30 de Abril de 2004
-Aurelio Jargas
+---
+title: I Semana de Capacitação e Desenvolvimento em Software Livre
+subtitle: 26 a 30 de abril de 2004, Brasília - DF
+date: 2004-04-26
+---
 
 Numa atitude inédita e grandiosa, o governo federal montou um
 mega esquema de treinamento em Linux para os funcionários

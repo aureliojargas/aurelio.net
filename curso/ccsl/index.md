@@ -1,6 +1,8 @@
-II Congresso Catarinense de Software Livre
-08 e 09 de Outubro de 2004, Joinville - SC
-Aurelio Jargas
+---
+title: II Congresso Catarinense de Software Livre
+subtitle: 8 e 9 de outubro de 2004, Joinville - SC
+date: 2004-10-08
+---
 
   ![](img/diploma.jpg) 
 

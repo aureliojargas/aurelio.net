@@ -1,6 +1,8 @@
-II Encontro Nacional LinuxChix-BR
-São Paulo, 1 e 2 de Maio de 2004
-Aurelio Jargas
+---
+title: II Encontro Nacional LinuxChix-BR
+subtitle: 1 e 2 de maio de 2004, São Paulo - SP
+date: 2004-05-01
+---
 
 Convidado pela amiga Sulamita a participar do evento, fui para
 São Paulo dar a palestra de desenvolvedor no encontro das

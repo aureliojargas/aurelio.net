@@ -1,6 +1,8 @@
-III SDSL - Seminário de Desenvolvimento em Software Livre
-19 a 23 de Julho de 2004, Lajeado - RS
-Aurelio Jargas
+---
+title: III SDSL - Seminário de Desenvolvimento em Software Livre
+subtitle: 19 a 23 de julho de 2004, Lajeado - RS
+date: 2004-07-19
+---
 
   ![](cracha.jpg)
 Durante a semana do dia 19 de Julho de 2004, aconteceu em Lajeado - RS

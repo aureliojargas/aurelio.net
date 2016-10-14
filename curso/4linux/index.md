@@ -1,6 +1,8 @@
-Curso de Programação Shell na 4linux
-São Paulo, 4 a 8 de Agosto de 2003
-Aurelio Jargas
+---
+title: Curso de Programação Shell na 4linux
+subtitle: 4 a 8 de agosto de 2003, São Paulo - SP
+date: 2003-08-04
+---
 
 Em agosto de 2003, saí da minha toca em Florianópolis para ir
 a São Paulo ministrar um curso de programação em Shell de uma
