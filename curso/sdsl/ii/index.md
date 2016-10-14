@@ -220,24 +220,40 @@ Meu objetivo pessoal era que todos, sem exceção, aumentassem pelo
 menos um ponto nessa escala. Nem todos lembraram de anotar o número no
 final, mas dos que o fizeram, todos aumentaram!
 
-| NOME |ANTES |DEPOIS |x |NOME |ANTES |DEPOIS|
-|---------------|
-|Adilson |3 |5 | |Luis |0 |5|
-|Bruno |0 |- | |Marcos |4 |-|
-|Bruno |3 |7 | |Olav |2 |-|
-|Claudio |2 |7 | |Otávio |1 |-|
-|Dani |0 |4 | |Pablo |0 |-|
-|Daniel |6 |- | |Pedro |0 |4|
-|Fabio |2 |5 | |Renne |4 |-|
-|Fabricio |8 |- | |Ribamar |3 |7|
-|Glauber |6 |8 | |Ricardo |3 |-|
-|Gustavo |1 |- | |Silvana |2 |5|
-|Henrique |0 |- | |Ulisses |3 |6|
-|João |3 |4 | |Vlad |2 |8|
-|Kate |0 |4 | |Wendell |3 |6|
-|Leonardo |6 |- | |Yuri |2 |5|
+```
+NOME       ANTES   DEPOIS
+-------------------------
+Adilson        3        5
+Bruno          0        -
+Bruno          3        7
+Claudio        2        7
+Dani           0        4
+Daniel         6        -
+Fabio          2        5
+Fabricio       8        -
+Glauber        6        8
+Gustavo        1        -
+Henrique       0        -
+João           3        4
+Kate           0        4
+Leonardo       6        -
+Luis           0        5
+Marcos         4        -
+Olav           2        -
+Otávio         1        -
+Pablo          0        -
+Pedro          0        4
+Renne          4        -
+Ribamar        3        7
+Ricardo        3        -
+Silvana        2        5
+Ulisses        3        6
+Vlad           2        8
+Wendell        3        6
+Yuri           2        5
+```
 
-|Ainda bem que ninguém diminuiu né? :D|
+> Ainda bem que ninguém diminuiu né? :D
 
 Fora essa auto-avaliação, os alunos também preencheram aquelas fichas
 de avaliação do instrutor. Fiquei muito feliz ao constatar

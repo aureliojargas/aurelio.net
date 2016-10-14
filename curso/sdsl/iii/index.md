@@ -132,15 +132,24 @@ Nem todos lembraram de anotar o número no final, mas dos que o
 fizeram, todos aumentaram. E alguns aumentaram bastante.
 **Missão cumprida!**
 
-| NOME |ANTES |DEPOIS |x |NOME |ANTES |DEPOIS|
-|---------------|
-|Daniel |0 |- | |Tiago |1 |6|
-|Marcos |5 |- | |Niumar |0 |7|
-|Paulo |0 |5 | |Armando |1 |9|
-|Fabrício |1 |8 | |Diego |2 |7|
-|Eduardo M. |2 |- | |Júnior |5 |8|
-|William |3 |8,5 | |Luiz |5 |-|
-|Jamiel |2 |9 | |Edurado D. |0 |5|
+```
+NOME       ANTES   DEPOIS
+-------------------------
+Armando        1        9
+Daniel         0        -
+Diego          2        7
+Eduardo M.     2        -
+Edurado D.     0        5
+Fabrício       1        8
+Jamiel         2        9
+Júnior         5        8
+Luiz           5        -
+Marcos         5        -
+Niumar         0        7
+Paulo          0        5
+Tiago          1        6
+William        3      8,5
+```
 
 Depois do curso, um lanche rápido com o pessoal, e às 18h eu já estava
 no carro de carona com o Egídio, rumo a Porto Alegre para pegar o
