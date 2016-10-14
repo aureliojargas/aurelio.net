@@ -1,0 +1,979 @@
+#!/usr/X11R6/bin/mgp -t 90
+%deffont "normal"    xfont  "utopia-medium-r", charset "iso8859-1"
+%deffont "normal-i"  xfont  "utopia-medium-i", charset "iso8859-1"
+%deffont "normal-b"  xfont  "utopia-bold-r"  , charset "iso8859-1"
+%deffont "normal-bi" xfont  "utopia-bold-i"  , charset "iso8859-1"
+%deffont "mono"      xfont "courier-medium-r", charset "iso8859-1"
+%default 1 size 5
+%default 2 size 8, fore "yellow", font "normal-b", center
+%default 3 size 5, fore "white",  font "normal", left, prefix "  "
+%tab 1 size 4, vgap 30, prefix "     ", icon arc "red" 40, leftfill
+%tab 2 prefix "            ", icon arc "orange" 40, leftfill
+%tab 3 prefix "                   ", icon arc "brown" 40, leftfill
+%tab 4 prefix "                          ", icon arc "darkmagenta" 40, leftfill
+%tab 5 prefix "                                ", icon arc "magenta" 40, leftfill
+%%------------------------- end of headers -----------------------------
+%page
+
+
+
+
+
+%size 10, center, fore "yellow"
+Software Livre
+
+%size 7
+Experiências de um Desenvolvedor
+
+%font "mono", size 7, center
+Aurélio Marinho Jargas
+
+%page
+
+Conteúdo da Palestra
+
+	
+%cont, fore "cyan"
+Parte 1:
+%cont, fore "white"
+ Quem é o Aurélio
+
+	
+%cont, fore "cyan"
+Parte 2:
+%cont, fore "white"
+ O que é ser um desenvolvedor de Software Livre
+
+	
+%cont, fore "cyan"
+Parte 3:
+%cont, fore "white"
+ Como criar e lançar um Software Livre
+
+	
+%cont, fore "cyan"
+Parte 4:
+%cont, fore "white"
+ Os Detalhes Que Fazem a Diferença
+
+%page
+
+Quem é o Aurélio
+
+%font "normal", size 5
+   
+%center
+%newimage "aurelio.jpg"
+%left
+   
+
+%page
+
+Currículo das Horas Vagas
+
+	
+%cont, fore "cyan"
+Experiência:
+%cont, fore "white"
+ Desenvolvedor de Software Livre há 4 anos
+
+	
+%cont, fore "cyan"
+Programas:
+%cont, fore "white"
+ Funções ZZ, txt2regex, txt2tags, sedsed, SedSokoban, RAC
+
+	
+%cont, fore "cyan"
+Distribuições:
+%cont, fore "white"
+ Conectiva, Debian, FreeBSD, Knoppix, Gentoo e Fink
+
+	
+%cont, fore "cyan"
+Sites:
+%cont, fore "white"
+ unixreview.com, linux.org, serverwatch.com, Dicas-L, br-linux.org
+
+	
+%cont, fore "cyan"
+Revistas:
+%cont, fore "white"
+ ASCII Linux (jp), Linux Format (fr), Revista do Linux (br)
+
+	
+%cont, fore "cyan"
+GNU:
+%cont, fore "white"
+ http://www.gnu.org/directory/txt2tags.html
+
+%page
+
+O que é ser um Desenvolvedor de Software Livre
+
+%font "normal", size 5
+
+
+%cont, size 60, center
+?
+
+%page
+
+Características do Desenvolvedor
+
+	Programa nas horas vagas
+
+	Programa por prazer
+
+	Quer sempre melhorar seu programa
+
+	Quer ter seu trabalho reconhecido
+
+	Não tem tempo de ver novela, navegar na Internet e dormir até tarde
+
+%page
+
+A Minha Experiência
+
+	
+%cont, font "mono"
+Fev/2000
+%cont, font "normal"
+: funções ZZ (
+%cont, fore "cyan"
+Shell, nacional, parceria, +40
+%cont, fore "white"
+)
+
+	
+%cont, font "mono"
+Nov/2000
+%cont, font "normal"
+: txt2regex (
+%cont, fore "cyan"
+Shell, distros, artigos
+%cont, fore "white"
+)
+
+	
+%cont, font "mono"
+Jul/2001
+%cont, font "normal"
+: txt2tags (
+%cont, fore "cyan"
+Python, GNU, colaboração
+%cont, fore "white"
+)
+
+	
+%cont, font "mono"
+Dez/2001
+%cont, font "normal"
+: sedsed (
+%cont, fore "cyan"
+Python, uma idéia, 5 linhas
+%cont, fore "white"
+)
+
+	
+%cont, font "mono"
+Mar/2002
+%cont, font "normal"
+: SedSokoban (
+%cont, fore "cyan"
+SED, 8 horas, SlashDot
+%cont, fore "white"
+)
+
+	
+%cont, font "mono"
+Dez/2003
+%cont, font "normal"
+: RAC (
+%cont, fore "cyan"
+C, parceria++, marketing++
+%cont, fore "white"
+)
+
+%page
+
+O Ritmo Frenético de Atualizações
+
+
+%font "mono", size 3
+       Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez TOTAL
+------+---+---+---+---+---+---+---+---+---+---+---+---+-----
+ 2000 |   | 1 |   | 1 | 2 | 1 |   |   | 1 |   | 2 | 1 |   9
+ 2001 |   | 2 |   | 1 |   | 2 | 2 | 4 | 1 | 2 | 1 | 4 |  19
+ 2002 | 1 | 5 | 8 | 2 | 1 | 4 | 2 | 2 | 1 | 1 | 3 | 3 |  33
+ 2003 | 2 | 4 | 1 | 1 | 3 | 1 | 2 |   |   | 1 | 3 | 1 |  19
+------+---+---+---+---+---+---+---+---+---+---+---+---+-----
+TOTAL | 3 |12 | 9 | 5 | 6 | 8 | 6 | 6 | 3 | 4 | 9 | 9 |  80 
+%font "normal"
+
+%font "normal", size 5
+          
+%center
+%newimage "seumadruga.jpg"
+%left
+          
+
+%page
+
+Qual a Recompensa?
+
+	Satisfação pessoal
+
+	Amigos e contatos         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+	Oportunidades
+
+	Experiência, currículo
+
+	Dinheiro!
+
+%page
+
+Como criar e lançar Software Livre
+
+%font "normal", size 5
+
+
+%cont, size 60, center
+?
+
+%page
+
+O Ciclo de Vida de um Programa
+
+	
+%cont, fore "cyan"
+A idéia                  <<<-----------------------------
+%cont, fore "white"
+
+
+	O projeto
+
+	O desenvolvimento
+
+	O lançamento
+
+	A manutenção
+
+%font "normal", size 5
+%right, size 35, fore "cyan"
+1 
+
+%page
+
+A Idéia
+
+	Melhorar um programa já existente - PATCH
+
+	Melhorar um programa, criando outro - FORK
+
+	
+%cont, fore "cyan"
+Criar um programa novo
+%cont, fore "white"
+
+
+%page
+
+A Concepção de um Programa
+
+	Identificar uma necessidade
+
+	Pesquisar soluções já existentes         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+	Idealizar uma solução
+
+	Simulações de uso, protótipo
+
+	
+%cont, fore "cyan"
+Papel!
+%cont, fore "white"
+
+
+%page
+
+A Importância do Papel
+
+	Visão geral da idéia
+
+	Desenhar/Rabiscar é mais rápido que programar
+
+	Rascunho da Interface com o usuário (aparência, navegação)
+
+	Rascunho do fluxo de dados e organização interna do programa
+
+	O desenvolvimento da idéia não depende do computador! (ônibus, banheiro, viagem)
+
+%page
+
+O Ciclo de Vida de um Programa
+
+	A idéia
+
+	
+%cont, fore "cyan"
+O projeto                  <<<-----------------------------
+%cont, fore "white"
+
+
+	O desenvolvimento
+
+	O lançamento
+
+	A manutenção
+
+%font "normal", size 5
+%right, size 35, fore "cyan"
+2 
+
+%page
+
+O Projeto
+
+	Público alvo
+
+	Escolha da plataforma
+
+	Interface com o usuário
+
+	Escolha da linguagem
+
+	Escopo do programa (KISS)         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+%page
+
+Público Alvo
+
+	Qual o idioma principal da interface e documentação?
+
+	Qual o nível técnico dos usuários?
+
+	Qual a plataforma dos usuários?
+
+	Serão usuários domésticos ou corporativos?
+
+	Serão usuários de interface gráfica ou console?
+
+%page
+
+Escolha da Plataforma
+
+	Diretamente ligada ao Público Alvo
+
+	Define a escolha da Interface
+
+	Define a escolha da Linguagem
+
+	Pode ser uma ou várias (UNIX, Windows, Mac, Palm)
+
+	O desenvolvedor deve ter acesso à plataforma para testes
+
+%page
+
+Interface com o Usuário
+
+	É necessária interface modo texto (
+%cont, fore "cyan"
+console
+%cont, fore "white"
+)?
+
+	É necessária interface gráfica (
+%cont, fore "cyan"
+GUI
+%cont, fore "white"
+)?
+
+	É necessária interface Intranet/Internet (
+%cont, fore "cyan"
+Web
+%cont, fore "white"
+)?
+
+	É necessária interface não interativa (
+%cont, fore "cyan"
+batch
+%cont, fore "white"
+)?
+
+	É necessária a integração com outros programas (
+%cont, fore "cyan"
+módulo
+%cont, fore "white"
+)?
+
+%page
+
+Escolha da Linguagem
+
+	Velocidade de processamento é crucial? (
+%cont, fore "cyan"
+C
+%cont, fore "white"
+)
+
+	Legibilidade de código é crucial? (
+%cont, fore "cyan"
+Python, C
+%cont, fore "white"
+)
+
+	Portabilidade é crucial? (
+%cont, fore "cyan"
+Shell, Python
+%cont, fore "white"
+)
+
+	Ser independente de plataforma é crucial? (
+%cont, fore "cyan"
+PHP, Java
+%cont, fore "white"
+)
+
+	Ser ilegível, uma caixa preta e NÃO receber contribuições é crucial? (
+%cont, fore "cyan"
+Perl, C++
+%cont, fore "white"
+)          
+%cont, fore "cyan"
+; )
+%cont, fore "white"
+
+
+%page
+
+Escopo do Programa
+
+	KISS - 
+%cont, fore "cyan"
+Keep It Simple, Stupid!
+%cont, fore "white"
+
+
+	O que exatamente meu programa vai fazer?
+
+	O que meu programa NÃO vai fazer?
+
+	No mundo perfeito, como seria a "versão final" dele?
+
+	Evite ao máximo que seu programa seja um BLOATware
+
+	Anote  ->  Memorize  ->  Focalize  ->  Respeite!
+
+%page
+
+O Ciclo de Vida de um Programa
+
+	A idéia
+
+	O projeto
+
+	
+%cont, fore "cyan"
+O desenvolvimento                  <<<-----------------------------
+%cont, fore "white"
+
+
+	O lançamento
+
+	A manutenção
+
+%font "normal", size 5
+%right, size 35, fore "cyan"
+3 
+
+%page
+
+O desenvolvimento
+
+%bar "white" 5
+
+	Especificação Completa
+
+	Codificação
+
+	Suíte de Testes
+
+%bar "white" 5
+
+	Documentação
+
+%bar "white" 5
+
+%page
+
+Especificação Completa
+
+	Descrição e Sumário do projeto
+
+	Escopo
+
+	Sintaxe, opções, telas, arquivos
+
+	Definir esquema de versionamento
+
+	Cronograma, planejamento, metas
+
+%page
+
+Codificação
+
+	Implementação da especificação
+
+	Controle de alterações (CVS, svn)
+
+	Lançamento de versões Alpha e Beta
+
+	Troca de idéias com testadores
+
+	Shhhhhhh! Ainda não faça muito barulho
+
+%page
+
+Suíte de Testes
+
+	Completa
+
+	Sincronizada com o código
+
+	Prever erros do usuário
+
+	Prever situações imprevisíveis (
+%cont, fore "cyan"
+!!?!
+%cont, fore "white"
+)
+
+	É chato fazer, mas 
+%cont, fore "cyan"
+compensa
+%cont, fore "white"
+!
+
+%page
+
+Documentação
+
+	Tela de ajuda (
+%cont, fore "cyan"
+--help
+%cont, fore "white"
+)
+
+	Página de Manual (
+%cont, fore "cyan"
+man page
+%cont, fore "white"
+)
+
+	README, INSTALL, Changelog
+
+	Perguntas Freqüentes (
+%cont, fore "cyan"
+FAQ
+%cont, fore "white"
+)
+
+	Guia do usuário e/ou Tutorial
+
+	Um exemplo vale por 1.000 man pages!         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+%page
+
+O Ciclo de Vida de um Programa
+
+	A idéia
+
+	O projeto
+
+	O desenvolvimento
+
+	
+%cont, fore "cyan"
+O lançamento                  <<<-----------------------------
+%cont, fore "white"
+
+
+	A manutenção
+
+%font "normal", size 5
+%right, size 35, fore "cyan"
+4 
+
+%page
+
+O Lançamento
+
+	Empacotamento
+
+	Testes completos e minuciosos         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+	Homepage
+
+	Canais de comunicação
+
+	Anúncio
+
+%page
+
+Empacotamento
+
+	Escolha do formato (
+%cont, fore "cyan"
+.tar.gz, RPM, .ZIP, binário
+%cont, fore "white"
+)
+
+	Incluir apenas os arquivos relevantes
+
+	Colocar a versão no nome do pacote
+
+	Múltiplos pacotes pode ser uma boa idéia, OU NÃO!
+
+%page
+
+Testes completos e minuciosos
+
+	Antes de pensar em lançar: testar, testar e testar
+
+	Expandir o pacote num diretório limpo
+
+	Rodar a suíte de testes
+
+	Testar o funcionameto da interface
+
+	Simular o procedimento de instalação que será feito pelo usuário
+
+%page
+
+Homepage
+
+	Definir o endereço/domínio do programa
+
+	Fazer a página do programa e colocar online
+
+	Testar todos os links e checar as informações (página == 100%)
+
+	Colocar o pacote online
+
+	Testar o link de Download, baixar o pacote e checar o MD5
+
+%page
+
+Canais de Comunicação
+
+	Lista de discussão no idioma oficial do programa
+
+	Lista de discussão no idioma do autor (caso diferente do oficial)
+
+	Fórum online
+
+	Canal de IRC para suporte e confraternização de usuários
+
+	Colocar o e-mail do autor na página do programa e na documentação
+
+%page
+
+Anúncio
+
+	Postar notícias em sites e fórums especializados
+
+	Mandar mensagem para listas de discussão (
+%cont, fore "cyan"
+CUIDADO!
+%cont, fore "white"
+)
+
+	Avisar os amigos e interessados pessoalmente
+
+	Anunciar na página pessoal ou blog do autor
+
+	Esperar 
+%cont, fore "cyan"
+pacientemente
+%cont, fore "white"
+ o resultado da empreitada 
+%right
+%newimage "homer.gif"
+%left
+
+
+%page
+
+O Ciclo de Vida de um Programa
+
+	A idéia
+
+	O projeto
+
+	O desenvolvimento
+
+	O lançamento
+
+	
+%cont, fore "cyan"
+A manutenção                  <<<-----------------------------
+%cont, fore "white"
+
+
+%font "normal", size 5
+%right, size 35, fore "cyan"
+5 
+
+%page
+
+A manutenção
+
+	Corrigir problemas (
+%cont, fore "cyan"
+bugs
+%cont, fore "white"
+)
+
+	Adicionar funcionalidades (
+%cont, fore "cyan"
+features
+%cont, fore "white"
+)
+
+	Aceitar/rejeitar contribuições (
+%cont, fore "cyan"
+patches
+%cont, fore "white"
+)
+
+	Lidar com os usuários (
+%cont, fore "cyan"
+política
+%cont, fore "white"
+)
+
+	Manter a documentação atualizada
+
+	Fazer atualizações constantes
+
+	Não abandonar o projeto!
+
+%page
+
+Os Detalhes Que Fazem a Diferença
+
+%font "normal", size 5
+
+
+%cont, size 60, center
+!!!
+
+%page
+
+O Caminho das Pedras
+
+	Finalizar a primeira versão (
+%cont, fore "cyan"
+tem que ser usável!
+%cont, fore "white"
+)
+
+	Finalizar a homepage do projeto e colocar no ar
+
+	Criar os canais de comunicação
+
+	Hospedar o projeto no SourceForge (
+%cont, fore "cyan"
+http://sf.net
+%cont, fore "white"
+)
+
+	Registrar o projeto no FreshMeat (
+%cont, fore "cyan"
+http://freshmeat.net
+%cont, fore "white"
+)
+
+	Aparecer no SlashDot (
+%cont, fore "cyan"
+http://slashdot.org
+%cont, fore "white"
+)
+
+%page
+
+O Nome do Programa
+
+	Deve ser pronunciável no idioma do público alvo
+
+	Deve ser inédito (vide Phoenix  ->  Firebird  ->  FireFox  ->  ???)
+
+	Deve ser curto, forte, impactante, descritivo, sonoro, memorizável
+
+	Quanto menos páginas o Google retornar, melhor
+
+	Veja se o domínio NOME.{org,net,com} está vago
+
+	Matz, criador da linguagem Ruby: "
+%cont, font "normal-i"
+a good name for a project will take care of 
+%cont, fore "cyan"
+80%
+%cont, fore "white"
+ of your design work
+%cont, font "normal"
+"
+
+%page
+
+A Página da Internet
+
+	Endereço curto e fácil de lembrar         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+	Screenshots         
+%cont, fore "cyan"
+[IMPORTANTE]
+%cont, fore "white"
+
+
+	Link para download bem visível
+
+	Texto rápido, direto ao ponto
+
+	Endereço para contato com o autor
+
+	Apresentação profissional
+
+%page
+
+O Marketing
+
+	Invista nos testes para não lançar versões problemáticas
+
+	Incentive os outros a mostrarem que usam seu programa (
+%cont, fore "cyan"
+botão "Powered by"
+%cont, fore "white"
+)
+
+	Crie uma identidade visual para o programa e para a página (
+%cont, fore "cyan"
+cores, formatos, estilos
+%cont, fore "white"
+)
+
+	Crie muitos acessórios inúteis! (
+%cont, fore "cyan"
+mascote, logo, frase, temas, sons
+%cont, fore "white"
+)
+
+	Deixe claro porquê o seu programa é melhor que os outros
+
+	Divulgue testemunhos de usuários satisfeitos
+
+	Crie concursos, faça screenshots lindos, livro de visitas, ...
+
+%page
+
+A Atenção aos Usuários
+
+	Crucial, complicado, desgastante e gratificante
+
+	Esteja sempre aberto a receber contribuições, críticas e bugs
+
+	Deixe o código sempre limpo para facilitar contribuições
+
+	Agradeça publicamente a quem merece, sempre
+
+	Usuários desprezam o KISS!
+
+	Aprenda a dizer NÃO sem desmerecer o tempo alheio
+
+	
+%cont, fore "cyan"
+Sem usuários, programar para quem?
+%cont, fore "white"
+
+
+%page
+
+É Isso
+
+%font "normal", size 5
+
+
+%cont, size 60, center
+%fore "green"
+&
+%cont, fore "white"
+:)
+
+%page
+
+Letrinhas Que Sobem...
+
+	Esta apresentação foi 100% produzida com Softwares Livres.
+
+	Foi usando o editor 
+%cont, fore "cyan"
+Vim
+%cont, fore "white"
+ para escrever o texto no formato do 
+%cont, fore "cyan"
+txt2tags
+%cont, fore "white"
+, que converteu o arquivo para o formato do 
+%cont, fore "cyan"
+MagicPoint
+%cont, fore "white"
+, que gera as telas da apresentação.
+
+	A interface utilizada foi o 
+%cont, fore "cyan"
+WindowMaker
+%cont, fore "white"
+, rodando no sistema operacional 
+%cont, fore "cyan"
+Yellow Dog Linux
+%cont, fore "white"
+, sob plataforma PowerPC num 
+%cont, fore "cyan"
+ibook
+%cont, fore "white"
+ joiado 
+%right
+%newimage "ibook.jpg"
+%left
+
+
+
+%% mgp code generated by txt2tags 2.0-beta1-dev0303 (http://txt2tags.sf.net)
+%% cmdline: txt2tags desenvolvedor.t2t
+%%EOD

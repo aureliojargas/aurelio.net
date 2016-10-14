@@ -1,0 +1,637 @@
+Software Livre
+Experiências de um Desenvolvedor
+Aurelio Marinho Jargas
+
+%!target: mgp
+
+%%%% Linha de comando mágica
+%% mgp -b gray70 -t 60 -G -g 640x480 arquivo.mgp      # fundo cinza
+%% mgp           -t 60 -G -g 640x480 arquivo.mgp      # fundo preto
+
+%%%% SETA INDICADORA e DESTAQUE
+%!postproc(mgp): '@seta@'  '                 <<<-----------------------------'
+%!preproc: '@importante@'  '        __[IMPORTANTE]__'
+
+%%%% TABELA DE RELEASES
+%!postproc(mgp): '(%font "mono")$'  '\1, size 3'
+
+%%%% TEXTO GIGANTE
+%!postproc(mgp): '\(\(([12345])\)\)$' '%right, size 35, fore "cyan"\n\1 '
+%!postproc(mgp): '\(\((.*)\)\)$'  '\n\n%cont, size 60, center\n\1'
+
+%%%% CABELO VERDE
+%!postproc(mgp): '&:\)'  '%fore "green"\n&\n%cont, fore "white"\n:)'
+
+%%%% TELA INICIAL - segunda linha
+%!postproc(mgp): '^%font "normal-i".*' '%size 7'
+
+%helv%%%%% FONTES HELVETICA (default é UTOPIA)
+%helv%%!postproc(mgp): utopia-medium-r helvetica-medium-r
+%helv%%!postproc(mgp): utopia-medium-i helvetica-medium-o
+%helv%%!postproc(mgp): utopia-bold-r   helvetica-bold-r
+%helv%%!postproc(mgp): utopia-bold-i   helvetica-bold-o
+
+%bgpreto%%%%% FUNDO PRETO
+%bgpreto%% tela inicial - terceira linha
+%bgpreto%%!postproc(mgp): '^%font "mono", size 7.*' '%font "normal",size 6,fore "white"'
+%bgpreto%% bolotas das listas
+%bgpreto%%!postproc(mgp): '"red"'    '"yellow"'
+%bgpreto%%!postproc(mgp): '"orange"' '"yellow"'
+%bgpreto%% links e underline (destaques)
+%bgpreto%%!postproc(mgp): '"cyan"'   '"green"'
+
+%bgbranco%%%%% FUNDO BRANCO
+%bgbranco%% tela inicial - terceira linha
+%bgbranco%%!postproc(mgp): '^%font "mono", size 7.*' '%font "normal",size 6,fore "black"'
+%bgbranco%% texto
+%bgbranco%%!postproc(mgp): '"white"'  '"black"'
+%bgbranco%% títulos
+%bgbranco%%!postproc(mgp): '"yellow"' '"blue"'
+%bgbranco%% bolotas das listas
+%bgbranco%%!postproc(mgp): '"red"'    '"blue"'
+%bgbranco%%!postproc(mgp): '"orange"' '"blue"'
+%bgbranco%% links e underline (destaques)
+%bgbranco%%!postproc(mgp): '"cyan"'   '"red"'
+%bgbranco%% fundo
+%bgbranco%%!postproc(mgp): '^(%default 1.*)' '\1, back "white"'
+
+%bgcinza%%%%% FUNDO CINZA (depende do fundo branco)
+%bgcinza%%!postproc(mgp): '^(%default 1.*)' '\1, back "gray70"'
+%bgcinza%%!postproc(mgp): '"red"'    '"white"'
+
+
+%%%% CONTABILIDADE
+%
+% SDSL: ?
+% Sucesu: sdsl + 4h (texto) + 1h (frescurada)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Conteúdo da Palestra =
+
+- __Parte 1:__ Quem é o Aurelio
+
+- __Parte 2:__ O que é ser um desenvolvedor de Software Livre
+
+- __Parte 3:__ Como criar e lançar um Software Livre
+
+- __Parte 4:__ Os Detalhes Que Fazem a Diferença
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Quem é o Aurelio =
+
+%((?))
+   [aurelio.jpg]   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Currículo das Horas Vagas =
+
+- __Experiência:__ Desenvolvedor de Software Livre há 4 anos
+
+- __Programas:__ Funções ZZ, txt2regex, txt2tags, sedsed, SedSokoban, RAC
+
+- __Distribuições:__ Conectiva, Debian, FreeBSD, Knoppix, Gentoo e Fink
+
+- __Sites:__ unixreview.com, linux.org, serverwatch.com, Dicas-L, br-linux.org
+
+- __Revistas:__ ASCII Linux (jp), Linux Format (fr), Revista do Linux (br)
+
+- __GNU:__ ""http://www.gnu.org/directory/txt2tags.html""
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= O que é ser um Desenvolvedor de Software Livre =
+
+((?))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Características do Desenvolvedor =
+
+- Programa nas horas vagas
+
+- Programa por prazer
+
+- Quer sempre melhorar seu programa
+
+- Quer ter seu trabalho reconhecido
+
+- Não tem tempo de ver novela, navegar na Internet e dormir até tarde
+
+
+= A Minha Experiência =
+
+- ``Fev/2000``: funções ZZ (__Shell, nacional, parceria, +40__)
+
+- ``Nov/2000``: txt2regex (__Shell, distros, artigos__)
+
+- ``Jul/2001``: txt2tags (__Python, GNU, colaboração__)
+
+- ``Dez/2001``: sedsed (__Python, uma idéia, 5 linhas__)
+
+- ``Mar/2002``: SedSokoban (__SED, 8 horas, SlashDot__)
+
+- ``Dez/2003``: RAC (__C, parceria++, marketing++__)
+
+
+= O Ritmo Frenético de Atualizações =
+
+```
+       Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez TOTAL
+------+---+---+---+---+---+---+---+---+---+---+---+---+-----
+ 2000 |   | 1 |   | 1 | 2 | 1 |   |   | 1 |   | 2 | 1 |   9
+ 2001 |   | 2 |   | 1 |   | 2 | 2 | 4 | 1 | 2 | 1 | 4 |  19
+ 2002 | 1 | 5 | 8 | 2 | 1 | 4 | 2 | 2 | 1 | 1 | 3 | 3 |  33
+ 2003 | 2 | 4 | 1 | 1 | 3 | 1 | 2 |   |   | 1 | 3 | 1 |  19
+------+---+---+---+---+---+---+---+---+---+---+---+---+-----
+TOTAL | 3 |12 | 9 | 5 | 6 | 8 | 6 | 6 | 3 | 4 | 9 | 9 |  80 
+```
+
+          [seumadruga.jpg]          
+
+
+= Qual a Recompensa? =
+
+- Satisfação pessoal
+
+- Amigos e contatos @importante@
+
+- Oportunidades
+
+- Experiência, currículo
+
+- Dinheiro!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Como criar e lançar Software Livre =
+
+((?))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= O Ciclo de Vida de um Programa =
+
+- __A idéia @seta@__
+
+- O projeto
+
+- O desenvolvimento
+
+- O lançamento
+
+- A manutenção
+
+
+((1))
+
+= A Idéia =
+
+- Melhorar um programa já existente - PATCH
+
+- Melhorar um programa, criando outro - FORK
+
+- __Criar um programa novo__
+
+
+= A Concepção de um Programa =
+
+- Identificar uma necessidade
+
+- Pesquisar soluções já existentes @importante@
+
+- Idealizar uma solução
+
+- Simulações de uso, protótipo
+
+- __Papel!__
+
+
+= A Importância do Papel =
+
+- Visão geral da idéia
+
+- Desenhar/Rabiscar é mais rápido que programar
+
+- Rascunho da Interface com o usuário (aparência, navegação)
+
+- Rascunho do fluxo de dados e organização interna do programa
+
+- O desenvolvimento da idéia não depende do computador! (ônibus, banheiro, viagem)
+
+
+= O Ciclo de Vida de um Programa =
+
+- A idéia
+
+- __O projeto @seta@__
+
+- O desenvolvimento
+
+- O lançamento
+
+- A manutenção
+
+
+((2))
+
+= O Projeto =
+
+- Público alvo
+
+- Escolha da plataforma
+
+- Interface com o usuário
+
+- Escolha da linguagem
+
+- Escopo do programa (KISS) @importante@
+
+
+= Público Alvo =
+
+- Qual o idioma principal da interface e documentação?
+
+- Qual o nível técnico dos usuários?
+
+- Qual a plataforma dos usuários?
+
+- Serão usuários domésticos ou corporativos?
+
+- Serão usuários de interface gráfica ou console?
+
+
+= Escolha da Plataforma =
+
+- Diretamente ligada ao Público Alvo
+
+- Define a escolha da Interface
+
+- Define a escolha da Linguagem
+
+- Pode ser uma ou várias (UNIX, Windows, Mac, Palm)
+
+- O desenvolvedor deve ter acesso à plataforma para testes
+
+
+= Interface com o Usuário =
+
+- É necessária interface modo texto (__console__)?
+
+- É necessária interface gráfica (__GUI__)?
+
+- É necessária interface Intranet/Internet (__Web__)?
+
+- É necessária interface não interativa (__batch__)?
+
+- É necessária a integração com outros programas (__módulo__)?
+
+
+= Escolha da Linguagem =
+
+- Velocidade de processamento é crucial? (__C__)
+
+- Legibilidade de código é crucial? (__Python, C__)
+
+- Portabilidade é crucial? (__Shell, Python__)
+
+- Ser independente de plataforma é crucial? (__PHP, Java__)
+
+- Ser ilegível, uma caixa preta e NÃO receber contribuições é crucial? (__Perl, C++__)          __; )__
+
+
+= Escopo do Programa =
+
+- KISS - __Keep It Simple, Stupid!__
+
+- O que exatamente meu programa vai fazer?
+
+- O que meu programa NÃO vai fazer?
+
+- No mundo perfeito, como seria a "versão final" dele?
+
+- Evite ao máximo que seu programa seja um BLOATware
+
+- Anote  ->  Memorize  ->  Focalize  ->  Respeite!
+
+
+= O Ciclo de Vida de um Programa =
+
+- A idéia
+
+- O projeto
+
+- __O desenvolvimento @seta@__
+
+- O lançamento
+
+- A manutenção
+
+
+((3))
+
+= O desenvolvimento =
+
+---------------------------------------------------
+
+- Especificação Completa
+
+- Codificação
+
+- Suíte de Testes
+
+
+---------------------------------------------------
+
+- Documentação
+
+
+---------------------------------------------------
+
+= Especificação Completa =
+
+- Descrição e Sumário do projeto
+
+- Escopo
+
+- Sintaxe, opções, telas, arquivos
+
+- Definir esquema de versionamento
+
+- Cronograma, planejamento, metas
+
+
+= Codificação =
+
+- Implementação da especificação
+
+- Controle de alterações (CVS, svn)
+
+- Lançamento de versões Alpha e Beta
+
+- Troca de idéias com testadores
+
+- Shhhhhhh! Ainda não faça muito barulho
+
+
+= Suíte de Testes =
+
+- Completa
+
+- Sincronizada com o código
+
+- Prever erros do usuário
+
+- Prever situações imprevisíveis (__!!?!__)
+
+- É chato fazer, mas __compensa__!
+
+
+= Documentação =
+
+- Tela de ajuda (__--help__)
+
+- Página de Manual (__man page__)
+
+- README, INSTALL, Changelog
+
+- Perguntas Freqüentes (__FAQ__)
+
+- Guia do usuário e/ou Tutorial
+
+- Um exemplo vale por 1.000 man pages! @importante@
+
+
+= O Ciclo de Vida de um Programa =
+
+- A idéia
+
+- O projeto
+
+- O desenvolvimento
+
+- __O lançamento @seta@__
+
+- A manutenção
+
+
+((4))
+
+= O Lançamento =
+
+- Empacotamento
+
+- Testes completos e minuciosos @importante@
+
+- Homepage
+
+- Canais de comunicação
+
+- Anúncio
+
+
+= Empacotamento =
+
+- Escolha do formato (__.tar.gz, RPM, .ZIP, binário__)
+
+- Incluir apenas os arquivos relevantes
+
+- Colocar a versão no nome do pacote
+
+- Múltiplos pacotes pode ser uma boa idéia, OU NÃO!
+
+
+= Testes completos e minuciosos =
+
+- Antes de pensar em lançar: testar, testar e testar
+
+- Expandir o pacote num diretório limpo
+
+- Rodar a suíte de testes
+
+- Testar o funcionameto da interface
+
+- Simular o procedimento de instalação que será feito pelo usuário
+
+
+= Homepage =
+
+- Definir o endereço/domínio do programa
+
+- Fazer a página do programa e colocar online
+
+- Testar todos os links e checar as informações (página == 100%)
+
+- Colocar o pacote online
+
+- Testar o link de Download, baixar o pacote e checar o MD5
+
+
+= Canais de Comunicação =
+
+- Lista de discussão no idioma oficial do programa
+
+- Lista de discussão no idioma do autor (caso diferente do oficial)
+
+- Fórum online
+
+- Canal de IRC para suporte e confraternização de usuários
+
+- Colocar o e-mail do autor na página do programa e na documentação
+
+
+= Anúncio =
+
+- Postar notícias em sites e fórums especializados
+
+- Mandar mensagem para listas de discussão (__CUIDADO!__)
+
+- Avisar os amigos e interessados pessoalmente
+
+- Anunciar na página pessoal ou blog do autor
+
+- Esperar __pacientemente__ o resultado da empreitada [homer.gif]
+
+
+= O Ciclo de Vida de um Programa =
+
+- A idéia
+
+- O projeto
+
+- O desenvolvimento
+
+- O lançamento
+
+- __A manutenção @seta@__
+
+
+((5))
+
+= A manutenção =
+
+- Corrigir problemas (__bugs__)
+
+- Adicionar funcionalidades (__features__)
+
+- Aceitar/rejeitar contribuições (__patches__)
+
+- Lidar com os usuários (__política__)
+
+- Manter a documentação atualizada
+
+- Fazer atualizações constantes
+
+- Não abandonar o projeto!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Os Detalhes Que Fazem a Diferença =
+
+((!!!))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= O Caminho das Pedras =
+
+- Finalizar a primeira versão (__tem que ser usável!__)
+
+- Finalizar a homepage do projeto e colocar no ar
+
+- Criar os canais de comunicação
+
+- Hospedar o projeto no SourceForge (http://sf.net)
+
+- Registrar o projeto no FreshMeat (http://freshmeat.net)
+
+- Aparecer no SlashDot (http://slashdot.org)
+
+
+= O Nome do Programa =
+
+- Deve ser pronunciável no idioma do público alvo
+
+- Deve ser inédito (vide Phoenix  ->  Firebird  ->  FireFox  ->  ???)
+
+- Deve ser curto, forte, impactante, descritivo, sonoro, memorizável
+
+- Quanto menos páginas o Google retornar, melhor
+
+- Veja se o domínio NOME.{org,net,com} está vago
+
+- Matz, criador da linguagem Ruby: "//a good name for a project will take care of __80%__ of your design work//"
+
+
+= A Página da Internet =
+
+- Endereço curto e fácil de lembrar @importante@
+
+- Screenshots @importante@
+
+- Link para download bem visível
+
+- Texto rápido, direto ao ponto
+
+- Endereço para contato com o autor
+
+- Apresentação profissional
+
+
+= O Marketing =
+
+- Invista nos testes para não lançar versões problemáticas
+
+- Incentive os outros a mostrarem que usam seu programa (__botão "Powered by"__)
+
+- Crie uma identidade visual para o programa e para a página (__cores, formatos, estilos__)
+
+- Crie muitos acessórios inúteis! (__mascote, logo, frase, temas, sons__)
+
+- Deixe claro porquê o seu programa é melhor que os outros
+
+- Divulgue testemunhos de usuários satisfeitos
+
+- Crie concursos, faça screenshots lindos, livro de visitas, ...
+
+
+= A Atenção aos Usuários =
+
+- Crucial, complicado, desgastante e gratificante
+
+- Esteja sempre aberto a receber contribuições, críticas e bugs
+
+- Deixe o código sempre limpo para facilitar contribuições
+
+- Agradeça publicamente a quem merece, sempre
+
+- Usuários desprezam o KISS!
+
+- Aprenda a dizer NÃO sem desmerecer o tempo alheio
+
+- __Sem usuários, programar para quem?__
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= É Isso =
+
+((&:)))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+= Letrinhas Que Sobem... =
+
+- Esta apresentação foi 100% produzida com Softwares Livres.
+
+- Foi usando o editor __Vim__ para escrever o texto no formato do __txt2tags__, que converteu o arquivo para o formato do __MagicPoint__, que gera as telas da apresentação.
+
+- A interface utilizada foi o __WindowMaker__, rodando no sistema operacional __Yellow Dog Linux__, sob plataforma PowerPC num __ibook__ joiado [ibook.jpg]
+
+
+% vim: tw=0

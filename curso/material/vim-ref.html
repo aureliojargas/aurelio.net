@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Editor VI - Guia de Referência</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<P ALIGN="center"><CENTER><H1>Editor VI - Guia de Referência</H1>
+<FONT SIZE="4">
+<I>Aurelio Marinho Jargas (http://aurelio.net)</I><BR>
+</FONT></CENTER>
+
+<P>
+<table align="center" cellpadding="5"><tr><td>
+</P>
+<P>
+<B>Entrar e Sair</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>:q <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+<B>Entrar, Inserir Texto, Salvar e Sair</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>i
+<LI>Minha primeira frase no VI.
+<LI><I>&lt;ESC&gt;</I>
+<LI>:wq <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+<B>Entrar, Alterar Texto e Sair sem Salvar</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>dd
+<LI>:q! <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+<B>Entrar, Alterar Texto, Salvar em Outro Arquivo e Sair</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>yy
+<LI>p
+<LI>:w arquivo-novo.txt <I>&lt;ENTER&gt;</I>
+<LI>:q <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+<B>Configurar o VI</B>
+</P>
+<UL>
+<LI>vi ~/.vimrc <I>&lt;ENTER&gt;</I>
+<LI>i
+<LI>set vb ru nu <I>&lt;ENTER&gt;</I>
+<LI>set ic is hls scs
+<LI><I>&lt;ESC&gt;</I>
+<LI>:wq <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+<B>Repetir a Primeira Linha 2 Vezes e Apagar a Última</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>gg
+<LI>yy
+<LI>p
+<LI>p
+<LI>G
+<LI>dd
+</UL>
+
+<P>
+<B>Repetir Comandos</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>A
+<LI>FIM
+<LI><I>&lt;ESC&gt;</I>
+<LI>j
+<LI>.
+<LI>j
+<LI>.
+</UL>
+
+<P>
+<B>Abrir Dois Arquivos Simultaneamente</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>:split ~/.vimrc <I>&lt;ENTER&gt;</I>
+<LI>Ctrl+W
+<LI>Ctrl+W
+<LI>:q <I>&lt;ENTER&gt;</I>
+<LI>:q <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+<B>Obter Ajuda</B>
+</P>
+<UL>
+<LI>vi arquivo.txt <I>&lt;ENTER&gt;</I>
+<LI>:help <I>&lt;ENTER&gt;</I>
+</UL>
+
+<P>
+</td><td>
+</P>
+<TABLE ALIGN="center"  BORDER="1">
+<TR>
+<TH bgcolor="silver"></TH>
+<TH bgcolor="silver">Comandos de Arquivo</TH>
+</TR>
+<TR>
+<TD ALIGN="center">:q</TD>
+<TD>Sai do VI</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:w</TD>
+<TD>Salva alteraçoes feitas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:wq</TD>
+<TD>Salva aterações e sai do VI</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:q!</TD>
+<TD>Sai sem salvar</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:w abc</TD>
+<TD>Grava arquivo com o nome 'abc'</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:r abc</TD>
+<TD>Insere o conteúdo do arquivo 'abc'</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:e abc</TD>
+<TD>Edita o arquivo 'abc'</TD>
+</TR>
+<TR>
+<TH bgcolor="silver"></TH>
+<TH bgcolor="silver">Modo de Inserção</TH>
+</TR>
+<TR>
+<TD ALIGN="center">i</TD>
+<TD>Entra no modo de Inserção</TD>
+</TR>
+<TR>
+<TD ALIGN="center">a</TD>
+<TD>Entra no modo de Inserção, após o cursor</TD>
+</TR>
+<TR>
+<TD ALIGN="center">o</TD>
+<TD>Entra no modo de Inserção, em uma nova linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><I>&lt;ESC&gt;</I></TD>
+<TD>Sai do modo de Inserção</TD>
+</TR>
+<TR>
+<TH bgcolor="silver"></TH>
+<TH bgcolor="silver">Copiar, Cortar e Colar</TH>
+</TR>
+<TR>
+<TD ALIGN="center">yy</TD>
+<TD>Copia a linha inteira</TD>
+</TR>
+<TR>
+<TD ALIGN="center">5yy</TD>
+<TD>Copia as 5 próximas linhas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">dd</TD>
+<TD>Apaga a linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">5dd</TD>
+<TD>Apaga 5 linhas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">x</TD>
+<TD>Apaga uma letra</TD>
+</TR>
+<TR>
+<TD ALIGN="center">5x</TD>
+<TD>Apaga 5 letras</TD>
+</TR>
+<TR>
+<TD ALIGN="center">p</TD>
+<TD>Cola o trecho copiado ou apagado</TD>
+</TR>
+<TR>
+<TD ALIGN="center">V</TD>
+<TD>Seleção visual de linhas</TD>
+</TR>
+<TR>
+<TH bgcolor="silver"></TH>
+<TH bgcolor="silver">Pulos</TH>
+</TR>
+<TR>
+<TD ALIGN="center">gg</TD>
+<TD>Pula para a primeira linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">G</TD>
+<TD>Pula para a última linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">44G</TD>
+<TD>Pula para a linha número 44</TD>
+</TR>
+<TR>
+<TD ALIGN="center">w</TD>
+<TD>Pula para a próxima palavra</TD>
+</TR>
+<TR>
+<TD ALIGN="center">b</TD>
+<TD>Pula para a palavra anterior</TD>
+</TR>
+<TR>
+<TD ALIGN="center">{</TD>
+<TD>Pula para o parágrafo anterior</TD>
+</TR>
+<TR>
+<TD ALIGN="center">}</TD>
+<TD>Pula para o próximo parágrafo</TD>
+</TR>
+<TR>
+<TD ALIGN="center">(</TD>
+<TD>Pula para a frase anterior</TD>
+</TR>
+<TR>
+<TD ALIGN="center">)</TD>
+<TD>Pula para a próxima frase</TD>
+</TR>
+<TR>
+<TD ALIGN="center">f.</TD>
+<TD>Pula até o próximo ponto (.), na mesma linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">``</TD>
+<TD>Desfaz o pulo, volta</TD>
+</TR>
+<TR>
+<TH bgcolor="silver"></TH>
+<TH bgcolor="silver">Apagando com esperteza</TH>
+</TR>
+<TR>
+<TD ALIGN="center">dgg</TD>
+<TD>Apaga até o início do arquivo</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d0</TD>
+<TD>Apaga até o início da linha atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">dw</TD>
+<TD>Apaga a palavra</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d4b</TD>
+<TD>Apaga as quatro palavras anteriores</TD>
+</TR>
+<TR>
+<TD ALIGN="center">df.</TD>
+<TD>Apaga até o próximo ponto</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d)</TD>
+<TD>Apaga até o fim da frase</TD>
+</TR>
+<TR>
+<TH bgcolor="silver"></TH>
+<TH bgcolor="silver">Outros</TH>
+</TR>
+<TR>
+<TD ALIGN="center">J</TD>
+<TD>Junta a próxima linha com a atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">u</TD>
+<TD>Desfaz o último comando</TD>
+</TR>
+<TR>
+<TD ALIGN="center">Ctrl+R</TD>
+<TD>Refaz o último comando desfeito</TD>
+</TR>
+<TR>
+<TD ALIGN="center">.</TD>
+<TD>Repete o comando anterior</TD>
+</TR>
+<TR>
+<TD ALIGN="center">hjkl</TD>
+<TD>Movimenta o cursor</TD>
+</TR>
+<TR>
+<TD ALIGN="center">/</TD>
+<TD>Pesquisa um texto</TD>
+</TR>
+<TR>
+<TD ALIGN="center">n</TD>
+<TD>Vai para o próximo resultado da pesquisa</TD>
+</TR>
+<TR>
+<TD>:%s/a/b/g</TD>
+<TD>Troca 'a' por 'b' em todo o texto</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:!cmd</TD>
+<TD>Executa o comando externo 'cmd'</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:r!cmd</TD>
+<TD>Insere o resultado do comando externo 'cmd'</TD>
+</TR>
+</TABLE>
+
+<P></P>
+<P>
+</td></tr></table>
+</P>
+<TABLE ALIGN="center" >
+<TR>
+<TD>Mais informações em <a href="http://aurelio.net/vim/">http://aurelio.net/vim/</a></TD>
+</TR>
+</TABLE>
+
+
+<!-- html code generated by txt2tags 2.0-alpha5 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags apoio.t2t -->
+</BODY></HTML>
