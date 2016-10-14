@@ -69,8 +69,8 @@ tenham aprendido :)
 
 Moçada, VALEU a presença e até a próxima!
 
-|![](sucesu-seder-turma.jpg)|
-|Galera que agora sabe tudo de SED e ERs|
+![](sucesu-seder-turma.jpg)
+*Galera que agora sabe tudo de SED e ERs*
 
 ## 03.Mar.2004 ::: Como Ser um Desenvolvedor de Software Livre
 
@@ -92,7 +92,7 @@ Diferente da outra palestra, esta não foi na linha de comando, mas sim
 uma palestra normal, com uma apresentação de slides e um cara falando
 sem parar, que por coincidência, era eu :)
 
-|![](sucesu-desenvolvedor-aurelio.jpg)|
+![](sucesu-desenvolvedor-aurelio.jpg)
 
 Ahhhh, como é bom fazer essa palestra. Me dá muita satisfação falar
 sobre Software Livre e espalhar por aí quais foram todas as alegrias e
@@ -121,8 +121,8 @@ nos ouvintes a vontade de tentar. Instigar idéias, incentivar a
 começar. É só isso. O resto acontece naturalmente, vencida a grande
 barreira inicial da inércia.
 
-|![](sucesu-desenvolvedor-turma.jpg)|
-|Futuros desenvolvedores de Software Livre!|
+![](sucesu-desenvolvedor-turma.jpg)
+*Futuros desenvolvedores de Software Livre!*
 
 Quero ver daqui um tempo essa galerinha aí lançando seus próprios
 softwares e mostrando ao mundo a qualidade dos programadores de horas

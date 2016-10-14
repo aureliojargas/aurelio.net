@@ -38,16 +38,16 @@ minhas fitinhas k7 (CD no carro? Coisa de preibói ;).
 Em duas horas estava em Joinville, a cidade que só chove. Mas aquele
 dia estava sol forte, hooray!
 
-|![](img/joinville.jpg)|
-|Portal de entrada de Joinville|
+![](img/joinville.jpg)
+*Portal de entrada de Joinville*
 
 O evento foi num local chamado Centreventos. O amigo toti me garantiu:
 "Pode vir tranqüilo que você acha". E foi mesmo. Parabéns à Prefeitura
 de Joinville, tinha placas indicando onde era o tal Centreventos desde
 a entrada de cidade, não tive como errar.
 
-|![](img/centreventos.jpg)|
-|Centreventos: bonito e grande, tudo novo e bem cuidado, legal|
+![](img/centreventos.jpg)
+*Centreventos: bonito e grande, tudo novo e bem cuidado, legal*
 
 ## Expressões Regulares
 
@@ -67,8 +67,9 @@ final o clássico exemplo de trocar datas no formato americano
 Todo o [histórico da linha de comando](ccsl2-er-prompt.html) está disponível,
 confira!
 
-|![](img/er-1.jpg)|
-|![](img/er-2.jpg)|
+![](img/er-1.jpg)
+
+![](img/er-2.jpg)
 
 Lembro de ter visto alguns amigos na platéia: Helio (KDE), Bruder
 (Haxent), André Ruiz (token), Boto (Conectiva), Binhara (Sucesu) e
@@ -86,8 +87,8 @@ estar rodeado de mentes poderosas e poder papear e aprender com eles.
 
 Parte do pessoal, reunido na sala dos palestrantes:
 
-|![](img/palestrantes.jpg)|
-|Não sei, Sulamita, Cláudio, Helio, Roxo, Eu, Bolaños, Bruder, Fabianne, Marcelo, Julio, Paulino, Maddog|
+![](img/palestrantes.jpg)
+*Não sei, Sulamita, Cláudio, Helio, Roxo, Eu, Bolaños, Bruder, Fabianne, Marcelo, Julio, Paulino, Maddog*
 
 Ah, essa sala dos palestrantes era massa! Tinha cadeiras, link com
 Internet, água, refri, bolachas e frutas. Mordomia né?
@@ -115,8 +116,11 @@ cabeças em média.
 Nota mental 2: Fazer uma versão "light" da palestra, com poucos slides
 e para caber em uma hora.
 
-|![](img/desenv-1.jpg)![](img/desenv-2.jpg)|
-|![](img/desenv-3.jpg)|
+![](img/desenv-1.jpg)
+
+![](img/desenv-2.jpg)
+
+![](img/desenv-3.jpg)
 
 Opa, mais alguns amigos nessa palestra: Bruder (Haxent), MrPrompt
 (Floripa), André Ruiz (token), Adilson Oliveira e Fabianne (Blender).
@@ -144,5 +148,5 @@ solzão e fez um dia animal, embora sem ondas também. O jeito foi subir
 o morro e tirar fotos. Foi triste deixar a praia e voltar para
 Curitiba sem ter entrado na água, mas enfim...
 
-|![](img/saochico.jpg)|
-|Curitiba é pra lá, lá loooonge...|
+![](img/saochico.jpg)
+*Curitiba é pra lá, lá loooonge...*

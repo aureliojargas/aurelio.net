@@ -4,6 +4,8 @@ subtitle: 2 a 5 de junho de 2004, Porto Alegre - RS
 date: 2004-06-02
 ---
 
+![](logo.gif)
+
 O fórum de Porto Alegre é sem dúvida o maior evento nacional
 de Software Livre, e este ano tive a honra de participar como
 palestrante.
@@ -17,7 +19,7 @@ todos os estados do país, e ainda gringos que vieram de 35
 países! Um mega evento.
 
 Ministrei uma palestra de 1 hora sobre Expressões Regulares no
-sábado dia 5, e esta página conta as histórias dessa viagem. ![](logo.gif)
+sábado dia 5, e esta página conta as histórias dessa viagem.
 
 Meus agradecimentos à equipe do fórum pela oportunidade e
 recursos, ao Deivi Kuhn pelo apoio, à Conectiva pela liberação
@@ -86,8 +88,8 @@ que sempre me apoiaram, e que se não fosse o seu incentivo e força,
 nada disso estaria acontecendo agora. Julio, Rubens, vocês são os
 caras. **VALEU MESMO**.
 
-|![](juliorubens.jpg)|
-|Meus padrinhos Julio Neves e Rubens Queiroz, no FISL de 2003|
+![](juliorubens.jpg)
+*Meus padrinhos Julio Neves e Rubens Queiroz, no FISL de 2003*
 
 ## A Ida
 
@@ -227,8 +229,8 @@ Leonardo Vaz. Era uma festinha íntima, para umas 20 pessoas, e se
 tornou um evento com quase 100 cabeças. Foi um legítimo churrasco
 gaúcho feito por gaúchos tchê!
 
-|![](churrasqueiro.jpg)|
-|Bohne - O Churrasqueiro ::: Piter - O Controle de Qualidade|
+![](churrasqueiro.jpg)
+*Bohne - O Churrasqueiro ::: Piter - O Controle de Qualidade*
 
 A comilança aconteceu na sede do Serpro, mas como eu estava com pouca
 blusa e o frio naquela noite resolveu dar as caras, **fui embora cedo**
@@ -296,10 +298,11 @@ Na correria, esqueci totalmente de tirar a já tradicional
 encarecidamente para quem tirou alguma foto da palestra que me envie.
 **ATUALIZAÇÃO:** recebi algumas fotos da palestra, valeu amiguinhos!
 
-|![](palestra1.jpg)|
-|Hora da propaganda: Expressões Regulares e Python ;)|
-|![](palestra2.jpg)|
-|No final sessão de perguntas, com o Deivi coordenando|
+![](palestra1.jpg)
+*Hora da propaganda: Expressões Regulares e Python ;)*
+
+![](palestra2.jpg)
+*No final sessão de perguntas, com o Deivi coordenando*
 
 A palestra em si durou 45 minutos e depois foram mais 10 para
 as perguntas do pessoal. Foi a primeira vez que "tentei" falar menos
@@ -340,15 +343,15 @@ lembro quem que estava oferecendo. Muitos gringos por lá, que não se
 cansavam de tirar fotos dos espetos, das carnes, como quem não estava
 acreditando em toda aquela fartura de comida.
 
-|![](churrasco2.jpg)|
-|Eu, Paulino e Anahuac|
+![](churrasco2.jpg)
+*Eu, Paulino e Anahuac*
 
 Depois **aeroporto e avião**. Viemos eu, o Diego e o Rubens Queiroz
 papeando até Curitiba. Ah, o Rubens estava de aniversário! Pouso às
 15:50.
 
-|![](aeroporto.jpg)|
-|No aeroporto de POA: Eu, Marcus Maciel (UnderLinux.com.br), Rubens Queiroz (Dicas-L), Diego Linke (FreeBSD)|
+![](aeroporto.jpg)
+*No aeroporto de POA: Eu, Marcus Maciel (UnderLinux.com.br), Rubens Queiroz (Dicas-L), Diego Linke (FreeBSD)*
 
 Para minha surpresa, o Diego, meu companheiro de quarto que eu nunca
 tinha visto antes, é **meu vizinho**, de poucas quadras, então ainda
@@ -374,8 +377,8 @@ o Fernando Aires, quando vi meu cabeção no telão do estande do ITI
 (Governo Federal), que estava passando um vídeo. Saí na foto com cara
 de bobo e apontando para frente.
 
-|![](olha_eu.jpg)|
-|Olha eu lá! Olha eu lá!|
+![](olha_eu.jpg)
+*Olha eu lá! Olha eu lá!*
 
 Depois que fui ver que foi de uma entrevista que dei lá em Brasília,
 no evento de capacitação. Falei uns 30 minutos e no vídeo apareceram
@@ -383,30 +386,68 @@ somente duas frases sem graça e sem sal. Fazer o quê...
 
 ## A Galera
 
-|![](thobias.jpg) |![](morimoto.jpg)|
-|Thobias Salazar Trevisan (ZZ, RAC) |Carlos Morimoto (Kurumin)|
-|![](brain.jpg) |![](guaracy.jpg)|
-|Augusto Campos (br-linux.org) |Guaracy Monteiro (Ruby-Man)|
-|![](bohne.jpg) |![](sobral_kojima.jpg)|
-|Frederico Bohne |Tiago Sobral, Alfredo Kojima (Window Maker)|
-|![](fabs.jpg) |![](paloma.jpg)|
-|Fabianne Balvedi (Blender) |Paloma Costa (Java-Woman)|
-|![](pablo.jpg) |![](priscilla.jpg)|
-|Pablo Dall'Oglio (PHP-Gtk) |Priscilla Pimenta|
-|![](brito.jpg) |![](tania.jpg)|
-|Fabio Brito |Tania Moreira|
-|![](jose.jpg) |![](kimie.jpg)|
-|José (CCL-BR) |Kimie|
-|![](toledo.jpg) |![](glauber.jpg)|
-|Leandro Toledo |Glauber Costa|
-|![](fabioh.jpg) |![](pauloh.jpg)|
-|Fabio Henrique (Honeypot-BR) |Paulo Henrique (PH)|
+![](thobias.jpg)
+*Thobias Salazar Trevisan (ZZ, RAC)*
 
-|![](galera_churrasco2.jpg)|
-|Diego Linke, Till Kamppeter, Oscar Santos|
-|![](galera.jpg)|
-|Marcelo Gondim, Rudá Moura, Augusto Campos, eu, Thobias Trevisan, Lucas Santos|
-|![](galera2.jpg)|
-|Lucas, Gondim, Simpson, Sulamita, eu, Wilson, Ramoni, Piter Punk|
-|![](openoffice.jpg)|
-|Cláudio Ferreira (à esquerda) e time do projeto OpenOffice Brasil|
+![](morimoto.jpg)
+*Carlos Morimoto (Kurumin)*
+
+![](brain.jpg)
+*Augusto Campos (br-linux.org)*
+
+![](guaracy.jpg)
+*Guaracy Monteiro (Ruby-Man)*
+
+![](bohne.jpg)
+*Frederico Bohne*
+
+![](sobral_kojima.jpg)
+*Tiago Sobral, Alfredo Kojima (Window Maker)*
+
+![](fabs.jpg)
+*Fabianne Balvedi (Blender)*
+
+![](paloma.jpg)
+*Paloma Costa (Java-Woman)*
+
+![](pablo.jpg)
+*Pablo Dall'Oglio (PHP-Gtk)*
+
+![](priscilla.jpg)
+*Priscilla Pimenta*
+
+![](brito.jpg)
+*Fabio Brito*
+
+![](tania.jpg)
+*Tania Moreira*
+
+![](jose.jpg)
+*José (CCL-BR)*
+
+![](kimie.jpg)
+*Kimie*
+
+![](toledo.jpg)
+*Leandro Toledo*
+
+![](glauber.jpg)
+*Glauber Costa*
+
+![](fabioh.jpg)
+*Fabio Henrique (Honeypot-BR)*
+
+![](pauloh.jpg)
+*Paulo Henrique (PH)*
+
+![](galera_churrasco2.jpg)
+*Diego Linke, Till Kamppeter, Oscar Santos*
+
+![](galera.jpg)
+*Marcelo Gondim, Rudá Moura, Augusto Campos, eu, Thobias Trevisan, Lucas Santos*
+
+![](galera2.jpg)
+*Lucas, Gondim, Simpson, Sulamita, eu, Wilson, Ramoni, Piter Punk*
+
+![](openoffice.jpg)
+*Cláudio Ferreira (à esquerda) e time do projeto OpenOffice Brasil*

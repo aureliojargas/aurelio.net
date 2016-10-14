@@ -43,15 +43,15 @@ RootSh na estação Paraíso e ele nos levou até o **Hotel** Real
 Paulista. Deu tempo de tomarmos o café da manhã com tranquilidade, e
 depois ir para o evento.
 
-|![](banheiro.jpg)|
-|Peculiaridade: pia, espelho e tomada dentro do box do chuveiro!|
+![](banheiro.jpg)
+*Peculiaridade: pia, espelho e tomada dentro do box do chuveiro!*
 
 O dia foi bem **descontraído**, (re)encontrando vários amigos, batendo
 papo, assistindo às palestras, aquele social massa.
 
 ## 01.Mai.2004 ::: Experiências de um Desenvolvedor de Software Livre
 
-|![](palestrante.jpg)|
+![](palestrante.jpg)
 
 Às 16:00 a minha palestra começou. O auditório estava cheio, e assim
 como na última palestra da UFPR que tinha bastante gente, deu um
@@ -63,7 +63,7 @@ estimamos que devia ter um **total de 200 pessoas** no momento de
 lotação máxima do auditório, show de bola! Então bati o recorde antigo
 de 150.
 
-|![](plateia1.jpg)|
+![](plateia1.jpg)
 
 O previsto eram duas horas de falatório, mas como era a última
 palestra do dia e não tinha hora certa para fechar o auditório, avisei
@@ -76,7 +76,7 @@ histórias. Também foi diferente pois na platéia a maioria eram nerds
 já familiarizados com o Linux e Software Livre, então o nível foi
 alto.
 
-|![](plateia2.jpg)|
+![](plateia2.jpg)
 
 Um detalhe muito interessante foi que **toda a palestra foi filmada**!
 Estou desde já salivando e esfregando as mãos, doido para ver minha
@@ -92,7 +92,7 @@ do pagamento do almoço com o Visa Electron. Foi engraçado ver todos
 esvaziarem as carteiras, deixando vários papeizinhos abertos nas coxas
 :)
 
-|![](papeis.jpg)|
+![](papeis.jpg)
 
 Fiquei **bastante emocionado** com os aplausos no final, que se
 estenderam por vários segundos, com pessoas em pé, outras assobiando,
@@ -128,17 +128,23 @@ Covolo, Indiox, Rafael.
 
 A comunidade do Software Livre é mesmo muito bacana. Longa vida a ela!
 
-|![](galera1.jpg)|
-|Sobral, eu, Sula, Julio, Léo|
-|![](galera2.jpg)|
-|Piter Punk, eu, Santos|
-|![](galera3.jpg)|
-|Márcio, Ralf, Lucas, eu, Toledo|
-|![](galera4.jpg)|
-|Gondim, Ramoni, Indiox, Santos, eu|
-|![](alunos-centro.jpg)|
-|Alunos do Centro Público de Formação Profissional em Tecnologia da Informação em Software Livre de Santo Andre - SP (ufa!)|
-|![](nerds.jpg)|
-|Nerds e seus computadores|
-|![](boteco.jpg)|
-|Galera no boteco comendo uma pizza|
+![](galera1.jpg)
+*Sobral, eu, Sula, Julio, Léo*
+
+![](galera2.jpg)
+*Piter Punk, eu, Santos*
+
+![](galera3.jpg)
+*Márcio, Ralf, Lucas, eu, Toledo*
+
+![](galera4.jpg)
+*Gondim, Ramoni, Indiox, Santos, eu*
+
+![](alunos-centro.jpg)
+*Alunos do Centro Público de Formação Profissional em Tecnologia da Informação em Software Livre de Santo Andre - SP (ufa!)*
+
+![](nerds.jpg)
+*Nerds e seus computadores*
+
+![](boteco.jpg)
+*Galera no boteco comendo uma pizza*

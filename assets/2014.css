@@ -150,6 +150,7 @@ table.grid tr:hover td {
 	display: block;
 	margin: 0 auto;
 }
+#article-body > p > img + em, /* Markdown image\n*caption* */
 .figure span {
 	font-family: Arial, sans-serif;
 	font-size: 75%;

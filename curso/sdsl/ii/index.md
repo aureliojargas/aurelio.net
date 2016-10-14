@@ -4,6 +4,8 @@ subtitle: 9 a 12 de dezembro de 2003, Campinas - SP
 date: 2003-12-09
 ---
 
+![](img/credencial.png)
+
 Durante os dias 9, 10, 11 e 12 de Dezembro de 2003 aconteceu em
 Campinas, na Unicamp, o
 [II SDSL](http://rau-tu.ccuec.unicamp.br/sdsl/index.php).
@@ -26,10 +28,6 @@ Links para os materiais:
 * [Avaliação dos Alunos para o Curso de Expressões Regulares](avaliacao-expressoes.html)
 
 * [Slides da Palestra Desenvolvedor de Software Livre](desenvolvedor/)
-
-          ![](img/credencial.png)
-
-Tópicos deste relato:
 
 ## A Ida
 
@@ -142,8 +140,8 @@ restaurante do hotel, com tudo pago pela organização do evento. Depois
 do almoço, uma reunião do pessoal na recepção do hotel para tirar
 fotos:
 
-|![](img/galera.jpg)|
-|Não sei, Julio Neves, Rubens Queiroz, Maurício de Castro, Leonardo Lemes ::: Ribamar Santarosa, Daniel Ferreira, Pablo Dall'Oglio, Marcelo Malheiros, Nasair Júnior Silva ::: César Brod, eu|
+![](img/galera.jpg)
+*Em pé: Não sei, Julio Neves, Rubens Queiroz, Maurício de Castro, Leonardo Lemes ::: Fileira do meio: Ribamar Santarosa, Daniel Ferreira, Pablo Dall'Oglio, Marcelo Malheiros, Nasair Júnior Silva ::: Na frente: César Brod, eu*
 
 > Nota 1: Me desculpe pelo "Não sei", mas eu realmente não sei
 > seu nome. Me mande e-mail avisando!
@@ -188,8 +186,8 @@ pequeno deslize, o resto do dia foi tranquilo e gratificante.
 
 ## Curso de Expressões Regulares
 
-|![](img/turma-er.jpg)|
-|Turma do curso, foto tirada ao meio-dia|
+![](img/turma-er.jpg)
+*Turma do curso, foto tirada ao meio-dia*
 
 O curso foi muito bacana. Ele foi andando num ritmo tranquilo, e no
 fim do dia todos os metacaracteres básicos tinham sido vistos em

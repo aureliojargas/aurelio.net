@@ -4,7 +4,8 @@ subtitle: 19 a 23 de julho de 2004, Lajeado - RS
 date: 2004-07-19
 ---
 
-  ![](cracha.jpg)
+![](cracha.jpg)
+
 Durante a semana do dia 19 de Julho de 2004, aconteceu em Lajeado - RS
 o [III SDSL](http://www.sdsl.org.br), nas salas do Centro Universitário Univates. Eu
 fui convidado pelo amigo César Brod a participar para ministrar o
@@ -99,10 +100,11 @@ problema e fazer a expressão, apareceram duas respostas diferentes e
 fechamos o curso fazendo uma análise detalhada para decidir qual era a
 melhor solução. **MEGA NERD**.
 
-|![](turma-quadro.jpg)|
-|A turma de feras em Expressões Regulares, com suas crias no quadro|
-|![](quadro.jpg)|
-|As duas expressões de data que exercitaram os neurônios do pessoal|
+![](turma-quadro.jpg)
+*A turma de feras em Expressões Regulares, com suas crias no quadro*
+
+![](quadro.jpg)
+*As duas expressões de data que exercitaram os neurônios do pessoal*
 
 Para facilitar a leitura, as expressões espaçadas:
 
@@ -150,5 +152,5 @@ está de parabéns e a organização do evento também. Também consegui
 terminar de ler o livro do Kelly Slater, o hexa campeão mundial de
 surfe que lançou sua biografia, show de bola.
 
-|![](amigos.jpg)|
-|Luciano Ramalho, César Brod, Julio Neves e eu|
+![](amigos.jpg)
+*Luciano Ramalho, César Brod, Julio Neves e eu*
