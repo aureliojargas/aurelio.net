@@ -4,6 +4,7 @@ title: Cursos e palestras de Aurelio Jargas
 title_prefix: ""
 hide_byline: true
 hide_read_more: true
+hide_comments: true
 ---
 
 <style>
