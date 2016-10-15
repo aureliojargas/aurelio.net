@@ -2,7 +2,6 @@
 permalink: curso/
 title: Cursos e palestras de Aurelio Jargas
 title_prefix: ""
-tags: [evento, programador, regex, shell]
 hide_byline: true
 hide_read_more: true
 ---

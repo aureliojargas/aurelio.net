@@ -1,9 +1,7 @@
 ---
-date: 2016-05-21
 title: Palestra “O poder da linha de comando” no SC Dev Summit 2016
 subtitle: 21 de maio de 2016, Joinville - SC
-tags: [evento, programador, regex, shell]
-hide_comments: false
+date: 2016-05-21
 worked: 3:30
 ---
 

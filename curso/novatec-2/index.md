@@ -1,9 +1,7 @@
 ---
-permalink: curso/novatec-2/
-#title: "Curso Expressões Regulares: Imersão no CT da Novatec"
 title: "Curso de Imersão em Expressões Regulares no CT da Novatec"
 subtitle: 20 de fevereiro de 2016, São Paulo - SP
-tags: [evento, programador, regex, shell]
+date: 2016-02-20
 ---
 
 Fui à São Paulo dar um curso de 8 horas de [Expressões Regulares](http://aurelio.net/regex/) no dia 20/02/2016, no [Centro de Treinamento da Novatec Editora](http://ctnovatec.com.br).

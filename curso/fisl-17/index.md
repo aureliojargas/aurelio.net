@@ -1,9 +1,7 @@
 ---
-date: 2016-07-15
 title: Palestra “Shell Script Moderno” no FISL17
 subtitle: 15 de julho de 2016, Porto Alegre - RS
-tags: [evento, programador, shell]
-hide_comments: false
+date: 2016-07-15
 worked: 6:00
 ---
 

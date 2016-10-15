@@ -1,9 +1,7 @@
 ---
-date: 2016-09-22
 title: Palestra “Expressões Regulares” na XVIII Semana da Computação UDESC
 subtitle: 22 de setembro de 2016, Joinville - SC
-tags: [evento, programador, regex]
-hide_comments: false
+date: 2016-09-22
 worked: 2:30
 ---
 
