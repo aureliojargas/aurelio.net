@@ -1,56 +1,56 @@
 /* ------------------------------------  reset */
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-	line-height: 1.5em;
+  line-height: 1.5em;
     background-color: #fff;
-	color: black;
+  color: black;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 td {
-	vertical-align: top;
+  vertical-align: top;
 }
 
 /* ------------------------------------  basic */
 
 b, strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 i, em {
-	font-style: italic;
+  font-style: italic;
 }
 ul {
-	list-style-type: square;
+  list-style-type: square;
 }
 hr {
-	border-style: solid;
-	border-width: 1px 0 0 0;
+  border-style: solid;
+  border-width: 1px 0 0 0;
 }
 
 /* ------------------------------------  fonts */
 
 body {
-	line-height: 1.5em;
+  line-height: 1.5em;
 }
 pre, code {
-	font-family: "Courier New", monospace;
+  font-family: "Courier New", monospace;
 }
 blockquote {
-	font-style: italic;
+  font-style: italic;
 }
 
 /* ------------------------------------  links */
@@ -62,107 +62,107 @@ a:hover, a:visited:hover { color: red; }
 /* ------------------------------------  spacing */
 
 h1, h2, h3, h4, p, blockquote, ul, ol, dt, dd, pre, table, hr {
-	margin: 1em 0;
+  margin: 1em 0;
 }
 :first-child {
-	margin-top: 0;
+  margin-top: 0;
 }
 :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 ol, ul, dd {  /* lists */
-	margin-left: 2em;
+  margin-left: 2em;
 }
 blockquote {
-	margin-left: 3em;
-	margin-right: 3em;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 table {
-	margin: 1.5em auto;  /* 1em is not enough */
+  margin: 1.5em auto;  /* 1em is not enough */
 }
 pre {
-	margin: 1.5em 0;
+  margin: 1.5em 0;
 }
 hr {
-	margin: 2em 0;
+  margin: 2em 0;
 }
 
 /* ------------------------------------  headers */
 
 h1, h2, h3 {
-	line-height: 1.2em;
+  line-height: 1.2em;
 }
 h1, h2 {
-	color: #333;  /* darker */
+  color: #333;  /* darker */
 }
 h2, h3 {
-	margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 h1 a {
-	text-decoration: none;
-	color: inherit !important;
+  text-decoration: none;
+  color: inherit !important;
 }
 h1 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* ------------------------------------  code */
 
 code {
-	color: orange;  /* old: #a0f */
+  color: orange;  /* old: #a0f */
 }
 pre, pre code {
-	color: #fff;
+  color: #fff;
 }
 pre {
-	font-size: 85%;
-	line-height: 1.5em;
-	padding: 0.5em 1em;
-	background-color: #222;
-	color: white;
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 0.5em 1em;
+  background-color: #222;
+  color: white;
 }
 
 /* ------------------------------------  nav */
 
 #nav ul {
-	list-style-type: none;
-	margin-left: 0;
+  list-style-type: none;
+  margin-left: 0;
 }
 #nav a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /* ------------------------------------  special */
 
 pre {
-	overflow: auto;
+  overflow: auto;
 }
 tr:hover td {
-	background: #eee;
+  background: #eee;
 }
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* ------------------------------------  iPhone = 320x480 */
 
 @media screen and (max-width: 480px) {
-	body {
-		padding: 10px;
-		font-size: 100%;
-	}
-	blockquote {
-		margin-left: 1em;
-		margin-right: 1em;
-	}
-	ol, ul, dd {  /* lists */
-		margin-left: 1em;
-	}
-	.figure img,
-	.image img,
-	p img {
-		max-width: 100%;
-		padding: 0;
-		border-width: 0;
-	}
+  body {
+    padding: 10px;
+    font-size: 100%;
+  }
+  blockquote {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  ol, ul, dd {  /* lists */
+    margin-left: 1em;
+  }
+  .figure img,
+  .image img,
+  p img {
+    max-width: 100%;
+    padding: 0;
+    border-width: 0;
+  }
 }

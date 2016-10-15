@@ -4,13 +4,13 @@
 
 /* ------------------------------------  From common.css */
 pre {
-	overflow: auto;
+  overflow: auto;
 }
 .byline {
-	margin: 0;
+  margin: 0;
 }
 .byline a {
-	color: blue;
+  color: blue;
 }
 .note            { padding:6px 9px; background:#EEEEEE; border:1px solid #CCC; }    /* silver */
 .download        { padding:6px 9px; background:#E7F7D3; border:1px solid #6C3; }    /* green  */
@@ -20,75 +20,75 @@ pre {
 /* ------------------------------------ */
 
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #444;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #444;
 }
 h1 a {
-	color: #050 !important;
+  color: #050 !important;
 }
 blockquote {
-	color: gray;
-	font-size: 90%;
+  color: gray;
+  font-size: 90%;
 }
 li {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 table, tr, td, th {
-	border: 0 solid #ccc;
+  border: 0 solid #ccc;
 }
 table {
-	border-collapse: collapse;
-	margin: 2em auto;
+  border-collapse: collapse;
+  margin: 2em auto;
 }
 td, th {
-	line-height: 1.2em;
-	font-size: 80%;
+  line-height: 1.2em;
+  font-size: 80%;
 }
 th {
-	padding: 0.7em 5px;
-	background-color: #eee;
-	font-weight: bold;
+  padding: 0.7em 5px;
+  background-color: #eee;
+  font-weight: bold;
 }
 td {
-	padding: 4px 5px;
+  padding: 4px 5px;
 }
 td.center { text-align: center; }
 td.right  { text-align: right; }
 
 table.tableborder td,
 table.tableborder th {
-	border-width: 1px;
+  border-width: 1px;
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 img.center {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+  clear: both;
+  display: block;
+  margin: 0 auto;
 }
 img.right {
-	float: right;
-	margin-left: 1em;
+  float: right;
+  margin-left: 1em;
 }
 code {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 #eof {
-	text-align: center;
-	color: #ddd;
-	margin-top: 2em;
+  text-align: center;
+  color: #ddd;
+  margin-top: 2em;
 }
 
 /* ------------------------------------  nav */
 
 #nav ul ul {
-	padding-left: 1.5em;
+  padding-left: 1.5em;
 }
 #nav li {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* ------------------------------------  custom */
@@ -107,27 +107,27 @@ code {
 /* ------------------------------------  iPad = 1024x768 */
 
 @media screen and (max-width: 767px) {
-	.github-fork-ribbon-wrapper {
-		display: none;
-	}
+  .github-fork-ribbon-wrapper {
+    display: none;
+  }
 }
 
 /* ------------------------------------  iPhone = 320x480 */
 
 @media screen and (max-width: 480px) {
-	#article-header h1 {
-		font-size: 1.5em;
-	}
-	#article-body {
-		overflow: auto;  /* Wide tables */
-	}
-	td, th {
-		font-size: 70%;
-	}
-	#nav ul ul {
-		padding-left: 0;
-	}
-	.aureliohead {
-		display: none;
-	}
+  #article-header h1 {
+    font-size: 1.5em;
+  }
+  #article-body {
+    overflow: auto;  /* Wide tables */
+  }
+  td, th {
+    font-size: 70%;
+  }
+  #nav ul ul {
+    padding-left: 0;
+  }
+  .aureliohead {
+    display: none;
+  }
 }

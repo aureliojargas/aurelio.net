@@ -4,49 +4,49 @@
 /* ------------------------------------  Elements */
 
 pre {
-	overflow: auto;
+  overflow: auto;
 }
 
 
 /* ------------------------------------  Page structure */
 
 .byline {
-	margin: 0;
+  margin: 0;
 }
 .byline a {
-	color: blue;
+  color: blue;
 }
 .read-more {
-	margin-top: 2em;
+  margin-top: 2em;
 }
 .read-more,
 .share {
-	text-align: center;
+  text-align: center;
 }
 #footer {
-	clear: both;
-	margin: 4em 0 4em 0;
-	border-top: 1px solid silver;
-	padding-top: 1.5em;
-	font-family: Arial, sans-serif;
-	font-size: 85%;
-	line-height: 150%;
-	text-align: center;
+  clear: both;
+  margin: 4em 0 4em 0;
+  border-top: 1px solid silver;
+  padding-top: 1.5em;
+  font-family: Arial, sans-serif;
+  font-size: 85%;
+  line-height: 150%;
+  text-align: center;
 }
 #footer,
 #footer a,
 #footer a:link,
 #footer a:visited {
-	color: gray;
+  color: gray;
 }
 #footer:hover a {
-	color: blue;
+  color: blue;
 }
 #footer:hover a:visited {
-	color: purple;
+  color: purple;
 }
 #footer:hover a:hover {
-	color: red;
+  color: red;
 }
 
 
@@ -61,16 +61,16 @@ pre {
 /* ------------------------------------  Special */
 
 .mog {
-	color: #800000;
-	background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
-	padding: 0 58px 0 0;
-	min-height: 48px;
+  color: #800000;
+  background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
+  padding: 0 58px 0 0;
+  min-height: 48px;
 }
 .unicode-char {
-	font-family: "Helvetica Neue", sans-serif;
-	/* Helvetica Neue is Mac-only */
+  font-family: "Helvetica Neue", sans-serif;
+  /* Helvetica Neue is Mac-only */
 }
 .read-more .heart,
 #footer:hover .heart {
-	color: #C00;
+  color: #C00;
 }
