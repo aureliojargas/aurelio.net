@@ -1,0 +1,257 @@
+# Stop hack attempts early on
+Redirect permanent /wp-login.php http://5fa8fd8b170efb73d331d89c549f80dd.com/
+
+# Do not execute aurelio.net/bin/python scripts
+RemoveHandler cgi-script .py
+
+# For text/plain and text/html files
+AddDefaultCharset UTF-8
+
+# 2015-01-23 Page Speed: Enable Compression
+# http://wiki.dreamhost.com/DEFLATE
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript text/css application/javascript
+
+### Hold your horses, the redirect nightmare will begin
+
+# Blog feeds
+Redirect permanent /blog.html      /blog-arquivo.html
+Redirect permanent /blog.rss       /feed/
+Redirect permanent /aurelio.rss    /feed/
+Redirect permanent /blog/feed/     /feed/
+# /comments/feed/ points to FeedBurner, who read http://aurelionet.disqus.com/latest.rss
+Redirect permanent /comments/feed/ http://feeds.feedburner.com/AurelioJargasComentarios
+# /feed points to FeedBurner, who reads http://aurelio.net/feed.xml
+Redirect permanent /feed/          http://feeds.feedburner.com/AurelioJargas
+
+# Page -> Post
+Redirect permanent /wordpress/css-sprites/ /blog/2011/12/05/css-sprites-na-pratica/
+
+### Incorrect links in another sites
+# http://www.dicas-l.com.br/arquivo/semana_do_aurelio_vi.php
+Redirect permanent /coluna/coluna09.vim  /doc/coluna/coluna-09.vim
+Redirect permanent /coluna/coluna11.txt  /doc/coluna/coluna-11.html
+# http://br.dir.groups.yahoo.com/group/cygwin-br/message/268
+Redirect permanent /coluna/coluna11.html /doc/coluna/coluna-11.html
+# http://br.dir.groups.yahoo.com/group/shell-script/message/4886
+Redirect permanent /coluna/coluna07.html /doc/coluna/coluna-07.html
+# http://www.dicas-l.com.br/artigos/linux-modotexto/coluna08.html
+Redirect permanent /doc/doc/dotfiles/screenrc.txt /doc/dotfiles/screenrc.txt
+# http://dicas-l.com.br/artigos/linux-modotexto/
+Redirect permanent /doc/doc/vim/txt.vim /vim/txt.vim
+# various
+Redirect permanent /doc/dialog /shell/dialog
+
+# icon128/ -> icon/128/ (padfiles and other sites use the old URL)
+RedirectMatch ^/img/icon(\d+)(.*)  /img/icon/$1$2
+
+### Shortcuts
+Redirect temp /atacama     /viagem/atacama
+Redirect temp /dialog      /shell/dialog
+Redirect temp /shell/livro http://www.shellscript.com.br
+Redirect temp /codare      http://codare.net
+# other
+Redirect temp /coluna      /doc/coluna
+Redirect temp /cv          /doc/cv-aurelio.html
+Redirect temp /dort        /doc/dort.html
+Redirect temp /faq         /doc/faq.html
+Redirect temp /pyobjc      /mac/dev/tutorial-pyobjc
+# app
+Redirect temp /adiumbook   /soft/adiumbook
+Redirect temp /sokoban     /soft/sedsokoban
+Redirect temp /txt2tags    http://txt2tags.org/pt
+Redirect temp /zz          http://funcoeszz.net
+Redirect temp /soft/moneylog/moneylog.html /soft/moneylog/moneylog4.html
+
+# Coisinha
+Redirect permanent /engripeitor   http://aurelio.net/coisinha/engripeitor/
+Redirect permanent /miguxeitor    http://aurelio.net/coisinha/miguxeitor/
+Redirect permanent /embriagueitor http://aurelio.net/coisinha/embriagueitor/
+
+### BIG ENGLISH MOVE
+#
+# moved to /doc/en (2012-12)
+Redirect gone      /doc/as4pp-pdf.html
+Redirect gone      /shell/canivete/en/canivete-en.t2t
+Redirect gone      /doc/cv-aurelio-en.html
+Redirect gone      /doc/curriculum-mini.txt
+Redirect permanent /doc/as4pp.html                      /articles/applescript-vs-python.html
+Redirect permanent /img/wp/hungry-sumo-ranking.jpg      /articles/img/hungry-sumo-ranking.jpg
+Redirect permanent /articles/hungry-sumo-high-scores/   /articles/hungry-sumo-high-scores.html
+Redirect permanent /shell/canivete/en/canivete-en.html  /articles/shell-reference.html
+Redirect permanent /shell/canivete/en/index.html        /articles/shell-reference.html
+Redirect permanent /shell/canivete/en/                  /articles/shell-reference.html
+Redirect permanent /shell/canivete/en                   /articles/shell-reference.html
+Redirect permanent /soft/applescript-install.html       /articles/applescript-install.html
+# moved /doc/en -> /articles (2012-12-20)
+Redirect permanent /en/doc /articles
+# Obsoleted /en (2012-12-20)
+Redirect permanent /en/article.css /include/2013/article.css
+Redirect permanent /en/donate.html /projects/donate.html
+Redirect permanent /en/img         /img/en
+Redirect permanent /en/index.html  /about.html
+Redirect permanent /en/            /about.html
+Redirect permanent /en             /about.html
+#### /soft -> /projects (2012-12-20)
+# scripts moved to Google Code (links em PAD files) [moved from /soft/.htaccess]
+Redirect permanent /soft/adiumbook/AdiumBook-sources.zip http://code.google.com/p/adiumbook/source/checkout
+Redirect permanent /soft/adiumbook/AdiumBook-1.3.dmg http://adiumbook.googlecode.com/files/AdiumBook-1.3.dmg
+Redirect permanent /soft/export-contacts-to-mp3-player/Export_Contacts_To_MP3_Player.zip http://aurelio.googlecode.com/files/Export_Contacts_To_MP3_Player-1.1.zip
+Redirect permanent /soft/export-contacts-to-yahoo-csv/Export_Contacts_To_Yahoo_CSV.zip http://aurelio.googlecode.com/files/Export_Contacts_To_Yahoo_CSV-1.2.zip
+Redirect permanent /soft/gmail-to-jabber/Gmail_to_Jabber.zip http://aurelio.googlecode.com/files/Gmail_to_Jabber-2.zip
+Redirect permanent /soft/iphoto-sed/iPhoto_SED.zip http://aurelio.googlecode.com/files/iPhoto_SED-1.zip
+Redirect permanent /soft/iphoto-set-sequential-title/iPhoto_Set_Sequential_Title.zip http://aurelio.googlecode.com/files/iPhoto_Set_Sequential_Title-1.0.zip
+Redirect permanent /soft/itunes-find-artwork-less/iTunes_Find_Artwork-less.zip http://aurelio.googlecode.com/files/iTunes_Find_Artwork-less-1.0.zip
+Redirect permanent /soft/itunes-rename-disk-file/iTunes_Rename_Disk_File_2.zip http://aurelio.googlecode.com/files/iTunes_Rename_Disk_File-2.zip
+Redirect permanent /soft/itunes-search-in-lyrics/iTunes_Search_in_Lyrics.zip http://aurelio.googlecode.com/files/iTunes_Search_in_Lyrics-1.zip
+Redirect permanent /soft/itunes-sed/iTunes_SED_1.1.zip http://aurelio.googlecode.com/files/iTunes_SED-1.1.zip
+# padfiles used old URLs, don't remove this rules [moved from /soft/.htaccess]
+Redirect permanent /soft/img/icon128   /soft/img/icon/128
+Redirect permanent /soft/img/icon32    /soft/img/icon/32
+# app sites now moved to /projects
+Redirect permanent /css-sandbox        /projects/css-sandbox
+Redirect permanent /sedsed             /projects/sedsed
+Redirect permanent /txt2regex          /projects/txt2regex
+# And finally, the catchall rule
+Redirect permanent /soft               /projects
+# txt2tags redir
+Redirect temp      /projects/txt2tags  http://txt2tags.org
+Redirect temp      /projects/txt2tags/ http://txt2tags.org
+
+# moved :(
+Redirect permanent /articles/img                 /img/articles
+Redirect permanent /canivete/                    /shell/canivete/
+Redirect permanent /canivete                     /shell/canivete/
+Redirect permanent /curso/4linux.html            /curso/4linux/
+Redirect permanent /curso/apostila-shell         /shell/apostila
+Redirect permanent /curso/IIsdsl                 /curso/sdsl-2
+Redirect permanent /curso/fisl/                  /curso/fisl-5/
+Redirect permanent /curso/novatec/iii            /curso/novatec-3
+Redirect permanent /curso/novatec/ii             /curso/novatec-2
+Redirect permanent /curso/novatec/i              /curso/novatec-1
+Redirect permanent /curso/sdsl/ii                /curso/sdsl-2
+Redirect permanent /curso/sdsl/i                 /curso/sdsl-1
+Redirect permanent /curso/ufpr/ii                /curso/ufpr-2
+Redirect permanent /curso/ufpr/i                 /curso/ufpr-1
+Redirect permanent /cygwin/rdl.html              /cygwin/rdl/
+Redirect permanent /doc/besteiras                /doc/misc/besteiras
+Redirect permanent /doc/er-rdl/index.html        /er/rdl-regex-1-respostas.html
+Redirect permanent /doc/er-rdl/ip.html           /er/casar-ip.html
+Redirect permanent /doc/er-rdl/                  /er/rdl-regex-1-respostas.html
+Redirect permanent /doc/er-rdl                   /er/rdl-regex-1-respostas.html
+Redirect permanent /doc/fvm                      /fvm
+Redirect permanent /doc/misc/dort.html           /doc/dort.html
+Redirect permanent /doc/misc/irc-mar2005.html    /doc/irc-mar2005.html
+Redirect permanent /doc/misc/videogame.html      /doc/videogame.html
+Redirect permanent /doc/ooo-vi.html              /vim/ooo-vi.html
+Redirect permanent /doc/rdl/regex-1.html         /er/rdl-regex-1.html
+Redirect permanent /doc/rdl/regex-2.html         /er/rdl-regex-2.html
+Redirect permanent /doc/rdl/vi-vim-venci.html    /vim/vi-vim-venci.html
+Redirect permanent /doc/vim                      /vim
+Redirect permanent /er/guia/galeria/             http://www.piazinho.com.br/galeria.html
+Redirect permanent /er/guia/galeria              http://www.piazinho.com.br/galeria.html
+Redirect permanent /er/livro/galeria/            http://www.piazinho.com.br/galeria.html
+Redirect permanent /er/livro/galeria             http://www.piazinho.com.br/galeria.html
+Redirect permanent /er/livro/cadastro            /livro/cadastro
+Redirect permanent /er/livro                     http://www.piazinho.com.br/ed1
+Redirect permanent /er                           /regex
+Redirect permanent /moneylog/importar.html       /moneylog/conversor.html
+Redirect permanent /moneylog/conversor.html      /moneylog/import/
+Redirect permanent /moneylog/v4/conversor.html   /moneylog/import/
+Redirect permanent /moneylog/doacao.html         /moneylog/donate/
+Redirect permanent /moneylog/moneylog.html       /moneylog/moneylog1.html
+Redirect permanent /moneylog/v4.html             /moneylog/v4/
+Redirect permanent /moneylog/beta.html           /moneylog/beta/
+Redirect permanent /moneylog/online              /moneylog/browser/app
+Redirect permanent /moneylog/svn/v5-migracao.html /moneylog/beta/update-2012.html
+Redirect permanent /moneylog/svn                 https://github.com/aureliojargas/moneylog/tree/master
+Redirect permanent /musica/baterna               /baterna
+Redirect permanent /musica/pogo.php              /pogo/
+Redirect permanent /musica/pogo                  /pogo
+Redirect permanent /musica/shows.txt             /musica/shows.html
+Redirect permanent /projects/emomemory/buy.php   /projects/emomemory/code.html
+Redirect permanent /rac/ADDRESSING               /rac/info/ADDRESSING
+Redirect permanent /sed/sed-HOWTO/sed-HOWTO.html /sed/sed-HOWTO/
+Redirect permanent /shell/cadastro               /livro/cadastro
+Redirect permanent /shell/canivete-pdf.html      /shell/canivete/pdf/
+Redirect permanent /shell/canivete-shell.pdf     /shell/canivete/pdf/canivete-shell.pdf
+Redirect permanent /shell/canivete-es.html       /shell/canivete/es/
+Redirect permanent /shell/canivete-es.t2t        /shell/canivete/es/canivete-es.t2t
+Redirect permanent /shell/canivete.html          /shell/canivete/
+Redirect permanent /shell/canivete.t2t           /shell/canivete/canivete.t2t
+Redirect permanent /shell/canivete.conf          /shell/canivete/canivete.conf
+Redirect permanent /shell/ascii.gif              /shell/canivete/ascii.gif
+Redirect permanent /shell/zzcores.gif            /shell/canivete/zzcores.gif
+Redirect permanent /shell/miniman.html           /shell/miniman/
+Redirect permanent /vi                           /vim
+Redirect permanent /viagem/farol-imbituba-2001   /viagem/farol-imbituba
+Redirect permanent /viagem/marumbi-2001          /viagem/marumbi
+Redirect permanent /viagem/trilha-pinhao-2001    /viagem/trilha-do-pinhao
+Redirect permanent /vim/vimrc.txt                /doc/dotfiles/vimrc.txt
+Redirect permanent /curso/pycon/iii              /blog/2007/08/21/minha-palestra-na-pyconbrasil
+# old symlinks
+Redirect temp      /bin/sed /sed/programas/
+Redirect permanent /doc/misc/ramones.txt /doc/ramones.txt
+Redirect permanent /curso/material/tutorial-pyobjc /mac/dev/tutorial-pyobjc
+
+# Gone 2014-02-26
+# Old obsoleted WordPress pages
+# Note: The old tag rules are in /a/www/.admin/htaccess*
+Redirect gone /blog/tag
+Redirect gone /blog/category
+Redirect gone /tag
+Redirect gone /category
+Redirect gone /blog/author
+Redirect gone /blog/page
+
+# 2014-02-23 Disable old WordPress archive pages by date
+# http://aurelio.net/blog/2012/12/31/
+# http://aurelio.net/blog/2012/12/
+# http://aurelio.net/blog/2012/
+# http://aurelio.net/blog/2012/page/
+# http://aurelio.net/blog/2012/page/3
+RedirectMatch gone "^/blog/20\d\d/(../)?(../)?$"
+RedirectMatch gone "^/blog/20\d\d/page/"
+
+# Referral shortcuts
+Redirect temp /dropbox   http://www.dropbox.com/referrals/NTUwOTI4NDg5
+Redirect temp /dreamhost http://www.dreamhost.com/r.cgi?251258
+
+# Gone 2012-08-31: old scrap book
+Redirect gone /doc/recados-antigos/2002.html
+Redirect gone /doc/recados-antigos/2003.html
+Redirect gone /doc/recados-antigos/2004.html
+Redirect gone /doc/recados-antigos/2005.html
+Redirect gone /doc/recados-antigos/2006.html
+Redirect gone /doc/recados-antigos/2007.html
+Redirect gone /doc/recados-antigos/2008.html
+Redirect gone /doc/recados-antigos/2009.html
+Redirect gone /doc/recados-antigos/
+Redirect gone /recados.php
+Redirect gone /recados.html
+
+# Gone
+Redirect gone /shell/apostila/amostra/01-revisao.html
+Redirect gone /shell/apostila/amostra/02-programa.html
+Redirect gone /shell/apostila/amostra/03-explorando.html
+Redirect gone /shell/apostila/amostra/04-controle.html
+Redirect gone /shell/apostila/amostra/04-ferramentas.html
+Redirect gone /shell/apostila/amostra/05-regex.html
+Redirect gone /shell/apostila/amostra/06-config.html
+Redirect gone /shell/apostila/amostra/07-banco.html
+Redirect gone /shell/apostila/amostra/08-dialog.html
+Redirect gone /shell/apostila/amostra/09-cgi.html
+Redirect gone /shell/apostila/amostra/index.html
+Redirect gone /shell/apostila/amostra
+Redirect gone /soft/emomemory/cancelled.html
+Redirect gone /soft/emomemory/registered.html
+# 2014-02-23 linked from http://www.cocoaforge.com/viewtopic.php?p=74845
+Redirect gone /adiumdup
+
+### Page Speed: Leverage browser caching
+# http://webmasters.stackexchange.com/a/5275
+<FilesMatch "^.*\.(ico|png|jpg|gif|css|css\.gz)$">
+ExpiresActive On
+ExpiresDefault A2592000
+</FilesMatch>
+
+ErrorDocument 404 /404.html
