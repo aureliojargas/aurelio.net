@@ -1,0 +1,35 @@
+# Monografia da Mog que costumava ficar aqui
+Redirect permanent /mog/monografia-morgana-laemmle.pdf http://aurelio.net/monografia-morgana-laemmle.pdf
+
+# Links errados em outros sites
+# Veja mais no Webmaster Tools: https://www.google.com/webmasters/tools/crawl-errors?hl=en&siteUrl=http://www.mulherzice.com.br/
+#
+# http://viidadegarootas.blogspot.com/2011/01/tendencias-de-maquiagem.html
+Redirect permanent /mog/tendencia-de-maquiagem-na-moda-verao-2011.html /mog/tendencias-de-maquiagem-na-moda-verao-2011.html
+# http://www.casalea.com.br/dicas/?vCod=83
+Redirect permanent /mog/tendencias-de-unhas-e-esmal /mog/tendencias-de-unhas-e-esmaltes-na-moda-verao-2011.html
+# http://toquefemininobyprih.blogspot.com/
+Redirect permanent /mog/dicas-identificar-tipo-de-pele.html%20 /mog/dicas-identificar-tipo-de-pele.html
+# http://daymundopink.blogspot.com/2010/12/tendencias-desse-verao.html
+Redirect permanent /mog/tendencias-para-cabelos-na-moda-verao-2011.html....PEGUEI /mog/tendencias-para-cabelos-na-moda-verao-2011.html
+# http://fashionstar10.blogspot.com/2011/01/peep-toe.html
+Redirect permanent /mog/sapatos-peep-toe-dicas-de-uso.html /mog/sapato-peep-toe-dicas-de-uso.html
+# http://modasperfectgirls.blogspot.com/2010_05_01_archive.html
+Redirect permanent /mog/dicas-para-usar-saias-de-cintura-alta.html /mog/dicas-para-usar-saia-de-cintura-alta.html
+# http://docecabanna.blogspot.com/2011/02/como-hidratar-os-cabelos-em-sua-casa.html
+Redirect permanent /mog/mascara-hidratacao-caseira-cabelo.htmle /mog/mascara-hidratacao-caseira-cabelo.html
+# http://lindapordetalhes.blogspot.com/2011/08/esfoliantes-caseiros-para-cuidado-do.html
+Redirect permanent /mog/receita-caseira-esfoliante-corporal-e-facial.html /mog/receita-caseira-esfoliante-facial-e-corporal.html
+# http://br.kopea.com/question/719135/queria-saber-como-faço-para-emagreçer-rapido
+Redirect permanent /mog/dicas-para-emagrecer /mog/dicas-para-emagrecer-rapido.html
+# http://www.slideee.com/slide/12-dicas-para-emagrecer-rapido
+Redirect permanent /mog/dicas-para-emagrecer-rapido /mog/dicas-para-emagrecer-rapido.html
+# ?
+Redirect permanent /mog/dicas-de-moda-inverno-2010 /mog/dicas-de-moda-inverno-2010.html
+Redirect permanent /mog/tendencias-de-unhas-e-esmal /mog/tendencias-de-unhas-e-esmaltes-na-moda-verao-2011.html
+
+# ?
+Redirect permanent /mog/dicasdebeleza /mog
+
+# Vá pro site novo
+Redirect permanent /mog http://www.mulherzice.com.br
