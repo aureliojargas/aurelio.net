@@ -5,7 +5,6 @@ II CCSL - Joinville, 09 de Outubro de 2004
 %!target: html
 %!encoding: UTF-8
 %!options: --toc --style ../prompt-doc.css
-%%!options: --toc --css-sugar --style ../../artigo.css
 
 Este é o histórico da linha de comando da palestra de Expressões
 Regulares que ministrei no II Congresso Catarinense de Software
