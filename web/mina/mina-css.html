@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Campo Minado em CSS</title>
+<meta name="generator" content="Vim :)">
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--
+	Campo Minado em CSS
+	
+	por Aurelio Marinho Jargas, Abr 2006.
+	http://aurelio.net
+
+	Fiz para estudar o comportamento das diretivas :hover, :active
+	e :visited. O código está comentado, aproveite.
+	
+	Funcionou no Camino (Gecko). No Safari (KHTML) ele funciona
+	o :active mas não preserva o estado do :visited, não
+	desvendando a casa após o clique. Não testei outros programas.
+
+	Por outro lado, no Safari posso usar as mesmas diretivas em um
+	DIV, independente do seu conteúdo, tipo .meumenu:hover { ... }
+	No Camino isso não funciona.
+
+	Ah, "Editar > Selecionar Tudo" estraga a brincadeira. Para
+	evitar esse furo tem que usar imagens de fundo ao invés de
+	números.
+-->
+	
+	
+<style type="text/css">
+
+	body
+		{
+		font-family	: sans-serif;
+		text-align	: center;
+		}
+	#board a
+		{
+		/* Vai empilhando as casas */
+		display		: block;
+		float		: left;
+	
+		width		: 46px; 
+		line-height	: 46px;
+		border		: 2px outset gray;
+		
+		font-size	: 25px;
+		text-align	: center;
+		text-decoration	: none;
+		cursor		: default;
+		
+		/* Manha de "esconder" o texto */
+		background-color: #999;
+		color		: #999;
+		}
+	#board a:hover
+		{
+		/* Seleção em preto quando passa o mouse */
+		border		: 2px solid yellow;
+		}
+	#board a:active, #board a:visited
+		{
+		/* Quando clica, "desesconde" o texto */
+		background-color: #ddd;
+		color		: black;
+		border		: 2px solid #ccc;
+		}
+	#board br
+		{
+		/* Necessário pra não encavalar as linhas */
+		clear		: left;
+		}
+	#board
+		{
+		padding		: 0;
+		margin-top	: 0;
+		margin		: auto;
+
+		/* Pegadinha:
+		   IE usa borda interna: width = largura*4
+		   Resto usa externa   : width = (borda+largura+borda)*4
+		 */
+		width		: 200px;
+		height		: 200px;
+		}
+	p
+		{
+		font-size	: small;
+		text-align	: justify;
+		}
+	#browsers
+		{
+		position	: fixed;
+		bottom		: 0;
+		left		: 0;
+		width		: 100%;
+		padding-top	: 10px;
+		padding-bottom	: 15px;
+		background-color: #ffd;
+		border-top	: 1px solid silver;
+		text-align	: center;
+		font-weight	: bold;
+		}
+	.browserok  { color	: #0c0; }
+	.browseraok { color	: #f60; }
+	.browsernok { color	: #f00; }
+</style>	
+</head>
+
+<body>
+
+<h1>Mina CSS</h1>
+
+<!--
+	E agora o código HTML do tabuleiro, que é simplesmente um
+	conjunto de links. As linhas são quebradas pelo BR, que dá o
+	clear:left.
+
+	Cada link aponta para um anchor (#11) diferente na mesma
+	página. Alguns navegadores (Gecko) consideram cada link único,
+	apesar de apontarem para a mesma página. Por isso o joguinho
+	funciona.
+-->
+
+<div id="board">
+	<a href="#11">1</a>
+	<a href="#12">2</a>
+	<a href="#13">*</a>
+	<a href="#14">1</a>
+	<br />
+	<a href="#21">2</a>
+	<a href="#22">*</a>
+	<a href="#23">3</a>
+	<a href="#24">1</a>
+	<br />
+	<a href="#31">2</a>
+	<a href="#32">*</a>
+	<a href="#33">3</a>
+	<a href="#34">1</a>
+	<br />
+	<a href="#41">1</a>
+	<a href="#42">1</a>
+	<a href="#43">2</a>
+	<a href="#44">*</a>
+</div>
+
+<div id="statusline">
+Evite as bombas!
+</div>
+
+<p><br /></p>
+<hr>
+
+<p>
+Feito somente com HTML e CSS, não tem inteligência, apenas responde às
+ações do jogador.
+</p>
+<p>
+Cada casa do jogo é um <b>link</b>. O CSS formata o link como um quadrado
+cinza com bordas. O texto do link fica cinza também, escondendo-o do
+jogador. Todos os links apontam para esta mesma página, porém cada um
+com um ID diferente (<b>#anchor</b>). Com o uso da pseudo-classe
+<b>:hover</b> é feito o destaque em amarelo da casa sob o mouse. Com a
+pseudo-classe <b>:visited</b> o conteúdo da casa é revelado,
+trocando-se suas cores.
+</p>
+<p>Jogando-se uma vez, todos os links são marcados como visitados e
+não é possível jogar novamente a não ser que se limpe o histórico do
+navegador ou se salve este arquivo em seu computador com outro nome.
+</p>
+<p>Fontes:
+<a href="mina-css.html">mina-css.html</a>
+</p>
+
+<p><br /><br /><br /></p>
+
+<div id="browsers">
+<span class="browserok">Camino</span> .
+<span class="browserok">Firefox</span> .
+<span class="browseraok">Safari</span> .
+<span class="browseraok">Opera</span> .
+<span class="browsernok">IE</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Campo Minado em Javascript</title>
+<meta name="generator" content="Vim :)">
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+	body
+		{
+		font-family	: sans-serif;
+		text-align	: center;
+		}
+	table
+		{
+		margin		: auto;
+		background-color: #aaa;
+		border-collapse	: separate;
+		border-spacing	: 0px;
+		}
+	td
+		{
+		width		: 44px; 
+		line-height	: 44px;
+		border		: 2px outset gray;
+		text-align	: center;
+		
+		/* manha de "esconder" o texto */
+		background-color: #999;
+		color		: #999;
+		}
+	td.clicked
+		{
+		background-color: #ddd;
+		color		: black;
+		font-size	: 25px;
+		border		: 2px solid #ccc;
+		}
+	p
+		{
+		font-size	: small;
+		text-align	: justify;
+		}
+	#browsers
+		{
+		position	: fixed;
+		bottom		: 0;
+		left		: 0;
+		width		: 100%;
+		padding-top	: 10px;
+		padding-bottom	: 15px;
+		background-color: #ffd;
+		border-top	: 1px solid silver;
+		text-align	: center;
+		font-weight	: bold;
+		}
+	.browserok  { color	: #0c0; }
+	.browseraok { color	: #f60; }
+	.browsernok { color	: #f00; }
+</style>
+
+<script type="text/javascript">
+
+var safeCount, safeMax, mineField, isDead, isWinner;
+
+function init() {
+	resetData();
+	drawBoard();
+	setMessage("Evite as bombas!");
+}
+
+function resetData() {
+	isDead = false;
+	isWinner = false;
+	safeMax = 12;
+	safeCount = 0;
+	mineField = [
+		[1,  2, -1,  1],
+		[2, -1,  3,  1],
+		[2, -1,  3,  1],
+		[1,  1,  2, -1] // -1 == bomba
+	];
+}
+
+function setMessage(text) {
+	document.getElementById("statusline").innerHTML = text;
+}
+
+function drawBoard() {
+	// Converte o array em uma tabela e a insere no DIV #board
+	// Note o parametro onclick, que deixa cada celula "clicavel"
+	var board = new Array();  
+
+	board.push("<table><tr>");
+	for (var i = 0; i < mineField.length; i++) {
+		if (i != 0) board.push("</tr><tr>");
+		for (var j = 0; j < mineField[i].length; j++) {
+			board.push(
+				'<td' +
+				'    onMouseOver="cellHover(this)"' +
+				'    onMouseOut="cellOut(this)"' +
+				'    onClick="cellClicked(this)">' +
+				mineField[i][j] + "</td>"
+			);
+		}
+	}
+	board.push("</tr></table>"); 
+	document.getElementById("board").innerHTML = board.join("\n");
+}
+
+function cellClicked(thisCell) {
+	// Detecta se algo importante aconteceu
+	if (isDead) {
+		init();
+		setMessage("Vamos tentar de novo");
+		return;
+	} else if (isWinner) {
+		init();
+		setMessage("Vai ganhar de novo?");
+		return;
+	}
+	
+	// Se esse quadrado ja foi clicado, ignora
+	if (thisCell.className == "clicked") return;
+
+	// No CSS a classe "clicked" usa outras cores, revelando o numero
+	thisCell.className = "clicked";
+
+	switch (thisCell.innerHTML) {
+		// Pinta cada numero de uma cor
+		case "1": thisCell.style.color = "#070"; break;
+		case "2": thisCell.style.color = "#00b"; break;
+		case "3": thisCell.style.color = "#c00"; break;
+		// Bomba!
+		case "-1":
+			thisCell.innerHTML = '*';
+			isDead = true;
+			setMessage("MORREU");
+			return;
+	}
+	safeCount++;
+
+	if (safeCount == safeMax) { // achou todos os quadrados livres
+		isWinner = true;
+		setMessage("PARABENS, voce conseguiu!");
+	} else {
+		setMessage("Beleza! Faltam " + (safeMax-safeCount));
+	}
+}
+// Podia ter usado :hover, mas a ideia eh estressar o javascript
+// Soh faz o highlight nos quadrados virgens
+function cellHover(thisCell) {
+	if (!thisCell.className) {
+		thisCell.style.border = "2px solid yellow";
+	}
+}
+function cellOut(thisCell) {
+	if (thisCell.className == "clicked") {
+		thisCell.style.border = "2px solid #ccc";
+	} else {
+		thisCell.style.border = "2px outset gray";
+	}
+}
+
+window.onload = init;
+
+</script>
+
+</head>
+<body>
+
+<h1>Mina Javascript</h1>
+
+<noscript>
+Xiii, seu navegador não tem Javascript (ou está desligado)
+</noscript>
+
+<div id="board">
+<!-- O javascript vai colocar o campo minado aqui -->
+</div>
+
+<div id="statusline">
+<!-- O javascript vai colocar o texto de status aqui -->
+</div>
+
+<p><br /></p>
+<hr>
+
+<p>
+Feito com HTML, CSS e Javascript. Detecta morte e vitória.
+</p>
+<p>
+O tabuleiro é uma <b>tabela</b>. Ela não existe no HTML, é o
+Javascript quem a gera a partir de um <b>array</b>. Cada célula da
+tabela responde às ações <b>onMouseOver</b> e <b>onMouseOut</b> para
+fazer o destaque em amarelo e a ação <b>onClick</b> para revelar o
+conteúdo da casa. O HTML é o esqueleto (estrutura), o Javascript é o
+cérebro (ações) e o CSS é a roupa (aparência).
+</p>
+<p>Em caso de morte ou vitória, clicar em qualquer casa reinicia o
+jogo.
+</p>
+<p>Fontes:
+<a href="mina-js.html">mina-js.html</a>
+</p>
+
+<p><br /><br /><br /></p>
+
+<div id="browsers">
+<span class="browserok">Firefox</span> .
+<span class="browserok">IE</span> .
+<span class="browserok">Camino</span> .
+<span class="browserok">Safari</span> .
+<span class="browserok">Opera</span>
+</div>
+
+</body>
+</html>

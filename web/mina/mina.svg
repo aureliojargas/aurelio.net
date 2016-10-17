@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+	"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!--
+     Campo Minado em SVG
+     por
+     Aurelio Marinho Jargas, Maio de 2006
+     http://aurelio.net
+
+     SVG + CSS + Javascript!
+
+     - o SVG é quem define os elementos (rect e text)
+     - o CSS cuida a aparência deste elementos (cores, bordas)
+     - o Javascript manipula estes elementos (ações, decisões)
+
+     O jogo é o que menos importa, o objetivo deste arquivo é estudar
+     estas tecnologias e a praticar a integração entre elas.
+
+     Abra em um navegador com suporte a SVG, como o Firefox.
+-->
+
+<svg version="1.1" onload="init();" xmlns="http://www.w3.org/2000/svg">
+
+<!-- __________________________ CSS ________________________ -->
+
+<style type="text/css">
+<![CDATA[
+
+/* Estado inicial */
+text
+	{
+	font-size	: 25px;
+	font-family	: sans-serif;
+	fill		: #999;
+	stroke		: #999;
+	stroke-width	: 1px;
+	}
+rect
+	{
+	fill		: #999;
+	stroke		: #ccc;
+	stroke-width	: 2px;
+	}
+
+/* Quando o mouse passa em cima */
+#board g:hover rect
+	{
+	stroke		: yellow;
+	}
+#board g.clicked:hover rect
+	{
+	stroke		: #ccc;
+	}
+
+/* Quando clicado, revela o conteudo */
+.clicked rect
+	{
+	fill		: #ddd;
+	}
+.clicked text
+	{
+	fill		: yellow;
+	stroke		: #000;
+	}
+
+#statusline
+	{
+	font-size	: 100%;
+	fill		: #000;
+	stroke-width	: 0;
+	text-align	: center;
+	}
+]]>
+</style>
+
+<!-- _______________________ Javascript _____________________ -->
+
+<script>
+<![CDATA[
+
+var foundCount, mineField, isDead, isWinner;
+var foundMax = 12;
+
+// Bom para Debug
+function dir(obj) { for (prop in obj) { txt += prop + ", "; }; alert(txt); }
+
+function status(text) {
+	document.getElementById("statusline").firstChild.data = text;
+}
+
+function init() {
+	foundCount = 0;
+	isDead = false;
+	isWinner = false;
+	mineField = [
+		[1, 2, -1, 1],
+		[2, -1, 3, 1],
+		[2, -1, 3, 1],
+		[1, 1, 2, -1] // -1 eh bomba
+	];
+
+	status("Evite as bombas!");
+
+	// Adiciona o evento onClick em todas as casas
+	//
+	var board = document.getElementById("board");
+	var row = 0, col = 0;
+	for (var i = 0; i < board.childNodes.length; i++) {
+		thisNode = board.childNodes[i];
+		if (thisNode.nodeName == "g") {
+			thisNode.setAttribute("onclick", "cellClicked(this)");
+			thisNode.setAttribute("class", "");
+
+			// Define o conteudo da casa (numero ou bomba)
+			for (var j = 0; j < thisNode.childNodes.length; j++) {
+				thisSubNode = thisNode.childNodes[j];
+				if (thisSubNode.nodeName == "text") {
+					contents = mineField[row][col];
+					contents = (contents == -1) ? "*" : contents;
+					thisSubNode.firstChild.data = contents;
+					col++; col = (col == mineField[0].length) ? 0 : col;
+					if (col == 0) row++;
+				}
+			}
+		}
+	}
+}
+
+
+function cellClicked(thisCell) {
+	if (isDead) {
+		init();
+		status("Vamos tentar de novo");
+		return;
+	} else if (isWinner) {
+		init();
+		status("Vai ganhar de novo?");
+		return;
+	}
+
+	if (thisCell.getAttribute("class") == "clicked") return;
+
+	// Pega o conteudo dessa casa (numero ou bomba)
+	contents = thisCell.getElementsByTagName("text")[0].firstChild.data;
+
+	// Revela o conteudo da casa para o jogador (CSS)
+	thisCell.setAttribute("class", "clicked");
+
+	// E aih, ainda estamos vivos?
+	if (contents != "*") {
+		foundCount++;
+		if (foundCount == foundMax) {
+			status("PARABENS, voce conseguiu!");
+			isWinner = true;
+		} else {
+			status("Beleza! Faltam " + (foundMax-foundCount));
+		}
+	} else {
+		status("MORREU");
+		isDead = true;
+	}
+}
+]]>
+</script>
+
+<!-- ___________________________ SVG ________________________ -->
+
+<!--
+     Nota: Eu poderia ter usado o Javascript para gerar essas linhas
+     repetitivas de <rect> e <text>, mas a ideia aqui eh estudar SVG e
+     assim fica mais facil entender o codigo.
+
+     Atenção! Se deixar espaços em branco ou quebras de linha entre as
+     tags, tipo "<g><rect></g> <g><rect></g>" vai ser criado um
+     elemento #text para o espaço.
+-->
+
+<g id="board"><g>
+	<rect x="1"   y="1"   width="48" height="48" />
+	<text x="15"  y="35">-</text>
+</g><g>
+	<rect x="51"  y="1"   width="48" height="48" />
+	<text x="65"  y="35">-</text>
+</g><g>
+	<rect x="101" y="1"   width="48" height="48" />
+	<text x="115" y="35">-</text>
+</g><g>
+	<rect x="151" y="1"   width="48" height="48" />
+	<text x="165" y="35">-</text>
+</g><g>
+	<rect x="1"   y="51"  width="48" height="48" />
+	<text x="15"  y="85">-</text>
+</g><g>
+	<rect x="51"  y="51"  width="48" height="48" />
+	<text x="65"  y="85">-</text>
+</g><g>
+	<rect x="101" y="51"  width="48" height="48" />
+	<text x="115" y="85">-</text>
+</g><g>
+	<rect x="151" y="51"  width="48" height="48" />
+	<text x="165" y="85">-</text>
+</g><g>
+	<rect x="1"   y="101" width="48" height="48" />
+	<text x="15"  y="135">-</text>
+</g><g>
+	<rect x="51"  y="101" width="48" height="48" />
+	<text x="65"  y="135">-</text>
+</g><g>
+	<rect x="101" y="101" width="48" height="48" />
+	<text x="115" y="135">-</text>
+</g><g>
+	<rect x="151" y="101" width="48" height="48" />
+	<text x="165" y="135">-</text>
+</g><g>
+	<rect x="1"   y="151" width="48" height="48" />
+	<text x="15"  y="185">-</text>
+</g><g>
+	<rect x="51"  y="151" width="48" height="48" />
+	<text x="65"  y="185">-</text>
+</g><g>
+	<rect x="101" y="151" width="48" height="48" />
+	<text x="115" y="185">-</text>
+</g><g>
+	<rect x="151" y="151" width="48" height="48" />
+	<text x="165" y="185">-</text>
+</g></g>
+
+<!-- XXX Sem o espaco em branco de conteudo, nao mostra a frase :/ -->
+<text id="statusline" x="0" y="220"> </text>
+
+</svg>

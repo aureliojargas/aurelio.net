@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Menu Fixo porém Líquido</title>
+
+<style type="text/css">
+
+h2 { clear: both; font-size: 100%; padding-top: 1em }
+p.ems { width:7em; margin:0; padding:0; float:right; border:1px solid green }
+
+.menu     { border: 2px solid red ; float: left }
+.conteudo { border: 2px solid blue; color: #888 }
+
+#menufixo         { width      : 110px }
+#conteudofixo     { margin-left: 120px }
+	
+#menuporcento     { width      : 20% }
+#conteudoporcento { margin-left: 22% }
+
+#menuem           { width      : 9em }
+#conteudoem       { margin-left: 10em }
+
+</style>
+</head>
+
+<body>
+
+<p class="ems">width:7em<br>mmmmmmm<br>MMMMMMM</p>
+
+Aumente/diminua o tamanho do texto e da janela. (<a
+href="http://aurelio.net/blog/2006/06/30/css-menu-fixo-porem-liquido/">Explicação detalhada</a>)
+
+<h2>Menu com largura fixa (px)</h2>
+
+<div id="menufixo" class="menu">
+	<p>Principal</p><p>Telemarketing</p><p>Suporte Técnico</p>
+</div>
+<div id="conteudofixo" class="conteudo">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+	sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+	ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<h2>Menu proporcional à janela (%)</h2>
+
+<div id="menuporcento" class="menu">
+	<p>Principal</p><p>Telemarketing</p><p>Suporte Técnico</p>
+</div>
+<div id="conteudoporcento" class="conteudo">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+	sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+	ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<h2>Menu proporcional ao texto (em)</h2>
+
+<div id="menuem" class="menu">
+	<p>Principal</p><p>Telemarketing</p><p>Suporte Técnico</p>
+</div>
+<div id="conteudoem" class="conteudo">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+	sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+	ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+</body>
+</html>

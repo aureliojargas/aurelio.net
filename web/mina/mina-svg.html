@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Campo Minado em SVG</title>
+<meta name="generator" content="Vim :)">
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+	body
+		{
+		font-family	: sans-serif;
+		text-align	: center;
+		}
+	#board
+		{
+		display		: table;
+		margin		: auto;
+		padding		: 0;
+		}
+	p
+		{
+		font-size	: small;
+		text-align	: justify;
+		}
+	#browsers
+		{
+		position	: fixed;
+		bottom		: 0;
+		left		: 0;
+		width		: 100%;
+		padding-top	: 10px;
+		padding-bottom	: 15px;
+		background-color: #ffd;
+		border-top	: 1px solid silver;
+		text-align	: center;
+		font-weight	: bold;
+		}
+	.browserok  { color	: #0c0; }
+	.browseraok { color	: #f60; }
+	.browsernok { color	: #f00; }
+</style>
+</head>
+
+<body>
+
+<h1>Mina SVG</h1>
+
+<div id="board">
+<noscript>
+Xiii, seu navegador não tem Javascript (ou está desligado)<br /><br />
+</noscript>
+<object data="mina.svg" type="image/svg+xml"
+	width="200" height="250"
+	codebase="http://www.adobe.com/svg/viewer/install/">
+	<embed src="mina.svg" type="image/svg+xml" width="200" height="250"
+	pluginspage="http://www.adobe.com/svg/viewer/install/" />
+	<p>Xiii, seu navegador não sabe ler SVG</p>
+</object>
+</div>
+
+<hr>
+
+<p>
+Feito com HTML, CSS, SVG e Javascript. Detecta morte e vitória.
+</p>
+<p>
+Tanto o tabuleiro quanto a linha de status são um gráfico vetorial
+em <b>XML</b> (padrão SVG). São 16 elementos <b>&lt;rect&gt;</b> e 17
+<b>&lt;text&gt;</b> (casas + status). As casas são
+definidas e posicionadas estaticamente (eixos X e Y) no XML, sem
+cores. Há regras CSS que cuidam da aparência, pintando as casas e o
+texto. No Javascript as casas recebem o atributo <b>onClick</b>. Cada
+elemento text recebe seu conteúdo (os números e bombas) segundo um
+<b>array</b>.
+</p>
+<p>
+O HTML é meramente cosmético, pois tanto o CSS quanto o Javascript
+estão dentro do arquivo SVG, que é autosuficiente.
+</p>
+<p>Fontes:
+<a href="mina-svg.html">mina-svg.html</a>
+<a href="mina.svg">mina.svg</a>
+</p>
+
+<p><br /><br /><br /></p>
+
+<div id="browsers">
+<span class="browserok">Camino</span> .
+<span class="browserok">Firefox</span> .
+<span class="browseraok">Opera</span> .
+<span class="browseraok">IE</span> .
+<span class="browsernok">Safari</span>
+</div>
+
+</body>
+</html>
