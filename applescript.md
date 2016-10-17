@@ -1,6 +1,5 @@
 ---
 title: AppleScript – Documentação em Português
-permalink: applescript/
 hide_ads: true
 hide_comments: true
 ---

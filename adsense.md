@@ -1,7 +1,6 @@
 ---
 date: 2008-01-01
 title: Google AdSense – Como ganhar dinheiro com anúncios em seu site
-permalink: adsense/
 hide_ads: true
 hide_comments: true
 ---
