@@ -117,6 +117,18 @@ Redirect permanent /soft               /projects
 Redirect temp      /projects/txt2tags  http://txt2tags.org
 Redirect temp      /projects/txt2tags/ http://txt2tags.org
 
+# Obsoleted /bin/as content
+Redirect permanent /bin/as/adium-book                    /projects/adiumbook
+Redirect permanent /bin/as/adiumbook                     /projects/adiumbook
+Redirect permanent /bin/as/AdiumBook-sources.zip         http://code.google.com/p/adiumbook/source
+Redirect permanent /bin/as/export-contacts-to-mp3-player /projects/export-contacts-to-mp3-player
+Redirect permanent /bin/as/export-contacts-to-yahoo-csv  /projects/export-contacts-to-yahoo-csv
+Redirect permanent /bin/as/iphoto-set-sequential-title   /projects/iphoto-set-sequential-title
+Redirect permanent /bin/as/itunes-rename-disk-file       /projects/itunes-rename-disk-file
+Redirect permanent /bin/as/itunes-search-in-lyrics       /projects/itunes-search-in-lyrics
+Redirect permanent /bin/as/itunes-sed                    /projects/itunes-sed
+Redirect permanent /bin/as/py2as.html                    /articles/applescript-vs-python.html
+
 # moved :(
 Redirect permanent /articles/img                 /img/articles
 Redirect permanent /canivete/                    /shell/canivete/
