@@ -1,0 +1,78 @@
+---
+title: LELOLAB - Jogo de labirinto Ascii Art para MS-DOS
+hide_ads: true
+---
+
+<p>Meu primeiro programa, um joguinho de labirinto para MS-DOS. Feito láááá por 1995, 1996.</p>
+
+<h2>A Histórinha</h2>
+
+<p>Algum tempo depois de fuçar bastante no nosso primeiro computador em casa, passou a “fase Windows” e descobri algo mais interessante e desafiador para brincar: o MS-DOS. Era legal ir descobrindo as coisas apenas lendo as páginas de ajuda e vendo os arquivos .bat que vinham com os joguinhos. Sem o Google, sem um guru por perto.</p>
+
+<p>Fui brincando e não sei porque um dia decidi tentar fazer um jogo de labirinto. Não sabia absolutamente nada de programação então comecei no Bloco de Notas (Notepad), fazendo vários desenhos em Ascii Art até chegar no que seria a estrutura da sala que o jogador veria, com paredes e portas. Tudo bem, tenho a sala, mas como fazer um jogo?</p>
+
+<p>Após muita pesquisa e testes, conseguir fazer a movimentação, mudança de telas e até animação (!!?!) usando apenas 6 comandos básicos dos Batch File: <code>call</code>, <code>cls</code>, <code>choice</code>, <code>echo</code>, <code>goto</code> e <code>pause</code>.</p>
+
+<p>Foram meses a fio usando o editor Edit do MS-DOS, desenhando cada tela com os caracteres ANSI (<code>Alt+167</code>, <code>Alt+222</code>, ...), amarrando o fluxo entre as salas para ficar certo e inventando personagens e dificuldades.</p>
+
+<p>Casa sala tem várias “visões”, dependendo de qual porta você entra nela, e tive que desenhar cada uma delas. Tudo feito de maneira extremamente tosca, com todas as telas <strong>hardcoded</strong>. Eu nem tinha idéia do que eram funções ou algoritmos. Durante o desenvolvimento, descobri que o Edit palha só abria arquivos de no máximo 256 Kb, então tive que quebrar o jogo em vários arquivos...</p>
+
+<h2>O Jogo</h2>
+
+<p>O jogo se passa num castelo de um “Velho Sábio” (ou seria Sádico?) onde você foi aprisionado e deve resolver problemas, coletar itens e escapar de armadilhas mortais enquando tenta encontrar a saída, que está lá no 6º andar. E o jogo ainda possui animações na introdução, nas mortes, no encontro de personagens, entre-fases e no final, que é emocionante e sentimentalóide &amp;;)</p>
+
+<p>No fim das contas são “apenas” 749Kb de código! O jogo foi feito para funcionar no DOS 6.22 do Windows 3.11. No Windows 95 e posteriores, alguns caracteres podem aparecer trocados, mas até onde percebi isso não impede a jogabilidade. No Windows 2000 mala, o comando <code>choice</code> não é instalado normalmente mas está disponível no tal “Resource Kit”. Guardei uma cópia <a href="CHOICE.EXE">aqui</a> (26 Kb).</p>
+
+<ul>
+    <li><a href="lelolab.zip">Download</a> (zipado, 46 Kb)</li>
+</ul>
+
+<!-- ftp://ftp.microsoft.com/bussys/winnt/winnt-public/reskit/nt31/i386/reskit.exe -->
+
+<p><strong>DICA:</strong> Se ele apitar e parecer travado, aperte a exclamação (<code>!</code>) que continua.</p>
+
+<h2>As Telas</h2>
+
+<p>1) A tela inicial</p>
+
+<p><img src="ll_ll.png" alt=""></p>
+
+<p>2) Uma tela da apresentação</p>
+
+<p><img src="ll_apres.png" alt=""></p>
+
+<p>3) A visão das salas em 1ª pessoa</p>
+
+<p><img src="ll_sala1.png" alt=""></p>
+
+<p>4) Os labirintos têm mapas</p>
+
+<p><img src="ll_mapa.png" alt=""></p>
+
+<p>5) Temos um mocinho (você)</p>
+
+<p><img src="ll_cama.png" alt=""></p>
+
+<p>6) E é claro, temos um vilão</p>
+
+<p><img src="ll_vilao.png" alt=""></p>
+
+<p>7) Temos também alguns personagens</p>
+
+<p><img src="ll_carto.png" alt=""></p>
+
+<p>9) Coleta de itens e respostas</p>
+
+<p><img src="ll_cofre.png" alt=""></p>
+
+<p>10) Situações inusitadas</p>
+
+<p><img src="ll_revi.png" alt=""></p>
+
+<p>11) O jogo tem um final</p>
+
+<p><img src="ll_lua.png" alt=""></p>
+
+<p>12) E você pode morrer no caminho...</p>
+
+<p><img src="ll_morte.png" alt=""></p>

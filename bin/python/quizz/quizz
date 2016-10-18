@@ -1,0 +1,294 @@
+#!/usr/bin/python
+
+# --features
+# uses readline (history)
+# blank answer shows the correct answer
+# you've got 3 chances
+# more chances to find the answer, less points you win
+
+# GURU: all questions, the score is the percent of correct ones, one error = OUT
+
+# sed:
+# TODO info sobre o .qzz pra ser mostrada antes das perguntas?
+# como se -n não existisse
+# não colocar espaços em branco entre comandos
+
+import re, sys, os, readline, getopt
+from time import time
+from whrandom import randrange
+
+timeini = time()
+usecolor = 1
+score = iamaluser = iamaguru = checkfile = debugit = 0
+questions_max = 10    # please don't change
+errors_max = 3
+points = [10, 8, 6, 4, 2]
+
+def usage(progname):
+	print "usage: %s [--nocolor|--guru|--check] file.qzz"%progname
+	print "usage: %s --help"%progname
+	sys.exit(1)
+
+
+### ['question', 'default answer', 'answer regex1', 'answer regex2', ...]
+
+class QuizzEntry:
+	checkfile = 0
+	
+	def __init__(self,lineno):
+		self.question = ''
+		self.dft_answer = ''
+		self.answers = []
+		self.isok = 0
+		self.lineno = lineno
+	def doError(self, txt):
+		print 'error:%d: %s'%(self.lineno,txt)
+		if not self.checkfile:
+			print 'quiZZ datafile corrupted! - aborting'
+			sys.exit(1)
+	def getType(self, id):
+		if   id == '  ': return 'str'
+		elif id == ', ': return 'istr'
+		elif id == '. ': return 'rgx'
+		elif id == '; ': return 'irgx'
+		else: self.doError('unknown answer type')
+	def doQuestion(self, txt):
+		if self.dft_answer or self.answers:
+			self.doError('question after answer (or 2nd entry)')
+		self.question = txt
+	def doAnswer(self, str):
+		if not self.question:
+			self.doError('answer before question')
+		
+		self.lineno = self.lineno + 1
+		type = self.getType(str[0:2])
+		str = str[2:]
+		
+		if not self.dft_answer:
+			if type == 'str' or type == 'istr':
+				self.dft_answer = str
+				self.isok = 1    # we've already got a valid entry
+			else:
+				self.doError('invalid default answer (maybe a regex?)')
+		
+		# TODO put re.I _after_ compile?
+		# if type[0] == 'i': re.add(re.I)
+		if type == 'str':
+			rex = re.compile(re.escape(str)+'$')
+		elif type == 'istr':
+			rex = re.compile(re.escape(str)+'$',re.I)
+		elif type == 'rgx':
+			rex = re.compile(str+'$')
+		elif type == 'irgx':
+			rex = re.compile(str+'$',re.I)
+		self.answers.append(rex)
+
+
+def loadQuizFile(file,check=0):
+	f = open(file, 'r')
+	i = -1
+	list = []
+	lineno = 0
+	if check: QuizzEntry.checkfile = 1
+	quizz = QuizzEntry(lineno)
+	lines = f.readlines()
+	f.close()
+	for l in range(len(lines)):
+		line = lines[l]
+		lineno = l+1
+		if line[0] == '#': continue          # comment
+		if re.match('\s*$', line): continue  # blank
+		line = re.sub('\n$','',line)
+		if re.match('\* [^ ]', line[0:3]):  # tip
+			tips.append(line)
+			continue
+		if re.match('[^ ,.;*]', line[0:1]):  # question
+		
+			# flushing previous entry
+			if quizz.question:
+				if quizz.isok:
+					list[i].append(quizz.dft_answer)
+					for ans in quizz.answers:
+						list[i].append(ans)
+				else:
+					quizz.lineno = quizz.lineno + 1
+					quizz.doError('previous question not finished')
+			
+			quizz = QuizzEntry(lineno)
+			quizz.doQuestion(line)
+			i = i + 1
+			list.append([])
+			list[i].append(quizz.question)
+		else:
+			quizz.doAnswer(line)
+
+	#TODO best checkings (equal above - function)
+	# flushing last entry
+	list[i].append(quizz.dft_answer)
+	for ans in quizz.answers:
+		list[i].append(ans)
+	
+	return list
+
+
+# parse options
+try:
+	(opt, args)=getopt.getopt(sys.argv[1:], "h", ["nocolor", "help", "cheat", "guru", "check", "debug"])
+except getopt.error:
+	print "bad option"
+	usage(sys.argv[0])
+	sys.exit(1)
+
+# if no argument print usage
+if args == []:
+	usage(sys.argv[0])
+else:
+	file =args[0]
+
+# sanity test
+if errors_max > 5:
+	print 'config error: maximum number of chances exceeded.'
+	sys.exit(0)
+
+
+# process command line options
+for o in opt:
+	if o[0] == "--nocolor":
+		usecolor = 0
+	elif o[0] == '-h' or o[0] == "--help":
+		usage(sys.argv[0])
+	elif o[0] == "--cheat":
+		iamaluser = 1
+		iamaguru = 0                   # gurus don't cheat
+	elif o[0] == "--guru":
+		iamaluser = 0                  # gurus aren't lusers
+		iamaguru = 1
+		guruprompt = '# '
+	elif o[0] == "--check":
+		checkfile = 1
+	elif o[0] == "--debug":
+		debugit = 1
+		iamaluser = 1
+
+tips = []
+sources = loadQuizFile(file,checkfile)
+if checkfile: sys.exit(0)
+
+if debugit:
+	for d in range(len(sources)):
+		print '\n%d--'%(d+1),
+		for item in sources[d]:
+			print '(%s)'%item,
+	print '\n'
+
+if iamaguru:
+	questions_max = len(sources)   # all questions
+	points_pcent = 100.00/questions_max
+
+# color settings
+c_ylw = c_red = c_wht = c_dft = ''
+if usecolor:
+	c_ylw = '\033[33;01m'
+	c_red = '\033[31;01m'
+	c_wht = '\033[37;01m'
+	c_dft = '\033[m'
+
+
+# the nice sort-randomizer
+def randsort(a1, a2):
+	return randrange(-1, 2)
+
+def gameover(score):
+	# formatting score
+	if iamaguru: score = "%.2f%%"%score
+	else       : score = "%d points (top is %d)"%(score,points[0]*questions_max)
+	
+	# time statistics
+	etime = int(time()-timeini)
+	min = etime/60
+	if min: etime = "%d:%d"%(min,etime%60)
+	else  : etime = "%d secs"%etime
+	
+	# bye, bye
+	print "\nElapsed Time: %s"%etime
+	print "Final Score:",score
+	sys.exit(0)
+
+
+###############################################################################
+##################  ALL YOUR ANSWER ARE BELONG TO US  #########################
+###############################################################################
+
+
+# sorting³
+sources.sort(randsort)
+sources.sort(randsort)
+sources.sort(randsort)
+
+
+# friendly initial statistics
+if iamaguru:
+	print "quiZZ -=[guru]=-  %d questions, %.2f%% each one"%(len(sources),points_pcent)
+	print "you fail, you die...\n"
+else:
+	possiblepoints = ''
+	for p in points[:errors_max]:
+		possiblepoints = possiblepoints+`p`+','
+	print "quiZZ - %d questions, %d chances (%s points)"%(
+	       questions_max,errors_max,possiblepoints[:-1])
+	print "ready... GO!\n"
+
+# showing the cool tips (if any)
+if tips:
+	print 'TIPS:'
+	for tip in tips:
+		print tip 
+	print
+
+# here we go
+for source in sources[:questions_max]:
+	print source[0]    # the question
+	ok = errnum = 0
+	
+	if iamaluser: print "   %s"%source[1]   # L
+	
+	while not ok and errnum < errors_max:
+		if iamaguru:
+			prompt = guruprompt
+			point = points_pcent
+		else:
+			prompt = "%d) "%(errors_max-errnum)
+			point = points[errnum]
+		
+		user = raw_input(prompt)
+		if user:
+			# let's try all the possible answers
+			for regex in source[2:]:
+				if debugit:
+					print 'trying',regex
+				if ok: break
+				# great! we've matched!
+				if regex.match(user):
+					score = score + point
+					ok = 1
+					errnum = 0
+			# right answer!
+			if ok:
+				if not iamaguru:    # gurus doesn't care about partial score
+					print '%s:)%s %d\n'%(c_ylw,c_dft,score)  # partial score
+			# wrong answer...	
+			else:
+				if iamaguru: gameover(score)           # a guru can't fail
+				errnum = errnum+1
+		# blank answer is a "i give up"
+		else:
+			errnum = errors_max
+	
+	# on give up or all tryes wrong, shows the answer
+	if errnum:
+		if iamaguru: gameover(score)                   # a guru can't fail
+		print '%s--=>%s %s\n'%(c_wht,c_dft,source[1])  # the better answer
+
+# all questions are done, let's get out
+gameover(score)
+

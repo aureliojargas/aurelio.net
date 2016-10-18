@@ -1,0 +1,10 @@
+0|aurelio marinho|tv. rafael greca,98|243-2871|curitiba|PR
+0|joao da silva|r. das alagoas, 533|233-3428|curitiba|PR
+0|maria jose aparecida|av. garibaldi, 334|222-2145|sao paulo|SP
+0|andreia almeida|r. principal, 33|233-4441|santo amaro|SP
+0|jose pereira|r. palmeiras, 365|344-2982|porto alegre|RS
+0|karla jargas|av. das flores, 777|253-2561|curitiba|PR
+0|antonio bueno|r. trivial, 305|973-4321|sao paulo|SP
+0|pedro h. cunha|r. gauchos, 396 ap 576|942-2771|porto alegre|RS
+0|paulo oliveira|r. estou cansado, 23|333-3831|curitiba|PR
+0|andressa|r. dep. nilson ribas, 855|244-3476|curitiba|PR
