@@ -1,6 +1,9 @@
 # Hand made, so I can include posts and pages
 # Used in main index, sidebar, feed
 
+- title: "Serei papai \\o/"
+  url: /blog/2016/11/09/serei-papai/
+
 - title: "Tela Preta episódio 9: Contar palavras com egrep|sort|uniq"
   url: /blog/2016/08/09/tela-preta-9/
 
