@@ -456,3 +456,12 @@
   estado: SP
   participantes: 0
   site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+
+- data: 2016-11-30
+  duracao: 3
+  tema: Deploy e Rollback automático com GitLab CI
+  evento: Prefeitura de Joinville
+  cidade: Joinville
+  estado: SC
+  participantes: 12
+
