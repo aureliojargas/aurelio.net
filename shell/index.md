@@ -11,8 +11,6 @@ hide_ads: true
 article_footer_after: false
 ---
 
-{% include banner-course-regex.html %}
-
 {% include shell-book-banner.html %}
 
 <img style="float:right" src="/img/icon/128/shell.png">
