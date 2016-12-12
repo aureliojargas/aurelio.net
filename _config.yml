@@ -10,7 +10,7 @@
 production: true
 
 # Save the final HTMLs here
-destination: /Users/aurelio/aurelio.net
+destination: ../aurelio.net.html
 
 name: Aurelio.net
 url: http://aurelio.net
