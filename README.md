@@ -17,6 +17,18 @@ This git repository holds these contents.
 But the majority of the site (1000+ files) still remains as [txt2tags](http://txt2tags.org) text files. I'll try to integrate Jekyll with txt2tags, and them I'll add those files here.
 
 
+## Local build
+
+
+```bash
+# Initial setup
+gem install bundler
+bundle install
+
+# Building
+bundle exec jekyll build
+```
+
 ## License
 
 Jekyll-related and Liquid codes are Public Domain.
