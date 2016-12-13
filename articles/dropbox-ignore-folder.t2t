@@ -8,7 +8,7 @@ permalink: articles/dropbox-ignore-folder.html
 ---
 
 
-%!includeconf: /Users/aurelio/github/aureliojargas/aurelio.net/articles/_config.t2t
+%!includeconf: {{ site.source }}/articles/_config.t2t
 
 
 % When you uncheck a folder in the [Selective Sync https://www.dropbox.com/help/175/en] feature of Dropbox, the local folder is **removed** from your drive. This removal is desired if you want to save space, but in some cases, you just want Dropbox to ignore that local folder, leaving it alone: no syncing, no removing.

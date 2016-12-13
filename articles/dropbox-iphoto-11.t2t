@@ -8,7 +8,7 @@ permalink: articles/dropbox-iphoto-11.html
 ---
 
 
-%!includeconf: /Users/aurelio/github/aureliojargas/aurelio.net/articles/_config.t2t
+%!includeconf: {{ site.source }}/articles/_config.t2t
 
 
 == The problem ==[problem]

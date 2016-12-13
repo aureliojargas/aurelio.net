@@ -11,7 +11,7 @@ permalink: articles/hungry-sumo-high-scores.html
 % 2012-12-05 0h30 moved to txt2tags for /articles/
 
 
-%!includeconf: /Users/aurelio/github/aureliojargas/aurelio.net/articles/_config.t2t
+%!includeconf: {{ site.source }}/articles/_config.t2t
 
 
 [Hungry Sumo http://itunes.apple.com/us/app/hungry-sumo/id467006009?mt=8] is a fast paced sumo-bouncing [Osmos http://www.hemispheregames.com/osmos/]-like game for iOS. You grow your characters (the sumos) to make them bigger than the enemies, then bounce to convert them to your team. The gameplay is simple, but you need to think fast and make precise touches.

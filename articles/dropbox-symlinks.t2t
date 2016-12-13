@@ -8,7 +8,7 @@ permalink: articles/dropbox-symlinks.html
 ---
 
 
-%!includeconf: /Users/aurelio/github/aureliojargas/aurelio.net/articles/_config.t2t
+%!includeconf: {{ site.source }}/articles/_config.t2t
 
 
 % In short: Dropbox does not preserve symlinks. It follows the symlink and uploads the target file or folder.
