@@ -35,11 +35,11 @@ redcarpet:
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
-# exclude:
-#   - _posts
-#   - blog
-#   - viagem
-exclude: [README.md, articles/README.md]
+exclude:
+  - articles/README.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 defaults:
   -
