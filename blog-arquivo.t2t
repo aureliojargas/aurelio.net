@@ -10,7 +10,7 @@ permalink: blog-arquivo.html
 
 % Blog Verde - Arquivo Morto
 
-%!includeconf: /a/www/include/urls.t2t
+%!includeconf: {{ site.source }}/_includes/urls.t2t
 %!postproc: SITEROOT 	.
 
 %%!style: blog.css
