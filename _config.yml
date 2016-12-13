@@ -1,12 +1,7 @@
-# Do not use tabs in configuration files
-# This will either lead to parsing errors, or Jekyll will revert to the default settings. Use spaces instead.
-
-### /!\ MUST RESTART jekyll --watch FOR CHANGES TO TAKE EFFECT /!\
-### /!\ MUST RESTART jekyll --watch FOR CHANGES TO TAKE EFFECT /!\
-### /!\ MUST RESTART jekyll --watch FOR CHANGES TO TAKE EFFECT /!\
+# No tabs, use spaces only.
+# Restart Jekyll --watch after editing here.
 
 # True to turn on Disqus, Analytics, etc.
-# production: false
 production: true
 
 # Save the final HTMLs here
