@@ -19,14 +19,19 @@ But the majority of the site (1000+ files) still remains as [txt2tags](http://tx
 
 ## Local build
 
-
 ```bash
 # Initial setup
 gem install bundler
 bundle install
 
-# Building
+# Building the site
 bundle exec jekyll build
+
+# Viewing
+bundle exec jekyll serve --watch --limit_posts 10
+
+# Viewing at Cloud9
+bundle exec jekyll serve --watch --limit_posts 10 --port 8080 --host 0.0.0.0
 ```
 
 ## License
