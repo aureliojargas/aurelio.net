@@ -20,6 +20,10 @@ Se preferir ver os textos agrupados por assunto, vá na [página de tags](http:/
 
 Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
 
+## 2017 (1)
+
+  * [Minha experiência na ContaAzul](http://aurelio.net/blog/2017/02/06/contaazul/)
+
 ## 2016 (6)
 
   * [Serei papai \o/](http://aurelio.net/blog/2016/11/09/serei-papai/)

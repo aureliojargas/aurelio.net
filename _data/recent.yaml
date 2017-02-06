@@ -1,6 +1,9 @@
 # Hand made, so I can include posts and pages
 # Used in main index, sidebar, feed
 
+- title: "Minha experiência na ContaAzul"
+  url: /blog/2017/02/06/contaazul/
+
 - title: "Serei papai \\o/"
   url: /blog/2016/11/09/serei-papai/
 
@@ -30,6 +33,3 @@
 
 - title: "Eu no podcast Castálio"
   url: /blog/2015/09/18/eu-no-podcast-castalio/
-
-- title: "15 anos de Funções ZZ"
-  url: /blog/2015/05/30/15-anos-de-funcoes-zz/
