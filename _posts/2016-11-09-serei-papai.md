@@ -1,6 +1,6 @@
 ---
 title: Serei papai \o/
-tags: [meu-querido-diario]
+tags: [meu-querido-diario, mog]
 hide_ads: true
 worked: 5:00
 ---
