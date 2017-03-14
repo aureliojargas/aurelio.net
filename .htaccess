@@ -56,8 +56,8 @@ Redirect temp /dort        /doc/dort.html
 Redirect temp /faq         /doc/faq.html
 Redirect temp /pyobjc      /mac/dev/tutorial-pyobjc
 # app
-Redirect temp /adiumbook   /soft/adiumbook
-Redirect temp /sokoban     /soft/sedsokoban
+Redirect temp /adiumbook   /projects/adiumbook
+Redirect temp /sokoban     /projects/sedsokoban
 Redirect temp /txt2tags    http://txt2tags.org/pt
 Redirect temp /zz          http://funcoeszz.net
 Redirect temp /soft/moneylog/moneylog.html /soft/moneylog/moneylog4.html
@@ -256,8 +256,8 @@ Redirect gone /shell/apostila/amostra/08-dialog.html
 Redirect gone /shell/apostila/amostra/09-cgi.html
 Redirect gone /shell/apostila/amostra/index.html
 Redirect gone /shell/apostila/amostra
-Redirect gone /soft/emomemory/cancelled.html
-Redirect gone /soft/emomemory/registered.html
+Redirect gone /projects/emomemory/cancelled.html
+Redirect gone /projects/emomemory/registered.html
 # 2014-02-23 linked from http://www.cocoaforge.com/viewtopic.php?p=74845
 Redirect gone /adiumdup
 
