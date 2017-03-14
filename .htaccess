@@ -242,6 +242,8 @@ Redirect gone /recados.php
 Redirect gone /recados.html
 
 # Gone
+Redirect gone /ooo/controle.html
+Redirect gone /ooo/
 Redirect gone /shell/apostila/amostra/01-revisao.html
 Redirect gone /shell/apostila/amostra/02-programa.html
 Redirect gone /shell/apostila/amostra/03-explorando.html
