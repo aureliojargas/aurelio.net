@@ -5,4 +5,3 @@ function _init() {
 		roda = function(x){ return ''; };
 	}
 }
-// Se editar este arquivo, comente-o em .rsync-exclude
