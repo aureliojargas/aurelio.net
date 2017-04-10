@@ -103,7 +103,7 @@ Um guia completo sobre shell, que ensina tanto os conceitos básicos como sintax
 * [O que o #! realmente faz](http://geocities.yahoo.com.br/cesarakg/tips-shell-programming.html) *por Mo Budlong*
 Artigo traduzido que explica a função do #! no início dos scripts shell.
 
-* [Programação em Bourne-Again Shell](http://www.meleuzord.hpg.ig.com.br/textos/bashscripting.txt) *por Meleu*
+* [Programação em Bourne-Again Shell](http://meleu.github.io/txts/bashscripting.txt) *por Meleu*
 Tutorial de Bash, ensinando devagarzinho, com carinho e vai avançando. Também fala sobre o `getopts`, o `select` e o Dialog.
 
 * [Programação Shell](http://linuxfocus.berlios.de/Portugues/September2001/article216.shtml) *por Guido Socher*
