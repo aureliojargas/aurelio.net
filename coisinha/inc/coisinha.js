@@ -1,7 +1,7 @@
 function _init() {
 	// script só roda no site
 	// Obs.: Sim, é tosco e fácil de quebrar, mas serve.
-	if (!window.location.href.match(/[c]oi[s]in[h]a\.c[o]m\.b[r]/)) {
+	if (!window.location.href.match(/au[r]elio\.n[e]t\/[c]oi[s]in[h]a/)) {
 		roda = function(x){ return ''; };
 	}
 }
