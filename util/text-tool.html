@@ -126,7 +126,7 @@
 
         // show output
         $('#output-text').val(result);
-        $('#pipe').show();
+        $('#pipe').css('visibility', 'visible');
       });
 
       // Pipe: Use current output as input
@@ -137,7 +137,7 @@
         $('#output-text').val('');
 
         // reset UI
-        $('#pipe').hide();
+        $('#pipe').css('visibility', 'hidden')
         deactivateAll();
       });
 
@@ -179,7 +179,7 @@
       color: black;
     }
     #pipe {
-      display: none;
+      visibility: hidden;
       cursor: pointer;
     }
     footer {
