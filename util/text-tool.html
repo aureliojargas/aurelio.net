@@ -51,7 +51,7 @@
       }).join('\n');
     }
     function split(txt) {
-      return txt.replace(' ', '\n');
+      return txt.replace(/[ \t]/g, '\n');
     }
     function strip(txt) {
       // multiline strip
