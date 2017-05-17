@@ -21,14 +21,14 @@
 
   <!--Our nice text tools-->
   <script>
-  
+
     String.prototype.strip = function () {
       return this.replace(/^\s+/, '').replace(/\s+$/, '');
     };
     String.prototype.reverse = function () {
       return this.split('').reverse().join('');
     };
-    
+
     // Apply a character translation table to a string (y///)
     function applyTable(table, text) {
       var i, c, r, result;
@@ -40,7 +40,7 @@
       }
       return result.join('');
     }
-    
+
     function tac(txt) {
       return txt.split('\n').reverse().join('\n');
     }
@@ -104,7 +104,7 @@
       };
       return applyTable(unaccentTable, txt);
     }
-    
+
     function deactivateAll() {
       $('#filters li').removeClass('active');
     }
@@ -131,7 +131,7 @@
 
       // Pipe: Use current output as input
       $('#pipe').click(function(event) {
-        
+
         // set input, clear output
         $('#input-text').text($('#output-text').val());
         $('#output-text').text('');
@@ -144,7 +144,7 @@
       // Startup focus
       $('#input-text').focus();
     });
-    
+
   </script>
 
 <!--====================================================-->
