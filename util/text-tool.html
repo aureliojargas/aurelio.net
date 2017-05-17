@@ -1,0 +1,225 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Simple Text Tool - Aurelio.net</title>
+  <meta name="author" content="Aurelio Jargas">
+  <link rel="shortcut icon" href="http://aurelio.net/favicon.ico">
+
+  <!--mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!--normalize-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--====================================================-->
+
+  <!--Our nice text tools-->
+  <script>
+  
+    String.prototype.strip = function () {
+      return this.replace(/^\s+/, '').replace(/\s+$/, '');
+    };
+    String.prototype.reverse = function () {
+      return this.split('').reverse().join('');
+    };
+    
+    // Apply a character translation table to a string (y///)
+    function applyTable(table, text) {
+      var i, c, r, result;
+      result = new Array(text.length);
+      for (i = 0; i < text.length; i++) {
+        c = text.charAt(i);
+        r = table[c];
+        result[i] = r ? r : c;
+      }
+      return result.join('');
+    }
+    
+    function tac(txt) {
+      return txt.split('\n').reverse().join('\n');
+    }
+    function rev(txt) {
+      // multiline rev
+      return $.map(txt.split('\n'), function (t, i) {
+        return t.reverse();
+      }).join('\n');
+    }
+    function split(txt) {
+      return txt.replace(' ', '\n');
+    }
+    function strip(txt) {
+      // multiline strip
+      return $.map(txt.split('\n'), function (t, i) {
+        return t.strip();
+      }).join('\n');
+    }
+    function sort(txt) {
+      var arr = txt.split('\n');
+      arr.sort();
+      return arr.join('\n');
+    }
+    function lower(txt) {
+      return txt.toLowerCase();
+    }
+    function upper(txt) {
+      return txt.toUpperCase();
+    }
+    function join(txt) {
+      return txt.replace(/\r*\n/g, ' ');
+    }
+    function squeeze(txt) {
+      return txt.replace(/[ \t][ \t]+/g, ' ');
+    }
+    function uniq(txt) {
+      var array = txt.split('\n');
+      // http://stackoverflow.com/a/10192255/1623438
+      var result =  $.grep(array, function(el, index) {
+          return index === $.inArray(el, array);
+      });
+      return result.join('\n');
+    }
+    function unaccent(txt) {
+      var unaccentTable = {
+        'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
+        'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E',
+        'Ì': 'I', 'Í': 'I',  'Î': 'I', 'Ï': 'I',
+        'Ò': 'O', 'Ó': 'O', 'Ô': 'O', 'Õ': 'O',  'Ö': 'O', 'Ő': 'O', 'Ø': 'O',
+        'Ù': 'U', 'Ú': 'U', 'Û': 'U', 'Ü': 'U',  'Ű': 'U',
+        'Ç': 'C', 'Ñ': 'N', 'Ý': 'Y',
+        'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae',
+        'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
+        'ì': 'i', 'í': 'i',  'î': 'i', 'ï': 'i',
+        'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o',  'ö': 'o', 'ő': 'o', 'ø': 'o',
+        'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',  'ű': 'u',
+        'ç': 'c', 'ñ': 'n', 'ý': 'y',
+        'Þ': 'P', 'þ': 'p', 'Ð': 'D', 'ð': 'd', 'ß': 'B', '§': 'S', 'µ': 'u',
+        '¢': 'c', '£': 'L', '¥': 'Y',
+        'ª': 'a', 'º': 'o'
+      };
+      return applyTable(unaccentTable, txt);
+    }
+    
+    function deactivateAll() {
+      $('#filters li').removeClass('active');
+    }
+
+    // init
+    $(document).ready(function () {
+
+      // Add click handlers for the filters
+      $('#filters li').click(function(event) {
+
+        // highlight clicked button
+        deactivateAll();
+        $(event.target).addClass('active');
+
+        // run the function named as filter name
+        var filter = $(event.target).text();
+        var input = $('#input-text').val();
+        var result = window[filter](input);
+
+        // show output
+        $('#output-text').text(result);
+        $('#pipe').show();
+      });
+
+      // Pipe: Use current output as input
+      $('#pipe').click(function(event) {
+        
+        // set input, clear output
+        $('#input-text').text($('#output-text').val());
+        $('#output-text').text('');
+
+        // reset UI
+        $('#pipe').hide();
+        deactivateAll();
+      });
+
+      // Startup focus
+      $('#input-text').focus();
+    });
+    
+  </script>
+
+<!--====================================================-->
+
+  <style type="text/css">
+    body {
+      background: black;
+      color: lime;
+      padding: 0 2em;
+      text-align: center;
+      font-family: monospace;
+      font-weight: bold;
+    }
+    textarea {
+      height: 7em;
+      width: 100%;
+    }
+    #filters ul {
+      padding: 0;
+    }
+    #filters li {
+      display: inline-block;
+      margin: 0.5em;
+      padding: 0.5em;
+      border: 1px solid lime;
+      cursor: pointer;
+    }
+    .active {
+      background: lime;
+      color: black;
+    }
+    #pipe {
+      display: none;
+      cursor: pointer;
+    }
+    footer {
+      margin: 5em 0 2em 0;
+    }
+  </style>
+
+<!--====================================================-->
+
+</head>
+<body>
+
+  <h1>Simple Text Tool</h1>
+
+  <div id="input">
+    <textarea id="input-text"></textarea>
+  </div>
+
+  <div id="filters">
+    <ul>
+      <li>join</li>
+      <li>lower</li>
+      <li>rev</li>
+      <li>sort</li>
+      <li>split</li>
+      <li>squeeze</li>
+      <li>strip</li>
+      <li>tac</li>
+      <li>unaccent</li>
+      <li>uniq</li>
+      <li>upper</li>
+    </ul>
+  </div>
+
+  <div id="output">
+    <textarea id="output-text"></textarea>
+    <div id="pipe">
+      &orarr; Use this text as input
+    </div>
+  </div>
+
+  <footer>
+    See also: <a href="http://www.text-tools-online.com">http://www.text-tools-online.com</a>
+  </footer>
+</body>
+</html>
