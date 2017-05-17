@@ -125,7 +125,7 @@
         var result = window[filter](input);
 
         // show output
-        $('#output-text').text(result);
+        $('#output-text').val(result);
         $('#pipe').show();
       });
 
@@ -133,8 +133,8 @@
       $('#pipe').click(function(event) {
 
         // set input, clear output
-        $('#input-text').text($('#output-text').val());
-        $('#output-text').text('');
+        $('#input-text').val($('#output-text').val());
+        $('#output-text').val('');
 
         // reset UI
         $('#pipe').hide();
