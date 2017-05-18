@@ -76,7 +76,7 @@
     function squeeze(txt) {
       return txt.replace(/[ \t][ \t]+/g, ' ');
     }
-    function uniq(txt) {
+    function unique(txt) {
       var array = txt.split('\n');
       // http://stackoverflow.com/a/10192255/1623438
       var result =  $.grep(array, function(el, index) {
@@ -210,7 +210,7 @@
       <li>strip</li>
       <li>tac</li>
       <li>unaccent</li>
-      <li>uniq</li>
+      <li>unique</li>
       <li>upper</li>
     </ul>
   </div>
