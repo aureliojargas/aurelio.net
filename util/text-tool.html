@@ -53,6 +53,20 @@
       return result.join('');
     }
 
+    function replace(txt) {
+      var mode = $('#replace-mode').val();
+      var from = $('#replace-from').val();
+      var to = $('#replace-to').val();
+
+      // multiline replace
+      return $.map(txt.split('\n'), function (line, i) {
+        if (mode === 'all') {
+          return line.replaceAll(from, to);
+        } else {
+          return line.replace(from, to);  // first only
+        }
+      }).join('\n');
+    }
     function reverse(txt) {
       var mode = $('#reverse-mode').val();
       return (mode === 'lines') ? tac(txt) : rev(txt);
@@ -258,6 +272,18 @@
       </li>
       <li>
         <span class="button">lower</span>
+      </li>
+      <li>
+        <span class="button">replace</span>
+        <span class="options">
+          <select id="replace-mode">
+            <option>all</option>
+            <option>first</option>
+          </select>
+          <input id="replace-from" type="text" value="a">
+          with
+          <input id="replace-to" type="text" value="XX">
+        </span>
       </li>
       <li>
         <span class="button">reverse</span>
