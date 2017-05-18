@@ -22,12 +22,24 @@
   <!--Our nice text tools-->
   <script>
 
-    String.prototype.strip = function () {
-      return this.replace(/^\s+/, '').replace(/\s+$/, '');
+    String.prototype.stripLeft = function () {
+      return this.replace(/^\s+/, '');
+    };
+    String.prototype.stripRight = function () {
+      return this.replace(/\s+$/, '');
     };
     String.prototype.reverse = function () {
       return this.split('').reverse().join('');
     };
+    String.prototype.replaceAll = function (from, to) {
+      return this.split(from).join(to);
+      // http://stackoverflow.com/a/17606289/1623438
+    };
+
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
 
     // Apply a character translation table to a string (y///)
     function applyTable(table, text) {
@@ -41,6 +53,10 @@
       return result.join('');
     }
 
+    function reverse(txt) {
+      var mode = $('#reverse-mode').val();
+      return (mode === 'lines') ? tac(txt) : rev(txt);
+    }
     function tac(txt) {
       return txt.split('\n').reverse().join('\n');
     }
@@ -51,12 +67,23 @@
       }).join('\n');
     }
     function split(txt) {
-      return txt.replace(/[ \t]/g, '\n');
+      var sep = $('#split-sep').val();
+      if (sep) {
+        return txt.replaceAll(sep, '\n');
+      } else {
+        // if empty, split by sequences of spaces or tabs
+        return txt.replace(/[ \t]+/g, '\n');
+      }
     }
     function strip(txt) {
       // multiline strip
+      var mode = $('#strip-mode').val();
       return $.map(txt.split('\n'), function (line, i) {
-        return line.strip();
+        switch (mode) {
+          case 'left': return line.stripLeft();
+          case 'right': return line.stripRight();
+          default: return line.stripLeft().stripRight();
+        }
       }).join('\n');
     }
     function sort(txt) {
@@ -71,10 +98,18 @@
       return txt.toUpperCase();
     }
     function join(txt) {
-      return txt.replace(/\r*\n/g, ' ');
+      var sep = $('#join-sep').val();
+      return txt.replace(/\r*\n/g, sep);
     }
     function squeeze(txt) {
-      return txt.replace(/[ \t][ \t]+/g, ' ');
+      var char = $('#squeeze-char').val();
+      if (char) {
+        var char_safe = escapeRegExp(char);
+        var regex = new RegExp(char_safe + '{2,}', 'g');
+        return txt.replace(regex, char);
+      } else {
+        return txt.replace(/[ \t][ \t]+/g, ' ');
+      }
     }
     function unique(txt) {
       var array = txt.split('\n');
@@ -112,12 +147,11 @@
     // init
     $(document).ready(function () {
 
-      // Add click handlers for the filters
-      $('#filters li').click(function(event) {
+      $('#filters .button').click(function(event) {
 
         // highlight clicked button
         deactivateAll();
-        $(event.target).addClass('active');
+        $(event.target).parent().addClass('active');
 
         // run the function named as filter name
         var filter = $(event.target).text();
@@ -127,6 +161,11 @@
         // show output
         $('#output-text').val(result);
         $('#pipe').css('visibility', 'visible');
+      });
+
+      // Changing options rerun the current filter
+      $('#filters .options').change(function(event) {
+        $('li.active').children('.button').click();
       });
 
       // Pipe: Use current output as input
@@ -164,6 +203,9 @@
       height: 7em;
       width: 100%;
     }
+    input[type=text] {
+      width: 1.5em;
+    }
     #filters ul {
       padding: 0;
     }
@@ -177,6 +219,12 @@
     .active {
       background: lime;
       color: black;
+    }
+    .options {
+      display: none;
+    }
+    .active .options {
+      display: inline;
     }
     #pipe {
       margin-top: 0.5em;
@@ -201,17 +249,61 @@
 
   <div id="filters">
     <ul>
-      <li>join</li>
-      <li>lower</li>
-      <li>rev</li>
-      <li>sort</li>
-      <li>split</li>
-      <li>squeeze</li>
-      <li>strip</li>
-      <li>tac</li>
-      <li>unaccent</li>
-      <li>unique</li>
-      <li>upper</li>
+      <li>
+        <span class="button">join</span>
+        <span class="options">
+          lines by
+          <input id="join-sep" type="text" value=" ">
+        </span>
+      </li>
+      <li>
+        <span class="button">lower</span>
+      </li>
+      <li>
+        <span class="button">reverse</span>
+        <span class="options">
+          <select id="reverse-mode">
+            <option>lines</option>
+            <option>letters</option>
+          </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">sort</span>
+      </li>
+      <li>
+        <span class="button">split</span>
+        <span class="options">
+          by
+          <input id="split-sep" type="text">
+        </span>
+      </li>
+      <li>
+        <span class="button">squeeze</span>
+        <span class="options">
+          char
+          <input id="squeeze-char" type="text" maxlength="1">
+        </span>
+      </li>
+      <li>
+        <span class="button">strip</span>
+        <span class="options">
+          <select id="strip-mode">
+            <option>both</option>
+            <option>left</option>
+            <option>right</option>
+          </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">unaccent</span>
+      </li>
+      <li>
+        <span class="button">unique</span>
+      </li>
+      <li>
+        <span class="button">upper</span>
+      </li>
     </ul>
   </div>
 
