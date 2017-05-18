@@ -46,8 +46,8 @@
     }
     function rev(txt) {
       // multiline rev
-      return $.map(txt.split('\n'), function (t, i) {
-        return t.reverse();
+      return $.map(txt.split('\n'), function (line, i) {
+        return line.reverse();
       }).join('\n');
     }
     function split(txt) {
@@ -55,8 +55,8 @@
     }
     function strip(txt) {
       // multiline strip
-      return $.map(txt.split('\n'), function (t, i) {
-        return t.strip();
+      return $.map(txt.split('\n'), function (line, i) {
+        return line.strip();
       }).join('\n');
     }
     function sort(txt) {
