@@ -8,7 +8,7 @@ layout: null
 		<description>{{ site.description | xml_escape }}</description>
 		<link>{{ site.url }}</link>
 		<image>
-			<url>http://aurelio.net/img/icon128/aurelio.png</url>
+			<url>http://aurelio.net/img/icon/128/aurelio.png</url>
 			<title>Aurelio</title>
 			<link>http://aurelio.net</link>
 		</image>
