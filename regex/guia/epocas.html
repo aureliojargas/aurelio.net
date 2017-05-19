@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="mais-sobre-metacaracteres.html">
+<LINK REL="Next" HREF="quantificadores-gulosos.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Épocas e aplicativos diversos, Metacaracteres distorcidos</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="mais-sobre-metacaracteres.html">Anterior</A>
+<A HREF="quantificadores-gulosos.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="epocas"><A NAME="3_1">Épocas e aplicativos diversos,
+ Metacaracteres distorcidos</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Agora que já aprendemos todos aqueles metacaracteres, sua sintaxe,
+ suas regras, seus detalhes, é hora de aplicar na prática esse
+ conhecimento. E aí é que vem a surpresa, quando você percebe que
+ alguns metacaracteres não funcionam direito... O que acontece?</P>
+<P> O que acontece é que existe uma diferença brutal de sintaxe entre
+ aplicativos, em que cada um coloca sua personalidade, e temos várias
+ maneiras de representar o mesmo metacaractere.</P>
+<P> Por exemplo: o opcional é<B> <CODE>?</CODE></B> no Python, Perl e
+ linguagens de programação mais novas. Mas em aplicativos mais antigos
+ como o grep e o sed, ele é escapado<B> <CODE>\?</CODE></B>, sendo<B> <CODE>
+?</CODE></B> uma mera interrogação literal. Já no editor de textos
+ vim, o opcional é representado pelo esquisito<B> <CODE>\=</CODE></B>.
+ Vai entender?</P>
+<P> O motivo mais comum para isso acontecer são as razões históricas.
+ Voltando no tempo, na época em que os primeiros programas começavam a
+ ter suporte a expressões regulares, basicamente o que era comum de se
+ fazer em um editor de textos eram códigos de programas, e não textos
+ normais da linguagem falada.</P>
+<P> Assim, como era (e ainda é) muito comum de se ter os caracteres<B> <CODE>
+?</CODE></B>,<B> <CODE>+</CODE></B>,<B> <CODE>{</CODE></B>,<B> <CODE>(</CODE>
+</B> e<B> <CODE>|</CODE></B> nos códigos de programas, era comum eles
+ fazerem parte da ER por seu valor literal, ou seja, procurar por uma
+ interrogação, por uma barra vertical, etc. Então, no começo de
+ tudo, esses metacaracteres eram todos escapados para serem especiais:<B>
+ <CODE>\?</CODE></B>,<B> <CODE>\+</CODE></B>,<B> <CODE>\{</CODE></B>,<B>
+ <CODE>\(</CODE></B> e<B> <CODE>\|</CODE></B>.</P>
+<P> Já aplicativos e linguagens mais novos, criados em um mundo onde a
+ editoração eletrônica avançou muito e um &quot;texto de computador&quot; não
+ era apenas um código de programa, todos os escapes foram retirados e
+ os metacaracteres ficaram mais simples.</P>
+<P> Aqueles aplicativos antigos, porém, continuam até hoje utilizando
+ os escapes, pois têm de manter a compatibilidade com versões
+ anteriores. Alguns são mais espertos e suportam ambas as sintaxes,
+ escolhendo via configuração ou opção de linha de comando.</P>
+<P> Toda essa historinha, além de curiosidade, está aqui para que
+ você saiba o porquê das coisas, e isso o ajuda na hora da dúvida,
+ pois se você sabe que o aplicativo é antigo, provavelmente os
+ metacaracteres devem ser escapados. Ou ainda, se você viu que o
+ opcional<B> <CODE>?</CODE></B> precisou ser escapado, outros
+ provavelmente precisarão também.</P>
+<P> Concluindo, ora razões históricas ora vaidade do autor, o fato é
+ que a diversidade impera e você vai ter de se acostumar com isso e
+ aprender as diferenças de cada aplicativo que for utilizar. Bem-vindo
+ ao mundo caótico da implementação das expressões regulares.</P>
+<P> Mas para ajudar nesse reconhecimento da diferença, no final do guia
+ há uma daquelas tabelinhas mágicas, que parece simples, mas demora
+ dias para fazer, e pode e deve ser consultada em caso de dúvida.</P>
+<P> Estão registradas todas as diferenças encontradas em vários
+ aplicativos e linguagens. Com ela em mãos, você não precisa mais se
+ preocupar com isso. O nome é &quot;Diferenças de Metacaracteres Entre
+ Aplicativos&quot;.</P>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="mais-sobre-metacaracteres.html">Anterior</A>
+<A HREF="quantificadores-gulosos.html">Próxima</A>
+</BODY>
+</HTML>

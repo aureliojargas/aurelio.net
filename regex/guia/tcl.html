@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="shell-script.html">
+<LINK REL="Next" HREF="vbscript.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Tcl</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="shell-script.html">Anterior</A>
+<A HREF="vbscript.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="tcl"><A NAME="7_17">Tcl</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<PRE>
+característica	como fazer
+--------------------------------------
+busca   	função regexp
+substituição	função regsub
+divisão 	-
+ER crua 	{entre chaves}
+ignore M/m	opção -nocase
+global  	opção -all
+</PRE>
+<P> A linguagem Tcl não podia ficar de fora da festa.</P>
+<P> Bem, de cara aquela dica que é sempre importante: para deixar a ER
+ no formato cru, evitando pré-processamento, basta colocá-la entre
+ {chaves}.</P>
+<P> As funções que nos interessam são <CODE>regexp</CODE> para busca
+ e <CODE>regsub</CODE> para substituição. O grande problema da Tcl é
+ que ela não tem suporte às classes POSIX, nem às bordas nem às
+ chaves! Fora isso, a busca de padrões é tranqüila:</P>
+<PRE>
+if [regexp -nocase {^[a-z][a-z]$} &quot;OI&quot;] {
+  puts &quot;casou!&quot;
+}
+</PRE>
+<P> Então, para ignorar maiúsculas e minúsculas, usamos a opção <CODE>
+-nocase</CODE>, que deve ser colocada logo após o nome da função. Em
+ seguida, colocamos nossa ER no formato cru para evitar problemas, e
+ como não podemos usar as chaves, fazemos a repetição manual,
+ duplicando a lista.</P>
+<P> Já uma substituição é muito mais chata de fazer, o formato
+ genérico é <CODE>regsub -opção ER $texto textonovo variávelnova</CODE>
+, veja:</P>
+<PRE>
+prompt$ tclsh
+% regsub -all {[A-Z]} &quot;eScaMOSO&quot; &quot;.&quot; sobra
+5
+% puts $sobra
+e.ca....
+</PRE>
+<P> A função <CODE>regsub</CODE> retornou o número de substituições
+ efetuadas: cinco. Mas observe o trabalho para fazer isso, pois
+ colocamos a opção <CODE>-all</CODE> para trocar todas as
+ ocorrências, depois nossa ER crua, depois o texto original a ser
+ trocado, depois o texto novo que será colocado na troca e, por
+ último, o nome de uma variável para colocar o texto modificado.</P>
+<P> Aí usamos o <CODE>puts</CODE> para nos mostrar o conteúdo da
+ variável <CODE>sobra</CODE> e finalmente conferir o que nossa ER fez.</P>
+<P> Mais informações são encontradas em:</P>
+<UL>
+<LI><A HREF="http://www.scriptics.com">http://www.scriptics.com</A>.</LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="shell-script.html">Anterior</A>
+<A HREF="vbscript.html">Próxima</A>
+</BODY>
+</HTML>

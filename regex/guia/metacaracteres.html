@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="utilidade.html">
+<LINK REL="Next" HREF="representantes.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Os Metacaracteres</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="utilidade.html">Anterior</A>
+<A HREF="representantes.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H1 ID="metacaracteres"><A NAME="2">Os Metacaracteres</A></H1>
+<P> Então, para já matar sua curiosidade, aqui estão os tão falados
+ metacaracteres-padrão que serão nossos personagens das próximas
+ páginas:<B> <CODE>. ? * + ^ $ | [ ] { } ( ) \</CODE></B>. E aí,
+ sentiu um frio na barriga? Cada simbolozinho desses tem sua função
+ específica, que pode mudar dependendo do contexto no qual está
+ inserido, e podemos agregá-los uns com os outros, combinando suas
+ funções e fazendo construções mais complexas. Olha, ainda dá tempo
+ de fechar o livro e voltar a assistir à novela....</P>
+<P> Então deixa eu te assustar mais um pouquinho. Além destes, temos
+ outros metacaracteres estendidos que foram criados posteriormente, pois
+ tarefas mais complexas requisitavam funções mais específicas ainda.
+ E para terminar de complicar, sua sintaxe de utilização não é a
+ mesma para todos os programas que suportam expressões regulares.</P>
+<P> Bem, já que você não desistiu (eu tentei), vamos logo ao que
+ interessa, e para começar vamos dar nomes aos bois. Leia, releia e
+ &quot;treleia&quot; esta lista, repetindo para si mesmo e associando o nome ao
+ símbolo, pois estas palavras farão parte de sua vida, de sua rotina.
+ Acostume-se com os nomes e não os mude.</P>
+<PRE>
+	meta	mnemônico
+	------------------------------
+	.	ponto
+	[]	lista
+	[^]	lista negada
+	?	opcional
+	*	asterisco
+	+	mais
+	{}	chaves
+	^	circunflexo
+	$	cifrão
+	\b	borda
+	\	escape
+	|	ou
+	()	grupo
+	\1	retrovisor
+</PRE>
+<P> Agora que sabemos como chamar nossos amigos novos, veremos uma
+ prévia, um apanhado geral de todos os metacaracteres e suas funções.
+ Eles estão divididos em quatro grupos distintos, de acordo com
+ características comuns entre eles.</P>
+<P><B> Representantes</B></P>
+<PRE>
+meta	mnemônico	função
+---------------------------------------------------------------
+.	ponto   	um caractere qualquer
+[...]	lista   	lista de caracteres permitidos
+[^...]	lista negada	lista de caracteres proibidos
+</PRE>
+<P><B> Quantificadores</B></P>
+<PRE>
+meta	mnemônico	função
+---------------------------------------------------------------
+?	opcional	zero ou um
+*	asterisco	zero, um ou mais
++	mais    	um ou mais
+{n,m}	chaves  	de n até m
+</PRE>
+<P><B> Âncoras</B></P>
+<PRE>
+meta	mnemônico	função
+---------------------------------------------------------------
+^	circunflexo	início da linha
+$	cifrão  	fim da linha
+\b	borda   	início ou fim de palavra
+</PRE>
+<P><B> Outros</B></P>
+<PRE>
+meta	mnemônico	função
+---------------------------------------------------------------
+\c	escape  	torna literal o caractere c
+|	ou      	ou um ou outro
+(...)	grupo   	delimita um grupo
+\1...\9	retrovisor	texto casado nos grupos 1...9
+</PRE>
+<BLOCKQUOTE><I> Aaaah, ? e * eu já uso na linha de comando!</I></BLOCKQUOTE>
+<P> Opa, não confunda! Os curingas usados na linha de comando para
+ especificar nomes de arquivos, como <CODE>*.txt</CODE>, <CODE>
+relatorio.{txt,doc}</CODE> e <CODE>guia-??.html</CODE><B> não são</B>
+ expressões regulares. São curingas específicos de nomes de arquivo,
+ e apesar de parecidos, são outra coisa e os significados de seus
+ símbolos são diferentes dos das expressões, então o melhor que
+ você faz agora é<B> esquecer</B> esses curingas, senão eles podem
+ confundi-lo e atrapalhar seu aprendizado.</P>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="utilidade.html">Anterior</A>
+<A HREF="representantes.html">Próxima</A>
+</BODY>
+</HTML>

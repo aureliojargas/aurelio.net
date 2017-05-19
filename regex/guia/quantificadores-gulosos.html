@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="epocas.html">
+<LINK REL="Next" HREF="quantificadores-nao-gulosos.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Quantificadores gulosos</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="epocas.html">Anterior</A>
+<A HREF="quantificadores-nao-gulosos.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="quantificadores-gulosos"><A NAME="3_2">Quantificadores gulosos</A>
+</H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Como já vimos, todos os quantificadores são gulosos, pois sempre
+ casam o máximo possível. Mas por que isso? Como isso acontece?
+ Acompanhe um passo-a-passo para esclarecer o assunto e nunca mais
+ sofrer por não entender a gulodice.</P>
+<P> Para a demonstração, vamos pegar uma frase:</P>
+<BLOCKQUOTE> um &lt;b&gt;negrito&lt;/b&gt; aqui.</BLOCKQUOTE>
+<P> E supondo que nosso objetivo seja casar os marcadores <CODE>&lt;b&gt;</CODE>
+ e <CODE>&lt;/b&gt;</CODE> para apagá-los. Mas ao aplicarmos a ER<B> <CODE>
+&lt;.*&gt;</CODE></B>, vemos que ela casou além, pegando de uma vez todo o
+ trecho <U>&lt;b&gt;negrito&lt;/b&gt;</U>. O que aconteceu?</P>
+<P> Aconteceu que o asterisco, como todo quantificador, é guloso e
+ casou o máximo que conseguiu. Vamos entrar na abstração da
+ abstração e entender como isso aconteceu.</P>
+<P> Imaginemos que somos o próprio robozinho, então como aplicaremos a
+ ER no texto?</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+^                           &lt;.*&gt;
+</PRE>
+<P> Temos a frase e o circunflexo logo abaixo indica onde está o foco
+ da ER e mais à direita está nossa ER. Estamos no estado inicial,
+ parados no começo da linha, e agora vamos tentar casar a expressão. A
+ primeira coisa que temos para casar, é o<B> <CODE>&lt;</CODE></B>.</P>
+<P> Como a primeira letra da frase é um <CODE>u</CODE>, mudamos o foco
+ para o próximo caractere, pois este não é o<B> <CODE>&lt;</CODE></B>
+ que procuramos:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+.^                          &lt;.*&gt;
+</PRE>
+<P> Mmmmmmm, ainda não deu, então continuamos assim, um por um, até
+ conseguirmos um casamento:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+..^                         &lt;.*&gt;
+...^                        &lt;.*&gt;
+</PRE>
+<P> Opa, agora achamos um <CODE>&lt;</CODE>! Conseguimos casar o primeiro
+ átomo de nossa ER. Então marcamos como casado esses caracteres e
+ seguimos adiante para o próximo:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...x^                       &quot;&lt;&quot;.*&gt;
+</PRE>
+<P> Os trechos já casados são representados pelos <CODE>x</CODE>
+ marcando a frase e as aspas marcam a ER. Os pontinhos representam
+ apenas os &quot;rastros&quot; do foco, as partes já visitadas e não casadas.</P>
+<P> A próxima parte da ER a ser casada é o curinga, que casa<I>
+ qualquer caractere em qualquer quantidade</I>. Então, procurando
+ qualquer caractere, nosso curinga segue casando:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...x^                       &quot;&lt;.*&quot;&gt;
+...xx^                      &quot;&lt;.*&quot;&gt;
+...xxx^                     &quot;&lt;.*&quot;&gt;
+...xxxx^                    &quot;&lt;.*&quot;&gt;
+</PRE>
+<P> Ei! Mas ele passou batido pelo <CODE>&gt;</CODE> que a gente queria!
+ Por quê? Lembre-se de que o ponto casa<I> qualquer caractere</I>? E
+ por acaso o <CODE>&gt;</CODE> também não é qualquer caractere? É,
+ então o ponto casa ele também, seguindo guloso até o fim da linha:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...xxxxxxxxxxxxxxxxxxxx^    &quot;&lt;.*&quot;&gt;
+</PRE>
+<P> Pronto. Como bateu lá no final e não tem mais caracteres para
+ casar, o asterisco sossega. Mas ainda temos um componente da ER para
+ casar, o<B> <CODE>&gt;</CODE></B>. E agora?</P>
+<P> Bem, o asterisco é guloso, mas não é egoísta, então se ele
+ precisar ceder alguma coisa, ele cede. E assim acontece, ele vai
+ devolvendo até satisfazer o próximo componente da ER:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...xxxxxxxxxxxxxxxxxxx^     &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxxxxxx^      &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxxxxx^       &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxxxx^        &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxxx^         &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxx^          &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxx^           &quot;&lt;.*&quot;&gt;
+</PRE>
+<P> Opa, agora o asterisco devolveu um <CODE>&gt;</CODE> que servirá para
+ casar o último átomo de nossa ER:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...xxxxxxxxxxxxxx^          &quot;&lt;.*&gt;&quot;
+</PRE>
+<P> Pronto! Nossa ER agora está casada por inteiro, então não temos
+ mais o que fazer, fim do processo. Agora ficou fácil entender essa
+ gulodice? É sempre assim, casa o máximo possível, e se precisar,
+ devolve alguns caracteres para satisfazer o resto da expressão.</P>
+<P> Por causa dessa gulodice e da subseqüente procura de trás para
+ frente é que acaba se casando além do desejado. Exatamente assim
+ também funcionam todos os outros quantificadores: mais, chaves e
+ opcional. Sempre casam o máximo possível. Então, em uma visão
+ diferente, vamos ver o que cada parte da ER casou na frase:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...x                        &lt;
+....xxxxxxxxxxxx            .*
+................x           &gt;
+</PRE>
+<P> Quando o que normalmente se esperava conseguir era:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...x.........x              &lt;
+....x.........xx            .*
+.....x..........x           &gt;
+</PRE>
+<P> Para o asterisco ter esse comportamento, ou você faz uma ER mais
+ específica, ou usa um quantificador não-guloso, se o aplicativo
+ suportá-lo. Vamos conhecê-los!</P>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="epocas.html">Anterior</A>
+<A HREF="quantificadores-nao-gulosos.html">Próxima</A>
+</BODY>
+</HTML>

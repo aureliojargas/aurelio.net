@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="opcional.html">
+<LINK REL="Next" HREF="mais.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Asterisco: o tanto-faz</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="opcional.html">Anterior</A>
+<A HREF="mais.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H3 ID="asterisco"><A NAME="2_2_2">Asterisco: o tanto-faz *</A></H3>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Se o opcional já não esquenta a cabeça, podendo ter ou não a
+ entidade anterior, o asterisco é mais tranqüilo ainda, pois para ele
+ pode ter, não ter, ou ter vários, infinitos. Em outras palavras, a
+ entidade anterior pode aparecer<I> em qualquer quantidade</I>.</P>
+<PRE>
+6*0     	0, 60, 660, 6660, ..., 666666666660, ...
+bi*p    	bp, bip, biip, biiip, biiiip...
+b[ip]*  	b, bi, bip, biipp, bpipipi, biiiiip, bppp, ...
+</PRE>
+<P> Como HTML é sempre um ótimo exemplo, voltamos ao nosso exemplo das
+ marcações, que podem ter vários espaços em branco após o
+ identificador, então <CODE>&lt;b &gt;</CODE> e <CODE>&lt;/b &gt;</CODE> são
+ válidos. Vamos colocar essa condição na ER:</P>
+<PRE>
+    &lt;/?[BIPbip] *&gt;	&lt;/B&gt;, &lt;/B &gt;, &lt;/B  &gt;, ..., &lt;p         &gt;, ...
+</PRE>
+<P> Note que agora com o asterisco, nossa ER já não tem mais um
+ número finito de possibilidades. Vejamos como fica a leitura dessa ER:
+ um <CODE>&lt;</CODE>, seguido ou não de uma <CODE>/</CODE>, seguido de:
+ ou <CODE>B</CODE>, ou <CODE>I</CODE>, ou <CODE>P</CODE>, ou <CODE>b</CODE>
+, ou <CODE>i</CODE>, ou <CODE>p</CODE>, seguido ou não de vários
+ espaços, seguido de <CODE>&gt;</CODE>.</P>
+<H4 ID="gulodice">Apresentando a gulodice</H4>
+<P> Pergunta: o que casará<B> <CODE>[ar]*a</CODE></B> na palavra<I>
+ arara</I>? Alternativas:</P>
+<PRE>
+1) a    	[ar] zero vezes, seguido de a
+2) ara  	[ar] duas vezes (a,r), seguido de a
+3) arara	[ar] quatro vezes (a,r,a,r), seguido de a
+4) n.d.a.
+</PRE>
+<P> Acertou se você escolheu a número 3. O asterisco repete em
+ qualquer quantidade, mas ele sempre tentará repetir o<B> máximo</B>
+ que conseguir. As três alternativas são válidas, mas entre casar a
+ lista<B> <CODE>[ar]</CODE></B> zero, duas ou quatro vezes, ele
+ escolherá o maior número possível. Por isso se diz que o asterisco
+ é guloso.</P>
+<P> Essa gulodice às vezes é boa, às vezes é ruim. Os próximos
+ quantificadores, mais e chaves, bem como o opcional já visto, são
+ igualmente gulosos. Mais detalhes sobre o assunto, confira mais
+ adiante.</P>
+<H4 ID="curinga">Apresentando o curinga .*</H4>
+<P> Vimos até agora que temos dois metacaracteres extremamente
+ abrangentes, como o ponto (qualquer caractere) e o asterisco (em
+ qualquer quantidade). E se juntarmos os dois? Teremos<I> qualquer
+ caractere, em qualquer quantidade</I>. Pára um instante para pensar
+ nisso. O que isso significa, tudo? Nada? A resposta é: ambos.</P>
+<P> O nada, pois &quot;qualquer quantidade&quot; também é igual a &quot;nenhuma
+ quantidade&quot;. Então é opcional termos qualquer caractere, não
+ importa. Assim, uma ER que seja simplesmente<B> <CODE>.*</CODE></B>
+ sempre será válida e casará mesmo uma linha vazia.</P>
+<P> O tudo, pois &quot;qualquer quantidade&quot; também é igual a &quot;tudo o que
+ tiver&quot;. E é exatamente isso o que o asterisco faz, ele é guloso,
+ ganancioso, e sempre tentará casar o<B> máximo</B> que conseguir.
+ Repita comigo: o MÁXIMO que conseguir.</P>
+<BLOCKQUOTE> <U>O curinga .* é qualquer coisa!</U></BLOCKQUOTE>
+<P> Assim, temos aqui o curinga das ERs, uma carta para se usar em
+ qualquer situação. É muito comum ao escrever uma expressão regular,
+ você definir alguns padrões que procura, e lá no meio, em uma parte
+ que não importa, pode ser<I> qualquer coisa</I>, você coloca um<B> <CODE>
+.*</CODE></B> e depois continua a expressão normalmente.</P>
+<P> Por exemplo, para procurar ocorrência de duas palavras na mesma
+ linha,<B> <CODE>relatório.*amanhã</CODE></B> serve para achar aquela
+ linha maldita em que lhe pediram um trabalho &quot;pra ontem&quot;. Ou, ainda,
+ procurar acessos de usuários em uma data qualquer:<B> <CODE>
+22/11/2001.*login</CODE></B>.</P>
+<P><B> Resumão</B></P>
+<UL>
+<LI>O asterisco repete em qualquer quantidade.</LI>
+<LI>Quantificadores são gulosos.</LI>
+<LI>O curinga .* é o tudo e o nada, qualquer coisa.</LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="opcional.html">Anterior</A>
+<A HREF="mais.html">Próxima</A>
+</BODY>
+</HTML>

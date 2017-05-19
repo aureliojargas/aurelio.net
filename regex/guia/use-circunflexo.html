@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="nao-complique.html">
+<LINK REL="Next" HREF="evite-lista-negada.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Use o circunflexo</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="nao-complique.html">Anterior</A>
+<A HREF="evite-lista-negada.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="use-circunflexo"><A NAME="4_2">Use o circunflexo</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Sempre que possível,<I> comece sua ER com o circunflexo</I>. Como
+ já vimos, o robozinho vai tentando casá-la, caractere por caractere,
+ da esquerda para a direita, a partir do começo da linha. Então, o
+ ponto inicial de pesquisa, é o começo de linha.</P>
+<P> Se você não coloca o circunflexo em sua ER, o robozinho tentará
+ casá-la em qualquer parte da linha. Isso significa ir varrendo a
+ linha, um por um, até chegar no final e caso não encontre o padrão,
+ retorna falha na pesquisa.</P>
+<P> Se você coloca o circunflexo na sua ER, forçando o casamento do
+ começo de linha, se o primeiro componente da ER após o<B> <CODE>^</CODE>
+</B> já não casar com o primeiro caractere da linha, dali mesmo já
+ retorna falha de pesquisa, sem precisar varrer o resto da linha.</P>
+<P> Por exemplo, se você procura valores em reais &quot;R$&quot;, pode
+ simplesmente dizer<B> <CODE>R\$</CODE></B>. Mas se você sabe que os
+ reais que lhe interessam estão sempre no começo da linha, digam isso
+ com sua ER:<B> <CODE>^R\$</CODE></B>. Assim, em um exemplo como:</P>
+<PRE>
+R$ 200,00 : fósforos e velas
+  essenciais na crise de energia.
+  comprados das marcas mais baratas.
+R$ 100,00 : caixas de ovos vazias
+</PRE>
+<P> Ambas as ERs casam as linhas 1 e 4 imediatamente, pois têm o <U>R$</U>
+ já no começo. Mas nas linhas 2 e 3, onde não há nossos reais
+ desejados, a primeira ER seria tentada em ambas, em todas as
+ posições, até o final, para ver que falhou. Já a segunda, ao
+ encontrar um espaço em branco no começo da linha, já retorna falha,
+ pois ele não é um <CODE>R</CODE>.</P>
+<P> Em um exemplo mais palpável, suponha que seu chefe tenha uma mesa
+ enorme, com oito gavetas. E se ele lhe falar: &quot;Me traga a pasta verde,
+ está na minha gaveta&quot;, ou então &quot;Me traga a pasta verde, que está na
+ última gaveta. Na última hein? Não fuce no resto de minhas coisas!&quot;.
+ Tem uma diferença, não? &amp;:)</P>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="nao-complique.html">Anterior</A>
+<A HREF="evite-lista-negada.html">Próxima</A>
+</BODY>
+</HTML>

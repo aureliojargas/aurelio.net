@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="vim.html">
+<LINK REL="Next" HREF="googledocs.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Emacs</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="vim.html">Anterior</A>
+<A HREF="googledocs.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="emacs"><A NAME="6_2">Emacs</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Chamar o emacs de editor de texto é ser superficial, pois editar
+ texto parece ser a coisa menos interessante para fazer neste programa
+ que também lê e-mails, acessa a Internet, faz ftp, entre outros. Mas
+ como nosso interesse aqui é ERs, é isso o que veremos.
+ Contrastando-as com a abundância de funcionalidades, as ERs no emacs
+ são diferentes em alguns aspectos e não têm as chaves!</P>
+<P> As ERs são tratadas como<I> strings</I>, então valem as dicas já
+ vistas para lidar com isso. Para complicar, ele usa a notação antiga,
+ em que a maioria dos metacaracteres deve ser escapada para serem
+ especiais.</P>
+<P> Então juntando esses dois fatos, precisamos fazer<B> <CODE>
+\\[\\(.*\\)\\]</CODE></B> para agrupar o conteúdo de um par de
+ colchetes, o que normalmente seria<B> <CODE>\[(.*)\]</CODE></B>.</P>
+<P> Há vários comandos que trabalham com ERs, sendo <CODE>
+re-search-forward</CODE> e <CODE>re-search-backward</CODE> os comandos
+ de busca nas linhas adiante e anteriores, respectivamente. Mas melhores
+ do que estes são os comandos similares que procuram enquanto você
+ digita, já sabendo se sua ER está funcionando ou não antes de
+ finalizá-la: <CODE>isearch-forward-regexp</CODE> e <CODE>
+isearch-backward-regexp</CODE>.</P>
+<P> Como um editor de texto serve para alterar texto, temos o comando <CODE>
+replace-regexp</CODE> que se encarrega de fazer a substituição de
+ padrões:</P>
+<PRE>
+M-x replace-regexp &lt;enter&gt; \(Gentalha!\) &lt;enter&gt; \&amp; \1 Prrrr! &lt;enter&gt;
+</PRE>
+<P> Com essa seqüência agrupamos a palavra <U>gentalha!</U> e com o
+ especial<B> <CODE>\&amp;</CODE></B> que referencia todo o trecho casado e o
+ retrovisor um, que neste caso têm mesmo conteúdo, obtemos a frase
+ clássica que o<I> Seu Madruga</I> ouve após apanhar: &quot;Gentalha!
+ Gentalha! Prrrr!&quot;.</P>
+<P> O que é realmente diferente de tudo no emacs são suas &quot;classes de
+ sintaxe&quot;, que são seus similares para as classes POSIX e um algo mais.
+ A sintaxe para acessar essas classes é<B> <CODE>\s&lt;identificador&gt;</CODE>
+</B>, em que o identificador pode ser:</P>
+<PRE>
+ident.	nome    	casa um caractere que...
+--------------------------------------------------
+/	charquote	escapa o próximo caractere
+\	escape  	inicia um escape tipo C
+(	open    	abre um bloco
+)	close   	fecha de um bloco
+&lt;	comment 	inicia um comentário
+&gt;	endcomment	termina um comentário
+,	quote   	marca um texto normal
+&quot;	string  	delimita uma string
+-	whitespace	é branco
+.	punct   	é pontuação
+w	word    	é parte de uma palavra
+_	symbol  	não é parte de palavra
+</PRE>
+<P> O detalhe é que você mesmo pode alterar o conteúdo dessas classes
+ antes de utilizá-las, dependendo de suas necessidades. O comando <CODE>
+describe-syntax</CODE> mostra os valores atuais dessas classes, para
+ conferência.</P>
+<P> E como era de se esperar<B> <CODE>\S</CODE></B> (com S maiúsculo)
+ casa exatamente o oposto, sendo<B> <CODE>\S-</CODE></B> qualquer coisa
+ fora brancos, e assim vai...</P>
+<P> Ops, quase me esqueci do mais importante: é<B> GNU</B> emacs...</P>
+<UL>
+<LI><A HREF="http://www.gnu.org/software/emacs/emacs.html">
+http://www.gnu.org/software/emacs/emacs.html</A></LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="vim.html">Anterior</A>
+<A HREF="googledocs.html">Próxima</A>
+</BODY>
+</HTML>

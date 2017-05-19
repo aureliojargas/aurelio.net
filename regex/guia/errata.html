@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Errata do livro</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY id="errata">
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div>
+<DIV>
+</DIV>
+
+<DIV CLASS="body" ID="body">
+
+<H1>Errata</H1>
+
+<P>
+Errar é humano, errar várias vezes é super-humano! Aproveite para
+aprender com os meus erros, sua professora de português ficará
+orgulhosa.
+</P>
+<P>
+Dicas:
+</P>
+
+<UL>
+<LI>A notação <B>12§3</B> indica "página 12, parágrafo 3"
+<LI>Os exemplos e trechos de código não entram na contagem de parágrafos
+<LI>A "fala do leitor" conta como parágrafo
+</UL>
+
+<TABLE BORDER="1">
+<TR>
+<TH>local</TH>
+<TH>correção</TH>
+<TH>descrição</TH>
+</TR>
+<TR>
+<TD>06§1</TD>
+<TD><b>s/</b>compõe<b>/</b>compõem<b>/</b></TD>
+<TD>concordância</TD>
+</TR>
+<TR>
+<TD>12§2</TD>
+<TD><b>s/</b>simbolozinho desse<b>/</b>simbolozinho desses<b>/</b></TD>
+<TD>concordância</TD>
+</TR>
+<TR>
+<TD>12§2</TD>
+<TD><b>s/</b>assistir a novela<b>/</b>assistir à novela<b>/</b></TD>
+<TD>crase</TD>
+</TR>
+<TR>
+<TD>12§3</TD>
+<TD><b>s/</b>extendidos<b>/</b>estendidos<b>/</b></TD>
+<TD>em inglês é com X, em português não</TD>
+</TR>
+<TR>
+<TD>12§4</TD>
+<TD><b>s/</b>não mude-os<b>/</b>não os mude<b>/</b></TD>
+<TD>diz que o não puxa o os</TD>
+</TR>
+<TR>
+<TD>14§1</TD>
+<TD><b>s/</b>que sua função<b>/</b>cuja função<b>/</b></TD>
+<TD>é, fica melhor assim</TD>
+</TR>
+<TR>
+<TD>14§2</TD>
+<TD><b>s/</b>os metacaractere<b>/</b>os metacaracteres<b>/</b></TD>
+<TD>ops!</TD>
+</TR>
+<TR>
+<TD>16§1</TD>
+<TD><b>s/</b>poderiam haver<b>/</b>poderia haver<b>/</b></TD>
+<TD>concordância</TD>
+</TR>
+<TR>
+<TD>16§5</TD>
+<TD><b>s/</b>É assim olhe<b>/</b>É assim, olhe<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>17§6</TD>
+<TD><b>s/</b>Intuitivo não?<b>/</b>Intuitivo, não?<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>19§6</TD>
+<TD><b>s/</b>[:number:]<b>/</b>[:digit:]<b>/</b></TD>
+<TD>:number: não existe!</TD>
+</TR>
+<TR>
+<TD>20§2</TD>
+<TD><b>s/</b>igual a lista<b>/</b>igual à lista<b>/</b></TD>
+<TD>crase</TD>
+</TR>
+<TR>
+<TD>21§1</TD>
+<TD><b>s/</b>que não o espaço<b>/</b>que não seja o espaço<b>/</b></TD>
+<TD>para ficar mais claro</TD>
+</TR>
+<TR>
+<TD>25§1</TD>
+<TD><b>s/</b>Para um instante<b>/</b>Pára um instante<b>/</b></TD>
+<TD>acento diferencial</TD>
+</TR>
+<TR>
+<TD>25§5</TD>
+<TD><b>s/</b>um expressão<b>/</b>uma expressão<b>/</b></TD>
+<TD>ops!</TD>
+</TR>
+<TR>
+<TD>26§1</TD>
+<TD><b>s/</b>funcionamente<b>/</b>funcionamento<b>/</b></TD>
+<TD>vixe</TD>
+</TR>
+<TR>
+<TD>26§4</TD>
+<TD><b>s/</b>isso"$<b>/</b>isso?"<b>/</b></TD>
+<TD>faltou uma interrogação no final da fala do leitor</TD>
+</TR>
+<TR>
+<TD>28§2</TD>
+<TD><b>s/</b>Por quê âncora?<b>/</b>Por que âncora?<b>/</b></TD>
+<TD>nunca acerto os porquês</TD>
+</TR>
+<TR>
+<TD>29§3</TD>
+<TD><b>s/</b>linha em branco<b>/</b>linha vazia<b>/</b></TD>
+<TD>em branco pode ser duvidoso</TD>
+</TR>
+<TR>
+<TD>29§4</TD>
+<TD><b>s/</b>Ou ainda que tal<b>/</b>Ou, ainda, que tal<b>/</b></TD>
+<TD>milhares de pausas</TD>
+</TR>
+<TR>
+<TD>29§5</TD>
+<TD><b>s/</b>Júlio Neves<b>/</b>Julio Neves<b>/</b></TD>
+<TD>o nome é sem acento</TD>
+</TR>
+<TR>
+<TD>30§2</TD>
+<TD><b>s/</b>, veja como se<b>/</b>. Veja como se<b>/</b></TD>
+<TD>pausa maior</TD>
+</TR>
+<TR>
+<TD>30§2</TD>
+<TD><b>s/</b>$<b>/</b>melodia<b>/</b></TD>
+<TD>faltou incluí-la na lista!</TD>
+</TR>
+<TR>
+<TD>32§3</TD>
+<TD><b>s/</b>RG? Lembre que ele tem o formato n.nnn.nnn-n,<b>/</b>RG no formato n.nnn.nnn-n?<b>/</b></TD>
+<TD>nem todos os RG têm o mesmo formato</TD>
+</TR>
+<TR>
+<TD>35§8</TD>
+<TD><b>s/</b>repetidas como estas<b>/</b>repetidas como como estas<b>/</b></TD>
+<TD>a revisão tirou a piada</TD>
+</TR>
+<TR>
+<TD>36§2</TD>
+<TD><b>s/</b>in(d)ol(or) é sem \\2\\3<b>/</b>in(d)ol(or) é sem \\1\\2<b>/</b></TD>
+<TD>me perdi nas contas</TD>
+</TR>
+<TR>
+<TD>40§3</TD>
+<TD><b>s/</b>&lt;<b>/</b>&gt;<b>/</b></TD>
+<TD>o componente é o maior-que &gt;</TD>
+</TR>
+<TR>
+<TD>44§1</TD>
+<TD><b>s/</b>bastante letras<b>/</b>muitas letras<b>/</b></TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD>45§3</TD>
+<TD><b>s/</b>como com tudo isso<b>/</b>como tudo isso<b>/</b></TD>
+<TD>sobrou</TD>
+</TR>
+<TR>
+<TD>46§1</TD>
+<TD><b>s/</b>virou o base<b>/</b>viraram a base<b>/</b></TD>
+<TD>vixe</TD>
+</TR>
+<TR>
+<TD>49§9</TD>
+<TD><b>s/</b>E como no primário<b>/</b>É como no primário<b>/</b></TD>
+<TD>É É É</TD>
+</TR>
+<TR>
+<TD>50§5</TD>
+<TD><b>s/</b>implementacão.<b>/</b>implementação.<b>/</b></TD>
+<TD>ops</TD>
+</TR>
+<TR>
+<TD>52§2</TD>
+<TD><b>s/</b>diferença não?<b>/</b>diferença, não?<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>53§2</TD>
+<TD><b>s/</b>qualquer caracteres<b>/</b>quaisquer caracteres<b>/</b></TD>
+<TD>concordância</TD>
+</TR>
+<TR>
+<TD>53§4</TD>
+<TD><b>s/</b>Lembra da nossa<b>/</b>Lembra a nossa<b>/</b></TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD>55§2</TD>
+<TD><b>s/</b>começe<b>/</b>comece<b>/</b></TD>
+<TD>que feio...</TD>
+</TR>
+<TR>
+<TD>56§1</TD>
+<TD><b>s/</b>1[12]<b>/</b>1[012]<b>/</b></TD>
+<TD>feio! faltou outubro na ER da data (duas últimas)</TD>
+</TR>
+<TR>
+<TD>57§4</TD>
+<TD><b>s/</b>estabilidde<b>/</b>estabilidade<b>/</b></TD>
+<TD>comi o a</TD>
+</TR>
+<TR>
+<TD>57§5</TD>
+<TD><b>s/</b>foi uma falha<b>/</b>que foi uma falha<b>/</b></TD>
+<TD>ops, faltou</TD>
+</TR>
+<TR>
+<TD>63§7</TD>
+<TD><b>s/</b>outro programas<b>/</b>outros programas<b>/</b></TD>
+<TD>tsc tsc</TD>
+</TR>
+<TR>
+<TD>64§1</TD>
+<TD><b>s/</b>qual linha<b>/</b>quais linhas<b>/</b></TD>
+<TD>diferença mínima mas importante</TD>
+</TR>
+<TR>
+<TD>64§6</TD>
+<TD><b>s/</b>Com ERs é claro!<b>/</b>Com ERs, é claro!<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>65§3</TD>
+<TD><b>s/</b>Então juntando<b>/</b>Então, juntando<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>67§1</TD>
+<TD><b>s/</b>bastante diferenças<b>/</b>muitas diferenças<b>/</b></TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD>68§7</TD>
+<TD><b>s/</b>não-separável<b>/</b>não-separável.<b>/</b></TD>
+<TD>faltou um ponto final</TD>
+</TR>
+<TR>
+<TD>70§4</TD>
+<TD><b>s/</b>Depois na linha<b>/</b>Depois, na linha<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>72§1</TD>
+<TD><b>s/</b>sessente<b>/</b>sessenta<b>/</b></TD>
+<TD>sealevante...</TD>
+</TR>
+<TR>
+<TD>72§3</TD>
+<TD><b>s/</b>umas das<b>/</b>uma das<b>/</b></TD>
+<TD>falta de sono dá nisso...</TD>
+</TR>
+<TR>
+<TD>75§2</TD>
+<TD><b>s/</b>E o olha<b>/</b>E olha<b>/</b></TD>
+<TD>sobrou</TD>
+</TR>
+<TR>
+<TD>76§1</TD>
+<TD><b>s/</b>foi incluída<b>/</b>foi incluído<b>/</b></TD>
+<TD>O suporte, O suporte</TD>
+</TR>
+<TR>
+<TD>76§4</TD>
+<TD><b>s/</b>Fácil não?<b>/</b>Fácil, não?<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>79§1</TD>
+<TD><b>s/</b>todos pedaços<b>/</b>todos os pedaços<b>/</b></TD>
+<TD>scáps</TD>
+</TR>
+<TR>
+<TD>80§4</TD>
+<TD><b>s/</b>após nome<b>/</b>após o nome<b>/</b></TD>
+<TD>comi o o</TD>
+</TR>
+<TR>
+<TD>82§5</TD>
+<TD><b>s/</b>em repositório<b>/</b>no repositório<b>/</b></TD>
+<TD>em + o = no</TD>
+</TR>
+<TR>
+<TD>82§7</TD>
+<TD><b>s/</b>orientado à linha<b>/</b>orientado a linha<b>/</b></TD>
+<TD>a caractere, a menu, ...</TD>
+</TR>
+<TR>
+<TD>83§7</TD>
+<TD><b>s/</b>conectiva.com.br<b>/</b>aurelio.net<b>/</b></TD>
+<TD>mudança de endereço</TD>
+</TR>
+<TR>
+<TD>84§2</TD>
+<TD><b>s/</b>seu maiores traumas<b>/</b>sem maiores traumas<b>/</b></TD>
+<TD>pois é...</TD>
+</TR>
+<TR>
+<TD>85§1</TD>
+<TD><b>s/</b>verde666.org<b>/</b>aurelio.net<b>/</b></TD>
+<TD>site novo</TD>
+</TR>
+<TR>
+<TD>85§2</TD>
+<TD><b>s/</b>à expressões<b>/</b>às expressões<b>/</b></TD>
+<TD>cafundi</TD>
+</TR>
+<TR>
+<TD>85§6</TD>
+<TD><b>s/</b>yahoogroups.com<b>/</b>yahoogrupos.com.br<b>/</b></TD>
+<TD>a lista foi abrasileirada</TD>
+</TR>
+<TR>
+<TD>87§1</TD>
+<TD><b>s/</b>acabar não?<b>/</b>acabar, não?<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>88§1</TD>
+<TD><b>s/</b>Mas por quê<b>/</b>Mas por que<b>/</b></TD>
+<TD>eu odeio porquês...</TD>
+</TR>
+<TR>
+<TD>88§2</TD>
+<TD><b>s/</b>procura certo?<b>/</b>procura, certo?<b>/</b></TD>
+<TD>pausa</TD>
+</TR>
+<TR>
+<TD>88§2</TD>
+<TD><b>s/</b>nós dá<b>/</b>nos dá<b>/</b></TD>
+<TD>e dá-lhe acento!</TD>
+</TR>
+</TABLE>
+
+<P>
+Meu MUITO OBRIGADO aos caçadores dos erros perdidos:
+</P>
+
+<UL>
+<LI>Arnaldo Ribeiro
+<LI>Carlos Alberto Teixeira
+<LI>Denis de Azevedo
+<LI>Fernandes Moura
+<LI>Guilherme Fonseca
+<LI>Julio Cezar Neves
+<LI>Klayson Sesana Bonatto
+<LI>Leslie Harlley Watter
+<LI>Marcelo Assis
+<LI>Marcio Marchini
+<LI>Max Jorge
+<LI>Rafael Colatusso
+<LI>Rodrigo Stulzer
+<LI>Rogério Brito
+<LI>Sérgio Fischer
+</UL>
+
+<HR NOSHADE SIZE=1>
+
+<P>
+← <A HREF=".">Continue a leitura do Guia de Expressões Regulares</A>
+</P>
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags ../errata.t2t -->
+</BODY></HTML>

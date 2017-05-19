@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="ponto.html">
+<LINK REL="Next" HREF="lista-negada.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Lista: a exigente [...]</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="ponto.html">Anterior</A>
+<A HREF="lista-negada.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H3 ID="lista"><A NAME="2_1_2">Lista: a exigente [...]</A></H3>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Bem mais exigente que o ponto, a lista não casa com qualquer um.
+ Ela sabe exatamente o que quer, e nada diferente daquilo,<I> a lista
+ casa com quem ela conhece</I>.</P>
+<P> Ela guarda dentro de si os caracteres permitidos para casar, então
+ algo como<B> <CODE>[aeiou]</CODE></B> limita nosso casamento a apenas
+ letras vogais.</P>
+<P> No exemplo anterior do ponto, sobre acentuação, tínhamos a ER<B> <CODE>
+n.o</CODE></B>. Além dos casamentos desejados, ela é muito abrangente,
+ e também casa coisas indesejáveis como <U>neo</U>, <U>n-o</U>, <U>n5o</U>
+ e <U>n o</U>.</P>
+<P> Para que nossa ER fique mais específica, trocamos o ponto pela
+ lista, para casar apenas o <U>não</U> e <U>nao</U> desejados, veja:</P>
+<PRE>
+n[ãa]o
+</PRE>
+<P> E assim como o<B> <CODE>n.o</CODE></B>, todos os outros exemplos
+ anteriores do ponto casam muito mais que o desejado, justo pela sua
+ natureza &quot;promíscua&quot;.</P>
+<BLOCKQUOTE><I> Por isso que nos exemplos tinha os três pontinhos ...
+ no final?</I></BLOCKQUOTE>
+<P> Exatamente, eles indicam que havia mais possibilidades de casamento.
+ Como o ponto casa com qualquer coisa, ele é nada específico. Então
+ vamos impor limites às ERs:</P>
+<PRE>
+n[ãa]o  	não, nao
+[Tt]eclado	Teclado, teclado
+e[sx]tendido	estendido, extendido
+12[:. ]45	12:45, 12.45, 12 45
+&lt;[BIP]&gt; 	&lt;B&gt;, &lt;I&gt;, &lt;P&gt;
+</PRE>
+<BLOCKQUOTE><I> Mas e aquele ponto na ER da hora, não casa com qualquer
+ coisa?</I></BLOCKQUOTE>
+<P> Pegadinha! Não. Registre em algum canto de seu cérebro:<I> dentro
+ da lista, todo mundo é normal</I>. Repetindo:<I> dentro da lista, todo
+ mundo é normal</I>. Então aquele ponto é simplesmente um ponto
+ normal e não um metacaractere.</P>
+<P> No exemplo de marcação<B> <CODE>&lt;[BIP]&gt;</CODE></B>, vemos que as
+ ERs são sensíveis a maiúsculas e minúsculas, então se quisermos
+ mais possibilidades, basta incluí-las:</P>
+<PRE>
+&lt;[BIPbip]&gt;	&lt;B&gt;, &lt;I&gt;, &lt;P&gt;, &lt;b&gt;, &lt;i&gt;, &lt;p&gt;
+</PRE>
+<H4 ID="intervalos">Intervalos em listas</H4>
+<P> Por enquanto, vimos então que a lista abriga todos os caracteres
+ permitidos em uma posição. Como seria uma lista que dissesse que numa
+ determinada posição poderia haver apenas números?</P>
+<BLOCKQUOTE><I> Peraí que essa eu sei... deixa ver... [0123456789].
+ Acertei?</I></BLOCKQUOTE>
+<P> Sim! Então para casar uma hora, qualquer que ela seja, fica como?
+ Lembre que o formato é <CODE>hh:mm</CODE>.</P>
+<BLOCKQUOTE><I> Tá. [0123456789][0123456789]:[0123 - Argh! QUE SACO!</I>
+</BLOCKQUOTE>
+<P> Pois é! Assim também pensaram nossos ilustres criadores das ERs,
+ e, para evitar esse tipo de listagem extensa, temos<B> somente dentro
+ da lista</B> o conceito de intervalo.</P>
+<P> Lembra, que eu disse para você memorizar que dentro da lista, todo
+ mundo é normal? Pois é, aqui temos a primeira exceção à regra.
+ Todo mundo, fora o traço. Se tivermos um traço (-) entre dois
+ caracteres, isso representa todo o intervalo entre eles.</P>
+<P> Não entendeu? É assim, olhe:</P>
+<PRE>
+[0123456789] é igual a [0-9]
+</PRE>
+<P> É simples assim. Aquele tracinho indica um intervalo, então <CODE>
+0-9</CODE> se lê: &quot;de zero a nove&quot;.</P>
+<P> Voltando a nossa ER da hora, poderíamos fazer<B> <CODE>
+[0-9][0-9]:[0-9][0-9]</CODE></B>, mas veja que não é específico o
+ bastante, pois permite uma hora como 99:99, que não existe. Como
+ poderíamos fazer uma ER que case no máximo 23 horas e 59 minutos?</P>
+<BLOCKQUOTE><I> Calma lá... [012][0-9]:[0-5][0-9]. Quase, só que tá
+ pegando 29 horas...</I></BLOCKQUOTE>
+<P> Excelente! Com o que aprendemos até agora, esse é o máximo de
+ precisão que conseguimos. Mais adiante, quem poderá nos ajudar será
+ o<B> ou</B>. Depois voltamos a esse problema.</P>
+<BLOCKQUOTE><I> Esse intervalo funciona só para números? Algo como a-z
+ também existe?</I></BLOCKQUOTE>
+<P> Era isso que eu ia falar agora. Sim, qualquer intervalo é válido,
+ como<B> <CODE>a-z</CODE></B>,<B> <CODE>A-Z</CODE></B>,<B> <CODE>5-9</CODE>
+</B>,<B> <CODE>a-f</CODE></B>,<B> <CODE>:-@</CODE></B>, etc.</P>
+<BLOCKQUOTE><I> De : até @?</I></BLOCKQUOTE>
+<P> Sim. Por exemplo, se eu quiser uma lista que case apenas letras
+ maiúsculas, minúsculas e números:<B> <CODE>[A-Za-z0-9]</CODE></B>.</P>
+<BLOCKQUOTE><I> Sério, intervalo de : até @?</I></BLOCKQUOTE>
+<P> Sim. Ah! E tem uma pegadinha. Como o traço é especial dentro da
+ lista, como fazer quando você quiser colocar na lista um traço
+ literal?</P>
+<BLOCKQUOTE><I> Sei lá, eu queria saber sobre o intervalo do arroba...</I>
+</BLOCKQUOTE>
+<P> Espere um pouco. Basta colocar o traço no final da lista, assim<B> <CODE>
+[0-9-]</CODE></B> casa números ou um traço. E tem os colchetes, que
+ são os delimitadores da lista. Como incluí-los dentro dela?</P>
+<P> O colchete que abre não tem problema, pode colocá-lo em qualquer
+ lugar na lista, pois ela já está aberta mesmo e não se pode ter uma
+ lista dentro da outra.</P>
+<P> O colchete que fecha deve ser colocado no começo da lista, ser o<B>
+ primeiro</B> item dela, para não confundir com o colchete que termina
+ a lista. Então<B> <CODE>[]-]</CODE></B> casa um <CODE>]</CODE> ou um <CODE>
+-</CODE>.</P>
+<P> Vamos juntar tudo e fazer uma lista que case ambos os colchetes e o
+ traço:<B> <CODE>[][-]</CODE></B>. Calma. Pare, pense, respire fundo,
+ encare esta ER. Vamos lê-la um por um: o primeiro <CODE>[</CODE>
+ significa que é o começo de uma lista, já dentro da lista, temos um <CODE>
+]</CODE> literal, seguido de um <CODE>[</CODE> literal, seguido de um <CODE>
+-</CODE> literal, e por último o <CODE>]</CODE> que termina a lista.
+ Intuitivo, não? &amp;:)</P>
+<BLOCKQUOTE><I> Tá, confundi tudo, mas que diabos tem entre o : e o
+ @???</I></BLOCKQUOTE>
+<P> Tudo bem, você venceu. Nesse intervalo tem <CODE>: ; &lt; = &gt; ? @</CODE>
+. Como saber isso? Os intervalos respeitam a ordem numérica da tabela
+ ASCII, então basta tê-la em mãos para ver que um intervalo como<B> <CODE>
+A-z</CODE></B> não pega somente as maiúsculas e minúsculas como era
+ de se esperar.</P>
+<P> Para sua comodidade, a tabela está no fim do guia, e nela podemos
+ ver que A-z pega também &quot;[\]^_`&quot; e não pega os caracteres acentuados
+ como &quot;áéóõç&quot;. Infelizmente, não há um intervalo válido para
+ pegarmos todos os caracteres acentuados de uma vez. Mas já já veremos
+ a solução...</P>
+<BLOCKQUOTE> <U>Não use o intervalo<B> <CODE>A-z</CODE></B>, prefira<B>
+ <CODE>A-Za-z</CODE></B></U></BLOCKQUOTE>
+<H4 ID="posix">Dominando caracteres acentuados (POSIX)</H4>
+<P> Como para nós brasileiros se a-z não casar letras acentuadas não
+ serve para muita coisa, temos uns curingas<B> somente</B> para usar em
+ listas que são uma mão na roda. Duas até.</P>
+<P> Eles são chamados de<B> classes de caracteres POSIX</B>. São
+ grupos definidos por tipo, e POSIX é um padrão internacional que
+ define esse tipo de regra, como será sua sintaxe, etc. Falando em
+ sintaxe, aqui estão as classes:</P>
+<PRE>
+classe POSIX	similar 	significa
+-----------------------------------------
+[:upper:]	[A-Z]   	letras maiúsculas
+[:lower:]	[a-z]   	letras minúsculas
+[:alpha:]	[A-Za-z]	maiúsculas/minúsculas
+[:alnum:]	[A-Za-z0-9]	letras e números
+[:digit:]	[0-9]   	números
+[:xdigit:]	[0-9A-Fa-f]	números hexadecimais
+[:punct:]	[.,!?:...]	sinais de pontuação
+[:blank:]	[ \t]   	espaço e TAB
+[:space:]	[ \t\n\r\f\v]	caracteres brancos
+[:cntrl:]	-       	caracteres de controle
+[:graph:]	[^ \t\n\r\f\v]	caracteres imprimíveis
+[:print:]	[^\t\n\r\f\v]	imprimíveis e o espaço
+</PRE>
+<P> Note que os colchetes fazem parte da classe e não são os mesmos
+ colchetes da lista. Para dizer<I> maiúsculas</I>, fica<B> <CODE>
+[[:upper:]]</CODE></B>, ou seja um [:upper:] dentro de uma lista [].</P>
+<BLOCKQUOTE> <U>O [[:upper:]] é uma classe POSIX dentro de uma lista.</U>
+</BLOCKQUOTE>
+<P> Então, em uma primeira olhada, [:upper:] é o mesmo que A-Z, letras
+ maiúsculas. Mas a diferença é que essas classes POSIX levam em conta
+ a localidade do sistema.</P>
+<P> Atenção para essa diferença, pois a literatura na língua inglesa
+ sempre fala sobre esse assunto muito superficialmente, pois eles não
+ utilizam acentuação e deve ser às vezes até difícil para quem
+ está escrevendo o documento entender isso.</P>
+<P> Como nossa situação é inversa, e nossa língua é rica em
+ caracteres acentuados, entender essa diferença é de suma
+ importância.</P>
+<P> Como estamos no Brasil, geralmente nossas máquinas estão
+ configuradas como tal, usando números no formato <CODE>nnn.nnn,nn</CODE>
+, a data é no formato <CODE>dd/mm/aaaa</CODE>, medidas de distância
+ são em centímetros e outras coisinhas que são diferentes nos demais
+ países.</P>
+<P> Entre outros, também está definido que<I> áéíóú</I> são
+ caracteres válidos em nosso alfabeto, bem como<I> ÁÉÍÓÚ</I>.</P>
+<P> Então, toda essa volta foi para dizer que o [:upper:] leva isso em
+ conta e inclui as letras acentuadas também na lista. O mesmo para o
+ [:lower:], o [:alpha:] e o [:alnum:].</P>
+<BLOCKQUOTE> <U>Nos Estados Unidos, [[:upper:]] é igual a [A-Z]. No
+ Brasil, [[:upper:]] é igual [A-ZÁÃÂÀÉÊÍÓÕÔÚÇ...]</U></BLOCKQUOTE>
+<P> Por isso para nós essas classes POSIX são importantíssimas, e
+ sempre que você tiver de fazer ERs que procurarão em textos em
+ português, prefira [:alpha:] em vez de A-Za-z, sempre.</P>
+<P> Então refazendo a ER que casava maiúsculas, minúsculas e
+ números, temos:<B> <CODE>[[:upper:][:lower:][:digit:]]</CODE></B>, ou
+ melhor:<B> <CODE>[[:alpha:][:digit:]]</CODE></B>, ou melhor ainda:<B> <CODE>
+[[:alnum:]]</CODE></B>. Todas são equivalentes.</P>
+<BLOCKQUOTE><I> Aaaaaaaah, chega de falar de lista!</I></BLOCKQUOTE>
+<P> Tudo bem, acabou (será?). Mas não se assuste, a lista é o único
+ metacaractere que tem suas próprias regras, funcionando como uma
+ minilinguagem dentro das expressões regulares.</P>
+<P><B> Resumão</B></P>
+<UL>
+<LI>A lista casa com quem ela conhece e tem suas próprias regras.</LI>
+<LI>Dentro da lista, todo mundo é normal.</LI>
+<LI>Dentro da lista, traço indica intervalo.</LI>
+<LI>Um<B> <CODE>-</CODE></B> literal deve ser o último item da lista.</LI>
+<LI>Um<B> <CODE>]</CODE></B> literal deve ser o primeiro item da lista.</LI>
+<LI>Os intervalos respeitam a tabela ASCII (não use A-z).</LI>
+<LI>[:classes POSIX:] incluem acentuação,<B> <CODE>A-Z</CODE></B>
+ não.</LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="ponto.html">Anterior</A>
+<A HREF="lista-negada.html">Próxima</A>
+</BODY>
+</HTML>

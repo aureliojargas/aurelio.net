@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="mandamentos.html">
+<LINK REL="Next" HREF="use-circunflexo.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Não complique</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="mandamentos.html">Anterior</A>
+<A HREF="use-circunflexo.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="nao-complique"><A NAME="4_1">Não complique</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Ao construir uma ER, lembre-se que um dia alguém, provavelmente
+ você mesmo, terá de dar manutenção a ela, para arrumar algum
+ problema ou incrementá-la. Tendo isso em mente, evite fazer
+ construções complicadas desnecessariamente. Nem sempre a menor ER é
+ a melhor, tudo vai depender do quão comentada ela está ou das
+ habilidades de quem for mantê-la. Vamos ver um exemplo bem simples.
+ Lembra na explicação do escape, quando vimos uma ER que casava um
+ número de RG?</P>
+<PRE>
+[0-9]\.[0-9]{3}\.[0-9]{3}-[0-9]
+</PRE>
+<P> Note que o trecho para casar um ponto e três números seguidos<B> <CODE>
+\.[0-9]{3}</CODE></B> se repete duas vezes, então podemos agrupá-lo e
+ aplicar as chaves, diminuindo o tamanho da ER:</P>
+<PRE>
+[0-9](\.[0-9]{3}){2}-[0-9]
+</PRE>
+<P> Note, porém, que nesse caso, essa &quot;simplificação&quot; da expressão
+ acabou ficando não tão simples assim, e exige um pouco de reflexão
+ até você pescar exatamente o que ela faz. Foi vantagem ter diminuído
+ seu tamanho? Isso é questionável, mas geralmente não. E aquela do
+ mercado?</P>
+<PRE>
+(mini|(su|hi)per)?mercado
+</PRE>
+<P> Será que se a deixássemos mais simples, não ficaria mais fácil
+ entendê-la? A mudança é pequena, mas veja como visualmente fica mais
+ agradável e fácil:</P>
+<PRE>
+(mini|super|hiper)?mercado
+</PRE>
+<BLOCKQUOTE> <U>Nem sempre a ER menor é a melhor.</U></BLOCKQUOTE>
+<P> Então muito cuidado ao colocar grupos dentro de grupos, quantificar
+ grupos, usar chaves quando se pode usar o asterisco, entre outros.
+ Procure manter sua ER simples. Como dizem os gringos: KISS (&quot;Keep It
+ Simple, Stupid&quot;), traduzindo: &quot;deixe simples, estúpido&quot;.</P>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="mandamentos.html">Anterior</A>
+<A HREF="use-circunflexo.html">Próxima</A>
+</BODY>
+</HTML>

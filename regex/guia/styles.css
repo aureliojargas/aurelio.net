@@ -1,0 +1,212 @@
+body {
+	padding		: 2em 3em 3em 200px;
+	line-height	: 150%;
+	font-family	: sans-serif;
+	background	: white url(http://aurelio.net/include/kiwi/aureliolga.jpg) no-repeat right bottom fixed
+}
+pre {
+	border		: 1px solid #666;
+	background	: #eee;
+	margin		: 2em 0 2em 2em;
+	padding		: 1em 0 1em 2em;
+	clear		: both;
+}
+table {
+	font-family	: sans-serif;
+	Xfont-size	: 80%;
+	line-height	: 150%;
+}
+th {
+	background-color: #eee;
+}
+blockquote {
+	margin		: 2em 4em;
+}
+blockquote i {
+	color		: red;
+	font-size	: 120%;
+}
+blockquote u {
+	text-decoration	: none;
+	background-color: yellow;
+	border		: 1px solid black;
+	padding		: .5em;
+}
+
+#header {
+	margin		: 0 0 3em 0;
+	padding-top	: 1em;
+	padding-left	: 65px;
+	color		: #777;
+	font-size	: 85%;
+	height		: 100px;
+	background	: url(../img/guia.png) no-repeat left;
+}
+#header h1, #header h2 {
+	font-weight	: normal
+}
+#header a {
+	color		: #777;
+	text-decoration	: none;
+}
+#header a:hover {
+	color		: black;
+	text-decoration	: underline;
+}
+
+form {
+	float		: right;
+	margin		: 0 0 -2em 0;
+}
+
+.bookbox {
+	float		: right;
+	width		: 33%;
+	border		: 2px solid black;
+	margin		: 0 0 2em 1.5em;
+	padding		: 1em;
+/*ed3	background-color: #069;*/
+	background-color: black;	
+	color		: white;
+	font-weight	: bold;
+}
+.bookbox a {
+	display		: block;
+	color		: white;
+	text-decoration	: none;
+}
+.bookbox img {
+	float		: right;
+	border		: 2px solid black;
+	margin-left	: .5em;
+}
+
+.warning {
+	clear		: both;
+	margin		: 3em auto;
+	background-color: red;
+	color		: white;
+	padding		: 1em;
+	width		: 60%;
+}
+.warning b {
+	display		: block;
+	font-size	: 120%;
+	text-align	: center;
+	padding-bottom	: 1em;
+}
+.warning a {
+	color		: yellow;
+}
+hr {
+	clear		: both;
+	width		: 100%;
+}
+#footer {
+	text-align:right;
+	float:right;
+	color:#aaa;
+}
+
+.adsky {
+	top:0;
+	left:0;
+	position:fixed;
+
+	/* Emulating position:fixed in IE/Win 5+ */
+	_position:absolute;
+	_top:expression(eval(document.body.scrollTop));
+}
+.adbox-336 {
+	margin: 4em auto 0 auto;
+	width: 336px;
+}
+
+/* Pages where bookbox hides content */
+/* 2011-12-12: now it's ok
+#diferencas + .bookbox,
+#resumao + .bookbox,
+#aliens + .bookbox,
+#modernosos-remendos-precedencia + .bookbox,
+#ascii + .bookbox {
+	display:none;
+}
+*/
+
+/* Special pages with no search form or marketing */
+#copyright .bookbox,
+#recados .bookbox,
+#vendas .bookbox,
+#errata .bookbox {
+	display:none;
+}
+#copyright form,
+#recados form,
+#vendas form,
+#errata form {
+	display: none;
+}
+#recados #formscraps { /*recados*/
+	display:block;
+	float:none;
+	margin:3em 0 0 2em;
+}
+
+/* Index */
+#index #header,
+#index #header a {
+	color:black;
+}
+.intro {
+	font-size:90%;
+	padding-right:2em;
+	text-align:justify;
+}
+#index form {
+	float:none;
+}
+.bookinfo {
+	font-size:75%;
+	line-height:150%;
+	background-color:#eee;
+	padding-left:0.5em;
+	border:1px solid #ccc;
+}
+#index td {
+	font-size:100%;
+	vertical-align:top;
+}
+
+/* Vendas */
+#vendas table {
+	border-collapse:collapse;
+	margin:2em auto;
+}
+#vendas td {
+	padding:0.5em 1em;
+}
+
+
+/* Errata table */
+#errata table {
+	border-collapse:collapse;
+	border:1px solid black;
+	margin:4em 0;
+}
+#errata tr:hover {
+	background-color:yellow;
+}
+#errata th {
+	text-align:left;
+	padding:1em 1em;
+	border-width:0;
+}
+#errata td {
+	padding:1em 1em;
+	border-width:0;
+	border-bottom:1px solid #ccc;
+}
+#errata td b {
+	color:blue;
+	padding:0 .5em
+}

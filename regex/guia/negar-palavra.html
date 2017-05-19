@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="cruas.html">
+<LINK REL="Next" HREF="multilinha.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Negação de uma palavra</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="cruas.html">Anterior</A>
+<A HREF="multilinha.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="negar-palavra"><A NAME="5_3">Negação de uma palavra</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Vamos agora esclarecer um mito da mitologia ERística: como negar
+ uma palavra. Resposta:<B> depende</B>. Depende da posição dela na
+ linha ou se seu aplicativo suporta os metacaracteres modernosos. Por
+ enquanto esquecendo estes, temos que o único metacaractere que proíbe
+ alguma coisa é a lista negada, mas ela vale apenas para a posição de
+ um caractere, não tendo como proibir uma palavra. Intuitivamente e de
+ sopetão, as tentativas de negar a palavra <CODE>aqui</CODE> poderiam
+ ser coisas como:</P>
+<PRE>
+[^aqui], (^aqui) e [^(aqui)]
+</PRE>
+<P> O que, como sabemos, são inválidos pois o primeiro nega os quatro
+ caracteres em qualquer ordem, para uma posição, o segundo é um grupo
+ que casa a palavra no começo da linha e o último é uma viagem
+ astral, simplesmente negando todos os caracteres da lista, em qualquer
+ ordem. O que fazer então? Se, e somente se a palavra sempre estiver no
+ começo ou fim da linha, a âncora nos dá a base e podemos fazer uma
+ seqüência de listas negadas de um caractere, completando a palavra,
+ assim:</P>
+<PRE>
+^[^a][^q][^u][^i]
+</PRE>
+<P> Mas como cada lista é independente uma da outra, qualquer uma que
+ falhe é suficiente para falhar a ER toda. Isso significa que qualquer
+ linha que comece com <CODE>a</CODE>, seja<I> aonde</I>,<I> agora</I> ou<I>
+ assim</I>, falhará a primeira lista negada e com ela toda a ER. Para
+ lidar com isso, precisamos amarrar a seqüência das letras, em uma ER
+ gigante, feia e literal, mas que funciona:</P>
+<PRE>
+^( [^a] | a[^q] | aq[^u] | aqu[^i] )
+</PRE>
+<P> Note que os espaços em branco foram colocados para facilitar a
+ leitura apenas, eles não fazem parte da ER. Vamos fazer a leitura dela
+ para clarificar. A primeira letra da linha não pode ser um <CODE>a</CODE>
+. Se for, este não pode ser seguido de um <CODE>q</CODE>. Se for, este <CODE>
+aq</CODE> não pode ser seguido por um <CODE>u</CODE>, mas caso seja, em
+ hipótese alguma a próxima pode ser um <CODE>i</CODE>. Se for, falhou
+ a ER e conseguimos ignorar a palavra <CODE>aqui</CODE> no começo da
+ linha. Ufa! Se a palavra fosse no fim da linha, basta usar o cifrão,
+ aliás, acho que nem precisava falar isso né? E se você não quisesse
+ a palavra <CODE>chato</CODE> também?</P>
+<PRE>
+^([^a]|a[^q]|aq[^u]|aqu[^i]|[^c]|c[^h]|ch[^a]|...)
+</PRE>
+<P> E assim vai, podendo ficar quilométrica. Mas funciona. Se for no
+ meio da linha, esqueça, pois<B> qualquer</B> linha casará, mesmo as
+ que contenham a palavra proibida. Tome como exemplo a frase &quot;o aqui é
+ proibido.&quot;. Aplicando a ER quilométrica apresentada, mesmo sem a
+ âncora ela casa no começo da linha na maior cara-de-pau:</P>
+<PRE>
+o aqui é proibido.
+xxxx
+</PRE>
+<P> Então a ER casa <U>o aq</U>, considerando a frase válida e o que
+ era para ser proibido, passou... O motivo é simples e esse problema
+ nunca terá solução, pois as ERs são orientadas a caracteres e
+ repetições para casar um texto. O que precisaríamos aqui é algo que<B>
+ não</B> case caracteres em seqüência, sob qualquer contexto. As ERs
+ não foram feitas para isso.</P>
+<BLOCKQUOTE> <U>Negar uma palavra, só no começo ou fim da linha.</U></BLOCKQUOTE>
+<P> Mas como não poderia deixar de ser, esta regra também tem uma
+ exceção. Legal né? Você se lembra do tópico dos metacaracteres
+ modernosos? Mais especificamente o<B> <CODE>(?!...)</CODE></B>. No
+ nosso exemplo em questão, a ER ficaria<B> <CODE>(?!aqui)</CODE></B>,
+ pois esse metacaractere fará a ER falhar caso encontre um <CODE>aqui</CODE>
+ na linha.</P>
+<P> Para ficar mais simples, você pode considerar essa construção uma
+ &quot;lista negada de ERs&quot;, que casa<I> qualquer coisa fora o que casar a ER
+ contida</I>. Em nosso caso as ER eram apenas caracteres literais, mas
+ poderia ser uma ER tão complicada quanto se precise. Levando-se isso
+ em conta, fica aqui nossa conclusão:</P>
+<BLOCKQUOTE> <U>Há como negar uma ou mais palavras, em apenas alguns
+ aplicativos.</U></BLOCKQUOTE>
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="cruas.html">Anterior</A>
+<A HREF="multilinha.html">Próxima</A>
+</BODY>
+</HTML>

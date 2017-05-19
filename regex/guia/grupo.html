@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="ou.html">
+<LINK REL="Next" HREF="retrovisor.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Grupo: o pop (...)</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="ou.html">Anterior</A>
+<A HREF="retrovisor.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H3 ID="grupo"><A NAME="2_4_3">Grupo: o pop (...)</A></H3>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Assim como artistas famosos e personalidades que conseguem arrastar
+ multidões, o grupo tem o dom de juntar vários tipos de sujeitos em um
+ mesmo local. Dentro de um grupo podemos ter um ou mais caracteres,
+ metacaracteres e inclusive outros grupos! Como em uma expressão
+ matemática, os parênteses definem um grupo, e seu conteúdo pode ser
+ visto como um bloco na expressão.</P>
+<P> Todos os metacaracteres quantificadores que vimos anteriormente,
+ podem ter seu poder ampliado pelo grupo, pois ele lhes dá mais
+ abrangência. E o ou, pelo contrário, tem sua abrangência limitada
+ pelo grupo, e pode parecer estranho, mas é essa limitação que lhe
+ dá mais poder.</P>
+<P> Em um exemplo simples,<B> <CODE>(ai)+</CODE></B> agrupa a palavra
+ &quot;ai&quot; e esse grupo está quantificado pelo mais. Isso quer dizer que
+ casamos várias repetições da palavra, como <U>ai</U>, <U>aiai</U>, <U>
+aiaiai</U>, ... E assim podemos agrupar tudo o que quisermos, literais e
+ metacaracteres, e quantificá-los:</P>
+<PRE>
+(ha!)+          	ha!, ha!ha!, ha!ha!ha!, ...
+(\.[0-9]){3}    	.0.6.2, .2.8.9, .6.6.6, ...
+(www\.)?zz\.com 	www.zz.com, zz.com
+</PRE>
+<P> E em especial nosso amigo ou ganha limites e seu poder cresce:</P>
+<PRE>
+boa-(tarde|noite)	boa-tarde, boa-noite
+(#|n\.|núm) 6    	# 6, n. 6, núm 6
+(in|con)?certo  	incerto, concerto, certo
+</PRE>
+<P> Note que o grupo não altera o sentido da ER, apenas serve como
+ marcador. Podemos criar subgrupos também, então imagine que você
+ esteja procurando o nome de um supermercado em uma listagem e não sabe
+ se este é um mercado, supermercado ou um hipermercado.</P>
+<PRE>
+(super|hiper)mercado
+</PRE>
+<P> Consegue casar as duas últimas possibilidades, mas note que nas
+ alternativas<I> super</I> e<I> hiper</I> temos um trecho <U>per</U>
+ comum aos dois, então podíamos &quot;alternativizar&quot; apenas as diferenças<I>
+ su</I> e<I> hi</I>:</P>
+<PRE>
+(su|hi)permercado
+</PRE>
+<P> Precisamos também casar apenas o<I> mercado</I> sem os
+ aumentativos, então temos de agrupá-los e torná-los opcionais:</P>
+<PRE>
+((su|hi)per)?mercado
+</PRE>
+<P> Pronto! Temos a ER que buscávamos e ainda esbanjamos habilidade
+ utilizando um grupo dentro do outro.</P>
+<BLOCKQUOTE><I> Ei! E se tivesse minimercado também?</I></BLOCKQUOTE>
+<PRE>
+(mini|(su|hi)per)?mercado
+</PRE>
+<P> E assim vai... Acho que já deu para notar quão poderosas e
+ complexas podem ficar nossas ERs ao utilizarmos grupos, não? Mas não
+ acaba por aqui! Acompanhe o retrovisor na seqüência.</P>
+<BLOCKQUOTE><I> Espera! E se eu quiser casar um par de parênteses
+ literais?</I></BLOCKQUOTE>
+<P> Ah! Lembra-se do escape criptonita? Basta tirar o poder dos
+ parênteses, escapando-os. Veja um exemplo na ER para procurar
+ declarações de função em códigos de programas como<I>
+ Minha_Funcao()</I></P>
+<PRE>
+[A-Za-z0-9_]+\(\)
+</PRE>
+<P> Ou ainda, caso acentuação seja permitida em nomes de função
+ (lembre-se das classes POSIX!):</P>
+<PRE>
+[[:alnum:]_]+\(\)
+</PRE>
+<P><B> Resumão</B></P>
+<UL>
+<LI>Grupos servem para agrupar.</LI>
+<LI>Grupos são muito poderosos.</LI>
+<LI>Grupos podem conter grupos.</LI>
+<LI>Grupos são quantificáveis.</LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="ou.html">Anterior</A>
+<A HREF="retrovisor.html">Próxima</A>
+</BODY>
+</HTML>

@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="evite-lista-negada.html">
+<LINK REL="Next" HREF="seja-especifico.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Evite o curinga</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="evite-lista-negada.html">Anterior</A>
+<A HREF="seja-especifico.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H2 ID="evite-curinga"><A NAME="4_4">Evite o curinga</A></H2>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Quando pegamos o jeito com expressões regulares e as usamos
+ regularmente, é comum usar o<B> <CODE>.*</CODE></B> para qualquer
+ situação, pois como todo curinga que se preze, é uma mão na roda.
+ Mas à medida que você vai usando ERs para coisas mais complicadas e
+ mais intensivamente, você começa a perceber que grande parte de seus
+ problemas foi ter usado o curinga guloso e genérico, onde você
+ poderia ter sido mais específico, e ele casou o que não devia.</P>
+<P> Nem sempre é fácil trocar um curinga por outra coisa. Supõe-se
+ que se você já o usou, é porque precisava de &quot;qualquer coisa&quot;. Mas
+ pare para pensar, esse qualquer coisa é realmente QUALQUER coisa?
+ Lembre que isso é muito abrangente, o tudo e o nada. Não seria apenas
+ &quot;qualquer letra em qualquer quantidade&quot; ou &quot;quaisquer caracteres fora
+ espaços em branco&quot;?</P>
+<P> Percebeu? As listas são nossa opção para tirar o curinga,
+ trocando-o por algo não tão abrangente. Então, se em um texto
+ normal, você procura parte de uma frase, o restante dela até o ponto
+ final não diga que é<B> <CODE>.*\.</CODE></B>, mas<B> <CODE>[^.]*\.</CODE>
+</B>, ou melhor:<B> <CODE>[A-Za-z ,]*\.</CODE></B>. Isso evita de o
+ curinga casar além do ponto final da frase e ir até o ponto final do
+ parágrafo.</P>
+<P> Lembra a nossa demonstração da gulodice em que o asterisco casou
+ demais? Podemos evitar isso sendo mais específicos em nossa ER. Em vez
+ de dizer<B> <CODE>&lt;.*&gt;</CODE></B>, ou seja, uma marcação pode ter
+ &quot;qualquer coisa&quot; antes do <CODE>&gt;</CODE>, dizemos que pode ter
+ &quot;qualquer coisa fora o fechamento da marcação&quot;. Invocaremos a lista
+ negada para nos ajudar nessa supertarefa, assim:<B> <CODE>&lt;[^&gt;]*&gt;</CODE>
+</B>, ou mais visual:</P>
+<PRE>
+um &lt;b&gt;negrito&lt;/b&gt; aqui.
+...xxxxxxxxxxxxxx           &lt;.*&gt;
+...xxx.......xxxx           &lt;[^&gt;]*&gt;
+</PRE>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="evite-lista-negada.html">Anterior</A>
+<A HREF="seja-especifico.html">Próxima</A>
+</BODY>
+</HTML>

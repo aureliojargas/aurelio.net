@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="grupo.html">
+<LINK REL="Next" HREF="mais-sobre-metacaracteres.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Retrovisor: o saudosista \1 ... \9</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="grupo.html">Anterior</A>
+<A HREF="mais-sobre-metacaracteres.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H3 ID="retrovisor"><A NAME="2_4_4">Retrovisor: o saudosista \1 ... \9</A>
+</H3>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> Já vimos o poder do grupo, e várias utilidades em seu uso. Mas
+ ainda não acabou! Se prepare para conhecer o mundo novo que o
+ retrovisor nos abre. Ou seria mundo velho?</P>
+<P> Ao usar um (grupo) qualquer, você ganha um brinde, e muitas vezes
+ nem sabe. O brinde é o trecho de texto casado pela ER que está no
+ grupo, que fica guardado em um cantinho especial, e pode ser usado em
+ outras partes da mesma ER!</P>
+<BLOCKQUOTE><I> Mmmmmmmmmm, ficou meio confuso</I></BLOCKQUOTE>
+<P> Então vamos tentar de novo. Como o nome diz, é retrovisor porque
+ ele &quot;olha pra trás&quot;, para buscar um trecho já casado. Isso é muito
+ útil para casar trechos repetidos em uma mesma linha. Veja bem, é o
+ trecho de texto, e não a ER.</P>
+<P> Como exemplo, em um texto sobre passarinhos, procuramos o
+ quero-quero. Podemos procurar literalmente por<B> <CODE>quero-quero</CODE>
+</B>, mas assim não tem graça, pois somos mestres em ERs e vamos usar
+ o grupo e o retrovisor para fazer isso:</P>
+<PRE>
+(quero)-\1
+</PRE>
+<P> Então o retrovisor<B> <CODE>\1</CODE></B> é uma referência ao
+ texto casado do primeiro grupo, nesse caso <U>quero</U>, ficando, no
+ fim das contas, a expressão que queríamos. O retrovisor pode ser
+ lembrado também como um link ou um ladrão, pois copia o texto do
+ grupo.</P>
+<BLOCKQUOTE><I> Mas esse \1 não é o tal do escape?</I></BLOCKQUOTE>
+<P> Pois é, lembra que o escape<B> <CODE>\</CODE></B> servia para tirar
+ os poderes do metacaractere seguinte. Então, a essa definição agora
+ incluímos: a não ser que este próximo caractere seja um número de 1
+ a 9, então estamos lidando com um retrovisor.</P>
+<P> Notou o detalhe? Podemos ter no máximo 9 retrovisores por ER,
+ então<B> <CODE>\10</CODE></B> é o retrovisor número 1 seguido de um
+ zero. Alguns aplicativos novos permitem mais de nove.</P>
+<BLOCKQUOTE><I> Não era muito mais fácil escrever quero-quero direto?</I>
+</BLOCKQUOTE>
+<P> Nesse caso sim. Mas este é só um exemplo didático. O verdadeiro
+ poder do retrovisor é quando não sabemos exatamente qual texto o
+ grupo casará. Vamos estender nosso<I> quero</I> para &quot;qualquer
+ palavra&quot;:</P>
+<PRE>
+([A-Za-z]+)-\1
+</PRE>
+<P> Percebeu o poder dessa ER? Ela casa palavras repetidas, separadas
+ por um traço, como o próprio <U>quero-quero</U>, e mais: <U>bate-bate</U>
+, <U>come-come</U>, etc. Mas, e se tornássemos o traço opcional?</P>
+<PRE>
+([A-Za-z]+)-?\1
+</PRE>
+<P> Agora, além das anteriores, nossa ER também casa <U>bombom</U>, <U>
+lili</U>, <U>dudu</U>, <U>bibi</U> e outros apelidos e nomes de
+ cachorro.</P>
+<P> Com uma modificação pequena, fazemos um minicorretor ortográfico
+ para procurar por palavras repetidas como como estas em um texto:</P>
+<PRE>
+([A-Za-z]+) \1
+</PRE>
+<P> Mas lembre-se que procuramos por palavras inteiras e não apenas
+ trechos delas, então precisamos usar as bordas para completar nossa
+ ER:</P>
+<PRE>
+\b([A-Za-z]+) \1\b
+</PRE>
+<P> Legal né? Note como vamos construindo as ERs aos poucos,
+ melhorando, testando e não simplesmente escrevendo tudo de uma vez.
+ Esta é a arte ninja de se escrever ERs.</P>
+<P><B> Mais detalhes</B></P>
+<P> Como já dito, podemos usar no máximo nove retrovisores. Vamos ver
+ uns exemplos com mais de um de nossos amigos novos:</P>
+<PRE>
+(lenta)(mente) é \2 \1	lentamente é mente lenta
+((band)eira)nte \1 \2a	bandeirante bandeira banda
+in(d)ol(or) é sem \1\2	indolor é sem dor
+((((a)b)c)d)-1 = \1,\2,\3,\4	abcd-1 = abcd,abc,ab,a
+</PRE>
+<P> Para não se perder nas contagens, há uma dica valiosa: conte
+ somente os parênteses que abrem, da esquerda para a direita. Este vai
+ ser o número do retrovisor. E o conteúdo é o texto casado pela ER do
+ parêntese que abre até seu correspondente que fecha.</P>
+<BLOCKQUOTE> <U>O retrovisor referencia o texto casado e não a ER do
+ grupo.</U></BLOCKQUOTE>
+<P> Nos nossos exemplos acima ocorre a mesma coisa porque a ER dentro do
+ grupo já é o próprio texto, sem metacaracteres. Veja, entretanto,
+ que<B> <CODE>([0-9])\1</CODE></B> casa <U>66</U> mas não <U>69</U>.</P>
+<BLOCKQUOTE><I> E se eu colocar um retrovisor em uma ER que não tem
+ grupo?</I></BLOCKQUOTE>
+<P> Vai dar pau &amp;:)</P>
+<P> Apenas como lembrete, algumas linguagens e programas, além da
+ função de busca, têm a função de substituição. O retrovisor é
+ muito útil nesse caso, para substituir &quot;alguma coisa&quot; por &quot;apenas uma
+ parte dessa coisa&quot;, ou seja, extrair trechos de uma linha. Mais
+ detalhes sobre isso adiante.</P>
+<P><B> Resumão</B></P>
+<UL>
+<LI>O retrovisor só funciona se usado com o grupo.</LI>
+<LI>O retrovisor serve para procurar palavras repetidas.</LI>
+<LI>Numeram-se retrovisores contando os grupos da esquerda para a
+ direita.</LI>
+<LI>Temos no máximo 9 retrovisores por ER.</LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="grupo.html">Anterior</A>
+<A HREF="mais-sobre-metacaracteres.html">Próxima</A>
+</BODY>
+</HTML>

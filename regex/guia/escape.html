@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<LINK REL="Start" HREF=".">
+<LINK REL="Contents" HREF=".">
+<LINK REL="Prev" HREF="outros.html">
+<LINK REL="Next" HREF="ou.html">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
+<meta name="Author" content="Aurelio Marinho Jargas">
+<TITLE>EXPRESSÕES REGULARES - Escape: a criptonita \</TITLE>
+
+<script type="text/javascript">window.google_analytics_uacct = "UA-280222-1";</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY>
+
+<div id="header">
+<h1><a
+href=".">Expressões
+Regulares - Guia de Consulta Rápida</a></h1>
+<h2>por <a href="http://aurelio.net">Aurelio Marinho Jargas</a> e
+<a href="http://novatec.com.br">Editora Novatec</a>,
+<a href="copyright.html">©2001</a></h2>
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/cse" id="cse-search-box" target="_blank">
+   <div>
+     <input type="hidden" name="cx" value="partner-pub-0009608813278754:po81dtqec1l" />
+     <input type="hidden" name="ie" value="UTF-8" />
+     <input type="text" name="q" size="40" />
+     <input type="submit" name="sa" value="Pesquisar" />
+   </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com.br/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+<div style="clear:both;"></div>
+
+<!-- Google Ad - Skyscraper -->
+
+<div class="adsky">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	/* Guia ER Sky 160x600 */
+	google_ad_slot = "0358343708";
+	google_ad_width = 160;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><A HREF=".">Índice</A>
+<A HREF="outros.html">Anterior</A>
+<A HREF="ou.html">Próxima</A>
+<HR NOSHADE>
+
+<!-- Google Ad - Leaderboard -->
+
+<div class="adbox">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0009608813278754";
+	google_alternate_color = "FFFFFF";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	google_ad_format = "728x90_as";
+	google_ad_type = "text";
+	google_ad_channel = "";
+	google_color_border = "FFFFFF";
+	google_color_bg = "FFFFFF";
+	google_color_link = "0000FF";
+	google_color_text = "333333";
+	google_color_url = "888888";
+	//-->
+	</script>
+	<script type="text/javascript"
+	  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<H3 ID="escape"><A NAME="2_4_1">Escape: a criptonita \</A></H3>
+<div class="bookbox">
+<a href="http://www.piazinho.com.br"><img src="img/livro.jpg"></a>
+<a href="http://www.piazinho.com.br">
+Está gostando da leitura?
+Está aprendendo?
+
+Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+</a>
+</div>
+<P> E tudo estava indo bem na sua vida nova de criador de ERs, quando de
+ repente...</P>
+<BLOCKQUOTE><I> Ó não, preciso colocar um * literal, o que fazer?</I></BLOCKQUOTE>
+<P> Se você está atento, lembrará que a lista tem suas próprias
+ regras e que...</P>
+<BLOCKQUOTE><I> Dentro da lista, todo mundo é normal!</I></BLOCKQUOTE>
+<P> Isso! Cara esperto. Precisou de um caractere que é um meta, mas
+ você quer seu significado literal, coloque-o dentro de uma lista,
+ então<B> <CODE>lua[*]</CODE></B> casa <U>lua*</U>. O mesmo serve para
+ qualquer outro metacaractere. Maaaaaas, para não precisar ficar toda
+ hora criando listas de um único componente só para tirar seu valor
+ especial, temos o metacaractere criptonita<B> <CODE>\</CODE></B>, que
+ &quot;escapa&quot; um metacaractere, tirando todos os seus poderes.</P>
+<P> Escapando,<B> <CODE>\*</CODE></B> é igual a<B> <CODE>[*]</CODE></B>
+ que é igual a um asterisco literal. Similarmente podemos escapar todos
+ os metacaracteres já vistos:<B> <CODE>\.</CODE></B>,<B> <CODE>\[</CODE>
+</B>,<B> <CODE>\]</CODE></B>,<B> <CODE>\?</CODE></B>,<B> <CODE>\+</CODE></B>
+,<B> <CODE>\{</CODE></B>,<B> <CODE>\}</CODE></B>,<B> <CODE>\^</CODE></B>
+ e<B> <CODE>\$</CODE></B>. E para você ver como são as coisas, o
+ escape é tão poderoso que pode escapar a si próprio! O<B> <CODE>\\</CODE>
+</B> casa uma barra invertida <CODE>\</CODE> literal.</P>
+<P> Ah! É claro, escapar um circunflexo ou cifrão somente é
+ necessário caso eles estejam em suas posições especiais, como casar
+ o texto<I> ^destaque^</I>, em que ambos os circunflexos são literais,
+ mas o primeiro será considerado uma âncora de começo de linha caso
+ não esteja escapado.</P>
+<P> Então, agora que sabemos muito sobre ERs, que tal uma expressão
+ para casar um número de RG no formato n.nnn.nnn-n? É fácil!</P>
+<PRE>
+[0-9]\.[0-9]{3}\.[0-9]{3}-[0-9]
+</PRE>
+<P><B> Resumão</B></P>
+<UL>
+<LI>O escape escapa um metacaractere, tirando seu poder.</LI>
+<LI><B><CODE>\*</CODE></B> =<B> <CODE>[*]</CODE></B> = asterisco
+ literal.</LI>
+<LI>O escape escapa o escape, escapando-se a si próprio
+ simultaneamente.</LI>
+</UL>
+
+<div class="adbox-336">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Guia ER Box 336 */
+	google_ad_slot = "4832821251";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div><HR NOSHADE>
+
+<div id="footer">
+	<a href="errata.html">Errata</a> —
+	<a href="recados.php">Deixe sua opinião</a> —
+	<a href="http://aurelio.net">Site do autor</a>
+</div>
+
+<A HREF=".">Índice</A>
+<A HREF="outros.html">Anterior</A>
+<A HREF="ou.html">Próxima</A>
+</BODY>
+</HTML>
