@@ -6,3 +6,6 @@ script:
 - bundle exec jekyll build
 
 sudo: false  # container-based faster build
+
+notifications:
+  email: false
