@@ -10,6 +10,7 @@ Estes são os arquivos especiais:
 - errata.html
 - img/
 - index.html
+- opiniao.html
 - styles.css
 - vendas.html
 
