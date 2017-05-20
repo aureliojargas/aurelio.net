@@ -1,0 +1,55 @@
+
+%%% minhas configurações
+%!includeconf: inc/config.t2t
+
+%%% para incluir as palavras-chave das ferramentas de busca
+%!postproc: (</HEAD>) <meta name="Description" content="Site da banda CORRERIA HC">\n\1
+%!postproc: (</HEAD>) <meta name="Keywords" content="correria, banda, curitiba, brasil, hardcore, punk, punkrock, pesado, tosco, show, dumbs">\n\1
+
+%%% para incluir o botão do t2t no final, à direita
+%%!preproc: (@correria.org) \1[[img/t2tbutton.png] http://txt2tags.sf.net/pt/]
+%!postproc: 'middle(" SRC="img/t2t)'  'right\1'
+
+%%% URLs
+%!postproc: ORKUTFEJAO  http://www.orkut.com/Profile.aspx?uid=4578746125264411398
+%!postproc: ORKUTVERDE  http://www.orkut.com/Profile.aspx?uid=2039382754798085041
+%!postproc: ORKUTNISSIN http://www.orkut.com/Profile.aspx?uid=150743500267167043
+
+
+%%% inclusão do título do topo da página e do menu
+%!include: inc/topo.t2t
+%!include: inc/menu.t2t
+
+Bem-vindo ao site da banda de hardcore CORRERIA HC.
+
+Os três remanescentes da antiga banda [DUMBS {urldumbs}] (Curitiba,
+1995-1999) voltaram a tocar em 2004, formando a CORRERIA HC.
+Quanto mais velhos, mais toscos.
+O som é forte, rápido e pesado.
+O vocal é berrado, nervoso.
+A temática das letras é única: raiva.
+
+%Ouça os MP3, leia as letras, veja os vídeos. Gostou? Odiou?
+%[Deixe-nos seu recado http://aurelio.net/correriaaa.php].
+
+
+                      [img/banda.jpg] 
+  |       Fejão     |   Aurelio   |   Nissin 
+  |  (baixo e voz)  |  (bateria)  |  (guitarra) 
+  |  [orkut ORKUTFEJAO]  |  [orkut ORKUTVERDE]  |  [orkut ORKUTNISSIN] 
+
+''' <a href="http://txt2tags.org/pt/"><img id="t2t" src="img/t2tbutton.png" alt=""></a>
+
+%
+%----------------------------------------------------------
+%
+%{NOVO} [MP3 mp3.html] renovados!
+%
+%{NOVO} Você tem dotes artísticos? Estamos precisando de um **logo tosco**
+%:) Para depois fazer adesivo, camiseta e outros cacarecos. De preferência
+%preto e branco, com o nome CORRERIA HC, e que passasse a idéia de pressa,
+%apuro, correria.
+%
+
+%%% inclusão do rodapé padrão de todas as páginas
+%!include: inc/rodape.t2t

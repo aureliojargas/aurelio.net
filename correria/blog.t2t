@@ -1,0 +1,195 @@
+
+%!preproc: {grave}	no estúdio Áudio Grave
+%!preproc: {lucas}	no estúdio [Passagem de Som {urlpassagem}]
+%!preproc: {hmix}	no estúdio HMix
+%!preproc: {aurelio}	na casa do Aurelio
+%!preproc: {gravado}	//(gravado)//
+
+% imagem centralizada
+%!preproc: (\[img/.*?(jpg|png)])	' \1 '
+%!postproc: '(logo-preto.png")'		'\1 class="noborder"'
+
+%!includeconf: inc/config.t2t
+%!postproc: '(</TITLE>)'    ' :: blog\1'
+
+%!include: inc/topo.t2t
+%!include: inc/menu.t2t
+
+
+= Blog de 2006 =
+
+: 27 de Julho
+Já tem uma banda chamada CORRERIA em São Paulo e eles possuem o
+registro desse nome. Como a nossa banda é para divertir e não para
+estressar, mudamos o nome para CORRERIA HC.
+
+: 23 de Junho
+O amigo [Cícero Moraes http://cogitas3d.site.vu] fez uma logo para a
+banda. VALEU Cícero! ([fontes img/logo-cicero.svg])
+
+[img/logo-preto.png]
+
+%: 17 de Março
+%Ensaio {lucas}.
+
+
+= Blog de 2005 =
+
+%: 17 de Outubro.
+%Ensaio {lucas}.
+%
+%: 10 de Outubro.
+%Ensaio {lucas}.
+%
+%: 01 de Outubro.
+%Ensaio {aurelio}.
+%
+
+: 07 de Maio
+Ensaio {aurelio}. Fizemos uma música nova. O Nissin fez uma base
+pesada e um refrão para uma letra sem métrica. Começamos a pirar em
+cima e logo saíram as transições e a parte final. Ficou meio NYHC, mas
+está massa. Ainda sem letra.
+
+%: 30 de Abril
+%Ensaio {aurelio}.
+%
+: 16 de Abril
+Ensaio {aurelio}. Tiramos a lona preta do MST e colamos espuma
+acústica em duas paredes. Diminuiu bastante o ruído e a reverberação.
+Talvez ainda precise mais espuma, vamos ver...
+
+: 07 de Abril
+O site da banda mudou-se para um servidor novo. Saímos do Geocities
+com seus banners e limitação de acesso. Agora além de mais rápido, não
+dará mais erro ao tentar baixar uma música ou vídeo.
+
+Nossos agradecimentos ao Daniel Duclós, Rodrigo Bernardo Pimentel
+(rbp) e todo o time do servidor [CYBERSHARK.NET http://cybershark.net].
+
+: 01 de Abril
+Gravação {lucas}. Aproveitamos o Dia da Mentira para fazer uma gravação
+não-tão-tosca de nossas músicas e melhorar os MP3 do site. Sexta-feira,
+calor, meio-dia (único horário que todos podiam). Foi uma hora de gravação
+"ao vivo", com a sala microfonada, a banda toda tocando junta e sem
+pós-edição. Depois chutamos o balde indo se entupir de carne na
+churrascaria Divino Mestre.
+
+Resultado: 10 músicas, 15 minutos ([confira as MP3 novas mp3.html])
+
+Curtimos bastante o resultado, foi a primeira vez que conseguimos ouvir
+direito nossas músicas :) A bateria ficou sem peso, tem erros, falhas de
+vocal, emboladas, desandadas... a tosqueira continua.
+Valeu Lucas pela gravação e apoio!
+
+[img/gravacao-1oAbril.jpg]
+
+: 19 de Março
+Ensaio {aurelio}. Tinha aquela música antiga do Dumbs, a "Lesson One".
+Fizemos uma letra nova para ela chamada "Mudar" e nosso repertório aumentou
+:) Já está lá na seção de Letras.
+
+: 05 de Março
+Ensaio {aurelio}, com paredes do MST. Colocamos um plástico preto na parede
+para ver se diminuía a reverberação do som. **Parece** ter adiantado um
+pouco. Algumas músicas foram filmadas na câmera digital e alguns trechos
+foram colocados na seção de vídeo. Valeu Henrique pela filmagem!
+
+[img/video-opiniao.jpg]
+
+: 25 de Fevereiro
+Quer __ver a banda__? Foi criada a seção [VÍDEO video.html], com um trecho
+do ensaio desse sábado. Sinta a energia e tosquice da CORRERIA.
+
+[img/video-pasto.jpg]
+
+: 19 de Fevereiro
+Ensaio {aurelio}, o primeiro depois de mais de dois meses de férias. A
+tosqueira foi gravada em fita k7 e agora tem um MP3 melhor da música nova
+"Correria". O dia estava quentão, o ensaio foi uma verdadeira sauna. Mas o
+gás não pode parar. Valeu Kau pelas fotos!
+
+[img/fejao-gritando.jpg]
+
+:
+
+= Blog de 2004 =
+
+: 04 de Dezembro
+Ensaio {aurelio}. Fizemos uma tentativa tosca de filmagem, apoiando a
+câmera dentro de um pote de maionese, que estava preso num pedestal de
+microfone com um durécão. Até que funcionou, só que demoramos tanto para
+começar a tocar a música que a memória da câmera lotou antes mesmo da
+primeira nota. Resultado: não filmou nada :)
+
+[img/maionese.jpg]
+
+: 06 de Novembro
+Ensaio {aurelio}. Foram 4 horas de suor e barulho. A música nova agora tem
+letra, é a "Correria", nossa música tema da banda. Já está no ar a letra e
+o mp3 (com qualidade de gravação horrível).
+: 25 de Setembro
+Ensaio {lucas}. Fizemos uma música nova! O Fejão inventou na hora uma base
+no baixo, o resto acompanhou e a música saiu inteira em poucos minutos.
+Ainda sem letra.
+: 18 de Setembro
+% cid tirou foto
+Ensaio {lucas}. Ah, tiramos aquele finalzinho gay da música "{seliga}".
+Agora ela acaba meio no susto.
+: 02 de Setembro
+A amiga Fabianne Balvedi criou uma página para a banda no site
+Trama Virtual. Boa alternativa para baixar os MP3 caso o Geocities esteja
+negando
+acesso. Valeu Fabi!
+%: 28 de Agosto
+%Ensaio {lucas}.
+: 23 de Agosto
+__Site da banda__ no ar, endereço oficial: ""WWW.CORRERIA.ORG"".
+%: 21 de Agosto
+%Ensaio {lucas}. {gravado}
+
+[img/banda.jpg]
+
+%: 14 de Agosto
+% (show tequila, gravado, power)
+%Ensaio {grave}. {gravado}
+: 07 de Agosto
+% Prato novo na bateria.
+% (show cólera, gravado, vocal baixo)
+Ensaio {grave}. {gravado} Depois fomos nos confraternizar (chutar) no
+show do CÓLERA no 92. Foi ANIMAL.
+: 24 de Julho
+__Escolha do nome CORRERIA__. Decidido em segundos, assim:
+{br}//(Fejão) Tava pensando, a gente podia mudar o nome da banda pra Correria//
+{br}//(Aurelio) Massa!//
+{br}//(Nissin) Massa!//
+%: 24 de Julho
+% (gravado, vocal alto)
+%Ensaio {lucas}. {gravado}
+: 17 de Julho
+Ensaio {aurelio}. A empolgação foi tanta que a pele do bumbo não agüentou.
+Coisa de pedrêro que não sabe tocar...
+
+[img/bumbo-furado.jpg]
+
+%: 26 de Junho
+% (show HC local, nós 3)
+%Ensaio {hmix}.
+%: 22 de Maio
+%Ensaio {aurelio}.
+: 08 de Maio
+Segundo ensaio, 3 meses depois {aurelio}. Estamos voltando devagarinho, sem
+estresse... Valeu Gracielle pelas fotos!
+
+[img/ensaio-2004-05-08.jpg]
+
+: 14 de Fevereiro
+__Primeiro ensaio__ após 3 anos de inatividade musical, desde o último
+ensaio com o [DUMBS {urldumbs}]. Com Aurelio, Fejão e Nissin {hmix}. Olha a
+posição estratégica do Nissin escondido atrás do microfone :)
+
+[img/primeiro-ensaio.jpg]
+
+:
+
+%!include: inc/rodape.t2t

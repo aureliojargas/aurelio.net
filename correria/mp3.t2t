@@ -1,0 +1,54 @@
+
+%!includeconf: inc/config.t2t
+%!postproc: '(</TITLE>)'    ' :: mp3\1'
+%!include: inc/topo.t2t
+%!include: inc/menu.t2t
+
+= MP3 =
+
+% Todos os MP3 estão armazenados em
+% [nossa área no site Trama Virtual {urltrama}]. É um site bem rápido, onde
+% se pode baixar a música para o computador (//Download//) ou ouvi-la
+% instantaneamente (//Streaming//).
+
+Todas as músicas foram gravadas ao vivo, sem pós-edição, no dia 1º de Abril de 2005 no estúdio [Passagem de Som {urlpassagem}].
+
+	"Aproveitamos o Dia da Mentira para fazer uma gravação não-tão-tosca de nossas músicas. Sexta-feira, calor, meio-dia (único horário que todos podiam). Foi uma hora de gravação ao vivo, com a sala microfonada, a banda toda tocando junta e sem pós-edição. Curtimos bastante o resultado, foi a primeira vez que conseguimos ouvir direito nossas músicas :) A bateria ficou sem peso, tem erros, falhas de vocal, emboladas, desandadas... a tosqueira continua."
+
+
+% **Obs.:** Caso tenha problemas para baixar os MP3, tente este
+% [local alternativo mp3/].
+
+| 1:14 | [{correria} mp3/CORRERIA-1-correria.mp3]
+| 1:31 | [{espera} mp3/CORRERIA-2-espera.mp3]
+| 2:44 | [{pasto} mp3/CORRERIA-3-pasto.mp3]
+| 1:16 | [{voudormir} mp3/CORRERIA-4-voudormir.mp3]
+| 1:16 | [{opiniao} mp3/CORRERIA-5-opiniao.mp3]
+| 2:12 | [{mudar} mp3/CORRERIA-6-mudar.mp3]
+| 0:09 | [{fraco} mp3/CORRERIA-7-fraco.mp3]
+| 0:08 | [{gas} mp3/CORRERIA-8-gas.mp3]
+| 2:36 | [{mentira} mp3/CORRERIA-9-mentira.mp3]
+
+
+%|| (min) |  (Mb)
+% |  1:14  |  1,2  | [{correria} mp3/Correria-Correria.mp3]
+% |  1:15  |  1,2  | [{opiniao} mp3/Correria-Opiniao.mp3]
+% |  2:43  |  2,5  | [{pasto} mp3/Correria-Pasto.mp3]
+% |  2:36  |  2,4  | [{mentira} mp3/Correria-Mentira.mp3]
+
+%Músicas gravadas "ao vivo" nos ensaios da banda.
+%Atualizadas conforme as gravações forem ficando melhores.
+%
+%| ``19-Fev-2005`` |  1:17  |  0,6  | [{correria} mp3/CORRERIA-correria.mp3]
+%| ``14-Ago-2004`` |  1:34  |  0,7  | [{espera} mp3/CORRERIA-espera.mp3]
+%| ``14-Ago-2004`` |  2:46  |  1,3  | [{pasto} mp3/CORRERIA-pasto.mp3]
+%| ``14-Ago-2004`` |  1:11  |  0,5  | [{voudormir} mp3/CORRERIA-voudormir.mp3]
+%| ``14-Ago-2004`` |  1:09  |  0,5  | [{opiniao} mp3/CORRERIA-opiniao.mp3]
+%| ``24-Jul-2004`` |  2:15  |  1,0  | [{mentira} mp3/CORRERIA-mentira.mp3]
+%| ``14-Ago-2004`` |  0:08  |  0,1  | [{fraco} mp3/CORRERIA-fraco.mp3]
+%| ``14-Ago-2004`` |  0:05  |  0,1  | [{gas} mp3/CORRERIA-gas.mp3]
+%| ``14-Ago-2004`` |  1:47  |  0,8  | [{seliga} mp3/CORRERIA-seliga.mp3]
+
+[Veja as letras letras.html]
+
+%!include: inc/rodape.t2t

@@ -1,0 +1,33 @@
+
+%!target  : html
+%!style   : estilo.css
+%!encoding: UTF-8
+
+%!postproc: (<HEAD>)		\1\n<link rel="icon" type="image/png" href="/img/favhead.png">
+%!postproc: (<HEAD>)		\1\n<TITLE>Banda CORRERIA HC</TITLE>
+%!postproc: CELLPADDING="4"	""
+%!postproc: {(.*?)}		<\1>
+
+%!preproc: {NOVO}	[img/novo.png]
+%!preproc: {correria}	correria
+%!preproc: {espera}	espera
+%!preproc: {fraco}	fraco
+%!preproc: {gas}	gás
+%!preproc: {greencorn}	Green Corn - NOFX
+%!preproc: {hobophobic}	Hobophobic - NOFX
+%!preproc: {lessonone}	lesson one
+%!preproc: {malachi}	Malachi Crunch - NOFX
+%!preproc: {mentira}	mentira
+%!preproc: {mudar}	mudar
+%!preproc: {opiniao}	opinião
+%!preproc: {pasto}	pasto
+%!preproc: {seliga}	se liga e desliga
+%!preproc: {semletra}	sem letra
+%!preproc: {sticking}	Sticking in my Eye - NOFX
+%!preproc: {voudormir}	vou dormir
+
+%!preproc: {urldumbs}	http://aurelio.net/dumbs/
+%!preproc: {urlpassagem}	http://www.passagemdesom.com/
+%%%!preproc: {urltrama}   http://tramavirtual.com.br/artista/correria_hc
+
+%!postproc: '(novo.png")'	'\1 class="novo"'

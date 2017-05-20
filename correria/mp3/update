@@ -1,0 +1,13 @@
+#!/bin/bash
+
+root="/Volumes/media/music/iTunes/Music/Correria HC/Primeiro de Abril"
+
+cp -va "$root/01 Correria.mp3"	CORRERIA-1-correria.mp3
+cp -va "$root/02 Espera.mp3"	CORRERIA-2-espera.mp3
+cp -va "$root/03 Pasto.mp3"	CORRERIA-3-pasto.mp3
+cp -va "$root/04 Vou Dormir.mp3"	CORRERIA-4-voudormir.mp3
+cp -va "$root/05 Opinião.mp3"	CORRERIA-5-opiniao.mp3
+cp -va "$root/06 Mudar.mp3"	CORRERIA-6-mudar.mp3
+cp -va "$root/07 Fraco.mp3"	CORRERIA-7-fraco.mp3
+cp -va "$root/08 Gás.mp3"	CORRERIA-8-gas.mp3
+cp -va "$root/09 Mentira.mp3"	CORRERIA-9-mentira.mp3
