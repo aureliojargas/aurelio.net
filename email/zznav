@@ -1,0 +1,18 @@
+#!/bin/bash
+
+out=include/nav.t2t
+
+cd $(dirname "$0")
+
+(
+	echo
+	for f in *.t2t
+	do
+		u=${f/.t2t/.html}
+		n=$(sed 1q $f)
+		echo "- [$n ../$u]"
+	done
+	echo "-"
+) > $out
+
+echo $out atualizado.

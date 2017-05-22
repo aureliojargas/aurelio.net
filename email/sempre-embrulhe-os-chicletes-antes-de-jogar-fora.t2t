@@ -1,0 +1,19 @@
+Sempre embrulhe os chicletes antes de jogar fora
+
+
+%!includeconf: include/config.t2t
+%!include: include/before.t2t
+
+== Ajudem os passarinhos ==
+
+Atraídos pelo cheiro adocicado e pelo sabor de fruta, os pássaros comem restos de chicletes deixados, irresponsavelmente, em qualquer lugar.
+
+Ao sentirem o chiclete grudando em seu biquinho, tentam, desesperados, retirá-lo com os pés... E aí, acontece o pior: acabam sufocados.
+
+Por favor, embrulhe o chiclete num pedaço de papel e jogue-o no lixo.
+
+Além disso, você ajuda a NATUREZA!
+
+@desconhecido
+
+%!include: include/footer.t2t
