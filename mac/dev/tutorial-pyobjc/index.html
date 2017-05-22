@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../../include/clean/clean.css">
+<TITLE>Vídeo-Tutorial de PyObjC</TITLE>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="author" content="Aurelio Jargas">
+</HEAD>
+<BODY>
+
+<DIV ID="header" style="margin-bottom:2em">
+<H1>Vídeo-Tutorial de PyObjC</H1>
+<H2>Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa programando em Python (PyObjC)", ministrada na PyCon Brasil [3]</H2>
+<H3>Joinville, 31 de Agosto de 2007, Aurelio Marinho Jargas</H3>
+</DIV>
+
+<DIV CLASS="body" ID="body">
+<!--Twins-->
+<table class="ad-twins" align="center"><tr><td class="ad-twin-left">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Clean Box 336 */
+	google_ad_slot = "3228615252";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</td><td class="ad-twin-right">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Clean Box 336 */
+	google_ad_slot = "3228615252";
+	google_ad_width = 336;
+	google_ad_height = 280;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</td></tr></table>
+<!--End Twins-->
+<!-- hlink -->
+<div class="ad-hlink">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Clean hlink 728 */
+	google_ad_slot = "6537842827";
+	google_ad_width = 728;
+	google_ad_height = 15;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div>
+<div style="padding:1em 20% 4em 20%" id="main">
+<P>
+<B>Veja o vídeo da palestra completa (34 minutos):</B>
+</P>
+<center><embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=-82892405626718533&hl=en" flashvars=""> </embed></center><p><br></p>
+<P>
+<B>Acompanhe o tutorial em seu Mac, seguindo estas instruções:</B>
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">1. Apresentação</A>
+    <LI><A HREF="#toc2">2. Dolar - Versão com Outlets e Actions</A>
+      <UL>
+      <LI><A HREF="#toc3">2.1. Instale o ambiente de desenvolvimento</A>
+      <LI><A HREF="#toc4">2.2. Crie um projeto novo e salve na mesa</A>
+      <LI><A HREF="#toc5">2.3. Veja os arquivos criados</A>
+      <LI><A HREF="#toc6">2.4. Crie a interface no IB</A>
+      <LI><A HREF="#toc7">2.5. Crie as ligações para comunicar-se com a classe</A>
+      <LI><A HREF="#toc8">2.6. Conecte os elementos com as ligações</A>
+      <LI><A HREF="#toc9">2.7. Crie o executável</A>
+      <LI><A HREF="#toc10">2.8. Teste o programa</A>
+      <LI><A HREF="#toc11">2.9. Arrume o erro do log</A>
+      <LI><A HREF="#toc12">2.10. Descubra objetos e métodos</A>
+      <LI><A HREF="#toc13">2.11. Faça o algoritmo do cálculo</A>
+      <LI><A HREF="#toc14">2.12. Descubra como gravar o conteúdo do TextField</A>
+      <LI><A HREF="#toc15">2.13. Melhorando: Use formatadores de dinheiro</A>
+      </UL>
+    <LI><A HREF="#toc16">3. Dolar - Versão com Bindings</A>
+      <UL>
+      <LI><A HREF="#toc17">3.1. Crie um projeto novo para Bindings</A>
+      <LI><A HREF="#toc18">3.2. Limpe os Outlets e Actions</A>
+      <LI><A HREF="#toc19">3.3. Crie os Bindings no IB</A>
+      <LI><A HREF="#toc20">3.4. Crie os Bindings no Python</A>
+      <LI><A HREF="#toc21">3.5. Crie o método para converter Dólares em Reais</A>
+      <LI><A HREF="#toc22">3.6. Crie o método para converter Reais em Dólares</A>
+      <LI><A HREF="#toc23">3.7. Melhorias na interface</A>
+      </UL>
+    <LI><A HREF="#toc24">4. Outros Programas</A>
+      <UL>
+      <LI><A HREF="#toc25">4.1. Markup Babel - Interface Cocoa para programa de console</A>
+      <LI><A HREF="#toc26">4.2. contatos.py - Programa de linha de comando com PyObjC</A>
+      <LI><A HREF="#toc27">4.3. AB Reports - Programa complexo</A>
+      </UL>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">1. Apresentação</H2>
+
+<P>
+Este tutorial é uma demonstração do <A HREF="http://pyobjc.sourceforge.net">PyObjC</A>, que faz a ponte entre <A HREF="http://www.pythonbrasil.com.br">Python</A> e <A HREF="http://en.wikipedia.org/wiki/Cocoa_(API)">Cocoa</A>, a poderosa API usada pelos aplicativos do <A HREF="http://en.wikipedia.org/wiki/Mac_OS_X">Mac OS X</A>.
+</P>
+<P>
+Com ele instalado, o programador usa o <A HREF="http://en.wikipedia.org/wiki/Xcode">Xcode</A> e o <A HREF="http://en.wikipedia.org/wiki/Interface_Builder">Interface Builder</A> normalmente, codificando em Python, sem precisar saber nada de <A HREF="http://en.wikipedia.org/wiki/Objective-C">Objective-C</A> ou <A HREF="http://en.wikipedia.org/wiki/AppleScript">AppleScript</A>.
+</P>
+<P>
+Os aplicativos resultantes funcionam exclusivamente no Mac, usufruindo de todas as suas tecnologias nativas.
+</P>
+<P>
+Para saber mais:
+</P>
+
+<UL>
+<LI><A HREF="http://developer.apple.com/cocoa/pyobjc.html">Tutorial da Apple sobre PyObjC</A>
+<LI><A HREF="http://scm.wilcoxd.com/blog/?p=36">Artigo introdutório de Ryan Wilcox</A>
+<LI><A HREF="http://en.wikipedia.org/wiki/Human_Interface_Guidelines">Human Interface Guidelines</A>
+</UL>
+
+<H2 ID="toc2">2. Dolar - Versão com Outlets e Actions</H2>
+
+  <center><IMG ALIGN="middle" SRC="dolar-1.jpg" BORDER="0" ALT=""></center>  
+<P>
+<A HREF="dolar.zip">Baixe os fontes</A> (Zip, 60 KB)
+</P>
+
+<H3 ID="toc3">2.1. Instale o ambiente de desenvolvimento</H3>
+
+<UL>
+<LI>Instale o Xcode (<A HREF="../../../mac/dev/#xcode">leia instruções</A>)
+<LI><S>Instale o PyObjC</S> À partir do Leopard, o PyObjC já faz parte do sistema.
+</UL>
+
+<H3 ID="toc4">2.2. Crie um projeto novo e salve na mesa</H3>
+
+<UL>
+<LI>Abra o Xcode
+<LI>New Project &gt; Application &gt; PyObjC Application
+<LI>Project Directory: ~/Desktop/<B>Dolar</B>
+</UL>
+
+<H3 ID="toc5">2.3. Veja os arquivos criados</H3>
+
+<UL>
+<LI>Info.plist
+  <UL>
+  <LI>CFBundleShortVersionString
+  <LI>Copyright
+  </UL>
+<LI>setup.py
+  <UL>
+  <LI>Construção do aplicativo
+  <LI>Não precisa mexer
+  </UL>
+<LI><B>Dolar</B>.py
+  <UL>
+  <LI>Arquivo principal do programa
+  <LI>Não precisa mexer
+  </UL>
+<LI><B>Dolar</B>AppDelegate.py
+  <UL>
+  <LI>Classe base para brincar (já instanciada no Interface Builder)
+  <LI>Coloque aqui seus métodos
+  </UL>
+<LI>MainMenu.nib
+  <UL>
+  <LI>Editável no Interface Builder (chamado de IB daqui adiante)
+  <LI>Arquivo com as definições de posicionamentos e <B>conexões</B> entre elementos
+  </UL>
+</UL>
+
+<H3 ID="toc6">2.4. Crie a interface no IB</H3>
+
+<UL>
+<LI>Chame o Interface Builder
+  <br><I style="font-size:90%;color:#888">Duplo clique no MainMenu.nib</I>
+<LI>Mostre o Inspetor
+  <br><I style="font-size:90%;color:#888">Tools &gt; Show Inspector</I>
+<LI>Dê um título para a janela
+  <br><I style="font-size:90%;color:#888">Inspetor &gt; Attributes &gt; Window Title: Conversor Dólar - Real</I>
+<LI>Ligue as guias de posicionamento
+  <br><I style="font-size:90%;color:#888">Layout &gt; Guides &gt; Enable Aqua Guidelines</I>
+<LI>Mostre as paletas
+  <br><I style="font-size:90%;color:#888">Tools &gt; Palettes &gt; Show Palettes</I>
+<LI>Arraste os elementos para a janela
+  <UL>
+  <LI>3 labels
+    <br><I style="font-size:90%;color:#888">Paleta &gt; Text &gt; System Font Text</I>
+  <LI>3 caixas de texto
+    <br><I style="font-size:90%;color:#888">Paleta &gt; Text &gt; NSTextField</I>
+  <LI>1 botão
+    <br><I style="font-size:90%;color:#888">Paleta &gt; Controls &gt; Button</I>
+  </UL>
+<LI>Coloque nomes nos labels e no botão
+  <br><I style="font-size:90%;color:#888">Duplo clique no elemento</I>
+  <UL>
+  <LI>Cotação do dia:
+  <LI>Dólares:
+  <LI>Reais:
+  <LI>Converter
+  </UL>
+</UL>
+
+<H3 ID="toc7">2.5. Crie as ligações para comunicar-se com a classe</H3>
+
+<UL>
+<LI>Duplo clique na instância do AppDelegate (cubo azul)
+<LI>Adicione outlets para as caixas de texto
+  <br><I style="font-size:90%;color:#888">Inspetor &gt; Attributes &gt; Outlets &gt; Add</I>
+  <UL>
+  <LI>cotacao
+  <LI>dolares
+  <LI>reais
+  </UL>
+<LI>Adicione um action para o botão
+  <br><I style="font-size:90%;color:#888">Inspetor &gt; Attributes &gt; Action &gt; Add</I>
+  <UL>
+  <LI>converte:
+  </UL>
+</UL>
+
+<H3 ID="toc8">2.6. Conecte os elementos com as ligações</H3>
+
+<UL>
+<LI>Conecte os outlets com suas respectivas caixas de texto
+  <UL>
+  <LI>Ctrl-click na instância do AppDelegate (cubo azul)
+  <LI>Arrasta até a caixa de texto da cotação
+  <LI>Inspetor &gt; Connections &gt; Outlets &gt; cotacao &gt; Connect
+  <LI>Repita para as outras caixas de texto
+  </UL>
+<LI>Conecte o botão com sua ação
+  <UL>
+  <LI>Ctrl-click no botão
+  <LI>Arrasta até a instância do AppDelegate
+  <LI>Inspetor &gt; Connections &gt; Target/Action &gt; converte: &gt; Connect
+  </UL>
+</UL>
+
+<H3 ID="toc9">2.7. Crie o executável</H3>
+
+<UL>
+<LI>Volte ao Xcode
+<LI>Project &gt; New Custom Executable...
+  <UL>
+  <LI>Executable Name: <B>Dolar</B> (uma palavra para não complicar)
+  <LI>Executable Path: /usr/bin/env
+  </UL>
+<LI>Groups &amp; Files &gt; Executables &gt; Seleciona teu executável
+<LI>File &gt; Get Info &gt; Arguments &gt; Botão [+]
+  <UL>
+  <LI>Argument: <B>Dolar</B>.app/Contents/MacOS/<B>Dolar</B>
+  </UL>
+</UL>
+
+<H3 ID="toc10">2.8. Teste o programa</H3>
+
+<UL>
+<LI>Build &gt; Build and Run
+<LI>Botão não faz nada
+<LI>Veja no log a mensagem sobre falha na conexão do action converte:
+</UL>
+
+<H3 ID="toc11">2.9. Arrume o erro do log</H3>
+
+<UL>
+<LI>Edite o código Python
+  <br><I style="font-size:90%;color:#888">Duplo clique em <B>Dolar</B>AppDelegate.py</I>
+<LI>Dentro da classe, crie o método converte_
+  <UL>
+  <LI>def converte_(self, sender): pass
+  <LI>Sempre lembre-se que ":" deve virar "_" no nome do método
+  <LI>Teste o programa novamente
+  </UL>
+<LI>Agora sem erros no log, mas o botão continua sem ação
+</UL>
+
+<H3 ID="toc12">2.10. Descubra objetos e métodos</H3>
+
+<UL>
+<LI>Coloque comandos dentro do converte_()
+  <UL>
+  <LI>print self.cotacao # outlet
+  <LI>&lt;NSTextField: 0x154c110&gt;
+  </UL>
+<LI>Rode e teste o programa
+<LI>Descubra os métodos do NSTextField
+  <UL>
+  <LI>Chame a Ajuda para o Cocoa
+    <br><I style="font-size:90%;color:#888">Help &gt; Documentation &gt; Search Groups &gt; Cocoa</I>
+  <LI>Faça a pesquisa pelo elemento
+    <br><I style="font-size:90%;color:#888">Digite NSTextField na caixa de busca</I>
+  </UL>
+<LI>Veja os métodos
+  <UL>
+  <LI>Nenhum em especial
+  </UL>
+<LI>Veja os métodos do pai NSControl (herdado)
+  <UL>
+  <LI>floatValue()
+  </UL>
+<LI>Mude o print para mostrar o conteúdo da caixa de texto
+  <UL>
+  <LI>print self.dolares.floatValue()
+    <UL>
+    <LI>self: Instância da classe (Python)
+    <LI>dolares: Outlet de comunicação (Interface Builder)
+    <LI>floatValue(): Método do NSTextField (Objective-C)
+    <LI>Salada! :)
+    </UL>
+  </UL>
+<LI>Rode e teste o programa
+</UL>
+
+<H3 ID="toc13">2.11. Faça o algoritmo do cálculo</H3>
+
+<UL>
+<LI>dolares = self.dolares.floatValue()
+<LI>cotacao = self.cotacao.floatValue()
+<LI>reais = dolares * cotacao
+<LI>print reais
+</UL>
+
+<H3 ID="toc14">2.12. Descubra como gravar o conteúdo do TextField</H3>
+
+<UL>
+<LI>Veja Documentação novamente
+<LI>Ache o setFloatValue: do NSControl
+<LI>Grave o resultado do cálculo na caixa de texto dos Reais
+  <UL>
+  <LI>self.reais.setFloatValue_(reais)
+  <LI>Lembre-se que no Python o ":" vira "_"
+  </UL>
+<LI>Rode e teste o programa
+</UL>
+
+<H3 ID="toc15">2.13. Melhorando: Use formatadores de dinheiro</H3>
+
+<UL>
+<LI>Vá no IB
+<LI>Arraste o formatador de dinheiro para cada caixa de texto da cotação
+  <br><I style="font-size:90%;color:#888">Paleta &gt; Text &gt; NSNumberFormatter</I>
+<LI>Configure o formatador para nossa moeda
+  <br><I style="font-size:90%;color:#888">Inspetor &gt; Formatter &gt; [x] Localize</I>
+<LI>Repita o procedimento para as caixas de dólares e reais
+<LI>Rode e teste o programa
+</UL>
+
+<H2 ID="toc16">3. Dolar - Versão com Bindings</H2>
+
+  <center><IMG ALIGN="middle" SRC="dolar-2.jpg" BORDER="0" ALT=""></center>  
+<P>
+<A HREF="dolar-bindings.zip">Baixe os fontes</A> (Zip, 60 KB)
+</P>
+
+<H3 ID="toc17">3.1. Crie um projeto novo para Bindings</H3>
+
+<UL>
+<LI>Salve e feche projeto atual no Xcode e IB
+<LI>Vá na mesa
+  <br><I style="font-size:90%;color:#888">F11</I>
+<LI>Duplique o diretório do projeto
+  <br><I style="font-size:90%;color:#888">Command-D</I>
+<LI>Renomeie a pasta nova para: Dolar Bindings
+<LI>Entre nessa pasta e abra o arquivo <B>Dolar</B>.xcodeproj
+<LI>Rode o programa para ter certeza que tudo continua funcionando
+  <br><I style="font-size:90%;color:#888">Build &gt; Build and Run</I>
+</UL>
+
+<H3 ID="toc18">3.2. Limpe os Outlets e Actions</H3>
+
+<UL>
+<LI>Vá no IB
+  <br><I style="font-size:90%;color:#888">Duplo clique no MainMenu.nib</I>
+<LI>Apague todos os outlets
+  <br><I style="font-size:90%;color:#888">Duplo clique na instância do AppDelegate (cubo azul)</I>
+  <br><I style="font-size:90%;color:#888">Inspetor &gt; Attributes &gt; Outlets &gt; Remove</I>
+<LI>Apague o Action
+  <br><I style="font-size:90%;color:#888">Inspetor &gt; Attributes &gt; Action &gt; Remove</I>
+<LI>Apague o botão "Converter", pois não será mais usado
+  <br><I style="font-size:90%;color:#888">Selecione o botão na janela e aperte Delete</I>
+</UL>
+
+<H3 ID="toc19">3.3. Crie os Bindings no IB</H3>
+
+<UL>
+<LI>Selecione a caixa de texto da cotação
+<LI>Inspetor &gt; Bindings &gt; Value &gt; value
+  <UL>
+  <LI>Bind to: <B>Dolar</B>AppDelegate
+  <LI>Model Key Path: cotacao
+  <LI>[x] Continuously Update Values
+    <UL>
+    <LI>Isso mandará uma ação a cada alteração no texto da caixa
+    <LI>E chamará automaticamente o método setCotacao_ no Python
+    <LI>O nome do método é sempre "set" + capitalize(Model Key Path) + "_"
+    </UL>
+  </UL>
+<LI>Repita o procedimento para as outras caixas de texto
+</UL>
+
+<H3 ID="toc20">3.4. Crie os Bindings no Python</H3>
+
+<UL>
+<LI>Vá no Xcode
+<LI>Edite o <B>Dolar</B>AppDelegate.py
+<LI>Importe o módulo "objc"
+  <UL>
+  <LI>import objc
+  </UL>
+<LI>Logo após a declaração da classe DolarAppDelegate, crie três "ivar"
+  <UL>
+  <LI>cotacao = objc.ivar(u"cotacao")
+  <LI>dolares = objc.ivar(u"dolares")
+  <LI>reais = objc.ivar(u"reais")
+  </UL>
+<LI>Atente aos detalhes
+  <UL>
+  <LI>Lembre-se que o nome do binding vem em Unicode
+  <LI>Esse nome do binding é o Model Key Path que você preencheu no IB
+  <LI>Cada um destes bindings representa o <B>conteúdo</B> da caixa de texto
+  </UL>
+</UL>
+
+<H3 ID="toc21">3.5. Crie o método para converter Dólares em Reais</H3>
+
+<UL>
+<LI>Ao se digitar o valor em dólares, o valor em reais será calculado automaticamente
+<LI>Para isso, crie o método que cuidará das alterações na caixa de dólares
+  <UL>
+  <LI>def setDolares_(self, valor):
+  <LI>Lembre-se do _ no final, pois recebe argumento
+  </UL>
+<LI>Guarde o valor digitado pelo usuário na referência ao binding (ivar)
+  <UL>
+  <LI>self.dolares = valor
+  </UL>
+<LI>Faça as contas e guarde o resultado
+  <UL>
+  <LI>self.reais = self.dolares * self.cotacao
+  <LI>O resultado será atualizado automaticamente
+  </UL>
+<LI>Rode e teste o programa
+</UL>
+
+<H3 ID="toc22">3.6. Crie o método para converter Reais em Dólares</H3>
+
+<UL>
+<LI>Ao se digitar o valor em reais, o valor em dólares será calculado automaticamente
+<LI>Similar ao passo anterior, crie o método set
+  <UL>
+  <LI>def setReais_(self, valor):
+  </UL>
+<LI>Guarde o valor e faça o cálculo
+  <UL>
+  <LI>self.reais = valor
+  <LI>self.dolares = self.reais / self.cotacao
+  </UL>
+<LI>Rode e teste o programa
+<LI>Perceba que o antigo método converte_() não é mais necessário
+</UL>
+
+<H3 ID="toc23">3.7. Melhorias na interface</H3>
+
+<UL>
+<LI>Visualização dos resultados
+  <UL>
+  <LI>Crie outros labels usando letras grandes e coloridas para mostrar os valores em reais e dólares
+  <LI>Faça bindings destes textos com o conteúdo das caixas de texto, para serem atualizados automaticamente
+  </UL>
+<LI>Usabilidade
+  <UL>
+  <LI>Use um binding para esconder as caixas de dólares e reais enquanto a cotação não for digitada
+  <LI>Inspetor &gt; Bindings &gt; Availability &gt; hidden
+    <UL>
+    <LI>Bind to: <B>Dolar</B>AppDelegate
+    <LI>Model Key Path: cotacao
+    <LI>Value Transformer: NSIsNil
+    </UL>
+  <LI>Isso deixa claro para o usuário que a cotação deve ser digitada primeiro
+  <LI>Além de evitar a necessidade de verificações no código Python, pois a cotação sempre vai estar preenchida
+    <UL>
+    <LI>Chega de "if self.cotacao:" nos setFoo_()
+    </UL>
+  </UL>
+</UL>
+
+  <center><IMG ALIGN="middle" SRC="dolar-3-1.jpg" BORDER="0" ALT=""></center>  
+  <center><IMG ALIGN="middle" SRC="dolar-3-2.jpg" BORDER="0" ALT=""></center>  
+  <center><IMG ALIGN="middle" SRC="dolar-3-3.jpg" BORDER="0" ALT=""></center>  
+<P>
+<A HREF="dolar-bindings-melhorado.zip">Baixe os fontes</A> (Zip, 68 KB)
+</P>
+
+<H2 ID="toc24">4. Outros Programas</H2>
+
+<H3 ID="toc25">4.1. Markup Babel - Interface Cocoa para programa de console</H3>
+
+<P>
+Um exemplo de como fazer um interface Cocoa para um programa Python já existente. O aplicativo <A HREF="http://txt2tags.sf.net/pt">txt2tags</A> foi usado como módulo, convertendo textos automaticamente enquanto o usuário digita. Foi usada a técnica de binding no conteúdo com o método setReferencia_() agindo a cada tecla digitada.
+</P>
+<a href="pyobjc-app-1.jpg">  <center><IMG ALIGN="middle" SRC="pyobjc-app-1.mini.jpg" BORDER="0" ALT=""></center> </a>
+<P>
+<A HREF="markup-babel.zip">Baixe os fontes</A>, abra no Xcode e rode (Build and Run).
+</P>
+
+<H3 ID="toc26">4.2. contatos.py - Programa de linha de comando com PyObjC</H3>
+
+<P>
+Um exemplo de como usar o PyObjC para programas de linha de comando. É utilizado o framework da Agenda do Mac (Address Book), acessando os dados dos contatos em tempo real e mostrando na tela.
+</P>
+<P>
+<A HREF="contatos.py">Baixe os fontes</A> e execute no Terminal.app: <B>python contatos.py</B>
+</P>
+
+<H3 ID="toc27">4.3. AB Reports - Programa complexo</H3>
+
+<P>
+Um exemplo de como fazer um programa mais complexo, utilizando as tecnologias disponíveis no Mac OS X.
+</P>
+
+<UL>
+<LI>Data source (tabelas)
+  <UL>
+  <LI>Ordenar os dados pela coluna FOO (ordem direta e reversa)
+  <LI>Trocar colunas de lugar (arrastando)
+  </UL>
+<LI>Live search
+  <UL>
+  <LI>Com o uso de bindings, fazer pesquisas em tempo real, enquanto digita
+  </UL>
+<LI>Picture resize
+  <UL>
+  <LI>Com o uso de sliders e bindings, fica fácil alterar o tamanho das fotos em tempo real, enquanto arrasta o botão
+  </UL>
+<LI>Performance
+  <UL>
+  <LI>Mesmo lidando com muitos dados e fotos, a performance fica excelente
+  <LI>O PyObjC não sobrecarrega o aplicativo, é uma ponte enxuta
+  </UL>
+</UL>
+
+<a href="pyobjc-app-3.jpg">  <center><IMG ALIGN="middle" SRC="pyobjc-app-3.mini.jpg" BORDER="0" ALT=""></center> </a>
+<P>
+Programa ainda inacabado, fontes não disponíveis.
+</P>
+<!-- BOX -->
+<div class="ad-box-300">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Clean Box 300 */
+	google_ad_slot = "4490217623";
+	google_ad_width = 300;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div>
+<!-- hlink -->
+<div class="ad-hlink">
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0009608813278754";
+	/* Clean hlink 728 */
+	google_ad_slot = "6537842827";
+	google_ad_width = 728;
+	google_ad_height = 15;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+</div>
+</DIV><!--main-->
+</DIV><!--contents-->
+
+<!-- Begin footer -->
+
+<p id="footer">
+	<a href="http://aurelio.net">AURELIO.NET</a><br>
+	1999-2011
+</p>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags mac/dev/tutorial-pyobjc/index.t2t -->
+</BODY></HTML>

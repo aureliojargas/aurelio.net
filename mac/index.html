@@ -1,0 +1,1404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/faq.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Mac OS X - FAQ e Dicas :: aurelio.net</TITLE>
+</HEAD>
+<BODY id="mac">
+
+<DIV ID="header">
+<H1>M a c O S X • F A Q</H1>
+</DIV>
+
+<DIV ID="main">
+
+<H1 ID="toc1">Mac OS X - FAQ e Dicas</H1>
+
+ <center><IMG ALIGN="middle" SRC="../img/linux-apple.png" BORDER="0" ALT=""></center> 
+<P>
+Página com dicas, aplicativos e informações sobre o Mac OS X,
+com foco em usuários brasileiros e com experiência em Linux/UNIX.
+</P>
+<DIV CLASS="toc">
+
+  <UL>
+  <LI><A HREF="#toc1">Mac OS X - FAQ e Dicas</A>
+    <UL>
+    <LI><A HREF="#comunidade">Comunidade</A>
+      <UL>
+      <LI><A HREF="#lista">Lista de Discussão</A>
+      <LI><A HREF="#blogs">Blogs</A>
+      <LI><A HREF="#apps-br">Aplicativos Feitos por Brasileiros</A>
+      <LI><A HREF="#aplicativos">Aplicativos Indispensáveis</A>
+      </UL>
+    <LI><A HREF="#preliminares">Preliminares</A>
+      <UL>
+      <LI><A HREF="#osx-pc">1. Tem como instalar o Mac OS X em um PC?</A>
+      <LI><A HREF="#linux-mac">2. Tem como instalar o Linux em um Mac?</A>
+      <LI><A HREF="#osx-livre">3. O Mac OS X é livre?</A>
+      <LI><A HREF="#osx">4. O Mac OS X é tipo um KDE/Gnome? Ou é tipo um Windows?</A>
+      <LI><A HREF="#mais-info">5. Onde posso obter mais informações?</A>
+      </UL>
+    <LI><A HREF="#primeiros-passos">Primeiros Passos</A>
+      <UL>
+      <LI><A HREF="#primeiro-login">6. Tá, acabei de logar pela primeira vez no Mac OS X. E agora?</A>
+      <LI><A HREF="#mouse">7. Cadê os outros botões do mouse?</A>
+      <LI><A HREF="#terminal">8. Onde está o terminal?</A>
+      <LI><A HREF="#conf">9. Onde estão meus preciosos .conf?</A>
+      <LI><A HREF="#instalar-app">10. Instalação e remoção de aplicativos</A>
+      <LI><A HREF="#versao-app">11. Como saber a versão de um aplicativo instalado?</A>
+      <LI><A HREF="#todos-apps">12. Como ter uma lista de todos os aplicativos instalados?</A>
+      <LI><A HREF="#progs-linux">13. Tem como usar um programa do Linux no Mac?</A>
+      <LI><A HREF="#vdesktop">14. Onde estão meus múltiplos desktops?</A>
+      <LI><A HREF="#info-sistema">15. Como obter as informações do sistema</A>
+      <LI><A HREF="#assassinar-app">16. Como assassinar um aplicativo</A>
+      <LI><A HREF="#screenshot">17. Como tirar screenshots</A>
+      <LI><A HREF="#executar-root">18. Executando comandos como root</A>
+      <LI><A HREF="#root">19. Tornando-se root</A>
+      </UL>
+    <LI><A HREF="#comandos">Comandos</A>
+      <UL>
+      <LI><A HREF="#ls-limitado">20. Onde estão as duzentas opções do ls?</A>
+      <LI><A HREF="#ls-colorido">21. Como deixar o ls colorido</A>
+      <LI><A HREF="#bc">22. Onde está o bc (ou o dc)?</A>
+      <LI><A HREF="#df-du">23. Como fazer o df e o du mostrar os tamanhos corretos</A>
+      <LI><A HREF="#locate">24. Quero usar o locate!</A>
+      <LI><A HREF="#md5sum">25. Cadê o comando md5sum?</A>
+      <LI><A HREF="#seq">26. Cadê o comando seq?</A>
+      <LI><A HREF="#ldd-strace-objdump">27. Cadê o ldd, strace e objdump?</A>
+      <LI><A HREF="#dialog">28. Cadê o comando dialog?</A>
+      <LI><A HREF="#make">29. Cadê o comando make (e o gcc)?</A>
+      </UL>
+    <LI><A HREF="#config">Configuração</A>
+      <UL>
+      <LI><A HREF="#abnt">30. [Acentuação] Como usar mapas de teclado alternativos (US, ABNT)</A>
+      <LI><A HREF="#plugin">31. Ligando/desligando plug-ins</A>
+      <LI><A HREF="#app-lang">32. Configurar o idioma de um aplicativo</A>
+      <LI><A HREF="#nfs">33. Exportando uma pasta via NFS</A>
+      <LI><A HREF="#apache-conf">34. Onde configuro o Apache?</A>
+      <LI><A HREF="#apache">35. Onde ligo/desligo o Apache/Samba/FTP/SSH ?</A>
+      <LI><A HREF="#dois-monitores">36. Usando dois monitores</A>
+      </UL>
+    <LI><A HREF="#outros">Outros</A>
+      <UL>
+      <LI><A HREF="#open">37. Open, o comando curinga</A>
+      <LI><A HREF="#say">38. Say, o comando que fala</A>
+      <LI><A HREF="#botao-iniciar">39. Acesso rápido ao /Applications</A>
+      <LI><A HREF="#pdf">40. Como criar arquivos PDF</A>
+      <LI><A HREF="#pacote">41. O formato do "pacote"</A>
+      <LI><A HREF="#arquivos-ocultos">42. O Finder não mostra o /etc</A>
+      <LI><A HREF="#mount-dmg-terminal">43. Como montar e desmontar uma imagem (DMG ou ISO) pelo terminal?</A>
+      <LI><A HREF="#reparar-permissoes">44. Como reparar as permissões do disco pelo terminal?</A>
+      <LI><A HREF="#liberar-espaco">45. Como liberar espaço em disco? O que posso apagar?</A>
+      <LI><A HREF="#i18n">46. Como internacionalizar/traduzir um aplicativo? (i18n)</A>
+      <LI><A HREF="#xcode">47. Xcode</A>
+      <LI><A HREF="#single">48. Sou mega 13370 e quero usar só modo texto (init 1, single)</A>
+      <LI><A HREF="#pr0n">49. Diquinhas</A>
+      <LI><A HREF="#pr0n">50. Você não pode morrer sem...</A>
+      </UL>
+    </UL>
+  </UL>
+
+</DIV>
+
+<H2 ID="comunidade">Comunidade</H2>
+
+<H3 ID="lista">Lista de Discussão</H3>
+
+<P>
+Local de encontro dos usuários, para discussões e dicas sobre o
+sistema, em português. A temática da lista é ajudar na migração de
+usuários de Linux para o Mac. Para entrar, mande um e-mail para
+<A HREF="mailto:linux2macosx-subscribe@yahoogrupos.com.br">linux2macosx-subscribe@yahoogrupos.com.br</A>. Para ler as mensagens já
+circuladas, procure no <A HREF="http://br.groups.yahoo.com/group/linux2macosx">arquivo</A>.
+</P>
+<P>
+Grande parte do conteúdo desta página foi retirado do histórico da
+lista. Se você se encaixa no perfil linuxeiro no mac, junte-se a nós!
+</P>
+
+<H3 ID="blogs">Blogs</H3>
+
+<UL>
+<LI><A HREF="http://token47.blogspot.com">André Ruiz</A>
+<LI><A HREF="http://aurelio.net/blog">Aurelio Marinho Jargas</A>
+<LI><A HREF="http://homepage.mac.com/fundidor/iblog/">Bernardo Höhl</A>
+<LI><A HREF="http://livejournal.com/users/ferhr">Fernando Massen</A>
+<LI><A HREF="http://otavio.geek42.org">Otávio Corrêa Cordeiro</A>
+<LI><A HREF="http://www.livejournal.com/~rstm">Rudá Moura</A>
+</UL>
+
+<H3 ID="apps-br">Aplicativos Feitos por Brasileiros</H3>
+
+<DL>
+<DT><A HREF="http://aurelio.net/soft/adiumbook/">AdiumBook</A>, por Aurelio Marinho Jargas</DT><DD>
+<P></P>
+O AdiumBook serve para fazer pesquisas e cruzar dados de contatos do
+Adium e do Address Book, mantendo-os em sincronia. Escrito em
+AppleScript + Cocoa.
+<P></P>
+<DT><A HREF="http://www.jcs.santos.nom.br/fyl/fyl.html">FetchYourLyrics</A>, por Julio Cesar Silva dos Santos</DT><DD>
+<P></P>
+O FetchYourLyrics é um programa que mostra as letras da música que
+está tocando atualmente no iTunes. Se o campo de letras estiver vazio,
+o programa procura por elas na Internet.
+<P></P>
+<DT>MySQL GUI Tools, por Alfredo Kojima</DT><DD>
+<P></P>
+O Kojima (<A HREF="http://www.windowmaker.info">Window Maker</A>, sabe?)
+trabalha na MySQL e fez as versões para Mac de três
+componentes do MySQL GUI Tools: Workbench,
+<A HREF="http://www.mysql.com/products/tools/query-browser/">Query Browser</A>
+e
+<A HREF="http://www.mysql.com/products/tools/administrator/">Administrator</A>.
+<P></P>
+<DT><A HREF="http://quicksynergy.sourceforge.net">QuickSinergy</A>, por Otávio Corrêa Cordeiro</DT><DD>
+<P></P>
+O QuickSynergy é uma interface amigável de configuração para o
+Synergy2 (aplicativo que compartilha o mesmo mouse e teclado para
+dois ou mais computadores). Escrito em AppleScript + Cocoa.
+<P></P>
+<DT><A HREF="http://rudix.org">Rudix</A>, por Rudá Moura</DT><DD>
+<P></P>
+O Rudix disponibiliza pacotes prontos para instalar de programas
+úteis do Linux que faltam no OS X, como wget, ncftp e lynx. Diferente
+do Fink ou do MacPorts, cada pacote é auto contido e pré-compilado.
+Não há dependências ou requisitos, basta baixar e usar.
+</DL>
+
+<H3 ID="aplicativos">Aplicativos Indispensáveis</H3>
+
+<div class="table-rows">
+
+<TABLE>
+<TR>
+<TD><A HREF="http://adium.im">Adium</A></TD>
+<TD>Cliente de IM multi-protocolo (MSN, ICQ, Yahoo, GTalk, ...)</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://macmagazine.com.br/blog/wp-content/files/brasileiro-abnt2.zip">Brasileiro-abnt2</A></TD>
+<TD>Mapeamento de teclado ABNT</TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.mozilla.org/projects/camino/">Camino</A></TD>
+<TD>Navegador do Mozilla.org</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://doublecommand.sourceforge.net">DoubleCommand</A></TD>
+<TD>Troca Cmd/Option, desliga Caps Lock</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://fink.sf.net">Fink</A></TD>
+<TD>O "<A HREF="../cygwin/">cygwin</A>" do Mac (1)</TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD><A HREF="http://br.mozdev.org">Firefox</A></TD>
+<TD>Navegador</TD>
+<TD>port</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.gimp.org/macintosh/">Gimp</A></TD>
+<TD>Edição de imagens</TD>
+<TD>port/X11</TD>
+</TR>
+<TR>
+<TD>ImageWell</TD>
+<TD>Edição rápida de imagens</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.inkscape.org">Inkscape</A></TD>
+<TD>Desenho vetorial</TD>
+<TD>port/X11</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.macports.org">MacPorts</A> (ex-DarwinPorts)</TD>
+<TD>O "<A HREF="../cygwin/">cygwin</A>" do Mac (2)</TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.planamesa.com/neojava/">NeoOffice</A></TD>
+<TD>Suíte OpenOffice</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.simonhaertel.de/">Quinn</A></TD>
+<TD>Clone do jogo Tetris</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://rudix.org">Rudix</A></TD>
+<TD>O "<A HREF="../cygwin/">cygwin</A>" do Mac (3)</TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD><A HREF="http://skype.com/products/skype/macosx/">Skype</A></TD>
+<TD>Telefone na Internet</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD><A HREF="http://transmission.m0k.org">Transmission</A></TD>
+<TD>Cliente Bit torrent</TD>
+<TD>nativo</TD>
+</TR>
+<TR>
+<TD>USInternational (<A HREF="http://www.brockerhoff.net/usi/">1</A>, <A HREF="http://www.robertoteixeira.com/2008/06/09/teclado-brasileiro-us-international-para-mac/pt/">2</A>)</TD>
+<TD>Mapeamento de teclado us-acentos</TD>
+<TD>-</TD>
+</TR>
+<TR>
+<TD><A HREF="http://xchataqua.sourceforge.net">X-Chat Aqua</A></TD>
+<TD>X-Chat (IRC)</TD>
+<TD>port</TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.xiph.org/quicktime/">Xiph QT</A></TD>
+<TD>Suporte a OGG no sistema</TD>
+<TD>-</TD>
+</TR>
+</TABLE>
+
+</div>
+<P>
+Veja também:
+<A HREF="http://atreides.cf.ac.uk/groovecorner/space/Software">A list of useful software</A>
+(em inglês)
+</P>
+
+<H2 ID="preliminares">Preliminares</H2>
+
+<H3 ID="osx-pc">0.0.1. Tem como instalar o Mac OS X em um PC?</H3>
+
+<P>
+Hoje não, pois as máquinas da Apple usam processadores PowerPC, uma
+arquitetura diferente do PC. Mas a empresa mudará toda a sua linha
+para usar processadores Intel em 2006/2007, então brevemente
+(teoricamente) será simples instalar o OS X em um PC normal.
+</P>
+	<BLOCKQUOTE>
+	Nota: Hoje é possível instalar o OS X em um PC com algum
+	esforço, usando o emulador <A HREF="http://pearpc.sf.net">PearPC</A> ou
+	baixando imagens ISO da Internet. No emulador fica lento e
+	instalar a imagem é um parto, mesmo para experts em
+	informática.
+	</BLOCKQUOTE>
+
+<H3 ID="linux-mac">0.0.2. Tem como instalar o Linux em um Mac?</H3>
+
+<P>
+Sim. É possível instalar só o Linux ou fazer dual boot. Há várias
+distribuições de Linux que possuem versões para PPC (PowerPC). Há
+também uma distro exclusiva de PPC, a
+<A HREF="http://www.yellowdoglinux.com/">Yellow Dog</A>. É só baixar os ISOs dos
+CDs, queimar e instalar o Linux normalmente, funciona tudo normal.
+Dica: para bootar um Mac pelo CD, segure a tecla C ao ligá-lo.
+</P>
+
+<H3 ID="osx-livre">0.0.3. O Mac OS X é livre?</H3>
+
+<P>
+Não. O coração do sistema é uma variante do BSD (UNIX), mas sua
+interface gráfica (Aqua) é código fechado. Não há previsão de abertura
+desse código.
+</P>
+
+<H3 ID="osx">0.0.4. O Mac OS X é tipo um KDE/Gnome? Ou é tipo um Windows?</H3>
+
+<P>
+O Mac OS X é bem diferente tanto do Linux quanto do Windows. Sua
+interface é ultra simples e o foco principal é a facilidade de uso.
+</P>
+
+<UL>
+<LI>No topo da tela, há uma única barra de menu, usada por todos os
+  aplicativos. A janela de um aplicativo é limpa, não tem menu
+  próprio. O menu do topo da tela muda conforme o aplicativo que está
+  em foco.
+  <UL>
+  <LI>Na extrema esquerda do menu, tem o menu Apple (com a maçã), que dá
+    acesso a funções relativas ao sistema como um todo (configuração,
+    atualização, desligar, ...).
+  <LI>Logo em seguida vêm os menus do aplicativo atual.
+  <LI>No canto direito do menu estão os mini-ícones, com acesso rápido a
+    aplicativos e o relógio. Eles lembram o canto direito da barra de
+    tarefas do Windows.
+  </UL>
+<LI>Na parte inferior da tela está o Dock, que lembra o Window Maker. No
+  Dock ficam os aplicativos mais usados, a Lixeira e as janelas
+  minimizadas.
+<LI>O resto da tela é a Mesa (Desktop), com ícones de mídias montadas (disco
+  rígido, CD, DVD, USB) e arquivos que o usuário coloca ali.
+</UL>
+
+<P>
+E só. Nada de excessos, nada de firulas desnecessárias.
+<A HREF="http://www.apple.com/br/macosx/">Aqui tem screenshots e vídeos</A> do sistema.
+</P>
+
+<H3 ID="mais-info">0.0.5. Onde posso obter mais informações?</H3>
+
+<P>
+Em português:
+</P>
+
+<UL>
+<LI><A HREF="http://www.apple.com/br/macosx/">Mac OS X</A>
+<LI><A HREF="http://www.apple.com/br/ibook/">iBook</A>
+<LI><A HREF="http://www.terra.com.br/macmania/">Revista Macmania</A>
+</UL>
+
+<P>
+Em inglês:
+</P>
+
+<UL>
+<LI><A HREF="http://discussions.info.apple.com/">Fórums da Apple</A>
+<LI><A HREF="http://www.versiontracker.com/macosx/">Version Tracker, o "Freshmeat" do OS X</A>
+<LI><A HREF="http://scriptbuilders.net/">AppleScript - Exemplos</A>
+<LI><A HREF="http://en.wikipedia.org/wiki/Apple_computer">Wikipedia - Apple computer</A>
+<LI><A HREF="http://developer.apple.com/tools/subversionxcode.html">Xcode usando Subversion</A>
+</UL>
+
+<H2 ID="primeiros-passos">Primeiros Passos</H2>
+
+<H3 ID="primeiro-login">0.0.6. Tá, acabei de logar pela primeira vez no Mac OS X. E agora?</H3>
+
+<P>
+Abra sua mente :)
+</P>
+
+<OL>
+<LI>Esqueça tudo o que você sabe sobre Linux
+<LI>Esqueça tudo o que você sabe sobre Windows
+<LI>Esqueça tudo o que você sabe sobre informática
+</OL>
+
+<P>
+Dê-se a chance de experimentar algo novo com a mente limpa, sem vícios
+e sem pré-conceitos. Você se surpreenderá ao perceber como o sistema é
+amigável e intuitivo. Muito do que você costumava se preocupar antes,
+simplesmente funcionará sem que você se dê conta.
+</P>
+<P>
+Use e abuse do Drap &amp; Drop. Arraste coisas (ícones, textos, imagens)
+para o Dock, Finder, diálogos, janelas... Experimente, é seguro. O
+sistema não deixa você fazer algo que possa danificá-lo e é possível
+desfazer a maioria das ações.
+</P>
+<P>
+Para conhecer os truques ninjas e saber mais sobre o "jeito Mac" de
+fazer as coisas, leia a ajuda do Finder (Finder &gt; Ajuda &gt; Ajuda Mac).
+</P>
+
+<H3 ID="mouse">0.0.7. Cadê os outros botões do mouse?</H3>
+
+<P>
+Os Macs vêm com mouses de um botão, pois os aplicativos são projetados
+para serem simples e fáceis de usar. Para imitar o segundo botão do
+mouse, clique o mouse com a tecla Ctrl pressionada. Se preferir,
+plugue um mouse USB comum e os demais botões funcionarão normalmente.
+</P>
+
+<H3 ID="terminal">0.0.8. Onde está o terminal?</H3>
+
+<P>
+Applications &gt; Utilities &gt; Terminal.app
+</P>
+<P>
+Se quiser usar terminal com abas (tabs), instale o iTerm.
+</P>
+
+<H3 ID="conf">0.0.9. Onde estão meus preciosos .conf?</H3>
+
+<P>
+Sei que isso vai chocá-lo e provavelmente causará revolta, mas aceite
+a realidade: esqueça seus .conf. Os aplicativos são configurados de
+maneira padronizada, graficamente, via Preferências (Command-,). Se
+você fizer questão de saber onde ficam os arquivos, vasculhe seu
+~/Library/Preferences e seja feliz. São arquivos XML que podem ser
+editados "na mão" à vontade, embora raramente isso seja necessário.
+</P>
+
+<H3 ID="instalar-app">0.0.10. Instalação e remoção de aplicativos</H3>
+
+<P>
+Em geral, instalar um aplicativo é simplesmente copiar seu ícone para a
+pasta /Applications e desinstalar é apagar o ícone (jogar na lixeira).
+Também é possível colocar aplicativos no seu HOME (dentro do
+~/Applications). Na verdade tanto faz a sua localização, até no /tmp
+vai funcionar, mas recomenda-se sempre usar o /Applications. Alguns
+aplicativos maiores vêm com instalador, e destes, alguns possuem
+desinstalador e outros indicam no README quais as pastas criadas.
+</P>
+
+<H3 ID="versao-app">0.0.11. Como saber a versão de um aplicativo instalado?</H3>
+
+<P>
+Ou abra a sua tela About (no menu com o nome do aplicativo), ou veja
+a janela de informações pelo Finder (Command-i no seu ícone). Se
+quiser uma listagem completa de todos os aplicativos instalados e suas
+versões, vá em:
+</P>
+<P>
+Maçã &gt; Sobre Este Mac &gt; Mais Informações &gt; Software &gt; Aplicativos
+</P>
+
+<H3 ID="todos-apps">0.0.12. Como ter uma lista de todos os aplicativos instalados?</H3>
+
+<P>
+Para obter a lista de todos os aplicativos que você tem instalados em
+seu sistema, independente de sua localização (por exemplo, fora do
+/Applications), use o seguinte comando:
+</P>
+
+<PRE>
+$ mdfind 'kMDItemContentTypeTree == "com.apple.application"c'
+</PRE>
+
+<H3 ID="progs-linux">0.0.13. Tem como usar um programa do Linux no Mac?</H3>
+
+<P>
+Tem. Assim como tem o <A HREF="http://aurelio.net/cygwin/">Cygwin</A> para Windows, no Mac tem o
+<A HREF="http://fink.sf.net">Fink</A> e o <A HREF="http://www.macports.org">MacPorts</A> (ex-DarwinPorts). Eles simulam um
+"ambiente" Linux, sendo possível instalar programas como ImageMagick,
+pico e lynx. Também funcionam os programas gráficos como Xgalaga e até
+o Window Maker! A diferença é que o Fink utiliza pacotes no formato
+Debian e o MacPorts baixa os fontes e os compila localmente.
+Escolha o que mais lhe agradar. Visite a página de cada sistema para
+ver a lista completa de programas suportados.
+</P>
+
+<H3 ID="vdesktop">0.0.14. Onde estão meus múltiplos desktops?</H3>
+
+<P>
+F9. A tecla mágica do OS X. Use-a, sempre. Você pode trabalhar com
+todos os aplicativos em tela cheia e quando precisar chavear, há três
+opções: Command-Tab, clicar no ícone do aplicativo no Dock ou apertar F9
+(Exposé) e clicar na janela desejada. Com o tempo você perceberá que,
+dispondo destes recursos, não há necessidade de múltiplos desktops.
+Mas se mesmo assim você quiser, <A HREF="http://desktopmanager.berlios.de">tem</A>.
+</P>
+
+<H3 ID="info-sistema">0.0.15. Como obter as informações do sistema</H3>
+
+<P>
+Para obter via linha de comando as informações que são
+listadas no menu "Maçã &gt; Sobre Este Mac &gt; Mais Informações", basta
+usar o comando /usr/bin/system_profiler. A opção -detailLevel vai de
+-2 a 1 e indica a quantidade de informações do relatório. Usar -2
+significa relatório resumido. Consulte a página de manual para mais
+informações.
+</P>
+
+<PRE>
+$ system_profiler -detailLevel -2
+</PRE>
+
+<H3 ID="assassinar-app">0.0.16. Como assassinar um aplicativo</H3>
+
+<P>
+Command-Option-Esc vai abrir a janela com os aplicativos ativos. Escolha
+o zumbi e clique em Forçar Encerrar. O Finder é o único que não pode
+ser morto, apenas reiniciado.
+</P>
+
+<H3 ID="screenshot">0.0.17. Como tirar screenshots</H3>
+
+<P>
+Command-Shift-3 tira uma foto da tela toda e grava o resultado em um
+arquivo na sua Mesa (Desktop). Se você usar dois monitores, será tirada uma
+foto para cada um.
+</P>
+<P>
+Command-Shift-4 deixa que você selecione qual parte da tela quer
+fotografar. Clique e arraste o mouse para formar o retângulo. Ao
+soltar o botão, o arquivo será gravado na sua Mesa. Aperte Esc a
+qualquer momento para cancelar.
+</P>
+<P>
+Para selecionar uma janela inteira, aperte Command-Shift-4 e em
+seguida a barra de espaço. O cursor virará uma máquina fotográfica e a
+janela que o mouse estiver sobre, será selecionada. Ao clicar com o
+mouse, o arquivo será gravado na sua Mesa. Aperte Esc a qualquer
+momento para cancelar.
+</P>
+<P>
+Para tirar uma foto de um Screen Saver, pressione Command-Shift e
+fique segurando. Enquanto isso vá nas Preferências do Sistema &gt; Screen
+Saver, escolha um e mande testar. Espera um pouquinho e aperta 3.
+Pronto.
+</P>
+<P>
+Ao segurar também a tecla Control em qualquer um destes procedimentos,
+a foto será copiada para a Área de Transferência ao invés de ser criado
+um arquivo na Mesa.
+</P>
+
+<H3 ID="executar-root">0.0.18. Executando comandos como root</H3>
+
+<P>
+O sudo já está configurado no Mac OS X e os usuários
+administradores já têm permissão de executar todos os comandos
+(<I>%admin ALL=(ALL) ALL</I>). Então basta colocar "sudo" na frente do
+comando que você quer executar e em seguida digitar sua senha de
+usuário.
+</P>
+
+<PRE>
+$ sudo vi /etc/passwd
+</PRE>
+
+<H3 ID="root">0.0.19. Tornando-se root</H3>
+
+<PRE>
+$ sudo su -
+</PRE>
+
+<P>
+E digite a sua senha de usuário. Não há senha para o usuário root.
+</P>
+
+<H2 ID="comandos">Comandos</H2>
+
+<H3 ID="ls-limitado">0.0.20. Onde estão as duzentas opções do ls?</H3>
+
+<P>
+Lembre-se que embaixo do Mac OS X é um BSD e não um GNU/Linux. Alguns
+comandos são diferentes e outros, apesar de possuírem mesmo nome e
+função, têm opções diferentes ou são mais limitados. Na dúvida,
+consulte a página de manual.
+</P>
+
+<H3 ID="ls-colorido">0.0.21. Como deixar o ls colorido</H3>
+
+<P>
+Coloque essas linhas no final do seu ~/.bashrc:
+</P>
+
+<PRE>
+export LSCOLORS="DxGxcxdxCxegedabagacad"
+alias ls="ls -G"                              # -G == --color
+</PRE>
+
+<H3 ID="bc">0.0.22. Onde está o bc (ou o dc)?</H3>
+
+<P>
+Nem o bc nem o dc vêm instalados porque a própria calculadora do Mac
+(Calculator.app) também pode ser usada via linha de comando. Para
+facilitar seu uso, crie um alias, colocando essa linha
+linha no final do seu ~/.bashrc:
+</P>
+
+<PRE>
+alias calc='/Applications/Calculator.app/Contents/MacOS/CalcEngine'
+</PRE>
+
+<P>
+O uso é similar ao bc, inclusive contando com funções como sqrt(),
+ceil() e pow(). A lista completa das funções e mais dicas sobre a
+calculadora estão
+<A HREF="http://www.macgeekery.com/mosx/10.3/applications/calculator">aqui</A>.
+</P>
+
+<PRE>
+$ echo 1/3 | calc
+0.3333333333333
+$ calc
+1+2/3*4
+3.6666666666667
+</PRE>
+
+<H3 ID="df-du">0.0.23. Como fazer o df e o du mostrar os tamanhos corretos</H3>
+
+<P>
+Eles mostram :) Porém usando uma medida diferente da padrão no Linux.
+Para um comportamento igual, adicione essas linhas no final do seu
+~/.bashrc:
+</P>
+
+<PRE>
+alias df="df -kh"
+alias du="du -kc"
+</PRE>
+
+<H3 ID="locate">0.0.24. Quero usar o locate!</H3>
+
+<P>
+O comando locate já vem instalado, o difícil é encontrar o updatedb.
+Aqui está:
+</P>
+
+<PRE>
+$ sudo /usr/libexec/locate.updatedb
+</PRE>
+
+<H3 ID="md5sum">0.0.25. Cadê o comando md5sum?</H3>
+
+<P>
+Não precisa, pois o próprio comando openssl já faz a soma MD5, quando
+usado com a opção dgst. Exemplo:
+</P>
+
+<PRE>
+$ openssl dgst -md5 /etc/passwd
+MD5(/etc/passwd)= 456ab74c32ea6c2a96f83a3fff4f9e42
+</PRE>
+
+<P>
+Se preferir crie um alias, colocando a seguinte linha no final do seu
+~/.bashrc:
+</P>
+
+<PRE>
+alias md5sum="openssl dgst -md5"
+</PRE>
+
+<H3 ID="seq">0.0.26. Cadê o comando seq?</H3>
+
+<P>
+No Mac (BSD), o comando similar ao seq é o jot. Se passado apenas um
+número, ambos os comandos funcionam iguais. Porém com múltiplos
+argumentos, a sintaxe difere:
+</P>
+
+<PRE>
+seq  INíCIO  FIM  PASSO
+
+jot  REPETIÇÕES  INíCIO  FIM
+</PRE>
+
+<P>
+O jot tem diversas opções e é bem mais poderoso que o seq, leia a sua
+manpage para conhecê-lo melhor. Caso queira ter o seq original no Mac,
+é fácil emulá-lo com uma função em shell. Coloque estas linhas no
+final do seu ~/.bashrc:
+</P>
+
+<PRE>
+seq() {
+   local H='&lt;' s='++' a=1 z=$1; [ "$2" ] &amp;&amp; { a=$1; z=$2; }
+   [ $a -gt $z ] &amp;&amp; { H='&gt;'; s='--'; };
+   for ((i=$a;i$H=$z;i$s)); do echo $i; done
+}
+</PRE>
+
+<H3 ID="ldd-strace-objdump">0.0.27. Cadê o ldd, strace e objdump?</H3>
+
+<P>
+O Rudá <A HREF="http://www.livejournal.com/~rstm/2199.html">publicou em seu blog</A>
+algumas dicas para quem estava acostumado a usar as ferramentas de
+desenvolvimento no Linux e ficou perdido no Mac OS X. Em resumo:
+</P>
+
+<UL>
+<LI>ldd: otool -L
+<LI>objdump: otool -tV
+<LI>strace: ktrace e kdump
+</UL>
+
+<H3 ID="dialog">0.0.28. Cadê o comando dialog?</H3>
+
+<P>
+O <A HREF="../shell/dialog/">dialog</A> (útil para fazer janelinhas com botões e
+menus em <A HREF="../shell/">scripts shell</A>) pode ser instalado no Mac pelo
+<A HREF="#progs-linux">Fink</A>.
+</P>
+<P>
+Se você ainda não tem o Fink, aqui vai um guia rápido para instalá-lo
+somente com o dialog:
+</P>
+
+<OL>
+<LI>Baixe o DMG do <A HREF="http://fink.sf.net">http://fink.sf.net</A>
+<LI>Rode o instalador
+<LI>No Terminal: fink scanpackages; fink index
+<LI>No Terminal: sudo apt-get update; sudo apt-get install fink
+<LI>No Terminal: sudo apt-get install dialog
+</OL>
+
+<P>
+Há um projeto similar que desenha janelas nativas do Mac (Cocoa)
+também pela linha de comando, o
+<A HREF="http://cocoadialog.sourceforge.net/">CocoaDialog</A>.
+</P>
+
+<H3 ID="make">0.0.29. Cadê o comando make (e o gcc)?</H3>
+
+<P>
+Para ter o make, gcc e amigos, é preciso instalar o <A HREF="http://en.wikipedia.org/wiki/Xcode">Xcode</A>. Ele está no CD/DVD de instalação do Mac OS X. Mais especificamente, o gcc está no pacote Xcode Tools.
+</P>
+
+<H2 ID="config">Configuração</H2>
+
+<H3 ID="abnt">0.0.30. [Acentuação] Como usar mapas de teclado alternativos (US, ABNT)</H3>
+
+<P>
+Para que a acentuação funcione corretamente com teclados US ou
+ABNT, baixe os mapeamentos (veja os links na seção
+<A HREF="#aplicativos">Aplicativos</A>) e faça:
+</P>
+
+<OL>
+<LI>Descompacte e coloque em /Library/Keyboard Layouts
+<LI>Logout
+<LI>Login
+<LI>Maçã &gt; Preferências do Sistema &gt; Internacional &gt; Menu de Entrada
+<LI>Selecione na lista o mapeamento recém-instalado
+</OL>
+
+<P>
+Caso a tecla de interrogação não funcione, dê uma olhada
+<A HREF="http://forum.insanelymac.com/index.php?showtopic=26156&amp;pid=189069&amp;st=0&amp;#entry189069">neste post</A>.
+</P>
+<P>
+<A HREF="http://oglobo.globo.com/blogs/mac/post.asp?cod_post=76200">Veja informações adicionais aqui</A>.
+</P>
+
+<H3 ID="plugin">0.0.31. Ligando/desligando plug-ins</H3>
+
+<P>
+No Finder, selecione o aplicativo desejado e aperte Command-i (Arquivo
+&gt; Obter Informações). Na janela que abre, terá uma seção Plug-ins,
+basta marcar ou desmarcar cada item.
+</P>
+
+<H3 ID="app-lang">0.0.32. Configurar o idioma de um aplicativo</H3>
+
+<P>
+No Finder, selecione o aplicativo desejado e aperte Command-i (Arquivo
+&gt; Obter Informações). Na janela que abre, terá uma seção Idiomas.
+Desmarque todos exceto o idioma desejado.
+</P>
+<P>
+Outra alternativa é chamar o aplicativo com uma opção extra na linha
+de comando, exemplo:
+</P>
+
+<PRE>
+/Applications/iCal.app/Contents/MacOS/iCal -AppleLanguages '(en-US)'
+</PRE>
+
+<H3 ID="nfs">0.0.33. Exportando uma pasta via NFS</H3>
+
+<P>
+<B>No Leopard:</B>
+</P>
+<P>
+Adicione uma linha nova no /etc/exports.
+</P>
+<P>
+<B>No Tiger:</B>
+</P>
+<P>
+Exemplo para exportar a pasta local /media/mp3:
+</P>
+
+<OL>
+<LI>Rode o Applications &gt; Utilities &gt; Netinfo
+<LI>Clique no cadeado
+<LI>Crie uma entrada nova no raiz (/) chamada "exports"
+<LI>Dentro dela, crie três chaves:
+
+<PRE>
+name: /media/mp3
+opts: ro
+client: &lt;vazio&gt;
+</PRE>
+
+<LI>Inicie os servidores NFS
+
+<PRE>
+$ sudo /usr/sbin/portmap
+$ sudo /usr/sbin/mountd
+$ sudo /sbin/nfsd -t -u -n 6
+</PRE>
+
+<LI>Confira se funcionou:
+
+<PRE>
+$ showmount -e
+$ sudo mount localhost:/media/mp3 /tmp/mala
+</PRE>
+
+<P></P>
+Se fizer alguma alteração e precisar reler a configuração:
+
+<PRE>
+$ sudo kill -1 $(cat /var/run/mountd.pid)
+</PRE>
+
+</OL>
+
+<P>
+Informações mais detalhadas (em inglês) em:
+<A HREF="http://astcomm.net/tech/nfs_howto/server/">Mac OS X as an NFS Server</A>.
+</P>
+
+<H3 ID="apache-conf">0.0.34. Onde configuro o Apache?</H3>
+
+<P>
+/etc/httpd/httpd.conf
+</P>
+<P>
+/etc/http/users/&lt;seu login&gt;.conf
+</P>
+
+<H3 ID="apache">0.0.35. Onde ligo/desligo o Apache/Samba/FTP/SSH ?</H3>
+
+<P>
+Maçã &gt; Preferências do Sistema &gt; Compartilhamento
+</P>
+
+<TABLE>
+<TR>
+<TH>Mac OS X</TH>
+<TH>Internet</TH>
+<TH>Software</TH>
+</TR>
+<TR>
+<TD>Personal File Sharing</TD>
+<TD>AFP(overTCP)</TD>
+<TD>AppleFileServer</TD>
+</TR>
+<TR>
+<TD>Windows Sharing</TD>
+<TD>SMB/CIFS</TD>
+<TD>Samba</TD>
+</TR>
+<TR>
+<TD>Personal Web Sharing</TD>
+<TD>HTTP</TD>
+<TD>Apache</TD>
+</TR>
+<TR>
+<TD>Remote Login</TD>
+<TD>SSH</TD>
+<TD>OpenSSH</TD>
+</TR>
+<TR>
+<TD>FTP access</TD>
+<TD>FTP</TD>
+<TD>tnftpd</TD>
+</TR>
+<TR>
+<TD>Apple Remote Desktop</TD>
+<TD>ARD</TD>
+<TD>ARD Helper</TD>
+</TR>
+<TR>
+<TD>Remote Apple Events</TD>
+<TD>EPPC</TD>
+<TD>AEServer</TD>
+</TR>
+<TR>
+<TD>Printer Sharing</TD>
+<TD>LPR/printer</TD>
+<TD>CUPS</TD>
+</TR>
+</TABLE>
+
+<H3 ID="dois-monitores">0.0.36. Usando dois monitores</H3>
+
+<P>
+Nos Tiger, o uso de múltiplos monitores funciona "de fábrica". No
+Panther, baixe o Screen Spanning Doctor, que libera várias
+configurações legais de vídeo, como por exemplo usar mais de 1024x768
+de resolução do monitor externo em um iBook e ativar o modo não
+espelhado. Ele é bem esperto, podendo conectar e desconectar o monitor
+externo tranqüilamente, ele se garante de mover as janelas para o
+lugar certo.
+</P>
+
+<H2 ID="outros">Outros</H2>
+
+<H3 ID="open">0.0.37. Open, o comando curinga</H3>
+
+<P>
+O comando open é muito útil na linha de comando. Passando como
+parâmetro um nome de arquivo, ele o abre no aplicativo mais indicado
+(iTunes para MP3, visualizador para imagens, e assim por diante). Se o
+parâmetro for uma URL, ela é aberta no navegador. Se for uma pasta,
+ela será mostrada no Finder. Passando a opção -a e um nome de
+aplicativo, ele dispara este aplicativo. Por fim, passando a opção -e
+ele abre o Editor de Texto. Exemplos:
+</P>
+
+<PRE>
+$ open imagem.jpg
+
+$ open .
+
+$ open http://www.google.com
+
+$ open -a firefox
+
+$ open -a gimp ~/Desktop/figura.png
+
+$ open -e /etc/passwd
+</PRE>
+
+<H3 ID="say">0.0.38. Say, o comando que fala</H3>
+
+<P>
+O Mac fala. Uma das maneiras de fazê-lo soltar a língua é usar o
+comando say. É simples, basta passar a frase
+</P>
+
+<PRE>
+$ say Hello, I am your computer
+</PRE>
+
+<P>
+É possível escolher a voz (homem, mulher, criança etc). A lista
+completa de vozes disponíveis está nas Preferências do Sistema &gt; Fala
+&gt; Vocalização de texto:
+</P>
+
+<PRE>
+$ say -v Junior Hello, I am your computer
+</PRE>
+
+<P>
+Outras opções úteis são a de gravar a fala em um arquivo AIFF, ler o
+texto de um arquivo e falar o que vier pela STDIN:
+</P>
+
+<PRE>
+$ say -o fala.aiff Hello, I am your computer
+
+$ say -f /etc/motd
+
+$ echo say it | say
+</PRE>
+
+<P>
+É uma boa opção para scripts, ao invés de mostrar a mensagem na tela,
+fale-a!
+</P>
+
+<H3 ID="botao-iniciar">0.0.39. Acesso rápido ao /Applications</H3>
+
+<P>
+Arraste a pasta /Applications para o Dock, ao lado da
+lixeira. Será criado um atalho que se clicado com o botão esquerdo,
+abrirá a pasta no Finder. Se clicado com o botão direito, mostrará
+um menu com os aplicativos, prontos para serem disparados. Algo como
+um "botão Iniciar", para quem gosta :)
+</P>
+
+<H3 ID="pdf">0.0.40. Como criar arquivos PDF</H3>
+
+<P>
+Basta mandar imprimir o arquivo e clicar em "Salvar como PDF". É tão
+simples que às vezes passa despercebido.
+</P>
+
+<H3 ID="pacote">0.0.41. O formato do "pacote"</H3>
+
+<P>
+A principal diferença conceitual do Mac enquanto Unix é a forma de
+criação e instalação de pacotes. A grande maioria dos softwares é
+compilada semi-estaticamente, ou inclui as bibliotecas de que
+necessita, o que evita árvores de dependências, tão comuns (e chatas)
+no Linux.
+</P>
+<P>
+Cada aplicativo é na verdade uma pasta com estrutura bem-definida; o
+executável "real" está muito bem escondido dentro dessa estrutura, e
+você quase nunca precisa chamá-lo diretamente. Se quiser ver
+exatamente como é a estrutura de um aplicativo, clique com o botão
+direito em seu ícone e escolha "Mostrar Conteúdo do Pacote".
+</P>
+
+<H3 ID="arquivos-ocultos">0.0.42. O Finder não mostra o /etc</H3>
+
+<P>
+As pastas /etc, /usr e /dev são invisíveis no Finder, assim como todos
+os arquivos ocultos (iniciados por ponto). Para acessá-las use
+Shift-Command-G (Ir &gt; Ir para Pasta) e digite o PATH completo.
+Se quiser desligar essa funcionalidade, fazendo com que todos os
+arquivos sejam mostrados sempre, faça:
+</P>
+
+<PRE>
+$ open ~/Library/Preferences/com.apple.finder.plist
+</PRE>
+
+<P>
+O Property List Editor será aberto com as suas preferências do Finder.
+Clique no triângulo Root, depois clique na primeira linha que aparecerá
+logo baixo, clique no botão New Sibling e crie uma entrada nova com:
+AppleShowAllFiles, boolean, Yes. Salve e reinicie o Finder
+(Command-Option-Esc).
+</P>
+
+<H3 ID="mount-dmg-terminal">0.0.43. Como montar e desmontar uma imagem (DMG ou ISO) pelo terminal?</H3>
+
+<P>
+Use o comando hdiutil para montar a imagem e desmontar (note que é
+uNmount) o volume montado.
+</P>
+
+<PRE>
+$ hdiutil mount ~/Desktop/Arquivo.dmg
+</PRE>
+
+<PRE>
+$ hdiutil mount ~/Desktop/Arquivo.iso
+</PRE>
+
+<PRE>
+$ hdiutil unmount /Volumes/Arquivo
+</PRE>
+
+<H3 ID="reparar-permissoes">0.0.44. Como reparar as permissões do disco pelo terminal?</H3>
+
+<P>
+Para quem instala muitos aplicativos de terceiros em seu Mac, de
+tempos em tempos é aconselhável abrir o Utilitário de Disco (/Applications/Utilities/Disk Utility.app)
+ e rodar o "Reparar Permissões do Disco".
+</P>
+<P>
+Isso irá corrigir eventuais problemas causados por instaladores mal configurados, que mudam as características (permissões) de arquivos importantes do sistema.
+</P>
+<P>
+Para não precisar abrir o programa e apertar o botão, também é possível executar essa ação diretamente na linha de comando:
+</P>
+
+<PRE>
+sudo diskutil repairpermissions /
+</PRE>
+
+<H3 ID="liberar-espaco">0.0.45. Como liberar espaço em disco? O que posso apagar?</H3>
+
+<P>
+A instalação de fábrica do Mac OS X traz vários gigas ocupados em seu
+HD. O que mais pesa é multimídia e documentação. Seguem algumas dicas
+do que pode ser apagado para liberar espaço.
+</P>
+
+<UL>
+<LI>Para descobrir quem são os vilões comedores de disco, use o
+  <A HREF="http://www.id-design.com/software/whatsize/">What Size</A>, que mostra
+  quanto de espaço cada pasta ocupa, mostrando os maiores primeiro.
+<LI>O Garage Band é um monstro, se não usa, pode desinstalá-lo e
+  economizar gigas. Além do /Applications, também tem rastros dele em
+  /Library/Application Support/GarageBand.
+<LI>Idem para o iDVD e seus templates pesados.
+<LI>Use o <A HREF="http://pages.cpsc.ucalgary.ca/~fuhrer/personal/freestuff/iphotodiet/">iPhoto Diet</A>
+  para liberar o espaço ocupado por fotos duplicadas, becapes,
+  edições... Quem tem muitas fotos vai ganhar bastante espaço.
+<LI>Caso não use aplicativos antigos, pode remover o suporte ao Classic.
+<LI>Remova o suporte a outros idiomas do sistema (economizei 1.25GB só
+  nessa). Tem dois aplicativos que fazem isso, o
+  <A HREF="http://monolingual.sourceforge.net/">Monolingual</A> e o
+  <A HREF="http://www.versiontracker.com/dyn/moreinfo/macosx/13503">DeLocalizer</A>.
+<LI>Remova os drivers de impressora não utilizados (são quase 2GB!)
+<LI>Instale o <A HREF="http://appzapper.com">Appzapper</A> para remover programas.
+  Ele localiza todos os arquivos que os programas espalharam pelo
+  sistema. Há também um relatório com os programas menos usados e o
+  espaço total ocupado por eles.
+</UL>
+
+<P>
+Ah, outra coisa básica é reiniciar o sistema :) O /var/vm vai crescendo,
+crescendo... Não deveria, mas alguns arquivos ali não são liberados e
+rapidinho ele fica com 1GB se usar programas pesados. NÃO APAGUE
+estes arquivos na mão. Reinicie o sistema e eles vão embora.
+</P>
+
+<H3 ID="i18n">0.0.46. Como internacionalizar/traduzir um aplicativo? (i18n)</H3>
+
+<P>
+Não tem potfiles, não tem gettext. Seus pesadelos acabaram!
+</P>
+<P>
+Basta traduzir as frases em um arquivo texto e traduzir itens da
+interface direto no Interface Builder. Ok, isso não é tão simples
+quanto parece.
+</P>
+<P>
+Nada tema, o Julio Cesar Silva dos Santos escreveu um
+<A HREF="http://www.jcs.santos.nom.br/localiza">excelente artigo</A> ensinando
+passo a passo como funciona a localização e tradução de aplicativos no
+Mac.
+</P>
+
+<H3 ID="xcode">0.0.47. Xcode</H3>
+
+<UL>
+<LI>Se estiver usando Tiger, baixe o Xcode 2.x e use o leiaute de janelas
+  tudo em 1
+<LI>Perfis de compilação: tu podes definir 1 ou mais perfis com
+  parâmetros de compilação diferentes, os que vêm por padrão são:
+  <UL>
+  <LI>Development: vem com opções de debug, 0 de otimização e uns
+  truques pra linkar mais rápido
+  <LI>Deployment: com otimização, sem debug symbols, linkagem definitiva
+  </UL>
+<LI>Para adicionar bibliotecas à lista de dependências, vai pra /usr/lib
+  (ou /System/Library/Frameworks) no Finder e faz drag&amp;drop
+<LI>Cuide para que os arquivos no teu projeto estejam com paths
+  relativos (selecione o arquivo e tecle Command-i). Se não, quando
+  fores distribuir os fontes (se for o caso), ninguém vai conseguir
+  compilar.
+<LI>Para adicionar classes tuas no Interface Builder (IB), arraste o
+  header com a declaração e largue-o na janela de projeto do IB. Assim,
+  tu podes instanciar as classes usadas pela interface direto no IB e
+  conectar todas as mensagens/conexões graficamente.
+</UL>
+
+<H3 ID="single">0.0.48. Sou mega 13370 e quero usar só modo texto (init 1, single)</H3>
+
+<P>
+Durante o boot, mantenha pressionadas as teclas Command-S. Para sair,
+digite reboot.
+</P>
+
+<H3 ID="pr0n">0.0.49. Diquinhas</H3>
+
+<UL>
+<LI>Ao alternar entre aplicativos (Command-Tab), se apertar Q fecha o
+  aplicativo selecionado
+<P></P>
+<LI>Segure o Shift e gire a rodinha (scroll wheel) do mouse. Scroll
+  horizontal!
+<P></P>
+<LI>Apertar a barra de espaço também faz PageDown em alguns aplicativos
+  como o Safari. Shift-espaço para voltar.
+<P></P>
+<LI>No Finder, para abrir um arquivo ou pasta pelo teclado, digite
+  Command-O (letra ó, de Open) ou Command-Seta para baixo.
+<P></P>
+<LI>Clique na Mesa (Desktop) e aperte Command-J para configurá-la. Deixe
+  os ícones organizados por Data de Modificação. Assim fica fácil
+  identificar as novidades, que estarão sempre no lado direito da
+  tela.
+<P></P>
+<LI>Quando estiver arrastando algo (um arquivo, uma foto), pode usar
+  tranqüilamente o F9 ou o Command-Tab para escolher em qual
+  aplicativo largá-lo.
+<P></P>
+<LI>Na Agenda, selecione um cartão e segure a tecla Option. Todos os
+  grupos aos quais este cartão pertence ficarão em destaque.
+</UL>
+
+<H3 ID="pr0n">0.0.50. Você não pode morrer sem...</H3>
+
+<UL>
+<LI>Criar um segundo usuário, ativar a troca de usuário, usá-la e ver o
+  cubo girando.
+<P></P>
+<LI>Configurar o Dock para usar o "Efeito Gênio" e segurar o Shift ao
+  apertar o botão amarelo da janela (minimizar).
+<P></P>
+<LI>Configurar o Dock para tamanho pequeno e ampliação máxima, enchê-lo
+  de ícones e arrastar o cursor sobre ele. Vaaaai. E vooooooolta.
+  Vaaaaaai...
+<P></P>
+<LI>Disparar uns 5 vídeos diferentes (open *.mpg), apertar F10 (Exposé
+  do aplicativo) e ver e ouvir todos simultaneamente.
+<P></P>
+<LI>Apertar freneticamente o F9 (Exposé) para ver a dança dos pixels, quando
+  estiver com duzentas e quarenta e sete janelas abertas.
+<P></P>
+<LI>Brincar de Zoom. Option-Command-8 liga, Option-Command-= aproxima e
+  Option-Command-- afasta. Ah, tem também o Command-Option-Control-8
+  que é legal.
+<P></P>
+<LI>Brincar de Zoom - O Retorno. Mais fácil ainda, segure o Control e
+  gire a rodinha do mouse.
+<P></P>
+<LI>Fazer o descanso de tela (Screen Saver) rodar na sua mesa (Desktop),
+  enquanto você trabalha:
+<PRE>
+nice -n +20 /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background
+</PRE>
+
+<P></P>
+<LI>Instalar o port do Gimp que roda no X11, abrir umas 5 fotos nele e
+  após tentar utilizá-lo por 15 minutos, perceber como você é feliz.
+<P></P>
+<LI>;)
+</UL>
+
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags mac/index.t2t -->
+</BODY></HTML>
