@@ -1,0 +1,117 @@
+Adesivo para colar na lataria do carro (Plotter, Vinil)
+
+
+%!includeconf: config.t2t
+%!postproc: '^<LI><A HREF="adesivo-para.*' ''
+
+%!include: /a/www/include/clean/cabecalho.t2t
+
+% ''' <div class="foto">
+% 
+% [plotter1.jpg]
+% (1) desenho
+% 
+% [plotter2.jpg]
+% (2) colagem
+% 
+% [plotter3.jpg]
+% (3) corte
+% 
+% [plotter4.jpg]
+% (4) aplicação
+% 
+% ''' </div>
+
+
+
+Normalmente precisa-se ir a alguma loja especializada em serviços de
+plotagem e pagar para se ter um adesivo para colar na lataria ou vidro
+do carro, pela parte externa. Este adesivo normalmente é feito por
+corte de vinil adesivo, que é resistente a chuvas.
+
+A idéia aqui é pegar um pedaço de vinil, e com a tesoura, cortar em
+casa o desenho ou mensagem desejada.
+
+''' <div class="material center">
+
+**Material**
+
+- Pedaço de vinil adesivo
+- Tesoura ou estilete
+- Lápis, caneta ou impressora
+-
+
+''' </div>
+
+
+== Como obter o vinil ==
+
+Para se obter um pedaço de vinil, entre outras alternativas, há as
+lojas especializadas em materiais para serigrafia e plotagem. Peça por
+sobras de vinil na cor que você quiser (geralmente o branco).
+
+Se o atendente for camarada, ele lhe dará as sobras ou cortará um
+pedaço do rolo para você de graça. Senão, você vai ter que pagar pelo
+vinil. Mas insista que dá certo. Geralmente quem compra vinil compra
+em grandes quantidades, então eles não vão ter prejuízo em te liberar
+uma tira de 20 centímetros ou sobras.
+
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+== O desenho ==
+
+A parte traseira do vinil normalmente é de papel, pois é a parte que depois você vai precisar tirar para colar ele no carro. É ali que você precisa colocar o desenho para depois recortar.
+
+A pegadinha é que como esta é a parte traseira, o **desenho precisa estar ao contrário**, para quando você for colar, ele ficar certo.
+
+Se você é artista e sabe como desenhar invertido, basta pegar um lápis e soltar a criatividade direto na traseira do vinil.
+
+Se você é como eu, sem dotes artísticos, tem um jeito de contornar isso: basta desenhar (ou imprimir) normalmente (sem ser invertido) numa folha normal A4 e depois recortar e colar na traseira do vinil, de maneira invertida.
+
+Nas fotos seguintes vou mostrar como foi que eu fiz as letras do endereço **""WWW.AURELIO.NET""** para colar na traseira do carro. Aí vai ficar claro este processo.
+
+
+ [img/plotter1.jpg] 
+
+Primeiro desenhei (toscamente) as letras necessárias numa folha branca normal A4, sem ser invertido. Aí com uma tesoura recortei cada uma das letras. Tá vendo aquele pedaço grande de papel rabiscado ali no canto, embaixo do lápis? Aquilo na verdade é a parte traseira do vinil, e já te explico o porquê do rabisco. Agora vou colar as letras no vinil:
+
+ [img/plotter2.jpg] 
+
+Perceba como colei as letras **invertidas** na parte **de trás** do vinil. Antes eu rabisquei com o lápis todo o fundo do vinil, para poder dar um contraste e diferenciá-lo facilmente das letras brancas que seriam coladas. Como isso não foi suficiente, pintei as letras de laranja pra ficarem mais visíveis.
+
+O pedaço de vinil que arranjei era um retângulo de aproximadamente
+30x15 cm, que foi suficiente para abrigar todas as letras. Demorei um tempo
+brincando de quebra-cabeças até achar conseguir encaixar tudo, mas deu
+certo.
+
+== O corte ==
+
+Agora é a parte mais importante, o corte final. Muita paciência para
+recortar com cuidado, pois o resultado será o colocado no carro, sem
+muita margem para correções posteriores. Se for usar estilete, uma
+régua é bem-vinda para desenhos com bordas retas.
+
+ [img/plotter3.jpg] 
+
+Com uma tesoura recortei o contorno de cada letra. Não tem muito
+segredo nesse passo, basta lembrar do primário na escola, com as
+tesouras sem ponta e de cabos coloridos.
+
+Obs.: Os mais atentos notarão que estão faltando as letras W, W, W, E
+e os dois pontos que separam as palavras. É que antes eu tinha já no
+carro o endereço __**WWW.**__VERD__**E**__666__**.**__ORG, então aproveitei algumas dessas letras e só colei as que faltavam.
+
+== A aplicação ==
+
+ [img/plotter4.jpg] 
+
+A aplicação do adesivo no carro é simples. Primeiro limpe a área, pode
+usar um pano com detergente ou similar. Seque bem e aplique o vinil,
+cuidando para que não formem bolhas de ar. Se isso acontecer, faça um
+furo na bolha com uma agulha que o ar sai.
+
+E pronto. É tudo bem simples, basta ter a vontade e um tempo livre.
+Claro, se o desenho for muito complexo ou envolver várias cores, aí é
+mais vantajoso pagar para os especialistas.
+
+%!include: footer.t2t

@@ -1,0 +1,67 @@
+Como fazer etiquetas para fitas cassete (k7)
+
+
+%!includeconf: config.t2t
+
+%!postproc: '^<LI><A HREF="etiquetas-fitas.*' ''
+
+%!include: /a/www/include/clean/cabecalho.t2t
+
+Essa "fita informativa" acabou surgindo como um subproduto do
+[porta-fitas com palitos de sorvete porta-fitas-k7-de-palito-sorvete.html],
+pois este inutiliza as capinhas plásticas das fitas
+(economizando espaço).
+
+A idéia é grudar papéis na fita onde constam informações importantes
+como o nome/tempo das músicas, do álbum e da banda.
+
+''' <div class="material center">
+
+**Material**
+
+  - Uma fita cassete
+  - Papel branco
+  - Caneta ou computador com impressora
+  - Fita adesiva transparente (durex) largura 1cm
+  - Fita adesiva transparente (durex) largura 2cm OPT
+  - Papel adesivo branco OPT
+  - Tesoura
+
+
+''' </div>
+
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+''' <div class="foto center big">
+
+[img/fita.jpg]
+
+Fita etiquetada e informativa
+
+''' </div>
+
+
+**Nº 1 - Número, nome e tempo das músicas**
+
+É simplesmente um papel com texto impresso no computador (ou escrito a
+mão), grudados na fita de ambos os lados com uma fita adesiva
+transparente. Para ficar melhor, é aconselhável usar a fita adesiva de
+2cm de largura, para não ficarem emendas.
+
+**Nº 2 - Nome da banda, nome do álbum, data do álbum**
+
+Novamente um papel impresso ou escrito, com uma linha apenas, colado
+com fita adesiva transparente simples, de 1cm de largura, de ambos os
+lados da fita.
+
+**Nº 3 - Identificação da fita**
+
+Essas partes brancas na parte de baixo da fita, servem para
+identificá-la facilmente em meio às outras, quando estiver no
+porta-fitas ([veja aqui a foto do porta-fitas lotado img/pf-pronto.jpg]). Se tiver o
+papel adesivo melhor, basta escrever nele uma identificação, como
+parte do nome do álbum ou da banda, ou qualquer coisa que te lembre o
+conteúdo da fita. Na falta do papel adesivo (tem nas papelarias),
+escreva num papel normal e cole com cola branca mesmo.
+
+%!include: footer.t2t

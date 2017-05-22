@@ -1,0 +1,80 @@
+Faça Você Mesmo
+Aqui é tudo grátis, aproveite as dicas!
+
+%!postproc: (</TITLE>)	' - Estampas de camiseta, adesivos, hidratação caseira e mais\1'
+
+%!includeconf: /a/www/include/clean/config.t2t
+
+%!postproc: SITEROOT 	..
+%!postproc: (<BODY)	\1 class="fvm"
+
+%!postproc: (</HEAD>)	'<style type="text/css"></style>\1'
+%!postproc: (</style>)	'#main dt {font-size:150%;margin-top:3em}\n\1'
+%!postproc: (</style>)	'#main dt img {width:120;height:90;border:1px solid #444;padding:3px;margin-left:1em}\n\1'
+
+% autolink all images
+%!postproc: '(<DT><A HREF="(.*?)">.*)(<IMG.*?>)'	'\1<a href="\2">\3</a>'
+
+% Mog: Nomes de artigos e seus links
+%!includeconf: /a/www/mog-old/include/database.t2t
+% Mog: Arruma path dos artigos
+%!postproc: '(★ <A HREF=")'	'\1http://www.mulherzice.com.br/'
+%!postproc: '(<A HREF=")([^"]*">leia mais...</A>)'	'\1http://www.mulherzice.com.br/\2'
+
+% Textos Email
+% <LI><A HREF="../a-vida-de-um-...buffett.html">A vida de um ... Buffett</A> 
+%!postproc: '(^<LI><A HREF=")\.\./([a-z0-9])'    '\1/email/\2'
+
+%%!include: ''/a/www/include/kiwi/ads-twins.html''
+%%!include: ''/a/www/include/massa/ads-twins-musica.html''
+
+%!include: /a/www/include/clean/cabecalho.t2t
+
+Use uma camiseta com a SUA estampa.''<br>''
+Cole o SEU adesivo no carro.''<br>''
+Pinte VOCÊ mesmo seu cabelo.''<br>''
+Liberte-se, faça você mesmo.
+
+% Todos os procedimentos aqui descritos eu já fiz e funcionam. Se você 
+% fizer algum desses itens, mande-me a foto de sua criação que eu coloco
+% aqui. Caso tenha usado alguma dica adicional, me conte!
+
+%---------------------------------------------------------
+% == Mais Dicas ==
+
+: [Como pintar o cabelo com papel crepom pintar-cabelo-com-papel-crepom.html] [mini/crepom.jpg]
+Quer pintar o cabelo de vermelho igual à personagem do Rebelde (RBD)? Quer chamar atenção na festa da escola? Quer chocar a sociedade com seu moicano colorido? Papel crepom é bem barato e com um simples copo d'água você pinta o cabelo.
+: [Como retirar os pontos de uma ferida retirar-pontos-de-sutura.html] [mini/ponto4.jpg]
+Cortou-se, levou pontos e está com preguiça de ir ao hospital retirá-los? Faça você mesmo em casa!
+: [Adesivo para colar na lataria do carro (Plotter, Vinil) adesivo-para-carro-plotter.html] [mini/plotter4.jpg]
+Aprenda como fazer um adesivo bonitão para colar na lataria do seu carro, pode ser um desenho, uma frase ou o endereço de um site.
+: [Como fazer um barquinho de papel barquinho-de-papel.html] [mini/barquinho-desenho.jpg]
+Aprenda (ou relembre) como fazer seu barquinho. Tem passo-a-passo com desenhos e até um vídeo para aqueles realmente apressadinhos.
+: [Como pintar camiseta com CANETA para tecido pintar-camiseta-com-caneta.html] [mini/cam_fatbob.jpg]
+Fazer sua própria estampa em uma camiseta é muito fácil, basta desenhar com a caneta! É uma caneta especial, comprada em qualquer papelaria e custa baratinho. Pode lavar à vontade que não sai.
+: [Como pintar camiseta com TINTA para tecido pintar-camiseta-com-tinta.html] [mini/cam_ultrage.jpg]
+Para fazer estampas com aparência mais profissional que as do item anterior, use a tinta para tecido, que é como se fosse uma "tinta guache" que não sai quando lava. Fica show!
+: [Porta-fitas cassete (k7) feito com palitos de sorvete porta-fitas-k7-de-palito-sorvete.html] [mini/pf-pronto.jpg]
+Seja para organizar sua coleção de antigas fitas cassete (k7), seja para relaxar ou passar um tempo de qualidade com seu filho, brinque de colar palitos de sorvete.
+: [Como fazer etiquetas para fitas cassete (k7) etiquetas-fitas-k7.html] [mini/fita.jpg]
+Tá, eu sei que as fitas cassete já estão virando item de museu, mas ainda há pessoas que as utilizam, então fica a dica. Nas etiquetas vão os nomes das músicas, da banda e do disco. Bem prático!
+: [Desenho matriz para pintar na camiseta desenho-matriz-para-pintar-camiseta.html] [mini/cam_toyabsurd.jpg]
+Usado tanto na pintura da estampa com caneta e com tinta (veja itens seguintes), fazer o molde para a arte da camiseta é o primeiro passo.
+:
+
+%!include: ''/a/www/include/clean/ad-box-300.html''
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+== Textos de E-mail ==
+
+%!include: /a/www/email/include/nav.t2t
+
+== Especial Mulher ==
+
+%!include: /a/www/mog-old/include/artigos.t2t
+
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+%!include: ''/a/www/include/clean/footer.html''
+
+%%!include: /a/www/include/massa/footer.t2t

@@ -1,0 +1,19 @@
+
+%!includeconf: /a/www/include/clean/config.t2t
+
+% Necessário pra expandir os links dos artigos da Mog no rodapé dos FVM (!index)
+% %!includeconf: /a/www/mog-old/include/database.t2t
+% %!postproc: '^(  <LI><A HREF=")'	'\1/mog/'
+
+%!postproc: SITEROOT            ..
+
+%!postproc: "(</TITLE>)"	" — FAÇA VOCÊ MESMO\1"
+
+% CSS exclusivo
+%!style: fvm.css
+
+%!preproc : OPT			__opcional__
+
+% cada imagem vira um link com label mini/nome.jpg e target img/nome.jpg
+%!preproc : '\[([^ /]*\.jpg)]'	[[mini/\1] img/\1]
+%%!preproc : '\| \[(.*?\.jpg)]'	'| [[mini/\1] img/\1]'

@@ -1,0 +1,33 @@
+
+%!include: ''/a/www/include/clean/ad-box-300.html''
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+% ''' <div class="aprendamais">
+
+=== Aprenda mais: ===
+
+- [Como pintar o cabelo com papel crepom pintar-cabelo-com-papel-crepom.html]
+- [Como retirar os pontos de uma ferida (machucado, sutura) retirar-pontos-de-sutura.html]
+- [Adesivo para colar na lataria do carro (Plotter, Vinil) adesivo-para-carro-plotter.html]
+- [Como fazer um barquinho de papel barquinho-de-papel.html]
+- [Como pintar camiseta com caneta para tecido pintar-camiseta-com-caneta.html]
+- [Como pintar camiseta com tinta para tecido pintar-camiseta-com-tinta.html]
+- [Desenho matriz para pintar na camiseta desenho-matriz-para-pintar-camiseta.html]
+- [Porta-fitas cassete (k7) feito com palitos de sorvete porta-fitas-k7-de-palito-sorvete.html]
+- [Como fazer etiquetas para fitas cassete (k7) etiquetas-fitas-k7.html]
+-
+
+% % Links para artigos das mulheres
+% %!include: nav-mog.t2t
+
+% Colocar títulos nos Ads é contra as regras do AdSense
+% === Quero saber mais sobre: ===
+% %!include: ''/a/www/include/google-ads-links-vertical-sabermais-amarelo.html''
+
+% ''' </div>
+
+% %!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+%!include: ''/a/www/include/clean/footer.html''
+
+%%!include: ''/a/www/include/footer-clean.html''

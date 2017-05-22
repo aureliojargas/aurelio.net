@@ -1,0 +1,94 @@
+Como pintar camiseta com caneta para tecido (estampa)
+
+
+%!includeconf: config.t2t
+
+%!postproc: '^<LI><A HREF="pintar-camiseta-com-caneta.*' ''
+%!postproc: URLBOB "http://en.wikipedia.org/wiki/Fat_Bob's_Feet"
+
+%!include: /a/www/include/clean/cabecalho.t2t
+
+É muito fácil personalizar uma camiseta branca, fazendo nela um
+desenho ou frase qualquer. Há uma caneta especial para tecido, que não
+sai a tinta na lavagem. O nome é **caneta para tecido**, geralmente
+encontrada em papelarias e lojas de armarinhos, na marca **Acrilex**.
+
+É uma caneta de ponta grossa, parecida com as canetas de retroprojetor
+usadas para rabiscar em CDs/DVDs. Tem de várias cores, mas o preto dá o
+melhor resultado em camisetas brancas.
+
+''' <div class="material center">
+
+**Material**
+
+- Uma camiseta de cor clara
+- Caneta para tecido cor preta (acrilex)
+- Pedaço de papelão 30x30 cm OPT
+- Fita adesiva (durex) OPT
+- Grampos de roupa OPT
+
+
+''' </div>
+
+== Prepare o desenho (arte) ==
+
+Para os que sabem desenhar bem à mão livre, não tem segredo: basta
+rabiscar direto na camiseta e pronto. Já para os menos dotados na arte
+(como eu), o jeito é decalcar um desenho já pronto ou imprimir algo
+pelo computador. Todos os detalhes sobre como fazer isso estão no
+tópico "[Desenho matriz para pintar na camiseta #desenhomatriz]".
+
+== Pinte a camiseta ==
+
+Com o desenho em mãos, siga esse roteiro:
+
++ Grude com fita adesiva o desenho em um pedaço de papelão (ou algo
+  parecido, que seja resistente a dobras), formando uma matriz rígida.
+
++ Coloque o desenho dentro da camiseta, na posição desejada. Cuide
+  para centralizar bem, evitando que o desenho fique torto
+
++ Estique a camiseta (mas não muito!) na área do desenho, prendendo
+  com os grampos de roupa nas bordas do papelão, ficando uma área de
+  tecido limpa e fixa para desenhar.
+
++ Com a caneta para tecido, pinte a camiseta, enxergando os traços
+  originais através do tecido. Um ambiente bem iluminado ajuda.
+
++ Terminada a pintura, espere pelo menos 2 dias para lavá-la, para que
+  a tinta seque bem.
+
+
+
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+== Algumas camisetas que pintei ==
+
+ [img/cam_fodase.jpg] 
+
+Esta camiseta mal educada eu fiz as letras no editor de textos do computador e imprimi numa folha normal A4. Como a letra é grande e a tinta é forte, ficou fácil de enxergar por trás do tecido e pintar tranquilamente.
+
+ [img/cam_fatbob.jpg] 
+
+Esta outra camiseta tem um desenho mais elaborado, que está na capa de um LP da banda inglesa [Toy Dolls http://www.thetoydolls.com], chamado [Fat Bob's Feet URLBOB]. Os traços do desenho original já estavam bem fortes, então bastou colocar a capa do LP dentro da camiseta e desenhar por cima. Demora, mas é muito gratificante usar uma camiseta com um desenho que foi você quem pintou.
+
+
+== Estampas coloridas? ==
+
+Há canetas para tecido disponíveis em várias cores. Mas na minha experiência, somente a caneta preta é que dá bons resultados em camisetas. E de preferência camisetas brancas. O contraste do branco com o preto dá um visual legal.
+
+Se você quiser pintar camisetas pretas ou de outras cores mais fortes, ou ainda, se quiser fazer uma estampa mais elaborada, com cores vibrantes, em vez da caneta para tecido você deve usar a **tinta para tecido**.
+
+Eu expliquei como fazer neste artigo: [Como pintar camiseta com tinta para tecido pintar-camiseta-com-tinta.html].
+
+== Pinte outros tecidos! ==
+
+Além de camisetas, a caneta serve para qualquer outro tipo
+de tecido. Ela também pode ser útil para personalizar panos de prato,
+outras peças de roupa ou ainda identificar peças íntimas (meias,
+cuecas e calcinhas) entre irmãos.
+
+
+
+
+%!include: footer.t2t

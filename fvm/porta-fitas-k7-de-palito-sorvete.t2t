@@ -1,0 +1,247 @@
+Porta-fitas cassete (k7) feito com palitos de sorvete
+
+
+%!includeconf: config.t2t
+%!options: --toc --toc-level 2
+
+%!postproc: '^<LI><A HREF="porta-fitas.*' ''
+
+%!include: /a/www/include/clean/cabecalho.t2t
+
+''' <div class="material">
+
+**Material**
+
+- Palitos de sorvete (madeira, ponta arredondada)
+- Cola branca
+- Tesoura ou estilete
+- Clipes de papel OPT
+- Pedaços de tecido OPT
+
+
+''' </div>
+% ''' <div class="foto">
+% 
+% [pf-colecao.jpg]
+% 
+% Aqui está parte da minha coleção de fitas k7, cada torre
+% contendo 30.
+% 
+% ''' </div>
+
+Você pode estar se perguntando:
+//Mas pra que perder tempo fazendo isso?//
+
+Eu tenho uma coleção de mais de 200 fitas k7, que fui gravando ao
+longo dos anos, e como ainda tenho toca-fitas, ainda as escuto. Também
+não posso me desfazer delas pois há muitos sons ali que não encontro
+mais em lugar algum.
+
+Com tantas fitas, eu tinha um problema com o armazenamento delas. Um
+coisa que nunca gostei são aquelas caixinhas plásticas que envolvem
+cada fita, pois além de serem malas de abrir e quebrar fácil, ainda
+ocupam muito espaço.
+
+Eu queria um porta-fitas que guardasse as fitas sem as caixinhas, e ao
+mesmo tempo fosse fácil identificar rapidamente a fita que eu queria
+pegar no meio do bolo. Como não achei nada parecido com isso nas
+lojas, um belo dia tive a idéia de tentar fazer um eu mesmo, e um
+material que eu tinha por perto eram palitos de sorvete.
+
+Brincando um tempo com os palitos, cheguei no "design final" de como
+seria o porta-fitas e o resultado foi melhor do que esperado. Usando
+cola normal de escola (branca), depois de seca os palitos ficam
+firmes, e mesmo já tendo derrubado o porta-fitas no chão ele não
+quebrou.
+
+Aos poucos fui fazendo outros, tendo um total de cinco torres hoje,
+que abrigam mais da metade da minha coleção de fitas:
+
+ [img/pf-colecao.jpg] 
+
+
+	Nota 1: Um amigo comentou que fez o porta-fitas junto com seu
+	filho, para um trabalho escolar. Taí uma outra utilidade :)
+
+	Nota 2: Fazer o porta-fitas também pode ser considerada uma
+	atividade relaxante (anti-estresse), que consiste em ocupar
+	sua mente com algo fútil ;)
+
+Tópicos:
+%%TOC
+
+% %!include: ''/a/www/include/google-ads-faixa.html''
+%!include: ''/a/www/include/clean/ad-hlink-728.html''
+
+== Como fazer um andar ==
+
+Cada andar suporta 2 fitas cassete e é feito com 17 palitos:
+- 13 para a base (10 base, 2 suporte, 1 trava)
+- 2 para as paredes externas
+- 2 para as paredes internas
+
+
+=== Base ===
+
+ [img/pf-base.jpg] 
+
+% ''' <div class="foto">
+% 
+% [pf-base.jpg]
+% 
+% Base pronta, com 10 + 3 palitos
+% 
+% ''' </div>
+
++ Primeiro faça a base, colocando 10 palitos (palitos base) alinhados
+  lado a lado;
++ Corte (com a tesoura ou estilete) uma ponta de 2 palitos (palitos de
+  suporte) de maneira que eles fiquem do mesmo tamanho dos 10 palitos
+  base alinhados (deixe a ponta arredondada);
++ Para manter os palitos base unidos, e para suportar as futuras
+  paredes interna e externa, cole (com a cola branca) os 2 palitos de
+  suporte na perpendicular aos palitos base, nos dois extremos,
+  deixando aproximadamente 4 milímetros de borda sobrando para as
+  pontas dos palitos base;
++ Para fazer uma trava para impedir que a fita entre inteira dentro do
+  porta-fitas, corte as duas pontas de 1 palito (palito trava, deixe a
+  ponta quadrada) no tamanho exato dos palitos base alinhados, e o
+  cole no meio da base, entre os palitos suporte, perpendicular aos
+  palitos base;
++ Coloque toda a base para secar a cola sob um peso (livro, caixa)
+  para garantir a união dos palitos e para que eles não empenem.
+
+
+=== Parede externa ===
+
+% ''' <div class="foto">
+% 
+% [pf-andar.jpg]
+% 
+% "Close" na vista de um andar completo (na verdade dois andares)
+% 
+% ''' </div>
+
++ Corte mais 2 palitos (palitos parede) com ponta arredondada do
+  tamanho dos palitos suporte;
++ Cole-os na vertical, nas duas extremidades da base, alinhados
+  aos palitos suporte, pelo lado de fora.
+
+
+=== Parede interna ===
+
++ Corte mais 2 palitos (palitos parede) com ponta arredondada do
+  tamanho dos palitos suporte;
++ Cole-os na vertical, nas duas extremidades da base, grudados com
+  os palitos da parede externa pelo lado de dentro;
++ Estes ficarão mais altos que os palitos da parede externa, pois
+  ficarão em cima dos palitos suporte.
+
+
+% ''' <div class="foto">
+% 
+% [pf-andares.jpg]
+% 
+% E vai colando um em cima do outro...
+% 
+% ''' </div>
+
+ [img/pf-andar.jpg] 
+
+Colocada a parede interna, deixe todo o conjunto para secar. Para
+se assegurar que as paredes interna e externas ficarão bem unidas,
+prenda-as com clipes de papel.
+
+Espere a cola secar e pronto, está feito um andar.
+
+== Como fazer mais andares ==
+
+ [img/pf-andares.jpg] 
+
+Repita todo o procedimento anterior para fazer outros andares e os vá
+colando, um em cima do outro, formando uma espécie de mini-edifício.
+
+Eu geralmente faço porta-fitas com 15 andares cada, para caber 30 fitas (2
+por andar). Mas você pode fazer com quantos quiser. Dez andares também
+é um número bom. Mais do que 15 pode ficar um arranha-céus instável :)
+
+
+== Como fazer um pezinho ==
+
+ [img/pf-pezinho.jpg] 
+
+% ''' <div class="foto">
+% 
+% [pf-pezinho.jpg]
+% 
+% O pezinho, com um tecido colado para "deslizar"
+% 
+% ''' </div>
+
+Como você deve ter percebido pela foto, a "base" que você fez é na
+verdade o teto do andar. Precisamos agora fazer um pezinho para nosso
+porta-fitas.
+
++ Faça uma base normal, apenas com os palitos suporte, sem o palito
+  trava;
++ Cole mais 2 palitos suporte do lado de dentro dos dois palitos
+  suporte já existentes, fazendo 2 pezinhos com 2 palitos cada;
++ Faça mais uma camada de palitos para o pezinho, colando mais 4;
++ Para um acabamento final decente, cole um pedaço de tecido nos
+  pezinhos, para que seu porta-fitas deslize facilmente e não risque
+  as superfícies.
+
+
+== Como fazer um pegador ==
+
+ [img/pf-pegador.jpg] 
+
+% ''' <div class="foto">
+% 
+% [pf-pegador.jpg]
+% 
+% O pegador, feito com palitos quebrados/cortados.
+% 
+% ''' </div>
+
+Como você vai carregar seu porta-fitas pra lá e pra cá, você também
+precisa de um pegador para segurá-lo.
+
++ Aproveite os palitos quebrados, ou corte palitos novos em 3 partes
+  iguais;
++ Deixe todos os pedaços de palito com uma ponta arredondada e outra
+  quadrada;
++ No topo do porta-fitas, vá colando esses pedaços de palito nos dois
+  palitos do meio, nas extremidades, deixando o espaço no meio que é
+  para pôr seu dedo;
++ Quando ver que a altura do pegador já é suficiente para caber seus
+  dedos, cole duas camadas de 2 palitos inteiros em cima, para
+  finalizar o pegador.
+
+
+== Dicas ==
+
+ [img/pf-pronto.jpg] 
+
+% ''' <div class="foto">
+% 
+% [pf-pronto.jpg]
+% 
+% PRONTO e populado.
+% 
+% ''' </div>
+
+Está feito o porta-fitas. Agora basta lotá-lo de fitas. Algumas dicas:
+
+- Veja [neste outro artigo etiquetas-fitas-k7.html] como deixar as fitas informativas e fáceis de
+  localizar dentro do porta-fitas.
+- Nas laterais do porta-fitas, é possível colar etiquetas, caso você
+  prefira guardar as fitas ordenadas, ajuda a identificar grupos
+  distintos.
+- Para viagens ou transporte, simplesmente passe um elástico ou fio
+  amarrado ao redor, que segura todas as fitas em seu lugar.
+- Também é possível pintar o porta-fitas, alguns métodos possíveis são
+  mergulhá-lo num balde de corante diluído em água ou usar um spray.
+-
+
+%!include: footer.t2t
