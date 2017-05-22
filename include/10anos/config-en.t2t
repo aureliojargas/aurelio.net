@@ -1,0 +1,11 @@
+
+%%% Livro Config - English extras
+
+% Nav translation
+%!preproc: (^\*\*)Nerdices(\*\*$)	\1Nerd\2
+%!preproc: (^\*\*)Programas(\*\*$)	\1Software\2
+%!preproc: (^\*\*)Livros(\*\*$)		\1Books\2
+%!preproc: (^\*\*)Eu(\*\*$)		\1Me\2
+%!preproc: (^\*\*)Diversos(\*\*$)	\1Misc\2
+
+

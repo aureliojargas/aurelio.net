@@ -1,0 +1,31 @@
+
+%%% Kiwi Footer
+
+%!include: /a/www/include/kiwi/sidebar.t2t
+
+% Close #main DIV
+""" {{/div}}{{div id="footer"}}
+%% Copiado rodapé do tema 10anos
+[AURELIO.NET SITEROOT/sobre.html] é o site pessoal de _MYNAME.''<br>''
+Mais de [10 anos no ar _MYBLOG/2009/06/27/10-anos-de-saite/] (desde 1999), feito com _TXT2TAGS_LINK
+% e [SourceForge http://sourceforge.net].
+e [DreamHost http://www.dreamhost.com/r.cgi?251258].
+''<br>''
+Contato:
+%  [deixe um recado SITEROOT/recados.php] ou 
+[e-mail _MYEMAIL], [twitter _MYTWEET].
+%
+%
+% [AURELIO.NET SITEROOT/sobre.html], site pessoal de _MYNAME, no ar desde 1999.{{br}}
+% Para entrar em contato, [deixe um recado SITEROOT/recados.php] ou [mande um e-mail /img/emeio.png].{{br}}
+% Feito com _TXT2TAGS_LINK e [SourceForge http://sourceforge.net].
+""" {{/div}}
+
+% see me
+% nerds: /include/kiwi/: footer.t2t, kiwi.css
+% musica: /include/massa/: footer.t2t, massa.css
+% carve, fvm, foto, mac, moneylog, viagem: /include/footer-clean.html /include/clean2.css
+% mog: /mog/include/ads-twins.html
+% ''' <div id="seeme">VerdeNews: <a href="http://www.UmPortugues.com">www.UmPortugues.com</a> - Guia completo e corretor online para o <b>Acordo Ortográfico</b></div>
+
+%!include(html): ''/a/www/include/google-analytics.html''

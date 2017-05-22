@@ -1,0 +1,16 @@
+body {color:#444; font-family:sans-serif; text-align:center}
+#header {padding-top:1em; text-align:center}
+#body { background:url("../img/emeio.png") no-repeat bottom right; width:640px; 
+  border:2px dashed #07f; margin:3em auto; padding:1em 2em;
+  text-align:justify; font-size:120%}
+h1 {color:#07f}
+p {line-height:140%}
+a {color:#07f; text-decoration:none}
+a:hover {text-decoration:underline}
+img.pdfpages {float:left; margin-right:1em}
+ul.payment {border-top:2px dashed #07f;margin:2em -2em 0 0; padding:1em 1em 0 0}
+li {font-size:smaller}
+li li {list-style-type:none}
+li ul {padding:0 0 .5em 0; margin-left:1em}
+img {vertical-align:text-bottom; margin:0; padding:0}
+hr {margin:2em 0;clear:both}

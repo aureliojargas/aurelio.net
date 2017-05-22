@@ -1,0 +1,180 @@
+txt2regex	http://aurelio.net/txt2regex/	@software@shell@regex@
+Funções ZZ	http://funcoeszz.net	@software@shell@
+txt2tags	http://txt2tags.sf.net/pt	@software@python@web@site@
+Sedsed	http://aurelio.net/sedsed/	@software@sed@python@
+Sed Sokoban	/sed/sokoban/	@software@sed@game@
+Sed Arkanoid	/bin/sed/arkanoid/	@software@sed@game@
+RAC	/rac	@software@
+LELOLAB	/bin/lelolab/	@software@game@
+Simulador das Eleições 2002	/bin/python/urna.py	@software@python@
+Importa agenda (CSV) no tocador de MP3 xingue-lingue	http://aurelio.net/blog/2005/11/09/contatos-do-csv-para-o-tocador-de-mp3/	@software@python@musica@
+Site com cores aleatórias	/bin/php/randbody.phps	@software@php@
+Projeto Final da Faculdade - Lojinha Virtual	/bin/php/ESEEI-proj_final/	@software@php@
+OpenOffice Console Search	/bin/bash/oofind	@software@shell@
+Quizz	/bin/python/quizz/	@software@python@
+Sed scripts	/bin/sed/	@software@sed@
+MoneyLog Experience	/moneylog	@software@javascript@web@
+MiGuXeiToR	/web/miguxeitor.html	@software@javascript@web@
+Engripeitor	/web/engripeitor.html	@software@javascript@web@
+Campo Minado	/web/mina/	@software@web@javascript@game@
+BookCash	/bin/python/bookcash.py	@software@python@livro@
+Scraps (Livro de visitas)	/bin/php/scraps.phps	@software@php@
+AdiumBook	/soft/adiumbook/	@software@applescript@mac@
+EmoMemory	/soft/emomemory/	@software@applescript@mac@game@
+Import Contacts From Yahoo CSV	/bin/as/ImportContactsFromYahooCSV.py	@software@applescript@python@mac@
+Export Contacts to MP3 Player	/soft/export-contacts-to-mp3-player/	@software@applescript@mac@
+Export Contacts to Yahoo CSV	/soft/export-contacts-to-yahoo-csv/	@software@applescript@mac@
+iPhoto Set Sequential Title	/soft/iphoto-set-sequential-title/	@software@applescript@mac@
+iTunes Find Artwork-less	/soft/itunes-find-artwork-less/	@software@applescript@mac@
+iTunes Rename Disk File	/soft/itunes-rename-disk-file/	@software@applescript@mac@
+iTunes Search in Lyrics	/soft/itunes-search-in-lyrics/	@software@applescript@mac@
+iTunes SED	/soft/itunes-sed/	@software@applescript@mac@
+iPhoto SED	/soft/iphoto-sed/	@software@applescript@mac@
+Gmail to Jabber	/soft/gmail-to-jabber/	@software@applescript@mac@
+AppleScript for Python Programmers	/doc/as4pp.html	@doc@applescript@mac@python@
+Installing AppleScripts	/soft/applescript-install.html	@doc@applescript@mac@
+AppleScript Blog	http://applescripter.blogspot.com	@doc@applescript@mac@
+AppleScripts	/soft/	@mac@
+* Portal Documentação	/doc	@doc@
+* Portal Vim	/doc/vim/	@doc@vim@
+* Portal Sed	/sed/	@doc@sed@
+* Portal Cygwin	/cygwin/	@doc@cygwin@linux@
+* Portal Mac	/mac/	@doc@mac@
+* Portal Shell	/shell/	@doc@shell@
+* Portal Programação	/bin/	@doc@software@
+* Portal Expressões Regulares	/er/	@doc@regex@
+* Portal dos Cursos	/curso/	@curso@
+* Portal dos Livros	/livro	@livro@
+FAQ VERDE	/doc/faq.html	@doc@eu@
+Faça Você Mesmo	/fvm/	@doc@
+DORT / LER - Dicas para evitar lesões	/doc/misc/dort.html	@doc@
+Dotfiles	/doc/dotfiles/	@doc@linux@
+Lista dos jogos terminados	/doc/misc/videogame.html	@doc@game@
+RAMONES	/doc/misc/ramones.txt	@doc@musica@banda@
+/usr/bin/adventure - Mapa das cavernas	/doc/misc/adventure-mapa.txt	@doc@linux@game@
+Sed HOWTO	/sed/sed-HOWTO	@doc@sed@
+Canivete Suíço do Shell	/shell/canivete/	@doc@shell@
+Dialog --tudo	/shell/dialog	@doc@shell@
+Apostila Programação Shell	/shell/apostila	@doc@shell@livro@
+Livro Shell Script Profissional	http://www.shellscript.com.br	doc@shell@livro@sed@cygwin@linux@mac@
+Editando arquivos do OpenOffice.org no VI	/doc/ooo-vi.html	@doc@vim@
+Programas Compatíveis com Python v1.5	http://www.pythonbrasil.com.br/moin.cgi/ProgramasCompativeisV15	@doc@python@
+Sem Mouse HOWTO	/doc/sem-mouse-HOWTO.html	@doc@linux@
+Morte à tecla CAPS LOCK!	/doc/CAPSLOCK.txt	@doc@linux@
+Fanatismo Digital - A Guerra dos Editores	/doc/guerra-editores.html	@doc@vim@
+Revista LinuxMag #02 - Seleção VI-sual	http://www.linuxmagazine.com.br/issue/02/selecao_visual.pdf	@doc@vim@
+RdL #03 - O Poder do Modo Texto	/doc/rdl/poder-modo-texto.html	@doc@linux@
+RdL #03 - Expressões Regulares - Parte 1	/doc/rdl/regex-1.html	@doc@regex@
+RdL #04 - Vi, Vim e Venci	/doc/rdl/vi-vim-venci.html	@doc@vim@
+RdL #04 - Áreas Compartilhadas	/doc/rdl/areas-compartilhadas.html	@doc@linux@
+RdL #07 - Expressões Regulares - Parte 2	/doc/rdl/regex-2.html	@doc@regex@
+RdL #47 - Cygwin - O Linux no Windows	/cygwin/rdl/	@doc@cygwin@
+RdL #49 - Pulando com o VI	/doc/vim/pulando.html	@doc@vim@
+Coluna 01 - Introdução	/doc/coluna/coluna-01.html	@doc@linux@
+Coluna 02 - ICQ	/doc/coluna/coluna-02.html	@doc@linux@
+Coluna 03 - Zgv/ImageMagick (manipulação de imagens)	/doc/coluna/coluna-03.html	@doc@linux@web@
+Coluna 04 - Pine (e-mails na tela preta)	/doc/coluna/coluna-04.html	@doc@linux@
+Coluna 05 - Jogos (uma viagem ao mundo da diversão)	/doc/coluna/coluna-05.html	@doc@linux@game@
+Coluna 06 - Arte Ascii (artistas do teclado)	/doc/coluna/coluna-06.html	@doc@
+Coluna 07 - Screen (janelizando o modo texto - parte 1)	/doc/coluna/coluna-07.html	@doc@linux@
+Coluna 08 - Screen (janelizando o modo texto - parte 2)	/doc/coluna/coluna-08.html	@doc@linux@
+Coluna 09 - Vim (um vimrc diferente)	/doc/coluna/coluna-09.vim	@doc@vim@
+Coluna 10 - Mpage (impressão ágil em postscript)	/doc/coluna/coluna-10.html	@doc@linux@
+Coluna 11 - Caracteres de Controle (não fuja, domine-os)	/doc/coluna/coluna-11.html	@doc@
+Coluna 12 - Lynx (navegação turbinada)	/doc/coluna/coluna-12.html	@doc@linux@web@
+Desenvolverde 01 - Controle de alterações (diff)	http://www.dicas-l.com.br/desenvolverde/desenvolverde_20061205	@doc@linux@vim@
+Expressões Regulares - Guia de Consulta Rápida	/er/guia/	doc@livro@regex@python@php@javascript@sed@vim@
+Expressões Regulares Online	http://guia-er.sf.net	doc@livro@regex@python@php@javascript@sed@vim@
+Livro Expressões Regulares - Uma Abordagem Divertida	/er/livro/	doc@livro@regex@python@php@javascript@sed@vim@
+Livro Dominando o SED	/sed/livro/	@doc@livro@sed@
+Cartilha do Webdesigner Antenado	http://aurelio.net/blog/2006/06/01/cartilha-do-webdesigner-antenado/	@doc@web@
+CSS: Menu fixo porém líquido	http://aurelio.net/blog/2006/06/30/css-menu-fixo-porem-liquido/	@doc@web@
+CAPTCHA de pobre	http://aurelio.net/blog/2007/05/11/captcha-de-pobre/	@doc@web@php@
+E-book ou livro impresso, como publicar sua obra?	http://aurelio.net/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/	@doc@livro@
+Como instalar o Vim 7 no Mac OS X	http://aurelio.net/blog/2006/09/19/como-instalar-o-vim-7-no-mac-os-x/	@doc@mac@vim@
+Lista Linux2osx	http://br.groups.yahoo.com/group/linux2macosx	@forum@linux@mac@
+Lista Shell	http://br.groups.yahoo.com/group/shell-script	@forum@shell@
+Lista Sed	http://br.groups.yahoo.com/group/sed-br	@forum@sed@
+Lista VI	http://br.groups.yahoo.com/group/vi-br	@forum@vim@
+Lista Cygwin	http://yahoogrupos.com.br/groups/cygwin-br	@forum@cygwin@
+Lista ZZ	http://br.groups.yahoo.com/group/zztabtab	@forum@
+Lista txt2tags	http://br.groups.yahoo.com/group/txt2tags-br	@forum@
+Lista MacDev	http://br.groups.yahoo.com/group/macdev-br	@forum@mac@
+Valeta	/valeta/	@banda@musica@
+Correria HC	http://aurelio.net/correria/	@banda@musica@
+Dumbs	/dumbs/	@banda@musica@
+DDD	/musica/ddd/	@musica@
+Baterna - Curso Online de Bateria	/baterna/	@musica@
+Bateria	/musica/	@musica@
+Carbona	http://aurelio.net/blog/2006/04/30/dica-de-banda-carbona/	@banda@musica@
+Roda de Pogo - A Dança Punk	/pogo/	@musica@
+Blog - Música	http://aurelio.net/tags/#musica	@musica@
+Blog - Sonzeira do Mês	http://aurelio.net/tags/#sonzeira-do-mes	@musica@
+Sobre o site	/sobre.html	@site@
+Mapa do site	/mapa.html	@site@
+Página Principal	/index.html	@site@
+Deixe seu recado	/recados.php	@site@eu@
+Contador de acessos	/bin/php/counter.phps	@site@software@php@
+Livro de visitas	/bin/php/recados.phps	@site@software@php@
+Registro do domínio	http://www.e-dominios.com.br?from=8061	@site@
+Em inglês	/en/	@site@
+Txt2tags Online	http://txt2tags.sourceforge.net/pt/online.php	@software@php@
+Orkut	http://www.orkut.com/Profile.aspx?uid=2039382754798085041	@eu@foto@
+Blog Feed (RSS)	http://aurelio.net/feed/	@eu@site@
+Blog	http://aurelio.net/blog/	@eu@foto@site@
+Sobre mim	/mim.html	@eu@
+$$$ Campanha Aurelio Trilhardário $$$	/1000000000000.html	@eu@
+Blog antigo	/blog-arquivo.html	@eu@
+Processo de desnerdização	http://aurelio.net/blog/2005/11/30/processo-de-desnerdizacao/	@eu@
+Aurelio v2.8	http://aurelio.net/blog/2005/10/07/aurelio-v28/	@eu@
+Aurelio v2.9	http://aurelio.net/blog/2006/10/07/aurelio-v29/	@eu@
+Aurelio v3.0	http://aurelio.net/blog/2007/10/07/fiz-trinta/	@eu@
+Um ano sem Linux	http://aurelio.net/blog/2005/10/02/um-ano-sem-linux/	@eu@linux@mac@
+Dois anos de Mac OS X	http://aurelio.net/blog/2006/10/16/dois-anos-de-mac-os-x/	@eu@linux@mac@
+Free as in BIRD	http://aurelio.net/blog/2005/09/23/free-as-in-bird/	@eu@linux@mac@
+Currículo	/doc/cv-aurelio.html	@eu@
+Currículo em inglês	/doc/cv-aurelio-en.html	@eu@
+Flickr	http://www.flickr.com/photos/aureliojargas	@eu@foto@
+Doação Paypal	https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=verde%40aurelio%2enet&item_name=Aurelio%20Open%20Source%20Software&no_shipping=1&return=http%3a%2f%2faurelio%2enet%2fdonate%2dthanks%2ehtml&cn=Please%20leave%20a%20comment%20to%20me&tax=0&currency_code=USD&bn=PP%2dDonationsBF&charset=UTF%2d8	@software@doc@site@
+4Linux - SP	/curso/4linux/	@curso@
+Conectiva - PR	/curso/conectiva/	@curso@
+Sucesu - PR	/curso/sucesu/	@curso@
+Congresso Catarinense de Software Livre (CCSL) - SC	/curso/ccsl/	@curso@
+Semana de Informática da FAC - SP	/curso/fac/	@curso@
+Fórum Internacional de Software Livre (FISL) - RS	/curso/fisl/	@curso@
+Encontro Nacional LinuxChix - SP	/curso/linuxchix/	@curso@
+Seminário de Desenvolvimento em Software Livre (SDSL) - SP/RS	/curso/sdsl/	@curso@
+Semana de Software Livre da UFPR - PR	/curso/ufpr/	@curso@
+Semana de Capacitação e Desenvolvimento em Software Livre (SCSL) - DF	/curso/scsl/	@curso@
+Apostila Introdução ao Shell Script	/curso/material/apostila-shell-intro.pdf	@curso@doc@shell@
+Apostila Conhecendo as Expressões Regulares	/curso/material/apostila-expressoes-intro.pdf	@curso@doc@regex@
+Editor VI - Guia de Referência	/curso/material/vim-ref.html	@curso@doc@vim@
+Slides: Software Livre - Experiências de um Desenvolvedor	/curso/material/desenvolvedor	@curso@doc@
+PyCon Brasil [3] - SC	/curso/pycon/iii/	@curso@
+Aurelio Freak Show	/foto/tosco/	@foto@eu@
+Surf - Fotos Aquáticas	/surf/	@foto@esporte@
+Shows com a banda	/foto/banda/	@foto@banda@musica@
+Meu pé tatuado	/foto/pe/	@foto@eu@
+Fotos bizarras	http://geocities.yahoo.com.br/aureliojargas/biz/	@foto@
+Jacaré do Parque Barigüi	http://aurelio.net/blog/2004/09/05/jacare-do-parque-barigui/	@foto@
+* Portal das Viagens	/viagem/	@foto@viagem@
+Curitiba à Matinhos de bicicleta - PR	/viagem/matinhos-bike-2004/	@foto@viagem@esporte@
+Deserto do Atacama (Chile)	/viagem/atacama/	@foto@viagem@
+Lagoinha do Leste - Floripa	/viagem/lagoinha-do-leste/	@foto@viagem@
+Farol Sta. Marta e Imbituba - SC	/viagem/farol-imbituba/	@viagem@foto@
+Escalada Pico Marumbi - PR	/viagem/marumbi/	@viagem@foto@esporte@
+Trilha do Pinhão - PR	/viagem/trilha-do-pinhao/	@viagem@foto@
+Férias e Surfe em Matinhos - PR	/viagem/matinhos-2005/	@viagem@foto@esporte@
+Farol de Santa Marta - SC	http://aurelio.net/blog/2006/09/13/farol-de-santa-marta/	@viagem@foto@
+Ouro Preto - MG	/viagem/ouro-preto	@viagem@foto@
+Mariana - MG	/viagem/mariana	@viagem@foto@
+Caxambu - MG	/viagem/caxambu	@viagem@foto@
+Praia do Forte - São Francisco do Sul - SC	/viagem/forte	@viagem@foto@
+Changelog Nerd	/doc/changelog-nerd.html	@software@doc@
+Sed Sokoban Slashdotted	http://developers.slashdot.org/article.pl?sid=02/03/21/0217219	@sed@
+Não fazem mais jogos como antigamente	http://aurelio.net/blog/2005/12/04/nao-fazem-mais-jogos-como-antigamente/	@game@
+Blog dos meus softwares (inglês)	http://aureliosoft.wordpress.com	@applescript@mac@software@
+Sintaxe txt2tags	http://txt2tags.sourceforge.net/tools/txt2tags.vim	@vim@
+Desenvolvedores brasileiros no Mac OS X	http://aurelio.net/blog/2006/08/08/desenvolvedores-brasileiros-no-mac-os-x/	@mac@
+* Portal Carveboard	/carve/	@foto@video@esporte@
+Campeonato de Carveboard	http://aurelio.net/blog/2006/08/03/relato-fotos-e-videos-do-campeonato-de-carveboard/	@foto@video@esporte@

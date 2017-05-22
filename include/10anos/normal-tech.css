@@ -1,0 +1,48 @@
+/*
+Inspired by http://www.tuaw.com/2012/03/01/retina-display-macs-ipads-and-hidpi-doing-the-math/
+*/
+
+body {
+	width: 35em;
+/*	width: 475px;*/
+	font-family: Helvetica, Arial, sans-serif;
+	color: #444;
+	font-size: 14px;
+	line-height: 150%;
+	vertical-align: baseline;
+}
+#header h1 {
+	font-size: 2.5em;
+	font-weight: normal;
+/*	color: black;*/
+	color: #333;
+}
+#main pre {
+	margin: 2em 0;
+}
+#main p {
+	text-align: left;
+	margin: 0 0 1.5em 0;
+}
+#main h2 {
+	font-size: 2em;
+	margin: 0 0 0.75em 0;
+	padding: 0;
+	color: #333;
+	line-height: 42px;
+/*	font-weight: normal;*/
+}
+blockquote {
+	margin: 1.5em;
+}
+
+th {
+	border-width: 0;
+/*	background-color: inherit !important;*/
+}
+td, th {
+	border-bottom: 1px solid #ccc !important;
+}
+tr:hover td {
+	background: #eee;
+}

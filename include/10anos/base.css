@@ -1,0 +1,321 @@
+body {
+	background-color:white;
+	color:black;
+	/* Arial font defined in YUI */
+	/* Aurelio head placed as image+link */
+	/* background: white url(aureliolga.jpg) no-repeat right bottom fixed; */
+
+}
+
+/*-------------------------- LINKS ------*/
+a:hover,
+a:hover img {
+/*	background:yellow;*/
+	background:#CF6;
+	color:black;
+}
+a img {
+	padding:5px; /* make sure border appears on :hover */
+}
+
+/*-------------------------- HEADER ------*/
+#header {
+	text-align:center;
+	font-size:100%;
+	margin:6em 0;
+}
+#header h1 {
+	font-size:200%;
+}
+#header h2 {
+	font-size:100%;
+	font-weight:normal;
+}
+#header h3 {
+	font-size:100%;
+	font-weight:normal;
+	font-style:italic;
+}
+/* links in header are hidden */
+#header h1 a,
+#header h2 a,
+#header h3 a {
+	text-decoration:none;
+	color:inherit;
+}
+
+/*-------------------------- TOC ------*/
+.toc {
+	font-size:85%;
+}
+
+/*-------------------------- MAIN ------*/
+#main {
+	line-height:150%;
+}
+#main p {
+	text-align:justify;
+}
+#main code {
+	font-family:Courier New,monospace;
+	white-space:nowrap;
+}
+#main pre {
+	margin:1em 0;
+	font-family:Courier New,monospace;
+	line-height:120%;
+}
+#main table,
+#main td,
+#main th {
+	border-color:silver;
+	font-size:90%;
+	vertical-align:top;
+}
+#main th {
+	background:#eee;
+}
+#main blockquote {
+	margin:2em;
+	background:#eee;
+	text-align:left;
+}
+#main blockquote > blockquote {
+	margin:1em 2em;
+}
+#main > center {   /* CENTER > IMG: txt2tags centred image (no P) */
+	margin:1em 0;
+}
+#main ul,
+#main ol {
+	margin:1em 0 1em 2em;
+}
+#main li {   /* YUI has set too little space at left */
+	margin-left:1em;
+}
+#main dd {   /* Vertical space, no right margin, nesting (left) more visible */
+	margin:1em 0 1em 2em;
+}
+
+/*-------------------------- SAIBA MAIS SOBRE ------*/
+a.linkblock {
+	display:block;
+	text-align:center;
+	margin:5em 0;
+	padding:5px 0;
+	background:#fafafa;      /* same as #nav */
+	border:1px solid #ddd;   /* same as #nav */
+}
+a.linkblock:hover {
+	background:#CF6;  /* same as a:hover */
+	border-color:#CF6;
+}
+a.linkblock img {
+	width:64px;
+	height:64px;
+}
+
+/*-------------------------- VOLTAR PARA PRINCIPAL ------*/
+a.backblock {
+	display:block;
+	margin:5em 0;
+}
+
+/*-------------------------- NAV ------*/
+#nav {
+	font-family:Arial, sans-serif;
+	margin:5em auto 0 auto;
+/*	border-top:1px solid gray;*/
+	background:#fafafa;
+	border:1px solid #ddd;
+}
+#nav table {
+	font-size:70%; /* here not #nav to avoid influence on width:30em */
+	border-collapse:separate; /* to avoid TD border over DIV border */
+	margin:1em auto;
+	width:80%;
+}
+#nav td {
+	padding:0;
+	border-width:0;
+	vertical-align:top;
+}
+
+/*-------------------------- NAV HEADING ------*/
+#nav th {
+	padding:0;
+	border-width:0;
+}
+#nav th a,
+#nav th a:visited {
+	padding:0.5em 0;
+	color:blue;
+	text-decoration:none;
+	display:inline;
+}
+
+/*-------------------------- NAV SEARCH ------*/
+#nav th.search {
+	text-align:center;
+	padding:2em 0;
+}
+
+/*-------------------------- NAV LINKS ------*/
+#nav td p {
+	margin:0;
+}
+#nav b {
+	display:block;
+	padding:0 0 0 1em;
+	text-align:left;
+	font-weight:normal;
+}
+#nav ul {
+	margin:0.5em 0;
+}
+#nav li {
+	list-style-type:none;
+}
+#nav a {
+	display:block;
+	padding-left:1em; /* here, not in TD, bcos :hover background full width */
+	text-decoration:none;
+}
+#nav a:visited {
+	text-decoration:line-through;
+}
+#nav a:hover {  /* needed by :visited */
+	color:black;
+	text-decoration:none;
+}
+
+
+/*-------------------------- FOOTER ------*/
+#footer {
+	font-family:Arial, sans-serif;
+	margin:2em 0 2em 0;
+	color:gray;
+	font-size:70%;
+	text-align:center;
+}
+#footer:hover {
+	color:black;
+}
+#footer:hover a {
+	color:blue;
+	text-decoration:underline;
+}
+#footer a {
+	color:gray;
+	text-decoration:none;
+}
+.cabecao {
+	position:fixed;
+	right:0;
+	bottom:0;
+}
+.cabecao img {
+	padding:2px;
+}
+.t2tbutton {
+/*	margin:4em 0 0 0;*/
+	float:left;
+/*	position:fixed;*/
+/*	left:0;*/
+/*	bottom:0;*/
+/*	border:1px solid red;*/
+}
+
+/*-------------------------- CUSTOM ------*/
+body.canivete #main table,
+body.miniman #main table {
+	width:100%;
+}
+body.canivete #main p {
+	text-indent:0;
+}
+body.canivete #main > p > img { /* zzcores.gif */
+	width:100%;
+}
+body.ooo-vi #main > center > img { /* screenshots */
+	width:100%;
+}
+body.miniman #sidebar b {
+	font-size:150%;
+}
+body.miniman #main th {
+	text-align:left;
+}
+body.livro #main td {
+	border-style:none;
+	vertical-align:middle;
+	font-size:100%;
+}
+body.livroregexref #main table.nav {
+	font-size:100%;
+	background:#fafafa;      /* same as #nav */
+	border:1px solid #ddd;   /* same as #nav */
+	margin:6em 0 4em 0;
+}
+body.livroregexref #main table.nav td {
+/*	font-size:100%;*/
+	vertical-align:middle;
+	border-style:none;
+}
+
+
+/*-------------------------- BANNER ------*/
+
+#main .banner,
+#main .bannertrans {
+	margin:3em 0;
+}
+#main .banner table,
+#main .bannertrans table {
+	margin:0;
+	border-style:none;
+	border-width:0;
+}
+#main .banner td,
+#main .bannertrans td {
+	border-style:none;
+	border-width:0;
+	vertical-align:middle;
+}
+/* The only difference */
+#main .banner {
+	background:#fafafa;
+	border:1px solid #ddd;
+}
+
+/*-------------------------- TESTIMONIALS ------*/
+#main .testimonial dl {
+	margin:1em 2em 1em 2em;
+	text-align:justify;
+}
+#main .testimonial dd {
+	margin:0 0 0 0;
+	font-style:italic;
+	color:#555;
+}
+
+/*-------------------------- SEE ME! ------*/
+
+#seeme {
+	background:#cf6 url(../../img/favhead.png) no-repeat left;
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	margin:0;
+	padding:3px 0 3px 16px;
+}
+#seeme a {
+	font-weight:bold;
+	color:blue;
+}
+body.livroregexref #seeme,
+body.as4pp #seeme {
+	display:none;
+}
+

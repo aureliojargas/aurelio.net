@@ -1,0 +1,73 @@
+
+%%% Kiwi Config
+
+% Global
+%!includeconf: /a/www/include/global.t2t
+
+% CSS
+%!style: SITEROOT/include/kiwi/kiwi.css
+
+% TITLE append
+%!postproc: (</TITLE>)	' :: aurelio.net\1'
+
+% Use #main DIV
+%!postproc: '<DIV CLASS="body" ID="body">'	'<DIV ID="main">'
+
+% Javascript (order matters!)
+%!postproc: (<TITLE>)	<script type="text/javascript" src="SITEROOT/include/kiwi/tagmenu-diet.js"></script>\n\1
+%!postproc: (<TITLE>)	<script type="text/javascript" src="SITEROOT/include/kiwi/tagmenu-urls.js"></script>\n\1
+
+% Breadcrumb
+% 
+% Remove absolute PATH from %%infile
+%!postproc: ^<H3>/a/pessoal/aurelio.net		<H3>
+%!postproc: ^<H3>/a/www				<H3>
+%!postproc: ^<H3>/Users/aurelio/Dropbox/a/www	<H3>
+% %%infile(%d) -> aurelio.net / shell / canivete
+%!postproc: '^<H3>/(.*?)/(.*?)/(.*?)</H3>$'	'<H3><a href="/">aurelio.net</a> / <a href="/\1">\1</a> / <a href="/\1/\2">\2</a> / <a href="/\1/\2/\3">\3</a></H3>'
+%!postproc: '^<H3>/(.*?)/(.*?)</H3>$'	'<H3><a href="/">aurelio.net</a> / <a href="/\1">\1</a> / <a href="/\1/\2">\2</a></H3>'
+%!postproc: '^<H3>/(.*?)</H3>$'	'<H3><a href="/">aurelio.net</a> / <a href="/\1">\1</a></H3>'
+
+% Compose menu icons (sidebar.t2t)
+%!postproc: @i@([A-Z0-9_]+)	'<A\n\n HREF="_\1_URL"\nTITLE="_\1_NAME"><IMG BORDER="0"\n  ALT="_\1_NAME"\n  SRC="SITEROOT/img/icon/32/_\1_ID.jpg"></A>'
+
+% Sidebar link descriptions
+%!postproc: '(<A) (HREF="/">)'	'\1 title="Voltar ao início do site" \2'
+%!postproc: '(<A) (HREF="_MYBLOG">)'	'\1 title="Visite meu Blog!" \2'
+
+% Expand macros and URLs
+%!includeconf: database.t2t
+%%!includeconf: ../urls.t2t
+
+% Fix image name for _FOO_128 (database.t2t)
+%!postproc: \.png\.png .png
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Code tips
+%
+
+% TITLE append
+%%!postproc: (</TITLE>)	' - Informações\1'
+
+% Remove sidebar: Javascripts and inclusion from kiwi/footer.t2t
+%%!postproc: '<script type="text/javascript" src=".*/kiwi/.*'	''
+%%!preproc: '^%!include: /a/www/include/kiwi/sidebar.t2t'	''
+
+% Remove Ad Skyscraper from sidebar.t2t
+%%!preproc: "%!include\(html\): ''/a/www/include/kiwi/ads-sky160.html''"	''
+
+% ADs
+%%!include: ''../include/kiwi/ads-sky120-image.html''
+%%!include: ''../include/kiwi/ads-twins.html''
+%%!include: ''../include/kiwi/ads-link-h468.html''
+
+% Remove os 0. da numeracao do TOC
+%%!postproc: '(HREF="#[a-z0-9-]+">)0\.0\.'	\1
+%%!postproc: '^<H3>0\.0\.'			<H3>
+
+% meta: keywords
+%%!postproc: (</HEAD>)	<meta name="keywords" content="finanças, financeiro, controle, fácil, grátis, código aberto, javascript, simples, linux, unix, mac, windows">\n\1
+
+% meta: description
+%%!postproc: (</HEAD>)	<meta name="description" content="Coloque suas finanças em dia com o MoneyLog. Ele toma conta de sua contabilidade pessoal com um único arquivo HTML!">\n\1

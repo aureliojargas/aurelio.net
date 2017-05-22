@@ -1,0 +1,226 @@
+/*
+	CLEAN CSS
+
+	Muitos espacos em branco, fonte agradavel,
+	titulo principal em grande evidencia,
+	sem menu, sem search, rodape simplificado.
+	
+	Feito por Aurelio Jargas (www.aurelio.net),
+	2007, uso liberado.
+*/
+
+
+/* --- MASTER ---------------------------------------------- */
+
+body {
+	margin		:0;
+	padding		:0;
+	color		:#555;
+	font-family	:Optima, Omega, "Zapf Humanist", "Lucida Grande", Arial, sans-serif;
+}
+a {
+	text-decoration	:none;
+	color           :#07f;
+}
+a:visited {
+	color		:#888;
+}
+a:hover,
+a:visited:hover {
+	background-color:#07f;
+	color		:#fff;
+}
+h1, h2, h3, b, strong {
+	color		:#000;
+}
+table {
+	margin-bottom: 2em;
+	border-collapse: collapse;
+	border-color: #ddd;
+}
+
+#main, #header {
+	width: 680px;
+}
+
+/* --- HEADER ---------------------------------------------- */
+
+#header {
+	margin		:1em auto;
+	text-align	:center;
+	border-bottom	:1px solid #ccc;
+}
+#header h1 {
+	margin-bottom	:0.4em;
+	margin-top	:0;
+	font-size	:250%;
+	font-family	:"Trebuchet MS", "Lucida Grande", sans-serif;
+	color		:#000;
+}
+#header h2 {
+/*	font-size	:100%;*/
+	color 		:#888;
+	font-weight	:normal;
+}
+#header h3 {
+	color 		:#888;
+	font-weight	:normal;
+}
+
+/* --- MAIN ---------------------------------------------- */
+
+#main {
+/*	padding		:0 25% 4em 25%;*/
+	padding		:0 0 2em 0;
+	margin: 0 auto;
+	
+	text-align	:justify;
+	line-height	:160%;
+}
+#main h2,
+#main h3 {
+	line-height	:100%;
+	text-align	:left;
+	font-weight	:normal;
+}
+#main h2 {
+	clear		:both;
+	font-size	:350%;
+	margin		:1.5em -1em 1em -1em;
+	border-bottom	:8px solid #eee;
+	padding-bottom	:0;
+	letter-spacing	:-0.1em;
+}
+#main h3 {
+	font-size	:250%;
+	margin 		:1.5em 0 .6em 0;
+	letter-spacing	:-2px;
+}
+
+#main ul {
+	list-style-type	:disc;
+}
+#main blockquote {
+	border 		:1px solid #ddd;
+	border-width	:1px 1em;
+	margin 		:3em 2em;
+	padding 	:1em;
+/*	font-size	:85%;*/
+	line-height	:125%;
+}
+#main pre{
+	margin-left	:2em;
+	padding 	:1em;
+	background 	:#eee;
+	border 		:1px solid #ddd;
+/*	overflow 	:auto;*/
+	font-size	:85%;
+}
+#main td {
+	padding: 5px 5px;
+}
+#main tr:hover {
+	background: #eee;
+}
+
+/* --- CUSTOM  ----------------------------------------- */
+
+#main .table-rows table {
+	border-collapse	:collapse;
+}
+#main .table-rows td {
+	border-bottom	:1px solid #ccc;
+	padding		:0.3em 0.5em 0.3em 0;
+}
+#main .table-rows th {
+	border-bottom	:1px solid #ccc;
+	text-align	:left;
+	font-weight	:normal;
+	font-style	:italic;
+}
+
+/* --- LISTS ---------------------------------------------- */
+
+#main ul,
+#main ol {
+	margin 		:0;
+	padding 	:0;
+}
+#main li {
+	margin 		:0 1.4em;
+	padding 	:0.3em 0;
+	line-height	:145%;
+}
+#main li ul {
+	margin 		:0.3em 0 0 0;
+	padding 	:0;
+}
+#main dt,
+#main dd {
+	margin-bottom	:1em;
+}
+#main dt {
+	font-size	:115%;
+	color 		:#000;
+}
+
+/* --- TOC ---------------------------------------------- */
+
+.toc {
+/*	font-size	:85%;*/
+	background 	:#f4f4f4;
+	padding 	:2em;
+	margin 		:4em auto;
+	border 		:1px solid #ccc; 
+}
+.toc li {
+	padding 	:0.2em 0;
+	line-height	:125%;
+}
+
+/* --- FOOTER ---------------------------------------------- */
+
+#footer {
+	text-align	:center;
+	padding		:1em 0 3em 0;
+	color		:#aaa;
+	font-size	:85%;
+	font-family	:"Trebuchet MS", "Lucida Grande", sans-serif;
+}
+#footer a {
+	font-size	:150%;
+	color 		:#07f;
+}
+#footer a:hover {
+	color:white;
+}
+
+/* --- CUSTOM ---------------------------------------------- */
+
+body.viagem #main table {
+	border-collapse: collapse;
+}
+body.viagem #main td {
+	border-bottom: 1px solid silver;
+	padding: 10px;
+}
+
+/* --- ADS ---------------------------------------------- */
+
+.ad-twins,
+.ad-hlink,
+.ad-box-300 {
+	margin: 25px auto;
+	text-align: center;
+	clear: both;
+}
+.ad-twins { width: 680px; }
+.ad-twin-left { text-align: left; }
+.ad-twin-right { text-align: right; }
+.ad-hlink {
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	padding: 15px 0;
+}
+
+

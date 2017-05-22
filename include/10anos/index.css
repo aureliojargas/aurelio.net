@@ -1,0 +1,110 @@
+/* index.css */
+/* It has a sidebar (left) and wider #main, DLs are used for link listing */
+
+body {
+	margin:0 0 0 24%;   /* left space for sidebar */
+	width:67%;
+	font-size:100%;
+}
+#header h1 {
+	font-size:300%;
+	font-family:Impact,Arial,Helvetica,sans-serif;
+	text-transform:uppercase;
+}
+
+#main h2 {   /* Borders and spacing to really separate topics */
+	font-size:150%;
+	margin:2em 0;
+	padding-top:2em;
+	border-top:1px solid #ddd;
+	
+}
+#main h3 {   /* Vim index uses H3, needs more spacing */
+	margin:3em 0 2em 0;
+}
+#main dl {   /* Used for link listing, no need to indent */
+	margin-left:0;
+}
+#main dt i {   /* Author name in low contrast */
+	color:gray;
+	display:block;
+	font-size:80%;
+	line-height:90%;
+}
+#nav {
+	width:30em;   /* Keep it short */
+}
+
+/*-------------------------- SIDEBAR ------*/
+
+#main #sidebar {
+	position:fixed;
+	top:0;
+	left:0;
+	width:18%;
+	height:100%;
+	overflow:auto;
+	padding:15px 0 0 0;
+	line-height:110%;
+	text-align:left;
+	font-size:75%;
+	background-color:#fafafa;
+	border-right:5px solid silver;
+}
+#main #sidebar a {
+	display:block;
+}
+#main #sidebar img {
+	width:64px;
+	height:64px;
+}
+#main #sidebar h4 {
+	font-weight:normal;
+	border-top:1px solid silver;
+	padding:0.5em 0 0 0.5em;
+	margin:1em 0 1em 0;
+}
+#main #sidebar ul {
+	margin-left:1em;
+}
+#main #sidebar li {
+	list-style-type:none;
+	line-height:150%;
+}
+#main #sidebar .toc {
+	font-size:100%; /* redefine from main CSS */
+}
+#main #sidebar .toc ul ul {
+	margin:0 0 0 1em;
+	font-size:90%;
+	line-height:100%;
+}
+
+/*-------------------------- CUSTOM ------*/
+body.regex #main table,
+body.regex #main td,
+body.regex #main th,
+body.vim #main table,
+body.vim #main th,
+body.vim #main td {
+	border-style:none;
+	vertical-align:middle;
+}
+body.miniman #header h1 {
+	text-transform:none;
+}
+body#moneylog-doacao {
+	background:yellow;
+	margin:0 auto;
+}
+#main p.image {
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#main p.image img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+

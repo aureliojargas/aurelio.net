@@ -1,0 +1,11 @@
+/* normal.css */
+/* Basically the same as tutorial.css, with less spacing on H2 */
+
+body {
+	width:30em;
+	margin:0 auto;
+	font-size:100%;
+}
+#main h2 {
+	padding-top:2em;
+}

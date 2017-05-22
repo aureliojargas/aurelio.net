@@ -1,0 +1,30 @@
+
+%%% Global Config
+
+%!target  : html
+%!encoding: UTF-8
+%!options : --css-sugar
+
+% favicon
+%!postproc: (<TITLE>)	<link rel="shortcut icon" href="/favicon.ico">\n\1
+
+% meta: author
+%!postproc: (<HEAD>)	\1\n<meta name="author" content="Aurelio Jargas">
+
+% DIVs: header, main (TODO: txt2tags tips page!)
+%!postproc: '<DIV CLASS="header" ID="header">'	'<DIV ID="header">'
+% Ops, massa uses #body and #main ...
+%%!postproc: '<DIV CLASS="body" ID="body">'	'<DIV ID="main">'
+
+% Custom HTML
+%!postproc: {{(.*?)}}	<\1>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Code tips
+
+% meta: keywords
+%%!postproc: (</HEAD>)	<meta name="keywords" content="finanças, financeiro, controle, fácil, grátis, código aberto, javascript, simples, linux, unix, mac, windows">\n\1
+
+% meta: description
+%%!postproc: (</HEAD>)	<meta name="description" content="Coloque suas finanças em dia com o MoneyLog. Ele toma conta de sua contabilidade pessoal com um único arquivo HTML!">\n\1

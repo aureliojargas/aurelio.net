@@ -1,0 +1,111 @@
+
+% include/10anos/database-artigos.t2t
+%
+% 
+
+%-------------------------------------- VIM
+
+%!postproc: _VIM_PULANDO_URL		_MYSITE_VIM_PULANDO_PATH
+%!postproc: _VIM_PULANDO_PATH		_VIM_PATH_VIM_PULANDO_ID.html
+%!postproc: _VIM_PULANDO_ID		pulando
+%!postproc: _VIM_PULANDO_NAME		Pulando com o Vim
+%!postproc: _VIM_PULANDO_INTRO		Ganhe tempo usando comandos precisos para movimentar o cursor e editar textos, dispensando o uso das setas do teclado, Delete e Backspace.
+%!postproc: _VIM_PULANDO_DESC		Este artigo explica como ganhar tempo usando os vários comandos internos do editor Vim para movimentar o cursor, ao invés de usar as setinhas do teclado. Também são demonstrados os comandos para apagar textos, que dispensam o uso das teclas Delete e Backspace.
+
+
+%!postproc: _VIM_SELECAOVISUAL_URL	_MYSITE_VIM_SELECAOVISUAL_PATH
+%!postproc: _VIM_SELECAOVISUAL_PATH	_VIM_PATH_VIM_SELECAOVISUAL_ID.html
+%!postproc: _VIM_SELECAOVISUAL_PDF	_VIM_PATH_VIM_SELECAOVISUAL_ID.pdf
+%!postproc: _VIM_SELECAOVISUAL_ID	selecao-vi-sual
+%!postproc: _VIM_SELECAOVISUAL_NAME	Seleção VI-sual
+%!postproc: _VIM_SELECAOVISUAL_INTRO	Seja um guru do Vim (VI) na arte de selecionar texto, usando caracteres, linhas e até colunas inteiras, para depois recortar, copiar ou alterar o texto.
+%!postproc: _VIM_SELECAOVISUAL_DESC	Este artigo dá várias dicas de uso do modo visual do Vim (VI). O modo visual serve para selecionar textos, podendo ser feito orientado a caracteres, linhas ou colunas. Uma vez selecionado, o texto pode ser recortado, copiado ou alterado. O artigo vai fundo e demonstra técnicas avançadas na seleção vertical (de colunas).
+
+
+%!postproc: _VIM_VIVIMVENCI_URL		_MYSITE_VIM_VIVIMVENCI_PATH
+%!postproc: _VIM_VIVIMVENCI_PATH	_VIM_PATH_VIM_VIVIMVENCI_ID.html
+%!postproc: _VIM_VIVIMVENCI_ID		vi-vim-venci
+%!postproc: _VIM_VIVIMVENCI_NAME	VI, Vim e venci
+%!postproc: _VIM_VIVIMVENCI_INTRO	Saiba tudo sobre o editor Vim (VI), sua história, seu arqui-inimigo Emacs, as doações para Uganda e aprenda desde o básico até a utilização dos comandos mais avançados.
+%!postproc: _VIM_VIVIMVENCI_DESC	Artigo completo sobre o editor Vim, que conta sua história (VI), demonstra suas qualidades, comenta sobre as doações arrecadadas para órfãos de Uganda (África) e explica sua rixa com o editor Emacs. Iniciando pelo uso básico, o artigo evolui para demonstrar várias funções avançadas como seleção vertical, abrir vários arquivos ao mesmo tempo, abreviações, marcas, mapeamentos (macros), programação e configuração.
+
+
+%!postproc: _VIM_OOO_URL		_MYSITE_VIM_OOO_PATH
+%!postproc: _VIM_OOO_PATH		_VIM_PATH_VIM_OOO_ID.html
+%!postproc: _VIM_OOO_ID			ooo-vi
+%!postproc: _VIM_OOO_NAME		Editando arquivos do OpenOffice.org no Vim
+%!postproc: _VIM_OOO_INTRO		Aprenda como editar arquivos .SXW do OpenOffice.org diretamente no Vim!
+%!postproc: _VIM_OOO_DESC		Um artigo que analisa a estrutura de um arquivo .SXW (arquivo do Writer do OpenOffice.org) e ensina como editá-lo utilizando um editor de textos comum como o Vim.
+
+%-------------------------------------- ER
+
+
+%!postproc: _ER_RDL1_URL		_MYSITE_ER_RDL1_PATH
+%!postproc: _ER_RDL1_PATH		_ER_PATH_ER_RDL1_ID.html
+%!postproc: _ER_RDL1_ID			rdl-regex-1
+%!postproc: _ER_RDL1_NAME		Expressões Regulares
+%!postproc: _ER_RDL1_INTRO		Como "farejar" um texto e aumentar a produtividade
+%!postproc: _ER_RDL1_DESC		Meu primeiro artigo sobre _ER_NAME, escrito em 2000. É uma introdução ao assunto, explicando o básico e demonstrando com exemplos o uso de quatro metacaracteres: . + * []
+
+%!postproc: _ER_RDL2_URL		_MYSITE_ER_RDL2_PATH
+%!postproc: _ER_RDL2_PATH		_ER_PATH_ER_RDL2_ID.html
+%!postproc: _ER_RDL2_ID			rdl-regex-2
+%!postproc: _ER_RDL2_NAME		Expressões Regulares II
+%!postproc: _ER_RDL2_INTRO		Conhecendo as ferramentas complementares
+%!postproc: _ER_RDL2_DESC		Meu segundo artigo sobre _ER_NAME, escrito em 2000. É uma continuação do artigo introdutório, agora apresentando conceitos mais avançados como as chaves, o opcional, os grupos e retrovisores. Também conta com uma tabela de exemplos.
+
+%!postproc: _ER_CASARIP_URL		_MYSITE_ER_CASARIP_PATH
+%!postproc: _ER_CASARIP_PATH		_ER_PATH_ER_CASARIP_ID.html
+%!postproc: _ER_CASARIP_ID		casar-ip
+%!postproc: _ER_CASARIP_NAME		Como casar um número IP (regex)
+%!postproc: _ER_CASARIP_INTRO		''
+%!postproc: _ER_CASARIP_DESC		Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular para casar um número IP válido. 
+
+%!postproc: _ER_APOSTILA_URL		_MYSITE_ER_APOSTILA_PATH
+%!postproc: _ER_APOSTILA_PATH		_ER_PATH_ER_APOSTILA_ID.pdf
+%!postproc: _ER_APOSTILA_ID		apostila-conhecendo-regex
+%!postproc: _ER_APOSTILA_NAME		Conhecendo as Expressões Regulares
+%!postproc: _ER_APOSTILA_INTRO		Apostila introdutória sobre _ER_NAME
+%!postproc: _ER_APOSTILA_DESC		Apostila introdutória sobre _ER_NAME, que apresenta o conceito e explora todos os metacaracteres básicos, um a um e de maneira sequencial. A explicação se dá por exemplos que podem (devem) ser executados pelo leitor na linha de comando. Boa para quem nem faz idéia do que sejam as expressões e quer aprender a usá-las.
+
+%!postproc: _ER_PROMPTDOC_URL		_MYSITE_ER_PROMPTDOC_PATH
+%!postproc: _ER_PROMPTDOC_PATH		_CURSO_PATHconectiva/_ER_PROMPTDOC_ID.html
+%!postproc: _ER_PROMPTDOC_ID		conectiva-er-prompt
+%!postproc: _ER_PROMPTDOC_NAME		Prompt-doc: Expressões Regulares - Introdução
+%!postproc: _ER_PROMPTDOC_INTRO		Histórico da linha de comando de uma palestra sobre _ER_NAME
+%!postproc: _ER_PROMPTDOC_DESC		Documento que registra o histórico da linha de comando de uma palestra sobre _ER_NAME ministrada pelo Aurelio para os funcionários da Conectiva sobre em dezembro de 2003. Mostra um por um todos os metacaracteres e suas funções.
+
+%-------------------------------------- SHELL
+
+%!postproc: _SHELL_APOSTILAINTRO_URL		_MYSITE_SHELL_APOSTILAINTRO_PATH
+%!postproc: _SHELL_APOSTILAINTRO_PATH		_SHELL_PATH_SHELL_APOSTILAINTRO_ID.pdf
+%!postproc: _SHELL_APOSTILAINTRO_ID		apostila-introducao-shell
+%!postproc: _SHELL_APOSTILAINTRO_NAME		Introdução ao Shell Script
+%!postproc: _SHELL_APOSTILAINTRO_INTRO		Apostila introdutória sobre _SHELL_NAME
+%!postproc: _SHELL_APOSTILAINTRO_DESC		Apostila introdutória sobre _SHELL_NAME, com 22 páginas de uma abordagem rápida e direta sobre como fazer scripts em shell. Útil para quem já usa o UNIX/Linux na linha de comando e quer começar a fazer alguns scripts para automatizar tarefas.
+
+%-------------------------------------- COLUNA
+
+% Macros bacanas para não precisar colocar uma por uma
+% URL
+%!postproc: _COLUNA_(\d\d)_URL	_MYSITE_COLUNA_\1_PATH
+% PATH
+%!postproc: _COLUNA_09_PATH	_COLUNA_PATH_COLUNA_09_ID.vim
+%!postproc: _COLUNA_(\d\d)_PATH	_COLUNA_PATH_COLUNA_\1_ID.html
+% ID
+%!postproc: _COLUNA_(\d\d)_ID	coluna-\1
+
+%!postproc: _COLUNA_01_NAME	Introdução
+%!postproc: _COLUNA_02_NAME	ICQ
+%!postproc: _COLUNA_03_NAME	Zgv/ImageMagick — Manipulação de imagens
+%!postproc: _COLUNA_04_NAME	Pine — E-mail na tela preta
+%!postproc: _COLUNA_05_NAME	Jogos — Uma viagem ao mundo da diversão
+%!postproc: _COLUNA_06_NAME	Arte Ascii — Artistas do teclado
+%!postproc: _COLUNA_07_NAME	Screen — Janelizando o modo texto (parte 1)
+%!postproc: _COLUNA_08_NAME	Screen — Janelizando o modo texto (parte 2)
+%!postproc: _COLUNA_09_NAME	Vim — Um vimrc diferente
+%!postproc: _COLUNA_10_NAME	Mpage — Impressão ágil em PostScript
+%!postproc: _COLUNA_11_NAME	Caracteres de Controle — Não fuja, domine-os
+%!postproc: _COLUNA_12_NAME	Lynx — Navegação turbinada
+
+%!postproc: _COLUNA_09_DESC	Este artigo é na verdade um arquivo de configuração do Vim, cheio de opções bacanas, que são explicadas nos comentários. Basta salvar este arquivo e lê-lo diretamente no Vim. Os comandos aparecerão em cores, facilitando o entendimento. Experimente!

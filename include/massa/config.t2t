@@ -1,0 +1,51 @@
+
+%%% Massa Config
+
+% Global
+%!includeconf: ../global.t2t
+
+% CSS
+%!style: SITEROOT/include/massa/massa.css
+
+% Expand macros and URLs
+%!includeconf: ../kiwi/database.t2t
+%%!includeconf: ../urls.t2t
+
+% Fix image name for _FOO_128 (database.t2t)
+%!postproc: \.png\.png .png
+
+
+% Remove linhas em branco inúteis entre itens de lista
+% XXX isso faz tabela seguida de lista aparecerem grudadas
+%%!postproc(html): '(?i)^ *<p></p>$'	''
+
+% TODO fazer com CSS
+% Link Unit no topo (conteúdo do include/google-ads-links-horizontal-clean.html)
+%%!postproc: '(<BODY>)' '\1\n\n<div class="adlinkhorizclean">\n<script type="text/javascript"><!--\ngoogle_ad_client = "pub-0009608813278754";\ngoogle_alternate_color = "FFFFFF";\ngoogle_ad_width = 728;\ngoogle_ad_height = 15;\ngoogle_ad_format = "728x15_0ads_al_s";\n//2007-08-22: Links Unit Top Clean\ngoogle_ad_channel = "3626311462";\ngoogle_color_border = "eeeeee";\ngoogle_color_bg = "eeeeee";\ngoogle_color_link = "0077ff";\ngoogle_color_text = "333333";\ngoogle_color_url = "0077FF";\n//-->\n</script>\n<script type="text/javascript"\nsrc="http://pagead2.googlesyndication.com/pagead/show_ads.js">\n</script>\n</div><!--adlinkhorizclean-->\n'
+
+% TODO fazer com CSS
+% Link Unit no topo 2 (conteúdo do include/google-ads-links-horizontal.html)
+%%!postproc: '(<BODY_2>)' '<BODY>\n\n<!--Begin Google Ads - Links Horizontal-->\n\n<div class="googleadlinkshoriz">\n<script type="text/javascript"><!--\ngoogle_ad_client = "pub-0009608813278754";\ngoogle_alternate_color = "ffffff";\ngoogle_ad_width = 468;\ngoogle_ad_height = 15;\ngoogle_ad_format = "468x15_0ads_al_s";\ngoogle_ad_channel = "";\ngoogle_color_border = "FFFFFF";\ngoogle_color_bg = "FFFFFF";\ngoogle_color_link = "0077ff";\ngoogle_color_text = "333333";\ngoogle_color_url = "336699";\n//--></script>\n<script type="text/javascript"\nsrc="http://pagead2.googlesyndication.com/pagead/show_ads.js">\n</script>\n</div><!--googleadlinkshoriz-->\n'
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Code tips
+
+% Remove o Link Unit do topo (adicionado pelo config-clean.t2t)
+%%!postproc: <BODY>	<body>
+
+% Estilos personalizados
+%%!postproc: (</HEAD>)	'<style type="text/css">\n</style>\1'
+%%!postproc: (</style>)	'#foo {bar:baz;}\n\1'
+
+% Aumenta a largura do conteudo para 80%
+%%!postproc: '(id="main")'	'\1 style="padding:1em 20% 4em 20%"'
+
+% Deixa branco o Link Unit que vai apos o logo
+%%!postproc: adlinkhorizclean	adlinkhorizcleanmiddle
+%%!postproc: eeeeee		ffffff
+
+% Remove os 0. da numeracao do TOC
+%%!postproc: '(HREF="#[a-z0-9-]+">)0\.0\.'	\1
+%%!postproc: '^<H3>0\.0\.'			<H3>
+

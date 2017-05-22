@@ -1,0 +1,41 @@
+/* tutorial.css */
+/* Long text, many subtitles, subsubtitles, lists, blockquotes, a mess */
+/* Ex.: Dialog --tudo */
+
+body {
+	width:33em;   /* 3in to 5in is recommended */
+	margin:0 auto;
+	font-size:100%;
+}
+#main h2 {   /* Highlighted, similar as in index.css */
+	font-size:175%;
+	margin:3em 0;
+	padding-top:3em;
+	border-top:1px solid #ddd;
+}
+#main h3 {   /* Spaced from text block */
+	margin:4em 0 2em 0;
+	font-size:125%;
+}
+#main h4 {
+	margin:2em 0 1em 0;
+}
+
+/* Copied to livro.css */
+#main dl {   /* DL don't need to be indented, waste of space */
+	margin:1em 0;
+}
+#main dt {   /* Seems pretty and calls attention */
+	font-style:italic;
+}
+#main dd > ul {   /* no extra spacing when nesting lists */
+	margin:0 0 0 1em;
+}
+
+body.canivete #main .toc {
+	padding-left:3em;
+/*	background:#eee;*/
+}
+body.canivete #main .banner ul li {
+	margin-top:1em;
+}

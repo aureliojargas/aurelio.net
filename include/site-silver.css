@@ -1,0 +1,22 @@
+/*
+yellow: rgb(95%,91%,42%) 
+orange: rgb(96%,73%,40%)
+red   : rgb(98%,47%,46%)
+green : rgb(76%,88%,44%)
+blue  : rgb(48%,71%,99%)
+
+*/
+
+#header  { background-color: #ddd; }
+.sidebar { background-color: #ddd; }
+#footer  { background-color: #ddd; }
+#main th { background-color: #def; }
+
+#main pre {
+	background-color: #def;
+	border-color	: #888;
+}
+
+#header a#sitename {
+	background: url(img/aureliohead.png) no-repeat center;
+	}

@@ -1,0 +1,4 @@
+
+%!postproc: '(<script )'	'<!-- \1'
+%!postproc: '(</script>)'	'\1 -->'
+

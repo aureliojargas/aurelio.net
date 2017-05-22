@@ -1,0 +1,207 @@
+/*AURELIO.NET Site Theme, Dez 2006, Public Domain*/
+
+body{
+	margin		:0;
+	padding		:0;
+	color		:#555;
+	font-family	:"Lucida Grande", Arial, sans-serif;
+}
+a{
+	text-decoration	:none;
+	color           :#07f;
+}
+a:visited:hover, a:hover{
+	background-color:#07f;
+	color		:#fff;
+}
+a:visited{
+	color           :#888;
+}
+#header{
+	padding		:0;
+	text-align	:center;
+}
+#header form{
+	float		:right;
+}
+#header a#sitename{
+	display		:block;
+	float		:left;
+	margin		:0;
+	padding		:.3em 0 .3em .2em;
+	color		:#060;
+	font-size	:250%;
+	font-weight	:bold;
+}
+#header a#sitename:hover{
+	background-color:transparent;
+}
+#header table{
+	border-spacing	:0;
+}
+#toolbar{
+	margin		:auto;
+	text-align	:center;
+	padding-bottom	:.5em;
+}
+#contents{
+	clear		:both;
+}
+.sidebar{ /*Shared by left and right sidebars*/
+	width		:14%;
+	margin		:0;
+	font-size	:85%;
+}
+.sidebar a{
+	display		:block;
+	padding		:0 .5em;
+	border-bottom	:1px solid #ccc;
+	line-height	:150%;
+}
+.sidebar ul{
+	margin		:0;
+	padding		:0;
+	list-style-type	:none;
+}
+#menumisc{
+	display 	:none;
+	float		:right;
+	margin-left	:20px;
+}
+#menulinks{
+	display		:none;
+	float		:left;
+}
+#main{
+	font-size	:110%;
+	padding		:1em 18% 4em 18%;
+	text-align	:justify;
+	line-height	:145%;
+}
+#main b{
+	font-weight	:normal;
+	color		:#222;
+}
+#main i{
+	font-style	:normal;
+}
+#main a:visited{
+	text-decoration	:underline;
+}
+#main h1{
+	margin		:1.5em 0 1em 0;
+	text-align	:center;
+	line-height	:130%;
+	font-size	:250%;
+	color		:#222;
+}
+#main p.subtitle{
+	margin		:-1em 1em 2em 1em;
+	padding-top	:0;
+	text-align	:center;
+	color		:black;
+}
+#main h2{
+	margin-top	:2em;
+	border-bottom	:1px solid #444;
+	color		:#222;
+}
+#main h3{
+	margin-top	:1.5em;
+	color		:#222;
+}
+#main dt, #main dd{
+	margin-bottom	:1em;
+}
+#main pre{
+        padding		:1em;
+        border		:1px solid #444;
+	overflow	:auto;
+}
+#main table{
+	margin-top	:2em;
+	margin-bottom	:2em;
+}
+#main td{
+	padding		:.2em .5em;
+}
+#main li{
+	margin-bottom	:.4em;
+}
+#main .toc li{
+	margin-bottom	:0;
+}
+#main ul{
+	padding-bottom	:1em;
+}
+#tagsarea{
+	padding-bottom	:1em;
+}
+#menutags{
+	width		:480px;
+	margin		:auto;
+	text-align	:center;
+	font-family	:Arial,sans-serif;
+	font-size	:90%;
+	line-height	:150%;
+}
+#menutags a{
+	margin-right	:.7em;
+	text-decoration	:underline;
+}
+#menutags a.on,
+#menutags a:hover,
+#menutags a.off:hover{
+	color		:white;
+}
+#footer{
+	clear		:both;
+	margin		:0;
+	line-height	:140%;
+	padding		:1em;
+	text-align	:center;
+	font-family	:sans-serif;
+	font-size	:85%;
+}
+.box{
+	width		:50%;
+	padding		:1em;
+	margin		:1.5em 5em;
+	border		:6px double white;
+	background-color:#07f;
+	color		:white;
+	text-align	:left;
+	font-size	:90%;
+	font-family	:sans-serif;
+	-moz-border-radius:28px;
+}
+/*Hide tagmenu extras*/
+#menuextra{display:none}
+#menutags .menutagcount{display:none}
+
+/* Ads */
+.googleadfaixa{text-align:center;margin:2em auto 3em auto}
+.googleadcaixa,.googleadsidebar{float:right;margin:0 0 0 2em}
+.googleadlinksheader{margin:auto;text-align:center;padding-top: .2em}
+table.googleadtwins{border-spacing:0;border-collapse:collapse}
+table.googleadtwins td{border-top:5px solid black}
+
+/*AURELIO.NET TopVerde theme*/
+#header{background-color:#3c3;border-top:1px solid #3c3}
+#menutags a.on, #menutags a:hover, #menutags a.off:hover{
+	background:transparent;color:white}
+.sidebar a:hover{color:white}
+#menumisc{background-color:#f22;color:black}
+#menumisc p{text-align:center;text-transform:uppercase}
+#menumisc a{border-bottom-color:#c00}
+#menumisc a:visited{color:#900}
+#menulinks{background-color:#cf0}
+#menulinks a{border-bottom-color:#be0}
+#menulinks a:visited{color:#990;color:#8b0;}
+#menumisc a:visited:hover, #menulinks a:visited:hover{color:white}
+#header a, .sidebar a{color:black}
+#main th{background-color:#def}
+#main pre{background-color:#def;border-color:#888}
+#footer{background-color:#eee;color:#777;border-top:1px solid #ddd;}
+#footer a{color:#444}
+#footer a:hover{text-decoration:underline;background:transparent}

@@ -1,0 +1,70 @@
+
+% txt2tags
+%!preproc: __TAGLINE_EN_TXT2TAGS	Text to HTML, LaTeX, Man page, ...
+%!preproc: __TAGLINE_PT_TXT2TAGS	Texto para HTML, LaTeX, Man page, ...
+%!preproc: __PATH_EN_TXT2TAGS		__URL_EN_TXT2TAGS
+%!preproc: __PATH_PT_TXT2TAGS		__URL_PT_TXT2TAGS
+%!preproc: __URL_EN_TXT2TAGS		http://txt2tags.sourceforge.net
+%!preproc: __URL_PT_TXT2TAGS		http://txt2tags.sourceforge.net/pt/
+%!preproc: __ICON96_TXT2TAGS		__PATH_ICON96/__ID_TXT2TAGS.jpg	
+%!preproc: __NAME_EN_TXT2TAGS		NAME_PT_TXT2TAGS
+%!preproc: __NAME_PT_TXT2TAGS		txt2tags
+%!preproc: __ID_TXT2TAGS		txt2tags
+
+% MoneyLog
+%!preproc: __TAGLINE_EN_MONEYLOG	Personal finances made real simple
+%!preproc: __TAGLINE_PT_MONEYLOG	Finanças descomplicadas
+%!preproc: __PATH_EN_MONEYLOG		SITEROOT/soft/moneylog/
+%!preproc: __PATH_PT_MONEYLOG		SITEROOT/moneylog/
+%!preproc: __URL_EN_MONEYLOG		http://aurelio.net/soft/moneylog/
+%!preproc: __URL_PT_MONEYLOG		http://aurelio.net/moneylog
+%!preproc: __ICON96_MONEYLOG		__PATH_ICON96/__ID_MONEYLOG.jpg	
+%!preproc: __NAME_EN_MONEYLOG		NAME_PT_MONEYLOG
+%!preproc: __NAME_PT_MONEYLOG		MoneyLog Experience ³
+%!preproc: __ID_MONEYLOG		moneylog
+
+% Funções ZZ
+%!preproc: __TAGLINE_EN_ZZ		__TAGLINE_PT_ZZ
+%!preproc: __TAGLINE_PT_ZZ		Pacote com 70 mini-programas de console
+%!preproc: __PATH_EN_ZZ			__URL_PT_ZZ
+%!preproc: __PATH_PT_ZZ			__URL_PT_ZZ
+%!preproc: __URL_EN_ZZ			__URL_PT_ZZ
+%!preproc: __URL_PT_ZZ			http://funcoeszz.net
+%!preproc: __ICON96_ZZ			__PATH_ICON96/__ID_ZZ.jpg	
+%!preproc: __NAME_EN_ZZ			ZZ Tools
+%!preproc: __NAME_PT_ZZ			Funções ZZ
+%!preproc: __ID_ZZ			zz
+
+% Livro Regex 2
+%!preproc: __TAGLINE_PT_LIVROREGEX	-
+%!preproc: __PATH_PT_LIVROREGEX		SITEROOT/er/livro/
+%!preproc: __URL_PT_LIVROREGEX		http://aurelio.net/er/livro/
+%!preproc: __ICON96_LIVROREGEX		__PATH_ICON96/__ID_LIVROREGEX.jpg	
+%!preproc: __NAME_PT_LIVROREGEX		Expressões Regulares - Uma Abordagem Divertida
+%!preproc: __ID_LIVROREGEX		livroregex
+
+% Canivete
+%!preproc: __TAGLINE_PT_CANIVETE	-
+%!preproc: __PATH_PT_CANIVETE		SITEROOT/shell/canivete/
+%!preproc: __URL_PT_CANIVETE		http://aurelio.net/shell/canivete/
+%!preproc: __ICON96_CANIVETE		__PATH_ICON96/__ID_CANIVETE.jpg	
+%!preproc: __NAME_PT_CANIVETE		Canivete Suíço do Shell
+%!preproc: __ID_CANIVETE		canivete
+
+
+%!preproc: __PATH_ICON96		SITEROOT/img/icon/96			
+
+
+% bin
+%%%
+%!postproc: URL_TXT2REGEX  http://txt2regex.sourceforge.net
+%!postproc: URL_ZZ         http://funcoeszz.net
+%!postproc: URL_SOKOBAN    http://aurelio.net/soft/sedsokoban
+%!postproc: URL_TXT2TAGSPT http://txt2tags.sourceforge.net/pt
+%!postproc: URL_TXT2TAGS   http://txt2tags.sourceforge.net
+%!postproc: URL_SEDSED     http://sedsed.sourceforge.net
+%!postproc: URL_RAC        http://aurelio.net/rac
+%!postproc: URL_ADIUMBOOK  http://aurelio.net/soft/adiumbook
+%!postproc: URL_EMOMEMORY  http://aurelio.net/soft/emomemory
+%!postproc: URL_MONEYLOG   http://aurelio.net/moneylog
+%%%
