@@ -1,0 +1,3 @@
+txt2tags --dump-source sed-HOWTO/tudo.t2t |
+ 	egrep -v '^NAVIGATION|%%TOC|%!include:|%INCLUDED'
+

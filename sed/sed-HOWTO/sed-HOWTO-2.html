@@ -1,0 +1,306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Sed HOWTO — Parte 2/11 :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="sedhowto">
+
+<DIV ID="header">
+<H1>Sed HOWTO — Parte 2/11</H1>
+<H2>Conhecendo o sed</H2>
+<H3><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H3>
+</DIV>
+
+<DIV ID="main">
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-1.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-3.html">próximo »</A></div>
+</P>
+<P>
+Vamos conhecer um pouco o <I>Sed</I>, mostrar que ele não é o bicho de
+<I>Sed</I> cabeças que aparenta :)
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">2.1. Descrição do Sed</A>
+    <LI><A HREF="#toc2">2.2. O que significa a palavra Sed</A>
+    <LI><A HREF="#toc3">2.3. Como saber se devo usar o Sed</A>
+      <UL>
+      <LI><A HREF="#toc4">2.3.1. Quando usar o Sed</A>
+      <LI><A HREF="#toc5">2.3.2. Quando não usar o Sed</A>
+      </UL>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">0.1. Descrição do Sed</H2>
+
+<P>
+O <I>Sed</I> é um editor de textos <B>não interativo</B>.
+</P>
+<P>
+Ele pode editar automaticamente, sem interação do usuário, vários arquivos
+seguindo um conjunto de regras especificadas.
+</P>
+
+<H2 ID="toc2">0.2. O que significa a palavra Sed</H2>
+
+<P>
+Vem do inglês "Stream EDitor", ou seja, editor de fluxos (de texto).
+</P>
+
+<H2 ID="toc3">0.3. Como saber se devo usar o Sed</H2>
+
+<P>
+Sendo um editor de textos não interativo, o <I>Sed</I> é excelente para
+desempenhar algumas tarefas, mas em outras seu uso não é aconselhado.
+</P>
+
+<H3 ID="toc4">0.3.1. Quando usar o Sed</H3>
+
+<P>
+A característica principal do <I>Sed</I> é poder editar arquivos automaticamente.
+</P>
+<P>
+Então sempre que você precisar fazer alterações sistemáticas em <B>vários</B>
+arquivos, o <I>Sed</I> é uma solução eficaz.
+</P>
+<P>
+Por exemplo, você tem um diretório cheio de relatórios de vendas, e
+descobriu que por um erro na geração, todas as datas saíram erradas, com o
+ano de <B>1999</B> onde era para ser <B>2000</B>. Num editor de textos normal, você tem
+que abrir os relatórios um por um e alterar o ano em todas as ocorrências.
+</P>
+<P>
+Certo, isso não é tão complexo se o editor de textos possuir uma ferramenta
+de procura e troca, também chamado de substituição.
+</P>
+<P>
+Mas então suponhamos que o erro da data não seja o ano, e sim o <B>formato</B>,
+tendo saído como <B>mm/dd/aaaa</B> quando deveria ser <B>dd/mm/aaaa</B>. Aqui não é
+uma substituição e sim uma troca de lugares, e uma ferramenta simples de
+procura e troca não poderá ajudar.
+</P>
+<P>
+Esse é um caso típico onde o <I>Sed</I> mostra seu poder: alterações complexas em
+vários arquivos.
+</P>
+<P>
+Utilizando o <I>Sed</I>, a solução para este problema (que veremos adiante) é até
+simples, bastando definir uma série de regras de procura e troca, e o
+programa se encarregará de executá-las e arrumar os relatórios.
+</P>
+
+<H3 ID="toc5">0.3.2. Quando não usar o Sed</H3>
+
+<P>
+<B>Nenhuma</B> ferramenta é ideal para todas as tarefas, e o <I>Sed</I> não é uma
+exceção à regra.
+</P>
+
+<H4>2.3.2.1. Edição genérica de textos</H4>
+
+<P>
+Ele <B>não</B> é prático para ser utilizado como editor de textos de uso genérico.
+</P>
+<P>
+Para escrever textos, ou alterar coisas simples, é mais rápido e fácil
+abrir um editor de textos interativo como o <I>vi</I> ou o <I>emacs</I> e fazer a
+alteração "na mão".
+</P>
+
+<H4>2.3.2.2. Programação avançada</H4>
+
+<P>
+O <I>Sed</I> não é uma linguagem de programação completa, pois não possui
+variáveis, funções matemáticas, interação com o sistema operacional, entre
+outras limitações. Mas bem, ele é um <B>manipulador de texto</B> e não uma
+linguagem de uso geral.
+</P>
+<P>
+Algumas estruturas complexas podem ser simuladas com alguma técnica, mas se
+o seu programa em <I>Sed</I> começou a inchar muito, é aconselhável reescrevê-lo
+numa linguagem com mais recursos, como o <I>perl</I>.
+</P>
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-1.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-3.html">próximo »</A></div>
+</P>
+<P>
+<a href="http://aurelio.net/sed/" class="linkblock"><IMG ALIGN="middle" SRC="../../img/icon/128/sed.png" BORDER="0" ALT=""> Aprenda mais sobre Sed</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags sed/sed-HOWTO/sed-HOWTO-2.t2t -->
+</BODY></HTML>

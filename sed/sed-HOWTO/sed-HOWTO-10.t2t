@@ -1,0 +1,24 @@
+_SEDHOWTO_NAME — Parte @@C/11
+Nota sobre os adicionais GNU
+'_MYNAME
+
+%!includeconf: config.t2t
+%!postproc: @@P 9
+%!postproc: @@C 10
+%!postproc: @@N 11
+
+NAVIGATION
+%%TOC
+
+O //_SED_NAME// da GNU, atualmente é o utilizado pela maioria das distribuições de
+Linux e é o que tem mais funcionalidades novas.
+
+Mas o preço de se usar essas funcionalidades é que se perde em
+**compatibilidade**, pois seu programa //_SED_NAME// não funcionará em UNIXes ou
+outros sistemas que usem um //_SED_NAME// que não o da GNU.
+
+Para a grande maioria dos usuários isso não fará diferença pois geralmente
+trabalham com apenas um tipo de sistema operacional, mas o recado fica
+dado.
+
+%!include: footer.t2t

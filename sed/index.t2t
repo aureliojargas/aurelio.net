@@ -1,0 +1,277 @@
+_SED_NAME
+_MYNAME
+
+%!postproc: (</TITLE>)	' - Portal brasileiro do Stream EDitor do UNIX/Linux\1'
+
+%!includeconf:		../include/10anos/config.t2t
+%!style:                ../include/10anos/index.css
+%!postproc: SITEROOT 	..
+%!postproc: (<BODY)	\1 class="sed"
+%!options:              --toc --toc-level 3
+
+%!preproc: NOMETHOBIAS  Thobias Salazar Trevisan
+%!postproc: (.*sed(sokoban|arkanoid).png.*)	<center>\1</center>
+
+% 1999-08 sed-br
+% 2000-05 dicas.txt
+% 2000-08 HOWTO
+% 2001-12 sedsed
+% 2002-03 sokoban
+% 2002-03 livro
+% 2002-?? sed.sf.net
+% 2012-12-12 alfabeto do sed
+
+''' <div id="sidebar">
+ [_SED_128] 
+%%TOC
+==== Destaques: ====
+- [Alfabeto do sed alfabeto.html]
+- _SEDHOWTO_LLINK
+- _LIVROSED_LLINK
+- [Sed 1liners 1liners-ptBR.txt]
+- [Só Sed http://thobias.org/doc/sosed.html]
+- _SEDSOKOBAN_LLINK
+-
+==== Veja também: ====
+- _ER_LLINK
+- _SHELL_LLINK
+- _VIM_LLINK
+- [Cygwin SITEROOT_CYGWIN_PATH]
+- _CODARE_LINK
+- [docz nerdz SITEROOT_DOC_PATHnerd.html]
+-
+''' </div>
+
+'''
+<p class="image">
+    <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">
+        <img src="http://aurelio.net/img/banner-curso-regex-novatec.png" alt="Curso de Expressões Regulares">
+    </a>
+</p>
+'''
+
+%''' <div style="width:620px; margin:0 auto 2em auto;"><a href="http://www.piazinho.com.br/"><img src="http://aurelio.net/img/banner-piazinho4.png" style="padding:0;border:1px solid black;"></a></div>
+
+
+```
+#!/bin/sed -fn
+
+/^Bem-vind[oa]/!{
+
+  /E/s/ta é a /minha pá/g;/i/n;/a/ s/o//;b re; /o Se/d
+
+  sed primeiro, dep;/oi/s o resto ;P
+
+}
+$!N
+
+```
+
+Seja bem-vindo(a) ao portal do _SED_NAME. Ele é um editor de textos? É uma linguagem de programação? É um comando do UNIX? É um filtro? Na verdade, é isso tudo e mais um pouco :)
+
+Acompanhe aqui vários artigos sobre o _SED_NAME, escritos em **português**.
+
+Lá no meu blog eu contei [a minha história com o _SED_NAME _MYBLOG/2009/07/03/10anos-sed/], que começou em 1997 e mudou minha vida, culminando com a escrita de [um livro sobre _ER_NAME _LIVROREGEX_URL].
+
+== Lista de discussão ==[lista]
+
+Você ainda não assina a [sed-br _SED_ML]? Demorou. [Inscreva-se já sed-br-subscribe@yahoogrupos.com.br] para conversar com outros coleguinhas sobre _SED_NAME e _ER_LINK.
+
+Your book is on the table? So [try this one http://tech.groups.yahoo.com/group/sed-users/] for advanced topics in english.
+
+== Documentação ==[docs]
+
+=== Em português ===[docs-pt]
+
+: [Alfabeto do sed alfabeto.html] //por _MYNAME//
+
+Uma cola rápida de todos os comandos do sed, em ordem alfabética.
+
+: _SEDHOWTO_LLINK //por _MYNAME//
+
+_SEDHOWTO_DESC
+
+: _LIVROSED_LLINK //por _MYNAME//
+
+_LIVROSED_DESC
+
+: [Sed 1liners 1liners-ptBR.txt] //por Ricardo Sartori//
+
+Comandos _SED_NAME de apenas 1 linha, prontos para copiar e colar.
+
+: [Só Sed http://thobias.org/doc/sosed.html] //por NOMETHOBIAS//
+
+Rápido e rasteiro, exemplos do _SED_NAME em ação resolvendo problemas comuns.
+
+: [Usando o sed para contar http://thobias.org/doc/inc_sed.html] //por NOMETHOBIAS//
+
+Explicação didática de como incrementar números (e letras) usando o _SED_NAME.
+
+: [Lookup Tables & Incrementando em sed http://thobias.org/doc/lookup_tables_sed.html] //por NOMETHOBIAS//
+
+Demonstração do uso da técnica de Lookup Tables em _SED_NAME.
+
+: [Branches no sed http://thobias.org/doc/sedbranch.html] //por NOMETHOBIAS//
+
+Explicação dos comandos de branch (pulo, tipo GOTO) em _SED_NAME.
+
+: [Expressões Regulares http://aurelio.net/er/] //por _MYNAME//
+
+Vários documentos e um livro inteiro para você entender que **``^#!.*$``** não é um xingamento.
+
+: [Dicas soltas de _SED_NAME sed-dicas.txt] //por _MYNAME//
+
+Diquinhas soltas, rápidas, para ler e esquecer.
+:
+
+=== Em inglês ===[docs-en]
+
+: [Portal mundial do _SED_NAME http://sed.sourceforge.net] //por _MYNAME//
+
+Este é o portal mundial do _SED_NAME, com dezenas de links para programas, artigos, sites e até jogos! Prepare-se para gastar MUITAS horas lendo todo o conteúdo.
+
+: [Sed - An Introduction and Tutorial http://www.grymoire.com/Unix/Sed.html]
+
+Um guia bem completo, cheio de exemplos, que explica em detalhes o funcionamento do _SED_NAME.
+:
+
+== Depurador (debug) ==[sedsed]
+
+O [_SEDSED_NAME _SEDSED_URL] é um depurador (debugger) para scripts _SED_NAME escrito em Python. Sempre que seu script crescer e ficar confuso, ou estiver usando o [HOLD SPACE sed-HOWTO/sed-HOWTO-8.html#toc4], esse depurador salvará a sua vida lhe mostrando o conteúdo dos buffers internos do _SED_NAME enquanto o script é executado.
+
+Além disso o mesmo programa também serve como embelezador de código ("//indentation//") e também converte scripts _SED_NAME para páginas HTML coloridas. Veja por exemplo como ficou o [_SEDSOKOBAN_NAME em HTML sokoban/sokoban.sed.html].
+
+== Programas / Scripts ==[scripts]
+
+Aqui estão alguns programinhas em _SED_NAME que eu fiz. Alguns estão com o nome e comentários em inglês porque eu os postei em listas gringas e não tive tempo/saco de traduzir. Se você tem, traduza e me mande que eu coloco aqui :D
+
+: [sokoban.sed _SEDSOKOBAN_URL]
+_SEDSOKOBAN_DESC
+_SEDSOKOBAN_IMGLINK
+
+: [arkanoid.sed _SEDARKANOID_URL]
+_SEDARKANOID_DESC
+_SEDARKANOID_IMGLINK
+
+: [justify.sed programas/justify.sed]
+Justificador de texto.
+
+: [mail-iso2txt.sed programas/mail-iso2txt.sed]
+Traduz os =20 e outros aliens que às vezes aparecem em mensagens de e-mail.
+
+: [wrap-forced.sed programas/wrap-forced.sed]
+Quebra as linhas exatamente na coluna especificada, sem se importar com o contexto.
+
+: [yahoogroups-kill-sig.sed programas/yahoogroups-kill-sig.sed]
+Apaga a propaganda do Yahoo! das mensagens de e-mail (TXT ou HTML).
+
+: [escape.sed programas/escape.sed]
+Converte os símbolos ``[^A-Za-z0-9_]`` para hexadecimais, usando a notação de internet como %20.
+
+: [unescape.sed programas/unescape.sed]
+Desconverte o que o escape.sed converteu.
+
+: [txt2sgml-sed programas/txt2sgml-sed]
+Um conversor simples de arquivos texto puro (TXT) para SGML. Este é um script bem antigo, que deu origem ao _TXT2TAGS_LINK.
+:
+
+
+== Mensagens de erro ==[mensagens]
+
+Eu sou o tradutor do GNU _SED_NAME para o português. Isso inclui todas as mensagens que o programa mostra na tela durante o uso, como a tela de ajuda (--help) e as mensagens de erro.
+
+As mensagens originais são bem curtas e difíceis de entender, eu tentei torná-las mais amigáveis, colocando dicas adicionais sobre a possível causa dos problemas. Veja alguns exemplos:
+
+: ``unterminated `s' command``
+Comando `s' inacabado (s/// - faltou delimitador)
+: ``unknown option to `s'``
+Opção desconhecida para o comando `s' (s///?)
+: ``Invalid content of \\{\\}``
+Conteúdo inválido no \\{\\} (permitidos números e vírgula)
+:
+
+Se o seu _SED_NAME está em inglês e você está tendo problemas para decifrar alguma mensagem, dê uma olhada no [arquivo de tradução http://translationproject.org/PO-files/pt_BR/sed-4.2.0.pt_BR.po] e procure pela frase em questão, pois a tradução pode te ajudar.
+
+% XXX Eu traduzi a man page tb?
+
+== GNU _SED_NAME 3.02.80 ==[gnu-sed]
+
+Nem lembro mais porque eu guardava essa versão específica do _SED_NAME, mas tem algo a ver com a troca de mantenedor do programa. A versão seguinte a essa contava com firulas inúteis, que eu não gostei. Hoje isso já não faz mais diferença na minha vida (hehe), então que fique aqui para fins meramente arqueológicos:
+
+- [GNU _SED_NAME 3.02.80 — Linux (.tar.gz) sed-3.02.80.tar.gz] (342 Kb)
+- [GNU _SED_NAME 3.02.80 — Linux (RPM) sed-3.02.80-4cl.i386.rpm] (63 Kb)
+- [GNU _SED_NAME 3.02.80 — Windows (EXE) sed3028a.zip] (68 Kb)
+-
+
+== Palestra sobre _SED_NAME ==[palestra]
+
+Nos dias 27 e 28 de outubro de 1999 (é, faz tempo, tou véio), eu fiz uma palestra sobre _SED_NAME e _ER_LINK para os funcionários da Conectiva.
+
+A palestra foi gravada e aqui está um resumão dela, divido em dois arquivos. Provavelmente quase nada é aproveitável desses arquivos, visto que não é a palestra corrida e sim apenas o supra-sumo de cada tópico, mas se servir pra alguém já vale.
+
+É uma pena que eu cortei demais. As frases ficaram grudadas e há poucos trechos com as falas do pessoal que estava assistindo. Dá pra identificar as vozes do [Acme http://oops.ghostprotocols.net:81/blog/] e do [Marcelo Tosatti http://pt.wikipedia.org/wiki/Marcelo_Tosatti], em trechos curtos.
+
+Nas tabelas seguintes, há uma descrição breve do assunto de cada trecho. Acompanhe os bips para saber quando passou de um trecho para o outro.
+
+Obrigado ao amigo Fernando Rodrigues por ter convertido para MP3 os arquivos originais que estavam em Real Audio.
+% <fernando (a) tnk com br> Brasília
+
+- [sed1-19991027.mp3 sed1-19991027.mp3] (2,3 Mb):
+  Como o _SED_NAME funciona e seus comandos básicos
+- [sed2-19991028.mp3 sed2-19991028.mp3] (2,6 Mb):
+  _ER_NAME em _SED_NAME
+
+
+Segue uma descrição dos tópicos abordados em cada arquivo:
+
+ |  //27 de Outubro de 1999, 13:09 minutos//  |||
+ || # |     assunto       | descrição |
+ |  1 |   **nome func**   | s+ed, fluxo, funcionamento, STDIN/STDOUT, regras
+ |  2 |     **util**      | substituição de padrões
+ |  3 |    **chamada**    | cat A |sed; sed 's///' A > A2
+ |  4 |      **cp**       | tática cp;sed;rm - permissões, ligações e atributos
+ |  5 |  **delimitador**  | barras, tem que ser 3
+ |  6 |     **s///g**     | modificador g: global, + de 1 ocorrência
+ |  7 |     **s/\///**    | escapar a / com um \ para não confundir com o delim
+ |  8 |     **s@@@**      | s/$velho/$novo/, barra é padrão
+ |  9 |    **" ou '**     | bash. sempre use '' ou "" ao redor
+ | 10 |     **$aux**      | aux=/1998 ; echo sed s,$aux,lala,
+ | 11 |   **echo sed**    | faz as substituições normais do bash
+ | 12 |   **-n s///p**    | geralmente com -n usa-se o p
+ | 13 |     **dica**      | ?
+ | 14 |  **s/// ; s///**  | vários comandos seguidos
+ | 15 |     **dica**      | vantagem s/// ; s/// por sed|sed
+ | 16 |  **aplicativos**  | grep, cat, rev, etc
+ | 17 |      **=**        | = mostra o número da linha
+ | 18 |      **N**        | N grude a próxima linha com a minha atual
+
+ |  //20 de Outubro de 1999, 14:39 minutos//  |||
+ || # |     assunto       | descrição |
+ |  1 |    **âncoras**    | ^$
+ |  2 |       **.**       | qualquer caractere
+ |  3 |  **classe char**  | [], nada é interpretado
+ |  4 |   **intervalo**   | 0-9 = 0123456789, tabela ASCII, A-z != A-Za-z
+ |  5 |  **chk domínio**  | ^[A-Za-z0-9.]*, zero uma ou mais vezes
+ |  6 |       **.***      | tudo ou nada, curinga
+ |  7 |   **o * guloso**  | __http:__""//www.lala.com.br:80"" — ^.*:
+ |  8 |       **\+**      | motivos históricos, escapado para ser especial
+ |  9 |       **\?**      | .html* casa .htmllllll, então faz .html\?
+ | 10 |   **classe neg**  | 1º caractere deve ser ^, ! é negação no sed
+ | 11 |   **tags html**   | abordagem inversa: o que NÃO pode ter, <[^>]*>
+ | 12 |    **técnica**    | nega pois ele é o delimitador
+ | 13 |    **é fácil**    | encarar a ER como pequenas partes, ler um a um
+ | 14 |      **\|**       | devem ser escapados os (), código C
+ | 15 |   **aninhando**   | parênteses dentro de parênteses
+ | 16 |     **buffer**    | ()s, conta da esquerda para a direita, até 9, \1
+ | 17 |      **dica**     | sem escapar, depois sai escapando tudo
+ | 18 |      **cut**      | trocar a ordem de 2 campos
+
+== Divirta-se! ==[divirta-se]
+
+=== Sed Superman ===[superman]
+[[img/sed-superman.png] img/sed-superman.png]
+=== Evolução das línguas ===[linguas]
+[[img/grep-awk-sed.gif] http://www.userfriendly.org/cartoons/archives/99aug/19990815.html]
+
+
+%!include: ../include/10anos/footer.t2t

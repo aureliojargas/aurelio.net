@@ -1,0 +1,1671 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>GNU SED 4 discussion</title></head>
+
+<body>
+
+<center><h1>random thoughts about current sed and
+development</h1></center>
+
+<p>
+This is the title of one of the longest threads that populated the
+<i>sed-users@yahoogroups.com</i> mailing list.<br>
+It started at the list's message number 2696, and ran from 31/Jan/2003
+to 14/Mar/2003.
+
+<p>
+The subject was about new SED commands.<br>
+On GNU SED 4.x, several new commands were introduced.
+<ul>
+<li>Some users liked it and were proposing even more new commands.
+<li>Some users didn't like it and wanted SED with no extra commands.
+</ul>
+So, we had a thread :)
+
+<p>
+Lots of issues was discussed under the same thread, so they're
+splitted into sections.<br>
+I've <b>tryed</b> join all e-mails into one single document, to a
+general overview.<br>
+I hope you find it readable.
+
+<p>
+The original thread e-mails can be seen by following
+<a href="http://groups.yahoo.com/group/sed-users/messagesearch?query=random%20thoughts">
+this link</a><br>
+(You must be a sed-users subscriber to access the list history)
+
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#first">First Message of the Thread</a>
+<li><a href="#diet">SED must stay diet</a>
+<li><a href="#newcmds">Proposing of new SED commands</a>
+<li><a href="#gsed4">GNU SED 4 new commands</a>
+<li><a href="#pnp">SED is P/NP or P=NP or none?</a>
+<li><a href="#luciano">Reply Message Not Connected to Any</a>
+<li><a href="#final">Final Message, Paolo Conclusion</a>
+</ul>
+
+<p><br><p>
+<b>Note:</b>
+<blockquote>Paolo Bonzini (identified as "paolo" on the following
+messages)<br>
+is the current GNU SED maintainer.
+</blockquote>
+
+
+
+ 
+
+
+
+<p>
+
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+
+</pre><a name="first"></a>
+<h1>First Message of the Thread</h1><pre>
+
+From: "aurelio" &lt;aurelio@...&gt;
+Date: Fri, 31 Jan 2003 11:16:08 -0300 (ART)
+Subject: random thoughts about current sed and development
+
+hi all,
+
+as the subject is "give your opinion", i'll do my part. :)
+i'll extend the subject and talk about new GNU sed features
+and KISS.
+
+i'm sorry my words may seem stronger than the subject desires,
+but it's really frustating that my english vocabulary is so
+limited. i can't write exactly the way i think, but i hope
+i'll not offend anybody, this is not what i want.
+
+
+i really admire paolo's work and disposal to take the
+GNU-package-that-NOBODY-wanted-to-touch, improving the
+regex machine speed, correcting bugs and adding the
+brother commands as 'Q', 'R' and 'W'
+
+but i'm also worried that sed will follow the ssed way,
+which in my opinion "has crossed the line" and its
+more-than-sed. i appreciate the ideas and code effort,
+but i don't use it because i like sed simple.
+no perl mimic, no multiline mode, no system
+command execution.
+
+
+
+
+i dislike zap command idea
+
+   there's no need to add a command that can be substituted
+   by just 2 commands, and x;s/.*//;x is not that long!
+
+   i think sed must remain as UNIX, little commands, that
+   *joined* do big things.  x;s/.*//;x is just about it.
+   "know your tools"
+
+  
+i dislike \# to do count idea
+i dislike the macro idea
+
+   these two introduce new concepts on sed, which in my point
+   of view, are out of the sed scope and principles.
+
+   sed is a text editor, not a programming language.
+   anything more complicated can be easily made in
+   perl/python/bash/whatever.
+
+   there is no need to bloat sed.
+
+
+i also dislike sed doing Perl weird Regexes (as ssed does)
+
+   it was not proposed, but i want to make it clear that
+   i think paolo's option to NOT include it on the GNU sed
+   was right.
+
+   ssed is a personal project and can go wherever it wants.
+   but GNU sed is a worlwide program that ALL Linux
+   distributions use for BOOT process (init.d scripts) and
+   other critical stuff, so it must no follow the trendy way,
+   but stay diet.
+
+   if you want sed to mimic perl, install miniperl instead
+   and be happy! sed is older than perl and has nothing to
+   do with it.
+   
+
+i dislike the 'e' command and modifier inserted into GNU sed
+
+   sed interacting with system commands is way far from
+   what sed proposes to be. sed is about text, not commands.
+   
+   using this command brings to sed scripts a new world of
+   problems it should never have! problems that the shell
+   and shell script language should be used for.
+    
+   now sed scripts could not work if the system command used
+   by the 'e' command:
+
+     - has removed
+     - has moved
+     - was a symlink and the target has moved
+     - is not of PATH anymore
+     - is not executable (chmod -x) anymore
+     - was updated and the syntax changed
+     - ... (long list)
+
+   and of course, platform compatibility is completelly
+   lost on scripts that uses that.
+   
+
+i dislike the 'M', 'm' modifiers inserted into GNU sed
+
+   sed is not multiline. sed was never multiline.
+   sed knows about line.
+
+   using 'G' is not multiline, it is still a single
+   line on pattern space and it is treated as that.
+
+
+i dislike the 'L' command inserted into GNU sed
+
+   insert fmt into sed?
+   not much to talk about this one. just plain wrong.
+
+
+i dislike the 'T' command inserted into GNU sed
+
+   maybe i didn't get the point, but it is really needed?
+   the if/then/else structures was already fully supported
+   by plain sed, as eric shows, so why T?
+   http://www.student.northpark.edu/pemente/sed/ifelse.txt
+   
+
+
+well, now i said what i should have said before but the
+lack of time didn't allowed me to do it.
+
+paolo, it is nothing personal. i admire you.
+but as nobody droped a single line against *any* GNU sed
+new feature, and they were HUGE, i wanted to speak.
+
+maybe i'm just a KISS freak, maybe i'm a dinossaur inside
+a young body, but i don't want sed to follow the way to
+BLOATware as many GNU tools did. (hint: sort -u)
+
+
+final thoughts:
+  after all, dc.sed was written in vanilla sed.
+  why us plain mortals will need more commands to "edit text"?
+
+&amp;;)
+
+
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+</pre><a name="diet"></a>
+<h1>SED must stay diet</h1><pre>
+
+<i><font color="darkcyan">
+[aurelio]
+hi all,
+
+as the subject is "give your opinion", i'll do my part. :) i'll extend
+the subject and talk about new GNU sed features and KISS.
+
+i'm sorry my words may seem stronger than the subject desires, but
+it's really frustating that my english vocabulary is so limited. i
+can't write exactly the way i think, but i hope i'll not offend
+anybody, this is not what i want.
+
+i really admire paolo's work and disposal to take the
+GNU-package-that-NOBODY-wanted-to-touch, improving the regex machine
+speed, correcting bugs and adding the brother commands as 'Q', 'R' and
+'W'
+</i></font>
+  [paolo]
+  I'd add 'T' to the list.  It is actually much more useful than W,
+  which is actually there more for symmetry and HHsed-compatibility
+  than for anything else. (more on this later).
+
+  [peter tillier]
+  I agree totally.
+<i><font color="darkcyan">
+[aurelio]
+but i'm also worried that sed will follow the ssed way, which in my
+opinion "has crossed the line" and its more-than-sed. i appreciate the
+ideas and code effort, but i don't use it because i like sed simple.
+no perl mimic, no multiline mode, no system command execution.
+</i></font>
+  [peter tillier]
+  Interestingly I feel the same about the changes to GNU sed and some
+  recently proposed changes to GNU awk.  I'm a big fan of both tools,
+  I write more awk, but I'm more fond of sed.  Why do I write more
+  awk? Well, because some of the scripts that I write will be
+  maintained by others at work and I think that awk's syntax is easier
+  to learn than sed's.
+
+  I don't like perl much as my sig. shows.  Why?  Because of the
+  things that perl is and which worry Aurelio about the latest version
+  of sed. IMO perl is a bloated, everything-but-the-kitchen-sink,
+  language and it's too darn big!  And I don't want sed to follow the
+  same route.
+
+    [björn]
+    I agree with both Peter and aurelio. Sed is sed. It has a long
+    Unix history and it is available in different versions on all Unix
+    platforms. To many new features and extensions to GNU sed will
+    make it not sed anymore.
+
+  [peter tillier]
+  On one OS that I use the maximum memory is 4Mb or 2Mb depending on
+  the machine and I can run an ANSI-89 C compiler for that OS, plus
+  awk and GNU sed up to 3.02.80 from a 1.44Mb floppy disk.  Perl 4.036
+  can (just) be compiled on the 2Mb machine, but won't fit on a floppy
+  alongside the compiler, awk and sed.  As to perl 5.0 it won't even
+  compile on the 4Mb machine and would take a lot of floppies to
+  accommodate the modules, etc..  I haven't yet tried to compile GNU
+  sed 4.0 for this OS.
+
+  One thing recently asked for once again in GNU awk (it raises its
+  ugly head about once a year or so) is an include facility similar to
+  the C pre-processor directive.  This is currently made available
+  through the use of an external shell program called igawk on systems
+  that support it, but people seem to think that it would be better if
+  it was a built- in function.  No one has yet, IMO, provided a cogent
+  reason for its adoption.  There's no need for something that is
+  currently available in another tool.
+<i><font color="darkcyan">
+[aurelio]
+* i dislike zap command idea
+
+there's no need to add a command that can be substituted
+by just 2 commands, and x;s/.*//;x is not that long!
+</i></font>
+  [brian hiles]
+  I have come rather late to this thread; indeed, I have purposely
+  avoided the discussion thread of sed extensions because in my past
+  capacity as a compiler writer, "language lawyer," and language
+  developer, I am -- what can be the word without offending anybody?
+  -- "concerned" by what I see (and have seen and seen and seen...) as
+  "suboptimal" language design. Lest this degenerate into a rant, let
+  me instead be constructive and give Brian's Three Rules of Language
+  Design:
+
+  (1) What _should_ work, _will_ work! (The language is consistent).
+  (2) Provide _tools_, not _features_, at well-defined levels of
+  abstraction. (The language is complete).
+  (3) Never, EVER, tell the programmer what he or she must or should
+  do. It is the ONLY duty of the language designer to satisfactorily
+  fulfill rules (1) and (2) and the rest will take care of itself.
+
+  If they sound rather putative and didactic, I admit this. It's just
+  that it's so frustrating when so few programmers understand the
+  mathematical concepts of language design and parsing theory that it
+  cannot be explained, ironically, that the essence of proper design
+  is just good common sense.
+
+  Concerning the above, do you realize what x;s/.*//;x has to _do_
+  merely to reset the "t" flag -- if I understand the context
+  correctly? Except for not having a "T" command which does this, the
+  following is MUCH more efficient, and doesn't eat into the command
+  number limit of some legacy versions of sed(1), nor zap the hold
+  buffer. RTFM!
+
+  t label
+  : label
+<i><font color="darkcyan">
+[aurelio]
+i think sed must remain as UNIX, little commands, that
+*joined* do big things.  x;s/.*//;x is just about it.
+"know your tools"
+</i></font>
+  [ed rosten]
+  True in one way, except that z will presumable run rather faster.
+  
+  [peter tillier]
+  I agree (sorry Eric) I much prefer the early UNIX philosophy of many
+  tools that each perform a set of well-defined functions linked by
+  pipes, etc.
+
+    [björn]
+    I agree as well. Maybe in the smaller picture a zap command may
+    look convenient. But in the big picture, each new
+    replace-two-commands-by-one command addition has a much larger
+    negative impact.
+<i><font color="darkcyan">
+[aurelio]
+* i dislike \# to do count idea
+</i></font>
+  [ed rosten]
+  It seems like pointless bloat to me. Awk is much more suitable for
+  that kind of thing and has far greater (well easier to use)
+  abilities in that regard. I'm not sure about \=. = is a completely
+  useless command. I've sometimes wanted something similar, but = is
+  so completely utterly hopeless, that I've gone on without it.
+<i><font color="darkcyan">
+[aurelio]
+* i dislike the macro idea
+</i></font>
+  [paolo]
+  So do I.  I am mildly in favor of \= only because = is completely
+  broken.
+
+  [ed rosten]
+  Agreed: One can always run sed through M4 if yow want macros. The
+  tools exist.
+<i><font color="darkcyan">
+[aurelio]
+these two introduce new concepts on sed, which in my point of view,
+are out of the sed scope and principles.
+
+sed is a text editor, not a programming language. anything more
+complicated can be easily made in perl/python/bash/whatever.
+</i></font>
+  [peter tillier]
+  I know of some interpreters for esoteric languages that have been
+  written in sed.  If you need to do counting in sed Greg Ubben has
+  demonstrated how this can be achieved in dc.sed and other of his sed
+  scripts.  Clearly if Aurelio can implement sokoban in sed then it is
+  already a pretty powerful programming language.
+<i><font color="darkcyan">
+[aurelio]
+there is no need to bloat sed.
+</i></font>
+  [peter tillier]
+  I agree.  It can already do most of these things if you want it to
+  (one way or another).  I think it was Paolo who demonstrated how to
+  use sed to write sed scripts (apologies here if it was someone
+  else).
+<i><font color="darkcyan">
+[aurelio]
+* i also dislike sed doing Perl weird Regexes (as ssed does)
+
+it was not proposed, but i want to make it clear that i think paolo's
+option to NOT include it on the GNU sed was right.
+</i></font>
+  [peter tillier]
+  I agree.  Not because I dislike the PCRE regexes, but because I
+  don't want sed to become bloated.  I think the addition of EREs is
+  fine, though.
+
+    [björn]
+    I agree. EREs are an established Unix(Posix) standard by now, but
+    Perl REs aren't.
+<i><font color="darkcyan">
+[aurelio]
+ssed is a personal project and can go wherever it wants. but GNU sed
+is a worlwide program that ALL Linux distributions use for BOOT
+process (init.d scripts) and other critical stuff, so it must no
+follow the trendy way, but stay diet.
+</i></font>
+  [paolo]
+  Right.
+<i><font color="darkcyan">
+[aurelio]
+if you want sed to mimic perl, install miniperl instead and be happy!
+sed is older than perl and has nothing to do with it.
+</i></font>
+  [peter tillier]
+  As Arnold Robbins (the gawk maintainer) has sometimes written, "If
+  you want perl then you know where to get it."  I sometimes
+  abbreviate this as IYWPTYKWTGI - along the lines of TMTOWTDI.
+<i><font color="darkcyan">
+[aurelio]
+* i dislike the 'e' command and modifier inserted into GNU sed
+
+sed interacting with system commands is way far from what sed proposes
+to be. sed is about text, not commands.
+</i></font>
+  [paolo]
+  You're right, but it makes sed usable for very simple things, like
+  inserting the current date in a log-processing command, which were
+  not possible otherwise.  I also use 'sed s/.../.../ | sh' pipes
+  often enough that s///e is a nice addition for me.
+
+  [ed rosten]
+  I'll agree with that. Piping the result to sh or xargs is easy
+  enough and has far fewer problems assosciated with it: ie none for
+  sed, since it never knows.
+<i><font color="darkcyan">
+[aurelio]
+using this command brings to sed scripts a new world of problems it
+should never have! problems that the shell and shell script language
+should be used for.
+ 
+now sed scripts could not work if the system command used by the 'e'
+command:
+
+- has removed
+- has moved
+- was a symlink and the target has moved
+- is not of PATH anymore
+- is not executable (chmod -x) anymore
+- was updated and the syntax changed
+- ... (long list)
+
+and of course, platform compatibility is completelly lost on scripts
+that uses that.
+</i></font>
+  [paolo]
+  Right, and the manual warns about this.
+
+  [peter tillier]
+  This may be handy, but is it sed?  Not really. it's a cut-down
+  version of some of perl's functionality.  IYWPTYKWTGI
+<i><font color="darkcyan">
+[aurelio]
+* i dislike the 'M', 'm' modifiers inserted into GNU sed
+
+sed is not multiline. sed was never multiline.
+sed knows about line.
+</i></font>
+  [paolo]
+  Again, why?
+
+  [peter tillier]
+  Perl is multi-line - IYWPTYKWTGI!
+<i><font color="darkcyan">
+[aurelio]
+using 'G' is not multiline, it is still a single
+line on pattern space and it is treated as that.
+
+* i dislike the 'L' command inserted into GNU sed
+
+insert fmt into sed?
+not much to talk about this one. just plain wrong.
+</i></font>
+  [paolo]
+  This is the only thing where I have the doubt of having "crossed the
+  line" :-)  -i cost a lot of code (also to implement the associated
+  option -s) and \[lLuUE] did as well, but they are so darn useful.
+<i><font color="darkcyan">
+[aurelio]
+* i dislike the 'T' command inserted into GNU sed
+
+maybe i didn't get the point, but it is really needed?
+the if/then/else structures was already fully supported
+by plain sed, as eric shows, so why T?
+http://www.student.northpark.edu/pemente/sed/ifelse.txt
+</i></font>
+  [paolo]
+  The  ty bx :y sequence can be replaced by Ty.
+
+  [ed rosten]
+  I'm not sure about this one. I find the structure suggested by
+  ty bx :y quite common. I have less issue with inserting small
+  commands that add very little extra, and which can improve
+  readability of scripts. But it isn't necessary.
+
+  [peter tillier]
+  And others have shown how to inclement while and for loops in sed if
+  you really need them.
+<i><font color="darkcyan">
+[aurelio]
+well, now i said what i should have said before but the
+lack of time didn't allowed me to do it.
+
+paolo, it is nothing personal. i admire you.
+but as nobody droped a single line against *any* GNU sed
+new feature, and they were HUGE, i wanted to speak.
+</i></font>
+  [paolo]
+  You did the right thing, of course it is nothing personal.  You
+  might like to hear that I'm not going to implement $n in the s///
+  command. :-)
+
+  [peter tillier]
+  I agree, too many changes make the tool too far removed from sed on
+  other platforms and make it more like perl - IYWPTYKWTGI!
+<i><font color="darkcyan">
+[aurelio]
+maybe i'm just a KISS freak, maybe i'm a dinossaur inside
+a young body, but i don't want sed to follow the way to
+BLOATware as many GNU tools did. (hint: sort -u)
+</i></font>
+  [paolo]
+  Again, I think the particular example you made is a matter of a
+  feature being very economic to implement.  But it strikes me that
+  with all these bloats cut -v is not there.
+
+  [peter tillier]
+  Putting too much into any tool (or language) makes it unwieldy.
+  Look at C versus C++, I know which I'd prefer to program in.
+  Certainly not C++, which has been through many variations until the
+  standard was published. I think that the recent C standard may have
+  gone too far with C.  I'm quite happy with the C89/ISO C90 standard
+  thanks.
+
+    [björn]
+    This is a good example, but from another angle too; I don't think
+    there is anything wrong with C++. However, C++ and C are
+    completely different languages, each with their own language
+    specification. C++ is still mostly backwards compatible, being a
+    super set of C. Much like I imgaine super sed to be. It is a super
+    set of sed, but it is also it's own program. Anyone can install
+    them side by side, or replace their system sed with super sed. But
+    for sed itself, just as with C, I think there is a lot of legacy
+    responsibility to not extend it into something else.
+<i><font color="darkcyan">
+[aurelio]
+final thoughts:
+after all, dc.sed was written in vanilla sed.
+</i></font>
+  [peter tillier]
+  And on a Sun box where there are limits to the number of sed
+  commands and it's still pretty efficient in operation.
+<i><font color="darkcyan">
+[aurelio]
+why us plain mortals will need more commands to "edit text"?
+</i></font>
+  [peter tillier]
+  Amen to that.
+
+
+</pre>
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+
+
+</pre><a name="newcmds"></a>
+<h1>Proposing of new SED commands</h1><pre>
+
+<i><font color="darkcyan">
+[brian hiles]
+... Thus my "sd" debugger on Eric Pement's site. It was the program I
+wrote before I commenced (and subsequently finished) writing a k/sh
+lexical scanner and parser in (old) sed plus (old) awk (itself 2000
+lines of code!), and implements conditional spypoint tracing on line
+and/or pattern range(s), for the pattern and/or hold space, and for
+all or a subset of embedded spypoints, just like any good debugger
+does. sed(1) cannot step and break: hint, hint! A sed "hook" (perhaps
+to be implemented with a new printf directive -- see following text)
+for use with an external debugger, is the _only_ debugging command
+necessary for sed.
+
+Again, I admit that I have come late to this thread, but tolerate me
+for just a bit longer, to say that I am of Peter's opinion concerning
+complexity, and let me further add that ideas I have heard about the
+"s" command are just plain wrong. Solve the _real_ problem and
+implement extensions by allowing multiple and additional flags:
+
+s///e # use ANSI escape sequences, including \n
+</i></font>
+  [paolo]
+  GNU sed does this by default (i.e. unless you have POSIXLY_CORRECT
+  set).
+<i><font color="darkcyan">
+    [brian hiles]
+    GNU sed has many, many wonderful options! But I was talking
+    about (1) canonical enhancements that can be applied without
+    compromising backward compatibility to (2) a sed in the same
+    lineage (and design philosophy) as distribution sed(1).
+</i></font>
+      [paolo]
+      I don't think POSIX allows things such as \t or \xAA, yet I
+      don't see how this seriously hinders backward compatibility
+      more than \+ or \|.
+<i><font color="darkcyan">
+        [brian hiles]
+		That's why a terminating option, to assert extended ANSI
+		usage, is a good idea -- it provides necessarily (and often
+		asked for) functionality without compromising backward
+		compatibility.
+
+[brian hiles]
+s///v # allow var substs of (pushed) \1, \2, ...
+</i></font>
+  [paolo]
+  Can you expand on this?
+<i><font color="darkcyan">
+    [brian hiles]
+    I'm sure that I wasn't being very clear when I wrote this; to
+    wit: inasmuch as I was discussing pushing and popping regex
+    environments, the ability to push/pop regex's AND pattern/hold
+    AND even numbered buffers separately was key. The "v" flag would
+    substitution \1, \2, ... from the current environment instead of
+    the conventionally under- stood behavior. The would be like
+    variables, then....
+</i></font>
+      [björn]
+	  No, no, no! This is simply not sed. Use awk instead. It is
+	  ridiculous to make sed into a fully fledged programming language
+	  (it already is, but I hope you get my meaning). There is already
+	  a multitude of other tools to choose from if you need printf,
+	  file manipulation, variables, debugger, etc. Why bloat sed? Why
+	  make GNU sed into something which is not sed? 
+
+	  I would recommend anyone thinking of all these dramatic
+	  extensions to sed to read the original sed manual at Laura's
+	  site (http://lf.8k.com/UNIX/SED.HTM). Then ask yourself if your
+	  extension is really in the spirit of sed.
+
+	  All the extensions I have read about so far, was technically
+	  possible to implement in the orginal sed (except maybe perl REs
+	  :-), yet they wasn't.
+      
+        [paolo]
+        Q is not (except at a very high cost in performance, or by
+        forcing one to use -n).  R is not.
+
+          [björn]
+		  I am not sure I understand you? I am saying that most of the
+		  features suggested (or implemented) now were possible to
+		  implement in the original sed way back when, and so I am
+		  suggesting that leaving them out was a design choice made by
+		  the original authors of sed. That is why I am talking about
+		  the design intentions of the original authors of sed.
+
+            [paolo]
+			Ah, I meant "it was possible to obtain their effect with
+			the original sed".
+      
+              [björn]
+			  Oh, ok. All the below is said IMO. I'd like to first say
+			  that I don't think the fact that a feature is useful is
+			  a strong enough motivation for including it. Any feature
+			  can be "useful" depending on how you look at it. It is
+			  possible to come up with an example where even the
+			  horrible L command could be "useful". IMO, one always
+			  has to look at the bigger picture also.
+<i><font color="darkcyan">
+        [brian hiles]
+		I amused -- or frustrated -- that we are really talking about
+		exactly the same thing. I encourage you to read the entire
+		thread to understand the reason I made one of my infrequent
+		rants/contributions was to defer what I perceived was (1)
+		another ill-conceived attempt at featuritis; (2) inelegant and
+		unacceptable proposals for the bugs and/or omissions in sed(1)
+		that I feel do need to be addressed.
+</i></font>
+          [björn]
+		  I did read the whole thread, albeit cursory, if you are
+		  referring to the thread "random thoughts about current sed
+		  and development" that is. I think I understand now what you
+		  mean though, even if I disagree that there are any larger
+		  omissions in sed that needs to be corrected.
+<i><font color="darkcyan">
+        [brian hiles]
+        We're on the same side!
+</i></font>
+          [björn]
+          I see that now.
+<i><font color="darkcyan">
+        [brian hiles]
+		What I was doing was examining a protocol for a controlled
+		development upon sed(1) -- not that I was necessarily
+		encouraging enhancements.
+</i></font>
+          [björn]
+		  I see now that you were arguing that IF changes were to be
+		  made, they should be more in line with an overall design
+		  principle rather than small patches here and there, ie
+		  features.
+<i><font color="darkcyan">
+        [brian hiles]
+		And BTW, there is a VERY fundamental difference between
+		language completeness and "featuritis." As a talented language
+		designer, I cannot entertain discussion on this until at least
+		the [mathematical] paradigm is accepted.
+</i></font>
+          [björn]
+		  I agree. That is why I am talking about general design
+		  guidelines and dito intentions. Changing those is an
+		  organised, structured way to make changes rather than adding
+		  features here and there without considering the language
+		  design as a whole. Am I interpreting you correctly?
+<i><font color="darkcyan">
+            [brian hiles]
+            Yes.
+</i></font>
+      [björn]
+	  The design goals of sed obviously are different from those of
+	  other Unix tools. I think any extension made to sed should be
+	  made trying to keep the original desgin goals in mind.
+
+	  I hope I don't come off to strong here, it is just that I feel
+	  strongly about this issue, and about the Unix spirit. I don't
+	  mean this as a rant. If GNU sed becomes to feature filled and
+	  bloated (and I don't mean bloated as in binary size or memory
+	  foot print, but rather in the featuritis sense), I personally
+	  will switch to BSD sed or earlier GNU versions for use on my
+	  GNU/Linux systems.
+      
+	  (I don't like most of the new commands I've seen from the new
+	  GNU sed 4. I wasn't aware of them until I saw them described by
+	  aurelio earlier in this thread.) If GNU sed is becoming super
+	  sed,
+
+        [paolo]
+		Since GNU sed 4, super sed does not have anything new except
+		Perl REs. That is, super sed is simply GNU sed  with a
+		different regular expression matcher and with Perl REs.
+      
+          [björn]
+          Ok. I never did look too closely on super sed, all I know
+          about it is from what I've read on this group.
+
+      [björn]
+	  perhaps bug fixes could still be back ported to eg GNU sed 3.x?
+	  Then there would still be a GNU sed for people who don't want
+	  the bloat.
+<i><font color="darkcyan">
+[brian hiles]
+s///g,w filename # [multiple flags!]
+</i></font>
+  [paolo]
+  Already there (s///gp or s///gw filename both work).
+<i><font color="darkcyan">
+    [brian hiles]
+    "s///gw filename" works? Not on my (admittedly ancient) sed(1)!
+    Nice to know, though.
+
+[brian hiles]
+s///1-4,34-,w filename
+</i></font>
+  [paolo]
+  Hmmm..., this would not exactly be a breeze to implement!  But I
+  agree it is very powerful.
+<i><font color="darkcyan">
+    [brian hiles]
+	Why not? Enumerated substitution sequence substitution is already
+	supported, and this is merely a range extension to that idea
+	(1-4,34- instead of just one number). I sincerely hope that you
+	may find it at least straighforward to implement.
+</i></font>
+      [paolo]
+	  Yes, but the parsing stage of sed (at least GNU sed) is already
+	  quite convoluted.  Well I could steal some code from cut.
+<i><font color="darkcyan">
+        [brian hiles]
+		It was afraid it was so. I have not seen the source code of
+		distribution sed(1) nor GNU sed, but knowing Thompson's
+		algorithm for the generation of IFAs, I would not be surprised
+		if it was goto-hell spaghetti code.
+
+[brian hiles]
+s///g,v,t,e,1-4,w filename
+# any others you can think of?
+
+The above, as well as new printf/readf commands, a command to redirect
+I/O to given file unit numbers (file descripters), are the only
+commands needed to be added. Rule (1).
+
+Any extensions to the language syntax itself must be implemented as
+allowing for a push-down stack: for pattern space AND hold space,
+</i></font>
+  [paolo]
+  Yep.  I thought of having &gt; and &lt; commands that push and pop the
+  contents of pattern space (not both, because you can always do
+  &gt;;x;&gt;;x and x;&lt;;x;&lt;).
+<i><font color="darkcyan">
+    [brian hiles]
+    Certainly that's an idea.
+
+[brian hiles]
+saved buffers (vars),
+</i></font>
+  [paolo]
+  This is very powerful, but maybe this is overkill.
+<i><font color="darkcyan">
+    [brian hiles]
+	I agree. But I was making a true effort (I made 15-20 drafts
+	before I -- incorrect ;) -- sent the post) as to Rule (2) --
+	logical completeness of the specification.
+
+[brian hiles]
+printf/readf directives,
+</i></font>
+  [paolo]
+  I don't agree you need these.
+<i><font color="darkcyan">
+    [brian hiles]
+    It's true that readf is not in the vernacular of sed(1), but
+    since I have wished over and over for numerical evaluation and
+    formatting, strings in specific field widths, etcetera -- and
+    especially because field extraction and handling is such a pain
+    in sed(1)! -- a printf would really be nice. Sed(1) _is_ a
+    filter, so I thought....
+</i></font>
+      [paolo]
+      I'd use awk for numeric stuff...
+<i><font color="darkcyan">
+        [brian hiles]
+		I had sent the email (after 15 drafts! :) before I realized
+		the reason that I had thought readf was so important was the
+		very reason I was going on and on about providing just such a
+		hook for an external debugger.
+        
+		My aforementioned debugger (before it get written _back_ into
+		ksh(1)) cannot break at a spypoint -- that is, it cannot have
+		specified the place to stop execution temporarily to allow the
+		debugger to browse the current environment -- without some
+		kind of read statement. Very, very important.
+
+    [brian hiles]
+	I was hoping not to impress upon a list of enhancements, per se,
+	but to apply a little common sense to the "featuritis" that I see
+	creeping into the proposed extended sed. My only intention -- and
+	I truly made a effort to succeed at expressing this -- was to
+	proffer a comprehensive _minimum_ set of language elements
+	providing _maximum_ usability. Of course, the final decision is
+	yours -- but even this does not necessarily mitigate against all
+	that I have said if you keep to a _same_ given level of design
+	sophistication. Distribution sed(1) shows by the existence of this
+	very mailing list how much can be done with so little, and is a
+	credit to the "do one thing, and do it well" overall design of
+	Unix, which has worked so well.
+
+[brian hiles]
+and regexes -- which would otherwise be implemented by functions,
+macros, multiple I/O streams a la m4(1), etcetera. Rule (2).
+
+Anything more and you might as well program in awk, as has been
+previously observed. Rule (3).
+
+Allow a command line option to source a given sed file, like bc(1)
+does with its "-l" option. Make sure it is allowed to specify more
+than one -l option argument.
+</i></font>
+  [paolo]
+  Why not -f?
+<i><font color="darkcyan">
+    [brian hiles]
+    Because the -l option applies to defining functions, setting
+    macroes, etcetera -- all those things I said were the "_tools_,
+    not _features_, at well-defined levels of abstraction." I hope
+    you understand that it _cannot_ be provided as an -f option.
+</i></font>
+      [paolo]
+	  Well, that implies that you have functions, macros, and features
+	  of *that* level.  It's quite a long way from the current sed --
+	  the creeping features in sed did anyway keep the same core
+	  concepts for all the commands except perhaps the fmt-like L, and
+	  e (which I think is maybe not orthodox for scripts, but is very
+	  nice for one-liners and pipelines).
+      
+	  The commands I added don't add constructs to sed, only
+	  functionality (Q to quit without printing, T to jump on not
+	  substituted, R to read one line of a given file into pattern
+	  space, W to write the first line to a file).
+<i><font color="darkcyan">
+        [brian hiles]
+        I totally agree. Again, I was attempting to be "complete."
+
+        How is "Q" different from "d;q"?
+</i></font>
+          [stew ravenhall]
+          In the version of HP-UX sed I use "d" deletes the pattern
+          space, and execution resumes at the first line of the sed
+          script, so the "q" would never be executed.
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+
+
+</pre><a name="gsed4"></a>
+<h1>GNU SED 4 new commands</h1><pre>
+
+<i><font color="darkcyan">
+[paolo]
+Don't worry, I am not going to add commands any more to GNU sed :-)
+</i></font>
+  [björn]
+  Didn't you alreay add several commands? I count to seven GNU
+  specific commands in the 4.05 manual. Since the orginal sed commands
+  are 24, I consider that a lot.
+<i><font color="darkcyan">
+    [paolo]
+    Yes, but I'm not going to add any more. Now:
+	- W is present for compatibility with other seds that implement
+	  it; it can be useful anyway
+</i></font>
+      [björn]
+      Which other seds implement it?
+<i><font color="darkcyan">
+        [paolo]
+		(Don't take this as a flame war, but rather as a sorely needed
+		explanation of some of my choices).
+
+        HHsed and sed 1.6
+</i></font>
+          [björn]
+		  Not at all. If anything, I am afraid that I am too hard in
+		  my critique. Being a maintainer isn't always the most
+		  grateful job to have.
+
+		  Is this GNU sed 1.6 you are referring to? (I have never
+		  heard of HHsed before.)
+<i><font color="darkcyan">
+            [paolo]
+			HHsed and sed 1.6 are both improved versions of the
+			original Eric Raymond sed.
+</i></font>
+              [björn]
+			  I see. Are they actually in use, ie are they the default
+			  sed on any platform? (Asking only out of curiousity.)
+
+      [björn]
+	  I don't see why it would ever be particularly useful, especially
+	  considering it is very similar to the existing w command.
+<i><font color="darkcyan">
+        [paolo]
+        Well, if so, P would also be useless :-)
+</i></font>
+          [björn]
+		  I guess you could argue like that, but at least half of my
+		  argument is that GNU sed shouldn't be turned into something
+		  which is no longer sed. Maybe if someone were to design a
+		  streaming editor today from scratch, it wouldn't look much
+		  like sed. Nevertheless, sed has an important legacy to
+		  consider.
+<i><font color="darkcyan">
+    [paolo]
+	- T is a shortcut which can make sed scripts less spaghetti-like
+</i></font>
+      [björn]
+	  It's functionality is easily replaced by three other lines. I
+	  disagree that the impact of adding a completely new command
+	  outweighs saving 2 lines at rare places.
+<i><font color="darkcyan">
+    [paolo]
+    - R is very useful
+</i></font>
+      [björn]
+      What is so useful with R that cannot be done with r?
+<i><font color="darkcyan">
+        [paolo]
+		Everything :-)  R reads *a line* of a file *into pattern
+		space*.  r prints the whole contents of a file without
+		allowing any kind of editing.  It is a very common question
+		"how do I mix files with sed" and my solution is usually to
+		take one file, pipe it through sed to generate a sed script,
+		and run the script on the other file.  R adds a much simpler
+		alternative.
+
+		On second thought, it would have probably been better to add
+		optional file name arguments to the n and N commands.  But
+		then w is also a mistake, it would have been better to add
+		file names to p and P which would have removed the need for
+		W... the original sed is damn good, but not perfect (and I
+		have not -yet- taken = into account...)
+</i></font>
+          [björn]
+		  I agree it is not perfect -- but it is sed. Still, it is
+		  possible to achieve similar effects by using more than one
+		  sed invocation. Sed is not designed to be used for
+		  everything, and should not be used for everything. Many
+		  times when you have several simultaneous input files, awk is
+		  a better choice of tool for example.
+<i><font color="darkcyan">
+    [paolo]
+    - Q can often avoid using -n and obscuring scripts
+</i></font>
+      [björn]
+      What is wrong with using -n?
+<i><font color="darkcyan">
+        [paolo]
+        On a one-liner I prefer /bar/Q to -n /bar/q;p
+</i></font>
+          [björn]
+		  Is that miniscule difference really worth introducing a new
+		  command into sed?
+<i><font color="darkcyan">
+            [paolo]
+            IMHO yes.  Of course other's mileage may vary...
+
+        [paolo]
+		There are additions, like \[lLuUE], which could be
+		misinterpreted by other seds.  By adding a v command you can
+		ensure correct results.  Or there might be known bugs that are
+		fixed in later versions.
+</i></font>
+          [björn]
+		  I still don't understand. Are you saying that I could
+		  include the v command in my GNU sed scripts to make sure
+		  that they break rather than give unexpected results on
+		  another sed?
+<i><font color="darkcyan">
+            [paolo]
+            Yes.
+
+    [paolo]
+    - L is definitely a mistake :-)
+</i></font>
+      [björn]
+      I agree. :-)
+<i><font color="darkcyan">
+    [paolo]
+    - e is useful though very controversial
+</i></font>
+      [björn]
+	  My opinion is that it is a huge mistake in the same vein as L
+	  is. It adds a whole new semantic to sed, while not being of any
+	  use. If one would like to process output from another command,
+	  the proper way is to pipe it to sed, the Streaming EDitor.
+<i><font color="darkcyan">
+    [paolo]
+	- v does nothing, it can prevent subtle as in 4.1 and 4.0.6 it can
+	  accept a version number
+</i></font>
+      [björn]
+	  So what is it used for? I'm afraid I don't see the point of a
+	  command which does nothing. :-)
+<i><font color="darkcyan">
+    [paolo]
+	So I count 5 useful commands, 1 controversial command and 1
+	mistake :-)
+</i></font>
+      [björn]
+	  I count 4 questionable commands, 2 horrible semantic-destroying
+	  commands, and 1 commands that does nothing.
+<i><font color="darkcyan">
+        [paolo]
+        Well, that's a point of view :-)
+
+[paolo]
+What will be added in GNU sed 4.1 (I already did so in my local copy,
+but of course the release is far from mature) is:
+
+- better treatment of multibyte characters.  A slash inside a
+  multibyte character will not terminate a regex.
+
+- fixing the bug with \n not being parsed correctly in the `y' command
+
+- enabling // in POSIXLY_CORRECT mode
+</i></font>
+  [björn]
+  All these seem good to me. :-)
+<i><font color="darkcyan">
+[paolo]
+- possibility to use Emacs-style backup file names when you use
+  in-place editing.  I need to do this with coherency with patch and
+  other GNU utilities, I agree it is not strictly necessary and bloats
+  a bit.
+</i></font>
+  [björn]
+  Are you saying that this is required by the GNU project? I'm not
+  sure I understand, how would you do in place editing with sed?
+<i><font color="darkcyan">
+    [paolo]
+	It is just expected by some users who do use the VERSION_CONTROL
+	variable with patch(1).  You do in-place editing with the -i
+	option in GNU sed 4.  It works like
+</i></font>
+      [björn]
+	  Ok, I didn't see that this was also added. In-place editing is
+	  contardictory to sed being a /streaming/ editor, IMO. The usual
+	  way of doing in-place editing would be with ed.
+<i><font color="darkcyan">
+        [paolo]                
+		Which is much more complex and not always really up to the
+		job, for example for complex tasks like removing C comments.
+		sed scripts are quite widespread (at least on this list's
+		subscriber's PCs...) and it takes little to add -i to a
+		command line.
+</i></font>      
+          [björn]
+		  If I were to change C source files, I sure as hell wouldn't
+		  run an automated script without keeping backups until I can
+		  verify that the script result worked out ok. In short: it is
+		  almost always preferable to keep the old file until the new
+		  transformed file can be verified.
+<i><font color="darkcyan">
+            [paolo]
+			Usually what I do is tarring the whole directory
+			structure, running sed on a couple of files to check the
+			results, then doing
+
+               find . -type f -print0 | xargs -0 sed -i -f script.sed
+</i></font>
+              [björn]
+			  So you are keeping the tar archive as a backup? I don't
+			  see why that would be more convenient than to just
+			  rename all files with a backup extension, and then run
+			  sed producing the new files. To each his own I guess. I
+			  often move the file(s) I want to edit to $filename.orig
+			  or something like that before I sed it back into the
+			  original name.
+
+          [björn]
+		  I should mention that there are a few other ways of doing
+		  in-place editing with sed:
+          
+          1) The traditional method:
+          
+             sed -f script file &gt; file.tmp
+             mv file.tmp file
+          
+             Easy and reliable.
+          
+		  2) There are also ways to avoid having to create a temporary
+			 file. As I understand it, even gsed -i creates a
+			 temporary, so this method has an advantage to gsed too:
+          
+             (rm -f file; sed -f script &gt; file) &lt; file
+<i><font color="darkcyan">
+            [paolo]
+            Cool!
+</i></font>
+          [björn]
+		  The method relies on the fact that a file is not unlinked as
+		  long as it is being accessed.
+
+      [björn]
+	  I also question the -s option. It is very easy to implement the
+	  -s option, eg with Bourne shell syntax:
+      
+         for f in file1 file2 file3
+         do
+            sed -f script.sed $f
+         done
+<i><font color="darkcyan">
+        [paolo]                
+		The -s option is a freebie that is needed to implement -i
+		correctly because -i implies it.  It might be featuritis to
+		allow it even when -i is not there.
+</i></font>
+          [björn]
+          I see. I didn't make the connection between the two.
+
+      [björn]
+	  It seems to me that several of the exensions are for making it
+	  easier to write self-contained sed scripts.
+<i><font color="darkcyan">
+        [paolo]
+		No, my intention was to make it easier to replace complex
+		pipelines with a single sed invocation.
+</i></font>
+      [björn]
+	  Scripts that doesn't have to be wrapped in shell scripts, or
+	  having to make use of any external utility. IMO, this is very
+	  wrong. sed was designed from the start to be used in conjunction
+	  with the other Unix tools, not replacing them. All of e, L &amp;
+	  -s are features of this type, and I suspect that R, W &amp; Q
+	  are in a sense too.
+<i><font color="darkcyan">
+        [paolo]
+		Don't consider L.  It is a mistake indeed.  But e is designed
+		to run other Unix tools, and hence to make sed work in
+		conjunction with them!
+</i></font>
+          [björn]
+		  IMO, e is an absolute abomination. It doesn't fit in at all
+		  with the rest of the sed commands or the sed philosophy,
+		  IMO.
+<i><font color="darkcyan">
+            [paolo]
+            I might be too picky in counting keypresses, but I prefer
+            
+            ls | sed 's/.*/mv &amp; \L&amp;/e'
+            
+            to
+            
+            ls | sed 's/.*/cp &amp; \L&amp;/' | sh
+            
+            :-)
+</i></font>
+              [björn]
+			  I never use sed for such things. I would consider it a
+			  shell duty. The common way to do it in the shell is by a
+			  loop,
+
+                 for f in *; do &lt;sthg with $f&gt;; done
+
+              I have written a shell function that permits me to write
+
+                 each "*" mv %1 %1.orig          # (bad example)
+
+          [björn]
+		  (The same goes for L, but since you say it was a mistake, I
+		  won't harp on it. BTW, if you consider L to be a mistake,
+		  couldn't you describe it as deprecated in the manual, and
+		  say that it might be removed in a future version of GNU sed?
+		  I cannot imagine it is of any wide use anyway.)
+<i><font color="darkcyan">
+            [paolo]
+            Yes, I was thinking of this too.
+
+        [paolo]
+		Why Q?  And if R and W are designed to replace Unix tools I
+		don't see why r and w aren't.
+</i></font>        
+          [björn]
+		  Are you suggesting that I cannot be in favour of not having
+		  R &amp; W without also wanting to get rid of r &amp; w?
+<i><font color="darkcyan">
+            [paolo]
+            No, that I did not understand your parallel between [eL]
+            and [QRW].
+</i></font>
+              [björn]
+			  Well maybe there is no parallell. The reason I am
+			  opposed to e &amp; L is beacuse they are not 'sed', and
+			  the only things they make easier are things that should
+			  be done with other tools, or in conjunction with other
+			  tools. The reason I am a bit doubtful about Q, R &amp; W
+			  is that I don't think the gain from them outweighs the
+			  negative aspects of introducing new commands, and
+			  breaking legacy with original sed.
+
+          [björn]
+		  I am not arguing for making changes to the original sed,
+		  quite the opposite. I am arguing that intrusive changes to
+		  the sed language should not be made to a sed which is the
+		  default sed on many platforms.
+<i><font color="darkcyan">
+            [paolo]
+			Note that all the changes in GNU sed, except escapes in
+			regular expressions, are 100% backwards compatible.  I am
+			not sure this is true of bash.
+</i></font>
+              [björn]
+			  I only mentioned bash because it is not sh, and does not
+			  try to be sh, but sh-compatible. Let me show you what I
+			  mean:
+
+              1497 d95-bli@hasse:~&gt; ll /bin/*awk*
+              lrwxrwxrwx  1 root  root       4 sep 23 15:30 /bin/awk -&gt; gawk
+              -rwxr-xr-x  2 root  root  248748 mar 18  2002 /bin/gawk
+
+              1498 d95-bli@hasse:~&gt; ll /bin/*sh*
+              -rwxr-xr-x  1 root  root  541096 apr 12  2002 /bin/bash
+              lrwxrwxrwx  1 root  root       4 sep 23 15:29 /bin/sh -&gt; bash
+
+              1499 d95-bli@hasse:~&gt; ll /bin/*sed*
+              -rwxr-xr-x  1 root  root   54949 apr  5  2002 /bin/sed
+
+			  I am not comparing sed to bash or gawk, only saying that
+			  if GNU sed is going to aim to be a superset of
+			  original/POSIX sed, then I wpuld rather see the last
+			  example to look like
+
+              -rwxr-xr-x  1 root  root   54949 apr  5  2002 /bin/gsed
+              lrwxrwxrwx  1 root  root       4 sep 23 15:29 /bin/sed -&gt; gsed
+
+              (This is all on a Redhat 7.3 system.)
+
+			  You are right that bash is not completely compatible
+			  with either old sh or POSIX.
+            
+<i><font color="darkcyan">
+            [paolo]
+			I also happen to agree with you about obtrusive changes,
+			and that's why I am not ever going to add Perl REs to sed!
+</i></font>
+              [björn]
+              Thank you!
+<i><font color="darkcyan">
+            [paolo]
+			I think \[lLuUE] escapes are *much* more intrusive, both
+			in terms of source code and in terms of  backward
+			incompatibility (in that the script behaves wrong silently
+			instead of breaking), than for example Q or W, yet you
+			don't seem to have problems with them, only with new
+			*commands*.  In other words, I don't understand exactly
+			what kind of extension you would favor.
+</i></font>
+              [björn]
+			  That is because I was not aware of those extensions
+			  before you told me just now. :-) Well, for the record I
+			  think those escape sequences are just as bad as the e
+			  &amp; L commands. Actually, even worse since they break
+			  backwards compatibility as you say. I also don't think
+			  they are in the spirit of regular expressions. They even
+			  more strongly motivates having GNU sed behave like an
+			  ordinary sed when called as 'sed', but allowing all GNU
+			  extensions when called as eg 'gsed'.
+<i><font color="darkcyan">
+                [paolo]
+                You can name the program gsed and then use a script
+
+                #! /bin/sh
+                POSIXLY_CORRECT=1 sed gsed ${1+"$@"}
+</i></font>
+                  [björn]
+                  I presume you mean 
+                  
+                  POSIXLY_CORRECT=1 /bin/gsed "$@"
+                  
+				  ? If not, what is your script supposed to accomplish
+				  exactly?
+<i><font color="darkcyan">
+                    [paolo]
+					Of course.  Also, `v' disables POSIXLY_CORRECT
+					behavior so you can use extensions freely.
+                    
+                [paolo]
+                Escapes are all disabled in POSIXLY_CORRECT mode.
+</i></font>
+                  [björn]
+				  That is good. Are the extra GNU commands disabled
+				  too?
+<i><font color="darkcyan">
+                    [paolo]
+					Not so far, but I can change my mind for 4.1
+					except for `v'; as they don't break compatibility
+					(besides, who would use \l in an expression) I
+					don't think it's necessary.
+
+                [paolo]
+				(Don't do that in 3.x and 4.0.x, it will break the
+				empty RE)
+</i></font>
+                  [björn]
+				  Um, so which version can I actually do it in? :-) I
+				  have GNU sed 3.02 on my home box.
+<i><font color="darkcyan">
+                    [paolo]
+					The yet-to-be-released 4.0a which is a pre-release
+					for what will be 4.1 :-)
+</i></font>
+              [björn]
+			  I admit that case conversion can be a bit unconvenient
+			  in Unix though, and it wouldn't hurt having some tool
+			  that would make it easier. It is just that I think the
+			  sed extensions described above is a very ugly way of
+			  accomplishing ushc a task.
+
+			  What I'm really meaning to say, and hinting of in my
+			  case conversion digression, is:
+
+			  1) For short script and one-liners, if you want to do
+				 case conversion, sed is probably the wrong tool.
+				 There are already several other alternatives (like
+				 tr).
+
+			  2) For longer scripts i think using the y command for
+				 case conversion is a fully acceptable method.
+				 Especially if the alternative means an intrusion on
+				 the design of sed while even breaking backwards
+				 compatibility.
+
+          [björn]
+		  If someone wants all these little features I am much more
+		  comfortable with them being made to something which is not
+		  called or used as 'sed'. I thought that super sed was
+		  something like this. Here is an idea I just thought of:
+		  maybe GNU sed could be made so that when it is called as
+		  'sed', all extensions are disabled, but when it is called as
+		  'gsed' they are enabled? That would work a little bit like
+		  bash, which when called as 'sh', tries to emulate a POSIX
+		  shell more closely. It would make it easier to write
+		  portable scripts.
+<i><font color="darkcyan">
+    [paolo]
+    sed -i s/^/&gt;/ FILE
+    adding &gt; signs in front of every line of FILE.
+</i></font>
+      [björn]
+      echo -e ',s/^/&gt;/\nwq' | ed file
+      
+	  I know I'm coming of a bit harsh here, and in a way it is not
+	  very useful to complain about the features you have already
+	  included. I'm just out for the discussion really, of what sed is
+	  and of what it should be. GNU sed is the default (and only) sed
+	  on many platforms now, so it is a great responsibility.
+
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+
+</pre><a name="pnp"></a>
+<h1>SED is P/NP or P=NP or none?</h1><pre>
+
+<i><font color="darkcyan">
+[brian hiles]
+All the above has the virtue of being both a proper superset of sed(1)
+and P/NP complete. It is possible to prove this mathematically.
+</i></font>
+  [paolo]
+  sed is P/NP complete.  There is a Turing machine script on the grab
+  bag.
+<i><font color="darkcyan">
+    [brian hiles]
+	I don't think you realize either the complexity of the P/NP
+	problem (it's a mathematical problem that has been worked on for a
+	hundred years), nor the applicability to a Turing machine to its
+	proof (the fact that turing.sed exists has nothing whatsoever to
+	do with the fact that sed(1) is P/NP complete or not.)
+</i></font>
+      [paolo]
+	  I probably misunderstood.  Isn't it that whatever is equivalent
+	  to a Turing machine can compute any decidable problem?
+<i><font color="darkcyan">
+        [brian hiles]
+		Well, yes and no. The P/NP problem (AKA or analogous to the
+		"P=NP? problem," "p-time reducibility," "NP-completeness,") is
+		indeed a mathematical assertion asks if any set of finite
+		objects of a certain mathematical space (numbers, polynomials,
+		...) encoded in a finite language that is accepted by a
+		non-deterministic Turing machine in polynomial time is also
+		"decidable in polynomial time by a deterministic machine."
+		according an old textbook from college I had to check;
+		however, P/NP (not under that name) predates Turing, although
+		P/NP has come to be described using the vernacular of that
+		theory. Even in this, _I don't believe_ the Turing Machine has
+		itself "answered" the P/NP Problem. It is generally
+		conjectured that the answer is negative, but a proof of the
+		conjecture seems to be far away.
+
+		Additional examples of NP-complete problems are "SAT, 3-SAT,
+		clique, 3-colorability, graph embedding, travelling salesman
+		problem, Nullstellensatz over finite fields, bounded Hilbert's
+		10th problem, integer linear programming, subsetsum problem,
+		hitting set and covering set problem," from the same text, of
+		which I have personally studied colorability, graph embedding,
+		the travelling salesman problem -- and Frege, having taking a
+		format logic class at Cal Berkeley by a protege of Kleene, a
+		noted mathematician in that field.
+</i></font>
+      [björn]
+	  I understand the P = NP problem, but I fail to see what it has
+	  to do with sed, and -- more specifically -- what it has to do
+	  with extensions to sed?
+<i><font color="darkcyan">
+        [brian hiles]
+		It has everything to do with sed, extensions to sed, language
+		design, language theory, and indeed computers in general. I
+		really cannot decide whether to be frank or sarcastic, but
+		I'll defer and hope the issue will have been made clear with a
+		reading of the previous threads.
+</i></font>
+          [björn]
+		  Why don't you try being frank? I am a last year Masters
+		  student in Computer Science, having studied both complexity
+		  and some language theory. The statement of yours that I have
+		  trouble understanding is the following:
+<i><font color="darkcyan">
+              [brian hiles]
+			  All the above has the virtue of being both a proper
+			  superset of sed(1) and P/NP complete. It is possible to
+			  prove this mathematically.
+</i></font>          
+          [björn]
+		  With "the above" referring to your suggestions of changes to
+		  sed. In what way do you mean to say that those changes are
+		  "P/NP complete"? Or are you referring to sed being "P/NP
+		  complete"?
+
+            [paolo]
+			Actually I didn't understand this at all too.  I cannot
+			see why the proposed additions (some of which might even
+			be worse than L :-) make sed *computationally* more
+			powerful.  sed is already Turing-complete (I too am a last
+			year Masters student in Computer Science by the way).
+<i><font color="darkcyan">
+              [brian hiles]
+              Everybody here is a Masters student of CS? :)
+
+			  To say "computational more powerful" is problematic
+			  usage. _Theoretically_, sed(1) have been used to send a
+			  man to the moon in the 60s. I've seen DOS Batch
+			  libraries that do amazing things.
+
+              ... But I wouldn't advise it.
+
+			  If there is a keyword that for all my hot air would
+			  encapsulate my intention and philosophy, it is "elegance
+			  of design," which usually, BUT NOT NECESSARILY, is
+			  minimalistic. The Unix philosophy is always a good
+			  paradigm: make a program do _one_ thing, and do it
+			  _well_.
+
+            [brian hiles]
+			I sought councel with a colleague who is more familiar
+			with the distinction between the P=NP Problem and Turing
+			Completeness. As I had indicated, the former predates the
+			latter, and so the statement that _any_ language (a
+			"language" satisfying the three criteria of variables,
+			flow-of-control, and I/O) is Turing Complete. In this
+			much, sed is Turing Complete, _although_ a turing.sed
+			(which I had known of before) does not indicate TC in
+			itself but that it is possible to have been written, which
+			does satisfy the conditions.
+
+			The P=NP (P/NP) Problem has always interested me; Turing
+			Machines have not. It is enough that the latter's
+			existence provides an algorithmic context to the former,
+			but just like the fact that Cellular Automata is now
+			mainly only of academic interest, it is not practical in
+			the implementation.
+
+			I find myself in the awkward position of reinforcing my
+			original thesis that, although complexity and "featuritis"
+			are NOT the same thing -- insofar as completeness and
+			consistency of the language are concerned -- the fact that
+			I have discussed push-down stacks of RE, pattern, hold,
+			and numbered buffers, enhanced I/O, etcetera, I did so
+			because if sed (or any other language) is to be extended
+			and/or enhanced, there is definitely a right way and a
+			wrong way to do it.
+
+			Ultimately, although most of my ideas are for the
+			"obvious" commands omitted in sed that through my
+			programmming of "non-trivial" projects, I _really_ wish
+			had been there from the inception, I am in favor of
+			minimalism.
+
+			I'm really quite proud of my aforementioned Three Rules of
+			Language Design. I've never seen an instance where this
+			wasn't apropos.
+</i></font>
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+</pre><a name="luciano"></a>
+<h1>Reply Message Not Connected to Any</h1><pre>
+
+From: "Luciano ES" &lt;luc-groups@...&gt;
+Date: Sat, 01 Feb 2003 16:09:48 -0200
+
+I can't comment much on Aurelio's rants, for two reasons:
+
+1 - I'm a sed neophyte. What do I know about it?
+2 - I haven't followed the latest changes introduced in GNU sed. Even
+	if I had, I wouldn't be able to tell new features from primeval
+	ones.
+
+But I do know that PCRE are a super-sed thing and, albeit I love them
+(super-sed and PCRE) and the extremely favorable view I have of them
+can easily be taken with a lot of reserve, I still think it is worth
+considering this particular point: the PCRE capabilities in ssed do
+not interfere with anything else in (s)sed. Even if you do know plain
+POSIX RE but have no idea of what PCRE are, you can write all RE that
+you want without the risk of incurring some PCRE syntax mistake. You
+use PCRE if you want, and ssed will only recognize it if you turn on
+the -R switch. Perhaps that could be said of other new features
+recently introduced in GNU sed?
+
+OTOH, I do agree that someone (Paolo?) might be just trying to force
+sed to do what is otherwise another tool's job. I also think that such
+improvements should be made to super-sed, which is great and is a lot
+more interested in the future than in the past, and is a lot less
+likely to break Jur... I mean, legacy setups.
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<hr>
+</pre><a name="final"></a>
+<h1>Final Message, Paolo Conclusion</h1><pre>
+
+From: "Paolo Bonzini" <bonzini@...>
+Date: Thu, 20 Mar 2003 10:13:34 +0100
+
+Let me clear up this.  The comments are regarding the future 4.1
+version, of which I hope to release a beta soon (will be named 4.0a).
+I hope you don't think I am abusing my role as gsed maintainer --
+indeed I did change my mind about some things as a result from the
+thread.
+
+I am not going to turn this into another giant thread, but of course
+feel free to reply and give me your opinion.  I'm asking however to
+avoid reinstating what people said in other posts, and to avoid making
+the thread too deep.  This will make this message and the replies more
+useful to me and to my users (that is, you).
+
+- 'L' will not be gone before 4.2
+  Also because I don't intend to make another 4.0 release, so I can
+  deprecate L in 4.1 but not remove it.
+
+  I'm going to do the same in ssed as well.  ssed and gsed are not
+  going to have any difference but the RE matcher.
+
+- 'e' will not go away.  Sorry.  :-)
+
+- $1, $2, ... will never be included.  They have serious backwards
+  incompatibility problems and implementing them is not the easiest
+  thing to do.
+
+- I doubt 1,3-4,7- options in the 's' command will be implemented
+  soon, but mostly for laziness.  I do think it is an extension which
+  is worth being considered, and will put it into the TODO list.
+
+- I doubt \= will be ever implemented, but I am not absolutely
+  negative.
+
+- I doubt more commands will be ever implemented, but I am not
+  absolutely negative.
+
+- POSIXLY_CORRECT behavior will disable \l \L \u \U \E.  Not because
+  of popular request :-) but because it is the right thing to do (it
+  is no different from disabling \t and the like).
+
+- 'v' will override POSIXLY_CORRECT behavior.  This makes it more
+  useful.
+
+- I am going to think much more about generating backups with
+  GNU-style filenames.  The implementation is clumsy because of
+  backwards compatibility (if I really wanted to do this, I should
+  have taken a look at the command line options for patch; now it is
+  too late and besides things are simpler as they are now).
+
+  IOW, this feature will 99% be removed.
+
+- -i will stay.  I think that sed is different enough from ed that -i
+  does fit in the picture.  -s will stay because it does not cost
+  anything to implement it.
+
+- I *might* consider if there is enough request disabling extended
+  commands in POSIXLY_CORRECT mode.  v will be left there to enable
+  other extended commands.
+
+  Anyway, Eric is right saying that new commands and options are not
+  backwards incompatible, and they make older seds abort.  OTOH
+  escapes make older seds spit out incorrect results.
+
+- The command will still be named sed.  If you want to have a bare
+  bones sed, you can use the scriptlet that I posted (I advise against
+  enabling POSIXLY_CORRECT behavior globally).
+</pre>
+<hr>
+
+<p>The End.
+</body>
+</html>

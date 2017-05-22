@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Sed HOWTO — Parte 6/11 :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="sedhowto">
+
+<DIV ID="header">
+<H1>Sed HOWTO — Parte 6/11</H1>
+<H2>Conceitos complementares</H2>
+<H3><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H3>
+</DIV>
+
+<DIV ID="main">
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-5.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-7.html">próximo »</A></div>
+</P>
+<P>
+Estes são conhecimentos que possivelmente surgirão como dúvidas em sua
+cabeça após utilizar o <I>Sed</I> por um tempo.
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">6.1. Sed e shell</A>
+    <LI><A HREF="#toc2">6.2. Usando outros delimitadores</A>
+      <UL>
+      <LI><A HREF="#toc3">6.2.1. No comando s</A>
+      <LI><A HREF="#toc4">6.2.2. No endereço</A>
+      </UL>
+    <LI><A HREF="#toc5">6.3. Escapes para caracteres especiais</A>
+    <LI><A HREF="#toc6">6.4. Gravando o resultado no mesmo arquivo</A>
+      <UL>
+      <LI><A HREF="#toc7">6.4.1. Problema inicial</A>
+      <LI><A HREF="#toc8">6.4.2. Solução genérica</A>
+      <LI><A HREF="#toc9">6.4.3. Solução segura</A>
+      </UL>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">0.1. Sed e shell</H2>
+
+<P>
+Com o <I>Sed</I> sendo invocado na linha de comando, deve-se ter alguns cuidados
+para evitar transtornos. O interpretador de comandos (shell), interpreta a
+linha de comando antes de processá-la, então alguns caracteres especiais
+como <B><CODE>$</CODE></B>, <B><CODE>\</CODE></B> e <B><CODE>!</CODE></B>, são interpretados pelo shell <B>antes</B> de chegarem ao
+<I>Sed</I>, modificando o comportamento esperado.
+</P>
+<P>
+Para evitar isso coloque os comandos <I>Sed</I> <B>sempre</B> entre aspas simples:
+</P>
+
+<PRE>
+prompt$ sed 's/isso/aquilo/' texto.txt
+</PRE>
+
+<P>
+Salvo quando no meio do comando <I>Sed</I>, existir algo que deva ser
+interpretado, como uma variável por exemplo. Neste caso coloque os comandos
+entre aspas duplas:
+</P>
+
+<PRE>
+prompt$ sed "s/$HOME/aquilo/" texto.txt
+</PRE>
+
+<P>
+Ou ainda, para evitar completamente a interpretação do shell, sem se
+preocupar com aspas, coloque os comandos Sed num arquivo. Veja o tópico
+<A HREF="sed-HOWTO-8.html#toc2">Colocando comandos Sed num arquivo</A>.
+</P>
+
+<H2 ID="toc2">0.2. Usando outros delimitadores</H2>
+
+<H3 ID="toc3">0.2.1. No comando s</H3>
+
+<P>
+É comum ao fazer um comando de substituição <B><CODE>s///</CODE></B> conter uma
+<B><CODE>/</CODE></B> num dos dois lados do comando, como quando querendo substituir
+<CODE>/usr/local/bin</CODE> por <CODE>/usr/bin</CODE>.
+</P>
+<P>
+Sendo a barra o delimitador do comando <B><CODE>s</CODE></B> as outras barras comuns devem
+ser escapadas com a barra invertida <B><CODE>\</CODE></B>, para não serem confundidas com os
+delimitadores normais, ficando o monstro a seguir:
+</P>
+
+<PRE>
+prompt$ sed 's/\/usr\/local\/bin/\/usr\/bin/' texto.txt
+</PRE>
+
+<P>
+Para evitar ter que ficar se escapando todas estas barras, basta lembrar
+que o comando <B><CODE>s</CODE></B> aceita <B>qualquer</B> delimitador, sendo a barra apenas um
+padrão de referências históricas. Então, neste caso, poderíamos escolher
+outro delimitador como por exemplo a vírgula:
+</P>
+
+<PRE>
+prompt$ sed 's,/usr/local/bin,/usr/bin,' texto.txt
+</PRE>
+
+<P>
+Evitando-se de ter que ficar escapando as barras. A mesma dica vale para o
+comando <B><CODE>y</CODE></B>.
+</P>
+
+<H3 ID="toc4">0.2.2. No endereço</H3>
+
+<P>
+E se precisássemos apagar as linhas que contém o <CODE>/usr/local/bin</CODE>? Teríamos
+que colocar o nome do diretório no endereço do comando <B><CODE>d</CODE></B>, voltando
+com a festa dos escapes:
+</P>
+
+<PRE>
+prompt$ sed '/\/usr\/local\/bin/d' texto.txt
+</PRE>
+
+<P>
+Para usarmos outro delimitador no endereço, basta escaparmos o
+primeiro, que no caso abaixo é a vírgula:
+</P>
+
+<PRE>
+prompt$ sed '\,/usr/local/bin,d' texto.txt
+</PRE>
+
+<P>
+Confusão de delimitadores com o texto a ser procurado é muito comum de
+acontecer, então se algo não está funcionando como deveria, olhe com
+cuidado para ver se não há conflitos entre eles.
+</P>
+
+<H2 ID="toc5">0.3. Escapes para caracteres especiais</H2>
+
+<P>
+No <I>Sed</I> da GNU, a partir da versão <B>3.02.80</B>(*), vários escapes novos
+foram adicionados e podem ser usados nas duas partes do comando <B><CODE>s///</CODE></B>:
+</P>
+
+<PRE>
+   \a      beep             (apito)
+   \f      form-feed        (avança linha)
+   \n      newline          (quebra de linha)
+   \r      carriage-return  (retorno de carro)
+   \t      hTAB             (tabulação horizontal)
+   \v      vTAB             (tabulação vertical)
+   \oNNN   o caractere de valor octal NNN
+   \dNNN   o caractere de valor decimal NNN
+   \xNN    o caractere de valor hexadecimal NN
+</PRE>
+
+<P>
+(*) veja o tópico <A HREF="sed-HOWTO-10.html">Nota sobre os adicionais GNU</A>
+</P>
+
+<H2 ID="toc6">0.4. Gravando o resultado no mesmo arquivo</H2>
+
+<H3 ID="toc7">0.4.1. Problema inicial</H3>
+
+<P>
+O procedimento comum quando se quer gravar num arquivo o resultado de um
+comando <I>Sed</I>, é o redirecionamento:
+</P>
+
+<PRE>
+prompt$ sed 'comando' texto.txt &gt; texto-alterado.txt
+</PRE>
+
+<P>
+Mas é muito comum, ao alterarmos um arquivo, queremos gravar estas
+alterações no <B>próprio</B> arquivo original. A tentativa intuitiva seria:
+</P>
+
+<PRE>
+prompt$ sed 'comando' texto.txt &gt; texto.txt
+</PRE>
+
+<P>
+Mas é só fazer para ver. Além de não dar certo, você ainda perderá <B>todo</B> o
+conteúdo do arquivo.
+</P>
+<P>
+Isso acontece porque ao fazer o redirecionamento <B><CODE>&gt;</CODE></B>, o <CODE>shell</CODE> abre
+imediatamente o arquivo referenciado, antes mesmo de começar a executar o
+comando <I>Sed</I>. E como este é um redirecionamento destrutivo <B><CODE>&gt;</CODE></B> e não
+incremental <B><CODE>&gt;&gt;</CODE></B>, se o arquivo já existir, ele será truncado, e seu
+conteúdo perdido. A essa altura, o <I>Sed</I> começará seu processamento já
+lendo um arquivo <I>texto.txt</I> vazio, e aplicados qualquer comandos
+<I>Sed</I> num
+arquivo vazio, o resultado será o próprio arquivo vazio.
+</P>
+
+<H3 ID="toc8">0.4.2. Solução genérica</H3>
+
+<P>
+Para evitar isso, voltamos a primeira tática de gravar o resultado num
+outro arquivo, e depois o mais natural é <B>mover</B> o arquivo novo sobre o
+original:
+</P>
+
+<PRE>
+prompt$ sed 'comando' texto.txt &gt; texto-alterado.txt
+prompt$ mv texto-alterado.txt texto.txt
+</PRE>
+
+<P>
+Para a grande maioria dos casos, isso é suficiente, mas convém aqui lembrar
+que caso o arquivo 'texto.txt' possua atributos especiais, grupo diferente
+do padrão do usuário, ou referências (links, simbólicos ou não) para outros
+arquivos, tudo isso <B>será perdido</B>. Ao mover o arquivo recém-criado, com os
+atributos padrão do sistema, sobre o original, este perderá seus atributos
+e ficará com os padrões do sistema, <B>herdado</B> do arquivo novo.
+</P>
+
+<H3 ID="toc9">0.4.3. Solução segura</H3>
+
+<P>
+Para evitar isso, a abordagem mais ortodoxa e segura seria aplicar o
+comando <I>Sed</I> numa cópia e gravar o resultado no arquivo original via
+redirecionamento:
+</P>
+
+<PRE>
+prompt$ cp -a texto.txt texto-tmp.txt
+prompt$ sed 'comando' texto-tmp.txt &gt; texto.txt
+prompt$ rm texto-tmp.txt
+</PRE>
+
+<P>
+Novamente, isso só é necessário com arquivos especiais, senão a solução com
+o <I>mv</I> pode ser usada. Mas é importante ter em mente esta outra maneira e
+principalmente saber o porque de utilizá-la, sendo este conhecimento
+aplicável a qualquer outro comando do sistema que leia e grave arquivos.
+</P>
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-5.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-7.html">próximo »</A></div>
+</P>
+<P>
+<a href="http://aurelio.net/sed/" class="linkblock"><IMG ALIGN="middle" SRC="../../img/icon/128/sed.png" BORDER="0" ALT=""> Aprenda mais sobre Sed</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags sed/sed-HOWTO/sed-HOWTO-6.t2t -->
+</BODY></HTML>

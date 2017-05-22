@@ -1,0 +1,51 @@
+http://tech.groups.yahoo.com/group/sed-users/message/1643
+
+To: sed-users
+Date: Tue Jul 9, 2002 10:27 pm
+Subject: arkanoid sed
+
+hi friends,
+
+i really liked this sed games thing, so i tried to do something
+different than sokoban.sed.
+
+i thought arkanoid would be easier than sokoban, but i was really
+wrong. sokoban took 8 hours, arkanoid took more than 20 (lost count).
+
+the trickiest part was the block explosions, which can be of 4 types:
+free X way, free Y way, blocked XY and round (sequence) explosions.
+
+this one i tried to put lots os comments to be easier to understand
+the sed tricks. the sad part is that i only remembered the first two
+arkanoid levels. if someone has the others, please send me!
+
+there's a new page
+http://sed.sf.net/sedgames
+http://sed.sf.net/sedgames
+http://sed.sf.net/sedgames
+which besides holding the arkanoid.sed and arkanoid.gif screenshot,
+i'll put the other sed games and docs explaining how they work and
+how to do your own game, explaining some techniques i've learned.
+
+ah! there's a 'playsed' bash script that automatically feeds the
+ENTER on a timeout, or append it after the command you've entered
+(like a getchar), so the ball moves by itself. but this script only works
+with gsed 3.02.80 (with the -u option) and with bash>=2
+
+prompt$ ./playsed -t 1 arkanoid.sed
+
+sokoban + playsed is good also, you just move without the needing to
+press ENTER:
+
+prompt$ ./playsed sokoban.sed
+
+
+hope you like it!
+
+ps.: internet has lots of futile information on it.
+i'm glad to contribute &;)
+
+
+=====
+--
+http://verde666.org s/click/^a]/;^[:wq

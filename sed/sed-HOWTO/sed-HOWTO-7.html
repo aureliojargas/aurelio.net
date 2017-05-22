@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Sed HOWTO — Parte 7/11 :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="sedhowto">
+
+<DIV ID="header">
+<H1>Sed HOWTO — Parte 7/11</H1>
+<H2>Tarefas diversas</H2>
+<H3><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H3>
+</DIV>
+
+<DIV ID="main">
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-6.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-8.html">próximo »</A></div>
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">7.1. Como substituir alguma coisa por uma quebra de linha</A>
+    <LI><A HREF="#toc2">7.2. Apagando linhas específicas</A>
+    <LI><A HREF="#toc3">7.3. Como ignorar maiúsculas e minúsculas</A>
+    <LI><A HREF="#toc4">7.4. Lendo e gravando em arquivos externos</A>
+      <UL>
+      <LI><A HREF="#toc5">7.4.1. Lendo arquivos</A>
+      <LI><A HREF="#toc6">7.4.2. Gravando arquivos</A>
+      </UL>
+    <LI><A HREF="#toc7">7.5. Trocando um trecho de texto por outro</A>
+      <UL>
+      <LI><A HREF="#toc8">7.5.1. Trocar várias linhas por uma</A>
+      <LI><A HREF="#toc9">7.5.2. Trocar várias linhas por outras</A>
+      </UL>
+    <LI><A HREF="#toc10">7.6. Emulando outros comandos</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">0.1. Como substituir alguma coisa por uma quebra de linha</H2>
+
+<P>
+No <I>Sed</I> da GNU, a partir da versão <B>3.02.80</B>(*), foi adicionado o <B><CODE>\n</CODE></B>
+como escape válido dos dois lados do comando <B><CODE>s///</CODE></B>. Com isso a tarefa de
+colocar cada palavra numa linha isolada, ou seja, trocar espaços em branco
+por quebras de linha, fica trivial:
+</P>
+
+<PRE>
+prompt$ sed 's/ /\n/g' texto.txt
+</PRE>
+
+<P>
+Mas com outras versões do <I>Sed</I> que não entendem este escape, a quebra de
+linha deve ser inserida <B>literalmente</B> e deve ser escapada:
+</P>
+
+<PRE>
+prompt$ sed 's/ /\
+prompt$ /g' texto.txt
+</PRE>
+
+<P>
+Como curiosidade, a operação inversa, de colocar todas as linhas de um
+arquivo numa linha só, já é mais trabalhosa e utiliza o conceito de <I>laço</I>:
+</P>
+
+<PRE>
+prompt$ sed ':a;$!N;s/\n/ /g;ta'
+</PRE>
+
+<P>
+(*) veja o tópico <A HREF="sed-HOWTO-10.html">Nota sobre os adicionais GNU</A>
+</P>
+
+<H2 ID="toc2">0.2. Apagando linhas específicas</H2>
+
+<P>
+O comando para apagar linhas é o <B><CODE>d</CODE></B>.
+</P>
+<P>
+O único detalhe nesta tarefa é especificar <B>quais</B> linhas você vai querer
+apagar. Isso está  completamente coberto no tópico <A HREF="sed-HOWTO-5.html#toc4">O endereço</A>.
+</P>
+
+<H2 ID="toc3">0.3. Como ignorar maiúsculas e minúsculas</H2>
+
+<P>
+O jeito padrão do <I>Sed</I> ser "ignore-case", é dizendo literalmente todas as
+possibilidades, como em:
+</P>
+
+<PRE>
+prompt$ sed '/[Rr][Oo][Oo][Tt]/d' texto.txt
+</PRE>
+
+<P>
+Para apagar todas as linhas que contêm a palavra <CODE>root</CODE>, <CODE>ROOT</CODE>, <CODE>RooT</CODE>
+etc.
+</P>
+<P>
+No <I>Sed</I> da GNU, a partir da versão <B>3.01-beta1</B>(*), foi adicionado o
+modificador <B><CODE>I</CODE></B> no endereço e no comando <B><CODE>s///</CODE></B>, fazendo com que o
+comando acima fique mais simples:
+</P>
+
+<PRE>
+prompt$ sed '/root/Id' texto.txt
+</PRE>
+
+<P>
+Ou ainda:
+</P>
+
+<PRE>
+prompt$ sed 's/root/administrador/Ig' texto.txt
+</PRE>
+
+<P>
+(*) veja o tópico <A HREF="sed-HOWTO-10.html">Nota sobre os adicionais GNU</A>
+</P>
+
+<H2 ID="toc4">0.4. Lendo e gravando em arquivos externos</H2>
+
+<H3 ID="toc5">0.4.1. Lendo arquivos</H3>
+
+<P>
+Uma tarefa comum é incluir cabeçalho e rodapé num arquivo qualquer. O
+<I>Sed</I> possui um comando específico para ler arquivos, o <B><CODE>r</CODE></B>, então
+basta(*):
+</P>
+
+<PRE>
+prompt$ sed -e '1r cabecalho.txt' -e '$r rodape.txt' texto.txt
+</PRE>
+
+<P>
+Para incluir o cabeçalho após a linha <B>1</B> e incluir o rodapé após a
+<B>última</B> linha.
+</P>
+<P>
+(*) a explicação do porquê das opções <B><CODE>-e</CODE></B> está no tópico
+<A HREF="sed-HOWTO-5.html#toc10">Aplicando vários comandos de uma vez</A>.
+</P>
+
+<H3 ID="toc6">0.4.2. Gravando arquivos</H3>
+
+<P>
+O comando <B><CODE>w</CODE></B> grava num arquivo a linha atual, ou melhor, o conteúdo do
+<I>espaço padrão</I>. Por exemplo, você quer gravar num arquivo o resultado de
+uma busca por linhas que contêm a palavra <CODE>estorvo</CODE>. A solução não-Sed
+seria:
+</P>
+
+<PRE>
+prompt$ grep 'estorvo' texto.txt &gt; estorvos.txt
+</PRE>
+
+<P>
+Nosso similar em Sed seria:
+</P>
+
+<PRE>
+prompt$ sed '/estorvo/w estorvos.txt' texto.txt
+</PRE>
+
+<P>
+Gravar dados num arquivo também pode servir de <B>espaço auxiliar</B> caso o
+<I>espaço reserva</I> não seja suficiente. Mas esta é uma opção drástica, não
+tão flexível. Mais informações sobre o <I>espaço reserva</I> no tópico
+<A HREF="sed-HOWTO-8.html#toc4">Conhecendo os registradores internos</A>.
+</P>
+
+<H2 ID="toc7">0.5. Trocando um trecho de texto por outro</H2>
+
+<P>
+Uma tarefa que parece simples mas confunde, é trocar um trecho de texto,
+como um parágrafo inteiro por exemplo, por outro trecho, independente do
+número de linhas de ambos.
+</P>
+
+<H3 ID="toc8">0.5.1. Trocar várias linhas por uma</H3>
+
+<P>
+Essa é simples, basta usar o comando <B><CODE>c</CODE></B>, que "Coloca" um texto no lugar da
+linha atual. A única complicação é definir o <I>endereço</I>, para aplicar
+o comando apenas nas linhas desejadas. Por exemplo, vamos colocar uma frase
+no lugar de uma área de texto pré-formatado num documento HTML. Esta área é
+delimitada pelos identificadores <B><CODE>&lt;pre&gt;</CODE></B> e <B><CODE>&lt;/pre&gt;</CODE></B>:
+</P>
+
+<PRE>
+prompt$ sed '/&lt;pre&gt;/,/&lt;\/pre&gt;/c \
+prompt$ aqui tinha texto pré-formatado' texto.html
+</PRE>
+
+<P>
+Note que o comando <B><CODE>c</CODE></B> (assim como o <B><CODE>a</CODE></B> e o <B><CODE>i</CODE></B>) <B>exige</B> que o texto que
+ele recebe como parâmetro esteja na linha seguinte, estando a quebra de
+linha escapada com a barra invertida <B><CODE>\</CODE></B>
+</P>
+<P>
+No <I>Sed</I> da GNU, a partir da versão <B>3.02a</B>(*), é permitido que se coloque
+o texto na mesma linha:
+</P>
+
+<PRE>
+prompt$ sed '/&lt;pre&gt;/,/&lt;\/pre&gt;/c aqui tinha texto pré-formatado' texto.html
+</PRE>
+
+<P>
+(*) veja o tópico <A HREF="sed-HOWTO-10.html">Nota sobre os adicionais GNU</A>
+</P>
+
+<H3 ID="toc9">0.5.2. Trocar várias linhas por outras</H3>
+
+<P>
+Similarmente a trocar por apenas uma linha, pode-se usar o comando <B><CODE>c</CODE></B> e
+passar várias linhas para ele. O único detalhe é que todas as linhas devem
+ser <B>escapadas</B> no final, menos a última:
+</P>
+
+<PRE>
+prompt$ sed '/&lt;pre&gt;/,/&lt;\/pre&gt;/c \
+prompt$ aqui tinha texto pré-formatado,\
+prompt$ mas eu resolvi tirar.\
+prompt$ porque?\
+prompt$ porque sim' texto.html
+</PRE>
+
+<P>
+É claro, quando o comando começa a ficar grande desse jeito, é melhor
+colocá-lo num arquivo. Saiba mais detalhes sobre isso no tópico
+<A HREF="sed-HOWTO-8.html#toc2">Colocando comandos sed num arquivo</A>.
+</P>
+<P>
+Mas melhor ainda é separar o comando <I>Sed</I> do texto, colocando-o num
+arquivo separado. Assim, quando se precisar alterar este texto, basta
+editá-lo, sem mudar o comando <I>Sed</I>, e sem precisar ficar colocando <B><CODE>\</CODE></B> no
+final de cada linha.
+</P>
+<P>
+Supondo que nosso texto explicativo do porquê da retirada do texto
+pré-formatado foi gravado no arquivo <I>desculpa.txt</I>, utilizaremos o comando
+<B><CODE>r</CODE></B> para lê-lo e o comando <B><CODE>d</CODE></B> para apagar o texto antigo:
+</P>
+
+<PRE>
+prompt$ sed -e '/&lt;\/pre&gt;/r desculpa.txt' -e '/&lt;pre&gt;/,/&lt;\/pre&gt;/d' texto.html
+</PRE>
+
+<P>
+Então acompanhe o que acontece: o primeiro comando será executado apenas na
+linha <CODE>&lt;/pre&gt;</CODE> que é o fechamento do trecho, então vamos esquecer dele por
+enquanto. O segundo comando diz para apagar o trecho desde <CODE>&lt;pre&gt;</CODE> até
+<CODE>&lt;/pre&gt;</CODE>, então assim que começar o trecho, ele vai apagando, linha por
+linha.
+</P>
+<P>
+Ao chegar na linha que contém o <CODE>&lt;/pre&gt;</CODE>, o primeiro comando <I>Sed</I> entra em
+ação e lê o arquivo <I>desculpa.txt</I>, colocando seu conteúdo imediatamente
+após a linha atual. Em seguida, o segundo comando apaga a linha <CODE>&lt;/pre&gt;</CODE>,
+completando a tarefa.
+</P>
+<P>
+Esta segunda solução é mais difícil de entender e implementar, mas é muito
+mais prática caso a alteração do texto a ser colocado seja freqüente, além
+destas alterações poderem ser feitas por alguém que nem saiba o que é
+<I>Sed</I>, pois será apenas um texto normal.
+</P>
+<P>
+Note que sempre que o <CODE>&lt;/pre&gt;</CODE> foi referenciado nos <I>endereços</I>, a
+barra foi escapada, ficando <CODE>&lt;\/pre&gt;</CODE>. A explicação desse escape está em
+<A HREF="sed-HOWTO-6.html#toc2">Usando outros delimitadores</A>.
+</P>
+<P>
+<B>obs.:</B> talvez o <CODE>&lt;pre&gt;&lt;/pre&gt;</CODE> não seja um exemplo dos mais didáticos, mas
+não me veio algo mais comum à mente...
+</P>
+
+<H2 ID="toc10">0.6. Emulando outros comandos</H2>
+
+<P>
+Aqui vão alguns exemplos de emulações de outros comandos usando-se o
+<I>Sed</I>:
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TH>comando</TH>
+<TH>emulação</TH>
+</TR>
+<TR>
+<TD>cat</TD>
+<TD>sed :</TD>
+</TR>
+<TR>
+<TD>head</TD>
+<TD>sed 10q</TD>
+</TR>
+<TR>
+<TD>grep</TD>
+<TD>sed /padrão/!d</TD>
+</TR>
+<TR>
+<TD>grep -v</TD>
+<TD>sed /padrão/d</TD>
+</TR>
+<TR>
+<TD>tac</TD>
+<TD>sed 1!G;h;$!d</TD>
+</TR>
+<TR>
+<TD>tail -1</TD>
+<TD>sed $!d</TD>
+</TR>
+<TR>
+<TD>tr A-Z a-z</TD>
+<TD>sed y/ABCDEF...UVWXYZ/abcdef...uvwxyz/</TD>
+</TR>
+<TR>
+<TD>wc -l</TD>
+<TD>sed -n $=</TD>
+</TR>
+</TABLE>
+
+<P>
+A lista completa e atualizada pode ser encontrada em:
+<A HREF="http://sed.sourceforge.net/local/docs/emulating_unix.txt">http://sed.sourceforge.net/local/docs/emulating_unix.txt</A>
+</P>
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-6.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-8.html">próximo »</A></div>
+</P>
+<P>
+<a href="http://aurelio.net/sed/" class="linkblock"><IMG ALIGN="middle" SRC="../../img/icon/128/sed.png" BORDER="0" ALT=""> Aprenda mais sobre Sed</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags sed/sed-HOWTO/sed-HOWTO-7.t2t -->
+</BODY></HTML>

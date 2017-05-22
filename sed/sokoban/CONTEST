@@ -1,0 +1,19 @@
+today (20020321) SedSokoban was slashdotted
+<http://slashdot.org/developers/02/03/21/0217219.shtml?tid=127>
+
+in one of the comments, Wispers_in_the_dark posted his solution for
+level 1, it's on dolevel1.txt file.
+
+to execute it, just pass this file to the sed script:
+
+   prompt$ ./sokoban.sed dolevel1.txt
+or
+   prompt$ cat dolevel1.txt | ./sokoban.sed
+or
+   prompt$ ./sokoban.sed < dolevel1.txt
+or
+   ...
+
+so, what about a tiny-solution contest?
+this one has 200 moves.
+

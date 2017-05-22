@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Sed HOWTO :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="sedhowto">
+
+<DIV ID="header">
+<H1>Sed HOWTO</H1>
+<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
+<H3>2000-2009</H3>
+</DIV>
+
+<DIV ID="main">
+
+<OL>
+<LI><A HREF="sed-HOWTO-1.html">Sobre este documento</A>
+  <UL>
+  <LI>1.1. Descrição
+  <LI>1.2. Anúncio
+  <LI>1.3. Onde encontrá-lo
+  <LI>1.4. Registro de mudanças
+  <LI>1.5. Agradecimentos
+  </UL>
+<LI><A HREF="sed-HOWTO-2.html">Conhecendo o Sed</A>
+  <UL>
+  <LI>2.1. Descrição do Sed
+  <LI>2.2. O que significa a palavra Sed
+  <LI>2.3. Como saber se devo usar o Sed
+    <UL>
+    <LI>2.3.1. Quando usar o Sed
+    <LI>2.3.2. Quando não usar o Sed
+    </UL>
+  </UL>
+<LI><A HREF="sed-HOWTO-3.html">Perdendo o medo do Sed</A>
+  <UL>
+  <LI>3.1. Como ele funciona
+  <LI>3.2. Sua sintaxe
+    <UL>
+    <LI>3.2.1. Exemplo
+    <LI>3.2.2. Outros exemplos
+    </UL>
+  <LI>3.3. Como executá-lo
+  </UL>
+<LI><A HREF="sed-HOWTO-4.html">Os comandos do Sed</A>
+  <UL>
+  <LI>4.1. Descrição de todos os comandos
+  <LI>4.2. Lista de todos os comandos por categoria
+  </UL>
+<LI><A HREF="sed-HOWTO-5.html">Conceitos básicos</A>
+  <UL>
+  <LI>5.1. Suprimindo a saída padrão
+    <UL>
+    <LI>5.1.1. Saída normal
+    <LI>5.1.2. Saída suprimida
+    </UL>
+  <LI>5.2. O endereço
+    <UL>
+    <LI>5.2.1. Endereço simples
+    <LI>5.2.2. Intervalo
+    <LI>5.2.3. Outros
+    </UL>
+  <LI>5.3. Interrompendo o processamento
+  <LI>5.4. Invertendo a lógica
+  <LI>5.5. Aplicando vários comandos de uma vez
+    <UL>
+    <LI>5.5.1. Comandos normais
+    <LI>5.5.2. Comandos com parâmetros
+    <LI>5.5.3. Terceira via
+    </UL>
+  </UL>
+<LI><A HREF="sed-HOWTO-6.html">Conceitos complementares</A>
+  <UL>
+  <LI>6.1. Sed e shell
+  <LI>6.2. Usando outros delimitadores
+    <UL>
+    <LI>6.2.1. No comando s
+    <LI>6.2.2. No endereço
+    </UL>
+  <LI>6.3. Escapes para caracteres especiais
+  <LI>6.4. Gravando o resultado no mesmo arquivo
+    <UL>
+    <LI>6.4.1. Problema inicial
+    <LI>6.4.2. Solução genérica
+    <LI>6.4.3. Solução segura
+    </UL>
+  </UL>
+<LI><A HREF="sed-HOWTO-7.html">Tarefas diversas</A>
+  <UL>
+  <LI>7.1. Como substituir alguma coisa por uma quebra de linha
+  <LI>7.2. Apagando linhas específicas
+  <LI>7.3. Como ignorar maiúsculas e minúsculas
+  <LI>7.4. Lendo e gravando em arquivos externos
+    <UL>
+    <LI>7.4.1. Lendo arquivos
+    <LI>7.4.2. Gravando arquivos
+    </UL>
+  <LI>7.5. Trocando um trecho de texto por outro
+    <UL>
+    <LI>7.5.1. Trocar várias linhas por uma
+    <LI>7.5.2. Trocar várias linhas por outras
+    </UL>
+  <LI>7.6. Emulando outros comandos
+  </UL>
+<LI><A HREF="sed-HOWTO-8.html">Conceitos avançados</A>
+  <UL>
+  <LI>8.1. Monitorando um arquivo
+  <LI>8.2. Colocando comandos Sed num arquivo
+  <LI>8.3. Tornando arquivos Sed executáveis
+  <LI>8.4. Conhecendo os registradores internos
+    <UL>
+    <LI>8.4.1. Apresentação
+    <LI>8.4.2. Exemplo
+    <LI>8.4.3. Exemplo gráfico
+    <LI>8.4.4. Resumão
+    <LI>8.4.5. Fluxograma
+    </UL>
+  </UL>
+<LI><A HREF="sed-HOWTO-9.html">Fluxogramas</A>
+  <UL>
+  <LI>9.1. Fluxos do texto
+  <LI>9.2. Fluxos da execução dos comandos
+  <LI>9.3. Fluxos dos registradores internos
+  </UL>
+<LI><A HREF="sed-HOWTO-10.html">Nota sobre os adicionais GNU</A>
+<LI><A HREF="sed-HOWTO-11.html">Onde obter mais informações</A>
+</OL>
+
+<P>
+<a href="http://aurelio.net/sed/" class="linkblock"><IMG ALIGN="middle" SRC="../../img/icon/128/sed.png" BORDER="0" ALT=""> Aprenda mais sobre Sed</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags sed/sed-HOWTO/index.t2t -->
+</BODY></HTML>

@@ -1,0 +1,91 @@
+_SEDHOWTO_NAME — Parte @@C/11
+Conhecendo o sed
+_MYNAME
+
+%!includeconf: config.t2t
+%!postproc: @@P 1
+%!postproc: @@C 2
+%!postproc: @@N 3
+
+NAVIGATION
+
+Vamos conhecer um pouco o //_SED_NAME//, mostrar que ele não é o bicho de
+//_SED_NAME// cabeças que aparenta :)
+
+%%TOC
+
+ ==Descrição do _SED_NAME==
+
+O //_SED_NAME// é um editor de textos **não interativo**.
+
+Ele pode editar automaticamente, sem interação do usuário, vários arquivos
+seguindo um conjunto de regras especificadas.
+
+
+ ==O que significa a palavra _SED_NAME==
+
+Vem do inglês "Stream EDitor", ou seja, editor de fluxos (de texto).
+
+
+
+ ==Como saber se devo usar o _SED_NAME==
+
+Sendo um editor de textos não interativo, o //_SED_NAME// é excelente para
+desempenhar algumas tarefas, mas em outras seu uso não é aconselhado.
+
+%   ------------------------------------
+
+  ===Quando usar o _SED_NAME===
+
+A característica principal do //_SED_NAME// é poder editar arquivos automaticamente.
+
+Então sempre que você precisar fazer alterações sistemáticas em **vários**
+arquivos, o //_SED_NAME// é uma solução eficaz.
+
+Por exemplo, você tem um diretório cheio de relatórios de vendas, e
+descobriu que por um erro na geração, todas as datas saíram erradas, com o
+ano de **1999** onde era para ser **2000**. Num editor de textos normal, você tem
+que abrir os relatórios um por um e alterar o ano em todas as ocorrências.
+
+Certo, isso não é tão complexo se o editor de textos possuir uma ferramenta
+de procura e troca, também chamado de substituição.
+
+Mas então suponhamos que o erro da data não seja o ano, e sim o **formato**,
+tendo saído como **mm/dd/aaaa** quando deveria ser **dd/mm/aaaa**. Aqui não é
+uma substituição e sim uma troca de lugares, e uma ferramenta simples de
+procura e troca não poderá ajudar.
+
+Esse é um caso típico onde o //_SED_NAME// mostra seu poder: alterações complexas em
+vários arquivos.
+
+Utilizando o //_SED_NAME//, a solução para este problema (que veremos adiante) é até
+simples, bastando definir uma série de regras de procura e troca, e o
+programa se encarregará de executá-las e arrumar os relatórios.
+
+%   ------------------------------------
+
+  ===Quando não usar o _SED_NAME===
+
+**Nenhuma** ferramenta é ideal para todas as tarefas, e o //_SED_NAME// não é uma
+exceção à regra.
+
+   ====Edição genérica de textos====
+
+Ele **não** é prático para ser utilizado como editor de textos de uso genérico.
+
+Para escrever textos, ou alterar coisas simples, é mais rápido e fácil
+abrir um editor de textos interativo como o //vi// ou o //emacs// e fazer a
+alteração "na mão".
+
+   ====Programação avançada====
+
+O //_SED_NAME// não é uma linguagem de programação completa, pois não possui
+variáveis, funções matemáticas, interação com o sistema operacional, entre
+outras limitações. Mas bem, ele é um **manipulador de texto** e não uma
+linguagem de uso geral.
+
+Algumas estruturas complexas podem ser simuladas com alguma técnica, mas se
+o seu programa em //_SED_NAME// começou a inchar muito, é aconselhável reescrevê-lo
+numa linguagem com mais recursos, como o //perl//.
+
+%!include: footer.t2t

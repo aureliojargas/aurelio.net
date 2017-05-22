@@ -1,0 +1,602 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Sed HOWTO — Parte 8/11 :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="sedhowto">
+
+<DIV ID="header">
+<H1>Sed HOWTO — Parte 8/11</H1>
+<H2>Conceitos avançados</H2>
+<H3><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H3>
+</DIV>
+
+<DIV ID="main">
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-7.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-9.html">próximo »</A></div>
+</P>
+<P>
+Estes são conhecimentos necessários àqueles que fazem uso intensivo do
+<I>Sed</I>, fazendo programas grandes e/ou complexos.
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">8.1. Monitorando um arquivo</A>
+    <LI><A HREF="#toc2">8.2. Colocando comandos Sed num arquivo</A>
+    <LI><A HREF="#toc3">8.3. Tornando arquivos Sed executáveis</A>
+    <LI><A HREF="#toc4">8.4. Conhecendo os registradores internos</A>
+      <UL>
+      <LI><A HREF="#toc5">8.4.1. Apresentação</A>
+      <LI><A HREF="#toc6">8.4.2. Exemplo</A>
+      <LI><A HREF="#toc7">8.4.3. Exemplo gráfico</A>
+      <LI><A HREF="#toc8">8.4.4. Resumão</A>
+      <LI><A HREF="#toc9">8.4.5. Fluxograma</A>
+      </UL>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">0.1. Monitorando um arquivo</H2>
+
+<P>
+No <I>Sed</I> da GNU, a partir da versão <B>3.02.80</B>(*), foi adicionada a opção
+-u, que significa "unbuffered", ou seja, faz um uso minimalista dos
+registradores, mostrando a saída o mais rápido possível, tornando possível
+editar um fluxo interminável como o gerado por um <I>tail -f</I>.
+</P>
+<P>
+Um exemplo prático seria mostrar apenas as mensagens do sistema relativas
+às conexões <I>ssh</I>:
+</P>
+
+<PRE>
+prompt$ tail -f /var/log/messages | sed -nu '/sshd/p'
+</PRE>
+
+<P>
+Cuidado com -nu perto de crianças! :)
+</P>
+<P>
+(*) veja o tópico <A HREF="sed-HOWTO-10.html">Nota sobre os adicionais GNU</A>
+</P>
+
+<H2 ID="toc2">0.2. Colocando comandos Sed num arquivo</H2>
+
+<P>
+Como os comandos <I>Sed</I> vão ficando extensos e complicados, é conveniente
+colocá-los <B>num arquivo</B>, com estruturação e comentários.
+</P>
+<P>
+Você pode espalhar os comandos por várias linhas, trocando o <B><CODE>;</CODE></B> por quebras
+de linha e colocar <B>comentários</B> precedidos de <B><CODE>#</CODE></B>. O exemplo de apagar
+linhas ficaria:
+</P>
+
+<PRE>
+# programa.sed: apaga algumas linhas
+
+# apaga a 5ª linha
+5d
+
+# apaga a 10ª linha
+10d
+
+# apaga as linhas que contêm 'estorvo'
+/estorvo/d
+</PRE>
+
+<P>
+Para dizer ao <I>Sed</I> para utilizar aquele arquivo como fonte de comandos,
+basta usar a opção <B><CODE>-f</CODE></B>
+</P>
+
+<PRE>
+prompt$ sed -f programa.sed texto.txt
+</PRE>
+
+<H2 ID="toc3">0.3. Tornando arquivos Sed executáveis</H2>
+
+<P>
+O interpretador de comandos mais utilizado (<I>bash</I>) sempre procura na
+<B>primeira</B> linha de um arquivo instruções para executá-lo.
+</P>
+<P>
+Se um arquivo é um programinha em <I>shell</I>, basta colocar
+</P>
+
+<PRE>
+#!/bin/sh
+</PRE>
+
+<P>
+Na primeira linha para que o <I>bash</I> saiba que deve executá-lo com o
+comando <CODE>/bin/sh</CODE>. O mesmo funciona para qualquer outro interpretador,
+como o <I>Sed</I>. então para tornar um arquivos de comandos <I>Sed</I>
+executável basta colocar como primeira linha:
+</P>
+
+<PRE>
+#!/bin/sed -f
+</PRE>
+
+<P>
+E é claro, torná-lo executável:
+</P>
+
+<PRE>
+prompt$ chmod +x programa.sed
+</PRE>
+
+<P>
+E na linha de comando, chame-o normalmente:
+</P>
+
+<PRE>
+prompt$ ./programa.sed texto.txt
+prompt$ cat texto.txt | ./programa.sed
+</PRE>
+
+<H2 ID="toc4">0.4. Conhecendo os registradores internos</H2>
+
+<H3 ID="toc5">0.4.1. Apresentação</H3>
+
+<P>
+O <I>Sed</I> possui 2 registradores ("buffers") internos, que são usados para a
+manipulação do texto.
+</P>
+<P>
+Um deles é o <I>espaço padrão</I> ("pattern space"), que é o registrador
+utilizado normalmente pelo <I>Sed</I>. É nele que a linha a ser processada é
+armazenada e manipulada.
+</P>
+<P>
+O outro é o <I>espaço reserva</I> ("hold space"), que é um registrador auxiliar,
+inicialmente vazio, que serve para guardar uma cópia da linha original,
+parte dela, ou agrupar dados diversos de várias linhas.
+</P>
+<P>
+Há comandos para fazer a troca de dados entre os dois registradores:
+</P>
+
+<PRE>
+  h      guarda no espaço reserva
+  H      guarda (anexando) no espaço reserva
+
+  g      pega o conteúdo do espaço reserva
+  G      pega (anexando) o conteúdo do espaço reserva
+
+  x      troca os conteúdos dos 2 registradores
+</PRE>
+
+<P>
+O <I>anexando</I> acima significa "não sobrescreve o conteúdo original", ou
+seja, ele mantém o que já tem, e adiciona um <B><CODE>\n</CODE></B> (quebra de linha),
+seguido do texto manipulado. Para entender melhor, veja o exemplo gráfico
+a seguir.
+</P>
+
+<H3 ID="toc6">0.4.2. Exemplo</H3>
+
+<P>
+Um exemplo didático de uso do <I>espaço reserva</I> é ir guardando nele algumas
+linhas do texto e mostrá-las depois no final do arquivo:
+</P>
+
+<PRE>
+prompt$ sed '/root/H;$g' /etc/passwd
+</PRE>
+
+<P>
+Ou seja, adicione no <I>espaço reserva</I> (comando <B><CODE>H</CODE></B>), as linhas que contêm a
+palavra <CODE>root</CODE> e na última linha do arquivo (endereço <B><CODE>$</CODE></B>), recupere o
+conteúdo do <I>espaço reserva</I> (comando <B><CODE>g</CODE></B>).
+</P>
+
+<H3 ID="toc7">0.4.3. Exemplo gráfico</H3>
+
+<P>
+Como os registradores são a parte mais <B>obscura</B> do <I>Sed</I> (mais por falta
+de documentação do que por complexidade), merecem uma explicação <B>bem</B>
+didática. Vamos lá.
+</P>
+<P>
+Temos os dois registradores vazios:
+(que daqui pra frente serão chamados apenas de <I>padrão</I> e <I>reserva</I>)
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |                  |              |                  |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+E um arquivo hipotético com o conteúdo:
+(não são odiosos estes exemplos com frutas?)
+</P>
+
+<PRE>
+laranja
+uva
+abacaxi
+melancia
+mimosa
+</PRE>
+
+<P>
+E aplicaremos o comando:
+</P>
+
+<PRE>
+sed '/laranja/h ; /uva/g ; /abacaxi/H ; /melancia/G ; /mimosa/x'
+</PRE>
+
+<P>
+Obtendo como resultado:
+</P>
+
+<PRE>
+laranja
+laranja
+abacaxi
+melancia
+laranja
+abacaxi
+laranja
+abacaxi
+</PRE>
+
+<P>
+Vejamos o que aconteceu. Lida a primeira linha <CODE>laranja</CODE>, ela é
+imediatamente colocada no <I>padrão</I> para ser manipulada:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |      laranja     |              |                  |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+O comando direcionado a ela é o <B><CODE>h</CODE></B>, que guarda uma cópia dela no
+<I>reserva</I>:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |      laranja     |   -- h --&gt;   |      laranja     |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+Como mais nenhum comando é relativo à linha <CODE>laranja</CODE>, o <I>Sed</I> dá por
+encerrado o processamento dessa linha e imprime o conteúdo do <I>padrão</I> na
+saída: "laranja".
+</P>
+<P>
+Beleza, agora ele vai processar a segunda linha, novamente a primeira coisa
+é colocá-la no <I>padrão</I>, sobrescrevendo o que tinha antes:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |        uva       |              |      laranja     |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+O <I>reserva</I>, enquanto nenhum outro comando escrever nele, permanecerá o
+mesmo. O comando direcionado à linha <CODE>uva</CODE> é o <B><CODE>g</CODE></B>, que pega o conteúdo do
+<I>reserva</I> e o coloca no <I>padrão</I>, apagando o que estiver nele (neste caso:
+<CODE>uva</CODE>):
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |      laranja     |   &lt;-- g --   |      laranja     |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+Novamente, não há mais comandos a ser executados, então imprime na saída o
+conteúdo do <I>padrão</I>: "laranja".
+</P>
+<P>
+Indo para a terceira linha e colocando-a no <I>padrão</I>:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |      abacaxi     |              |      laranja     |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+O comando dessa linha é o <B><CODE>H</CODE></B>, que tal como o <B><CODE>h</CODE></B>, guarda o conteúdo do
+<I>padrão</I> no <I>reserva</I>, com diferença que ele preserva o conteúdo já
+existente dele, separando com um <B><CODE>\n</CODE></B>:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |      abacaxi     |   -- H --&gt;   | laranja\nabacaxi |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+Novamente, chegou ao fim, imprime o <I>padrão</I>: "abacaxi".
+a próxima linha é a da <CODE>melancia</CODE>:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |     melancia     |              | laranja\nabacaxi |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+E agora vai ficar divertido, aplicando o comando <B><CODE>G</CODE></B>, que pega o conteúdo
+do <I>reserva</I> e anexa ao <I>padrão</I>:
+</P>
+
+<PRE>
+ ____________________________           __________________
+|                            |         |                  |
+| melancia\nlaranja\nabacaxi |  &lt;-G--  | laranja\nabacaxi |
+|____________________________|         |__________________|
+        espaço padrão                    espaço reserva
+</PRE>
+
+<P>
+E a saída agora fica "melancia\nlaranja\nabacaxi", com o detalhe que o
+<I>Sed</I> troca estes <B><CODE>\n</CODE></B> por quebras de linha na impressão. Então são 3
+linhas na saída. Vá acompanhando com o resultado que já foi cantado
+antecipadamente lá em cima.
+</P>
+<P>
+E finalmente, a última linha:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     |      mimosa      |              | laranja\nabacaxi |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+E para ela, o comando que troca o conteúdo dos 2 registradores, o <B><CODE>x</CODE></B>:
+</P>
+
+<PRE>
+      __________________                __________________
+     |                  |              |                  |
+     | laranja\nabacaxi |  &lt;-- x ---&gt;  |      mimosa      |
+     |__________________|              |__________________|
+        espaço padrão                     espaço reserva
+</PRE>
+
+<P>
+E mostra na saída o <I>padrão</I>, com duas linhas: "laranja" e "abacaxi".
+</P>
+<P>
+Ufa! Depois dessa não venha me dizer que não sabe como funcionam os
+<I>registradores internos</I> do <I>Sed</I> ;)
+</P>
+
+<H3 ID="toc8">0.4.4. Resumão</H3>
+
+<UL>
+<LI>Cada linha nova lida é colocada (sobrescrevendo) no <I>espaço padrão</I>
+<LI>Uma vez colocado algo no <I>espaço reserva</I>, fica lá até ser sobrescrito
+<LI>O <B><CODE>\n</CODE></B> é o separador do conteúdo original com o anexo
+<LI>Na saída, o <B><CODE>\n</CODE></B> vira quebra de linha
+<LI>Registradores são simples! ;)
+</UL>
+
+<H3 ID="toc9">0.4.5. Fluxograma</H3>
+
+<P>
+Para uma representação gráfica dos fluxos e comandos que manipulam estes
+registradores, veja o tópico <A HREF="sed-HOWTO-9.html#toc3">Fluxos dos registradores internos</A>.
+</P>
+<P>
+<div class="prevnextnav"><A HREF="sed-HOWTO-7.html">« anterior</A> | <A HREF="index.html">índice</A> | <A HREF="sed-HOWTO-9.html">próximo »</A></div>
+</P>
+<P>
+<a href="http://aurelio.net/sed/" class="linkblock"><IMG ALIGN="middle" SRC="../../img/icon/128/sed.png" BORDER="0" ALT=""> Aprenda mais sobre Sed</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags sed/sed-HOWTO/sed-HOWTO-8.t2t -->
+</BODY></HTML>
