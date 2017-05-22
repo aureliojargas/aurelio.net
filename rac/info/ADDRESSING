@@ -1,0 +1,303 @@
+	RAC ADDRESSING SPECIFICATION
+	=== ========== =============
+
+	Aurelio Marinho Jargas
+	Thobias Salazar Trevisan
+	December, 2003
+
+
+This document details all the components available to be used on
+the RAC program as valid addressing directives.
+
+All the rules are the same to lines and columns.
+
+The specs will talk about lines, but are valid for columns also.
+Just surround a sample with [brackets] and you got a column
+oriented sample.
+
+Where needed, the differences between lines and columns behavior
+will be explained.
+
+The components and modifiers are individual tools. They can be
+mixed with each other at any level, forming simple addresses or
+real complex and tricky ones.
+
+
+-----------------------------------------------------------------
+
+
+		       ADDRESS COMPONENTS
+		       ------- ----------
+
+
+NUMBER
+
+	Syntax: N
+
+	A number address directly by the line number.
+
+	First line is ONE not ZERO.
+
+
+NEGATIVE NUMBER
+
+	Syntax: -N
+
+	A negative number address directly by the line number,
+	but start counting by the end.
+
+	Last line is -1.
+
+
+STRING
+
+	Syntax: =string=
+
+	A string inside equal signs.
+
+	Address all the FULL lines that contains the given
+	string.
+
+	In a columns context, addresses just the given text, not
+	the rest of the line.
+
+
+REGULAR EXPRESSION
+
+	Syntax: /regex/
+
+	An expression inside slashes.
+
+	Address all the FULL lines that matches the given
+	Regular Expression.
+
+	In a columns context, addresses just the matched text,
+	not the rest of the line.
+
+
+-----------------------------------------------------------------
+
+
+			ADDRESS MODIFIERS
+			------- ---------
+
+An address modifier changes or improves the way an ADDRESS
+COMPONENT work. A modifier is not meant to be used alone, it must
+be used together with an ADDRESS COMPONENT.
+
+
+RANGE
+
+	Syntax: X:Y
+
+	Two components separated by a colon.
+
+	A range addresses all the lines from X to Y, including X
+	and Y.
+
+	The range 2:5 expands to lines 2, 3, 4 and 5.
+
+	The range /^$/:-1 expands to the first blank line until
+	the end.
+
+
+NEGATIVE RANGE
+
+	Syntax: Y:X
+
+	Two components separated by a colon, the second appears
+	before the first on the text.
+
+	A negative range addresses all the lines from Y to X,
+	including Y and X. The order printed is reversed,
+	compared to the original text.
+
+	The range 5:2 expands to lines 5, 4, 3 and 2.
+
+	The range -1:/^$/ expands to the last line until the last
+	blank line.
+
+
+STEP
+
+	Syntax: ~N
+
+	A ~ char followed by a number represents a step.
+
+	A step walks forward until the end of text, jumping by N
+	lines.
+
+	A step must be preceded by an Address Component.
+
+	To address all odd lines, do 1~2.
+
+
+NEGATIVE STEP
+
+	Syntax: ~-N
+
+	A ~ char followed by a negative number represents a
+	negative step.
+
+	A negative step walks backward until the beginning of
+	text, jumping by N lines.
+
+	A negative step must be preceded by an Address Component.
+
+	To print reversed and alternated lines from the word
+	"here" until the file beginning, use =here=~-2.
+
+
+FIELD
+
+	Syntax: =delimiter string={fields}
+	Syntax: /delimiter regex /{fields}
+
+	A string or regex address followed by a pair of braces.
+	Inside the braces {}, must reside a number (negative or
+	not), various individual numbers or even a numbered
+	range.
+
+	If no delimiter string or regex is informed, the
+	following default regex is assumed: /[ \t]+/, which means
+	a group of spaces and TABs, at any number.
+
+	Use =:={3} to get the third field on a colon separated
+	line.
+
+	Use /[ \t]*=[ \t]*/{2} to get the value of a "name=value"
+	pair.
+
+
+COUNT AHEAD
+
+	Syntax: =string=+N
+	Syntax: /regex /+N
+
+	A string or regex address followed by a plus sign,
+	followed by a number.
+
+	Addresses the Nth line after the one matched by the
+	address.
+
+	On a column sense, addresses the Nth column after the end
+	of the matched text.
+
+	Use =root=+3 to address the third line after the line
+	containing the string root.
+
+
+COUNT BACK
+
+	Syntax: =string=-N
+	Syntax: /regex /-N
+
+	A string or regex address followed by a minus sign,
+	followed by a number.
+
+	Addresses the Nth line before the one matched by the
+	address.
+
+	On a column sense, addresses the Nth column before the
+	beginning of the matched text.
+
+	Use =root=-3 to address the third line before the line
+	containing the string root.
+
+
+COUNT OCCURRENCE
+
+	Syntax: =string=*N
+	Syntax: /regex /*N
+
+	A string or regex address followed by an asterisk,
+	followed by a number.
+
+	Addresses de Nth line that matches the address.
+
+	Use =root=*3 to address the third line that contains the
+	string root.
+
+
+COUNT NEGATIVE OCCURRENCE
+
+	Syntax: =string=*-N
+	Syntax: /regex /*-N
+
+	A string or regex address followed by an asterisk,
+	followed by a negative number.
+
+	Addresses de Nth line that matches the address, starting
+	the count on the last line.
+
+	Use =root=*-1 to address the last line that contains the
+	string root.
+
+
+-----------------------------------------------------------------
+
+
+			ADDRESS OPERATORS
+			------- ---------
+
+
+FILTER
+
+	Syntax: addr1 | addr2 ...
+
+	A pipe connects addresses, passing the results of the
+	first to the next, and so on, until the last connected
+	address.
+
+	To get a box selection of lines 5 to 10 and columns 20 to
+	50, just do 5:10 | [20:50]
+
+	This is the same as:  rac 5:10 file | rac [20:50]
+	but using a single process.
+
+
+-----------------------------------------------------------------
+
+
+			 ADDRESS DETAILS
+			 ------- -------
+
+
+FIRST AND LAST LINE/COLUMN
+
+	Number 1 represents the first line/column
+
+	Number -1 represents the last line/column
+
+	Zero is not used.
+
+
+DEFAULT RANGE ELEMENT
+
+	A range is composed by two elements in the X:Y format.
+
+	Any of them can be omitted, and its default value will be
+	used: X = 1 and Y = -1.
+
+	So the address ':' defaults to '1:-1'.
+
+
+RANGE ELEMENT OVERFLOW
+
+	A range specification where one element is larger than
+	the actual text size is not an error.
+
+	The exceeding range part defaults to the last valid
+	position.
+
+	On a 5 lines text, '3:10' turns '3:5' and '3:-10' turns
+	to '3:-5'.
+
+
+FIRST AND LAST OCCURRENCE
+
+	To address only the first occurrence of a string or regex,
+	use *1, as in =foobar=*1.
+
+	For the last occurrence, use *-1.
+

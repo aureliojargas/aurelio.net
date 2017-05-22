@@ -1,0 +1,23 @@
+RAC 2/12 - Os Endereços
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+Um endereço é formado por números de linhas e/ou colunas.
+
+Por exemplo, para obter a terceira linha de um texto, basta informar o
+endereço "``3``".
+
+Colunas são informadas entre colchetes, então o endereço "``[3]``"
+significa a "terceira coluna".
+
+Como referência, uma tela normal de terminal possui 80 colunas e 25
+linhas (80x25).
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-1.html] |  [Próxima Página >> rac-tutorial-3.html]
+
+                |  http://aurelio.net/rac 

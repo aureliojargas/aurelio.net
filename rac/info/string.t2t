@@ -1,0 +1,218 @@
+RAC - Endereços Usando Textos (Strings)
+
+
+%!includeconf: config.t2t
+% negrito nos endereços das tabelas
+%!preproc: '^( +\| +)([^ ]+)'	'\1**\2**'
+% texto centralizado
+%!postproc: '^!(.*)'	'<CENTER>\1</CENTER>'
+
+Nas suas primeiras versões, o RAC usava apenas endereçamento numérico,
+indicando diretamente a posição de linhas e colunas, como por exemplo
+**[5]** para especificar a quinta coluna. A partir da versão 1.2
+também é possível endereçar linhas pelo seu conteúdo, independente de
+sua posição no texto.
+
+Antes de conhecer as novidades, um resumo rápido dos tipos de endereço
+conhecidos até então:
+
+!ENDEREÇOS NUMÉRICOS
+
+ ||  Endereço  |   Tipo       | Representa
+ |   3   |       Linha        | A terceira linha
+ |  -3   |  Contagem Reversa  | A antepenúltima linha
+ |  [3]  |       Coluna       | A terceira coluna
+ |  1:3  |       Trecho       | Da primeira a terceira linha
+ |  1~3  |       Salto        | A partir da primeira linha, ande de 3 em 3
+
+Apesar do poder de se especificar endereços complexos, inclusive com
+trechos e saltos, o endereçamento numérico exige que o usuário saiba
+de antemão a posição exata do pedaço desejado de texto. Embora
+suficiente para uma grande variedade de tarefas, esse tipo de
+endereçamento se torna ineficiente quando se precisa buscar por
+**conteúdo**, e não posições.
+
+=== Buscando por Conteúdo ===
+
+Ao invés de buscar pela "//quinta linha//", certas tarefas exigem buscar
+por linhas que contenham determinada palavra ou frase, não importando
+a sua posição no texto original. Ou ainda, baseado nesta palavra
+obter as linhas adjacentes ou um trecho entre duas palavras distintas.
+
+O RAC torna estas tarefas triviais, bastando ao usuário apenas
+fornecer o endereço desejado. Entre outras possibilidades, o programa
+pode buscar:
+
+- Todas as linhas que contêm a palavra Vencido (//grep//)
+- A última ocorrência de PENDENTE no texto
+- O trecho entre as linhas <SCRIPT> e </SCRIPT>
+- O trecho que vai da linha que contém BEGIN até o final do texto
+- A linha que contém o número IP 10.0.0.10, com um contexto de duas
+  linhas antes e três após
+- O trecho que inicia na linha que contenha a data 2004-12-31 e vai
+  até última ocorrência da palavra Error
+
+
+Entre várias outras possibilidades que combinam um texto com a sua
+contagem de aparições (normal ou reversa) e linhas adjacentes.
+
+O uso é muito simples, basta colocar a palavra ou frase a se buscar
+entre sinais de igual, **=assim=**. A contagem de aparições da palavra
+é especificada usando o asterisco e o contexto usa os sinais de mais e
+menos.
+
+!ENDEREÇOS DE TEXTO
+
+ || Endereço |     Tipo     | Representa
+ | =abc=     |     Texto    | Todas as linhas que contêm o texto abc
+ | =abc=*3   |  Ocorrência  | Terceira linha que contém o texto abc
+ | =abc=+3   |   Contexto   | Terceira linha após a que contém o texto abc
+ | =abc=-3   |   Contexto   | Terceira linha anterior a que contém o texto abc
+
+	Curioso(a) porque o sinal de igual foi utilizado como
+	delimitador? A explicação está no final deste documento.
+
+Fácil de usar, não? Simplesmente colocar uma palavras entre iguais faz
+com que o RAC retorne todas as linhas do texto que contêm esta
+palavra. Ela pode estar no início, meio ou final da linha, tanto faz.
+Este comportamento é idêntico ao comando //grep//.
+
+Se o desejado não forem todas as ocorrências da palavra mas apenas a
+primeira, terceira ou a última, basta adicionar um asterisco e
+informar o número. E mais, números negativos servem para contar à
+partir do final do texto, então **=abc=*-2** retornará a linha com a
+penúltima aparição de "abc".
+
+Para completar, o contexto serve para obter linhas próximas à linha
+com a palavra pesquisada, anteriores ou posteriores. Útil quando se
+tem uma palavra-chave para encontrar, mas o conteúdo desejado está na
+próxima linha. Exemplo: **=Total de gastos=+1** retornará a linha
+seguinte ao texto informado, toda vez que o ele for encontrado.
+
+Se no exemplo anterior for necessário obter a próxima linha somente
+da primeira aparição do texto, basta combinar os dois operadores,
+ficando **=Total de gastos=*1+1**.
+
+=== Flexibilidade e Poder ===
+
+Todos os conceitos dos endereços numéricos e de texto são
+intercambiáveis, combináveis, misturáveis. Lembre-se do brinquedo LEGO
+onde combinando formas básicas se obtém estruturas mais complexas.
+
+No RAC é possível misturar endereços numéricos com texto num mesmo
+comando, produzindo endereços tão complicados e precisos quanto
+necessário.
+
+!ENDEREÇOS MAIS ELABORADOS
+
+ || Endereço         | Representa
+ | 5:=abc=*1         | Trecho da quinta linha até a primeira que conter abc
+ | =abc=[1:10]       | As dez primeiras colunas das linhas com abc
+ | =abc=*-1:-1       | Trecho da última linha com abc até o final do texto
+ | =abc=*5[-9:]      | As últimas nove colunas da quinta linha com abc
+% | =abc=:=xyz=       | Trecho entre as linhas com abc e xyz, inclusive
+% | =abc=+1:=xyz=-1   | Trecho entre as linhas com abc e xyz, excluindo-as
+ | =abc=*-1:=xyz=*-1 | Trecho da última linha com abc até a última linha com xyz
+ | =abc=*1~3         | A partir da primeira linha com abc, ande de 3 em 3
+ | =abc=*5-2:=abc=*5+2 | Quinta ocorrência da linha com abc, com contexto de 2 linhas antes e após
+
+=== Os Detalhes ===
+
+Ao usar endereços com texto, algumas dúvidas podem surgir. Aqui vão as
+respostas para algumas delas:
+
+: Maiúsculas/Minúsculas:
+
+  Letras maiúsculas e minúsculas são diferentes. Se você pesquisar por
+  LINUX, as linhas que contiverem Linux não serão retornadas.
+
+  **Dica:** Use a opção "**-i**" para ignorar a diferença entre
+  maiúsculas e minúsculas (opção inclusa na versão 1.3)
+
+: Texto, não Expressão Regular
+
+  O conteúdo do endereço de texto é texto puro, não é expressão
+  regular. Qualquer texto pode ser colocado sem a preocupação de ser
+  confundido com uma expressão.
+
+  **Dica:** O suporte a expressões regulares foi incluso na versão
+  1.3, usando a barra / como delimitador. [Saiba mais... regex.html]
+
+: Escapes
+
+  Para inserir um sinal de igual literal no texto, é preciso
+  "escapá-lo", precedendo-o com uma barra \. Exemplo: **=2+2\=4=**.
+  Há outros "escapes" reconhecidos pelo RAC, segue a lista completa:
+  | ``\t`` | Tabulação (TAB)
+  | ``\=`` | Um sinal de igual literal
+  | ``\\`` | Uma barra \ literal
+
+
+=== A Pergunta Que Não Quer Calar - Parte 1 ===
+
+//- Mas por que ter um delimitador só para texto?//
+//Por que não usar Expressões Regulares de uma vez?//
+
+: Resposta curta:
+O RAC também funciona com Expressões Regulares, usando a barra "**/**"
+como delimitador. Tendo dois operadores diferentes para texto e
+expressões, o usuário ganha em flexibilidade.
+
+: Resposta longa:
+Diferente de outras ferramentas como o SED que procura apenas por
+expressões regulares, o RAC tem um operador para procurar por texto
+normal e outro para as expressões. Essa diferenciação é necessária
+para que o usuário tenha total flexibilidade de informar "o quê" está
+procurando.
+
+Para se procurar por um número IP entre colchetes por exemplo, no SED
+é preciso fazer **/\[10\.0\.0\.1\]/**, enquanto no RAC é simplesmente
+**=[10.0.0.1]=**. O texto fica mais limpo e fácil de escrever.
+
+Se o padrão for complexo e variável, sem dúvida alguma deve-se usar
+expressões regulares. Mas para os textos fixos é mais fácil
+informá-los como são, sem precisar se preocupar em escapar os
+caracteres especiais das expressões.
+
+
+
+=== A Pergunta Que Não Quer Calar - Parte 2 ===
+
+//- Mas por que usar o = como delimitador? Isso é anti-Unix!//
+
+: Resposta curta:
+O "**=**" foi o melhor caractere **livre** que encontramos.
+
+: Resposta longa:
+A escolha do caractere "**=**" como delimitador foi feita por exclusão.
+
+Primeiro foram excluídos da lista de caracteres possíveis as letras,
+números, TAB, espaço e todos os caracteres que já são operadores do
+RAC: "**[ ] - + , ; : * ~**". Caracteres já previstos para uso futuro no
+programa também foram eliminados: "**{ } ( ) | /**".
+
+Outros foram excluídos por serem muito "cheios", visualmente muito
+poluentes para serem usados como delimitadores: "**@ # % &**".
+
+Dos poucos que sobraram, os primeiros candidatos foram as aspas
+(simples e duplas), que ficam visualmente bonitas e seu uso é
+intuitivo. Mas é um inferno para inseri-las na linha de comando, pois
+são especiais para o shell e é preciso escapá-las sempre. Pelo mesmo
+problema de escape já foram excluídos a exclamação e o cifrão também.
+
+Em seguida "**<**" e "**>**" pareceram bons candidatos, mas além de
+serem caracteres perigosos na linha de comando, são dois caracteres
+diferentes e para inseri-los literais somente o > precisaria ser
+escapado, tornando as regras mais complicadas.
+
+Enfim, o que sobrou foi o "**=**". É estranho num primeiro momento
+pois não conhecemos nenhuma outra ferramenta que o utilize como
+delimitador, mas acostuma. E quanto mais o usamos mais nos convencemos
+que foi uma escolha boa, pois fica visualmente agradável.
+
+E ainda tem o mnemônico de que o conteúdo é "igual" para você e para o
+RAC, pois nenhuma expansão é feita ;)
+
+
+----------------------------------------------------------------
+[Voltar à página do RAC .]

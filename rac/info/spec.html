@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<TITLE>rac</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<CENTER>
+<H2>rac</H2>
+<FONT SIZE="4"><I>RAC Specification, Version 1, Copyright © 2003-2004</I></FONT><BR>
+<FONT SIZE="4">Aurélio Marinho Jargas, Thobias Salazar Trevisan</FONT>
+</CENTER>
+
+
+<HR NOSHADE SIZE=1>
+
+<H4>NAME</H4>
+
+<BLOCKQUOTE>
+rac - Rows And Columns, the text extraction tool
+</BLOCKQUOTE>
+
+<H4>SYNOPSIS</H4>
+
+<BLOCKQUOTE>
+<CODE>rac address [file]...</CODE>
+</BLOCKQUOTE>
+
+<H4>DESCRIPTION</H4>
+
+<BLOCKQUOTE>
+The <I>rac</I> utility is a text extractor that reads one input file and
+grab pieces of it, writing them to standard output. The pieces are
+defined by addresses, obtained from the <I>address</I> operand string.
+</BLOCKQUOTE>
+
+<H4>OPTIONS</H4>
+
+<BLOCKQUOTE>
+The <I>rac</I> utility supports the <B>XBD</B> specification,
+<A HREF="http://www.opengroup.org/onlinepubs/007908799/xbd/utilconv.html#usg">Utility Syntax Guidelines</A>.
+</BLOCKQUOTE>
+
+<BLOCKQUOTE><DL>
+<DT> <B>-h</B>, <B>--help</B></DT><DD>
+Prints help information and exit
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT> <B>-V</B>, <B>--version</B></DT><DD>
+Prints program version and exit
+</DL></BLOCKQUOTE>
+
+<H4>OPERANDS</H4>
+
+<BLOCKQUOTE>
+The following operands are supported:
+</BLOCKQUOTE>
+
+<BLOCKQUOTE><DL>
+<DT><I>file</I></DT><DD>
+  A pathname of a file whose contents will be read and extracted. If
+  no <I>file</I> operands are specified, the standard input will be used.
+<DT><I>address</I></DT><DD>
+  A string to be used as the address of the desired text to be
+  extracted. The application must not present an <I>address</I> that
+  violates the restrictions of a text file except that the final
+  character need not be a newline character.
+</DL></BLOCKQUOTE>
+
+<H4>STDIN</H4>
+
+<BLOCKQUOTE>
+The standard input will be used only if no <I>file</I> operands are
+specified. See the INPUT FILES section.
+</BLOCKQUOTE>
+
+<H4>INPUT FILES</H4>
+
+<BLOCKQUOTE>
+The input files must be text files.
+</BLOCKQUOTE>
+
+<H4>ENVIRONMENT VARIABLES</H4>
+
+<BLOCKQUOTE>
+None.
+</BLOCKQUOTE>
+
+<H4>ASYNCHRONOUS EVENTS</H4>
+
+<BLOCKQUOTE>
+Default.
+</BLOCKQUOTE>
+
+<H4>STDOUT</H4>
+
+<BLOCKQUOTE>
+The pieces of input file that matches the specified addresses are
+written to standard output.
+</BLOCKQUOTE>
+
+<H4>STDERR</H4>
+
+<BLOCKQUOTE>
+Used only for diagnostic messages.
+</BLOCKQUOTE>
+
+<H4>OUTPUT FILES</H4>
+
+<BLOCKQUOTE>
+None.
+</BLOCKQUOTE>
+
+<H4>EXTENDED DESCRIPTION</H4>
+
+<BLOCKQUOTE>
+<I>Rac</I> is a GPL text extraction tool. It reads a file (or STDIN) and
+return the text that matches the specified address. This address is
+composed by lines, columns, or a combination of them. Different from
+other UNIX tools, <I>rac</I> is <B>char</B> based, not <B>line</B>.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+Ranges, reverse count, step and repetition are allowed. The address
+'1; 3; 5:7; 1; 6:4; -1' applied on a 10 lines text returns these
+lines: 1 3 5 6 7 1 6 5 4 10 (the specified order is preserved).
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+It is useful to extract arbitrary text lines and/or columns, or
+complicated ranges as: from line 10 column 13 to line 15 column 4.
+Please read the <A HREF="ADDRESSING">complete addressing specification</A>.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+Please visit the program homepage at
+<A HREF="http://aurelio.net/rac">http://aurelio.net/rac</A>.
+</BLOCKQUOTE>
+
+<H4>EXIT STATUS</H4>
+
+<BLOCKQUOTE>
+The following exit values are returned:
+</BLOCKQUOTE>
+
+<BLOCKQUOTE><DL>
+<DT>0</DT><DD>
+  Successful completion.
+<DT>&gt;0</DT><DD>
+  An error occurred.
+</DL></BLOCKQUOTE>
+
+<H4>CONSEQUENCES OF ERRORS</H4>
+
+<BLOCKQUOTE>
+Default.
+</BLOCKQUOTE>
+
+<H4>APPLICATION USAGE</H4>
+
+<BLOCKQUOTE>
+Addresses are not line based as other UNIX tools. The specified order
+matters, repetition and interpolation are allowed.
+</BLOCKQUOTE>
+
+<H4>EXAMPLES</H4>
+
+<BLOCKQUOTE><DL>
+<DT>Get the 3rd line</DT><DD>
+  <CODE>$ rac '3' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Get from the 3rd to the 5th line, including</DT><DD>
+  <CODE>$ rac '3:5' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Get the last line (tail -1)</DT><DD>
+  <CODE>$ rac '-1' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Get the last 10 lines (tail)</DT><DD>
+  <CODE>$ rac '-10:-1' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Get the first 10 columns of each line (cut -c1-10)</DT><DD>
+  <CODE>$ rac '[1:10]' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Get the last char of each line</DT><DD>
+  <CODE>$ rac '[-1]' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Invert lines of file (tac)</DT><DD>
+  <CODE>$ rac '-1:1' file.txt</CODE>
+<BLOCKQUOTE></BLOCKQUOTE>
+<DT>Invert columns of lines (rev)</DT><DD>
+  <CODE>$ rac '[-1:1]' file.txt</CODE>
+</DL></BLOCKQUOTE>
+
+<H4>FUTURE DIRECTIONS</H4>
+
+<BLOCKQUOTE>
+None.
+</BLOCKQUOTE>
+
+<H4>SEE ALSO</H4>
+
+<BLOCKQUOTE>
+<A HREF="http://www.opengroup.org/onlinepubs/007908799/xcu/head.html">head</A>,
+<A HREF="http://www.opengroup.org/onlinepubs/007908799/xcu/tail.html">tail</A>,
+rev,
+tac,
+<A HREF="http://www.opengroup.org/onlinepubs/007908799/xcu/cut.html">cut</A>,
+<A HREF="http://www.opengroup.org/onlinepubs/007908799/xcu/sed.html">sed</A>.
+</BLOCKQUOTE>
+
+<!-- html code generated by txt2tags 2.6.1087 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags spec.t2t -->
+</BODY></HTML>

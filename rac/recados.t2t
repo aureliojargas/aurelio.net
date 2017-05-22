@@ -1,0 +1,21 @@
+RAC - Recados
+
+
+%!target: html
+%!encoding: UTF-8
+%!style: ../include/scraps.css
+%!options: --css-sugar
+%%!options: -o recados.php
+%!postproc: {(.*?)}	<\1>
+%%!postproc: RECADOS	<? require("PATHPHP"); ?>
+%%!postproc: PATHPHP	../bin/php/scraps.phps
+%!postproc: (.*t2tpowered.*)	<a href="http://txt2tags.sf.net/pt/">\1</a>
+
+%""" {div id="disclaimer"}
+%""" {/div}
+
+%!include: ''recados-inc.html''
+
+_______________________________________________________
+  [../img/t2tpowered.png]
+[VOLTAR para o site do RAC .]

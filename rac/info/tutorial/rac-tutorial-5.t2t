@@ -1,0 +1,22 @@
+RAC 5/12 - A Última Linha
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+Informando números negativos, a contagem é regressiva, feita a partir
+da última linha.
+
+``` rac "-1" /etc/passwd
+
+Este comando retornará a última linha do arquivo.
+
+Da mesma forma, pode-se informar o endereço "``-2 ; -3``" para obter a
+penúltima e antepenúltima linhas.
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-4.html] |  [Próxima Página >> rac-tutorial-6.html]
+
+                |  http://aurelio.net/rac 

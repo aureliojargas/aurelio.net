@@ -1,0 +1,22 @@
+RAC 11/12 - Pratique, complique!
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+E tudo que foi visto neste tutorial pode ser misturado à vontade,
+formando endereços tão complexos quanto o necessário.
+
+``` 1[1~2] ; 5[-10:-1 , 1:3] ; 10:-2 ; -1 ; -1 ; -1
+
+Este endereço mostra as colunas ímpares da primeira linha, depois da
+quinta linha mostra as 10 últimas colunas seguidas das três primeiras,
+depois mostra da décima linha até a penúltima e finalmente a última
+linha repetida três vezes.
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-10.html] |  [Próxima Página >> rac-tutorial-12.html]
+
+                |  http://aurelio.net/rac 

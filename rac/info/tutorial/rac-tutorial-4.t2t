@@ -1,0 +1,23 @@
+RAC 4/12 - Várias Linhas
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+Mais de uma linha pode ser chamada de uma só vez:
+
+``` rac "3 ; 5 ; 3" /etc/passwd
+
+Basta separá-las por ponto-e-vírgula.
+
+Sempre proteja o endereço com aspas, para evitar problemas.
+
+Este comando retornará a terceira linha, a quinta e a terceira
+novamente.
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-3.html] |  [Próxima Página >> rac-tutorial-5.html]
+
+                |  http://aurelio.net/rac 

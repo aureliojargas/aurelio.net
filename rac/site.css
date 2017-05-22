@@ -1,0 +1,38 @@
+/* CSS style for RAC Homepage - http://aurelio.net/rac */
+
+body  {
+	margin: 20px;
+	line-height: 110%;
+/*	font-size: 10%;*/
+	font-family: sans-serif;
+	color: #333;
+}
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+h3 {
+	margin-top: 2em;
+	font-size: 200%;
+	color: #000;
+	font-weight: normal;
+}
+pre {
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: 10px;
+	background-color: silver;
+}
+td {
+	font-size: 110%;
+	padding: 10px;
+	border: 1px solid gray;
+}
+th {
+	background-color: silver;
+	padding: 5px;
+	border: 2px solid black;
+}
+blockquote {
+	font-style: italic;
+}

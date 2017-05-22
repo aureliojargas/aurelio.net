@@ -1,0 +1,23 @@
+RAC 3/12 - Primeiro Teste
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+Usar o programa é muito fácil, basta chamá-lo assim:
+
+``` rac  ENDEREÇO  ARQUIVO
+
+Como já sabemos informar endereços simples, para extrair a terceira
+linha do arquivo de usuários, basta fazer:
+
+``` rac 3 /etc/passwd
+
+É simples, basta informar diretamente o número da linha.
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-2.html] |  [Próxima Página >> rac-tutorial-4.html]
+
+                |  http://aurelio.net/rac 

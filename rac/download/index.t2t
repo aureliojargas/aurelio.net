@@ -1,0 +1,41 @@
+RAC - Download
+
+
+%!includeconf: config.t2t
+%!preproc: '\[(Versão Atual) .*?]'	'//\1//'
+%!include: ../menu.t2t
+%!include: menu.t2t
+
+=== Baixe Agora Mesmo ===
+
+- [rac-VERSION.tgz U_TGZ] (os fontes originais)
+
+- [Pacote RPM do rac-1.3 U_RPM] (feito por Bruno Tadeu Russo)
+
+- [Pacote Slackware do rac-1.3 U_SLACK] (feito por Bruno Tadeu Russo)
+
+%- [Pacote Debian do rac-1.2 U_DEB] (feito por Alan Kelon)
+- [Pacote Debian do rac-1.3 U_DEB] (feito por Rafael Sfair)
+-
+
+
+=== ANÚNCIO: 11-04-2005: Lançado RAC versão VERSION ===
+
+Esta versão traz a possibilidade de se endereçar linhas usando
+**Expressões Regulares** (regex). Juntamente com os endereços já
+existentes por números e por texto, está fechada a trinca de
+endereçamento prevista na especificação do programa.
+
+A sintaxe preserva a tradição já firmada por outras ferramentas: basta
+colocar a expressão /entre barras/. O formato padrão das expressões é
+o moderno (usado por Perl, Python, PHP, Java, etc), mas também é
+possível especificá-las no formato antigo (usado pelo grep, SED, AWK)
+informando a opção de linha de comando **-b**.
+
+Outra opção nova é a **-i**, que assim como no grep e no SED, serve
+para ignorar a diferença entre letras maiúsculas e minúsculas,
+tratando-as como iguais. Essa opção funciona tanto para endereçamento
+por textos quanto para expressões regulares.
+
+Para saber mais sobre as novidades, leia o guia
+[Endereços Usando Expressões Regulares (Regex) U_REGEX].

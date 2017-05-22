@@ -1,0 +1,27 @@
+RAC 8/12 - Saltos
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+Também é possível informar endereços que fazem saltos, no seguinte
+formato:
+
+``` LINHA-DE-INÍCIO ~ TAMANHO-DO-SALTO
+
+Por exemplo, para se obter todas as linhas ímpares do arquivo, basta
+fazer:
+
+``` rac "1~2" /etc/passwd
+
+Que significa: a partir da linha 1, salte de duas em duas.
+
+Saltos invertidos (negativos) também são válidos! O endereço "``10~-3``"
+volta de três em três linhas, a partir da décima linha.
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-7.html] |  [Próxima Página >> rac-tutorial-9.html]
+
+                |  http://aurelio.net/rac 

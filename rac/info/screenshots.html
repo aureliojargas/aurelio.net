@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="site.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../site.css">
+<TITLE>RAC - Informações e Documentação</TITLE>
+</HEAD>
+<BODY>
+
+<DIV CLASS="header" ID="header">
+<H1>RAC - Informações e Documentação</H1>
+</DIV>
+
+<DIV CLASS="body" ID="body">
+
+<HR NOSHADE SIZE=1>
+
+<P>
+<A HREF="../index.html">Início</A> | <I>Info</I> | <A HREF="../download/index.html">Download</A> | <A HREF="../comunidade.html">Comunidade</A> | <A HREF="../recados.html">Recados</A>
+</P>
+
+<HR NOSHADE SIZE=1>
+
+	<BLOCKQUOTE>
+	<A HREF="../info/index.html">Sobre</A> | <I>Screenshots</I> | <A HREF="../info/iniciante.html">Iniciantes</A> | <A HREF="../info/docs.html">Documentação</A> | <A HREF="../info/ficha.html">Ficha Técnica</A>
+	</BLOCKQUOTE>
+
+<HR NOSHADE SIZE=1>
+
+<H3>Screenshots do Programa em Ação</H3>
+
+<P>
+Exemplos valem mais do que mil páginas de manual. Este é o arquivo de
+texto que todos os exemplos seguintes usarão:
+</P>
+
+<PRE>
+<B>$ cat num.txt</B>
+1:um    :one  :uno   :ein
+2:dois  :two  :dos   :zwei
+3:três  :three:tres  :drei
+4:quatro:four :cuatro:vier
+5:cinco :five :cinco :fünf
+6:seis  :six  :seis  :sechs
+7:sete  :seven:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+</PRE>
+
+<P>
+Agora alguns exemplos de endereçamento de linhas:
+</P>
+
+<PRE>
+<B>$ cat num.txt | rac '4'           # Somente a linha 4</B>
+4:quatro:four :cuatro:vier
+
+<B>$ cat num.txt | rac '4;7;2'       # As linhas 4, 7 e 2, nesta ordem</B>
+4:quatro:four :cuatro:vier
+7:sete  :seven:siete :sieben
+2:dois  :two  :dos   :zwei
+
+<B>$ cat num.txt | rac '4;4;4'       # A linha 4, três vezes</B>
+4:quatro:four :cuatro:vier
+4:quatro:four :cuatro:vier
+4:quatro:four :cuatro:vier
+
+<B>$ cat num.txt | rac '4:6'         # Da linha 4 até a linha 6</B>
+4:quatro:four :cuatro:vier
+5:cinco :five :cinco :fünf
+6:seis  :six  :seis  :sechs
+
+<B>$ cat num.txt | rac '6:4'         # Da linha 6 até a linha 4 (inverso!)</B>
+6:seis  :six  :seis  :sechs
+5:cinco :five :cinco :fünf
+4:quatro:four :cuatro:vier
+
+<B>$ cat num.txt | rac '8:-1'        # Da linha 8 até a última linha</B>
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+
+<B>$ cat num.txt | rac '-1:-3'       # Da última à antepenúltima linha (inverso!)</B>
+9:nove  :nine :nueve :neun
+8:oito  :eight:ocho  :acht
+7:sete  :seven:siete :sieben
+
+<B>$ cat num.txt | rac ':3'          # Do início até a terceira linha</B>
+1:um    :one  :uno   :ein
+2:dois  :two  :dos   :zwei
+3:três  :three:tres  :drei
+</PRE>
+
+<P>
+Para colunas é bem parecido, basta colocar entre colchetes:
+</P>
+
+<PRE>
+<B>$ cat num.txt | rac '[2:9]'       # Da coluna 2 até a coluna 9</B>
+:um    :
+:dois  :
+:três  :
+:quatro:
+:cinco :
+:seis  :
+:sete  :
+:oito  :
+:nove  :
+
+<B>$ cat num.txt | rac '[23:]'       # Da coluna 23 até o final da linha</B>
+ein
+zwei
+drei
+vier
+fünf
+sechs
+sieben
+acht
+neun
+
+<B>$ cat num.txt | rac '7[3:6]'      # A linha 7, da coluna 3 até a coluna 6</B>
+sete
+
+<B>$ cat num.txt | rac '7[-1:1]'     # A linha 7 de trás para frente</B>
+nebeis: eteis:neves:  etes:7
+
+<B>$ cat num.txt | rac '7[15]:9[15]' # Da col. 15 da linha 7 à col. 15 da linha 9</B>
+:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :
+
+<B>$ cat num.txt | rac '7[16:21,3:7,23:,2,1]'   # A linha 7, vários cortes</B>
+siete sete sieben:7
+</PRE>
+
+<P>
+Textos! Tudo fica mais interessante endereçando por textos (strings):
+</P>
+
+<PRE>
+<B>$ cat num.txt | rac '=sete='      # Linhas que contêm a palavra sete</B>
+7:sete  :seven:siete :sieben
+
+<B>$ cat num.txt | rac '=sete=+2'    # A segunda linha após a que contém sete</B>
+9:nove  :nine :nueve :neun
+
+<B>$ cat num.txt | rac '=sete=-2'    # A segunda linha anterior a que contém sete</B>
+5:cinco :five :cinco :fünf
+
+<B>$ cat num.txt | rac '=:=*3'       # A terceira linha que contém dois-pontos</B>
+3:três  :three:tres  :drei
+
+<B>$ cat num.txt | rac '=:=*-2'      # A penúltima linha que contém dois-pontos</B>
+8:oito  :eight:ocho  :acht
+
+<B>$ cat num.txt | rac '=sete=*1~1'  # Partindo da 1a linha com sete, ande de 1 em 1</B>
+7:sete  :seven:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+
+<B>$ cat num.txt | rac '=sete=*1~-2' # Partindo da 1a linha com sete, volte de 2 em 2</B>
+7:sete  :seven:siete :sieben
+5:cinco :five :cinco :fünf
+3:três  :three:tres  :drei
+1:um    :one  :uno   :ein
+</PRE>
+
+<H3>Screenshot "Gráfico"</H3>
+
+<P>
+Além dos exemplos, aqui vai uma representação colorida das áreas que
+os comandos listados abaixo representam num suposto arquivo de 9x9 (9
+linhas com 9 colunas cada).
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TD></TD>
+<TD><B>1</B></TD>
+<TD><B>2</B></TD>
+<TD><B>3</B></TD>
+<TD><B>4</B></TD>
+<TD><B>5</B></TD>
+<TD><B>6</B></TD>
+<TD><B>7</B></TD>
+<TD><B>8</B></TD>
+<TD><B>9</B></TD>
+<TD></TD>
+</TR>
+<TR>
+<TD><B>1</B></TD>
+<td bgcolor=magenta>&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD><B>1</B></TD>
+</TR>
+<TR>
+<TD><B>2</B></TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<td bgcolor=orange >&nbsp;</TD>
+<td bgcolor=orange >&nbsp;</TD>
+<td bgcolor=orange >&nbsp;</TD>
+<TD><B>2</B></TD>
+</TR>
+<TR>
+<TD><B>3</B></TD>
+<td bgcolor=orange >&nbsp;</TD>
+<td bgcolor=orange >&nbsp;</TD>
+<td bgcolor=orange >&nbsp;</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD><B>3</B></TD>
+</TR>
+<TR>
+<TD><B>4</B></TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD><B>4</B></TD>
+</TR>
+<TR>
+<TD><B>5</B></TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<TD><B>5</B></TD>
+</TR>
+<TR>
+<TD><B>6</B></TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD><B>6</B></TD>
+</TR>
+<TR>
+<TD><B>7</B></TD>
+<td bgcolor=lightgreen>&nbsp;</TD>
+<TD>.</TD>
+<td bgcolor=lightgreen>&nbsp;</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<td bgcolor=lightgreen>&nbsp;</TD>
+<TD>.</TD>
+<td bgcolor=lightgreen>&nbsp;</TD>
+<TD>.</TD>
+<TD><B>7</B></TD>
+</TR>
+<TR>
+<TD><B>8</B></TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD><B>8</B></TD>
+</TR>
+<TR>
+<TD><B>9</B></TD>
+<TD>.</TD>
+<td bgcolor=silver >&nbsp;</TD>
+<td bgcolor=silver >&nbsp;</TD>
+<td bgcolor=silver >&nbsp;</TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>.</TD>
+<TD>.</TD>
+<TD>.</TD>
+<td bgcolor=red    >&nbsp;</TD>
+<TD><B>9</B></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD><B>1</B></TD>
+<TD><B>2</B></TD>
+<TD><B>3</B></TD>
+<TD><B>4</B></TD>
+<TD><B>5</B></TD>
+<TD><B>6</B></TD>
+<TD><B>7</B></TD>
+<TD><B>8</B></TD>
+<TD><B>9</B></TD>
+<TD></TD>
+</TR>
+</TABLE>
+
+<TABLE ALIGN="center">
+<TR>
+<TH>Endereço</TH>
+<TH>ID</TH>
+<TH>Descrição</TH>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>5</CODE></TD>
+<td bgcolor=cyan   >&nbsp;</TD>
+<TD>Quinta linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>[5]</CODE></TD>
+<td bgcolor=blue   >&nbsp;</TD>
+<TD>Quinta coluna</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>1[1]</CODE></TD>
+<td bgcolor=magenta>&nbsp;</TD>
+<TD>Primeira coluna da primeira linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>-1[-1]</CODE></TD>
+<td bgcolor=red    >&nbsp;</TD>
+<TD>Última coluna da última linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>2[7]:3[3]</CODE></TD>
+<td bgcolor=orange >&nbsp;</TD>
+<TD>Da linha 2 coluna 7 até a linha 3 coluna 3</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>7[1,3,6,8]</CODE></TD>
+<td bgcolor=lightgreen>&nbsp;</TD>
+<TD>Colunas 1, 3, 6 e 8 da sétima linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>-1[2:4]</CODE></TD>
+<td bgcolor=silver >&nbsp;</TD>
+<TD>Colunas 2, 3 e 4 da última linha</TD>
+</TR>
+</TABLE>
+
+</DIV>
+<!-- html code generated by txt2tags 2.6.1087 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags screenshots.t2t -->
+</BODY></HTML>

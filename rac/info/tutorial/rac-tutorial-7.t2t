@@ -1,0 +1,26 @@
+RAC 7/12 - Mais Detalhes
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+A ordem especificada num trecho é respeitada. O comando
+
+``` rac "5:1" /etc/passwd
+
+Mostra as cinco primeiras linhas, começando pela quinta e terminando
+na primeira.
+
+Também é possível misturar trechos com linhas soltas:
+
+``` rac "5:1 ; 2 ; 2" /etc/passwd
+
+Além das cinco primeiras linhas invertidas, este comando também
+mostrará a segunda linha duas vezes no final.
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-6.html] |  [Próxima Página >> rac-tutorial-8.html]
+
+                |  http://aurelio.net/rac 

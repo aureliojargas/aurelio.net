@@ -1,0 +1,16 @@
+RAC - Download
+
+
+%!includeconf: config.t2t
+%!preproc: '\[(Changelog) .*?]'	'//\1//'
+
+% "obrigados" em itálico
+%!preproc: '\((.*?)\)'			'(//\1//)'
+
+%!include: ../menu.t2t
+%!include: menu.t2t
+
+=== Mudanças Feitas ===
+
+%!include: /a/rac/ChangeLog.t2t
+

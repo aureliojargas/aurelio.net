@@ -1,0 +1,24 @@
+RAC 10/12 - Linhas e Colunas
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+E para terminar, ainda é possível misturar linhas e colunas num mesmo
+endereço.
+
+Para se obter apenas a quinta coluna da terceira linha:
+
+``` rac "3[5]" /etc/passwd
+
+Que tal um trecho que vai da décima coluna da terceira linha até a
+antepenúltima coluna da penúltima linha?
+
+``` rac "3[10]:-2[-3]" /etc/passwd
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-9.html] |  [Próxima Página >> rac-tutorial-11.html]
+
+                |  http://aurelio.net/rac 

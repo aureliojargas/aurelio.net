@@ -1,0 +1,65 @@
+#!/bin/bash
+
+comandos="
+sshot-texto
+:
+sshot-linhas
+4 %           # Somente a linha 4
+4;7;2 %       # As linhas 4, 7 e 2, nesta ordem
+4;4;4 %       # A linha 4, três vezes
+4:6 %         # Da linha 4 até a linha 6
+6:4 %         # Da linha 6 até a linha 4 (inverso!)
+8:-1 %        # Da linha 8 até a última linha
+-1:-3 %       # Da última à antepenúltima linha (inverso!)
+:3 %          # Do início até a terceira linha
+sshot-colunas
+[2:9] %       # Da coluna 2 até a coluna 9
+[23:] %       # Da coluna 23 até o final da linha
+7[3:6] %      # A linha 7, da coluna 3 até a coluna 6
+7[-1:1] %     # A linha 7 de trás para frente
+7[15]:9[15] % # Da col. 15 da linha 7 à col. 15 da linha 9
+7[16:21,3:7,23:,2,1] %   # A linha 7, vários cortes
+sshot-string
+\"sete\" %      # Linhas que contêm a palavra sete
+\"sete\"+2 %    # A segunda linha após a que contém sete
+\"sete\"-2 %    # A segunda linha anterior a que contém sete
+\":\"*3 %       # A terceira linha que contém dois-pontos
+\":\"*-2 %      # A penúltima linha que contém dois-pontos
+\"sete\"*1~1 %  # Partindo da 1a linha com sete, ande de 1 em 1
+\"sete\"*1~-2 % # Partindo da 1a linha com sete, volte de 2 em 2
+"
+
+> sshot-texto.txt
+> sshot-linhas.txt
+> sshot-colunas.txt
+> sshot-string.txt
+
+echo "$comandos" | while read LINHA; do
+	[ "$LINHA" ] || continue
+	[ "${LINHA#sshot}" != "$LINHA" ] && arquivo=$LINHA.txt && continue
+	comando=${LINHA% %*}
+	txt=${LINHA#*% }
+	[ -f "$arquivo" ] || {
+		echo "erro: arquivo não existente '$arquivo'"
+		exit
+	}	
+	(
+		[ -s "$arquivo" ] && echo
+		echo "$ cat num.txt | rac '$comando' $txt" |
+			sed "s/ | rac ':' .*//;s/\"/=/g"
+		sed '1,/^@@@@$/d' $0 | rac "$comando"
+	) >> $arquivo	
+done
+echo "screenshots feitos"
+exit
+
+@@@@
+1:um    :one  :uno   :ein
+2:dois  :two  :dos   :zwei
+3:três  :three:tres  :drei
+4:quatro:four :cuatro:vier
+5:cinco :five :cinco :fünf
+6:seis  :six  :seis  :sechs
+7:sete  :seven:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun

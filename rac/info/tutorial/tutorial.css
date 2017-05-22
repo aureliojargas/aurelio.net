@@ -1,0 +1,31 @@
+/* CSS style for RAC Tutorial - http://aurelio.net/rac */
+
+body  {
+	margin-top:2em;
+	margin-left:15%;
+	margin-right:15%;
+	background:#894;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 130%;
+	text-align: justify;
+}
+h1 {
+	color: white;
+}
+i {
+	font-size: 120%;
+}
+a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 120%;
+	color: yellow;
+}
+table {
+	width: 100%;
+}
+/*code  {
+	background-color:gold;
+	padding-right:.5em;
+	padding-left:.5em;
+}*/

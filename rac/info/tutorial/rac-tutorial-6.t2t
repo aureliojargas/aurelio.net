@@ -1,0 +1,24 @@
+RAC 6/12 - Trechos de Linhas
+
+
+%!target: html
+%!style: tutorial.css
+
+------------------------------------------------------------------------
+
+Um trecho de linhas consecutivas pode ser especificado indicando a
+linha inicial e a final, separadas por dois-pontos:
+
+``` rac "1:5" /etc/passwd
+
+Este comando retornará as cinco primeiras linhas do arquivo.
+
+A contagem regressiva também pode ser usada em trechos. Para mostrar
+as cinco últimas linhas, faça:
+
+``` rac "-5:-1" /etc/passwd
+
+------------------------------------------------------------------------
+| [<< Página Anterior rac-tutorial-5.html] |  [Próxima Página >> rac-tutorial-7.html]
+
+                |  http://aurelio.net/rac 

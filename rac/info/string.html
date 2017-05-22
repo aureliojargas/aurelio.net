@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="site.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../site.css">
+<TITLE>RAC - Endereços Usando Textos (Strings)</TITLE>
+</HEAD>
+<BODY>
+
+<DIV CLASS="header" ID="header">
+<H1>RAC - Endereços Usando Textos (Strings)</H1>
+</DIV>
+
+<DIV CLASS="body" ID="body">
+<P>
+Nas suas primeiras versões, o RAC usava apenas endereçamento numérico,
+indicando diretamente a posição de linhas e colunas, como por exemplo
+<B>[5]</B> para especificar a quinta coluna. A partir da versão 1.2
+também é possível endereçar linhas pelo seu conteúdo, independente de
+sua posição no texto.
+</P>
+<P>
+Antes de conhecer as novidades, um resumo rápido dos tipos de endereço
+conhecidos até então:
+</P>
+<P>
+<CENTER>ENDEREÇOS NUMÉRICOS</CENTER>
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TH>Endereço</TH>
+<TH>Tipo</TH>
+<TH>Representa</TH>
+</TR>
+<TR>
+<TD ALIGN="center"><B>3</B></TD>
+<TD ALIGN="center">Linha</TD>
+<TD>A terceira linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><B>-3</B></TD>
+<TD ALIGN="center">Contagem Reversa</TD>
+<TD>A antepenúltima linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><B>[3]</B></TD>
+<TD ALIGN="center">Coluna</TD>
+<TD>A terceira coluna</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><B>1:3</B></TD>
+<TD ALIGN="center">Trecho</TD>
+<TD>Da primeira a terceira linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><B>1~3</B></TD>
+<TD ALIGN="center">Salto</TD>
+<TD>A partir da primeira linha, ande de 3 em 3</TD>
+</TR>
+</TABLE>
+
+<P>
+Apesar do poder de se especificar endereços complexos, inclusive com
+trechos e saltos, o endereçamento numérico exige que o usuário saiba
+de antemão a posição exata do pedaço desejado de texto. Embora
+suficiente para uma grande variedade de tarefas, esse tipo de
+endereçamento se torna ineficiente quando se precisa buscar por
+<B>conteúdo</B>, e não posições.
+</P>
+
+<H3>Buscando por Conteúdo</H3>
+
+<P>
+Ao invés de buscar pela "<I>quinta linha</I>", certas tarefas exigem buscar
+por linhas que contenham determinada palavra ou frase, não importando
+a sua posição no texto original. Ou ainda, baseado nesta palavra
+obter as linhas adjacentes ou um trecho entre duas palavras distintas.
+</P>
+<P>
+O RAC torna estas tarefas triviais, bastando ao usuário apenas
+fornecer o endereço desejado. Entre outras possibilidades, o programa
+pode buscar:
+</P>
+
+<UL>
+<LI>Todas as linhas que contêm a palavra Vencido (<I>grep</I>)
+<LI>A última ocorrência de PENDENTE no texto
+<LI>O trecho entre as linhas &lt;SCRIPT&gt; e &lt;/SCRIPT&gt;
+<LI>O trecho que vai da linha que contém BEGIN até o final do texto
+<LI>A linha que contém o número IP 10.0.0.10, com um contexto de duas
+  linhas antes e três após
+<LI>O trecho que inicia na linha que contenha a data 2004-12-31 e vai
+  até última ocorrência da palavra Error
+</UL>
+
+<P>
+Entre várias outras possibilidades que combinam um texto com a sua
+contagem de aparições (normal ou reversa) e linhas adjacentes.
+</P>
+<P>
+O uso é muito simples, basta colocar a palavra ou frase a se buscar
+entre sinais de igual, <B>=assim=</B>. A contagem de aparições da palavra
+é especificada usando o asterisco e o contexto usa os sinais de mais e
+menos.
+</P>
+<P>
+<CENTER>ENDEREÇOS DE TEXTO</CENTER>
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TH>Endereço</TH>
+<TH>Tipo</TH>
+<TH>Representa</TH>
+</TR>
+<TR>
+<TD><B>=abc=</B></TD>
+<TD ALIGN="center">Texto</TD>
+<TD>Todas as linhas que contêm o texto abc</TD>
+</TR>
+<TR>
+<TD><B>=abc=*3</B></TD>
+<TD ALIGN="center">Ocorrência</TD>
+<TD>Terceira linha que contém o texto abc</TD>
+</TR>
+<TR>
+<TD><B>=abc=+3</B></TD>
+<TD ALIGN="center">Contexto</TD>
+<TD>Terceira linha após a que contém o texto abc</TD>
+</TR>
+<TR>
+<TD><B>=abc=-3</B></TD>
+<TD ALIGN="center">Contexto</TD>
+<TD>Terceira linha anterior a que contém o texto abc</TD>
+</TR>
+</TABLE>
+
+	<BLOCKQUOTE>
+	Curioso(a) porque o sinal de igual foi utilizado como
+	delimitador? A explicação está no final deste documento.
+	</BLOCKQUOTE>
+<P>
+Fácil de usar, não? Simplesmente colocar uma palavras entre iguais faz
+com que o RAC retorne todas as linhas do texto que contêm esta
+palavra. Ela pode estar no início, meio ou final da linha, tanto faz.
+Este comportamento é idêntico ao comando <I>grep</I>.
+</P>
+<P>
+Se o desejado não forem todas as ocorrências da palavra mas apenas a
+primeira, terceira ou a última, basta adicionar um asterisco e
+informar o número. E mais, números negativos servem para contar à
+partir do final do texto, então <B>=abc=*-2</B> retornará a linha com a
+penúltima aparição de "abc".
+</P>
+<P>
+Para completar, o contexto serve para obter linhas próximas à linha
+com a palavra pesquisada, anteriores ou posteriores. Útil quando se
+tem uma palavra-chave para encontrar, mas o conteúdo desejado está na
+próxima linha. Exemplo: <B>=Total de gastos=+1</B> retornará a linha
+seguinte ao texto informado, toda vez que o ele for encontrado.
+</P>
+<P>
+Se no exemplo anterior for necessário obter a próxima linha somente
+da primeira aparição do texto, basta combinar os dois operadores,
+ficando <B>=Total de gastos=*1+1</B>.
+</P>
+
+<H3>Flexibilidade e Poder</H3>
+
+<P>
+Todos os conceitos dos endereços numéricos e de texto são
+intercambiáveis, combináveis, misturáveis. Lembre-se do brinquedo LEGO
+onde combinando formas básicas se obtém estruturas mais complexas.
+</P>
+<P>
+No RAC é possível misturar endereços numéricos com texto num mesmo
+comando, produzindo endereços tão complicados e precisos quanto
+necessário.
+</P>
+<P>
+<CENTER>ENDEREÇOS MAIS ELABORADOS</CENTER>
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TH>Endereço</TH>
+<TH>Representa</TH>
+</TR>
+<TR>
+<TD><B>5:=abc=*1</B></TD>
+<TD>Trecho da quinta linha até a primeira que conter abc</TD>
+</TR>
+<TR>
+<TD><B>=abc=[1:10]</B></TD>
+<TD>As dez primeiras colunas das linhas com abc</TD>
+</TR>
+<TR>
+<TD><B>=abc=*-1:-1</B></TD>
+<TD>Trecho da última linha com abc até o final do texto</TD>
+</TR>
+<TR>
+<TD><B>=abc=*5[-9:]</B></TD>
+<TD>As últimas nove colunas da quinta linha com abc</TD>
+</TR>
+<TR>
+<TD><B>=abc=*-1:=xyz=*-1</B></TD>
+<TD>Trecho da última linha com abc até a última linha com xyz</TD>
+</TR>
+<TR>
+<TD><B>=abc=*1~3</B></TD>
+<TD>A partir da primeira linha com abc, ande de 3 em 3</TD>
+</TR>
+<TR>
+<TD><B>=abc=*5-2:=abc=*5+2</B></TD>
+<TD>Quinta ocorrência da linha com abc, com contexto de 2 linhas antes e após</TD>
+</TR>
+</TABLE>
+
+<H3>Os Detalhes</H3>
+
+<P>
+Ao usar endereços com texto, algumas dúvidas podem surgir. Aqui vão as
+respostas para algumas delas:
+</P>
+
+<DL>
+<DT>Maiúsculas/Minúsculas:</DT><DD>
+<P></P>
+  Letras maiúsculas e minúsculas são diferentes. Se você pesquisar por
+  LINUX, as linhas que contiverem Linux não serão retornadas.
+<P></P>
+  <B>Dica:</B> Use a opção "<B>-i</B>" para ignorar a diferença entre
+  maiúsculas e minúsculas (opção inclusa na versão 1.3)
+<P></P>
+<DT>Texto, não Expressão Regular</DT><DD>
+<P></P>
+  O conteúdo do endereço de texto é texto puro, não é expressão
+  regular. Qualquer texto pode ser colocado sem a preocupação de ser
+  confundido com uma expressão.
+<P></P>
+  <B>Dica:</B> O suporte a expressões regulares foi incluso na versão
+  1.3, usando a barra / como delimitador. <A HREF="regex.html">Saiba mais...</A>
+<P></P>
+<DT>Escapes</DT><DD>
+<P></P>
+  Para inserir um sinal de igual literal no texto, é preciso
+  "escapá-lo", precedendo-o com uma barra \. Exemplo: <B>=2+2\=4=</B>.
+  Há outros "escapes" reconhecidos pelo RAC, segue a lista completa:
+</DL>
+
+<TABLE ALIGN="center">
+<TR>
+<TD><B><CODE>\t</CODE></B></TD>
+<TD>Tabulação (TAB)</TD>
+</TR>
+<TR>
+<TD><B><CODE>\=</CODE></B></TD>
+<TD>Um sinal de igual literal</TD>
+</TR>
+<TR>
+<TD><B><CODE>\\</CODE></B></TD>
+<TD>Uma barra \ literal</TD>
+</TR>
+</TABLE>
+
+<H3>A Pergunta Que Não Quer Calar - Parte 1</H3>
+
+<P>
+<I>- Mas por que ter um delimitador só para texto?</I>
+<I>Por que não usar Expressões Regulares de uma vez?</I>
+</P>
+
+<DL>
+<DT>Resposta curta:</DT><DD>
+O RAC também funciona com Expressões Regulares, usando a barra "<B>/</B>"
+como delimitador. Tendo dois operadores diferentes para texto e
+expressões, o usuário ganha em flexibilidade.
+<P></P>
+<DT>Resposta longa:</DT><DD>
+Diferente de outras ferramentas como o SED que procura apenas por
+expressões regulares, o RAC tem um operador para procurar por texto
+normal e outro para as expressões. Essa diferenciação é necessária
+para que o usuário tenha total flexibilidade de informar "o quê" está
+procurando.
+<P></P>
+Para se procurar por um número IP entre colchetes por exemplo, no SED
+é preciso fazer <B>/\[10\.0\.0\.1\]/</B>, enquanto no RAC é simplesmente
+<B>=[10.0.0.1]=</B>. O texto fica mais limpo e fácil de escrever.
+<P></P>
+Se o padrão for complexo e variável, sem dúvida alguma deve-se usar
+expressões regulares. Mas para os textos fixos é mais fácil
+informá-los como são, sem precisar se preocupar em escapar os
+caracteres especiais das expressões.
+</DL>
+
+<H3>A Pergunta Que Não Quer Calar - Parte 2</H3>
+
+<P>
+<I>- Mas por que usar o = como delimitador? Isso é anti-Unix!</I>
+</P>
+
+<DL>
+<DT>Resposta curta:</DT><DD>
+O "<B>=</B>" foi o melhor caractere <B>livre</B> que encontramos.
+<P></P>
+<DT>Resposta longa:</DT><DD>
+A escolha do caractere "<B>=</B>" como delimitador foi feita por exclusão.
+<P></P>
+Primeiro foram excluídos da lista de caracteres possíveis as letras,
+números, TAB, espaço e todos os caracteres que já são operadores do
+RAC: "<B>[ ] - + , ; : * ~</B>". Caracteres já previstos para uso futuro no
+programa também foram eliminados: "<B>{ } ( ) | /</B>".
+<P></P>
+Outros foram excluídos por serem muito "cheios", visualmente muito
+poluentes para serem usados como delimitadores: "<B>@ # % &amp;</B>".
+<P></P>
+Dos poucos que sobraram, os primeiros candidatos foram as aspas
+(simples e duplas), que ficam visualmente bonitas e seu uso é
+intuitivo. Mas é um inferno para inseri-las na linha de comando, pois
+são especiais para o shell e é preciso escapá-las sempre. Pelo mesmo
+problema de escape já foram excluídos a exclamação e o cifrão também.
+<P></P>
+Em seguida "<B>&lt;</B>" e "<B>&gt;</B>" pareceram bons candidatos, mas além de
+serem caracteres perigosos na linha de comando, são dois caracteres
+diferentes e para inseri-los literais somente o &gt; precisaria ser
+escapado, tornando as regras mais complicadas.
+<P></P>
+Enfim, o que sobrou foi o "<B>=</B>". É estranho num primeiro momento
+pois não conhecemos nenhuma outra ferramenta que o utilize como
+delimitador, mas acostuma. E quanto mais o usamos mais nos convencemos
+que foi uma escolha boa, pois fica visualmente agradável.
+<P></P>
+E ainda tem o mnemônico de que o conteúdo é "igual" para você e para o
+RAC, pois nenhuma expansão é feita ;)
+</DL>
+
+<HR NOSHADE SIZE=1>
+
+<P>
+<A HREF=".">Voltar à página do RAC</A>
+</P>
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.1087 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags string.t2t -->
+</BODY></HTML>

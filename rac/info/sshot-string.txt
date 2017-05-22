@@ -1,0 +1,25 @@
+$ cat num.txt | rac '=sete='      # Linhas que contêm a palavra sete
+7:sete  :seven:siete :sieben
+
+$ cat num.txt | rac '=sete=+2'    # A segunda linha após a que contém sete
+9:nove  :nine :nueve :neun
+
+$ cat num.txt | rac '=sete=-2'    # A segunda linha anterior a que contém sete
+5:cinco :five :cinco :fünf
+
+$ cat num.txt | rac '=:=*3'       # A terceira linha que contém dois-pontos
+3:três  :three:tres  :drei
+
+$ cat num.txt | rac '=:=*-2'      # A penúltima linha que contém dois-pontos
+8:oito  :eight:ocho  :acht
+
+$ cat num.txt | rac '=sete=*1~1'  # Partindo da 1a linha com sete, ande de 1 em 1
+7:sete  :seven:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+
+$ cat num.txt | rac '=sete=*1~-2' # Partindo da 1a linha com sete, volte de 2 em 2
+7:sete  :seven:siete :sieben
+5:cinco :five :cinco :fünf
+3:três  :three:tres  :drei
+1:um    :one  :uno   :ein

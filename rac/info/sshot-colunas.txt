@@ -1,0 +1,35 @@
+$ cat num.txt | rac '[2:9]'       # Da coluna 2 até a coluna 9
+:um    :
+:dois  :
+:três  :
+:quatro:
+:cinco :
+:seis  :
+:sete  :
+:oito  :
+:nove  :
+
+$ cat num.txt | rac '[23:]'       # Da coluna 23 até o final da linha
+ein
+zwei
+drei
+vier
+fünf
+sechs
+sieben
+acht
+neun
+
+$ cat num.txt | rac '7[3:6]'      # A linha 7, da coluna 3 até a coluna 6
+sete
+
+$ cat num.txt | rac '7[-1:1]'     # A linha 7 de trás para frente
+nebeis: eteis:neves:  etes:7
+
+$ cat num.txt | rac '7[15]:9[15]' # Da col. 15 da linha 7 à col. 15 da linha 9
+:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :
+
+$ cat num.txt | rac '7[16:21,3:7,23:,2,1]'   # A linha 7, vários cortes
+siete sete sieben:7

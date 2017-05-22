@@ -1,0 +1,77 @@
+RAC - Download
+
+
+%!includeconf: config.t2t
+%!preproc: '\[(Versões Anteriores) .*?]'	'//\1//'
+%!preproc: SRC	../src
+%!include: ../menu.t2t
+%!include: menu.t2t
+
+
+=== Versão 1.2 ===
+
+A grande novidade desta [versão 1.2 SRC/rac-1.2.tgz] é o suporte a
+endereçamento de linhas por seu conteúdo, utilizando pesquisa por
+**textos** (strings). Até então as linhas podiam ser endereçadas
+somente pela sua posição (número).
+
+A sintaxe é simples, basta colocar o texto de pesquisa entre sinais de
+igual, **=assim=**. Alguns operadores novos também foram incluídos,
+como o asterisco para contar o número de ocorrências e o + e - para
+definir contexto.
+
+-------------------------------------------------------------------
+
+=== Versão 1.1 ===
+
+Meses depois da primeira versão, com direito a Natal, virada de ano e
+carnaval no meio, saiu a [versão 1.1 do programa SRC/rac-1.1.tgz].
+Nenhuma funcionalidade extra foi incluída, mas o código do programa
+foi reestruturado e reescrito em grande parte. Agora sim pudemos fazer
+tudo o que não deu tempo de fazer antes, pois tínhamos uma data de
+entrega :D
+
+Das melhorias, a mais notável é que o programa está **mais rápido** e
+**consome menos memória**, não carregando mais o arquivo todo em
+memória para processá-lo.
+
+O código também foi limpo e está todo comentado para incentivar
+contribuidores externos a mandar correções e melhoramentos (patches).
+
+-------------------------------------------------------------------
+
+=== Versão 1.0 ===
+
+A [primeira versão pública SRC/rac-1.0.tgz] do programa é a 1.0,
+lançada na noite do dia 12 de Dezembro de 2003, durante o evento "II
+Seminário de Desenvolvimento de Software Livre", na Unicamp.
+
+Esta versão possui as seguintes características:
+
+- Especificação de linhas e colunas individuais
+- Especificação de linhas e colunas em qualquer ordem
+- Especificação de intervalos usando números de linha e coluna
+- Especificação de intervalos reversos (de trás para frente)
+- Especificação de saltos (step) para linhas e colunas
+- Especificação de saltos reversos para linhas e colunas
+- É permitida a mistura de todos os tipos de endereços
+- É permitida a repetição de um mesmo endereço várias vezes
+-
+
+E ainda conta com:
+
+- Página de Manual (man page) completa com exemplos
+- Uma cópia do Tutorial e da tabela de emulação
+- Arquivo LEIAME com instruções de instalação
+-
+
+Versão 1.0 na mídia:
+
+ |      Dicas-L    | http://www.dicas-l.unicamp.br/dicas-l/20031213.shtml
+ |     Ponto BR    | http://pontobr.org/article.php?sid=432
+ | Linux in Brazil | http://brlinux.linuxsecurity.com.br/noticias/001503.html
+ |    Tchê Linux   | http://www.tchelinux.com.br/article.php?sid=1517&mode=thread&order=0
+ |   Xoops Brasil  | http://br.xoops.org/modules/news/article.php?storyid=1691
+ |    UNIX - BR    | http://unix-br.org/site/modules.php?name=News&file=article&sid=102
+ |   Jund Linux    | http://www.jundlinux.org/news.php?cod=267
+ |   Portal Vol    | http://www.portalvol.com/modules.php?name=News&file=article&sid=3796

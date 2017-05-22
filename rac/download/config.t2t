@@ -1,0 +1,14 @@
+
+% menu entries
+%!preproc: L_CURRENT	[Versão Atual U_DOWNLOAD]
+%!preproc: L_ANNOUNCE	[Versões Anteriores U_ANNOUNCE]
+%!preproc: L_CHANGELOG	[Changelog U_CHANGELOG]
+%!preproc: L_FUTURE	[Futuro U_FUTURE]
+
+%!includeconf: ../config.t2t
+%!style: ../site.css
+
+% other
+%!preproc: '\[(Download) .*?]'  '//\1//'
+%!preproc: ' \./'		' ../'
+

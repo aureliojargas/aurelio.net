@@ -1,0 +1,31 @@
+RAC - Informações e Documentação
+
+
+%!includeconf: config.t2t
+%!preproc: '\[(Ficha Técnica) .*?]'	'//\1//'
+%!include: ../menu.t2t
+%!include: menu.t2t
+
+=== Ficha Técnica do RAC ===
+
+```
+NOME      : RAC
+DESCRIÇÃO : Extrai trechos de um texto
+LINGUAGEM : C
+INTERFACE : Linha de comando
+IDIOMA    : Português do Brasil (pt_BR)
+LICENÇA   : GPL
+
+SINTAXE   : rac [OPÇÕES] ENDEREÇO ARQUIVO
+ENTRADA   : Arquivo ou entrada padrão (STDIN)
+SAÍDA     : Tela (STDOUT)
+ENDEREÇO  : Numérico, texto, expressão regular, intervalo,
+            salto, negativo, repetição, ocorrência, contexto
+
+URL       : U_RAC
+LISTA     : U_MAILING
+
+NASCIMENTO: 12 de Dezembro de 2003, versão 1.0
+AUTORES   : Aurélio Marinho Jargas    <  verde (a) aurelio net>
+            Thobias Salazar Trevisan  <thobias (a) thobias org>
+```
