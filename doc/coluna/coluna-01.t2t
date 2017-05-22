@@ -1,0 +1,117 @@
+coluna do aurelio 01
+introdução
+http://aurelio.net/doc/coluna
+
+olás.  eu  sou  o aurelio e me deram uma coluna na revista para escrever
+sobre o modo texto. não sou guru em linux, apenas não uso `x` nem mouse,
+então  utilizo os poderes da boa e velha linha de comando para interagir
+com  a  máquina.  muitos  vêem  nisso um retrocesso, uma perda de tempo,
+considerando  todos  os  maravilhosos  recursos  dos menus e das janelas
+disponíveis.  pode  ser,  tudo depende do uso que se faz do sistema e da
+familiaridade  com  as ferramentas. neste espaço, vou tentar mostrar aos
+já  iniciados  dicas para agilizar ainda mais seu uso, e aos incrédulos,
+apresentar a luz divina dos caracteres cinza sob o fundo preto &:)
+
+bem,  para  usar  o  modo  texto  de maneira integral, o usuário precisa
+basicamente  de  duas  coisas:  saber  se virar com seu interpretador de
+comandos  (shell)  e  ter  em  mãos  uma  gama de programas para console
+capazes  de  satisfazer  todas as suas necessidades computacionais, como
+ler   email,  navegar  na  internet,  editar  um  texto,  tocar  cd/mp3,
+manipular/visualizar  imagens, jogos, calculadora, calendário, irc, icq,
+etc.
+
+o foco desta coluna será apresentar e dar dicas sobre diversos programas
+para  o modo texto, além de passar dicas de uso da linha de comando e de
+automatização de tarefas.
+
+se  você  é  usuário  somente  da  interface  gráfica e tem interesse em
+aprender,  ou  pelo  menos  entender  porque  ainda se usa o modo texto,
+acompanhe  os  artigos,  experimente  os  programas,  utilize-os  no seu
+dia-a-dia, brinque com as opções, realmente dedique um tempo a eles. aos
+poucos tente ir substituindo os programas gráficos pelos texto, devagar,
+e  quando  você perceber, já estará se sentindo à vontade trabalhando na
+tela preta.
+
+primeiramente,  o  interpretador  de  comandos.  o  `bash` (bourne again
+shell)  é o padrão na maioria das distribuições de linux, então ele será
+utilizado  nos  exemplos.  ele  possui  várias características poderosas
+tanto  para  o  uso  normal  quanto  para programação de roteiros (shell
+scripts).
+
+sabe  aquele  item  do  seu  menu chamado `xterm`? pois é, ele simula um
+console,  quando  lhe  é  apresentanda  uma  linha  de comando, este é o
+`bash`.  este  `xterm` pode ser considerado um pseudo modo texto, mas os
+exemplos  que  serão  citados nesta coluna, serão melhor aproveitados se
+executados  no modo texto mesmo, fora da interface gráfica, até para uma
+ambientação  mais  completa.  para  acessá-lo,  segure ao mesmo tempo as
+teclas  `Ctrl+Alt+F1`  e  entre com seu usuário e senha. não acesse como
+superusuário (`root`) para prevenir danos ao sistema.
+
+nosso primeiro amigo é o famoso `[usuário@localhost usuário]$`. esta é a
+linha  de comando (`prompt`). o sistema (`bash`) está esperando que você
+digite  um  comando  para que ele possa executar. este formato padrão de
+sua linha de comando é bem informativo, mostrando primeiro o nome de seu
+usuário, o nome de sua máquina (`localhost` é o nome padrão) e o nome do
+diretório   no   qual   você   se   encontra   (ao  acessar  o  sistema,
+`/home/usuário`).  estas informações podem ser configuradas para mostrar
+horas,  data,  textos, e isso ainda pode ser em cores. daqui pra frente,
+para  indicar  uma  linha de comando, vou simplesmente indicar uma linha
+começando com `$`.
+
+    $ cat /etc/bashrc
+
+na busca de mais detalhes sobre este ou qualquer outro tópico específico
+do  modo  texto,  utilize  as  páginas  de manual on line. sim, elas são
+densas  e  às  vezes criptográficas à primeira vista, mas são essenciais
+para  o  aprendizado  de  qualquer  comando ou programa do sistema, para
+saber sua sintaxe, opções e detalhes. as páginas de manual são invocadas
+com o comando `man`, como no exemplo:
+
+    $ man cat
+
+muitos  aplicativos  estão  deixando de lado o formato `man`, com apenas
+uma  página e várias seções, e estão colocando a documentação atualizada
+no formato `info`, que permite a navegação entre páginas.
+
+por  exemplo,  o comando `cat` acima, mostra o conteúdo de um arquivo na
+tela.  ele  tem  algumas  opções, que são modificadores, que alteram seu
+comportamento normal, fazendo o comando tomar outra ação, ou mostrar uma
+saída  diferente  da  normal.  ele pode por exemplo numerar as linhas do
+arquivo com a opção `-n`
+
+    $ cat -n /etc/bashrc
+
+para  ver rapidamente quais são as opções disponíveis em um comando, use
+o parâmetro `--help`:
+
+    $ cat --help
+
+e  para  fechar esta introdução rápida aos conceitos básicos da linha de
+comando, temos o redirecionamento, que pode ser tanto para comandos:
+
+    $ cat -n /etc/passwd | sort -nr
+
+como para arquivos:
+
+    $ cat -n /etc/passwd > /tmp/passwd-numerado
+
+ou para dispositivos:
+
+    $ cat musica.au > /dev/audio
+
+estes são os conceitos básicos que se precisa saber para operar na linha
+de  comando  sem  ficar  (muito)  perdido.  oportunamente,  nos próximos
+textos,  cada  um  dos  aspectos  do  uso  da  linha de comando terá uma
+demonstração mais aprofundada e acompanhada por exemplos práticos.
+
+espero   que   esta   coluna  possa  servir  como  um  pequeno  guia  de
+sobrevivência  para  aqueles que, por um motivo ou outro, estão passando
+apuros  na linha de comando, e quem sabe ainda "relembrar" algumas dicas
+aos "gurus" de plantão.
+
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

@@ -1,0 +1,131 @@
+             KIT DE SOBREVIVÊNCIA PARA O CYGWIN
+             ----------------------------------
+             abr2003     Aurélio Marinho Jargas
+
+
+Após instalar  o cygwin,  você notará  que o bash  e algumas
+ferramentas como o vi estão um pouco "peladas" se comparadas
+com as de uma distribuição normal de Linux.
+
+Aqui estão  algumas configurações  que dão um  jeito nisso e
+devem  ser colocadas **NO FINAL** dos arquivos citados. Caso
+algum desses arquivos ainda não exista, crie-o.
+
+As configurações servem para funcionar:
+- acentuação
+- ls colorido
+- cair direto no $HOME ao chamar o cygwin
+- interpretador python com TAB completion
+- várias configurações para deixar o vi usável
+- melhor interação com o Windows
+
+
+O original deste documento está em:
+  http://aurelio.net/doc/cygwin-config.txt
+
+------------------------------------------------------------
+
+   ~/.inputrc
+   ==========
+
+set bell-style visible
+set meta-flag on
+set convert-meta off
+set output-meta on
+#set editing-mode vi
+set completion-ignore-case on
+
+------------------------------------------------------------
+
+   ~/.bash_profile
+   ===============
+
+alias ls='ls --color=tty'
+alias l='ls -la'
+export HISTSIZE=5000
+export PYTHONSTARTUP="$HOME/.pythonrc"
+start(){ explorer.exe `cygpath -w "$*"`; }
+
+------------------------------------------------------------
+
+   /etc/profile
+   ============
+
+cd "$HOME"
+
+------------------------------------------------------------
+
+   ~/.pythonrc
+   ===========
+
+import rlcompleter, readline
+readline.parse_and_bind('tab: complete')
+
+------------------------------------------------------------
+
+   ~/.vimrc
+   ========
+
+set viminfo='10,\"30,:40,%,n~/.viminfo
+au BufReadPost * if line("'\"")|execute("normal `\"")|endif
+cab W w | cab Q q | cab Wq wq | cab wQ wq | cab WQ wq
+set report=0 laststatus=2 shm=filmnrwxt
+set visualbell wrap nojoinspaces ruler
+set is hls ic scs magic sm hid aw ai
+set wildmode=longest,list:full
+set backspace=0  shiftwidth=1
+set textwidth=70 tabstop=4
+set background=dark
+syntax on
+
+------------------------------------------------------------
+
+
+Fora tudo isso lembre-se que é possível acessar dispositivos
+diretamente através de diretórios especiais:
+
+/dev/clipboard              Área de tranferência do Windows
+/cygdrive/a                 Drive A: (disquete)
+/cygdrive/c                 Drive C: (hd)
+/cygdrive/d                 Drive D: (CDROM)
+////outramaquina/tmp/       Diretório mapeado da rede
+
+
+Como  não é  possível completar  (usando o TAB)  o diretório
+especial /cygdrive,  é melhor criar links  no diretório raiz
+para eles:
+
+  ln -s /cygdrive/a /a
+  ln -s /cygdrive/c /c
+  ln -s /cygdrive/d /d
+
+
+Outra dica é usar o comando 'start' para abrir um arquivo em
+seu  programa associado.  Isso funciona  de maneira parecida
+com clicar duas vezes no arquivo.  Esse comando 'start' está
+definido no arquivo ~/.bash_profile (acima).
+
+  # start imagem.gif
+  # start documento.pdf
+
+
+E por último, caso você precise do caminho Windows de um
+arquivo/diretório (usando C: e barra invertida), use o
+cygpath, exemplo:
+
+  # pwd
+  /home/verde/pessoal/aurelio.net/doc
+
+  # cygpath -w $PWD
+  C:\aurelio\cygwin-root\home\verde\pessoal\aurelio.net\doc
+
+
+------------------------------------------------------------
+
+
+[[ MUITO OBRIGADO ]]
+
+Amilcar Bodini, Aldrin Leal, Leonardo Mesquita
+
+
+fim.

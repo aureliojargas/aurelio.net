@@ -1,0 +1,82 @@
+Direto GNU e o Conectiva Linux
+
+%%infile(%d)
+
+%!includeconf:		../../include/kiwi/config.t2t
+%!postproc: SITEROOT 	../..
+%!postproc: (<BODY)	\1 class="doc"
+
+%!include: ''../../include/kiwi/ads-twins.html''
+%!include: ''../../include/kiwi/ads-link-h468.html''
+
+Nos meses de Novembro e Dezembro de 2003, uma de minhas tarefas na
+Conectiva era fazer a suíte Direto GNU funcionar no Conectiva Linux.
+Na época, a única distribuição homologada para o Direto era a Suse.
+
+Ele utilizava alguns pacotes antigos, outros que possuíam equivalentes
+melhores e outros que não existiam no Conectiva Linux. O objetivo era
+fazer o Direto funcionar usando os pacotes do Conectiva, e tirar ao
+máximo a dependência de pacotes externos.
+
+Fiz testes, configurações, adaptações e depois de muito estresse
+finalmente estava lá, o
+**Direto GNU rodando num Conectiva Linux 9 + updates**.
+
+Terminado o relatório de homologação, o segundo passo foi adaptar o
+instalador de Direto (Shell script + dialog) para o Conectiva. O
+terceiro e último passo seria o empacotamento do Direto, para que
+instalá-lo se resumisse a um "``apt-get install direto``".
+
+Infelizmente no final do segundo passo, devido a mudanças na diretoria
+da Procergs (empresa estatal do RS que criou o Direto), o site do
+programa foi retirado do ar e tudo indicava que ele seria fechado,
+deixaria de ser um Software Livre.
+
+Com isso a demanda por ele esfriou e o projeto de migração do Direto
+para o CL foi paralisado e depois de um tempo abortado.
+
+Demonstrando boa vontade e interesse na comunidade de Software Livre
+nacional, a Conectiva __**cedeu**__ todo o resultado desse projeto de
+migração para a comunidade. Caso algum outro desenvolvedor queira
+continuar este trabalho, pode aproveitar o que já foi feito.
+
+Esta página armazena este resultado e todos os arquivos que aqui estão
+são livres para download, uso e modificações. Não há nenhuma garantia
+ou suporte, os arquivos devem ser usados sob conta e risco do usuário.
+
+	//Aurelio Marinho Jargas, Curitiba 19 de Março de 2004//
+
+== Os Arquivos ==
+
+: [Relatório de Homologação homologacao.html]
+
+O relatório completo do teste de funcionalidades do Direto rodando
+no Conectiva Linux 9 + updates.
+
+: [Programa de Instalação diretocl-setup.sh]
+
+O programa original de instalação do Direto (Shell script + dialog)
+foi modificado para instalar no Conectiva Linux. Além das adaptações,
+alguns melhoramentos foram feitos no código. Mais detalhes no
+cabeçalho do programa.
+
+: [Arquivos de Configuração diretocl-config-files.zip] 
+
+Os arquivos de configuração usados pelo instalador. Alguns são
+"templates" onde dados do usuário são inseridos durante a instalação
+do Direto. Outros arquivos de configuração já existentes no sistema
+são editados onde necessário, sem sobrescrevê-los.
+
+: [Dicas dicas.txt]
+
+Um arquivo simples de dicas que fui anotando durante o processo.
+Pode servir para ajudar na resolução de problemas na instalação do
+Direto.
+
+: [Anúncio Oficial anuncio.txt]
+
+O e-mail enviado à lista DiretoLivre, que é o anúncio oficial da
+disponibilização deste conteúdo para a comunidade.
+
+
+%!include: ../../include/kiwi/footer.t2t

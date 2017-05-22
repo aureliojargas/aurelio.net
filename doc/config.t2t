@@ -1,0 +1,5 @@
+
+%!includeconf: ../include/config.t2t
+%!includeconf: ../include/urls.t2t
+
+%!postproc: SITEROOT 		..

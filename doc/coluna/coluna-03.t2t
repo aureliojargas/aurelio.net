@@ -1,0 +1,76 @@
+coluna do aurelio 03
+zgv/ImageMagick (manipulando imagens no modo texto)
+http://aurelio.net/doc/coluna
+
+olás.  continuando  a  saga  da  ambientalização no modo texto, mais uma
+tarefa  importante: lidar com imagens. sim, pode parecer paradoxal mexer
+com "imagens" no modo "texto", mas se podemos, por que não fazê-lo?
+
+dois programas que estão presentes na maioria das distribuições de linux
+são o `zgv` (http://www.svgalib.org/rus/zgv) para visualizar imagens e o
+`ImageMagick`    (http://www.wizards.dupont.com/cristy/ImageMagick.html)
+para manipulá-las. eles serão nossos convidado do mês.
+
+o  `zgv` utiliza a `SVGAlib`, biblioteca genérica para programas de modo
+texto que precisam de recursos gráficos, suportanto a grande maioria das
+placas  de  vídeo  e  monitores  existentes.  ele  mostra  em tela cheia
+arquivos dos tipos JPG, GIF (inclusive animado), PNG, BMP, entre outros.
+
+entre  num  diretório que contenha algumas imagens e chame o `zgv`. será
+apresentado um "navegador" para você escolher qual imagem quer ver. para
+que  o  navegador  gere  miniaturas  dessas  imagens, aperte `u`. ah! em
+tempo, se apertar `?` aparecerá uma tela de ajuda e o `Esc` é a tecla de
+saída.
+
+para  ver  um  arquivo apenas, ou uma seleção, chame o `zgv` passando os
+nomes destes arquivos como parâmetro:
+
+    $ zgv imagem.jpg
+    $ zgv *.jpg *.gif
+
+note  que  na  linha de comando, o asterisco significa "tudo", então com
+`*.jpg` você passa ao `zgv` todos os arquivos JPG do diretório atual.
+
+chamado  assim,  o programa entra no modo de exibir "slides", alternando
+as  imagens  a  cada  4  segundos. visualizando uma imagem, temos vários
+comandos aplicáveis (`?` para ajuda), destacando-se controle de brilho e
+contraste (`<>,.`) e zoom (`z`).
+
+o `zgv` tem centenas de comandos e opções e uma leitura na sua página de
+manual  on  line  pode  consumir  horas,  então  os comandos acima são o
+supra-sumo,  os  mais  utilizados.  outra  dica  é  que pode-se criar um
+`~/.zgvrc`  com  configurações diversas como por exemplo `tagtimeout 30`
+para aumentar o tempo entre cada slide.
+
+agora  que  sabemos  como  ver imagens, falta saber como manipulá-las. o
+pacote  `ImageMagick` conta com vários programas, e apesar de sua página
+de  manual  dizer  que  ele é para `X11`, vários aplicativos de linha de
+comando o acompanham, como `combine`, `identify`, `convert` e `montage`,
+cada um com sua própria página de manual. a seguir, exemplos práticos de
+obtenção de informação, conversão de imagem e criação de um GIF animado:
+
+    $ identify imagem.jpg
+    $ convert -rotate 90 -antialias original.bmp convertida.jpg
+    $ convert -delay 50 -loop 0 foto1.jpg foto2.jpg animacao.gif
+
+basta  chamar  qualquer  um dos programas citados com o `--help` e ver a
+quantidade  grande de opções que eles suportam. tem de tudo, controle de
+cores,   transparência,   montagens,   redimensionamento,   alinhamento,
+animação,  efeitos,  compressão,  gamma, entrelaçamento etc. e tudo isso
+disparado  pela  linha  de  comando  sem  precisar  ir  para a interface
+gráfica,  abrir  o  programa,  carregar  a  imagem,  procurar os efeitos
+desejados em menus, dezenas de cliques no mouse, salvar a imagem, fecha,
+abre  a  próxima,  e  assim  vai...  atenção  "webmasters", tratar fotos
+digitalizadas pode ser uma questão de segundos utilizando o `convert`!
+
+manipulando-se  imagens  no  modo  texto se consegue aplicar tratamentos
+padronizados  para  várias imagens, automatizando-se a edição e poupando
+bastante o tempo do operador. e tudo isso sem nem precisar ver a imagem.
+experimente!
+
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

@@ -1,0 +1,138 @@
+# ~/.screenrc
+# vim: ft=sh
+#
+# explicações sobre as configurações e utilização geral do screen
+# estão em http://aurelio.net/doc/coluna
+#
+# 20010403 <verde (a) aurelio net>
+
+# dica: zombie
+#   :zombie kr
+# faz com que cada janela morta fique esperando uma ação
+# (Kill ou Restore). útil pra ver os erros que aconteceram.
+#
+
+### explanation about color codes:
+#
+# sorendition <attribute> <color>
+# sorendition ab cd  //  a,c=bg  b,d=fg
+#
+#  ab             c&d       c&d
+#  00 normal       0 black   4 blue 
+#  1- invert       1 red     5 magenta
+#  25 bright       2 green   6 cyan
+#  3- 1+2          3 brown   7 silver
+#
+# * attributes are cumulative, so a=3 is invert+bright
+# * colors use the same codes for bg & fg colors,
+#   so cd=22 all you get is green, text unreadable
+# 
+# examples:
+#  00 02 - black bg (0), green fg (2), no attributes (00)
+#  20 30 - brown bg (3), black fg (0), bright bg (2) -> turns yellow
+#  35 74 - silver bg (7), blue fg (4), invert, bright bg (3), bright fg (5)
+
+# barra azul e amarelo, com hora, data e janelas
+msgwait 3
+sorendition 05 43
+hardstatus alwayslastline " %c | %Y%m%d |  %w"
+
+# barra verde e preto, com códigos de cores literais
+#hardstatus alwayslastline "\033[m\033[42;30m%c\033[m \033[42;30m%Y%m%d\033[m \033[42;30m %w \033[m"
+
+vbell on                                 # bipe visual
+bell "  %n %t apitando!"                 # msg bipe
+autodetach on                            # -
+startup_message off                      # msg mala
+shell -$SHELL                            # nem lembro
+#bufferfile $TMPFILE                     # arq tmp
+nethack on                               # msgs estilo nethack
+#defmonitor on                           # monitorar QUALQUER atividade
+#bind \034 hardcopy                      # mapeia PrintScreen
+caption splitonly "%2n %t"               # barra de janelas
+
+# programas carregados automaticamente
+bind c screen 1                          # janela nova
+bind L screen -t www 6 lynx -book        # navegador
+bind M screen -t mp3 9 mp3 /mp3/punk     # mp3
+
+# cadeias comuns que tem que digitar toda hora, nome, email, etc
+# útil pra preencher formalários online...
+bind N stuff "$NOME"
+bind D stuff $DATA
+bind I stuff $ICQ
+bindkey -t ec stuff $EMAILC
+bindkey -t ev stuff $EMAILV
+bindkey -t uc stuff $URLC
+bindkey -t uv stuff $URLV
+bindkey -t ur stuff http://txt2regex.sourceforge.net
+bindkey -t ut stuff http://txt2tags.sourceforge.net
+bindkey -t uz stuff http://funcoeszz.codigolivre.org.br
+
+bind o screen 0 /usr/bin/play $HOME/pessoal/O-Oh.wav
+
+#register c "$URLC"
+#register v "$URLV"
+#register r "http://txt2regex.sourceforge.net"
+#register t "http://txt2tags.sourceforge.net"
+#bind E paste
+
+# to shit+(page up|page down) work
+bind h hardstatus ignore
+bind g hardstatus alwayslastline
+
+
+# mapeamentos para fazer redimensionamento de janelas divididas
+# com o Split.
+bind 'R' wrap
+bind 'r' resize
+bind '+' resize +5
+bind '-' resize -5
+
+
+# enquanto não resolver o problema do hardcopy com hardstatus
+#hardcopy_append on
+#bind h
+
+# segurança: desligar algumas tecla perigosas
+bind k
+bind ^k
+bind '^\'
+bind z
+bind ^z
+bind x
+
+# e aqui fica o kill
+bind 'K' kill
+
+#colocar \033k\033\134 no começo do PS1
+# permite prompt colorido mas bagunça quando chega na extrema direita
+shelltitle '] |_'
+
+# para colar no vim sem "identar"
+# ATENÇÃO: é ^a^] 
+register [ "\033:set   pastea"
+register ] "\033:set nopastea"
+bind ^] paste [.]
+
+
+### do /etc/screenrc
+termcap  facit|vt100|xterm LP:G0
+terminfo facit|vt100|xterm LP:G0
+#the vt100 description does not mention "dl". *sigh*
+termcap  vt100 dl=5\E[M
+terminfo vt100 dl=5\E[M
+###
+
+# disprando programas automaticamente ao iniciar o screen
+
+#@# ### DHCP ### ### DHCP ### ### DHCP ### ### DHCP ###
+screen -t icq          1 bash -c ". ~/.bashrc ; icq"
+screen -t irc          2 BitchX -b verde irc.openprojects.net
+screen -t freshmeat    3 lynx http://www.freshmeat.net
+screen -t zznoticias   4 bash -c "funcoeszz zznoticiaslinux; echo; echo ---FIM---; read"
+screen -t artistas     5 bash -c "funcoeszz zzcasadosartistas; echo; echo ---FIM---; read"
+select 1
+
+
+

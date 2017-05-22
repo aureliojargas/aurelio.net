@@ -1,0 +1,220 @@
+'''DIRETO no CL'''
+
+''Relatório de Testes de Funcionalidade''
+
+Aurelio Marinho Jargas, Nov/2003
+
+
+----
+
+= Visão Geral das Funcionalidades do Software =
+
+
+||||Interface de Administração||
+|| :) ||Tela de Login||
+|| :) ||Menu: Setor||
+|| :) ||Menu: Usuário||
+|| :( ||Menu: Lista pública||
+|| :( ||Menu: Política de senhas||
+||||Interface do Usuário||
+|| :) ||Tela de Login||
+|| :) ||Nome da Empresa & Data atual||
+|| :) ||Trocar usuário (ida/volta)||
+|| :) ||Opções||
+|| :) ||Encerrar sessão||
+|| :) ||Menu: Hoje||
+|| :) ||Menu: Correio||
+|| :) ||Menu: Agenda||
+|| :) ||Menu: Catálogo Geral||
+|| :) ||Menu: Catálogo Pessoal||
+|| :) ||Menu: Dicas e Novidades||
+
+
+
+ * ''''''Conclusão'''''':
+
+  A grande maioria das características e funções do software estão
+  funcionando no Conectiva Linux.
+
+  As poucas funções que não estão funcionando também estão deficientes
+  na instalação original no Suse Linux, então não é problema da
+  migração e sim do próprio DIRETO ou sua configuração.
+
+  Com base nestes dados, o status do DIRETO é
+  '''HOMOLOGADO no Conectiva Linux'''.
+
+----
+
+= Visão Detalhada - Interface de Administração =
+
+ * Tela de Login
+   *  :)  Botão Limpar
+   *  :)  Botão Ok
+   *  :)  Verificação de usuário inválido
+   *  :)  Verificação de senha inválida
+   *  :)  Sair
+
+ * Menu: Setor
+   *  :)  Inserir (nome somente em maiúsculas)
+   *  :)  Pesquisar
+
+ * Menu: Usuário
+   *  :)  Inserir
+     *  :)  Checagem de campos obrigatórios
+     *  :)  Checagem da senha e confirmação
+     *  {i}  Apenas cidades do RS cadastradas (hardcoded no HTML)
+     *  {i}  Quota sempre desligada
+   *  :)  Pesquisar
+     *  :)  Nome
+     *  :)  Identificação
+     *  <!>  Organização (não tive como testar)
+     *  :)  Setor
+     *  :)  Matrícula
+     *  :)  Cidade
+     *  :)  Estado
+   *  :)  Resetar senha
+   *  :)  Inserir alias
+   *  :)  Alterar setor
+
+ * Menu: Lista pública
+   *  :(  Inserir
+     * ERRO: Informe o nome da empresa (possível bug do DIRETO)
+   *  <!>  Pesquisar (nenhuma lista criada)
+
+ * Menu: Política de senhas
+   *  :(  Inserir
+     * ERRO: Informe o nome da empresa (possível bug do DIRETO)
+     *  <!>  Comprimento mínimo (não tive como testar)
+     *  <!>  senhas no histórico (não tive como testar)
+     *  <!>  tempo de expiração (não tive como testar)
+     *  <!>  complexidade (não tive como testar)
+   *  <!>  Pesquisar (não tive como testar)
+
+ * Menu: Estatísticas
+   *  {i}  Este item é citado na introdução mas não está no menu
+
+----
+
+= Visão Detalhada - Interface do Usuário =
+
+ * Tela de Login
+  *  :)  Botão Limpar
+  *  :)  Botão Ok
+  *  :)  Usuário inválido
+  *  :)  Senha inválida
+
+ *  :)  Nome da Empresa & Data atual
+
+ *  :)  Trocar usuário, ida e volta (vide Opções -> Permissões)
+
+ * Opções
+  * Geral
+    *  :)  Senha
+    *  :)  Timeout Sessão (perde no logout)
+  * Correio
+    *  <!>  Email padrão
+    *  :)  Redirecionamento (perde no logout)
+    *  :)  Guardar em Enviadas
+    *  :)  Guardar na lixeira
+    *  <!>  Limpar lixeira (perde no logout)
+    *  :)  paginar a cada (perde no logout)
+    *  :)  Assinatura
+  * Agenda
+    *  :)  Horário de trabalho
+    *  :)  Visão padrão (perde no logout)
+    *  :)  VCALENDAR Exportar
+    *  :(  VCALENDAR Importar (erro JAVA - Resource not available)
+  * Catálogo
+    *  <!>  Importar catálogo
+    *  <!>  Separador
+    *  <!>  Núm coluna nome
+    *  <!>  Núm coluna email
+    *  <!>  Ignorar 1a linha
+  * Permissões
+    *  :)  Adicionar usuário
+
+ *  :)  Encerrar sessão
+
+ * Menu: Hoje
+  *  :)  Website
+  *  :(  Suporte (deu erro e deslogou)
+    * ERRO: Chamada sem indicação de tarefa. Verifique o link informado
+  *  :)  Criar mensagem
+  *  :)  Criar compromisso
+  *  :)  Atualizar
+  *  :)  Link de mensagem de email
+  *  :)  Link de compromisso
+
+ * Menu: Correio
+  *  :)  SubMenu: Caixa de Entrada
+  *  :)  SubMenu: Lixeira
+  *  :)  SubMenu: Programado
+  *  :)  SubMenu: Rascunho
+  *  :)  Botão Criar mensagem
+  *  :)  Botão Pesquisar
+  *  :)  Botão Pastas
+    *  :)  Botão Criar pasta
+    *  :)  Botão Excluir
+    *  :)  Botão Atualizar
+    *  :)  Botão Exportar (.zip -> .eml)
+    *  :)  Botão Renomear
+    *  :)  Botão Cancelar
+  *  :)  Botão Excluir
+  *  :)  Botão Recuperar
+  *  :)  Botão Mover
+  *  :)  Botão Encaminhar
+  *  :)  Botão Atualizar
+  *  :)  Botão Limpar pasta
+  *  :)  Botão Exportar (.eml)
+  *  :)  Botão Sinalizar
+
+ * Menu: Agenda
+  *  :)  SubMenu: Dia
+  *  :)  SubMenu: Semana
+  *  :)  SubMenu: Mês
+  *  :)  Botão Excluir
+  *  :)  Botão Imprimir
+  *  :)  Seta Anterior
+  *  :)  Seta Posterior
+  *  :)  SubMenu: Convites
+  *  :)  SubMenu: Compromissos
+  *  :)  Botão Criar compromisso
+    *  :)  Botão Calendário
+    *  :)  Botão Agendar
+    *  :)  Botão Salvar
+    *  :)  Botão Cancelar
+    *  :)  Botão Imprimir
+    *  :(  Convidados (Adicionar convidado do Catálogo Pessoal dá erro)
+      * ERRO: Não foi possível incluir compromisso na Agenda - ERRO: Convidado(s)
+      *  :)  Botão Adicionar
+      *  :)  Botão Excluir
+      *  :)  Botão Verificar Horário
+  *  :(  Botão Calendário (se chamado do nível principal, dá erro e desloga)
+
+ * Menu: Catálogo Geral
+   *  :)  Botão Pesquisar
+   *  :(  Botão Adicionar contato (Não funciona)
+   *  :)  Botão Criar mensagem
+   *  :)  Botão Criar compromisso
+   *  :)  Navegação entre setores
+
+ * Menu: Catálogo Pessoal
+   *  :)  Botão Criar Grupo
+     *  :)  Aba Cat. Pessoal (AVISO: ele deixa incluir o próprio grupo!)
+     *  :(  Aba Cat. Geral (Não mostra os outros setores nem usuários)
+     *  :)  Botão Excluir integrantes
+   *  :)  Botão Criar Contato
+   *  :)  Botão Excluir
+   *  :)  Botão Criar Mensagem
+   *  :)  Botão Criar Compromisso
+   *  :)  Ordenação por Nome, Descrição e Telefone
+   *  :)  Botão V: Marcar e desmarcar todos os contatos
+
+ * Menu: Dicas e Novidades
+   *  :)  Imprimir
+   *  :(  (Ainda não implementado)
+
+
+
+
+

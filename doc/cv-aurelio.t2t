@@ -1,0 +1,318 @@
+CURRÍCULO - Aurelio Marinho Jargas
+
+
+%!target: html
+%!includeconf: ../include/urls.t2t
+
+%!style: ../artigo.css
+%!options: --css-inside --css-sugar
+%!encoding: UTF-8
+
+%!postproc: SITEROOT 		..
+
+%!postproc: {(.*?)}	<\1>
+%!preproc: '^(- .*?:\*\*)$'  \1{br}
+%!postproc: italic normal
+
+
+%see: http://starship.python.net/~goodger/cv/resume_David_Goodger.html
+
+''' <div style="background:yellow;">
+Atenção: Este currículo está desatualizado e não estou procurando emprego. Deixo ele aqui para fins históricos somente.
+''' </div>
+
+	{i}Site: http://aurelio.net{br}
+	E-mail: verde@aurelio.net{br}
+	Habilidades: Programador, Escritor, Instrutor{br}
+	Formação: Técnico em Eletrônica, Tecnólogo em
+	Processamento de Dados{br}
+	Brasileiro, residente em Curitiba, 28 anos, não
+	fumante, inglês fluente{/i}
+
+
+
+= Habilidades =
+
+	**Programador:** Além de programador profissional, nas horas
+	vagas sou desenvolvedor voluntário de Software Livre. Minha
+	especialidade é a manipulação de dados (filtros, conversores,
+	tradutores, extratores, formatadores) e as linguagens que
+	domino são Python, Bash e SED. Tenho experiência grande com
+	PHP, SQL, CGI e programação Web, além de conhecimentos em
+	AppleScript. Também possuo experiência em projeto,
+	lançamento, manutenção e divulgação de software (como
+	produto).
+
+	**Escritor:** Possuo didática na escrita técnica, explicando
+	conceitos abstratos de maneira digerível. Já escrevi três livros,
+	vários guias e tutoriais, apostilas para cursos e artigos para
+	revistas de circulação nacional. Escrevo bem em português e
+	inglês, gosto de fazer textos lapidados (sem erros, sem
+	excedente) e domino a arte de organizar e formatar o conteúdo.
+
+	**Instrutor:** Possuo didática para ensinar os conhecimentos
+	que domino. Já dei cursos e fiz palestras técnicas em empresas
+	e eventos pelo país, sempre recebendo elogios do público e dos
+	organizadores. Gosto de ensinar e sinto satisfação quando o
+	aluno aprende. Possuo certa dose de carisma também, segurando
+	o público em palestras de 3, 4 horas.
+
+	**Outros:** Inglês fluente (fala e escrita), Linux, Windows,
+	Mac OS X, Cygwin, linha de comando, expressões regulares, VI,
+	KISS, domínio de tecnologias da Internet, estruturação de
+	conteúdo, músico (bateria), esportista (surfe, skate,
+	bicicleta, escalada).
+
+% ver curr rudá
+%**Outros:** Linux, MacOS X, HTML, CSS,
+
+= Estudos =
+
+- **1992-1996:** Curso de Técnico em Eletrônica no CEFET-PR (2º grau),
+  concluído.
+- **1997-1998:** Curso de Bacharelado em Informática na UFPR, não concluído.
+- **1998-2000:** Curso de Tecnólogo em Processamento de Dados na
+  faculdade ESEEI, concluído.
+- **2000-2001:** Curso de Ciências Sociais na UFPR, não concluído.
+- **2001-Hoje:** Google.
+-
+
+= Trabalho =
+
+- **1997-2002:** Conectiva, Curitiba (http://www.conectiva.com.br)
+- **2002-2003:** Techlink, Florianópolis (http://www.techlink.com.br)
+- **2003-2005:** Conectiva (hoje Mandriva), Curitiba
+  (http://www.mandriva.com.br)
+-
+
+: Conectiva
+
+  //Empresa pioneira no desenvolvimento e serviços em Linux no Brasil e América Latina//.
+
+  Fui o primeiro funcionário técnico contratado pela empresa, tendo
+  passado por vários setores e ocupado vários cargos, incluindo
+  gerência. Entre as tarefas: implantação de servidores, suporte
+  técnico, tradução técnica, desenvolvimento do Conectiva
+  Linux, testes e controle de qualidade, programação de sistemas e
+  ferramentas, documentação, redação e diagramação de apostilas de
+  treinamento, certificação, recrutamento e treinamento de funcionários,
+  gerência da equipe de suporte técnico (5 técnicos) e gerência da
+  equipe de testes (6 técnicos).
+
+  //Extra:// Criação e presidência da AFC (Associação de
+  Funcionários da Conectiva) e dois mandatos na CIPA (Comissão Interna
+  de Prevenção de Acidentes).
+
+
+: Techlink
+
+  //Empresa pioneira no sistema POS (Point of Sale) 100% nacional (hardware e software).//
+
+  Tarefas desempenhadas: administração do servidor Linux da rede
+  interna, programação de sistemas e ferramentas, testes e controle de
+  qualidade de produtos, redação e diagramação de manuais de produtos.
+
+
+= Programador - Experiência =
+
+Softwares Livres feitos na horas vagas
+(mais detalhes em http://aurelio.net/bin):
+
+- **Funções ZZ (Bash):**
+  Mais de 60 mini-aplicativos de utilidades diversas e consulta na
+  Internet.
+  [Elogiado pelos usuários http://funcoeszz.net/recados.php].
+
+- **txt2tags (Python):**
+  Conversor de texto para formatos como HTML, Sgml, ManPage, LaTeX e
+  outros.
+  [Elogiado pelos usuários http://txt2tags.sf.net/pt/testemunhos.html].
+
+- **txt2regex (Bash):**
+  Wizard que constrói Expressões Regulares de maneira fácil e interativa.
+
+- **sedsed (Python):**
+  Depurador e alinhador (debugger & indenter) para a linguagem SED.
+
+- **RAC (C):**
+  Extrator de trechos de textos, com especificação flexível e poderosa.
+
+- **AdiumBook (AppleScript Studio):**
+  Para Mac OS X, sincroniza os contatos da Agenda e do Adium (IM).
+-
+
+Conectiva:
+
+- **MDA Intelig (Python e PHP):**
+  Solução integrada via Web para controlar a criação e manutenção de
+  domínios virtuais, usuários, filtros de e-mail, aliases, forwards,
+  listas de discussão, autoresposta e quota. Sistema modular, com
+  componentes em várias máquinas diferentes interligadas via socket.
+
+- **Conectiva Build System (Python e Bash):**
+  Sistema automático de construção de pacotes do Conectiva Linux 7.0,
+  composto por vários scripts especialistas.
+
+- **Bogostat (Python):**
+  Analizador de logs do Bogofilter, gerando gráficos sobre as
+  estatísticas de SPAMs recebidos no servidor de e-mail.
+
+- **StarOffice em Português (Python):**
+  Programa de edição automática dos binários da suíte StarOffice 5.2
+  (não tínhamos acesso aos fontes), traduzindo as strings de Português
+  de Portugal para o Português do Brasil.
+
+- **ACDP (PHP e Postgres):**
+  Sistema de apontamento de horas em projetos. Usado por todos os
+  técnicos e controla todos os projetos da empresa. Intuitivo, com
+  navegação via calendário e interface limpa. Além do apontamento,
+  também fecha a contabilidade de horas dos projetos e gera diversos
+  tipos de relatórios, inclusive relatórios personalizados. Também
+  possui autochecagem, indicando pontos de inconsistência nos dados.
+-
+
+Techlink:
+
+- **Servidor RedeCard (Python):**
+  Simulador de servidor da bandeira RedeCard para testes locais do
+  equipamento POS, com suporte a inicialização, finalização e
+  transações, utilizando protocolo de comunicação binário ISO-8583.
+
+- **EasyPrinter Tester (Python):**
+  Programa de teste de todas funções da impressora térmica da solução
+  POS. Os comandos da impressora são seqüências de caracteres de
+  controle, enviados via interface serial.
+
+- **Sistemas internos (Python):**
+  Programas para a Intranet, no ambiente CGI e armazenamento em banco de
+  dados: Ponto Eletrônico, Carga Horária de Projetos e Controle de
+  Estoque.
+-
+
+
+= Escritor - Experiência =
+
+Textos pessoais feitos nas horas vagas
+(mais detalhes em http://aurelio.net/doc/nerd.html):
+
+- **Livro Shell Script Profissional:**
+  Lançado em 2008 pela Editora Novatec, são 480 páginas sobre shell script visto de maneira profissional, com foco em qualidade e manuteção posterior. ISBN: 978-85-7522-152-5.
+  [Elogiado pelos leitores http://www.novatec.com.br/comentarios.php?isbn=9788575221525].
+
+- **Livro Expressões Regulares:**
+  Lançado pela Editora Novatec, são 144 páginas e é a única publicação
+  nacional dedicada ao assunto e umas das poucas existentes no mundo. Já
+  foram vendidas mais de 3.000 unidades. ISBN: 85-7522-100-0.
+  [Elogiado pelos leitores http://www.novateceditora.com.br/comentarios.php?isbn=8575221000].
+
+- **Apostila Programação Profissional em Shell:**
+  Eram 114 páginas sobre conceitos avançados de programação em Shell
+  script. Foram vendidas mais de 400 unidades.
+  [Elogiada pelos leitores http://aurelio.net/shell/apostila/leitores.html].
+
+- **Artigos em Revistas:**
+  Já escrevi 10 artigos técnicos e uma matéria de capa de 9 páginas para
+  revistas de circulação nacional sobre Linux. Também fui colunista
+  mensal com o tema "Modo Texto".
+
+- **Coluna do Aurelio:**
+  Foram 12 artigos de duas páginas com o tema "Modo Texto", publicados
+  em meu site.
+
+- **Guias e Tutoriais:**
+  sed-HOWTO, sem-mouse-HOWTO, Dialog --tudo, Canivete Suíço do
+  Programador Shell, AppleScript for Python Programmers.
+
+- **Material de Cursos:**
+  Apostila Introdução ao Shell Script, Apostila Conhecendo as Expressões
+  Regulares, Editor VI - Guia de Referência, Software Livre -
+  Experiências de um Desenvolvedor (slides).
+-
+
+Conectiva:
+
+- **Linuxconf (1999):**
+  Tradução técnica para o português da interface do programa e toda a
+  sua extensa documentação e ajuda online.
+
+- **Apostila Administrador de Sistemas Linux I (2004):**
+  São 179 páginas, escritas e diagramadas do zero, parte integrante da
+  nova linha de treinamento da empresa. Tópicos: editor VI, pacotes,
+  expressões regulares, usuários, configuração, runlevels, processos,
+  serviços, logs, agendamento e backup.
+-
+
+Techlink:
+
+- **EasyCAD - Manual do Usuário (2003):**
+  Redação e diagramação do manual de uso que acompanha o aparelho
+  EasyCAD.
+
+- **EasyPrinter - Manual do Usuário (2003):**
+  Redação e diagramação do manual de uso que acompanha a impressora
+  térmica EasyPrinter.
+-
+
+= Instrutor - Experiência =
+
+Todos os cursos e palestras que já ministrei estão detalhados em
+http://aurelio.net/curso. Destaques:
+
+- Quatro cursos na //Semana de Capacitação e Desenvolvimento em//
+  //Software Livre//, evento do Governo Federal, em Brasília - DF (2004)
+
+- Palestra no //V Fórum Internacional de Software Livre// em Porto
+  Alegre - RS (2004)
+
+- Palestra e cursos no //II// e //III Seminário de Desenvolvimento//
+  //em Software Livre// em Campinas - SP (2003) e Lajeado - RS (2004)
+
+- Palestras no //II Congresso Catarinense de Software Livre// em
+  Joinville - SC (2004)
+-
+
+= Raio-X =
+
+	Minhas características são: perfeccionismo, persistência,
+	pesquisa, concentração, detalhismo, didática, organização, boa
+	escrita, iniciativa, luta, liderança, multitarefa,
+	honestidade, irritabilidade, vestimentas alternativas,
+	inconformismo, populismo, desinibido, especialista, simples.
+
+	Sou conhecido na comunidade do Software Livre e minha página
+	pessoal recebe mais de 3.000 acessos por dia. Uso o Google para
+	pesquisar assuntos novos e resolver problemas, aprendo por
+	demanda e não por antecipação. Sou multitarefa, porém
+	monofoco. Cada coisa de uma vez, na sua vez.
+
+	Minha experiência com CIPA e Associação de Funcionários foram
+	muito gratificantes. Entre as conquistas, estão: máquinas de
+	refrigerante/salgadinho/doces/café, festas de Páscoa e Natal,
+	organização de palestras da SIPAT, exercícios durante o
+	expediente acompanhados de fisioterapeuta, doação de sangue e
+	vacinação contra a gripe.
+
+	Com a experiência de escrever programas para a comunidade e
+	para empresas, acabei aprendendo a lidar com lançamento de
+	software, controle de alterações, versionamento e contato com
+	usuários. Aprendi a fazer interfaces amigáveis, elogiadas
+	pelos usuários na facilidade de uso, simplicidade e navegação
+	intuitiva. Também aprendi a tratar o programa como um produto,
+	cuidando de imagem e marketing perante o público.
+
+	Com a experiência das palestras e cursos, aprendi a preparar
+	materiais direcionados e com tempo definido. Também aprendi a
+	falar em público cativando a atenção da platéia e aperfeiçoei
+	os dotes didáticos. O networking pessoal aumentou bastante e
+	conheci lugares novos.
+
+	Do lado criativo, prezo pelo resultado final polido e simples.
+	Seja na música, na escrita ou na programação, gosto de lapidar
+	o trabalho até que não se tenha mais o que tirar de "gordura".
+	O simples é belo.
+
+	Como funcionário não sou um robô. Gosto de participar, de
+	propor mudanças, de conversar com as pessoas. Não temo o que
+	desconheço e gosto de desafios. Aliás, eu PRECISO deles,
+	porque só o dinheiro não vale a dedicação de 1/3 de meu dia,
+	tem que ter EMOÇÃO.

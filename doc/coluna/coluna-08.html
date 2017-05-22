@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>coluna do aurelio 08</TITLE>
+
+<!-- Included coluna.css -->
+<STYLE TYPE="text/css">
+/* --css-inside: Se mudar algo, regerar todas as colunas */
+h1, h3    { color: green     ; }
+h2        { color: lightgreen; }
+code      { color: white     ;      font-weight: bold   ; }
+a         { color: yellow    ;  text-decoration: none   ; }
+a:visited { color: purple    ; }
+body      { color: silver    ; background-color: black  ;
+           margin: 2em       ;       text-align: justify; }
+</STYLE>
+
+</HEAD>
+<BODY>
+
+<DIV CLASS="header" ID="header">
+<H1>coluna do aurelio 08</H1>
+<H2>screen (janelizando o modo texto - parte 2)</H2>
+<H3>http://aurelio.net/doc/coluna</H3>
+</DIV>
+
+<DIV CLASS="body" ID="body">
+<P>
+olás. já estão apertando <CODE>^a</CODE> até no celular? ainda não? bem, então hoje
+eu vou mostrar porque sua vida será mais feliz com o <CODE>screen</CODE>.
+</P>
+<P>
+comecemos com o simples e útil: monitoramento. quer ser informado quando
+algum  usuário  entrou  na  sua máquina, ou quando acabou aquele comando
+demorado?  o  comando  de  monitoramento  emite um aviso quando qualquer
+coisa  muda  na  janela,  como  linhas ou caracteres novos. na janela do
+comando em questão <CODE>^a :monitor on</CODE>. comandos candidatos a monitoramento
+são: <CODE>tail -f</CODE>, <CODE>tar czf</CODE>, <CODE>comando &gt; arquivo</CODE> ou qualquer outro comando
+que  não produza saída na tela por algum tempo e que quando é finalizado
+simplesmente retorna à linha de comando.
+</P>
+<P>
+o  inverso também é possível: monitorar o silêncio. o comando para tal é
+o <CODE>^a :silence 10</CODE>,  sendo 10  o número de segundos  de monitoração.  se
+durante  esse  tempo  nada  mudar  na tela, um aviso será emitido na sua
+barra  de tarefas. ótimo para detectar falhas em programas que não podem
+parar.
+</P>
+<P>
+de  longe  minha  funcionalidade  preferida é a de copiar e colar textos
+entre  janelas  sem  precisar  do  mouse.  como  é mesmo um mouse? &amp;:) o
+<CODE>screen</CODE> lhe permite selecionar visualmente um texto utilizando apenas o
+teclado. numa primeira tentativa pode parecer complicado, mas é simples.
+pra  variar,  começa com <CODE>^a</CODE>. veja no seu teclado, as teclas <CODE>[</CODE> e <CODE>]</CODE>.
+viu?  olhe de novo, fixamente, como quem acaba de conhecer um amigo novo
+e  se  entenda  com  elas,  pois você passará a utilizá-las muito, serão
+inseparáveis. bem, talvez nem tanto, mas use, tente e seja mais um feliz
+usuário  do <CODE>screen</CODE> que jogou seu mouse pela janela e nunca mais sofreu
+de dores no pulso. sua saúde agradece.
+</P>
+<P>
+espero  que  toda  essa  propaganda  lhe  faça "ver a luz", o nirvana do
+teclado, retomando seu reinado roubado pelo mouse famigerado. acompanhe:
+temos  o  colchete  que  abre e o que fecha, um copia e o outro cola. só
+isso.  então,  numa janela do <CODE>screen</CODE> digite <CODE>^a [</CODE> para entrar no modo
+de  cópia ("copy mode") e com as <CODE>setas</CODE> do teclado, vá com o cursor até
+o  início  do trecho a ser copiado. agora para marcar que ali é o começo
+da  seleção,  simplesmente  aperte a <CODE>barra de espaços</CODE> e veja a seleção
+visual começar. novamente com as <CODE>setas</CODE> direcione o cursor até o fim do
+trecho  desejado  e  vá vendo o texto ficando marcado. marcou tudo o que
+queria?  novamente  aperte  a  <CODE>barra de espaços</CODE>  para  informar  que a
+seleção  acabou.  pronto,  o trecho foi copiado e o <CODE>screen</CODE> voltou para
+seu estado normal. opcionalmente você pode usar a tecla <CODE>ENTER</CODE> ao invés
+da <CODE>barra de espaços</CODE>.
+</P>
+<P>
+para  colar  o trecho copiado, seja na linha de comando, no navegador ou
+no  seu  editor  de  textos  preferido, simplesmente aperte <CODE>^a ]</CODE>. essa
+cópia  e  colagem  é  independente  de  aplicação,  você pode selecionar
+qualquer  trecho  da tela, seja texto, seja um menu ou a tela inteira. e
+nesse  intervalo  entre  copiar  o trecho e colá-lo, você pode trocar de
+janela  normalmente,  executar  outros  comandos, até esquecer que tinha
+copiado algo, e quando apertar <CODE>^a ]</CODE>, lá estará seu texto, intocado.
+</P>
+<P>
+recapitulando: para copiar, <CODE>^a [</CODE>,  move cursor,  espaço,  move cursor,
+espaço e para colar basta o <CODE>^a ]</CODE>.
+</P>
+<P>
+para  alegria  dos  usuários  de  <CODE>vi</CODE>,  quando se está no modo de cópia
+vários  atalhos  conhecidos  de  movimentação funcionam, como: <CODE>0</CODE>, <CODE>$</CODE>,
+<CODE>w</CODE>,  <CODE>G</CODE> e <CODE>g</CODE>, bem como os comandos de pesquisa <CODE>/</CODE> e <CODE>?</CODE>. isso mesmo!
+você  pode procurar por palavras na tela estando no modo de cópia. então
+se  numa listagem grande de nomes que está na tela, seja num programa de
+cadastro,  no  navegador  ou  foi  a  saída  de  um  programa, você quer
+encontrar seu nome, basta digitar <CODE>^a [ ? seu_nome</CODE>. matador.
+</P>
+<P>
+outra  funcionalidade  muito  útil é o bipe visual. quando você está com
+muitos aplicativos abertos, por exemplo um leitor de e-mail, um de ICQ e
+outro  de  IRC e de repente sua máquina bipa, qual será o programa que o
+gerou?  será  um  e-mail novo, ou uma mensagem privada no IRC? ou ainda,
+você  está  se  batendo  no <CODE>vi</CODE> e ele não pára de apitar e mostrar para
+todos  em  volta  que  você está errando? <CODE>^a :vbell on</CODE> é a solução. ao
+invés do bipe, sua tela irá dar uma piscada discreta, e caso o bipe veio
+de  uma  outra  janela,  você será avisado em sua barra de tarefas que a
+janela  "nome-da-janela"  está  bipando.  eu  sei,  "bipar"  é feio. mas
+"clicar" também é...
+</P>
+<P>
+você  também  pode criar seus próprios "atalhos" para disparar programas
+ou  comandos rotineiros. atalhos são coisas que os "ícones" substituíram
+na  interface gráfica, pois são mais "fáceis"... um atalho bem útil é um
+que  abra uma janela nova com seu navegador preferido, já mostrando seus
+endereços  preferidos  (os  marcadores, ou "bookmarks"). um comando como
+<CODE>^a :bind L screen -t www lynx -book</CODE> mapeia a tecla <CODE>L</CODE> para  abrir uma
+janela  nomeada  "www"  e  executar  nela  o  <CODE>lynx</CODE>. então você está em
+qualquer  janela,  fazendo  o  que  quer que seja e precisou acessar uma
+página  da internet? <CODE>^a L</CODE>. viu a página e não quer mais navegar? basta
+sair do <CODE>lynx</CODE> e a janela será fechada automaticamente. fácil assim.
+</P>
+<P>
+ainda  tem  mais!  não é um saco ter que ficar toda hora preenchendo seu
+nome  e  email  em  programas, formulários online, cadastros, registros,
+etc?  o <CODE>screen</CODE> também resolve este problema, pois você pode mapear uma
+tecla para "cuspir" um texto na tela. captou?
+</P>
+<P>
+por  exemplo,  com o <CODE>^a :bind N stuff "aurelio marinho jargas"</CODE>, quando
+preciso  preencher  meu  nome,  simplesmente  faço  <CODE>^a  N</CODE>.  e ainda, o
+conteúdo  desse  comando  <CODE>stuff</CODE>  pode  ser uma variável de ambiente do
+<CODE>shell</CODE>, então  se você já tem uma variável <CODE>$EMAIL</CODE>,  mapeie o <CODE>E</CODE> para
+"cuspir" seu conteúdo: <CODE>^a :bind E stuff $EMAIL</CODE>. só cuidado  na hora de
+escolher as teclas que farão estes atalhos para  não pegar uma letra que
+é  algum  comando  do  <CODE>screen</CODE>  que você utilize com o <CODE>c</CODE> por exemplo.
+letras maiúsculas são uma boa dica.
+</P>
+<P>
+como  o  <CODE>screen</CODE> tem muitos comandos e configurações, você pode colocar
+suas  preferências  num arquivo no seu "home", o <CODE>~/.screenrc</CODE>. todos os
+comandos  que  vimos  que  começam  com  <CODE>:</CODE>  podem  ser colocados neste
+arquivo,  e  serão  sempre carregados, não precisando ficar os digitando
+toda  vez que  entra no <CODE>screen</CODE>. o que é  sempre a  melhor escolha para
+começar  um arquivo de configuração é pegar um pronto e modificá-lo para
+suas  necessidades.  o meu está disponível e comentado  para facilitar o
+entendimento:  <A HREF="http://aurelio.net/doc/dotfiles/screenrc.txt">http://aurelio.net/doc/dotfiles/screenrc.txt</A>.  baixe-o  e
+copie para <CODE>~/.screenrc</CODE>.
+</P>
+<P>
+e  vamos terminar falando mal, pois nenhum programa é perfeito. então os
+maiores incovenientes  do <CODE>screen</CODE>, que  nem de longe atrapalham seu uso
+em  face  de todas as  vantagens que ele  lhe oferece,  são: a função de
+travar  as janelas  (<CODE>^a x</CODE>)  às vezes se perde e  bagunça o terminal, o
+<CODE>Shift+PageUp</CODE> para ver as  telas que passaram  não funciona com a barra
+de  tarefas permanente (<CODE>:hardstatus alwayslastline</CODE>) e alguns programas
+se perdem com o tipo do terminal usado (<CODE>TERM=screen</CODE>). as soluções para
+estes probleminhas são,  respectivamente: comando <CODE>reset</CODE> para arrumar o
+terminal,  não usar a barra de tarefas permanente  se quiser histórico e
+<CODE>export TERM=linux</CODE> se um programa não gostar do terminal.
+</P>
+<P>
+e para pensar na cama: "por quê você precisa do CAPS LOCK?".
+</P>
+<P>
+a  tecla <CODE>CAPS LOCK</CODE> atrapalha estando ao lado da tecla <CODE>a</CODE>, que é nossa
+tecla chave do <CODE>screen</CODE>. esbarrar nela sem querer ao pressionar o <CODE>^a</CODE> é
+normal,  e  chato.  mas  pense  bem. você usa o <CODE>CAPS LOCK</CODE>? ESCREVER EM
+MAIÚSCULAS  é  um hábito repugnante e geralmente são tão poucas as vezes
+que  se  precisa  escrever uma palavra inteira ou mais em maiúsculas que
+ficar  segurando  o  <CODE>Shift</CODE>  com  o  mindinho é mais rápido que ligar e
+desligar  o  <CODE>CAPS LOCK</CODE>. e se precisar escrever um texto em maiúsculas,
+qualquer  editor de texto decente tem a função de "capitalizar" um texto
+selecionado.  isso  fora o inconveniente de ligar a tecla sem perceber e
+digitar  trechos  ou  executar  comandos  em maiúsculas sem querer. bem,
+concluindo  eu aconselho a remoção física do <CODE>CAPS LOCK</CODE> do seu teclado.
+basta puxá-la para cima, arrancando-a  e tapar o buraco com um durex. eu
+já fiz isso há mais de um ano e minha vida ficou mais feliz &amp;:)
+</P>
+<HR NOSHADE SIZE=1>
+<P>
+ <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
+<A HREF=".">&lt;--- Voltar para o índice</A>
+</P>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-280222-1";
+urchinTracker();
+</script>
+</DIV>
+
+<!-- html code generated by txt2tags 2.3.3-dev (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags -C config.t2t coluna-08.t2t -->
+</BODY></HTML>

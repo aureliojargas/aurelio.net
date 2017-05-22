@@ -1,0 +1,180 @@
+coluna do aurelio 11
+caracteres de controle (não fuja, domine-os)
+http://aurelio.net/doc/coluna
+
+caracteres  de  controle  para  formatação  de  texto  e movimentação do
+cursor:  um assunto salgado, mas que fascina e apaixona quanto mais você
+aprende e mexe. mas qual a graça de ficar posicionando o cursor na tela?
+toda!  o limite  é  sua  imaginação, pode ser útil  para fazer desenhos,
+animações, barra de status, interfaces que se atualizam, ...
+
+estes  comandos são chamados de seqüências de escape, e veremos o padrão
+`ANSI X3.64`.  o  nome  é  apropriado,  pois  todas  as  seqüências  são
+precedidas pelo caractere ESC da tabela ASCII (código 033 octal).
+
+as  seqüências funcionam em placas monocromáticas e coloridas, então até
+naquela  velharia de tela verde você pode brincar. os comandos devem ser
+enviados  diretamente  ao  terminal,  ou  seja,  devem  ser  ecoados  na
+tela. para isso você pode usar qualquer um dos vários sabores de `print`
+e `printf` existentes,  mas nosso  bom e velho `echo` também dá conta do
+serviço.
+
+as  seqüências são diferenciadas entre si por caracteres comuns, sendo o
+ESC inicial o único problemático para ecoar.  pode-se colocá-lo literal,
+apertando  `ctrl+v, esc` (aparece ^[), ou referenciá-lo  por seu  código
+octal,  usando a opção -e do echo. como a quebra de linha geralmente não
+é desejada  quando  estamos  mandando comandos  para a tela,  a opção -n
+também é necessária.
+
+todas as  seqüências  que  veremos  começam  com um  ESC  seguido  de um
+colchete,  então `ESC[` é o nosso início padrão de seqüência. opa! temos
+uma exceção. o comando para limpar a tela, similar ao `clear` é `ESCc`:
+
+--- prompt$ echo -ne '\033c'
+
+então  pra  começar,  vamos ver como definir cores para as letras e seus
+fundos?  esta  seqüência  é geralmente  a mais  utilizada, porém  possui
+diversos  parâmetros, e merece atenção especial.  você sempre quis saber
+como  mostrar  um texto colorido e não tinha a quem perguntar  ou achava
+que era muito complicado? acompanhe!
+
+o  formato  do  comando  é  `ESC[n1;n2;...m`, ou seja, abre com o padrão
+esc-colchete  e fecha  com a letra eme.  no meio temos números separados
+por ponto-e-vírgula. o padrão caso nenhum número seja informado  é zero.
+vamos aos significados dos números:
+
+---
+    0  desliga tudo (volta ao normal)
+    1  cor brilhante
+    5  pisca-pisca
+    7  vídeo reverso (inverte letra e fundo)
+   30  texto preto (cinza)          40 fundo preto (cinza)
+   31  texto vermelho               41 fundo vermelho
+   32  texto verde                  42 fundo verde
+   33  texto marrom (amarelo)       43 fundo marrom (amarelo)
+   34  texto azul                   44 fundo azul
+   35  texto roxo                   45 fundo roxo
+   36  texto ciano                  46 fundo ciano
+   37  texto cinza (branco)         47 fundo cinza (branco)
+---
+
+os  números são lidos de forma seqüencial e adicional, então `44;31;1;5`
+é: fundo azul, com letra vermelha e brilhante (clara), e ainda piscando,
+confira:
+
+--- prompt$ echo -e '\033[44;31;1;5m azul e vermelho \033[m'
+
+note  que a cor  brilhante  geralmente  indica o  vermelho claro,  verde
+claro,  e assim vai.  as exceções são o marrom que vira amarelo, o preto
+que vira cinza e o cinza que vira branco.
+
+aqui  vai  um  script superútil  para lhe mostrar  todas as  combinações
+possíveis com os códigos de cores. guarde e use!
+
+---
+   #!/bin/bash
+   # cores.sh - mostra todas as cores do console
+   
+   for letra in 0 1 2 3 4 5 6 7; do
+     for bold in '' ';1'; do
+       for fundo in 0 1 2 3 4 5 6 7; do
+         seq="4$fundo;3$letra"
+         echo -ne "\033[$seq${bold}m $seq${bold:-  } \033[m"
+       done; echo
+     done
+   done
+---
+
+agora  que  já  sabemos  como colorir um texto, vamos ver como colocá-lo
+exatamente  onde  queremos  na  tela.  o  formato padrão dos comandos de
+movimentação   é   `ESC[<quantidade><comando>`.  vamos  começar  com  os
+comandos de movimentação simples, os mais comuns:
+
+---
+   comando   padrão   move o cursor...
+   --------+--------+------------------------------------------
+   ESC[nA    n=1      n linhas para cima, na mesma coluna
+   ESC[nB    n=1      n linhas para baixo, na mesma coluna
+   ESC[nC    n=1      n colunas para a direita, na mesma linha
+   ESC[nD    n=1      n colunas para a esquerda, na mesma linha
+   ESC[nE    n=1      n linhas para baixo, na coluna 1
+   ESC[nF    n=1      n linhas para cima, na coluna 1
+   ESC[nG    n=1      para a coluna n da linha atual
+   ESC[n;mH  n=1,m=1  para a coluna m da linha n
+---
+
+é  fácil,  basta ecoar o comando e o cursor vai dar o pulo, por exemplo,
+`ESC[5E` pula para o começo da 5ª linha abaixo da posição atual.
+
+bem,  para  ficar mais visual o que cada comando desses faz, aqui vai um
+"gráfico"  de exemplo  de movimentação do cursor  com os comandos  sendo
+executados com seus valores padrão (n=1,m=1) à partir da posição marcada
+pelo ponto, que está na linha 4 coluna 7:
+
+---
+     123456789
+    +----------
+   1|H
+   2|
+   3|F     A
+   4|G    D.C
+   5|E     B
+   6|
+---
+
+e  como  um exemplo  prático,  este comando  gera o conteúdo  do gráfico
+anterior:
+
+--- echo -e '\033c\033[HH\033[4;7H.C\033[3DD\033[AA\033[GF\033[EG\033[EE\033[7GB'
+
+além  destes, temos outros comandos de movimentação e outros para apagar
+trechos de texto, confira:
+
+---
+   comando   padrão   ação
+   --------+--------+----------------------------------------------
+   ESC[nJ    n=0      (n=0) apaga até o fim da tela
+                      (n=1) apaga até o começo da tela
+                      (n=2) apaga a tela toda
+   --------+--------+----------------------------------------------
+   ESC[nK    n=0      (n=0) apaga até o fim da linha
+                      (n=1) apaga até o começo da linha
+                      (n=2) apaga a linha toda
+   --------+--------+----------------------------------------------
+   ESC[nM    n=1      apaga n linhas para baixo
+   ESC[nP    n=1      apaga n caracteres à direita
+   ESC[nX    n=1      limpa n caracteres à direita (coloca espaços)
+   --------+--------+----------------------------------------------
+   ESC[n@    n=1      insere n espaços em branco
+   ESC[nL    n=1      insere n linhas em branco
+   --------+--------+----------------------------------------------
+   ESC[nS    n=1      move a tela n linhas para cima
+   ESC[nT    n=1      move a tela n linhas para baixo
+---
+
+bem,  as tabelas estão aí e você já sabe como ecoar os comandos na tela.
+agora é só soltar a imaginação e brincar com os caracteres. para fechar,
+dois  dos  exemplos  mais  clássicos  de  posicionamento  de  cursor,  a
+tradicional barra de status, que usa pulos, inserção e apagamento:
+
+---
+   for i in 1 2 3 4 5 6 7 8 9; do
+     echo -ne "\033[G\033[@#\033[11G\033[0K$i"
+     sleep 1
+   done; echo
+---
+
+e é claro, a clássica hélice ASCII:
+
+--- while :; do for a in / - \\ \|; do echo -ne "\033[D$a"; done; done
+
+vale lembrar  que  alguns  comandos  como o  `tput` ou  bibliotecas como
+`ncurses` visam facilitar a tarefa de  posicionamento de texto e desenho
+de caixas  e botões,  com funções  já prontas para  fazer isso.  mas que
+graça isso tem se você pode fazer tudo na mão e reinventar a roda? &:)
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

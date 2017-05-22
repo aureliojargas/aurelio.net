@@ -1,0 +1,173 @@
+coluna do aurelio 12
+lynx (navegação turbinada)
+http://aurelio.net/doc/coluna
+
+	"mas afinal, que graça tem ver a internet apenas como texto?"
+	- indagam os incrédulos.
+
+depende.  se você está navegando despreocupadamente, a passeio, e com um
+link rápido, não tem muita graça mesmo, use o netscape. mas se você está
+com o tempo curto,  fazendo pesquisas na internet e num link lento, para
+que perder tempo com vários tipos de fonte,  tamanhos, cores, formatação
+desnecessária, imagens gratuitas, banners, flash, shockwave, javascript,
+e outras novidades tecnológicas inúteis que inventarão?
+
+como trabalhar com o auxílio da internet para obter informações é rotina
+de muitos, o navegador `lynx` (http://lynx.browser.org) é uma ferramenta
+indispensável.  para começo de conversa, como bom navegador texto que é,
+ele  nem tenta carregar as imagens da página, ou interpretar javascript,
+flash e outras "linguagens de programação" similares, mostrando a página
+mais rápido que qualquer navegador gráfico.
+
+como  também  não  precisa  se  preocupar com tamanhos, cores e tipos de
+fontes  e  desenho  de  frames e linhas  de  tabela, o  texto é  cuspido
+rapidamente  na tela.  falando  sobre tabelas, versões mais  recentes do
+`lynx`  até   fazem  algum  tratamento   nelas,  tabulando  as  colunas,
+alinhando-as. mas sem desenhar as bordas, continua tudo apenas texto.
+
+este é o  grande trunfo do `lynx` sobre  seus "concorrentes",  sempre se
+tem apenas  texto na tela, texto este que  pode ser  gravado num arquivo
+(comando `p` - Print) e "grepado" ou editado facilmente.
+
+então para começar, pode-se chamar o programa já indicando a URL:
+--- lynx http://aurelio.net
+
+ou dentro dele, coloque uma URL nova com o comando `g` (Go to), ou edite
+a URL atual com o gê maiúsculo: `G` (g/G, lembrou do vi?). ah! por falar
+em `grep`, para procurar um texto qualquer na página, use a barra `/`.
+
+a navegação entre links e páginas é feita de forma intuitiva, utilizando
+as setas  `->` e `<-`  para ir e voltar. as setas para cima e para baixo
+servem  para escolher  os links  da página  e `Page Up/Down` servem para
+rolá-la. para sair, `q`.
+
+para saciar  a curiosidade  de quem  nunca viu  uma página HTML  em modo
+texto, aqui vai um `screenshot`:
+---
+				 Título
+
+   Um parágrafo normal de texto, com uma imagem: [ovni.jpg], seguida de
+um   texto
+  pré     formatado.
+
+   E agora uma lista de itens e subitens:
+     * segunda-feira
+     * terça-feira
+          + tomar banho
+          + pagar contas
+               o telefone
+               o luz
+               o água
+     * quarta-feira
+     * ...
+
+   E para terminar uma tabelinha de 3 colunas:
+
+   joão manoel              (operador)       manhã/tarde
+   josé maria          (manutenção elétrica)       tarde
+   jair antônio carlos       (limpeza)             noite
+
+   Obs.: note os alinhamentos esquerda/centralizado/direita
+---
+
+como se pode ver, as imagens aparecem apenas com o nome entre colchetes,
+ou com o conteúdo do campo `ALT=""`, caso especificado. entrando na tela
+de opções  (comando `o`),  podemos ignorar completamente  as imagens, ou
+mostrá-las como links, para vê-las se quiser.
+
+mas como ver imagens num navegador texto? basta usar um visualizador de
+imagens externo para console, como o `zgv` (veja coluna do aurelio #3).
+o `lynx`  respeita  as configurações de `mime types` e  seus programas,
+então basta adicionar a seguinte linha em seu `/etc/mailcap`:
+
+--- image/*; /usr/bin/zgv %s
+
+e ao  seguir um link que aponta  para uma imagem, o `zgv` é chamado para
+mostrá-la.  mas mostrar imagens é uma das  últimas coisas que se quer de
+um navegador texto, então vamos para a parte quente: extração de dados.
+
+reforçando,  como visto  no exemplo,  até as tabelas  são  representadas
+apenas com texto,  então a extração de informação  fica facilitada,  não
+precisando ignorar caracteres embelezadores.
+
+uma tarefa bem comum,  é uma extração automatizada  de dados à partir de
+uma página qualquer,  digamos,  uma que tenha a cotação diária do dólar.
+lááááá no meio  da página, depois  de quilos  de banners de propaganda e
+links de navegação do site, tem uma linha assim:
+
+--- Dólar paralelo (08/11/2001): R$ 2,62 compra   R$ 2,67 venda 
+
+e precisamos  extrair diariamente,  as cotações  de compra  e venda para
+colocar num documento local.  do diariamente,  o `crontab` se encarrega.
+mas  como extrair apenas um trecho de uma página da internet?  temos uma
+opção mágica  para que o `lynx`  busque a página,  renderize-a e cuspa o
+texto na saída padrão:
+
+--- lynx -dump http://www.cotacaodolar.com.br/hoje.html
+
+ou ainda, você pode gravar a página toda num arquivo:
+
+--- lynx -dump http://www.cotacaodolar.com.br/hoje.html > cotacao.txt
+
+e pronto! mais da metade do caminho já está andada.  com o texto na mão,
+basta um "pipe" e um `grep` e nosso problema está resolvido:
+
+--- lynx -dump http://www.cotacaodolar.com.br/hoje.html | grep 'paralelo'
+
+e temos extraída  apenas a linha  com as informações desejadas,  obtidas
+fresquinhas direto da internet. percebeu o poder disso?  usando o `lynx`
+e filtros como  `grep`,  `sed` e  `awk`, pode-se obter  automaticamente,
+QUALQUER  dado de  QUALQUER  página da internet.  deixemos os planos de
+dominação mundial para depois e vamos continuar a estressar o assunto.
+
+suponhamos  que você precise baixar  a página em HTML  mesmo, ou extrair
+dados que estão  "escondidos"  nas marcações e atributos de formulários.
+sem problema,  usando o  `-source` baixamos a página "como ela é", igual
+ao "salvar como" de outros navegadores, ou o `wget`:
+
+--- lynx -source http://www.cotacaodolar.com.br/hoje.html > dolar.html
+
+principalmente os que sofrem  com conexões lentas,  essa automatização é
+benéfica e econômica.  digamos que você  todos os dias acessa dois sites
+de notícia,  um de esportes  e um de variedades para ver as novidades do
+dia. então basta fazer um script rápido onde o  `lynx` baixa todas essas
+páginas. então você se conecta, roda o script, se desconecta, e pode ler
+as notícias com calma, sem gastar telefone.
+
+e ainda, um segundo script pode reformatar as páginas,  tirando todas as
+propagandas, alterando fontes e cores, ou seja, uma personalização local
+da página para que sua leitura fique mais agradável.
+
+mas além de obter,  você também pode  enviar informações automaticamente
+(olha lá o que você vai fazer hein?). que tal preencher formulários para
+várias pessoas obtendo  os dados de um banco de dados  local e enviá-los
+para um site qualquer da internet?
+
+--- echo "nome=carlos&idade=33&..." | lynx -post-data http://www.../cadastro.cgi
+
+pa bo en me pa ba.
+
+para ver usos práticos do  `lynx`  para envio e obtenção automatizada de
+informações,  acesse http://funcoeszz.net,  a casa das "funções ZZ", um
+pacote de funções diversas para  bash que usam `lynx` e `sed` para obter
+e formatar informações,  fazendo pesquisas na  internet em  dicionários,
+tradutores, imposto de renda, cotação do dólar e outros.
+
+além do  `lynx`  há outros dois navegadores  para modo texto  que trazem
+funcionalidades  a mais  e dividem  a preferência  dos usuários: `links`
+(http://artax.karlin.mff.cuni.cz/~mikulas/links) e `w3m`
+(http://ei5nazha.yz.yamagata-u.ac.jp/~aito/w3m/eng),  que possuem, entre
+outros, renderização de cores,  tabelas e frames, e abertura de links em
+outras janelas  (use com o `screen`!).  eles também contam com suporte a
+mouse, com direito a menu de contexto no botão direito (eca!).  mas note
+que o `links` tem um problema  crônico com cookies e autenticação `http`
+via proxy.
+
+vida longa aos navegadores em modo texto, pois na busca de informações o
+que importa é o conteúdo, e não sua apresentação.
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

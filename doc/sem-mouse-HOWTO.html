@@ -1,0 +1,903 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/kiwi/kiwi.css">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<TITLE>Sem Mouse Howto - Use somente o teclado e jogue fora o rato :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="doc semmouse">
+
+<DIV ID="header">
+<H1>Sem Mouse Howto</H1>
+<H2>Use somente o teclado e jogue fora o rato</H2>
+<H3><a href="/">aurelio.net</a> / <a href="/doc">doc</a></H3>
+</DIV>
+
+<DIV ID="main">
+
+<P>
+"Eu estava com esse documento perdido nos confins do meu $HOME há séculos. Ele foi feito em Dezembro de 1999. Como minha página é o lugar definitivo para todas as inutilidades, é claro que este documento merece um cantinho nela. Boa leitura!"
+<br> -- Aurelio, Nov 2003
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">Respondendo às primeiras perguntas</A>
+    <LI><A HREF="#toc2">Como copiar e colar sem o mouse</A>
+      <UL>
+      <LI><A HREF="#toc3">Shell (linha de comando)</A>
+        <UL>
+        <LI><A HREF="#toc4">Bash</A>
+        <LI><A HREF="#toc5">zsh</A>
+        </UL>
+      <LI><A HREF="#toc6">Editores</A>
+        <UL>
+        <LI><A HREF="#toc7">Pico</A>
+        <LI><A HREF="#toc8">Vim</A>
+        </UL>
+      <LI><A HREF="#toc9">Mail/News</A>
+        <UL>
+        <LI><A HREF="#toc10">Pine</A>
+        <LI><A HREF="#toc11">mutt</A>
+        <LI><A HREF="#toc12">slrn</A>
+        </UL>
+      <LI><A HREF="#toc13">Navegadores</A>
+        <UL>
+        <LI><A HREF="#toc14">lynx</A>
+        <LI><A HREF="#toc15">links</A>
+        <LI><A HREF="#toc16">w3m</A>
+        </UL>
+      <LI><A HREF="#toc17">IRC</A>
+        <UL>
+        <LI><A HREF="#toc18">BitchX</A>
+        <LI><A HREF="#toc19">tirc</A>
+        </UL>
+      </UL>
+    <LI><A HREF="#toc20">Screen, o gerenciador de janelas do modo texto</A>
+      <UL>
+      <LI><A HREF="#toc21">Copiar &amp; colar entre janelas do screen</A>
+      <LI><A HREF="#toc22">Copiar &amp; colar entre uma janela do screen e outra fora do screen</A>
+      <LI><A HREF="#toc23">O comando PrintScreen</A>
+      </UL>
+    <LI><A HREF="#toc24">Usando o XFree86 sem mouse!</A>
+      <UL>
+      <LI><A HREF="#toc25">fvwm &amp; fvwm2</A>
+      </UL>
+    <LI><A HREF="#toc26">Mostre que você se libertou!</A>
+    <LI><A HREF="#toc27">Obrigado</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">Respondendo às primeiras perguntas</H2>
+
+<DL>
+<DT><B>O que é um mouse?</B></DT><DD>
+<P></P>
+  De acordo com o "Webster's Revised Unabridged Dictionary (1913)", um
+  mouse é:
+<P></P>
+</DL>
+
+	<BLOCKQUOTE>
+	Any one of numerous species of small rodents belonging to the
+	genus Mus and various related genera of the family Murid[ae].
+	The common house mouse ({Mus musculus) is found in nearly all
+	countries.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Tradução: Qualquer uma das várias espécies de pequenos
+	roedores pertencentes ao gênero Mus e vários outros
+	relacionados à família Murid[ae]. O rato (mouse) caseiro comum
+	({Mus musculus) é encontrado praticamente em todos os países.
+	</BLOCKQUOTE>
+
+<DL>
+<DT><B>E o que é esse sem-mouse-HOWTO?</B></DT><DD>
+<P></P>
+  Este documento descreve como trabalhar em um computador desprovido
+  de mouse, rodando o sistema operacional Linux. O autor decidiu
+  aposentar o mouse, tanto na interface texto (console) quanto na
+  interface gráfica (XFree). Nesta condição, teve que aprender vários
+  truques para ter a mesma facilidade de Copiar e Colar textos entre
+  terminais e programas. Este documento descreve quais são estes
+  truques para ajudar outros que também têm que usar o sistema sem
+  mouse, ou por opção ou por motivos aleatórios.
+<P></P>
+<DT><B>Por que não usar o mouse?</B></DT><DD>
+<P></P>
+  Para quem usa a interface gráfica todo o tempo, não faz muito
+  sentido. Mas para quem usa primariamente a interface texto e muito
+  de vez em quando precisa da interface gráfica para rodar algum
+  programa ou outro, o mouse não é um acessório obrigatório. De fato,
+  após se acostumar com os procedimentos aqui descritos, o autor notou
+  mais agilidade e menos dispersão no uso da máquina, ficando 100% do
+  tempo com as mãos no teclado, sem aquela alternância insana entre os
+  periféricos.
+<P></P>
+<DT><B>Sou novato no Linux, eu vou conseguir entender este documento?</B></DT><DD>
+<P></P>
+  Talvez. Aqui estão dicas de uso para vários programas. É necessário
+  um conhecimento prévio destes programas para poder usufruir dos
+  truques. Mas estas dicas não têm validade. Depois que você estiver
+  mais acostumado com o Linux, volte e releia este documento, sempre
+  que precisar.
+<P></P>
+<DT><B>Por que eu deveria ler isso?</B></DT><DD>
+<P></P>
+  <UL>
+  <LI>Para se sentir à vontade numa máquina sem mouse;
+  <LI>Para salvar seu pulso da inevitável tendinite;
+  <LI>Para mostrar aos amigos suas habilidades no teclado;
+  <LI>Para economizar dinheiro, não precisando mais comprar um mouse;
+  <LI>Para dedetizar sua máquina, livrando-a de animais peçonhentos;
+  <LI>Para ter uma razão para jogar fora o roedor e não ficar com
+    remorso;
+  <LI>Para apoiar e ajudar a divulgar a campanha "Morte ao Mouse!";
+  <P></P>
+    E o mais importante:
+  <P></P>
+  <LI>Aumentar a produtividade, evitando todo o transtorno de copiar e
+    colar um texto entre terminais, acompanhe a insanidade:
+    <OL>
+    <LI>ter que tirar a mão do teclado
+    <LI>achar e agarrar o hamster, digo, o mouse
+    <LI>mover o cursor por toda a tela
+    <LI>clicar no botão esquerdo e segurá-lo
+    <LI>mover o mouse para selecionar o texto
+    <LI>soltar o botão
+    <LI>voltar a mão para o teclado
+    <LI>apertar Alt+F2 para ir ao outro terminal
+    <LI>tirar a mão do teclado novamente
+    <LI>achar e agarrar o mouse de novo
+    <LI>movê-lo até o ponto desejado
+    <LI>lembrar se é o botão do meio ou o da direita que cola
+    <LI>apertar o botão
+    <LI>voltar a mão ao teclado
+    <LI>apertar Alt+F1 para voltar ao terminal original
+    <LI>gastar segundos ou minutos preciosos tentando lembrar o que
+      mesmo você estava fazendo antes desse malabarismo todo que
+      roubou seu tempo e sua concentração.
+    <P></P>
+    </OL>
+  </UL>
+<DT><B>Você odeia ratos?</B></DT><DD>
+<P></P>
+  Somente aqueles que têm um conector na ponta do rabo :)
+</DL>
+
+<DL>
+<DT><B>Mas assim, mais especificamente, do que se trata esse documento?</B></DT><DD>
+<P></P>
+  Este documento descreve como usar somente o teclado para fazer as
+  seguintes tarefas:
+  <OL>
+  <LI>Copiar e Colar entre terminais
+  <LI>Copiar e Colar entre programas
+  <LI>Copiar e Colar usando o 'screen', o gerenciador de janelas do console
+  <LI>No X, mover o cursor usando as setas e "clicar"
+  </OL>
+</DL>
+
+<H2 ID="toc2">Como copiar e colar sem o mouse</H2>
+
+<P>
+Sem usar um programa auxiliar como o <CODE>screen</CODE> (que será visto
+adiante), a única maneira de guardar um texto para depois reutilizá-lo
+em outro lugar é usar um arquivo temporário, que fará o papel do
+"buffer" do mouse. É muito simples:
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TD ALIGN="right"><B>Copiar:</B></TD>
+<TD>Você grava o texto desejado no arquivo temporário</TD>
+</TR>
+<TR>
+<TD ALIGN="right"><B>Colar:</B></TD>
+<TD>Você lê o conteúdo do arquivo temporário</TD>
+</TR>
+</TABLE>
+
+<P>
+Dependendo de qual o programa que você está usando, ele tem como
+gravar em arquivo somente um trecho, ou uma seleção visual. O VI é um
+bom exemplo. Outros programas só têm opção de gravar um arquivo
+inteiro ou fazer um "dump", uma cópia completa de toda a tela.
+</P>
+<P>
+Veremos como Copiar e Colar em cada programa, mas o primeiro passo é
+escolher que arquivo fará esse papel de ponte entre a Cópia e a
+Colagem. O seu nome deve ser curto, e de preferência deve estar no seu
+diretório $HOME. É bom também que seja um arquivo oculto (iniciado por
+um ponto). Sugestão: <CODE>~/.tmp</CODE>. Curto, oculto, fácil.
+</P>
+<P>
+Se preferir, você pode ainda guardar este nome em uma variável de
+ambiente, para poder modificá-lo caso necessário. No shells ash, bash
+e zsh:
+</P>
+
+<PRE>
+export ARQTMP="$HOME/.tmp"
+</PRE>
+
+<P>
+Seguem agora os programas e como usar este arquivo neles.
+</P>
+
+<H3 ID="toc3">Shell (linha de comando)</H3>
+
+<H4 ID="toc4">Bash</H4>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Saída de um comando</TD>
+<TD><CODE>comando &gt; ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Linha de comando</TD>
+<TD><CODE>echo "comando" &gt; ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Linha de comando (set -o vi)</TD>
+<TD><CODE>&lt;esc&gt;v</CODE> (chama o VI)</TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>Colar e editar um comando</TD>
+<TD>???</TD>
+</TR>
+<TR>
+<TD>Colar executando um comando</TD>
+<TD><CODE>`cat ~/.tmp`</CODE> ou <CODE>$(cat ~/.tmp)</CODE></TD>
+</TR>
+<TR>
+<TD>Linha de comando (set -o vi)</TD>
+<TD><CODE>&lt;esc&gt;v</CODE> (chama o VI)</TD>
+</TR>
+</TABLE>
+
+<H4 ID="toc5">zsh</H4>
+
+<P>
+O zsh não tem um "modo VI", mas você pode emulá-lo colocando estas
+linhas no seu <CODE>~/.zshrc</CODE>:
+</P>
+
+<PRE>
+edit-command() {
+  if [[ -n "$BUFFER" ]]
+  then echo $BUFFER &gt; ~/.tmp2
+       BUFFER="vim ~/.tmp2;`&lt; ~/.tmp2`"
+  else BUFFER="vim ~/.tmp;`&lt; ~/.tmp`"
+  fi
+  zle accept-line
+}
+zle -N edit-command
+bindkey "^[v" edit-command
+</PRE>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Saída de um comando</TD>
+<TD><CODE>comando &gt; ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Linha de comando</TD>
+<TD><CODE>echo "comando" &gt; ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Linha de comando (set -o vi)</TD>
+<TD><CODE>&lt;esc&gt;v</CODE> (chama o VI)</TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>Colar e editar um comando</TD>
+<TD>???</TD>
+</TR>
+<TR>
+<TD>Colar executando um comando</TD>
+<TD><CODE>`&lt; ~/.tmp`</CODE> ou <CODE>$(&lt; ~/.tmp)</CODE></TD>
+</TR>
+<TR>
+<TD>Linha de comando (set -o vi)</TD>
+<TD><CODE>&lt;esc&gt;v</CODE> (chama o VI)</TD>
+</TR>
+</TABLE>
+
+<H3 ID="toc6">Editores</H3>
+
+<H4 ID="toc7">Pico</H4>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Arquivo todo</TD>
+<TD><CODE>Ctrl+O</CODE>, depois digite <CODE>~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>Arquivo todo</TD>
+<TD><CODE>Ctrl+R</CODE>, depois digite <CODE>.tmp</CODE></TD>
+</TR>
+</TABLE>
+
+<H4 ID="toc8">Vim</H4>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Arquivo todo</TD>
+<TD><CODE>:w! ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Texto selecionado</TD>
+<TD><CODE>:'&lt;,'&gt; w! ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Da linha 12 até a 15</TD>
+<TD><CODE>:12,15 w! ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Da linha atual até o fim do arquivo</TD>
+<TD><CODE>: .,$  w! ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Da linha marcada 'a' até a marcada 'b'</TD>
+<TD><CODE>:'a,'b w! ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>Arquivo todo</TD>
+<TD><CODE>:r ~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Filtrar com comandos (bônus!)</TH>
+</TR>
+<TR>
+<TD>Arquivo todo</TD>
+<TD><CODE>:%!comando</CODE></TD>
+</TR>
+<TR>
+<TD>Texto selecionado (modo visual)</TD>
+<TD><CODE>:'&lt;,'&gt;!comando</CODE></TD>
+</TR>
+</TABLE>
+
+<P>
+Para facilitar, coloque estes mapeamentos no seu <CODE>~/.vimrc</CODE> e usa as
+teclas F7 e F8 para copiar e colar texto. Estes mapeamentos funcionam
+nos modos de comandos, inserção e visual.
+(<I>Obrigado ao pessoal da lista de discussão do Vim pelo vmap</I>)
+</P>
+
+<PRE>
+imap &lt;F7&gt; &lt;esc&gt;:w! ~/.tmp&lt;cr&gt;
+ map &lt;F7&gt;      :w! ~/.tmp&lt;cr&gt;
+vmap &lt;F7&gt; yGo&lt;esc&gt;p:.,$w! ~/.tmp&lt;cr&gt;u``
+imap &lt;F8&gt; &lt;esc&gt;:r ~/.tmp&lt;cr&gt;
+ map &lt;F8&gt;      :r ~/.tmp&lt;cr&gt;
+</PRE>
+
+<H3 ID="toc9">Mail/News</H3>
+
+<H4 ID="toc10">Pine</H4>
+
+<P>
+O Pine usa o <CODE>pico</CODE> como editor padrão. Mas também é possível
+configurá-lo para utilizar o editor de sua preferência. Veja o tópico
+anterior "Editores" para informações de como Copiar e Colar.
+</P>
+
+<H4 ID="toc11">mutt</H4>
+
+<P>
+O mutt usa o <CODE>VI</CODE> como editor padrão, ou o conteúdo de <CODE>$EDITOR</CODE> caso
+exista. Veja o tópico anterior "Editores" para informações de como
+Copiar e Colar.
+</P>
+
+<H4 ID="toc12">slrn</H4>
+
+<P>
+O slrn usa o <CODE>VI</CODE> como editor padrão, ou o conteúdo de <CODE>$EDITOR</CODE> caso
+exista. Veja o tópico anterior "Editores" para informações de como
+Copiar e Colar.
+</P>
+
+<H3 ID="toc13">Navegadores</H3>
+
+<H4 ID="toc14">lynx</H4>
+
+<P>
+Você pode configurar o editor de texto que o lynx usará indo na tela
+de opções (comando 'o'). Preencha o item "<I>Editor</I>", selecione a
+opção "<I>Salvar opções no disco: [ ]</I>" e finalmente
+"<I>Aceitar Mudanças</I>".
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Página toda</TD>
+<TD>Use o comando <CODE>p</CODE>, "salvar em arquivo local", <CODE>~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Fonte HTML</TD>
+<TD>Use o comando <CODE>\</CODE>, depois <CODE>p</CODE>, "salvar em arquivo local", <CODE>~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>Em uma Caixa de Texto</TD>
+<TD><CODE>Ctrl+V</CODE>, depois Cole com o editor de texto</TD>
+</TR>
+</TABLE>
+
+<H4 ID="toc15">links</H4>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Página toda</TD>
+<TD><CODE>&lt;ESC&gt;</CODE>, "File", "sAve as", <CODE>~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD COLSPAN="2">???</TD>
+</TR>
+</TABLE>
+
+<H4 ID="toc16">w3m</H4>
+
+<P>
+O <CODE>VI</CODE> é o editor padrão do w3m. Você pode configurar outro indo na
+tela de opções (comando 'o'). Preencha o item "<I>Editor</I>" e aperte o
+botão "OK".
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Página toda</TD>
+<TD>Use o comando <CODE>S</CODE>, então digite <CODE>~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TD>Fonte HTML</TD>
+<TD><CODE>&lt;ESC&gt;</CODE>, <CODE>s</CODE>, <CODE>~/.tmp</CODE></TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>Em uma Caixa de Texto</TD>
+<TD>Seta para a direita, depois Cole com o editor de texto</TD>
+</TR>
+</TABLE>
+
+<H3 ID="toc17">IRC</H3>
+
+<H4 ID="toc18">BitchX</H4>
+
+<P>
+Coloque a linha seguinte no seu arquivo de configuração do BitchX:
+</P>
+
+<PRE>
+/alias colar /exec -o cat ~/.tmp
+</PRE>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Conversas</TD>
+<TD>Ligue o LOG, depois copie direto do arquivo de log</TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>No canal</TD>
+<TD>Use o comando <CODE>/colar</CODE></TD>
+</TR>
+</TABLE>
+
+<H4 ID="toc19">tirc</H4>
+
+<P>
+Coloque a linha seguinte no seu arquivo de configuração do tirc:
+</P>
+
+<PRE>
+/alias colar system $* cat ~/.tmp
+</PRE>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH COLSPAN="2">Copiar</TH>
+</TR>
+<TR>
+<TD>Conversas</TD>
+<TD>Ligue o LOG, depois copie direto do arquivo de log</TD>
+</TR>
+<TR>
+<TH COLSPAN="2">Colar</TH>
+</TR>
+<TR>
+<TD>No canal</TD>
+<TD>Use o comando <CODE>/colar</CODE></TD>
+</TR>
+<TR>
+<TD>Para outro canal ou usuário</TD>
+<TD><CODE>/colar -msg #canal</CODE> ou <CODE>/colar -msg nick</CODE></TD>
+</TR>
+</TABLE>
+
+<H2 ID="toc20">Screen, o gerenciador de janelas do modo texto</H2>
+
+<P>
+O screen é um programa que permite trabalhar com janelas no modo
+texto. Ele faz de tudo: cria e alterna entre janelas, tem barra de
+status com data e hora, abrir mais de uma janela na mesma tela,
+"dormir" todas as janelas, monitoramento de atividades e o principal: é
+possível selecionar, Copiar e Colar texto somente usando o teclado,
+sem precisar de mouse ou arquivos temporários.
+</P>
+<P>
+Este documento falará apenas sobre o Copiar &amp; Colar, para saber sobre
+as outras características do screen, acesse <A HREF="http://aurelio.net/doc/coluna/">http://aurelio.net/doc/coluna/</A>.
+</P>
+
+<H3 ID="toc21">Copiar &amp; colar entre janelas do screen</H3>
+
+<P>
+O screen tem um esquema muito bacana de Copiar e Colar que te deixa
+selecionar visualmente o texto desejado (igual no Vim), e Colá-lo em
+qualquer outra janela do screen. É muito fácil, um pouco estranho numa
+primeira tentativa, mas acostuma. Acompanhe:
+</P>
+
+<DL>
+<DT><B>Copiar</B></DT><DD>
+  <UL>
+  <LI><CODE>Ctrl+A</CODE>
+  <LI><CODE>[</CODE>
+  <LI>Mova o cursor ao começo do teto desejado (use as setas ou hjkl)
+  <LI><CODE>Barra de Espaço</CODE>
+  <LI>Mova o cursor até o fim do teto desejado (use as setas ou hjkl)
+  <LI><CODE>Barra de Espaço</CODE>
+  <P></P>
+  </UL>
+<DT><B>Colar</B></DT><DD>
+  <UL>
+  <LI><CODE>Ctrl+A</CODE>
+  <LI><CODE>]</CODE>
+  </UL>
+</DL>
+
+<P>
+Durante a seleção do texto, para mover-se basta utilizar as setinhas
+do teclado normalmente. Usuários de VI se sentirão em casa, pois
+vários do comandos de movimentação também funcionam durante a seleção.
+Já o Emacs é um pouco mais complicado (novidade... ;)
+</P>
+
+<DL>
+<DT><B>Teclas do VI</B></DT><DD>
+<P></P>
+
+<PRE>
+h j k l
+0 ^ $
+w b e
+H M L
++ -
+G g |
+C-u C-d C-b C-f
+</PRE>
+
+<P></P>
+<DT><B>Teclas do Emacs</B></DT><DD>
+<P></P>
+Direto da Man Page do screen:
+</DL>
+
+	<BLOCKQUOTE>
+	Emacs style movement keys can be customized by a .screenrc
+	command. (E.g. markkeys "h=^B:l=^F:$=^E") There is no simple
+	method for a full emacs-style keymap, as this involves
+	multi-character codes.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Tradução: Teclas de movimentação estilo Emacs podem ser
+	configuradas com comandos no .screenrc. (Ex.: markkeys
+	"h=^B:l=^F:$=^E") Não há nenhuma maneira simples de configurar
+	todos os movimentos do Emacs, pois eles são compostos de
+	múltiplos caracteres.
+	</BLOCKQUOTE>
+
+<H3 ID="toc22">Copiar &amp; colar entre uma janela do screen e outra fora do screen</H3>
+
+<P>
+O screen tem uma opção chamada 'bufferfile', que é um arquivo opcional
+para guardar o conteúdo da seleção visual. Coloque a seguinte linha no
+seu .screenrc:
+</P>
+
+<PRE>
+bufferfile ~/.tmp
+</PRE>
+
+<P>
+E use os seguintes comandos para Copiar/Colar no arquivo temporário:
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TD ALIGN="right"><B>Copiar:</B></TD>
+<TD><CODE>Ctrl+A</CODE>, <CODE>&gt;</CODE></TD>
+</TR>
+<TR>
+<TD ALIGN="right"><B>Colar:</B></TD>
+<TD><CODE>Ctrl+A</CODE>, <CODE>&lt;</CODE>, <CODE>Ctrl+A</CODE>, <CODE>]</CODE></TD>
+</TR>
+</TABLE>
+
+<H3 ID="toc23">O comando PrintScreen</H3>
+
+<P>
+O screen tem o comando 'hardcopy' que copia todo o conteúdo da tela
+para um arquivo. As teclas para fazer esse "dump" são:
+</P>
+
+<PRE>
+Ctrl+A, h
+</PRE>
+
+<P>
+Mas ao invés disso, é mais legal aproveitar a própria tecla
+'PrintScreen' do teclado para disparar este comando. Para isso, basta
+colocar a linha seguinte no .screenrc:
+</P>
+
+<PRE>
+bind \034 hardcopy
+</PRE>
+
+<P>
+O comando 'hardcopy' copia a tela para o arquivo <CODE>~/hardcopy.n</CODE>, onde 'n'
+é o número da janela. Mas como temos apenas um arquivo temporário,
+basta "linkar" estes arquivos com o bom e velho <CODE>~/.tmp</CODE>:
+</P>
+
+<PRE>
+cd $HOME
+ln -s hardcopy.0 ~/.tmp
+ln -s hardcopy.1 ~/.tmp
+ln -s hardcopy.2 ~/.tmp
+ln -s hardcopy.3 ~/.tmp
+...
+</PRE>
+
+<P>
+E assim vai, até o número de janelas que você normalmente usa.
+</P>
+
+<H2 ID="toc24">Usando o XFree86 sem mouse!</H2>
+
+<P>
+Apesar de ter sido feita para funcionar com o mouse, também é possível
+utilizar a interface gráfica sem ele!
+</P>
+<P>
+Além do já consagrado Alt+TAB para trocar janelas, e a possibilidade
+de configurar alguns atalhos ("hotkeys") para disparar programas,
+também é possível mover o ponteiro e simular "cliques" de todos os
+botões do mouse.
+</P>
+<P>
+É muito simples: no X, aperte <CODE>Shift+NumLock</CODE> para habilitar o modo
+"sem mouse". Nesse modo, usa-se o teclado numérico (aquele à direita)
+para se movimentar e "clicar", veja:
+</P>
+
+<TABLE ALIGN="center">
+<TR>
+<TH>Teclas</TH>
+<TH>Funções</TH>
+</TR>
+<TR>
+<TD ALIGN="center">78946123</TD>
+<TD>Move o ponteiro para todas as direções</TD>
+</TR>
+<TR>
+<TD ALIGN="center">/</TD>
+<TD>Ativa o botão da esquerda</TD>
+</TR>
+<TR>
+<TD ALIGN="center">*</TD>
+<TD>Ativa o botão do meio</TD>
+</TR>
+<TR>
+<TD ALIGN="center">-</TD>
+<TD>Ativa o botão da direita</TD>
+</TR>
+<TR>
+<TD ALIGN="center">5</TD>
+<TD>Clique (do botão ativado, qualquer que seja)</TD>
+</TR>
+<TR>
+<TD ALIGN="center">+</TD>
+<TD>Duplo clique</TD>
+</TR>
+<TR>
+<TD ALIGN="center">Enter</TD>
+<TD>Triplo clique</TD>
+</TR>
+<TR>
+<TD ALIGN="center">0</TD>
+<TD>Segura o botão (o que estiver ativado)</TD>
+</TR>
+<TR>
+<TD ALIGN="center">,</TD>
+<TD>Solta o botão</TD>
+</TR>
+</TABLE>
+
+<P>
+Para dar um "clique" com o botão esquerdo, mova o ponteiro com os
+números, depois aperte a <CODE>/</CODE> para selecionar o botão esquerdo, então
+aperte o <CODE>5</CODE> para clicar.
+</P>
+<P>
+Para arrastar algo, movimente, depois <CODE>/</CODE> para o botão da esquerda,
+depois <CODE>0</CODE> (zero) para segurar o botão. Movimente-se novamente até o
+ponto desejado então aperte <CODE>,</CODE> (vírgula) para soltar o botão e terminar o
+arrasto.
+</P>
+	<BLOCKQUOTE>
+	Nota 1: Para que este "mouse alternativo" funcione é preciso
+	comentar a linha <CODE>XkbDisable</CODE> na configuração do XFree.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Nota 2: Para teclados americanos (sem C cedilha) ao invés da
+	vírgula é utilizada a tecla o ponto (.)
+	</BLOCKQUOTE>
+
+<H3 ID="toc25">fvwm &amp; fvwm2</H3>
+
+<P>
+O fvwm (e seu parente fvwm2) é um gerenciador de janelas extremamente
+leve e rápido, que além de outras características, permite configurar
+atalhos complementares que aceleram a movimentação do ponteiro com as
+setas do teclado, fazendo saltos! Adicione as linhas seguintes no
+<CODE>~/.fvwmrc</CODE>:
+</P>
+
+<PRE>
+# 1/10 de uma tela: seta + Ctrl
+Key Left    A    C     CursorMove -10  +0
+Key Right   A    C     CursorMove +10  +0
+Key Up      A    C     CursorMove +0  -10
+Key Down    A    C     CursorMove +0  +10
+
+#   2% de uma tela: seta + Ctrl + Shift
+Key Left    A    CS    CursorMove -2    0
+Key Right   A    CS    CursorMove +2   +0
+Key Up      A    CS    CursorMove +0   -2
+Key Down    A    CS    CursorMove +0   +2
+
+#   1% de uma tela: seta + Ctrl + Alt
+Key Left    A    CM    CursorMove -1    0
+Key Right   A    CM    CursorMove +1   +0
+Key Up      A    CM    CursorMove +0   -1
+Key Down    A    CM    CursorMove +0   +1
+</PRE>
+
+<P>
+Feito isso, reinicie o fvwm e use as setas, segurando o Ctrl e veja o
+ponteiro correr pela tela! Apertando simultaneamente o Shift ou o Alt,
+os pulos têm tamanhos diferentes.
+</P>
+
+<H2 ID="toc26">Mostre que você se libertou!</H2>
+
+<P>
+Dedetize sua máquina, roedores não serão bem-vindos novamente.
+</P>
+
+<OL>
+<LI>Feche os buracos onde eles se escondem:
+
+<PRE>
+rm -f /dev/*mouse
+</PRE>
+
+<P></P>
+<LI>Limpe seus rastros imundos:
+
+<PRE>
+rm -f /etc/sysconfig/mouse
+</PRE>
+
+<P></P>
+<LI>Impeça-os de voltarem:
+
+<PRE>
+rpm -e gpm mouseconfig
+</PRE>
+
+</OL>
+
+<H2 ID="toc27">Obrigado</H2>
+
+<P>
+Thomas Köhler, Eliphas Levi Theodoro, Rudá Tente de Moura e Guilherme
+W. Manika pela ajuda com os comandos e dicas.
+</P>
+</div><div id="footer">
+<P>
+<A HREF="../sobre.html">AURELIO.NET</A> é o site pessoal de Aurelio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</div>
+</P>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags doc/sem-mouse-HOWTO.t2t -->
+</BODY></HTML>

@@ -1,0 +1,1352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/kiwi/kiwi.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<script type="text/javascript" src="../include/kiwi/tagmenu-diet.js"></script>
+<script type="text/javascript" src="../include/kiwi/tagmenu-urls.js"></script>
+<TITLE>Textos técnicos - Livros, apostilas, artigos, guias, tutoriais, HOWTO e slides :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="doc">
+
+<DIV ID="header">
+<H1>Docs Nerdz</H1>
+<H2>Tudo para o seu prazer intelectual</H2>
+<H3><a href="/">aurelio.net</a> / <a href="/doc">doc</a></H3>
+</DIV>
+
+<DIV ID="main">
+<P>
+Esta página reúne todos os textos técnicos que fiz. São artigos, guias,
+tutoriais, HOWTOs, slides, apostilas e livros. Alguns foram publicados
+em revistas de circulação nacional, outros foram publicados no meu site,
+outros são material dos cursos que ministrei. Todos têm seus "fontes"
+no formato do <A HREF="http://txt2tags.org/pt/">txt2tags</A>, inclusive os livros e slides.
+</P>
+<P>
+Todos estes textos são livres para serem copiados, somente peço que
+mantenha as informações de autoria (meu nome) e indique a sua
+localização original (o link). As exceções são:
+</P>
+
+<UL>
+<LI>O conteúdo da apostila Programação Profissional em Shell é fechado.
+<LI>O conteúdo do livro Expressões Regulares está online mas possui
+  Direitos Autorais.
+</UL>
+
+<P>
+Procurando por algum documento específico? Confira a lista:
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#linha-do-tempo">Resumão: Linha do Tempo</A>
+    <LI><A HREF="#livros">Livros</A>
+      <UL>
+      <LI><A HREF="#livro-shell">Shell Script Profissional</A>
+      <LI><A HREF="#livro-er">Expressões Regulares - Uma abordagem divertida</A>
+      <LI><A HREF="#guia-er">Expressões Regulares - Guia de Consulta Rápida</A>
+      <LI><A HREF="#livro-sed">Dominando o Sed</A>
+      </UL>
+    <LI><A HREF="#guias">Tutoriais, Guias, Textos</A>
+      <UL>
+      <LI><A HREF="#canivete-shell">Canivete Suíço do Shell</A>
+      <LI><A HREF="#dialog-tudo">Dialog --tudo</A>
+      <LI><A HREF="#sed-howto">Sed HOWTO</A>
+      <LI><A HREF="#pyobjc">Vídeo-tutorial de PyObjC</A>
+      <LI><A HREF="#as4pp">AppleScript for Python Programmers</A>
+      <LI><A HREF="#ooo-vi">Editando arquivos do OpenOffice.org no Vim</A>
+      <LI><A HREF="#python15">Programas Compatíveis com Python v1.5</A>
+      <LI><A HREF="#sem-mouse">Sem Mouse HOWTO</A>
+      <LI><A HREF="#caps-lock">Você realmente usa a tecla CAPS LOCK?</A>
+      <LI><A HREF="#guerra-editores">Fanatismo Digital - A Guerra dos Editores</A>
+      </UL>
+    <LI><A HREF="#cursos">Material de Cursos</A>
+      <UL>
+      <LI><A HREF="#curso-shell">Apostila Programação Profissional em Shell Script</A>
+      <LI><A HREF="#curso-shell-intro">Apostila Introdução ao Shell Script</A>
+      <LI><A HREF="#curso-regex">Apostila Conhecendo as Expressões Regulares</A>
+      <LI><A HREF="#curso-vi-ref">Editor VI - Guia de Referência</A>
+      <LI><A HREF="#curso-desenv">Software Livre - Experiências de um Desenvolvedor (slides)</A>
+      </UL>
+    <LI><A HREF="#programas">Documentação de Programas</A>
+      <UL>
+      <LI><A HREF="#txt2tags">txt2tags</A>
+      <LI><A HREF="#txt2regex">txt2regex</A>
+      <LI><A HREF="#sedsed">sedsed</A>
+      <LI><A HREF="#funcoeszz">Funções ZZ</A>
+      <LI><A HREF="#rac">RAC</A>
+      </UL>
+    <LI><A HREF="#linuxmag">Artigos na Revista Linux Magazine</A>
+      <UL>
+      <LI><A HREF="#linuxmag-01">LinuxMag #02 - Seleção VI-sual</A>
+      </UL>
+    <LI><A HREF="#rdl">Artigos na Revista do Linux (RdL)</A>
+      <UL>
+      <LI><A HREF="#rdl-01">RdL #03 - O Poder do Modo Texto</A>
+      <LI><A HREF="#rdl-02">RdL #03 - Expressões Regulares - Parte 1</A>
+      <LI><A HREF="#rdl-03">RdL #04 - Vi, Vim e Venci</A>
+      <LI><A HREF="#rdl-04">RdL #04 - Áreas Compartilhadas</A>
+      <LI><A HREF="#rdl-05">RdL #07 - Expressões Regulares - Parte 2</A>
+      <LI><A HREF="#rdl-06">RdL #09 - Coluna do Aurelio I - Introdução</A>
+      <LI><A HREF="#rdl-07">RdL #10 - Coluna do Aurelio II - ICQ</A>
+      <LI><A HREF="#rdl-08">RdL #11 - Coluna do Aurelio III - zgv/ImageMagick</A>
+      <LI><A HREF="#rdl-09">RdL #47 - Cygwin - O Linux no Windows (matéria de capa)</A>
+      <LI><A HREF="#rdl-10">RdL #49 - Pulando com o Vim</A>
+      </UL>
+    <LI><A HREF="#coluna">Coluna do Aurelio</A>
+      <UL>
+      <LI><A HREF="#coluna-01">Coluna 01: Introdução</A>
+      <LI><A HREF="#coluna-02">Coluna 02: ICQ</A>
+      <LI><A HREF="#coluna-03">Coluna 03: Zgv/ImageMagick — Manipulação de imagens</A>
+      <LI><A HREF="#coluna-04">Coluna 04: Pine — E-mail na tela preta</A>
+      <LI><A HREF="#coluna-05">Coluna 05: Jogos — Uma viagem ao mundo da diversão</A>
+      <LI><A HREF="#coluna-06">Coluna 06: Arte Ascii — Artistas do teclado</A>
+      <LI><A HREF="#coluna-07">Coluna 07: Screen — Janelizando o modo texto (parte 1)</A>
+      <LI><A HREF="#coluna-08">Coluna 08: Screen — Janelizando o modo texto (parte 2)</A>
+      <LI><A HREF="#coluna-09">Coluna 09: Vim — Um vimrc diferente</A>
+      <LI><A HREF="#coluna-10">Coluna 10: Mpage — Impressão ágil em PostScript</A>
+      <LI><A HREF="#coluna-11">Coluna 11: Caracteres de Controle — Não fuja, domine-os</A>
+      <LI><A HREF="#coluna-12">Coluna 12: Lynx — Navegação turbinada</A>
+      </UL>
+    </UL>
+
+</DIV>
+
+<H2 ID="linha-do-tempo">Resumão: Linha do Tempo</H2>
+
+<TABLE>
+<TR>
+<TD><CODE>01 Dez 1999</CODE></TD>
+<TD>Sem Mouse HOWTO</TD>
+</TR>
+<TR>
+<TD><CODE>01 Mar 2000</CODE></TD>
+<TD>RdL #03 - O Poder do Modo Texto</TD>
+</TR>
+<TR>
+<TD><CODE>01 Mar 2000</CODE></TD>
+<TD>RdL #03 - Expressões Regulares - Parte 1</TD>
+</TR>
+<TR>
+<TD><CODE>01 Abr 2000</CODE></TD>
+<TD>RdL #04 - VI, Vim e venci</TD>
+</TR>
+<TR>
+<TD><CODE>01 Abr 2000</CODE></TD>
+<TD>RdL #04 - Áreas Compartilhadas</TD>
+</TR>
+<TR>
+<TD><CODE>23 Jun 2000</CODE></TD>
+<TD>Fanatismo Digital - A Guerra dos Editores</TD>
+</TR>
+<TR>
+<TD><CODE>01 Jul 2000</CODE></TD>
+<TD>RdL #07 - Expressões Regulares - Parte 2</TD>
+</TR>
+<TR>
+<TD><CODE>31 Jul 2000</CODE></TD>
+<TD>Coluna 01 - Introdução</TD>
+</TR>
+<TR>
+<TD><CODE>25 Ago 2000</CODE></TD>
+<TD>Sed HOWTO</TD>
+</TR>
+<TR>
+<TD><CODE>30 Ago 2000</CODE></TD>
+<TD>Coluna 02 - ICQ</TD>
+</TR>
+<TR>
+<TD><CODE>01 Set 2000</CODE></TD>
+<TD>RdL #09 - Coluna do Aurelio I - Introdução</TD>
+</TR>
+<TR>
+<TD><CODE>21 Set 2000</CODE></TD>
+<TD>Coluna 03 - Zgv/ImageMagick — Manipulação de imagens</TD>
+</TR>
+<TR>
+<TD><CODE>01 Out 2000</CODE></TD>
+<TD>RdL #10 - Coluna do Aurelio II - ICQ</TD>
+</TR>
+<TR>
+<TD><CODE>01 Nov 2000</CODE></TD>
+<TD>RdL #11 - Coluna do Aurelio III - zgv/ImageMagick</TD>
+</TR>
+<TR>
+<TD><CODE>02 Dez 2000</CODE></TD>
+<TD>Coluna 04 - Pine — E-mail na tela preta</TD>
+</TR>
+<TR>
+<TD><CODE>04 Jan 2001</CODE></TD>
+<TD>Coluna 05 - Jogos — Uma viagem ao mundo da diversão</TD>
+</TR>
+<TR>
+<TD><CODE>22 Fev 2001</CODE></TD>
+<TD>Coluna 06 - Arte Ascii — Artistas do teclado</TD>
+</TR>
+<TR>
+<TD><CODE>12 Abr 2001</CODE></TD>
+<TD>Coluna 07 - Screen — Janelizando o modo texto (parte 1)</TD>
+</TR>
+<TR>
+<TD><CODE>10 Mai 2001</CODE></TD>
+<TD>Coluna 08 - Screen — Janelizando o modo texto (parte 2)</TD>
+</TR>
+<TR>
+<TD><CODE>28 Jun 2001</CODE></TD>
+<TD>Coluna 09 - Vim — Um vimrc diferente</TD>
+</TR>
+<TR>
+<TD><CODE>31 Jul 2001</CODE></TD>
+<TD>Livro Expressões Regulares - Guia de Consulta Rápida</TD>
+</TR>
+<TR>
+<TD><CODE>13 Ago 2001</CODE></TD>
+<TD>Coluna 10 - Mpage — Impressão ágil em PostScript</TD>
+</TR>
+<TR>
+<TD><CODE>27 Ago 2001</CODE></TD>
+<TD>Coluna 11 - Caracteres de Controle — Não fuja, domine-os</TD>
+</TR>
+<TR>
+<TD><CODE>09 Nov 2001</CODE></TD>
+<TD>Coluna 12 - Lynx — Navegação turbinada</TD>
+</TR>
+<TR>
+<TD><CODE>25 Jun 2003</CODE></TD>
+<TD>Dialog --tudo</TD>
+</TR>
+<TR>
+<TD><CODE>09 Jul 2003</CODE></TD>
+<TD>Canivete Suíço do Shell</TD>
+</TR>
+<TR>
+<TD><CODE>30 Jul 2003</CODE></TD>
+<TD>Apostila Programação Profissional em Shell Script</TD>
+</TR>
+<TR>
+<TD><CODE>01 Nov 2003</CODE></TD>
+<TD>RdL #47 - Cygwin - O Linux no Windows (matéria de capa)</TD>
+</TR>
+<TR>
+<TD><CODE>10 Dez 2003</CODE></TD>
+<TD>Apostila Conhecendo as Expressões Regulares</TD>
+</TR>
+<TR>
+<TD><CODE>12 Dez 2003</CODE></TD>
+<TD>Software Livre - Experiências de um Desenvolvedor (slides)</TD>
+</TR>
+<TR>
+<TD><CODE>01 Jan 2004</CODE></TD>
+<TD>RdL #49 - Pulando com o Vim</TD>
+</TR>
+<TR>
+<TD><CODE>19 Abr 2004</CODE></TD>
+<TD>Editor VI - Guia de Referência</TD>
+</TR>
+<TR>
+<TD><CODE>24 Abr 2004</CODE></TD>
+<TD>Apostila Introdução ao Shell Script</TD>
+</TR>
+<TR>
+<TD><CODE>31 Ago 2004</CODE></TD>
+<TD>Editando arquivos do OpenOffice.org no Vim</TD>
+</TR>
+<TR>
+<TD><CODE>01 Out 2004</CODE></TD>
+<TD>Linux Magazine #02 - Seleção VI-sual</TD>
+</TR>
+<TR>
+<TD><CODE>17 Nov 2004</CODE></TD>
+<TD>Livro Dominando o Sed</TD>
+</TR>
+<TR>
+<TD><CODE>15 Jul 2005</CODE></TD>
+<TD>AppleScript for Python Programmers</TD>
+</TR>
+<TR>
+<TD><CODE>10 Nov 2006</CODE></TD>
+<TD>Livro Expressões Regulares - Uma abordagem divertida</TD>
+</TR>
+<TR>
+<TD><CODE>31 Ago 2007</CODE></TD>
+<TD>Vídeo-tutorial de PyObjC</TD>
+</TR>
+<TR>
+<TD><CODE>04 Abr 2008</CODE></TD>
+<TD>Livro Shell Script Profissional</TD>
+</TR>
+</TABLE>
+
+<P>
+Obs.: No caso de documentos versionados, a data indica a primeira versão.
+</P>
+
+<H2 ID="livros">Livros</H2>
+
+<H3 ID="livro-shell">Shell Script Profissional</H3>
+
+<P>
+<A HREF="http://www.shellscript.com.br">http://www.shellscript.com.br</A>                       <IMG ALIGN="right" SRC="../img/icon/128/livroshell.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Livro de 480 páginas, é uma bíblia completa sobre shell, que ensina a fazer programas de qualidade profissional: código legível, portabilidade e manutenção futura. Explica ainda opções de linha de comando, arquivo de configuração, banco de dados, interface amigável ao usuário, CGI, ferramentas do sistema, expressões regulares e caracteres de controle. Tem também um apêndice que faz uma análise detalhada no código das <A HREF="http://funcoeszz.net">Funções ZZ</A>. O livro foi lançado em 4 de Abril de 2008 e está à venda na maioria das livrarias do país por cerca de 85 reais. ISBN: 978-85-7522-152-5
+<P></P>
+<DT>História</DT><DD>
+  Leia no meu blog o <A HREF="http://aurelio.net/blog/2008/04/04/parto-prematuro/">"Making Of" do livro</A> e o <A HREF="http://aurelio.net/blog/2008/04/22/a-mog-foi-no-fisl/">relato da tarde de autógrafos no FISL 9.0</A>.
+<P></P>
+<DT>Status</DT><DD>
+  O livro está em sua primeira edição. <A HREF="http://www.shellscript.com.br">Saiba mais...</A>
+</DL>
+
+<H3 ID="livro-er">Expressões Regulares - Uma abordagem divertida</H3>
+
+<P>
+<A HREF="http://www.piazinho.com.br">http://www.piazinho.com.br</A>                       <IMG ALIGN="right" SRC="../img/icon/128/livroregex4.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+A evolução do <A HREF="#guia-er">guia de consulta</A>. Agora em formato de livro, fontes maiores, tabelas bonitas e ilustrações, contando com um personagem que aprende e testa os exemplos ao decorrer do texto. Usando uma linguagem leve e descontraída, o assunto é explicado de maneira didática e divertida. Esta abordagem, incomum de se encontrar em literaturas técnicas, foi <A HREF="http://www.piazinho.com.br/opiniao.html">muito elogiada pelos leitores</A>. ISBN: 978-85-7522-337-6.
+<P></P>
+<DT>História</DT><DD>
+  Leia no meu blog o <A HREF="http://aurelio.net/blog/2006/11/10/expressoes-regulares-uma-abordagem-divertida/">"Making Of" da 1ª edição</A>.
+<br>
+  Leia no meu blog o <A HREF="http://aurelio.net/blog/2008/08/15/expressoes-regulares-2a-edicao/">"Making Of" da 2ª edição</A>.
+<br>
+  Leia no meu blog o <A HREF="http://aurelio.net/blog/2009/10/03/expressoes-regulares-3a-edicao/">"Making Of" da 3ª edição</A>.
+<br>
+  Leia no meu blog o <A HREF="http://aurelio.net/blog/2012/10/31/piazinho4-pre-venda-autografada/">"Making Of" da 4ª edição</A>.
+<P></P>
+<DT>Status</DT><DD>
+  Em 2006 foi lançada a <A HREF="http://www.piazinho.com.br/ed1/">primeira edição</A> deste livro.<br>
+  Em 2008 foi lançada a <A HREF="http://www.piazinho.com.br/ed2/">segunda edição</A> deste livro.<br>
+  Em 2009 foi lançada a <A HREF="http://www.piazinho.com.br/ed3/">terceira edição</A> deste livro.<br>
+  Em 2012 foi lançada a <A HREF="http://www.piazinho.com.br">quarta edição</A> deste livro.
+</DL>
+
+<H3 ID="guia-er">Expressões Regulares - Guia de Consulta Rápida</H3>
+
+<P>
+<A HREF="http://aurelio.net/regex/guia/">http://aurelio.net/regex/guia/</A>                       <IMG ALIGN="right" SRC="../img/icon/128/guiaregex.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+Livro de 96 páginas, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Primeira publicação nacional sobre o assunto, e uma das poucas existentes no mundo. Tem o formato "de bolso", fácil de carregar. Também <A HREF="http://aurelio.net/regex/guia/">pode ser consultado</A> integral e gratuitamente na Internet. ISBN: 85-7522-011-X.
+<P></P>
+<DT>História</DT><DD>
+  Conectiva. Eu lá tranqüilo trabalhando, quando surge um assunto sobre
+  Expressões Regulares. Papo vem, papo vai e o meu chefe Wanderlei
+  Cavassin acende o pavio:
+  "<I>Você manja disso, por que não escreve um livro?</I>"
+<P></P>
+  Em seguida ele me mostrou o site da Editora Novatec e apontou para o
+  link "Procuramos autores". Aí não teve mais volta. No mesmo dia mandei
+  um e-mail para a editora e o Rubens (Editor/Dono) imediatamente me
+  telefonou dizendo que tinha interesse em publicar um livro sobre o
+  assunto.
+<P></P>
+  Dois meses depois do primeiro
+  contato, o texto final estava indo para a gráfica. O livro foi lançado
+  em 31 de Julho de 2001, na feira Fenasoft.
+<P></P>
+<DT>Status</DT><DD>
+  Esgotado em Dezembro de 2006. A 1ª edição teve uma tiragem de 3.000 exemplares. Foram cinco anos e meio, em um ritmo lento porém constante, eram vendidos cerca de 40 exemplares por mês (mais de um por dia!). Seu sucessor é o livro <A HREF="#livro-er">Expressões Regulares - Uma abordagem divertida</A>, lançado em Novembro de 2006. <A HREF="http://aurelio.net/regex/guia/recados.php">Veja a opinião dos leitores do guia</A>.
+</DL>
+
+<H3 ID="livro-sed">Dominando o Sed</H3>
+
+<P>
+<A HREF="http://aurelio.net/sed/livro/">http://aurelio.net/sed/livro/</A>                    <IMG ALIGN="right" SRC="../img/icon/128/livrosed.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Um livro inacabado sobre Sed, disponível gratuitamente em PDF. Ele cobre instalação, todos os detalhes dos endereços, como lidar com arquivos, quebras de linha,  maiúsculas e minúsculas, contando com vários exemplos didáticos com que podem ser testados em sua máquina.
+<P></P>
+<DT>História</DT><DD>
+  Em março de 2002 comecei a trabalhar em um livro sobre Sed. Peguei o
+  Sed HOWTO como base e comecei a completá-lo, escrever mais tópicos,
+  definir um índice, definir um foco. Tudo muito devagar e com muita
+  calma, escrevendo em média apenas uma vez por semana, durante cerca de
+  2 horas. Os capítulos e tópicos foram surgindo naturalmente e o
+  conteúdo foi tomando forma de um livro.
+<P></P>
+  Em outubro de 2002, já com aproximadamente 60% do livro escrito,
+  resolvi tornar o projeto público e chamar colaboradores. Após um
+  <A HREF="http://br.groups.yahoo.com/group/sed-br//message/1266">anúncio na lista sed-br</A> e convites em
+  particular para amigos e colegas escritores, foi formado um time de 11
+  pessoas que ajudaram a revisar o trecho já escrito. Mas desde então,
+  nenhum conteúdo novo foi escrito, o livro estagnou.
+<P></P>
+  Em novembro de 2005, decidido que eu realmente não iria mais
+  continuá-lo, resolvi lançá-lo inacabado mesmo, para não perder o
+  trabalho já feito.
+<P></P>
+<DT>Status</DT><DD>
+  Versão inacabada, porém final.
+</DL>
+
+<H2 ID="guias">Tutoriais, Guias, Textos</H2>
+
+<H3 ID="canivete-shell">Canivete Suíço do Shell</H3>
+
+<P>
+<A HREF="http://aurelio.net/shell/canivete/">http://aurelio.net/shell/canivete/</A>                    <IMG ALIGN="right" SRC="../img/icon/128/canivete.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Documento de apenas uma página HTML com um resumão de Shell e os
+  comandos principais do sistema. São várias tabelas que resumem
+  operadores, opções, conceitos, dicas e listagens. Nada de texto, só
+  tabelas. Bom para guardar, imprimir, ter sempre à mão para tirar
+  dúvidas.
+<P></P>
+<DT>História</DT><DD>
+  Este documento eu fiz para mim mesmo, pois estava cansado de sempre
+  ter que recorrer aos <I>--help</I> e <I>manpages</I> dos comandos para
+  lembrar qual mesmo aquela opção que fazia tal coisa? Ou pior, ter que
+  fazer um "man bash" e tentar achar algo naquela selva.
+<P></P>
+  Juntei tudo em uma única página, no melhor estilo Guia de Consulta
+  Rápida e divulguei. O pessoal gostou bastante e inclusive sugeriram
+  conteúdo novo. Assim o "canivete" cresceu mais ainda e se tornou uma
+  referência na área.
+<P></P>
+<DT>Status</DT><DD>
+  O documento já está bem maduro, com bastante conteúdo. Eventualmente são feitas atualizações para corrigir erros e adicionar alguma tabela nova. Há também uma <A HREF="/shell/canivete/pdf/">versão em PDF do canivete</A>, boa para imprimir.
+</DL>
+
+<H3 ID="dialog-tudo">Dialog --tudo</H3>
+
+<P>
+<A HREF="http://aurelio.net/shell/dialog/">http://aurelio.net/shell/dialog/</A>				<IMG ALIGN="right" SRC="../img/icon/128/dialog.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Documento completo sobre o Dialog, o programa que faz interfaces
+  "gráficas" no modo texto, com botões, menus e caixas de texto,
+  interagindo com o Shell. Serve de tutorial para os iniciantes,
+  com bastante imagens e explicações básicas. Serve de guia de
+  referência para os experientes, listando todas as opções, telas e
+  funcionalidades. Também contém exemplos funcionais de scripts
+  completos.
+<P></P>
+<DT>História</DT><DD>
+  O Dialog é a chave para se fazer scripts em Shell utilizáveis por
+  leigos em informática. Com ele, os programas do modo texto ficam com
+  cara de programas gráficos, tendo menus e botões. Mas era incrível
+  como mesmo sendo um programa antigo, muito útil e bem conhecido, não
+  existia <B>nenhuma</B> documentação dele em português.
+<P></P>
+  Era muito freqüente aparecer na <A HREF="http://br.groups.yahoo.com/group/shell-script/">lista de shell-script</A>
+  mensagens do tipo: "<I>Tem documentação do Dialog em português?</I>".
+  Cansado de ver essa mensagem sempre reaparecendo, resolvi escrever um
+  documento completo e definitivo. O resultado é um tutorial com
+  bastante imagens para os iniciantes, que gradualmente vai ficando
+  complexo até chegar em scripts completos com várias telas.
+<P></P>
+<DT>Status</DT><DD>
+  O documento já está bem completo, o considero uma documentação
+  definitiva. Ele é atualizado esporadicamente quando o próprio Dialog
+  muda (versão nova, opções novas) ou quando tenho mais exemplos de
+  scripts para colocar.
+</DL>
+
+<H3 ID="sed-howto">Sed HOWTO</H3>
+
+<P>
+<A HREF="http://aurelio.net/sed/sed-HOWTO/">http://aurelio.net/sed/sed-HOWTO/</A>				<IMG ALIGN="right" SRC="../img/icon/128/sed.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Este documento se propõe a ser um tutorial e um guia de consulta de Sed ao mesmo tempo. Ele apresenta o Sed aos poucos, explicando seu funcionamento, mas também conta com dicas avançadas. Este guia é exclusivo de Sed, as Expressões Regulares não são abordadas.
+<P></P>
+<DT>História</DT><DD>
+  Esse documento é o resultado do meu difícil aprendizado do programa
+  Sed, uma ferramenta de edição automática de texto através de scripts.
+  Desde a primeira vez que o usei achei fantástico por ser tão poderoso
+  e tão intimidador. Apesar do programa ter vários comandos, todos os
+  técnicos que eu conhecia só sabiam usar o comando básico
+  "<I>s/isso/aquilo/g</I>".
+<P></P>
+  Início de 1999, resolvi aprender os outros comandos a acabar com o
+  mistério. Li diversas vezes a página de manual (manpage) do Sed e ela
+  só embaralhava mais a cabeça. Achei alguns documentos em inglês na
+  Internet mas eram muito avançados. Passei várias noites em casa
+  tentando aprender por tentativa e erro e aos poucos fui captando sua
+  filosofia e as trevas foram clareando.
+<P></P>
+  Aprendi os comandos, os registradores e finalmente comecei a me sentir
+  à vontade. Para consolidar o conhecimento recém adquirido, escrevi um
+  programa conversor de texto para SGML que usava vários comando Sed
+  dentro de um script Shell.
+<P></P>
+  E assim, perdi o medo do Sed. Finalmente comecei a entender as
+  respostas dadas na <A HREF="http://groups.yahoo.com/group/sed-users">lista gringa</A>
+  do programa, passando de mero espectador perdido a participante ativo.
+  Ali aprendi as técnicas avançadas e as diferenças entre as versões do
+  programa. Essa evolução foi registrada: o programa conversor foi
+  melhorado e virou um <A HREF="/sed/programas/txt2sgml-sed/">script em Sed</A>.
+<P></P>
+  Todo este esforço não poderia passar em branco e ficar só pra mim. Eu
+  precisava difundir o uso do Sed e o seu poder. O primeiro passo foi
+  criar a <A HREF="http://br.groups.yahoo.com/group/sed-br/">lista de discussão sed-br</A> e os usuários foram
+  aparecendo. Com a lista pude identificar as dúvidas mais comuns de
+  quem estava começando e comecei a juntar dicas para um documento
+  maior. Escrevendo um pouco por dia, durante ou no fim do expediente,
+  depois de alguns meses consegui lançar a primeira versão do HOWTO,
+  quase dois anos depois do início de toda essa odisséia.
+<P></P>
+<DT>Status</DT><DD>
+  O documento foi divulgado, lido, recebi sugestões de melhorias e hoje
+  ele se encontra na versão 0.6. Ele continua o documento mais completo
+  sobre Sed em português. Mas há outros documentos complementares
+  excelentes, escritos ou traduzidos por usuários. Confira-os no
+  <A HREF="/sed/">portal do Sed</A>.
+<P></P>
+  Este HOWTO ajuda o iniciante a se achar, mas ainda está longe de ser
+  algo tão completo quanto eu gostaria. É preciso um <B>livro</B> inteiro
+  sobre o Sed. <A HREF="#livro-sed">Eu comecei</A>, mas atualmente ele está parado. O HOWTO
+  recebe atualizações esporádicas com correções, mas dificilmente
+  conteúdo novo. Preciso resolver esse dilema do HOWTO versus livro.
+</DL>
+
+<H3 ID="pyobjc">Vídeo-tutorial de PyObjC</H3>
+
+<P>
+<A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">http://aurelio.net/mac/dev/tutorial-pyobjc/</A>				<IMG ALIGN="right" SRC="../img/icon/128/pyobjc.png" BORDER="0" ALT="">
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Este vídeo-tutorial é um guia completo para iniciar em PyObjC, a ponte entre Python e Cocoa, a poderosa API usada pelos aplicativos do Mac OS X. Leia o guia e veja o vídeo de demonstração.
+<P></P>
+<DT>História</DT><DD>
+  Fiz este tutorial para uma palestra que ministrei em Joinville, na PyCon Brasil [3]. Seu título foi "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa programando em Python (PyObjC)". O objetivo foi mostrar como é fácil fazer um programa nativo para Mac, utilizando Python.
+<P></P>
+  A palestra foi filmada e o vídeo também está disponível, melhorando muito o aprendizado do tutorial. São 34 minutos de demonstração, seguindo os passos descritos no tutorial.
+<P></P>
+<DT>Status</DT><DD>
+  Versão final.
+</DL>
+
+<H3 ID="as4pp">AppleScript for Python Programmers</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/as4pp.html">http://aurelio.net/doc/as4pp.html</A>
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Um comparativo entre duas linguagens, útil para programadores
+  Python que queiram aprender AppleScript, em inglês.
+<P></P>
+<DT>História</DT><DD>
+  Acho mais fácil de assimilar algo novo quando se compara com algo já
+  conhecido. Como eu já programava em Python e estava aprendendo
+  AppleScript, fui anotando os comandos novos aprendidos,
+  comparando-os com os comandos Python já conhecidos. O resultado é
+  uma tabelona que fica auto-explicativa para programadores Python.
+<P></P>
+  Fiz em inglês porque só conheço mais um brasileiro que programa em
+  AppleScript. Se você é o terceiro, entre em contato!
+<P></P>
+<DT>Status</DT><DD>
+  Versão quase final, vou adicionar mais dados se necessário.
+</DL>
+
+<H3 ID="ooo-vi">Editando arquivos do OpenOffice.org no Vim</H3>
+
+<P>
+<A HREF="http://aurelio.net/vim/ooo-vi.html">http://aurelio.net/vim/ooo-vi.html</A>
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Um artigo que analisa a estrutura de um arquivo .SXW (arquivo do Writer do OpenOffice.org) e ensina como editá-lo utilizando um editor de textos comum como o Vim.
+<P></P>
+<DT>História</DT><DD>
+  Quando eu estava escrevendo uma apostila no OpenOffice.org para a
+  linha de treinamento da Conectiva, surgiu a dúvida se existiria
+  alguma maneira de fazer edições posteriores de modo automático
+  (batch), como por exemplo transformar todas as imagens para preto e
+  branco. Descobri que o arquivo .SXW na verdade é um ZIP com arquivos
+  XML e subdiretórios, e aí acabou o mistério. Fiz vários testes e esse
+  artigo é a conclusão deles.
+<P></P>
+<DT>Status</DT><DD>
+  Versão final.
+</DL>
+
+<H3 ID="python15">Programas Compatíveis com Python v1.5</H3>
+
+<P>
+<A HREF="http://www.python.org.br/wiki/ProgramasCompativeisV15">http://www.python.org.br/wiki/ProgramasCompativeisV15</A>
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Um documento rápido dando as dicas de como codificar em Python de
+  maneira conservadora, mantendo compatibilidade com a versão antiga
+  da linguagem, a v1.5, ainda em uso.
+<P></P>
+<DT>Status</DT><DD>
+  Versão final.
+</DL>
+
+<H3 ID="sem-mouse">Sem Mouse HOWTO</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/sem-mouse-HOWTO.html">http://aurelio.net/doc/sem-mouse-HOWTO.html</A>
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Este documento dá dicas de como usar um sistema Linux sem o mouse,
+  apenas com o teclado. São explicados vários truques para Copiar &amp;
+  Colar textos entre programas, além de dicas de uso do programa
+  "screen". Também é ensinado como movimentar o cursor com o teclado no
+  XFree86 e nos gerenciadores fvwm e fvwm2.
+<P></P>
+<DT>História</DT><DD>
+  Escrevi este documento em inglês em 1999, mas ficou inacabado e acabei
+  perdendo-o nos confins do meu $HOME. Em Novembro de 2003 o
+  reencontrei, traduzi para português e terminei as partes que faltavam.
+  Na época eu não usava mouse e fui juntando essas dicas, que eu usava
+  no dia-a-dia.
+<P></P>
+<DT>Status</DT><DD>
+  Versão final.
+</DL>
+
+<H3 ID="caps-lock">Você realmente usa a tecla CAPS LOCK?</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/CAPSLOCK.txt">http://aurelio.net/doc/CAPSLOCK.txt</A>
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  <IMG ALIGN="right" SRC="img/capslock-cnc.jpg" BORDER="0" ALT="">
+  Um guia completo de como diminuir seu estresse e tornar a sua vida
+  mais tranqüila desabilitando (ou removendo fisicamente) a tecla
+  Caps Lock do teclado.
+<P></P>
+<DT>História</DT><DD>
+  Não faço a menor idéia de quando escrevi isso, foi entre 1999 e 2001.
+  Foi depois de um tempo de eu ter arrancado a minha tecla e ter
+  conferido que era uma ótima idéia. Dentro da Conectiva foram vários os
+  funcionários que aderiram à campanha e me doaram suas teclas (vide
+  foto).
+<P></P>
+  Até hoje ainda recebo e-mails esporádicos de pessoas que leram este
+  documento e "viram a luz", arrancando a tecla maldita. Alguns ainda
+  me mandam a foto. Mande a sua!
+<P></P>
+</DL>
+
+<TABLE ALIGN="center">
+<TR>
+<TD ALIGN="center"><IMG ALIGN="middle" SRC="img/capslock-claudio.jpg" BORDER="0" ALT=""></TD>
+<TD ALIGN="center"><IMG ALIGN="middle" SRC="img/capslock-apoena.jpg" BORDER="0" ALT=""></TD>
+</TR>
+<TR>
+<TD ALIGN="center"><I>Claudio (TuxUnix)</I></TD>
+<TD ALIGN="center"><I>Apoena Machado Cunha</I></TD>
+</TR>
+<TR>
+<TD ALIGN="center" COLSPAN="2"><center><IMG ALIGN="middle" SRC="img/capslock-miurrause.jpg" BORDER="0" ALT=""></center></TD>
+</TR>
+<TR>
+<TD ALIGN="center" COLSPAN="2"><I>Marcelo Miurrause</I></TD>
+</TR>
+</TABLE>
+
+<P>
+  Que tal um pouco de ação? Veja esse vídeo do <A HREF="http://twitter.com/codexico/status/28449049365">@codexico</A>, que registrou o vôo de sua tecla, em homenagem ao CAPS LOCK DAY de 2010:
+</P>
+<object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/1_enHS9zB-w?fs=1&amp;hl=pt_BR"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/1_enHS9zB-w?fs=1&amp;hl=pt_BR" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+
+<DL>
+<DT>Status</DT><DD>
+  Versão final.
+</DL>
+
+<H3 ID="guerra-editores">Fanatismo Digital - A Guerra dos Editores</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/guerra-editores.html">http://aurelio.net/doc/guerra-editores.html</A>
+</P>
+
+<DL>
+<DT>Descrição</DT><DD>
+  Análise do resultado de uma pesquisa antropológica feita em Junho de
+  2000 sobre a paixão e fanatismo que profissionais de informática
+  nutrem por seu editor de textos. Em outras palavras: uma análise sobre
+  a "guerra" entre usuários de VI e Emacs.
+<P></P>
+<DT>História</DT><DD>
+  Terminado o curso de Informática na faculdade, fiz vestibular
+  novamente e cursei Ciências Sociais na UFPR. Numa aula de
+  Antropologia, foi pedido para que os alunos fizessem uma "Pesquisa
+  Antropológica" completa, que consistia na escolha de um grupo social,
+  entrevistas e análise dos resultados.
+<P></P>
+  Resolvi fazer uma pesquisa com um tema nerd. Toda a metodologia e
+  análise foi antropológica, mas o tema foi a guerra entre usuários de
+  VI e Emacs. "Guerra" de piadinhas e sacanagens, claro. O grupo
+  investigado foram os funcionários da Conectiva, que responderam um
+  extenso formulário. A nota obtida com a análise foi 90 (uau!).
+<P></P>
+<DT>Status</DT><DD>
+  Versão final.
+</DL>
+
+<H2 ID="cursos">Material de Cursos</H2>
+
+<H3 ID="curso-shell">Apostila Programação Profissional em Shell Script</H3>
+
+<P>
+<A HREF="http://aurelio.net/shell/apostila/">http://aurelio.net/shell/apostila/</A>				 <IMG ALIGN="right" SRC="../img/icon/128/apostila.png" BORDER="0" ALT="">
+</P>
+<P>
+Apostila com 114 páginas (quase um livro!) que fiz para ministrar um
+curso de Shell Avançado de 40 horas em 2003. Terminado o curso houve
+interesse de terceiros em adquirir o material, então estou vendendo essa
+apostila por 20 reais (em PDF).
+</P>
+<P>
+Nela estão informações valiosas para pessoas que trabalham com Shell ou
+que pretendem fazer programas complexos na linguagem. O conteúdo aborda
+vários tópicos relacionados a programação, direcionados ao Shell.
+Comentários, código limpo, banco de dados, CGI e interface com o usuário
+são alguns dos assuntos explicados.
+<A HREF="#livro-shell">Em 2008 essa apostila virou um livro</A>.
+</P>
+
+<H3 ID="curso-shell-intro">Apostila Introdução ao Shell Script</H3>
+
+<P>
+<A HREF="http://aurelio.net/curso/material/apostila-shell-intro.pdf">http://aurelio.net/curso/material/apostila-shell-intro.pdf</A>
+</P>
+<P>
+Apostila de 22 páginas, com uma abordagem rápida e direta sobre como
+fazer scripts em Shell. Útil para quem já usa o UNIX/Linux na linha de
+comando e quer começar a fazer alguns scripts para automatizar tarefas.
+</P>
+
+<H3 ID="curso-regex">Apostila Conhecendo as Expressões Regulares</H3>
+
+<P>
+<A HREF="http://aurelio.net/regex/apostila-conhecendo-regex.pdf">http://aurelio.net/regex/apostila-conhecendo-regex.pdf</A>
+</P>
+<P>
+Apostila introdutória sobre Expressões Regulares, que apresenta o conceito e explora todos os metacaracteres básicos, um a um e de maneira sequencial. A explicação se dá por exemplos que podem (devem) ser executados pelo leitor na linha de comando. Boa para quem nem faz idéia do que sejam as expressões e quer aprender a usá-las.
+</P>
+
+<H3 ID="curso-vi-ref">Editor VI - Guia de Referência</H3>
+
+<P>
+<A HREF="http://aurelio.net/curso/material/vim-ref.html">http://aurelio.net/curso/material/vim-ref.html</A>
+</P>
+<P>
+Material de apoio utilizado no meu curso de VI. Mistura tabelas com
+descrição de comandos e procedimentos prontos para executar, servindo de
+referência rápida. É apenas uma página, útil para imprimir e deixar ao
+alcance da mão.
+</P>
+
+<H3 ID="curso-desenv">Software Livre - Experiências de um Desenvolvedor (slides)</H3>
+
+<P>
+ <IMG ALIGN="right" SRC="img/slides.jpg" BORDER="0" ALT="">
+<A HREF="http://aurelio.net/curso/material/desenvolvedor/">http://aurelio.net/curso/material/desenvolvedor/</A>
+</P>
+<P>
+Todos os 44 slides da palestra que conta a minha experiência de mais
+de 4 anos produzindo e lançado softwares livres. É abordado todo o
+ciclo de desenvolvimento de um software, que engloba: a concepção da
+idéia, o planejamento prévio com escolha de
+linguagem/interface/plataforma, a codificação, a documentação, a suíte
+de testes, o empacotamento, o lançamento, a manutenção, o marketing e
+o trato com os usuários.
+</P>
+<P>
+Alguns itens presentes: nome, idioma, versionamento, distribuição,
+Changelog,  anúncios, divulgação, público-alvo, agradecimentos, trabalho
+colaborativo, instalador, homepage, logo, lista de discussão,
+comunidade, Freshmeat, SourceForge, CVS,  bugs, suporte, melhoramentos,
+ambiente, requisitos, delegação de tarefas e planejamento futuro.
+</P>
+
+<H2 ID="programas">Documentação de Programas</H2>
+
+<P>
+Além de escrever dicas e tutoriais sobre os programas dos outros,
+também tenho meus próprios programas e sou responsável pela
+documentação deles. A maioria dos programadores odeia documentar suas
+criações, mas eu acho divertido &amp;:)
+</P>
+<P>
+O próprio site do programa é a sua documentação principal, servindo de
+vitrine para angariar usuários novos e apontar direções para os
+iniciantes seguirem. Os links imprescindíveis são "Download" e
+"Screenshots". Um livro de visitas também é recomendado para que os
+próprios usuários ajudem a fazer o marketing e apontar suas vantagens.
+</P>
+<P>
+Eu faço o site e escrevo toda a documentação de meus programas, em
+inglês e português. Alguns estão em apenas uma língua. No txt2tags
+alguns documentos foram traduzidos para o português por usuários.
+Alguns documentos também foram traduzidos para outras línguas por
+usuários estrangeiros.
+</P>
+<P>
+A seguir vou listar apenas os documentos que merecem alguma citação
+por suas características. O texto que os acompanha não é uma descrição
+de seu conteúdo, mas sim da forma como foram pensados e organizados,
+bem como seus propósitos.
+</P>
+
+<H3 ID="txt2tags">txt2tags</H3>
+
+<DL>
+<DT><A HREF="http://txt2tags.org/pt/markup-pt.html">http://txt2tags.org/pt/markup-pt.html</A> (português)</DT><DD>
+<P></P>
+  <B>Demonstração:</B> Uma única página que faz um resumo de todas as
+  marcas usadas pelo programa, lado a lado com o seu resultado
+  convertido para HTML. Serve como uma apresentação rápida e completa
+  da sintaxe das marcas. Também pode ser impresso e servir de guia de
+  consulta rápida. A vantagem desse formato é que com pouco texto se
+  consegue dizer muito, além de demonstrar o programa em ação.
+<P></P>
+<DT><A HREF="http://txt2tags.org/pt/../userguide/">http://txt2tags.org/pt/../userguide/</A> (inglês)</DT><DD>
+<P></P>
+  <B>Guia do Usuário:</B> Um documento extenso e completo, escrito em
+  linguagem formal e dividido por tópicos, como em um livro. É
+  abrangente, cobrindo desde a instalação até uso avançado,
+  documentando todas as funcionalidades do programa. Este é o
+  documento mestre do programa, os outros sintetizam ou apresentam de
+  maneira diferente o que já está aqui. Também é disponibilizado como
+  PDF para poder ser impresso e consultado.
+<P></P>
+<DT><A HREF="http://txt2tags.org/pt/../writing-book.html">http://txt2tags.org/pt/../writing-book.html</A> (inglês)</DT><DD>
+<P></P>
+  <B>Writing Books With Txt2tags:</B> Inspirado pela adoção do programa
+  como ferramenta de produção de um livro técnico estrangeiro,
+  escrevi este documento para apontar as vantagens de se usar o
+  txt2tags como formato original do texto de um livro. Ele tem um
+  forte apelo visual com um CSS que tenta imitar a aparência de um
+  livro. Tem uma linguagem sucinta e formal, passando sobriedade.
+</DL>
+
+<H3 ID="txt2regex">txt2regex</H3>
+
+<DL>
+<DT><A HREF="http://aurelio.net/txt2regex//manpage.html">http://aurelio.net/txt2regex//manpage.html</A> (inglês)</DT><DD>
+<P></P>
+  <B>Página de manual:</B> O formato padrão de documentação de programas
+  no UNIX/Linux, que geralmente serve para listar todas as opções de
+  linha de comando, acompanhadas de uma descrição sucinta. Como este é
+  um programa simples e de interface interativa, esta é a única
+  documentação e é suficiente.
+</DL>
+
+<H3 ID="sedsed">sedsed</H3>
+
+<DL>
+<DT><A HREF="http://aurelio.net/sedsed/">http://aurelio.net/sedsed/</A> (inglês)</DT><DD>
+<P></P>
+  <B>Site tudo-em-um:</B> Aqui uma abordagem diferente. A página
+  principal do site do programa centraliza várias informações,
+  eliminando a necessidade de documentação extra. Na página estão
+  os exemplos de uso (que já abrigam os screenshots), as opções de
+  linha de comando (--help), Changelog e exemplos de uso com outros
+  programas conhecidos (credibilidade).
+</DL>
+
+<H3 ID="funcoeszz">Funções ZZ</H3>
+
+<DL>
+<DT><A HREF="http://funcoeszz.net">http://funcoeszz.net</A> (português)</DT><DD>
+<P></P>
+  <B>Site tudo-em-um:</B> Segue a mesma filosofia do programa anterior de
+  toda a documentação ser centralizada no site. Como conta com a
+  contribuição ativa de vários usuários, a seção de Agradecimentos
+  também está no site. Cada tópico tem um nome (âncora), para serem
+  possíveis links diretos, como "#screenshot" por exemplo.
+</DL>
+
+<H3 ID="rac">RAC</H3>
+
+<DL>
+<DT><A HREF="http://aurelio.net/rac/info/tutorial/">http://aurelio.net/rac/info/tutorial/</A> (português)</DT><DD>
+<P></P>
+  <B>Tutorial:</B> Um passo-a-passo que serve de apresentação dos
+  conceitos e uso básico do programa. As letras são grandes, há pouco
+  texto em cada tela e a leitura toma poucos minutos. A idéia é o
+  leitor aprender de forma gradual e no final estar com vontade de
+  experimentar o programa. O fato de obrigatoriamente ter que clicar e
+  passar por várias páginas serve para prender sua atenção e evitar a
+  "passada rápida de olhos".
+<P></P>
+<DT><A HREF="http://aurelio.net/rac/info/emu.html">http://aurelio.net/rac/info/emu.html</A> (português)</DT><DD>
+<P></P>
+  <B>Tabela de Emulação:</B> Visa o aprendizado por associação, onde são
+  mostrados comandos equivalentes a aqueles que o usuário já domina.
+  Por já conhecer o resultado esperado, o usuário pode testá-los em
+  sua máquina e certificar-se que o programa funciona. Gera uma
+  empatia inicial e satisfação pela familiaridade.
+</DL>
+
+<H2 ID="linuxmag">Artigos na Revista Linux Magazine</H2>
+
+<P>
+Com o encerramento da Revista do Linux em Janeiro de 2004, ficou um
+buraco na mercado nacional de publicações dedicada ao Linux. Meses
+depois apareceu a revista <A HREF="http://www.linuxmagazine.com.br">Linux Magazine</A>, uma revista
+alemã que também é publicada em outros países. A versão brasileira tem
+parte de seu conteúdo traduzido de artigos estrangeiros e outra parte
+são artigos feitos aqui.
+</P>
+<P>
+Antes de sair o primeiro número, o editor Rafael Peregrino veio
+pessoalmente em Curitiba me mostrar a proposta da revista e me convidou
+para ser colaborador. Topei!
+</P>
+<P>
+ <IMG ALIGN="right" SRC="../img/linuxmag02.jpg" BORDER="0" ALT="">
+</P>
+
+<H3 ID="linuxmag-01">LinuxMag #02 - Seleção VI-sual</H3>
+
+<P>
+<A HREF="http://aurelio.net/vim/selecao-vi-sual.html">http://aurelio.net/vim/selecao-vi-sual.html</A>
+</P>
+<P>
+PDF original: <A HREF="http://www.linuxmagazine.com.br/images/uploads/pdf_aberto/LM02_vi.pdf">site da revista</A>, <A HREF="/vim/selecao-vi-sual.pdf">cópia local</A>
+</P>
+<P>
+Presente nas páginas 82 e 83 da revista. Este artigo dá várias dicas de uso do modo visual do Vim (VI). O modo visual serve para selecionar textos, podendo ser feito orientado a caracteres, linhas ou colunas. Uma vez selecionado, o texto pode ser recortado, copiado ou alterado. O artigo vai fundo e demonstra técnicas avançadas na seleção vertical (de colunas).
+</P>
+
+<H2 ID="rdl">Artigos na Revista do Linux (RdL)</H2>
+
+<P>
+A <A HREF="http://www.revistadolinux.com.br">Revista do Linux</A> era editada pela Conectiva e foi a maior
+revista sobre Linux do mercado nacional, com circulação mensal. A sua
+primeira edição foi lançada em Janeiro de 2000 e sua saideira (#49) em
+Janeiro de 2004.
+</P>
+<P>
+Escrevi vários artigos para a revista durante todo o ano de 2000, o que
+foi importantíssimo para despertar e desenvolver a minha escrita técnica
+com sabor didático. A receptividade dos leitores foi tão boa que o
+pessoal da revista me convidou para ser seu primeiro "colunista" e ter
+um cantinho fixo para escrever todo mês sobre o Linux no modo texto.
+Muito massa!
+</P>
+<P>
+Mas, o rodapé da terceira coluna que saiu com uma brincadeira que não
+gostei, nos desentendemos e o projeto acabou. Porém, como recebi muitos
+e-mails de leitores que gostaram do conteúdo da coluna, voltei a
+publicá-la (quase) mensalmente no meu site. Veja o tópico
+<A HREF="#coluna">Coluna do Aurelio</A>.
+</P>
+<P>
+Passados três anos desde o desentendimento, escrevi uma matéria de capa
+com 9 páginas sobre o Cygwin. Para fechar, um artigo sobre o VI que saiu
+na última edição da revista em 2004.
+</P>
+<P>
+Valeu Márcia, Rigues, Felipe e toda a galera da revista. Foi uma
+experiência muito legal e recompensadora.
+</P>
+
+<H3 ID="rdl-01">RdL #03 - O Poder do Modo Texto</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/rdl/poder-modo-texto.html">http://aurelio.net/doc/rdl/poder-modo-texto.html</A>
+</P>
+
+<H3 ID="rdl-02">RdL #03 - Expressões Regulares - Parte 1</H3>
+
+<P>
+<A HREF="http://aurelio.net/regex/rdl-regex-1.html">http://aurelio.net/regex/rdl-regex-1.html</A> (<A HREF="er-rdl/">respostas dos exercícios</A>)
+</P>
+<P>
+Meu primeiro artigo sobre Expressões Regulares, escrito em 2000. É uma introdução ao assunto, explicando o básico e demonstrando com exemplos o uso de quatro metacaracteres: . + * []
+</P>
+
+<H3 ID="rdl-03">RdL #04 - Vi, Vim e Venci</H3>
+
+<P>
+<A HREF="http://aurelio.net/vim/vi-vim-venci.html">http://aurelio.net/vim/vi-vim-venci.html</A>
+</P>
+<P>
+Artigo completo sobre o editor Vim, que conta sua história (VI), demonstra suas qualidades, comenta sobre as doações arrecadadas para órfãos de Uganda (África) e explica sua rixa com o editor Emacs. Iniciando pelo uso básico, o artigo evolui para demonstrar várias funções avançadas como seleção vertical, abrir vários arquivos ao mesmo tempo, abreviações, marcas, mapeamentos (macros), programação e configuração.
+</P>
+
+<H3 ID="rdl-04">RdL #04 - Áreas Compartilhadas</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/rdl/areas-compartilhadas.html">http://aurelio.net/doc/rdl/areas-compartilhadas.html</A>
+</P>
+
+<H3 ID="rdl-05">RdL #07 - Expressões Regulares - Parte 2</H3>
+
+<P>
+<A HREF="http://aurelio.net/regex/rdl-regex-2.html">http://aurelio.net/regex/rdl-regex-2.html</A>
+</P>
+<P>
+Meu segundo artigo sobre Expressões Regulares, escrito em 2000. É uma continuação do artigo introdutório, agora apresentando conceitos mais avançados como as chaves, o opcional, os grupos e retrovisores. Também conta com uma tabela de exemplos.
+</P>
+
+<H3 ID="rdl-06">RdL #09 - Coluna do Aurelio I - Introdução</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-01.html">http://aurelio.net/doc/coluna/coluna-01.html</A>
+</P>
+
+<H3 ID="rdl-07">RdL #10 - Coluna do Aurelio II - ICQ</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-02.html">http://aurelio.net/doc/coluna/coluna-02.html</A>
+</P>
+
+<H3 ID="rdl-08">RdL #11 - Coluna do Aurelio III - zgv/ImageMagick</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-03.html">http://aurelio.net/doc/coluna/coluna-03.html</A>
+</P>
+
+<H3 ID="rdl-09">RdL #47 - Cygwin - O Linux no Windows (matéria de capa)</H3>
+
+<P>
+ <IMG ALIGN="right" SRC="img/capa-rdl-cygwin.jpg" BORDER="0" ALT="">
+<A HREF="http://aurelio.net/cygwin/rdl/">http://aurelio.net/cygwin/rdl/</A>
+</P>
+<P>
+Matéria de capa, com 9 páginas. O CD que acompanha a revista veio com a
+versão mais recente do Cygwin. Este artigo apresenta o Cygwin, ensina
+como instalá-lo no Windows a partir do CD da revista e dá várias dicas
+de configuração e uso do sistema. Também é útil para que quer instalar o
+Cygwin direto da Internet, as diferenças são mínimas.
+</P>
+
+<H3 ID="rdl-10">RdL #49 - Pulando com o Vim</H3>
+
+<P>
+<A HREF="http://aurelio.net/vim/pulando.html">http://aurelio.net/vim/pulando.html</A>
+</P>
+<P>
+Páginas 58 e 59 dessa que foi a última edição publicada da revista. Este artigo explica como ganhar tempo usando os vários comandos internos do editor Vim para movimentar o cursor, ao invés de usar as setinhas do teclado. Também são demonstrados os comandos para apagar textos, que dispensam o uso das teclas Delete e Backspace.
+</P>
+
+<H2 ID="coluna">Coluna do Aurelio</H2>
+
+<P>
+A "Coluna do Aurelio" começou em Setembro de 2000, sendo publicada
+mensalmente na <A HREF="#rdl">Revista do Linux</A>. Em Dezembro de 2000 ela virou
+uma coluna online no meu site, com circulação "quase" mensal. Foram ao
+todo 12 edições, tendo sido encerrada em Novembro de 2001.
+</P>
+<P>
+O tema é o uso do Linux no modo texto, a interface de caracteres. Como
+era somente isso que eu usava na época, tinha bastante dicas para
+passar. A maior parte dos artigos ensina a usar programas, como
+jogos, editor de texto, navegador e leitor de e-mail. Outros tratam
+sobre os conceitos da interface, como redirecionamento e caracteres de
+controle.
+</P>
+<P>
+Muito obrigado aos leitores que enviaram erratas: Osvaldo Santana Neto,
+Batista, Guto, Michel Angelo da Silva Pereira e Arlan Lucas de Souza.
+</P>
+
+<H3 ID="coluna-01">Coluna 01: Introdução</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-01.html">http://aurelio.net/doc/coluna/coluna-01.html</A>
+</P>
+
+<H3 ID="coluna-02">Coluna 02: ICQ</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-02.html">http://aurelio.net/doc/coluna/coluna-02.html</A>
+</P>
+
+<H3 ID="coluna-03">Coluna 03: Zgv/ImageMagick — Manipulação de imagens</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-03.html">http://aurelio.net/doc/coluna/coluna-03.html</A>
+</P>
+
+<H3 ID="coluna-04">Coluna 04: Pine — E-mail na tela preta</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-04.html">http://aurelio.net/doc/coluna/coluna-04.html</A>
+</P>
+
+<H3 ID="coluna-05">Coluna 05: Jogos — Uma viagem ao mundo da diversão</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-05.html">http://aurelio.net/doc/coluna/coluna-05.html</A>
+</P>
+
+<H3 ID="coluna-06">Coluna 06: Arte Ascii — Artistas do teclado</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-06.html">http://aurelio.net/doc/coluna/coluna-06.html</A>
+</P>
+
+<H3 ID="coluna-07">Coluna 07: Screen — Janelizando o modo texto (parte 1)</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-07.html">http://aurelio.net/doc/coluna/coluna-07.html</A>
+</P>
+
+<H3 ID="coluna-08">Coluna 08: Screen — Janelizando o modo texto (parte 2)</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-08.html">http://aurelio.net/doc/coluna/coluna-08.html</A>
+</P>
+
+<H3 ID="coluna-09">Coluna 09: Vim — Um vimrc diferente</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-09.vim">http://aurelio.net/doc/coluna/coluna-09.vim</A>
+</P>
+
+<H3 ID="coluna-10">Coluna 10: Mpage — Impressão ágil em PostScript</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-10.html">http://aurelio.net/doc/coluna/coluna-10.html</A>
+</P>
+
+<H3 ID="coluna-11">Coluna 11: Caracteres de Controle — Não fuja, domine-os</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-11.html">http://aurelio.net/doc/coluna/coluna-11.html</A>
+</P>
+
+<H3 ID="coluna-12">Coluna 12: Lynx — Navegação turbinada</H3>
+
+<P>
+<A HREF="http://aurelio.net/doc/coluna/coluna-12.html">http://aurelio.net/doc/coluna/coluna-12.html</A>
+</P>
+</div><div id="sidebar">
+
+<!--Begin Google Ads Wide Skyscraper 160x600-->
+
+<div class="adsky160">
+<script type="text/javascript"><!--
+google_ad_client = "pub-0009608813278754";
+/* Sky 160x600 */
+google_ad_slot = "3387680546";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!--End Skyscraper-->
+
+<P>
+<A title="Voltar ao início do site" HREF="/"><IMG ALIGN="middle" SRC="../include/kiwi/aurelionet.jpg" BORDER="0" ALT=""></A>
+</P>
+
+<!--tagmenu.js populates menutags and menulinks-->
+<div id="menutags">
+<noscript>
+<a href="http://aurelio.net/blog">blog</a>
+<a href="../carve/">carve</a>
+<a href="../curso/">cursos</a>
+<a href="../doc/">doc</a>
+<a href="../mim.html">eu</a>
+<a href="../foto/">fotos</a>
+<a href="../livro/">livros</a>
+<a href="../mac/">mac</a>
+<a href="../musica/">música</a>
+<a href="../er/">regex</a>
+<a href="../sed/">sed</a>
+<a href="../shell/">shell</a>
+<a href="../bin/">software</a>
+<a href="../surf/">surf</a>
+<a href="../viagem/">viagens</a>
+<a href="../vim/">vim</a>
+</noscript>
+</div><!--menutags-->
+<div id="icons">
+<P>
+<A
+
+ HREF="http://www.shellscript.com.br"
+TITLE="Shell Script Profissional"><IMG BORDER="0"
+  ALT="Shell Script Profissional"
+  SRC="../img/icon/32/livroshell.jpg"></A><A
+
+ HREF="http://www.piazinho.com.br"
+TITLE="Expressões Regulares - Uma abordagem divertida (4ª edição)"><IMG BORDER="0"
+  ALT="Expressões Regulares - Uma abordagem divertida (4ª edição)"
+  SRC="../img/icon/32/livroregex4.jpg"></A><A
+
+ HREF="http://aurelio.net/shell/canivete/"
+TITLE="Canivete Suíço do Shell"><IMG BORDER="0"
+  ALT="Canivete Suíço do Shell"
+  SRC="../img/icon/32/canivete.jpg"></A><A
+
+ HREF="http://aurelio.net/shell/dialog/"
+TITLE="Dialog --tudo"><IMG BORDER="0"
+  ALT="Dialog --tudo"
+  SRC="../img/icon/32/dialog.jpg"></A><A
+
+ HREF="http://txt2tags.org/pt/"
+TITLE="txt2tags"><IMG BORDER="0"
+  ALT="txt2tags"
+  SRC="../img/icon/32/txt2tags.jpg"></A><A
+
+ HREF="http://funcoeszz.net"
+TITLE="Funções ZZ"><IMG BORDER="0"
+  ALT="Funções ZZ"
+  SRC="../img/icon/32/zz.jpg"></A><A
+
+ HREF="http://aurelio.net/moneylog/"
+TITLE="MoneyLog"><IMG BORDER="0"
+  ALT="MoneyLog"
+  SRC="../img/icon/32/moneylog.jpg"></A><A
+
+ HREF="http://aurelio.net/css-sandbox/"
+TITLE="CSS Sandbox"><IMG BORDER="0"
+  ALT="CSS Sandbox"
+  SRC="../img/icon/32/css-sandbox.jpg"></A><A
+
+ HREF="http://aurelio.net/fvm/"
+TITLE="Faça Você Mesmo"><IMG BORDER="0"
+  ALT="Faça Você Mesmo"
+  SRC="../img/icon/32/fvm.jpg"></A><A
+
+ HREF="http://aurelio.net/baterna/"
+TITLE="Baterna - Curso de bateria online e gratuito"><IMG BORDER="0"
+  ALT="Baterna - Curso de bateria online e gratuito"
+  SRC="../img/icon/32/baterna.jpg"></A><A
+
+ HREF="http://www.coisinha.com.br/miguxeitor/"
+TITLE="MiGuXeiToR"><IMG BORDER="0"
+  ALT="MiGuXeiToR"
+  SRC="../img/icon/32/miguxeitor.jpg"></A><A
+
+ HREF="http://www.coisinha.com.br/engripeitor/"
+TITLE="Engripeitor"><IMG BORDER="0"
+  ALT="Engripeitor"
+  SRC="../img/icon/32/engripeitor.jpg"></A><A
+
+ HREF="http://aurelio.net/viagem/"
+TITLE="Viagens"><IMG BORDER="0"
+  ALT="Viagens"
+  SRC="../img/icon/32/viagem.jpg"></A><A
+
+ HREF="http://aurelio.net/pogo/"
+TITLE="Roda de Pogo - A Dança Punk"><IMG BORDER="0"
+  ALT="Roda de Pogo - A Dança Punk"
+  SRC="../img/icon/32/pogo.jpg"></A><A
+
+ HREF="http://aurelio.net/carve/"
+TITLE="Carveboard"><IMG BORDER="0"
+  ALT="Carveboard"
+  SRC="../img/icon/32/carve.jpg"></A><A
+
+ HREF="http://aurelio.net/surf/"
+TITLE="Fotos de Surfe"><IMG BORDER="0"
+  ALT="Fotos de Surfe"
+  SRC="../img/icon/32/surf.jpg"></A>
+</P>
+</div>
+<P>
+<B><A HREF="http://aurelio.net/blog">Visite o blog</A></B>
+</P>
+<P>
+<A HREF="http://twitter.com/oreio"><IMG ALIGN="middle" SRC="../img/twitter-button.png" BORDER="0" ALT=""></A>
+</P>
+<div class="livros">
+<P>
+Meus livros:
+</P>
+
+<TABLE>
+<TR>
+<TD><A HREF="http://www.piazinho.com.br"><IMG ALIGN="middle" SRC="../img/icon/32/livroregex.jpg" BORDER="0" ALT=""></A></TD>
+<TD><A HREF="http://www.piazinho.com.br">Expressões Regulares</A></TD>
+</TR>
+<TR>
+<TD><A HREF="http://www.shellscript.com.br"><IMG ALIGN="middle" SRC="../img/icon/32/livroshell.jpg" BORDER="0" ALT=""></A></TD>
+<TD><A HREF="http://www.shellscript.com.br">Shell Script Profissional</A></TD>
+</TR>
+</TABLE>
+
+</div>
+
+<!-- SiteSearch Google -->
+<form action="http://aurelio.net/search.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:b3yrms-qdqp" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" /><br />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+<!-- SiteSearch Google -->
+
+</div>
+
+<div id="menulinks">
+<noscript>
+</noscript>
+</div><!--menulinks-->
+
+</div><div id="footer">
+<P>
+<A HREF="../sobre.html">AURELIO.NET</A> é o site pessoal de Aurelio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</div>
+</P>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags /a/www/doc/nerd.t2t -->
+</BODY></HTML>

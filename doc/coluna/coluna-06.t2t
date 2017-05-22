@@ -1,0 +1,117 @@
+coluna do aurelio 06
+arte ascii (artistas do teclado)
+http://aurelio.net/doc/coluna
+
+--- .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
+
+lembra  quando  você  estudou  poesia concreta na escola? aquela onde as
+frases  eram  postas de maneira a formar desenhos? ou ainda, antigamente
+quando  ainda  se  usava muita máquina de escrever e faziam cartazes com
+letras  grandes, que na verdade eram cheias de outras letrinhas? isso, é
+claro, foi antes da popularização dos computadores e seus "processadores
+de texto", com fontes e figuras escalonáveis.
+
+antigamente  também,  na internet circulava apenas texto, sem imagens, e
+era  utilizada  apenas  para uso militar. como figuras e esquemas tinham
+que  ser  passados  de  um  lugar  para  outro, começaram a transitar os
+desenhos feitos com letras e símbolos.
+
+o nome `ASCII` (lê-se "ásqui", e não causa "asco") se refere a um padrão
+que  define  um  conjunto  de  128  caracteres  para  os computadores se
+comunicarem  entre  si. a `arte ascii` usa 95 destes caracteres, que são
+basicamente  os  que  estão  no  teclado  de  seu computador: as letras,
+números e símbolos.
+
+então,  apenas de posse de um teclado e um editor de textos simples como
+`vi`,  `pico`  ou  o  próprio `bloco de notas` do `windows`, os artistas
+`ascii`  canalizam  a  criatividade e produzem obras admiráveis. o único
+requisito básico é que o editor mostre as letras em `fonte fixa`, também
+chamada  `monoespaçada`,  onde todas as letras ocupam a mesma largura na
+tela,   desde   o   `i`  até  o  `m`,  como  a  `courier`  por  exemplo.
+
+--- .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
+
+como  fazer  `arte  ascii`  (`AA`  daqui  adiante)  em seu computador? a
+maneira  mais  fácil  de  desenhar com caracteres é utilizar um programa
+conversor para gerar o desenho a partir de uma imagem `GIF` por exemplo,
+como este online: http://www.degraeve.com/gif2txt.shtml. mas é claro, um
+desenho  convertido  NÃO  é  arte. `AA` só é `AA` se o desenho foi feito
+todo "na mão".
+
+feitas  diretamente  com  o  teclado,  há  vários  tipos  de  `AA` desde
+a  fina,  apenas de traçado (http://www.geocities.com/SoHo/7373/new.htm)
+até  a  cheia,  que é sólida (http://users.inetw.net/~mullen/ascii.htm),
+e as mistas, trabalhando com brilho, contraste, cor e até 3D! e ainda há
+várias  técnicas  para  ajudar  a  chegar  ao resultado final, como usar
+transparências  ou  folhas quadriculadas coladas no monitor, para não se
+perder nas proporções.
+
+além  disso, usando-se `GIF` animado ou `javascript`, pode-se fazer `AA`
+animada  na  internet,  basta desenhar cada "tela" e depois passá-las em
+seqüência.  ou  ainda utilizar uma linguagem de programação para mostrar
+cada "cena" num intervalo de tempo estipulado.
+
+--- .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
+
+uma  categoria  nova  surgida  com  os  monitores  de  resolução  alta e
+navegadores que colorem texto, é a de transformar um texto qualquer numa
+figura,  apenas  colorindo  as  partes  certas,  como  neste pingüim com
+trechos   de   código  `C`  em  cores  diversas  compondo  sua  textura:
+http://www.autsch.de/bitsteller/linux_penguin.html.
+
+uma área da `AA` que sempre deu trabalho e é considerada por muitos algo
+chato   de  se  fazer  na  mão  são  letras.  mas  o  programa  `FIGlet`
+(http://www.figlet.org) acabou com a lamúria e é  o principal criador de
+`fontes ascii`.  basta passar uma  palavra ou frase  para ele para vê-la
+escrita com dezenas de fontes diferentes.  você pode baixar e instalar o
+programa,  ou testá-lo  na  versão  online  em  http://figlet.zelab.net.
+simplesmente escreva o texto na caixa e aperte `go`. perfeito.
+
+existe   uma   biblioteca   "gráfica"   para   console  chamada  `aalib`
+(http://aa-project.sourceforge.net/aalib),   que   faz  gráficos  usando
+caracteres  `ascii`.  ela  é  bem  comple[tx]a  e alguns programas foram
+feitos  a  utilizando,  como  seu  próprio programa de demonstração `bb`
+(http://aa-project.sourceforge.net/bb),  que  é  imperdível,  instale  e
+veja.  outro  programa  é o `aatv` (http://n00n.free.fr/aatv), para você
+assistir  tv com as imagens sendo apenas texto. show de bola. e o `gimp`
+(http://www.gimp.org),  que  a  utiliza  para salvar imagens como texto.
+
+--- .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
+
+os  artistas  de  `AA`  ao  redor  do  globo  têm suas coleções de obras
+(http://www.afn.org/~afn39695/collect.htm)  e  uma campanha de respeito,
+para  que  suas  assinaturas  não  sejam  retiradas  dos desenhos quando
+copiados (http://designs.multiservers.com/mIRC/respect.html).
+
+fora  para observação simples, desenhos em `AA` são úteis em assinaturas
+de   e-mail   (http://www.math.fu-berlin.de/~guckes/afw/sig.collection),
+jogos  para  console  (http://artax.karlin.mff.cuni.cz/~brain/0verkill),
+e-zines   e   periódicos   (http://www.geocities.com/SoHo/Gallery/6446),
+demonstrações  de  fé  (http://www.geocities.com/SoHo/7373/newtest.jpg),
+vacas   [loucas?]   (http://www.mcs.brandonu.ca/~ennsnr/Cows/guide.html)
+ou taras (http://www.asciibabes.com).
+
+quer aprender como fazer `AA`? simplesmente tente. demora mas sai alguma
+coisa. se quiser saber como os artistas fazem suas obras, veja na página
+de  cada  um  deles. alguns descrevem seu procedimento. para começar, um
+bom  documento  para  ler é http://users.inetw.net/~mullen/crateach.htm.
+
+veja  mais  informações sobre o assunto em http://www.ascii-art.com e no
+newsgroup  alt.ascii-art,  e  para  achar  algum  desenho  sobre um tema
+específico,   acesse  http://www.stud.uni-hannover.de/~freise/ascii.  no
+Brasil,  temos  o news://news.uol.com.br/uol.mundodigital.ascii_art onde
+os usuários trocam muitos `AA`.
+
+e é claro, para finalizar, um exemplo de `AA` simples:
+
+---
+     o   \ o /  _ o        __|    \ /    |__         o _  \ o /   o
+    /|\    |     /\   __\o   \o    |    o/    o/__   /\     |    /|\
+    / \   / \   | \  /) |    ( \  /o\  / )    |  (\  / |   / \   / \
+---
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

@@ -1,0 +1,812 @@
+Docs Nerdz
+Tudo para o seu prazer intelectual
+%%infile(%d)
+
+% TODO: desenvolverde
+
+%!postproc: '^(<TITLE>).*(</TITLE>)'	'\1Textos técnicos - Livros, apostilas, artigos, guias, tutoriais, HOWTO e slides\2'
+
+%!includeconf:		/a/www/include/10anos/database-artigos.t2t
+%!includeconf:		/a/www/include/10anos/database.t2t
+%!includeconf:		/a/www/include/kiwi/config.t2t
+%!postproc: SITEROOT 	..
+%!postproc: (<BODY)	\1 class="doc"
+
+%!options: --toc
+
+% desliga itens do TOC sem label
+%!postproc: '(?i)<a href="#toc[0-9]+">(.*?)</a>'   '\1'
+
+% todas as imagens com borda, pois muitas têm branco
+%%!postproc: '(<IMG [^>]*BORDER)="0"'    '\1="1"'
+
+% Linka endereços em macros (eles só expandem no postproc)
+%!preproc: '^(_COLUNA_URL[^ ]*)'	'[\1 \1]'
+%!preproc: '^(URL[^ ]*)'	'[\1 \1]'
+%!preproc: '^(_[^ ]*_URL)'	'[\1 \1]'
+%!preproc: '^: (URL[^ ]*)'	': [\1 \1]'
+%!preproc: '^: (_[^ ]*_URL(/[^ ]+)?)'	': [\1 \1]'
+%!preproc: '^: (_[^ ]*_ROOT/[^ ]+)'	': [\1 \1]'
+
+% novidades
+%%!postproc: '^(  *<LI><A HREF="#as4pp".*)' '\1 <b>(NOVO)</b>'
+
+%%!include: ''/a/www/include/kiwi/ads-twins.html''
+
+Esta página reúne todos os textos técnicos que fiz. São artigos, guias,
+tutoriais, HOWTOs, slides, apostilas e livros. Alguns foram publicados
+em revistas de circulação nacional, outros foram publicados no meu site,
+outros são material dos cursos que ministrei. Todos têm seus "fontes"
+no formato do _TXT2TAGS_LINK, inclusive os livros e slides.
+
+Todos estes textos são livres para serem copiados, somente peço que
+mantenha as informações de autoria (meu nome) e indique a sua
+localização original (o link). As exceções são:
+
+- O conteúdo da apostila Programação Profissional em Shell é fechado.
+- O conteúdo do livro Expressões Regulares está online mas possui
+  Direitos Autorais.
+-
+
+Procurando por algum documento específico? Confira a lista:
+
+%%toc
+
+== Resumão: Linha do Tempo ==[linha-do-tempo]
+
+| ``01 Dez 1999`` | Sem Mouse HOWTO
+| ``01 Mar 2000`` | RdL #03 - O Poder do Modo Texto
+| ``01 Mar 2000`` | RdL #03 - Expressões Regulares - Parte 1
+| ``01 Abr 2000`` | RdL #04 - _VIM_VIVIMVENCI_NAME
+| ``01 Abr 2000`` | RdL #04 - Áreas Compartilhadas
+| ``23 Jun 2000`` | Fanatismo Digital - A Guerra dos Editores
+| ``01 Jul 2000`` | RdL #07 - Expressões Regulares - Parte 2
+| ``31 Jul 2000`` | Coluna 01 - _COLUNA_01_NAME
+| ``25 Ago 2000`` | _SEDHOWTO_NAME
+| ``30 Ago 2000`` | Coluna 02 - _COLUNA_02_NAME
+| ``01 Set 2000`` | RdL #09 - Coluna do Aurelio I - Introdução
+| ``21 Set 2000`` | Coluna 03 - _COLUNA_03_NAME
+| ``01 Out 2000`` | RdL #10 - Coluna do Aurelio II - ICQ
+| ``01 Nov 2000`` | RdL #11 - Coluna do Aurelio III - zgv/ImageMagick
+| ``02 Dez 2000`` | Coluna 04 - _COLUNA_04_NAME
+| ``04 Jan 2001`` | Coluna 05 - _COLUNA_05_NAME
+| ``22 Fev 2001`` | Coluna 06 - _COLUNA_06_NAME
+| ``12 Abr 2001`` | Coluna 07 - _COLUNA_07_NAME
+| ``10 Mai 2001`` | Coluna 08 - _COLUNA_08_NAME
+| ``28 Jun 2001`` | Coluna 09 - _COLUNA_09_NAME
+| ``31 Jul 2001`` | Livro _GUIAREGEX_NAME
+| ``13 Ago 2001`` | Coluna 10 - _COLUNA_10_NAME
+| ``27 Ago 2001`` | Coluna 11 - _COLUNA_11_NAME
+| ``09 Nov 2001`` | Coluna 12 - _COLUNA_12_NAME
+| ``25 Jun 2003`` | _DIALOG_NAME
+| ``09 Jul 2003`` | _CANIVETE_NAME
+| ``30 Jul 2003`` | _APOSTILA_NAME
+| ``01 Nov 2003`` | RdL #47 - Cygwin - O Linux no Windows (matéria de capa)
+| ``10 Dez 2003`` | Apostila _ER_APOSTILA_NAME
+| ``12 Dez 2003`` | Software Livre - Experiências de um Desenvolvedor (slides)
+| ``01 Jan 2004`` | RdL #49 - _VIM_PULANDO_NAME
+| ``19 Abr 2004`` | Editor VI - Guia de Referência
+| ``24 Abr 2004`` | Apostila Introdução ao Shell Script
+| ``31 Ago 2004`` | _VIM_OOO_NAME
+| ``01 Out 2004`` | Linux Magazine #02 - _VIM_SELECAOVISUAL_NAME
+| ``17 Nov 2004`` | Livro _LIVROSED_NAME
+| ``15 Jul 2005`` | AppleScript for Python Programmers
+| ``10 Nov 2006`` | Livro _LIVROREGEX1_NAME
+| ``31 Ago 2007`` | _PYOBJC_NAME
+| ``04 Abr 2008`` | Livro _LIVROSHELL_NAME
+
+Obs.: No caso de documentos versionados, a data indica a primeira versão.
+
+
+
+== Livros ==[livros]
+
+=== _LIVROSHELL_NAME ===[livro-shell]
+
+_LIVROSHELL_URL                       [_LIVROSHELL_128.png]
+
+: Descrição
+  Livro de 480 páginas, é uma bíblia completa sobre shell, que ensina a fazer programas de qualidade profissional: código legível, portabilidade e manutenção futura. Explica ainda opções de linha de comando, arquivo de configuração, banco de dados, interface amigável ao usuário, CGI, ferramentas do sistema, expressões regulares e caracteres de controle. Tem também um apêndice que faz uma análise detalhada no código das _ZZ_LINK. O livro foi lançado em 4 de Abril de 2008 e está à venda na maioria das livrarias do país por cerca de 85 reais. ISBN: _LIVROSHELL_ISBN
+
+: História
+  Leia no meu blog o ["Making Of" do livro _MYBLOG/2008/04/04/parto-prematuro/] e o [relato da tarde de autógrafos no FISL 9.0 _MYBLOG/2008/04/22/a-mog-foi-no-fisl/].
+
+: Status
+  O livro está em sua primeira edição. [Saiba mais... _LIVROSHELL_URL]
+:
+
+
+=== _LIVROREGEX1_NAME ===[livro-er]
+
+_LIVROREGEX_URL                       [_LIVROREGEX_128.png]
+
+: Descrição
+%   Livro de 144 páginas, 
+A evolução do [guia de consulta #guia-er]. Agora em formato de livro, fontes maiores, tabelas bonitas e ilustrações, contando com um personagem que aprende e testa os exemplos ao decorrer do texto. Usando uma linguagem leve e descontraída, o assunto é explicado de maneira didática e divertida. Esta abordagem, incomum de se encontrar em literaturas técnicas, foi [muito elogiada pelos leitores _LIVROREGEX_ROOT/opiniao.html]. ISBN: _LIVROREGEX_ISBN.
+%  O livro foi lançado em 10 de Novembro de 2006.
+%  e está à venda na maioria das livrarias do país por cerca de 32 reais.
+
+: História
+  Leia no meu blog o ["Making Of" da 1ª edição _MYBLOG/2006/11/10/expressoes-regulares-uma-abordagem-divertida/].
+''<br>''
+  Leia no meu blog o ["Making Of" da 2ª edição _MYBLOG/2008/08/15/expressoes-regulares-2a-edicao/].
+''<br>''
+  Leia no meu blog o ["Making Of" da 3ª edição _MYBLOG/2009/10/03/expressoes-regulares-3a-edicao/].
+''<br>''
+  Leia no meu blog o ["Making Of" da 4ª edição _MYBLOG/2012/10/31/piazinho4-pre-venda-autografada/].
+
+: Status
+%   O livro está em sua primeira edição. [Saiba mais... _LIVROREGEX1_URL]
+  Em 2006 foi lançada a [primeira edição _LIVROREGEX1_URL] deste livro.''<br>''
+  Em 2008 foi lançada a [segunda edição _LIVROREGEX2_URL] deste livro.''<br>''
+  Em 2009 foi lançada a [terceira edição _LIVROREGEX3_URL] deste livro.''<br>''
+  Em 2012 foi lançada a [quarta edição _LIVROREGEX4_URL] deste livro.
+:
+
+=== _GUIAREGEX_NAME ===[guia-er]
+
+_GUIAREGEX_URL                       [_GUIAREGEX_128.png]
+
+: Descrição
+Livro de 96 páginas, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Primeira publicação nacional sobre o assunto, e uma das poucas existentes no mundo. Tem o formato "de bolso", fácil de carregar. Também [pode ser consultado _GUIAREGEX_ONLINE] integral e gratuitamente na Internet. ISBN: _GUIAREGEX_ISBN.
+
+: História
+  Conectiva. Eu lá tranqüilo trabalhando, quando surge um assunto sobre
+  Expressões Regulares. Papo vem, papo vai e o meu chefe Wanderlei
+  Cavassin acende o pavio:
+  "//Você manja disso, por que não escreve um livro?//"
+
+  Em seguida ele me mostrou o site da Editora Novatec e apontou para o
+  link "Procuramos autores". Aí não teve mais volta. No mesmo dia mandei
+  um e-mail para a editora e o Rubens (Editor/Dono) imediatamente me
+  telefonou dizendo que tinha interesse em publicar um livro sobre o
+  assunto.
+
+%   Foi um total de 96 horas de escrita e
+  Dois meses depois do primeiro
+  contato, o texto final estava indo para a gráfica. O livro foi lançado
+  em 31 de Julho de 2001, na feira Fenasoft.
+
+: Status
+  Esgotado em Dezembro de 2006. A 1ª edição teve uma tiragem de 3.000 exemplares. Foram cinco anos e meio, em um ritmo lento porém constante, eram vendidos cerca de 40 exemplares por mês (mais de um por dia!). Seu sucessor é o livro [_LIVROREGEX1_NAME #livro-er], lançado em Novembro de 2006. [Veja a opinião dos leitores do guia _GUIAREGEX_ROOT/recados.php].
+:
+
+=== _LIVROSED_NAME ===[livro-sed]
+
+_LIVROSED_URL                    [_LIVROSED_128.png]
+
+: Descrição
+  _LIVROSED_DESC
+
+: História
+  Em março de 2002 comecei a trabalhar em um livro sobre _SED_NAME. Peguei o
+  _SEDHOWTO_NAME como base e comecei a completá-lo, escrever mais tópicos,
+  definir um índice, definir um foco. Tudo muito devagar e com muita
+  calma, escrevendo em média apenas uma vez por semana, durante cerca de
+  2 horas. Os capítulos e tópicos foram surgindo naturalmente e o
+  conteúdo foi tomando forma de um livro.
+
+  Em outubro de 2002, já com aproximadamente 60% do livro escrito,
+  resolvi tornar o projeto público e chamar colaboradores. Após um
+  [anúncio na lista sed-br _SED_ML/message/1266] e convites em
+  particular para amigos e colegas escritores, foi formado um time de 11
+  pessoas que ajudaram a revisar o trecho já escrito. Mas desde então,
+  nenhum conteúdo novo foi escrito, o livro estagnou.
+
+  Em novembro de 2005, decidido que eu realmente não iria mais
+  continuá-lo, resolvi lançá-lo inacabado mesmo, para não perder o
+  trabalho já feito.
+
+: Status
+  Versão inacabada, porém final.
+:
+
+
+
+== Tutoriais, Guias, Textos ==[guias]
+
+=== _CANIVETE_NAME ===[canivete-shell]
+
+_CANIVETE_URL                    [_CANIVETE_128.png]
+
+: Descrição
+  Documento de apenas uma página HTML com um resumão de Shell e os
+  comandos principais do sistema. São várias tabelas que resumem
+  operadores, opções, conceitos, dicas e listagens. Nada de texto, só
+  tabelas. Bom para guardar, imprimir, ter sempre à mão para tirar
+  dúvidas.
+
+: História
+  Este documento eu fiz para mim mesmo, pois estava cansado de sempre
+  ter que recorrer aos //--help// e //manpages// dos comandos para
+  lembrar qual mesmo aquela opção que fazia tal coisa? Ou pior, ter que
+  fazer um "man bash" e tentar achar algo naquela selva.
+
+  Juntei tudo em uma única página, no melhor estilo Guia de Consulta
+  Rápida e divulguei. O pessoal gostou bastante e inclusive sugeriram
+  conteúdo novo. Assim o "canivete" cresceu mais ainda e se tornou uma
+  referência na área.
+
+: Status
+  O documento já está bem maduro, com bastante conteúdo. Eventualmente são feitas atualizações para corrigir erros e adicionar alguma tabela nova. Há também uma [versão em PDF do canivete /shell/canivete/pdf/], boa para imprimir.
+:
+
+=== _DIALOG_NAME ===[dialog-tudo]
+
+_DIALOG_URL				[_DIALOG_128.png]
+
+: Descrição
+  Documento completo sobre o Dialog, o programa que faz interfaces
+  "gráficas" no modo texto, com botões, menus e caixas de texto,
+  interagindo com o Shell. Serve de tutorial para os iniciantes,
+  com bastante imagens e explicações básicas. Serve de guia de
+  referência para os experientes, listando todas as opções, telas e
+  funcionalidades. Também contém exemplos funcionais de scripts
+  completos.
+
+: História
+  O Dialog é a chave para se fazer scripts em Shell utilizáveis por
+  leigos em informática. Com ele, os programas do modo texto ficam com
+  cara de programas gráficos, tendo menus e botões. Mas era incrível
+  como mesmo sendo um programa antigo, muito útil e bem conhecido, não
+  existia **nenhuma** documentação dele em português.
+
+  Era muito freqüente aparecer na [lista de shell-script _SHELL_ML]
+  mensagens do tipo: "//Tem documentação do Dialog em português?//".
+  Cansado de ver essa mensagem sempre reaparecendo, resolvi escrever um
+  documento completo e definitivo. O resultado é um tutorial com
+  bastante imagens para os iniciantes, que gradualmente vai ficando
+  complexo até chegar em scripts completos com várias telas.
+
+: Status
+  O documento já está bem completo, o considero uma documentação
+  definitiva. Ele é atualizado esporadicamente quando o próprio Dialog
+  muda (versão nova, opções novas) ou quando tenho mais exemplos de
+  scripts para colocar.
+:
+
+=== _SEDHOWTO_NAME ===[sed-howto]
+
+_SEDHOWTO_URL				[_SEDHOWTO_128.png]
+
+: Descrição
+  _SEDHOWTO_DESC
+
+: História
+  Esse documento é o resultado do meu difícil aprendizado do programa
+  _SED_NAME, uma ferramenta de edição automática de texto através de scripts.
+  Desde a primeira vez que o usei achei fantástico por ser tão poderoso
+  e tão intimidador. Apesar do programa ter vários comandos, todos os
+  técnicos que eu conhecia só sabiam usar o comando básico
+  "//s/isso/aquilo/g//".
+
+  Início de 1999, resolvi aprender os outros comandos a acabar com o
+  mistério. Li diversas vezes a página de manual (manpage) do _SED_NAME e ela
+  só embaralhava mais a cabeça. Achei alguns documentos em inglês na
+  Internet mas eram muito avançados. Passei várias noites em casa
+  tentando aprender por tentativa e erro e aos poucos fui captando sua
+  filosofia e as trevas foram clareando.
+
+  Aprendi os comandos, os registradores e finalmente comecei a me sentir
+  à vontade. Para consolidar o conhecimento recém adquirido, escrevi um
+  programa conversor de texto para SGML que usava vários comando _SED_NAME
+  dentro de um script Shell.
+
+  E assim, perdi o medo do _SED_NAME. Finalmente comecei a entender as
+  respostas dadas na [lista gringa http://groups.yahoo.com/group/sed-users]
+  do programa, passando de mero espectador perdido a participante ativo.
+  Ali aprendi as técnicas avançadas e as diferenças entre as versões do
+  programa. Essa evolução foi registrada: o programa conversor foi
+  melhorado e virou um [script em _SED_NAME /sed/programas/txt2sgml-sed/].
+
+  Todo este esforço não poderia passar em branco e ficar só pra mim. Eu
+  precisava difundir o uso do _SED_NAME e o seu poder. O primeiro passo foi
+  criar a [lista de discussão sed-br _SED_ML] e os usuários foram
+  aparecendo. Com a lista pude identificar as dúvidas mais comuns de
+  quem estava começando e comecei a juntar dicas para um documento
+  maior. Escrevendo um pouco por dia, durante ou no fim do expediente,
+  depois de alguns meses consegui lançar a primeira versão do HOWTO,
+  quase dois anos depois do início de toda essa odisséia.
+
+: Status
+  O documento foi divulgado, lido, recebi sugestões de melhorias e hoje
+  ele se encontra na versão 0.6. Ele continua o documento mais completo
+  sobre _SED_NAME em português. Mas há outros documentos complementares
+  excelentes, escritos ou traduzidos por usuários. Confira-os no
+  [portal do _SED_NAME _SED_PATH].
+
+  Este HOWTO ajuda o iniciante a se achar, mas ainda está longe de ser
+  algo tão completo quanto eu gostaria. É preciso um **livro** inteiro
+  sobre o _SED_NAME. [Eu comecei #livro-sed], mas atualmente ele está parado. O HOWTO
+  recebe atualizações esporádicas com correções, mas dificilmente
+  conteúdo novo. Preciso resolver esse dilema do HOWTO versus livro.
+:
+
+=== _PYOBJC_NAME ===[pyobjc]
+
+_PYOBJC_URL				[_PYOBJC_128.png]
+
+: Descrição
+  Este vídeo-tutorial é um guia completo para iniciar em PyObjC, a ponte entre Python e Cocoa, a poderosa API usada pelos aplicativos do Mac OS X. Leia o guia e veja o vídeo de demonstração.
+
+: História
+  Fiz este tutorial para uma palestra que ministrei em Joinville, na PyCon Brasil [3]. Seu título foi "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa programando em Python (PyObjC)". O objetivo foi mostrar como é fácil fazer um programa nativo para Mac, utilizando Python.
+
+  A palestra foi filmada e o vídeo também está disponível, melhorando muito o aprendizado do tutorial. São 34 minutos de demonstração, seguindo os passos descritos no tutorial.
+
+: Status
+  Versão final.
+:
+
+=== AppleScript for Python Programmers ===[as4pp]
+
+http://aurelio.net/doc/as4pp.html
+
+: Descrição
+  Um comparativo entre duas linguagens, útil para programadores
+  Python que queiram aprender AppleScript, em inglês.
+
+: História
+  Acho mais fácil de assimilar algo novo quando se compara com algo já
+  conhecido. Como eu já programava em Python e estava aprendendo
+  AppleScript, fui anotando os comandos novos aprendidos,
+  comparando-os com os comandos Python já conhecidos. O resultado é
+  uma tabelona que fica auto-explicativa para programadores Python.
+
+  Fiz em inglês porque só conheço mais um brasileiro que programa em
+  AppleScript. Se você é o terceiro, entre em contato!
+
+: Status
+  Versão quase final, vou adicionar mais dados se necessário.
+:
+
+=== _VIM_OOO_NAME ===[ooo-vi]
+
+_VIM_OOO_URL
+
+: Descrição
+  _VIM_OOO_DESC
+
+: História
+  Quando eu estava escrevendo uma apostila no OpenOffice.org para a
+  linha de treinamento da Conectiva, surgiu a dúvida se existiria
+  alguma maneira de fazer edições posteriores de modo automático
+  (batch), como por exemplo transformar todas as imagens para preto e
+  branco. Descobri que o arquivo .SXW na verdade é um ZIP com arquivos
+  XML e subdiretórios, e aí acabou o mistério. Fiz vários testes e esse
+  artigo é a conclusão deles.
+
+: Status
+  Versão final.
+:
+
+=== Programas Compatíveis com Python v1.5 ===[python15]
+
+http://www.python.org.br/wiki/ProgramasCompativeisV15
+
+: Descrição
+  Um documento rápido dando as dicas de como codificar em Python de
+  maneira conservadora, mantendo compatibilidade com a versão antiga
+  da linguagem, a v1.5, ainda em uso.
+
+: Status
+  Versão final.
+:
+
+=== Sem Mouse HOWTO ===[sem-mouse]
+
+http://aurelio.net/doc/sem-mouse-HOWTO.html
+
+: Descrição
+  Este documento dá dicas de como usar um sistema Linux sem o mouse,
+  apenas com o teclado. São explicados vários truques para Copiar &
+  Colar textos entre programas, além de dicas de uso do programa
+  "screen". Também é ensinado como movimentar o cursor com o teclado no
+  XFree86 e nos gerenciadores fvwm e fvwm2.
+
+: História
+  Escrevi este documento em inglês em 1999, mas ficou inacabado e acabei
+  perdendo-o nos confins do meu $HOME. Em Novembro de 2003 o
+  reencontrei, traduzi para português e terminei as partes que faltavam.
+  Na época eu não usava mouse e fui juntando essas dicas, que eu usava
+  no dia-a-dia.
+
+: Status
+  Versão final.
+:
+
+=== Você realmente usa a tecla CAPS LOCK? ===[caps-lock]
+
+http://aurelio.net/doc/CAPSLOCK.txt
+
+: Descrição
+  [img/capslock-cnc.jpg]
+  Um guia completo de como diminuir seu estresse e tornar a sua vida
+  mais tranqüila desabilitando (ou removendo fisicamente) a tecla
+  Caps Lock do teclado.
+
+: História
+  Não faço a menor idéia de quando escrevi isso, foi entre 1999 e 2001.
+  Foi depois de um tempo de eu ter arrancado a minha tecla e ter
+  conferido que era uma ótima idéia. Dentro da Conectiva foram vários os
+  funcionários que aderiram à campanha e me doaram suas teclas (vide
+  foto).
+
+  Até hoje ainda recebo e-mails esporádicos de pessoas que leram este
+  documento e "viram a luz", arrancando a tecla maldita. Alguns ainda
+  me mandam a foto. Mande a sua!
+
+  |  [img/capslock-claudio.jpg]  |  [img/capslock-apoena.jpg] 
+  |    //Claudio (TuxUnix)//     |   //Apoena Machado Cunha// 
+  |  [img/capslock-miurrause.jpg]  ||
+  |   //Marcelo Miurrause//        ||
+
+% Vídeo antigo: http://www.youtube.com/watch?v=iv3Xq_Un5OU
+
+  Que tal um pouco de ação? Veja esse vídeo do [@codexico http://twitter.com/codexico/status/28449049365], que registrou o vôo de sua tecla, em homenagem ao CAPS LOCK DAY de 2010:
+
+''' <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/1_enHS9zB-w?fs=1&amp;hl=pt_BR"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/1_enHS9zB-w?fs=1&amp;hl=pt_BR" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+
+: Status
+  Versão final.
+:
+
+=== Fanatismo Digital - A Guerra dos Editores ===[guerra-editores]
+
+http://aurelio.net/doc/guerra-editores.html
+
+: Descrição
+  Análise do resultado de uma pesquisa antropológica feita em Junho de
+  2000 sobre a paixão e fanatismo que profissionais de informática
+  nutrem por seu editor de textos. Em outras palavras: uma análise sobre
+  a "guerra" entre usuários de VI e Emacs.
+
+: História
+  Terminado o curso de Informática na faculdade, fiz vestibular
+  novamente e cursei Ciências Sociais na UFPR. Numa aula de
+  Antropologia, foi pedido para que os alunos fizessem uma "Pesquisa
+  Antropológica" completa, que consistia na escolha de um grupo social,
+  entrevistas e análise dos resultados.
+
+  Resolvi fazer uma pesquisa com um tema nerd. Toda a metodologia e
+  análise foi antropológica, mas o tema foi a guerra entre usuários de
+  VI e Emacs. "Guerra" de piadinhas e sacanagens, claro. O grupo
+  investigado foram os funcionários da Conectiva, que responderam um
+  extenso formulário. A nota obtida com a análise foi 90 (uau!).
+
+: Status
+  Versão final.
+:
+
+
+
+== Material de Cursos ==[cursos]
+
+=== _APOSTILA_NAME ===[curso-shell]
+
+_APOSTILA_URL				 [_APOSTILA_128.png]
+
+Apostila com 114 páginas (quase um livro!) que fiz para ministrar um
+curso de Shell Avançado de 40 horas em 2003. Terminado o curso houve
+interesse de terceiros em adquirir o material, então estou vendendo essa
+apostila por 20 reais (em PDF).
+
+Nela estão informações valiosas para pessoas que trabalham com Shell ou
+que pretendem fazer programas complexos na linguagem. O conteúdo aborda
+vários tópicos relacionados a programação, direcionados ao Shell.
+Comentários, código limpo, banco de dados, CGI e interface com o usuário
+são alguns dos assuntos explicados.
+[Em 2008 essa apostila virou um livro #livro-shell].
+
+=== Apostila Introdução ao Shell Script ===[curso-shell-intro]
+
+http://aurelio.net/curso/material/apostila-shell-intro.pdf
+
+Apostila de 22 páginas, com uma abordagem rápida e direta sobre como
+fazer scripts em Shell. Útil para quem já usa o UNIX/Linux na linha de
+comando e quer começar a fazer alguns scripts para automatizar tarefas.
+
+=== Apostila _ER_APOSTILA_NAME ===[curso-regex]
+
+_ER_APOSTILA_URL
+
+_ER_APOSTILA_DESC
+
+=== Editor VI - Guia de Referência ===[curso-vi-ref]
+
+http://aurelio.net/curso/material/vim-ref.html
+
+Material de apoio utilizado no meu curso de VI. Mistura tabelas com
+descrição de comandos e procedimentos prontos para executar, servindo de
+referência rápida. É apenas uma página, útil para imprimir e deixar ao
+alcance da mão.
+
+=== Software Livre - Experiências de um Desenvolvedor (slides) ===[curso-desenv]
+
+ [img/slides.jpg]
+http://aurelio.net/curso/material/desenvolvedor/
+
+Todos os 44 slides da palestra que conta a minha experiência de mais
+de 4 anos produzindo e lançado softwares livres. É abordado todo o
+ciclo de desenvolvimento de um software, que engloba: a concepção da
+idéia, o planejamento prévio com escolha de
+linguagem/interface/plataforma, a codificação, a documentação, a suíte
+de testes, o empacotamento, o lançamento, a manutenção, o marketing e
+o trato com os usuários.
+
+Alguns itens presentes: nome, idioma, versionamento, distribuição,
+Changelog,  anúncios, divulgação, público-alvo, agradecimentos, trabalho
+colaborativo, instalador, homepage, logo, lista de discussão,
+comunidade, Freshmeat, SourceForge, CVS,  bugs, suporte, melhoramentos,
+ambiente, requisitos, delegação de tarefas e planejamento futuro.
+
+
+
+== Documentação de Programas ==[programas]
+
+Além de escrever dicas e tutoriais sobre os programas dos outros,
+também tenho meus próprios programas e sou responsável pela
+documentação deles. A maioria dos programadores odeia documentar suas
+criações, mas eu acho divertido &:)
+
+O próprio site do programa é a sua documentação principal, servindo de
+vitrine para angariar usuários novos e apontar direções para os
+iniciantes seguirem. Os links imprescindíveis são "Download" e
+"Screenshots". Um livro de visitas também é recomendado para que os
+próprios usuários ajudem a fazer o marketing e apontar suas vantagens.
+
+Eu faço o site e escrevo toda a documentação de meus programas, em
+inglês e português. Alguns estão em apenas uma língua. No txt2tags
+alguns documentos foram traduzidos para o português por usuários.
+Alguns documentos também foram traduzidos para outras línguas por
+usuários estrangeiros.
+
+A seguir vou listar apenas os documentos que merecem alguma citação
+por suas características. O texto que os acompanha não é uma descrição
+de seu conteúdo, mas sim da forma como foram pensados e organizados,
+bem como seus propósitos.
+
+%Para mais informações sobre estes programas, [acesse o /bin /bin/].
+
+=== txt2tags ===[txt2tags]
+
+: _TXT2TAGS_ROOT/markup-pt.html (português)
+
+  **Demonstração:** Uma única página que faz um resumo de todas as
+  marcas usadas pelo programa, lado a lado com o seu resultado
+  convertido para HTML. Serve como uma apresentação rápida e completa
+  da sintaxe das marcas. Também pode ser impresso e servir de guia de
+  consulta rápida. A vantagem desse formato é que com pouco texto se
+  consegue dizer muito, além de demonstrar o programa em ação.
+
+: _TXT2TAGS_ROOT/../userguide/ (inglês)
+
+  **Guia do Usuário:** Um documento extenso e completo, escrito em
+  linguagem formal e dividido por tópicos, como em um livro. É
+  abrangente, cobrindo desde a instalação até uso avançado,
+  documentando todas as funcionalidades do programa. Este é o
+  documento mestre do programa, os outros sintetizam ou apresentam de
+  maneira diferente o que já está aqui. Também é disponibilizado como
+  PDF para poder ser impresso e consultado.
+
+: _TXT2TAGS_ROOT/../writing-book.html (inglês)
+
+  **Writing Books With Txt2tags:** Inspirado pela adoção do programa
+  como ferramenta de produção de um livro técnico estrangeiro,
+  escrevi este documento para apontar as vantagens de se usar o
+  txt2tags como formato original do texto de um livro. Ele tem um
+  forte apelo visual com um CSS que tenta imitar a aparência de um
+  livro. Tem uma linguagem sucinta e formal, passando sobriedade.
+:
+
+=== txt2regex ===[txt2regex]
+
+: _TXT2REGEX_ROOT/manpage.html (inglês)
+
+  **Página de manual:** O formato padrão de documentação de programas
+  no UNIX/Linux, que geralmente serve para listar todas as opções de
+  linha de comando, acompanhadas de uma descrição sucinta. Como este é
+  um programa simples e de interface interativa, esta é a única
+  documentação e é suficiente.
+:
+
+=== sedsed ===[sedsed]
+
+: _SEDSED_URL (inglês)
+
+  **Site tudo-em-um:** Aqui uma abordagem diferente. A página
+  principal do site do programa centraliza várias informações,
+  eliminando a necessidade de documentação extra. Na página estão
+  os exemplos de uso (que já abrigam os screenshots), as opções de
+  linha de comando (--help), Changelog e exemplos de uso com outros
+  programas conhecidos (credibilidade).
+:
+
+=== Funções ZZ ===[funcoeszz]
+
+: _ZZ_URL (português)
+
+  **Site tudo-em-um:** Segue a mesma filosofia do programa anterior de
+  toda a documentação ser centralizada no site. Como conta com a
+  contribuição ativa de vários usuários, a seção de Agradecimentos
+  também está no site. Cada tópico tem um nome (âncora), para serem
+  possíveis links diretos, como "#screenshot" por exemplo.
+:
+
+=== RAC ===[rac]
+
+: _RAC_ROOT/info/tutorial/ (português)
+
+  **Tutorial:** Um passo-a-passo que serve de apresentação dos
+  conceitos e uso básico do programa. As letras são grandes, há pouco
+  texto em cada tela e a leitura toma poucos minutos. A idéia é o
+  leitor aprender de forma gradual e no final estar com vontade de
+  experimentar o programa. O fato de obrigatoriamente ter que clicar e
+  passar por várias páginas serve para prender sua atenção e evitar a
+  "passada rápida de olhos".
+
+: _RAC_ROOT/info/emu.html (português)
+
+  **Tabela de Emulação:** Visa o aprendizado por associação, onde são
+  mostrados comandos equivalentes a aqueles que o usuário já domina.
+  Por já conhecer o resultado esperado, o usuário pode testá-los em
+  sua máquina e certificar-se que o programa funciona. Gera uma
+  empatia inicial e satisfação pela familiaridade.
+:
+
+
+
+== Artigos na Revista Linux Magazine ==[linuxmag]
+
+Com o encerramento da Revista do Linux em Janeiro de 2004, ficou um
+buraco na mercado nacional de publicações dedicada ao Linux. Meses
+depois apareceu a revista [Linux Magazine _X_LINUXMAG_URL], uma revista
+alemã que também é publicada em outros países. A versão brasileira tem
+parte de seu conteúdo traduzido de artigos estrangeiros e outra parte
+são artigos feitos aqui.
+
+Antes de sair o primeiro número, o editor Rafael Peregrino veio
+pessoalmente em Curitiba me mostrar a proposta da revista e me convidou
+para ser colaborador. Topei!
+
+ [../img/linuxmag02.jpg]
+=== LinuxMag #02 - _VIM_SELECAOVISUAL_NAME ===[linuxmag-01]
+
+_VIM_SELECAOVISUAL_URL
+
+PDF original: [site da revista http://www.linuxmagazine.com.br/images/uploads/pdf_aberto/LM02_vi.pdf], [cópia local _VIM_SELECAOVISUAL_PDF]
+
+Presente nas páginas 82 e 83 da revista. _VIM_SELECAOVISUAL_DESC
+
+% O artigo no site da revista saiu do ar em mar-2008
+
+
+== Artigos na Revista do Linux (RdL) ==[rdl]
+
+A [Revista do Linux _X_RDL_URL] era editada pela Conectiva e foi a maior
+revista sobre Linux do mercado nacional, com circulação mensal. A sua
+primeira edição foi lançada em Janeiro de 2000 e sua saideira (#49) em
+Janeiro de 2004.
+
+Escrevi vários artigos para a revista durante todo o ano de 2000, o que
+foi importantíssimo para despertar e desenvolver a minha escrita técnica
+com sabor didático. A receptividade dos leitores foi tão boa que o
+pessoal da revista me convidou para ser seu primeiro "colunista" e ter
+um cantinho fixo para escrever todo mês sobre o Linux no modo texto.
+Muito massa!
+
+Mas, o rodapé da terceira coluna que saiu com uma brincadeira que não
+gostei, nos desentendemos e o projeto acabou. Porém, como recebi muitos
+e-mails de leitores que gostaram do conteúdo da coluna, voltei a
+publicá-la (quase) mensalmente no meu site. Veja o tópico
+[Coluna do Aurelio #coluna].
+
+Passados três anos desde o desentendimento, escrevi uma matéria de capa
+com 9 páginas sobre o Cygwin. Para fechar, um artigo sobre o VI que saiu
+na última edição da revista em 2004.
+
+Valeu Márcia, Rigues, Felipe e toda a galera da revista. Foi uma
+experiência muito legal e recompensadora.
+
+=== RdL #03 - O Poder do Modo Texto ===[rdl-01]
+
+http://aurelio.net/doc/rdl/poder-modo-texto.html
+
+=== RdL #03 - Expressões Regulares - Parte 1 ===[rdl-02]
+
+_ER_RDL1_URL ([respostas dos exercícios er-rdl/])
+
+_ER_RDL1_DESC
+
+=== RdL #04 - Vi, Vim e Venci ===[rdl-03]
+
+_VIM_VIVIMVENCI_URL
+
+_VIM_VIVIMVENCI_DESC
+
+=== RdL #04 - Áreas Compartilhadas ===[rdl-04]
+
+http://aurelio.net/doc/rdl/areas-compartilhadas.html
+
+=== RdL #07 - Expressões Regulares - Parte 2 ===[rdl-05]
+
+_ER_RDL2_URL
+
+_ER_RDL2_DESC
+
+=== RdL #09 - Coluna do Aurelio I - Introdução ===[rdl-06]
+
+_COLUNA_01_URL
+
+=== RdL #10 - Coluna do Aurelio II - ICQ ===[rdl-07]
+
+_COLUNA_02_URL
+
+=== RdL #11 - Coluna do Aurelio III - zgv/ImageMagick ===[rdl-08]
+
+_COLUNA_03_URL
+
+=== RdL #47 - Cygwin - O Linux no Windows (matéria de capa) ===[rdl-09]
+
+ [img/capa-rdl-cygwin.jpg]
+http://aurelio.net/cygwin/rdl/
+
+Matéria de capa, com 9 páginas. O CD que acompanha a revista veio com a
+versão mais recente do Cygwin. Este artigo apresenta o Cygwin, ensina
+como instalá-lo no Windows a partir do CD da revista e dá várias dicas
+de configuração e uso do sistema. Também é útil para que quer instalar o
+Cygwin direto da Internet, as diferenças são mínimas.
+
+=== RdL #49 - _VIM_PULANDO_NAME ===[rdl-10]
+
+_VIM_PULANDO_URL
+
+Páginas 58 e 59 dessa que foi a última edição publicada da revista. _VIM_PULANDO_DESC
+
+
+
+== _COLUNA_NAME ==[coluna]
+
+A "Coluna do Aurelio" começou em Setembro de 2000, sendo publicada
+mensalmente na [Revista do Linux #rdl]. Em Dezembro de 2000 ela virou
+uma coluna online no meu site, com circulação "quase" mensal. Foram ao
+todo 12 edições, tendo sido encerrada em Novembro de 2001.
+
+O tema é o uso do Linux no modo texto, a interface de caracteres. Como
+era somente isso que eu usava na época, tinha bastante dicas para
+passar. A maior parte dos artigos ensina a usar programas, como
+jogos, editor de texto, navegador e leitor de e-mail. Outros tratam
+sobre os conceitos da interface, como redirecionamento e caracteres de
+controle.
+
+Muito obrigado aos leitores que enviaram erratas: Osvaldo Santana Neto,
+Batista, Guto, Michel Angelo da Silva Pereira e Arlan Lucas de Souza.
+
+=== Coluna 01: _COLUNA_01_NAME ===[coluna-01]
+_COLUNA_01_URL
+=== Coluna 02: _COLUNA_02_NAME ===[coluna-02]
+_COLUNA_02_URL
+=== Coluna 03: _COLUNA_03_NAME ===[coluna-03]
+_COLUNA_03_URL
+=== Coluna 04: _COLUNA_04_NAME ===[coluna-04]
+_COLUNA_04_URL
+=== Coluna 05: _COLUNA_05_NAME ===[coluna-05]
+_COLUNA_05_URL
+=== Coluna 06: _COLUNA_06_NAME ===[coluna-06]
+_COLUNA_06_URL
+=== Coluna 07: _COLUNA_07_NAME ===[coluna-07]
+_COLUNA_07_URL
+=== Coluna 08: _COLUNA_08_NAME ===[coluna-08]
+_COLUNA_08_URL
+=== Coluna 09: _COLUNA_09_NAME ===[coluna-09]
+_COLUNA_09_URL
+=== Coluna 10: _COLUNA_10_NAME ===[coluna-10]
+_COLUNA_10_URL
+=== Coluna 11: _COLUNA_11_NAME ===[coluna-11]
+_COLUNA_11_URL
+=== Coluna 12: _COLUNA_12_NAME ===[coluna-12]
+_COLUNA_12_URL
+
+
+%!include: /a/www/include/kiwi/footer.t2t
+

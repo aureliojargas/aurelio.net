@@ -1,0 +1,54 @@
+Histórico de Manutenção e Peças
+-------------------------------
+
+1999-11-09	-	-       	seguro  	1º pagamento
+1999-12-09	-	-       	seguro  	1ª vistoria
+1999-12-22	-	-       	licenciamto	pagamento 1999
+2000-01-19	-	furuta  	anti-roubo	alarme sonoro positron, trava carneiro
+2000-03-14	-	reptal  	bateria 	nova, goodyear maxima 35-p (chile)
+2000-04-07	83000	reticenter	motor   	retificação
+2000-04-??	83500	sulreal 	embreagem	caixa zerada (engrenagem, rolamentos, luva, eixo, pino)
+2000-04-??	83500	sulreal 	freio   	lona nova
+2000-08-04	86000	sulreal 	embreagem	óleo na caixa
+2000-08-04	86000	fanny   	pneu    	alinhamento e geometria
+2000-12-12	90000	sulreal 	peças   	maçaneta/dobradiça 3ª porta, contato buzina
+2000-12-12	90000	sulreal 	luz     	farol esquerdo novo, lâmpadas faróis, lanternas traseiras
+2001-01-16	92000	gerasom 	anti-roubo	corta-combustível
+2001-01-30	93500	sulreal 	escapamento	comprado novo (desde saída do motor)
+2001-01-30	93500	dd      	radiador	conserto de furo e limpeza
+2001-01-30	93500	shimomura	elétrica	conserto luz de ré e 4x4, colocação luz do teto
+2001-01-31	93500	zezus   	escapamento	colocação
+2001-02-01	93500	swinka  	mola    	revisão, colocadas duas a mais traseira
+2001-02-03	93500	equipneu	pneu    	quatro BF 265-75 r16 novos, balanceamento/geometria
+2001-02-03	93500	shimomura	alternador	zerado (regulador, rolamentos)
+2001-02-13	94000	sulreal 	amortecedor	todos novos
+2001-06-21	05000	sulreal 	peças   	contato buzina, bóia tanque
+2001-08-30	08000	sulreal 	vedação 	borrachas novas nas 3 portas
+2001-08-30	08000	sulreal 	embreagem	disco zerado (disco, platô, cubo)
+2001-12-29	13500	sulreal 	tanque  	novo
+2002-01-04	14000	sulreal 	direção 	caixa zerada (sem fim, reparo)
+2002-01-04	14000	sulreal 	velocímetro	cabo novo
+2002-02-01	16000	sulreal 	eixo    	cruzeta traseira cardã traseiro nova
+2002-02-01	16000	poli valente	pneu    	balanceamento dianteiras
+2002-02-07	16500	shimomura	elétrica	3ª luz de freio nova, lâmpada pressão ar
+2002-02-09	16500	velotec 	velocímetro	aferição (-12%, w=548), odômetro colocado
+2002-02-20	17500	shimomura	arranque	motor de arranque zerado
+2002-03-09	19000	sulreal   	óleos    	motor, filtro, ar
+2002-04-22	22000	zezus   	escapamento	colocado silenciador novo
+2002-04-27	22500	dd      	radiador	conserto 2 furos, aditivo
+2002-05-20	24500	??      	alternador	trocado fusível queimado
+2002-05-25	24500	lincon  	freio   	conserto 2 vazamentos tubulação de ar
+2002-06-10	26000	??      	velocímetro	cabo novo (fajuto)
+2002-10-20	30000	alemão  	escapamento	solda (emenda rompeu)
+2002-12-23	32000	sulreal 	velocímetro	cabo novo
+2002-12-23	32000	sulreal 	peças   	contato buzina
+2002-12-23	32000	sulreal 	óleos   	motor, filtro ar, copinho
+2002-12-27	32500	barigui 	pneu    	balanceamento dianteiras
+2003-02-25	34000	capivari	alternador	zerado (regulador, retificador)
+2003-02-25	34000	capivari	farol   	colocado relé no farol auxiliar
+2003-03-07	36500	mec.amarela	arranque	pinhão novo
+2003-03-15	36800	car brasil	bancos  	dianteiros peugeot 206
+2003-06-05	38700	posto texaco	óleos   	motor, filtro óleo, graxa
+2003-07-02	.....	mec.amarela	embreagem	regulagem
+
+vim:ts=8:tw=120

@@ -1,0 +1,109 @@
+19981020 homem_mictorio.txt
+* comportamento do homem no mictório. e o pior é que é verdade &:)
+
+
+Os homens devem detonar este teste... As mulheres podem ter uma certa
+dificuldade. Existe um código de Etiqueta para o Banheiro que deve ser
+seguido.
+
+O desenho abaixo é um exemplo de mictórios num baneiro masculino.
+Um X indica ocupado.
+
+(Exemplo)
+
+|   |   | x |   |   | x |   (Indica que o terceiro e o sexto estão ocupados)
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+Você deve identificar corretamente, baseado no código de etiqueta, que
+mictório é o correto para ser usado. Boa sorte!
+
+
+-----------------------------------------------------------------
+
+1) fácil: 2 e 4 ocupados
+
+|   | x |   | x |   |   |
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+
+Resposta certa: 6
+É o único lugar pra usar, e qualquer cara sabe isso.
+
+-----------------------------------------------------------------
+
+2) fácil: 1 ocupado
+
+| x |   |   |   |   |   |
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+
+Resposta certa: 6
+5 é aceitável, mas você corre um risco maior de ficar ao lado de alguem
+quem chegar depois.
+
+-----------------------------------------------------------------
+
+3) atenção: vazio
+
+|   |   |   |   |   |   |
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+
+Resposta certa: 1 ou 6
+Você está dizendo, implicitamente, "Não quero ninguem do meu lado."
+
+-----------------------------------------------------------------
+
+4) médio: 2, 4 e 6 ocupados
+
+|   | x |   | x |   | x |
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+
+Resposta certa: 1
+Você tem que ficar do lado de alguem, então você diminui o prejuízo e fica
+do lado de uma parede. NUNCA fique entre dois caras se você puder evitar. A
+única exceção é no banheiro dos estadios, onde a boiada entra.
+
+-----------------------------------------------------------------
+
+5) difícil: 2, 5 e 6 ocupados
+
+|   | x |   |   | x | x |
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+
+Resposta correta: 4
+Acredite se quiser, 1 e 3 'juntam'  você com o cara do 2.E você não quer
+isso, quer?
+
+Esta questão é diferente da 4 duma maneira tão sutil que os detalhes não
+podem ser explicados. Só os homens podem entender.
+
+-----------------------------------------------------------------
+
+6) muito difícil: 1, 2, 5 e 6 ocupados
+
+| x | x |   |   | x | x |
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+
+Resposta certa: NENHUM!
+Você vai pro espelho e finge pentear o cabelo até esvaziar um pouco.
+Se você tiver que mijar, mas tiver MESMO... Vai na privada.
+
+-----------------------------------------------------------------
+
+Outras regras de etiqueta:
+
+- Nunca converse, a não ser com um amigo... mesmo assim seja breve e
+  direto.Isto não é um clube.
+
+- Eu não devia ter que dizer isto, não toque em ninguem. Encostar o
+  cotovelo é uma ofensa federal.
+
+- Sem cantoria.
+
+-----------------------------------------------------------------
+
+fim.

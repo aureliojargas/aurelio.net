@@ -1,0 +1,93 @@
+coluna do aurelio 05
+jogos (uma viagem ao mundo da diversão)
+http://aurelio.net/doc/coluna
+
+olás. escrevendo diretamente da praia, sob um sol escaldante no primeiro
+dia  deste  milênio  novo,  lhes convido a participar de uma viagem a um
+mundo  divertido  de  jogos  de  aparência  simples, que conquistam pela
+jogabilidade e não pela roupagem enfeitada.
+
+no  caminho passamos pelo mundo dos jogos gráficos para `X` e pelo mundo
+dos  híbridos  que  usam  a  `SVGAlib`  e  `frame buffer`, pobres mundos
+dependentes  do  fornecimento  de  bibliotecas  estrangeiras como `SDL`,
+`ClanLib`, `Allegro`, `Mesa`, `OpenGL` entre outras.
+
+vamos além das fronteiras onde humanos normais não costumam ir, ao mundo
+dos  jogos  texto,  ora baseados em `curses`, ora cuspindo `arte ascii`,
+uma terra onde "mouse" e "joystick" são palavras proibidas.
+
+logo  na chegada, um senhor idoso, experiente em várias distribuições de
+linux  desde  os  tempos  mais  remotos,  e  que  atende  pelo  nome  de
+`bsd-games`  nos  mostra  várias  opções  de  divertimento, como `quiz`,
+`hunt`  e  `teachgammon`.  mas  o  que  realmente  chama  a  atenção é o
+`adventure`,  um  jogo de exploração que apenas lhe dá dicas escritas, e
+toda  a  parte  de  norteamento  e  construção de cenários fica para sua
+imaginação.  aprender  os comandos por tentativa e erro também faz parte
+da diversão.
+
+seguindo  em  frente, vamos à cidade `nethack` (http://www.nethack.org),
+onde  ficar  parado  pode  significar  a  morte. atravessando labirintos
+escuros,  que  são  aleatórios  e  mudam  a cada vez que você entra, use
+os  vários  tipos  de  armas  disponíveis  para  matar  vários  tipos de
+monstros.   várias   "personalidades"   do   mundo   linux   ajudaram  a
+construir  a  cidade  `nethack` e até hoje ela é visitada por legiões de
+adoradores.
+
+indo  para a região mais antiga deste mundo, onde a civilização deu seus
+primeiros passos, experimentando formas e adaptando-se ao meio ambiente,
+visitamos  lugares  que  antes  eram  chamados  de `pac-man` e `tetris`.
+
+o  último  evoluiu  com várias cópias de si mesmo, construídas sobre ele
+próprio,  `nct` (ftp://ftp.yars.free.net/pub/software/unix/games/tetris)
+é  seu nome hoje. basicamente vários `tetris` coexistem, um de cada cor,
+e  os  de cores pesadas sobrepõem os de cores mais leves. tudo bem, pode
+não  ser fácil de entender à primeira vista, mas faça uma visita, tente,
+você não vai mais querer sair.
+
+logo  ao  lado,  a  mística  terra  dos  seres  cara-de-pizza que tinham
+fantasmas  imaginários como inimigos mortais. diz a lenda que ao ingerir
+a  pílula  sagrada, eles tinham poderes de engolir estes fantasmas. hoje
+este lugar se chama `myman` (http://geocities.com/bsittler) e é populado
+por `C`s, que continuam temendo os fastasmas `m`s, mas tudo indica que o
+mito  é  verdadeiro,  e  a  pílula  sagrada  realmente  funciona. visões
+lisérgicas  de  `arte  ascii`  que  impressionam  pela  simplicidade dos
+componentes, e pela velocidade com que as coisas acontecem.
+
+com  a  barriga  estufada de fantasmas, que tal um passeio automotivo na
+lua?  correr  pela  superfície do astro pulando crateras e desintegrando
+rochas  com  seu  super  raio  laser?  de carona no foguete `moon-buggy`
+(http://www.mathematik.uni-kl.de/~wwwstoch/voss/moon-buggy.html),  teste
+toda  sua  perícia  de motorista espacial lunar. cuidado que ao pular, o
+carro se mexe todo, então não se distraia.
+
+regressando  da  lua, é hora de voltar, dar uma descansada e... ...o que
+é  isso? um `tornado` (http://www.lionking.org/~kiza/linux/tornado)! sua
+casa  está sendo destruída! controlando as forças da natureza, proteja-a
+com  neve  e  destrua  a do seu vizinho maligno com relâmpagos, granizo,
+chuva e é claro, tornados, ganhando a maior guerra climática de todos os
+tempos.
+
+mas  infelizmente você perdeu, e com a casa destruída, nada mais resta a
+fazer  a  não  ser  descontar  sua  raiva  nos outros e promover rios de
+sangue.  seu  destino  então  é  o  melhor  lugar "mate-ou-morra" que já
+apareceu    neste    pacato    mundo    texto:    a   arena   `0verkill`
+(http://artax.karlin.mff.cuni.cz/~brain/0verkill),  com  `arte ascii` 2d
+colorida  por  toda parte, desde o cenário de fundo às pessoas. ei, você
+também  virou  `arte  ascii`! essa foi a gota d'água, canalize sua fúria
+nas  várias  armas disponíveis, atingindo seus próprios amigos ascii que
+participam  da  mesma  arena  via  rede  local ou internet. sangue ascii
+jorrará nesse verdadeiro `quake` do mundo texto.
+
+é,  não  deu  e você morreu. felizmente essa viagem foi imaginária e seu
+corpo permanece intacto. mas que tal tornar a fazê-la sempre que quiser?
+baixe estes  joguinhos e  divirta-se. outros  podem ser  encontrados  no
+`freshmeat` em http://freshmeat.net/appindex/console/games.html.
+
+e essa foi uma coletânea de jogos texto para animar seu verão.
+ou melhor, desligue o computador e vá tomar um sol.
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

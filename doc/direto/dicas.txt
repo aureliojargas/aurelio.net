@@ -1,0 +1,115 @@
+Dicas sobre o DIRETO no CL
+Aurelio Marinho Jargas (http://aurelio.net)
+Nov/2003
+
+-------------------------------------------------------------------------------
+
+- SISTEMA:
+  - serviços: tomcat, apache, ldap, cyrus, postgresql, pam, postfix
+  - daemons: saslauthd
+
+- LOGS:
+  - /var/log/ldap.log
+  - /var/log/messages (Cyrus, IMAP)
+  - /var/log/tomcat.log (sempre vazio :/)
+
+-------------------------------------------------------------------------------
+
+
+- DIRETO:
+  - URL USER : http://localhost:8080/direto/
+  - URL ADMIN: http://localhost:8080/direto/html/admin/ 
+
+- ERROS:
+  - org.procergs.direto.DiretoException: Login failed: generic failure
+    o saslauthd não está rodando
+  - org.procergs.direto.DiretoException: user.conectiva-fulano not found
+    saslauthd rodando, user autenticado no LDAP, mas inexistente no cyrus
+    fazer:
+        cyradm --user USER --auth login --server localhost
+        cm user.USER
+        quit
+
+-------------------------------------------------------------------------------
+
+
+- Apache:
+  - configuração simples do DocumentRoot
+
+- Tomcat:
+  - iniciar tomcat un s 5 segundos ANTES do apache
+  - tomcat escuta na porta 8080 (http://localhost:8080)
+  - /opt/jakarta/bin/*  (catalina.sh start)
+  - /opt/jakarta/webapps/direto/* - código fonte do direto
+  - cds && ./tomcat start  (ver se funciona mesmo)
+  - export JAVA_HOME=/usr/lib/java2/jre antes de iniciá-lo
+  - instalar java-SDK (IBM ou Sun)
+  - movido do suse: /etc/rc.status -> `cds`
+  - movido do suse: /etc/sysconfig/jakarta-tomcat
+  - TODO ver como ficou o /etc/sysconfig/jakarta-tomcat no cds&&tomcat
+  - TODO deixar limpa inicialização
+  - usando o IBMJava2-SDK-1.3-258 e n"ao o IBM-jre do CL (não funca admin)
+  - pra iniciar: /opt/jakarta/bin/catalina.sh start
+
+- Postfix:
+  - servidor SMTP
+  - configuração trivial
+
+- Cyrus:
+  - servidor IMAP
+  - daemon escutador da senha em PAM: saslauthd -a pam -d 
+  - o usuário padrão 'cyrus' não é usado como admin pois a autenticação é
+    remota (PAM) e não local (shadow)
+  - o admin é o conectiva-direto, ou melhor, COMPANY-direto, e a senha
+    é a informada durante a instalação do direto
+  - para testar o login:
+    imtest -m login -p imap -a conectiva-direto localhost
+    vai aparecer:
+    S: L01 OK User logged in
+    para sair:
+    . logout
+  - para testar o usuário padrão 'fulano', basta trocar o -a
+  - Cyrus, que tem o daemon saslauthd, que escuta PAM, que está
+    configurado pra acessar o LDAP. Funciona, mas aparentemente para
+    acessar o INBOX o Cyrus não acessa o LDAP (não há log)
+  - TODO ler INBOX do usuário
+
+- PostgreSQL:
+  - usado pela Agenda somente
+  - precisa do "-o -e" pra usar data formato europeu
+  - precisa do "-i" pra aceitar conexões TCP/IP
+  - precisa ser povoado com a base padrão do DIRETO (pg_*)
+  - deu erro ao incluir contato num evento
+
+- LDAP:
+  - usado para usuários, senhas e contatos
+  - precisa ser povoado com .ldif gerado pelo setup (slapadd -l conectiva.ldif)
+  - foi preciso colocar a opção "allow bind_v2" on /etc/openldap/slapd.conf
+  - desligado tls no /etc/ldap.conf (e mais umas configs)
+  - e mais um monte de mágicas do andreas
+
+
+
+/etc/pam.d/imap:
+auth    required        /lib/security/pam_ldap.so
+account required        /lib/security/pam_ldap.so
+# copiar para diretorio /etc/pam_ldap/imap
+
+
+/etc/imapd.conf:
+configdirectory: /var/lib/imap
+partition-default: /var/spool/imap
+sievedir: /var/lib/imap/sieve
+admins: cyrus root conectiva-direto conectiva-manager
+allowanonymouslogin: no
+sieveuserhomedir: no
+hashimapspool: yes
+lmtpsocket: /var/lib/imap/socket/lmtp
+
+# To use the PAM for authentication (but not /etc/passwd or shadow), change
+# the following line to specify "pam" instead of "sasldb".
+#WARNING (verde): 'pam' is not working, use saslauthd instead
+# and run the daemon: saslauthd -a pam
+#sasl_pwcheck_method: pwcheck
+sasl_pwcheck_method: saslauthd
+

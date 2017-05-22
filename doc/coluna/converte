@@ -1,0 +1,7 @@
+#!/bin/sh
+# 2005-02-05
+f="coluna-??.t2t" ; [ "$1" ] && f="$*" 
+for file in $f; do
+	txt2tags -C config.t2t $file
+	#txt2tagsdev -C config.t2t $file
+done

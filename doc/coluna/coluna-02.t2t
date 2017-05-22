@@ -1,0 +1,81 @@
+coluna do aurelio 02
+ICQ
+http://aurelio.net/doc/coluna
+
+olás.  após a introdução rápida da edição passada, vamos passar ao campo
+prático,  com  dicas  de execução de uma tarefa bem comum de nossos dias
+conectados: conversar pelo ICQ.
+
+bem,  como  o  protocolo  do  ICQ  é  algo  relativamente simples de ser
+implementado,  vários  clones  apareceram  para  linux. dos que conheci,
+destaco  3  clientes  de  ICQ  que  servem para todos os gostos: `mICQ`,
+orientado  a  linha,  simples  e  poderoso,  `zicq`,  que  hoje se chama
+`krolden  ICQ`,  é  o  `micq`  em  tela  cheia,  mas com funcionalidades
+reduzidas  e  o  `centerICQ`,  que  usa o conceito de menus. todos estes
+programas podem ser encontrados em
+http://freshmeat.net/appindex/Console/Communication.html
+
+o  `mICQ`  é aconselhado para sessões remotas com conexão lenta, como em
+contas  linux  gratuitas  que  existem  na  internet.  é bem simples, as
+mensagens vão pipocando e rolando na tela, bem como os avisos de pessoas
+que   estão  on  line.  a  adição  de  pessoas  novas  em  sua  lista  e
+configurações  gerais  como  retirar  a cor ou redefinir os comandos são
+colocadas no arquivo `~/.micqrc`. sua principal vantagem é ser simples e
+funcionar em qualquer tipo de terminal.
+
+o `zicq` é basicamente uma carinha mais amigável do `mICQ`. o código foi
+reescrito  utilizando-se  a biblioteca `ncurses`. esta biblioteca é para
+programas  de  modo  texto utilizarem tela cheia, bem como trabalhar com
+janelas  e  áreas  distintas numa mesma tela. a vantagem é que você pode
+ver  sua  lista  de  contatos, com os estados atuais de cada um, além de
+haverem  áreas  específicas  para  ler e para escrever mensagens. amigos
+podem  ser  adicionados  à  sua  lista  com  o comando `add`, mas outras
+configurações  são feitas no arquivo `~/.zicqrc`, inclusive o arquivo de
+som,  para você ouvir aquele "á-ou" quando chega uma mensagem nova. este
+é  o  que  eu  uso diariamente e fora umas quebras eventuais na conexão,
+funciona que é uma beleza.
+
+para os amantes de programas de menu, como `minicom`, `mc` e `emacs`, há
+o  `centerICQ`,  que  é  bem  mais organizado e intuitivo de usar que os
+outros  icqs  de modo texto, pois além das áreas da tela separadas, seus
+comandos  são  divididos  em  menus, acessados pelas teclas de função do
+teclado.  o  lado negativo dessa "janelização" de todas as funções é que
+se  demora mais para mandar uma mensagem ou obter algum informação, pois
+ao  invés  de  digitar  um comando direto, você tem que obrigatoriamente
+seguir  menus.  sua  configuração  é  separada  em arquivos no diretório
+`~/.center`  e  ele  já  vem  com  os  arquivos  de som para mensagens e
+notificações.
+
+estes  clientes  de  icq  não  possuem  todas  as funcionalidades do icq
+original, como chat, envio de arquivos e integração com o navegador, mas
+na  característica  principal de enviar e receber mensagens rapidamente,
+não há do que reclamar.
+
+voltando  ao  `zicq`  e  seu  problema  de  queda  de conexão, usamos um
+artifício  do  shell  para  que  ele  sempre se reconecte quando caia, o
+"laço".  digite  na  linha  de  comando  ou coloque no seu `~/.bashrc` a
+linha:
+
+    alias icq="rm -f /tmp/zicq; while [ ! -f /tmp/zicq ]; do zicq; done"
+
+aqui temos vários conceitos do `bash`, o primeiro é o `alias`, onde você
+define  um  apelido  para  um comando. seu sistema já tem alguns, digite
+`alias`  para  vê-los.  então  sempre  que  você  digitar  `icq`, o bash
+executará  o comando entre aspas duplas. o comando em si apaga <`rm -f`>
+um  arquivo de trava <`/tmp/zicq`> e enquanto <`while`> este arquivo NÃO
+existir  <`!  -f`>,  o  zicq  será executado. agora nosso `zicq` é quase
+eterno.  para derrubá-lo, temos que criar <`touch`> o arquivo de trava e
+matar <`killall`> o zicq ativo.
+
+    alias icqk="touch /tmp/zicq ; killall zicq"
+
+este foi um pontapé inicial para o uso do icq no modo texto, escolha seu
+preferido  e  não  fique  mais  incomunicável.  sugestões para temas das
+próximas colunas são bem-vindas.
+
+
+--
+este texto pode ser copiado livremente na íntegra ou em parte, desde que
+indicado o endereço do original: http://aurelio.net/doc/coluna
+
+%!include: ''../../include/google-analytics.html''

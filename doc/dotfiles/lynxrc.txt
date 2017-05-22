@@ -1,0 +1,59 @@
+# conferir se o lynx nao usa ~/lynx.cfg como arquivo de config padrao
+# caso sim, adicione esse alias no teu shell:
+# alias lynx='lynx -cfg=~/.lynxrc'
+
+file_editor=vi
+vi_keys=on
+emacs_keys=off
+lineedit_mode=Default Binding
+
+case_sensitive_searching=off
+select_popups=on
+show_color=default
+show_cursor=off
+show_dotfiles=off
+verbose_images=on
+
+bookmark_file=.bookmarks.html
+sub_bookmarks=OFF
+
+accept_all_cookies=on
+#cookie_accept_domains=.egroups.com,.yahoogrupos.com.br
+#cookie_reject_domains=
+
+character_set=Western (ISO-8859-1)
+preferred_language=en
+visited_links=LAST_REVERSED
+
+
+# BY_FILENAME ou BY_TYPE ou BY_SIZE ou BY_DATE
+file_sorting_method=BY_FILENAME
+
+# NUMBERS_AS_ARROWS ou LINKS_ARE_NUMBERED ou LINKS_AND_FORM_FIELDS_ARE_NUMBERED
+keypad_mode=NUMBERS_AS_ARROWS
+
+# MIXED_STYLE ou FILES_FIRST ou DIRECTORIES_FIRST
+dir_list_style=MIXED_STYLE
+
+# NOVICE ou INTERMEDIATE ou ADVANCED
+#user_mode = ADVANCED
+# This config crashed lynx in Yosemite: https://github.com/rudix-mac/rudix/issues/52
+
+# cores
+# 0  texto normal              |   black      |   white
+# 1  referências               |   blue       |   yellow
+# 2  linha de status           |   brown      |   brightblue
+# 3  (não usado)               |   cyan       |   brightcyan
+# 4  ênfase: <b>, <i> e <em>   |   gray       |   brightgreen
+# 5  refências com ênfase      |   green      |   brightmagenta
+# 6  referência selecionada    |   magenta    |   brightred
+# 7  resultados da busca       |   red        |   lightgray
+
+COLOR:0:cyan:black
+COLOR:1:yellow:black
+COLOR:2:black:green
+#COLOR:3:green:white
+COLOR:4:lightgray:black
+COLOR:5:yellow:black
+COLOR:6:white:blue
+COLOR:7:black:white

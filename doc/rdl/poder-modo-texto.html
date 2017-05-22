@@ -1,0 +1,323 @@
+<html><head><title>Artigo RdL</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+</head><body>
+<p><font color="#245A9A" size="+2"><B>O poder do modo texto</B><font color="#245a9a" size="+1"><br>
+Todos os caminhos levam ao velho e bom teclado </font></font><br> <br>
+
+<i>Aurelio M. Jargas</i><br>
+
+<p align="justify">O que para a maioria dos usuários são funcionalidades fantásticas do mundo gráfico, para outros não passam
+de futilidades. Aliás, no Linux, são muitos os usuários que fazem apologia do modo texto, sem interfaces gráficas, sem mouse,
+em um terminal de fundo preto, basicamente devido ao poder e flexibilidade obtidos. São os que não adotam o mouse porque
+consideram os atalhos de teclado muito mais rápidos. Dispensam o ambiente gráfico porque o julgam uma "desespecialização", uma
+padronização que nivela o especialista por baixo e pela média. Uma camisa-de-força inaceitável.</p>
+
+<p align="justify">Mais do que qualquer apologia do modo texto, porém, nada como a demonstração de conceitos e o detalhamento
+de exemplos para mostrar suas vantagens. E a realidade é que há muitas tarefas que não podem ser feitas em aplicações gráficas
+ou que, se podem, não alcançam toda a flexibilidade do modo texto.</p>
+
+<p align="justify">Vamos a uma análise rápida. O que temos no mercado, aos milhares, são aplicativos gráficos para sistemas
+operacionais "gráficos", que tentam centralizar diversas tarefas e, assim, monopolizar o uso. Quase sempre, desempenham todas
+as tarefas aquém do grau ideal para cada uma. Resultado: o usuário acaba tendo um aplicativo muito genérico e pouco especialista,
+que no fim acaba não sendo ótimo para nenhuma das tarefas isoladamente. Ganha-se em integração, mas perde-se em flexibilidade.
+Exemplos são o Lotus Notes, Microsoft Office, etc.</p>
+
+<p align="justify">Também existe aquele outro tipo de programa, chamado de front-end, que é apenas uma interface "bonitinha"
+para o usuário, que acessa um programa não-gráfico, cheio de opções. O grande problema é que geralmente essa interface não
+contém todas as opções do programa, limitando seu uso, como em alguns aplicativos do KDE e do Gnome.</p>
+
+<p align="justify">Já o Unix, o Linux e o Java seguem uma filosofia contrária: a modularidade. Pequenos aplicativos, cada um com
+uma tarefa bem específica e definida, que desempenham de maneira eficiente e confiável. Combinando essas pequenas "ferramentas",
+conseguimos todo o poder, flexibilidade e confiabilidade necessários a uma tarefa. São essas ferramentas e dicas de uso que
+vamos comentar.</p>
+
+<p align="justify">Numa alusão simples mas didática, o modo gráfico é comparável a um carrinho de plástico, pronto e imutável.
+E o modo texto pode ser comparado a um Lego®, com todas as peças para montar o carrinho da maneira que bem se entenda. Se amanhã
+seu carrinho precisar de mais duas rodas, basta acrescentá-las, sem traumas ou esforço.</p>
+
+<p align="justify">Ao contrário do que possa parecer, "montar" o seu carrinho não é complicado. Basta entender um conceito básico,
+como o redirecionamento, e você já sai criando. Isso não é uma exclusividade de administradores de sistema, e você, como usuário
+normal, pode se beneficiar dessas ferramentas, automatizando tarefas repetitivas e extraindo informações de maneira rápida e
+eficiente.</p>
+
+<p>Primeiro, vamos dar uma olhada nas ferramentas mais usadas: </p>
+
+<table border="0">
+ <tr>
+  <td><b>cal</b></td>
+  <td>mostra o calendário</td>
+ </tr>
+ <tr>
+  <td><b>cat</b></td>
+  <td>mostra o conteúdo de um arquivo</td>
+ </tr>
+ <tr>
+  <td><b>crontab</b></td>
+  <td>agenda tarefas de sistema</td>
+ </tr>
+ <tr>
+  <td><b>cut</b></td>
+  <td>"corta" pedaços de uma linha</td>
+ </tr>
+ <tr>
+  <td><b>date</b></td>
+  <td>mostra a data e hora atuais</td>
+ </tr>
+ <tr>
+  <td><b>du</b></td>
+  <td>mostra o uso do disco</td>
+ </tr>
+ <tr>
+  <td><b>find</b></td>
+  <td>"acha" arquivos no sistema</td>
+ </tr>
+ <tr>
+  <td><b>grep</b></td>
+  <td>procura palavras num texto</td>
+ </tr>
+ <tr>
+  <td><b>more</b></td>
+  <td>pagina um fluxo de texto</td>
+ </tr>
+ <tr>
+  <td><b>sort</b></td>
+  <td>"ordena" um texto</td>
+ </tr>
+ <tr>
+  <td><b>tr</b></td>
+  <td>"traduz" texto (no sentido de trocar letras)</td>
+ </tr>
+ <tr>
+  <td><b>uniq</b></td>
+  <td>elimina linhas repetidas seguidas num texto</td>
+ </tr>
+ <tr>
+  <td><b>wc</b></td>
+  <td>conta letras, palavras e linhas de um texto</td>
+ </tr>
+</table>
+
+<p align="justify">Antes de partirmos para os exemplos práticos, lembremos o único conceito fundamental: redirecionamento.
+Temos um comando para mostrar o conteúdo de um arquivo, o cat. </p>
+
+<p>Experimente:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/inittab
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">E o comando cat exibirá esse arquivo no vídeo. Como você pôde perceber, o arquivo é muito grande, e rola na
+tela. Então podemos usar um utilitário cuja única função é paginar um fluxo de texto, o more. Vamos colocá-lo para paginar a saída do
+comando anterior:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/inittab | more
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Agora, a cada tela cheia, o more espera que você aperte a barra de espaços para mostrar a próxima tela. Pare
+um pouco para refletir e entender o que ocorreu aqui. Primeiro, você tinha um comando que gerou uma saída qualquer na tela (nesse
+caso, o conteúdo do /etc/inittab), e essa saída foi redirecionada (pelo pipe |, um cano de redirecionamento), ao comando more que
+a paginou.</p>
+
+<p align="justify">Observe que o cat joga a saída para o more, que joga a saída na tela, e esse é o nosso conceito base, o
+redirecionamento. Um comando faz o que tem que fazer, e joga o resultado na saída. Outro comando pega essa saída, que lhe foi
+passada pelo pipe |, faz o que tem que fazer com ela e exibe a saída na tela.</p>
+
+<p align="justify">Dessa mesma maneira, pode-se ir ligando os comandos, um atrás do outro, indefinidamente, até se obter os
+resultados desejados. Vamos a outro exemplo simples. Como conseguir uma lista de todos os usuários de sua máquina? Digite:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/passwd
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Novamente estamos vendo o conteúdo de um arquivo. Este é um arquivo especial, com todos os usuários do sistema
+e alguns dados sobre eles. A chave de acesso do usuário (o "login") está no começo de cada linha, seguido de um :. E como obter a
+lista de todos os usuários?</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/passwd | cut -d: -f1
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Aqui usamos o cut, para extrair de cada linha apenas o que nos interessa, a chave do usuário. A maioria dos
+comandos possui opções que geralmente são identificadas por uma letra precedida de um hífen (como o -d e o -f do cut acima).
+Para ver as opções de um comando, use o --help:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cut --help
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Resumindo, nosso cut usou como delimitador (-d) o :, e pegou o campo (-f, do inglês field) de número 1,
+ou seja, o primeiro campo. Então para cada linha do /etc/passwd, tiramos a parte que nos interessa, obtendo a lista de usuários.
+Supondo que desejemos colocar esta lista em ordem alfabética:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/passwd | cut -d: -f1 | sort
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Usamos o sort para sortear nosso texto. E se precisássemos dessa lista em ordem inversa? Bem, como podem
+imaginar, o sort também tem suas opções, e uma delas é a ordenação reversa (-r). Então:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/passwd | cut -d: -f1 | sort -r
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Indica-nos a saída requerida. E se tiver muitos usuários e a saída rolar na tela? Aí podemos usar o more.</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/passwd | cut -d: -f1 | sort -r | more
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">No esquema cat Æ cut Æ sortÆ more Æ tela, o cat joga a saída para o cut, que joga a saída para o sort,
+que joga a saída para o more, que joga a saída na tela.</p>
+
+<p align="justify">Olhe bem para o comando acima. Uma primeira olhada assusta, não? Mas como vimos anteriormente, são pequenas
+partes que, quando concatenadas, geram um comando poderoso. Lembrando: ferramentas simples que são agrupadas, tipo Lego® &amp;:)</p>
+
+<p align="justify">E assim se constróem grandes linhas de comando. Faz-se o comando básico, analisa-se a saída, filtra-se um pouco
+com outro comando após o pipe |, analisa-se a saída nova, filtra-se novamente e assim se vai.</p>
+
+<p align="justify">Alguns comandos já são úteis por si sós, sem opções, como o date e o cal. Outros ficam mais poderosos se
+usados em conjunto com outros comandos. Outros ainda, por terem várias opções, sozinhos fazem muita coisa, como o find:</p>
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# find / -type f -iname "*.jpg" -o -iname "*.gif" -mtime 3 -ok rm -f {} \;
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<p align="justify">Esse "comandinho" apaga (pedindo confirmação) todos os arquivos JPG e GIF modificados nos últimos três dias.</p>
+
+<p align="justify">Agora alguns exemplos de seqüências de comandos úteis utilizando as ferramentas básicas apresentadas neste artigo:</p>
+
+<ol>
+ <li>lista dos maiores arquivos de um diretório e subdiretórios
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# du -b `find /home/aurelio -type f` | sort -nr | more
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<li>contar (wc -l) o número de ocorrências (grep) da palavra set em um arquivo (cat), quer sejam maiúsculas ou minúsculas (-i)
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/rc.d/rc.sysinit | grep -i set | wc -l
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+ 
+<li>mostrar o nome em letras maiúsculas (tr) dos usuários do sistema
+
+<table border="0">
+ <tr>
+  <td>
+  <font size="2">
+  <pre>
+# cat /etc/passwd | cut -d: -f1 | tr a-z A-Z
+  </pre>
+  </font>
+  </td>
+ </tr>
+</table>
+
+<table border="0" bgcolor="#DDDDDD">
+ <tr>
+  <td><font size="3">Nota aos experts: o uso do cat em alguns dos exemplos acima não é necessário, é apenas didático.</font></td>
+ </tr>
+</table>
+
+</ol>
+
+<p align="justify">Ainda nesse tópico de modo texto e linhas de comando úteis, poderíamos considerar redirecionamentos para
+arquivos, saída padrão e saída de erro, tarefas em segundo plano, subshell, interpretação de variáveis, condicionais, laços e
+outros. Esses são complementos ao redirecionamento para comandos apresentado aqui, e serão abordados em artigos futuros. </p>
+
+<p align="justify">Para finalizar com uma visão geral do assunto, é importante lembrar que numa primeira tentativa tudo pode
+parecer confuso e estranho. Para simplificar basta ver cada parte da linha de comando como algo completo e não relacionado
+ao resto, fazendo apenas sua função e nada mais.</p>
+
+<p align="justify">Aprendendo aos poucos o funcionamento das "ferramentas" base, você conseguirá juntá-las, obtendo resultados bem
+satisfatórios. </p>
+
