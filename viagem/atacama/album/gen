@@ -1,0 +1,40 @@
+#!/bin/sh
+# fazroteiros.sh
+# 20000813 aurelio
+
+ArrumaNum(){
+  case $1 in
+	  0) echo 9;;
+	 10) echo 1;;	
+	  *) echo $1;;
+  esac	
+}
+
+for file in album-?.t2t; do
+   	NUM=${file%.t2t} ; NUM=${NUM#album-}
+    	NUM_ANT=`expr $NUM - 1` ;  NUM_ANT=`ArrumaNum $NUM_ANT`
+   	NUM_PROX=`expr $NUM + 1` ; NUM_PROX=`ArrumaNum $NUM_PROX`  
+   
+	(
+	echo "\
+Deserto do ATACAMA (Chile)
+Álbuns de fotos
+
+%!includeconf: config.t2t
+
+%!postproc: (</TITLE>) ' - Álbum de Fotos - #$NUM\1'
+%!postproc: #@#NUM_ANT#@# $NUM_ANT
+%!postproc: #@#NUM_PROX#@# $NUM_PROX
+
+%!include: cabecalho.t2t
+%!include: ''_navegacao.html''
+"
+	cat $file
+
+	echo "%!include: ''_navegacao.html''"
+	# echo "%!include: ''../../../include/google-ads-faixa-noborder.html''"
+	echo "%!include: rodape.t2t"
+
+	) | txt2tags -i - -o ${file%t2t}html
+done
+

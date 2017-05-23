@@ -1,0 +1,21 @@
+Deserto do ATACAMA (Chile)
+Álbuns de fotos
+
+%!includeconf: config.t2t
+%!postproc: '(</TITLE>)'	' - Álbum de fotos\1'
+
+%!include: cabecalho.t2t
+
+=== Álbuns ===
+- [Estrada de Salta até Santo Antonio de Los Cobres album-1.html]
+- [Santo Antonio de Los Cobres album-2.html]
+- [A travessia dos andes album-3.html]
+- [San Pedro de Atacama e localidades próximas album-4.html]
+- [Vale da Lua album-5.html]
+- [Chile/Argentina/Uruguai/Brasil album-6.html]
+- [Toyota Bandeirante album-7.html]
+- [Fotos diversas album-8.html]
+- [As melhores album-9.html]
+-
+
+%!include: rodape.t2t

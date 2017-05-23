@@ -1,0 +1,67 @@
+#!/bin/sh
+# fazroteiros.sh
+# 20000813 aurelio
+
+tmp=temp
+
+ArrumaNum(){
+	case $1 in
+		[1-9]) echo "0$1";;
+		0) echo "11" ;;
+		12) echo "01" ;;
+		*) echo "$1" ;;
+	esac
+}
+
+# JpgTamanho(){
+# rdjpgcom -verbose $1 |
+# sed -n '1s§^.\{14\}\([0-9]\+\)w \* \([0-9]\+\)h.*§\1 \2§p'
+# }
+
+Imagem(){
+	M=$(ls -1 $NUM-*.jpg)
+	# TAMANHO=`JpgTamanho $M`
+	#    LARG=${TAMANHO% *}
+	#    ALTU=${TAMANHO#* }
+	# echo "<p><img src=\"$M\" width=$LARG height=$ALTU alt=\"[mapa]\"></p>"
+	echo "<p><img src=\"$M\" alt=\"[mapa]\"></p>"
+}
+
+for file in mapa??.txt; do
+   	NUM=${file%.txt} ; NUM=${NUM#mapa}
+    	NUM_ANT=`expr $NUM - 1` ;  NUM_ANT=`ArrumaNum $NUM_ANT`
+   	NUM_PROX=`expr $NUM + 1` ; NUM_PROX=`ArrumaNum $NUM_PROX`  
+
+	# Gera o HTML do miolo
+   	(
+	LANG=pt_BR.ISO-8859-1
+	sed -n '1s_.*_<h2>Trecho &</h2>_p' $file
+   	Imagem
+   	sed -f txtfotoroteiro2html.sed $file
+	) > $tmp
+
+	# Converte o t2t
+	(
+	echo "\
+Deserto do ATACAMA (Chile)
+Mapas do roteiro
+
+%!includeconf: ../album/config.t2t
+
+%!postproc: (</TITLE>) ' - Mapa #$NUM\1'
+%!postproc: #@#NUM_ANT#@# $NUM_ANT
+%!postproc: #@#NUM_PROX#@# $NUM_PROX
+
+%!include: $PWD/../album/cabecalho.t2t
+%!include: ''$PWD/_navegacao.html''
+%!include: ''$PWD/$tmp''
+"
+
+	echo "%!include: ''$PWD/_navegacao.html''"
+	# echo "%!include: ''$PWD/../../../include/google-ads-faixa-noborder.html''"
+	echo "%!include: $PWD/../album/rodape.t2t"
+
+	) | txt2tags -i - -o ${file%txt}html
+done
+
+rm $tmp

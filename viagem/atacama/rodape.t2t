@@ -1,0 +1,12 @@
+
+% Spaced so it won't be erased by preproc in config.t2t
+%!include:     ''/a/www/include/clean/ad-box-300.html''
+%!include:     ''/a/www/include/clean/ad-hlink-728.html''
+
+% [ad-pics2.jpg] 
+
+%!include: nav.t2t
+%!include: ../nav.t2t
+
+%%!include: ''../../include/google-ads-faixa.html''
+%!include: ''/a/www/include/clean/footer.html''

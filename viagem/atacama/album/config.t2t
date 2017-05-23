@@ -1,0 +1,15 @@
+
+% Config de atacama/album e atacama/mapas
+
+%!includeconf: /a/www/include/clean/config.t2t
+%!style: SITEROOT/viagem/viagem.css
+
+%!postproc: SITEROOT	../../..
+
+% Remove o Atacama da lista de "Outras viagens"
+%!postproc: '^<LI><A HREF=".*/atacama/">Deserto.*'	''
+
+%%% Remove os ads do nav.t2t padrão do /viagem
+%!preproc: "^%!include: ''/a/www/include/clean/ad-box-300.html''"  ""
+%!preproc: "^%!include: ''/a/www/include/clean/ad-hlink-728.html''"  ""
+

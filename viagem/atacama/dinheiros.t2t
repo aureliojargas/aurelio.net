@@ -1,0 +1,41 @@
+Deserto do ATACAMA (Chile)
+Saiba quanto custa ir até lá
+
+%!includeconf: config.t2t
+
+%!postproc: '(</TITLE>)'	' - Saiba quanto custa ir até lá\1'
+%!postproc: '(\(em US)'		'<br>\1'
+
+% Estilo
+%!postproc: (</HEAD>)	'<style type="text/css"></style>\1'
+%!postproc: (</style>) '#main .moneytab table{border:1px solid #ccc}\n\1'
+%!postproc: (</style>) '#main .moneytab td{padding:1em 2em}\n\1'
+
+%!include: cabecalho.t2t
+
+== Quanto gastamos ==
+
+''' <div class="moneytab">
+
+ || Gastos com... |  Total (em US$) |  Por dia (em US$)
+ | Diesel    |  449,26 |  17,97 |
+ | Comida    |  287,13 |  11,48 |
+ | Hotel     |  312,19 |  12,48 |
+ | Pedágio   |   55,02 |   2,20 |
+ | Outros    |  307,85 |  12,31 |
+ || Total     | 1.411,45  |  56,44  |
+
+''' </div>
+
+- Foram 25 dias de viagem.
+- Os gastos incluem todas as despesas para 2 pessoas, então, na média, gastamos
+28,22 dólares cada um por dia. Saiu barato.
+- No item "outros" estão incluídos os gastos com os consertos no carro durante
+a viagem e uma bateria nova, que foi uma facada.
+- Também tem que levar em conta que o carro é diesel, se fosse gasolina o
+gasto com combustíveis iria aumentar.
+- A maior parte dos dias dormimos em pousadas com banheiro e almoçamos comida
+de verdade, em restaurante.
+-
+
+%!include: rodape.t2t
