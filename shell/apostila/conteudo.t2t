@@ -1,0 +1,175 @@
+Apostila Programação Profissional em Shell Script
+Conteúdo
+%%infile(%d)
+
+%!includeconf: ../../include/kiwi/config.t2t
+%!postproc: SITEROOT ../..
+%!postproc: (<BODY)	\1 class="apostila"
+
+%!include: mkt-livro-shell.t2t
+
+% 	"[capa.png]
+% O que tem nessa apostila? Quais são os tópicos? Tudo isso e
+% muito mais, incluindo uma amostra com páginas de todos os
+% capítulos para dar água na boca."
+
+== Sobre o conteúdo ==
+
+- O conteúdo não é específico de Bash, Ksh ou Zsh, é Shell.
+
+- O conteúdo é Shell, sem usar das características obscuras,
+  funcionando em UNIX, AIX, Linux, Cygwin, etc.
+
+- Todos os exemplos de código foram testados e são funcionais.
+
+- Os exemplos estão escritos em Bourne Shell. Alguns são em Bash.
+
+- Os capítulos estão divididos por aulas não seqüenciais. A leitura
+  pode ser feita em qualquer ordem.
+
+- A escrita está em forma didática e narrativa (não é resumida ou em
+  listagem de tópicos).
+
+- O conteúdo é completo, podendo ser lido e entendido sem a
+  necessidade de materiais complementares.
+
+
+== Sobre os assuntos ==
+
+Estes são os assuntos tratados pela apostila:
+
+- Revisão do Básico
+- Programas Não São Scripts
+- Explorando as Possibilidades do Shell
+- As Ferramentas do Sistema
+- Caracteres de Controle
+- Expressões Regulares
+- Arquivos de Configuração
+- Banco de Dados com Arquivos Texto
+- Interfaces Amigáveis com o Dialog
+- CGI em Shell
+
+
+== Tour pelo conteúdo ==
+
+: AULA 1
+
+A revisão de Shell básico é feita com 10 exercícios relativamente
+simples para quem já conhece bem o Shell, mas desafiadores e didáticos
+para o aprendizado, pois envolvem raciocínio e uso das estruturas da
+linguagem e das ferramentas do sistema. Na revisão estão várias
+tabelas que resumem os comandos, estruturas e detalhes do Shell, que
+servem para consulta rápida.
+
+: AULA 2
+
+A diferença entre um Script e um Programa é vista com detalhes. Nessa
+aula o aluno percebe que há muitos outros elementos necessários para
+que seus Scripts atuais se tornem Programas de verdade. São vistos
+conceitos de programação como cabeçalho, comentários e código limpo e
+estruturado. Também são dadas dicas para o uso racional de variáveis e
+funções.
+
+: AULA 3
+
+Tópicos de programação são vistos em detalhes, como uso de Chaves
+(Flags) e depuração de várias maneiras diferentes. Também é aprendido
+como fazer o Programa aceitar opções de linha de comando e são vistos
+os padrões em uso atualmente para essa funcionalidade. Para completar
+o conjunto de características de um programa profissional, é aprendido
+como fazer o versionamento, o histórico de mudanças (ChangeLog) e os
+agradecimentos aos possíveis colaboradores.
+
+: AULA 4
+
+É visto com grande riqueza de detalhes as 25 ferramentas mais
+importantes de um ambiente UNIX/Linux, suas opções mais úteis e onde e
+como aplicar cada uma delas. Esta parte da apostila também serve para
+referência futura, tornando desnecessária a leitura de páginas de
+manual. Em seguida os Caracteres de Controle assumem a pauta e
+deliciam o leitor com seu poder de movimentação do cursor e
+possibilidade de adicionar sons e cores a programas do modo texto.
+
+: AULA 5
+
+Aqui entra o grande assunto controverso, que todos já ouviram falar
+mas poucos dominam: Expressões Regulares. É feita uma "tour" pelo
+assunto, apresentando de maneira simples e amigável os metacaracteres
+mais importantes e suas funções. Para praticar o aprendizado, é
+mostrado passo-a-passo como lidar com dados de uma página HTML
+(Internet).
+
+: AULA 6
+
+Os Arquivos de Configuração são desmistificados e é ensinado como
+fazer para que qualquer programa os utilize. É visto o funcionamento
+do "parser" que extrai (e também grava) informações e como integrar um
+programa já existente com este parser.
+
+: AULA 7
+
+Explicação e aplicação do conceito de Banco de Dados Textuais,
+instruindo desde a escolha do formato interno do arquivo de dados (CSV
+simplificado) até a escrita do gerenciador que irá ler e gravar
+informações. As vantagens e desvantagens dos bancos textuais também
+são vistas.
+
+: AULA 8
+
+A mais divertida, que ensina como utilizar o Dialog, o programa que
+desenha "caixas" na tela, deixando os programas do modo texto com
+botões, menus e outros componentes geralmente encontrados no modo
+gráfico (X). Também é mostrada a integração do Dialog com programas,
+demonstrando como fazer a navegação e a ligação entre as telas.
+
+: AULA 9
+
+Para finalizar, uma passada completa em CGI, com dicas de configuração
+do Apache, explicação do conceito e prática, com códigos prontos para
+um formulário HTML e o CGI que lidará com os dados recebidos.
+
+
+== Esse conteúdo é livre (free)? ==
+
+Não.
+
+É um trabalho literário registrado no escritório de Direitos Autorais
+(tem Copyright) e não é um texto livre para ser copiado como todos os
+outros que estão disponíveis em meu site na Internet.
+
+% Levando em conta esta realidade, temos que:
+% 
+% - Não há documentos TXT, HTML ou RTF com o conteúdo da apostila para
+%   baixar da Internet.
+% 
+% - O único formato disponível da apostila é o PDF.
+% 
+% - Para ter acesso ao PDF da apostila, é preciso pagar por ele
+%   (comprá-lo).
+
+
+% Veja o preço e informações sobre como adquirir o PDF na
+% [página seguinte comprar.html].
+
+%%%
+== Que tal uma amostra? ==
+
+Apesar do conteúdo da apostila não ser livre, há como se ter uma boa
+idéia do que se trata e ainda aprender conceitos novos de graça.
+
+O índice completo está disponível
+[em PDF indice.pdf] e
+[em TXT indice.txt]. Com ele você saberá quais são todos os assuntos
+abordados no material.
+
+Depois, veja [uma amostra do conteúdo amostra/], com páginas
+inteiras disponíveis para consulta e avaliação. Aproveite!
+
+Finalmente, veja
+[todos os exemplos e programas da apostila pacotao.tgz], que são
+livres para baixar e utilizar. Muitos podem servir de ponto de partida
+para um programa novo feito por você.
+%%%
+
+%!include: nav.t2t
+%!include: ../../include/kiwi/footer.t2t

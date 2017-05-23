@@ -1,0 +1,198 @@
+#!/bin/bash
+#
+# controle.sh - controle de vendas da apostila de Shell
+# Aurélio Marinho Jargas
+#
+# Este arquivo é o programa e a base de dados em um só
+# Aqui no início está o código e depois do @@@ estão os dados.
+#
+# Isso é possível pois o Bash lê o programa linha a linha, e ao
+# encontrar o comando "exit" no final do programa, sai na hora,
+# não se importando (ou fazendo checagens de sintaxe) com o
+# texto que vem depois.
+#
+# Assim após o "exit" pode-se colocar qualquer tipo de dados,
+# inclusive binários, compactados e outras maluquices. Nesse
+# caso, são linhas de texto com campos no formato:
+#
+#       Campo : Valor
+#
+# E o programa que segue sabe como lidar com eles.
+#
+
+# variáveis iniciais
+total=0 totalp=0 n=0 np=0 atmp='/tmp/caixa-apostila'
+
+# o ESC é usado para mostrar textos ccoloridos
+esc=$(echo -ne "\033")
+
+# aqui eu jogo no arquivo temporário apenas os dados que estão
+# neste arquivo, tudo o que vem depois do @@@
+sed '1,/^@@@/d;/^%/d;/^ *$/d' $0 > $atmp
+
+# então esse arquivo temporário é lido linha a linha
+# e aqui começa a brincadeira
+while read LINHA; do
+
+# a linha separadora dispara a impressão do registro
+if echo $LINHA | grep -qs '^-\+$'; then
+
+	# ele pode receber parâmetros também ($1)
+	#
+	# email : lista o nome/emails de todos
+	# cidade: lista das cidades dos compradores
+	# status: tabelinha com o status atual de cada um
+	#
+	# e sem parâmetros, mostra cada um com seu último status
+	#
+	if [ "$1" = 'email' ]; then
+		Data=${Data/*200[34] /}
+		printf "%-12.10s%-22.20s%s\n" "$Data" "$Nome" "$Email"
+	elif [ "$1" = 'cidade' ]; then
+		[ "$S_apo" ] && printf ' | %-18s | %s | `#####`\n' \
+		                       "${Cidade:-?}" "${Estado:-?}"
+	elif [ "$1" = 'status' ]; then
+		printf "%5s%5s%5s%5s%5s%5s  %s\n" "$S_pag" "$S_apo" \
+		       "$S_cheg" "$S_tgz"  "$S_com" "$S_pdf" "$Email" |
+		sed "
+			/ PAG   /s/.*/$esc[31;1m&$esc[m/
+			/ APO   /s/.*/$esc[33;1m&$esc[m/
+			/ CHE   /s/.*/$esc[35;1m&$esc[m/
+			/ TGZ   /s/.*/$esc[36;1m&$esc[m/
+			/ COM   /s/.*/$esc[34;1m&$esc[m/
+			/ PDF  / s/.*/$esc[32;1m&$esc[m/"
+	else
+		Data=$(echo $Data | sed 's/-200[34]//')
+		[ "${Data/ */}" = "$DataIni" ] && Data=${Data/??????/      }
+		total=$( funcoeszz calcula "$total +$Valor")
+		n=$((n +1))
+		printf "%s  %-25.24s %s/%s\n" \
+		       "$Valor" "$Nome" "$DataIni" "$Data" |
+		sed "
+			s/.* pagou/$esc[31;1m&$esc[m/
+			s/.* apostila enviada/$esc[33;1m&$esc[m/
+			s/.* apostila chegou/$esc[35;1m&$esc[m/
+			s/.* tgz enviado/$esc[36;1m&$esc[m/
+			s/.* comentários/$esc[34;1m&$esc[m/
+			s/.* PDF enviado/$esc[32;1m&$esc[m/"
+	fi
+
+	# zerando toda a galera
+	Valor= Email= Nome= Fone= Nota= Data= DataIni=
+	Endereco= Cidade= Estado= CEP=
+	S_pag= S_apo= S_tgz= S_cheg= S_com= S_pdf=
+
+	continue
+fi
+
+# apenas as linhas campo:valor passam daqui pra baixo
+
+# aqui troca de campo:valor para campo="valor" para usar no eval
+LINHA=$(echo $LINHA | sed "s/ *: */='/;s/$/'/")
+eval $LINHA
+campo=${LINHA%%=*}
+# beleza, variável com o nome do campo gravada
+
+# no registro da data, vê se o cara já pagou e adiciona ao total
+if [ "$campo" = 'Data' ]; then
+	echo $Data | grep -wqs 'pagou' &&
+	totalp=$(funcoeszz calcula "$totalp+$Valor") np=$((np+1))
+	[ "$DataIni" ] || DataIni=${Data/-200[34]*/}
+
+	# aqui algumas mágicas para setar as Flags dos status
+	[ "${Data/pagou /}"    != "$Data" ] && S_pag='PAG'
+	[ "${Data/apostila /}" != "$Data" ] && S_apo='APO'
+	[ "${Data/tgz /}"      != "$Data" ] && S_tgz='TGZ'
+	[ "${Data/la chegou/}" != "$Data" ] && S_cheg='CHE'
+	[ "${Data/comentár/}"  != "$Data" ] && S_com='COM'
+	[ "${Data/PDF /}"      != "$Data" ] && S_pdf='PDF'
+
+fi
+
+# e fim de papo
+done < $atmp
+rm $atmp
+
+# se chamado sem parâmetros, ainda mostra o TOTAL no final
+echo
+[ "$1" ] || echo -e "TOTAL Geral: $total ($n)\nTOTAL Pago : $totalp ($np)"
+
+exit
+
+Exit, acabou. Aqui o shell já nem chega mais nem preciso
+colocar os # para fazer comentários.
+
+Depois dos @@@ seguintes, que foi o marcador que eu
+escolhi, são os dados do mini banco texto. Então para
+cada comprador novo, é criada uma nova entrada no fim
+do arquivo.
+
+Exemplos da saída deste programa, com estes dados:
+
+$ sh controle-shell.txt 
+34,97  Fulano da Silva           28-Ago/04-Jan comentários enviados
+34,98  Cicrano da Silva          05-Set/09-Out apostila enviada
+30,00  Beltrano da Silva         11-Set/       primeiro contato
+
+TOTAL Geral: 99,95 (3)
+TOTAL Pago : 69,95 (2)
+
+$ sh controle-shell.txt status
+  PAG  APO  CHE  TGZ  COM       fulano@abc.com.br
+  PAG  APO                      cicrano@xyz.com.br
+                                beltrano@mno.com.br
+
+$ sh controle-shell.txt email 
+comentário  Fulano da Silva       fulano@abc.com.br
+apostila e  Cicrano da Silva      cicrano@xyz.com.br
+primeiro c  Beltrano da Silva     beltrano@mno.com.br
+
+$ sh controle-shell.txt cidade
+ | Juiz de Fora       | MG | `#####`
+ | São Paulo          | SP | `#####`
+
+$ 
+
+--------------------------------------------------------------
+@@@
+
+Valor: 34,97
+Email: fulano@abc.com.br
+Nome : Fulano da Silva
+Data : 28-Ago-2003 primeiro contato
+Data : 29-Ago-2003 pagou (depósito)
+Data : 12-Set-2003 apostila enviada
+Data : 20-Set-2003 apostila chegou
+Data : 22-Set-2003 tgz enviado
+Data : 04-Jan-2004 comentários enviados
+Endereco: Rua da praça, 123
+Cidade  : Juiz de Fora
+Estado  : MG
+CEP     : 80000-000
+
+--------------------------------------------------------------
+
+Valor: 34,98
+Email: cicrano@xyz.com.br
+Nome : Cicrano da Silva
+Data : 05-Set-2003 primeiro contato
+Data : 01-Out-2003 pagou (transferência)
+Data : 09-Out-2003 apostila enviada
+Endereco: Rua das Palmeiras, 456
+Cidade  : São Paulo
+Estado  : SP
+CEP     : 80000-000
+
+--------------------------------------------------------------
+
+Valor: 30,00
+Email: beltrano@mno.com.br
+Nome : Beltrano da Silva
+Data : 11-Set-2003 primeiro contato
+Endereco: Rua da Praia, 789
+Cidade  : Joinville
+Estado  : SC
+CEP     : 80000-000
+
+--------------------------------------------------------------
+

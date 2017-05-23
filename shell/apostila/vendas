@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+
+import sys, commands
+sys.path.append('/a/www/bin/python/')
+
+import bookcash, os
+
+plot_data = {
+	'title': 'Vendas da Apostila de Shell Profissional - Mensal',
+	'ylabel': 'Unidades Vendidas',
+	'ymax':25,
+	'datefmt': '%b %y',
+	'output': 'vendas.png',
+	'extra': 'set size 0.85,0.85\nset ytics 5'
+}
+
+bookcash.lang = 'pt'
+bookcash.earning_per_unit = 20.00
+bookcash.printed_amount = 9999
+bookcash.data = """
+2004-02 14
+2004-03 23
+2004-04 11
+2004-05 12
+2004-06 3
+2004-07 17
+2004-08 12
+2004-09 6
+2004-11 18
+2004-12 7
+2005-01 0
+2005-02 9
+2005-03 11
+2005-04 6
+2005-05 11
+2005-06 5
+2005-07 5
+2005-08 6
+2005-09 4
+2005-10 3
+2005-11 7
+2005-12 2
+"""
+
+# Extract more recent data from moneylog
+ml_data = commands.getoutput("sed -n 's/^\(....-..\)-.*Apostila Shell (\([0-9]*\))[^[:print:]]*$/\\1 \\2/p' /mesa/grana.html")
+bookcash.data = bookcash.data + ml_data
+
+bookcash.report()
+bookcash.plot(plot_data)
+os.system("open vendas.png")

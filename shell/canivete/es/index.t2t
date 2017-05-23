@@ -1,0 +1,660 @@
+Navaja Suiza de Shell (Bash)
+por _MYNAME, 2003-%%date(%Y)
+Traducido al español por Gonzalo Nemmi
+
+% 2010-05-11
+
+%!postproc: SITEROOT 	../../..
+%!includeconf: ../canivete.conf
+
+%!postproc: 'Aprenda mais sobre'  'Obtenga más información sobre'
+
+% Fix image path
+%!postproc: (img/icon/128/)   ../\1
+
+%%TOC
+
+	Traducciones: [Português ../], [Español ../es/], [English ../en/] || [txt2tags source file %%infile]
+
+
+== Operadores ==[operadores]
+
+ || Operadores Aritméticos ||
+ |   ``+``   | Adición
+ |   ``-``   | Substracción
+ |   ``*``   | Multiplicación
+ |   ``/``   | Divición
+ |   ``%``   | Resto
+ |  ``**``   | Exponenciación
+ || Operadores de Asignación ||
+ |   ``=``   | Asigna un valor a una variable
+ |  ``+=``   | Incrementa variable por una constante
+ |  ``-=``   | Disminuye variable por una constante
+ |  ``*=``   | Multiplica variable por una constante
+ |  ``/=``   | Divide variable por una constante
+ |  ``%=``   | Resto de la divición por una constante
+ |  ``++``   | Incrementa en 1 el valor de la variable
+ |  ``--``   | Disminuye en 1 el valor de la variable
+ || Operadores Relacionales ||
+ |  ``==``   | Igual a
+ |  ``!=``   | Distinto a
+ |  ``>``    | Mayor que
+ |  ``>=``   | Mayor o Igual que
+ |  ``<``    | Menor que
+ |  ``<=``   | Menor o Igual que
+ || Operadores Lógicos ||
+ |  ``&&``   | Y lógico (AND)
+ |  ``||``   | O lógico (OR)
+ || Operadores de BIT ||
+ |  ``<<``   | Desplaza a la izquierda
+ |  ``>>``   | Desplaza a la derecha
+ |   ``&``   | Y de bit (AND)
+ |   ``|``   | O de bit (OR)
+ |   ``^``   | O exclusivo de bit (XOR)
+ |   ``~``   | Negación de bit
+ |   ``!``   | NO de bit (NOT)
+ || Operadores de BIT (atribución) ||
+ |  ``<<=``  | Desplaza a la izquierda
+ |  ``>>=``  | Desplaza a la derecha
+ |  ``&=``   | Y de bit
+ |  ``|=``   | O de bit
+ |  ``^=``   | O exclusivo de bit
+
+
+== Redireccionamento ==[redir]
+
+ ||  Operador    | Acción |
+ |   ``<``       | Redirecciona hacia la entrada estándar (STDIN)
+ |   ``>``       | Redirecciona hacia la salida estándar (STDOUT)
+ |  ``2>``       | Redirecciona hacia la salida de errores (STDERR)
+ |   ``>>``      | Redirecciona hacia la entrada estándar, anexando
+ |  ``2>>``      | Redirecciona hacia la salida de errores, anexando
+ |   ``|``       | Conecta salida estándar a la entrada estándar de otro comando
+ |  ``2>&1``     | Conecta salida de errores a la salida estándar
+ |   ``>&2``     | Conecta salida estándar a la salida de errores
+ |   ``>&-``     | Cierra la salida estándar
+ |  ``2>&-``     | Cierra la salida de errores
+ |  ``3<>arch``  | Conecta descriptor de archivos 3 al archivo 'arch'
+ |  ``<<FIN``    | Alimenta entrada estándar (Here Document)
+ |  ``<<-FIN``   | Alimenta entrada estándar, cortando TABs
+ |  ``<(cmd)``   | Salida de comando 'cmd' es un archivo: diff <(cmd1) <(cmd2)
+ |  ``>(cmd)``   | Entrada de comando 'cmd' es un archivo: tar cf >(bzip2 -c >file.tbz) $dir
+
+
+== Variables especiales ==[variables]
+
+ ||  Variable    | Parámetros Posicionales |
+ |    ``$0``     | Parámetro número 0 (nombre del comando o función)
+ |    ``$1``     | Parámetro número 1 (de la línea de comandos o función)
+ |    ``...``    | Parámetro número N ...
+ |    ``$9``     | Parámetro número 9 (de la línea de comandos o función)
+ |   ``${10}``   | Parámetro número 10 (de la línea de comandos o función)
+ |    ``...``    | Parámetro número NN ...
+ |    ``$#``     | Número total de parámetros en línea de comando o función
+ |    ``$*``     | Todos los parámetros, como una string única
+ |    ``$@``     | Todos los parámetros, como varias strings protegidas
+ ||  Variable    | Misceláneos
+ |    ``$$``     | PID del proceso actual (del propio script)
+ |    ``$!``     | PID del último job en segundo plano
+ |    ``$_``     | Último argumento del último comando ejecutado
+ |    ``$?``     | Código de retorno del último comando ejecutado
+
+
+== Expanción de variables ==[expancion]
+
+ || Sintaxis               | Expanción Condicional |
+ | ``${var:-texto}``       | Si var no está definida, devuelve 'texto'
+ | ``${var:=texto}``       | Si var no está definida, definir como 'texto'
+ | ``${var:?texto}``       | Si var no está definida, devuelve el error 'texto'
+ | ``${var:+texto}``       | Si var está definida, devuelve 'texto', sino devuelve vacío
+ || Sintaxis               | Expanción de Strings
+ | ``${var}``              | Igual que $var, pero no ambiguo
+ | ``${#var}``             | Devuelve tamaño de la string
+ | ``${!var}``             | Ejecuta el contenido de $var (igual a 'eval \$$var')
+ | ``${!texto*}``          | Devuelve nombres de variables que comienzan con 'texto'
+ | ``${var:N}``            | Devuelve texto a partir de la posición 'N'
+ | ``${var:N:tam}``        | Devuelve 'tam' caracteres a partir de la posición 'N'
+ | ``${var#texto}``        | Corta 'texto' del inicio de la string
+ | ``${var##texto}``       | Corta 'texto' del inicio de la string (* goloso)
+ | ``${var%texto}``        | Corta 'texto' del final de la string
+ | ``${var%%texto}``       | Corta 'texto' del final de la string (* goloso)
+ | ``${var/texto/nuevo}``  | Substituye 'texto' por 'nuevo', una vez
+ | ``${var//texto/nuevo}`` | Substituye 'texto' por 'nuevo', siempre
+ | ``${var/#texto/nuevo}`` | Si string empieza con 'texto', substituye 'texto' por 'nuevo'
+ | ``${var/%texto/nuevo}`` | Si string termina con 'texto', substituye 'texto' por 'nuevo'
+
+
+== Bloques y agrupamientos ==[bloques]
+
+ ||   Sintaxis    | Descripción                                                       |  Ejemplo  |
+ |    ``"..."``   | Protege una string, pero reconoce a $, \ y ` como especiales      |  "abc" 
+ |    ``'...'``   | Protege una string por completo (ningún carácter es especial)     |  'abc' 
+ |   ``$'...'``   | Protege una string completamente, pero interpreta \n, \t, \a, etc |  $'abc\n' 
+ |    ```...```   | Ejecuta comandos en un subshell                                   |  `ls` 
+ |    ``{...}``   | Agrupa comandos en un bloque                                      |  { ls ; } 
+ |    ``(...)``   | Ejecuta comandos en un subshell                                   |  ( ls ) 
+ |   ``$(...)``   | Ejecuta comandos en un subshell, devolviendo el resultado         |  $( ls ) 
+ |   ``((...))``  | Testea una operación aritmética, devolviendo 0 ó 1                |  ((5 > 3)) 
+ |  ``$((...))``  | Devuelve el resultado de una operación aritmética                 |  $((5+3)) 
+ |    ``[...]``   | Testea una expreción, devolviendo 0 ó 1 (alias del comando 'test')|  [ 5 -gt 3 ] 
+ |   ``[[...]]``  | Testea una expreción, devolviendo 0 ó 1 (puede usar && y ""||"")  |  [[ 5 > 3 ]] 
+
+
+== if, for, select, while, until, case ==[ifwhilefor]
+
+'''
+<table><tr>
+	<th>if</th>
+	<th>for / select</th>
+	<th>while / until</th>
+	<th>case</th>
+</tr>
+<tr>
+	<td>
+<pre>
+if COMANDO
+then
+   ...
+elif COMANDO
+then
+   ...
+else
+   ...
+fi
+</pre>
+	</td><td>
+<pre>
+for VAR in LISTA
+do
+    ...
+done
+
+o:
+
+for ((exp1;exp2;exp3))
+</pre>
+	</td><td>
+<pre>
+while COMANDO
+do
+    ...
+done
+</pre>
+	</td><td>
+<pre>
+case $VAR in
+    txt1) ... ;;
+    txt2) ... ;;
+    txtN) ... ;;
+    *)    ... ;;
+esac
+</pre>
+</td></tr></table>
+'''
+
+
+== Opciones del comando test ó [ ==[test]
+
+ || Comparando Números ||
+ |  ``-lt``  | Menor que   (LessThan)
+ |  ``-gt``  | Mayor que   (GreaterThan)
+ |  ``-le``  | Menor o igual a (LessEqual)
+ |  ``-ge``  | Mayor o igual a (GreaterEqual)
+ |  ``-eq``  | Igual a (EQual)
+ |  ``-ne``  | No igual a (NotEqual)
+ || Comparando Strings ||
+ |   ``=``   | Es igual
+ |  ``!=``   | No es igual
+ |  ``-n``   | No es nula
+ |  ``-z``   | Es nula
+ || Operadores Lógicos ||
+ |   ``!``   | NO lógico (NOT)
+ |  ``-a``   | Y lógico (AND)
+ |  ``-o``   | O lógico (OR)
+ || Tests sobre archivos ||
+ |  ``-b``   | es un dispositivo de bloque
+ |  ``-c``   | es un dispositivo de carácter
+ |  ``-d``   | es un directorio
+ |  ``-e``   | es un archivo existente
+ |  ``-f``   | es un archivo normal
+ |  ``-g``   | el bit SGID está activado
+ |  ``-G``   | el grupo del archivo es el del usuario
+ |  ``-k``   | el sticky-bit está activado
+ |  ``-L``   | el archivo es un link simbólico
+ |  ``-O``   | el archivo pertenece al usuario actual
+ |  ``-p``   | el archivo es un named pipe
+ |  ``-r``   | el archivo tiene permisos de lectura
+ |  ``-s``   | el tamaño del archivo es mayor que cero
+ |  ``-S``   | el archivo es un socket
+ |  ``-t``   | el descriptor de archivos N es un tty
+ |  ``-u``   | el bit SUID está activado
+ |  ``-w``   | el archivo tiene permisos de escritura
+ |  ``-x``   | el archivo tiene permisos de ejecución
+ |  ``-nt``  | el archivo es más nuevo (NewerThan)
+ |  ``-ot``  | el archivo es más antiguo (OlderThan)
+ |  ``-ef``  | el archivo es el mismo (EqualFile)
+
+
+== Escapes especiales para usar en el prompt (PS1) ==[prompt]
+
+ || Escape | Recordatorio    | Se expande como... |
+ |   \a    | //Alerta//      | Alerta (bip)
+ |   \d    | //Date//        | Fecha en formato "Día Mes Fecha" (Sat Jan 15)
+ |   \e    | //Escape//      | Carácter Esc
+ |   \h    | //Hostname//    | Nombre de la máquina sin el dominio (dhcp11)
+ |   \H    | //Hostname//    | Nombre completo de la máquina (dhcp11.empresa)
+ |   \j    | //Jobs//        | Número de jobs activos
+ |   \l    | //Tty//         | Nombre del terminal corriente (ttyp1)
+ |   \n    | //Newline//     | Nueva línea
+ |   \r    | //Return//      | Retorno de carro
+ |   \s    | //Shell//       | Nombre del shell (basename $0)
+ |   \t    | //Time//        | Horario en formato 24 horas HH:MM:SS
+ |   \T    | //Time//        | Horario en formato 12 horas HH:MM:SS
+ |   \@    | //At//          | Horario en formato 12 horas HH:MM am/pm
+ |   \A    | //At//          | Horario en formato 24 horas HH:MM
+ |   \u    | //Usuario//     | Nombre de login del usuario corriente
+ |   \v    | //Versión//     | Versión de Bash (2.00)
+ |   \V    | //Versión//     | Versión+subversión de Bash (2.00.0)
+ |   \w    | //Working Dir// | Directorio corriente, ruta completa ($PWD)
+ |   \W    | //Working Dir// | Directorio corriente, solo el último (basename $PWD)
+ |   \!    | //Histórico//   | Número del comando corriente en el histórico
+ |   \#    | //Número//      | Número del comando corriente
+ |   \$    | //ID//          | Muestra "#" para root, "$" para usuarios normales
+ |   \nnn  | //Octal//       | Carácter cuyo octal es nnn
+ |   \\    | //Backslash//   | Barra invertida \ literal
+ |   \[    | //Escape//      | Inicia una secuencia de escape (ej: código de colores)
+ |   \]    | //Escape//      | Termina una secuencia de escape
+
+
+== Escapes reconocidos por el comando echo ==[echo]
+
+  ||  Escape  | Recordatorio  | Descripción |
+  |    \a     | //Alerta//    | Alerta (bip)
+  |    \b     | //Backspace// | Carácter Backspace
+  |    \c     | //EOS//       | Termina una string
+  |    \e     | //Escape//    | Carácter Esc
+  |    \f     | //Form feed// | Alimentación
+  |    \n     | //Newline//   | Nueva línea
+  |    \r     | //Return//    | Retorno de carro
+  |    \t     | //Tab//       | Tabulación horizontal
+  |    \v     | //Vtab//      | Tabulación vertical
+  |    \\     | //Backslash// | Barra invertida \ literal
+  |    \nnn   | //Octal//     | Carácter cuyo octal es nnn
+  |    \xnn   | //Hexa//      | Carácter cuyo hexadecimal es nn
+
+
+== Formateadores del comando date ==[date]
+
+ ||  Formato    | Descripción |
+ |    ``%a``    | Nombre día de la semana abreviado (Dom..Sáb)
+ |    ``%A``    | Nombre día de la semana (Domingo..Sábado)
+ |    ``%b``    | Nombre del mes abreviado (Ene..Dic)
+ |    ``%B``    | Nombre del mes (Enero..Diciembre)
+ |    ``%c``    | Fecha completa (Sat Nov 04 12:02:33 EST 1989)
+ |    ``%y``    | Año (00..99)
+ |    ``%Y``    | Año (1970...)
+ |    ``%m``    | Mes (01..12)
+ |    ``%d``    | Día (01..31)
+ |    ``%j``    | Día del año (001..366)
+ |    ``%H``    | Horas (00..23)
+ |    ``%M``    | Minutos (00..59)
+ |    ``%S``    | Segundos (00..60)
+ |    ``%s``    | Segundos desde 1º de Enero de 1970
+ |    ``%%``    | Un % literal
+ |    ``%t``    | Un TAB
+ |    ``%n``    | Una nueva línea
+
+
+== Formateadores del comando printf ==[printf]
+
+ || Formato   | Descripción |
+ |   ``%d``   | Número decimal
+ |   ``%o``   | Número octal
+ |   ``%x``   | Número hexadecimal (a-f)
+ |   ``%X``   | Número hexadecimal (A-F)
+ |   ``%f``   | Número con coma
+ |   ``%e``   | Número en notación científica (e+1)
+ |   ``%E``   | Número en notación científica (E+1)
+ |   ``%s``   | String
+
+
+== Identificadores de archivos del comando ls -l ==[ls]
+
+  || Letra | Recordatorio | Tipos de Archivo (primer carácter) |
+  |    -   |     -        | Archivo normal
+  |    d   |  Directory   | Directorio
+  |    l   |    Link      | Link simbólico
+  |    b   |   Block      | Dispositivo de bloque (HD)
+  |    c   |    Char      | Dispositivo de caracteres (modem serial)
+  |    s   |   Socket     | Socket mapeado a archivo (comunicación de procesos)
+  |    p   |    Pipe      | FIFO o Named Pipe (comunicación de procesos)
+  || Letra | Recordatorio | Permisos de Archivo (los nueve caracteres siguientes)
+  |    -   |     -        | Permiso desactivado
+  |    r   |    Read      | Acceso de lectura
+  |    w   |    Write     | Acceso de escritura
+  |    x   |   eXecute    | Acceso de ejecución (o acceso al directorio)
+  |    X   |   eXecute    | Acceso al directorio solamente
+  |    s   |   Set ID     | Ejecución para usuario/grupo (SUID, SGID) - permiso 'x' activado
+  |    S   |   Set ID     | Ejecución para usuario/grupo (SUID, SGID) - permiso 'x' desactivado
+  |    t   |   sTicky     | Usuarios solo borran sus propios archivos - permiso 'x' activado
+  |    T   |   sTicky     | Usuarios solo borran sus propios archivos - permiso 'x' desactivado
+
+
+== Comodines para nombres de archivos (glob) ==[glob]
+
+   ||  Comodín    | Se expande como...                           | Ejemplo |
+   |     ``*``    | Cualquier cosa                               | ``*.txt``
+   |     ``?``    | Un carácter cualquiera                       | ``archivo-??.zip``
+   |   ``[...]``  | Cualquier carácter entre...                  | ``[Aa]rchivo.txt``
+   |  ``[^...]``  | Cualquier carácter excepto...                | ``[^A-Z]*.txt``
+   |   ``{...}``  | Cualquiera de los texto separados por coma   | ``archivo.{txt,html}``
+
+
+== Comodines para los ítems del comando case ==[case]
+
+   ||  Comodín      | Se expande como...                  |  Ejemplo |
+   |      ``*``     | Cualquier cosa                      |  ``*.txt) echo ;;``
+   |      ``?``     | Un carácter cualquiera              |  ``archivo-??.zip) echo ;;``
+   |    ``[...]``   | Cualquier carácter entre...         |  ``[0-9]) echo ;;``
+   |   ``[^...]``   | Cualquier carácter excepto...       |  ``[^0-9]) echo ;;``
+   |   ``...|...``  | Cualquier texto separado por ""|""  |  ``txt|html) echo ;;``
+
+
+== Señales para usar con trap/kill/killall ==[senales]
+
+% kill -l | tr '\t' '\n' | sed 's/)/ |/;s/^/ | /'
+
+ || # | Linux  | Cygwin | SystemV | AIX     | HP-UX  | Solaris | BSD/Mac |
+ |  1 | HUP    | HUP    | HUP     | HUP     | HUP    | HUP     | HUP     |
+ |  2 | INT    | INT    | INT     | INT     | INT    | INT     | INT     |
+ |  3 | QUIT   | QUIT   | QUIT    | QUIT    | QUIT   | QUIT    | QUIT    |
+ |  4 | ILL    | ILL    | ILL     | ILL     | ILL    | ILL     | ILL     |
+ |  5 | TRAP   | TRAP   | TRAP    | TRAP    | TRAP   | TRAP    | TRAP    |
+ |  6 | ABRT   | ABRT   | IOT     | LOST    | ABRT   | ABRT    | ABRT    |
+ |  7 | BUS    | EMT    | EMT     | EMT     | EMT    | EMT     | EMT     |
+ |  8 | FPE    | FPE    | FPE     | FPE     | FPE    | FPE     | FPE     |
+ |  9 | KILL   | KILL   | KILL    | KILL    | KILL   | KILL    | KILL    |
+ | 10 | USR1   | BUS    | BUS     | BUS     | BUS    | BUS     | BUS     |
+ | 11 | SEGV   | SEGV   | SEGV    | SEGV    | SEGV   | SEGV    | SEGV    |
+ | 12 | USR2   | SYS    | SYS     | SYS     | SYS    | SYS     | SYS     |
+ || # | Linux  | Cygwin | SystemV | AIX     | HP-UX  | Solaris | BSD/Mac |
+ | 13 | PIPE   | PIPE   | PIPE    | PIPE    | PIPE   | PIPE    | PIPE    |
+ | 14 | ALRM   | ALRM   | ALRM    | ALRM    | ALRM   | ALRM    | ALRM    |
+ | 15 | TERM   | TERM   | TERM    | TERM    | TERM   | TERM    | TERM    |
+ | 16 | -      | URG    | USR1    | URG     | USR1   | USR1    | URG     |
+ | 17 | CHLD   | STOP   | USR2    | STOP    | USR2   | USR2    | STOP    |
+ | 18 | CONT   | TSTP   | CHLD    | TSTP    | CHLD   | CHLD    | TSTP    |
+ | 19 | STOP   | CONT   | PWR     | CONT    | PWR    | PWR     | CONT    |
+ | 20 | TSTP   | CHLD   | WINCH   | CHLD    | VTALRM | WINCH   | CHLD    |
+ | 21 | TTIN   | TTIN   | URG     | TTIN    | PROF   | URG     | TTIN    |
+ | 22 | TTOU   | TTOU   | IO      | TTOU    | IO     | IO      | TTOU    |
+ | 23 | URG    | IO     | STOP    | IO      | WINCH  | STOP    | IO      |
+ | 24 | XCPU   | XCPU   | TSTP    | XCPU    | STOP   | TSTP    | XCPU    |
+ || # | Linux  | Cygwin | SystemV | AIX     | HP-UX  | Solaris | BSD/Mac |
+ | 25 | XFSZ   | XFSZ   | CONT    | XFSZ    | TSTP   | CONT    | XFSZ    |
+ | 26 | VTALRM | VTALRM | TTIN    | -       | CONT   | TTIN    | VTALRM  |
+ | 27 | PROF   | PROF   | TTOU    | MSG     | TTIN   | TTOU    | PROF    |
+ | 28 | WINCH  | WINCH  | VTALRM  | WINCH   | TTOU   | VTALRM  | WINCH   |
+ | 29 | IO     | LOST   | PROF    | PWR     | URG    | PROF    | INFO    |
+ | 30 | PWR    | USR1   | XCPU    | USR1    | LOST   | XCPU    | USR1    |
+ | 31 | SYS    | USR2   | XFSZ    | USR2    | -      | XFSZ    | USR2    |
+ | 32 | -      | -      | -       | PROF    | -      | WAITING | -       |
+ | 33 | -      | -      | -       | DANGER  | -      | LWP     | -       |
+ | 34 | -      | -      | -       | VTALRM  | -      | FREEZE  | -       |
+ | 35 | -      | -      | -       | MIGRATE | -      | THAW    | -       |
+ | 36 | -      | -      | -       | PRE     | -      | CANCEL  | -       |
+ | 37 | -      | -      | -       | -       | -      | LOST    | -       |
+
+Como obtener el listado: trap -l, kill -l ó killall -l''<br>''
+Ver también: [man 7 signal http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7]
+
+
+== Códigos de retorno de comandos ==[exitcode]
+
+ ||  Código  | Significado                                    | Ejemplo |
+ |     0     | No hubo errores, ejecución finalizó OK         | echo
+ |     1     | La mayoría de los errores comunes              | echo $((1/0))
+ |     2     | Error de uso en algún 'builtin' de Shell       | -
+ |   126     | Comando no ejecutable (sin permisos)           | touch a ; ./a
+ |   127     | Comando no encontrado ("command not found")    | echooo
+ |   128     | El parámetro para 'exit' no es un decimal      | exit 1.0
+ |   128+n   | 128 + código de la señal que mató al proceso   | kill -9 $PPID #exit 137
+ |   130     | Programa interrumpido con Ctrl+C (128 + 2)     | -
+ |   255     | El parámetro para 'exit' no está entre 0 y 255 | exit -1
+
+
+== Códigos de colores (ANSI) ==[colores]
+
+  || Color     | Letra | Fondo |
+  | Negro      |  30   |  40   |
+  | Rojo       |  31   |  41   |
+  | Verde      |  32   |  42   |
+  | Amarillo   |  33   |  43   |
+  | Azul       |  34   |  44   |
+  | Rosa       |  35   |  45   |
+  | Cian       |  36   |  46   |
+  | Blanco     |  37   |  47   |
+  || Atributo         || Valor |
+  | Reset             ||   0   |
+  | Negrita           ||   1   |
+  | Subrayado         ||   4   |
+  | Parpadeando       ||   5   |
+  | Inverso           ||   7   |
+  || Ejemplos: ESC [ <N>;<N> m                     |||
+  | Texto normal (apaga colores) ||  ``ESC[m``       |
+  | Negrita                      ||  ``ESC[1m``      |
+  | Amarillo                     ||  ``ESC[33;1m``   |
+  | Fondo azul, letra gris       ||  ``ESC[44;37m``  |
+  | Rojo parpadeando             ||  ``ESC[31;5m``   |
+  || En la línea de comando                        |||
+  | ``echo -e '\e[33;1m amarillo \e[m'``           |||
+  | ``echo -e '\033[33;1m amarillo \033[m'``       |||
+
+[../zzcores.gif]
+
+
+== Metacaracteres de las expresiones regulares ==[metacaracteres]
+
+ ||  Meta  | Nombre         | Descripción |
+ |     .   | Punto          | Comodín para un carácter
+ |    []   | Lista          | Cualquiera de los caracteres listados
+ |   [^]   | Lista negativa | Cualquier carácter, excepto los listados
+ |     ?   | Opcional       | El objeto previo puede aparecer o no (opcional)
+ |     *   | Asterisco      | El objeto previo puede aparecer en cualquier cantidad
+ |     +   | Más            | El objeto previo debe aparecer como mínimo una vez
+ |   {,}   | Llaves         | El objeto previo debe aparecer en la cantidad indicada
+ |     ^   | Circunflejo    | Comienzo de la línea
+ |     $   | Pesos          | Fin de la línea
+ |    \b   | Borde          | Limita una palabra (letras, números y subrayado)
+ |     \   | Escape         | Carácter de escape para un meta, lo deja sin efecto
+ |  ""|""  | O              | Indica alternativas (usar con el grupo)
+ |    ()   | Grupo          | Agrupa partes de la expresión (cuantificable y multinivel)
+ |    \1   | Retrovisor     | Recupera el contenido del grupo 1
+ |    \2   | Retrovisor     | Recupera el contenido del grupo 2 (sigue hasta el \9)
+ |    .*   | Comodín        | Expande como cualquier cosa, es todo o nada
+ |    ??   | Opcional NG    | Igual a opcional común, pero expande el mínimo posible
+ |    *?   | Asterisco NG   | Igual a asterisco común, pero expande el mínimo posible
+ |    +?   | Más NG         | Igual a más común, pero expande el mínimo posible
+ |   {}?   | Llaves NG      | Igual a llaves comunes, pero expande el mínimo posible
+
+
+== Metacaracteres que son diferentes en las aplicaciones ==[metadif]
+
+ || Programa |  Opc |   Más  |  Llaves  |  Borde |    O    |  Grupo |
+  | awk      |   ?  |    +   |   -      |   -    |  ""|""  |   ()   |
+  | ed       |  \?  |   \+   |  \{,\}   |  \b    |   \|    |  \(\)  |
+  | egrep    |   ?  |    +   |   {,}    |  \b    |  ""|""  |   ()   |
+  | emacs    |   ?  |    +   |   -      |  \b    |   \|    |  \(\)  |
+  | expect   |   ?  |    +   |   -      |   -    |  ""|""  |   ()   |
+  | find     |   ?  |    +   |   -      |  \b    |   \|    |  \(\)  |
+  | gawk     |   ?  |    +   |   {,}    |  \<\>  |  ""|""  |   ()   |
+  | grep     |  \?  |   \+   |  \{,\}   |  \b    |   \|    |  \(\)  |
+  | mawk     |   ?  |    +   |   -      |   -    |  ""|""  |   ()   |
+  | perl     |   ?  |    +   |   {,}    |  \b    |  ""|""  |   ()   |
+  | php      |   ?  |    +   |   {,}    |  \b    |  ""|""  |   ()   |
+  | python   |   ?  |    +   |   {,}    |  \b    |  ""|""  |   ()   |
+  | sed      |  \?  |   \+   |  \{,\}   |  \<\>  |   \|    |  \(\)  |
+  | vim      |  \=  |   \+   |  \{,}    |  \<\>  |   \|    |  \(\)  |
+
+
+== Caracteres ASCII imprimibles (ISO-8859-1) - texto ==[ascii]
+
+```
+$ zzascii
+32        64  @     96  `    162  ¢    194  Â    226  â
+33  !     65  A     97  a    163  £    195  Ã    227  ã
+34  "     66  B     98  b    164  ¤    196  Ä    228  ä
+35  #     67  C     99  c    165  ¥    197  Å    229  å
+36  $     68  D    100  d    166  ¦    198  Æ    230  æ
+37  %     69  E    101  e    167  §    199  Ç    231  ç
+38  &     70  F    102  f    168  ¨    200  È    232  è
+39  '     71  G    103  g    169  ©    201  É    233  é
+40  (     72  H    104  h    170  ª    202  Ê    234  ê
+41  )     73  I    105  i    171  «    203  Ë    235  ë
+42  *     74  J    106  j    172  ¬    204  Ì    236  ì
+43  +     75  K    107  k    173       205  Í    237  í
+44  ,     76  L    108  l    174  ®    206  Î    238  î
+45  -     77  M    109  m    175  ¯    207  Ï    239  ï
+46  .     78  N    110  n    176  °    208  Ð    240  ð
+47  /     79  O    111  o    177  ±    209  Ñ    241  ñ
+48  0     80  P    112  p    178  ²    210  Ò    242  ò
+49  1     81  Q    113  q    179  ³    211  Ó    243  ó
+50  2     82  R    114  r    180  ´    212  Ô    244  ô
+51  3     83  S    115  s    181  µ    213  Õ    245  õ
+52  4     84  T    116  t    182  ¶    214  Ö    246  ö
+53  5     85  U    117  u    183  ·    215  ×    247  ÷
+54  6     86  V    118  v    184  ¸    216  Ø    248  ø
+55  7     87  W    119  w    185  ¹    217  Ù    249  ù
+56  8     88  X    120  x    186  º    218  Ú    250  ú
+57  9     89  Y    121  y    187  »    219  Û    251  û
+58  :     90  Z    122  z    188  ¼    220  Ü    252  ü
+59  ;     91  [    123  {    189  ½    221  Ý    253  ý
+60  <     92  \    124  |    190  ¾    222  Þ    254  þ
+61  =     93  ]    125  }    191  ¿    223  ß    255  ÿ
+62  >     94  ^    126  ~    192  À    224  à   
+63  ?     95  _    161  ¡    193  Á    225  á   
+```
+
+
+== Caracteres ASCII imprimibles (ISO-8859-1) - imagen ==[asciiimg]
+
+          [../ascii.gif]          
+
+
+== Códigos listos para copiar y pegar ==[codigos]
+
+ || Condicionales con IF |
+ | ``if [ -f "$archivo" ]; then echo 'Archivo encontrado'; fi``
+ | ``if [ ! -d "$dir" ]; then echo 'Directorio no encontrado'; fi``
+ | ``if [ $i -gt 5 ]; then echo 'Mayor que 5'; else echo 'Menor que 5'; fi``
+ | ``if [ $i -ge 5 -a $i -le 10 ]; then echo 'Entre 5 y 10 inclusive'; fi``
+ | ``if [ $i -eq 5 ]; then echo '=5'; elif [ $i -gt 5 ]; then echo '>5'; else echo '<5'; fi``
+ | ``if [ "$USER" = 'root' ]; then echo 'Hola root!'; fi``
+ | ``if grep -qs 'root' /etc/passwd; then echo 'Usuario encontrado'; fi``
+ || Condicionales con Y (&&) y O (||)
+ | ``[ -f "$archivo" ] && echo 'Archivo encontrado'``
+ | ``[ -d "$dir" ] || echo 'Directorio no encontrado'``
+ | ``grep -qs 'root' /etc/passwd && echo 'Usuario encontrado'``
+ | ``cd "$dir" && rm "$archivo" && touch "$archivo" && echo 'listo!'``
+ | ``[ "$1" ] && param=$1 || param='valor por defecto'``
+ | ``[ "$1" ] && param=${1:-valorpordefecto}``
+ | ``[ "$1" ] || { echo "Uso: $0 parámetro" ; exit 1 ; }``
+ || Adicionar 1 a una variable $i
+ | ``i=$(expr $i + 1)``
+ | ``i=$((i+1))``
+ | ``let i=i+1``
+ | ``let i+=1``
+ | ``let i++``
+ || Loop de 1 a 10
+ | ``for i in 1 2 3 4 5 6 7 8 9 10; do echo $i; done``
+ | ``for i in $(seq 10); do echo $i; done``
+ | ``for ((i=1;i<=10;i++)); do echo $i; done``
+ | ``i=1 ; while [ $i -le 10 ]; do echo $i ; i=$((i+1)) ; done``
+ | ``i=1 ; until [ $i -gt 10 ]; do echo $i ; i=$((i+1)) ; done``
+ || Loop sobre las líneas de un archivo o sobre la salida de un comando
+ | ``cat /etc/passwd | while read LINEA; do echo "$LINEA"; done``
+ | ``grep 'root' /etc/passwd | while read LINEA; do echo "$LINEA"; done``
+ | ``while read LINEA; do echo "$LINEA"; done < /etc/passwd``
+ | ``while read LINEA; do echo "$LINEA"; done < <(grep 'root' /etc/passwd)``
+ || Comodines en los ítems del comando case
+ | ``case "$dir" in /home/*) echo 'dir dentro de /home';; esac``
+ | ``case "$user" in root|juan|maria) echo "Hola $user !";; *) echo "No te conozco";; esac``
+ | ``case "$var" in ?) echo '1 letra';; ??) echo '2 letras';; ??*) echo 'más de 2';; esac``
+ | ``case "$i" in [0-9]) echo '1 dígito';; [0-9][0-9]) echo '2 dígitos';; esac``
+ || Cuadros con Dialog
+ | ``dialog --calendar 'abc' 0 0 31 12 1999``
+ | ``dialog --checklist 'abc' 0 0 0 item1 'desc1' on item2 'desc2' off``
+ | ``dialog --fselect /tmp 0 0``
+ | ``(echo 50; sleep 2; echo 100) | dialog --gauge 'abc' 8 40 0``
+ | ``dialog --infobox 'abc' 0 0``
+ | ``dialog --inputbox 'abc' 0 0``
+ | ``dialog --passwordbox 'abc' 0 0``
+ | ``dialog --menu 'abc' 0 0 0 item1 'desc1' item2 'desc2'``
+ | ``dialog --msgbox 'abc' 8 40``
+ | ``dialog --radiolist 'abc' 0 0 0 item1 'desc1' on item2 'desc2' off``
+ | ``dialog --tailbox /tmp/archivo.txt 0 0``
+ | ``dialog --textbox /tmp/archivo.txt 0 0``
+ | ``dialog --timebox 'abc' 0 0 23 59 00``
+ | ``dialog --yesno 'abc' 0 0``
+ | **Tip1:** ``dialog ... && echo 'Presionó OK/Yes' || echo 'Presionó Cancel/No'``
+ | **Tip2:** ``respuesta=$(dialog --stdout --TIPODECAIXA 'abc' ...)``
+
+
+== Atajos de la línea de comando (set -o emacs) ==[emacs]
+
+ || Atajo  | Descripción                           | Tecla Similar |
+  | Ctrl+A | Mueve cursor al inicio de la línea    |     Home      |
+  | Ctrl+B | Mueve cursor un lugar a la izquierda  |       ←       |
+  | Ctrl+C | Envia señal EOF() al sistema          |               |
+  | Ctrl+D | Borra un carácter a la derecha        |    Delete     |
+  | Ctrl+E | Mueve cursor al fin de la línea       |      End      |
+  | Ctrl+F | Mueve cursor un lugar a la derecha    |       →       |
+  | Ctrl+H | Borra un carácter a la izquierda      |   Backspace   |
+  | Ctrl+I | Completa archivos y comandos          |      Tab      |
+  | Ctrl+J | Línea nueva                           |     Enter     |
+  | Ctrl+K | Corta del cursor al fin de la línea   |               |
+  | Ctrl+L | Limpa la pantalla (igual que 'clear') |               |
+  | Ctrl+N | Próximo comando                       |               |
+  | Ctrl+P | Comando anterior                      |               |
+  | Ctrl+Q | Destraba el shell (ver Ctrl+S)        |               |
+  | Ctrl+R | Busca en el histórico de comandos     |               |
+  | Ctrl+S | Traba el shell (ver Ctrl+Q)           |               |
+  | Ctrl+T | Intercambia dos caracteres de lugar   |               |
+  | Ctrl+U | Corta la línea entera                 |               |
+  | Ctrl+V | inserta un carácter literal           |               |
+  | Ctrl+W | Corta la palabra a la izquierda       |               |
+  | Ctrl+X | Mueve cursor al inicio/fin de línea (x2) |  Home/End  |
+  | Ctrl+Y | Pega el texto cortado                 |               |
+
+
+== La caja de herramientas del shellero ==[herramientas]
+
+ ||  Comando    | Función                 | Opciones útiles |
+ |  **cat**     | //Muestra archivo//     | -n, -s
+ |  **cut**     | //Extrae campo//        | -d -f, -c
+ |  **date**    | //Muestra fecha//       | -d, +'...'
+ |  **diff**    | //Compara archivos//    | -u, -Nr, -i, -w
+ |  **echo**    | //Muestra texto//       | -e, -n
+ |  **find**    | //Encuentra archivos//  | -name, -iname, -type f, -exec, -or
+ |  **fmt**     | //Formatea párrafos//   | -w, -u
+ |  **grep**    | //Encuentra cadena//    | -i, -v, -r, -qs, -n, -l, -w -x, -A -B -C
+ |  **head**    | //Muestra inicio//      | -n, -c
+ |  **od**      | //Muestra caracteres//  | -a, -c, -o, -x
+ |  **paste**   | //Une archivos//        | -d, -s
+ |  **printf**  | //Muestra texto//       | //ninguna//
+ |  **rev**     | //Invierte texto//      | //ninguna//
+ |  **sed**     | //Edita texto//         | -n, -f, s/esto/aquello/, p, d, q, N
+ |  **seq**     | //Cuenta números//      | -s, -f
+ |  **sort**    | //Ordena texto//        | -n, -f, -r, -k -t, -o
+ |  **tac**     | //Invierte archivo//    | //ninguna//
+ |  **tail**    | //Muestra final//       | -n, -c, -f
+ |  **tee**     | //Archiva flujo//       | -a
+ |  **tr**      | //Transforma texto//    | -d, -s, A-Z a-z
+ |  **uniq**    | //Remueve duplicados//  | -i, -d, -u
+ |  **wc**      | //Cuenta letras//       | -c, -w, -l, -L
+ |  **xargs**   | //Gerencia argumentos// | -n, -i
+
+
+_LINKBLOCK_SHELL
+
+%!include: /a/www/include/10anos/footer.t2t
