@@ -1,0 +1,48 @@
+#!/bin/bash
+
+[ "$1" ] || { echo "usage: $0 files.JPG"; exit ; }
+
+while [ "$1" ]; do
+	[ -f "$1" ] || { echo "not a file: $1"; exit; }
+	indir=$(dirname $1)
+	infile=$(basename $1)
+	outdir=$indir
+	outfile=$infile
+
+	size=$(identify $indir/$infile | cut -d' ' -f3 | cut -d+ -f1)
+	case $size in
+		460x345) geometry=+140+295; wmark=misc/marca-dagua-300.png;;
+		460x306) geometry=+140+260; wmark=misc/marca-dagua-300.png;;
+		345x460) geometry=+25+400 ; wmark=misc/marca-dagua-300.png;;
+		459x345) geometry=+140+295; wmark=misc/marca-dagua-300.png;;
+
+		520x390) geometry=+195+340; wmark=misc/marca-dagua-300.png;;
+		520x346) geometry=+195+300; wmark=misc/marca-dagua-300.png;;
+		390x520) geometry=+45+450 ; wmark=misc/marca-dagua-300.png;;
+		
+		400x300) geometry=+130+255; wmark=misc/marca-dagua-250.png;;
+		400x266) geometry=+130+220; wmark=misc/marca-dagua-250.png;;
+		300x400) geometry=+25+345 ; wmark=misc/marca-dagua-250.png;;
+		
+		      *) geometry=+140+295; wmark=misc/marca-dagua-300.png;;
+	esac
+		     # *) geometry=+50+50  ; wmark=misc/marca-dagua-300.png;;
+	
+	
+# foto 400x300, marca d'água de 200x
+#	composite -quality 90 -geometry +185+263 \
+
+# foto 520x390, marca d'água de 300x
+#	width=$(identify $indir/$infile | cut -d' ' -f3 | cut -d+ -f1)
+#	case $width in
+#		520x390) geometry=+195+340;;
+#		520x346) geometry=+195+300;;
+#		390x520) geometry=+45+450;;
+#		      *) geometry=+50+50;;
+#	esac
+	composite -quality 90 -geometry $geometry \
+		~/site/$wmark $indir/$infile $outdir/$outfile
+
+	echo $outdir/$outfile saved
+	shift
+done

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+text=http://aurelio.net/surf
+font=helvetica-bold
+size=36
+
+[ "$1" ] || { echo "usage: $0 files.JPG"; exit ; }
+
+while [ "$1" ]; do
+	[ -f "$1" ] || { echo "not a file: $1"; exit; }
+	indir=$(dirname $1)
+	infile=$(basename $1)
+	outdir=$indir
+	outfile=$infile
+	convert -quality 85  \
+		-font $font -pointsize $size \
+		-fill white \
+		-stroke black -strokewidth 1 \
+		-draw "text 20,280 \"$text\"" \
+		"$indir/$infile" "$outdir/$outfile"
+	echo $outdir/$outfile saved
+	shift
+done

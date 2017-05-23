@@ -1,0 +1,24 @@
+#!/bin/bash
+
+[ "$1" ] || { echo "$0 foto.jpg"; exit; }
+
+orig="$1"
+foto=img/foto-capa.jpg
+cam=img/camera.png
+text="Luiz, 13 anos"
+
+# bottom left
+#                -draw "text 20,280 \"$text\"" \
+convert -quality 95 -geometry 400x300 \
+               -font helvetica-bold -pointsize 12 \
+                -fill white \
+                -draw "text 310,20 \"$text\"" \
+		$orig $foto
+           #     -stroke black -strokewidth 1 \
+
+# bottom left
+#composite -quality 95 $cam -geometry 400x300+30+170 $orig $foto
+# bottom right
+composite -quality 95 $cam -geometry +220+200 $foto $foto
+
+echo $foto saved

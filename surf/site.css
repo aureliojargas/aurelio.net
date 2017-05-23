@@ -1,0 +1,124 @@
+/* by Aurelio Marinho Jargas on Jan2006, public domain */
+
+body
+	{
+	background-color: #fff;
+	color		: #555;
+	margin		: 0px;
+	background-image	: url(img/onda.gif);
+	background-repeat	: repeat-x;
+	background-position	: bottom;
+	background-attachment	: fixed;
+	}
+.body2
+	{
+	background-image	: url(img/sol.gif);
+	background-repeat	: no-repeat;
+	background-position	: left top;
+	}
+.header
+	{
+	text-align	: center;
+	}
+	
+.body
+	{
+	margin		: 2em 7em 3em 7em;
+	}
+
+.about
+	{
+	color		: #555;
+	margin		: 1em;
+	padding-left	: 15px;
+	padding-right	: 15px;
+	text-align	: justify;
+	font-size	: 90%;
+	}
+table.about td
+	{
+	vertical-align	: super;
+	padding-left	: 15px;
+	padding-right	: 15px;
+	}
+
+.names
+	{
+	text-align	: justify;
+	line-height	: 125%;
+	}
+.names a
+	{
+	font-size	: 85%;
+	color		: #555;
+	margin-left	: 0.5em;
+	margin-right	: 0.5em;
+	font-weight	: normal;
+	white-space	: nowrap;
+	}
+.names a b
+	{
+	color		: #000;
+	font-size	: 120%;
+	}
+.names a:hover
+	{
+	background-color: #ff0;
+	color		: #555;
+	}
+.footer
+	{
+	padding-bottom	: 80px;
+	text-align	: center;
+	color		: #555;
+	font-size	: 90%;
+	}
+a
+	{
+	font-weight	: bold;
+	text-decoration	: none;
+	font-size	: 130%;
+	}
+a:hover
+	{
+	color		: red;
+	}
+dl
+	{
+	clear		: both;
+	margin-top	: 2em; 
+	/* the last bar before footer */
+	border-width	: 0 0 1px 0;
+	border-style	: solid;
+	border-color	: gray;
+	padding-bottom	: 1em;
+	}
+dt
+	{
+	line-height	: 150%;
+	border-width	: 1px 0 0 0;
+	border-style	: solid;
+	border-color	: gray;
+	padding-top	: 1em;
+	}
+dt.sonzeira
+	{
+	text-align	: center;
+	}
+dt img 
+	{
+	/* for each day's thumbnails */
+	float		: right;
+	}
+img
+	{
+	border		: 1px solid gray;
+	padding		: 2px;
+	margin		: 5px;
+	}
+.googleadlinkshoriz
+	{
+	text-align	:center;
+	margin 		:0 auto;
+	}
+	

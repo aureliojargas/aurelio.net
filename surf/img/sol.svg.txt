@@ -1,0 +1,4 @@
+- faz uma bola amarela
+- faz um quadrado
+- mira um sobre o outro
+- Object > Intersection (ou algo assim)

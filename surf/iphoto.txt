@@ -1,0 +1,26 @@
+Procedimento completo das fotos:
+
+- Importar via iPhoto
+- No iPhoto, criar um album novo com a data (20060130 tarde)
+- Pegar todas do "last roll" e jogar nesse album
+- Setar keywords para indicar o pico da foto
+- Apagar as fotos ruins e não vendáveis (Option-Command-Delete)
+- Rodar o script para setar o title das fotos
+- Preencher o nome do cara nos comentários
+- Preencher as estrelinhas para classificar as fotos
+- Retocar as fotos escuras do site
+- Criar smart album para separar as fotos para o site
+- Exportar para web, já no diretório do site, criar uma pasta nova com
+  o nome do album (20060130)
+  - title: 30 de Janeiro de 2006
+  - table: 4x10
+  - text color: Gray Scale Slider: 25%
+  - show title em ambos
+  - show comment em ambos
+  - Thumb: 120x90 -> 180x135
+  - Image: 400x300 -> 520x390 -> 460x345
+- Rodar os scripts para finalizar as páginas (fix & watermark) e conferir
+- Atualizar index.html
+- Upload e corre pro abraço
+
+

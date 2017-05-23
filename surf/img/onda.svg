@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg1453"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docbase="/Applications"
+   sodipodi:docname="onda2.svg">
+  <defs
+     id="defs1455" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="18.114623"
+     inkscape:cx="314.28571"
+     inkscape:cy="617.14286"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="701"
+     inkscape:window-height="507"
+     inkscape:window-x="20"
+     inkscape:window-y="42" />
+  <metadata
+     id="metadata1458">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:nodetypes="cssscscccc"
+       d="M 293.15249,438.10224 C 294.39038,440.17950 296.45136,442.57921 301.36677,443.83836 C 305.45637,444.88597 316.08943,444.11386 316.42394,438.67258 C 316.61014,435.68408 314.51980,434.23469 312.91891,433.27246 C 310.60469,431.88151 305.78690,431.76026 303.58436,433.65365 C 303.59226,432.52954 304.84778,427.07244 315.56827,428.50716 C 322.69245,429.46058 327.99164,433.19773 330.81615,437.96183 L 330.81572,453.11124 L 293.14478,453.11124 L 293.15249,438.10224 z "
+       style="opacity:0.49999997;fill:#2476fe;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000;stroke-linecap:square;stroke-linejoin:round;marker-start:none;stroke-miterlimit:4.5000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+       id="path11089"
+       inkscape:export-filename="/mesa/onda.png"
+       inkscape:export-xdpi="190.93268"
+       inkscape:export-ydpi="190.93268" />
+  </g>
+</svg>

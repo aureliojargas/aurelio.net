@@ -1,0 +1,145 @@
+#!/bin/bash
+
+die() { echo "$*" ; exit; }
+
+[ "$1" ] || die "usage: $0 --index folder"
+[ "$1" == '--index' ] && { shift ; just_index=1 ; } || just_index=0
+folder=${1%/}
+
+echo "$folder" | grep -qs '2006[01][0-9][0123][0-9]' ||
+	die "Invalid folder '$folder'. Must be a date like 20061231"
+
+#TITLE_PREFIX='Foto Molhada - '
+#DISCLAIMER='&Eacute; proibida a reprodu&ccedil;&atilde;o das fotos deste site sem autoriza&ccedil;&atilde;o, por escrito, do fot&oacute;grafo.'
+
+ year=${folder:0:4}
+month=${folder:4:2}
+  day=${folder:6:2}
+newfolder=$year-$month/$day  
+
+[ -d "$year-$month" ] || {
+	mkdir "$year-$month" || die "Can't create folder '$year-$month'"; }
+[ -d "$newfolder" ] || {
+	mkdir "$newfolder" || die "Can't create folder '$newfolder"; }
+echo $newfolder
+
+# todo mv html/* ..
+
+cd $folder &&
+
+# rename files
+if [ $just_index -eq 1 ]; then
+	rm -rf $folder-* &&
+	mv -v $folder.html ../$newfolder/index.html
+else
+	rm -f $newfolder/*.html
+	rm -rf foto mini 
+	mv -v $folder.html ../$newfolder/index.html &&
+	mv -v $folder-Images 		../$newfolder/foto &&
+	mv -v $folder-Thumbnails	../$newfolder/mini &&
+	mv -v $folder-Pages/*		../$newfolder/     &&
+	(
+		cd ../$newfolder
+		funcoeszz trocapalavra "$folder.html" index.html *.html
+		for page in Image* ; do mv -v $page ${page#Image} ; done
+	)
+fi &&
+
+cd ../$newfolder
+
+### fix index.html
+
+cp index.html index.old &&
+sed "
+s|<title>|&$TITLE_PREFIX|
+s|<head>|& <LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"../../site-sub.css\">|
+s|$folder-Pages/||g
+s|$folder-Thumbnails|mini|g
+s|Image\\([0-9]*\\.html\\)|\\1|g
+
+# name + nick turns to nick
+/<br>/ s|>[^<]*&quot;\\(.*\\)&quot;|>\\1|
+
+# bottom align, so all the codes are in a row
+s|<td |<td valign=\"bottom\" |
+# force an empty line for empty comments
+s|^     <br>$|&\&nbsp;|
+# comments with mini-size
+s|^\\(     <br>\\)\\([^<]*\\)$|\\1<font size=\"-1\">\\2</font>|
+
+/<\\/table>/a\\
+<br><br><font size=\"3\"><b>Dica:</b> Clique na foto para v&ecirc;-la \\
+maior.<br><br><b>Dica:</b> Anote o c&oacute;digo das fotos \\
+que voc&ecirc; gostar! Exemplo de c&oacute;digo: S134</font><br><br>\\
+<p><a href=\"../../index.html\">&lt; &lt; Voltar &agrave; principal</a></p>
+
+/<body /a\\
+<div class=\"body\">
+
+/<\\/body>/i\\
+</div><div class=\"footer\">$DISCLAIMER</div>
+
+" index.old > index.html &&
+rm index.old &&
+echo index.html fixed &&
+
+[ $just_index -eq 1 ] && exit
+
+### fix pages
+
+for page in [0-9]*.html ; do
+	cp "$page" "$page.old" &&
+	sed "
+s|<title>|&$TITLE_PREFIX|
+s|<head>|& <LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"../../site-sub.css\">|
+s|$folder-Images|foto|g
+s|HREF=\"\.\./index.html\"|HREF=\"index.html\"|
+s|Image\\([0-9]*\\.html\\)|\\1|g
+s|src=\"\.\./foto/|src=\"foto/|
+
+# build table and arrows
+/^  <br><br><A / {
+	s|\\(<A HREF[^>]*>\\)Up</A>\\(&nbsp;\\)*|\\
+		<td align=\"center\">\\1\\&Iacute;ndice</A></td>|
+	s|\\(<A HREF[^>]*>\\)Next--></A>|\\
+		<td class=\"noborder\" width=\"100\" align=\"right\">\\
+		\\1<img src=\"../../img/seta-direita.gif\"\\
+			alt=\"Proxima\" title=\"Proxima\"></A>\\&nbsp;</td>|
+	s|\\(<A HREF[^>]*>\\)<--Previous</A>\\(&nbsp;\\)*|\\
+		<td class=\"noborder\" width=\"100\">\\
+		\\1<img src=\"../../img/seta-esquerda.gif\"\\
+			alt=\"Anterior\" title=\"Anterior\"></A></td>|
+	
+	# 0.html and LAST.html needs it (no previous/next)
+	/seta-esquerda/ !s|<br><br>|&<td width=\"100\">\\&nbsp;</td>|
+	/seta-direita/  !s|<br><br>$|<td width=\"100\">\\&nbsp;</td>&|
+	
+	# second row for picture and comments
+	s|<br><br>$|</tr><tr><td colspan=\"3\">|
+	
+	# open table, finally
+	s|<br><br>|&<table align=\"center\"><tr>|
+}
+# close the table
+/<\\/body>/i\\
+</td></tr></table>
+
+# dirty fix
+#s|<--Previous|\\&lt;--Anterior|
+#s|Next-->|Pr\\&oacute;xima--\\&gt;|
+#s|>Up<|>\\&Iacute;ndice<|
+
+/<body /a\\
+<div class=\"body\">
+
+/<\\/body>/i\\
+</div><div class=\"footer\">$DISCLAIMER</div>
+
+	" "$page.old" > "$page" &&
+	echo "$page" fixed
+done &&
+
+# clean up
+find . -type f -name "*.old" -exec rm {} \; &&
+
+echo && echo DONE
