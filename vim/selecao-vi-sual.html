@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Seleção VI-sual - Artigo da Linux Magazine :: aurelio.net</TITLE>
+</HEAD>
+<BODY>
+
+<DIV ID="header">
+<H1>Seleção VI-sual</H1>
+<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
+<H3>Outubro, 2004</H3>
+</DIV>
+
+<DIV ID="main">
+<p class="intro"> Seja um guru do Vim (VI) na arte de selecionar texto, usando caracteres, linhas e até colunas inteiras, para depois recortar, copiar ou alterar o texto. </p>
+<P>
+O nome do VI vem da palavra "Visual". Editor de textos
+revolucionário em sua época, sua primeira versão já trazia uma impressionante
+característica: podia mostrar na tela o texto que estava sendo editado!
+</P>
+<P>
+Já pensou ter que editar um texto com o monitor desligado, só
+digitando os comandos e torcendo para que tudo fique certo? Pois assim
+eram os editores antes do VI, como o seu antecessor <CODE>ed</CODE>. Nada de
+cursor, setinhas, letras aparecendo e sumindo na tela. A edição era
+feita às escuras. E você achando que o VI é que é complicado, hein?
+</P>
+<P>
+Pois bem, neste artigo vamos conhecer o "modo visual" do VI. O nome
+pode causar confusão, mas esse modo nada tem a ver com o fato do VI
+ser um editor visual. O modo visual é o nome que se dá quando fazemos
+uma seleção de texto, igual aos editores gráficos quando selecionamos
+um texto com o mouse.
+</P>
+<P>
+Como o VI não depende de mouse para ser operado, há meios de
+selecionar um texto somente com o teclado. A tecla chave é o V (de
+Visual, claro!).
+</P>
+<P>
+  <B>Variantes do modo visual</B>
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH>Comando</TH>
+<TH>Nome</TH>
+<TH>Ação</TH>
+</TR>
+<TR>
+<TD ALIGN="center">v</TD>
+<TD ALIGN="center">-- VISUAL --</TD>
+<TD>Seleciona caracteres</TD>
+</TR>
+<TR>
+<TD ALIGN="center">V</TD>
+<TD ALIGN="center">-- VISUAL LINE --</TD>
+<TD>Seleciona linhas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">Ctrl+V</TD>
+<TD ALIGN="center">-- VISUAL BLOCK --</TD>
+<TD>Seleciona blocos (seleção vertical)</TD>
+</TR>
+</TABLE>
+
+<P>
+Diferente da seleção de texto em outros editores, que só serve para
+apagar o texto selecionado, copiá-lo ou trocá-lo por outro texto, a
+seleção visual do VI é um aliado poderoso para se fazer edições
+complicadas com pouco esforço.
+</P>
+<P>
+Abra um texto qualquer no VI e brinque de selecionar trechos para se
+familiarizar com os três modos de seleção. Primeiro posicione o cursor
+no meio de uma linha, tecle <CODE>v</CODE> e mova o cursor com as setas do teclado para ver a seleção
+se formando: o texto selecionado ficará em destaque. Tecle <CODE>v</CODE>
+novamente (ou <CODE>Esc</CODE>) para cancelar a seleção.
+</P>
+<P>
+Agora volte ao mesmo meio da linha inicial e tecle <CODE>V</CODE> (maiúsculo).
+Surpresa! A linha inteira foi selecionada. Usando as setas para cima
+e para baixo podemos incluir mais linhas inteiras na seleção.
+Tecle <CODE>V</CODE> ou <CODE>Esc</CODE>, para cancelar a seleção.
+</P>
+<P>
+Volte novamente ao meio da linha e agora tecle <CODE>Ctrl+V</CODE> para fazer a
+seleção de blocos. Mova o cursor para baixo e para a direita e veja o
+retângulo se formando. Antes de cancelar esta seleção, veja que é
+possível mudar o modo de seleção sem perder o posicionamento atual!
+Ainda com o bloco selecionado, tecle <CODE>v</CODE> para trocar para seleção de
+caracteres, depois tecle <CODE>V</CODE> para selecionar as linhas.
+</P>
+<P>
+Tecle <CODE>Esc</CODE> para cancelar a seleção. Um comando
+bacana é o <CODE>gv</CODE> (Go Visual), que restaura a última seleção feita.
+Agora, com algumas linhas selecionadas, vamos
+fazer algo com elas. Veja na tabela 2 alguns dos comandos disponíveis.
+</P>
+<P>
+  <B>Alguns comandos do VI</B>
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH>Comando</TH>
+<TH>Ação no texto selecionado</TH>
+</TR>
+<TR>
+<TD ALIGN="center">d</TD>
+<TD>Apaga</TD>
+</TR>
+<TR>
+<TD ALIGN="center">y</TD>
+<TD>Copia</TD>
+</TR>
+<TR>
+<TD ALIGN="center">p</TD>
+<TD>Cola</TD>
+</TR>
+<TR>
+<TD ALIGN="center">c</TD>
+<TD>Troca por outro texto</TD>
+</TR>
+<TR>
+<TD ALIGN="center">r</TD>
+<TD>Troca cada letra por um caractere</TD>
+</TR>
+<TR>
+<TD ALIGN="center">J</TD>
+<TD>Junta todas as linhas em uma só</TD>
+</TR>
+<TR>
+<TD ALIGN="center">U</TD>
+<TD>Converte para maiúsculas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">u</TD>
+<TD>Converte para minúsculas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">~</TD>
+<TD>Inverte maiúsculas e minúsculas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">gq</TD>
+<TD>Reformata as linhas para a largura desejada</TD>
+</TR>
+<TR>
+<TD ALIGN="center">!</TD>
+<TD>Manda as linhas para um comando externo (!sort)</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:</TD>
+<TD>Aplica um comando 'ex' nas linhas (:s/isso/aquilo/)</TD>
+</TR>
+</TABLE>
+
+<P>
+Brinque bastante com cada um desses comandos para se acostumar
+e veja que seu uso do VI ficará muito mais ágil. Por exemplo,
+quer apagar todo um conjunto de linhas? Vá até a primeira, aperte <CODE>V</CODE> e
+desça com o cursor até a última linha, então aperte <CODE>d</CODE> e pronto:
+linhas apagadas.
+</P>
+<P>
+O comando <CODE>r</CODE> é interessante no modo de seleção: ele troca todos os
+caracteres do trecho selecionado por um caractere à sua escolha, bom para
+"esconder" uma parte do texto.
+</P>
+<P>
+Muito úteis também são o <CODE>u</CODE> e o <CODE>U</CODE>, para deixar o texto todo em
+minúsculas ou maiúsculas, não importando como era o trecho original.
+Experimente também o <CODE>gq</CODE>, que reformata as linhas, juntando-as e
+dividindo novamente para que a largura máxima (<CODE>:set textwidth</CODE>) seja
+respeitada.
+</P>
+<P>
+E por último, o poder dos comandos "<CODE>!</CODE>" e "<CODE>:</CODE>" aplicados à seleção. Para
+ordenar alfabeticamente apenas algumas linhas do texto, e não ele
+todo, selecione as linhas desejadas com o <CODE>V</CODE> e digite <CODE>!sort</CODE> seguido
+de ENTER. Para substituir palavras apenas na seleção, novamente
+selecione o texto desejado e tecle <CODE>:s/isso/aquilo/</CODE> e tecle ENTER.
+</P>
+<P>
+Ao usar esses comandos, surge na última linha da tela o texto
+<CODE>:'&lt;,'&gt;</CODE>. Não se preocupe, ele está ali para indicar que o
+comando digitado em seguida será aplicado apenas ao trecho
+selecionado.
+</P>
+<P>
+Note que após aplicado o comando, o VI volta para o modo anterior,
+abandonando o modo visual. Resumindo, este modo é composto por três
+operações:
+</P>
+
+<OL>
+<LI>Iniciar o modo visual com <CODE>v</CODE>, <CODE>V</CODE> ou <CODE>Ctrl+V</CODE>
+<LI>Mover o cursor para selecionar o texto
+<LI>Aplicar um comando à seleção
+</OL>
+
+<P>
+Durante o passo 2 de demarcar a seleção, se você apertar a tecla <CODE>o</CODE> (letra
+o de ontem, minúscula), o cursor alterna entre o início e o fim do
+trecho marcado. Dessa maneira é possível aumentar o tamanho de uma
+seleção já iniciada.
+</P>
+<P>
+Isso é tudo o que qualquer usuário normal precisa saber para usar e
+abusar da seleção visual e tornar a edição de textos no vi mais confortável.
+A partir daqui entraremos num mundo bizarro, onde coisas estranhas e
+surpreendentes acontecem. Continue lendo por sua conta e risco.
+</P>
+<P>
+A seleção de blocos (<CODE>Ctrl+V</CODE>) reserva algumas surpresas. Para
+entender o que vai acontecer com os comandos a seguir, é
+imprescindível que você tenha o VI aberto com um texto
+qualquer e repita exatamente em sua máquina todos os procedimentos descritos.
+</P>
+<P>
+Já precisou incluir no início de algumas linhas um texto padrão? É
+possível fazer isso com um <CODE>:s/^/TEXTO/</CODE>, mas com a seleção visual isso é
+muito mais divertido. Vá com o cursor até o início de uma linha qualquer,
+aperte <CODE>Ctrl+V</CODE> e desça 7 linhas com a seta. Tecle <CODE>I</CODE> (maiúsculo)
+e logo em seguida digite "MÁGICA". Agora pare, respire fundo, olhe
+atentamente para a tela e tecle <CODE>Esc</CODE>. Meio segundo se passa e PLIM!,
+letras pipocam na tela. Isso é mágica!
+</P>
+<P>
+Este foi o comando <CODE>I</CODE>, que <B>I</B>nsere um texto antes da seleção. Para
+inserir depois, o comando é <CODE>A</CODE>, de <B>A</B>nexar. Este fica de exercício
+para você brincar sozinho. O comando que fecha a trinca é o <CODE>c</CODE>
+(minúsculo), de <B>C</B>hange, que troca o texto selecionado por outro.
+</P>
+<P>
+O comando <CODE>c</CODE> é muito útil para editar tabelas. Selecione uma coluna vertical
+no meio da linha com o <CODE>Ctrl+V</CODE>, digamos cinco linhas e cinco colunas.
+Tecle <CODE>c</CODE>, depois digite <CODE>@@@@@</CODE>. Novamente respire fundo, tecle <CODE>Esc</CODE> e
+PLIM!, a mágica acontece!
+</P>
+<P>
+A última dica da seleção em bloco é útil para quando o bloco precisar ir
+até o final de todas as linhas, mas estas têm tamanhos diversos. Nesse
+caso o bloco sairá incompleto se a última linha não a for a mais
+longa. Enquanto estiver movendo o cursor para marcar o bloco, aperte
+<CODE>$</CODE> para expandir o bloco até o final de todas as linhas
+selecionadas.
+</P>
+<P>
+Ah! E antes tarde do que nunca, um aviso: este modo
+visual não faz parte do VI original, é uma característica presente no
+Vim, o Vi IMproved. Como ele é o "Vi" padrão da maioria das distros
+recentes, a seleção visual está disponível a praticamente todos os usuários.
+</P>
+<P>
+
+
+</P>
+	<BLOCKQUOTE>
+	Artigo originalmente publicado na Linux Magazine edição 2, de outubro de 2004. <A HREF="/vim/selecao-vi-sual.pdf">Veja o PDF original</A>
+	</BLOCKQUOTE>
+<P>
+<a href="http://aurelio.net/vim/" class="linkblock"><IMG ALIGN="middle" SRC="../img/icon/128/vim.png" BORDER="0" ALT=""> Aprenda mais sobre Vim</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags vim/selecao-vi-sual.t2t -->
+</BODY></HTML>

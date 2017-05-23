@@ -1,0 +1,212 @@
+Comandos do Vim (VI)
+por Gustavo Roberto Rodrigues Gonçalves
+
+
+%!includeconf:		../include/10anos/config.t2t
+%!style:		../include/10anos/tutorial.css
+%!postproc: SITEROOT 	..
+%!postproc: (<BODY)	\1 class="vim"
+%!options: --toc
+
+== Mais comandos a serem usados no Vim ==
+
+: **``:e``** — Abrir um arquivo.
+
+ A Sintaxe eh :e /root/teste.sh
+
+: **``:sp``** — Abrir em outra janela.
+
+ A Sintaxe pode ser :sp somente ou :sp /root/teste.sh
+
+: **``:enew``** — Novo documento.
+
+ A sintaxe eh :enew
+
+: **``:sav``** — Salvar como.
+
+ A sintaxe eh : sav nomedoarquivo.txt
+
+: **``u``** — Serve para Desfazer / Refazer.
+
+ A sintaxe e " u " sem aspas, quando voce fizer uma coisa errada
+
+: **``.``** — Serve para repetir.
+
+ A Sintaxe eh apenas " . " sem aspas.
+
+: **``[p``** — Serve para colar antes.
+
+ o comando eh simplesmente [p
+
+: **``]p``** — Server para colar depois.
+
+ o comando eh simplesmente ]p
+
+: **``ggVG``** — Seleciona tudo.
+
+ Para quem tem saudades do windows esse comando seleciona tudo visualmente.
+ A sintaxe é somente ggVG.
+
+: **``"+x``** — Serve para recortar.
+
+ A sintaxe eh escrita com da forma a cima (Aspa dupla)+(Sinal de mais)+(x).
+
+: **``"+y``** — Serve para colocar .
+
+ A sintaxe eh escrita com da forma a cima (Aspa dupla)+(Sinal de mais)+(y).
+
+: **``:wqa``** — Serve para salvar e sair.
+
+ A sintaxe eh :wqa
+
+: **``:qa``** — Serve para sair somente.
+
+ A sintaxe eh :qa
+
+: **``x``** — Serve para deletar
+
+ O comando para deletar eh somente " x " sem as aspas.
+
+: **``:set hls!``** — Serve para Ativar / Desativar Realce de padroes
+
+ A sintaxe eh :set hls!
+
+: **``:set ic!``** — Serve para Ativar / Desativar ignorar as letras maiusculas
+
+ A sintaxe eh :set ic!
+
+: **``:set sm!``** — Serve para Ativar / Desativar as coincidencias
+
+ A sintaxe eh :set sm!
+
+: **``:set cp!``** — Serve para Ativar / Desativar compatibilidade com o Vi
+
+ A sintaxe é :set cp!
+
+: **``:set nu!``** — Essa particularmente eu acho massa, ativar a numeracao de linhas
+
+ A sintaxe é :set nu!
+
+: **``:set list!``** — Serve para Ativar / Desativar modo list
+
+ A sintaxe é :set list!
+
+: **``:set wrap!``** — Serve para Ativar / Desativar quebra de linhas
+
+ A sintaxe é :set wrap!
+
+: **``:set lbr!``** — Serve para Ativar / Desativar quebra na palavra
+
+ A sintaxe é :set lbr!
+
+: **``:set ai!``** — Essa eu tambem acho muito legal, esse comando ativa a auto-indentacao
+
+ A sintaxe é :set ai!
+
+: **``g^]``** — Pula para esta tag
+
+ A sintaxe eh g^]
+
+: **``^T``** — Voltar
+
+ A sintaxe eh ^T
+
+: **``zi``** — Ativar / Desativar dobras
+
+ A sintaxe eh somente zi
+
+: **``zv``** — Ver linha do cursor
+
+ A sintaxe eh somente zv
+
+: **``zMzx``** — Ver somente a linha do cursor
+
+ A sintaxe eh somente zMzx
+
+: **``zm``** — Fechar mais dobras
+
+ A sintaxe eh somente zm
+
+: **``zM``** — Fechar todas as dobras
+
+ A sintaxe eh somente zM
+
+: **``zr``** — Abrir mais dobras
+
+ A sintaxe eh somente zr
+
+: **``zR``** — Abrir todas as dobras
+
+ A sintaxe eh somente zR
+
+: **``zd``** — Remover dobras
+
+ A sintaxe eh somente zd
+
+: **``zD``** — Remover todas as dobras
+
+ A sintaxe eh somente zD
+
+: **``:make``** — Make
+
+ A sintaxe eh :make
+
+: **``:cl``** — Lista de erros
+
+ A sintaxe eh somente :cl
+
+: **``:cl!``** — Lista de mensagens
+
+ A sintaxe eh :cl!
+
+: **``:cn``** — Proximo erro
+
+ A sintaxe eh :cn
+
+: **``:cold``** — Listar erros antigos
+
+ A sintaxe eh somente  :cold
+
+: **``:cnew``** — Listar erros novos
+
+ A sintaxe eh eh :cnew
+
+
+== Janelas de erro ==
+
+**``:cwin``** — Atualiza
+
+**``:copen``** — Abrir
+
+**``:cclose``** — Fechar
+
+== Conversao para hexadecimal ==
+
+**``:%!xxd``** — converte para hexadecimal
+
+**``:%!xxd -r``** — converte para decimal
+
+== Definicoes de Janelas ==
+
+| ^Wn   | Nova Janela
+| ^Wn   | Dividir a Janela
+| ^Wn^^ | Dividir para #
+| ^Wv   | Dividir verticalmente
+| ^Wc   | Fechar
+| ^Wo   | Fechar outra(s)
+| ^WR   | Girar para cima
+| ^Wr   | Girar para baixo
+| ^W=   | Mesmo Tamanho
+| ^W_   | Altura Maxima
+| ^W1_  | Altura Minima
+| ^W|   | Largura Maxima
+| ^W1|  | Largura Minima
+| ^WK   | Mover para cima
+| ^WJ   | Mover para Baixo
+| ^WH   | Mover para esquerda
+| ^WL   | Mover para Direita
+
+
+_LINKBLOCK_VIM
+
+%!include: ../include/10anos/footer.t2t

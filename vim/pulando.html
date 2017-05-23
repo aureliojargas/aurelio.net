@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/livro.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Pulando com o Vim - Artigo da Revista do Linux :: aurelio.net</TITLE>
+</HEAD>
+<BODY>
+
+<DIV ID="header">
+<H1>Pulando com o Vim</H1>
+<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
+<H3>Janeiro, 2004</H3>
+</DIV>
+
+<DIV ID="main">
+<p class="intro"> Ganhe tempo usando comandos precisos para movimentar o cursor e editar textos, dispensando o uso das setas do teclado, Delete e Backspace. </p>
+<P>
+Editar textos é a tarefa mais comum de qualquer usuário de computador.
+Seja para responder um e-mail, criar um documento ou codificar um
+programa, lá estará o usuário digitando texto para a máquina. Embora
+faça isso diariamente, a grande maioria não faz um uso otimizado do
+seu editor de textos. Muito tempo é perdido em tarefas repetitivas e
+vícios de uso.
+</P>
+<P>
+Este artigo é um guia para acabar com o sofrimento de pessoas viciadas
+em segurar teclas. Seja para movimentar o cursor ou para apagar
+grandes quantidades de texto, lá está o usuário estático segurando uma
+setinha ou a tecla Del por alguns preciosos segundos. Ao longo do dia
+esses segundos podem se tornar minutos, e ao longo dos meses, horas.
+</P>
+<P>
+Evitando este desperdício de tempo, entra em cena o melhor editor de
+textos de todos os tempos: o Vim. Concebido numa época quando conexões
+remotas eram muito lentas, editar um texto tinha que envolver apertar
+o menor número de teclas possível. Hoje as conexões são rápidas, mas o
+conceito de "menos teclas, melhor" ajuda a poupar tempo na rotina
+diária de editar textos.
+</P>
+
+<H2>As setinhas são para perdedores</H2>
+
+<P>
+Quanto mais você usa as setas, mais tempo perde. Basicamente se usam as
+setas para movimentar o cursor no arquivo. Para ir ao meio da frase, o
+usuário fica segurando a seta até chegar no ponto desejado. Para ir ao
+início do parágrafo anterior, seta pra cima, depois seta para a
+esquerda. O Vim provê vários comandos que servem para dar "pulos" a
+outros pontos do arquivo, evitando gastar a ponta do seu dedo
+segurando a seta.
+</P>
+<P>
+Seja na alteração de um texto já existente ou na composição de um
+novo, a edição nunca é linear. Editar um texto consiste em visitar
+diversas partes do documento, alterando e inserindo letras e palavras.
+Saber como chegar rapidamente a qualquer ponto do documento, apertando
+o menor número de teclas possível, é ser ágil e economiza tempo.
+</P>
+<P>
+Os pulos mais conhecidos e que já possuem tecla especial no teclado
+são <CODE>Home</CODE> e <CODE>End</CODE>, que vão ao início e fim da linha e <CODE>PgUp</CODE>/<CODE>PgDn</CODE>
+que pulam páginas. O Vim possui comandos para pular a outras partes do
+arquivo, são eles:
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH>Comando</TH>
+<TH>Ação</TH>
+</TR>
+<TR>
+<TD ALIGN="center">gg</TD>
+<TD>Pula para a primeira linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">G</TD>
+<TD>Pula para a última linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">:44</TD>
+<TD>Pula para a linha número 44</TD>
+</TR>
+<TR>
+<TD ALIGN="center">{</TD>
+<TD>Pula para o parágrafo anterior</TD>
+</TR>
+<TR>
+<TD ALIGN="center">}</TD>
+<TD>Pula para o próximo parágrafo</TD>
+</TR>
+<TR>
+<TD ALIGN="center">(</TD>
+<TD>Pula para a frase anterior</TD>
+</TR>
+<TR>
+<TD ALIGN="center">)</TD>
+<TD>Pula para a próxima frase</TD>
+</TR>
+<TR>
+<TD ALIGN="center">0</TD>
+<TD>Pula para o início da linha atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">$</TD>
+<TD>Pula para o fim da linha atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">``</TD>
+<TD>Desfaz o pulo, volta</TD>
+</TR>
+</TABLE>
+
+<P>
+Estes são os pulos básicos que todo usuário do Vim deve saber.
+Com eles é possível "navegar" no documento de maneira rápida,
+independente de qual o seu conteúdo. Lembre-se que eles são válidos
+fora do modo de inserção (é preciso apertar <CODE>&lt;Esc&gt;</CODE> antes).
+</P>
+<P>
+Se, por exemplo, lá no meio do texto você precisar voltar à primeira
+linha para checar uma frase, faz <CODE>&lt;Esc&gt;gg</CODE> e depois `` para voltar a
+editar o texto na posição original.
+</P>
+<P>
+Assim como outros comandos do Vim, os pulos também podem ser
+quantificados. Basta adicionar um número na sua frente. Assim, o
+comando <CODE>5{</CODE> volta cinco parágrafos.
+</P>
+<P>
+Além destes pulos para posições fixas, também é possível pular para
+uma posição qualquer onde esteja o texto desejado. Basta utilizar o o
+comando <CODE>/</CODE>, que procura adiante por um texto. Para ir até a próxima
+palavra "Linux", digite <CODE>/Linux&lt;ENTER&gt;</CODE>. Com o comando <CODE>n</CODE> (de Next),
+pula-se para as próximas ocorrências da mesma palavra. O <CODE>N</CODE>
+(maiúsculo) volta para a anterior.
+</P>
+<P>
+Um atalho útil é o comando <CODE>*</CODE>, que procura a próxima ocorrência da
+palavra atual do cursor. Similar ao exemplo de pesquisa anterior,
+bastaria posicionar o cursor sob a palavra "Linux" e apertar o
+asterisco. Para uma busca mais confortável, basta colocar no
+<CODE>~/.vimrc</CODE> a seguinte linha mágica <CODE>set ic is hls scs</CODE>.
+</P>
+<P>
+Um outro pulo rápido e muito útil é o comando <CODE>w</CODE> (de Word), que pula
+para o início da próxima palavra. Apertar a tecla "w" três vezes faz o
+cursor avançar três palavras, e o comando <CODE>7w</CODE> avançará sete palavras.
+O comando similar é o <CODE>b</CODE> (de Back), que pula para palavras
+anteriores.
+</P>
+<P>
+E por último, o pulo mais avançado é o de procurar um caractere na
+mesma linha, com o comando <CODE>f</CODE> (de Find). Por exemplo, para ir para a
+próxima vírgula, o comando é <CODE>f,</CODE> e para a vírgula anterior (à
+esquerda) é <CODE>F,</CODE>. A diferença é o comando em maiúscula ou minúscula. O
+comando <CODE>3fa</CODE> pulará para a terceira letra "a" após o cursor, na mesma
+linha.
+</P>
+<P>
+Para ilustrar estes pulos, uma figurinha. Com o cursor sempre sob a letra
+<CODE>N</CODE>, são citados alguns comandos e as setas indicam para onde o
+cursor pulará.
+</P>
+       <center><IMG ALIGN="middle" SRC="pulando.png" BORDER="0" ALT=""></center>   
+<P>
+Pulando rapidamente para a posição certa, o próximo passo é fazer a
+alteração necessária no texto. Nessa hora o Vim também é imbatível.
+</P>
+
+<H2>A tecla Del é para perdedores</H2>
+
+<P>
+Ficar segurando a tecla Del até apagar o trecho desejado é demorado e
+impreciso, freqüentemente apagando mais do que o desejado. O Vim provê
+meios de apagar grandes quantidades de texto apertando somente duas ou
+três teclas.
+</P>
+<P>
+O comando <CODE>x</CODE> apaga caracteres à direita do cursor. Se for preciso
+apagar 20 caracteres, em vez de ficar segurando a tecla "Del" alguns
+segundos, basta digitar o comando <CODE>20x</CODE>.
+</P>
+<P>
+O comando <CODE>d</CODE> (de Delete) apaga caracteres ou linhas, dependendo de
+como é utilizado. Apertando <CODE>dd</CODE> apaga-se a linha toda. Já <CODE>5dd</CODE> apaga
+as próximas cinco linhas. O comando <CODE>D</CODE> maiúsculo, apaga do cursor até
+o final da linha.
+</P>
+<P>
+Mas a brincadeira de apagar começa a ficar divertida ao combinar o
+comando delete com os pulos já vistos. Basta usar a forma <CODE>d&lt;pulo&gt;</CODE>.
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH>Comando</TH>
+<TH>Ação</TH>
+</TR>
+<TR>
+<TD ALIGN="center">dgg</TD>
+<TD>Apaga até o início do arquivo</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d0</TD>
+<TD>Apaga até o início da linha atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">dw</TD>
+<TD>Apaga a palavra</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d4b</TD>
+<TD>Apaga as quatro palavras anteriores</TD>
+</TR>
+<TR>
+<TD ALIGN="center">df.</TD>
+<TD>Apaga até o próximo ponto</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d)</TD>
+<TD>Apaga até o fim da frase</TD>
+</TR>
+</TABLE>
+
+<P>
+O comando apagará todo o texto desde a posição do cursor até o destino
+do pulo. Acostume a sempre "falar" o comando, para ficar mais fácil
+memorizá-lo. Por exemplo, o <CODE>df.</CODE> é "Delete Find Ponto", ou seja
+"Apague até Encontrar um Ponto".
+</P>
+<P>
+O comando <CODE>d</CODE> permanece no modo de comandos após apagar o texto. Caso
+o usuário queira acrescentar algum texto no lugar do antigo, primeiro
+será necessário entrar no modo de inserção (comando <CODE>i</CODE>). Para
+economizar esse passo, existe o comando <CODE>c</CODE> (de Change), que é
+idêntico do <CODE>d</CODE>, com a diferença de retornar automaticamente ao modo
+de inserção.
+</P>
+<P>
+Uma maneira rápida de trocar a palavra "UNIX" por "Linux" é posicionar
+o cursor na letra "U" e digitar <CODE>cwLinux</CODE>. Este comando se lê "Change
+Word Linux".
+</P>
+<P>
+Às vezes, não são grandes quantidades, mas alterações de um caractere
+que precisam ser feitas. Até nessa hora o Vim ajuda. Use o comando <CODE>r</CODE>
+(de Replace) para trocar um caractere por outro, sem precisar entrar
+no modo de inserção. Por exemplo, na palavra "Lenux", posicione o
+cursor na letra "e" e aperte <CODE>ri</CODE>.
+</P>
+<P>
+Cada texto removido com os comandos <CODE>x</CODE>, <CODE>d</CODE>, <CODE>c</CODE> e <CODE>r</CODE>, é
+automaticamente copiado, e pode ser colado em outra parte do
+arquivo com o comando <CODE>p</CODE> (de Paste). Então a operação de mover texto
+no arquivo envolve apagá-lo, pular para a posição nova e colar.
+</P>
+<P>
+Outro comando muito frequente de utilizar é o <CODE>xp</CODE>, que apaga um
+caractere e o cola uma posição à direita. Para corrigir a
+palavra "Liunx", basta posicionar o cursor na letra "u" e apertar
+<CODE>xp</CODE>. Parece bobo, mas é muito comum encontrar erros desse tipo em
+textos, onde duas letras estão com a posição trocada.
+</P>
+<P>
+Para finalizar, uma tarefa corriqueira que é apagar trechos grandes de
+um arquivo, como "todas as linhas daqui até o início do arquivo" ou
+"todas daqui até o fim". Um verdadeiro pesadelo para os seguradores de
+teclas; já imaginou ficar segurando o Del ou o BackSpace durante
+minutos num arquivo grande?
+</P>
+<P>
+Em alguns editores, pode-se usar o mouse para selecionar texto. Com um
+pouco de paciência e persistência, em alguns segundos consegue-se
+selecionar todo o texto e apertar Del. Outros mais espertos podem usar
+o teclado segurando o Shift para selecionar e apertar Ctrl+End para
+espichar a seleção até o fim do arquivo, e finalmente apertar a tecla
+Del. No Vim, basta um simples <CODE>dG</CODE> para apagar até o fim e um <CODE>dgg</CODE>
+para apagar até o começo. Mais prático impossível.
+</P>
+<P>
+Todos estes comandos poupam tempo e têm precisão, mas seu uso deve ser
+forçado, pois é muito difícil abandonar o vício de segurar teclas.
+Depois de memorizar estes comandos e se disciplinar a usá-los, você
+não terá mais paciência de usar "outros editores" que lhe fazem perder
+segundos preciosos.
+</P>
+	<BLOCKQUOTE>
+	Artigo originalmente publicado na Revista do Linux edição 49 (a última), de janeiro de 2004.
+	</BLOCKQUOTE>
+<P>
+<a href="http://aurelio.net/vim/" class="linkblock"><IMG ALIGN="middle" SRC="../img/icon/128/vim.png" BORDER="0" ALT=""> Aprenda mais sobre Vim</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags vim/pulando.t2t -->
+</BODY></HTML>

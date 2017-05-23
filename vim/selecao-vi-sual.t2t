@@ -1,0 +1,25 @@
+_VIM_SELECAOVISUAL_NAME
+_MYNAME
+Outubro, 2004
+
+%!postproc: (</TITLE>)	' - Artigo da Linux Magazine\1'
+
+%!includeconf:		../include/10anos/config.t2t
+%!style:		../include/10anos/livro.css
+%!postproc: SITEROOT 	..
+
+% Remove footer do artigo original
+%!postproc: '^Aurelio Marinho Jargas$'	''
+%!postproc: '^<A HREF="http://aurelio.net">http://aurelio.net</A>$'	''
+
+_ARTIGOINTRO_VIM_SELECAOVISUAL
+
+% Inclui direto do original, para evitar a fadiga...
+%!include: /a/grana/linuxmag/sel_visual/vi-selecao_visual.t2t
+
+
+	Artigo originalmente publicado na Linux Magazine edição 2, de outubro de 2004. [Veja o PDF original _VIM_SELECAOVISUAL_PDF]
+
+_LINKBLOCK_VIM
+
+%!include: ../include/10anos/footer.t2t

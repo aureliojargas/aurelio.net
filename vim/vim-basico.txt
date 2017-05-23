@@ -1,0 +1,118 @@
+v i m   b á s i c o       por Aurélio Marinho Jargas
+- - -   - - - - - -
+
+
+INTRODUÇÃO:
+----------
+
+No vim temos vários "modos", que são estados do editor.
+São eles:
+
+Modo               Tecla   Rodapé          Descrição 
+---------------------------------------------------------------------------  
+de Inserção        i       -- INSERT --    Inserção de texto
+de Comandos        <ESC>                   Comandos de manipulação de texto
+Linha de comando   :       :               Comandos de manipulação arquivo 
+Visual             v       -- VISUAL --    Seleção visual de texto
+Busca              /       /               Busca de padrões no texto
+Reposição          R       -- REPLACE --   Inserção sobreescrevendo
+
+
+* Os modos foram colocados em ordem de importância de uso da grande maioria
+  dos usuários.
+* Para acessar qualquer um desses modos, na dúvida aperte <ESC> antes da
+  sua tecla de acesso (2ª coluna da tabela)
+* Para identificar em qual modo você está, olhe no rodapé da tela! (3ª
+  coluna da tabela)
+
+
+
+CHAMANDO O VIM:
+--------------
+vi                      Abre o vim vazio, sem arquivo (muito pouco usado)
+vi arquivo              Abre o arquivo "arquivo". Se ele não existir, o cria
+
+vi arquivo +            Abre com cursor no fim do arquivo
+vi arquivo +10          Abre com cursor na linha 10
+vi arquivo +/linux      Abre com cursor na 1ª ocorrência de "linux"
+
+
+
+SALVANDO/SAINDO DO VIM:
+----------------------
+
+<F12>     Saída forçada, salva e sai (Se usar o .vimrc do aurélio  &:)  )
+
+Obs.: Antes de executar os comandos seguintes, aperte <ESC> para ir
+      ao modo de comandos, e é claro, após, um <ENTER>
+
+:w                Salva
+:q                Sai
+:wq ou :x ou ZZ   Salva e sai
+:w!               Salva forçado
+:q!               Sai forçado
+:wq!              Salva e sai forçado
+
+
+
+EDITANDO:
+--------
+
+Ao entrar no vim, ele está no modo de comandos. Como saber? Olhe no rodapé
+da tela. Nada na última linha.
+
+Para começar a Inserir um texto, aperte "i". Você verá que aparecerá um
+"-- INSERT --" no rodapé. Agora você pode digitar seu texto normalmente.
+
+Quer parar para dar uma gravada? Veja o tópico acima. ( <ESC>:w )
+chega de editar e quer salvar e sair? Veja acima de novo. ( <ESC>:wq )
+
+
+
+COPIANDO e COLANDO:
+------------------
+
+*** Usando o mouse:
+
+No modo de Inserção mesmo, note que o cursor do teclado (esse tracinho
+piscando na tela), está numa posição, e o cursor do mouse (mexa o mouse
+para que ele se mova) está em outra posição.
+
+Selecione uma parte do texto com o mouse, segurando o botão esquerdo.
+
+Ao colar, o texto selecionado com o MOUSE será colocado a partir do
+cursor do TECLADO. Experimente. Dependendo do mouse, a colagem se faz:
+
+- Apertando o botão direito
+- Segurando o botão esquerdo e apertando o direito ao mesmo tempo
+- Apertando o botão do meio (mouse de 3 botões)
+
+Tente, o seu será umas das 3 alternativas acima.
+
+
+*** Usando o modo visual:
+
+Entre no modo visual ( <ESC>v ), e simplesmente aperte as setas do
+teclado, movendo o cursor do TECLADO e selecionando o texto desejado. O
+comando para copiar o texto é o "y" de Yank.
+
+Volte para o modo de comandos ( <ESC> ) e posicione o cursor do TECLADO
+no lugar onde você quer colar o texto selecionado. O comando de colagem
+é o "p" de Paste.
+
+
+
+APAGANDO (DELETANDO):
+--------------------
+
+Como no tópico anterior, use o modo visual ( <ESC>v ) para selecionar o
+texto desejado. Para apagá-lo, digite "d", de Delete.
+
+Com o linux no modo texto, a tecla Delete do teclado também funciona para
+apagar texto. Já no X, isso é meio relativo...  &:)
+
+
+
+T U T O R I A L
+---------------
+http://www.networkcomputing.com/unixworld/tutorial/009/009.part1.html

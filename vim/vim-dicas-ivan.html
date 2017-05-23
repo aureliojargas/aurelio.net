@@ -1,0 +1,803 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/tutorial.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Dicas de Vim (VI) :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="vim">
+
+<DIV ID="header">
+<H1>Dicas de Vim (VI)</H1>
+<H2>por Ivan Carlos da Silva Lopes</H2>
+</DIV>
+
+<DIV ID="main">
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">1. Lendo manpage</A>
+    <LI><A HREF="#toc2">2. Abrir todos os arquivos que contenham uma determinada palavra</A>
+    <LI><A HREF="#toc3">3. Mapeamento para inserir linha com repetição de char</A>
+    <LI><A HREF="#toc4">4. Mapeamento para Ctrl-key</A>
+    <LI><A HREF="#toc5">5. Filtrando comandos internos</A>
+    <LI><A HREF="#toc6">6. Contando os padrões encontrados na edição</A>
+    <LI><A HREF="#toc7">7. Mapeamento</A>
+    <LI><A HREF="#toc8">8. Abreviacoes</A>
+    <LI><A HREF="#toc9">9. Movimentação por links</A>
+    <LI><A HREF="#toc10">10. Lendo man page ou help de programas externos</A>
+    <LI><A HREF="#toc11">11. Convertendo formato entre janelas</A>
+    <LI><A HREF="#toc12">12. Numerando linhas selecionadas</A>
+    <LI><A HREF="#toc13">13. invertendo linhas em arquivo</A>
+    <LI><A HREF="#toc14">14. Executando comando externo no modo de comando</A>
+    <LI><A HREF="#toc15">15. Metacaracteres especiais</A>
+    <LI><A HREF="#toc16">16. Capturando saída de comando externo como string</A>
+    <LI><A HREF="#toc17">17. Comandos duplos</A>
+    <LI><A HREF="#toc18">18. Fechando blocos de código</A>
+    <LI><A HREF="#toc19">19. Isere string em linha especifica</A>
+    <LI><A HREF="#toc20">20. Isere string em linha especifica</A>
+    <LI><A HREF="#toc21">21. Deletando</A>
+    <LI><A HREF="#toc22">22. tipos de variáveis</A>
+    <LI><A HREF="#toc23">23. gravando o histórico da linha de comandos em um arquivo</A>
+    <LI><A HREF="#toc24">24. salvando como</A>
+    <LI><A HREF="#toc25">25. Alteração em tempo de execução</A>
+    <LI><A HREF="#toc26">26. codificando</A>
+    <LI><A HREF="#toc27">27. Folding</A>
+    <LI><A HREF="#toc28">28. para os espertos</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="toc1">0.1. Lendo manpage</H2>
+
+<PRE>
+$ man assunto | col -b | vim -
+</PRE>
+
+<P>
+No gvim (modo Ex)
+</P>
+
+<PRE>
+:new|read!man tar|col -b
+</PRE>
+
+<H2 ID="toc2">0.2. Abrir todos os arquivos que contenham uma determinada palavra</H2>
+
+<PRE>
+$ vim `fgrep -l &lt;palavra&gt; *.ext`
+</PRE>
+
+<H2 ID="toc3">0.3. Mapeamento para inserir linha com repetição de char</H2>
+
+<PRE>
+:map - &lt;Esc&gt;o&lt;Esc&gt;78a-&lt;Esc&gt;
+:let @q="*"|normal i" ^[76"qp
+</PRE>
+
+<H2 ID="toc4">0.4. Mapeamento para Ctrl-key</H2>
+
+<P>
+exemplo01: mapeando a tecla Ctrl-t
+</P>
+
+<PRE>
+:map ^V^T  iOla Mundo
+</PRE>
+
+<P>
+exemplo02: mapeando a tecla Ctrl-a
+</P>
+
+<PRE>
+:map ^V^A  iOla Mundo
+</PRE>
+
+<P>
+exemplo03: mapeando a tecla Ctrl-a
+</P>
+
+<PRE>
+:map &lt;c-a&gt; iOla Mundo
+</PRE>
+
+<P>
+exemplo04: mapeando a tecla Ctrl-a
+</P>
+
+<PRE>
+:map &lt;char-1&gt;  iOla Mundo
+</PRE>
+
+<H2 ID="toc5">0.5. Filtrando comandos internos</H2>
+
+<P>
+Exemplo01:
+</P>
+
+<PRE>
+1,10m$|g/Essas/ p
+</PRE>
+
+<P>
+Exemplo02: move bloco de texto para última linha do arquivo e substitui 'Essas'
+por 'Aquelas' dentro do bloco.
+</P>
+
+<PRE>
+1,10m$|s/Essas/Aquelas/g
+</PRE>
+
+<H2 ID="toc6">0.6. Contando os padrões encontrados na edição</H2>
+
+<PRE>
+:let i=0|%g/{padrao}/let i=i+1
+:echo i
+</PRE>
+
+<H2 ID="toc7">0.7. Mapeamento</H2>
+
+<P>
+Qual o mapeamento de &lt;F4&gt; ?
+</P>
+
+<PRE>
+:map &lt;F4&gt;
+</PRE>
+
+<P>
+Quais os mapeamentos dos comandos que iniciam por ; ?
+</P>
+
+<PRE>
+:map ;
+</PRE>
+
+<PRE>
+           mapea       modo     limpar          exemplo
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           map          n       unmap           map &lt;F5&gt; :Ex&lt;cr&gt;
+   +-----&gt; map!/imap    i       unmap!          imap ff  File folder
+   |       iabb[rev]    i       una[bbreviate]  iabbr oi oiMundo
+   +-----&gt; cmap         lc      cunmap          cmap oi echo "oi mamae"
+   |       cab          lc      cuna            cab oi  echo "Oi"
+   |       --------------------------------------------------------
+   |
+   +--------------- não é necessário &lt;spaço&gt; e/ou [enter] após comando.
+
+  n/c - modo normal ou modo de comando
+  i   - modo de inserção
+  lc  - modo de linha de comando
+  v   - modo visual
+  R   - Reposição
+  B   - Busca
+
+sintaxe : comando-Mapeador {key[[key]...]} {comando[s]}
+</PRE>
+
+<P>
+Formato define-mapeia ou mapeamento referenciado, sintaxe:
+</P>
+
+<PRE>
+nnoremap    \{nomeExterno}              {comando[s]}
+{map-modo01} {combinação-tecla[s]02}   \{nomeExterno}
+{map-modo02} {combinação-tecla[s]03}   \{nomeExterno}
+{map-modo03} {combinação-tecla[s]04}   \{nomeExterno}
+</PRE>
+
+<P>
+exemplo:
+</P>
+
+<PRE>
+nnoremap \key :let @m="oi gente"&lt;cr&gt;:put m&lt;cr&gt;
+nmap &lt;F5&gt; \key
+imap &lt;F5&gt; &lt;c-o&gt;\key
+</PRE>
+
+<H2 ID="toc8">0.8. Abreviacoes</H2>
+
+<PRE>
+ab         - mostra todas as abreviações
+abc[lear]  - limpa todas as abreviações
+iab        - mostra todas as abreviações do modo de inserção
+iabc[lear] - limpa todas as abreviações do modo de inserção
+cab        - mostra todas as abreviações do modo de comando
+cabc[lear] - limpa todas as abreviações do modo de comand
+</PRE>
+
+<H2 ID="toc9">0.9. Movimentação por links</H2>
+
+<P>
+movimentação   '{char}
+</P>
+<P>
+para linkar    :&lt;range&gt; mark {char}
+</P>
+
+<H2 ID="toc10">0.10. Lendo man page ou help de programas externos</H2>
+
+<PRE>
+read !man dc|col -b
+read !bc --h
+</PRE>
+
+<H2 ID="toc11">0.11. Convertendo formato entre janelas</H2>
+
+<P>
+convertendo do formato horizontal para o vertical.
+</P>
+<P>
+de
+</P>
+
+<PRE>
+W|W|W
+</PRE>
+
+<P>
+para
+</P>
+
+<PRE>
+W
+W
+W
+</PRE>
+
+<PRE>
+:windo wincmd K
+</PRE>
+
+<P>
+convertendo do formato vertical para o horizontal.
+</P>
+<P>
+de
+</P>
+
+<PRE>
+W
+W
+W
+</PRE>
+
+<P>
+para
+</P>
+
+<PRE>
+W|W|W
+</PRE>
+
+<PRE>
+:windo wincmd H
+</PRE>
+
+<H2 ID="toc12">0.12. Numerando linhas selecionadas</H2>
+
+<P>
+usando um comando linux externo:
+</P>
+
+<PRE>
+:'&lt;,'&gt;!cat -n
+:3,10!cat -n|tr '^I' '-'
+</PRE>
+
+<P>
+usando Vim-Script:
+</P>
+
+       <UL>
+       <LI>com variável
+
+<PRE>
+a) let  i=0|'&lt;,'&gt;g/^/let i=i+1|s//\=i/g
+b) let  i=0|'a,'eg/^/let i=i+1|s//\=i/g
+c) let  i=0|2,200g/^/let i=i+1|s//\=i/g
+</PRE>
+
+       <P></P>
+       <LI>com registro
+
+<PRE>
+a) let  @s=0|'&lt;,'&gt;g/^/let @s=@s+1|s//\=@s/g
+b) let  @s=0|'a,'eg/^/let @s=@s+1|s//\=@s/g
+c) let  @s=0|2,200g/^/let @s=@s+1|s//\=@s/g
+</PRE>
+
+       <P></P>
+       <LI>com funcoes do Vim
+
+<PRE>
+a) '&lt;,'&gt;s/^/\=(line('.') - line("'&lt;") + 1)/g"
+b) 's,'qs/^/\=(line('.') - line("'s") + 1)/g"
+c) '20,46s/^/\=(line('.') - 20 + 1)/g"
+</PRE>
+
+       <P></P>
+       <LI>com minhas próprias funcoes
+       <P></P>
+
+<PRE>
+a) '&lt;,'&gt;s/^/\=INC(1)/g"
+</PRE>
+
+       </UL>
+
+<PRE>
+  +====================+====================+====================+
+  |    valor           |  :echo (valor)     | :echo strlen(valor)|
+  +====================+====================+====================+
+  | 987654321 % 10     |           1        |      1             |
+  | 987654321 % 100    |          21        |      2             |
+  | 987654321 % 1000   |         321        |      3             |
+  | 987654321 % 10000  |        4321        |      4             |
+  | 987654321 % 100000 |       54321        |      5             |
+  | 987654321 % 1000000|      654321        |      6             |
+  +--------------------+--------------------+--------------------+
+             :let c=3|let s=20|exec "normal i+^[ 
+".c."i".Espaco(s,'-')."+"
+              insere a linha da tabele acima
+</PRE>
+
+<H2 ID="toc13">0.13. invertendo linhas em arquivo</H2>
+
+<PRE>
+:'&lt;,'&gt;g/^/m '&lt;
+:25,67g/^/m 25
+</PRE>
+
+<H2 ID="toc14">0.14. Executando comando externo no modo de comando</H2>
+
+<P>
+a)
+</P>
+<P>
+     no modo de comando de linha
+</P>
+
+<PRE>
+:let @a=".!seq 5"
+</PRE>
+
+<P>
+     executando o comando contido no registro a:
+</P>
+
+<PRE>
+@a
+</PRE>
+
+<P>
+b)
+</P>
+<P>
+     no modo de comando de linha
+</P>
+
+<PRE>
+:let @s=":%!sort -u"
+</PRE>
+
+<P>
+     executando o comando contido no registro s:
+</P>
+
+<PRE>
+@s
+</PRE>
+
+<H2 ID="toc15">0.15. Metacaracteres especiais</H2>
+
+<PRE>
+  meta   exemplo              Casamentos
++~~~~~+~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+|     |                 |
+| \@= | Buf\(Read\)\@=  | BufReadPost, BufRead, BufReadPre,BufReadPost
+|     |                 |
+|     |                 | siguinificado:casa 'Buf' se 'Buf' sucedido
+|     |                 | por 'Read'
++-----+-----------------+------------------------------------------------+
+|     |                 | 
+| \@! | Buf\(Read\)\@!  | BufWritePost, BufNewFile, BufWritePre
+|     |                 | 
+|     |                 | siguinificado:casa 'Buf' se 'Buf' não for
+|     |                 | sucedido por 'Read'
++~~~~~+~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+|     |                 |
+|\@&lt;! | \(Read\)\@&lt;!Post| BufWritePost, FileWritePost, FileAppendPost
+|     |                 |
+|     |                 | siguinificado:casa 'Post' se 'Post' não for
+|     |                 | precedido por 'Read'
++-----+-----------------+------------------------------------------------+
+</PRE>
+
+<H2 ID="toc16">0.16. Capturando saída de comando externo como string</H2>
+
+<PRE>
+let a=system('ls')
+echo  matchstr(system('cygpath -m /'), "^.*\\ze\n") . '/'
+echo  substitute(system('gcc -v'),'\s\+','\n','g')
+</PRE>
+
+<H2 ID="toc17">0.17. Comandos duplos</H2>
+
+   <UL>
+   <LI>indentexpr, indentexpr:
+   <P></P>
+<PRE>
+setlocal indentexpr=GetPascalIndent()
+setlocal indentkeys+==end,=else,=type,=var,=Begin
+</PRE>
+
+   <P></P>
+   <LI>grepprg, grepformat:
+   <P></P>
+<PRE>
+   	setlocal grepprg=lid\ -Rgrep\ -s
+   	setlocal grepformat=%f:%l:%m
+</PRE>
+
+   <P></P>
+   <LI>makeprg, errorformats:
+   <P></P>
+<PRE>
+      let &amp;l:makeprg
+     set makeprg=make\ #&lt;.o
+     set efm=%EError\ %n,%Cline\ %l,%Ccolumn\ %c,%Z%m
+     set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}
+     let &amp;mp = 'latex \\nonstopmode \\input\{$*}'
+     set makeprg=gcc\ -o\ $*\ $*
+     set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ 
+]%\\@=%m
+</PRE>
+
+   </UL>
+
+<H2 ID="toc18">0.18. Fechando blocos de código</H2>
+
+<PRE>
+let  &amp;foldmarker="if,endif"|echo &amp;foldmarker
+</PRE>
+
+<H2 ID="toc19">0.19. Isere string em linha especifica</H2>
+
+<PRE>
+:call setline(5,strftime("%d.%m.%Y  %X"))
+</PRE>
+
+<H2 ID="toc20">0.20. Isere string em linha especifica</H2>
+
+<PRE>
+     :let id="valor"
+     :put =expand(id)
+
+     :let @g="Eu amo o VIM"
+     :exe 'normal 20"gp'
+     :exe "normal 200\p"
+     :exe "normal \iOi Caroline"
+     :'&lt;,'&gt;s/^/\='U'.Espaco(9,'k')/g
+     :'&lt;,'&gt;s/^/\='&lt;'.Espaco(9,'-').'&gt;'/g
+     :let m="&lt;right&gt;"|exe 'normal '.10.'i'.m
+</PRE>
+
+<H2 ID="toc21">0.21. Deletando</H2>
+
+<PRE>
+: {linha} delete {contador}
+</PRE>
+
+<P>
+por exemplo
+</P>
+
+<PRE>
+: n delete 5
+</PRE>
+
+<P>
+irá deletar as linhas n,n+1,...,n+5
+</P>
+
+<H2 ID="toc22">0.22. tipos de variáveis</H2>
+
+<P>
+   aviso aos navegantes:
+   &amp;texwidth  é o valor armazenado em texwidth
+</P>
+
+<PRE>
+   :set texwidth 78
+   :let b:a=texwidth      ERRADO
+   :let b:a=&amp;texwidth     CERTO
+   echo (b:a)
+   78
+
+   :let &amp;texwidth=25      CERTO
+   :set texwidth
+   45
+
+	 selecione 12 &lt; colune &lt; 18 e linha &lt;10
+   exe '/\%&gt;' . '12c' . '\&amp;.*' . '\%&lt;18c' . '\&amp;.*' . '\%&lt;10l'
+</PRE>
+
+<H2 ID="toc23">0.23. gravando o histórico da linha de comandos em um arquivo</H2>
+
+<PRE>
+$fc -l cp &gt; ultimos-comandos vi lastcommands$ source lastcommands
+  |
+  |
+  +------ O comando fc edita o shell com seu editor preferido.
+
+  um exemplo interessante é escrever na linha de comando `fc`
+  $fc
+
+  $fc -s     -- executa o último comando editado na linha de comando
+  $fc -s gcc -- executa o último comando `gcc` editado na linha de comando
+</PRE>
+
+<H2 ID="toc24">0.24. salvando como</H2>
+
+<P>
+para tanto usamos o comando w (write)
+</P>
+<P>
+exemplo:
+</P>
+
+<PRE>
+:2,8w nome_noivo_Arquivo.txt
+</PRE>
+
+<P>
+salvando da linha 2 a 8 no arquivo nome_noivo_Arquivo.txt
+</P>
+<P>
+exemplo2:
+</P>
+
+<PRE>
+:g/pattern/ .+2 !&gt;&gt; nome_noivo_Arquivo.txt
+</PRE>
+
+<P>
+salva as linhas que casarem com a combinaço pattern,
+sendo assim as mesmas 2 pontos abaixo.
+</P>
+
+<H2 ID="toc25">0.25. Alteração em tempo de execução</H2>
+
+<PRE>
+vi -c":%s/include/Bala da GOMA/g"   max.c
+</PRE>
+
+<H2 ID="toc26">0.26. codificando</H2>
+
+<PRE>
+map &lt;F12&gt; ggVGg?
+</PRE>
+
+<H2 ID="toc27">0.27. Folding</H2>
+
+<P>
+Folding :
+</P>
+
+<PRE>
+   i. Folding Markers := <{ >}
+  ii. Close One Fold := zc
+ iii. Open One Fold := zv
+  iv. Open All Fold := zn
+   v. Close All Fold := zm
+</PRE>
+
+<P>
+Move Around :
+</P>
+
+<PRE>
+   i. First Line := :0
+  ii. Last Line := :$
+ iii. Move To Line := :XX (XX is for Line Number)
+</PRE>
+
+<H2 ID="toc28">0.28. para os espertos</H2>
+
+<PRE>
+  nmap &lt;c-s&gt; :w&lt;CR&gt;
+  vmap &lt;c-s&gt; &lt;esc&gt;&lt;c-s&gt;
+  imap &lt;c-s&gt; &lt;esc&gt;&lt;c-s&gt;
+</PRE>
+
+<P>
+The F2 series of mappings are different; they only write if needed
+(performing an update) AND return you to where you were:  insert mode,
+visual selection etc.
+</P>
+
+<PRE>
+  nmap &lt;f2&gt; :update&lt;cr&gt;
+  vmap &lt;f2&gt; &lt;esc&gt;&lt;f2&gt;gv
+  imap &lt;f2&gt; &lt;c-o&gt;&lt;f2&gt;
+</PRE>
+
+<P>
+<a href="http://aurelio.net/vim/" class="linkblock"><IMG ALIGN="middle" SRC="../img/icon/128/vim.png" BORDER="0" ALT=""> Aprenda mais sobre Vim</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags vim/vim-dicas-ivan.t2t -->
+</BODY></HTML>

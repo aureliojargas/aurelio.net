@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/tutorial.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<TITLE>Comandos do Vim (VI) :: aurelio.net</TITLE>
+</HEAD>
+<BODY class="vim">
+
+<DIV ID="header">
+<H1>Comandos do Vim (VI)</H1>
+<H2>por Gustavo Roberto Rodrigues Gonçalves</H2>
+</DIV>
+
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#toc1">Mais comandos a serem usados no Vim</A>
+    <LI><A HREF="#toc2">Janelas de erro</A>
+    <LI><A HREF="#toc3">Conversao para hexadecimal</A>
+    <LI><A HREF="#toc4">Definicoes de Janelas</A>
+    </UL>
+
+</DIV>
+<DIV ID="main">
+
+<H2 ID="toc1">Mais comandos a serem usados no Vim</H2>
+
+<DL>
+<DT><B><CODE>:e</CODE></B> — Abrir um arquivo.</DT><DD>
+<P></P>
+ A Sintaxe eh :e /root/teste.sh
+<P></P>
+<DT><B><CODE>:sp</CODE></B> — Abrir em outra janela.</DT><DD>
+<P></P>
+ A Sintaxe pode ser :sp somente ou :sp /root/teste.sh
+<P></P>
+<DT><B><CODE>:enew</CODE></B> — Novo documento.</DT><DD>
+<P></P>
+ A sintaxe eh :enew
+<P></P>
+<DT><B><CODE>:sav</CODE></B> — Salvar como.</DT><DD>
+<P></P>
+ A sintaxe eh : sav nomedoarquivo.txt
+<P></P>
+<DT><B><CODE>u</CODE></B> — Serve para Desfazer / Refazer.</DT><DD>
+<P></P>
+ A sintaxe e " u " sem aspas, quando voce fizer uma coisa errada
+<P></P>
+<DT><B><CODE>.</CODE></B> — Serve para repetir.</DT><DD>
+<P></P>
+ A Sintaxe eh apenas " . " sem aspas.
+<P></P>
+<DT><B><CODE>[p</CODE></B> — Serve para colar antes.</DT><DD>
+<P></P>
+ o comando eh simplesmente [p
+<P></P>
+<DT><B><CODE>]p</CODE></B> — Server para colar depois.</DT><DD>
+<P></P>
+ o comando eh simplesmente ]p
+<P></P>
+<DT><B><CODE>ggVG</CODE></B> — Seleciona tudo.</DT><DD>
+<P></P>
+ Para quem tem saudades do windows esse comando seleciona tudo visualmente.
+ A sintaxe é somente ggVG.
+<P></P>
+<DT><B><CODE>"+x</CODE></B> — Serve para recortar.</DT><DD>
+<P></P>
+ A sintaxe eh escrita com da forma a cima (Aspa dupla)+(Sinal de mais)+(x).
+<P></P>
+<DT><B><CODE>"+y</CODE></B> — Serve para colocar .</DT><DD>
+<P></P>
+ A sintaxe eh escrita com da forma a cima (Aspa dupla)+(Sinal de mais)+(y).
+<P></P>
+<DT><B><CODE>:wqa</CODE></B> — Serve para salvar e sair.</DT><DD>
+<P></P>
+ A sintaxe eh :wqa
+<P></P>
+<DT><B><CODE>:qa</CODE></B> — Serve para sair somente.</DT><DD>
+<P></P>
+ A sintaxe eh :qa
+<P></P>
+<DT><B><CODE>x</CODE></B> — Serve para deletar</DT><DD>
+<P></P>
+ O comando para deletar eh somente " x " sem as aspas.
+<P></P>
+<DT><B><CODE>:set hls!</CODE></B> — Serve para Ativar / Desativar Realce de padroes</DT><DD>
+<P></P>
+ A sintaxe eh :set hls!
+<P></P>
+<DT><B><CODE>:set ic!</CODE></B> — Serve para Ativar / Desativar ignorar as letras maiusculas</DT><DD>
+<P></P>
+ A sintaxe eh :set ic!
+<P></P>
+<DT><B><CODE>:set sm!</CODE></B> — Serve para Ativar / Desativar as coincidencias</DT><DD>
+<P></P>
+ A sintaxe eh :set sm!
+<P></P>
+<DT><B><CODE>:set cp!</CODE></B> — Serve para Ativar / Desativar compatibilidade com o Vi</DT><DD>
+<P></P>
+ A sintaxe é :set cp!
+<P></P>
+<DT><B><CODE>:set nu!</CODE></B> — Essa particularmente eu acho massa, ativar a numeracao de linhas</DT><DD>
+<P></P>
+ A sintaxe é :set nu!
+<P></P>
+<DT><B><CODE>:set list!</CODE></B> — Serve para Ativar / Desativar modo list</DT><DD>
+<P></P>
+ A sintaxe é :set list!
+<P></P>
+<DT><B><CODE>:set wrap!</CODE></B> — Serve para Ativar / Desativar quebra de linhas</DT><DD>
+<P></P>
+ A sintaxe é :set wrap!
+<P></P>
+<DT><B><CODE>:set lbr!</CODE></B> — Serve para Ativar / Desativar quebra na palavra</DT><DD>
+<P></P>
+ A sintaxe é :set lbr!
+<P></P>
+<DT><B><CODE>:set ai!</CODE></B> — Essa eu tambem acho muito legal, esse comando ativa a auto-indentacao</DT><DD>
+<P></P>
+ A sintaxe é :set ai!
+<P></P>
+<DT><B><CODE>g^]</CODE></B> — Pula para esta tag</DT><DD>
+<P></P>
+ A sintaxe eh g^]
+<P></P>
+<DT><B><CODE>^T</CODE></B> — Voltar</DT><DD>
+<P></P>
+ A sintaxe eh ^T
+<P></P>
+<DT><B><CODE>zi</CODE></B> — Ativar / Desativar dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zi
+<P></P>
+<DT><B><CODE>zv</CODE></B> — Ver linha do cursor</DT><DD>
+<P></P>
+ A sintaxe eh somente zv
+<P></P>
+<DT><B><CODE>zMzx</CODE></B> — Ver somente a linha do cursor</DT><DD>
+<P></P>
+ A sintaxe eh somente zMzx
+<P></P>
+<DT><B><CODE>zm</CODE></B> — Fechar mais dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zm
+<P></P>
+<DT><B><CODE>zM</CODE></B> — Fechar todas as dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zM
+<P></P>
+<DT><B><CODE>zr</CODE></B> — Abrir mais dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zr
+<P></P>
+<DT><B><CODE>zR</CODE></B> — Abrir todas as dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zR
+<P></P>
+<DT><B><CODE>zd</CODE></B> — Remover dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zd
+<P></P>
+<DT><B><CODE>zD</CODE></B> — Remover todas as dobras</DT><DD>
+<P></P>
+ A sintaxe eh somente zD
+<P></P>
+<DT><B><CODE>:make</CODE></B> — Make</DT><DD>
+<P></P>
+ A sintaxe eh :make
+<P></P>
+<DT><B><CODE>:cl</CODE></B> — Lista de erros</DT><DD>
+<P></P>
+ A sintaxe eh somente :cl
+<P></P>
+<DT><B><CODE>:cl!</CODE></B> — Lista de mensagens</DT><DD>
+<P></P>
+ A sintaxe eh :cl!
+<P></P>
+<DT><B><CODE>:cn</CODE></B> — Proximo erro</DT><DD>
+<P></P>
+ A sintaxe eh :cn
+<P></P>
+<DT><B><CODE>:cold</CODE></B> — Listar erros antigos</DT><DD>
+<P></P>
+ A sintaxe eh somente  :cold
+<P></P>
+<DT><B><CODE>:cnew</CODE></B> — Listar erros novos</DT><DD>
+<P></P>
+ A sintaxe eh eh :cnew
+</DL>
+
+<H2 ID="toc2">Janelas de erro</H2>
+
+<P>
+<B><CODE>:cwin</CODE></B> — Atualiza
+</P>
+<P>
+<B><CODE>:copen</CODE></B> — Abrir
+</P>
+<P>
+<B><CODE>:cclose</CODE></B> — Fechar
+</P>
+
+<H2 ID="toc3">Conversao para hexadecimal</H2>
+
+<P>
+<B><CODE>:%!xxd</CODE></B> — converte para hexadecimal
+</P>
+<P>
+<B><CODE>:%!xxd -r</CODE></B> — converte para decimal
+</P>
+
+<H2 ID="toc4">Definicoes de Janelas</H2>
+
+<TABLE>
+<TR>
+<TD>^Wn</TD>
+<TD>Nova Janela</TD>
+</TR>
+<TR>
+<TD>^Wn</TD>
+<TD>Dividir a Janela</TD>
+</TR>
+<TR>
+<TD>^Wn^^</TD>
+<TD>Dividir para #</TD>
+</TR>
+<TR>
+<TD>^Wv</TD>
+<TD>Dividir verticalmente</TD>
+</TR>
+<TR>
+<TD>^Wc</TD>
+<TD>Fechar</TD>
+</TR>
+<TR>
+<TD>^Wo</TD>
+<TD>Fechar outra(s)</TD>
+</TR>
+<TR>
+<TD>^WR</TD>
+<TD>Girar para cima</TD>
+</TR>
+<TR>
+<TD>^Wr</TD>
+<TD>Girar para baixo</TD>
+</TR>
+<TR>
+<TD>^W=</TD>
+<TD>Mesmo Tamanho</TD>
+</TR>
+<TR>
+<TD>^W_</TD>
+<TD>Altura Maxima</TD>
+</TR>
+<TR>
+<TD>^W1_</TD>
+<TD>Altura Minima</TD>
+</TR>
+<TR>
+<TD>^W|</TD>
+<TD>Largura Maxima</TD>
+</TR>
+<TR>
+<TD>^W1|</TD>
+<TD>Largura Minima</TD>
+</TR>
+<TR>
+<TD>^WK</TD>
+<TD>Mover para cima</TD>
+</TR>
+<TR>
+<TD>^WJ</TD>
+<TD>Mover para Baixo</TD>
+</TR>
+<TR>
+<TD>^WH</TD>
+<TD>Mover para esquerda</TD>
+</TR>
+<TR>
+<TD>^WL</TD>
+<TD>Mover para Direita</TD>
+</TR>
+</TABLE>
+
+<P>
+<a href="http://aurelio.net/vim/" class="linkblock"><IMG ALIGN="middle" SRC="../img/icon/128/vim.png" BORDER="0" ALT=""> Aprenda mais sobre Vim</a>
+</P>
+</div> <!-- close #main -->
+<div id="nav">
+
+<table>
+<tr>
+	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
+</tr>
+<tr>	
+	<th class="search" colspan="5">
+ 
+<form action="http://aurelio.net/achei.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Pesquisar" />
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
+	</th>
+</tr>
+<tr><td>
+<P>
+<B>Nerdices</B>
+</P>
+
+<UL>
+<LI><A HREF="/doc/misc/adventure-mapa.txt">adventure</A>
+<LI><A HREF="/doc/as4pp.html">applescript</A>
+<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
+<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
+<LI><A HREF="http://codare.net">codare</A>
+<LI><A HREF="/doc/coluna/">coluna</A>
+<LI><A HREF="http://aurelio.net/curso/">curso</A>
+<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
+<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
+<LI><A HREF="/doc/dort.html">dort</A>
+<LI><A HREF="/er/">er</A>
+<LI><A HREF="/log/">log</A>
+<LI><A HREF="/mac/">mac</A>
+<LI><A HREF="/curso/">palestra</A>
+<LI><A HREF="/doc/misc/eu_odeio_perl.txt">perl</A>
+<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
+<LI><A HREF="/bin/python/">python</A>
+<LI><A HREF="/sed/">sed</A>
+<LI><A HREF="http://aurelio.net/shell/">shell</A>
+<LI><A HREF="/bin/sql/">sql</A>
+<LI><A HREF="http://aurelio.net/vim/">vim</A>
+<LI><A HREF="/doc/nerd.html">mais...</A>
+<LI><A HREF="/en/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Programas</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
+<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
+<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
+<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
+<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
+<LI><A HREF="/bin/lelolab/">lelolab</A>
+<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
+<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
+<LI><A HREF="http://aurelio.net/rac/">rac</A>
+<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
+<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
+<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
+<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
+<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
+<LI><A HREF="http://funcoeszz.net">zz</A>
+<LI><A HREF="/bin/">mais...</A>
+<LI><A HREF="/soft/">more...</A>
+</UL>
+
+</td><td>
+<P>
+<B>Livros</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
+<LI><A HREF="http://www.piazinho.com.br">regex</A>
+<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
+<LI><A HREF="http://www.shellscript.com.br">shell</A>
+</UL>
+
+</td><td>
+<P>
+<B>Eu</B>
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/blog">blog</A>
+<LI><A HREF="/cv">cv</A>
+<LI><A HREF="/img/emeio.png">e-mail</A>
+<LI><A HREF="/faq">faq</A>
+<LI><A HREF="/mim.html">raio-x</A>
+<LI><A HREF="http://twitter.com/oreio">twitter</A>
+</UL>
+
+</td><td>
+<P>
+<B>Diversos</B>
+</P>
+
+<UL>
+<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
+<LI><A HREF="/adsense/">adsense</A>
+<LI><A HREF="/atacama">atacama</A>
+<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
+<LI><A HREF="http://aurelio.net/carve/">carve</A>
+<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
+<LI><A HREF="/correria/">correria</A>
+<LI><A HREF="/dumbs/">dumbs</A>
+<LI><A HREF="/foto/">foto</A>
+<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
+<LI><A HREF="/musica/">musica</A>
+<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
+<LI><A HREF="/doc/ramones.txt">ramones</A>
+<LI><A HREF="/sobre.html">sobre</A>
+<LI><A HREF="http://aurelio.net/surf/">surf</A>
+<LI><A HREF="/doc/misc/toyota/">toyota</A>
+<LI><A HREF="http://umportugues.com">umportugues</A>
+<LI><A HREF="/valeta/">valeta</A>
+<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
+<LI><A HREF="/doc/videogame.html">videogame</A>
+</UL>
+
+</td><tr>
+</table>
+</div> <!-- #nav -->
+
+<div id="footer">
+<P>
+<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
+Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
+e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<br>
+Contato:
+<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
+</P>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags vim/vim-comandos.t2t -->
+</BODY></HTML>
