@@ -5,6 +5,7 @@ die() { echo "$*" ; exit; }
 [ "$1" ] || die "usage: $0 --index folder"
 [ "$1" == '--index' ] && { shift ; just_index=1 ; } || just_index=0
 folder=${1%/}
+folder=${folder//-/}
 
 echo "$folder" | grep -qs '2006[01][0-9][0123][0-9]' ||
 	die "Invalid folder '$folder'. Must be a date like 20061231"
@@ -15,10 +16,8 @@ echo "$folder" | grep -qs '2006[01][0-9][0123][0-9]' ||
  year=${folder:0:4}
 month=${folder:4:2}
   day=${folder:6:2}
-newfolder=$year-$month/$day  
+newfolder=$year-$month-$day
 
-[ -d "$year-$month" ] || {
-	mkdir "$year-$month" || die "Can't create folder '$year-$month'"; }
 [ -d "$newfolder" ] || {
 	mkdir "$newfolder" || die "Can't create folder '$newfolder"; }
 echo $newfolder
