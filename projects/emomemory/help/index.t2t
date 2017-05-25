@@ -1,0 +1,164 @@
+APPNAME Help
+
+
+%%% Hello,
+%%%
+%%% This is a txt2tags source file.
+%%% It can be converted to HTML, XHTML, LaTeX, Man Page and other formats.
+%%%
+%%% Download txt2tags now!
+%%% http://txt2tags.org
+
+
+%!target: html
+%!style: help.css
+%!encoding: utf-8
+%!options: --css-sugar --toc
+
+% Insert Apple Help required meta tags
+%%!postproc(html): (</HEAD>)	'<meta name="AppleTitle" content="APPNAME Help">\n\1'
+%%!postproc(html): (</HEAD>)	'<meta name="AppleIcon" content="EmoMemory%20Help/icon16.png">\n\1'
+
+% Normalize application data
+%!postproc: APPNAME	EmoMemory
+%!postproc: APPSITE	http://aurelio.net/projects/emomemory
+%!postproc: ADIUMBOOK	http://aurelio.net/projects/adiumbook
+
+% Trick to txt2tags see .icns as a valid image
+%%!postproc: .icns.png	.icns
+
+% Show the app artwork as tiny images (the regex exclude other icons)
+%!postproc(html): (SRC="img/[a-z-]+.png")	\1 width="32" height="32"
+
+% Trick to make superscript text
+%!postproc(html):  \^\^(.*?)\^\^  <sup>\1</sup>
+
+% Fill subject for author e-mail link
+%%!postproc(html): (mailto:verde@aurelio.net)		'\1?subject=EmoMemory%20feedback'
+
+%  [../../img/emomemory-big.png]
+
+Help Topics:
+%%toc
+
+= Game Rules =[rules]
+
+APPNAME is a classic memory game, also called Concentration. You have a board full of shuffled paired cards to be discovered.
+
++ All the cards are shown to you, this is the memorization time.
++ All the cards are turned over.
++ You reveal two cards
+  - If they match, they keep revealed and you won them.
+  - If they don't match, they're turned over again.
++ You keep turning cards until all the pairs are matched.
++
+
+= How To Play =[instructions]
+
++ Press the **New** [img/load.png] or **Retry** [img/retry.png] buttons to start a game.
+
++ **Memorization time!**
+
+All the cards are shown. Keep concentrated and try to memorize the cards positions as much as you can. But don't take too long, the clock is already ticking!
+
++ **Click any card to start.**
+
+All the cards, except the one you clicked, will be turned over.
+
++ **Find its pair.**
+
+Try to remember where the card's pair was located and click there.
+
+If both cards you flipped are pairs, you've got a match! They will be left face up until the end of the game. When you flip two unrelated cards, they are just turned over again.
+
++ **Keep clicking and matching!**
+
+Keep flipping cards until all pairs are revealed. Then the game ends and your score is shown. If you make a real good time, you will appear on the Hi-Scores listing!
++
+
+= Buttons =[fun]
+
+| [img/load.png] | **New** | ⌘N | Load a new set of pictures or change the difficulty level.
+| [img/retry.png] | **Retry** | ⌘R | Restart the game.
+| [img/zoom.png] | **Zoom** | ⌘Z | Force the pictures to fill all the card's area, if needed.
+| [img/sound-on.png] | **Sound** | ⌘S | Turn sounds ON or OFF.
+| [img/scores.png] | **Hi-Scores** | ⌘1 | Show or hide the scores drawer.
+
+= Trophys & Stars =[stars]
+
+If you finish the game in a short time, you enter on the Hi-Scores and win trophies!
+
+| [img/trophy-1.png] | 1^^st^^ place
+| [img/trophy-2.png] | 2^^nd^^ place
+| [img/trophy-3.png] | 3^^rd^^ place
+
+If you finish the game in an INSANELY short time, you win trophies and stars!
+
+| [img/star-1.png][img/trophy-1.png] | Master of the 1^^st^^ place
+| [img/star-2.png][img/trophy-2.png] | Master of the 2^^nd^^ place
+| [img/star-3.png][img/trophy-3.png] | Master of the 3^^rd^^ place
+
+If you master the first places of all the levels (Kid, Human, Nerd), you win a **new icon** for the Hi-Scores on your toolbar! Then you can show all your friends how fast your brain is. Mastering second and third places increase the number of stars on the icon. Even cooler!
+
+| [img/scores-starred-1.png] | Jedi Ninja of the 1^^st^^ places
+| [img/scores-starred-2.png] | Jedi Ninja of the 1^^st^^ and 2^^nd^^ places
+| [img/scores-starred-3.png] | Jedi Ninja of the 1^^st^^, 2^^nd^^ and 3^^rd^^ places (Wow)
+
+Can you get **all** those stars?
+
+
+= Join us! =[join]
+
+Try your best to beat all the default Hi-Scores. Don't give up!
+
+Then press the Submit button to send your scores to the [World Ranking APPSITE/scores.php].
+
+Can you reach the top of the **world**?
+
+
+= Address Book notes =[ab]
+
+: Why Address Book is opened when the game is launched?
+
+It's needed to access all the pictures of your Address Book contacts.
+
+: Why I can't choose some Address Book groups for a New game?
+
+These groups have very few contacts with pictures and is not suitable to compose a game. Either set pictures for more contacts on that group or choose an easier level, like Kid.
+
+: How can I easily set pictures for my Address Book contacts?
+
+If you're an [Adium http://adiumx.com/] user, download [AdiumBook ADIUMBOOK], a free application to copy your friend's IM pictures to Address Book.
+
+: I don't use Address Book at all. Can I disable it?
+
+Open Terminal.app and type:
+
+``` defaults write net.aurelio.EmoMemory useAB -bool false
+
+To enable it again later, type:
+
+``` defaults write net.aurelio.EmoMemory useAB -bool true
+
+Restart APPNAME after making these changes.
+
+
+: How can I reset all my Hi-Scores?
+
+Don't!
+
+But if you really want it, open Terminal.app and type:
+
+``` defaults delete net.aurelio.EmoMemory scores
+
+
+= Contact =[contact]
+
+APPNAME author is [Aurelio Jargas http://aurelio.net/about.html]. You can reach him at [@aureliojargas https://twitter.com/aureliojargas].
+
+The game's website is [APPSITE APPSITE].
+
+Enjoy!
+
+% Note: If a make a link to the website, Help Viewer tries to access it. Sucks.
+% Not really, I guess.

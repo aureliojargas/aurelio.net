@@ -1,0 +1,39 @@
+NAME_EMOMEMORY
+TAGLINE_EMOMEMORY
+by
+
+%!includeconf: config.t2t
+%!postproc: '(</TITLE>)'	' - Screenshots\1'
+
+% Remove link from current page on navigation
+%!postproc: '<A HREF="[^"]*">(Screenshots)</A>'	'\1'
+
+%!include: ''nav.html''
+%!include: sidebar.t2t
+
+''' <div id="content">
+
+== Screenshots ==
+
+=== Kid level (4x4) ===
+[shot-kid-ab.jpg]
+
+=== Human level (6x6) ===
+[shot-human-ab.jpg]
+
+=== Human level using system's default user pictures ===
+[shot-human-userpics.jpg]
+
+=== Human level using system's Widget icons ===
+[shot-human-widgets.jpg]
+
+=== Nerd level (8x8) using iChat avatars ===
+[shot-nerd-ichat.jpg]
+
+=== The settings window for a new game ===
+[shot-new-game.jpg]
+
+''' </div>
+
+%!include: ''nav.html''
+%!include: ''../footer.html''

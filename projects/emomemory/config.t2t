@@ -1,0 +1,15 @@
+
+%!postproc: ROOTPATH	..
+
+% Global options
+%!includeconf: ../config.t2t
+
+% Software options
+%!style: emomemory.css
+
+% Software data
+%!postproc: URLDOWNLOAD		EmoMemory.dmg
+%!postproc: URLBUY		buy.php
+
+% Left align AdiumBook image at sidebar
+%!postproc(html): '(ALIGN=")middle(" SRC="../../bin/img/adiumbook.png")'	'\1left\2'
