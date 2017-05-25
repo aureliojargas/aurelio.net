@@ -9,10 +9,15 @@ body
 	background-repeat: no-repeat;
 	background-position: left top;
 	}
+h1
+	{
+	text-align	: center;
+	}
 h2
 	{
 	text-align	: center;
-	margin-bottom	: 2em;
+	margin-bottom	: 1em;
+	font-weight	: normal;
 	}
 .body
 	{
