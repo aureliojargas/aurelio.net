@@ -21,6 +21,8 @@ header() {
             <h1>Fotos de surf de @@@@@</h1>
 
             <h2>Praia de Matinhos-PR, ano 2006</h2>
+
+            <p style="text-align:center;">Fotógrafo: Aurelio Marinho Jargas</p>
     ' | cut -c 9-
 }
 
