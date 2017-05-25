@@ -183,6 +183,7 @@ Redirect permanent /musica/pogo.php              /pogo/
 Redirect permanent /musica/pogo                  /pogo
 Redirect permanent /musica/shows.txt             /musica/shows.html
 Redirect permanent /projects/emomemory/buy.php   /projects/emomemory/code.html
+Redirect permanent /projects/emomemory/scores.php  /projects/emomemory/scores.html
 Redirect permanent /rac/ADDRESSING               /rac/info/ADDRESSING
 Redirect permanent /sed/sed-HOWTO/sed-HOWTO.html /sed/sed-HOWTO/
 Redirect permanent /shell/cadastro               /livro/cadastro
