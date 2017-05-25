@@ -1,0 +1,402 @@
+Novidades do _ML 4
+
+Agosto de 2009
+
+% _ML 4
+% Quais as novidades?
+% Agosto de 2009
+
+%!includeconf:  /a/www/include/10anos/config.t2t
+%!includeconf:	../_config-old.t2t
+%!style: 	../../include/10anos/index.css
+%!options: 	--toc
+%!postproc: SITEROOT ../..
+%!postproc: MLROOT ..
+
+% spacer
+%!postproc: @@@ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+% img link
+%!postproc: '(.*<IMG.*SRC="../moneylog4.jpg".*)'	<a href="../moneylog4.html">\1</a>
+
+% doação
+%!postproc: URLDOACAO_ https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&tipo=CP&moeda=BRL&item_id_1=1&item_descr_1=Doacao+ao+projeto+MoneyLog&item_quant_1=1&item_frete_1=000&item_valor_1=
+
+
+''' <div id="sidebar">
+ [_MONEYLOG_128] 
+%%TOC
+''' </div>
+
+	**Atenção:** Esta é uma versão antiga do _ML. Veja [a versão mais recente MLROOT/vCURRENT/] do programa.
+
+Após 88 horas de trabalho em algumas semanas de desenvolvimento ativo da [versão Beta #beta], que foi programada "ao vivo" [via twitter http://twitter.com/search?q=%23moneylog] e contou com a ajuda de [vários usuários #beta] dando sugestões e apontando problemas, saiu a [versão final do _ML 4 MLROOT/moneylog4.html] em 15 de agosto de 2009.
+
+ [MLROOT/moneylog4.jpg] 
+
+	**Dica:** Já é usuário do _ML 3 e quer saber como migrar seus dados para esta versão nova? [É fácil MLROOT/faq/#atualizar]!
+
+	**Dica:** Já é usuário do [_ML Beta MLROOT/beta/]? Ué, então pra quê estagnar na v4? Continue na beta e seja feliz! :)
+
+	**Dica:** Nunca usou o _ML? [Experimente agora MLROOT/moneylog4.html] e depois [leia o FAQ MLROOT/faq/] e importe seu extrato bancário com [o conversor MLROOT/import/]!
+
+== Lista de novidades ==[lista]
+% Confira a lista de novidades desta versão e continue lendo para aprender como utilizá-las.
+
+**Opções:**
+- Opção nova: Mostrar Lançamentos Futuros
+- Opção nova: Somente Valores: positivo, negativo, maior que N, menor que N [+info #filtro-valor]
+% - Usar um arquivo externo para a configuração (opcional) [+info #config-js]
+-
+**Gráficos:**
+- Gráfico de porcentagem [+info #grafico-porcento]
+- Gráfico de barras [+info #grafico-barras]
+-
+**Lançamentos:**
+- Pagamentos parcelados: ``-100/3`` é compra de R$ 100,00 parcelada em 3x [+info #parcelado-recorrente]
+- Ganhos parcelados: ``100/3`` é venda de R$ 100,00 parcelada em 3x [+info #parcelado-recorrente]
+- Pagamentos recorrentes: ``-600*12`` é a mensalidade de R$ 600,00 do ano todo [+info #parcelado-recorrente]
+- Ganhos recorrentes: ``600*12`` é o aluguel mensal de R$ 600,00 de seu inquilino [+info #parcelado-recorrente]
+- Segurança: checagem completa em seus lançamentos (os erros antes eram ignorados) [+info #codigo]
+- Usar um (ou mais) arquivo TXT externo para os lançamentos (opcional) [+info #txt] [+info #varios-txt]
+- Trocar arquivo de dados (TXT) sem precisar de Reload, mantendo visão atual
+- Botão para recarregar somente os dados (quando o TXT externo foi editado)
+-
+**Extratos:**
+- Extratos diários, mensais e anuais
+- Coluna nova Acumulado no extrato diário
+- Destaque de palavras e tags importantes
+- Velocidade: extratos instantâneos, mesmo com grande volume de lançamentos
+- Linhas novas no final do extrato mensal (e anual): total, mínima, máxima
+- Linhas numeradas no extrato mensal (e anual)
+- Totais positivo e negativo na última linha do diário (sem parciais)
+-
+**Tags:**
+- Novo menu de tags, agora no rodapé [+info #tagbar]
+- Menu de tags ordenado corretamente, independente de minúsculas, maiúsculas ou acentuação
+-
+**Geral:**
+- Codificação UTF-8 [+info #codigo]
+- Doctype HTML 4.01 STRICT [+info #codigo]
+- JSLint no código JavaScript [+info #codigo]
+- Código do programa foi colocado no SVN do Google Code
+- Visual consistente entre navegadores (YUI reset.css) [+info #navegadores]
+- Adicionado suporte aos navegadores IE7 e IE8 [+info #navegadores]
+- O suporte ao IE5.5 e IE6 foi abandonado [+info #navegadores]
+- Tema vermelho para sair da rotina :)
+-
+
+Quanta coisa né? Não perca tempo, teste e baixe a versão nova agora:''<br>''
+http://aurelio.net/moneylog/moneylog4.html
+
+== Interface Nova ==[interface]
+
+===Extrato Diário===[extrato-diaro]
+[MLROOT/img/v4-daily.jpg]
+
+Tema vermelho, mais opções no topo, tabela mais bonita no extrato, coluna nova de Acumulado, menu de tags agora fica no rodapé.
+
+===Extrato Mensal===[extrato-mensal]
+[MLROOT/img/v4-monthly.jpg]
+
+Opção de mostrar lançamentos futuros, gráficos de porcentagem ao lado do extrato, gráfico de barras após o extrato (pode escolher qual coluna mostrar), linhas de total, mínimo e máximo no final.
+
+===Barra de Tarefas===[toolbar]
+[MLROOT/img/v4-toolbar.png]
+
+- **Período do extrato:** O antigo "Relatório Geral" agora chama-se extrato mensal. Foi criado também o extrato anual para aqueles que usam o _ML a bastante tempo. Clique no nome do extrato para mostrá-lo.
+
+- **Opções do extrato:** "Somente Recentes" e "Mostrar Parciais Mensais" você já conhece. As novidades são a opção de mostrar/esconder os lançamentos futuros (aqueles em cinza) e o novo [filtro de valores #filtro-valor].
+
+- **Filtro e ajuda:** Nada de novo por aqui. Aliás, tem uma novidade sim: no filtro você pode digitar algo como ``v:>50`` para filtrar por valores acima de R$ 50,00. É um atalho para a opção nova "Somente Valores". [+info #filtro-valor]
+
+- **Arquivo de dados (TXT):** Só aparece para quem usa o [arquivo TXT externo #txt] para guardar os lançamentos. Se houver mais de um arquivo, aparecerá esse menu para escolher qual arquivo carregar. O botão **®** recarrega o arquivo atual, caso você o tenha editado (melhor que o Reload do navegador, pois não perde as opções atuais).
+-
+
+
+===Barra de Tags===[tagbar]
+
+O antigo menu de tags que ficava no canto esquerdo foi movido lá para o rodapé, liberando um precioso espaço lateral para que o extrato brilhe sozinho no meio da tela. Mas o funcionamento continua o mesmo: clique para marcar e desmarcar tags e o extrato será atualizado de acordo.
+
+Veja como ficou bem mais fácil perceber quando uma tag está selecionada:
+
+[MLROOT/img/v4-tagbar-1sel.png]
+
+Quando duas ou mais tags são selecionadas, aparece a opção para uni-las, ou seja, serão mostrados apenas os lançamentos que possuírem **todas** as tags selecionadas. Esta opção é o mesmo que aquele antigo "+" que aparecia no topo menu de tags.
+
+[MLROOT/img/v4-tagbar-2sel.png]
+
+	**Nota:** Esta barra nova é um alívio para aqueles que usam muitas tags (eu!) e tinham que ficar rolando a tela para ver o final da lista.
+
+== Gráficos ==[graficos]
+
+	**Aviso:** Não se preocupe! Apesar dos gráficos, o _ML continua sendo um programinha minúsculo, rápido e simples. Nenhuma biblioteca JavaScript externa foi adicionada, esta é uma solução "caseira" para gráficos, utilizando apenas HTML+CSS.
+
+=== Gráfico de % ===[grafico-porcento]
+
+Nos extratos mensal e anual, há uma coluna nova que mostra a porcentagem entre **ganhos** e **gastos** durante aquele mês/ano.
+
+Mas o mais legal é que essas porcentagens são mostradas em um gráfico de barras nas cores azul e vermelho, ficando muito fácil achar os grandes vilões:
+
+ [MLROOT/img/v4-grafico-porcento.png] 
+
+=== Gráfico de barras ===[grafico-barras]
+
+Nos extratos mensal e anual, agora tem um gráfico bacana no final, que mostra a evolução de uma determinada coluna (ganhos, gastos, saldo, acumulado) durante aquele mês/ano.
+
+ [MLROOT/img/v4-menu-colunas-grafico.png] 
+
+- Basta clicar no menu acima do gráfico para escolher a coluna desejada.
+- Valores positivos em azul, negativos em vermelho.
+-
+
+ [MLROOT/img/v4-grafico-barras.png] 
+
+	**Dica:** Se você mudar a ordenação das linhas do extrato (basta clicar nos títulos das colunas), o gráfico também vai mudar, respeitando a nova ordem!
+
+== Filtro de valores ==[filtro-valor]
+
+ [MLROOT/img/v4-filtro-valor.png] 
+
+Agora é possível filtrar os dados pelo seu valor. Você tem as seguintes opções:
+
+- Mostrar somente valores positivos
+- Mostrar somente valores negativos
+- Mostrar somente valores maiores do que N
+- Mostrar somente valores menores do que N
+-
+
+Útil para ver rapidamente somente os ganhos do período, ou para excluir valores muito pequenos (ou muito grandes) do extrato.
+
+Os mais aventureiros gostarão de saber que também é possível fazer a mesma filtragem pela caixa de busca, usando o prefixo "``v:``". Alguns exemplos:
+ | ``v:+`` | positivos
+ | ``v:-`` | negativos
+ | ``v:>50`` | maior que 50
+ | ``v:<-100`` | menor que -100
+ | ``v:=100`` | igual a 100
+ | ``v:>=100`` | maior ou igual a 100
+
+
+== Parcelado e recorrente ==[parcelado-recorrente]
+
+Agora é possível cadastrar lançamentos que possuem seu valor parcelado, ou lançamentos que se repetem um determinado número de meses.
+
+O formato é bem simples, basta adicionar uma barra ou um asterisco após o valor, seguido do número de parcelas/repetições:
+
+ | **/** | Divisor | Indica que o valor será dividido, ou seja, parcelado
+ | ***** | Repetidor | Indica que o valor será repetido, ou seja, recorrente
+
+Por exemplo, se você fez uma compra de R$ 120,00 no cartão de crédito e a parcelou em três vezes, cadastre este lançamento assim:
+
+``` 2009-08-15	-120/3	Vestido novo no shopping
+
+O _ML vai calcular automaticamente o valor de cada parcela e vai lançá-las para os meses seguintes. No seu extrato vai aparecer assim:
+
+```
+2009-08-15	-40	Vestido novo no shopping 1/3
+2009-09-15	-40	Vestido novo no shopping 2/3
+2009-10-15	-40	Vestido novo no shopping 3/3
+```
+
+Note que o mês é aumentado, é colocado o valor da parcela e não o total, e no final da descrição há números que indicam qual a parcela atual e quantas ainda faltam. Igual na sua fatura do cartão.
+
+De maneira similar, se você vendeu algo e vai receber o valor em parcelas, basta colocar um número positivo antes da barra:
+
+``` 2009-08-20	100/5	Vendi o vestido (semi-)novo pra Maria
+
+No extrato, vão aparecer os seguintes lançamentos:
+
+```
+2009-08-20	20	Vendi o vestido (semi-)novo pra Maria 1/5
+2009-09-20	20	Vendi o vestido (semi-)novo pra Maria 2/5
+2009-10-20	20	Vendi o vestido (semi-)novo pra Maria 3/5
+2009-11-20	20	Vendi o vestido (semi-)novo pra Maria 4/5
+2009-12-20	20	Vendi o vestido (semi-)novo pra Maria 5/5
+```
+
+Fácil e prático!
+
+Já os pagamentos/ganhos recorrentes, você usa o asterisco em vez da barra e informa o valor da parcela e não o valor total.
+
+Por exemplo, se você quiser cadastrar de uma vez todas as mensalidades da escola de seu filho para o ano de 2010. O valor da mensalidade é R$ 500,00 e o pagamento deve ser feito até o dia 5. Basta fazer:
+
+``` 2010-01-05	-500*12	Mensalidade da escolinha do Júnior
+
+E novamente, o _ML vai expandir os lançamentos futuros, deixando você chocado(a) ao ver no extrato com o tanto de dinheiro que vai sair do seu bolso:
+
+```
+2010-01-05	-500	Mensalidade da escolinha do Júnior 1/12
+2010-02-05	-500	Mensalidade da escolinha do Júnior 2/12
+2010-03-05	-500	Mensalidade da escolinha do Júnior 3/12
+2010-04-05	-500	Mensalidade da escolinha do Júnior 4/12
+2010-05-05	-500	Mensalidade da escolinha do Júnior 5/12
+2010-06-05	-500	Mensalidade da escolinha do Júnior 6/12
+2010-07-05	-500	Mensalidade da escolinha do Júnior 7/12
+2010-08-05	-500	Mensalidade da escolinha do Júnior 8/12
+2010-09-05	-500	Mensalidade da escolinha do Júnior 9/12
+2010-10-05	-500	Mensalidade da escolinha do Júnior 10/12
+2010-11-05	-500	Mensalidade da escolinha do Júnior 11/12
+2010-12-05	-500	Mensalidade da escolinha do Júnior 12/12
+```
+
+Para cadastrar ganhos recorrentes é a mesma coisa, basta colocar um valor positivo. Por exemplo, se você aluga um imóvel e quer cadastrar o recebimento do aluguel de R$ 400,00 durante dois anos, faça ``400*24``.
+
+	**Não confunda:** a barra divide (parcela) o valor total, o asterisco multiplica (repete) o valor parcial.
+
+	**Agradecimento:** A ideia de fazer estes lançamentos parcelados e recorrentes veio do Ricardo Nishimura, com seu excelente [myMoneyLog http://nishimura.eti.br/blog/mymoneylog], que é uma versão modificada do _ML. Obrigado Ricardo!
+
+
+== Código melhorado ==[codigo]
+
+O código do _ML foi inteiramente reformado:
+
+HTML:
+- Agora usa o doctype HTML 4.01 **STRICT**, que é mais rígido em suas regras, tornando o programa mais compatível com navegadores modernos.
+- Agora usa a codificação **UTF-8** em vez da antiga ISO-8859-1. Você pode colocar caracteres bem estranhos em seus lançamentos, como ☺ ♫ ↑ ↓ ♣ ♥ que eles vão aparecer corretamente. É divertido usar estes caracteres como tags!
+-
+CSS:
+- Desisti do formato compacto, que economiza espaço mas prejudica a legibilidade.
+- Agora tudo está bem **alinhado** e estruturado.
+- Há comentários para explicar regras complicadas.
+-
+JavaScript:
+- Código **reorganizado**, dividindo as funções por tipo: protótipos, ferramentas, interface, eventos, etc.
+- Vários **comentários** novos para explicar trechos intrincados.
+- Várias mudanças para seguir os padrões rígidos ditados pelo [JSLint http://www.jslint.com/], que tornam o código JavaScript mais robusto e compatível entre os navegadores.
+-
+Lançamentos:
+- O formato dos seus lançamentos continua o mesmo, a novidade é que agora é feita uma verificação completa neles, para ter certeza que está tudo digitado corretamente.
+- Lançamentos com erros antes eram ignorados (por exemplo, trocar TAB por espaços), mas agora o programa avisa sobre o erro e te força a arrumá-lo. Assim nenhum lançamento vai ficar de fora do extrato!
+
+[MLROOT/img/v4-erro-tabs.png]
+-
+
+
+== Navegadores ==[navegadores]
+
+Agora o _ML tem uma mesma aparência, independente de qual o navegador utilizado, pois estou usando regras de CSS que eliminam as diferenças entre eles ([reset.css http://developer.yahoo.com/yui/reset/]). Com isso pude refinar mais a interface, sem medo de que algum elemento apareça fora de esquadro em um ou outro navegador.
+
+Esta versão marca o abandono de navegadores antigos e problemáticos, como o Internet Explorer versões 5.5 e 6. Hoje o _ML ainda parece funcionar neles, mas eu não faço mais nenhum teste. Se funcionar, funcionou. Senão...
+
+Felizmente estes navegadores estão ficando cada vez mais no passado e a própria Microsoft quer forçar a atualização para versões mais novas. Em virtude disto, agora o _ML é testado somente nas versões 7 e 8 do Internet Explorer.
+
+Esta é a lista de navegadores que eu faço testes intensivos:
+
+- Safari 4
+- Firefox 3
+- Opera 9
+- Camino
+- IE7
+- IE8
+-
+
+Outros navegadores devem funcionar, mas eu não sei pois não tenho como testar. De fato, o _ML funcionará em qualquer navegador moderno que tenha um suporte decente a CSS e JavaScript.
+
+
+== Arquivo TXT ==[txt]
+
+Nas versões anteriores do _ML, você tinha que colocar seus lançamentos (ganhos e gastos) lá no final do programa, pertinho dos códigos HTML feiosos. Bem, você pode continuar fazendo isso nesta versão nova também, sem problemas.
+
+Mas para ficar mais confortável e evitar danos ao programa por mexer acidentalmente em seu código, que tal deixar seus lançamentos em um arquivo TXT separado, que vai ter apenas os lançamentos e mais nada?
+
+Agora isto é possível.
+
+Escolha uma pasta em seu computador e baixe para dentro dela estes dois arquivos:
+
+- [moneylog4-txt.html http://aurelio.net/moneylog/moneylog4-txt.html]
+- [moneylog.txt https://github.com/aureliojargas/moneylog/blob/413ec2f3e9e6068d6382d7280ce89d43614a452c/moneylog.txt]
+-
+
+Edite o ``moneylog.txt`` e troque os dados de exemplo pelos seus próprios lançamentos.
+
+	**Dica:** Se você já usava versões anteriores do _ML, migre seus dados copiando com o mouse todos os lançamentos lá no final do seu ``moneylog.html`` antigo e cole-os neste TXT novo.
+
+Pronto! Agora basta abrir em seu navegador preferido o ``moneylog4-txt.html`` que você acabou de baixar e aproveitar as novidades dessa versão nova.
+
+De agora em diante, sempre edite o TXT para cadastrar lançamentos novos.
+
+	**Nota:** Você também pode importar automaticamente os dados de seu extrato bancário, caso ele use um dos formatos conhecidos pelo [conversor MLROOT/import/].
+
+	**Nota:** Outra vantagem do TXT separado é que não é mais necessário escapar os caracteres especiais do HTML, como ``&``, ``<`` e ``>``. Se você fez uma compra na C&A, pode escrever normalmente, não precisa mais do feioso ``C&amp;A`` de antigamente.
+
+=== Google Chrome e TXT ===[chrome]
+
+%!include: ../_chrome.t2t
+
+
+
+== Vários TXT ==[varios-txt]
+
+Uma vez que você começar a usar [um arquivo TXT #txt] separado para seus lançamentos e gosta da ideia, é normal depois de um tempo querer usar dois ou mais arquivos para separar melhor seus dados.
+
+Alguns casos onde este cenário pode ser útil:
+
+- Mais de uma pessoa utiliza o _ML no mesmo computador. Para quê ter duas cópias do programa quando você pode ter apenas uma, e usar um arquivo TXT para cada usuário?
+  - ``joao.txt``
+  - ``maria.txt``
+  - ``junior.txt``
+
+- Você quer controlar em separado suas despesas pessoais de suas despesas profissionais. Isso é complicado e confuso, principalmente para quem viaja muito a trabalho. Então o _ML pode ser um aliado importante para a sua organização!
+  - ``pessoal.txt``
+  - ``profissional.txt``
+
+- Você já usa o _ML há alguns anos e quer arquivar dados antigos, para despoluir a visão dos recentes:
+  - ``2009.txt``
+  - ``2008.txt``
+  - ``2007.txt``
+  - ``2006.txt``
+
+
+Ao usar mais de um arquivo TXT, aparecerá um menu no topo, onde você pode escolher qual arquivo utilizar.
+
+ [MLROOT/img/v4-varios-txt.png] @@@→@@@ [MLROOT/img/v4-varios-txt-aberto.png] 
+
+O legal é que a mudança de arquivos é feita na hora, sem precisar recarregar a página, mantendo as mesmas configurações de visualização: opções, filtro, tags, ordenação, tudo.
+
+Mas como dizer ao _ML para usar estes arquivos?
+
+Edite o _ML e faça uma alteração na linha 438. Troque de:
+``` var dataFiles = ['moneylog.txt'];
+para:
+``` var dataFiles = ['2009.txt', '2008.txt', '2007.txt', '2006.txt'];
+
+Ou seja, você vai tirar o nome padrão ``moneylog.txt`` e vai colocar os nomes dos seus arquivos. Sempre coloque os nomes entre aspas, e separados por vírgulas. Na dúvida, cole esta linha de exemplo e a altere.
+
+Ah, na linha anterior (437), é importante que o ``oneFile`` esteja com o valor falso. Caso não esteja, troque de
+``` var oneFile = true;       // Full app is at moneylog.html single file?
+para:
+``` var oneFile = false;      // Full app is at moneylog.html single file?
+
+Ou seja, basta trocar a palavra "true" por "false".
+
+	**Dica:** Por padrão é sempre carregado o primeiro arquivo da lista, então coloque por primeiro aquele que você for utilizar mais frequentemente.
+
+	**Dica:** Aconselho que estes arquivos estejam todos dentro da mesma pasta do _ML, para evitar problemas no acesso.
+
+
+== Versão BETA ==[beta]
+
+Você sabia que o _ML tem uma [versão beta MLROOT/beta/] (estável) que está em constante evolução?
+
+Se você não quer esperar meses (às vezes anos) por uma versão nova, use a versão beta que novidades são adicionadas frequentemente. A próxima versão do _ML (v5), por exemplo, eu não faço ideia de quando vai sair, se é em 2009 ou 2010. Mas em compensação semana que vem já deve ter novidade na beta.
+
+Não se preocupe, apesar do nome beta, ela é bem estável pois é a versão que eu utilizo diariamente, então qualquer problema arrumarei rapidinho.
+
+Eu anuncio [no twitter _MYTWITTER] as novidades, então é bem fácil acompanhar.
+
+	Meu MUITO OBRIGADO a todos aqueles que participaram: @adolfont, @arthurfurlan, @AYHarano, @battisti, @brolesi, @carlosjvaz, @denilsonsa, @digoreisnet, @farleyrangel, @_Felipe, @InFog9, @jamilson, @lornlab, @lorrenec, @lucasdsd, @lucmove, @marrcandre, @matheusbonela, @mayckxavier, @netum, @ralcantara, @renatolond, @ricobl, @rochacon, @rodrigospillere, @taiar, @urso, @vmmello. Tomara que eu não tenha esquecido de ninguém!
+
+Consegui te deixar curioso(a)?''<br>''
+Então experimente: [_ML Beta MLROOT/beta/].
+
+
+== Doação ao projeto ==[doacao]
+
+- Você usa bastante o _ML?''<br>''
+- Está satisfeito(a) com o programa?''<br>''
+- Está conseguindo controlar melhor o seu dinheiro?
+-
+
+[Que tal doar R$ 5,00 para ajudar o projeto? MLROOT/donate/]
+
+%!include: /a/www/include/10anos/footer.t2t

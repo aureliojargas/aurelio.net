@@ -1,0 +1,9 @@
+body {
+	background-color: #FF8;
+/*	background-color: yellow;*/
+}
+.buttons th {
+	vertical-align: middle;
+	height: 80px;
+	padding: 0 20px;
+}

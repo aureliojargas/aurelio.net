@@ -1,0 +1,733 @@
+FAQ do MoneyLog
+
+
+% F A Q • M O N E Y L O G
+
+%!postproc: SITEROOT    ../..
+%!postproc: MLROOT    ..
+%!includeconf: ../_config.t2t
+%!postproc: (<BODY)     \1 class="faq"
+%!options: --toc
+
+%!preproc:	IMG		../img
+
+% FAQ style
+%!postproc: article.css faq.css
+
+
+%%!includeconf: ../_config.t2t
+%%!includeconf:  ../../include/10anos/config.t2t
+%%!style: 	../../include/10anos/faq.css
+%%!postproc: SITEROOT ../..
+%%!options: 	--toc
+
+%!postproc: '(Como inserir os dados diretamente no navegador.)(</A>)' '<b>\1</b>\2'
+%%!postproc: '(?i)(<BODY)'	'\1 id="moneylogfaq"'
+%%!postproc: <TITLE>.*::   <TITLE>FAQ MoneyLog ::
+%%!postproc: (<TITLE>).*(</TITLE>)   \1FAQ MoneyLog\2
+
+= FAQ do MoneyLog =[inicio]
+
+== Primeiro contato ==[preparativos]
+
+=== O que é este _ML? ===[sobre]
+
+O _ML é um programa simples e rápido para te ajudar a controlar seu dinheiro, que funciona direto em seu navegador.
+
+Você informa seus ganhos e gastos e ele gera extratos interativos (diário, mensal, anual), com gráficos, totais, pesquisa, tags e várias outras ferramentas para você enxergar para onde vai o seu dinheiro.
+
+[Saiba mais… MLROOT/about/]
+
+% Tudo fica em um único arquivo HTML: o programa e os seus lançamentos (ganhos e gastos). Muito prático para carregar em seu pendrive e ter o controle de suas finanças sempre a mão.
+
+% Não é preciso instalar nada, não é preciso estar conectado à Internet. Basta [baixar o arquivo #baixar] e pronto.
+
+=== Qual sabor escolher? ===[escolher-sabor]
+
+O _ML possui quatro sabores diferentes, cada um visando um tipo de uso.
+
+**Se você nunca usou** o _ML, vá agora no _MLB_APPLINK. Não é preciso instalar nem baixar nada, é só usar. Esta é uma versão de demonstração.
+
+**Se você quer usar online** (via internet), escolha o _MLC_LINK. Caso você ainda não tenha uma conta no Dropbox, crie uma, é rápido e gratuito.
+
+% Se você já conhece o _ML e usa Dropbox, já direto para o _MLC_LINK que é a melhor opção.
+% 
+% Se você ainda não usa Dropbox e quer ter o _ML disponível online, sugiro criar uma conta no Dropbox e usar o _MLC_LINK.
+
+**Se você quer usar offline** (sua máquina), escolha o _MLP_LINK.
+
+**Se você é nerd**, sabe usar o Git, e não tem medo de arquivos de configuração, o poder total está ao seu alcance com o _MLX_LINK.
+
+% - Já conhece o _ML?
+%  - Não.
+%   - Use o _MLB_APPLINK para conhecer o programa.
+%  - Sim.
+%   - Você usa Dropbox?
+%    - Sim.
+%      - Use o _MLC_LINK.
+%    - Não.
+%      - Use o _MLP_LINK.
+
+% - _MLC_LINK: Funciona online e usa o Dropbox para guardar seus lançamentos. Se você já usa Dropbox, nem pense duas vezes, esse é melhor sabor.
+% 
+% - _MLP_LINK: Funciona offline. Você baixa um arquivo HTML e coloca dentro dele os seus lançamentos. Então você sala este arquivo numa pasta (ou pendrive) de fácil acesso para usá-lo sempre.
+% -
+
+
+% === Funciona em quais navegadores? ===[navegadores]
+% 
+% - Internet Explorer 7 (IE7)
+% - Internet Explorer 8 (IE8)
+% - Firefox 3
+% - Safari 4
+% - Opera 9
+% - Camino
+% -
+% 
+% Outros navegadores devem funcionar, mas eu não sei pois não tenho como testar. De fato, o _ML funcionará em qualquer navegador moderno que tenha um suporte decente a CSS e JavaScript.
+
+% === Como baixar (instalar)? ===[baixar]
+
+=== Como baixar / instalar? ===[instalar]
+
+[Instruções para baixar o _MLP MLROOT/portable/#download].
+
+[Instruções para baixar o _MLX MLROOT/beta/#download].
+
+O _MLC_LINK e o _MLB_LINK rodam online, não é preciso baixar nem instalar.
+
+% 
+% 	**NOVIDADE:** Que tal usar o _ML direto do seu navegador, sem precisar baixar nem instalar nada? Use agora mesmo: _MLO_LINK.
+% 
+% Basta copiar [o arquivo com o programa _MONEYLOG_PATHmoneylogCURRENT.html] para o seu computador e pronto.
+% 
+% Veja instruções de como fazer isto:
+% 
+% : **Windows** (Internet Explorer):
+%   - Siga este link: [moneylogCURRENT.html ../moneylogCURRENT.html]
+%   - Clique no menu //Arquivo// e depois em //Salvar Como//
+%   - Escolha a pasta para salvar o arquivo: //Desktop// ou //Meus documentos//
+%   - Em //Nome do arquivo://, digite //moneylog4.html//
+%   - Em //Salvar como tipo://, escolha a opção //Página da Web, somente HTML (*.htm, *.html)//
+%   - Aperte o botão //Salvar//
+% [IMG/ie-salvar-como.png]
+% : **Linux** (Firefox):
+%   - Siga este link: [moneylogCURRENT.html ../moneylogCURRENT.html]
+%   - Aperte //Ctrl+S// (Arquivo > Salvar Página Como)
+%   - Escolha a pasta para salvar o arquivo: //Desktop//
+%   - Escolha o tipo do arquivo como //Página da Web, somente HTML//
+%   - Aperte o botão //Salvar//
+% : **Mac** (Safari):
+%   - Siga este link: [moneylogCURRENT.html ../moneylogCURRENT.html]
+%   - Aperte //⌘S// (Arquivo > Salvar Como...)
+%   - Escolha a pasta para salvar o arquivo: //Mesa//
+%   - No formato escolha //Código-fonte da página//
+%   - Aperte o botão //Salvar//
+% [IMG/safari-salvar-como.png]
+% : Linux/Mac (**linha de comando**):
+% ``` wget _MONEYLOG_ROOT/moneylogCURRENT.html
+% ou
+% ``` curl _MONEYLOG_ROOT/moneylogCURRENT.html > moneylogCURRENT.html
+
+
+% === Baixei, e agora? ===[confira]
+% 
+% Agora confira se está tudo Ok com o programa.
+% 
+% - Dê um clique duplo no arquivo que você acabou de baixar (``moneylog4.html``).
+% - O _ML vai ser aberto em seu navegador.
+% - Confira se está tudo funcionando.
+% -
+% 
+% 	**Nota para usuários do Internet Explorer:** Se o _ML não carregou corretamente e apareceu um aviso de segurança dizendo que ele pode ser perigoso ou algo assim, [veja como proceder #aviso-ie].
+
+=== Como inserir meus lançamentos? ===[inserir]
+
+Ao iniciar o uso do _ML, ele ainda estará mostrando no extrato os lançamentos de exemplo. Para inserir os seus próprios lançamentos, veja as instruções:
+
+- [Inserir no _MLB_NAME _MLB_URL#inserir]
+- [Inserir no _MLC_NAME _MLC_URL#inserir]
+- [Inserir no _MLP_NAME _MLP_URL#inserir]
+- [Inserir no _MLX_NAME _MLX_URL#inserir]
+-
+% - Se você usa **Windows** com o Internet Explorer, [clique aqui #inserir-ie].
+% - Se você usa **Linux** ou **Mac**, ou usa o Firefox no Windows, [clique aqui #inserir-ff].
+% -
+
+Você também pode [inserir automaticamente seu extrato bancário #banco], para não precisar inserir os lançamentos um a um.
+
+
+== Migração ==[migracao]
+
+=== Quais as novidades da versão CURRENT? ===[vCURRENT]
+
+Há um guia completo explicando todas as novidades do _ML CURRENT. [Confira! ../vCURRENT/]
+
+% === Como atualizar para uma versão nova do _ML? ===[atualizar]
+% 
+% - Se você já é usuário do _ML, [baixe #baixar] a versão nova.
+% - Abra os dois arquivos no editor de textos, o antigo e o novo. Por exemplo, ``moneylog4.html`` e ``moneylog5.html``.
+% - Apague (se houver) os lançamentos de exemplo que estão no final do arquivo novo.
+% - Copie seus dados já existentes no antigo e cole lá no final do novo.
+% - Certifique-se que os TABs foram colados como TABs e não espaços em branco.
+% - Salve o arquivo novo.
+% - Pronto!
+% -
+
+=== Como inserir o extrato do meu banco (Internet Banking)? ===[banco]
+
+Basta exportar/salvar seu extrato e usar o [conversor MLROOT/import/] para convertê-lo para o formato do _ML. Veja as instruções de como fazer isso:
+
+- Vá no site do seu banco, acesse sua conta e veja o seu extrato.
+- Na tela do extrato, procure por algum botão ou opção para //exportar//, //guardar//, //baixar// ou //salvar em arquivo//. O nome também pode ser //extrato eletrônico//.
+- Você precisará escolher um formato de arquivo. Procure por: //OFX//, //OFC//, //QIF//, //MS Money// ou //Quicken//. Você pode escolher qualquer um destes formatos.
+- Confirme, e um arquivo com seu extrato será baixado para seu computador.
+- Agora abra este arquivo em um [editor de textos simples #editor].
+- Copie todo seu conteúdo e cole no [conversor MLROOT/import/].
+- Escolha o tipo do arquivo na opção //De://.
+- Copie o resultado do conversor [para dentro do _ML #inserir].
+- Pronto!
+-
+
+Bancos que usam o formato //OFX//:
+- Banco do Brasil
+- Banco Real
+- Caixa Econômica (CEF)
+- Citibank
+- Itaú
+- Nossa Caixa
+- Santander
+- Unibanco
+- 
+Bancos que usam o formato //OFC//:
+- Bradesco
+- HSBC
+-
+
+% Real:
+% - No Internet Banking, no final de seu extrato há uma opção //Salvar em arquivo//.
+% - Escolha o formato //MS-Money/Finance (*.OFX)//.
+% - Aperte o botão //Continuar//.
+% - Será baixado um arquivo .OFX com os seus dados.
+% Caixa:
+% - No Internet Banking, no final de seu extrato há um botão //Gerar em arquivo//.
+% - Escolha o formato //OFX//.
+% - Aperte o botão //Continuar//.
+% - Será baixado um arquivo .OFX com os seus dados.
+
+Seu banco não está listado aqui e ele usa OFX, OFC ou QIF? [Me avise! _MYTWITTER]
+
+=== OFX, OFC, QIF — Que isso? ===[formatos-banco]
+
+Estes são arquivos especiais usados pelos programas financeiros MS Money e Quicken.
+
+Mas o que importa para nós, usuários do _ML, é que os bancos brasileiros deixam que você baixe uma versão eletrônica de seu extrato bancário usando um destes formatos. De posse deste arquivo, você [inserir seu extrato no _ML #banco] com facilidade, sem precisar ficar digitando seus lançamentos.
+
+Então a próxima vez que você acessar seu banco pela Internet, procure pela opção de salvar seu extrato em um destes formatos. Isso facilitará bastante seu uso do _ML!
+
+% === Como inserir dados no formato OFX ou OFC? ===[ofx]
+% 
+% O [conversor de lançamentos MLROOT/import/] do _ML sabe ler os formatos OFX e OFC, usados pelo Quicken, MS Money e pela maioria dos bancos brasileiros.
+% 
+% % O primeiro passo é obter o seu extrato eletrônico no formato OFX ou OFC. Vá no site do seu banco, acesse sua conta 
+% % Se você usa alguns destes programas, pode inseri-los no _ML com facilidade:
+% % 
+% % - No MS Money, Quicken ou no site de seu banco, exporte seus dados para o formato OFX.
+% - Vá no site de seu banco (ou no Quicken, ou MS Money) e [exporte seus dados #banco] para o formato OFX ou OFC, o que estiver disponível.
+% % - Abra este arquivo .OFX em um [editor de textos simples #editor].
+% - Abra o arquivo .OFX ou .OFC em um [editor de textos simples #editor].
+% - Copie todo seu conteúdo e cole no [conversor MLROOT/import/].
+% - Escolha //OFX// ou //OFC// na opção //De://.
+% - Copie o resultado do conversor [para dentro do _ML #inserir].
+% - Pronto!
+% -
+% 
+% === Como inserir dados no formato QIF? ===[qif]
+% 
+% O [conversor de lançamentos MLROOT/import/] do _ML sabe ler o formato QIF, usado por alguns bancos brasileiros, além dos seguintes programas:
+% 
+% - MS Money 97
+% - MS Money 98
+% - MS Money 99
+% - Quicken
+% -
+% 
+% Se você usa alguns destes programas, pode inseri-los no _ML com facilidade:
+% 
+% - No Quicken/Money ou no site de seu banco, exporte seus dados para o formato QIF.
+% - Abra este arquivo .QIF em um [editor de textos simples #editor].
+% - Copie todo seu conteúdo e cole no [conversor MLROOT/import/].
+% - Escolha a versão correta do //QIF// na opção //De://.
+% - Copie o resultado do conversor [para dentro do _ML #inserir].
+% - Pronto!
+% -
+
+
+=== Como migrar meus dados do myMoneyLog? ===[mymoneylog]
+
+Se você usa o [myMoneyLog http://nishimura.eti.br/blog/mymoneylog], programa derivado do _ML que adota um formato diferente para os lançamentos, use [o conversor MLROOT/import/] para transformar seus dados para o formato do _ML.
+
+
+== Busca ==[busca]
+
+=== Como fazer uma busca? ===[busca-como]
+
+Basta digitar o texto desejado na caixa de busca, lá no canto superior esquerdo do _ML.
+
+- Serão mostrados apenas os lançamentos que possuírem o texto pesquisado.
+- Os valores totais, parciais e acumulados serão atualizados de acordo.
+- Não é preciso apertar nenhum botão ou pressionar Enter, a pesquisa é feita instantaneamente enquanto você digita.
+-
+
+=== O que é esse "regex" na caixa de busca? ===[regex]
+
+Esta opção é usada para você fazer uma pesquisa utilizando [Expressões Regulares http://aurelio.net/regex/] em vez de usar texto normal. Com estas expressões é possível fazer filtros realmente poderosos!
+
+Um exemplo rápido, para ver todos os lançamentos parcelados e recorrentes (aqueles que terminam em 1/3, 2/3, ...)
+
+``` \d/\d+$
+
+=== O que é esse "excluir" na caixa de busca? ===[excluir]
+
+Marque esta opção para inverter o sentido do filtro, ou seja, pesquisar "tudo menos o filtrado". Assim você pode excluir lançamentos do extrato.
+
+Por exemplo, se digitar "recarga" na caixa de pesquisa e marcar a opção "excluir", todos os lançamentos referentes às recargas de seu celular serão omitidas. Os valores também serão deduzidos dos totais, é como se os lançamentos não existissem.
+
+	Dica: Se você quer excluir uma tag do extrato, clique duas vezes sobre a tag indesejada, na [Nuvem de Tags MLROOT/v5/#widget-nuvem-de-tags], até que ela fique riscada.
+
+== Tags (categorias) ==[tags]
+
+=== Como usar tags? ===[tags-usar]
+
+As tags aparecem na [Nuvem de Tags MLROOT/v5/#widget-nuvem-de-tags], ali na barra lateral, quando há uma ou mais tags nos lançamentos visíveis.
+
+Basta clicar em uma tag para que sejam mostrados somente os lançamentos que possuem aquela tag. Clique novamente para excluir a tag do extrato. Um terceiro clique desmarca a tag e volta para o extrato normal.
+
+Se você ainda não usou nenhuma tag em seus lançamentos, veja como fazer isso no [Guia de Lançamentos MLROOT/input/#tags].
+
+
+% === Como inserir tags? ===[tags-inserir]
+% 
+% No campo de descrição (terceiro), use uma barra vertical "|" para separar as tags do texto de descrição da transação. Tanto as tags quanto a descrição são opcionais. Veja alguns exemplos:
+% 
+% Somente descrição (sem barra):
+% ``` 2007-12-31	5,00	pão e leite
+% 
+% Somente tags (barra no final):
+% ``` 2007-12-31	5,00	padaria,comida |
+% 
+% Tags e descrição:
+% ``` 2007-12-31	5,00	padaria,comida | pão e leite
+% 
+% Detalhes:
+% - Várias tags podem ser colocadas, separadas por vírgulas.
+% - Você pode usar acentuação nas tags.
+% - Você pode usar espaços em branco nas tags. (Ex.: ``cartão de crédito,comida|``)
+% - Espaços em branco ao redor da barra | são ignorados.
+% - Espaços em branco ao redor da vírgula são ignorados.
+% -
+
+=== O que é o (sem tag)? ===[tag-vazia]
+
+Marque esta tag para mostrar todos os lançamentos que não possuem nenhuma tag. Útil para ver quais dados ainda precisam ser "tagueados".
+
+
+=== O que faz a opção Combinar? ===[combinar]
+
+Esta opção aparece abaixo da [Nuvem de Tags MLROOT/v5/#widget-nuvem-de-tags] quando você escolhe duas ou mais tags.
+
+- Se esta opção for marcada, serão listados os lançamentos que possuírem **todas** as tags escolhidas.
+- Se esta opção for desmarcada, serão listados os lançamentos que possuírem **pelo menos uma** das tags escolhidas.
+-
+
+
+== Lançamentos ==[lancamentos]
+
+% === Como inserir dados no Windows (IE)? ===[inserir-ie]
+% 
+% Se você está no Windows e usa o Internet Explorer 7 ou 8, é tudo muito simples:
+% 
+% - Abra o _ML (clique duplo no ``moneylog4.html``).
+% - Acesse o menu //Arquivo// > //Editar com Bloco de notas//
+% - Vá lá para o final do arquivo. Você vai ver os lançamentos de exemplo:
+% 
+% [IMG/notepad-lancamentos.jpg]
+% 
+% - Coloque os seus próprios lançamentos ali, no lugar destes exemplos.
+%   - Use o mesmo formato: data, valor, descrição.
+%   - A data deve estar no formato ANO-MÊS-DIA.
+%   - Use um TAB para separar os campos.
+% - Salve as modificações (menu //Arquivo// > //Salvar//).
+% - Volte para o _ML e recarregue a página.
+% - Pronto!
+% -
+% 
+% Repita este procedimento sempre que quiser inserir ou alterar lançamentos.
+% 
+% === Como inserir dados no Linux e Mac? ===[inserir-ff]
+% 
+% - Abra um editor de textos simples. [Veja a lista de editores bons para o _ML #editor].
+% - Abra neste editor de textos o arquivo do _ML, que você acabou de baixar (``moneylog4.html``).
+% - Se você está vendo apenas códigos, está tudo certo. [Na dúvida, confira as fotos. #editor-certo]
+% - Vá lá para o final do arquivo. Você vai ver os lançamentos de exemplo:
+% 
+% [IMG/editor-lancamentos.png]
+% 
+% - Coloque os seus próprios lançamentos ali, no lugar destes exemplos.
+%   - Use o mesmo formato: data, valor, descrição.
+%   - A data deve estar no formato ANO-MÊS-DIA.
+%   - Use um TAB para separar os campos.
+% - Salve as modificações.
+% -
+% 
+% Neste ponto, seus lançamentos já foram inseridos no _ML. Agora basta abrir o programa no navegador novamente, para conferir o extrato:
+% 
+% - Dê um clique duplo no _ML (``moneylog4.html``).
+% - Pronto!
+% -
+% 
+% Se tudo ocorreu bem, os seus lançamentos aparecerão no extrato. Se algo deu errado, [baixe #baixar] o _ML novamente e refaça os passos.
+
+% === Qual editor de texto usar? ===[editor]
+% 
+% : **Windows:**
+% Use o **Bloco de Notas** (Notepad), que é simples e rápido. Você o encontra em //Iniciar// > //Todos os programas// > //Acessórios// > //Bloco de Notas//.
+% 
+% : **Mac:**
+% Use o **Editor de Texto**, que está em //Aplicativos// > //Editor de Texto//. Mas antes de abrir o _ML nele, certifique-se de que a opção //Ignorar comandos de texto com estilo em arquivos HTML// esteja marcada.
+% 
+% [IMG/textedit-pref.png]
+% 
+% Você também pode usar outros editores de texto, como o Vim, TextMate e o Smultron.
+% 
+% : **Linux:**
+% Use o nano, Vim, Emacs, gedit, Kate, ou qualquer outro editor de textos simples ou de programação.
+% 
+% 	**IMPORTANTE:** Não use processadores de texto, editores de HTML ou qualquer outro editor mais complexo como o Word, FrontPage, Dreamweaver e OpenOffice. Eles irão estragar o _ML, pois tentarão "arrumar" seu código automaticamente. [Saiba mais... #editor-certo]
+% 
+% 
+% === Como saber se meu editor é certo? ===[editor-certo]
+% 
+% Um bom editor de texto para o _ML vai lhe mostrar o código do programa:
+% 
+% [IMG/editor-certo.png]
+% 
+% Um editor que você **NÃO** deve utilizar vai tentar mostrar o _ML:
+% 
+% [IMG/editor-errado.png]
+% 
+
+% === Como inserir os dados diretamente no navegador? ===[online]
+% 
+% 	"Acho um saco ter que usar o editor de textos para inserir meus lançamentos. Não tem como fazer um formulário no próprio _ML pra eu poder fazer tudo direto no navegador?"
+% 
+% **NOVIDADE:** Agora é possível usar o _ML direto no navegador, sem precisar baixar nada nem editar arquivos externos! Experimente: _MLO_LINK.
+% 
+% 	**Dica:** Se você usa o Internet Explorer (IE), sabia que basta acessar o menu //Editar com o Bloco de Notas// para fazer seus lançamentos? Se não sabia, [aprenda aqui #inserir-ie]. Fica bem fácil!
+% 
+% Usando as tecnologias atuais do _ML (HTML e JavaScript), não há uma maneira universal de gravar dados direto no arquivo, possibilitando incluir e editar transações direto no navegador.
+% 
+% Há algumas técnicas, que funcionam em somente alguns poucos navegadores. Isso iria inchar o programa e funcionaria somente para alguns. Sem uma solução definitiva, não vou investir tempo em uma solução "meia boca".
+% 
+% Possíveis soluções:
+% 
+% - **Use PHP:** O que você pode fazer é embutir o _ML em um arquivo PHP de poucas linhas que ao fazer o Submit, simplesmente grave os dados novos no final do arquivo (append).
+% 
+% - **Use uma versão modificada do _ML:** Outros usuários já sentiram falta dessa facilidade e alteraram o programa para que isso fosse possível. Um deles é o [myMoneyLog http://nishimura.eti.br/blog/mymoneylog].
+% 
+% - **Pense diferente:** Eu edito o arquivo várias vezes durante o mês para fazer os lançamentos. Mas só consulto o extrato no navegador poucas vezes por mês. Também acho mais rápido editar o arquivo no editor de textos do que preencher formulários no navegador. Quem sabe isso não se aplique a você também?
+% 
+% Veja o depoimento do usuário Carlos José Vaz, que ilustra essa mudança de hábito:
+% 
+% 	Cara, estou usando o programinha há cinco meses e estou muito satisfeito com a facilidade de uso, passei a dica para dois colegas que nem sequer sabem o que é HTML e estão maravilhados, pois não há necessidade de mexer com códigos. Antes de utilizar também achava ruim editar o arquivo HTML, mas com o uso notei que é **essa tarefa é simples e fácil**.
+% 
+% 
+% === Como usar um arquivo TXT separado? ===[txt]
+% 
+% % --Ser apenas um arquivo faz parte do conceito de simplicidade (e mobilidade) do _ML. Não vamos macular o coitado :)--
+% 
+% Na versão 4 já [é possível colocar seus lançamentos em um arquivo TXT separado ../v4/#txt]!
+% 
+=== Como fazer lançamentos periódicos (parcelado, recorrente)? ===[periodicos]
+
+Veja o tópico relacionado no [Guia de Lançamentos MLROOT/input/#parcelado-recorrente].
+
+% A versão 4 do _ML permite fazer [pagamentos/ganhos parcelados e recorrentes ../v4/#parcelado-recorrente].
+
+% 	Eu pago o aluguel todo dia 15 de cada mês. Seria útil algo do tipo:{{br}}
+% 	*-*-15 -300,00 aluguel
+% 
+% A sugestão é boa, mas daí complica porque também precisaria ter uma data de início (primeiro mês de aluguel) e a de final (quando você comprou a casa própria :)
+% 
+% Mas olha só, os lançamentos não precisam ser feitos em ordem cronológica no arquivo. Faz a linha do aluguel, copia e cola 11 vezes, uma embaixo da outra e só troca o mês. Em um minuto você já cadastrou o ano todo!
+% 
+% Por exemplo:
+% 
+% ```
+% 2007-01-15	-300,00	aluguel
+% 2007-02-15	-300,00	aluguel
+% 2007-03-15	-300,00	aluguel
+% 2007-04-15	-300,00	aluguel
+% 2007-05-15	-300,00	aluguel
+% 2007-06-15	-300,00	aluguel
+% 2007-07-15	-300,00	aluguel
+% ```
+% 
+% 	**Dica:** Para quem usa o editor _VIM_LINK, basta fazer "yy11p" para copiar e colar a linha 11 vezes.
+
+=== Como marcar um lançamento como PAGO ou PENDENTE? ===[pendente]
+
+É fácil, basta usar tags. Você pode usar as tags PAGO e PENDENTE para classificar seus lançamentos, atualizando sempre que o estado mudar.
+
+Mas pense bem, se um lançamento só pode ser pago ou pendente, então basta usar a tag PENDENTE, pois todos os outros serão pagos.
+
+Então faça assim: coloque a tag PENDENTE em cada lançamento novo que você ainda não pagou. Quando fizer o pagamento, remova a tag e pronto.
+
+Para listar todos os seus pagamentos pendentes, basta clicar na tag PENDENTE, lá na [Nuvem de Tags MLROOT/v5/#widget-nuvem-de-tags].
+
+
+== Gráficos ==[graficos]
+
+=== No gráfico aparece coisas como 2k e -1k5 — Que isso? ===[notacao-k]
+
+Esta é uma notação resumida para os valores R$ 2.000,00 e R$ -1.500,00.
+
+As barras dos gráficos não podem ser muito largas nem espaçadas, senão o gráfico ficará muito grande e não caberá na tela. Por isso ao mostrar o valor dentro do gráfico, é preciso que ele não seja muito extenso.
+
+Para contornar esta limitação, o _ML usa uma notação resumida, comum nos meios técnicos e financeiros, que representa mil com a letra **k** e milhão com a letra **m**.
+
+Alguns exemplos:
+
+ || Valor          | Arredondado | Resumido |
+ | R$         1,23 | 1          | 1
+ | R$        12,34 | 12         | 12
+ | R$       123,45 | 123        | 123
+ | R$     1.234,56 | 1,2 mil    | 1k2
+ | R$    12.345,67 | 12,3 mil   | 12k3
+ | R$   123.456,78 | 123,4 mil  | 123k4
+ | R$ 1.234.567,89 | 1,2 milhão | 1m2
+
+% É fácil, ao ver o **k**, pense "mil".
+% 
+% 	Dica: Você já conhece o **Km** (quilômetro) que significa "mil metros". Olha a letra K ali representado mil. Neste caso, **8,5 Km** ficaria **8k5** na notação resumida.
+
+Se quiser o valor preciso, basta repousar o cursor do mouse sobre o valor resumido. Em alguns segundos o valor original aparecerá. Veja um exemplo:
+
+[MLROOT/img/v5-chart-tooltip.png]
+
+
+== Adaptações ==[adaptacoes]
+
+=== Quais configurações posso fazer? ===[config]
+
+Várias! Consulte o [Guia de Configuração MLROOT/config/] para ver a lista completa de configurações, com exemplos de uso e instruções.
+
+% É possível mudar o estado inicial do programa, já deixando selecionadas as opções que você mais gosta. Por exemplo, deixar somente os 6 meses recentes e definir um filtro padrão.
+% 
+% Procure por "User Config" no arquivo do _ML e altere as seguintes chaves:
+% 
+%  || Chave | Descrição
+%  | **lang** | Idioma da interface. Use "pt" para Português ou "en" para Inglês.
+%  | **maxLastMonths** | Número máximo de meses da opção "Somente Recentes", caso você precise de mais de 12 meses.
+%  | **initLastMonths** | Item selecionado da opção "Somente Recentes".
+% %  | **defaultOverview** | Liga/desliga a opção "Relatório Geral"
+%  | **defaultLastMonths** | Liga/desliga a opção "Somente Recentes".
+%  | **defaultMonthPartials** | Liga/desliga a opção "Mostrar Parciais Mensais".
+%  | **defaultFuture** | Liga/desliga a opção "Mostrar Lançamentos Futuros ".
+%  | **defaultRegex** | Liga/desliga a opção "regex" no filtro.
+%  | **defaultNegate** | Liga/desliga a opção "excluir" no filtro.
+%  | **defaultSearch** | Preenche automaticamente a caixa do filtro, como por exemplo "mercado". Aqui é um bom lugar para guardar aquela expressão regular mágica que você levou horas para fazer.
+%  | **showRowCount** | Liga/desliga a numeração das linhas da tabela.
+%  | **monthlyRowCount** | Se ligada, faz a numeração das linhas ser reiniciada a cada mês. Note que esta opção somente será utilizada caso a opção "Mostrar Parciais Mensais" esteja ativada.
+%  | **reportType** | Tipo do extrato padrão. Use 'd' para diário, 'm' para mensal e 'y' para anual.
+%  | **highlightWords** | Lista de palavras que você quer que apareçam em destaque. Exemplo: ``'pendente férias'``
+%  | **highlightTags** | Lista de tags que você quer que apareçam em destaque. Exemplo: ``'cartão escola'``
+%  | **showCharts** | Liga/desliga o gráfico de barras nos extratos mensal e anual.
+%  | **showMiniBars** | Liga/desliga o gráfico de porcentagem nos extratos mensal e anual.
+%  | **showChartBarLabel** | Liga/desliga a legenda no gráfico de barras.
+%  | **showMiniBarsLabels** | Liga/desliga a legenda no gráfico de porcentagem.
+%  | **miniBarWidth** | A largura do gráfico de porcentagem (em pixels).
+%  | **oneFile** | Liga/desliga o modo tudo-em-um do _ML.
+%  | **dataFiles** | Array com o nome (PATH) do arquivo TXT usado para guardar os lançamentos. Pode ter mais de um arquivo. O arquivo TXT deve ter a codificação UTF-8. Note que é preciso que a opção ``oneFile`` esteja desligada. [Saiba mais... ../v4/#varios-txt]
+% 
+% Para as chaves do tipo liga/desliga, use "true" para ligar e "false" para desligar (sem as aspas).
+
+=== Posso usar o programa em inglês ou espanhol? ===[lang]
+
+Sim, basta alterar a configuração [lang MLROOT/config/#lang].
+
+% O MoneyLog pode ser usado em Português ou Inglês, basta mudar a variável "lang" para "en". [Saiba mais... #config]
+
+% === Odeio o TAB. Posso usar outro delimitador? ===[outro-delimitador]
+% 
+% Sim!
+% 
+% Basta trocar o conteúdo da variável dataFieldSeparator de ``'\t'`` para ``':'``, por exemplo, caso você queira usar os dois-pontos como delimitador:
+% 
+% ``` var dataFieldSeparator = ':';
+% 
+% Esta linha já está bem no início do código JavaScript, na parte de configuração do usuário.
+
+=== Como deixar os lançamentos mais recentes em cima? ===[recentes-primeiro]
+
+Basta clicar no título da coluna "**Mês**" que a ordenação dos lançamentos é invertida.
+
+Mas note que com isso as parciais mensais são ocultadas. Isso porque com a ordem invertida, estas parciais teriam que vir antes do dados, o que pode causar confusão. Por isso as parciais só aparecem na listagem tradicional cronológica.
+
+% % TODO sempre atualizar número da linha
+% Mas se você quiser, pode ter as parciais na listagem inversa. A mudança no arquivo é bem simples, na linha 1465 troque de:
+% 
+% ``` if (sortColIndex !== 0 || sortColRev) {
+% 
+% para:
+% 
+% ``` if (sortColIndex !== 0) {
+% 
+% Ou seja, basta apagar a segunda parte. Mas ainda acho que isso fica confuso :)
+
+
+
+== Outros ==[outros]
+
+=== O que é um Shrubbery? ===[shrubbery]
+
+http://en.wikipedia.org/wiki/Shrubbery
+
+
+=== Como saber em que eu gasto mais? ===[maiores-gastos]
+
++ Vá no extrato diário.
++ Limpe a caixa de busca.
++ Desmarque todas as opções na caixa //Visualizar//.
++ Desmarque todas as tags.
++
+
+Com isso todos os seus lançamentos aparecerão na tela, de uma só vez.
+
+Agora lá no extrato, clique no título da coluna //Valor// duas vezes para reordenar as linhas e ver quem são os seus principais sugadores de dinheiro.
+
+Quer mais?
+
+Agora vá no extrato mensal, e lá no [Relatório de Tags MLROOT/v5/#relatorio-de-tags], clique na coluna //Total// para reordenar as linhas e saber quais tags são as mais "vermelhas".
+
+
+=== Como lembrar de sempre registrar os meus gastos? ===[rotina-inserir]
+
+- Sempre guarde todos os comprovantes das compras que fizer.
+- Se comprar no cartão, Maestro ou Visa Electron, não jogue fora o papelzinho!
+- De vez em quando, quando lembrar, tire todos os comprovantes da carteira e IMEDIATAMENTE insira os valores no _ML.
+	**Importante:** Não jogue fora os comprovantes enquanto eles não tiverem sido cadastrados!
+- Gastos soltos em dinheiro vá colocando quando lembrar. Quanto mais frequente, melhor.
+- E é isso. Simples, sem perda de tempo.
+-
+
+=== Como sincronizar os dados entre várias máquinas? ===[sincronizar]
+
+Se você usa o _MLC_LINK, o Dropbox já se encarrega de sincronizar tudo pra você, não precisa fazer nada.
+
+Se você usa o _MLP_LINK ou o _MLX_LINK, considere instalar o _DROPBOX_LINK e colocar os arquivos do _ML dentro dele. Assim, automaticamente, todas as suas máquinas terão sempre a versão mais atualizada dos seus dados, não importa em qual delas você fizer a edição.
+
+% Se você tiver conexão com a Internet em todas as máquinas em que utiliza o _ML, pode usar aplicativos como o Dropbox para guardar seu(s) arquivo(s) do _ML.
+% 
+% É tudo muito simples, basta criar sua conta, instalar o Dropbox em todas as máquinas e colocar o _ML dentro da pasta especial de sincronização.
+% 
+% Assim, automaticamente, todas as suas máquinas terão sempre a versão mais atualizada dos seus dados, não importa em qual delas você fizer a edição.
+
+
+
+
+% === Como fazer o echo "dados" >> moneylog.html ? ===[echo]
+% 
+% No lugar de "dados", você deve colocar a linha completa de um lançamento, com data, valor e descrição, assim:
+% 
+% ``` echo -e "2007-12-25\t88,00\tPresente de natal" >> moneylog.html
+% 
+% Lembre-se que o separador dos dados é o TAB e não espaços em branco, por isso é necessária a opção -e do echo.
+
+=== Por que o saldo final muda conforme o período? ===[saldo-final]
+
+Se você ver somente os meses recentes, o saldo final é um. Se você ver todos os meses, o saldo final é outro.
+
+Esse é o comportamento esperado, pois é o mais flexível:
+
+- Se você quiser que o acumulado das parciais seja relativo ao período escolhido, tudo certo, este é o comportamento padrão.
+- Se preferir que o acumulado seja a partir do saldo inicial, basta desmarcar a opção //De:// que os valores serão calculados desde o dia zero.
+-
+
+=== A ordem dos lançamentos de um mesmo dia está errada! ===[sort]
+
+A ordem de inserção dos dados no arquivo [não importa MLROOT/input/#ordem-nao-importa]. Na hora de ver no navegador eles são sempre ordenados automaticamente pelo programa. Com isso você tem a flexibilidade de não precisar se preocupar em adicionar os dados cronologicamente.
+
+A ordenação padrão é por data, já a ordem dos lançamentos do mesmo dia não é previsível, depende do humor da função sort() do JavaScript :)
+
+=== Tenho uma sugestão. Para onde mando? ===[sugestao]
+
+https://github.com/aureliojargas/moneylog/issues
+
+% 
+% Visite o [meu blog URLBLOG_CURRENT] e deixe um comentário no final com a sua sugestão. Se possível, descreva como você usa o _ML e dê sua opinião de como essa sugestão tornará o programa melhor.
+% 
+% Aproveite para ler as sugestões e dicas de outros usuários do _ML!
+
+=== Como fazer uma doação para apoiar o projeto? ===[doacao]
+
+Obrigado pelo interesse em ajudar! Para doar é fácil, basta ir na [página de doações ../donate/].
+
+
+== Problemas ==[problemas]
+
+=== O Internet Explorer reclama do _ML! ===[aviso-ie]
+
+No Windows, o Internet Explorer pode mostrar um aviso dizendo que "a página tem conteúdo ativo", ou que ele "impediu esta página da web de executar scripts ou controles ActiveX".
+
+Clique no aviso e escolha //Permitir conteúdo bloqueado// para que você possa usar o _ML.
+
+=== "Ops! Seu navegador está sem JavaScript" ===[noscript]
+
+Caso esteja vendo uma mensagem "Ops! Seu navegador está sem JavaScript" no lugar do extrato, [veja as intruções de como ligar o JavaScript http://support.google.com/adsense/bin/answer.py?hl=pt-BR&hlrm=pt&answer=12654].
+
+=== Eu atualizo a página (reload) e os checkbox ficam loucos! ===[checkbox-reload]
+
+O Firefox tem uma "esperteza" de lembrar as seleções do usuário (radio, checkboxes, select, etc), mesmo ao recarregar a página.
+
+Útil em alguns casos, um desastre no _ML.
+
+Para contornar este problema, segure a tecla Shift ao apertar o botão Reload, ou clique no endereço da página e aperte Enter. Assim a página será recarregada para o seu estado original.
+
+Nos outros navegadores não há problema, o estado inicial de todas as configurações é recuperado a cada recarregada.
+
+% === Meus lançamentos não aparecem no Konqueror! ===[konqueror]
+% 
+% Infelizmente este é um bug do Konqueror, que não respeita os TABs ao ler o conteúdo de um bloco PRE no innerHtml. Não entendeu nada? Não se preocupe.
+% 
+% Se você usa o Konqueror basta [usar outro delimitador para os dados #outro-delimitador], que não seja o TAB. Uma boa pedida pode ser os dois-pontos ":", assim como no /etc/passwd.
+% 
+% 	Obrigado ao Caio Romão por descobrir este bug no Konqueror.
+% 
+=== As linhas não mudam de cor ao passar o mouse! ===[ie-hover]
+
+Isso é uma limitação do Internet Explorer versões 5.5 e 6, que só aceita ``:hover`` em links. Nos outros navegadores, e versões mais recentes do IE, funciona normalmente.
+
+Não há o que arrumar no _ML. Se você fizer questão deste comportamento, atualize seu Internet Explorer para as versões 7 ou 8 que vai funcionar.
+
+
+=== Google Chrome: Travou em Carregando arquivo.txt… ===[chrome]
+
+%!include: ../_chrome.t2t
+
+=== Eu odeio esses vermelhinhos! ===[vermelhinhos]
+
+Eu também :)
+
+Mas sumir com os números em vermelho (negativos) é a sua missão. Quanto mais dados você inserir no _ML, melhor poderá analisar suas despesas e poder identificar onde que a torneira está aberta.
+
+
+== Fim. ==[fim]
+
+%!include: ../_footer.t2t
+
+
+% === Devo salvar no Desktop (Mesa)? ===[salvar]
+% 
+% Coloque o arquivo do _ML em um lugar bem fácil de acessar, para que você poupe tempo e sempre esteja olhando para ele. Assim também ajudará a lembrar de inserir os dados. A mesa (Desktop, Área de Trabalho) ou a barra (Dock) são ótimas opções.
+

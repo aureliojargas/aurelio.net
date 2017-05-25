@@ -1,0 +1,69 @@
+
+%!preproc: _MLO_LINK	[_MLO http://aurelio.net/moneylog/online]
+
+% Example: _ZZ_LINK -> [_ZZ_NAME _ZZ_URL]
+%!preproc: \b_(DOC_[A-Z0-9]+)_LINK		[_\1_NAME _\1_URL]
+%!preproc: \b_([A-Z0-9]+)_LINK		[_\1_NAME _\1_URL]
+%!preproc: \b_([A-Z0-9]+)_APPLINK		[_\1_NAME _\1_APPURL]
+
+
+%!postproc: _DOC_CONFIG_NAME  Guia de Configuração
+%!postproc: _DOC_INPUT_NAME   Guia de Lançamentos
+
+% Referral @xupisco
+%!postproc: _DROPBOX_URL  https://www.dropbox.com/referrals/NTEwNDU4OQ
+%!postproc: _DROPBOX_NAME Dropbox
+%!postproc: _DROPBOX_DIR  /Apps/MoneyLog Cloud
+
+%!postproc: _MYMONEYLOG_URL http://nishimura.eti.br/blog/mymoneylog/
+
+%!postproc: _MLC_GITHUB	 https://github.com/xupisco/MoneyLog-Cloud
+%!postproc: _GITHUB_URL https://github.com/aureliojargas/moneylog
+%!postproc: _SOURCES_BROWSE https://github.com/aureliojargas/moneylog/tree/master
+
+
+%!postproc: _ML1_APPURL  http://aurelio.net/moneylog/moneylog1.html
+%!postproc: _ML2_APPURL  http://aurelio.net/moneylog/moneylog2.html
+%!postproc: _ML3_APPURL  http://aurelio.net/moneylog/moneylog3.html
+%!postproc: _ML4_APPURL  http://aurelio.net/moneylog/moneylog4.html
+
+%!postproc: _ML1_POSTURL http://aurelio.net/blog/2006/07/08/moneylog-experience/
+%!postproc: _ML2_POSTURL http://aurelio.net/blog/2007/02/02/moneylog-experience-2/
+%!postproc: _ML3_POSTURL http://aurelio.net/blog/2007/12/12/moneylog-experience-3/
+%!postproc: _ML4_POSTURL http://aurelio.net/blog/2009/08/15/moneylog-experience-4/
+
+%!postproc: URLBLOG_1 http://aurelio.net/blog/2006/07/08/moneylog-experience/
+%!postproc: URLBLOG_2 http://aurelio.net/blog/2007/02/02/moneylog-experience-2/
+%!postproc: URLBLOG_3 http://aurelio.net/blog/2007/12/12/moneylog-experience-3/
+%!postproc: URLBLOG_4 http://aurelio.net/blog/2009/08/15/moneylog-experience-4/
+
+
+%!postproc: _MLB_APPURL	http://aurelio.net/moneylog/browser/app/
+%!postproc: _MLC_APPURL	http://moneylog-cloud.aurelio.net
+%!postproc: _MLP_APPURL	http://aurelio.net/moneylog/portable/demo/
+%!postproc: _MLX_APPURL	http://aurelio.net/moneylog/beta/moneylog.html
+
+%!postproc: _MLP_DOWNLOAD	http://aurelio.net/moneylog/portable/moneylog5.html
+
+%!postproc: _MLB_URL	http://aurelio.net/moneylog/browser/
+%!postproc: _MLC_URL	http://aurelio.net/moneylog/cloud/
+%!postproc: _MLP_URL	http://aurelio.net/moneylog/portable/
+%!postproc: _MLX_URL	http://aurelio.net/moneylog/beta/
+
+%!postproc: _MLB_NAME	_MLBR
+%!postproc: _MLC_NAME	_MLC
+%!postproc: _MLP_NAME	_MLP
+%!postproc: _MLX_NAME	_MLX
+
+%!postproc: _MLBR	MoneyLog Browser
+%!postproc: _MLC	MoneyLog Cloud
+%!postproc: _MLP	MoneyLog Portable
+%!postproc: _MLX	MoneyLog Beta
+%!postproc: _MLB	MoneyLog Beta
+
+%!postproc: _MLE	MoneyLog Experience
+%!postproc: _MLO	Moneylog Online
+%!postproc: _ML		MoneyLog
+
+%!preproc : CURRENT	5
+

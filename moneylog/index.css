@@ -1,0 +1,57 @@
+/* MoneyLog index page */
+
+body {
+	padding-top: 0;
+}
+#header h1 {
+	text-align: center;
+	text-align: right;
+	font-size: 1em;
+	line-height: 200%;
+	color: #444;
+}
+td {
+	vertical-align: middle;
+	border-width: 0;
+}
+td.appname {
+	width: 50%;
+}
+td.appname a {
+	line-height: 100%;
+	font-size: 2em;
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 30px 20px;
+}
+td.appdesc {
+	padding: 0 10px 0 10px;
+}
+
+tr.cloud    td.appname { background-color: #2B97E9; }
+tr.browser  td.appname { background-color: #E89E00; }
+tr.portable td.appname { background-color: #4D8A68; }
+tr.beta     td.appname { background-color: black; }
+
+
+
+/* ------------------------- iPhone = 320x480 */
+
+@media screen and (max-width: 480px) {
+	#header h1 {
+		font-size: 90%;
+	}
+	#header h2 {
+		margin-top: 1em;
+	}
+	td.appname a {
+		font-size: 24px;
+		padding: 40px 10px;
+	}
+	td.appdesc {
+		line-height: 120%;
+		font-size: 90%;
+	}
+}
+

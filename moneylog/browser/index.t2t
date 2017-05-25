@@ -1,0 +1,69 @@
+_MLB_NAME
+
+
+%!postproc: SITEROOT    ../..
+%!postproc: MLROOT    ..
+%!includeconf: ../_config.t2t
+%!postproc: (<BODY)     \1 class="browser"
+%!options: --toc
+
+Esta é uma versão especial do MoneyLog, que roda inteiramente dentro do navegador: leitura, edição e gravação dos lançamentos. Não há nenhum tipo de armazenamento externo, todos os seus dados ficam gravados na memória do próprio navegador ([localStorage #localStorage]).
+
+Acesse agora: [_MLB_APPURL _MLB_APPURL]
+
+
+%%TOC
+
+
+== Aviso importante ==[aviso]
+
+Esta versão é indicada para demonstração e testes rápidos, porém **não recomendo a sua utilização como aplicativo**.
+
+Como os seus lançamentos ficam atrelados ao navegador, é fácil perdê-los. Por exemplo, se você remover o navegador, resetá-lo, trocar de navegador ou trocar de máquina, seus dados não estarão mais acessíveis.
+
+Utilize apenas se você estiver ciente destas limitações, ou seja, se você usa sempre o mesmo navegador na mesma máquina. Mesmo assim, recomendo que faça becape dos seus lançamentos de tempos em tempos.
+
+
+== Inserir seus lançamentos ==[inserir]
+
+[MLROOT/img/browser-edit-button.png]
+
+Para inserir seus próprios lançamentos, clique no botão //Editar//. Vai abrir uma janela com um editor de textos simples. Você pode usar os lançamentos de exemplo como base e ir inserindo os seus aos poucos.
+
+O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o [Guia de Lançamentos MLROOT/input/].
+
+[MLROOT/img/browser-edit-screen-400.png]
+
+Sempre que quiser conferir como está ficando, aperte o botão //Salvar//. Suas edições serão salvas e o _MLB_NAME mostrará o extrato atualizado já com seus dados novos.
+
+Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o [conversor do _ML MLROOT/import/], que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).
+
+== Funcionamento offline ==[offline]
+
+Esta versão também funciona de maneira offline. Basta você [salvar o arquivo html _MLB_APPURL] e abrir no seu navegador.
+
+Você pode salvar o arquivo em qualquer pasta, renomeá-lo, mudar de pasta, não importa. O navegador lembrará dele e mostrará os seus lançamentos corretamente.
+
+	**Firefox:** Dos navegadores que testei, o Firefox foi o único que não funcionou com o _MLB_NAME no modo offline. Ele mostra a tela de edição e parece que salva os dados, mas ao recarregar a página volta-se à estaca zero.
+
+== Detalhes sobre o localStorage ==[localStorage]
+
+O localStorage tem um funcionamento similar aos cookies: é atrelado a um navegador e usuário, e é usado para guardar dados. No caso do _MLB_NAME, são guardados os lançamentos do usuário. A chave utilizada chama-se ``moneylogData``.
+
+Se você quiser limpar todos os seus dados do navegador, você pode usar o próprio _MLB_NAME e limpar tudo na tela de edição, ou procurar pela chave ``moneylogData`` nas configurações/preferências de seu navegador.
+
+% 	Remoto é uma chave por domínio.
+% 	Local é uma chave só, não importa URL.
+% 	Firefox: remoto OK, local não salva (perde no reload).
+% 	Safari: remoto OK, local OK.
+% 	Chrome: remoto OK, local OK.
+% 	Opera: remoto OK, local OK.
+
+Saiba mais:
+http://en.wikipedia.org/wiki/Web_storage
+
+
+
+%!include: ../_footer.t2t
+
+%!include: ''../_disqus.html''

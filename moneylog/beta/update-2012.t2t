@@ -1,0 +1,169 @@
+MoneyLog Beta 2012
+Guia de migração para usuários do SVN
+Fevereiro de 2012
+
+%!postproc: SITEROOT    ../..
+%!postproc: MLROOT    ..
+%!includeconf: ../_config.t2t
+%!postproc: (<BODY)     \1 class="beta-update"
+%!options: --toc
+
+% faxina na pasta svn
+
+Este é um guia de migração para usuários do [MoneyLog Beta (versão SVN) MLROOT/beta/] que ainda não fizeram nenhum ``svn update`` em 2012. Se você usa a [versão 4 MLROOT/v4/] (estável), não precisa ler este guia.
+
+Eu não mexia no _ML [desde maio de 2010 http://code.google.com/p/moneylog-dev/source/list?num=25&start=190]. Foi mais de um ano e meio parado, sem novidades. Mas agora no início de 2012 houve uma enxurrada de commits (mais de 400!), há toneladas de mudanças.
+
+% Primeiro, deixa eu te contar o que está acontecendo.
+% 
+% Eu não mexia no MoneyLog [desde maio de 2010 http://code.google.com/p/moneylog-dev/source/list?num=25&start=190]. Foi mais de um ano e meio parado, sem novidades. Agora em janeiro de 2012 fui fazer a contabilidade de uma viagem e precisei de algumas funcionalidades novas. Então lá fui eu programar.
+% 
+% Comecei em 8 de janeiro na [r179 http://code.google.com/p/moneylog-dev/source/detail?r=179] e agora, quase dois meses depois, já estamos na [r569 http://code.google.com/p/moneylog-dev/source/list?num=25&start=569]! Foram quase 400 commits, tem toneladas de mudanças, inclusive uma nova interface.
+
+
+Como há mudanças no arquivo TXT e nas configurações, preparei este guia para que você possa dar um ``svn update`` e continuar usando o programa sem sustos.
+
+% 	Curiosidade: Se quiser saber qual revisão você tem atualmente, basta executar ``svn info | grep Revision``
+
+% 	Qualquer dúvida ou sugestão, fale comigo no twitter @oreio ou no email verde (a) aurelio.net.
+
+	Veja também: [Guia completo das novidades MLROOT/v5/].
+
+%%TOC
+
+== Arquivo TXT: O arquivo moneylog.txt mudou-se ==[txt-padrao]
+
+Foi feita uma grande faxina no SVN e muitos arquivos mudaram de lugar. Antigamente havia um arquivo ``moneylog.txt`` já na raiz do SVN, e este era o arquivo padrão que o _ML carregava ao iniciar.
+
+Como este arquivo é apenas um exemplo, eu aconselho que **ninguém guarde seus dados ali**.
+
+O certo é criar um arquivo TXT novo, com outro nome e indicar a localização dele no [config.js MLROOT/beta/#config], assim:
+
+``` dataFiles = ['dados.txt'];
+
+Se você não fez isso e usava o arquivo ``moneylog.txt`` como seu arquivo de dados, faça o seguinte:
+
+```
+cp moneylog.txt dados.txt
+svn revert moneylog.txt
+svn update
+```
+
+Ou seja, antes de fazer o update, copiar o arquivo de dados para um nome novo (``dados.txt``), voltar o TXT padrão para seu conteúdo original e só então fazer a atualização.
+
+== Arquivo TXT: O Tab não é mais obrigatório como separador, agora pode usar somente espaços em branco ==[txt-brancos]
+
+Agora o separador dos dados é simplesmente "brancos", que podem ser Tabs ou espaços, ou ambos. Você escolhe.
+
+Antes era obrigatório haver um Tab entre cada campo, assim:
+
+``` 2012-02-22	-14,56	almoço| bar da esquina
+
+Mas agora, se você preferir, pode usar somente espaços em branco e nenhum Tab:
+
+``` 2012-02-22 -14,56 almoço| bar da esquina
+
+
+== Arquivo TXT: Agora é proibido haver espaços entre o sinal e o valor ==[txt-erro-sinal]
+
+Como antes o Tab era o delimitador, você podia colocar espaços em branco em qualquer lugar, inclusive em lugares bizarros como entre o sinal e o valor, assim:
+```
+2012-02-22    -  14,56    almoço| bar da esquina
+2012-02-23    -  16,78    almoço| bar do centro
+2012-02-24    - 142,00    almoço| bar do hotel 5★
+```
+
+Agora isso vai dar o erro "Lançamento inválido na linha N", pois o sinal deve estar sempre junto do número, assim:
+
+```
+2012-02-22      -14,56    almoço| bar da esquina
+2012-02-23      -16,78    almoço| bar do centro
+2012-02-24     -142,00    almoço| bar do hotel 5★
+```
+
+Caso este erro apareça, você pode fazer estas alterações na mão, ou usar [o conversor do _ML MLROOT/import/] para atualizar seu arquivo TXT para o formato novo de maneira automática. Escolha a opção "MoneyLog v4".
+
+	**IMPORTANTE:** Faça um diff para conferir o resultado da conversão e garantir que nenhum dado foi perdido. Eu testei bastante, mas sabe como é, bugs podem aparecer.
+
+	Se você quiser voltar ao comportamento anterior, use a configuração ``useLegacyDataFormat = true;``. Mas apesar de funcionar, eu não testo mais e pode quebrar no futuro. Eu recomendo atualizar seus dados e não se preocupar mais com isso.
+
+== Arquivo TXT: Agora é proibido haver espaços entre o valor e o recorrente ==[txt-erro-recorrente]
+
+Mesmo problema do item anterior, mas dessa vez é o espaço entre o valor e o número de parcelas:
+
+```
+2011-12-05    -500 /5     nerd| Netbook usado
+2011-11-25     100 /2     presente| Presente de Natal
+2011-09-05    -200 *6     aluguel| Aluguel da casa
+2011-09-10     100 *4     presente| O Zé vai me dar 100 pilas
+```
+
+Não vai dar erro, mas o número de parcelas vai ser identificado como uma tag. Para resolver o problema, basta remover o espaço em branco após o valor:
+
+```
+2011-12-05    -500/5     nerd| Netbook usado
+2011-11-25     100/2     presente| Presente de Natal
+2011-09-05    -200*6     aluguel| Aluguel da casa
+2011-09-10     100*4     presente| O Zé vai me dar 100 pilas
+```
+
+Novamente, para fazer essas alterações de maneira automática, use [o conversor do _ML MLROOT/import/]. Escolha a opção "MoneyLog v4".
+
+	**IMPORTANTE:** Faça um diff para conferir o resultado da conversão e garantir que nenhum dado foi perdido. Eu testei bastante, mas sabe como é, bugs podem aparecer.
+
+	Se você quiser voltar ao comportamento anterior, use a configuração ``useLegacyDataFormat = true;``. Mas apesar de funcionar, eu não testo mais e pode quebrar no futuro. Eu recomendo atualizar seus dados e não se preocupar mais com isso.
+
+== Interface: Opções "Somente Recentes" e "Mostrar Lançamentos Futuros" foram substituídas ==[ui-opcoes-antigas]
+
+No lugar destas duas opções, agora há um [seletor de meses MLROOT/v5/#widget-visualizar] para escolher a data inicial e final. Você escolhe **de** que mês **até** qual mês será o extrato. Assim fica bem mais flexível e poderoso do que no modo antigo.
+
+Com isso, estas configurações deixaram de funcionar:
+```
+defaultFuture = true;
+defaultLastMonths = true;
+initLastMonths = 3;
+maxLastMonths = 12;
+```
+
+Em seu lugar, agora você tem:
+```
+checkDateFrom = true      ;// Iniciar marcando a opção [X] De:?
+checkDateUntil = true     ;// Iniciar marcando a opção [X] Até:?
+
+initMonthOffsetFrom = -2  ;// Valor inicial da opção [X] De:
+initMonthOffsetUntil = 0  ;// Valor inicial da opção [X] Até:
+```
+
+As duas últimas aceitam um número, positivo ou negativo, que indicará o número de meses à partir da data atual. Use números positivos para meses futuros e negativos para os passados. Por exemplo, para dizer "três meses atrás", use -3. Para dizer mês seguinte, use 1. Zero significa o mês corrente.
+
+	Se você quiser voltar ao modo antigo, use a configuração ``useLegacyDateFilter = true;``. Os seletores novos desaparecerão e voltarão as duas opções antigas, bem como as suas configurações voltarão a funcionar.
+
+
+== config.js: Configurações renomeadas ==[config-renomeadas]
+
+Algumas configurações mudaram o prefixo de "default" para "check", para ficar mais claro que o que elas fazem é marcar a checkbox:
+
+```
+defaultMonthPartials -> checkMonthPartials
+defaultRegex         -> checkRegex
+defaultNegate        -> checkNegate
+```
+
+== config.js: Configuração "oneFile" foi removida ==[config-onefile]
+
+Quem usa a versão SVN não deveria mexer nesta configuração, mas de qualquer forma, aviso que ela foi removida. Em seu lugar há os seguintes scripts, que geram as versões alternativas do programa:
+
+```
+util/gen-browser
+util/gen-portable
+```
+
+== config.js: Muitas configurações novas! ==[config-novas]
+
+Já que estamos falando de configurações, saiba que há várias novas para você brincar.
+
+Criei [um arquivo comentado com todas as configurações http://code.google.com/p/moneylog-dev/source/browse/trunk/sample/config-pt.js], que você pode usar como base para o seu config.js.
+
+Agora há também um [Guia de Configuração MLROOT/config/], completo, com instruções sobre cada configuração. Aproveite para "tunar" seu _ML :)
+
+%!include: ../_footer.t2t

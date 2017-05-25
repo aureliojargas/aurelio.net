@@ -1,0 +1,12 @@
+/a/git/moneylog/util/gen-browser > /tmp/z
+diff -u index.html /tmp/z | mate -
+
+echo "Atualizar mesmo? ^C cancela"
+read f
+cat /tmp/z > index.html
+echo feito
+# exit
+
+echo "Atualizar site aurelio.net? ^C cancela"
+read f
+cd /a/www && ./upload moneylog/browser/app/index.html

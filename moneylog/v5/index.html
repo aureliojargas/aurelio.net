@@ -1,0 +1,690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/article.css">
+<TITLE>Novidades do MoneyLog 5</TITLE>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY class="v5">
+
+<DIV ID="header">
+<H1>Novidades do MoneyLog 5</H1>
+<H3>Março de 2012</H3>
+</DIV>
+
+<DIV ID="main">
+<P>
+Este é o resultado de mais de 300 horas de trabalho que investi nesta versão nova do MoneyLog. Estou muito satisfeito com o resultado, espero que você também goste!
+</P>
+<P>
+Itens marcados com uma ★ indicam mudanças no comportamento do MoneyLog em relação à versão anterior. Não deixe de ler!
+</P>
+	<BLOCKQUOTE>
+	Usuário da versão Beta? <A HREF="../beta/update-2012.html">Leia aqui primeiro</A>.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Veja também: <A HREF="http://aurelio.net/blog/2012/03/15/moneylog-experience-5/">Anúncio desta versão 5</A>.
+	</BLOCKQUOTE>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#sabores">Quatro sabores</A>
+    <LI><A HREF="#ui">Interface nova (UI) ★</A>
+    <LI><A HREF="#mobile">Mobile / smartphone</A>
+    <LI><A HREF="#imprimir">Imprimir extratos</A>
+    <LI><A HREF="#senha">Senha de acesso</A>
+    <LI><A HREF="#tela-cheia">Tela Cheia</A>
+    <LI><A HREF="#widget-visualizar">Widget: Visualizar ★</A>
+    <LI><A HREF="#widget-nuvem-de-tags">Widget: Nuvem de tags</A>
+    <LI><A HREF="#widget-somatorio-de-tags">Widget: Somatório de tags</A>
+    <LI><A HREF="#widget-sobre">Widget: Sobre</A>
+    <LI><A HREF="#filtros-em-todos">Filtros em todos os extratos ★</A>
+    <LI><A HREF="#data">Formato da data ★</A>
+    <LI><A HREF="#relatorio-de-tags">Relatório de tags</A>
+    <LI><A HREF="#somatorio-de-linhas">Somatório de linhas</A>
+    <LI><A HREF="#graficos">Gráficos</A>
+    <LI><A HREF="#lancamentos">Lançamentos ★</A>
+    <LI><A HREF="#dia-99">Dia 99 = último dia do mês</A>
+    <LI><A HREF="#configuracao">Configuração</A>
+    <LI><A HREF="#idiomas">Idiomas</A>
+    <LI><A HREF="#seu-widget">Faça seu próprio Widget</A>
+    <LI><A HREF="#changelog">Changelog</A>
+    <LI><A HREF="#agradecimentos">Agradecimentos</A>
+    <LI><A HREF="#patrocinio">Patrocine o MoneyLog ♥</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="sabores"><a href="#sabores">Quatro sabores</a></H2>
+
+<P>
+Agora o MoneyLog está disponível em quatro sabores diferentes:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A> — online, integrado com o Dropbox.
+<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A> — online, só pra brincar.
+<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A> — offline, tudo-em-um arquivo HTML.
+<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A> — offline, arquivos TXT locais, versão GitHub.
+</UL>
+
+<H2 ID="ui"><a href="#ui">Interface nova (UI) ★</a></H2>
+
+<P>
+A interface do app foi completamente redesenhada (por <A HREF="http://twitter.com/xupisco">@xupisco</A>). Agora está mais moderna e organizada, adaptando-se melhor a telas largas (<I>wide</I>). Todos os controles foram movidos para uma barra lateral à esquerda, deixando todo o espaço vertical livre para o extrato e seus gráficos.
+</P>
+<P>
+Versão 4:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v4-daily.jpg" BORDER="0" ALT="">
+</P>
+<P>
+Versão 5:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-portable-daily-500.jpg" BORDER="0" ALT="">
+</P>
+<P>
+Você pode abrir e fechar as "caixinhas" da barra lateral (<I>widgets</I>), deixando à mostra somente o que interessa. Há também <A HREF="../config/#widgets">configurações</A> para definir o estado de cada widget, inclusive até removê-los da interface. E ainda, você pode <A HREF="#tela-cheia">remover toda a barra lateral com um clique</A>.
+</P>
+
+<H2 ID="mobile"><a href="#mobile">Mobile / smartphone</a></H2>
+
+<P>
+Com a <A HREF="#ui">nova interface</A>, agora o MoneyLog está preparado para se adaptar à tela pequena de seu iPhone ou Android. Assim, você pode consultar seus extratos mesmo quando estiver na rua.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-portable-iphone-top.png" BORDER="0" ALT="">
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-portable-iphone-daily.png" BORDER="0" ALT="">
+</P>
+<P>
+Se você estiver agora em seu celular, <A HREF="http://aurelio.net/moneylog/browser/app/">experimente</A>!
+</P>
+
+<H2 ID="imprimir"><a href="#imprimir">Imprimir extratos</a></H2>
+
+<P>
+Agora, ao mandar imprimir alguma tela do MoneyLog, são feitos ajustes para que você tenha a melhor impressão possível, somente com o que interessa, sem distrações:
+</P>
+
+<UL>
+<LI>A barra lateral é removida, sobrando apenas o extrato.
+<LI>Cores são removidas, ficando tudo em preto e branco (exceto números negativos).
+<LI>O botão do gráfico vira um título.
+<LI>As barras do gráfico ficam apenas com o contorno.
+</UL>
+
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-print.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="senha"><a href="#senha">Senha de acesso</a></H2>
+
+<P>
+Que tal definir uma senha de acesso, para que curiosos não possam ver seus extratos? Agora é possível, com a nova configuração <A HREF="http://aurelio.net/moneylog/config/#myPassword">myPassword</A>.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-password-safari.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="tela-cheia"><a href="#tela-cheia">Tela Cheia</a></H2>
+
+<P>
+Novo botão para entrar no modo Tela Cheia, que esconde a barra lateral, deixando apenas o extrato brilhando sozinho na tela.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-fullscreen-button.png" BORDER="0" ALT="">
+</P>
+<P>
+Veja também: configuração nova <A HREF="http://aurelio.net/moneylog/config/#initFullScreen">initFullScreen</A>.
+</P>
+
+<H2 ID="widget-visualizar"><a href="#widget-visualizar">Widget: Visualizar ★</a></H2>
+
+<P>
+Neste widget foram concentradas as opções que costumavam ficar no topo da versão anterior.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-widget-view.png" BORDER="0" ALT="">
+</P>
+<P>
+Duas opções da <A HREF="../v4/">v4</A> foram removidas:
+</P>
+
+<UL>
+<LI>Somente Recentes: [X meses]
+<LI>Mostrar Lançamentos Futuros
+</UL>
+
+<P>
+Em seu lugar, agora você tem a flexibilidade de definir exatamente qual o intervalo de meses do extrato, com as novas opções <I>De:</I> e <I>Até:</I>, que são automaticamente povoadas somente com os meses usados em seus lançamentos.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-date-range-menu.png" BORDER="0" ALT="">
+</P>
+	<BLOCKQUOTE>
+	Nota: Se quiser as opções antigas de volta, use a configuração <A HREF="http://aurelio.net/moneylog/config/#useLegacyDateFilter">useLegacyDateFilter</A>.
+	</BLOCKQUOTE>
+<P>
+Veja também as configurações novas:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#showViewWidget">showViewWidget</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initViewWidgetOpen">initViewWidgetOpen</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#checkDateFrom">checkDateFrom</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#checkDateUntil">checkDateUntil</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initMonthsOffsetFrom">initMonthsOffsetFrom</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initMonthsOffsetUntil">initMonthsOffsetUntil</A>
+</UL>
+
+<H2 ID="widget-nuvem-de-tags"><a href="#widget-nuvem-de-tags">Widget: Nuvem de tags</a></H2>
+
+<P>
+A grande novidade das tags é a nuvem com três estados:
+</P>
+
+<UL>
+<LI>primeiro clique seleciona
+<LI>segundo clique exclui
+<LI>terceiro clique desmarca
+</UL>
+
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-tagcloud-tristate.png" BORDER="0" ALT="">
+</P>
+<P>
+Neste exemplo, estão selecionadas as tags <I>livro</I> e <I>mercado</I>, e está excluída a tag <I>presente</I>. As outras não estão marcadas. O MoneyLog interpreta este cenário, assim:
+</P>
+	<BLOCKQUOTE>
+	Mostre no extrato somente os lançamentos que possuem as tags livro <B>ou</B> mercado. Mas se algum destes lançamentos também possuir a tag presente, remova-o do extrato.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	<B>Nerds:</B> (livro || mercado) &amp;&amp; !presente
+	</BLOCKQUOTE>
+<P>
+Assim eu consigo uma lista de todas as minhas compras na livraria e no supermercado, exceto aquelas que comprei um presente para alguém.
+</P>
+<P>
+Se eu marcar a opção <I>Combinar</I>, aí só vão aparecer no extrato os lançamentos que obedecem a TODAS as condições ao mesmo tempo: o lançamento deve ter ambas as tags <I>livro</I> <B>e</B> <I>mercado</I>, e não pode ter a tag <I>presente</I>. Ou seja, um livro que comprei no supermercado, para mim mesmo.
+</P>
+	<BLOCKQUOTE>
+	<B>Nerds:</B> livro &amp;&amp; mercado &amp;&amp; !presente
+	</BLOCKQUOTE>
+<P>
+Cansou de brincar com tags? Clique na opção <I>Desmarcar todas</I>.
+</P>
+<P>
+Veja também as configurações novas:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#showTagCloud">showTagCloud</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initTagCloudOpen">initTagCloudOpen</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initSelectedTags">initSelectedTags</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initExcludedTags">initExcludedTags</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#ignoreTags">ignoreTags</A>
+</UL>
+
+<H2 ID="widget-somatorio-de-tags"><a href="#widget-somatorio-de-tags">Widget: Somatório de tags</a></H2>
+
+<P>
+Esta caixinha bacana lhe mostra o saldo final de cada uma das tags que estão no extrato. Use a opção <I>Ordenar por valor</I> para… Bem, acho que não preciso explicar, né?
+</P>
+<div class="inline">
+<P>
+<IMG ALIGN="middle" SRC="../config/img/widget-tag-summary.png" BORDER="0" ALT="">
+<IMG ALIGN="middle" SRC="../config/img/widget-tag-summary-by-value.png" BORDER="0" ALT="">
+</P>
+</div>
+<P>
+Veja também as configurações novas:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#TagSummary-config-active">TagSummary.config.active</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#TagSummary-config-opened">TagSummary.config.opened</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#TagSummary-config-showTagless">TagSummary.config.showTagless</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#TagSummary-config-checkSort">TagSummary.config.checkSort</A>
+</UL>
+
+<H2 ID="widget-sobre"><a href="#widget-sobre">Widget: Sobre</a></H2>
+
+<P>
+Esta é a última caixinha da barra lateral e traz informações sobre o MoneyLog.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-about.png" BORDER="0" ALT="">
+</P>
+<P>
+É aqui que você confere qual versão do MoneyLog você está usando.
+</P>
+<P>
+Caso esteja no MoneyLog Cloud, no final também há um link para o commit do backend que está sendo usado no servidor, para você poder ir no GitHub conferir.
+</P>
+
+<H2 ID="filtros-em-todos"><a href="#filtros-em-todos">Filtros em todos os extratos ★</a></H2>
+
+<P>
+Na <A HREF="../v4/">v4</A>, os filtros (pesquisa, tags selecionadas, somente valores) só funcionavam no extrato diário. Quando você mudava para o mensal ou anual, eles eram desabilitados e sumiam da interface.
+</P>
+<P>
+Não mais! Agora você pode aplicar todos os filtros também nos relatórios mensal e anual: digitar um texto de busca, clicar na nuvem de tags, etc. Se bater a dúvida de quais lançamentos estão entrando na conta, basta voltar ao extrato mensal para ver a lista.
+</P>
+
+<H2 ID="data"><a href="#data">Formato da data ★</a></H2>
+
+<P>
+Desde a sua primeira versão, os extratos do MoneyLog sempre mostraram a data no formato AAAA-MM-DD, o mesmo usado nos lançamentos.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-date-yyyy-mm-dd.png" BORDER="0" ALT="">
+</P>
+<P>
+Agora o formato da data no extrato diário é mais amigável, usando a ordem do padrão brasileiro (dia, mês, ano), com o nome mês abreviado.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-date-daily.png" BORDER="0" ALT="">
+</P>
+<P>
+Já no extrato mensal, o nome completo do mês é mostrado.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-date-monthly.png" BORDER="0" ALT="">
+</P>
+<P>
+Se preferir, você também pode personalizar o formato da data. Veja as seguintes configurações:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#i18nDatabase-pt-dateFormat">i18nDatabase.pt.dateFormat</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#i18nDatabase-pt-dateFormatMonth">i18nDatabase.pt.dateFormatMonth</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#i18nDatabase-pt-dateFormatYear">i18nDatabase.pt.dateFormatYear</A>
+</UL>
+
+<P>
+Para voltar ao formato antigo AAAA-MM-DD, basta desligar a configuração <A HREF="http://aurelio.net/moneylog/config/#showLocaleDate">showLocaleDate</A>.
+</P>
+
+<H2 ID="relatorio-de-tags"><a href="#relatorio-de-tags">Relatório de tags</a></H2>
+
+<P>
+Esta era a funcionalidade mais pedida pelos usuários, e foi finalmente implementada: um relatório de tags, mostrando os totais mensais de cada uma, com somatório e média no final.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-beta-tag-report.png" BORDER="0" ALT="">
+</P>
+<P>
+O relatório de tags aparece nos extratos mensal e anual, logo após o gráfico de barras.
+</P>
+<P>
+Assim como na tabela do extrato, você pode clicar no topo de cada coluna para mudar a ordem das linhas, ficando fácil ver qual tag gastou mais em determinado mês, ou no geral.
+</P>
+<P>
+Se você costuma usar múltiplas tags em seus lançamentos, pode aparecer uma opção "<I>Esconder as tags relacionadas</I>" logo abaixo desta tabela. Se você marcá-la, somente as tags explicitamente selecionadas na <A HREF="#widget-nuvem-de-tags">Nuvem de Tags</A> serão mostradas neste relatório.
+</P>
+<P>
+Veja também as configurações novas:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#showTagReport">showTagReport</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#checkHideRelatedTags">checkHideRelatedTags</A>
+</UL>
+
+<H2 ID="somatorio-de-linhas"><a href="#somatorio-de-linhas">Somatório de linhas</a></H2>
+
+<P>
+Quando você clica em uma linha do extrato, agora ela fica selecionada. Clique novamente para cancelar a seleção.
+</P>
+<P>
+Quando você seleciona duas ou mais linhas no extrato, aparece uma janelinha no canto inferior direito, com os somatórios dos valores destas linhas: total, média, mínimo, máximo e número de linhas.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-rows-summary.png" BORDER="0" ALT="">
+</P>
+<P>
+Se você estiver nos extratos mensal ou anual, aparecerá um menu no topo desta janelinha, para você poder escolher qual coluna do extrato que deve ser usada nos somatórios: Ganhos, Gastos, Saldo.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-cloud-rows-summary-monthly.png" BORDER="0" ALT="">
+</P>
+<P>
+O botão <I>Limpar</I>, como você já deve ter deduzido, desmarca todas as linhas que você selecionou no extrato.
+</P>
+
+<H2 ID="graficos"><a href="#graficos">Gráficos</a></H2>
+
+<P>
+Agora o gráfico de barras também aparece no extrato diário. Antes ele era restrito ao mensal e anual.
+</P>
+<P>
+Um detalhe bacana, é que agora se você repousar o mouse sobre o valor abreviado que aparece no topo de cada barra, vai surgir um balão (<I>tooltip</I>) mostrando o valor original.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/v5-chart-tooltip.png" BORDER="0" ALT="">
+</P>
+<P>
+Veja também as configurações novas:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initChartDaily">initChartDaily</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initChartMonthly">initChartMonthly</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#initChartYearly">initChartYearly</A>
+</UL>
+
+<H2 ID="lancamentos"><a href="#lancamentos">Lançamentos ★</a></H2>
+
+<P>
+Houve uma mudança importante no formato dos lançamentos. Agora o separador dos dados é simplesmente "brancos", que podem ser Tabs ou espaços, ou ambos. Você escolhe.
+</P>
+<P>
+Antes era obrigatório haver um Tab entre cada campo, assim:
+</P>
+
+<PRE>
+2012-02-22	-14,56	almoço| bar da esquina
+</PRE>
+
+<P>
+Mas agora, se você preferir, pode usar somente espaços em branco e nenhum Tab:
+</P>
+
+<PRE>
+2012-02-22 -14,56 almoço| bar da esquina
+</PRE>
+
+<P>
+Como antes o Tab era o delimitador, você podia colocar espaços em branco em qualquer lugar, inclusive em lugares bizarros, que o MoneyLog silenciosamente aceitava. Agora, é preciso arrumar a bagunça: há dois lugares onde não é mais permitido colocar espaços.
+</P>
+<P>
+<B>1. Não deve haver espaços entre o sinal e o valor.</B> Agora isso vai dar o erro "Lançamento inválido na linha N", pois o sinal deve estar sempre junto do número.
+</P>
+<P>
+Errado:
+</P>
+
+<PRE>
+2012-02-22    -  14,56    almoço| bar da esquina
+</PRE>
+
+<P>
+Certo:
+</P>
+
+<PRE>
+2012-02-22      -14,56    almoço| bar da esquina
+</PRE>
+
+<P>
+<B>2. Não deve haver espaços entre o valor e o número de parcelas.</B> Não vai dar erro, mas o número de parcelas vai ser identificado como uma tag. Para resolver o problema, basta remover o espaço em branco após o valor.
+</P>
+<P>
+Errado:
+</P>
+
+<PRE>
+2011-09-10     100 *4     presente| O Zé vai me dar 100 pilas
+2011-12-05    -500 /5     nerd| Netbook usado
+</PRE>
+
+<P>
+Certo:
+</P>
+
+<PRE>
+2011-09-10     100*4      presente| O Zé vai me dar 100 pilas
+2011-12-05    -500/5      nerd| Netbook usado
+</PRE>
+
+<P>
+Você pode fazer estas alterações na mão, ou usar <A HREF="http://aurelio.net/moneylog/import/">o conversor</A> para atualizar seus lançamentos para o formato novo de maneira automática. Escolha a opção "MoneyLog v4".
+</P>
+	<BLOCKQUOTE>
+	<B>IMPORTANTE:</B> Confira o resultado da conversão (faça um diff) para garantir que nenhum dado foi perdido. Eu testei bastante, mas sabe como é, bugs podem aparecer.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Se você quiser voltar ao comportamento anterior, use a configuração useLegacyDataFormat = S. Mas apesar de hoje isso funcionar, eu não testo mais e pode quebrar no futuro. Eu recomendo atualizar seus dados e não se preocupar mais com isso.
+	</BLOCKQUOTE>
+<P>
+Para saber mais, consulte o <A HREF="../input/">Guia de Lançamentos</A>.
+</P>
+
+<H2 ID="dia-99"><a href="#dia-99">Dia 99 = último dia do mês</a></H2>
+
+<P>
+Agora existe um atalho bacana para você fazer um lançamento no último dia mês, sem precisar pensar exatamente qual será este dia. É 31? É 30? É ano bissexto? Não importa, basta colocar dia 99 e pronto.
+</P>
+
+<PRE>
+2012-01-99   -20   Mesada do Júnior
+</PRE>
+
+<P>
+E sabe o que é mais legal? É que isso também funciona para <A HREF="../input/#parcelado-recorrente">pagamentos recorrentes</A>, então você pode cadastrar de uma vez a mesada do ano todo:
+</P>
+
+<PRE>
+2012-01-99   -20*12   Mesada do Júnior
+</PRE>
+
+<P>
+E o MoneyLog vai se encarregar de expandir todos os pagamentos para a data correta. Perceba que 2012 é ano bissexto, e isso também é levado em conta:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/ultimo-dia-recorrente.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="configuracao"><a href="#configuracao">Configuração</a></H2>
+
+<P>
+Algumas configurações trocaram de nome:
+</P>
+
+<UL>
+<LI>defaultMonthPartials → <A HREF="http://aurelio.net/moneylog/config/#checkMonthPartials">checkMonthPartials</A>
+<LI>defaultRegex → <A HREF="http://aurelio.net/moneylog/config/#checkRegex">checkRegex</A>
+<LI>defaultNegate → <A HREF="http://aurelio.net/moneylog/config/#checkNegate">checkNegate</A>
+</UL>
+
+<P>
+Fora as já citadas nos tópicos anteriores, há várias outras configurações novas:
+</P>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/config/#showBalance">showBalance</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#dataFilesDefault">dataFilesDefault</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#ignoreDataOlderThan">ignoreDataOlderThan</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#ignoreDataNewerThan">ignoreDataNewerThan</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#sortData-d-index">sortData.d.index</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#sortData-m-index">sortData.m.index</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#sortData-y-index">sortData.y.index</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#sortData-d-rev">sortData.d.rev</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#sortData-m-rev">sortData.m.rev</A>
+<LI><A HREF="http://aurelio.net/moneylog/config/#sortData-y-rev">sortData.y.rev</A>
+</UL>
+
+<P>
+Mas, quer saber? Vá direto no <A HREF="../config/">Guia de Configuração</A> que lá está tudo o que você precisa saber sobre onde, como, e o quê configurar.
+</P>
+
+<H2 ID="idiomas"><a href="#idiomas">Idiomas</a></H2>
+
+<P>
+Além do português e inglês, agora o MoneyLog também está traduzido para estes idiomas:
+</P>
+
+<UL>
+<LI>Catalão — por <A HREF="http://twitter.com/pacoriviere">@pacoriviere</A>
+<LI>Espanhol — por <A HREF="http://twitter.com/g_nemmi">@g_nemmi</A> e Isadora Pinardi
+</UL>
+
+<H2 ID="seu-widget"><a href="#seu-widget">Faça seu próprio Widget</a></H2>
+
+<P>
+Se você manja de HTML e JavaScript, saiba que é muito fácil criar um widget novo ali na barra lateral, bastam poucas linhas de código no final de seu <A HREF="../config/#onde">config.js</A>.
+</P>
+<P>
+Há quatro widgets de exemplo:
+</P>
+
+<UL>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-world.js">widget-hello-world.js</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-translation.js">widget-hello-translation.js</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-checkbox.js">widget-hello-checkbox.js</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-nerd-toy.js">widget-nerd-toy.js</A>
+</UL>
+
+<P>
+E o teu widget, vai ser do que? Lembretes? Algum somatório especial? Exportar os dados do extrato para CSV? Use a criatividade! E depois contribua lá no repositório: <A HREF="https://github.com/aureliojargas/moneylog-plugins">https://github.com/aureliojargas/moneylog-plugins</A>
+</P>
+
+<H2 ID="changelog"><a href="#changelog">Changelog</a></H2>
+
+<P>
+Este é somente para nerds que gostam de estudar códigos-fonte: o <A HREF="NEWS.html">Changelog resumido</A> desde a v4, em inglês, com links para os principais commits feitos durante o desenvolvimento desta versão.
+</P>
+
+<H2 ID="agradecimentos"><a href="#agradecimentos">Agradecimentos</a></H2>
+
+<P>
+Esta v5 não seria nem metade do que é se não fosse pelo trabalho voluntário do <B>Leandro Voltolino</B> (<A HREF="http://twitter.com/xupisco">@xupisco</A>). Foi ele quem criou a <A HREF="#ui">interface nova</A>, programou todo o <A HREF="https://github.com/xupisco/MoneyLog-Cloud/">código de servidor do MoneyLog Cloud</A>, fez o ícone para iOS,
+criou os primeiros <A HREF="https://github.com/aureliojargas/moneylog-plugins">plugins</A>,
+escolheu as cores de cada sabor, além de apontar bugs e dar várias ideias.
+</P>
+<P>
+Trabalhamos juntos no MoneyLog grande parte do tempo durante as últimas semanas, via Google Talk. O Leandro ajudou tanto que o considero coautor dessa versão nova. O cara é 10 mesmo, valeu Leandro!
+</P>
+<P>
+Outro que me ajudou muito foi o <B>Denilson Figueiredo de Sá</B> (<A HREF="http://twitter.com/denilsonsa">@denilsonsa</A>). Desde 2009 trocamos e-mails sobre o MoneyLog. Ele já descobriu vários bugs e deu ideias bacanas, como o <A HREF="#somatorio-de-linhas">Somatório de linhas</A>. Foi de nossas discussões de ideias em e-mails quilométricos que surgiram as soluções para o <A HREF="#relatorio-de-tags">Relatório de tags</A> e os <A HREF="#widget-visualizar">seletores de datas</A>. Valeu Denilson, você é meu controle de qualidade :)
+</P>
+<P>
+Um agradecimento muito especial vai para o <B>XXXXXXXX</B> (ele pediu anonimato), que durante 5 meses <A HREF="../donate/">doou</A> 10% de sua renda para o projeto MoneyLog. Esta foi uma atitude única, admirável, que me tocou muito. Todo mês, quando vinha a sua doação, eu ficava muito feliz com o gesto. Só tenho a aplaudi-lo, valeu mesmo! Deixo aqui um trecho de seu e-mail:
+</P>
+	<BLOCKQUOTE>
+	"Muito do meu conhecimento e influências são pessoas que postam conhecimento ou software gratuitamente na Internet. É importante retribuir isso também em doações em dinheiro, principalmente com doações mais consistentes. O meu plano é doar regularmente 10% da minha renda mensal e escolher alguns projetos de software livre, pessoas, sites, etc e doar para cada projeto/pessoa por um período de 6 meses a 1 ano, pra dar uma boa injeção de motivação. [...] No software livre, nós recebemos muito da comunidade, e poder devolver também é um privilégio."
+	</BLOCKQUOTE>
+<P>
+Agradeço também aos tradutores, que possibilitaram que novas audiências possam usar o MoneyLog: Paco Rivière (<A HREF="http://twitter.com/pacoriviere">@pacoriviere</A>), Gonzalo Nemmi (<A HREF="http://twitter.com/g_nemmi">@g_nemmi</A>) e Isadora Pinardi.
+</P>
+<P>
+E finalmente, MUITO OBRIGADO a todos que ajudaram com ideias, patches, testes e bug reports:
+</P>
+
+<UL>
+<LI><A HREF="http://twitter.com/adolfont">@adolfont</A>
+<LI><A HREF="http://twitter.com/bebetasso">@bebetasso</A>
+<LI><A HREF="http://twitter.com/biancafreitas">@biancafreitas</A>
+<LI><A HREF="http://twitter.com/doutorchefe">@doutorchefe</A>
+<LI><A HREF="http://twitter.com/eeev2011">@eeev2011</A>
+<LI><A HREF="http://twitter.com/erickmor">@erickmor</A>
+<LI><A HREF="http://twitter.com/_Felipe">@_Felipe</A>
+<LI><A HREF="http://twitter.com/guaracybm">@guaracybm</A>
+<LI><A HREF="http://twitter.com/laubstein">@laubstein</A>
+<LI><A HREF="http://twitter.com/lucmove">@lucmove</A>
+<LI><A HREF="http://twitter.com/magasine">@magasine</A>
+<LI><A HREF="http://twitter.com/osantana">@osantana</A>
+<LI><A HREF="http://twitter.com/pirolla">@pirolla</A>
+<LI><A HREF="http://twitter.com/ralcantara">@ralcantara</A>
+<LI><A HREF="http://twitter.com/ricobl">@ricobl</A>
+<LI><A HREF="http://twitter.com/vyper">@vyper</A>
+<LI><A HREF="http://twitter.com/wcomnisky">@wcomnisky</A>
+<LI>Carlos Alvsan
+<LI>Tiago Centurion
+</UL>
+
+<H2 ID="patrocinio"><a href="#patrocinio">Patrocine o MoneyLog ♥</a></H2>
+
+<P>
+E aí, gostou das novidades?
+</P>
+<P>
+<A HREF="../donate/">Que tal doar R$ 5,00 para ajudar o projeto?</A>
+</P>
+<div id="footer">
+<hr>
+<div class="footer-col">
+
+<H4>Sabores</H4>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
+<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
+<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
+<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
+</UL>
+
+</div>
+<div class="footer-col">
+
+<H4>Docs</H4>
+
+<UL>
+<LI><A HREF="../about/">sobre</A>
+<LI><A HREF="../v5/">novidades v5</A> ★
+<LI><A HREF="../faq/">FAQ</A>
+<LI><A HREF="../input/">lançamentos</A>
+<LI><A HREF="../config/">configuração</A>
+</UL>
+
+</div>
+<div class="footer-col last">
+
+<H4>Misc</H4>
+
+<UL>
+<LI><A HREF="../import/">conversor</A>
+<LI><A HREF="../donate/">doação</A> ♥
+<LI><A HREF="../history/">versões antigas</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
+</UL>
+
+</div>
+<hr style="clear: both;">
+<a id="footer-home" href="..">← início</a>
+<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
+<div style="clear: both;"></div>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="../../include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'aurelionet';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags moneylog/v5/index.t2t -->
+</BODY></HTML>

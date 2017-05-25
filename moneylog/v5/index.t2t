@@ -1,0 +1,503 @@
+Novidades do _ML 5
+
+Março de 2012
+
+%!postproc: SITEROOT    ../..
+%!postproc: MLROOT    ..
+%!includeconf: ../_config.t2t
+%!postproc: (<BODY)     \1 class="v5"
+%!options: --toc
+
+% Add links to configuration keys ``fooBar``
+%!preproc(html): ``(.*?)``    [\1 http://aurelio.net/moneylog/config/#\1]
+% Fix some config links: #i18nDatabase.pt.dateFormat -> #i18nDatabase-pt-dateFormat
+%!postproc(html): (/config/#[A-Za-z0-9-]+?)\.    \1-
+%!postproc(html): (/config/#[A-Za-z0-9-]+?)\.    \1-
+
+% doação
+%!postproc: URLDOACAO_ https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&tipo=CP&moeda=BRL&item_id_1=1&item_descr_1=Doacao+ao+projeto+MoneyLog&item_quant_1=1&item_frete_1=000&item_valor_1=
+
+Este é o resultado de mais de 300 horas de trabalho que investi nesta versão nova do _ML. Estou muito satisfeito com o resultado, espero que você também goste!
+
+Itens marcados com uma ★ indicam mudanças no comportamento do _ML em relação à versão anterior. Não deixe de ler!
+
+	Usuário da versão Beta? [Leia aqui primeiro  MLROOT/beta/update-2012.html].
+
+	Veja também: [Anúncio desta versão 5 _MYBLOG/2012/03/15/moneylog-experience-5/].
+
+
+% Investi mais de 300 horas de trabalho nesta versão nova. Foi cansativo, mas estou muito satisfeito com o resultado. Considero esta a melhor versão já lançada do _ML, e espero que você também chegue nesta conclusão.
+
+% Agradecimentos
+
+%%TOC
+
+
+== Quatro sabores ==[sabores]
+
+Agora o _ML está disponível em quatro sabores diferentes:
+- _MLC_LINK — online, integrado com o Dropbox.
+- _MLB_LINK — online, só pra brincar.
+- _MLP_LINK — offline, tudo-em-um arquivo HTML.
+- _MLX_LINK — offline, arquivos TXT locais, versão GitHub.
+-
+
+
+== Interface nova (UI) ★ ==[ui]
+
+A interface do app foi completamente redesenhada (por @xupisco). Agora está mais moderna e organizada, adaptando-se melhor a telas largas (//wide//). Todos os controles foram movidos para uma barra lateral à esquerda, deixando todo o espaço vertical livre para o extrato e seus gráficos.
+
+Versão 4:
+
+[MLROOT/img/v4-daily.jpg]
+
+Versão 5:
+
+[MLROOT/img/v5-portable-daily-500.jpg]
+
+Você pode abrir e fechar as "caixinhas" da barra lateral (//widgets//), deixando à mostra somente o que interessa. Há também [configurações MLROOT/config/#widgets] para definir o estado de cada widget, inclusive até removê-los da interface. E ainda, você pode [remover toda a barra lateral com um clique #tela-cheia].
+
+
+== Mobile / smartphone ==[mobile]
+
+Com a [nova interface #ui], agora o _ML está preparado para se adaptar à tela pequena de seu iPhone ou Android. Assim, você pode consultar seus extratos mesmo quando estiver na rua.
+
+[MLROOT/img/v5-portable-iphone-top.png]
+
+[MLROOT/img/v5-portable-iphone-daily.png]
+
+Se você estiver agora em seu celular, [experimente _MLB_APPURL]!
+
+== Imprimir extratos ==[imprimir]
+
+Agora, ao mandar imprimir alguma tela do _ML, são feitos ajustes para que você tenha a melhor impressão possível, somente com o que interessa, sem distrações:
+
+- A barra lateral é removida, sobrando apenas o extrato.
+- Cores são removidas, ficando tudo em preto e branco (exceto números negativos).
+- O botão do gráfico vira um título.
+- As barras do gráfico ficam apenas com o contorno.
+-
+
+[MLROOT/img/v5-print.png]
+
+== Senha de acesso ==[senha]
+
+Que tal definir uma senha de acesso, para que curiosos não possam ver seus extratos? Agora é possível, com a nova configuração ``myPassword``.
+
+[MLROOT/img/v5-cloud-password-safari.png]
+
+% 	Obrigado @bebetasso pela ideia.
+
+
+== Tela Cheia ==[tela-cheia]
+
+Novo botão para entrar no modo Tela Cheia, que esconde a barra lateral, deixando apenas o extrato brilhando sozinho na tela.
+
+[MLROOT/img/v5-cloud-fullscreen-button.png]
+
+Veja também: configuração nova ``initFullScreen``.
+
+% - New config  to start app in Full Screen mode. (thanks @xupisco) [r324]
+
+
+== Widget: Visualizar ★ ==[widget-visualizar]
+
+Neste widget foram concentradas as opções que costumavam ficar no topo da versão anterior.
+
+[MLROOT/img/v5-cloud-widget-view.png]
+
+Duas opções da [v4 MLROOT/v4/] foram removidas:
+- Somente Recentes: ""[X meses]""
+- Mostrar Lançamentos Futuros
+-
+
+Em seu lugar, agora você tem a flexibilidade de definir exatamente qual o intervalo de meses do extrato, com as novas opções //De:// e //Até://, que são automaticamente povoadas somente com os meses usados em seus lançamentos.
+
+[MLROOT/img/v5-date-range-menu.png]
+
+	Nota: Se quiser as opções antigas de volta, use a configuração ``useLegacyDateFilter``.
+
+Veja também as configurações novas:
+- ``showViewWidget``
+- ``initViewWidgetOpen``
+- ``checkDateFrom``
+- ``checkDateUntil``
+- ``initMonthsOffsetFrom``
+- ``initMonthsOffsetUntil``
+-
+
+% - **New date filter:** combos to choose an initial and final month for the reports. It disables the Recent Only and Future Data options. (thanks @denilsonsa, @adolfont, @magasine) [r358]
+% - Now the new date filter is the default. New config ``useLegacyDateFilter`` to bring the old options back. (thanks @denilsonsa) [r369]
+
+== Widget: Nuvem de tags ==[widget-nuvem-de-tags]
+
+A grande novidade das tags é a nuvem com três estados:
+
+- primeiro clique seleciona
+- segundo clique exclui
+- terceiro clique desmarca
+-
+
+[MLROOT/img/v5-cloud-tagcloud-tristate.png]
+
+Neste exemplo, estão selecionadas as tags //livro// e //mercado//, e está excluída a tag //presente//. As outras não estão marcadas. O _ML interpreta este cenário, assim:
+
+	Mostre no extrato somente os lançamentos que possuem as tags livro **ou** mercado. Mas se algum destes lançamentos também possuir a tag presente, remova-o do extrato.
+
+% 	**Nerds:** egrep 'livro|mercado' | grep -v 'presente'
+
+	**Nerds:** (livro || mercado) && !presente
+
+Assim eu consigo uma lista de todas as minhas compras na livraria e no supermercado, exceto aquelas que comprei um presente para alguém.
+
+Se eu marcar a opção //Combinar//, aí só vão aparecer no extrato os lançamentos que obedecem a TODAS as condições ao mesmo tempo: o lançamento deve ter ambas as tags //livro// **e** //mercado//, e não pode ter a tag //presente//. Ou seja, um livro que comprei no supermercado, para mim mesmo.
+
+	**Nerds:** livro && mercado && !presente
+
+Cansou de brincar com tags? Clique na opção //Desmarcar todas//.
+
+Veja também as configurações novas:
+- ``showTagCloud``
+- ``initTagCloudOpen``
+- ``initSelectedTags``
+- ``initExcludedTags``
+- ``ignoreTags``
+-
+% - New option in Tag Cloud: [X] Reset. (thanks @wcomnisky) [r383]
+% ``ignoreTags`` to ignore all entries with one of the specified tags. (thanks @erickmor) [r435]
+
+== Widget: Somatório de tags ==[widget-somatorio-de-tags]
+
+Esta caixinha bacana lhe mostra o saldo final de cada uma das tags que estão no extrato. Use a opção //Ordenar por valor// para… Bem, acho que não preciso explicar, né?
+
+''' <div class="inline">
+[MLROOT/config/img/widget-tag-summary.png]
+[MLROOT/config/img/widget-tag-summary-by-value.png]
+
+''' </div>
+
+Veja também as configurações novas:
+- ``TagSummary.config.active``
+- ``TagSummary.config.opened``
+- ``TagSummary.config.showTagless``
+- ``TagSummary.config.checkSort``
+-
+% - New config ``TagSummary.config.showTagless`` to show/hide the EMPTY tag. (thanks @denilsonsa) [r211] [r511]
+
+== Widget: Sobre ==[widget-sobre]
+
+Esta é a última caixinha da barra lateral e traz informações sobre o _ML.
+
+[MLROOT/img/v5-cloud-about.png]
+
+É aqui que você confere qual versão do _ML você está usando.
+
+Caso esteja no _MLC, no final também há um link para o commit do backend que está sendo usado no servidor, para você poder ir no GitHub conferir.
+
+== Filtros em todos os extratos ★ ==[filtros-em-todos]
+
+Na [v4 MLROOT/v4/], os filtros (pesquisa, tags selecionadas, somente valores) só funcionavam no extrato diário. Quando você mudava para o mensal ou anual, eles eram desabilitados e sumiam da interface.
+
+Não mais! Agora você pode aplicar todos os filtros também nos relatórios mensal e anual: digitar um texto de busca, clicar na nuvem de tags, etc. Se bater a dúvida de quais lançamentos estão entrando na conta, basta voltar ao extrato mensal para ver a lista.
+
+% - Now all filters are also available in Monthly and Yearly reports. (thanks @denilsonsa, @eeev2011) [r514]
+
+
+== Formato da data ★ ==[data]
+
+Desde a sua primeira versão, os extratos do _ML sempre mostraram a data no formato AAAA-MM-DD, o mesmo usado nos lançamentos.
+
+[MLROOT/img/v5-date-yyyy-mm-dd.png]
+
+Agora o formato da data no extrato diário é mais amigável, usando a ordem do padrão brasileiro (dia, mês, ano), com o nome mês abreviado.
+
+[MLROOT/img/v5-date-daily.png]
+
+Já no extrato mensal, o nome completo do mês é mostrado.
+
+[MLROOT/img/v5-date-monthly.png]
+
+Se preferir, você também pode personalizar o formato da data. Veja as seguintes configurações:
+- ``i18nDatabase.pt.dateFormat``
+- ``i18nDatabase.pt.dateFormatMonth``
+- ``i18nDatabase.pt.dateFormatYear``
+-
+
+Para voltar ao formato antigo AAAA-MM-DD, basta desligar a configuração ``showLocaleDate``.
+
+% ``i18n.pt.dateFormatYear``. Change "pt" to "en", "es"…. (thanks @g_nemmi) [r113] [r352]
+
+
+== Relatório de tags ==[relatorio-de-tags]
+
+Esta era a funcionalidade mais pedida pelos usuários, e foi finalmente implementada: um relatório de tags, mostrando os totais mensais de cada uma, com somatório e média no final.
+
+[MLROOT/img/v5-beta-tag-report.png]
+
+O relatório de tags aparece nos extratos mensal e anual, logo após o gráfico de barras.
+
+Assim como na tabela do extrato, você pode clicar no topo de cada coluna para mudar a ordem das linhas, ficando fácil ver qual tag gastou mais em determinado mês, ou no geral.
+
+Se você costuma usar múltiplas tags em seus lançamentos, pode aparecer uma opção "//Esconder as tags relacionadas//" logo abaixo desta tabela. Se você marcá-la, somente as tags explicitamente selecionadas na [Nuvem de Tags #widget-nuvem-de-tags] serão mostradas neste relatório.
+
+Veja também as configurações novas:
+- ``showTagReport``
+- ``checkHideRelatedTags``
+-
+
+
+% - **New feature: Tag Report** in monthly and yearly reports. Table headings are clickable for sorting. (thanks @denilsonsa) [r524]
+
+== Somatório de linhas ==[somatorio-de-linhas]
+
+Quando você clica em uma linha do extrato, agora ela fica selecionada. Clique novamente para cancelar a seleção.
+
+Quando você seleciona duas ou mais linhas no extrato, aparece uma janelinha no canto inferior direito, com os somatórios dos valores destas linhas: total, média, mínimo, máximo e número de linhas.
+
+[MLROOT/img/v5-cloud-rows-summary.png]
+
+Se você estiver nos extratos mensal ou anual, aparecerá um menu no topo desta janelinha, para você poder escolher qual coluna do extrato que deve ser usada nos somatórios: Ganhos, Gastos, Saldo.
+
+[MLROOT/img/v5-cloud-rows-summary-monthly.png]
+
+O botão //Limpar//, como você já deve ter deduzido, desmarca todas as linhas que você selecionou no extrato.
+
+
+% - **New feature: Rows Summary.** When selecting rows, a popup appears with: sum, max, min, average, count. (thanks @denilsonsa) [r207]
+% - New button to reset the Rows Summary, undoing all user selections in the report. (thanks @denilsonsa) [r478]
+
+
+== Gráficos ==[graficos]
+
+Agora o gráfico de barras também aparece no extrato diário. Antes ele era restrito ao mensal e anual.
+
+Um detalhe bacana, é que agora se você repousar o mouse sobre o valor abreviado que aparece no topo de cada barra, vai surgir um balão (//tooltip//) mostrando o valor original.
+
+[MLROOT/img/v5-chart-tooltip.png]
+
+Veja também as configurações novas:
+- ``initChartDaily``
+- ``initChartMonthly``
+- ``initChartYearly``
+-
+
+% - Now showing chart bar original value as a tooltip. (by @_Felipe) [r144]
+
+
+
+== Lançamentos ★ ==[lancamentos]
+
+Houve uma mudança importante no formato dos lançamentos. Agora o separador dos dados é simplesmente "brancos", que podem ser Tabs ou espaços, ou ambos. Você escolhe.
+
+Antes era obrigatório haver um Tab entre cada campo, assim:
+
+``` 2012-02-22	-14,56	almoço| bar da esquina
+
+Mas agora, se você preferir, pode usar somente espaços em branco e nenhum Tab:
+
+``` 2012-02-22 -14,56 almoço| bar da esquina
+
+
+% == Arquivo TXT: Agora é proibido haver espaços entre o sinal e o valor ==[txt-erro-sinal]
+
+Como antes o Tab era o delimitador, você podia colocar espaços em branco em qualquer lugar, inclusive em lugares bizarros, que o _ML silenciosamente aceitava. Agora, é preciso arrumar a bagunça: há dois lugares onde não é mais permitido colocar espaços.
+
+**1. Não deve haver espaços entre o sinal e o valor.** Agora isso vai dar o erro "Lançamento inválido na linha N", pois o sinal deve estar sempre junto do número.
+
+Errado:
+```
+2012-02-22    -  14,56    almoço| bar da esquina
+```
+
+Certo:
+```
+2012-02-22      -14,56    almoço| bar da esquina
+```
+
+**2. Não deve haver espaços entre o valor e o número de parcelas.** Não vai dar erro, mas o número de parcelas vai ser identificado como uma tag. Para resolver o problema, basta remover o espaço em branco após o valor.
+
+Errado:
+```
+2011-09-10     100 *4     presente| O Zé vai me dar 100 pilas
+2011-12-05    -500 /5     nerd| Netbook usado
+```
+
+Certo:
+```
+2011-09-10     100*4      presente| O Zé vai me dar 100 pilas
+2011-12-05    -500/5      nerd| Netbook usado
+```
+
+Você pode fazer estas alterações na mão, ou usar [o conversor http://aurelio.net/moneylog/import/] para atualizar seus lançamentos para o formato novo de maneira automática. Escolha a opção "MoneyLog v4".
+
+	**IMPORTANTE:** Confira o resultado da conversão (faça um diff) para garantir que nenhum dado foi perdido. Eu testei bastante, mas sabe como é, bugs podem aparecer.
+
+	Se você quiser voltar ao comportamento anterior, use a configuração useLegacyDataFormat = S. Mas apesar de hoje isso funcionar, eu não testo mais e pode quebrar no futuro. Eu recomendo atualizar seus dados e não se preocupar mais com isso.
+
+Para saber mais, consulte o [Guia de Lançamentos MLROOT/input/].
+
+== Dia 99 = último dia do mês ==[dia-99]
+
+Agora existe um atalho bacana para você fazer um lançamento no último dia mês, sem precisar pensar exatamente qual será este dia. É 31? É 30? É ano bissexto? Não importa, basta colocar dia 99 e pronto.
+
+``` 2012-01-99   -20   Mesada do Júnior
+
+E sabe o que é mais legal? É que isso também funciona para [pagamentos recorrentes MLROOT/input/#parcelado-recorrente], então você pode cadastrar de uma vez a mesada do ano todo:
+
+``` 2012-01-99   -20*12   Mesada do Júnior
+
+E o _ML vai se encarregar de expandir todos os pagamentos para a data correta. Perceba que 2012 é ano bissexto, e isso também é levado em conta:
+
+[MLROOT/img/ultimo-dia-recorrente.png]
+
+
+== Configuração ==[configuracao]
+
+% Agora há um [modelo de arquivo de configuração padrão http://code.google.com/p/moneylog-dev/source/browse/trunk/sample/config-pt.js], explicado em português, que você pode utilizar como ponto de partida para suas configurações.
+% 
+% - _MLX_LINK: copie este arquivo para dentro do seu config.js.
+% - _MLC_LINK: este arquivo explicado já é o seu config.js padrão, não precisa fazer nada.
+% - Outros sabores do _ML não necessitam de arquivo de configuração.
+% -
+
+% Se você usa o _MLX_LINK, agora há um [arquivo de configuração explicado http://code.google.com/p/moneylog-dev/source/browse/trunk/sample/config-pt.js], em português, que você pode usar como ponto de partida para seu config.js.
+% 
+% Se você usa o _MLC_LINK, este arquivo explicado já é usado automaticamente como seu arquivo de configuração padrão.
+% 
+% Outros sabores do _ML não necessitam de arquivo de configuração.
+
+Algumas configurações trocaram de nome:
+
+- defaultMonthPartials → ``checkMonthPartials``
+- defaultRegex → ``checkRegex``
+- defaultNegate → ``checkNegate``
+-
+
+Fora as já citadas nos tópicos anteriores, há várias outras configurações novas:
+
+- ``showBalance``
+- ``dataFilesDefault``
+- ``ignoreDataOlderThan``
+- ``ignoreDataNewerThan``
+- ``sortData.d.index``
+- ``sortData.m.index``
+- ``sortData.y.index``
+- ``sortData.d.rev``
+- ``sortData.m.rev``
+- ``sortData.y.rev``
+-
+
+Mas, quer saber? Vá direto no [Guia de Configuração MLROOT/config/] que lá está tudo o que você precisa saber sobre onde, como, e o quê configurar.
+
+
+== Idiomas ==[idiomas]
+
+Além do português e inglês, agora o _ML também está traduzido para estes idiomas:
+
+- Catalão — por @pacoriviere
+- Espanhol — por @g_nemmi e Isadora Pinardi
+-
+
+== Faça seu próprio Widget ==[seu-widget]
+
+Se você manja de HTML e JavaScript, saiba que é muito fácil criar um widget novo ali na barra lateral, bastam poucas linhas de código no final de seu [config.js MLROOT/config/#onde].
+
+Há quatro widgets de exemplo:
+
+- [widget-hello-world.js https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-world.js]
+- [widget-hello-translation.js https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-translation.js]
+- [widget-hello-checkbox.js https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-checkbox.js]
+- [widget-nerd-toy.js https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-nerd-toy.js]
+-
+
+E o teu widget, vai ser do que? Lembretes? Algum somatório especial? Exportar os dados do extrato para CSV? Use a criatividade! E depois contribua lá no repositório: https://github.com/aureliojargas/moneylog-plugins
+
+== Changelog ==[changelog]
+
+Este é somente para nerds que gostam de estudar códigos-fonte: o [Changelog resumido NEWS.html] desde a v4, em inglês, com links para os principais commits feitos durante o desenvolvimento desta versão.
+
+
+== Agradecimentos ==[agradecimentos]
+
+Esta v5 não seria nem metade do que é se não fosse pelo trabalho voluntário do **Leandro Voltolino** (@xupisco). Foi ele quem criou a [interface nova #ui], programou todo o [código de servidor do _MLC https://github.com/xupisco/MoneyLog-Cloud/], fez o ícone para iOS,
+% fez o favicon,
+criou os primeiros [plugins https://github.com/aureliojargas/moneylog-plugins],
+escolheu as cores de cada sabor, além de apontar bugs e dar várias ideias.
+
+Trabalhamos juntos no _ML grande parte do tempo durante as últimas semanas, via Google Talk. O Leandro ajudou tanto que o considero coautor dessa versão nova. O cara é 10 mesmo, valeu Leandro!
+
+Outro que me ajudou muito foi o **Denilson Figueiredo de Sá** (@denilsonsa). Desde 2009 trocamos e-mails sobre o _ML. Ele já descobriu vários bugs e deu ideias bacanas, como o [Somatório de linhas #somatorio-de-linhas]. Foi de nossas discussões de ideias em e-mails quilométricos que surgiram as soluções para o [Relatório de tags #relatorio-de-tags] e os [seletores de datas #widget-visualizar]. Valeu Denilson, você é meu controle de qualidade :)
+
+Um agradecimento muito especial vai para o **XXXXXXXX** (ele pediu anonimato), que durante 5 meses [doou MLROOT/donate/] 10% de sua renda para o projeto _ML. Esta foi uma atitude única, admirável, que me tocou muito. Todo mês, quando vinha a sua doação, eu ficava muito feliz com o gesto. Só tenho a aplaudi-lo, valeu mesmo! Deixo aqui um trecho de seu e-mail:
+
+	"Muito do meu conhecimento e influências são pessoas que postam conhecimento ou software gratuitamente na Internet. É importante retribuir isso também em doações em dinheiro, principalmente com doações mais consistentes. O meu plano é doar regularmente 10% da minha renda mensal e escolher alguns projetos de software livre, pessoas, sites, etc e doar para cada projeto/pessoa por um período de 6 meses a 1 ano, pra dar uma boa injeção de motivação. [...] No software livre, nós recebemos muito da comunidade, e poder devolver também é um privilégio."
+
+Agradeço também aos tradutores, que possibilitaram que novas audiências possam usar o _ML: Paco Rivière (@pacoriviere), Gonzalo Nemmi (@g_nemmi) e Isadora Pinardi.
+
+E finalmente, MUITO OBRIGADO a todos que ajudaram com ideias, patches, testes e bug reports:
+- @adolfont
+- @bebetasso
+- @biancafreitas
+- @doutorchefe
+- @eeev2011
+- @erickmor
+- @_Felipe
+- @guaracybm
+- @laubstein
+- @lucmove
+- @magasine
+- @osantana
+- @pirolla
+- @ralcantara
+- @ricobl
+- @vyper
+- @wcomnisky
+- Carlos Alvsan
+- Tiago Centurion
+-
+
+% NEWS:
+% @adolfont
+% @bebetasso
+% @denilsonsa
+% @eeev2011
+% @erickmor
+% @_Felipe
+% @g_nemmi
+% @magasine
+% @pacoriviere
+% @ricobl
+% @wcomnisky
+% @xupisco
+% Isadora Pinardi
+% 
+% thanks.txt:
+% @doutorchefe
+% @guaracybm
+% @laubstein
+% @lucmove
+% @osantana
+% @pirolla
+% @ralcantara
+% @vyper
+% Carlos Alvsan
+% Tiago Centurion
+%
+% Thanks (ideas implemented):
+% OK	@magasine: Mostrar Futuros: [1 mes / 2 meses / etc] (a monthBar resolve isso)
+% OK	@g_nemmi showReport() {if (reportType == 'd') formatDate is ok but if (reportType == 'm') formatDate won't apply. Is that correct?
+% OK	@adolfont Que tal ter no #moneylog uma opção para filtrar os lançamentos por período? P.ex. na cx de busca iria "d:>2009-08-19<2009-08-01"
+% 	Kolmar @doutorchefe (quickadd improvement)
+
+== Patrocine o _ML ♥ ==[patrocinio]
+
+E aí, gostou das novidades?
+
+% Que tal patrocinar o projeto _ML, [doando R$ 5,00 MLROOT/donate/]?
+
+[Que tal doar R$ 5,00 para ajudar o projeto? MLROOT/donate/]
+
+
+%!include: ../_footer.t2t
+
+%!include: ''../_disqus.html''

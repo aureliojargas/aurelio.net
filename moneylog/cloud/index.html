@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/article.css">
+<TITLE>MoneyLog Cloud</TITLE>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY class="cloud">
+
+<DIV ID="header">
+<H1>MoneyLog Cloud</H1>
+</DIV>
+
+<DIV ID="main">
+<P>
+O seu MoneyLog, acessível de qualquer lugar, puxando dados direto do seu <A HREF="https://www.dropbox.com/referrals/NTEwNDU4OQ">Dropbox</A>. Que tal?
+</P>
+<P>
+Acesse agora: <A HREF="http://moneylog-cloud.aurelio.net">http://moneylog-cloud.aurelio.net</A>
+</P>
+<P>
+Atalho: <A HREF="http://ml.aurelio.net">http://ml.aurelio.net</A>
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#conectar">Passo 1: Conectar</A>
+    <LI><A HREF="#inserir">Passo 2: Inserir seus lançamentos</A>
+    <LI><A HREF="#arquivos">Os arquivos</A>
+    <LI><A HREF="#mobile">Mobile / smartphone</A>
+    <LI><A HREF="#seguranca">O MoneyLog Cloud é seguro?</A>
+    <LI><A HREF="#termos-de-uso">Termos de Uso</A>
+    <LI><A HREF="#autor">Autoria</A>
+    <LI><A HREF="#erro-500">500 Internal Server Error</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="conectar"><a href="#conectar">Passo 1: Conectar</a></H2>
+
+<P>
+Ao acessar pela primeira vez o <A HREF="http://moneylog-cloud.aurelio.net">MoneyLog Cloud</A>, você precisará conectá-lo à sua conta do Dropbox, para que ele possa acessá-la. Este procedimento só precisa ser feito uma vez. Você pode revogar este acesso a qualquer momento no futuro, se julgar necessário.
+</P>
+<P>
+Clique no botão <I>Conectar</I>, você será direcionado ao site do Dropbox e precisará fazer o login, como de costume. Após logar-se, o Dropbox perguntará se você quer se conectar com o MoneyLog Cloud.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/dropbox-connect-400.png" BORDER="0" ALT="">
+</P>
+<P>
+Basta apertar o botão azul (<I>Allow</I>) e pronto. Você será direcionado de volta ao site do MoneyLog Cloud, porém dessa já entrará direto no app.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/cloud-1st-shot-400.png" BORDER="0" ALT="">
+</P>
+<P>
+O MoneyLog Cloud já vem com alguns lançamentos de exemplo, então aproveite para brincar um pouco e se ambientar. Clique e descubra :)
+</P>
+
+<H2 ID="inserir"><a href="#inserir">Passo 2: Inserir seus lançamentos</a></H2>
+
+<P>
+<IMG ALIGN="middle" SRC="../img/cloud-edit-button.png" BORDER="0" ALT="">
+</P>
+<P>
+Para inserir seus próprios lançamentos, clique no botão <I>Editar</I>. Vai abrir uma janela com um editor de textos simples. Você pode usar os lançamentos de exemplo como base e ir inserindo os seus aos poucos.
+</P>
+<P>
+O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o <A HREF="../input/">Guia de Lançamentos</A>.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/cloud-edit-screen-400.png" BORDER="0" ALT="">
+</P>
+<P>
+Sempre que quiser conferir como está ficando, aperte o botão <I>Salvar</I>. Suas edições serão salvas no Dropbox e o MoneyLog Cloud mostrará o extrato atualizado já com seus dados novos.
+</P>
+<P>
+Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <A HREF="../import/">conversor do MoneyLog</A>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).
+</P>
+
+<H2 ID="arquivos"><a href="#arquivos">Os arquivos</a></H2>
+
+<P>
+<IMG ALIGN="middle" SRC="../img/dropbox-tree.png" BORDER="0" ALT="">
+</P>
+<P>
+Estes são os arquivos e pastas que o MoneyLog Cloud cria em seu Dropbox.
+</P>
+
+<H3 ID="moneylog-txt"><a href="#moneylog-txt">txt/moneylog.txt</a></H3>
+
+<P>
+É aqui que ficam os seus lançamentos. Você pode editá-los pelo MoneyLog, conforme ensinado no <A HREF="#inserir">passo 2</A>, ou abrir diretamente este arquivo TXT em seu editor de textos preferido. O Dropbox se encarrega de manter tudo atualizado.
+</P>
+	<BLOCKQUOTE>
+	Dica: Sabia que você pode criar outros arquivos .txt ali naquela pasta? O MoneyLog Cloud vai carregá-los automaticamente. Assim você pode organizar melhor seus lançamentos. Veja também: <A HREF="../config/#dataFilesDefault">dataFilesDefault</A>.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Importante: Todos os arquivos TXT devem usar a codificação UTF-8.
+	</BLOCKQUOTE>
+
+<H3 ID="config-js"><a href="#config-js">config.js</a></H3>
+
+<P>
+Este é o arquivo de configuração do MoneyLog Cloud. Ele já vem preenchido e explicado, porém com todas as configurações desativadas. Você pode ativar aquelas que quiser usar. Use um editor de textos simples. Leia as instruções dentro do próprio arquivo e veja mais detalhes no <A HREF="../config/">guia de configuração</A>.
+</P>
+
+<H3 ID="plugins"><a href="#plugins">plugins/</a></H3>
+
+<P>
+Nesta pasta você coloca <A HREF="https://github.com/aureliojargas/moneylog-plugins">os plugins</A> que quiser usar no MoneyLog Cloud. Basta colocar os arquivos <CODE>.js</CODE> aqui que eles serão carregados automaticamente.
+</P>
+
+<H2 ID="mobile"><a href="#mobile">Mobile / smartphone</a></H2>
+
+<P>
+O MoneyLog Cloud está preparado para se adaptar à tela pequena de seu iPhone ou Android. Assim, você pode consultar seus extratos e fazer alterações mesmo quando estiver na rua. Experimente!
+</P>
+<div class="inline">
+<P>
+<IMG ALIGN="middle" SRC="../img/cloud-iphone-top-200.png" BORDER="0" ALT="">
+<IMG ALIGN="middle" SRC="../img/cloud-iphone-report-200.png" BORDER="0" ALT="">
+</P>
+</div>
+
+<H2 ID="seguranca"><a href="#seguranca">O MoneyLog Cloud é seguro?</a></H2>
+
+<P>
+Sim.
+</P>
+
+<UL>
+<LI>O MoneyLog Cloud <B>não tem acesso a sua senha</B> do Dropbox. Ele usa a <A HREF="http://www.dropbox.com/developers/start/authentication#python">API</A> do Dropbox para ter acesso à sua conta sem precisar de sua senha.
+<P></P>
+<LI>O MoneyLog Cloud tem <B>acesso restrito a uma única pasta</B>, e não a todo o seu Dropbox. Essa pasta é a <CODE>/Apps/MoneyLog Cloud</CODE>.
+<P></P>
+<LI>O MoneyLog Cloud <B>não guarda seus dados</B>, ele sempre lê e grava direto em seu Dropbox. Não há base de dados nem armazenamento temporário (cache) no servidor do MoneyLog.
+<P></P>
+<LI>O MoneyLog Cloud <B>é um software open source</B>. Qualquer dúvida você pode consultar seu código-fonte, que está inteiramente <A HREF="https://github.com/xupisco/MoneyLog-Cloud">disponível no GitHub</A>. Na tela de login e na caixa <I>Sobre</I> do MoneyLog Cloud há um link para o commit no qual o serviço está rodando.
+</UL>
+
+<H2 ID="termos-de-uso"><a href="#termos-de-uso">Termos de Uso</a></H2>
+
+<P>
+O MoneyLog Cloud é um serviço que eu, Aurelio, hospedo em meu site e de boa vontade disponibilizo gratuitamente à todos que queiram usar.
+</P>
+<P>
+Não dou garantia alguma, <B>use sob seu próprio risco</B>.
+</P>
+<P>
+Se der algum problema e o MoneyLog Cloud sumir com os seus dados, eu não posso fazer nada.
+</P>
+<P>
+Se você não concorda com estes termos, NÃO USE o MoneyLog Cloud.
+</P>
+
+<H2 ID="autor"><a href="#autor">Autoria</a></H2>
+
+<P>
+O MoneyLog Cloud é uma criação do <B>Leandro Voltolino</B> (<A HREF="http://twitter.com/xupisco">@xupisco</A>), que <A HREF="https://twitter.com/#!/xupisco/status/159600503486029824">teve a ideia original</A>, programou e continua atualizando, voluntariamente, todo o código necessário para fazer a ponte entre o MoneyLog e o Dropbox.
+</P>
+<P>
+Eu apenas hospedo o serviço em meu site, mas <A HREF="https://github.com/xupisco/MoneyLog-Cloud">o código</A> é 100% dele. Então se você gostou do MoneyLog Cloud, não esqueça de agradecer ao Leandro!
+</P>
+
+<H2 ID="erro-500"><a href="#erro-500">500 Internal Server Error</a></H2>
+
+<P>
+Este erro aparece quando você desconecta o MoneyLog Cloud de seu Dropbox e tenta acessá-lo novamente. É algum cookie que ficou pelo meio do caminho.
+</P>
+<P>
+Basta acessar diretamente a tela de login para voltar a funcionar:
+<A HREF="http://moneylog-cloud.aurelio.net/login">http://moneylog-cloud.aurelio.net/login</A>
+</P>
+<div id="footer">
+<hr>
+<div class="footer-col">
+
+<H4>Sabores</H4>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
+<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
+<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
+<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
+</UL>
+
+</div>
+<div class="footer-col">
+
+<H4>Docs</H4>
+
+<UL>
+<LI><A HREF="../about/">sobre</A>
+<LI><A HREF="../v5/">novidades v5</A> ★
+<LI><A HREF="../faq/">FAQ</A>
+<LI><A HREF="../input/">lançamentos</A>
+<LI><A HREF="../config/">configuração</A>
+</UL>
+
+</div>
+<div class="footer-col last">
+
+<H4>Misc</H4>
+
+<UL>
+<LI><A HREF="../import/">conversor</A>
+<LI><A HREF="../donate/">doação</A> ♥
+<LI><A HREF="../history/">versões antigas</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
+</UL>
+
+</div>
+<hr style="clear: both;">
+<a id="footer-home" href="..">← início</a>
+<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
+<div style="clear: both;"></div>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="../../include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'aurelionet';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags moneylog/cloud/index.t2t -->
+</BODY></HTML>

@@ -1,0 +1,359 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/article.css">
+<TITLE>MoneyLog Beta</TITLE>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY class="beta">
+
+<DIV ID="header">
+<H1>MoneyLog Beta</H1>
+</DIV>
+
+<DIV ID="main">
+<P>
+O MoneyLog Beta é para os nerds. É para quem prefere o poder e a flexibilidade, mesmo sendo mais difícil de lidar.
+</P>
+<P>
+O seu código é sempre o mais atualizado, pois vem direto do GitHub. Funciona offline, pois só usa arquivos locais. Usa arquivos TXT para guardar os dados. Totalmente configurável (e raqueável) via arquivo JavaScript local. Pode usar <A HREF="#cloud">junto com o Cloud</A>. E a cor da interface é preta, a única cor verdadeiramente nerd :)
+</P>
+<P>
+Pode quebrar? Claro! Por isso o nome Beta. Mas <B>esta é a versão que eu uso</B>, então eu tenho muito cuidado para deixá-la sempre funcionando.
+</P>
+	<BLOCKQUOTE>
+	Nota: Se você já usava a versão Beta antes de 2012, leia o <A HREF="../beta/update-2012.html">Guia de Migração</A> pois há algumas mudanças importantes que requerem sua ação.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Nota: <A HREF="#bug-chrome">O Google Chrome é feio, bobo e chato</A> :(
+	</BLOCKQUOTE>
+<P>
+Acesse a demonstração online: Que demo o que… <A HREF="#download">Baixa logo aí</A>.
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#download">Download</A>
+    <LI><A HREF="#update">Atualização</A>
+    <LI><A HREF="#config">Arquivo de configuração</A>
+    <LI><A HREF="#txt">Arquivo TXT para os lançamentos</A>
+    <LI><A HREF="#inserir">Inserir seus lançamentos</A>
+    <LI><A HREF="#parabens">Parabéns!</A>
+    <LI><A HREF="#seu-widget">Faça seu próprio Widget</A>
+    <LI><A HREF="#online">Funcionamento Online</A>
+    <LI><A HREF="#cloud">Usar o MoneyLog Cloud ao mesmo tempo</A>
+    <LI><A HREF="#bug-acentos">Problemas com acentuação?</A>
+    <LI><A HREF="#bug-chrome">Não funciona no Google Chrome</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="download"><a href="#download">Download</a></H2>
+
+<PRE>
+git clone \
+    https://github.com/aureliojargas/moneylog.git \
+    moneylog-beta
+</PRE>
+
+<P>
+O repositório será copiado para a pasta local <CODE>moneylog-beta</CODE>. Quando ele terminar de baixar, abra o arquivo <CODE>moneylog.html</CODE> em seu navegador (<A HREF="#bug-chrome">que não seja o Google Chrome…</A>).
+</P>
+
+<H2 ID="update"><a href="#update">Atualização</a></H2>
+
+<P>
+Para sincronizar a sua versão local com os arquivos mais recentes do GitHub:
+</P>
+
+<PRE>
+cd moneylog-beta
+git pull
+</PRE>
+
+<P>
+Rode este comando de tempos em tempos, ou coloque no cron.
+</P>
+
+<H2 ID="config"><a href="#config">Arquivo de configuração</a></H2>
+
+<P>
+Todas as <A HREF="../config/">configurações</A> devem ser colocadas no arquivo <CODE>config.js</CODE>.
+</P>
+<P>
+Este arquivo não existe, você deve criá-lo dentro de sua pasta do MoneyLog Beta, já na raiz. Basta copiar o modelo comentado, que vem na pasta sample:
+</P>
+
+<PRE>
+cp sample/config-pt.js config.js
+</PRE>
+
+<P>
+Pode ficar tranquilo, suas alterações no <CODE>config.js</CODE> não serão perdidas quando você <A HREF="#update">atualizar</A> o MoneyLog Beta.
+</P>
+
+<H2 ID="txt"><a href="#txt">Arquivo TXT para os lançamentos</a></H2>
+
+<P>
+Por padrão o MoneyLog Beta carrega os lançamentos do arquivo de exemplo: <CODE>sample/data-pt.txt</CODE>. NÃO coloque seus dados neste arquivo.
+</P>
+<P>
+Crie uma pasta chamada <CODE>txt</CODE> dentro de sua pasta do MoneyLog Beta. E ali dentro crie os arquivos TXT para guardar seus lançamentos. Para começar simples, crie um único arquivo.
+</P>
+
+<PRE>
+mkdir txt
+echo &gt; txt/dados.txt
+</PRE>
+
+	<BLOCKQUOTE>
+	Nota: O arquivo TXT poderia estar em qualquer pasta de seu computador, mas é melhor deixar aqui dentro da pasta do MoneyLog Beta para evitar problemas com <A HREF="https://developer.mozilla.org/en/Same-origin_policy_for_file%3a_URIs">navegadores paranóicos</A>.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Nota: Usar uma pasta chamada txt vai facilitar a <A HREF="#cloud">integração com o Cloud</A>.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	Importante: Todos os arquivos TXT devem usar a codificação UTF-8.
+	</BLOCKQUOTE>
+<P>
+Agora que você criou o arquivo, precisa configurar o MoneyLog para utilizá-lo. Edite o <A HREF="#config">config.js</A> e procure pela configuração <CODE>dataFiles</CODE>. Descomente a linha e coloque o path do seu arquivo, assim:
+</P>
+
+<PRE>
+dataFiles = ['txt/dados.txt'];
+</PRE>
+
+<P>
+Abra o MoneyLog Beta em seu navegador. Se aparecer a mensagem "<I>Nenhum lançamento</I>", sorria. Está tudo configurado e funcionando corretamente.
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/beta-txt-ok-400.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="inserir"><a href="#inserir">Inserir seus lançamentos</a></H2>
+
+<P>
+Agora é seu momento de glória, a hora de inserir seus próprios lançamentos no MoneyLog. Já sabe onde, né? No <CODE>dados.txt</CODE>, claro.
+</P>
+<P>
+O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o arquivo de exemplo <CODE>sample/data-pt.txt</CODE> e o <A HREF="../input/">Guia de Lançamentos</A>.
+</P>
+<P>
+Sempre que quiser conferir como está ficando, salve o arquivo no editor de textos e recarregue o MoneyLog Beta no navegador.
+</P>
+<P>
+Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <A HREF="../import/">conversor do MoneyLog</A>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).
+</P>
+
+<H2 ID="parabens"><a href="#parabens">Parabéns!</a></H2>
+
+<P>
+Seu MoneyLog Beta está funcionando corretamente e agora você já pode dominar seus gastos, não deixando nem um centavinho sequer esquecido.
+</P>
+<P>
+Aconselho que você use um tempo o MoneyLog Beta para se acostumar bem com ele, antes de continuar a leitura deste artigo, que aborda tópicos mais avançados.
+</P>
+
+<HR NOSHADE SIZE=1>
+
+<H2 ID="seu-widget"><a href="#seu-widget">Faça seu próprio Widget</a></H2>
+
+<P>
+Se você manja de HTML e JavaScript, saiba que é muito fácil criar um widget novo ali na barra lateral, bastam poucas linhas de código no final de seu <A HREF="#config">config.js</A>.
+</P>
+<P>
+Há quatro widgets de exemplo:
+</P>
+
+<UL>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-world.js">widget-hello-world.js</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-translation.js">widget-hello-translation.js</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-checkbox.js">widget-hello-checkbox.js</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-nerd-toy.js">widget-nerd-toy.js</A>
+</UL>
+
+<P>
+E o teu widget, vai ser do que? Lembretes? Algum somatório especial? Exportar os dados do extrato para CSV? Use a criatividade! E depois contribua lá no repositório: <A HREF="https://github.com/aureliojargas/moneylog-plugins">https://github.com/aureliojargas/moneylog-plugins</A>
+</P>
+
+<H2 ID="online"><a href="#online">Funcionamento Online</a></H2>
+
+<P>
+O MoneyLog Beta foi criado para funcionar offline, em sua máquina. Mas você também pode ter fazê-lo funcionar (read-only) pela rede.
+</P>
+<P>
+Para poder consultar o MoneyLog Beta <B>na rede local</B>, rode o Apache em sua máquina e coloque os arquivos do MoneyLog nele. Acesse normalmente pelo navegador, usando o endereço de sua máquina.
+</P>
+<P>
+Para poder consultar o MoneyLog Beta <B>pela internet</B>, suba os arquivos para um servidor remoto (tipo o <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>) e coloque-os em uma pasta escondida de algum site que você já possua.
+</P>
+<P>
+De uma forma ou de outra, aconselho também <A HREF="../config/#myPassword">colocar uma senha de acesso</A> para evitar curiosos.
+</P>
+<P>
+Mas a melhor solução mesmo, é usar o MoneyLog Cloud para acesso remoto. Veja o próximo tópico.
+</P>
+
+<H2 ID="cloud"><a href="#cloud">Usar o MoneyLog Cloud ao mesmo tempo</a></H2>
+
+<P>
+Que tal ter uma solução completa, offline e online, usando dois sabores do MoneyLog ao mesmo tempo?
+</P>
+
+<UL>
+<LI>Para acesso local, use o MoneyLog Beta.
+<LI>Quando estiver longe de sua máquina, use o <A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>.
+</UL>
+
+<P>
+Para que este esquema funcione, você deve usar o mesmo <A HREF="#config">arquivo de configuração</A> e os mesmos <A HREF="#txt">arquivos TXT</A> para as duas versões. Veja como conseguir isso:
+</P>
+
+<OL>
+<LI>Vá lá no <A HREF="http://moneylog-cloud.aurelio.net">Cloud</A> e <A HREF="http://aurelio.net/moneylog/cloud/#conectar">conecte-se</A>.
+<LI>Entre na pasta /Apps/MoneyLog Cloud, que foi criada em seu Dropbox:
+
+<PRE>
+cd ~/Dropbox/Apps/MoneyLog Cloud
+</PRE>
+
+<LI>Crie symlinks para os seus arquivos originais do MoneyLog Beta:
+
+<PRE>
+rm -rf config.js txt/
+ln -s /caminho/para/moneylog-beta/config.js .
+ln -s /caminho/para/moneylog-beta/txt/ .
+</PRE>
+
+<LI>Espere o Dropbox sincronizar tudo.
+<LI>Acesse novamente o <A HREF="http://moneylog-cloud.aurelio.net">Cloud</A>, agora os seus dados devem aparecer.
+</OL>
+
+<H2 ID="bug-acentos"><a href="#bug-acentos">Problemas com acentuação?</a></H2>
+
+<P>
+O <B>Firefox</B> parece ter algum problema em alguns casos, de carregar os acentos incorretamente da primeira vez. Mas basta recarregar a página e tudo fica normal. É um comportamento estranho, que não ocorre com todo mundo. Aqui no meu Firefox do Mac, por exemplo, isso não acontece. De qualquer forma, fica o recado: <B>Reload</B> em caso de problemas.
+</P>
+<P>
+O <B>Camino</B> (derivado do Firefox pro Mac), não aceita os acentos nem com Reload. A única solução é mudar a codificação do seu arquivo TXT do padrão UTF-8 para o antigo ISO-8859-1. A troca é fácil:
+</P>
+
+<PRE>
+# Converter os dados de UTF-8 para ISO-8859-1
+cp dados.txt dados-utf.txt
+iconv -f utf-8 -t iso-8859-1 dados-utf.txt &gt; dados.txt
+</PRE>
+
+<P>
+Outros navegadores (inclusive IE7 e IE8) não apresentaram problemas com acentos em meus testes.
+</P>
+
+<H2 ID="bug-chrome"><a href="#bug-chrome">Não funciona no Google Chrome</a></H2>
+
+<P>
+A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <A HREF="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</A> a leitura de arquivos locais, mesmo que estejam na mesma pasta.
+</P>
+<P>
+Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:
+</P>
+	<BLOCKQUOTE>
+	Carregando arquivo.txt...
+	</BLOCKQUOTE>
+<P>
+As soluções:
+</P>
+
+<UL>
+<LI>Usar outro navegador. Só o Chrome tem essa nova política extrema.
+<LI>Usar uma versão antiga do Chrome como a 4.x.
+<LI>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
+  <UL>
+  <LI><B>Linux:</B> google-chrome --allow-file-access-from-files
+  <LI><B>Mac:</B> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1
+  <LI><B>Windows:</B> "…\Application\chrome.exe" --allow-file-access-from-files
+  </UL>
+</UL>
+
+<div id="footer">
+<hr>
+<div class="footer-col">
+
+<H4>Sabores</H4>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
+<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
+<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
+<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
+</UL>
+
+</div>
+<div class="footer-col">
+
+<H4>Docs</H4>
+
+<UL>
+<LI><A HREF="../about/">sobre</A>
+<LI><A HREF="../v5/">novidades v5</A> ★
+<LI><A HREF="../faq/">FAQ</A>
+<LI><A HREF="../input/">lançamentos</A>
+<LI><A HREF="../config/">configuração</A>
+</UL>
+
+</div>
+<div class="footer-col last">
+
+<H4>Misc</H4>
+
+<UL>
+<LI><A HREF="../import/">conversor</A>
+<LI><A HREF="../donate/">doação</A> ♥
+<LI><A HREF="../history/">versões antigas</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
+</UL>
+
+</div>
+<hr style="clear: both;">
+<a id="footer-home" href="..">← início</a>
+<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
+<div style="clear: both;"></div>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="../../include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'aurelionet';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags moneylog/beta/index.t2t -->
+</BODY></HTML>

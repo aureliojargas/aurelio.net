@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/clean-2012/article.css">
+<TITLE>Lançamentos — MoneyLog</TITLE>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</HEAD>
+<BODY class="input">
+
+<DIV ID="header">
+<H1>Lançamentos — MoneyLog</H1>
+</DIV>
+
+<DIV ID="main">
+<P>
+Os lançamentos são os seus ganhos e gastos, que você cadastra usando um editor de textos, ou própria interface do app, dependendo qual sabor do MoneyLog você usa.
+</P>
+<DIV CLASS="toc">
+
+    <UL>
+    <LI><A HREF="#onde">Onde colocar os lançamentos?</A>
+    <LI><A HREF="#formato">Formato dos lançamentos</A>
+    <LI><A HREF="#ordem-nao-importa">A ordem não importa</A>
+    <LI><A HREF="#comentarios">Comentários</A>
+    <LI><A HREF="#data">Data</A>
+    <LI><A HREF="#valor">Valor</A>
+    <LI><A HREF="#descricao">Descrição</A>
+    <LI><A HREF="#tags">Tags</A>
+    <LI><A HREF="#dia-99">Dia 99 = último dia do mês</A>
+    <LI><A HREF="#parcelado-recorrente">Parcelado e recorrente</A>
+    </UL>
+
+</DIV>
+
+<H2 ID="onde"><a href="#onde">Onde colocar os lançamentos?</a></H2>
+
+<DL>
+<DT><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>:</DT><DD>
+Basta apertar o botão <I>Editar</I> e uma janela vai aparecer. Coloque ali os seus lançamentos e quando terminar, use o botão <I>Salvar</I>. Você também pode editar diretamente os arquivos TXT que estão em seu Dropbox na pasta <CODE>/Apps/MoneyLog Cloud/txt/</CODE>. <A HREF="http://aurelio.net/moneylog/cloud/#inserir">Saiba mais…</A>
+<DT><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>:</DT><DD>
+Basta apertar o botão <I>Editar</I> e uma janela vai aparecer. Coloque ali os seus lançamentos e quando terminar, use o botão <I>Salvar</I>. <A HREF="http://aurelio.net/moneylog/browser/#inserir">Saiba mais…</A>
+<DT><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>:</DT><DD>
+Nesta versão, que usa um único arquivo HTML para tudo, você deve colocar seus lançamentos no final deste arquivo. Abra-o num editor de textos simples, e coloque seus lançamentos lá nas últimas linhas. <A HREF="http://aurelio.net/moneylog/portable/#inserir">Saiba mais…</A>
+<DT><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>:</DT><DD>
+Coloque os lançamentos no arquivo TXT que você <A HREF="../beta/#config">configurou</A> em <A HREF="../config/#dataFiles">dataFiles</A>. <A HREF="http://aurelio.net/moneylog/beta/#inserir">Saiba mais…</A>
+</DL>
+
+<H2 ID="formato"><a href="#formato">Formato dos lançamentos</a></H2>
+
+<P>
+O formato dos lançamentos no MoneyLog é bem simples, meu objetivo foi permitir que você adicione rapidamente o que precisa, de maneira natural. Basta colocar um lançamento por linha, neste formato:
+</P>
+
+<PRE>
+DATA   VALOR   DESCRIÇÃO
+</PRE>
+
+<P>
+Veja um exemplo com três lançamentos, que ilustra gastos feitos na hora do almoço, no dia 15 de janeiro de 2012:
+</P>
+
+<PRE>
+2012-01-15   -12,50   Almoço no Restaurante da Maria
+2012-01-15    -4,00   estacionamento
+2012-01-15   -30,00   Gasolina no Posto do João
+</PRE>
+
+<P>
+Fácil, não? Nem precisa pensar, basta anotar.
+</P>
+
+<UL>
+<LI>Use espaços ou Tabs para separar os dados, tanto faz.
+<LI>A data deve ser sempre no formato ANO-MÊS-DIA.
+<LI>Como foram gastos, o valor é negativo, com um hífen na frente.
+<LI>A descrição é um texto livre, escreva o que quiser.
+</UL>
+
+<H2 ID="ordem-nao-importa"><a href="#ordem-nao-importa">A ordem não importa</a></H2>
+
+<P>
+A ordem dos lançamentos não importa, o MoneyLog vai sempre reordenar tudo ao mostrar os extratos. Eu gosto de tirar vantagem disso para agrupar lançamentos parecidos. Assim fica mais fácil adicionar um novo, olha só:
+</P>
+
+<PRE>
+2012-01-10   -70,51  luz
+2012-02-10   -64,23  luz
+2012-03-10  -127,09  luz
+
+2012-01-05  -113,23  internet e telefone
+2012-02-05  -111,92  internet e telefone
+2012-03-05  -117,40  internet e telefone
+</PRE>
+
+<H2 ID="comentarios"><a href="#comentarios">Comentários</a></H2>
+
+<P>
+Você também pode fazer anotações entre os lançamentos, para ficar mais fácil de ser achar no meio da bagunça. Basta iniciar a linha com um #, veja:
+</P>
+
+<PRE>
+# Gastos com a luz do apartamento
+2012-01-10   -70,51  luz
+2012-02-10   -64,23  luz
+2012-03-10  -127,09  luz
+
+# Internet e telefone, está em débito automático
+2012-01-05  -113,23  internet e telefone
+2012-02-05  -111,92  internet e telefone
+2012-03-05  -117,40  internet e telefone
+</PRE>
+
+<H2 ID="data"><a href="#data">Data</a></H2>
+
+<P>
+Você pode <A HREF="../config/#formato-da-data">configurar o formato da data</A> que aparece na tela nos extratos do MoneyLog. Mas aqui nos lançamentos, o formato deve ser sempre o mesmo: AAAA-MM-DD.
+</P>
+<P>
+Este formato é o padrão internacional para datas (<A HREF="http://pt.wikipedia.org/wiki/ISO_8601">ISO 8601</A>), e deixa seus lançamentos organizados de maneira lógica, do maior para o menor: ano &gt; mês &gt; dia.
+</P>
+<P>
+Se você nunca usou este formato de data, pode parecer estranho no ínicio, mas eu te garanto que acostuma e você achar ele fácil de ler.
+</P>
+	<BLOCKQUOTE>
+	Dica: Alguns editores de texto possuem atalhos para inserir a data atual neste formato. No TextMate, por exemplo, basta digitar <CODE>isoD</CODE> e apertar Tab.
+	</BLOCKQUOTE>
+<P>
+Ah, você pode usar o <A HREF="#dia-99">dia 99</A> como atalho para o último dia do mês.
+</P>
+
+<H2 ID="valor"><a href="#valor">Valor</a></H2>
+
+<P>
+O valor não tem segredo, basta colocar o número.
+</P>
+
+<UL>
+<LI>Se for um gasto, use um valor negativo: <CODE>-123,45</CODE>
+<LI>Se for um ganho, use um valor positivo: <CODE>123,45</CODE> ou <CODE>+123,45</CODE>
+</UL>
+
+<P>
+Quanto o valor é redondo, você não precisa colocar os centavos. Estes dois lançamentos são idênticos:
+</P>
+
+<PRE>
+2012-01-15   -30,00   Gasolina no Posto do João
+2012-01-15   -30      Gasolina no Posto do João
+</PRE>
+
+<P>
+Se você prefere informar os valores no formato inglês, usando ponto em vez de vírgula para separar os centavos, tudo bem, também funciona:
+</P>
+
+<PRE>
+2012-01-05   1.234,56   Meu salário - formato brasileiro
+2012-01-05   1,234.56   Meu salário - formato inglês
+</PRE>
+
+<P>
+Sabia que você também pode informar <A HREF="#parcelado-recorrente">compras parceladas e pagamentos recorrentes</A>?
+</P>
+
+<H2 ID="descricao"><a href="#descricao">Descrição</a></H2>
+
+<P>
+Após o valor você coloca uma descrição, para te lembrar do que se trata aquele gasto ou ganho. Aqui é livre, você pode colocar o que quiser.
+</P>
+<P>
+Eu sugiro colocar bastante informações, para depois você pode consultar no extrato, usar a pesquisa, fazer filtros e tudo mais. Eu costumo colocar <B>o que</B> comprei e <B>onde</B> comprei:
+</P>
+
+<PRE>
+2011-07-22   -5   Aspirina na farmácia Catarinense
+</PRE>
+
+<P>
+Mas se você quiser realmente organizar suas finanças e usar o MoneyLog em toda a sua glória, use <A HREF="#tags">tags</A>.
+</P>
+
+<H2 ID="tags"><a href="#tags">Tags</a></H2>
+
+<P>
+Com as tags você coloca cada lançamento em uma ou mais categorias. Assim fica fácil agrupar gastos e responder perguntas básicas como:
+</P>
+<P>
+— Quanto gastei com escola, livros, cursos?<br>
+— Use a tag <I>educação</I>.
+</P>
+<P>
+— Quanto gastei com combustível, revisões, consertos?<br>
+— Use a tag <I>carro</I>.
+</P>
+<P>
+— Quanto gastei em consultas, exames, remédios?<br>
+— Use a tag <I>saúde</I>.
+</P>
+<P>
+Usar tags é fácil, basta inserí-las no início da descrição. Veja como fica o exemplo anterior, usando tags:
+</P>
+
+<PRE>
+2011-07-22   -5   farmácia,saúde| Aspirina na Catarinense
+</PRE>
+
+<P>
+Usei as tags <I>farmácia</I> e <I>saúde</I> neste lançamento. Note que as tags são terminadas por uma barra "|" e são separadas entre si por vírgulas.
+</P>
+<P>
+Agora estas tags vão aparecer no MoneyLog. Posso escolhê-las em meus extratos, ali na Nuvem de Tags da barra lateral, e também conferir o total de cada tag no Somatório de Tags:
+</P>
+<div class="inline">
+<P>
+<IMG ALIGN="middle" SRC="../img/tag-cloud-docs.png" BORDER="0" ALT="">
+<IMG ALIGN="middle" SRC="../img/tag-summary-docs.png" BORDER="0" ALT="">
+</P>
+</div>
+<P>
+Eu uso tags em todos os meus lançamentos. Vou listar aqui algumas delas, para te ajudar a escolher quais serão as suas:
+</P>
+<div class="multicol-3 mobile-multicol-2">
+
+<UL>
+<LI>academia
+<LI>almoço
+<LI>aluguel
+<LI>beleza
+<LI>carro
+<LI>cinema
+<LI>comida
+<LI>condomínio
+<LI>correio
+<LI>estacionamento
+<LI>farmácia
+<LI>gasolina
+<LI>imposto
+<LI>limpeza
+<LI>luz
+<LI>mercado
+<LI>ônibus
+<LI>padaria
+<LI>pedágio
+<LI>presente
+<LI>roupa
+<LI>saúde
+<LI>telefone
+<LI>verdureira
+</UL>
+
+</div>
+<P>
+Inclusive há lançamentos que só coloco tags e nenhuma descrição, para simplificar. Vou listar alguns exemplos. Ah, mas não se esqueça de sempre colocar a barra | no final, hein?
+</P>
+
+<PRE>
+2012-01-13 -132,03  condomínio|
+2012-01-15  -50,00  carro, gasolina|
+2012-01-15   -4,00  carro, estacionamento|
+2012-01-17   -4,60  padaria|
+2012-01-18  -32,10  verdureira|
+</PRE>
+
+<P>
+Detalhes:
+</P>
+
+<UL>
+<LI>Use quantas tags quiser, não há limite.
+<LI>Use acentuação normalmente nas tags.
+<LI>Espaços em branco ao redor da barra | são ignorados.
+<LI>Espaços em branco ao redor das vírgulas são ignorados.
+<LI>Tags com mais de uma palavra também funcionam.
+  <UL>
+  <LI>Exemplo: <CODE>cartão de crédito,comida|</CODE>
+  </UL>
+</UL>
+
+<H2 ID="dia-99"><a href="#dia-99">Dia 99 = último dia do mês</a></H2>
+
+<P>
+O MoneyLog traz um atalho bacana para você fazer um lançamento no último dia mês, sem precisar pensar exatamente qual será este dia. É 31? É 30? É ano bissexto? Não importa, basta colocar dia 99 e pronto.
+</P>
+
+<PRE>
+2012-01-99   -20   Mesada do Júnior
+</PRE>
+
+<P>
+E pronto. A mesada de seu filho do mês de janeiro está cadastrada. Só não vá esquecer de dar o dinheiro para ele no dia certo, ok? :)
+</P>
+<P>
+E sabe o que é mais legal? É que isso também funciona para <A HREF="#parcelado-recorrente">pagamentos recorrentes</A>, então você pode cadastrar de uma vez a mesada do ano todo:
+</P>
+
+<PRE>
+2012-01-99   -20*12   Mesada do Júnior
+</PRE>
+
+<P>
+E o MoneyLog vai se encarregar de expandir todos os pagamentos para a data correta. Perceba que 2012 é ano bissexto, e isso também é levado em conta:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/ultimo-dia-recorrente.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="parcelado-recorrente"><a href="#parcelado-recorrente">Parcelado e recorrente</a></H2>
+
+<P>
+É possível cadastrar lançamentos que possuem seu valor parcelado, ou lançamentos que se repetem um determinado número de meses.
+</P>
+<P>
+O formato é bem simples, basta adicionar uma barra ou um asterisco após <A HREF="#valor">o valor</A>, seguido do número de parcelas/repetições:
+</P>
+
+<TABLE ALIGN="center" BORDER="1">
+<TR>
+<TH>Símbolo</TH>
+<TH>Descrição</TH>
+</TR>
+<TR>
+<TD ALIGN="center"><B>/</B></TD>
+<TD>O valor será dividido, ou seja, parcelado</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><B>*</B></TD>
+<TD>O valor será repetido, ou seja, recorrente</TD>
+</TR>
+</TABLE>
+
+<P>
+Por exemplo, se você fez uma compra de R$ 120,00 no cartão de crédito e a parcelou em três vezes, cadastre este lançamento assim:
+</P>
+
+<PRE>
+2011-08-15  -120/3   Vestido novo no shopping
+</PRE>
+
+<P>
+O MoneyLog vai calcular automaticamente o valor de cada parcela e vai lançá-las para os meses seguintes. No seu extrato vai aparecer assim:
+</P>
+
+<PRE>
+2011-08-15    -40    Vestido novo no shopping 1/3
+2011-09-15    -40    Vestido novo no shopping 2/3
+2011-10-15    -40    Vestido novo no shopping 3/3
+</PRE>
+
+<P>
+Note que o mês é aumentado, é colocado o valor da parcela e não o total, e no final da descrição há números que indicam qual a parcela atual e quantas ainda faltam. Igual na sua fatura do cartão.
+</P>
+<P>
+De maneira similar, se você vendeu algo e vai receber o valor em parcelas, basta colocar um número positivo antes da barra:
+</P>
+
+<PRE>
+2011-08-20    100/5  Vendi o vestido (semi-)novo pra Maria
+</PRE>
+
+<P>
+No extrato, vão aparecer os seguintes lançamentos:
+</P>
+
+<PRE>
+2011-08-20     20    Vendi o vestido (semi-)novo pra Maria 1/5
+2011-09-20     20    Vendi o vestido (semi-)novo pra Maria 2/5
+2011-10-20     20    Vendi o vestido (semi-)novo pra Maria 3/5
+2011-11-20     20    Vendi o vestido (semi-)novo pra Maria 4/5
+2011-12-20     20    Vendi o vestido (semi-)novo pra Maria 5/5
+</PRE>
+
+<P>
+Fácil e prático!
+</P>
+<P>
+Já os pagamentos/ganhos recorrentes, você usa o asterisco em vez da barra e informa o valor da parcela e não o valor total.
+</P>
+<P>
+Por exemplo, se você quiser cadastrar de uma vez todas as mensalidades da escola de seu filho para o ano de 2012. O valor da mensalidade é R$ 500,00 e o pagamento deve ser feito até o dia 5. Basta fazer:
+</P>
+
+<PRE>
+2012-01-05  -500*12  Mensalidade da escolinha do Júnior
+</PRE>
+
+<P>
+E novamente, o MoneyLog vai expandir os lançamentos futuros, deixando você chocado(a) ao ver no extrato com o tanto de dinheiro que vai sair do seu bolso:
+</P>
+
+<PRE>
+2012-01-05   -500    Mensalidade da escolinha do Júnior 1/12
+2012-02-05   -500    Mensalidade da escolinha do Júnior 2/12
+2012-03-05   -500    Mensalidade da escolinha do Júnior 3/12
+2012-04-05   -500    Mensalidade da escolinha do Júnior 4/12
+2012-05-05   -500    Mensalidade da escolinha do Júnior 5/12
+2012-06-05   -500    Mensalidade da escolinha do Júnior 6/12
+2012-07-05   -500    Mensalidade da escolinha do Júnior 7/12
+2012-08-05   -500    Mensalidade da escolinha do Júnior 8/12
+2012-09-05   -500    Mensalidade da escolinha do Júnior 9/12
+2012-10-05   -500    Mensalidade da escolinha do Júnior 10/12
+2012-11-05   -500    Mensalidade da escolinha do Júnior 11/12
+2012-12-05   -500    Mensalidade da escolinha do Júnior 12/12
+</PRE>
+
+<P>
+Para cadastrar ganhos recorrentes é a mesma coisa, basta colocar um valor positivo. Por exemplo, se você aluga um imóvel e quer cadastrar o recebimento do aluguel de R$ 400,00 durante dois anos, faça <CODE>400*24</CODE>.
+</P>
+	<BLOCKQUOTE>
+	<B>Não confunda:</B> a barra divide (parcela) o valor total, o asterisco multiplica (repete) o valor parcial.
+	</BLOCKQUOTE>
+	<BLOCKQUOTE>
+	<B>Agradecimento:</B> A ideia de fazer estes lançamentos parcelados e recorrentes veio do Ricardo Nishimura, com seu excelente <A HREF="http://nishimura.eti.br/blog/mymoneylog/">myMoneyLog</A>, que é uma versão modificada do MoneyLog. Obrigado Ricardo!
+	</BLOCKQUOTE>
+<div id="footer">
+<hr>
+<div class="footer-col">
+
+<H4>Sabores</H4>
+
+<UL>
+<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
+<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
+<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
+<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
+</UL>
+
+</div>
+<div class="footer-col">
+
+<H4>Docs</H4>
+
+<UL>
+<LI><A HREF="../about/">sobre</A>
+<LI><A HREF="../v5/">novidades v5</A> ★
+<LI><A HREF="../faq/">FAQ</A>
+<LI><A HREF="../input/">lançamentos</A>
+<LI><A HREF="../config/">configuração</A>
+</UL>
+
+</div>
+<div class="footer-col last">
+
+<H4>Misc</H4>
+
+<UL>
+<LI><A HREF="../import/">conversor</A>
+<LI><A HREF="../donate/">doação</A> ♥
+<LI><A HREF="../history/">versões antigas</A>
+<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
+</UL>
+
+</div>
+<hr style="clear: both;">
+<a id="footer-home" href="..">← início</a>
+<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
+<div style="clear: both;"></div>
+</div> <!-- #footer -->
+<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="../../include/10anos/aureliolga.jpg"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280222-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'aurelionet';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</DIV>
+
+<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags moneylog/input/index.t2t -->
+</BODY></HTML>

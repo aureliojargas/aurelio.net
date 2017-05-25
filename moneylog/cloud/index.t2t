@@ -1,0 +1,138 @@
+_MLC_NAME
+
+
+%!postproc: SITEROOT    ../..
+%!postproc: MLROOT    ..
+%!includeconf: ../_config.t2t
+%!postproc: (<BODY)     \1 class="cloud"
+%!options: --toc --toc-level 2
+
+O seu MoneyLog, acessível de qualquer lugar, puxando dados direto do seu _DROPBOX_LINK. Que tal?
+
+Acesse agora: [_MLC_APPURL _MLC_APPURL]
+
+Atalho: http://ml.aurelio.net
+
+
+%%TOC
+
+
+== Passo 1: Conectar ==[conectar]
+
+Ao acessar pela primeira vez o _MLC_APPLINK, você precisará conectá-lo à sua conta do Dropbox, para que ele possa acessá-la. Este procedimento só precisa ser feito uma vez. Você pode revogar este acesso a qualquer momento no futuro, se julgar necessário.
+
+% [MLROOT/img/cloud-login.png]
+
+% [MLROOT/img/cloud-connect-button.png]
+
+Clique no botão //Conectar//, você será direcionado ao site do Dropbox e precisará fazer o login, como de costume. Após logar-se, o Dropbox perguntará se você quer se conectar com o _MLC.
+
+[MLROOT/img/dropbox-connect-400.png]
+
+Basta apertar o botão azul (//Allow//) e pronto. Você será direcionado de volta ao site do _MLC, porém dessa já entrará direto no app.
+
+[MLROOT/img/cloud-1st-shot-400.png]
+
+O _MLC já vem com alguns lançamentos de exemplo, então aproveite para brincar um pouco e se ambientar. Clique e descubra :)
+
+== Passo 2: Inserir seus lançamentos ==[inserir]
+
+[MLROOT/img/cloud-edit-button.png]
+
+Para inserir seus próprios lançamentos, clique no botão //Editar//. Vai abrir uma janela com um editor de textos simples. Você pode usar os lançamentos de exemplo como base e ir inserindo os seus aos poucos.
+
+O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o [Guia de Lançamentos MLROOT/input/].
+
+[MLROOT/img/cloud-edit-screen-400.png]
+
+Sempre que quiser conferir como está ficando, aperte o botão //Salvar//. Suas edições serão salvas no Dropbox e o _MLC mostrará o extrato atualizado já com seus dados novos.
+
+Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o [conversor do _ML MLROOT/import/], que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).
+
+% == Passo 3: Acabe com os vermelhinhos ==
+% 
+% Agora é contigo. Sempre anote todos os seus gastos e de tempos em tempos analise os extratos do _ML, e tome decisões procure
+
+
+
+== Os arquivos ==[arquivos]
+
+[MLROOT/img/dropbox-tree.png]
+
+Estes são os arquivos e pastas que o _MLC cria em seu Dropbox.
+
+=== txt/moneylog.txt ===[moneylog-txt]
+
+É aqui que ficam os seus lançamentos. Você pode editá-los pelo _ML, conforme ensinado no [passo 2 #inserir], ou abrir diretamente este arquivo TXT em seu editor de textos preferido. O Dropbox se encarrega de manter tudo atualizado.
+
+	Dica: Sabia que você pode criar outros arquivos .txt ali naquela pasta? O _MLC vai carregá-los automaticamente. Assim você pode organizar melhor seus lançamentos. Veja também: [dataFilesDefault MLROOT/config/#dataFilesDefault].
+
+	Importante: Todos os arquivos TXT devem usar a codificação UTF-8.
+
+=== config.js ===[config-js]
+
+Este é o arquivo de configuração do _MLC. Ele já vem preenchido e explicado, porém com todas as configurações desativadas. Você pode ativar aquelas que quiser usar. Use um editor de textos simples. Leia as instruções dentro do próprio arquivo e veja mais detalhes no [guia de configuração MLROOT/config/].
+
+=== plugins/ ===[plugins]
+
+Nesta pasta você coloca [os plugins https://github.com/aureliojargas/moneylog-plugins] que quiser usar no _MLC. Basta colocar os arquivos ``.js`` aqui que eles serão carregados automaticamente.
+
+
+== Mobile / smartphone ==[mobile]
+
+O _MLC está preparado para se adaptar à tela pequena de seu iPhone ou Android. Assim, você pode consultar seus extratos e fazer alterações mesmo quando estiver na rua. Experimente!
+
+''' <div class="inline">
+[MLROOT/img/cloud-iphone-top-200.png]
+[MLROOT/img/cloud-iphone-report-200.png]
+
+''' </div>
+
+
+== O _MLC é seguro? ==[seguranca]
+
+Sim.
+
+- O _MLC **não tem acesso a sua senha** do Dropbox. Ele usa a [API http://www.dropbox.com/developers/start/authentication#python] do Dropbox para ter acesso à sua conta sem precisar de sua senha.
+
+- O _MLC tem **acesso restrito a uma única pasta**, e não a todo o seu Dropbox. Essa pasta é a ``_DROPBOX_DIR``.
+
+- O _MLC **não guarda seus dados**, ele sempre lê e grava direto em seu Dropbox. Não há base de dados nem armazenamento temporário (cache) no servidor do _ML.
+
+- O _MLC **é um software open source**. Qualquer dúvida você pode consultar seu código-fonte, que está inteiramente [disponível no GitHub _MLC_GITHUB]. Na tela de login e na caixa //Sobre// do _MLC há um link para o commit no qual o serviço está rodando.
+-
+
+
+== Termos de Uso ==[termos-de-uso]
+
+O _MLC é um serviço que eu, Aurelio, hospedo em meu site e de boa vontade disponibilizo gratuitamente à todos que queiram usar.
+
+Não dou garantia alguma, **use sob seu próprio risco**.
+
+Se der algum problema e o _MLC sumir com os seus dados, eu não posso fazer nada.
+% Vá no site do Dropbox e restaure uma versão antiga dos arquivos.
+
+Se você não concorda com estes termos, NÃO USE o _MLC.
+
+
+== Autoria ==[autor]
+
+O _MLC é uma criação do **Leandro Voltolino** (@xupisco), que [teve a ideia original ""https://twitter.com/#!/xupisco/status/159600503486029824""], programou e continua atualizando, voluntariamente, todo o código necessário para fazer a ponte entre o _ML e o Dropbox.
+
+% DUVIDO: https://twitter.com/#!/oreio/status/159617769913073664
+
+Eu apenas hospedo o serviço em meu site, mas [o código _MLC_GITHUB] é 100% dele. Então se você gostou do _MLC, não esqueça de agradecer ao Leandro!
+
+
+== 500 Internal Server Error ==[erro-500]
+
+Este erro aparece quando você desconecta o _MLC de seu Dropbox e tenta acessá-lo novamente. É algum cookie que ficou pelo meio do caminho.
+
+Basta acessar diretamente a tela de login para voltar a funcionar:
+http://moneylog-cloud.aurelio.net/login
+
+
+%!include: ../_footer.t2t
+
+%!include: ''../_disqus.html''
+
