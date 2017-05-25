@@ -1,0 +1,227 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #222;
+	font-family: Lucida Grande, Geneva, Arial, sans-serif;
+}
+a {
+	text-decoration: none;
+}
+a:hover,
+a:hover img {
+	background-color: #ddf;
+	text-decoration: none;
+}
+
+/* -------------------------------------- CUSTOM HEADERS */
+
+#project-donate #header {
+	background: #fff url(img/aurelio-mountain.jpg) no-repeat left center;
+}
+body.applescript #header {
+	background: #fff url(img/icon/128/applescript.png) no-repeat left center;
+}
+body.applescriptab #header {
+	background: #fff url(img/icon/128/applescript-abook.png) no-repeat left center;
+}
+body.applescriptiphoto #header {
+	background: #fff url(img/icon/128/applescript-iphoto.png) no-repeat left center;
+}
+body.applescriptitunes #header {
+	background: #fff url(img/icon/128/applescript-itunes.png) no-repeat left center;
+}
+#project-adiumbook #header {
+	background: #fff url(img/icon/128/adiumbook.png) no-repeat left center;
+}
+#project-moneylog #header {
+	background: #fff url(img/icon/128/moneylog.png) no-repeat left center;
+}
+/*
+#project-sedsed #header {
+	background: #fff url(img/icon/128/sedsed.png) no-repeat left center;
+}
+*/
+#project-sedarkanoid #header {
+	background: #fff url(img/icon/128/sedarkanoid.png) no-repeat left center;
+}
+#project-sedsokoban #header {
+	background: #fff url(img/icon/128/sedsokoban.png) no-repeat left center;
+}
+/*
+#project-txt2tags #header {
+	background: #fff url(img/icon/128/txt2tags.png) no-repeat left center;
+}
+#project-txt2regex #header {
+	background: #fff url(img/icon/128/txt2regex.png) no-repeat left center;
+}
+*/
+
+/* -------------------------------------- HEADER */
+
+#header {
+	margin: 30px 100px;
+	padding-left: 200px;
+	padding-bottom: 1.5em;
+	min-height: 150px;
+	background: #fff;
+}
+#header h1 {
+	font-size: 60px;
+	color: black;
+	margin:0;
+	padding-top: 20px;
+	text-shadow: 3px 3px 3px #aaa;
+}
+#header h2 {
+	font-size: 175%;
+	color: #888;
+	font-weight: normal;
+	margin: .3em 0 0 0;
+}
+#header a {
+	text-decoration: none;
+}
+
+/* -------------------------------------- CONTENTS */
+
+#content {
+	padding: 1em 40px 2em 80px;
+	margin-right: 19em;
+}
+
+#content h2 {
+	font-weight: normal;
+	font-size: 250%;
+	margin: 1.5em -40px .7em -80px;
+	padding: 0 0 0 40px;
+	font-variant: small-caps;
+}
+#content p,
+#content li,
+#content dt,
+#content dd,
+#sidebar li {
+	line-height: 140%;
+}
+
+/* -------------------------------------- SIDEBAR BOXES */
+
+#sidebar {
+	clear: both;
+	float: right;
+	width: 21em;
+	margin: 0 20px 40px 20px;
+	border: 1px solid #cf3;
+	font-size: 75%;
+}
+#sidebar .box {
+	margin: 0;
+	padding: 5px 10px;
+}
+#sidebar .box ul {
+	margin: 0;
+	padding: 0;
+}
+#sidebar .box li {
+	padding-bottom: .5em;
+	list-style-type: none;
+}
+#sidebar .box h2 {
+	clear: both;
+	margin: .5em 0 0 0;
+	color: #444;
+}
+#sidebar .box h3 {
+	clear: both;
+	font-weight: normal;
+	margin: 0 -11px 5px -10px;
+	padding: 4px 5px 4px 10px;
+	font-size: 120%;
+	background-color: #cf3;
+	color: #360;
+}
+#sidebar a {
+	display: block;
+	font-size: 125%;
+}
+
+/* -------------------------------------- DOWNLOAD BOX */
+
+.downloadbox {
+	margin: 3em 0;
+}
+.downloadbox a {
+	font-size: 200%;
+}
+.downloadbox table {
+	border: 2px dashed #999;
+	background-color: #eee;
+	_background-color: #fff;
+	padding: 10px 15px;
+}
+.downloadbox td {
+	white-space: nowrap;
+}
+
+/* -------------------------------------- FEATURE LIST */
+
+.features td {
+	padding: 8px 3px;
+	vertical-align: top;
+	font-size: 90%;
+}
+.features td b {
+	font-size: 110%;
+	line-height: 155%;
+}
+
+/* -------------------------------------- OTHER */
+
+#body th {
+	text-align: left;
+}
+#body td, th {
+	padding: 3px 10px;
+}
+#body blockquote {
+	background-color: #ffc;
+	border: 1px solid #999;
+	padding: 5px;
+	color: #555;
+	font-size: 85%;
+}
+
+/* -------------------------------------- ROW TABLE */
+
+#body .rowtable table {
+	border-spacing: none;
+	border-collapse: collapse;
+}
+#body .rowtable td {
+	border-top: 1px solid #999;
+	padding: 5px 10px;
+}
+
+/* -------------------------------------- DISQUS */
+
+#disqus_thread {
+	margin: 0 80px 2em 80px;
+	border-top: 1px solid black;
+	padding-top: 3em;
+}
+
+/* -------------------------------------- FOOTER */
+
+#footer {
+	clear: both;
+	color: gray;
+	text-align: center;
+	line-height: 150%;
+}
+
+/* -------------------------------------- CUSTOM PAGES */
+
+#project-adiumbook h3 {
+	border-top:1px solid #ccc;
+	padding-top:1em;
+}

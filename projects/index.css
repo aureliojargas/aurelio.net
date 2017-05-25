@@ -1,0 +1,67 @@
+#header {
+	margin: 0;
+	padding: 1em 2em 3em 0;
+	min-height: 0;
+	background-color: #cf3;
+	text-align:right;
+}
+#header h1 {
+	padding-top: 0;
+	font-size: 2em;
+	text-shadow: none;
+	color:#360;
+}
+#header h1 a {
+	color: inherit;
+}
+#header h2 {
+	font-size: 1.5em;
+	color: #690;
+}
+/*-------------------------------------------------------*/
+#content {
+	margin: 2em 10em;
+	padding: 0;
+}
+#content h2 {
+	color: black;
+}
+#content table {
+	border-collapse: collapse;
+}
+#content .features td, #content li {
+	font-size: 85%;
+	padding-bottom: 1.8em;
+/*	border-bottom: 1px solid #ccc;*/
+}
+.applist a {
+	font-size: 140%;
+	text-decoration: none;
+}
+
+/* -------------------------------------- APP LIST */
+
+.applist td {
+	padding: 8px 3px;
+	font-size: 90%;
+}
+.applist td b {
+	font-size: 110%;
+	line-height: 155%;
+}
+
+/*-------------------------------------------------------*/
+#about td,
+#donate {
+	font-size: 90%;
+	line-height:140%;
+	text-align: justify;
+}
+#about a,
+#donate a {
+	font-size:100%;
+}
+#footer {
+	margin-top: 3em;
+	border-top: 1px solid #ccc;
+}

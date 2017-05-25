@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -r '[A-Z][A-Z]*_[A-Z][A-Z]*' */*.html

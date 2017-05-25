@@ -1,0 +1,48 @@
+Donate
+Thanks for your help!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% XXX Nao mudar esta URL pois os AppleScripts usam ela!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Extra TITLE
+%%!postproc: '(</TITLE>)'	' - TAGLINE_SOKOBAN\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-donate"'
+
+%!postproc: URL_DONATE_BASE_	https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=verde%40aurelio%2enet&amp;no_shipping=1&amp;return=http%3a%2f%2faurelio%2enet%2fdonate%2dthanks%2ehtml&amp;cn=Please%20leave%20a%20comment%20to%20me&amp;tax=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8&amp;item_name=
+
+%!includeconf: config.t2t
+%!include: sidebar-softs.t2t
+
+''' <div id="content">
+Hello. I'm Aurelio, a brazilian guy who likes programming on the spare time.
+You're here because you're an user of my Free / Open Source softwares.
+
+Thanks for your interest in donating to me.
+ANY value will fit, you will make make me real happy.
+
+Just choose where do you want me to spend my energy:
+
+- [I want more useful softwares that works on Linux, Mac and Windows! URL_DONATE_BASE_Aurelio%20Softwares%20for%20Linux,%20Mac,%20Windows]
+
+- [I want more useful AppleScripts! URL_DONATE_BASE_Aurelio%20Free%20AppleScripts]
+
+- [I want more Mac softwares such as AdiumBook and EmoMemory! URL_DONATE_BASE_Aurelio%20Mac%20OS%20X%20Softwares]
+
+- [I want more tutorials and guides! URL_DONATE_BASE_Aurelio%20Docs]
+-
+
+Thank You.
+
+	Don't you know what to do with that few bucks of your PayPal account?{{br}}
+	[Help an independent programmer today! URL_DONATE_BASE_Aurelio%20Programmer]
+
+
+
+% close CONTENT
+''' </div>
+
+%!include: ''footer.html''
