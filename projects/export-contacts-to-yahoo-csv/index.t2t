@@ -1,0 +1,74 @@
+NAME_EXPORTYAHOO
+TAGLINE_EXPORTYAHOO
+by
+
+%!postproc: ROOTPATH	..
+% Extra TITLE
+%!postproc: '(</TITLE>)'	' - TAGLINE_EXPORTYAHOO\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-ID_EXPORTYAHOO" class="applescriptab"'
+
+%!includeconf: ../config.t2t
+%!include: ../sidebar-softs.t2t
+
+''' <div id="content">
+AppleScript to export the Address Book contacts to the Yahoo! CSV format. Then they can be uploaded to the Yahoo Web-based Address Book. It is a nice way to have your contacts available everywhere.
+
+- Free / Open Source AppleScript (Mac only)
+- [See installation instructions http://aurelio.net/articles/applescript-install.html]
+% - [Read user reviews http://aureliosoft.wordpress.com/export-contacts-to-yahoo-csv/]
+-
+
+''' <div class="downloadbox">
+ | {IMG_DOWNLOAD} | [Download http://aurelio.googlecode.com/files/Export_Contacts_To_Yahoo_CSV-1.2.zip] | {IMG_FINDER}
+''' </div>
+
+% Mirror: http://scriptbuilders.net/files/exportcontactstoyahoocsv1.2.html
+
+== User Comments ==[users]
+
+: "This is BRILLIANT! I've been waiting for something like this for quite a while. Now I don't need to do five steps... using Entourage. Thank you."
+— Stephen
+
+: "The best script ever! Amazing."
+— Juan Pablo Piombo
+:
+
+[Read more comments... http://aureliosoft.wordpress.com/export-contacts-to-yahoo-csv/]
+
+
+
+== Road Map ==
+
+=== Step 1 ===
+
+Click on the Choose Group button.
+
+ [step-1.png] 
+
+=== Step 2 ===
+
+Select the desired group. If it is your first time, choose a group with few contacts, so the program will execute faster. Click on the Export button and the processing will begin. It takes just a few seconds to convert the contacts data. Huge amount of contacts can take around a minute or more.
+
+ [step-2.png] 
+
+=== Step 3 ===
+
+Work done! The contacts were exported to the Yahoo-AB.csv file on your Desktop. Now you can log into Yahoo! and import your contacts.
+
+ [step-3.png] 
+
+=== Notes ===
+
+- **Update 1:** Yahoo has changed one field name, so the Yahoo IM field will not be exported on the current 1.2 version. All you have to do is to change from "Yahoo! ID" to "Messenger ID" on the script file. It will be fixed on the next version.
+
+- **Update 2:** Hank Dolben has [modified the script http://www.dolben.org/nothingisperfect/archives/2005/10/address_book_ma_1.html] adding two new features: [1] Address Book groups mapped to Yahoo! Distribution Lists (instead Category) [2] A different e-mail handling, always trying to fill the three Yahoo! e-mail fields. These changes will be added to the 1.3 version.
+
+- The reverse process (Yahoo! to Mac) can be made using [this Python script ROOTPATH/../bin/as/ImportContactsFromYahooCSV.py].
+-
+
+% close CONTENT
+''' </div>
+
+%!include: ''../_disqus.html''
+%!include: ''../footer.html''

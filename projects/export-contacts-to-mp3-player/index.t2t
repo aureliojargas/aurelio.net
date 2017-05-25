@@ -1,0 +1,70 @@
+NAME_EXPORTMP3
+TAGLINE_EXPORTMP3
+by
+
+%!postproc: ROOTPATH	..
+% Extra TITLE
+%!postproc: '(</TITLE>)'	' - TAGLINE_EXPORTMP3\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-ID_EXPORTMP3" class="applescriptab"'
+
+%!includeconf: ../config.t2t
+%!include: ../sidebar-softs.t2t
+
+''' <div id="content">
+Some cheap Asian MP3 players (known as [S1 players http://www.s1mp3.org/], not iPod!) have a simple Telephone & E-mail browser, whose contacts are managed by an external Windows program (TELBOOK.EXE). Windows? No thanks.
+
+With this AppleScript you can export your Address Book contacts to the binary format used by the MP3 player. Then the contacts can be loaded into the player’s browser. The default fields are: full name, telephone numbers (mobile, home and work), e-mail and birthday.
+
+Features: Runs fast, export all contacts or choose a group, removes accents from letters (optional), order contacts alphabetically, easy to customize, generates the three different TELBOOK.EXE binary formats.
+
+
+- Free / Open Source AppleScript (Mac only)
+- [See installation instructions http://aurelio.net/articles/applescript-install.html]
+- [User reviews http://aureliosoft.wordpress.com/export-contacts-to-mp3-player/]
+-
+
+Not a Mac user? You can download [this Python script ROOTPATH/../bin/python/s1mp3-import-contacts.py] that imports your contacts to the player, reading a CSV file.
+
+''' <div class="downloadbox">
+ | {IMG_DOWNLOAD} | [Download http://aurelio.googlecode.com/files/Export_Contacts_To_MP3_Player-1.1.zip] | {IMG_FINDER}
+''' </div>
+
+== Road Map ==
+
+=== Step 1 ===
+
+On the first screen, you’ll have to choose the right version of the TELBOOK.EXE Windows program that came with your MP3 player. If you’re in doubt, try the three versions.
+
+ [step-1.png] 
+
+=== Step 2 ===
+
+Select the desired group or "- ALL -" to export all contacts. Then click on the Generate File button and the processing will begin. It takes just a few seconds.
+
+ [step-2.png] 
+
+=== Step 3 ===
+
+Work done! The contacts were exported to a binary file on your Desktop. Now plug in the MP3 player on the USB port, drag this file onto it, eject and unplug. On the player, go to TEL > Import (or similar) and before you count to three, your contacts will be there.
+
+ [step-3.png] 
+
+== Important ==
+
+This script should work for you if...
+
+- Your player looks similar to mine. The same product is sold under several company names, including K-Byte, Midi Japan, Merlin, Foster and Britania.
+
+ [mp3player.jpg] 
+
+- Your player looks different, but uses the same firmware (player’s system). Export your contacts to the three available formats and try to import them. One may work.
+
+- Your player comes with a program called TELBOOK.EXE and reads the contacts from the TELBOOK.BIN or TEL_SAVE.BIN files.
+-
+
+% close CONTENT
+''' </div>
+
+%!include: ''../_disqus.html''
+%!include: ''../footer.html''

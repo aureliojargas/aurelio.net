@@ -1,0 +1,57 @@
+NAME_ITUNESSED
+TAGLINE_ITUNESSED
+by
+
+%!postproc: ROOTPATH	..
+% Extra TITLE
+%!postproc: '(</TITLE>)'	' - TAGLINE_ITUNESSED\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-ID_ITUNESSED" class="applescriptitunes"'
+
+%!includeconf: ../config.t2t
+%!include: ../sidebar-softs.t2t
+
+''' <div id="content">
+iTunes SED, the UNIX geeks must-have script. It brings the power of [SED http://sed.sourceforge.net/]'s substitute command s/// to iTunes, so you can make smart batch changes on the tracks ID3 info (Name, Artist, Album, …). We've got regular expressions, back references, modifiers, multiple commands. It's SED babe!
+
+- Free / Open Source AppleScript (Mac only)
+- [See installation instructions http://aurelio.net/articles/applescript-install.html]
+% - [Read user reviews http://aureliosoft.wordpress.com/itunes-sed/]
+-
+
+''' <div class="downloadbox">
+ | {IMG_DOWNLOAD} | [Download http://aurelio.googlecode.com/files/iTunes_SED-1.1.zip] | {IMG_FINDER}
+''' </div>
+
+== User Comments ==[users]
+
+: "Oh, God, yes, oh, THANK YOU for this. Having completely overwriting existing tags be the only batch tag editing option in iTunes was driving me nuts."
+— Mike
+
+: "Thanks a lot for that wonderful script! Without it I would probably be living with bad song names for the rest of my life :-)"
+— Oliver
+:
+
+[Read more comments... http://aureliosoft.wordpress.com/itunes-sed/]
+
+== Road Map ==
+
+=== Step 1 ===
+
+Select the songs and run the script. You'll be asked to choose which field do you want to change.
+
+ [step-1.png] 
+
+=== Step 2 ===
+
+Now just type your nice SED command. Imagine you are on the Terminal, all the SED commands and features are available. Then press the Run SED button and you'll see the tunes changing.
+
+ [step-2.png] 
+
+**Note:** You may also like [iTunes Run Script ROOTPATH/../bin/as/iTunesRunScript-1.1.zip], a modified version of iTunes SED made by Bobby Holley. It accepts any command besides SED, makes differentiation between input field and output field, and has the ability to read from the filename.
+
+% close CONTENT
+''' </div>
+
+%!include: ''../_disqus.html''
+%!include: ''../footer.html''

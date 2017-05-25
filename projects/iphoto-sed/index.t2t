@@ -1,0 +1,44 @@
+NAME_IPHOTOSED
+TAGLINE_IPHOTOSED
+by
+
+%!postproc: ROOTPATH	..
+% Extra TITLE
+%!postproc: '(</TITLE>)'	' - TAGLINE_IPHOTOSED\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-ID_IPHOTOSED" class="applescriptiphoto"'
+
+%!includeconf: ../config.t2t
+%!include: ../sidebar-softs.t2t
+
+''' <div id="content">
+iPhoto SED brings the power of [SED http://sed.sourceforge.net/]'s substitute command s/// to iPhoto, so you can make smart batch changes on the pictures Title and Comments. Abuse from regular expressions, back references, modifiers, multiple commands. It's SED babe!
+
+- Free / Open Source AppleScript (Mac only)
+- [See installation instructions http://aurelio.net/articles/applescript-install.html]
+- [User reviews http://aureliosoft.wordpress.com/iphoto-sed/]
+-
+
+''' <div class="downloadbox">
+ | {IMG_DOWNLOAD} | [Download http://aurelio.googlecode.com/files/iPhoto_SED-1.zip] | {IMG_FINDER}
+''' </div>
+
+== Road Map ==
+
+=== Step 1 ===
+
+Select the desired pictures in iPhoto and run this script.
+
+=== Step 2 ===
+
+Now just type your nice SED command. Imagine you are on the Terminal, all the SED commands and features are available. Then press the button to apply this command to the Title or Comments fields. Done.
+
+ [step-2.png] 
+
+Note: The fields are already changed, but you need to click on a picture or empty area to iPhoto update the screen.
+
+% close CONTENT
+''' </div>
+
+%!include: ''../_disqus.html''
+%!include: ''../footer.html''
