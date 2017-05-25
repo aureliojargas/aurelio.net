@@ -1,0 +1,174 @@
+NAME_ADIUMBOOK
+TAGLINE_ADIUMBOOK
+by
+
+%!postproc: ROOTPATH	..
+% Extra TITLE
+%!postproc: '(</TITLE>)'	' - TAGLINE_ADIUMBOOK\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-adiumbook"'
+% Automatic link for screenshots
+%!preproc: '(\[(.*?)\.thumbnail(\..*?)\])'	'[\1 \2\3]'
+
+%!preproc: URLDOWNLOAD	http://code.google.com/p/adiumbook/downloads/list
+%!preproc: URLSOURCE	http://code.google.com/p/adiumbook/source
+%!preproc: URLCHANGELOG	http://code.google.com/p/adiumbook/wiki/VersionHistory
+
+%!includeconf: ../config.t2t
+%!include: ../sidebar-softs.t2t
+
+''' <div id="content">
+ | [shot-interface-v14.thumbnail.jpg]
+
+A free Mac OS X bridge application between [Adium http://www.adiumx.com] and Address Book, used to search, manage and keep your contacts in sync.
+
+**Manage:**
+- Add Adium contacts to Address Book.
+- Update card's information using Adium data.
+-
+**Search:**
+- Find an Adium contact in Address Book.
+- Find an Address Book contact in Adium.
+- Full text search for both applications.
+-
+**Reports:**
+- Listing of contacts grouped by IM service.
+- Contacts with/without picture.
+- Contacts present in Adium but not in Address Book.
+- Contacts present in Address Book but not in Adium.
+-
+
+ | [shot-reports-top.png]
+% Note: aureliosoft adiumbook v1.5 announce links to this image
+
+[KISS http://en.wikipedia.org/wiki/KISS_Principle]: Simple intuitive interface: one single window. No preferences, no drawers, no tabs, no popup, no splash, --no funky window resizing-- — now it resizes :)
+
+**See also:** [Gmail to Jabber ../gmail-to-jabber/] - Batch copy the Gmail email to the Jabber IM field in Address Book.
+
+== Download ==[download]
+
+- Price: Free
+- License: Open Source ([version history URLCHANGELOG], [sources URLSOURCE])
+- Language: AppleScript
+- Requires: [Adium http://www.adiumx.com] version 1.2 or later
+% - Requires: [Adium http://www.adiumx.com] version 0.84 or later
+-
+
+''' <div class="downloadbox">
+ | {IMG_DOWNLOAD} | [Download URLDOWNLOAD] | {IMG_FINDER}
+''' </div>
+
+% Choose a mirror to download **AdiumBook version 1.3**:
+% - [Adium Xtras http://adiumxtras.com/index.php?a=xtras&xtra_id=2069]
+% - [ScriptBuilders http://scriptbuilders.net/files/adiumbook1.3.html]
+% - [VersionTracker http://www.versiontracker.com/dyn/moreinfo/macosx/28352]
+% - [MacUpdate http://www.macupdate.com/info.php/id/20136]
+% -
+
+After downloading, just open the ZIP file and drag AdiumBook to your Applications folder.
+
+
+== User Comments ==[users]
+
+: "Simple, clean, fast and extremely useful."
+— [Florian Beer http://blog.no-panic.at/2006/04/03/adium-book-sync-adium-and-address-book/]
+
+: "Useful, should be a default in Adium."
+— [Michele Bugliaro http://adiumxtras.com/index.php?a=xtras&xtra_id=2069#c12877]
+
+: "On my Mac I’m migrating from Entourage to Mail.app and I haven’t been looking forward to transferring my contacts. This awesome program called **AdiumBook** has made this process extremely easy because almost all of my contacts are in my IM client, Adium."
+— [Jamie http://www.robojamie.com/wordpress/?p=64]
+
+: "Thanks for a great app! For some reason AOL deleted most of the contacts from my buddy list the other day, and Adium responded by removing them from its contact list. I had many of my contacts in my Address Book so your **AdiumBook** app was a tremendous help."
+— **John H.**
+:
+[Read more comments... http://aureliosoft.wordpress.com/adium-book/]
+
+
+== ScreenShots ==[shots]
+
+|  [shot-interface-v13.thumbnail.png] | Interface components
+|  [shot-search.thumbnail.jpg] | Text search (1) and cross search (2) for both applications
+|  [shot-set-buttons.thumbnail.jpg] | Nice buttons to copy IM and picture from Adium to Address Book
+|  [shot-add-contact.thumbnail.jpg] | Handy button to add the Adium contact to Address Book, with name, IM and picture
+|  [shot-reports.thumbnail.png] | Reports Menu full of goodies
+
+
+== Thank You ==[thanks]
+
+- Alan Schmitt — //Bug reports//
+- Alfredo Kojima — //Testing, Xcode/IB help, Tiger issues, UI design ideas, feature ideas//
+- André Ruiz — //UI design ideas, feature ideas//
+- Arthur Klepchukov - //Feature ideas//
+- Brian Exelbierd - //Feature ideas//
+- Eliphas Levy — //UI design ideas//
+- Guilherme Manika — //Testing, Tiger issues, feature ideas//
+- Fabio J. Augusto — //Testing, UI design ideas, feature ideas//
+- Felix Müeller — //Bug reports//
+- Jannis Hermanns — //Mirror space//
+- John Haiducek — //UI design ideas, feature ideas, bug reports//
+- John Mora — //Feature ideas//
+- Juan Jose Lopez Juarez - //Feature ideas//
+- Ken Raeburn — //Feature ideas, bug reports//
+- Nik.ca — //Version Tracker announce//
+- Pavel Zavyalov - //Documentation fixes//
+- Rodrigo Novo — //UI design ideas//
+- Rudá Moura — //Testing//
+- Bernardo Hoehl, Cliff Pruitt, Neil Faiman — //Adium install check//
+- Apple documentation team — //Great docs, easy learning//
+- Everybody who reported/helped an [issue http://code.google.com/p/adiumbook/issues/list]
+-
+
+== Known Issues ==[issues]
+
+If you have a feature request or found a bug not listed here, please
+[submit an issue http://code.google.com/p/adiumbook/issues/list].
+
+=== Issues in Snow Leopard ===[snow]
+
+If you upgraded your system to Snow Leopard, some reports will stop to work and the Set IM button won't save the changes to Address Book.
+
+Those issues were fixed at the [AdiumBook 1.5 - Snow Leopard release http://adiumbook.googlecode.com/files/AdiumBook-1.5-Snow.zip].
+
+=== Adium Book got an error: Can’t make every «class ltct» into type reference. (-1700) ===
+
+If you're in **Leopard**, you need to [upgrade AdiumBook to version 1.4 or newer URLDOWNLOAD].
+
+If you're in **Tiger**, you need to upgrade Adium to 1.3 or newer.
+
+=== Adium got an error: Can't make id of account of every contact into type reference. (-1700) ===
+
+% This error appears in Tiger (10.4.x) when using AdiumBook version 1.3.1 or newer with Adium 1.2. It's a [known issue http://trac.adiumx.com/ticket/8972] with the Adium AppleScript support for Tiger. In Leopard everything works fine.
+
+[This issue http://trac.adiumx.com/ticket/8972] was fixed in Adium version 1.3, so just upgrade it.
+
+
+=== I get the “NSReceiverEvaluationScriptError: 4 (1)” error ===
+
+This kind of error is usually caused by third party applications that change the default Mac OS X behavior, such as SIMBL plugins. Just disable the plugin and the error will be gone. Already reported incompatible plugins: megazoomer, SelectionFix.
+
+To check if this is your case, do the following:
+
+  - Run /Applications/Console.app and click on the “Clear” button.
+  - Run AdiumBook and use it until the error appears.
+  - Back to Console.app window, search for any related error message.
+
+
+=== I can't see the scroll bars ===
+
+TinkerTool has an option to put a pair of scroll buttons on both the top and the bottom of all scroll bars. It warns that this setting might cause some scroll bars to display incorrectly. Now you are experiencing this problems :)
+
+//-- Submitted by John Haiducek//
+
+
+''' <br><br><br>
+
+ | [500+ i use this http://osx.iusethis.com/app/adiumbook] |
+
+% close CONTENT
+''' </div>
+
+%%%!include: ''iusethis.html''
+
+%!include: ''../_disqus.html''
+%!include: ''../footer.html''
