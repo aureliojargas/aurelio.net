@@ -1,0 +1,106 @@
+^txt2regex$
+@image@
+Assistente para Expressões Regulares
+
+%!target: html
+%!encoding: UTF-8
+%!options: --css-sugar --style site.css
+%!postproc: @image@     	'<img src="img/txt2regex.png">'
+% Highlights
+%!postproc: '(interactive|20 programs|Shell Script)'  '<b>\1</b>'
+
+''' <div class="language">
+[[img/flag-en.gif] .] [in english .]
+
+''' </div>
+
+%----------------------------------------
+%= Setembro/2004: LANÇADA A VERSÃO 0.8 ! =
+% || **v0.8 Notícias:** Suporte a expressões do OpenOffice.org, funcionando com o bash-3.x, com traduções para Romenio/Espanhol/Italiano.
+%----------------------------------------
+
+: **Descrição**
+%!include: ""/a/txt2regex/description-pt.txt""
+
+: **Programas suportados (23)**
+  AWK, ed, egrep, Emacs, expect, find, gawk, grep, lex, lisp, mawk, MySQL,
+  OpenOffice.org, Perl, PHP, Postgres, Procmail, Python, SED, Tcl, VBscript,
+  VI, Vim.
+
+: **Screenshots**
+  Vá para [página de screenshots screenshots-pt.html]!
+
+: **Versão estável**
+  0.8 (29 Setembro de 2004) [baixar https://github.com/aureliojargas/txt2regex/raw/master/releases/txt2regex-0.8.tgz]
+
+: **GitHub**
+  https://github.com/aureliojargas/txt2regex
+
+: **COPYRIGHT**
+  GPL v2
+
+: **Arquivos do Programa**
+|   [Notícias https://github.com/aureliojargas/txt2regex/blob/master/NEWS] | Notícias quentes do seu programa favorito.
+|  [Changelog https://github.com/aureliojargas/txt2regex/blob/master/Changelog.txt] | Lista técnica sobre as mudanças ocorridas no programa.
+|     [LEIAME https://github.com/aureliojargas/txt2regex/blob/master/README.md] | Procedimentos de instalação, traduções e mini-FAQ
+|    [Páginas de Manual manpage-pt.html] | Páginas de manual, com uso, opções exemplos e muito mais. Leia isso agora!
+|      [Museu https://github.com/aureliojargas/txt2regex/tree/master/releases] | Versões antigas do programa.
+
+: **Idiomas para os quais o programa já foi traduzido**
+  - Bahasa indonesia
+  - Português do Brasil
+  - Alemão
+  - Italiano
+  - Japonês
+  - Polinésio
+  - Romênio
+  - Espanhol
+
+  - Novo: Francês (não na versão 0.8, [pegar arquivo .po aqui https://github.com/aureliojargas/txt2regex/blob/master/po/fr_FR.po])
+  - Novo: Catalão (não na versão 0.8, [pegar arquivo .po aqui https://github.com/aureliojargas/txt2regex/blob/master/po/ca.po])
+  - ...[adicione os seus https://github.com/aureliojargas/txt2regex/blob/master/po/txt2regex.pot]!
+
+: **UNIX/Linux distributions**
+  - [Conectiva Linux http://rpmfind.net/linux/RPM/conectiva/snapshot/i386/RPMS.main/txt2regex-0.7-1cl.i386.html]
+  - [Debian Linux http://packages.debian.org/unstable/utils/txt2regex.html]
+  - [Mandrake ftp://rpmfind.net/linux/Mandrake/9.2/contrib/i586/txt2regex-0.7-1mdk.noarch.rpm]
+  - [Free BSD http://www.freebsd.org/ports/misc.html]
+  - [Gentoo Linux ""http://packages.gentoo.org/packages/?category=dev-util;name=txt2regex""]
+  - [Knoppix Linux on CD http://unit.aist.go.jp/it/knoppix/menu/software/txt2regex.htm]
+  - [Fink for Mac OS X http://fink.sourceforge.net/pdb/package.php/txt2regex]
+  - [Rock Linux http://www.rocklinux.net/packages/txt2regex.html]
+  - [Crux Linux http://clc.morpheus.net/portdb/?command=search&pattern=txt2regex]
+
+%: **Sites**
+%  - [linux.org http://www.linux.org/apps/AppId_7263.html]
+%  - [linuxlinks.com http://www.linuxlinks.com/Software/Utilities/Text_Utilities/index.shtml]
+%  - [linuxworld.com http://www.linuxworld.com/download/tools.html]
+%  - [ABS (Advanced Bash-Scripting Guide) Bibliography http://www.tldp.org/LDP/abs/html/biblio.html]
+%  - [Wikipedia http://en.wikipedia.org/wiki/Regular_expression]
+%
+: **Revistas/sites sobre o assunto**
+|| data | fonte | seção | página | link |
+| **``Dez/2004``** | [Linux Magazine (Brasil) http://www.linuxmagazine.com.br] | Linux User |  82, 83  | [PDF http://www.linuxmagazine.com.br/issue/04/feiticeiro_shell.pdf]
+| **``Out/2004``** | [ComputerWoche.de site http://www.computerwoche.de] | Produkte + Technologien |  -  | [Artigo http://www.computerwoche.de/index.cfm?type=detail&artid=66533&category=160&Pageid=255] (em Alemão)
+| **``Out/2004``** | [Linux Magazine (Internacional) http://www.linux-magazine.com] | Linux User |  76, 77  | [PDF http://www.linux-magazine.com/issue/47/txt2regex.pdf] (em Inglês)
+| **``Set/2004``** | [Linux User (Alemanha) http://www.linux-user.de] | Im Test |  66, 67  | -
+| **``Dez/2003``** | [Slashdot Japan http://slashdot.jp] | dseg's journal |  -  | [Artigo http://slashdot.jp/journal.pl?op=display&uid=14237&id=177863] (em Japonês)
+| **``Out/2003``** | [Server Watch site http://www.serverwatch.com] | Tips of the Trade |  -  | [Artigo http://www.serverwatch.com/news/article.php/3093001] (em Inglês)
+| **``Mai/2002``** | [ASCII's Linux Magazine http://www.ascii.co.jp/linux/linuxmag] | World Freesoft Collection |  123  | [Página digitalizada (138 Kb) img/asciimagazine2.jpg] (em Japonês)
+| **``Fev/2002``** | [UnixReview.com site http://www.unixreview.com] | Tool of the Month |  -  | [Artigo http://www.unixreview.com/documents/s=2424/uni1014756451188/0202k.htm] (em Inglês)
+| **``Nov/2001``** | [ASCII's Linux Magazine http://www.ascii.co.jp/linux/linuxmag] | Free Application Showcase |  141  | [Página digitalizada (88 Kb) img/asciimagazine.jpg] (em Japonês)
+| **``Abr/2001``** | [Linux Format Magazine http://www.linuxformat.co.uk] | - |  47  | [Página digitalizada (111 Kb) img/linuxformat.png] (em Inglês)
+
+
+----------------------------------------------------------------------------
+Outros projetos do [Aurelio http://aurelio.net]:
+[txt2tags http://txt2tags.org] conversor |
+[sedsed http://aurelio.net/projects/sedsed/] debugger |
+[sokoban.sed http://aurelio.net/projects/sedsokoban/] jogo |
+[regex http://aurelio.net/regex/guia/] livro (pt_BR)
+----------------------------------------------------------------------------
+Tradução para o Português feita por Gustavo Roberto Rodrigues Gonçalves.
+----------------------------------------------------------------------------
+%!include(html): ''footer-pt.html''
+% vim:tw=0
+

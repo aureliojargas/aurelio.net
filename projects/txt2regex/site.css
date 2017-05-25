@@ -1,0 +1,8 @@
+/* txt2regex site CSS (http://aurelio.net/txt2regex/)  -  GPL */
+
+body 		{ margin: 3em; background-color: #889; }
+th 		{ background: #aab ; }
+.header, h1 	{ text-align: center ; }
+.language 	{ text-align: right; }
+a 		{ font-weight     : bold; text-decoration : none; }
+a:hover 	{ text-decoration : underline; }
