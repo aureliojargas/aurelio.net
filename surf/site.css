@@ -20,7 +20,7 @@ body
 	{
 	text-align	: center;
 	}
-	
+
 .body
 	{
 	margin		: 2em 7em 3em 7em;
@@ -86,7 +86,7 @@ a:hover
 dl
 	{
 	clear		: both;
-	margin-top	: 2em; 
+	margin-top	: 2em;
 	/* the last bar before footer */
 	border-width	: 0 0 1px 0;
 	border-style	: solid;
@@ -105,7 +105,7 @@ dt.sonzeira
 	{
 	text-align	: center;
 	}
-dt img 
+dt img
 	{
 	/* for each day's thumbnails */
 	float		: right;
@@ -121,4 +121,9 @@ img
 	text-align	:center;
 	margin 		:0 auto;
 	}
-	
+
+.googleadfaixa
+	{
+	text-align	:center;
+	margin 		:2em auto;
+	}
