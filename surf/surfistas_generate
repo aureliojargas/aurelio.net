@@ -1,0 +1,83 @@
+#!/bin/bash
+# Generate all surfista/*.html files.
+
+set -e
+
+test -d surfistas || mkdir surfistas
+
+# Note that @@@@@ will be replaced by the surfer's name
+header() {
+    echo '
+        <html>
+        <head>
+            <link rel="stylesheet" type="text/css" href="../site-sub.css">
+            <link rel="icon" type="image/png" href="/img/favhead.png">
+            <title>Fotos de surf de @@@@@ em Matinhos</title>
+        </head>
+        <body>
+
+        <div class="body">
+
+            <h1>Fotos de surf de @@@@@</h1>
+
+            <h2>Praia de Matinhos-PR, ano 2006</h2>
+    ' | cut -c 9-
+}
+
+# Good old spaghetti code :)
+# Will receive in STDIN the HTML file list for this surfer
+photos_grid() {
+    echo '<table cellspacing="5" cellpadding="4" width="100%">'
+    echo '<tr>'
+
+    i=0
+    while read html_path
+    do
+        i=$((i + 1))
+
+        # New table line at every 3 photos
+        test $((i % 3)) -eq 1 -a $i -gt 2 && echo '</tr><tr>'
+
+        # mini photo relative URL
+        mini_path=$(echo "$html_path" | sed 's@/html@/mini@; s/html$/jpg/')
+
+        photo_id=$(grep '<br><br><b>S[0-9][0-9][0-9]</b>' "$html_path" | grep -o 'S...')
+
+        echo '    <td align="center">'
+        echo "        <a href=\"../$html_path\"><img src=\"../$mini_path\"></a>"
+        echo "        <br><b>$photo_id</b>"
+        echo '    </td>'
+    done
+
+    echo '</tr>'
+    echo '</table>'
+}
+
+footer() {
+    echo '
+            <p style="margin-top:3em;"><a href="../index.html">&lt; &lt; Voltar à principal</a></p>
+
+        </div>
+        <div class="footer"></div>
+
+        </body>
+        </html>
+    ' | cut -c 9-
+}
+
+
+./names | while read slug name
+do
+    outfile="surfistas/${slug}.html"
+
+    # Compose the file contents
+    (
+        header | sed "s/@@@@@/${name}/g"
+
+        grep -il "^ *<br><br>${name} *$" 2006-??-??/html/* | photos_grid | sed 's/^/    /'
+
+        footer
+    ) > "$outfile"
+
+    echo "Saved $outfile"
+done
