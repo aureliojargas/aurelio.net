@@ -1,0 +1,14 @@
+#!/bin/bash
+
+/a/git/moneylog/util/gen-online --lang en > /tmp/z
+diff -u index.html /tmp/z | mate -
+echo "Atualizar mesmo? ^C cancela"
+read f
+cat /tmp/z > index.html
+echo feito
+#exit
+
+echo "Atualizar site aurelio.net? ^C cancela"
+read f
+cd /a/www
+./upload soft/moneylog/online/index.html

@@ -1,0 +1,55 @@
+NAME_MONEYLOG
+TAGLINE_MONEYLOG
+by
+
+%!postproc: ROOTPATH	..
+% Extra TITLE
+%!postproc: '(</TITLE>)'	' - TAGLINE_MONEYLOG\1'
+% BODY name
+%!postproc: '(<BODY)'		'\1 id="project-moneylog"'
+% Center screenshot
+%!postproc(html): '(.*SRC="shot.jpg".*)'	'<center>\1</center>'
+
+%!includeconf: ../config.t2t
+%!include: ../sidebar-softs.t2t
+
+''' <div id="content">
+Personal finances made real simple: one single HTML file with JavaScript smartness and CSS beauty.
+
+Forget those bureaucratic finance softwares. To add a transaction in MoneyLog you only have to inform two values: the date and the amount (incoming or expense). The description and tags are optional. And that's it.
+
+The reports are reached with a single click and you can narrow them showing just the most recent months or filtering "as you type", even using regular expressions. Click on the column header to change or reverse the report sorting. Future transactions are highlighted.
+
+All of that in an intuitive and uncluttered interface, with no "OK" buttons. You click, it's active. You type, it's already filtering. The Mac style meets the browser.
+
+All your transactions data reside on the same HTML file where the program is. You have just one single file to carry over. Edit the file on your favorite text editor and reload the report on the browser. Simple as that.
+
+Tested on Internet Explorer (IE), Google Chrome, Firefox, Camino, Safari and Opera. Should work in any browser that supports JavaScript.
+
+- Price: Free
+- License: Open Source
+- Language: JavaScript (runs on the browser)
+- Install: Just save the .HTML file to your computer and edit it.
+% - [User reviews http://aureliosoft.wordpress.com/moneylog/]
+-
+
+Notes about the different versions:
+- [ONLINE version http://aurelio.net/projects/moneylog/online/]: You edit your data right in the browser (uses localStorage), there's no need to download or install anything. Requires internet conection. Remember to always use the same browser, since your data will be stored into it.
+
+- [DOWNLOAD version http://aurelio.net/projects/moneylog/moneylog4.html]: This version you can use offline. You must download the .HTML file and edit it. Put your data at the end of the file. You can open this file in any browser, save it to your Dropbox, put it in a jump drive…
+-
+''' <div class="downloadbox">
+ | [PATH_ICON32/moneylog.png] | [ONLINE version http://aurelio.net/projects/moneylog/online/] | {IMG_MULTIPLAT}
+''' </div>
+
+''' <div class="downloadbox">
+ | [PATH_ICON32/moneylog.png] | [DOWNLOAD version http://aurelio.net/projects/moneylog/moneylog4.html]{{br}}version 4 — 68 KB | {IMG_MULTIPLAT}
+''' </div>
+
+ [[shot.jpg] URL_MONEYLOG]
+
+% close CONTENT
+''' </div>
+
+%!include: ''../_disqus.html''
+%!include: ''../footer.html''
