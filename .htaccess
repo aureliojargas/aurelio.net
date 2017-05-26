@@ -208,6 +208,9 @@ Redirect temp      /bin/sed /sed/programas/
 Redirect permanent /doc/misc/ramones.txt /doc/ramones.txt
 Redirect permanent /curso/material/tutorial-pyobjc /mac/dev/tutorial-pyobjc
 
+# PHP code moved to a subdomain
+Redirect permanent /livro/cadastro               https://cadastro.aurelio.net
+
 # Gone 2014-02-26
 # Old obsoleted WordPress pages
 # Note: The old tag rules are in /a/www/.admin/htaccess*
