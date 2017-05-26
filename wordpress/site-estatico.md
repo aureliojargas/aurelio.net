@@ -116,7 +116,7 @@ Também criei uma página [/blog](http://aurelio.net/blog/) no WordPress e a con
 
 O site já tinha um _index.html_ na raiz, e agora também tem o _index.php_ do WordPress lá. É preciso escolher um ou outro como o oficial para ser a página principal de seu site.
 
-Escolhi o WordPress como responsável pela principal, para ganhar de brinde os menus e a integração com o blog. Incrementei essa página com os links e alguns elementos da [antiga página principal estática](http://aurelio.net/index-old.html), e o resultado ficou uma mistura de ambos: [confira](http://aurelio.net).
+Escolhi o WordPress como responsável pela principal, para ganhar de brinde os menus e a integração com o blog. Incrementei essa página com os links e alguns elementos da [antiga página principal estática](http://aurelio.net/doc/misc/aurelionet-2011.pdf), e o resultado ficou uma mistura de ambos: [confira](http://aurelio.net).
 
 
 ## O menu
