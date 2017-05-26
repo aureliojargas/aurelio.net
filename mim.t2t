@@ -1,0 +1,780 @@
+O Aurelio
+
+
+%!includeconf:		include/kiwi/config.t2t
+%!postproc: SITEROOT 	.
+%!postproc: (<BODY)	\1 class="mim"
+%!options: 		--toc
+
+%!postproc: 'ALIGN="middle" (SRC="img/ibookg4)' 'ALIGN="right" \1'
+
+%!preproc : URLBEAVIS	http://www.geekasaurus.com/cornholio.html
+%!preproc : URLMADRUGA	http://www.chavodel8.com/donRamon.html
+%!preproc : URLHOMER    http://smacie.com/randomizer/simpsons/homer.html
+
+%- M frases maquiavel
+
+%%TOC
+
+== Introduzindo-lhe ==[intro]
+
+Oi.
+
+Eu sou o Aurelio e esta é minha página pessoal dentro do meu site
+pessoal. Isso significa que aqui há muitas informações inúteis e
+irrelevantes, que não mudarão a sua vida.
+
+Mas, se você está aqui, é porque tem tempo de sobra e não está afim de
+ser produtivo no momento. Então relaxe e aproveite.
+
+  | Exemplos de vida e fontes de inspiração:
+
+ |  [img/beavis.png]  |  [img/seumadruga.jpg]  |  [img/homer.gif]  
+ |  [Beavis URLBEAVIS]  |  [Seu Madruga URLMADRUGA]  | [Homer Simpson URLHOMER] 
+
+
+
+== Raio-X ==[raio-x]
+
+[img/aurelio.jpg]  
+%{{br}}E-mail: [img/emeio.png] 
+%{{br}}MSN: [img/messene.png] 
+
+%%%
+Olá, meu nome é Aurelio Marinho Jargas e este é meu site pessoal.
+Aqui há bastante conteúdo sobre vários assuntos,
+como informática, programação, música, esportes, viagens
+e outras áreas que me interesso.
+
+Há muitos textos para e ler, fotos e vídeos para ver e
+bastante informações úteis para quem busca aprendizado,
+principalmente na área de informática.
+Recomendo uma visita com tempo.
+Respire fundo e relaxe, aproveite a viagem.
+%%%
+
+Nasci em Curitiba, moro em Matinhos, tenho 30 anos,
+%  sou divorciado,
+me formei em Eletrônica e Informática.
+Também me chamam de Lelo, Miojo e Verde.
+Tenho cara de piá de 18 anos, sou magrela, cabeludo e tatuado.
+Os pais das moças não me consideram um bom partido numa primeira
+olhada, mas depois descobrem que não sou um maloqueiro.
+%
+Trabalhei durante muitos anos com Linux na Conectiva e fui um nerd
+produtivo: criei softwares, escrevi textos técnicos, livros, dei
+palestras e cursos. Hoje estou de férias disso tudo.
+%
+Curto muito viajar, sou baterista de banda de hardcore e praticante
+de esportes: surfe, ciclismo, carveboard, escalada e bumerangue.
+Não uso drogas, cigarro, álcool, jeans, tênis, sunga
+%celular (MERDA!)
+e óculos escuros.
+%
+Caso tenha interesse, as novidades sobre minha existência estão no
+[Blog _MYBLOG]. Tem aquele tal de [Orkut _MYORKUT] também.
+Como você já deve ter percebido, eu não sou o Aurelio do dicionário.
+
+== Jogo Rápido ==[jogo-rapido]
+
+	Aurelio Marinho Jargas, nascido em Curitiba em 07 de Outubro de
+	1977,
+% 	casou em 27 de Julho de 2002
+%	 com Milene Pereira da Silva (curitibana, designer)
+% 	e separou em 27 de Março de 2004,
+	mora em Matinhos (litoral do PR),
+	não bebe, não fuma, não se droga,
+	baterista, tocou nas bandas de hardcore DUMBS, SCARECROW,
+	VALETA, NO SNACKS e CORRERIA HC,
+	brinca de surfe, escalada, sandboard, carveboard e bumerangue,
+	tem todo o pé esquerdo tatuado com uma raiz e as costas com
+	uma garra de monstro,
+	durante 4 anos teve uma TOYOTA Bandeirante 89 e com ela foi 2
+	vezes para o Deserto do Atacama (Chile), hoje tem um Fiat Uno
+	96,
+	formado técnico em Eletrônica pelo CEFET-PR em 1996, formado
+	Tecnólogo em Processamento de Dados pela Faculdade ESEEI em
+	2000,
+	entrou na empresa Conectiva em 1997 e lá trabalhou com Linux
+	até mudar-se para Florianópolis (Praia de Canasvieiras) em 2002,
+	então trabalhou com soluções POS na Techlink por um ano,
+	depois voltou para Curitiba e para a Conectiva,
+	tendo trabalhado na empresa até o fim de 2005,
+	programador de Software Livre, manja de Sed, Bash, Python,
+	PHP, AppleScript, SQL, CGI, HTML, filtros, conversores, tradutores,
+	disponibiliza gratuitamente na Internet os programas que cria,
+	escreveu artigos para a Revista do Linux e a Linux Magazine,
+	escreveu um livro sobre Expressões Regulares e outro sobre Shell Script,
+% 	escreveu uma apostila de Programação Avançada em Shell,
+	deu cursos e palestras técnicas em eventos de Linux pelo
+	Brasil,
+	começou na informática usando Windows 3.11 em 1994 aos 17
+	anos, depois passou pelo Windows 95, 98, Linux, Windows 2000
+	com Cygwin, Linux no PPC e hoje usa o Mac OS X da Apple,
+	usou Internet discada até 2006, seu e-mail é do --Yahoo!-- Gmail
+	e edita textos e programas com o --Vim-- TextMate.
+
+
+
+== Massa / Palha ==[massa-palha]
+
+: **massa**
+  - hardcore, punkrock, pop rock, *metal, bandas nacionais e locais
+  - sandália franciscana de couro, bermuda de calça cortada, camisetas
+    sem estampa e em cores fortes (vermelhão, amarelão, azulão), bota
+    tosca de couro cano alto, calça de moletom, blusa com zíper na
+    frente
+  - macarrão ao sugo, strogonofe, suco natural, batata frita, melancia, sorvete
+  - câmera fotográfica digital, iBook, monitor LCD, linha de comando
+    do UNIX/Linux, Mac OS X, Vim, TextMate, sed, Bash, Python, ImageMagick,
+    WindowMaker, Mozilla, Xgalaga, XLogical, Super Mário, Street
+    Fighter II, Cygwin, Bloco de Notas, MP3, internet grátis, Yahoo!,
+    Apple, SourceForge, FreshMeat
+  - Toyota Bandeirante, Troller, Nissan Frontier, Berlingo com teto
+    solar, Twingo, Gurgel BR800, Caminhões, Tratores, Escavadeiras
+  - família, amigos sinceros, cachorros, internet, tatuagem,
+    joguinhos, skate, surfe, sandboard, bicicleta barraforte, 1 e 99,
+    cinema, banheiro com assento fofinho, chuveiro a gás, mar, areia,
+    vento
+  - andar descalço, pegar jacaré, andar na pedra, subir montanhas à pé,
+    fazer shows, programar, esquecer das coisas, usar ferramentas, fazer
+    avião de papel, viajar, aprender e ensinar, se encontrar com os
+    amigos, tocar bateria, consertar as coisas, dirigir, preservar a
+    natureza
+
+: **palha**
+  - pagode, samba, MPB, blues, jazz, tuxi-tuxi, reggae, sertanejo
+    romântico, ...
+  - óculos de sol, tênis, sapato, calça jeans, gravata, sunga, shorts,
+    meia branca, relógio de pulso
+  - chicletes, bucho, moela, língua, órgãos, pimentão, feijoada, frutos do mar
+  - mouse, páginas fru-fru, "programadores" HTML e XML, teclados com
+    teclas-extra inúteis (Power, Sleep, ...)
+  - Ford Ka, Mercedez Classe A, Xsara Picasso
+  - álcool, fumo, drogas, moda, piercing, anos 80, banco,
+    cartório, cheque, telefone celular, piscina, fumantes porcos e mal
+    educados, asnos volantes, lixo na natureza
+  - colocar cortina, acordar tarde, esquecer das coisas, se atrasar,
+    gastar dinheiro, muitos e-mails para responder
+
+
+
+
+%%%
+== Linha do Tempo ==[linha-do-tempo]
+
+%TODO cefet, 1a tatuagem, vestibulares, concurso publico
+
+- ``Out-1977:`` Nasci
+
+- ``meio:`` Preciso lembrar...
+
+- ``Dez-1991:`` Me formei no 1° grau, Escola Elias Abdo Bittar (Balão
+  Vermelho). Era um aluno agitado, bagunceiro, inquieto. Não gostava
+  de estudar mas sempre acabava tirando notas boas. Matérias
+  preferidas eram Inglês e Educação Física.
+- ``Ago-1992:`` Entrei no CEFET-PR, no curso de Técnico em Eletrônica
+- ``Set-1995:`` Montei minha primeira banda de verdade, o DUMBS
+- ``Jun-1996:`` Me formei no curso de Eletrônica do CEFET
+- ``Jul-1996:`` Verdemóvel 1: Gol 91
+- ``Ago-1996:`` Entrei na UFPR, no curso de Bacharelado em Informática
+- ``Abr-1997:`` Larguei o curso de Informática da UFPR
+- ``Ago-1997:`` Entrei na faculdade ESEEI, no curso de Tecnólogo em
+                Processamento de Dados
+- ``Out-1997:`` Entrei na Conectiva como estagiário e comecei a usar
+                Linux
+- ``Dez-1997:`` Comecei a programar em Shell Script
+% primeiro shell: monit_form (jan1998)
+- ``Mar-1998:`` Fui efetivado como funcionário na Conectiva
+
+- ``Abr-1999:`` Comecei a tatuar uma raiz no pé (levou 5 meses)
+- ``Fev-1999:`` Comecei a programar em Python
+- ``Fev-1999:`` Verdemóvel 2: Lada Niva 91
+% ver mail/sent/1999-02*: MM me ensinou PHP, eu aprendi Py e passei pra ele
+- ``Mar-1999:`` Comecei a programar em PHP
+- ``Jun-1999:`` Fiz a minha primeira página pessoal na Internet
+- ``Dez-1999:`` Verdemóvel 3: Toyota Bandeirante 89
+
+- ``Fev-2000:`` Viajei com a Toyota para o Deserto do Atacama no
+                Chile.
+- ``Fev-2000:`` Lançamento de um programa novo: funções ZZ
+- ``Mar-2000:`` Comencei a escrever artigos para a Revista do Linux
+- ``Nov-2000:`` Lançamento de um programa novo: txt2regex
+- ``Dez-2000:`` Me formei no curso de Tecnólogo da ESSEI
+
+- ``Fev-2001:`` Viajei de novo com a Toyota para o Deserto do Atacama
+- ``Jul-2001:`` Lançamento do meu livro: Expressões Regulares
+- ``Jul-2001:`` Comprei o domínio VERDE666.ORG
+- ``Jul-2001:`` Lançamento de um programa novo: txt2tags
+- ``Dez-2001:`` Lançamento de um programa novo: sedsed
+
+- ``Mar-2002:`` Fiz o joguinho Sokoban em SED e apareci no portal nerd
+                SlashDot
+- ``Mai-2002:`` Saí da Conectiva e fui morar em Florianópolis e
+                trabalhar na Techlink
+- ``Jul-2002:`` Casei com a Milene em Curitiba e fomos morar na praia
+                de Canasvieiras, em Floripa
+
+- ``Abr-2003:`` Comprei o domínio AURELIO.NET
+- ``Jun-2003:`` Fui dispensado da Techlink (corte de custos)
+- ``Ago-2003:`` Comecei a dar cursos e fazer palestras técnicas
+- ``Ago-2003:`` Comecei a vender minha Apostila de Programação em Shell
+- ``Out-2003:`` Voltamos a morar em Curitiba
+- ``Nov-2003:`` Voltei a trabalhar na Conectiva
+- ``Dez-2003:`` Lançamento de um programa novo: RAC
+- ``Dez-2003:`` Vendi a Toyota
+
+- ``Fev-2004:`` Minha banda DUMBS (futuro CORRERIA) voltou a ensaiar
+                após 3 anos parada
+- ``Mar-2004:`` Verdemóvel 4: Fiat Uno 96
+- ``Mar-2004:`` Me separei da Milene e voltei a morar com os pais
+- ``Jun-2004:`` Comecei a praticar escalada indoor (boulder)
+- ``Ago-2004:`` Comprei um CarveBoard com o dinheiro da venda das
+                Apostilas de Shell
+- ``Out-2004:`` Dei minha última palestra nerd, cansei
+- ``Out-2004:`` Larguei o Linux e virei usuário do sistema Mac OS X da Apple
+- ``Nov-2004:`` Viagem de bicicleta para a praia (120Km, 10h)
+
+- ``Fev-2005:`` Comecei a programar em AppleScript
+- ``Mai-2005:`` Dia 5: audiência de separação
+- ``Jul-2005:`` Comecei a programar em AppleScript Studio (Cocoa)
+- ``Set-2005:`` Saí da Conectiva
+-
+
+
+== Meu Pé Esquerdo ==[pe]
+
+Confira o ensaio fotográfico sensual que o membro mais sexy do
+momento, o "//Meu Pé Esquerdo//" fez para a revista "//Pés//".
+
+Antes de prosseguir, você deve declarar que é maior de idade e que sua
+mãe deixa você ver esse tipo de coisa na internet. Você aceita estes
+termos?
+
+
+            | [ACEITO foto/pe] |  | [NÃO ACEITO foto/pe]
+
+%%%
+
+== Trabalho, trabalho, trabalho... ==[trabalho]
+
++ Meu primeiro emprego foi de estagiário no
+  [CELEPAR http://www.celepar.pr.gov.br] em 1997. O CELEPAR é quem cuida
+  dos computadores, rede e sistemas do governo paranaense. Fiquei lá 6
+  meses comendo moscas, brincando no CorelDraw, "instalando a internet"
+  para os órgãos públicos do estado e aprendendo a odiar o Lotus Notes.
+
++ Depois entrei como estagiário na
+  [Conectiva http://www.conectiva.com.br], uma empresa de informática
+  de Curitiba pioneira no sistema operacional
+  [Linux http://www.linux.org] no Brasil, que além de fazer o
+  Conectiva Linux, também editava a Revista do Linux e presta todo tipo
+  de serviços a clientes com Linux. Depois de 5 meses fui contratado e
+  trabalhei lá por mais 4 anos (out1997-abr2002) fazendo de tudo:
+  programação, documentação, treinamento, tradução, suporte,
+  implantação, chefia... Só faltou fazer o cafézinho :)
+
++ Depois consegui uma vaga em Florianópolis e me mudei de mala e cuia
+  pra lá. Trabalhei na empresa [TechLink http://www.techlink.com.br]
+  durante um ano (mai2002-jun2003). Lá eu fui para programar e trabalhar
+  com documentação, mas também acabei ganhando "de brinde" o servidor e
+  brinquei de Administrador de Sistemas.
+
++ Depois a Techlink ficou mal e eu fiquei solto :) Por incentivo de
+  amigos montei um curso de 40 horas sobre Shell Script e fui pra São
+  Paulo ministrá-lo na empresa [4Linux http://www.4linux.com.br]
+  (set2003). Gostei da idéia e comecei a dar cursos e palestras em
+  eventos.
+
++ Nesse meio tempo, fui chamado de volta pela Conectiva e voltei para
+  Curitiba (out2003). Seguindo a tradição, continuei sendo multiuso:
+  programação, documentação, treinamento, ... Fiquei na empresa até
+  Setembro de 2005.
+
++ Mudei-me então para a praia em Janeiro de 2006 e hoje vivo uma vida mais simples e tranqüila, escrevendo [livros SITEROOT/livro] e [programas SITEROOT/bin], atualizando o site e contando histórias no [blog _MYBLOG].
++
+
+
+[Mais detalhes no currículo /doc/cv-aurelio.html].
+
+**FUTURO:** Tenho uma meta pessoal de não estar mais trabalhando com
+Informática ao completar 35 anos de idade. Gosto de programar e de
+usar a máquina, mas não quero que esta seja minha atividade principal
+para o resto da vida. Vou encontrar outra profissão, uma que o
+computador não seja o foco do trabalho. Meu objetivo hoje é me
+empenhar ao máximo nas atividades nerds e chegar o mais alto que
+conseguir, pois tem prazo de validade. Qual será a profissão nova? Não
+sei, mas tenho uma certeza (uma fé) que ela virá de maneira natural.
+
+% **Atualização (Set 2005):** Agora tenho a chance de adiantar estes planos. 2006 promete ser o ano em conseguirei atingir essa meta. Se não, volto para as nerdices, fazer o que... :)
+
+
+
+== Computador ==[computador]
+
+  [[img/ibookg4.jpg] _X_IBOOK_URL]
+Nunca fui ligado em **hardware**, se a máquina funcionasse estava bom.
+Mas infelizmente isso era um sonho distante, sempre dava algum pau e
+lá ia eu abrir o gabinete para tentar arrumar. Então passei a odiar
+hardware. Algo que me tira do sério também é o barulho insano das
+ventoínhas, cada vez mais alto. Entrei em paz com hardware depois de
+comprar um iBook (foto). Simplesmente funciona e é mudo.
+
+Já **software** eu sempre fui usuário entusiasmado e apaixonado.
+Sempre gostei de fuçar todas as configurações e opções, aprendendo o
+máximo possível. Não gosto muito de mudar, se o que eu uso está bom,
+não tenho interesse em testar um similar. As mudanças geralmente
+ocorreram por causa da mudança de sistema operacional.
+
+Segue a lista dos meus programas preferidos em cada sistema:
+
+- Os do Windows são os que eu usava em mil novecentos e antigamente,
+  mas ainda hoje acho o Paint e o MS Photo Editor ótimos programas.
+  São simples e funcionam.
+
+- Depois comecei a usar o Linux no modo texto, sem janelinhas. Foram
+  anos de militância a favor da tela preta. Depois precisei trabalhar
+  com o OpenOffice e não teve jeito de continuar no console.
+
+- Hoje uso o [Mac OS X _X_MACOSX_URL] e seus programas bonitinhos. Assim
+  como o hardware, o sistema é impecável. Tudo simplesmente funciona.
+-
+
+ ||               | Windows | Linux Modo Texto | Linux Gráfico | Mac OS X |
+ | Shell |  MS-DOS  |  Bash  |||
+ | Editor de textos |  Bloco de Notas  |  Vim  ||  TextMate 
+ | Processador de textos |  Write, Word  |  -  |  OpenOffice  |  Pages, NeoOffice 
+ | Editor de desenhos |  Paint (Paintbrush)  |  ImageMagick + Vim (arquivos XPM)  |  Xpaint, Xfig  |  Inkscape, VectorDesigner 
+ | Editor de fotos |  MS Photo Editor  |  ImageMagick (convert, montage)  |  ImageMagick (display)  |  Preview, ImageWell, Pixelmator, sips 
+ | Navegador |  Netscape  |  lynx  |  Firefox  |  Safari 
+ | ICQ/MSN/etc  |  ICQ  |  licq  |  Gaim  |  Adium 
+ | Cliente de IRC |  -  |  BitchX  |  X-chat  |  Colloquy 
+ | Leitor de e-mail |  -  |  PINE  ||  Gmail Browser 
+ | Tocador de MP3 |  -  |  mpg123  ||  iTunes 
+ | Outros |  Cygwin, Joguinhos  |  screen, SVGATextMode, zgv, mpage, wvdial  |  Window Maker, mgp, mplayer, Xgalaga, wvdial  |  iCal, Address Book, iPhoto, iMovie, Quinn, Transmission, Rudix, LiquidCD, Billable 
+ | Outros (Multiplataforma) |  bc, cal, diff, file, find, funcoeszz, grep, htmldoc, MAME, ncftp, PHP, Python, rsync, ScummVM, sed, ssh, tar, tree, txt2tags, wget, zip  ||||
+
+
+
+== Diversão ==[diversao]
+
+: **dirigir**
+
+  [img/niva.jpg] 
+
+  Não sei, não consigo explicar porque, mas gosto muito de dirigir. Acho
+  que trabalharia de motorista com o maior prazer. Posso viajar durante
+  horas sem ficar saturado. No último dia da viagem ao atacama, rolou 16
+  horas de direção contínua num Pelotas-Curitiba pra chegar logo em
+  casa. E quanto mais dirigo, mais gosto disso.
+
+  Meu primeiro carro foi um //GOL 91// verdinho a álcool. Muito massa. Altas
+  viagens com ele. Depois por influência do meu primo Júnior que tinha
+  comprado um //Jipe Willys//, comprei um //Lada Niva 91// para
+  experimentar esse lance de carro 4x4. Gostei tanto que juntei dinheiro
+  e finalmente comprei o carro dos sonhos: //Toyota Bandeirante 89//.
+  Após 4 anos de união, troquei-a por um //Uno 96//.
+
+  Talvez a liberdade de se ir onde quiser, quando quiser; talvez a
+  velocidade; talvez o barulho do motor; talvez a acústica da sonzeira
+  no toca-fitas; talvez a sensação de poder aparente; talvez uma
+  infância de carrinhos "match-box" e "rolimãs".
+
+: **jogos**
+
+  [img/sf2.jpg] 
+
+  Não fumo, não bebo álcool, não uso drogas. Mas sou viciado em jogos.
+  Qualquer tipo de jogo: cartas, roleta, infantis, fliperama, videogame,
+  palitinho, bolinhas de gude, dominó, xadrez, dama, trilha, sobe-desce,
+  palavras cruzadas, forca, pebolin, qualquer coisa que tenha regras e
+  objetivos e se jogue sozinho (ou contra um adversário).
+
+  Mas tem que ser individual, esse negócio de jogar em equipe ou times
+  não é a minha praia, detesto depender dos outros para fazer as coisas,
+  imagina depender dos outros para se divertir! Na minha adolescência, o
+  fliperama consumiu a maior parte da minha grana, e o videogame meu
+  tempo livre. É difícil evitar, é pôr qualquer tipo de jogo besta na
+  minha frente e me ver entretido por horas...
+
+  Por falar em videogame, a fissura era tanta que sempre alugava dois
+  jogos por final de semana e não saía da frente da tevê enquanto não
+  terminasse os dois, em todos os níveis de dificuldade (//Easy//,
+  //Normal//, //Hard//) e sem usar o //Continue//. Às vezes eu não
+  conseguia, aí tinha que alugar o mesmo jogo de novo no próximo final
+  de semana. Nerd é uma m* mesmo... Não acredita? Eu anotava tudo, aqui
+  está a [lista dos jogos que eu terminei doc/videogame.html] :D
+
+: **surfe**
+
+  [img/surfistas.jpg] 
+
+  Surfo desde criança, primeiro com uma pranchinha de surfe de isopor,
+  depois com uma "mórei" de isopor, depois com uma "mórei" de verdade
+  (acho que era da //Scott//). Como eu tentava ficar em pé nelas,
+  todas quebraram no meio.
+
+  Então a próxima foi uma de surfe de verdade, marca //Sun&Surf//,
+  5'11", chapada, linda, acho que aí eu tinha uns 14 anos. Esse toco
+  me acompanhou durnte mais de 10 anos. Nesse meio tempo tive mais 2
+  //Hatha// (hoje //Canfield//) feitas em Matinhos (PR), uma 6'3" e
+  outra 6'6". Ambas quebraram, a última em 3 partes (cara prego é uma
+  desgraça...). Lá por 2000 comprei a 6'5" do amigo João Cláudio e ela
+  me acompanha até hoje. Está irreconhecível: amarelada, cheia de
+  malhos, bem judiada a coitada. Mas enquanto não quebrar no meio, não
+  a aposento.
+
+  Sempre surfei em Matinhos e Caiobá, praias palhas do litoral
+  paranaense. Ah! Foi surfando que conheci o Nissin, guitarrista do
+  DUMBS, amigão. Enquanto estudava no CEFET, era comum juntar a galera
+  e ir até alguma praia de Santa Catarina, como São Francisco do Sul
+  (São Chico) ou Guarda do Embaú.
+
+  Depois me mudei pra Floripa e achei que ia ficar bom no negócio.
+  Pffffff. Em quase dois anos de ilha, surfei incríveis DUAS vezes. É
+  difícil de acreditar e impossível de explicar. Simplesmente
+  aconteceu. Os dias passaram, as semanas, os meses...
+
+  Mas não se engane, após todos esses anos surfando ainda sou prego.
+  Domino toda a logística (remar, se posicionar, escolher a onda, dropar,
+  grudar na parede). Mas manobra que é bom, nada :D
+
+: **skate**
+
+  [img/pro-skate.jpg] 
+
+  Lembra daqueles esqueites do paraguai, "Pro Life", com saboneteira,
+  biqueira, protetor de truque, uma lixa para cada pé, tábua reta?
+  Pois é. Na infância eu e meus primos (o Júnior e o Ângelo) nos
+  acabávamos de andar.
+
+  Passou a infância, acabou a febre do esqueite. Mais recentemente, no
+  início de 1999, criei vergonha na cara e comprei um usado, e andava
+  (ou melhor, tentava) quando ia para a praia, porque lá tinha uma
+  pistinha massa. Em Curitiba, raramente andava.
+
+  Sei lá, é difícil eu ter tesão de sair andar de esqueite. Deve ser
+  porque eu sou um completo iniciante e até hoje não sei nem bater
+  //ollie// (ou algo parecido)... Já o carveboard é outra história
+  (adiante).
+
+: **sandboard**
+
+  [img/duna.jpg] 
+
+  Ou "surfe de areia" para ficar melhor. Numa das viagens a São Chico
+  com a galera do CEFET, no carnaval de 1997, compramos uma pranchinha
+  (um toco!), pois lá tem umas duninhas... Tá certo que era mala ficar
+  dividindo a prancha para 5, 6 pessoas, mas ainda não existiam as
+  barraquinhas de alugar prancha.
+
+  Teve um dia que apareceu um capô de Chevette na duna que o pessoal
+  estava usando como rampa, foi muito massa (e cheio de hematomas). O
+  único porém é que o grau de inclinação da rampa era muito acentuado!
+  Resultado: a rampa te jogava para cima, numa trajetória vertical em
+  direção ao céu :) Ao cair na areia feito um saco de batatas, os
+  machucados apareciam instantaneamente.
+
+  Já fui também nas dunas da Joaquina-SC e de Garopaba-SC. Em Garopaba
+  o esquema era chique: tinha boteco com chuveiro na base e
+  iluminação, ficamos surfando de noitão no carnaval de 1999, foi
+  massa. No 7 de setembro de 1999, fomos em uma turma para o sul e
+  passamos na Barra do Ibiraquera-SC (ou coisa parecida) que tinha um
+  dunão de uns 30 metros! Animal. Com a mudança para Floripa, surfar
+  nas dunas da Joaquina virou rotina, muito massa.
+
+  Até levei a pranchinha pro Atacama, mas as dunas de lá são de uma
+  areia mais grossa e não rolou :(
+
+: **carveboard**
+
+  [img/carve.jpg] 
+
+  Brinquedinho novo, comprado com a venda das
+  [apostilas de Shell shell/apostila/]. É um esqueitão com rodonas de
+  borracha, com câmara de ar e tudo mais. A sensação é a mesma do
+  surfe, na cavada e no jogo de corpo, porém sem depender de ondas ou
+  viagens, apenas asfalto e uma leve descida. É muito massa.
+
+  Outros amigos também têm o carrinho, então final de semana de sol em
+  Curitiba é uma boa pedida para um carve. Tem fotos e vídeos de
+  nossas brincadeiras [aqui nessa outra página carve/].
+
+:
+
+
+
+== Citações Marcantes ==[frases]
+
+% quem mexeu queijo: Para surpresa sua, começou a gostar cada vez mais
+% do que estava fazendo. "Por que eu me  sinto tão bem?",
+% perguntou-se. "Não tenho nenhum Queijo e não sei para onde estou
+% indo." ... Quando Você Vence o seu Medo, Sente-se Livre.
+
+% 1984: Viver dia a dia, semana a semana, esticando um presente que
+% não tinha futuro, parecia um instinto irresistível, como os nossos
+% pulmões sempre procuram inspirar, enquanto existe ar. 
+
+% 1984: Percebes que o passado, a partir de ontem, foi abolido? Se
+% sobrevive nalguma parte, é em alguns objetos sólidos, sem palavras
+% ligadas a ele, como naquele pedaço de vidro. Já não sabemos quase
+% nada sobre a Revolução e os anos anteriores à Revolução. Todos os
+% registros foram destruidos ou falsificados, todo livro reescrito,
+% todo quadro repintado, toda estátua, rua e edifício rebatizado, toda
+% data alterada. E o processo continua, dia a dia, minuto a minuto. A
+% história parou. Nada existe, excepto um presente sem-fim no qual o
+% Partido tem sempre razão.
+
+% 1984: O essencial da guerra é a destruição, não necessàriamente de
+% vidas humanas, mas dos produtos do trabalho humano. A guerra é um
+% meio de despedaçar, ou de libertar na estratosfera, ou de afundar
+% nas profundezas do mar, materiais que doutra forma teriam de ser
+% usados para tornar as massas demasiado confortáveis e portanto, com
+% o passar do tempo, inteligentes. Mesmo quando as armas de guerra não
+% são destruidas, sua manufatura ainda é um nada que se possa
+% consumir.
+
+% 1984: Estar
+% em minoria, mesmo em minoria de um, não era sintoma de loucura.
+% Havia verdade e havia mentira, e não sinsiste em se agarrar à
+% verdade mesmo contra o mundo todo.
+
+- "O sol lá fora e eu aqui..."
+- "Eu tinha uma vida antes de conhecer o computador."
+- "E isso algum dia impediu alguém de fazer alguma coisa?"
+- "Elogios engrandecem o ego, críticas engrandecem o ser."
+-
+- "Se chorei ou se sorri, o importante é que emoções eu vivi." -
+  //o Rei//
+- "Construí o meu castelo com as pedras que você jogou." -
+  //banda Tack Ups - RS//
+- "A alegria está na luta, na tentativa, no sofrimento envolvido. Não na
+  vitória propriamente dita." -
+  //Mahatma Gandhi//
+- "A felicidade não é uma estação onde chegamos, mas uma maneira de
+  viajar." -
+  //Margareth Lee Rimbeuk//
+- "Viver intensamente com a cabeça no lugar." -
+  //banda Charlie Brown Jr - SP//
+- "Se não houver frutos, valeu a beleza das flores... Se não houver
+  flores, valeu a sombra das folhas... Se não houver folhas, valeu a
+  intenção da semente." -
+  //Autor Desconhecido//
+- "O segredo é não correr atrás das borboletas... é cuidar do jardim
+  para que elas venham até você. No final das contas, você vai achar
+  não quem você estava procurando, mas quem estava procurando por
+  você!" -
+  //Mário Quintana//
+-
+- "Queria ser preguiçoso, mas não tenho tempo." -
+  ???
+- "Não sabia que era impossível, foi lá e fez." -
+  //Jean Cocteau//
+- "To succeed...proceed." -
+  ???
+- "A persistência é o caminho do êxito." -
+  //Charles Chaplin//
+- "Não deixe que o barulho da opinião dos outros cale a sua própria voz
+  interior." - //Steve Jobs//
+- "Transportai um punhado de terra todos os dias e fareis uma montanha." -
+  //Confúncio//
+- "O caminho mais curto para fazer muitas coisas é fazer uma só de cada vez." -
+  //Autor Desconhecido//
+- "O prêmio por uma coisa bem feita é tê-la feito." -
+  //Ralph Waldo Emerson//
+- "Os pequenos atos que se executam são melhores que todos aqueles
+  grandes que apenas se planejam." -
+  //George C. Marshall//
+- "Talento é 1% inspiração e 99% transpiração." -
+  //Thomas Edison//
+- "Eu acredito, eu luto até o fim: não há como perder, não há como não vencer." -
+  //Oleg Taktarov//
+- "Quando você é forçado a ser simples, você precisa encarar o
+  problema de verdade. Quando não se pode produzir acessórios e
+  maquiagem, você tem que produzir conteúdo." -
+  //Paul Graham//
+-
+- "I don't care." -
+  //banda Ramones//
+- "Você pode remodelar meu rosto, mas não minha mente." -
+  //banda Propagandhi//
+- "Duvidar de tudo ou crer em tudo. São duas soluções igualmente
+  cômodas, que nos dispensam, ambas de refletir." -
+  //Henri Paincore//
+- "Será que Deus acredita em mim?" -
+  //banda Descendents//
+-
+- "Quando um homem sabe, ele é mestre de todos aqueles que não sabem.
+  O estudo é a escada do mérito e do poder." -
+  //Eliphas Levy//
+- "Feliz aquele que transfere o que sabe e aprende o que ensina." -
+  //Cora Coralina//
+- "Um entendido sabe tudo. O sábio sabe apenas o essencial." -
+  //Autor Desconhecido//
+- "Uma pessoa livre e aberta, quanto mais absorve novas idéias, mais
+  se entusiasma em passar adiante novas energias." -
+  //Dalai-Lama//
+- "Venham até a borda, ele disse. Eles disseram: Nós temos medo.
+  Venham até a borda, ele insistiu. Eles foram. Ele os empurrou... E
+  eles voaram." -
+  //Guillaume Apollinaire//
+-
+- "Feliz é o destino do inocente, esquecido pelo mundo que ele esqueceu.
+  Brilho eterno de uma mente sem lembranças!" -
+  //Papa Alexandre//
+- "A vantagem de ter péssima memória é divertir-se muitas vezes com as
+  mesmas coisas boas como se fosse a primeira vez." -
+  //Friedrich Nietzsche//
+-
+- "Se você vai fazer alguma coisa errada, aproveite." -
+  //Provérbio Iídiche//
+- "Perdoe seus inimigos mas não esqueça seus nomes." -
+  //J. Kennedy//
+- "Toda organização é má, porque é excludente." -
+  ???
+- "As tantas rosas que os poderosos matem nunca conseguirão deter a
+  primavera." -
+  //Che Guevara//
+- "Não me importo em morrer hoje ou amanhã, contanto que meus feitos continuem vivos." -
+  //Chuchullian//
+- "Minhas opiniões mudam, mas nunca muda o fato de eu estar sempre certo." -
+  //epx//
+- "É carnaval, que merda!" -
+  //banda Sociedade Armada - SP//
+- "Cada dia mais sujo e agressivo" -
+  //banda Ratos de Porão - SP//
+- "O que é um intelectual? Apenas um homem que descobriu alguma coisa
+  mais interessante do que as mulheres." -
+  //Edgar Wallace//
+- "Cansei de ser o que o mundo quer de mim" -
+  //banda Reação em Cadeia//
+- "Eu sou assim meio atrasadão, conservador, reacionário e caretão." -
+  //banda Ultraje a Rigor - SP//
+- "f u cn rd ths u cn gt a gd jb n cmpt prgmmg!" -
+  ???
+-
+- "Mulher tem que ser bonita quando acorda."
+- "Quando eu te vi o meu calção se abriu." -
+  //banda Raimundos - DF//
+- "Cubos de gelo não vão me salvar do calor que eu sinto." -
+  //banda Tequila Baby - RS//
+- "Eu procurei em outros corpos encontrar você." -
+  //banda Charlie Brown Jr - SP//
+- "Tudo o que eu fiz foi lindo, mas foi só pra te comer." -
+  //banda Os Velhas Virgens//
+- "Deus te proteja de mim." -
+  //Wando//
+- "Dentro de ti, um peixe!" -
+  //Fagner//
+-
+- "A pressa é a inimiga da perfeição."
+- "Devagar se vai ao longe."
+- "Quem tem pressa come cru."
+- "De grão em grão a galinha enche o papo."
+- "Água mole em pedra dura tanto bate até que fura."
+- "É caminhando que se faz o caminho."
+
+
+
+== Diz-me Por Onde Andas... ==[links]
+
+Uma coleção do que há de mais fino na internet. Não perca tempo em
+buscadores, siga todos os links abaixo e seja feliz.
+
+- [(@) http://csua.berkeley.edu/~danh/anton/]
+     Anton Maiden - Ouça e vire fã
+- [(@) http://www.gozeinomeudreamcast.cjb.net]
+     A URL diz tudo. É de rolar de rir.
+- [(@) http://www.beyond-the-illusion.com/files/Science/Space/Planets/Moon/moongate.txt]
+     A lua é na verdade uma nave espacial!
+- [(@) http://heromachine.com]
+     Faça seu próprio super-herói! (tem versão online)
+- [(@) http://www.alexchiu.com]
+     Compre ou faça seus anéis da imortalidade
+- [(@) http://www.darwinawards.com]
+     Darwin Awards - A celebração da estupidez humana
+- [(@) http://www.doodie.com]
+     Centenas de GIFs animados envolvendo cocô
+- [(@) http://www.geocities.com/Colosseum/Pennant/1984/cds.htm]
+     O que fazer com CDs velhos
+- [(@) http://www.gamecubicle.com/specials-mario_twins_shiggidy.htm]
+     Paródia mal desenhada e mal cantanda do Super Mario
+- [(@) http://www.videogamedc.com/Pixeled_Parodies/pixeled_parodies.html]
+     Paródias de vários jogos de video-game
+- [(@) http://hairball.bumba.net/~rwa2/aircraft/]
+     Aviões de papel - Vários modelos e instruções de como fazê-los
+- [(@) http://www.bonsaikitten.com]
+     Faça bonsai com seu gato
+- [(@) telnet://towel.blinkenlights.nl]
+     STAR WARS em arte ascii!
+- [(@) http://fun.from.hell.pl/2004-03-19/LOTR.gif]
+     Versão resumida (e tosca) de Senhor dos Anéis
+- [(@) http://members.lycos.nl/amazingart/E/4.html]
+     Várias imagens impossíveis
+- [(@) http://zonezero.com/magazine/essays/diegotime/time.html]
+     Mais de 25 anos de fotos anuais de uma família, veja o
+     envelhecimento!
+- [(@) http://www.mood.com.br/3a12/nerds.asp]
+     Nerds Mandam Bem - Artigo de uma mulher sobre os nerds que comem
+- [(@) http://project-apollo.net/text/rpg.html]
+     Clichês de jogos de RPG
+- [(@) http://www.olene.net/linux.swf]
+     Como transformar seu Windows num Linux
+- [(@) http://www.letitblog.com/epic/]
+     EPIC - A junção do Google+Amazon e o futuro da comunicação mundial
+- [(@) http://gprime.net/]
+     Coleção extensa de vídeos engraçados e jogos em flash
+- [(@) http://www.youtube.com/watch?v=udaFtXNrryc]
+     O cara tussiu...
+- [(@) http://www.mundocanibal.com.br/]
+     Vários desenhos toscos e bizarros em flash (avaiana de pau e outros)
+- [(@) http://planeta.terra.com.br/lazer/noisehlegal/humor/humor0001.htm]
+     Piadinhas de piazada da 8ª série
+- [(@) http://www.ukstars.co.uk/starr.htm]
+     O Regurgitador Humano (esse eu vi na TV, é verdade!)
+- [(@) http://www.masswerk.at/jsuix/]
+     UNIX implementado em Java script (pior que funciona, tem até VI)
+- [(@) http://www.angryalien.com/]
+     Filmes do cinema em 30 segundos (e com coelhos)
+- [(@) http://www.yak.net/fqa/]
+     Respostas para perguntas aleatórias
+- [(@) http://hanazuc02.ld.infoseek.co.jp/cassettes/cassettes.htm]
+     Centenas de fitas cassete diferentes
+- [(@) http://www.hanttula.com/exhibits/freakyfood/]
+     Fotos de alimentos bizarros (não entendeu? vê lá)
+- [(@) http://www.mindspring.com/~michaelreaves/D&Dpreface.html]
+     Episódio final da Caverna do Dragão (o verdadeiro)
+     ([tradução http://caverna.mushi-san.com/html/epi/requiem1.html])
+- [(@) http://www.fasco-csc.com/index_e.html]
+  [(@) http://www.datacraft.co.jp/takagism/index_e.html]
+  [(@) http://www.albartus.com/motas/]
+     Jogos tipo adventure de sair do quarto/sala
+
+
+
+
+% : **VALETA**
+%   Morreu. Infelizmente não deu pra gravar nem uma demo sequer. Eu
+%   curtia pra caramba as músicas... :(
+%
+% : **NO SNACKS**
+%   Tive que sair da banda porque me mudei para Floripa. Mas agora
+%   voltei. Voltamos a ensaiar, ainda sem baixista, mas voltamos!
+%
+% : **TOYOTA**
+%   Precisava de uma reforma geral na lata, que ficou cheio de podres do
+%   sal do deserto e da maresia de Floripa. Ao custo de 6 a 8 mil reais e
+%   com 90 dias de molho na oficina, pulei fora e a vendi. Com o dinheiro
+%   que ia gastar na reforma comprei um Uno 1.0 ano 96.
+%
+% : **tatuagem**
+%   A do pé cada vez mais fica sem cor por causa do sol e eu fico toda
+%   hora me machucando, raspando, detonando a coitada... Eu tenho um
+%   grande desejo de fazer uma tatuagem-monstro que ocupe todas as
+%   costas, de um corte transversal que mostre as costelas e os músculos.
+%   Algumas coisas mecânico-eletrônicas no meio. Mais um protesto
+%   anti-tecnoescravatura. Como mataram o pica-pau, fiquei órfão e sem
+%   tesão. :(
+
+%!include: include/kiwi/footer.t2t
+
