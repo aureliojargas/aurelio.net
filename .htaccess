@@ -13,7 +13,10 @@ AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript text
 
 ### Hold your horses, the redirect nightmare will begin
 
-Redirect permanent /monografia-morgana-laemmle.pdf http://www.moguinha.com.br/monografia-morgana-laemmle/
+# Mog
+Redirect permanent     /monografia-morgana-laemmle.pdf http://www.moguinha.com.br/monografia-morgana-laemmle/
+Redirect permanent /mog/monografia-morgana-laemmle.pdf http://www.moguinha.com.br/monografia-morgana-laemmle/
+Redirect permanent /mog                                http://www.mulherzice.com.br
 
 # Blog feeds
 Redirect permanent /blog.html      /blog-arquivo.html
