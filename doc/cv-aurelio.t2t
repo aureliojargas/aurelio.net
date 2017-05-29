@@ -4,7 +4,7 @@ CURRÍCULO - Aurelio Marinho Jargas
 %!target: html
 %!includeconf: ../include/urls.t2t
 
-%!style: ../artigo.css
+%!style: ../include/artigo.css
 %!options: --css-inside --css-sugar
 %!encoding: UTF-8
 
