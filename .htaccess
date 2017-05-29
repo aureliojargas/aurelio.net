@@ -147,7 +147,7 @@ Redirect permanent /curso/sdsl/i                 /curso/sdsl-1
 Redirect permanent /curso/ufpr/ii                /curso/ufpr-2
 Redirect permanent /curso/ufpr/i                 /curso/ufpr-1
 Redirect permanent /cygwin/rdl.html              /cygwin/rdl/
-Redirect permanent /doc/besteiras                /doc/misc/besteiras
+Redirect permanent /doc/besteiras                /misc/besteiras
 Redirect permanent /doc/er-rdl/index.html        /er/rdl-regex-1-respostas.html
 Redirect permanent /doc/er-rdl/ip.html           /er/casar-ip.html
 Redirect permanent /doc/er-rdl/                  /er/rdl-regex-1-respostas.html
@@ -208,7 +208,10 @@ Redirect temp      /bin/sed /sed/programas/
 Redirect permanent /doc/misc/ramones.txt /doc/ramones.txt
 Redirect permanent /curso/material/tutorial-pyobjc /mac/dev/tutorial-pyobjc
 
-# PHP code moved to a subdomain
+# Moved folder (2017-05-29)
+Redirect permanent /doc/misc                     /misc
+
+# PHP code moved to a subdomain (2017-05-26)
 Redirect permanent /livro/cadastro               https://cadastro.aurelio.net
 
 # Gone 2014-02-26
