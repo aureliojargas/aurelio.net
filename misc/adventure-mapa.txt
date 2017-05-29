@@ -178,5 +178,5 @@ d            rota para voltar ao "long hall"
 pronto. esqueça do labirinto, é só pra isso que ele serve.
 
 --
-http://aurelio.net/doc/misc/adventure-mapa.txt
+http://aurelio.net/misc/adventure-mapa.txt
 20000702 Aurelio Marinho Jargas

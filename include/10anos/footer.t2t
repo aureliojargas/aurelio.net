@@ -17,7 +17,7 @@
 <tr><td>
 '''
 **Nerdices**
-- [adventure /doc/misc/adventure-mapa.txt]
+- [adventure /misc/adventure-mapa.txt]
 - [applescript /doc/as4pp.html]
 @@@CANIVETE
 - [capslock /doc/CAPSLOCK.txt]
@@ -31,7 +31,7 @@
 - [log /log/]
 @@@mac
 - [palestra /curso/]
-- [perl /doc/misc/eu_odeio_perl.txt]
+- [perl /misc/eu_odeio_perl.txt]
 @@@PYOBJC
 - [python /bin/python/]
 @@@sed
@@ -100,7 +100,7 @@
 - [ramones /doc/ramones.txt]
 - [sobre /sobre.html]
 @@@SURF
-- [toyota /doc/misc/toyota/]
+- [toyota /misc/toyota/]
 @@@UMPORTUGUES
 @@@valeta
 @@@VIAGEM

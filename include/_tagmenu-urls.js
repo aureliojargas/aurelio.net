@@ -87,7 +87,7 @@ var allLinks = [
 [0, 'Dotfiles',	'/doc/dotfiles/', 'doc linux'],
 [0, 'Lista dos jogos terminados',	'/doc/misc/videogame.html', 'doc game'],
 [0, 'RAMONES',	'/doc/misc/ramones.txt', 'doc musica banda'],
-[0, '/usr/bin/adventure - Mapa das cavernas',	'/doc/misc/adventure-mapa.txt', 'doc linux game'],
+[0, '/usr/bin/adventure - Mapa das cavernas',	'/misc/adventure-mapa.txt', 'doc linux game'],
 
 [1, 'Sed HOWTO',		'/sed/sed-HOWTO', 'doc sed'],
 [1, 'Canivete Suíço do Shell',	'/shell/canivete/', 'doc shell'],

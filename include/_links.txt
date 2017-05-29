@@ -51,7 +51,7 @@ DORT / LER - Dicas para evitar lesões	/doc/misc/dort.html	@doc@
 Dotfiles	/doc/dotfiles/	@doc@linux@
 Lista dos jogos terminados	/doc/misc/videogame.html	@doc@game@
 RAMONES	/doc/misc/ramones.txt	@doc@musica@banda@
-/usr/bin/adventure - Mapa das cavernas	/doc/misc/adventure-mapa.txt	@doc@linux@game@
+/usr/bin/adventure - Mapa das cavernas	/misc/adventure-mapa.txt	@doc@linux@game@
 Sed HOWTO	/sed/sed-HOWTO	@doc@sed@
 Canivete Suíço do Shell	/shell/canivete/	@doc@shell@
 Dialog --tudo	/shell/dialog	@doc@shell@
