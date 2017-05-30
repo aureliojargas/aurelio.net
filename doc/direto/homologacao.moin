@@ -1,118 +1,118 @@
 '''DIRETO no CL'''
 
-''RelatÛrio de Testes de Funcionalidade''
+''Relat√≥rio de Testes de Funcionalidade''
 
 Aurelio Marinho Jargas, Nov/2003
 
 
 ----
 
-= Vis„o Geral das Funcionalidades do Software =
+= Vis√£o Geral das Funcionalidades do Software =
 
 
-||||Interface de AdministraÁ„o||
+||||Interface de Administra√ß√£o||
 || :) ||Tela de Login||
 || :) ||Menu: Setor||
-|| :) ||Menu: Usu·rio||
-|| :( ||Menu: Lista p˙blica||
-|| :( ||Menu: PolÌtica de senhas||
-||||Interface do Usu·rio||
+|| :) ||Menu: Usu√°rio||
+|| :( ||Menu: Lista p√∫blica||
+|| :( ||Menu: Pol√≠tica de senhas||
+||||Interface do Usu√°rio||
 || :) ||Tela de Login||
 || :) ||Nome da Empresa & Data atual||
-|| :) ||Trocar usu·rio (ida/volta)||
-|| :) ||OpÁıes||
-|| :) ||Encerrar sess„o||
+|| :) ||Trocar usu√°rio (ida/volta)||
+|| :) ||Op√ß√µes||
+|| :) ||Encerrar sess√£o||
 || :) ||Menu: Hoje||
 || :) ||Menu: Correio||
 || :) ||Menu: Agenda||
-|| :) ||Menu: Cat·logo Geral||
-|| :) ||Menu: Cat·logo Pessoal||
+|| :) ||Menu: Cat√°logo Geral||
+|| :) ||Menu: Cat√°logo Pessoal||
 || :) ||Menu: Dicas e Novidades||
 
 
 
- * ''''''Conclus„o'''''':
+ * ''''''Conclus√£o'''''':
 
-  A grande maioria das caracterÌsticas e funÁıes do software est„o
+  A grande maioria das caracter√≠sticas e fun√ß√µes do software est√£o
   funcionando no Conectiva Linux.
 
-  As poucas funÁıes que n„o est„o funcionando tambÈm est„o deficientes
-  na instalaÁ„o original no Suse Linux, ent„o n„o È problema da
-  migraÁ„o e sim do prÛprio DIRETO ou sua configuraÁ„o.
+  As poucas fun√ß√µes que n√£o est√£o funcionando tamb√©m est√£o deficientes
+  na instala√ß√£o original no Suse Linux, ent√£o n√£o √© problema da
+  migra√ß√£o e sim do pr√≥prio DIRETO ou sua configura√ß√£o.
 
-  Com base nestes dados, o status do DIRETO È
+  Com base nestes dados, o status do DIRETO √©
   '''HOMOLOGADO no Conectiva Linux'''.
 
 ----
 
-= Vis„o Detalhada - Interface de AdministraÁ„o =
+= Vis√£o Detalhada - Interface de Administra√ß√£o =
 
  * Tela de Login
-   *  :)  Bot„o Limpar
-   *  :)  Bot„o Ok
-   *  :)  VerificaÁ„o de usu·rio inv·lido
-   *  :)  VerificaÁ„o de senha inv·lida
+   *  :)  Bot√£o Limpar
+   *  :)  Bot√£o Ok
+   *  :)  Verifica√ß√£o de usu√°rio inv√°lido
+   *  :)  Verifica√ß√£o de senha inv√°lida
    *  :)  Sair
 
  * Menu: Setor
-   *  :)  Inserir (nome somente em mai˙sculas)
+   *  :)  Inserir (nome somente em mai√∫sculas)
    *  :)  Pesquisar
 
- * Menu: Usu·rio
+ * Menu: Usu√°rio
    *  :)  Inserir
-     *  :)  Checagem de campos obrigatÛrios
-     *  :)  Checagem da senha e confirmaÁ„o
+     *  :)  Checagem de campos obrigat√≥rios
+     *  :)  Checagem da senha e confirma√ß√£o
      *  {i}  Apenas cidades do RS cadastradas (hardcoded no HTML)
      *  {i}  Quota sempre desligada
    *  :)  Pesquisar
      *  :)  Nome
-     *  :)  IdentificaÁ„o
-     *  <!>  OrganizaÁ„o (n„o tive como testar)
+     *  :)  Identifica√ß√£o
+     *  <!>  Organiza√ß√£o (n√£o tive como testar)
      *  :)  Setor
-     *  :)  MatrÌcula
+     *  :)  Matr√≠cula
      *  :)  Cidade
      *  :)  Estado
    *  :)  Resetar senha
    *  :)  Inserir alias
    *  :)  Alterar setor
 
- * Menu: Lista p˙blica
+ * Menu: Lista p√∫blica
    *  :(  Inserir
-     * ERRO: Informe o nome da empresa (possÌvel bug do DIRETO)
+     * ERRO: Informe o nome da empresa (poss√≠vel bug do DIRETO)
    *  <!>  Pesquisar (nenhuma lista criada)
 
- * Menu: PolÌtica de senhas
+ * Menu: Pol√≠tica de senhas
    *  :(  Inserir
-     * ERRO: Informe o nome da empresa (possÌvel bug do DIRETO)
-     *  <!>  Comprimento mÌnimo (n„o tive como testar)
-     *  <!>  senhas no histÛrico (n„o tive como testar)
-     *  <!>  tempo de expiraÁ„o (n„o tive como testar)
-     *  <!>  complexidade (n„o tive como testar)
-   *  <!>  Pesquisar (n„o tive como testar)
+     * ERRO: Informe o nome da empresa (poss√≠vel bug do DIRETO)
+     *  <!>  Comprimento m√≠nimo (n√£o tive como testar)
+     *  <!>  senhas no hist√≥rico (n√£o tive como testar)
+     *  <!>  tempo de expira√ß√£o (n√£o tive como testar)
+     *  <!>  complexidade (n√£o tive como testar)
+   *  <!>  Pesquisar (n√£o tive como testar)
 
- * Menu: EstatÌsticas
-   *  {i}  Este item È citado na introduÁ„o mas n„o est· no menu
+ * Menu: Estat√≠sticas
+   *  {i}  Este item √© citado na introdu√ß√£o mas n√£o est√° no menu
 
 ----
 
-= Vis„o Detalhada - Interface do Usu·rio =
+= Vis√£o Detalhada - Interface do Usu√°rio =
 
  * Tela de Login
-  *  :)  Bot„o Limpar
-  *  :)  Bot„o Ok
-  *  :)  Usu·rio inv·lido
-  *  :)  Senha inv·lida
+  *  :)  Bot√£o Limpar
+  *  :)  Bot√£o Ok
+  *  :)  Usu√°rio inv√°lido
+  *  :)  Senha inv√°lida
 
  *  :)  Nome da Empresa & Data atual
 
- *  :)  Trocar usu·rio, ida e volta (vide OpÁıes -> Permissıes)
+ *  :)  Trocar usu√°rio, ida e volta (vide Op√ß√µes -> Permiss√µes)
 
- * OpÁıes
+ * Op√ß√µes
   * Geral
     *  :)  Senha
-    *  :)  Timeout Sess„o (perde no logout)
+    *  :)  Timeout Sess√£o (perde no logout)
   * Correio
-    *  <!>  Email padr„o
+    *  <!>  Email padr√£o
     *  :)  Redirecionamento (perde no logout)
     *  :)  Guardar em Enviadas
     *  :)  Guardar na lixeira
@@ -120,25 +120,25 @@ Aurelio Marinho Jargas, Nov/2003
     *  :)  paginar a cada (perde no logout)
     *  :)  Assinatura
   * Agenda
-    *  :)  Hor·rio de trabalho
-    *  :)  Vis„o padr„o (perde no logout)
+    *  :)  Hor√°rio de trabalho
+    *  :)  Vis√£o padr√£o (perde no logout)
     *  :)  VCALENDAR Exportar
     *  :(  VCALENDAR Importar (erro JAVA - Resource not available)
-  * Cat·logo
-    *  <!>  Importar cat·logo
+  * Cat√°logo
+    *  <!>  Importar cat√°logo
     *  <!>  Separador
-    *  <!>  N˙m coluna nome
-    *  <!>  N˙m coluna email
+    *  <!>  N√∫m coluna nome
+    *  <!>  N√∫m coluna email
     *  <!>  Ignorar 1a linha
-  * Permissıes
-    *  :)  Adicionar usu·rio
+  * Permiss√µes
+    *  :)  Adicionar usu√°rio
 
- *  :)  Encerrar sess„o
+ *  :)  Encerrar sess√£o
 
  * Menu: Hoje
   *  :)  Website
   *  :(  Suporte (deu erro e deslogou)
-    * ERRO: Chamada sem indicaÁ„o de tarefa. Verifique o link informado
+    * ERRO: Chamada sem indica√ß√£o de tarefa. Verifique o link informado
   *  :)  Criar mensagem
   *  :)  Criar compromisso
   *  :)  Atualizar
@@ -150,69 +150,69 @@ Aurelio Marinho Jargas, Nov/2003
   *  :)  SubMenu: Lixeira
   *  :)  SubMenu: Programado
   *  :)  SubMenu: Rascunho
-  *  :)  Bot„o Criar mensagem
-  *  :)  Bot„o Pesquisar
-  *  :)  Bot„o Pastas
-    *  :)  Bot„o Criar pasta
-    *  :)  Bot„o Excluir
-    *  :)  Bot„o Atualizar
-    *  :)  Bot„o Exportar (.zip -> .eml)
-    *  :)  Bot„o Renomear
-    *  :)  Bot„o Cancelar
-  *  :)  Bot„o Excluir
-  *  :)  Bot„o Recuperar
-  *  :)  Bot„o Mover
-  *  :)  Bot„o Encaminhar
-  *  :)  Bot„o Atualizar
-  *  :)  Bot„o Limpar pasta
-  *  :)  Bot„o Exportar (.eml)
-  *  :)  Bot„o Sinalizar
+  *  :)  Bot√£o Criar mensagem
+  *  :)  Bot√£o Pesquisar
+  *  :)  Bot√£o Pastas
+    *  :)  Bot√£o Criar pasta
+    *  :)  Bot√£o Excluir
+    *  :)  Bot√£o Atualizar
+    *  :)  Bot√£o Exportar (.zip -> .eml)
+    *  :)  Bot√£o Renomear
+    *  :)  Bot√£o Cancelar
+  *  :)  Bot√£o Excluir
+  *  :)  Bot√£o Recuperar
+  *  :)  Bot√£o Mover
+  *  :)  Bot√£o Encaminhar
+  *  :)  Bot√£o Atualizar
+  *  :)  Bot√£o Limpar pasta
+  *  :)  Bot√£o Exportar (.eml)
+  *  :)  Bot√£o Sinalizar
 
  * Menu: Agenda
   *  :)  SubMenu: Dia
   *  :)  SubMenu: Semana
-  *  :)  SubMenu: MÍs
-  *  :)  Bot„o Excluir
-  *  :)  Bot„o Imprimir
+  *  :)  SubMenu: M√™s
+  *  :)  Bot√£o Excluir
+  *  :)  Bot√£o Imprimir
   *  :)  Seta Anterior
   *  :)  Seta Posterior
   *  :)  SubMenu: Convites
   *  :)  SubMenu: Compromissos
-  *  :)  Bot„o Criar compromisso
-    *  :)  Bot„o Calend·rio
-    *  :)  Bot„o Agendar
-    *  :)  Bot„o Salvar
-    *  :)  Bot„o Cancelar
-    *  :)  Bot„o Imprimir
-    *  :(  Convidados (Adicionar convidado do Cat·logo Pessoal d· erro)
-      * ERRO: N„o foi possÌvel incluir compromisso na Agenda - ERRO: Convidado(s)
-      *  :)  Bot„o Adicionar
-      *  :)  Bot„o Excluir
-      *  :)  Bot„o Verificar Hor·rio
-  *  :(  Bot„o Calend·rio (se chamado do nÌvel principal, d· erro e desloga)
+  *  :)  Bot√£o Criar compromisso
+    *  :)  Bot√£o Calend√°rio
+    *  :)  Bot√£o Agendar
+    *  :)  Bot√£o Salvar
+    *  :)  Bot√£o Cancelar
+    *  :)  Bot√£o Imprimir
+    *  :(  Convidados (Adicionar convidado do Cat√°logo Pessoal d√° erro)
+      * ERRO: N√£o foi poss√≠vel incluir compromisso na Agenda - ERRO: Convidado(s)
+      *  :)  Bot√£o Adicionar
+      *  :)  Bot√£o Excluir
+      *  :)  Bot√£o Verificar Hor√°rio
+  *  :(  Bot√£o Calend√°rio (se chamado do n√≠vel principal, d√° erro e desloga)
 
- * Menu: Cat·logo Geral
-   *  :)  Bot„o Pesquisar
-   *  :(  Bot„o Adicionar contato (N„o funciona)
-   *  :)  Bot„o Criar mensagem
-   *  :)  Bot„o Criar compromisso
-   *  :)  NavegaÁ„o entre setores
+ * Menu: Cat√°logo Geral
+   *  :)  Bot√£o Pesquisar
+   *  :(  Bot√£o Adicionar contato (N√£o funciona)
+   *  :)  Bot√£o Criar mensagem
+   *  :)  Bot√£o Criar compromisso
+   *  :)  Navega√ß√£o entre setores
 
- * Menu: Cat·logo Pessoal
-   *  :)  Bot„o Criar Grupo
-     *  :)  Aba Cat. Pessoal (AVISO: ele deixa incluir o prÛprio grupo!)
-     *  :(  Aba Cat. Geral (N„o mostra os outros setores nem usu·rios)
-     *  :)  Bot„o Excluir integrantes
-   *  :)  Bot„o Criar Contato
-   *  :)  Bot„o Excluir
-   *  :)  Bot„o Criar Mensagem
-   *  :)  Bot„o Criar Compromisso
-   *  :)  OrdenaÁ„o por Nome, DescriÁ„o e Telefone
-   *  :)  Bot„o V: Marcar e desmarcar todos os contatos
+ * Menu: Cat√°logo Pessoal
+   *  :)  Bot√£o Criar Grupo
+     *  :)  Aba Cat. Pessoal (AVISO: ele deixa incluir o pr√≥prio grupo!)
+     *  :(  Aba Cat. Geral (N√£o mostra os outros setores nem usu√°rios)
+     *  :)  Bot√£o Excluir integrantes
+   *  :)  Bot√£o Criar Contato
+   *  :)  Bot√£o Excluir
+   *  :)  Bot√£o Criar Mensagem
+   *  :)  Bot√£o Criar Compromisso
+   *  :)  Ordena√ß√£o por Nome, Descri√ß√£o e Telefone
+   *  :)  Bot√£o V: Marcar e desmarcar todos os contatos
 
  * Menu: Dicas e Novidades
    *  :)  Imprimir
-   *  :(  (Ainda n„o implementado)
+   *  :(  (Ainda n√£o implementado)
 
 
 

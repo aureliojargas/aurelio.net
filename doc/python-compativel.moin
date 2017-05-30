@@ -1,21 +1,21 @@
 = Intro =
 
-Apesar do Python 2.x ser a vers„o da vez, com seus mÛdulos e conceitos novos,
-muitas m·quinas ainda rodam o bom e velho Python vers„o 1.5. Quer um exemplo?
+Apesar do Python 2.x ser a vers√£o da vez, com seus m√≥dulos e conceitos novos,
+muitas m√°quinas ainda rodam o bom e velho Python vers√£o 1.5. Quer um exemplo?
 O [http://sf.net SourceForge], nas contas shell para projetos usava
-o Python 1.5 atÈ meados de 2003.
+o Python 1.5 at√© meados de 2003.
 
 
-Como muitas mudanÁas introduzidas nas versıes novas '''quebraram compatibilidade'''
-com a vers„o 1.5, este artigo visa ensinar a pr·tica da programaÁ„o "conservadora",
-utilizando estruturas e sintaxe que funcionam tanto na vers„o antiga quanto na
+Como muitas mudan√ßas introduzidas nas vers√µes novas '''quebraram compatibilidade'''
+com a vers√£o 1.5, este artigo visa ensinar a pr√°tica da programa√ß√£o "conservadora",
+utilizando estruturas e sintaxe que funcionam tanto na vers√£o antiga quanto na
 nova do Python.
 
-N„o perca usu·ros, programe legal!
+N√£o perca usu√°ros, programe legal!
 
-= MÛdulo String =
+= M√≥dulo String =
 
-N„o use os mÈtodos de string diretamente pela vari·vel, como em:
+N√£o use os m√©todos de string diretamente pela vari√°vel, como em:
 
 {{{
 >>> texto = "Oi, tudo bem?"
@@ -23,7 +23,7 @@ N„o use os mÈtodos de string diretamente pela vari·vel, como em:
 OI, TUDO BEM?
 }}}
 
-Ao invÈs disso, importe o mÛdulo {{{string}}} e use seus mÈtodos:
+Ao inv√©s disso, importe o m√≥dulo {{{string}}} e use seus m√©todos:
 
 {{{
 >>> import string
@@ -33,10 +33,10 @@ OI, TUDO BEM?
 }}}
 
 
-= Atalhos para operaÁıes aritmÈticas =
+= Atalhos para opera√ß√µes aritm√©ticas =
 
-N„o use os atalhos de operaÁıes como {{{+=}}}, {{{-=}}} e amigos.
-O famoso {{{i+=1}}} È inv·lido no Python 1.5.
+N√£o use os atalhos de opera√ß√µes como {{{+=}}}, {{{-=}}} e amigos.
+O famoso {{{i+=1}}} √© inv√°lido no Python 1.5.
 
 {{{
 >>> i = 1
@@ -59,14 +59,14 @@ Seja conservador e use a sintaxe normal:
 
 = self.METODO em lambda =
 
-N„o use vari·veis ou mÈtodos da inst‚ncia da classe (self.NOME) em funÁıes
-anÙnimas (lambda). Elas n„o fazem parte do escopo no Python 1.5!
+N√£o use vari√°veis ou m√©todos da inst√¢ncia da classe (self.NOME) em fun√ß√µes
+an√¥nimas (lambda). Elas n√£o fazem parte do escopo no Python 1.5!
 
 {{{>>> minhalista = map( lambda tmpvar: self.parse_var(tmpvar), minhalista )}}}
 
-No exemplo, o mÈtodo {{{self.parse_var}}} n„o È reconhecido por {{{lambda}}}.
+No exemplo, o m√©todo {{{self.parse_var}}} n√£o √© reconhecido por {{{lambda}}}.
 
-A soluÁ„o È n„o usar o lambda :(
+A solu√ß√£o √© n√£o usar o lambda :(
 Use o {{{for}}} tradicional:
 
 {{{
@@ -77,14 +77,14 @@ minhalista = listatmp[:]
 del listatmp
 }}}
 
-= Pouco nÈ? =
+= Pouco n√©? =
 
-N„o È muita coisa. S„o pequenos detalhes na hora de programar que depois
-podem fazer a diferenÁa se o usu·rio vai poder rodar o seu programa ou
-vai te xingar por tentar fazÍ-lo baixar muitos megas da vers„o nova do Python. :)
+N√£o √© muita coisa. S√£o pequenos detalhes na hora de programar que depois
+podem fazer a diferen√ßa se o usu√°rio vai poder rodar o seu programa ou
+vai te xingar por tentar faz√™-lo baixar muitos megas da vers√£o nova do Python. :)
 
 ----
 
-AurÈlio Marinho Jargas
+Aur√©lio Marinho Jargas
 http://aurelio.net
 
