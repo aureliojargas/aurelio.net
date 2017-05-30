@@ -4,8 +4,8 @@
 
 IFS=
 while read LINHA ; do
-  KM=; KM=`echo $LINHA | sed -n 'sง^\(.....\) \([0-9]\{5\}\).*ง\2งp'`
+  KM=; KM=`echo $LINHA | sed -n 'sยง^\(.....\) \([0-9]\{5\}\).*ยง\2ยงp'`
   [ "$KM" ] && KM=$((KM-73020)) 
-  echo "$LINHA" | sed "sง^\(.....\) \([0-9]\{5\}\)ง\1 `printf %05d $KM`ง" 
+  echo "$LINHA" | sed "sยง^\(.....\) \([0-9]\{5\}\)ยง\1 `printf %05d $KM`ยง" 
 done
 

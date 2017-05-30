@@ -1,36 +1,36 @@
 #!/bin/sh
-# sh-lib.sh : biblioteca padrão para roteiros em bash
+# sh-lib.sh : biblioteca padrÃ£o para roteiros em bash
 #
-# Autor: aurélio marinho jargas <verde (a) aurelio net>
+# Autor: aurÃ©lio marinho jargas <verde (a) aurelio net>
 #
-#   a idéia é ter funções com um nome padrão e reimplementar essas mesmas
-#   funções com outras bibliotecas texto, mudando facilmente a cara de um
-#   roteiro em bash já existente (e que utilize estas funções)
+#   a idÃ©ia Ã© ter funÃ§Ãµes com um nome padrÃ£o e reimplementar essas mesmas
+#   funÃ§Ãµes com outras bibliotecas texto, mudando facilmente a cara de um
+#   roteiro em bash jÃ¡ existente (e que utilize estas funÃ§Ãµes)
 #
-#   há um dialog-lib.sh já feito e um simples programinha de teste chamado
-#   testa-lib.sh que muda de cara de você passar a opção '--dialog'.
+#   hÃ¡ um dialog-lib.sh jÃ¡ feito e um simples programinha de teste chamado
+#   testa-lib.sh que muda de cara de vocÃª passar a opÃ§Ã£o '--dialog'.
 #   teste-o!
 #
-# 19981118 ** 1a versão
-# 19990506 ++ limpa e comentários
-# 19991109 ++ integração com dialog
-# 19991110 -- separação do dialog &:)
+# 19981118 ** 1a versÃ£o
+# 19990506 ++ limpa e comentÃ¡rios
+# 19991109 ++ integraÃ§Ã£o com dialog
+# 19991110 -- separaÃ§Ã£o do dialog &:)
 # 19991111 ++ CaixaTexto
 # 20000502 <> MenuNum (\"\" no eval)
-#          ++ documentação e divulgação www
+#          ++ documentaÃ§Ã£o e divulgaÃ§Ã£o www
 # 20010108 <> SimNao suporta Yy
 # 20051119 <> colocado ; no final da LimpaLixo (valeu Elias Jr!)
 #          ++ adicionadas mais $C_ com as cores que faltavam (valeu Elias Jr!)
 #
-# funções disponíveis:
+# funÃ§Ãµes disponÃ­veis:
 #   ErroSai, Erro, Ecoa, Aviso, Pergunta
 #   SimNao, Menu, MenuNum, CaixaTexto, Texto
 #   Direitiza, Esquerdiza, Centraliza, Verticaliza
 #   ChkDir, ChkArq, LimpaLixo, Gauge
 
 
-MAX_Y=25                       # núm máx de linhas  da tela
-MAX_X=80                       # núm máx de colunas da tela
+MAX_Y=25                       # nÃºm mÃ¡x de linhas  da tela
+MAX_X=80                       # nÃºm mÃ¡x de colunas da tela
 [ "$COLUMNS" ] && MAX_X=$COLUMNS
 
 C_NOR=`echo -ne "\033[m"`      # cinza
@@ -57,10 +57,10 @@ echo -ne "\n[1-$i]:$C_NOR " ; read
 }
 
    ErroSai(){ echo -e  "\n$C_VRM$*$C_NOR\n" ; exit 1 ; }  # erro fatal
-      Erro(){ echo -e  "$C_VRM$*$C_NOR"   ; }             # advertência
+      Erro(){ echo -e  "$C_VRM$*$C_NOR"   ; }             # advertÃªncia
       Ecoa(){ echo -e  "$C_AMA$*$C_NOR"   ; }             # msg normal
      Aviso(){ echo -e  "$C_BRA$*$C_NOR" ; }             # msg importante
-     Texto(){ less "$*" ; }                               # conteúdo de arquivo
+     Texto(){ less "$*" ; }                               # conteÃºdo de arquivo
     SimNao(){ FazSimNao "$*"                              # pergunta [sn]?
                  case $REPLY in
                       y|Y|s|S|n|N) RESPOSTA=`echo $REPLY | sed 'y/YySN/sssn/'`;;
@@ -80,7 +80,7 @@ echo -ne "\n[1-$i]:$C_NOR " ; read
 CaixaTexto(){ Pergunta "$*" ; read RESPOSTA ; }          # caixa de texto
 
 
-# formatação de texto (sed detona! &:)
+# formataÃ§Ã£o de texto (sed detona! &:)
 AparaIF()    { sed 's/^[	]*\|[	 ]*$//g' ; }
 Direitiza()  { AparaIF | sed -e ":a;s/^.\{1,$((MAX_X-1))\}$/ &/;ta"  ; }
 Esquerdiza() { AparaIF | sed -e ":a;s/^.\{1,$((MAX_X-1))\}$/& /;ta"  ; }
@@ -89,16 +89,16 @@ Verticaliza(){ AparaIF | sed 's/./&\
 /g' ; }
 
 
-# teste da existência de arquivos/diretórios essenciais (aceita vários)
-ChkDir(){ for D in $* ; do [ -d $D ] || ErroSai "dir $D ñ existe" ; done ; }
-ChkArq(){ for A in $* ; do [ -f $A ] || ErroSai "arq $A ñ existe" ; done ; }
+# teste da existÃªncia de arquivos/diretÃ³rios essenciais (aceita vÃ¡rios)
+ChkDir(){ for D in $* ; do [ -d $D ] || ErroSai "dir $D Ã± existe" ; done ; }
+ChkArq(){ for A in $* ; do [ -f $A ] || ErroSai "arq $A Ã± existe" ; done ; }
 
 
-# tira comentários e linhas em branco e repetidas de arquivos de configuração
+# tira comentÃ¡rios e linhas em branco e repetidas de arquivos de configuraÃ§Ã£o
 LimpaLixo(){ grep -v "^#\|^$" | sort | uniq ; }
 
 
-# contador gráfico de andamento de processos por pontinhos
+# contador grÃ¡fico de andamento de processos por pontinhos
 # (porco, mas funciona &:)
 Gauge(){
 eval $* &
@@ -106,8 +106,8 @@ while ps ax | grep -qs $! ; do echo -n "$C_AMA.$C_NOR" ; done
 Ecoa "feito!"
 }
 
-# desativado não lembro o porque...
-#mostra a mensagem em cores. aceita as Opções do echo, mas perde espaços
+# desativado nÃ£o lembro o porque...
+#mostra a mensagem em cores. aceita as OpÃ§Ãµes do echo, mas perde espaÃ§os
 #   ErroO(){ echo -ne "\033[1;31m" ; echo $* ; echo -ne "\033[m" ; }
 #  AvisoO(){ echo -ne "\033[1;37m" ; echo $* ; echo -ne "\033[m" ; }
 #   EcoaO(){ echo -ne "\033[1;33m" ; echo $* ; echo -ne "\033[m" ; }

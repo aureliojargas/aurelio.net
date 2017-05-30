@@ -1,5 +1,5 @@
 #!/bin/bash
-# vers„o 0.9 (modificada)
+# vers√£o 0.9 (modificada)
 #
 # Instalador do Direto
 #
@@ -12,29 +12,29 @@
 # 	NEI Venturini Santos
 #
 # Janeiro de 2004:
-#   Modificado por AurÈlio Marinho Jargas para instalar no
+#   Modificado por Aur√©lio Marinho Jargas para instalar no
 #   Conectiva Linux 9 + updates.
 #
-#   O cÛdigo foi alterado para funcionar por "passos", os textos
-#   da interface foram colocados em vari·veis para facilitar a
-#   alteraÁ„o/i18n, e foram criadas as funÁıes str_*, sys_*,
+#   O c√≥digo foi alterado para funcionar por "passos", os textos
+#   da interface foram colocados em vari√°veis para facilitar a
+#   altera√ß√£o/i18n, e foram criadas as fun√ß√µes str_*, sys_*,
 #   cfg_* e dialog_*.
 #
 #   A Conectiva S.A. cede este trabalho para a comunidade.
 #
-#   IMPORTANTE: modificaÁıes INACABADAS, o projeto foi abortado.
-#   Este instalador ainda n„o È utiliz·vel.
+#   IMPORTANTE: modifica√ß√µes INACABADAS, o projeto foi abortado.
+#   Este instalador ainda n√£o √© utiliz√°vel.
 #
 ##############################################################################
-# CÛdigos de retorno:
+# C√≥digos de retorno:
 # 0 - programa concluido normalmente
-# 1 - programa interrompido por solicitaÁ„o do usu·rio
-# 2 - n„o tem uma das dependencias instaladas [ dialog ]
+# 1 - programa interrompido por solicita√ß√£o do usu√°rio
+# 2 - n√£o tem uma das dependencias instaladas [ dialog ]
 #
 
 VERSION="3.0.16"
 ARQUIVOSAPP="direto.${VERSION}.tar.gz"
-BACKTITLE="InstalaÁ„o do DiretoGNU vers„o ${VERSION}"
+BACKTITLE="Instala√ß√£o do DiretoGNU vers√£o ${VERSION}"
 #TIMESTAMP=`date "+%Y%m%d%H%M"`
 CONFIG_INIT_STR="Config included by DIRETO v$VERSION"
 SUCCESS=0
@@ -80,59 +80,59 @@ CHECK_TOOLS=1
 }
 
 #------------------------------------------------------------------
-# Aqui est„o todas as mensagens das telas, sendo:
+# Aqui est√£o todas as mensagens das telas, sendo:
 #
-#   TIT_*   O tÌtulo da Janela
-#   MSG_*   A mensagem apÛs o tÌtulo
+#   TIT_*   O t√≠tulo da Janela
+#   MSG_*   A mensagem ap√≥s o t√≠tulo
 #
-# Estas vari·veis podem ser editadas livremente
+# Estas vari√°veis podem ser editadas livremente
 #------------------------------------------------------------------
 
 TIT_WELCOME='BEM-VINDO(A)!'
 MSG_WELCOME="
-Este È o instalador do DiretoGNU para o Conectiva Linux.\n
+Este √© o instalador do DiretoGNU para o Conectiva Linux.\n
 \n
-Basta fornecer as informaÁıes b·sicas e o instalador\n
-configurar· seu servidor para ter um DiretoGNU funcional\n
+Basta fornecer as informa√ß√µes b√°sicas e o instalador\n
+configurar√° seu servidor para ter um DiretoGNU funcional\n
 em poucos minutos.\n
 \n
 Bom passeio!"
 
-TIT_CONFIRM_EXIT="ABORTAR INSTALA«√O?"
-MSG_CONFIRM_EXIT="O instalador vai ser finalizado e a instalaÁ„o
-abortada. O DiretoGNU n„o funcionar·, a n„o ser que a instalaÁ„o seja
-completada.\n\nVocÍ realmente deseja CANCELAR a instalaÁ„o?"
+TIT_CONFIRM_EXIT="ABORTAR INSTALA√á√ÉO?"
+MSG_CONFIRM_EXIT="O instalador vai ser finalizado e a instala√ß√£o
+abortada. O DiretoGNU n√£o funcionar√°, a n√£o ser que a instala√ß√£o seja
+completada.\n\nVoc√™ realmente deseja CANCELAR a instala√ß√£o?"
 
 TIT_LDAP_MENU="DADOS INICIAIS"
-TIT_LDAP_ORGANIZATION="LDAP - ORGANIZA«√O"
-TIT_LDAP_DESCRIPTION="LDAP - DESCRI«√O"
-TIT_LDAP_COUNTRY="LDAP - PAÕS"
+TIT_LDAP_ORGANIZATION="LDAP - ORGANIZA√á√ÉO"
+TIT_LDAP_DESCRIPTION="LDAP - DESCRI√á√ÉO"
+TIT_LDAP_COUNTRY="LDAP - PA√çS"
 TIT_LDAP_EMPRESA="LDAP - EMPRESA"
 TIT_LDAP_MAILSUFIX="LDAP - SUFIXO DE EMAIL"
 TIT_LDAP_PASSWD="LDAP - SENHA"
-MSG_LDAP_MENU="Preencha os dados iniciais sobre a OrganizaÁ„o e a
+MSG_LDAP_MENU="Preencha os dados iniciais sobre a Organiza√ß√£o e a
 Empresa, para serem adicionados na base de dados do LDAP:"
-MSG_LDAP_ORGANIZATION="Digite o nome da ORGANIZA«√O. Use apenas uma
-palavra, sem espaÁos, pontuaÁ„o ou acentos.\n\n  Ex.: CONECTIVA"
-MSG_LDAP_DESCRIPTION="Digite o nome completo da ORGANIZA«√O.\n\n  Ex.:
+MSG_LDAP_ORGANIZATION="Digite o nome da ORGANIZA√á√ÉO. Use apenas uma
+palavra, sem espa√ßos, pontua√ß√£o ou acentos.\n\n  Ex.: CONECTIVA"
+MSG_LDAP_DESCRIPTION="Digite o nome completo da ORGANIZA√á√ÉO.\n\n  Ex.:
 Conectiva S.A."
-MSG_LDAP_COUNTRY="Digite a sigla do paÌs sede da OrganizaÁ„o. Use
+MSG_LDAP_COUNTRY="Digite a sigla do pa√≠s sede da Organiza√ß√£o. Use
 apenas duas letras.\n\n  Ex.: br"
 MSG_LDAP_EMPRESA="Digite o nome da EMPRESA. Use apenas uma palavra,
-sem espaÁos, pontuaÁ„o ou acentos.\n\n  Ex.: conectiva"
-MSG_LDAP_MAILSUFIX="Digite o sufixo de email (o domÌnio) da sua
-ORGANIZA«√O, sem o '@'.\n\n  Ex.: conectiva.com.br"
+sem espa√ßos, pontua√ß√£o ou acentos.\n\n  Ex.: conectiva"
+MSG_LDAP_MAILSUFIX="Digite o sufixo de email (o dom√≠nio) da sua
+ORGANIZA√á√ÉO, sem o '@'.\n\n  Ex.: conectiva.com.br"
 MSG_LDAP_PASSWD="Digite a senha da base de dados LDAP"
 
 TIT_WEB_MENU="DADOS DO SERVIDOR WEB"
-TIT_WEB_HTTPDOMAIN="WEB - ENDERE«O DO SERVIDOR"
+TIT_WEB_HTTPDOMAIN="WEB - ENDERE√áO DO SERVIDOR"
 TIT_WEB_LOCAL="WEB - CIDADE"
 TIT_WEB_STATE="WEB - ESTADO"
 TIT_WEB_WEBMASTER="WEB - EMAIL DE CONTATO"
-MSG_WEB_MENU="Preencha os dados necess·rios para a configuraÁ„o do
+MSG_WEB_MENU="Preencha os dados necess√°rios para a configura√ß√£o do
 servidor HTTP (Apache):"
-MSG_WEB_HTTPDOMAIN="Digite o endereÁo do servidor Web. Este endereÁo È
-a URL que os usu·rios acessar„o no navegador. O 'https://' do inÌcio
+MSG_WEB_HTTPDOMAIN="Digite o endere√ßo do servidor Web. Este endere√ßo √©
+a URL que os usu√°rios acessar√£o no navegador. O 'https://' do in√≠cio
 deve ser omitido.\n\n  Ex.: direto.conectiva.com.br"
 MSG_WEB_LOCAL="Digite o nome da cidade onde reside a sede da
 empresa.\n\n  Ex.: Curitiba"
@@ -147,9 +147,9 @@ Erro(){ echo "ERRO: $*" ; exit 1 ; }
 
 IPLOCAL="127.0.0.2"  #TODO .2? nao devia ser .1?
 ERR_IPLOCAL="\
-Este servidor est· configurado para atender pelo
-endereco ip %s, que n„o È um endereco v·lido.
-Favor configurar esta m·quina para um IP rote·vel."
+Este servidor est√° configurado para atender pelo
+endereco ip %s, que n√£o √© um endereco v√°lido.
+Favor configurar esta m√°quina para um IP rote√°vel."
 
 
 ### IPLOCAL
@@ -160,8 +160,8 @@ if [ "${IP}" = "${IPLOCAL}" ]; then
 	printf "$ERR_IPLOCAL" "$IP"
 	exit 3
 
-### Aqui tinham v·rias linhas identificando as interfaces de rede
-### ativas na m·quina e o user escolhia qual delas utilizar. Pela
+### Aqui tinham v√°rias linhas identificando as interfaces de rede
+### ativas na m√°quina e o user escolhia qual delas utilizar. Pela
 ### interface se descobria o IP dela e guardava em $IP
 #   ex /etc/hosts <<!
 #      %s/^127\.0\.0\.2\>/$IP/
@@ -174,7 +174,7 @@ if [ "${IP}" = "${IPLOCAL}" ]; then
 fi
 
 
-### nao precisa checar dependencias, o RPM far· isso
+### nao precisa checar dependencias, o RPM far√° isso
 
 
 ###############################################################################
@@ -183,7 +183,7 @@ fi
 
 
 str_no_accents(){ $SED 'y
-¿‡¡·¬‚√„ƒ≈‰Â»Ë…È ÍÀÎÃÏÕÌŒÓœÔ“Ú”Û‘Ù’ı÷ˆŸ˘⁄˙€˚‹¸«Á—Ò
+√Ä√†√Å√°√Ç√¢√É√£√Ñ√Ö√§√•√à√®√â√©√ä√™√ã√´√å√¨√ç√≠√é√Æ√è√Ø√í√≤√ì√≥√î√¥√ï√µ√ñ√∂√ô√π√ö√∫√õ√ª√ú√º√á√ß√ë√±
 AaAaAaAaAaAaEeEeEeEeIiIiIiIiOoOoOoOoOoUuUuUuUuCcNn
 '
 }
@@ -191,8 +191,8 @@ str_squeeze_blanks(){ $TR '\t' ' ' | $TR -s ' ' ; }
 str_no_blanks()     { $TR -d ' \t' ; }
 str_strip()         { $SED 's/^[[:blank:]]*//;s/[[:blank:]]$//' ; }
 str_force_keyword() { str_no_accents | $SED 's/[^A-Za-z0-9]//g' ; }
-str_toupper()       { $TR a-z‡·ÈÌÛ˙‚ÍÙ„ıÁÒ A-Z¿¡…Õ”⁄¬ ‘√’«— ; }
-str_tolower()       { $TR A-Z¿¡…Õ”⁄¬ ‘√’«— a-z‡·ÈÌÛ˙‚ÍÙ„ıÁÒ ; }
+str_toupper()       { $TR a-z√†√°√©√≠√≥√∫√¢√™√¥√£√µ√ß√± A-Z√Ä√Å√â√ç√ì√ö√Ç√ä√î√É√ï√á√ë ; }
+str_tolower()       { $TR A-Z√Ä√Å√â√ç√ì√ö√Ç√ä√î√É√ï√á√ë a-z√†√°√©√≠√≥√∫√¢√™√¥√£√µ√ß√± ; }
 str_force_len()     { $CUT -c1-$1 ; }
 
 sys_log(){
@@ -208,7 +208,7 @@ sys_log(){
 sys_make_dir() {
 	[ "$1" -o -d "$1" ] || return  # already created
 	while [ "$1" ]; do
-		mkdir "$1" || Erro "N„o consegui criar o diretÛrio '$1'"
+		mkdir "$1" || Erro "N√£o consegui criar o diret√≥rio '$1'"
 		shift
 	done	
 }
@@ -224,7 +224,7 @@ cfg_change_line(){
 	[ "$1" -a "$2" -a "$3" ] || return
 	local old="$1" new="$2" file="$3" temp=$TMP_FILE
 	cp $file $temp
-	$SED "sß$oldß$newß" $temp > $file
+	$SED "s¬ß$old¬ß$new¬ß" $temp > $file
 }
 
 cfg_change(){
@@ -233,7 +233,7 @@ cfg_change(){
 	if $GREP -qs "^[$TAB ]*$key$sep" $file; then
 		# key already present, must change its value
 		cp $file $temp
-		$SED "sß^\([$TAB ]*$key$sep[$TAB ]*\).*ß\1$valßI" $temp > $file
+		$SED "s¬ß^\([$TAB ]*$key$sep[$TAB ]*\).*¬ß\1$val¬ßI" $temp > $file
 	else
 		#key not present, just append	
 		echo "$key$sep$val" >> $file
@@ -245,7 +245,7 @@ cfg_comment() {
 	local char="$1" key="$2" file="$3" temp=$TMP_FILE
 	cp $file $temp
 	# Note: sed must be >= 3.02.80 to support //I for ignorecase
-	$SED "\ß^[[:blank:]]*$key[[:blank:]=:]ßI sß^ß$charß" $temp > $file
+	$SED "\¬ß^[[:blank:]]*$key[[:blank:]=:]¬ßI s¬ß^¬ß$char¬ß" $temp > $file
 }	
 
 
@@ -296,7 +296,7 @@ confirm_data(){
 }
 
 
-### menu principal que obtÈm os dados da empresa
+### menu principal que obt√©m os dados da empresa
 passo1(){
 local continue_msg ok
 while :; do
@@ -310,12 +310,12 @@ while :; do
 	fi
 	
 	dialog_menu "$TIT_LDAP_MENU" "$MSG_LDAP_MENU" \
-		1 "Nome-chave da OrganizaÁ„o     [$ORGANIZATION]"     \
-		2 "Nome completo da OrganizaÁ„o  [$LDAPDESCRIPTION]"  \
-		3 "PaÌs                          [$COUNTRY]"          \
+		1 "Nome-chave da Organiza√ß√£o     [$ORGANIZATION]"     \
+		2 "Nome completo da Organiza√ß√£o  [$LDAPDESCRIPTION]"  \
+		3 "Pa√≠s                          [$COUNTRY]"          \
 		4 "Nome-chave da Empresa         [$EMPRESA]"          \
 		5 "Sufixo de e-mail              [$MAILSUFIX]"        \
-		6 "Senha do cat·logo             [${LDAPPASSWORD:+********}]" \
+		6 "Senha do cat√°logo             [${LDAPPASSWORD:+********}]" \
 		7 "$continue_msg"
 	
 	case "$USER_REPLY" in
@@ -363,9 +363,9 @@ done
 
 passo2(){
 	confirm_data "
-    ORGANIZA«√O: $ORGANIZATION\n
-      DESCRI«√O: $LDAPDESCRIPTION\n
-           PAÕS: $COUNTRY\n
+    ORGANIZA√á√ÉO: $ORGANIZATION\n
+      DESCRI√á√ÉO: $LDAPDESCRIPTION\n
+           PA√çS: $COUNTRY\n
         EMPRESA: $EMPRESA\n
 SUFIXO DE EMAIL: $MAILSUFIX"
 }
@@ -385,7 +385,7 @@ while :; do
 	dialog_menu "$TIT_WEB_MENU" "$MSG_WEB_MENU" \
 		1 "URL de acesso           [$HTTPDOMAIN]" \
 		2 "Cidade                  [$LOCAL]"      \
-		3 "Estado da FederaÁ„o     [$STATE]"      \
+		3 "Estado da Federa√ß√£o     [$STATE]"      \
 		4 "Email do administrador  [$WEBMASTER]"  \
 		5 "$continue_msg"
 	
@@ -405,12 +405,12 @@ while :; do
 		;;
 	3)
 		dialog_menu "$TIT_WEB_STATE" "$MSG_WEB_STATE" \
-		AC 'Acre' AL 'Alagoas' AP 'Amap·' AM 'Amazonas' BA 'Bahia' CE 'Cear·'\
-		DF 'Distrito Federal' ES 'Espirito Santo' GO 'Goi·s' MA 'Maranh„o'\
-		MT 'Mato Grosso' MS 'Mato Grosso do Sul' MG 'Minas Gerais' PA 'Par·'\
-		PB 'ParaÌba' PR 'Paran·' PE 'Pernambuco' PI 'PiauÌ'\
+		AC 'Acre' AL 'Alagoas' AP 'Amap√°' AM 'Amazonas' BA 'Bahia' CE 'Cear√°'\
+		DF 'Distrito Federal' ES 'Espirito Santo' GO 'Goi√°s' MA 'Maranh√£o'\
+		MT 'Mato Grosso' MS 'Mato Grosso do Sul' MG 'Minas Gerais' PA 'Par√°'\
+		PB 'Para√≠ba' PR 'Paran√°' PE 'Pernambuco' PI 'Piau√≠'\
 		RJ 'Rio de Janeiro' RN 'Rio Grande do Norte' RS 'Rio Grande do Sul'\
-		RO 'RondÙnia' RR 'Roraima' SC 'Santa Catarina' SP 'S„o Paulo'\
+		RO 'Rond√¥nia' RR 'Roraima' SC 'Santa Catarina' SP 'S√£o Paulo'\
 		SE 'Sergipe' TO 'Tocantins'
 		STATE="$USER_REPLY"
 		;;
@@ -439,18 +439,18 @@ passo5(){
 local file
 cd $CONFIG_FILES_DIR
 
-sys_log 1 'Iniciando a configuraÁ„o do LDAP'
+sys_log 1 'Iniciando a configura√ß√£o do LDAP'
 
-sys_log 2 'Criando os arquivos de configuraÁ„o'
+sys_log 2 'Criando os arquivos de configura√ß√£o'
 for file in ldif.txt direto.conf slapd-database.conf; do
 	$SED "
-	sß%EMPRESA%ß$EMPRESAßg
-	sß%LDAPDESCRIPTION%ß$LDAPDESCRIPTIONßg
-	sß%LDAPPASSWORD%ß$LDAPPASSWORDßg
-	sß%MAILSUFIX%ß$MAILSUFIXßg
-	sß%ORGANIZATION%ß$ORGANIZATIONßg
-	sß%COUNTRY%ß$COUNTRYßg
-	sß%LDAPDATADIR%ß$LDAPDATADIRßg
+	s¬ß%EMPRESA%¬ß$EMPRESA¬ßg
+	s¬ß%LDAPDESCRIPTION%¬ß$LDAPDESCRIPTION¬ßg
+	s¬ß%LDAPPASSWORD%¬ß$LDAPPASSWORD¬ßg
+	s¬ß%MAILSUFIX%¬ß$MAILSUFIX¬ßg
+	s¬ß%ORGANIZATION%¬ß$ORGANIZATION¬ßg
+	s¬ß%COUNTRY%¬ß$COUNTRY¬ßg
+	s¬ß%LDAPDATADIR%¬ß$LDAPDATADIR¬ßg
 	" $file.skel > $file
 	sys_log 3 "Gravado $CONFIG_FILES_DIR/$file"
 done	
@@ -464,8 +464,8 @@ include         $LDAP_CFG_DIR/schema/DiretoGNU.schema
 }" slapd.conf.skel > $TMP_FILE
 cat $TMP_FILE slapd-database.conf > slapd.conf
 
-sys_log 2 'Criando diretÛrio da base de dados'
-# andreas: usar /usr/var/openldap-direto - ver permissıes
+sys_log 2 'Criando diret√≥rio da base de dados'
+# andreas: usar /usr/var/openldap-direto - ver permiss√µes
 echo sys_make_dir $LDAPDATADIR
 echo chown  ldap. $LDAPDATADIR
 echo chmod   600  $LDAPDATADIR
@@ -481,14 +481,14 @@ BASE   o=$ORGANIZATION,c=$COUNTRY
 host   localhost
 " >> ldap.conf
 
-sys_log 2 'Salvando cÛpias dos arquivos do /etc'
+sys_log 2 'Salvando c√≥pias dos arquivos do /etc'
 echo mv -v $LDAP_CFG_DIR/slapd.conf{,.old}
 echo mv -v $LDAP_CFG_DIR/ldap.conf{,.old}
   
-sys_log 2 'Copiando arquivos de configuraÁ„o para o /etc'
+sys_log 2 'Copiando arquivos de configura√ß√£o para o /etc'
 echo cp -v slapd.conf ldap.conf $LDAP_CFG_DIR
 
-# andreas: È melhor colocar no /etc/openldap/schema mesmo
+# andreas: √© melhor colocar no /etc/openldap/schema mesmo
 sys_log 2 'Copiando arquivos de esquema para o /etc'
 echo cp -v $CONFIG_FILES_DIR/*.schema $LDAP_CFG_DIR/schema
 
@@ -500,9 +500,9 @@ echo slapadd -v -l ldif.txt
  
 
 passo6(){
-sys_log 1 'Iniciando a configuraÁ„o do SSL'
+sys_log 1 'Iniciando a configura√ß√£o do SSL'
 
-sys_log 2 'Criando o arquivo de configuraÁ„o tempor·rio'
+sys_log 2 'Criando o arquivo de configura√ß√£o tempor√°rio'
 echo "
 [ req ]
 distinguished_name = req_dn
@@ -527,14 +527,14 @@ echo openssl req -new -x509 -config $TMP_FILE \
 passo7(){
 cd $CONFIG_FILES_DIR
 
-sys_log 1 'Iniciando a configuraÁ„o do Apache'
+sys_log 1 'Iniciando a configura√ß√£o do Apache'
 
-sys_log 2 'Salvando cÛpias dos arquivos de configuraÁ„o'
+sys_log 2 'Salvando c√≥pias dos arquivos de configura√ß√£o'
 echo mv -v $HTTPD_CFG_DIR/httpd.conf{,.old}
 echo mv -v $JAKARTA_CFG_DIR/tomcat.conf{,.old}
 echo mv -v $SYSCONFIG_DIR/apache{,.old}
 
-sys_log 2 'Criando cÛpias locais para ediÁ„o'
+sys_log 2 'Criando c√≥pias locais para edi√ß√£o'
 cp $HTTPD_CFG_DIR/httpd.conf .
 #cp ../conf-orig/httpd.conf .
 #cp $JAKARTA_CFG_DIR/conf/tomcat.conf .
@@ -559,7 +559,7 @@ cfg_append "APACHE_SSL=\"yes\"" sysconfig-apache
 sys_log 2 'Alterando o arquivo tomcat.conf'
 cfg_append "WebAppDeploy     direto    tomcat  /direto" tomcat.conf
 
-sys_log 2 'Copiando arquivos de configuraÁ„o novos'
+sys_log 2 'Copiando arquivos de configura√ß√£o novos'
 echo cp -v tomcat.conf $JAKARTA_CFG_DIR
 echo cp -v httpd.conf $HTTPD_CFG_DIR
 echo cp -v sysconfig-apache $SYSCONFIG_DIR/apache
@@ -575,9 +575,9 @@ echo cp -v sysconfig-apache $SYSCONFIG_DIR/apache
 passo8(){
 cd $CONFIG_FILES_DIR
 
-sys_log 1 'Iniciando a configuraÁ„o do PostgreSQL'
+sys_log 1 'Iniciando a configura√ß√£o do PostgreSQL'
 
-sys_log 2 'Criando cÛpias locais para ediÁ„o'
+sys_log 2 'Criando c√≥pias locais para edi√ß√£o'
 #cp $SERVICES_DIR/postgresql initd-postgresql
 cp ../conf-orig/postgresql initd-postgresql
 #TIP cl9 doesn't have /etc/sysconfig/postgresql (cl10 has)
@@ -586,7 +586,7 @@ cp ../conf-orig/postgresql initd-postgresql
 sys_log 2 'Alterando o arquivo init.d/postgres'
 cfg_change_line '\(daemon .* postmaster.*\)"' '\1 -i -o -e"' initd-postgresql
 
-sys_log 2 'Copiando arquivos de configuraÁ„o novos'
+sys_log 2 'Copiando arquivos de configura√ß√£o novos'
 echo cp -v initd-postgresql $SERVICES_DIR
 
 #TODO? echo "host   all  `hostname -i` 255.255.255.255 trust" >> /var/lib/pgsql/pg_hba.conf
@@ -651,7 +651,7 @@ WEBMASTER=webmaster@conectiva.com.br
 # tools check
 [ "$CHECK_TOOLS" = 1 ] &&
 	for tool in $SED $TR $CUT $DIALOG; do
-		[ -x $tool ] || Erro "N„o encontrei a ferramenta '$tool'"
+		[ -x $tool ] || Erro "N√£o encontrei a ferramenta '$tool'"
 	done
 
 # Bem-vindo!
@@ -661,14 +661,14 @@ dialog_message "$TIT_WELCOME" "$MSG_WELCOME" || exit
 while :;do
 	case $PASSO in
 	1) passo1 ;;    # Menu dos dados do LDAP
-	2) passo2 ;;    # ConfirmaÁ„o dos dados do LDAP
+	2) passo2 ;;    # Confirma√ß√£o dos dados do LDAP
 	3) passo3 ;;    # Menu dos dados do HTTPD
-	4) passo4 ;;    # ConfirmaÁ„o dos dados do HTTPD
+	4) passo4 ;;    # Confirma√ß√£o dos dados do HTTPD
 	5) passo5 >> $LOG_FILE 2>&1 ; PASSO=6 ;;  # LDAP
 	6) passo6 >> $LOG_FILE 2>&1 ; PASSO=7 ;;  # ssl
 	7) passo7 >> $LOG_FILE 2>&1 ; PASSO=8 ;;  # Apache
 	8) passo8 >> $LOG_FILE 2>&1 ; PASSO=9 ;;  # PostgreSQL
-	9) passo9 >> $LOG_FILE 2>&1 ; PASSO=10;;  # FinalizaÁ„o
+	9) passo9 >> $LOG_FILE 2>&1 ; PASSO=10;;  # Finaliza√ß√£o
 	10) exit ;;
 	*) PASSO=1 ;;
 	esac

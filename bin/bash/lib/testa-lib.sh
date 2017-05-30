@@ -1,6 +1,6 @@
 #!/bin/sh
 # testa-lib.sh
-# 20000502 <verde (a) aurelio net> ** 1a vers„o
+# 20000502 <verde (a) aurelio net> ** 1a vers√£o
 # 20051119 ++ teste com CaixaTexto (valeu Elias Jr!)
 
 . sh-lib.sh

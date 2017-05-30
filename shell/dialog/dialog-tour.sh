@@ -1,22 +1,22 @@
 #!/bin/sh
-# dialog-tour.sh - O jeito r·pido de conhecer todas as caixas
+# dialog-tour.sh - O jeito r√°pido de conhecer todas as caixas
 # Este script faz parte do http://aurelio.net/shell/dialog
 #
-# 06 Julho 2003 - AurÈlio Marinho Jargas
+# 06 Julho 2003 - Aur√©lio Marinho Jargas
 
-BACKTITLE='Dialog Tour, por AurÈlio Marinho Jargas'
+BACKTITLE='Dialog Tour, por Aur√©lio Marinho Jargas'
 INTRO='
 Bem-Vindo(a) ao Dialog Tour!
 
-Este script mostra em seq¸Íncia todas as caixas
-do Dialog, para vocÍ conhecÍ-las.
+Este script mostra em seq√º√™ncia todas as caixas
+do Dialog, para voc√™ conhec√™-las.
 
 DICAS:
 - Siga apertando ENTER, ou aperte Esc para sair.
-- O tÌtulo em azul ("MSG BOX") È o tipo da caixa.
+- O t√≠tulo em azul ("MSG BOX") √© o tipo da caixa.
 
-Esta È a MSG BOX, a caixa que serve para mostrar
-mensagens na tela e esperar o OK do usu·rio.
+Esta √© a MSG BOX, a caixa que serve para mostrar
+mensagens na tela e esperar o OK do usu√°rio.
 '
 
 #.....................................................................
@@ -31,17 +31,17 @@ dialog --backtitle "$BACKTITLE" \
 
 dialog --backtitle "$BACKTITLE" \
    --title 'YES NO' \
-   --yesno 'Esta caixa serve para o usu·rio responder SIM ou N√O.
+   --yesno 'Esta caixa serve para o usu√°rio responder SIM ou N√ÉO.
    \n\nUse as setas do teclado, ou a tecla TAB para
-   alternar entre os botıes.
-   \n\nVocÍ quer continuar?' \
+   alternar entre os bot√µes.
+   \n\nVoc√™ quer continuar?' \
    0 0 &&
 
 #.....................................................................
 
 dialog --backtitle "$BACKTITLE" \
    --title 'INPUT BOX' \
-   --inputbox '\nServe para o usu·rio digitar um texto.
+   --inputbox '\nServe para o usu√°rio digitar um texto.
    \n\nDigite seu Login:' \
    0 0 &&
 
@@ -56,30 +56,30 @@ dialog --backtitle "$BACKTITLE" \
 
 dialog --backtitle "$BACKTITLE" \
    --title 'MENU' \
-   --menu 'O Menu È legal! Basta escolher um item e apertar OK.' \
+   --menu 'O Menu √© legal! Basta escolher um item e apertar OK.' \
    0 0 0 \
    pizza       'Quentinha, borda de catupiry' \
-   churrasco   'Espeto corrido com p„o'       \
+   churrasco   'Espeto corrido com p√£o'       \
    macarronada 'Spaghetti ao Sugo' &&
 
 #.....................................................................
 
 dialog --backtitle "$BACKTITLE" \
    --title 'RADIO LIST' \
-   --radiolist 'Idem ao Menu, sÛ que com (X) e j· vem selecionado' \
+   --radiolist 'Idem ao Menu, s√≥ que com (X) e j√° vem selecionado' \
    0 0 0 \
    pizza       'Quentinha, borda de catupiry' off \
-   churrasco   'Espeto corrido com p„o'       on  \
+   churrasco   'Espeto corrido com p√£o'       on  \
    macarronada 'Spaghetti ao Sugo'            off &&
 
 #.....................................................................
 
 dialog --backtitle "$BACKTITLE" \
    --title 'CHECK LIST' \
-   --checklist 'Idem ao Radio, sÛ que com m˙ltipla escolha' \
+   --checklist 'Idem ao Radio, s√≥ que com m√∫ltipla escolha' \
    0 0 0 \
    pizza       'Quentinha, borda de catupiry' on \
-   churrasco   'Espeto corrido com p„o'       on \
+   churrasco   'Espeto corrido com p√£o'       on \
    macarronada 'Spaghetti ao Sugo'            on &&
 
 #.....................................................................
@@ -98,21 +98,21 @@ dialog --backtitle "$BACKTITLE" \
    20 65 &&
 
 #.....................................................................
-# DICA: os 3 ˙ltimos par‚metros s„o: Dia, MÍs, Ano 
+# DICA: os 3 √∫ltimos par√¢metros s√£o: Dia, M√™s, Ano 
 
 dialog --backtitle "$BACKTITLE" \
    --title 'CALENDAR' \
-   --calendar 'Calend·rio bacana para se escolher uma data.
+   --calendar 'Calend√°rio bacana para se escolher uma data.
    Use o TAB e as setinhas.\n\n\n' \
    0 0 \
    31 12 1999 &&
 
 #.....................................................................
-# DICA: os 3 ˙ltimos par‚metros s„o: Horas, Minutos, Segundos
+# DICA: os 3 √∫ltimos par√¢metros s√£o: Horas, Minutos, Segundos
 
 dialog --backtitle "$BACKTITLE" \
    --title 'TIME BOX' \
-   --timebox 'Tipo o anterior, sÛ que para escolher um hor·rio.' \
+   --timebox 'Tipo o anterior, s√≥ que para escolher um hor√°rio.' \
    0 0 \
    23 59 30 &&
 

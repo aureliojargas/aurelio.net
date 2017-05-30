@@ -1,18 +1,18 @@
 #!/bin/sh
-# dialog-lib.sh : biblioteca padr„o para dialog em roteiros em bash
+# dialog-lib.sh : biblioteca padr√£o para dialog em roteiros em bash
 #                 necessita do pacote dialog instalado
-# Autor: aurÈlio marinho jargas <verde (a) aurelio net>
+# Autor: aur√©lio marinho jargas <verde (a) aurelio net>
 #
-#   implementa aixas de di·logo em roteiros feitos utilizando as funÁıes da
+#   implementa aixas de di√°logo em roteiros feitos utilizando as fun√ß√µes da
 #   sh-lib.sh
-#   obs.: (0) ok ou sim, (1) n„o ou cancelar, (-1) ESC ou erro
+#   obs.: (0) ok ou sim, (1) n√£o ou cancelar, (-1) ESC ou erro
 #
-# 19991109 ** 1a vers„o
+# 19991109 ** 1a vers√£o
 # 19991114 <> independente do sh-lib.sh, $MAX_X
-# 20000502 ++ documentaÁ„o e divulgaÁ„o www
+# 20000502 ++ documenta√ß√£o e divulga√ß√£o www
 # 20051119 <> arrumada DialogCaixaTexto, agora com --stdout (valeu Elias Jr!)
 
-# funÁıes disponÌveis:
+# fun√ß√µes dispon√≠veis:
 #   ErroSai, Erro, Ecoa, Aviso
 #   SimNao, Menu, MenuNum, CaixaTexto, Texto
 
@@ -25,14 +25,14 @@
 DIALOG='/usr/bin/dialog'
 
 OPC='--clear'
-MAX_Y=23                       # n˙m m·x de linhas  disp. na tela
-MAX_X=75                       # n˙m m·x de colunas disp. na tela
+MAX_Y=23                       # n√∫m m√°x de linhas  disp. na tela
+MAX_X=75                       # n√∫m m√°x de colunas disp. na tela
 [ "$COLUMNS" ] && MAX_X=$((COLUMNS-5))
 MAX_X_TXT=$((MAX_X-5))
 
 if [ "$DIALOG_TIT_FUNDO" ]
 then if [ "$DIALOG_TIT_FUNDO" != "${DIALOG_TIT_FUNDO% *}" ]
-     then echo 'a vari·vel $DIALOG_TIT_FUNDO n„o pode ter espaÁos em branco'
+     then echo 'a vari√°vel $DIALOG_TIT_FUNDO n√£o pode ter espa√ßos em branco'
           sleep 3
      fi
      TIT_FUNDO="--backtitle $DIALOG_TIT_FUNDO"
@@ -89,10 +89,10 @@ RESPOSTA=`cat $A_SAIDA` ; rm -f $A_OPCOES $A_SAIDA
 }
 
 ErroSai(){ DialogMensagem   'erro fatal' "$*" ; exit 1  ; } # erro fatal
-   Erro(){ DialogMensagemOk 'erro'       "$*"           ; } # advertÍncia
+   Erro(){ DialogMensagemOk 'erro'       "$*"           ; } # advert√™ncia
    Ecoa(){ DialogMensagem   'mensagem'   "$*" ; sleep 2 ; } # msg normal
   Aviso(){ DialogMensagemOk 'aviso'      "$*"           ; } # msg importante
-  Texto(){ DialogTexto                   "$*"           ; } # conte˙do de arq
+  Texto(){ DialogTexto                   "$*"           ; } # conte√∫do de arq
 
    Menu(){ MENUTIPO=1 ; DialogMenu       "$@"           ; } # menu normal
 MenuNum(){ MENUTIPO=2 ; DialogMenu       "$@"           ; } # menu numerado
