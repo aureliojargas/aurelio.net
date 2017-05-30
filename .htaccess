@@ -205,6 +205,11 @@ Redirect permanent /viagem/farol-imbituba-2001   /viagem/farol-imbituba
 Redirect permanent /viagem/marumbi-2001          /viagem/marumbi
 Redirect permanent /viagem/trilha-pinhao-2001    /viagem/trilha-do-pinhao
 Redirect permanent /vim/vimrc.txt                /doc/dotfiles/vimrc.txt
+Redirect permanent /web/engripeitor.html         /coisinha/engripeitor/
+Redirect permanent /web/miguxeitor.html          /coisinha/miguxeitor/
+Redirect permanent /web/moneylog.html            /moneylog/moneylog1.html
+Redirect permanent /web/moneylog2.html           /moneylog/moneylog2.html
+
 Redirect permanent /curso/pycon/iii              /blog/2007/08/21/minha-palestra-na-pyconbrasil
 # old symlinks
 Redirect temp      /bin/sed /sed/programas/
