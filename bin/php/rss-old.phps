@@ -2,14 +2,14 @@
 <?
 # Autor: Deivison Alves Elias http://www.noticiaslinux.com.br, Agosto de 2004
 # URL  : http://aurelio.net/bin/php/rss-old.php
-# 2004-Ago: Aurélio: Pequenas modificações
-# 2004-Dez: Aurélio: Separação de título e texto, melhora na saída
-# 2005-Set: Aurélio: Script aposentado pelo rss.sed
+# 2004-Ago: AurÃ©lio: Pequenas modificaÃ§Ãµes
+# 2004-Dez: AurÃ©lio: SeparaÃ§Ã£o de tÃ­tulo e texto, melhora na saÃ­da
+# 2005-Set: AurÃ©lio: Script aposentado pelo rss.sed
 
 
 $link   = "http://aurelio.net";
 $titulo = "Aurelio (verde)";
-$desc   = "Página do Aurélio, um monte de informações aleatórias para você";
+$desc   = "PÃ¡gina do AurÃ©lio, um monte de informaÃ§Ãµes aleatÃ³rias para vocÃª";
 $in     = "index.php";
 $out    = "aurelio.rss";
 

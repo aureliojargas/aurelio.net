@@ -92,7 +92,7 @@ $count_offset = 0;
 ### Mais antigos no topo e novos no final. Formulario no final.
 $older_first = 0;
 #
-## Coloque aqui os endereÁos (sem o http://www.) das paginas permitidas.
+## Coloque aqui os endere√ßos (sem o http://www.) das paginas permitidas.
 ## De um nome de variavel unico para cada pagina.
 ## E lembre-se de coloca-la no IF seguinte tambem.
 #
@@ -382,7 +382,7 @@ if ($REQUEST_METHOD == 'POST') {
 
 		# Se eh SPAM, mostro na tela um erro generico, pro cara desistir e ir embora.
 		# Assim evita que o spammer tente maquiar a URL para burlar a deteccao.
-		MyError("ERROR: Cannot connect to the database.<br>ERRO: N„o consegui conex„o com o banco de dados.");
+		MyError("ERROR: Cannot connect to the database.<br>ERRO: N√£o consegui conex√£o com o banco de dados.");
 	}
 	
 	

@@ -56,7 +56,7 @@ $count_offset = 0;
 ### Mais antigos no topo e novos no final. Formulario no final.
 $older_first = 0;
 #
-## Coloque aqui os endereÁos (sem o www.) das paginas permitidas.
+## Coloque aqui os endere√ßos (sem o www.) das paginas permitidas.
 ## De um nome de variavel unico para cada pagina.
 ## E lembre-se de coloca-la no IF seguinte tambem.
 #
@@ -103,7 +103,7 @@ $this_book = ereg_replace("www\.", "", "$script_url");
 #$_estado = "PR";
 #$this_book = $book_pogo;
 #
-## Convers„o do formato anterior dos recados para o atual (Vim)
+## Convers√£o do formato anterior dos recados para o atual (Vim)
 # :%s,\(<dt[^>]*>\)\(....\)-\(..\)-\(..\),\1\4/\3/\2,    # dd/mm/aaaa
 # :%s,<b>\([^<]*</b>\) &lt;\(.*\)&gt;,<b title="\2">\1,  # mail como title
 # :%s!\(</b> (.*\), \([A-Z][A-Z]\))!\1 - \2)!            # cidade - XX
@@ -138,7 +138,7 @@ elseif ($this_book == $book_rac) {
 #	$file = '/a/www/nobody/visitas-rac.html';     # local
 }
 else {
-	MyError("A p·gina '$this_book' n„o tem permiss„o para acessar este script");
+	MyError("A p√°gina '$this_book' n√£o tem permiss√£o para acessar este script");
 	exit;
 }
 
@@ -192,7 +192,7 @@ if (eregi('@aurelio.net', $_cidade) ||
     eregi('([bcdfghjklmnpqrstvwxyz]{4,}|\.\.\.)', $_cidade) ||
 		eregi('href=|url=|\[URL\]|Content-Transfer-Encoding:|ibdanswers.com|Hi! Very nice site!|Hello! Great site|sejaconsultor.rg.com.br|',
 			$_nome.$_email.$_cidade.$_txt)) {
-		MyError("Seu recado parece um SPAM. Use apenas texto, sem cÛdigos.");
+		MyError("Seu recado parece um SPAM. Use apenas texto, sem c√≥digos.");
 	}
 	
 	$_txt = strip_tags($_txt); # remove HTML

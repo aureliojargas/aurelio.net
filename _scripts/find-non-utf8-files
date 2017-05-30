@@ -9,6 +9,7 @@ find . \
   -iname "*.txt"  -or \
   -iname "*.t2t"  -or \
   -iname "*.java" -or \
+  -iname "*.phps" -or \
   -iname "*.sql"  -or \
   -iname "*.md" |
    xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
