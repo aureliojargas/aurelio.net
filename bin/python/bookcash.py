@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-# coding: latin-1
 #
 # Author: Aurelio Marinho Jargas - www.aurelio.net, 2007.
 # Description: Quick reports about book sales, with plotted graphics.
 # License: Public domain, use at your own risk, no support.
 # URL: http://aurelio.net/bin/python/bookcash.py
 #
-# Informações em Português: http://blog.aurelio.net/?s=bookcash
+# Informacoes em Portugues:
+# http://aurelio.net/blog/2007/04/04/bookcash-software-de-controle-de-vendas-de-livros/
 #
 # Notes:
 #
@@ -90,8 +90,8 @@ default_plot_data = {
 all_strings = {
 	'pt': {
 		'months': ['','Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
-		'month_col_name': 'Mês',
-		'avg_row_name': 'MÉDIA',
+		'month_col_name': 'Mes',
+		'avg_row_name': 'MEDIA',
 		'estimative': 'Em estoque %s exemplares.\nEstimativa de esgotamento em %s meses (%s %s).'
 	},
 	'en': {
