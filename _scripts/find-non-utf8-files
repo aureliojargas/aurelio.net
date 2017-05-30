@@ -1,0 +1,9 @@
+#!/bin/bash
+# Adapted from http://blog.endpoint.com/2010/04/tip-find-all-non-utf8-files.html
+
+find . \
+  -iname "*.html" -or \
+  -iname "*.txt"  -or \
+  -iname "*.t2t"  -or \
+  -iname "*.md" |
+   xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
