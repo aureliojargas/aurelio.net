@@ -13,5 +13,6 @@ find . \
   -iname "*.py"   -or \
   -iname "*.sh"   -or \
   -iname "*.sql"  -or \
+  -iname "*.vim"  -or \
   -iname "*.md" |
    xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"

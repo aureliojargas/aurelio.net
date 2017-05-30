@@ -1,8 +1,8 @@
 " Vim syntax file
 " Filename:	xlib.vim
 " Language:	xlib
-" Maintainer:	Augusto CÈsar Radtke <radtke@zaz.com.br>
-" nota do aurÈlio: funciona para vers„o 3.3.6 do XFree86
+" Maintainer:	Augusto C√©sar Radtke <radtke@zaz.com.br>
+" nota do aur√©lio: funciona para vers√£o 3.3.6 do XFree86
 " Last change:	sex jul  7 21:26:06 BRST 2000
 
 " carregue quando programar com a xlib

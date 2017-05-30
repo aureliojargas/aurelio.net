@@ -295,7 +295,7 @@ syn match php3ParentError "[)}\]]" contained
 " Todo
 syn keyword php3Todo TODO Todo todo contained
 
-"--aurélio's hacks 
+"--aurÃ©lio's hacks 
 syn match   php3Operator  "[;,]" contained
 syn match   php3StringHtml "<\(/\{0,1}\([biup]\|li\|ul\|h[1-6]\)\|[hb]r\)>" contained
 syn case match
@@ -304,7 +304,7 @@ syn keyword php3FunctionsMine  ErroSai ChkSenhaTmp GeraSenhaTmp contained
 "user functions with a prefix
 syn match   php3FunctionsMine  "\<\(Bd\|Num\|Html\|Ped\|Form\)[A-Z2][A-Za-z0-9_]*\>" contained
 syn case ignore
-"--end aurélio's hacks
+"--end aurÃ©lio's hacks
 
 
 " Parents

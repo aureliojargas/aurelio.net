@@ -1,7 +1,7 @@
 " Vim syntax file
 " Filename:	qzz.vim
 " Language:	plain text
-" Maintainer:	aurélio marinho jargas aurelio@verde666.org
+" Maintainer:	aurÃ©lio marinho jargas aurelio@verde666.org
 " Last change:	qui jan 11 00:47:52 EST 2001
 "coloque em seu ~/.vimrc:
 " au BufNewFile,BufRead ~/path/to/book/* so ~/path/to/qzz.vim

@@ -14,7 +14,7 @@ syn match  pm6HeaderName contained 'PMTags[0-9.]\+ win'
 syn match  pm6Number '\(^-\|[ \t]-\)\=\<[0-9.-]*[0-9]\>'
 syn match  pm6Value    contained "=[\t ]*[^'" \t>][^ \t>]*"hs=s+1
 syn match  pm6Special contained '[$()]'
-syn match  pm6Bullet  '•'
+syn match  pm6Bullet  'Â•'
 
 syn region pm6Tag      matchgroup=pm6TagDelimiter start='<' end='>' contains=pm6String,pm6Value,pm6Number,pm6TagName,pm6HeaderName,pm6Special
 syn region pm6StyleDef matchgroup=pm6Style start='<@[^=]*=' skip='<[^>]*>' end='>' contains=pm6Tag,pm6StyleIDK

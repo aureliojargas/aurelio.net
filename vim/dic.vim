@@ -5,7 +5,7 @@
 " Last change:	Fri May 12 09:58:56 EST 2000
 "
 " en_US: copy this file to your home and put in your ~/.vimrc:
-" pt_BR: copie este arquivo para seu diretório base e coloque no ~/.vimrc:
+" pt_BR: copie este arquivo para seu diretÃ³rio base e coloque no ~/.vimrc:
 "
 "   au BufNewFile,BufRead *.dic so ~/dic.vim
 

@@ -18,7 +18,7 @@ syn match   txtNumber  '\<\d\+\([,.]\d\+\)\{,1}\>'
 syn match   txtPercent '\<\d\+\([,.]\d\+\)\{,1}%'
 "syn match   txtBlank   '\s\+$'
 syn match   txtBar     '^\s*[_=-]\{20,}\s*$'
-syn match   txtSpecial '[][(){}®]'
+syn match   txtSpecial '[][(){}Â®]'
 syn match   txtSpecial '\<\(US\|R\)\$'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
