@@ -1,5 +1,8 @@
 #!/bin/bash
 # Adapted from http://blog.endpoint.com/2010/04/tip-find-all-non-utf8-files.html
+#
+# Command to fix everything:
+# _scripts/find-non-utf8-files | while read file; do echo $file; iconv -f iso-8859-1 -t utf-8 $file > foo; cat foo > $file; rm foo; done
 
 find . \
   -iname "*.html" -or \
