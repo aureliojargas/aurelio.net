@@ -7,20 +7,20 @@ Screenshots do Txt2regex
 
   |  Suporte para as classes POSIX, como [:alpha:], [:lower:] e amigos | [img/posix.png]
   |  Suporte total a grupos, incluindo o controle de abertura/fechamento | [img/group.png]
-  |  Use --showmeta para obter informações sobre os metacaracters dos programas | [img/showmeta.png]
-  |  Use --showinfo para obter informações de um programa específico | [img/showinfo.png]
+  |  Use --showmeta para obter informaÃ§Ãµes sobre os metacaracters dos programas | [img/showmeta.png]
+  |  Use --showinfo para obter informaÃ§Ãµes de um programa especÃ­fico | [img/showinfo.png]
   |  Use --whitebg para rodar o txt2regex em um terminal de fundo branco | [img/whitebg.png]
-  |  Use --make para gerar expressões regulares prontas para todos (--all) os programas ou para programas específicos (--prog). | [img/readyregex.png]
-  |  Suporte total a Localização, veja o programa em Japonês | [img/japanese.png]
+  |  Use --make para gerar expressÃµes regulares prontas para todos (--all) os programas ou para programas especÃ­ficos (--prog). | [img/readyregex.png]
+  |  Suporte total a LocalizaÃ§Ã£o, veja o programa em JaponÃªs | [img/japanese.png]
 
 --------------------------------------------------------------------
 
-= Screenshot completo com comentários =
+= Screenshot completo com comentÃ¡rios =
 
   | [img/screenshot.png]
 
 ----------------------------------------------------------------------
-Tradução para o Português feita por Gustavo Roberto Rodrigues Gonçalves.
+TraduÃ§Ã£o para o PortuguÃªs feita por Gustavo Roberto Rodrigues GonÃ§alves.
 ----------------------------------------------------------------------
-[Voltar para a página principal do txt2regex index-pt.html]
+[Voltar para a pÃ¡gina principal do txt2regex index-pt.html]
 % vim:tw=0
