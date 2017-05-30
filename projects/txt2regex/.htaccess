@@ -1,4 +1,0 @@
-# 2013-09-22
-Redirect permanent /projects/txt2regex/README.html       https://github.com/aureliojargas/txt2regex/blob/master/README.md
-Redirect permanent /projects/txt2regex/txt2regex-0.8.tgz https://github.com/aureliojargas/txt2regex/raw/master/releases/txt2regex-0.8.tgz
-Redirect permanent /projects/txt2regex/old               https://github.com/aureliojargas/txt2regex/raw/master/releases
