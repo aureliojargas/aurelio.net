@@ -1,6 +1,6 @@
 
--- quais clientes estão fora da califórnia e
--- têm pedido, não têm, e quantos por cada
+-- quais clientes estÃ£o fora da califÃ³rnia e
+-- tÃªm pedido, nÃ£o tÃªm, e quantos por cada
 
 select lname
 	from customer

@@ -1,5 +1,5 @@
--- quantas reservas estão pendentes: 10 
--- (todas as entradas da tabela reservas são reservas pendentes)
+-- quantas reservas estÃ£o pendentes: 10 
+-- (todas as entradas da tabela reservas sÃ£o reservas pendentes)
 
 SELECT count(cod_res)
 FROM reservas;

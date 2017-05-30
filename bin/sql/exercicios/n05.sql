@@ -1,5 +1,5 @@
 
--- quantos e quais clientes est„o fora da califÛrnia:  23
+-- quantos e quais clientes est√£o fora da calif√≥rnia:  23
 select lname
 	from customer
    where state != "CA"

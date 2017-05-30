@@ -12,7 +12,7 @@ where customer.customer_num = cust_calls.customer_num
 AND cust_calls.call_code = call_type.call_code
 group by cust_calls.call_code,code_descr;
 
--- prazo mÈdio, mÌnimo, m·ximo e total
+-- prazo m√©dio, m√≠nimo, m√°ximo e total
 select avg(res_dtime - call_dtime) media, 
 		 min(res_dtime - call_dtime) minimo,
 		 max(res_dtime - call_dtime) maximo,

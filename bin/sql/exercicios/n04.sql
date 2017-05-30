@@ -1,5 +1,5 @@
 
--- quantos cliente N√O possuem pedido e quais s„o: 11
+-- quantos cliente N√ÉO possuem pedido e quais s√£o: 11
 select lname
 from customer
 where customer.customer_num

@@ -1,5 +1,5 @@
 
--- quais itens em estoque n„o foram vendidos
+-- quais itens em estoque n√£o foram vendidos
 
 select stock.manu_code
 from stock

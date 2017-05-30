@@ -1,4 +1,4 @@
--- qual o usu·rio que mais emprestou: maria jose e joao
+-- qual o usu√°rio que mais emprestou: maria jose e joao
 
 SELECT usuarios.nome, count(emprestimos.cod_usu) qtos_emp
 FROM emprestimos, usuarios

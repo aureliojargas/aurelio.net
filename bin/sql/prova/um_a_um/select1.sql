@@ -1,4 +1,4 @@
--- quantas publicações estão emprestadas
+-- quantas publicaÃ§Ãµes estÃ£o emprestadas
 
 SELECT count(cod_emp)
 	FROM emprestimos

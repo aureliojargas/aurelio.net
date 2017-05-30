@@ -1,11 +1,11 @@
--- quantas publicações não estão emprestadas: 6
+-- quantas publicaÃ§Ãµes nÃ£o estÃ£o emprestadas: 6
 
 SELECT count(cod_emp)
 FROM emprestimos
 WHERE data_dev IS NOT NULL;
 
--- quais publicações não estão emprestadas
--- mostra o código cod_ite+cod_pub
+-- quais publicaÃ§Ãµes nÃ£o estÃ£o emprestadas
+-- mostra o cÃ³digo cod_ite+cod_pub
 SELECT cod_ite, cod_pub 
 FROM item
 WHERE item.cod_ite IN (

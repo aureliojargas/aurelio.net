@@ -7,7 +7,7 @@ AND orders.order_num = items.order_num
 group by customer.customer_num
 order by customer.customer_num;
 
--- o valor m·ximo de todos pedidos
+-- o valor m√°ximo de todos pedidos
 select max(items.total_price) valor_max,
 		 min(items.total_price) valor_min,
 		 sum(items.total_price) total
