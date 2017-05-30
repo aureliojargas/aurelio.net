@@ -6,6 +6,7 @@
 
 find . \
   -iname "*.html" -or \
+  -iname "*.css"  -or \
   -iname "*.txt"  -or \
   -iname "*.t2t"  -or \
   -iname "*.java" -or \
