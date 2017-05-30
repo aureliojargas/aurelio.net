@@ -1,11 +1,11 @@
 	
 artigo-v0.t2t
-	Primeira vers„o, enviada ‡ RdL
+	Primeira vers√£o, enviada √† RdL
 artigo-rdl.t2t
-	Vers„o com correÁıes ortogr·ficas da RdL e sem o
-	mini-resumo da instalaÁ„o
+	Vers√£o com corre√ß√µes ortogr√°ficas da RdL e sem o
+	mini-resumo da instala√ß√£o
 index.t2t
-	Vers„o RdL, com CSS e disclaimer inicial
+	Vers√£o RdL, com CSS e disclaimer inicial
 novo-install-internet.t2t
-	Vers„o moderna, com instalaÁ„o direto da Internet,
+	Vers√£o moderna, com instala√ß√£o direto da Internet,
 	sem ser pela RdL

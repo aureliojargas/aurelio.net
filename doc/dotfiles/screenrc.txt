@@ -1,15 +1,15 @@
 # ~/.screenrc
 # vim: ft=sh
 #
-# explicações sobre as configurações e utilização geral do screen
-# estão em http://aurelio.net/doc/coluna
+# explicaÃ§Ãµes sobre as configuraÃ§Ãµes e utilizaÃ§Ã£o geral do screen
+# estÃ£o em http://aurelio.net/doc/coluna
 #
 # 20010403 <verde (a) aurelio net>
 
 # dica: zombie
 #   :zombie kr
-# faz com que cada janela morta fique esperando uma ação
-# (Kill ou Restore). útil pra ver os erros que aconteceram.
+# faz com que cada janela morta fique esperando uma aÃ§Ã£o
+# (Kill ou Restore). Ãºtil pra ver os erros que aconteceram.
 #
 
 ### explanation about color codes:
@@ -37,7 +37,7 @@ msgwait 3
 sorendition 05 43
 hardstatus alwayslastline " %c | %Y%m%d |  %w"
 
-# barra verde e preto, com códigos de cores literais
+# barra verde e preto, com cÃ³digos de cores literais
 #hardstatus alwayslastline "\033[m\033[42;30m%c\033[m \033[42;30m%Y%m%d\033[m \033[42;30m %w \033[m"
 
 vbell on                                 # bipe visual
@@ -57,7 +57,7 @@ bind L screen -t www 6 lynx -book        # navegador
 bind M screen -t mp3 9 mp3 /mp3/punk     # mp3
 
 # cadeias comuns que tem que digitar toda hora, nome, email, etc
-# útil pra preencher formalários online...
+# Ãºtil pra preencher formalÃ¡rios online...
 bind N stuff "$NOME"
 bind D stuff $DATA
 bind I stuff $ICQ
@@ -90,11 +90,11 @@ bind '+' resize +5
 bind '-' resize -5
 
 
-# enquanto não resolver o problema do hardcopy com hardstatus
+# enquanto nÃ£o resolver o problema do hardcopy com hardstatus
 #hardcopy_append on
 #bind h
 
-# segurança: desligar algumas tecla perigosas
+# seguranÃ§a: desligar algumas tecla perigosas
 bind k
 bind ^k
 bind '^\'
@@ -105,12 +105,12 @@ bind x
 # e aqui fica o kill
 bind 'K' kill
 
-#colocar \033k\033\134 no começo do PS1
-# permite prompt colorido mas bagunça quando chega na extrema direita
+#colocar \033k\033\134 no comeÃ§o do PS1
+# permite prompt colorido mas bagunÃ§a quando chega na extrema direita
 shelltitle '] |_'
 
 # para colar no vim sem "identar"
-# ATENÇÃO: é ^a^] 
+# ATENÃ‡ÃƒO: Ã© ^a^] 
 register [ "\033:set   pastea"
 register ] "\033:set nopastea"
 bind ^] paste [.]

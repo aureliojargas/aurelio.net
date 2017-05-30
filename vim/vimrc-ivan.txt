@@ -1,6 +1,6 @@
 " ****************************************************************************
 " *  University: Universidade Federal Do Rio de Janeiro                      *
-" *  Department: Departamento De EletrÙnica e ComputaÁ„o Del - UFRJ          *
+" *  Department: Departamento De Eletr√¥nica e Computa√ß√£o Del - UFRJ          *
 " *      Author: Ivan Carlos Da Silva Lopes                                  *
 " *        Mail: <ivanczar78@yahoo.com.br, ivan.carlos78@gmail.com>          *
 " *         Url: <URL:http://www.del.ufrj.br/~ivanczar>                      *
@@ -23,7 +23,7 @@
 "                                                          $ figlet -c .vimrc
 "
 "
-"LEIAME sobre .vimrc (Vers„o 1.0) / 23.01.2005  03:17:28
+"LEIAME sobre .vimrc (Vers√£o 1.0) / 23.01.2005  03:17:28
 "
 "                       I N D I C E
 "---------------------------------------------------------------
@@ -46,21 +46,21 @@
 "=============================================================================
 "I N T R O D U C A O                                             (VI-IMproved)
 "=============================================================================
-" VI È um  Editor Visual (do inglÍs Visual Interface). Em um editor visual
-" podemos ver as linhas que est„o sendo editadas, ao contr·rio do sed por
-" exemplo que È um editor n„o visual.
+" VI √© um  Editor Visual (do ingl√™s Visual Interface). Em um editor visual
+" podemos ver as linhas que est√£o sendo editadas, ao contr√°rio do sed por
+" exemplo que √© um editor n√£o visual.
 "
 "(1) VI - Visual Interface
 "
-"  VI foi programado por William Joy na Universidade da CalifÛrnia como parte
-"  da distribuiÁ„o BSD. Posteriormente usado pela AT&T, e foi inserido desde
-"  ent„o na base do Unix.
+"  VI foi programado por William Joy na Universidade da Calif√≥rnia como parte
+"  da distribui√ß√£o BSD. Posteriormente usado pela AT&T, e foi inserido desde
+"  ent√£o na base do Unix.
 "
 "(2) VIM - VI-IMproved
 "
-"  Vim (VI iMproved) È um editor de texto altamente configur·vel projetado de
-"  forma a permitir a ediÁ„o r·pida e eficiente de texto. … uma vers„o
-"  melhorada do editor vi que È distribuÌdo com a maioria dos sistemas UNIX.
+"  Vim (VI iMproved) √© um editor de texto altamente configur√°vel projetado de
+"  forma a permitir a edi√ß√£o r√°pida e eficiente de texto. √â uma vers√£o
+"  melhorada do editor vi que √© distribu√≠do com a maioria dos sistemas UNIX.
 "
 "  O autor principal e mantenedor, Bram Moolenaar <bram@vim.org>.
 "  HomePage do vim na WWW:
@@ -68,24 +68,24 @@
 "
 "(3) GVIM - Graphic-VI-IMproved
 "
-"  O vim no modo gr·fico e com suporte a mouse. A grande vantagem dessa vers„o
-"  È a possibilidade de configurar o editor como uma ide de programaÁ„o onde
-"  onde pode-se criar botıes e janelas.
+"  O vim no modo gr√°fico e com suporte a mouse. A grande vantagem dessa vers√£o
+"  √© a possibilidade de configurar o editor como uma ide de programa√ß√£o onde
+"  onde pode-se criar bot√µes e janelas.
 "
 "
 "
-" Arquivo[e ou]tipo                    DefiniÁ„o
+" Arquivo[e ou]tipo                    Defini√ß√£o
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "
 " Dotfiles           Arquivos conhecidos como dotfile ou Prototype Dotfiles
-"                    contÈm as configuraÁıes iniciais de um programa.
+"                    cont√©m as configura√ß√µes iniciais de um programa.
 "
-" vimrc              Arquivo do tipo dotfile que contÈm as configuraÁıes do
-"                    ambiente de ediÁ„o do editor visual Vim.
+" vimrc              Arquivo do tipo dotfile que cont√©m as configura√ß√µes do
+"                    ambiente de edi√ß√£o do editor visual Vim.
 "
-" nomeArquivo.vim    Arquivo do tipo vim que contÈm scripts vim. Scripts-vim
-"                    s„o usados para configurar cores e ou automatizar
-"                    editoraÁ„o.
+" nomeArquivo.vim    Arquivo do tipo vim que cont√©m scripts vim. Scripts-vim
+"                    s√£o usados para configurar cores e ou automatizar
+"                    editora√ß√£o.
 "
 "
 "
@@ -94,27 +94,27 @@
 "=============================================================================
 "
 " O arquivo .vimrc pode ser instalado de duas formas distintas, sendo elas
-" colocando o arquivo em quest„o em seu diretÛrio de trabalho, ou invocando o
+" colocando o arquivo em quest√£o em seu diret√≥rio de trabalho, ou invocando o
 " mesmo usando o comando  vi[m] -U .vimrc  arquivo_a_ser_editado no prompt do
 " shell.
 "
 "
 "
-" ConfiguraÁ„o de vari·veis de ambiente
+" Configura√ß√£o de vari√°veis de ambiente
 " -------------------------------------
 "
-"  Algumas vari·veis de ambiente podem ser usadas para alterar o
-"  comportamento padr„o das funÁıes. Basta defini-las em seu .vimrc ou na
-"  prÛpria linha de comando antes de chamar as funÁıes. S„o elas:
+"  Algumas vari√°veis de ambiente podem ser usadas para alterar o
+"  comportamento padr√£o das fun√ß√µes. Basta defini-las em seu .vimrc ou na
+"  pr√≥pria linha de comando antes de chamar as fun√ß√µes. S√£o elas:
 "
-"    $ICMAIL[0X]   - EndereÁo de Mail do usu·rio
-"    $ICURL[0X]    - Pagina de internet do Usu·rio
-"    $ICPATHCONF   - Caminho completo para o diretÛrio com as configuraÁıes
-"    $ICPATHBACKUP - Caminho completo para o diretÛrio de armqzenamento
+"    $ICMAIL[0X]   - Endere√ßo de Mail do usu√°rio
+"    $ICURL[0X]    - Pagina de internet do Usu√°rio
+"    $ICPATHCONF   - Caminho completo para o diret√≥rio com as configura√ß√µes
+"    $ICPATHBACKUP - Caminho completo para o diret√≥rio de armqzenamento
 "                    de Backup
 "
-"   Uma forma pr·tica de se trabalhar com vari·veis de ambiente È definilas em
-"   algum arquivo shell de configuraÁ„o, por exemplo, dentro do arquivo
+"   Uma forma pr√°tica de se trabalhar com vari√°veis de ambiente √© definilas em
+"   algum arquivo shell de configura√ß√£o, por exemplo, dentro do arquivo
 "   .bashrc adicione as seguintes linhas:
 "
 "     export MAIL01="ivanczar78@yahoo.com.br"
@@ -123,8 +123,8 @@
 "     export PATHBACKUP="/cygdrive/G/principal/work/bkup"
 "     export PATHCONF="~/data"
 "
-"   Feito isso, basta usar vari·veis-vim de ambiente no formato let $name-Var
-"   para que qualqueir funcao ou chamada vim possa utilizar estas vari·veis.
+"   Feito isso, basta usar vari√°veis-vim de ambiente no formato let $name-Var
+"   para que qualqueir funcao ou chamada vim possa utilizar estas vari√°veis.
 "
 let         $ICAUTOR=expand($AUTOR)
 let  $ICUNIVERSIDADE=expand($UNIVERSIDADE)
@@ -136,9 +136,9 @@ let      $ICPATHCONF=expand($PATHCONF)
 let    $ICPATHBACKUP=expand($PATHBACKUP)
 
 "
-" … importante ressaltar que o formato acima pode ser substituÌdo por
-" vari·veis globais caso queira definir no prÛprio arquivo .vimrc, evitando
-" a definiÁ„o em arquivos shell de configuraÁ„o.
+" √â importante ressaltar que o formato acima pode ser substitu√≠do por
+" vari√°veis globais caso queira definir no pr√≥prio arquivo .vimrc, evitando
+" a defini√ß√£o em arquivos shell de configura√ß√£o.
 "
 "     let  g:MAIL01     = 'ivanczar78@yahoo.com.br'
 "     let  g:MAIL02     = 'ivan.carlos78@gmail.com'
@@ -164,7 +164,7 @@ else " tem windows -----------------------------------------------------------
 "			echo "Gvim-Win32"
 			let         $ICAUTOR="Ivan Carlos Da Silva Lopes"
 			let  $ICUNIVERSIDADE="Universidade Federal Do Rio de Janeiro"
-			let  $ICDEPARTAMENTO="Departamento De EletrÙnica e ComputaÁ„o Del - UFRJ"
+			let  $ICDEPARTAMENTO="Departamento De Eletr√¥nica e Computa√ß√£o Del - UFRJ"
 			let        $ICMAIL01='ivanczar78@yahoo.com.br'
 			let        $ICMAIL02='ivan.carlos78@gmail.com'
 			let         $ICURL01='http://www.del.ufrj/~ivanczar/'
@@ -206,8 +206,8 @@ endif
 " vom qual destes encontra-se ativo, ou seja, se os mesmos foram instalados
 "
 "
-" VAMOS UTILIZAR VARI¡VEIS GLOBAIS PARA QUE AS MESMAS SEJAM LIDAS
-" DENTRO DOS ESCOPOS DAS FUN«’ES.
+" VAMOS UTILIZAR VARI√ÅVEIS GLOBAIS PARA QUE AS MESMAS SEJAM LIDAS
+" DENTRO DOS ESCOPOS DAS FUN√á√ïES.
 "
 "let     g:CansiGNUColectionCompiler=1       " C-ansi     GCC
 "let g:CplusplusGNUColectionCompiler=1       " Cplusplus  GCC
@@ -228,48 +228,48 @@ endif
 "CONFIGURACAO DO AMBIENTE DE EDICAO                              (VI-IMproved)
 "=============================================================================
 "
-" Aqui vamos tornar o nosso editor mais amig·vel, para tanto, adicionaremos
-" configuraÁıes de cores, mapeamento de funÁıes, ativaÁ„o de modos e
-" configuraÁ„o de vari·veis de ambiente para serem usadas pelos futuros
+" Aqui vamos tornar o nosso editor mais amig√°vel, para tanto, adicionaremos
+" configura√ß√µes de cores, mapeamento de fun√ß√µes, ativa√ß√£o de modos e
+" configura√ß√£o de vari√°veis de ambiente para serem usadas pelos futuros
 " scripts.
 "
-" Para tanto devemos utilizar as configuraÁıes precedidas pelo comando
+" Para tanto devemos utilizar as configura√ß√µes precedidas pelo comando
 " set[local].
 "
   " **************************************************************************
   " *                                                                        *
-  " * use VIM padr„o È muito melhor                                          *
+  " * use VIM padr√£o √© muito melhor                                          *
   " *                                                                        *
   " **************************************************************************
 setlocal nocompatible
 
   " **************************************************************************
   " *                                                                        *
-  " *(compatible) Torna o comportamento do VIM o mais prÛximo possÌvel do VI.*
+  " *(compatible) Torna o comportamento do VIM o mais pr√≥ximo poss√≠vel do VI.*
   " *                                                                        *
   " **************************************************************************
 "setlocal cp
 
   " **************************************************************************
   " *                                                                        *
-  " *   Numerando as linhas do arquivo, isto È, qualquer arquivo carregado È *
-  " *   editado com a numeraÁ„o de linhas ligada                             *
+  " *   Numerando as linhas do arquivo, isto √©, qualquer arquivo carregado √© *
+  " *   editado com a numera√ß√£o de linhas ligada                             *
   " *                                                                        *
   " **************************************************************************
 setlocal number
 
   " **************************************************************************
   " *                                                                        *
-  " * Exibe o modo atual de operaÁıes do VI (InserÁ„o ou comandos)           *
-  " * Mostra o modo que vocÍ esta.                                           *
+  " * Exibe o modo atual de opera√ß√µes do VI (Inser√ß√£o ou comandos)           *
+  " * Mostra o modo que voc√™ esta.                                           *
   " *                                                                        *
   " **************************************************************************
 setlocal showmode
 
   " **************************************************************************
   " *                                                                        *
-  " * (beautfy)- Usando essa opÁ„o, todos os caracteres de controle (a n„o   *
-  " *  ser "tab", "linefeed" e "formfeed") ser„o descartados do texto ao ser *
+  " * (beautfy)- Usando essa op√ß√£o, todos os caracteres de controle (a n√£o   *
+  " *  ser "tab", "linefeed" e "formfeed") ser√£o descartados do texto ao ser *
   " *  carregados.                                                           *
   " *                                                                        *
   " **************************************************************************
@@ -277,14 +277,14 @@ setlocal showmode
 
   " **************************************************************************
   " *                                                                        *
-  " *       Recua cada linha para o mesmo nÌvel da linha superior            *
+  " *       Recua cada linha para o mesmo n√≠vel da linha superior            *
   " *                                                                        *
   " **************************************************************************
 setlocal autoindent
 
   " **************************************************************************
   " *                                                                        *
-  " *   Utilizando abreviaÁıes em linha de comando                           *
+  " *   Utilizando abrevia√ß√µes em linha de comando                           *
   " *   Para tanto vamos utilizar o comando Cab                              *
   " *                                                                        *
   " **************************************************************************
@@ -296,7 +296,7 @@ cab Q  q
 
   " **************************************************************************
   " *                                                                        *
-  " * Os comandos de abreviaÁ„o podem tambÈm ficar em uma ˙nica linha        *
+  " * Os comandos de abrevia√ß√£o podem tamb√©m ficar em uma √∫nica linha        *
   " * cab W w | cab Q q | cab Wq wq | cab wQ wq | cab WQ wq                  *
   " *                                                                        *
   " **************************************************************************
@@ -304,38 +304,38 @@ cab Q  q
 
   " **************************************************************************
   " *                                                                        *
-  " * ShiftWidth: n˙mero de colunas deslocadas pelo comando > ou <           *
+  " * ShiftWidth: n√∫mero de colunas deslocadas pelo comando > ou <           *
   " *                                                                        *
   " **************************************************************************
 setlocal sw=3
 
   " **************************************************************************
   " *                                                                        *
-  " * rÈgua: mostra a posiÁ„o do cursor                                      *
+  " * r√©gua: mostra a posi√ß√£o do cursor                                      *
   " *                                                                        *
   " **************************************************************************
 setlocal ruler
 
   " **************************************************************************
   " *                                                                        *
-  " * SHortMessages: encurta as mensagem da rÈgua                            *
+  " * SHortMessages: encurta as mensagem da r√©gua                            *
   " *                                                                        *
   " **************************************************************************
 setlocal shm=filmnrwxt
 
   " **************************************************************************
   " *                                                                        *
-  " * ShowMatch: Toda vez que vocÍ fecha um parÍntese, colchete              *
-  " * ou chave, o Vi mostra onde este foi aberto. Caso  n„o haja             *
-  " * nenhum aberto para este, deixa em vermelho parÍnteses ou               *
-  " * chaves que n„o tÍm um par.                                             *
+  " * ShowMatch: Toda vez que voc√™ fecha um par√™ntese, colchete              *
+  " * ou chave, o Vi mostra onde este foi aberto. Caso  n√£o haja             *
+  " * nenhum aberto para este, deixa em vermelho par√™nteses ou               *
+  " * chaves que n√£o t√™m um par.                                             *
   " *                                                                        *
   " **************************************************************************
 setlocal sm
 
   " **************************************************************************
   " *                                                                        *
-  " * tab com complemento de palavras autom·tico                             *
+  " * tab com complemento de palavras autom√°tico                             *
   " *                                                                        *
   " **************************************************************************
 setlocal wildmode=list:longest,full
@@ -349,28 +349,28 @@ setlocal showcmd
 
   " **************************************************************************
   " *                                                                        *
-  " * reporta aÁıes com linhas no rodapÈ                                     *
+  " * reporta a√ß√µes com linhas no rodap√©                                     *
   " *                                                                        *
   " **************************************************************************
 setlocal report=0
 
   " **************************************************************************
   " *                                                                        *
-  " * tabstop: n˙mero de colunas para o comando <tab>                        *
+  " * tabstop: n√∫mero de colunas para o comando <tab>                        *
   " *                                                                        *
   " **************************************************************************
 setlocal ts=3
 
-" A tecla TAB no vim vem padronizada com 8 espaÁos, sendo assim, quando
-" editar um cÛdigo em c, c++, pascal ou outra linguagem qualquer o texto
-" do cÛdigo torna-se algo meio confuso, principalmente quando o cÛdigo È
-" longo e possui in˙meros escopos. Para tanto, podemos mudar o tamanho do
-" TAB, isto È do n˙mero de espaÁos gerados pelo mesmo, utilizando o comando
+" A tecla TAB no vim vem padronizada com 8 espa√ßos, sendo assim, quando
+" editar um c√≥digo em c, c++, pascal ou outra linguagem qualquer o texto
+" do c√≥digo torna-se algo meio confuso, principalmente quando o c√≥digo √©
+" longo e possui in√∫meros escopos. Para tanto, podemos mudar o tamanho do
+" TAB, isto √© do n√∫mero de espa√ßos gerados pelo mesmo, utilizando o comando
 " 'setlocal tabstop=3' que transforma o tamanho do TAB de 8 para 3.
 
   " **************************************************************************
   " *                                                                        *
-  " * coloca 2 espaÁos apÛs o . quando usando o gq                           *
+  " * coloca 2 espa√ßos ap√≥s o . quando usando o gq                           *
   " *                                                                        *
   " **************************************************************************
 "set nojoinspaces
@@ -384,7 +384,7 @@ setlocal backspace=eol,start,indent
 
   " **************************************************************************
   " *                                                                        *
-  " * (window)Define o n˙mero de linhas deslocadas com os comandos           *
+  " * (window)Define o n√∫mero de linhas deslocadas com os comandos           *
   " * ^B (Ctrl+B) e ^F (Ctrl+F)                                              *
   " *                                                                        *
   " **************************************************************************
@@ -392,7 +392,7 @@ setlocal window=10
 
   " **************************************************************************
   " *                                                                        *
-  " * Define o n˙mero de linhas deslocadas com os comandos                   *
+  " * Define o n√∫mero de linhas deslocadas com os comandos                   *
   " * ^U (Ctrl+U) e ^D (Ctrl+D)                                              *
   " *                                                                        *
   " **************************************************************************
@@ -400,7 +400,7 @@ setlocal scroll=5
 
   " **************************************************************************
   " *                                                                        *
-  " * Em caso de se cometer um comando inv·lido aciona-se um alarme visual   *
+  " * Em caso de se cometer um comando inv√°lido aciona-se um alarme visual   *
   " * visual-bells                                                           *
   " *                                                                        *
   " **************************************************************************
@@ -409,7 +409,7 @@ set visualbell
   " **************************************************************************
   " *                                                                        *
   " * Aqui definimos para vim onde encontrar o arquivo com as cores do fvwm  *
-  " * … importante ressaltar que essa opÁ„o est· configurada para CygWin     *
+  " * √â importante ressaltar que essa op√ß√£o est√° configurada para CygWin     *
   " *                                                                        *
   " **************************************************************************
 
@@ -419,21 +419,21 @@ set visualbell
 
   " **************************************************************************
   " *                                                                        *
-  " * Aqui definimos uma chave para a altern‚ncia entre os modos:            *
+  " * Aqui definimos uma chave para a altern√¢ncia entre os modos:            *
   " *                                                                        *
   " * -- INSERT (paste) --          e             -- INSERT --               *
   " *                                                                        *
-  " *  O primeiro n„o segue o padr„o de linha Identada  enquanto o segundo   *
-  " *  È o modo normal de trabalho.                                          *
+  " *  O primeiro n√£o segue o padr√£o de linha Identada  enquanto o segundo   *
+  " *  √© o modo normal de trabalho.                                          *
   " *                                                                        *
   " **************************************************************************
 set pastetoggle=<F2>
 
   " **************************************************************************
   " *                                                                        *
-  " *  <F12>   Esconde coment·rio    liga ou desliga coment·rio              *
-  " *  <F11>   numeraÁ„o lateral     liga ou desliga numeraÁ„o               *
-  " *  <F10>   tabulaÁ„o             liga ou desliga tabulaÁ„o               *
+  " *  <F12>   Esconde coment√°rio    liga ou desliga coment√°rio              *
+  " *  <F11>   numera√ß√£o lateral     liga ou desliga numera√ß√£o               *
+  " *  <F10>   tabula√ß√£o             liga ou desliga tabula√ß√£o               *
   " *  <F9>    backup                                                        *
   " *                                                                        *
   " *                                                                        *
@@ -441,11 +441,11 @@ set pastetoggle=<F2>
   " *  <F2>    insert (paste)                                                *
   " *                                                                        *
   " *                                                                        *
-  " *  ;l      limpa                 retira espaÁos em branco de final       *
+  " *  ;l      limpa                 retira espa√ßos em branco de final       *
   " *                                de arquivo.                             *
   " *                                                                        *
   " *                                                                        *
-  " *  ,bi    EdiÁ„o bin·ria        liga ou desliga ediÁ„o bin·ria           *
+  " *  ,bi    Edi√ß√£o bin√°ria        liga ou desliga edi√ß√£o bin√°ria           *
   " *                                                                        *
   " *                                                                        *
   " *                                                                        *
@@ -456,7 +456,7 @@ map <F10> :call TurnOnOff_TAB_EOF()<cr>
 map <F9>  :call BackupNomeData()<cr>
 map <F3>  :call AjudaUsuario()<cr>
 
-" utilizando o dicion·rio aspell
+" utilizando o dicion√°rio aspell
 map \BR :w!<CR>:!aspell check %<CR>:e! %<CR>
 map \EN :w!<CR>:!aspell --lang=en check %<CR>:e! %<CR>
 
@@ -474,9 +474,9 @@ map ;l   :%s/\s*$//g<cr>
 
   " **************************************************************************
   " *                                                                        *
-  " *   geralmente usamos ^I para representar uma tabulaÁ„o                  *
-  " *   <Tab>, e $ para indicar o fim de linha. Mas È possÌvel               *
-  " *   customizar essas opÁıes. sintaxe:                                    *
+  " *   geralmente usamos ^I para representar uma tabula√ß√£o                  *
+  " *   <Tab>, e $ para indicar o fim de linha. Mas √© poss√≠vel               *
+  " *   customizar essas op√ß√µes. sintaxe:                                    *
   " *                                                                        *
   " *   set listchars=key:string,key:string                                  *
   " *                                                                        *
@@ -487,17 +487,17 @@ map ;l   :%s/\s*$//g<cr>
   " *                                                                        *
   " * - tab:{char1}{char2}                                                   *
   " *                                                                        *
-  " *     O tab È mostrado pelo primeiro caracter {char1} e                  *
+  " *     O tab √© mostrado pelo primeiro caracter {char1} e                  *
   " *     seguido por {char2}                                                *
   " *                                                                        *
   " * - trail:{char}                                                         *
   " *                                                                        *
-  " *     Esse caracter representa os espaÁos em branco.                     *
+  " *     Esse caracter representa os espa√ßos em branco.                     *
   " *                                                                        *
   " * - extends:{char}                                                       *
   " *                                                                        *
-  " *    Esse caracter representa o inÌcio do fim da linha  sem quebra-la    *
-  " *    Est· opÁ„o funciona com a opÁ„o nowrap abilitada                    *
+  " *    Esse caracter representa o in√≠cio do fim da linha  sem quebra-la    *
+  " *    Est√° op√ß√£o funciona com a op√ß√£o nowrap abilitada                    *
   " *                                                                        *
   " **************************************************************************
   "exemplo 1:
@@ -511,13 +511,13 @@ map ;l   :%s/\s*$//g<cr>
 "set listchars=tab:>-
 
   "exemplo 4:
-set nowrap    "Essa opÁ„o desabilita a quebra de linha
+set nowrap    "Essa op√ß√£o desabilita a quebra de linha
 "set listchars=extends:+
 
 
   " **************************************************************************
   " *                                                                        *
-  " * Em caso de se cometer um comando inv·lido aciona-se um alarme sonoro   *
+  " * Em caso de se cometer um comando inv√°lido aciona-se um alarme sonoro   *
   " * error-bells                                                            *
   " *                                                                        *
   " **************************************************************************
@@ -525,10 +525,10 @@ set nowrap    "Essa opÁ„o desabilita a quebra de linha
 
   " **************************************************************************
   " *                                                                        *
-  " * Antes de sobrescrever um arquivo mantÈm um backup do mesmo             *
+  " * Antes de sobrescrever um arquivo mant√©m um backup do mesmo             *
   " *                                                                        *
-  " * por exemplo, apÛs salvar um arquivo de nome Alfa.txt, o vim cria uo    *
-  " * outro arquivo chamado Alfa.txt~ com a configuraÁ„o anterior do arquivo *
+  " * por exemplo, ap√≥s salvar um arquivo de nome Alfa.txt, o vim cria uo    *
+  " * outro arquivo chamado Alfa.txt~ com a configura√ß√£o anterior do arquivo *
   " * antes do  mesmo ser alterado                                           *
   " *                                                                        *
   " **************************************************************************
@@ -543,7 +543,7 @@ set nowrap    "Essa opÁ„o desabilita a quebra de linha
 
   " **************************************************************************
   " *                                                                        *
-  " * Habilita a mudanÁa de coluna quando movimenta-se atravÈs das linhas    *
+  " * Habilita a mudan√ßa de coluna quando movimenta-se atrav√©s das linhas    *
   " *                                                                        *
   " **************************************************************************
 "set startofline
@@ -556,13 +556,13 @@ set nowrap    "Essa opÁ„o desabilita a quebra de linha
 
 " evento: lendo arquivo (*O ARQUIVO EXISTE EM DISCO*)
 " converte para o formato unix todo arquivo trabalhado
-" a convers„o em m˙ltiplos arquivos ocorre  quando o buffer referente ao
-" arquivo È criado.
+" a convers√£o em m√∫ltiplos arquivos ocorre  quando o buffer referente ao
+" arquivo √© criado.
 autocmd! BufReadPost * call Dos2UNIX()
 
   " **************************************************************************
   " *                                                                        *
-  " *             Fechamento autom·tico para parÍnteses                      *
+  " *             Fechamento autom√°tico para par√™nteses                      *
   " *                                                                        *
   " **************************************************************************
 
@@ -573,17 +573,17 @@ autocmd! BufReadPost * call Dos2UNIX()
 
   " **************************************************************************
   " *                                                                        *
-  " * DiretÛrios onde o VIM busca por arquivos                               *
+  " * Diret√≥rios onde o VIM busca por arquivos                               *
   " *                                                                        *
   " **************************************************************************
 set path=.,/usr/include/,/usr/local/bin/
 
   " **************************************************************************
   " *                                                                        *
-  " *exemplo de como usar o dicion·rio com mapeamento:                       *
-  " * (1)  dentro do modo de inserÁ„o       -- INSERT --                     *
+  " *exemplo de como usar o dicion√°rio com mapeamento:                       *
+  " * (1)  dentro do modo de inser√ß√£o       -- INSERT --                     *
   " * (2)  posicione o cursor sob a palavra a ser completada                 *
-  " * (3)  ligar dicion·rio  ao pressionar a seq¸encia  "CTRL+d"             *
+  " * (3)  ligar dicion√°rio  ao pressionar a seq√ºencia  "CTRL+d"             *
 "imap <c-d> <c-x><c-k>
   " * (4)  Completa uma palavra de forma ascendente     "<F7>"               *
 "imap <F7> <c-n>
@@ -594,16 +594,16 @@ set path=.,/usr/include/,/usr/local/bin/
 
   " **************************************************************************
   " *                                                                        *
-  " *  Quando completar uma palavra seguir a seguinte seq¸encia de           *
+  " *  Quando completar uma palavra seguir a seguinte seq√ºencia de           *
   " *  busca, sendo primeiro em 1, segundo em 2, ...                         *
   " *                                                                        *
   " * 1 - no buffer atual                  (.)                               *
   " * 2 - buffer de outra janela           (w)                               *
   " * 3 - outros buffers carregados        (b)                               *
-  " * 4 - buffers n„o carregados           (u)                               *
+  " * 4 - buffers n√£o carregados           (u)                               *
   " * 5 - arquivo de tags                  (t)                               *
   " * 6 - arquivo de include               (i)                               *
-  " * 7 - dicion·rio                       (K)                               *
+  " * 7 - dicion√°rio                       (K)                               *
   " *                                                                        *
   " *                                                                        *
   " complete=.,w,b,u,t,i,k     (*default*)                                   *
@@ -612,19 +612,19 @@ set path=.,/usr/include/,/usr/local/bin/
   " **************************************************************************
 "setlocal complete=.,w,k,t,i
 set complete-=k complete+=k
-"o comando acima ativa o formato i_Ctrl_n_Ctrl_n para ativar o dicion·rio
+"o comando acima ativa o formato i_Ctrl_n_Ctrl_n para ativar o dicion√°rio
 
   " **************************************************************************
   " *                                                                        *
-  " * Completa a palavra ignorando se È mai˙scula ou min˙scula               *
+  " * Completa a palavra ignorando se √© mai√∫scula ou min√∫scula               *
   " *                                                                        *
   " **************************************************************************
 setlocal infercase
 
   " **************************************************************************
   " *                                                                        *
-  " * se uma linha ultrapassar o valor estipulado em textwidth ela ser·      *
-  " * mostrada em destaque coloc·-la em uma funÁ„o de liga desliga junto     *
+  " * se uma linha ultrapassar o valor estipulado em textwidth ela ser√°      *
+  " * mostrada em destaque coloc√°-la em uma fun√ß√£o de liga desliga junto     *
   " * com uma que mostre as linhas e colunas de um arquivo em destaque       *
   " *                                                                        *
   " **************************************************************************
@@ -632,12 +632,12 @@ setlocal infercase
 
 " ****************************************************************************
 " *                                                                          *
-" *          ProteÁ„o De Arquivos                                            *
+" *          Prote√ß√£o De Arquivos                                            *
 " *                                                                          *
 " ****************************************************************************
 
   " **************************************************************************
-  " * Arquivos somente de leitura, n„o È permitido alter·-los                *
+  " * Arquivos somente de leitura, n√£o √© permitido alter√°-los                *
   " * dotfile                                                                *
   " *                                                                        *
   " **************************************************************************
@@ -655,12 +655,12 @@ set wildignore=*.o,*.obj,*.bak,*.exe
 
 " ****************************************************************************
 " *                                                                          *
-" *          ConfiguraÁ„o da barra de status                                 *
+" *          Configura√ß√£o da barra de status                                 *
 " *                                                                          *
 " ****************************************************************************
 
   " **************************************************************************
-  " *  Uma configuraÁ„o interessante È defini-la com tamanho de duas linhas e*
+  " *  Uma configura√ß√£o interessante √© defini-la com tamanho de duas linhas e*
   " *  fundo com cor azul e fonte branca.                                    *
   " *                                                                        *
   " **************************************************************************
@@ -669,7 +669,7 @@ highlight StatusLine ctermfg=blue   ctermbg=white  "Fundo azul e fonte branca.
 
   " **************************************************************************
   " *                                                                        *
-  " *          configurando o formato da rÈgua                               *
+  " *          configurando o formato da r√©gua                               *
   " *                                                                        *
   " **************************************************************************
 set statusline=%t%m%r%h%w
@@ -683,7 +683,7 @@ set statusline=%t%m%r%h%w
 
 " ****************************************************************************
 " *                                                                          *
-" *          ConfiguraÁ„o do TÌtulo                                          *
+" *          Configura√ß√£o do T√≠tulo                                          *
 " *                                                                          *
 " ****************************************************************************
 
@@ -703,14 +703,14 @@ set title
 
   " **************************************************************************
   " *                                                                        *
-  " *            Tamanho da barra de tÌtulo                                  *
+  " *            Tamanho da barra de t√≠tulo                                  *
   " *                                                                        *
   " **************************************************************************
 "set titlelen=78
 
   " **************************************************************************
   " *                                                                        *
-  " *         Exibe a barra de tÌtulo no formato configurado                 *
+  " *         Exibe a barra de t√≠tulo no formato configurado                 *
   " *                                                                        *
   " **************************************************************************
 
@@ -739,7 +739,7 @@ set titlestring=%<Nome=%t%m%r%h%w
 " [Nome=nome]       buffer={current}   [Total de linhas=999]                 '
 " ----------------------------------------------------------------------------
 
-" Se editar m˙ltiplos arquivos
+" Se editar m√∫ltiplos arquivos
 " ----------------------------------------------------------------------------
 " [Nome=nome]  buffer={current} [{current} of {max})]  [Total de linhas=999] '
 " ----------------------------------------------------------------------------
@@ -747,14 +747,14 @@ set titlestring=%<Nome=%t%m%r%h%w
 
 " ****************************************************************************
 " *                                                                          *
-" *          Definindo o formato de ediÁ„o dos textos                        *
+" *          Definindo o formato de edi√ß√£o dos textos                        *
 " *                                                                          *
 " ****************************************************************************
 
   " **************************************************************************
   " *                                                                        *
-  " * Define qual È o tamanho da margem direita para a quebra de linhas      *
-  " * autom·ticas                                                            *
+  " * Define qual √© o tamanho da margem direita para a quebra de linhas      *
+  " * autom√°ticas                                                            *
   " * wrapmargin                                                             *
   " *                                                                        *
   " **************************************************************************
@@ -762,10 +762,10 @@ set titlestring=%<Nome=%t%m%r%h%w
 
   " **************************************************************************
   " *                                                                        *
-  " *  Quando esta opÁ„o encontra-se ativa o VIM lÍ o arquivo, e qualquer    *
-  " *  comando de configuraÁ„o que estiver nas cinco primeiras linhas e cinco*
-  " *  ultimas do arquivo, ser„o executados. Um exemplo disso s„o os arquivos*
-  " *  do help, onde as ˙ltimas linhas a apresentam a seguinte sintaxe:      *
+  " *  Quando esta op√ß√£o encontra-se ativa o VIM l√™ o arquivo, e qualquer    *
+  " *  comando de configura√ß√£o que estiver nas cinco primeiras linhas e cinco*
+  " *  ultimas do arquivo, ser√£o executados. Um exemplo disso s√£o os arquivos*
+  " *  do help, onde as √∫ltimas linhas a apresentam a seguinte sintaxe:      *
   " *  'vim:tw=78:ts=8:ft=help:norl:'                                        *
   " *                                                                        *
   " **************************************************************************
@@ -773,75 +773,75 @@ setlocal modeline
 
   " **************************************************************************
   " *                                                                        *
-  " *  Definindo tamanho da linha, isto È, coluna onde a linha deve ser      *
-  " *  quebrada" com a inserÁ„o de fim de linha (<EOL>, abreviaÁ„o de        *
+  " *  Definindo tamanho da linha, isto √©, coluna onde a linha deve ser      *
+  " *  quebrada" com a inser√ß√£o de fim de linha (<EOL>, abrevia√ß√£o de        *
   " *  end-of-line).                                                         *
   " *                                                                        *
   " **************************************************************************
 setlocal textwidth=78
 
   " **************************************************************************
-  " * acentuaÁ„o                                                             *
+  " * acentua√ß√£o                                                             *
   " * ----------                                                             *
   " *                                                                        *
-  " *  SE n„o tiver suporte para acentuaÁ„o                                  *
+  " *  SE n√£o tiver suporte para acentua√ß√£o                                  *
   " *  retire as aspas das linhas mapeadas abaixo                            *
   " *                                                                        *
   " **************************************************************************
-"map! 'a ·
-"map! 'A ¡
-"map! 'e È
-"map! 'E …
-"map! 'i Ì
-"map! 'I Õ
-"map! 'o Û
-"map! 'O ”
-"map! ~a „
-"map! ~A √
-"map! ^a ‚
-"map! ^A ¬
-"map! `a ‡
-"map! `A ¿
-"map! ,c Á
-"map! ,C «
-"map! ^e Í
-"map! ^E  
-"map! ^o Ù
-"map! ^O ‘
-"map! ~o ı
-"map! ~O ’
-"map! 'u ˙
-"map! 'U ⁄
+"map! 'a √°
+"map! 'A √Å
+"map! 'e √©
+"map! 'E √â
+"map! 'i √≠
+"map! 'I √ç
+"map! 'o √≥
+"map! 'O √ì
+"map! ~a √£
+"map! ~A √É
+"map! ^a √¢
+"map! ^A √Ç
+"map! `a √†
+"map! `A √Ä
+"map! ,c √ß
+"map! ,C √á
+"map! ^e √™
+"map! ^E √ä
+"map! ^o √¥
+"map! ^O √î
+"map! ~o √µ
+"map! ~O √ï
+"map! 'u √∫
+"map! 'U √ö
 
 
 " ****************************************************************************
 " *                                                                          *
-" *          Definindo e trabalhando com histÛrico da linha de comando       *
+" *          Definindo e trabalhando com hist√≥rico da linha de comando       *
 " *                                                                          *
 " ****************************************************************************
 
   " **************************************************************************
   " *                                                                        *
-  " * histÛrico da linha de comando                                          *
+  " * hist√≥rico da linha de comando                                          *
   " *                                                                        *
   " **************************************************************************
 setlocal cedit=<Esc>
 
   " **************************************************************************
   " *                                                                        *
-  " * (^[ È o caracter ESC)                                                  *
-  " * Habilitando a apresentaÁ„o do histÛrico da linha de comando com o      *
+  " * (^[ √© o caracter ESC)                                                  *
+  " * Habilitando a apresenta√ß√£o do hist√≥rico da linha de comando com o      *
   " * comando esc. Por exemplo, escrevendo ':' e depois pressionando-se      *
-  " * ESC, abre-se uma janela com a lista dos comandos anteriores. A relaÁ„o *
+  " * ESC, abre-se uma janela com a lista dos comandos anteriores. A rela√ß√£o *
   " * pode ser modificada  como se fosse um arquivo. Quando se pressiona     *
-  " * Enter sobre uma linha o  comando correspondente È executado.           *
+  " * Enter sobre uma linha o  comando correspondente √© executado.           *
   " *                                                                        *
   " **************************************************************************
 
   " **************************************************************************
   " *                                                                        *
-  " * (history) Define o tamanho do arquivo de histÛrico, onde <valor> È o   *
-  " * n˙mero de linhas de comandos a serem armazenados                       *
+  " * (history) Define o tamanho do arquivo de hist√≥rico, onde <valor> √© o   *
+  " * n√∫mero de linhas de comandos a serem armazenados                       *
   " * setlocal hi=<valor>                                                    *
   " *                                                                        *
   " **************************************************************************
@@ -849,7 +849,7 @@ setlocal hi=5000
 
   " **************************************************************************
   " *                                                                        *
-  " * Guarda posiÁ„o do cursor e histÛrico da linha de comando :             *
+  " * Guarda posi√ß√£o do cursor e hist√≥rico da linha de comando :             *
   " *                                                                        *
   " **************************************************************************
 setlocal viminfo='100,\"1000,:40,%,n~/.viminfo
@@ -876,9 +876,9 @@ setlocal background=dark
 
   " **************************************************************************
   " *                                                                        *
-  " * Ligando configuraÁıes de cor, isto È, faz com que o vim busque no      *
-  " * diretÛrio /usr/share/vim/vim62/syntax os arquivos de configuraÁ„o de   *
-  " * cores de acordo com o tipo de arquivo que È aberto                     *
+  " * Ligando configura√ß√µes de cor, isto √©, faz com que o vim busque no      *
+  " * diret√≥rio /usr/share/vim/vim62/syntax os arquivos de configura√ß√£o de   *
+  " * cores de acordo com o tipo de arquivo que √© aberto                     *
   " *                                                                        *
   " **************************************************************************
 syntax on
@@ -890,13 +890,13 @@ syntax on
   " *                                                                        *
   " **************************************************************************
 setlocal hlsearch                                 " ativa o contraste de cores
-                                               "hlsearch possui abreviaÁ„o hls
+                                               "hlsearch possui abrevia√ß√£o hls
   " **************************************************************************
   " *                                                                        *
-  " * O mÈtodo de busca pode ser incrementado com a adiÁ„o do comando        *
-  " * incsearch". A pesquisa torna-se diferenciada e din‚mica em tempo de    *
-  " * pesquisa, isto È, antes do usu·rio entrar com o comando <enter> a fim  *
-  " * de buscar os resultados, os mesmos j· aparecer„o em sua tela.          *
+  " * O m√©todo de busca pode ser incrementado com a adi√ß√£o do comando        *
+  " * incsearch". A pesquisa torna-se diferenciada e din√¢mica em tempo de    *
+  " * pesquisa, isto √©, antes do usu√°rio entrar com o comando <enter> a fim  *
+  " * de buscar os resultados, os mesmos j√° aparecer√£o em sua tela.          *
   " *                                                                        *
   " **************************************************************************
 setlocal incsearch
@@ -904,12 +904,12 @@ setlocal incsearch
   " **************************************************************************
   " *                                                                        *
   " * Que tal trocar a cor do texto ?                                        *
-  " * daquela seleÁ„o que aparece quando vocÍ procura algo com o comando     *
-  " * / ? È f·cil, basta definir a cor do componente da sintaxe. ah sim, a   *
-  " * opÁ„o  hls (veja abaixo) deve estar ativa.                             *
-  " * vocÍ pode colocar as cores que quiser, em inglÍs. note que È           *
+  " * daquela sele√ß√£o que aparece quando voc√™ procura algo com o comando     *
+  " * / ? √© f√°cil, basta definir a cor do componente da sintaxe. ah sim, a   *
+  " * op√ß√£o  hls (veja abaixo) deve estar ativa.                             *
+  " * voc√™ pode colocar as cores que quiser, em ingl√™s. note que √©           *
   " * ctermBG e FG, de  background e foreground  (fundo e letra). e veja     *
-  " * tambÈm que o IncSearch (busca enquanto vocÍ digita) È invertido!       *
+  " * tamb√©m que o IncSearch (busca enquanto voc√™ digita) √© invertido!       *
   " *                                                                        *
   " **************************************************************************
 hi    Search ctermbg=yellow ctermfg=red
@@ -917,18 +917,18 @@ hi IncSearch ctermbg=green  ctermfg=cyan
 
   " **************************************************************************
   " *                                                                        *
-  " * no vim temos diversas opÁıes para  modificar seu comportamento         *
-  " * atravÈs do comando set. para ver  todas as opÁıes  disponÌveis, faÁa   *
-  " * :setlocal all. diversas  opÁıes j· vÍem  ligadas por  padr„o, ent„o    *
-  " * vamos mais opÁıes de busca                                             *
+  " * no vim temos diversas op√ß√µes para  modificar seu comportamento         *
+  " * atrav√©s do comando set. para ver  todas as op√ß√µes  dispon√≠veis, fa√ßa   *
+  " * :setlocal all. diversas  op√ß√µes j√° v√™em  ligadas por  padr√£o, ent√£o    *
+  " * vamos mais op√ß√µes de busca                                             *
   " * IncrementedSearch, HighLightedSearch, IgnoreCase e SmartCaSe           *
   " *                                                                        *
   " **************************************************************************
-setlocal ic scs                   "  opÁıes espertas de busca
+setlocal ic scs                   "  op√ß√µes espertas de busca
 
   " **************************************************************************
   " *                                                                        *
-  " *               Cor da numeraÁ„o lateral                                 *
+  " *               Cor da numera√ß√£o lateral                                 *
   " *                                                                        *
   " **************************************************************************
 "hi LineNr     guifg=pink     ctermfg=lightMagenta
@@ -936,13 +936,13 @@ setlocal ic scs                   "  opÁıes espertas de busca
 
 " ****************************************************************************
 " *                                                                          *
-" *          configuraÁıes especiais                                         *
+" *          configura√ß√µes especiais                                         *
 " *                                                                          *
 " ****************************************************************************
 
 "cores
 
-"t_Co n˙mero de cores
+"t_Co n√∫mero de cores
 "t_Sb tipo de cor do plano de fundo
 "t_Sf tipo de cor da fonte
 
@@ -965,24 +965,24 @@ endif
 
   " **************************************************************************
   " * Faz o shift-insert comportar-se semelhante ao Xterm                    *
-  " * Sendo assim vocÍ seleciona um bloco de texto com o mouse               *
-  " * e cola com o bot„o do meio do mouse                                    *
+  " * Sendo assim voc√™ seleciona um bloco de texto com o mouse               *
+  " * e cola com o bot√£o do meio do mouse                                    *
   " **************************************************************************
 map  <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 
   " **************************************************************************
   " *                                                                        *
-  " * Utilizando a barra de espaÁo para mover  uma p·gina                    *
+  " * Utilizando a barra de espa√ßo para mover  uma p√°gina                    *
   " *                                                                        *
   " **************************************************************************
 "noremap <Space> <PageDown>
 
   " **************************************************************************
   " *                                                                        *
-  " * O dicion·rio  de portuguÍs   est· associado ao comando dictionary      *
+  " * O dicion√°rio  de portugu√™s   est√° associado ao comando dictionary      *
   " *                                                                        *
-  " * Dicion·rio para procurar o auto-complemento de palavras                *
+  " * Dicion√°rio para procurar o auto-complemento de palavras                *
   " *                                                                        *
   " *                                                                        *
   " **************************************************************************
@@ -993,19 +993,19 @@ set dictionary=$ICPATHCONF/dict/portugues/portugues.api
 "FUNCOES E MAPEAMENTOS PADROES                                   (VI-IMproved)
 "=============================================================================
 "
-"             -- FunÁıes b·sicas usadas pelo editor vim --
+"             -- Fun√ß√µes b√°sicas usadas pelo editor vim --
 so $ICPATHCONF/func/funcBasicas.vim
 so $ICPATHCONF/func/increment.vim
 so $ICPATHCONF/func/blocos.vim
 "so $ICPATHCONF/func/completingEqualShell.vim
 "
-"             -- Mapeamento das funÁıes e teclas --
+"             -- Mapeamento das fun√ß√µes e teclas --
 so $ICPATHCONF/mapa/mapa.vim
 so $ICPATHCONF/mapa/mapafuncBasicas.vim
 "
 "
 "
-"             -- AbreviaÁıes de palavras --
+"             -- Abrevia√ß√µes de palavras --
 source $ICPATHCONF/abbreviation/acento.vim
 "
 "             -- Lendo Manpage no editor
@@ -1035,7 +1035,7 @@ com -nargs=0 Testacor :let i=0
 	 \|		 if exists('g:colors_name')
 	 \|			call Message('info',g:colors_name.' - '.i)
 	 \|		 else 
-    \|			call Message('Erro',"vari·vel g:colors_name[".i."] n„o definida")
+    \|			call Message('Erro',"vari√°vel g:colors_name[".i."] n√£o definida")
 	 \|		 endif
 	 \|	 endwhile
  
@@ -1066,13 +1066,13 @@ cmap vt Vt
 "=============================================================================
 "A R Q U I V O S  C A R R E G A D O S                            (VI-IMproved)
 "=============================================================================
-" Nessa parte do cÛdigo vamos utilizar um mapeamento do tipo grupo, ou seja,
+" Nessa parte do c√≥digo vamos utilizar um mapeamento do tipo grupo, ou seja,
 " de acordo com o tipo de arquivo vamos carregar determinadas propriedades do
-" mesmo e eliminar propriedades carregadas n„o v·lidas patra os mesmos.
-" Aliviando portanto a ·rea de memÛria utilizada pelo editor e customizando a
+" mesmo e eliminar propriedades carregadas n√£o v√°lidas patra os mesmos.
+" Aliviando portanto a √°rea de mem√≥ria utilizada pelo editor e customizando a
 " velocidade de processamento.
 "
-" Os grupos est„o divididos em 7, sendo os mesmos:
+" Os grupos est√£o divididos em 7, sendo os mesmos:
 "   + grupo pascal
 "   + grupo vim
 "   + grupo algoritmo
@@ -1082,8 +1082,8 @@ cmap vt Vt
 "   + grupo markuplanguage
 
 
-" evento: se o arquivo n„o existe em disco
-" Carrega um cabecalho din‚mico referente as configuraÁıes do tipo de arquivo
+" evento: se o arquivo n√£o existe em disco
+" Carrega um cabecalho din√¢mico referente as configura√ß√µes do tipo de arquivo
 " editado.
 autocmd BufNewFile  *  so $ICPATHCONF/func/cabecalho.vim | call GetHeader()
 
@@ -1091,20 +1091,20 @@ augroup pascal
    au!
 " Os arquivos pascal podem ter o seguinte formato
 " <: (*.pas, *.PAS, *.PP, *.pp, inc, etc.) :>
-"confguraÁ„o: {{{
+"confgura√ß√£o: {{{
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega configuraÁıes pessoais do arquivo, como cores, mapeamento de
-" teclado, tipo de coment·rio e configuraÁ„o de IDE para o Gvim.
+" evento: se o arquivo n√£o existe em disco
+" Carrega configura√ß√µes pessoais do arquivo, como cores, mapeamento de
+" teclado, tipo de coment√°rio e configura√ß√£o de IDE para o Gvim.
    au BufNewFile,BufReadPre *.\(pas\|pp\|inc\)
     		  	\ source $ICPATHCONF/autocom/pascal.autocom.vim
 "
 " evento: lendo arquivo (*O ARQUIVO EXISTE EM DISCO*)
-" posiciona o cursor na primeira ocorrÍncia da palavra 'inÌcio'
+" posiciona o cursor na primeira ocorr√™ncia da palavra 'in√≠cio'
    au BufRead     *.\(pas\|pp\)   1;/begin
 "
-" evento: Entrando e saindo do arquivo  (*O ARQUIVO PODE OU N√O EXISTIR*)
-" ao entrar acrescenta dicion·rio novo, e retira dicion·rio de palavras
+" evento: Entrando e saindo do arquivo  (*O ARQUIVO PODE OU N√ÉO EXISTIR*)
+" ao entrar acrescenta dicion√°rio novo, e retira dicion√°rio de palavras
 " ao sair.
    au BufEnter *.\(pas\|pp\|inc\) call Dicionario()
    au BufEnter *.\(pas\|pp\|inc\) call Dicionario('Liga')
@@ -1115,12 +1115,12 @@ augroup END
 
 augroup VIM
 au!
-" Definindo a configuraÁ„o de arquivos VIM
-"confguraÁ„o: {{{
+" Definindo a configura√ß√£o de arquivos VIM
+"confgura√ß√£o: {{{
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega configuraÁıes pessoais do arquivo, como cores, mapeamento de
-" teclado, tipo de coment·rio e configuraÁ„o de IDE para o Gvim.
+" evento: se o arquivo n√£o existe em disco
+" Carrega configura√ß√µes pessoais do arquivo, como cores, mapeamento de
+" teclado, tipo de coment√°rio e configura√ß√£o de IDE para o Gvim.
    autocmd BufNewFile,BufReadPre *.vim so $ICPATHCONF/autocom/vim.autocom.vim
 "
 " evento: lendo arquivo (*O ARQUIVO EXISTE EM DISCO*)
@@ -1132,12 +1132,12 @@ augroup END
 
 augroup SH
    au!
-" Definindo a configuraÁ„o de arquivos sh
-"confguraÁ„o: {{{
+" Definindo a configura√ß√£o de arquivos sh
+"confgura√ß√£o: {{{
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega configuraÁıes pessoais do arquivo, como cores, mapeamento de
-" teclado, tipo de coment·rio e configuraÁ„o de IDE para o Gsh.
+" evento: se o arquivo n√£o existe em disco
+" Carrega configura√ß√µes pessoais do arquivo, como cores, mapeamento de
+" teclado, tipo de coment√°rio e configura√ß√£o de IDE para o Gsh.
 	autocmd BufNewFile,BufReadPre   *.sh
    			\ so $ICPATHCONF/autocom/sh.autocom.vim
 "}}}
@@ -1145,19 +1145,19 @@ augroup END
 
 augroup algoritmo
    au!
-" Definindo a configuraÁ„o de arquivos algoritmo
-"confguraÁ„o: {{{
+" Definindo a configura√ß√£o de arquivos algoritmo
+"confgura√ß√£o: {{{
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega configuraÁıes pessoais do arquivo, como cores, mapeamento de
-" teclado, tipo de coment·rio e configuraÁ„o de IDE para o Gvim.
+" evento: se o arquivo n√£o existe em disco
+" Carrega configura√ß√µes pessoais do arquivo, como cores, mapeamento de
+" teclado, tipo de coment√°rio e configura√ß√£o de IDE para o Gvim.
    autocmd BufNewFile *.algoritmo  so $ICPATHCONF/autocom/algoritmo.autocom.vim
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega um esqueleto do tipo de arquivo que est· sendo editado. O
-" interessante nesse trexo de cÛdigo È a segunda linha que ilustra como
-" chamar uma funÁ„o ou executar um comando quando um
-" buffer È criado pela primeira vez.
+" evento: se o arquivo n√£o existe em disco
+" Carrega um esqueleto do tipo de arquivo que est√° sendo editado. O
+" interessante nesse trexo de c√≥digo √© a segunda linha que ilustra como
+" chamar uma fun√ß√£o ou executar um comando quando um
+" buffer √© criado pela primeira vez.
    autocmd BufNewFile         *.algoritmo
    	\ 0r $ICPATHCONF/skeleton/algoritmo.skeleton.vim
    autocmd BufNewFile         *.algoritmo
@@ -1165,11 +1165,11 @@ augroup algoritmo
    	\ exe "%s/_DATA_/" . strftime('%d\/%m\/%Y') . "/g"
 "
 " evento: lendo arquivo (*O ARQUIVO EXISTE EM DISCO*)
-" posiciona o cursor na primeira ocorrÍncia da palavra 'inÌcio'
-   autocmd BufRead            *.algoritmo   1;/inÌcio
+" posiciona o cursor na primeira ocorr√™ncia da palavra 'in√≠cio'
+   autocmd BufRead            *.algoritmo   1;/in√≠cio
 "
-" evento: Entrando e saindo do arquivo  (*O ARQUIVO PODE OU N√O EXISTIR*)
-" ao entrar acrescenta dicion·rio novo, e retira dicion·rio de palavras
+" evento: Entrando e saindo do arquivo  (*O ARQUIVO PODE OU N√ÉO EXISTIR*)
+" ao entrar acrescenta dicion√°rio novo, e retira dicion√°rio de palavras
 " ao sair.
    autocmd BufEnter  *.algoritmo   set
    \ dict+=$ICPATHCONF/dict/algoritmo/algoritmo.api
@@ -1180,27 +1180,27 @@ augroup END
 
 augroup MarkupLanguage
    au!
-" Linguagens de marcaÁ„o
+" Linguagens de marca√ß√£o
 " <: (*.htm, *.html, *.xml, *.xhtml,  etc.) :>
-"confguraÁ„o: {{{
+"confgura√ß√£o: {{{
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega configuraÁıes pessoais do arquivo, como cores, mapeamento de
-" teclado, tipo de coment·rio e configuraÁ„o de IDE para o Gvim.
+" evento: se o arquivo n√£o existe em disco
+" Carrega configura√ß√µes pessoais do arquivo, como cores, mapeamento de
+" teclado, tipo de coment√°rio e configura√ß√£o de IDE para o Gvim.
    autocmd BufNewFile,BufReadPre   *.html,*.htm
    			\ so $ICPATHCONF/autocom/html.autocom.vim
    autocmd BufNewFile,BufReadPre   *.xml
    			\ so $ICPATHCONF/autocom/xml.autocom.vim
 "
-" evento: se o arquivo n„o existe em disco
-" Carrega um esqueleto do tipo de arquivo que est· sendo editado
+" evento: se o arquivo n√£o existe em disco
+" Carrega um esqueleto do tipo de arquivo que est√° sendo editado
    autocmd BufNewFile   *.xml  read
         		\ $ICPATHCONF/skeleton/xml.skeleton.vim
 "
-" evento: Entrando e saindo do arquivo  (*O ARQUIVO PODE OU N√O EXISTIR*)
-" ao entrar acrescenta dicion·rio novo, e retira dicion·rio de palavras
+" evento: Entrando e saindo do arquivo  (*O ARQUIVO PODE OU N√ÉO EXISTIR*)
+" ao entrar acrescenta dicion√°rio novo, e retira dicion√°rio de palavras
 " ao sair.
-" remove dicion·rio de portugues
+" remove dicion√°rio de portugues
    au BufEnter *.\<\(xml\)\|\(x\=html\=\)\>,*.js
    			\ set dictionary-=$ICPATHCONF/dict/portugues/portugues.api
 "
@@ -1216,7 +1216,7 @@ augroup MarkupLanguage
    autocmd BufLeave  *.js  set
    			\ dict-=$ICPATHCONF/dict/html/mat.api
 "
-" adiciona dicion·rio de portugues
+" adiciona dicion√°rio de portugues
    au BufLeave *.\<\(xml\)\|\(x\=html\=\)\>,*.js
    			\ set dictionary=$ICPATHCONF/dict/portugues/portugues.api
 
@@ -1226,9 +1226,9 @@ augroup END
   " **************************************************************************
   " * GVIM                                                                   *
   " * ----                                                                   *
-  " *  Manter a compatibilidade de cÛdigo È mais que necess·rio para a       *
-  " *  ediÁ„o com o vim. Dessa forma qualquer mudanca de sistema operacional *
-  " *  n„o ir· alterar o funcionamento do editor.                            *
+  " *  Manter a compatibilidade de c√≥digo √© mais que necess√°rio para a       *
+  " *  edi√ß√£o com o vim. Dessa forma qualquer mudanca de sistema operacional *
+  " *  n√£o ir√° alterar o funcionamento do editor.                            *
   " *                                                                        *
   " **************************************************************************
 if has("gui_running") 
@@ -1237,7 +1237,7 @@ if has("gui_running")
 	set lines=65
 	set columns=120
 	winpos 0 0
-"  definiÁ„o de fonte                                                    
+"  defini√ß√£o de fonte                                                    
 	set guifont=Courier_New:h14:cANSI
 "  set guifont=Courier:h15:cANSI
 
@@ -1260,8 +1260,8 @@ if has("gui_running")
 "-----------------------------------------------------------------------------
 
 
-" A comfiguraÁ„o abaixo garante o funcionamento de programas UNIX dentro 
-" do gvim. Caso esse tipo de configuraÁ„o n„o esja h·bilitada teremos os
+" A comfigura√ß√£o abaixo garante o funcionamento de programas UNIX dentro 
+" do gvim. Caso esse tipo de configura√ß√£o n√£o esja h√°bilitada teremos os
 " seguinte tipos de erros:
 " exemplo:
 " :echo substitute(system('echo "8*9"|bc'),'\n','',"g")
@@ -1305,11 +1305,11 @@ if exists('b:DEBUG_LIB')
 "	imap \DB <c-o>\D1
 endif
 " evento: lendo arquivo (*O ARQUIVO EXISTE EM DISCO*)
-" corrige a o Ìndice do arquivo atual editado
+" corrige a o √≠ndice do arquivo atual editado
 autocmd BufRead  .vimrc   1|call IndicePontoVimrc()
                           \|so $ICPATHCONF/autocom/vim.autocom.vim
 
-"carrega o registro a com o Ìndice do arquivo
+"carrega o registro a com o √≠ndice do arquivo
 autocmd BufRead  .vimrc   map <F5> :27,43p<cr>
 
 
@@ -1323,7 +1323,7 @@ autocmd BufRead  .vimrc   map <F5> :27,43p<cr>
 "A J U D A                                                       (VI-IMproved)
 "=============================================================================
 "
-" Definindo comandos AJUDA e de navegaÁ„o no documento .vimrc
+" Definindo comandos AJUDA e de navega√ß√£o no documento .vimrc
 "
 "
 "             --  C O M A N D O S  D O  U S U A R I O  --
@@ -1347,25 +1347,25 @@ cab cores call AjudaCores()
 "            Publisher: O'Reilly & Associates Inc.
 "
 "
-" Essa È a bÌblia de expressıes regulares, deve ser lido por qualquer um que
+" Essa √© a b√≠blia de express√µes regulares, deve ser lido por qualquer um que
 " deseje se aprimorar com profundidade no assunto.
 "
 "
-"        B. Guia de Expressıes Regulares - by AurÈlio Marinho Jargas
+"        B. Guia de Express√µes Regulares - by Aur√©lio Marinho Jargas
 "           Publisher: NOVATEC Editora Ltda.
 "
 "
-" Esse livro È o passo inicial para qualquer usu·rio LINUX que deseja
+" Esse livro √© o passo inicial para qualquer usu√°rio LINUX que deseja
 " maximizar o potencial de seus comandos comandos de linhas.
 "
 "
-"        C. Apostila CURSO PROGRAMA«√O PROFISSIONAL EM SHELL
-"           Copyright© 2003, 2004 por AurÈlio Marinho Jargas
-"           N∫ Registro na BN: 303.593 Livro: 552 Folha: 253
+"        C. Apostila CURSO PROGRAMA√á√ÉO PROFISSIONAL EM SHELL
+"           Copyright¬© 2003, 2004 por Aur√©lio Marinho Jargas
+"           N¬∫ Registro na BN: 303.593 Livro: 552 Folha: 253
 "
 "
-" Um dos poucos bons livros sobre SHELL em portuguÍs que vai alÈm do
-" b·sico. AlÈm de mostrar algumas tÈcnicas de programadores experientes em
+" Um dos poucos bons livros sobre SHELL em portugu√™s que vai al√©m do
+" b√°sico. Al√©m de mostrar algumas t√©cnicas de programadores experientes em
 " SHELL-SCRIPT
 "
 "
@@ -1373,8 +1373,8 @@ cab cores call AjudaCores()
 "           Publisher: NOVATEC Editora Ltda.
 "
 "
-" Esse È ˙nico livro sobre VI brasileiro. Apesar de n„o enfatizar
-" com profundidade o potencial do VI È imprescindÌvel a leitura do mesmo,
+" Esse √© √∫nico livro sobre VI brasileiro. Apesar de n√£o enfatizar
+" com profundidade o potencial do VI √© imprescind√≠vel a leitura do mesmo,
 " por iniciastes e entusiastas do UNIX.
 "
 "
@@ -1382,7 +1382,7 @@ cab cores call AjudaCores()
 "           Publisher: O'Reilly & Associates Inc.
 "
 "
-" … fundamental a sua leitura para todo aquele que deseja utilizar o Editor
+" √â fundamental a sua leitura para todo aquele que deseja utilizar o Editor
 " VI e seus clones de forma eficiente e produtiva.
 "
 "
@@ -1392,8 +1392,8 @@ cab cores call AjudaCores()
 "            http://www.vim.org/
 "
 "
-" … a principal fonte de atualizaÁıes do editor VIM, alÈm de centenas de
-" exemplos de escripts e tutoriais sobre os mais diversos tÛpicos do editor.
+" √â a principal fonte de atualiza√ß√µes do editor VIM, al√©m de centenas de
+" exemplos de escripts e tutoriais sobre os mais diversos t√≥picos do editor.
 "
 "
 "=============================================================================
@@ -1402,30 +1402,30 @@ cab cores call AjudaCores()
 " Esse arquivo dotfile do VIM foi em quase toda sua plenitude baseado no
 " arquivo .vimrc de Aurelio Marinho Jargas.
 "
-" AurÈlio Marinho Jargas È desenvolvedor de software livre tem dois livros
+" Aur√©lio Marinho Jargas √© desenvolvedor de software livre tem dois livros
 " publicados e escreve com regularidade artigos sobre ferramentas LINUX-like
 " e sobre a comunidade com muito bom humor.
 "
 " Dentre os softwares temos txt2tags, RAC, txt2regex e SedSoKoban
 "
-" Com relaÁ„o aos livros temos O Guia de Expresses Regulares e  Apostila
+" Com rela√ß√£o aos livros temos O Guia de Expresses Regulares e  Apostila
 " do Curso de Shell.
 "
 "SITE:http://aurelio.net/
 "
 "
 " ,----------------[ http://www.del.ufrj/~ivanczar/ ]------------------------.
-" |  1. Sempre que vocÍ pegar um trecho de cÛdigo de alguÈm da comunidade    |
-" |     informe seu nome, site e mail. Pois uma comunidade È construÌda com  |
-" |     boas relaÁıes de seus participantes.                                 |
+" |  1. Sempre que voc√™ pegar um trecho de c√≥digo de algu√©m da comunidade    |
+" |     informe seu nome, site e mail. Pois uma comunidade √© constru√≠da com  |
+" |     boas rela√ß√µes de seus participantes.                                 |
 " |                                                                          |
-" |  2. Desencorajo qualquer cÛpia de documento n„o autorizada pelo autor da |
+" |  2. Desencorajo qualquer c√≥pia de documento n√£o autorizada pelo autor da |
 " |     obra ou editora.                                                     |
 " |                                                                          |
 " |  3. A compra de bons livros de autores nacionais deve ser estimulada pela|
 " |     comunidade. Como o incentivo aos mesmos que continuem a utilizar seu |
-" |     talento e perspic·cia na produÁ„o de livros de qualidade em bom      |
-" |     portuguÍs.                                                           |
+" |     talento e perspic√°cia na produ√ß√£o de livros de qualidade em bom      |
+" |     portugu√™s.                                                           |
 " |                                                                          |
 " |                                                                          |
 " |      Ivan Carlos Da Silva Lopes                                          |
@@ -1445,7 +1445,7 @@ cab cores call AjudaCores()
 " 2. Abrir todos os arquivos que contenham uma determinada palavra.
 " $ vim `fgrep -l <palavra> *.ext`
 "
-" 3. Mapeamento para inserir linha com repetiÁ„o de char
+" 3. Mapeamento para inserir linha com repeti√ß√£o de char
 "    :map - <Esc>o<Esc>78a-<Esc>
 "    :let @q="*"|normal i" 76"qp
 "
@@ -1468,11 +1468,11 @@ cab cores call AjudaCores()
 " 5. Filtrando comandos internos.
 "    Exemplo01:
 "    1,10m$|g/Essas/ p
-"    Exemplo02: move bloco de texto para ˙ltima linha do arquivo e substitui
+"    Exemplo02: move bloco de texto para √∫ltima linha do arquivo e substitui
 "    'Essas' por 'Aquelas' dentro do bloco.
 "    1,10m$|s/Essas/Aquelas/g
 "
-" 6. Contando os padrıes encontrados na ediÁ„o.
+" 6. Contando os padr√µes encontrados na edi√ß√£o.
 "    :let i=0|%g/{padrao}/let i=i+1
 "    :echo i
 "
@@ -1489,13 +1489,13 @@ cab cores call AjudaCores()
 "     |       cab          lc      cuna            cab oi  echo "Oi"
 "     |       --------------------------------------------------------
 "     |
-"     +--------------- n„o È necess·rio <spaÁo> e/ou [enter] apÛs comando.
+"     +--------------- n√£o √© necess√°rio <spa√ßo> e/ou [enter] ap√≥s comando.
 "
 "  n/c - modo normal ou modo de comando
-"  i   - modo de inserÁ„o
+"  i   - modo de inser√ß√£o
 "  lc  - modo de linha de comando
 "  v   - modo visual
-"  R   - ReposiÁ„o
+"  R   - Reposi√ß√£o
 "  B   - Busca
 "
 " sintaxe : comando-Mapeador {key[[key]...]} {comando[s]}
@@ -1504,9 +1504,9 @@ cab cores call AjudaCores()
 "
 " sintaxe:
 " nnoremap    \{nomeExterno}              {comando[s]}
-" {map-modo01} {combinaÁ„o-tecla[s]02}   \{nomeExterno}
-" {map-modo02} {combinaÁ„o-tecla[s]03}   \{nomeExterno}
-" {map-modo03} {combinaÁ„o-tecla[s]04}   \{nomeExterno}
+" {map-modo01} {combina√ß√£o-tecla[s]02}   \{nomeExterno}
+" {map-modo02} {combina√ß√£o-tecla[s]03}   \{nomeExterno}
+" {map-modo03} {combina√ß√£o-tecla[s]04}   \{nomeExterno}
 "
 "        exemplo:
 "           nnoremap \key :let @m="oi gente"<cr>:put m<cr>
@@ -1516,17 +1516,17 @@ cab cores call AjudaCores()
 "  abreviacoes
 "  -----------
 "
-"      ab         - mostra todas as abreviaÁıes
-"      abc[lear]  - limpa todas as abreviaÁıes
-"      iab        - mostra todas as abreviaÁıes do modo de inserÁ„o
-"      iabc[lear] - limpa todas as abreviaÁıes do modo de inserÁ„o
-"      cab        - mostra todas as abreviaÁıes do modo de comando
-"      cabc[lear] - limpa todas as abreviaÁıes do modo de comand
+"      ab         - mostra todas as abrevia√ß√µes
+"      abc[lear]  - limpa todas as abrevia√ß√µes
+"      iab        - mostra todas as abrevia√ß√µes do modo de inser√ß√£o
+"      iabc[lear] - limpa todas as abrevia√ß√µes do modo de inser√ß√£o
+"      cab        - mostra todas as abrevia√ß√µes do modo de comando
+"      cabc[lear] - limpa todas as abrevia√ß√µes do modo de comand
 "
 "
-" 8. MovimentaÁ„o por links:
+" 8. Movimenta√ß√£o por links:
 "
-"  	movimentaÁ„o   '{char}
+"  	movimenta√ß√£o   '{char}
 "  	para linkar    :<range> mark {char}
 "
 " 9. Lendo man page ou help de programas externos:
@@ -1566,7 +1566,7 @@ cab cores call AjudaCores()
 "
 "     - usando Vim-Script:
 "
-"       - com vari·vel
+"       - com vari√°vel
 "             a) let  i=0|'<,'>g/^/let i=i+1|s//\=i/g
 "             b) let  i=0|'a,'eg/^/let i=i+1|s//\=i/g
 "             c) let  i=0|2,200g/^/let i=i+1|s//\=i/g
@@ -1581,7 +1581,7 @@ cab cores call AjudaCores()
 "             b) 's,'qs/^/\=(line('.') - line("'s") + 1)/g"
 "             c) '20,46s/^/\=(line('.') - 20 + 1)/g"
 "
-"       - com minhas prÛprias funcoes
+"       - com minhas pr√≥prias funcoes
 "
 "             a) '<,'>s/^/\=INC(1)/g"
 "
@@ -1633,18 +1633,18 @@ cab cores call AjudaCores()
 "   |     |                 |                                                |
 "   | \@! | Buf\(Read\)\@!  | BufWritePost, BufNewFile, BufWritePre          |
 "   |     |                 |                                                |
-"   |     |                 | siguinificado:casa 'Buf' se 'Buf' n„o for      |
+"   |     |                 | siguinificado:casa 'Buf' se 'Buf' n√£o for      |
 "   |     |                 | sucedido por 'Read'                            |
 "   +~~~~~+~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 "   |     |                 |                                                |
 "   |\@<! | \(Read\)\@<!Post| BufWritePost, FileWritePost, FileAppendPost    |
 "   |     |                 |                                                |
-"   |     |                 | siguinificado:casa 'Post' se 'Post' n„o for    |
+"   |     |                 | siguinificado:casa 'Post' se 'Post' n√£o for    |
 "   |     |                 | precedido por 'Read'                           |
 "   +-----+-----------------+------------------------------------------------+
 "
 "
-" 15. Capturando saÌda de comando externo como string:
+" 15. Capturando sa√≠da de comando externo como string:
 "
 "     let a=system('ls')
 "     echo  matchstr(system('cygpath -m /'), "^.*\\ze\n") . '/'
@@ -1672,7 +1672,7 @@ cab cores call AjudaCores()
 "     set makeprg=gcc\ -o\ $*\ $*
 "     set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 "
-" 17. Fechando blocos de cÛdigo:
+" 17. Fechando blocos de c√≥digo:
 "		let  &foldmarker="if,endif"|echo &foldmarker
 "
 " 18. Isere string em linha especifica:
@@ -1696,14 +1696,14 @@ cab cores call AjudaCores()
 "
 "     por exemplo : n delete 5
 "
-"     ir· deletar as linhas n,n+1,...,n+5
+"     ir√° deletar as linhas n,n+1,...,n+5
 "
 "
-"    tipos de vari·veis
+"    tipos de vari√°veis
 "    ===================
 "
 "   aviso aos navegantes:
-"   &texwidth  È o valor armazenado em texwidth
+"   &texwidth  √© o valor armazenado em texwidth
 "   :set texwidth
 "    78
 "   :let b:a=texwidth      ERRADO
@@ -1719,18 +1719,18 @@ cab cores call AjudaCores()
 "   exe '/\%>' . '12c' . '\&.*' . '\%<18c' . '\&.*' . '\%<10l'
 "
 "
-" 21. gravando o histÛrico da linha de comandos em um arquivo
+" 21. gravando o hist√≥rico da linha de comandos em um arquivo
 " 
 " $fc -l cp > ultimos-comandos vi lastcommands$ source lastcommands
 "  |
 "  |
 "  +------ O comando fc edita o shell com seu editor preferido.
 "
-"  um exemplo interessante È escrever na linha de comando `fc`
+"  um exemplo interessante √© escrever na linha de comando `fc`
 "  $fc
 "  
-"  $fc -s     -- executa o ˙ltimo comando editado na linha de comando
-"  $fc -s gcc -- executa o ˙ltimo comando `gcc` editado na linha de comando
+"  $fc -s     -- executa o √∫ltimo comando editado na linha de comando
+"  $fc -s gcc -- executa o √∫ltimo comando `gcc` editado na linha de comando
 "
 "
 " 22. salvando como
@@ -1746,12 +1746,12 @@ cab cores call AjudaCores()
 "
 ":g/pattern/ .+2 !>> nome_noivo_Arquivo.txt
 "
-"salva as linhas que casarem com a combinaÁo pattern,
+"salva as linhas que casarem com a combina√ßo pattern,
 "sendo assim as mesmas 2 pontos abaixo.
 "
 "
 "
-" 23. AlteraÁ„o em tempo de execuÁ„o  
+" 23. Altera√ß√£o em tempo de execu√ß√£o  
 "
 "  vi -c":%s/include/Bala da GOMA/g"   max.c
 "  
