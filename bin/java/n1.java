@@ -12,9 +12,9 @@ int IDADE=17;
 int MEIO=18;
 
 if ( IDADE < MEIO )
-System.out.println(IDADE + " é menor de idade"); 
+System.out.println(IDADE + " Ã© menor de idade"); 
 else 
-System.out.println(IDADE + " é maior de idade"); 
+System.out.println(IDADE + " Ã© maior de idade"); 
 
 }  //fim main
 }  //fim classe

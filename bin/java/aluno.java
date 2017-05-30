@@ -10,7 +10,7 @@ private float NOTA1, NOTA2, MEDIA;
 void MostraMedia()
 {
     MEDIA=(NOTA1+NOTA2)/2;
-    System.out.println("A média do " + NOME + " é " + MEDIA);
+    System.out.println("A mÃ©dia do " + NOME + " Ã© " + MEDIA);
 }
 
 public static void main(String argv[])

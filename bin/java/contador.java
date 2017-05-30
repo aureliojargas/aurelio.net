@@ -10,7 +10,7 @@ class contador extends Frame
 
 	public contador()
 	{
-	super("título");
+	super("tÃ­tulo");
 	bstart = new Button("Start");
 	bstop  = new Button("Stop");	
 	result = new TextField(10);

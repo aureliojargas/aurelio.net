@@ -1,4 +1,4 @@
-// calcula os par‚metros
+// calcula os par√¢metros
 
 class calcula {
 

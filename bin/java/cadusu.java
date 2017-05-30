@@ -1,8 +1,8 @@
 //Date: Mon, 1 Dec 1997 19:30:53 -0200
 
-//bot„o transparente
+//bot√£o transparente
 //cor de fundo
-// textarea n„o edit·vel
+// textarea n√£o edit√°vel
 
 import java.awt.*;
 import java.applet.*;

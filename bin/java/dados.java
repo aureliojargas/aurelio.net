@@ -23,10 +23,10 @@ for (x=0;x<10;x++)
 			ic++;
 			}
 	if (ic==1)
-	COMB=" combinação ";
+	COMB=" combinaÃ§Ã£o ";
 	else
-	COMB=" combinações";
-   System.out.println("há "+ic+COMB+" de resultado "+r[x]+"\n");
+	COMB=" combinaÃ§Ãµes";
+   System.out.println("hÃ¡ "+ic+COMB+" de resultado "+r[x]+"\n");
 	}
 } 
 }

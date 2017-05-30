@@ -5,5 +5,6 @@ find . \
   -iname "*.html" -or \
   -iname "*.txt"  -or \
   -iname "*.t2t"  -or \
+  -iname "*.java" -or \
   -iname "*.md" |
    xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"

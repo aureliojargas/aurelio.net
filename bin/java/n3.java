@@ -14,7 +14,7 @@ int AREA;
 
 AREA=LARG*COMP;
 
-System.out.println("a area de " + LARG + " x " + COMP + " é " + AREA); 
+System.out.println("a area de " + LARG + " x " + COMP + " Ã© " + AREA); 
 
 }  //fim main
 }  //fim classe

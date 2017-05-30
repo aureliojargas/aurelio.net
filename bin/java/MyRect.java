@@ -1,8 +1,8 @@
 
-// define os pontos de um retângulo
-// usa sobregarga de métodos, métodos de mesmo nome (buildRect)
+// define os pontos de um retÃ¢ngulo
+// usa sobregarga de mÃ©todos, mÃ©todos de mesmo nome (buildRect)
 // que fazem a mesma coisa de maneiras diferentes, diferenciando-se
-// pelo número/tipo dois argumentos lhe passados. 
+// pelo nÃºmero/tipo dois argumentos lhe passados. 
 // Fri Nov 27 21:50:54 WST 1998
 
 import java.awt.Point;
@@ -38,7 +38,7 @@ MyRect buildRect(Point topLeft, int w, int h) {
 }
 
 void printRect() {
-	System.out.print("Meu retângulo:<" + x1 + "," + y1);
+	System.out.print("Meu retÃ¢ngulo:<" + x1 + "," + y1);
 	System.out.println("," + x2 + "," + y2 + ">");
 }
 

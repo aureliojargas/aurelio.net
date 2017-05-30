@@ -1,7 +1,7 @@
 // sex set 11 20:03:02 EST 1998
 // aluno: aurelio marinho jargas
 // turma: 4o 
-// declarar matriz, imprimir ímpares
+// declarar matriz, imprimir Ã­mpares
 
 import java.io.*;
 

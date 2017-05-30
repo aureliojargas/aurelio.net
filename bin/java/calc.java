@@ -21,7 +21,7 @@ else if ( op == 2 )
           else if ( op == 4 )
                   res =calcula.multiplica(num1,num2);
 
-System.out.println("o resultado é: " + res);
+System.out.println("o resultado Ã©: " + res);
 
 } // fim main
 } // fim class

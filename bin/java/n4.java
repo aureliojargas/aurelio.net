@@ -3,9 +3,9 @@
 // turma: 4o 
 // declarar salarios na matriz
 //
-// prof. talvez eu n„o tenha entendido bem o proposto,
+// prof. talvez eu n√£o tenha entendido bem o proposto,
 // o que fiz foi um programa que testa o valor do
-// sal·rio e o armazena numa posiÁ„o da matriz prÛpria
+// sal√°rio e o armazena numa posi√ß√£o da matriz pr√≥pria
 // para cada porcentagem.
 //    matriz[0] = 25%
 //    matriz[1] = 20%

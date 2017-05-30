@@ -8,8 +8,8 @@ private String NOME, CODIGO, PROFESSOR;
 
 void MostraProfessor()
 {
-    System.out.println("O prof. da matéria \"" + CODIGO + "-" + NOME +
-    "\" é " + PROFESSOR);
+    System.out.println("O prof. da matÃ©ria \"" + CODIGO + "-" + NOME +
+    "\" Ã© " + PROFESSOR);
 }
 
 public static void main(String argv[])
