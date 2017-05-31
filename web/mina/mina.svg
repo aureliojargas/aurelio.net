@@ -10,12 +10,12 @@
 
      SVG + CSS + Javascript!
 
-     - o SVG é quem define os elementos (rect e text)
-     - o CSS cuida a aparência deste elementos (cores, bordas)
-     - o Javascript manipula estes elementos (ações, decisões)
+     - o SVG Ã© quem define os elementos (rect e text)
+     - o CSS cuida a aparÃªncia deste elementos (cores, bordas)
+     - o Javascript manipula estes elementos (aÃ§Ãµes, decisÃµes)
 
-     O jogo é o que menos importa, o objetivo deste arquivo é estudar
-     estas tecnologias e a praticar a integração entre elas.
+     O jogo Ã© o que menos importa, o objetivo deste arquivo Ã© estudar
+     estas tecnologias e a praticar a integraÃ§Ã£o entre elas.
 
      Abra em um navegador com suporte a SVG, como o Firefox.
 -->
@@ -171,9 +171,9 @@ function cellClicked(thisCell) {
      repetitivas de <rect> e <text>, mas a ideia aqui eh estudar SVG e
      assim fica mais facil entender o codigo.
 
-     Atenção! Se deixar espaços em branco ou quebras de linha entre as
+     AtenÃ§Ã£o! Se deixar espaÃ§os em branco ou quebras de linha entre as
      tags, tipo "<g><rect></g> <g><rect></g>" vai ser criado um
-     elemento #text para o espaço.
+     elemento #text para o espaÃ§o.
 -->
 
 <g id="board"><g>

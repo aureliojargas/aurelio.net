@@ -18,7 +18,7 @@
 #    Achei em adm-sistemas-I.sxw
 #
 #
-# TODO -x pesquisa nas tags XML também
+# TODO -x pesquisa nas tags XML tambem
 # TODO -i case insensitive
 
 tmpdir=/tmp/lixo.$$                     # paranoicos: usem mktemp

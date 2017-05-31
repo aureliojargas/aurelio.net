@@ -1,34 +1,34 @@
 DVD - sistema de Distribuidora Virtual de fitas Demo
 ----------------------------------------------------
-       aurÈlio marinho jargas <verde (a) aurelio net>
+       aur√©lio marinho jargas <verde (a) aurelio net>
 
 
 
-DESCRI«√O
+DESCRI√á√ÉO
 
-projeto final do curso de tecnÛlogo em processamento de dados na
-faculdade ESEEI. … uma empresa virtual de vendas on-line demonstrando
-a independÍncia entre camadas (Three-Tear), com banco de dados, CGI e
+projeto final do curso de tecn√≥logo em processamento de dados na
+faculdade ESEEI. √â uma empresa virtual de vendas on-line demonstrando
+a independ√™ncia entre camadas (Three-Tear), com banco de dados, CGI e
 interface WWW (Postgres, Php e Apache).
 
 
 FUNCIONAMENTO
 
-as bandas cadastram seus dados e ganham uma p·gina na internet.
-Clientes acessam as p·ginas e se gostaram da banda, fazem o pedido da
-fita demo, que ser· enviada pelo correio.
+as bandas cadastram seus dados e ganham uma p√°gina na internet.
+Clientes acessam as p√°ginas e se gostaram da banda, fazem o pedido da
+fita demo, que ser√° enviada pelo correio.
 
 
 !!IMPORTANTE!!
 
-eu fiz esse projeto em 2000, apresentei ‡ banca, e depois nunca mais
-mexi. n„o posso garantir que ainda esteja funcionando.
+eu fiz esse projeto em 2000, apresentei √† banca, e depois nunca mais
+mexi. n√£o posso garantir que ainda esteja funcionando.
 
 QUALQUER UM pode pegar esse sistema e fazer o que bem entender com
-ele, mas atenÁ„o: SE VIRE.
+ele, mas aten√ß√£o: SE VIRE.
 
-n„o vou dar suporte porque nem lembro mais como ele funciona &:)
-e infelizmente a documentaÁ„o dele que eu tinha estava no meu
+n√£o vou dar suporte porque nem lembro mais como ele funciona &:)
+e infelizmente a documenta√ß√£o dele que eu tinha estava no meu
 computador que foi roubado &:(
 
-dica: o coraÁ„o dele s„o os arquivos lib*.
+dica: o cora√ß√£o dele s√£o os arquivos lib*.

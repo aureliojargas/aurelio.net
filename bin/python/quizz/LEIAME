@@ -1,59 +1,59 @@
-20010820 aurélio <aurelio@verde666.org>
+20010820 aurÃ©lio <aurelio@verde666.org>
 
 
 quizz - um software educacional
 -------------------------------
 
-o quizz é uma reescrita do /usr/games/quiz (bsdgames), um
+o quizz Ã© uma reescrita do /usr/games/quiz (bsdgames), um
 programa de perguntas e respostas, para aprender e testar
 conhecimentos sobre diversos assuntos.
 
-suas vantagens em relação ao original são:
+suas vantagens em relaÃ§Ã£o ao original sÃ£o:
 
-- pontuação
+- pontuaÃ§Ã£o
 - modo guru
 - facilidade de criar outras modalidades (contribua!)
 
 
-atualmente tem três modalidades:
+atualmente tem trÃªs modalidades:
 - sed
-- multiplicação
-- antônimos (em inglês)
+- multiplicaÃ§Ã£o
+- antÃ´nimos (em inglÃªs)
 
 
 modo normal:
-- três chances, se errar todas a resposta certa é mostrada.
-- se responder em branco, é considera desistência e a resposta é
+- trÃªs chances, se errar todas a resposta certa Ã© mostrada.
+- se responder em branco, Ã© considera desistÃªncia e a resposta Ã©
   mostrada
 - se acertar na primeira tentativa ganha mais pontos do que se
   acertar na terceira
-- 10 perguntas (aleatórias), total de 100 pontos possíveis
+- 10 perguntas (aleatÃ³rias), total de 100 pontos possÃ­veis
 
 modo guru:
-- TODAS as perguntas são feitas
-- qualquer erro é fatal e encerra o quiz
-- você deve acertar todas de primeira pra fazer 100%
+- TODAS as perguntas sÃ£o feitas
+- qualquer erro Ã© fatal e encerra o quiz
+- vocÃª deve acertar todas de primeira pra fazer 100%
 
 
-o formato dos arquivos de dados é bem simples e a idéia é que se criem
-outras modalidades facilmente. as respostas válidas (pode ter mais de
+o formato dos arquivos de dados Ã© bem simples e a idÃ©ia Ã© que se criem
+outras modalidades facilmente. as respostas vÃ¡lidas (pode ter mais de
 uma) podem ser cadastradas como:
 
-- string normal                       (espaço,espaço,texto)
-- string case-insensitive             (vírgula,espaço,texto)
-- expressão regular                   (ponto,espaço,texto)
-- expressão regular case-insensitive  (ponto-e-vírgula,espaço,texto)
+- string normal                       (espaÃ§o,espaÃ§o,texto)
+- string case-insensitive             (vÃ­rgula,espaÃ§o,texto)
+- expressÃ£o regular                   (ponto,espaÃ§o,texto)
+- expressÃ£o regular case-insensitive  (ponto-e-vÃ­rgula,espaÃ§o,texto)
 
 
 
 COMO USAR
 
-ele deve ser executado passando-se o arquivo que contém a base de
+ele deve ser executado passando-se o arquivo que contÃ©m a base de
 dados:
 
     ./quizz sed.qzz
 
-o modo guru é chamado assim:
+o modo guru Ã© chamado assim:
 
     ./quizz --guru antonimos.qzz
 

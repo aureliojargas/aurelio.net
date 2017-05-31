@@ -29,10 +29,10 @@ while [ "$1" ]; do
 		     # *) geometry=+50+50  ; wmark=misc/marca-dagua-300.png;;
 	
 	
-# foto 400x300, marca d'água de 200x
+# foto 400x300, marca d'Ã¡gua de 200x
 #	composite -quality 90 -geometry +185+263 \
 
-# foto 520x390, marca d'água de 300x
+# foto 520x390, marca d'Ã¡gua de 300x
 #	width=$(identify $indir/$infile | cut -d' ' -f3 | cut -d+ -f1)
 #	case $width in
 #		520x390) geometry=+195+340;;

@@ -1,6 +1,6 @@
 #!/bin/sh
 # showlink
-# 19991012 <verde (a) aurelio net> ** 1a versใo
+# 19991012 <verde (a) aurelio net> ** 1st version
 #
 # a bash+find+egrep+sed utility to webdesigners.
 # showlink shows all kind of links on a web site.
@@ -54,7 +54,7 @@ EGREP_PATT='href='
 
 # this filter parses the egrep output to only extract the
 # link itself: the string beetween the "".
-EGREP_FILTER="sง\(^[^:]*\):.*href=\"[    ]*\([^ \"]*\)[  ]*\".*ง\1$D\2ง"
+EGREP_FILTER="sยง\(^[^:]*\):.*href=\"[    ]*\([^ \"]*\)[  ]*\".*ยง\1$D\2ยง"
 
 # this filter is the action related to the option passed on
 # the command line. here is the "sedmagic". 'p' is the default,
@@ -69,22 +69,22 @@ if [ "${OPT#-}" != "$OPT2" ]
 then OPT=-$OPT2
      D='^' 
      EGREP_OPTS='-is' 
-     EGREP_FILTER="sง^.*href=\"[     ]*\([^ \"]*\)[  ]*\".*ง\1ง"
+     EGREP_FILTER="sยง^.*href=\"[     ]*\([^ \"]*\)[  ]*\".*ยง\1ยง"
 fi
 
 
 # sedmagics here!
 case $OPT in
   -a|--all  ) :                                       ;; # it uses the defaults
-  -c|--chk  ) SEDMAGIC="\ง${D}/[^/]งp"                ;; # TODO: more checks
-  -d|--dir  ) SEDMAGIC="\ง${D}[^.#]\+$งp"             ;;
-  -e|--email) SEDMAGIC="\ง${D}mailto:งp"              ;;
-  -f|--ftp  ) SEDMAGIC="\ง${D}ftp://งp"               ;;
-  -h|--http ) SEDMAGIC="\ง${D}http://งp"              ;;
-  -i|--image) SEDMAGIC='\ง\.\(jpg\|gif\|png\|bmp\)$งp';;
-  -m|--music) SEDMAGIC='\ง\.\(ra\|rm\|mp3\|wav\)$งp'  ;;
-  -p|--page ) SEDMAGIC='\ง#งp'                        ;;
-  -z|--zero ) SEDMAGIC='\ง???งp'                      ;;
+  -c|--chk  ) SEDMAGIC="\ยง${D}/[^/]ยงp"                ;; # TODO: more checks
+  -d|--dir  ) SEDMAGIC="\ยง${D}[^.#]\+$ยงp"             ;;
+  -e|--email) SEDMAGIC="\ยง${D}mailto:ยงp"              ;;
+  -f|--ftp  ) SEDMAGIC="\ยง${D}ftp://ยงp"               ;;
+  -h|--http ) SEDMAGIC="\ยง${D}http://ยงp"              ;;
+  -i|--image) SEDMAGIC='\ยง\.\(jpg\|gif\|png\|bmp\)$ยงp';;
+  -m|--music) SEDMAGIC='\ยง\.\(ra\|rm\|mp3\|wav\)$ยงp'  ;;
+  -p|--page ) SEDMAGIC='\ยง#ยงp'                        ;;
+  -z|--zero ) SEDMAGIC='\ยง???ยงp'                      ;;
            *) Usage                                   ;;
 esac
 

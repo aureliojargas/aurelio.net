@@ -2,10 +2,10 @@
 # 20010815 <verde@verde666.org> 
 
 # TIPS:
-* responda como se a opção -n não existisse (sempre imprime)
-* não colocar espaços em branco entre comandos
+* responda como se a opÃ§Ã£o -n nÃ£o existisse (sempre imprime)
+* nÃ£o colocar espaÃ§os em branco entre comandos
 
-### endereçamento
+### endereÃ§amento
 apagar a primeira linha
   1d
   2,$!d
@@ -14,9 +14,9 @@ mostrar apenas a primeira linha
   1q
   1!d
   2,$d
-apagar a última linha
+apagar a Ãºltima linha
   $d
-apagar as três primeiras linhas
+apagar as trÃªs primeiras linhas
   1,3d
   4,$!d
 mostrar apenas as sete primeiras linhas
@@ -26,22 +26,22 @@ mostrar apenas as sete primeiras linhas
 apagar todas as linhas em branco
   /^$/d
   /./!d
-apagar da linha "verde" até a última linha
+apagar da linha "verde" atÃ© a Ãºltima linha
   /verde/,$d
 imprimir apenas a linha 25
   25!d
   25q;d
   1,24d;25,4d
-imprimir até a primeira linha em branco
+imprimir atÃ© a primeira linha em branco
   /^$/q
   1,/^$/!d
 apagar o bloco de linhas entre "verde" e "amarelo", inclusive
   /verde/,/amarelo/d
-mostrar apenas linhas que contenham números
+mostrar apenas linhas que contenham nÃºmeros
   /[0-9]/!d
   /^[^0-9]*$/d
-apagar as linhas que contenham "água"
-  /água/d
+apagar as linhas que contenham "Ã¡gua"
+  /Ã¡gua/d
 substituir oi por tchau na linha 3
   3s/oi/tchau/
 # pegadinhas de escapes
@@ -49,17 +49,17 @@ remover todos os colchetes []
   s/[][]//g
   s/\[//g;s/]//g
   s/\[//g;s/\]//g
-apagar todos os trechos entre parênteses (), inclusive
+apagar todos os trechos entre parÃªnteses (), inclusive
   s/([^)]*)//g
-colocar todos os números entre colchetes []
+colocar todos os nÃºmeros entre colchetes []
   s/[0-9]\+/[&]/g
   s/[0-9][0-9]*/[&]/g
-# começo e fim de linha
-apagar as 3 últimos caracteres da linha
+# comeÃ§o e fim de linha
+apagar as 3 Ãºltimos caracteres da linha
   s/...$//
   s/.\{3\}$//
   s/\(.*\)...$/\1/
-mostrar apenas os 3 últimos caracteres da linha
+mostrar apenas os 3 Ãºltimos caracteres da linha
   s/.*\(...\)$/\1/
   s/.*\(.\{3\}\)$/\1/
 apagar os 3 primeiros caracteres da linha
@@ -69,48 +69,48 @@ apagar os 3 primeiros caracteres da linha
 mostrar apenas os 3 primeiros caracteres da linha
   s/^\(...\).*/\1/
   s/^\(.\{3\}\).*/\1/
-inserir um # no começo de cada linha
+inserir um # no comeÃ§o de cada linha
   s/^/#/
   s/.*/#&/
-mostrar linhas que começam com letras maiúsculas
+mostrar linhas que comeÃ§am com letras maiÃºsculas
   /^[A-Z]/!d
   /^[^A-Z]/d
-colocar um @ no final de linhas que começam com "email"
+colocar um @ no final de linhas que comeÃ§am com "email"
   /^email/s/$/@/
   s/^email.*/&@/
-apagar o 5º caractere de cada linha
+apagar o 5Âº caractere de cada linha
   s/.//5
   s/^\(....\)./\1/
   s/^\(.\{4\}\)./\1/
-# espaço reserva
-guardar as linhas "fone:" no espaço reserva
+# espaÃ§o reserva
+guardar as linhas "fone:" no espaÃ§o reserva
   /fone:/H
-guardar a primeira linha "fone:" no espaço reserva
+guardar a primeira linha "fone:" no espaÃ§o reserva
   1,/fone:/{/fone:/h;}
-trocar a linha 25 pelo conteúdo do espaço reserva
+trocar a linha 25 pelo conteÃºdo do espaÃ§o reserva
   25g
-colocar no final da linha 25 o conteúdo do espaço reserva
+colocar no final da linha 25 o conteÃºdo do espaÃ§o reserva
   25{G;s/\n//;}
 mostrar linhas com mais de 40 caracteres
   /^.\{41\}/!d
 apagar linhas com mais de 40 caracteres
   /^.\{41\}/d
-inverter de lugar todos os números entre dois-pontos (n:m -> m:n)
+inverter de lugar todos os nÃºmeros entre dois-pontos (n:m -> m:n)
   s/\([0-9]\+\):\([0-9]\+\)/\2:\1/
 trocar "verde" ou "amarelo" por "azul", sempre
   s/verde\|amarelo/azul/g
   s/verde/azul/g;s/amarelo/azul/g
-substituir o primeiro "verde" por "amarelo", menos nas linhas que contém "azul"
+substituir o primeiro "verde" por "amarelo", menos nas linhas que contÃ©m "azul"
   /azul/!s/verde/amarelo/
-trocar vários espaços em branco seguidos por um só
+trocar vÃ¡rios espaÃ§os em branco seguidos por um sÃ³
   s/ \+/ /g
   s/  */ /g
-mostrar o número de linhas do arquivo
+mostrar o nÃºmero de linhas do arquivo
   $=;d
-incrementar em uma unidade cada dígito de um número
+incrementar em uma unidade cada dÃ­gito de um nÃºmero
   y/0123456789/1234567890/
-apagar a 4ª ocorrência de "hoje" em cada linha
+apagar a 4Âª ocorrÃªncia de "hoje" em cada linha
   s/hoje//4
-juntar as 4 primeiras linhas numa só, apagando a quebra de linha
+juntar as 4 primeiras linhas numa sÃ³, apagando a quebra de linha
   1{N;N;N;s/\n//g;}
   1,3{N;s/\n//;}'

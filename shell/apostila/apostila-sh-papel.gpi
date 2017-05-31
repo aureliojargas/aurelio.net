@@ -1,14 +1,14 @@
 ### apostila-sh-papel.gpi
 ### 
-### Arquivo de comandos do gnuplot para gerar este gr·fico:
+### Arquivo de comandos do gnuplot para gerar este gr√°fico:
 ### http://aurelio.net/shell/apostila/vendas-papel.png
 ###
-### Os dados originais est„o no arquivo "plot.dat", no formato:
+### Os dados originais est√£o no arquivo "plot.dat", no formato:
 ###
 ###      YYYY-MM NN
 ###
-### um registro por linha, onde YYYY È o ano, MM È o mÍs e
-### NN È o n˙mero de exemplares vendidos naquele mÍs. Exemplo:
+### um registro por linha, onde YYYY √© o ano, MM √© o m√™s e
+### NN √© o n√∫mero de exemplares vendidos naquele m√™s. Exemplo:
 ###
 ###      2001-07 60
 ###      2001-08 96
@@ -16,7 +16,7 @@
 ###      2001-10 46
 ###      ...
 ###
-### Para gerar o gr·fico:
+### Para gerar o gr√°fico:
 ###
 ###      $ gnuplot apostila-sh-papel.gpi
 ###
@@ -24,21 +24,21 @@
 ###
 
 
-### define o tÌtulo do gr·fico
+### define o t√≠tulo do gr√°fico
 set title "Vendas da Apostila de Shell Profissional IMPRESSA"
 
 ### define o nome do eixo Y
 set ylabel "Unidades Vendidas (69)"
 
-### define o estilo do gr·fico: barras
+### define o estilo do gr√°fico: barras
 set boxwidth 0.9 relative
 set style fill solid 1.0
 set style data boxes
 
-### n„o mostra o comando no canto superior direito
+### n√£o mostra o comando no canto superior direito
 set nokey
 
-### indica que o eixo X È composto por datas
+### indica que o eixo X √© composto por datas
 set xdata time
 
 ### define os limites dos eixos X e Y
@@ -51,13 +51,13 @@ set grid ytics
 ### indica o formato original da data
 set timefmt "%Y-%m"
 
-### define o formato da data no gr·fico
+### define o formato da data no gr√°fico
 set format x "%b/%y"
 
-### define o nome e tipo do arquivo de saÌda
+### define o nome e tipo do arquivo de sa√≠da
 set output "vendas-papel.png"
 set terminal png
 set size 0.75,0.75
 
-### plota o gr·fico, usando as duas primeiras colunas de dados
+### plota o gr√°fico, usando as duas primeiras colunas de dados
 plot "plot.dat" using 1:2

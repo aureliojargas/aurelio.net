@@ -13,9 +13,9 @@ PATT=$1; shift
 
 grep -His -e "$PATT" "$@" |
   sed "h
-       s§^[^:]*:§§                             
-       s§$PATT§$C_PATT&$C_NORM§gi
+       sÂ§^[^:]*:Â§Â§                             
+       sÂ§$PATTÂ§$C_PATT&$C_NORMÂ§gi
        x
-       s§^\\([^:]*\\):.*§$C_FILE\\1$C_NORM:§
+       sÂ§^\\([^:]*\\):.*Â§$C_FILE\\1$C_NORM:Â§
        G
-       s§\\n§§"
+       sÂ§\\nÂ§Â§"

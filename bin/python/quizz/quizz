@@ -10,8 +10,8 @@
 
 # sed:
 # TODO info sobre o .qzz pra ser mostrada antes das perguntas?
-# como se -n n„o existisse
-# n„o colocar espaÁos em branco entre comandos
+# como se -n n√£o existisse
+# n√£o colocar espa√ßos em branco entre comandos
 
 import re, sys, os, readline, getopt
 from time import time
@@ -220,7 +220,7 @@ def gameover(score):
 ###############################################################################
 
 
-# sorting≥
+# sorting¬≥
 sources.sort(randsort)
 sources.sort(randsort)
 sources.sort(randsort)

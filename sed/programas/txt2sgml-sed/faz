@@ -1,6 +1,6 @@
 #!/bin/sh
-# faz - genÈrico
-# 20001127 <verde (a) aurelio net> ** 1a vers„o
+# faz - gen√©rico
+# 20001127 <verde (a) aurelio net> ** 1a vers√£o
 
 [ ! "$1" ] && echo prog arq.txt && exit 1
 

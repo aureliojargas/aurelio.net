@@ -4,7 +4,7 @@
 #echo 2006-04/26/index.html | while read file; do
 find . -type f -name index.html | grep ^..200 | while read file; do
 	if grep -qsr 'Praia de Matinhos' $file; then
-		echo "Ads j· colocados em $file"
+		echo "Ads j√° colocados em $file"
 		continue
 	fi
 	cp $file $file.tmp
