@@ -2,14 +2,14 @@
 #
 # sm2.sed - 20000713 <verde (a) aurelio net>
 #
-# minha tentaiva de fazer a máquina de estatos do carlos duarte
-# colocando o identificador no começo da linha, ao invés de usar uma
+# minha tentaiva de fazer a mÃ¡quina de estatos do carlos duarte
+# colocando o identificador no comeÃ§o da linha, ao invÃ©s de usar uma
 # linha sobresalente, mas cheguei num ponto que tinha que gastar o
-# hold space e também como eu iria utilizar apenas um caractere para
-# identificar, perderia o histórico dos estados, que existe na
-# máquina original.
+# hold space e tambÃ©m como eu iria utilizar apenas um caractere para
+# identificar, perderia o histÃ³rico dos estados, que existe na
+# mÃ¡quina original.
 #
-# não deu certo. quem sabe outro dia...
+# nÃ£o deu certo. quem sabe outro dia...
 # 
 #
 # first state : 0

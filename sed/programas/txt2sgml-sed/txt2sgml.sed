@@ -1,39 +1,39 @@
 #!/bin/sed -nf
 # txt2sgml.sed <verde (a) aurelio net>
-# conversor de texto para SGML padrão linuxdoc
-# 20000816 ** 1a versão
-# 20000821 ++ rodapé dentro da lista de itens, hífen permitido nos títulos
+# conversor de texto para SGML padrÃ£o linuxdoc
+# 20000816 ** 1a versÃ£o
+# 20000821 ++ rodapÃ© dentro da lista de itens, hÃ­fen permitido nos tÃ­tulos
 # 20000823 ++ verb, ref, section com label
-# 20000825 ++ cabeçalho intrínseco
-# 20000913 ++ pseudo-funções de cabeçalho e rodapé
+# 20000825 ++ cabeÃ§alho intrÃ­nseco
+# 20000913 ++ pseudo-funÃ§Ãµes de cabeÃ§alho e rodapÃ©
 # 20010112 **
-# <> referências: _LINK_ -> ^LINK^, aspas trocadas por crases '' -> ``
+# <> referÃªncias: _LINK_ -> ^LINK^, aspas trocadas por crases '' -> ``
 # <> itens de lista agora: -, + e = (trocado * por =)
-# <> destaques não valem dentro de palavras, devem estar isolados 
-# <> números permitidos nas section
-# ++ cabeçalho agora lido também do .txt, **strong** (negrito+itálico)
-# ++ _sublinhado_ (desativado) e //itálico//
+# <> destaques nÃ£o valem dentro de palavras, devem estar isolados 
+# <> nÃºmeros permitidos nas section
+# ++ cabeÃ§alho agora lido tambÃ©m do .txt, **strong** (negrito+itÃ¡lico)
+# ++ _sublinhado_ (desativado) e //itÃ¡lico//
 # ++ news adicionado na parte de URL
 # 20010514 ++ ~comando~
-# ++ linha de título permite acentos, dois pontos e barra
+# ++ linha de tÃ­tulo permite acentos, dois pontos e barra
 
 # TODO botar help binhara
 
-# INFORMAÇÕES SOBRE O CABEÇALHO
+# INFORMAÃ‡Ã•ES SOBRE O CABEÃ‡ALHO
 #
-# a primeira linha do documento determina como o cabeçalho, com as
-# informações do título, autor e data do documento, será feito.
-# caso a 1ª linha:
-#   - tiver nada além de um asterisco, o cabeçalho será inteiro lido
-#     do arquivo _cabecalho.sgml (formatação e informações)
-#   - começar com um asterisco (*) e tiver mais coisas além dele, as
-#     informações do cabeçalho são obtidas do próprio documento, no
+# a primeira linha do documento determina como o cabeÃ§alho, com as
+# informaÃ§Ãµes do tÃ­tulo, autor e data do documento, serÃ¡ feito.
+# caso a 1Âª linha:
+#   - tiver nada alÃ©m de um asterisco, o cabeÃ§alho serÃ¡ inteiro lido
+#     do arquivo _cabecalho.sgml (formataÃ§Ã£o e informaÃ§Ãµes)
+#   - comeÃ§ar com um asterisco (*) e tiver mais coisas alÃ©m dele, as
+#     informaÃ§Ãµes do cabeÃ§alho sÃ£o obtidas do prÃ³prio documento, no
 #     seguinte formato:
-#       * título do documento
+#       * tÃ­tulo do documento
 #       * nome do autor
-#       * data/verão do documento
-#   - não começe com asterisco (*), o cabeçalho é gerado pelo próprio
-#     conversor, na função :cabeca3 abaixo
+#       * data/verÃ£o do documento
+#   - nÃ£o comeÃ§e com asterisco (*), o cabeÃ§alho Ã© gerado pelo prÃ³prio
+#     conversor, na funÃ§Ã£o :cabeca3 abaixo
 #    
 1{
   /^\*./b cabeca1
@@ -42,13 +42,13 @@
 }  
 
 
-# daqui até o :ini, são pseudo-funções que só serão executadas caso
+# daqui atÃ© o :ini, sÃ£o pseudo-funÃ§Ãµes que sÃ³ serÃ£o executadas caso
 # chamadas no meio do programa
 b ini
 
 
 :cabeca1
-  # busca informações do cabeçalho nas primeiras linhas do documento
+  # busca informaÃ§Ãµes do cabeÃ§alho nas primeiras linhas do documento
   # caso elas comecem imediatamente com asterisco (*)
   s/^\*\+ */<!doctype linuxdoc system>\n<article>\n<title>/p
   n
@@ -61,25 +61,25 @@ b ini
 b ini
 
 :cabeca2
-  # lê o cabeçalho inteiro do arquivo _cabecalho.sgml
-  # este arquivo deve estar no diretório atual de execução
+  # lÃª o cabeÃ§alho inteiro do arquivo _cabecalho.sgml
+  # este arquivo deve estar no diretÃ³rio atual de execuÃ§Ã£o
   r _cabecalho.sgml
 b ini
 
 :cabeca3
-  # imprime o cabeçalho e continua o processamento
+  # imprime o cabeÃ§alho e continua o processamento
   # o texto abaixo pode ser livremente editado, mas lembre de SEMPRE
-  # terminar a linha com uma \, menos a última, antes do 'b ini'
+  # terminar a linha com uma \, menos a Ãºltima, antes do 'b ini'
   i\
 <!doctype linuxdoc system>\
 <article>\
-<title>o título deste documento\
+<title>o tÃ­tulo deste documento\
 <author>nome do autor, <tt/email@dominio.com.br/\
 <date>v0.1 20001231
 b ini
 
 :rodape
-  # imprime o rodapé e aborta o programa
+  # imprime o rodapÃ© e aborta o programa
   p
   a\
 \
@@ -96,7 +96,7 @@ s/&/\&amp;/g
 s/</\&lt;/g
 s/>/\&gt;/g
 
-# texto pré-formatado
+# texto prÃ©-formatado
 /^=--/{
   s||<p><verb>|
 
@@ -109,14 +109,14 @@ s/>/\&gt;/g
   bz
 }
 
-# comentários
+# comentÃ¡rios
 /^ *\/\//d
 
-# TABs e linhas em branco são palhas
+# TABs e linhas em branco sÃ£o palhas
 s|\t\+| |g
 s|^ *$||g
 
-# linhas separadoras são inúteis (depois podem virar HR???)
+# linhas separadoras sÃ£o inÃºteis (depois podem virar HR???)
 /^ *[-=+_]\+ *$/d
 
 # apagando linhas em branco consecutivas
@@ -127,17 +127,17 @@ s|^ *$||g
 }
 
 # sections
-# PALAVRA MAIÚSCULA   :0
-#  PALAVRA MAIÚSCULA  :1
-#   PALAVRA MAIÚSCULA :2 ...
+# PALAVRA MAIÃšSCULA   :0
+#  PALAVRA MAIÃšSCULA  :1
+#   PALAVRA MAIÃšSCULA :2 ...
 #
-# LEMBRE-SE: sincronizar ER ^referências^
+# LEMBRE-SE: sincronizar ER ^referÃªncias^
 #
 #old: /^ *[[:upper:]][-: [:upper:]]\+$/{
 # [:upper:] is NOT locale aware
-#^ *[[:upper:][:blank:]0-9:/ÇÃÓÁÕÊÉ-]\+[^[:blank:]/-]$'
-#/^ *[[:upper:]][0-9ÇÃÁÀÂÊÍÕÓÚ[:upper:]]*\([[:blank:]:/-]\+[[:upper:]ÇÃÁÀÂÊÍÕÓÚ0-9]\+\)*$/{
-/^ *[[:upper:]][0-9ÇÃÁÀÂÉÊÍÕÓÚ[:upper:]]*\([[:blank:]:/-][^[:blank:]:/-]\+\)*$/{
+#^ *[[:upper:][:blank:]0-9:/Ã‡ÃƒÃ“ÃÃ•ÃŠÃ‰-]\+[^[:blank:]/-]$'
+#/^ *[[:upper:]][0-9Ã‡ÃƒÃÃ€Ã‚ÃŠÃÃ•Ã“Ãš[:upper:]]*\([[:blank:]:/-]\+[[:upper:]Ã‡ÃƒÃÃ€Ã‚ÃŠÃÃ•Ã“Ãš0-9]\+\)*$/{
+/^ *[[:upper:]][0-9Ã‡ÃƒÃÃ€Ã‚Ã‰ÃŠÃÃ•Ã“Ãš[:upper:]]*\([[:blank:]:/-][^[:blank:]:/-]\+\)*$/{
   s|^[^ ]|<sect>&|
   s|^    |<sect4>|
    s|^   |<sect3>|
@@ -146,10 +146,10 @@ s|^ *$||g
 
   s|^\(<sect1\?>\)\(.*\) *$|\1\2 <label id="\2">|
   
-  ## tratamento para deixar os títulos em minúsculas - não gostei
-  ## guardando cópia e deixando os títulos em minúsculas
+  ## tratamento para deixar os tÃ­tulos em minÃºsculas - nÃ£o gostei
+  ## guardando cÃ³pia e deixando os tÃ­tulos em minÃºsculas
   #h
-  #y|ABCDEFGHIJKLMNOPQRSTUVWXYZÁÀÃÂÉÊÍÓÕÚÇÑ|abcdefghijklmnopqrstuvwxyzáàãâéêíóõúçñ|
+  #y|ABCDEFGHIJKLMNOPQRSTUVWXYZÃÃ€ÃƒÃ‚Ã‰ÃŠÃÃ“Ã•ÃšÃ‡Ã‘|abcdefghijklmnopqrstuvwxyzÃ¡Ã Ã£Ã¢Ã©ÃªÃ­Ã³ÃµÃºÃ§Ã±|
   #
   ## caso sect ou sect1, coloca label
   #/^<sect1\?>/{
@@ -163,14 +163,14 @@ s|^ *$||g
   
   s|^|\n|
 
-  ## tratamento para permitir título sem linha em branco depois e
-  ## evitar o <p>\n<p> no sgml. não vale a pena o trabalho...
+  ## tratamento para permitir tÃ­tulo sem linha em branco depois e
+  ## evitar o <p>\n<p> no sgml. nÃ£o vale a pena o trabalho...
   #s|$|\n<p>|; N; s| *\n$||;
   #
-  ## se for um título seguido de linha em branco, acaba aqui
+  ## se for um tÃ­tulo seguido de linha em branco, acaba aqui
   #/<p>$/bz
   # 
-  ## deixando apenas a última linha para continuar o processamento
+  ## deixando apenas a Ãºltima linha para continuar o processamento
   #h; s/\n[^\n]\+$//; p; g; s|.*\n||; b ini
   #
   bz
@@ -192,10 +192,10 @@ s|^ *$||g
 # - listas
 #   + de itens
 #     = e sublistas
-# - contínuas
+# - contÃ­nuas
 #
 #
-# - ou também
+# - ou tambÃ©m
 #   +listas inacabadas
 #
 
@@ -212,7 +212,7 @@ s|^ *$||g
     H; N; s|^\n *||; /^$/b fimlista1
   }
 
-  # começo da lista2
+  # comeÃ§o da lista2
   /^+ /{
 
     # primeiro item da lista2
@@ -229,7 +229,7 @@ s|^ *$||g
     # caso lista1
     /^- /b fimlista2
 
-    # começo da lista3
+    # comeÃ§o da lista3
     /^= /{
 
       # primeiro item da lista3
@@ -246,16 +246,16 @@ s|^ *$||g
       # caso lista[12] sai do loop
       /^[+-] /b fimlista3
 
-      # itens intermediários da lista3
+      # itens intermediÃ¡rios da lista3
       s|^= |<item>|
 
       # identando
       s|^|  |
 
-      # guardando, avançando e voltando ao início
+      # guardando, avanÃ§ando e voltando ao inÃ­cio
       H; n; b lista3
 
-      # fecha lista3 e volta à lista2
+      # fecha lista3 e volta Ã  lista2
       :fimlista3
       /^$/{
         x; s|$|  </itemize>\n|; x; b fimlista2
@@ -263,16 +263,16 @@ s|^ *$||g
         x; s|$|\n  </itemize>|; x; b lista2
     }
 
-    # itens intermediários da lista2
+    # itens intermediÃ¡rios da lista2
     s|^+ |<item>|
 
     # identando
     s|^| |
 
-    # guardando, avançando e voltando ao início
+    # guardando, avanÃ§ando e voltando ao inÃ­cio
     H; n; b lista2
 
-    # fecha lista2 e volta à lista1
+    # fecha lista2 e volta Ã  lista1
     :fimlista2
     /^$/{
       x; s|$| </itemize>\n|; x; b fimlista1
@@ -280,14 +280,14 @@ s|^ *$||g
       x; s|$|\n </itemize>|; x; b lista1
   }
 
-  # itens intermediários da lista
+  # itens intermediÃ¡rios da lista
   s|^- |<item>|
 
-  # guardando, avançando e voltando ao início
+  # guardando, avanÃ§ando e voltando ao inÃ­cio
   H; n; b lista1
 
   :fimlista1
-  # guardando a última linha
+  # guardando a Ãºltima linha
   H
 
   # descarregando todas as linhas da(s) lista(s)
@@ -304,31 +304,31 @@ s|^ *$||g
 }
 
 
-# destaques (negrito, itálico, fonte fixa)
-# se quiser evitá-los, descomente a linha abaixo (pode dar problemas nos links)
+# destaques (negrito, itÃ¡lico, fonte fixa)
+# se quiser evitÃ¡-los, descomente a linha abaixo (pode dar problemas nos links)
 #b links
 
 # `comandos` (fonte fixa)
 s|`\([^`]\+\)`|<tt><bf>\1</bf></tt>|g
 s|~\([^~]\+\)~|<tt><bf>\1</bf></tt>|g
 
-# **strong** (negrito+itálico)
+# **strong** (negrito+itÃ¡lico)
 s|\*\*\([^*\n]\+\)\*\*|<bf><em>\1</em></bf>|g
 
 # *negrito*
 s|\*\([^*\n]\+\)\*|<bf>\1</bf>|g
 
-# TODO sublinhado (não sei a tag SGML)
+# TODO sublinhado (nÃ£o sei a tag SGML)
 #s|\([^[:alnum:]_]\)_\([^_]\+\)_\([^[:alnum:]_]\)|\1<em>\2</em>\3|g
 
-# "ênfase" (itálico)
+# "Ãªnfase" (itÃ¡lico)
 s|"[^"]\+"|<em>&</em>|g
 
-# //itálico//
+# //itÃ¡lico//
 s|\([^[:alnum:]/]\)//\([^/]\+\)//\([^[:alnum:]/]\)|\1<em>\2</em>\3|g
 
 :links
-# referências para o próprio documento
+# referÃªncias para o prÃ³prio documento
 # LEMBRE-SE: sincronizar com a ER da section
 # old: s|\<_\([[:upper:]][-: [:upper:]]\+\)_\>|<ref id="\1" name="\1">|g
 s|\([^[:alnum:]^]\)^\([[:upper:]0-9]\+\([[:blank:]-]\+[[:upper:]0-9]\+\)*\)^\([^[:alnum:]^]\)|\1<ref id="\2" name="\2">\3|g
@@ -340,7 +340,7 @@ s|\<[A-Za-z0-9_.-]\+@[A-Za-z0-9_.-]\+\>|<htmlurl url="mailto:&" name="&">|g
 
 
 :z
-# se for a última linha, imprime o rodapé
+# se for a Ãºltima linha, imprime o rodapÃ©
 $b rodape
 
 p

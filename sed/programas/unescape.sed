@@ -1,14 +1,14 @@
 #!/bin/sed -f
 # unescape.sed - traduz os escapes hexadecimais para ascii
 #
-#   útil para converter para texto legível por humanos as tripas
-#   que os navegadores fazem com o conteúdo de formulários
+#   Ãºtil para converter para texto legÃ­vel por humanos as tripas
+#   que os navegadores fazem com o conteÃºdo de formulÃ¡rios
 #
 # IMPORTANTE! \n \r \t: sed >= 3.02.80
 #
-# 20000706 <verde (a) aurelio net> ** 1a versão
+# 20000706 <verde (a) aurelio net> ** 1a versÃ£o
 
-# tem que ser o primeiro para não confundir com + literais
+# tem que ser o primeiro para nÃ£o confundir com + literais
 s/+/ /g
 
 # quebra de linha (lynx %0d, netscape %0D)
@@ -21,7 +21,7 @@ s/%09/\t/g
 #s/%09/	/g
 
 
-# substituições padrão hexa->ascii
+# substituiÃ§Ãµes padrÃ£o hexa->ascii
 s/%21/!/g
 s/%22/"/g
 s/%23/#/g
@@ -48,101 +48,101 @@ s/%7B/{/g
 s/%7C/|/g
 s/%7D/}/g
 s/%7E/~/g
-s/%A1/¡/g
-s/%A2/¢/g
-s/%A3/£/g
-s/%A4/¤/g
-s/%A5/¥/g
-s/%A6/¦/g
-s/%A7/§/g
-s/%A8/¨/g
-s/%A9/©/g
-s/%AA/ª/g
-s/%AB/«/g
-s/%AC/¬/g
-s/%AD/­/g
-s/%AE/®/g
-s/%AF/¯/g
-s/%B0/°/g
-s/%B1/±/g
-s/%B2/²/g
-s/%B3/³/g
-s/%B4/´/g
-s/%B5/µ/g
-s/%B6/¶/g
-s/%B7/·/g
-s/%B8/¸/g
-s/%B9/¹/g
-s/%BA/º/g
-s/%BB/»/g
-s/%BC/¼/g
-s/%BD/½/g
-s/%BE/¾/g
-s/%BF/¿/g
-s/%C0/À/g
-s/%C1/Á/g
-s/%C2/Â/g
-s/%C3/Ã/g
-s/%C4/Ä/g
-s/%C5/Å/g
-s/%C6/Æ/g
-s/%C7/Ç/g
-s/%C8/È/g
-s/%C9/É/g
-s/%CA/Ê/g
-s/%CB/Ë/g
-s/%CC/Ì/g
-s/%CD/Í/g
-s/%CE/Î/g
-s/%CF/Ï/g
-s/%D0/Ð/g
-s/%D1/Ñ/g
-s/%D2/Ò/g
-s/%D3/Ó/g
-s/%D4/Ô/g
-s/%D5/Õ/g
-s/%D6/Ö/g
-s/%D7/×/g
-s/%D8/Ø/g
-s/%D9/Ù/g
-s/%DA/Ú/g
-s/%DB/Û/g
-s/%DC/Ü/g
-s/%DD/Ý/g
-s/%DE/Þ/g
-s/%DF/ß/g
-s/%E0/à/g
-s/%E1/á/g
-s/%E2/â/g
-s/%E3/ã/g
-s/%E4/ä/g
-s/%E5/å/g
-s/%E6/æ/g
-s/%E7/ç/g
-s/%E8/è/g
-s/%E9/é/g
-s/%EA/ê/g
-s/%EB/ë/g
-s/%EC/ì/g
-s/%ED/í/g
-s/%EE/î/g
-s/%EF/ï/g
-s/%F0/ð/g
-s/%F1/ñ/g
-s/%F2/ò/g
-s/%F3/ó/g
-s/%F4/ô/g
-s/%F5/õ/g
-s/%F6/ö/g
-s/%F7/÷/g
-s/%F8/ø/g
-s/%F9/ù/g
-s/%FA/ú/g
-s/%FB/û/g
-s/%FC/ü/g
-s/%FD/ý/g
-s/%FE/þ/g
-s/%FF/ÿ/g
+s/%A1/Â¡/g
+s/%A2/Â¢/g
+s/%A3/Â£/g
+s/%A4/Â¤/g
+s/%A5/Â¥/g
+s/%A6/Â¦/g
+s/%A7/Â§/g
+s/%A8/Â¨/g
+s/%A9/Â©/g
+s/%AA/Âª/g
+s/%AB/Â«/g
+s/%AC/Â¬/g
+s/%AD/Â­/g
+s/%AE/Â®/g
+s/%AF/Â¯/g
+s/%B0/Â°/g
+s/%B1/Â±/g
+s/%B2/Â²/g
+s/%B3/Â³/g
+s/%B4/Â´/g
+s/%B5/Âµ/g
+s/%B6/Â¶/g
+s/%B7/Â·/g
+s/%B8/Â¸/g
+s/%B9/Â¹/g
+s/%BA/Âº/g
+s/%BB/Â»/g
+s/%BC/Â¼/g
+s/%BD/Â½/g
+s/%BE/Â¾/g
+s/%BF/Â¿/g
+s/%C0/Ã€/g
+s/%C1/Ã/g
+s/%C2/Ã‚/g
+s/%C3/Ãƒ/g
+s/%C4/Ã„/g
+s/%C5/Ã…/g
+s/%C6/Ã†/g
+s/%C7/Ã‡/g
+s/%C8/Ãˆ/g
+s/%C9/Ã‰/g
+s/%CA/ÃŠ/g
+s/%CB/Ã‹/g
+s/%CC/ÃŒ/g
+s/%CD/Ã/g
+s/%CE/ÃŽ/g
+s/%CF/Ã/g
+s/%D0/Ã/g
+s/%D1/Ã‘/g
+s/%D2/Ã’/g
+s/%D3/Ã“/g
+s/%D4/Ã”/g
+s/%D5/Ã•/g
+s/%D6/Ã–/g
+s/%D7/Ã—/g
+s/%D8/Ã˜/g
+s/%D9/Ã™/g
+s/%DA/Ãš/g
+s/%DB/Ã›/g
+s/%DC/Ãœ/g
+s/%DD/Ã/g
+s/%DE/Ãž/g
+s/%DF/ÃŸ/g
+s/%E0/Ã /g
+s/%E1/Ã¡/g
+s/%E2/Ã¢/g
+s/%E3/Ã£/g
+s/%E4/Ã¤/g
+s/%E5/Ã¥/g
+s/%E6/Ã¦/g
+s/%E7/Ã§/g
+s/%E8/Ã¨/g
+s/%E9/Ã©/g
+s/%EA/Ãª/g
+s/%EB/Ã«/g
+s/%EC/Ã¬/g
+s/%ED/Ã­/g
+s/%EE/Ã®/g
+s/%EF/Ã¯/g
+s/%F0/Ã°/g
+s/%F1/Ã±/g
+s/%F2/Ã²/g
+s/%F3/Ã³/g
+s/%F4/Ã´/g
+s/%F5/Ãµ/g
+s/%F6/Ã¶/g
+s/%F7/Ã·/g
+s/%F8/Ã¸/g
+s/%F9/Ã¹/g
+s/%FA/Ãº/g
+s/%FB/Ã»/g
+s/%FC/Ã¼/g
+s/%FD/Ã½/g
+s/%FE/Ã¾/g
+s/%FF/Ã¿/g
         
-# tem que ser o último para não bagunçar os hexadecimais
+# tem que ser o Ãºltimo para nÃ£o bagunÃ§ar os hexadecimais
 s/%25/%/g

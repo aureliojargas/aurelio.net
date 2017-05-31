@@ -1,6 +1,6 @@
 #!/bin/sed -nf
 # arkanoid.sed - 20020709 - http://sed.sf.net/sedgames
-#   by aurélio marinho jargas <aurelio@verde666.org>
+#   by aurelio marinho jargas <aurelio@verde666.org>
 #
 # arkanoid: a paddle that bounces a ball (pong!) to destroy blocks
 #
@@ -257,7 +257,7 @@ y/RLUD/rlud/
 # holded ball, no move
 /o.\{20\}~/b end
 
-### LET´S MOVE IT!
+### LET'S MOVE IT!
 
 # reached top: do bounce changing Y-direction
 /_\(.\{20\}\)o/y/u/d/

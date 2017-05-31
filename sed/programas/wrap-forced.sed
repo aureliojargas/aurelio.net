@@ -9,14 +9,14 @@
 # quebrando a linha exatamente na coluna especificada
 #
 # c1: na primeira linha do texto...
-# c2: laÁo para colocar todas as linhas em 1 linha apenas
-# c3: isto È para eliminar espaÁos em branco repetidos
-#     vocÍ pode coment·-lo se n„o quiser alter·-los
-# c4: dica: tire o espaÁo da 2™ parte do comando s para
-#     apagar todos os espaÁos (parece arte ascii &:) )
-# c5: aqui È quem quebra a linha na coluna especificada
-#     mude o 25 para o n˙mero que vocÍ quiser
-#     o gnu-sed >= 3.02.80 È necess·rio por causa do \n
+# c2: la√ßo para colocar todas as linhas em 1 linha apenas
+# c3: isto √© para eliminar espa√ßos em branco repetidos
+#     voc√™ pode coment√°-lo se n√£o quiser alter√°-los
+# c4: dica: tire o espa√ßo da 2¬™ parte do comando s para
+#     apagar todos os espa√ßos (parece arte ascii &:) )
+# c5: aqui √© quem quebra a linha na coluna especificada
+#     mude o 25 para o n√∫mero que voc√™ quiser
+#     o gnu-sed >= 3.02.80 √© necess√°rio por causa do \n
 #
 # 20000726 <verde (a) aurelio net> 
 
