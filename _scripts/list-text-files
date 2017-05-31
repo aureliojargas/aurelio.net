@@ -1,0 +1,7 @@
+#!/bin/bash
+# List all the text files in the current repository folder,
+# omitting binaries such as images and PDFs.
+
+# https://stackoverflow.com/a/24350112/1623438
+# Search for the empty string (always matches) in all text files (-I)
+git grep --cached -l -I ''
