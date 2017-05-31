@@ -1,6 +1,5 @@
 ---
 date: 2011-04-15
-permalink: wordpress/remover-campos-formulario-comentarios/
 title: 'WordPress: Como remover campos do formulário de comentários'
 ---
 

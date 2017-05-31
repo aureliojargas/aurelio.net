@@ -1,6 +1,5 @@
 ---
 date: 2012-05-16
-permalink: wordpress/comment-meta-orfaos/
 title: 'WordPress: Remover dados órfãos da tabela wp_commentmeta'
 ---
 

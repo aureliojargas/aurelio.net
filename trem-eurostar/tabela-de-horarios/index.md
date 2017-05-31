@@ -1,7 +1,6 @@
 ---
 date: 2011-08-25
 layout: 2013-page
-permalink: trem-eurostar/tabela-de-horarios/
 title: 'Trem Eurostar: Tabela de horários'
 ---
 

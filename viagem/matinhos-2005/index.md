@@ -1,7 +1,6 @@
 ---
 date: 2005-02-09
 layout: 2013-page
-permalink: viagem/matinhos-2005/
 title: Férias e Surfe em Matinhos - PR
 title_prefix: 'EU FUI: '
 ---

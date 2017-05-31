@@ -1,6 +1,5 @@
 ---
 date: 2012-04-12
-permalink: wordpress/jetpack-sharing-posicao/
 title: 'WordPress: Jetpack: Mudar a posição dos botões de compartilhamento (sharing)'
 ---
 

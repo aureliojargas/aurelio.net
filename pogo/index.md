@@ -2,7 +2,6 @@
 date: 2005-01-15
 title: Roda de Pogo – A Dança Punk
 hide_tags: true
-permalink: pogo/
 ---
 
 Há mais de 10 anos fui assistir o meu primeiro show punk e desde então sou um freqüentador assíduo (às vezes nem tanto) de shows de punkrock e hardcore em Curitiba.

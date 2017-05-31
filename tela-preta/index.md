@@ -4,7 +4,6 @@ tags: [screencast, tela-preta]
 hide_ads: true
 hide_byline: true
 hide_read_more: true
-permalink: tela-preta/
 worked: 5:00
 ---
 

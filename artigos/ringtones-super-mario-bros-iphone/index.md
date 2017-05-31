@@ -1,6 +1,5 @@
 ---
 date: 2012-05-11
-permalink: artigos/ringtones-super-mario-bros-iphone/
 title: Toques (ringtones) do Super Mario Bros no iPhone e iPad
 hide_tags: true
 ---

@@ -1,6 +1,5 @@
 ---
 date: 2012-04-12
-permalink: wordpress/twentyten/remover-rodape-form/
 title: 'WordPress: Remover a mensagem "Você pode usar estas tags e atributos de HTML"'
 ---
 

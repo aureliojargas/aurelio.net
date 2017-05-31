@@ -7,7 +7,6 @@ hide_read_more: true
 hide_share: true
 hide_ads: true
 hide_tags: true
-permalink: texto-do-leitor/
 ---
 
 Este é o espaço para você escrever o que quiser.

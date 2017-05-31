@@ -1,7 +1,6 @@
 ---
 date: 2001-01-26
 layout: 2013-page
-permalink: viagem/farol-imbituba/
 title: Farol de Santa Marta à Imbituba - SC
 title_prefix: 'EU FUI: '
 ---

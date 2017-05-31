@@ -1,6 +1,5 @@
 ---
 date: 2012-08-17
-permalink: artigos/notebook-suporte-pvc/
 title: Suporte para notebook 13" feito com cano de PVC
 hide_tags: true
 ---

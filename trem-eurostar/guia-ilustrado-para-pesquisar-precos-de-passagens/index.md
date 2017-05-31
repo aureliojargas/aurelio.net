@@ -1,7 +1,6 @@
 ---
 date: 2011-08-25
 layout: 2013-page
-permalink: trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/
 title: 'Trem Eurostar: Guia ilustrado para pesquisar preços de passagens'
 ---
 

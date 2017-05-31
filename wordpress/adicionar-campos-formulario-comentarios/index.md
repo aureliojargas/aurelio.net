@@ -1,6 +1,5 @@
 ---
 date: 2011-04-15
-permalink: wordpress/adicionar-campos-formulario-comentarios/
 title: 'WordPress: Como adicionar campos no formulário de comentários'
 ---
 

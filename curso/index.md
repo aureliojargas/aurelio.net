@@ -1,5 +1,4 @@
 ---
-permalink: curso/
 title: Cursos e palestras de Aurelio Jargas
 title_prefix: ""
 hide_byline: true

@@ -1,7 +1,6 @@
 ---
 date: 2011-04-06
 title: Dicas de WordPress
-permalink: wordpress/
 hide_date: true
 hide_comments: true
 hide_read_more: true

@@ -1,6 +1,5 @@
 ---
 date: 2011-04-07
-permalink: wordpress/site-estatico/
 title: Site estático e WordPress juntos na raiz do domínio
 ---
 

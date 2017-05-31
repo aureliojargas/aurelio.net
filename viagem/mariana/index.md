@@ -2,7 +2,6 @@
 author: aurelio+mog
 date: 2007-11-01
 layout: 2013-page
-permalink: viagem/mariana/
 title: Mariana - MG
 title_prefix: 'EU FUI: '
 ---

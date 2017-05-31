@@ -1,6 +1,5 @@
 ---
 date: 2012-05-16
-permalink: wordpress/revisoes-remover-desativar/
 title: 'WordPress: Remover e desativar revisões de posts'
 ---
 

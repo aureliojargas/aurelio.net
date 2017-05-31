@@ -1,7 +1,6 @@
 ---
 date: 2008-01-01
 layout: 2013-page
-permalink: viagem/forte/
 title: Praia do Forte - São Francisco do Sul - SC
 title_prefix: 'EU FUI: '
 ---

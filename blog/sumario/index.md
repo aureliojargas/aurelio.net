@@ -7,7 +7,6 @@ hide_tags: true
 hide_read_more: true
 hide_share: true
 hide_comments: true
-permalink: blog/sumario/
 ---
 
 <style>

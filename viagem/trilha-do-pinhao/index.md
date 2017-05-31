@@ -1,7 +1,6 @@
 ---
 date: 2001-06-30
 layout: 2013-page
-permalink: viagem/trilha-do-pinhao/
 title: Trilha do Pinhão - PR (Jipe 4×4)
 title_prefix: 'EU FUI: '
 ---

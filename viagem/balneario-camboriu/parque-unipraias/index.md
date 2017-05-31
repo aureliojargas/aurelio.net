@@ -1,7 +1,6 @@
 ---
 date: 2012-04-29
 layout: 2013-page
-permalink: viagem/balneario-camboriu/parque-unipraias/
 title: Teleférico (bondinho) Camboriú-Laranjeiras - Parque Unipraias - SC
 title_prefix: 'EU FUI: '
 ---

@@ -1,7 +1,6 @@
 ---
 date: 2012-04-12
 title: Artigos
-permalink: artigos/
 hide_date: true
 hide_comments: true
 hide_read_more: true

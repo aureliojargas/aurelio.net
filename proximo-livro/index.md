@@ -6,7 +6,6 @@ hide_read_more: true
 hide_share: true
 hide_ads: true
 hide_tags: true
-permalink: proximo-livro/
 ---
 
 Já escrevi um livro sobre [expressões regulares](http://www.piazinho.com.br) e outro sobre [shell script](http://www.shellscript.com.br).

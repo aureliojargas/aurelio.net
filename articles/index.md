@@ -1,7 +1,6 @@
 ---
 layout: 2013-articles
 title: Articles
-permalink: articles/
 hide_comments: true
 hide_date: true
 hide_content: true

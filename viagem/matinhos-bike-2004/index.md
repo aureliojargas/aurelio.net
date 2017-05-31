@@ -1,7 +1,6 @@
 ---
 date: 2004-11-14
 layout: 2013-page
-permalink: viagem/matinhos-bike-2004/
 title: De Curitiba até Matinhos de Bicicleta (120 Km pedalando)
 title_prefix: 'EU FUI: '
 ---

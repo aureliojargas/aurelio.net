@@ -1,6 +1,5 @@
 ---
 date: 2012-05-16
-permalink: wordpress/comment-meta-akismet/
 title: 'WordPress: Remover dados do Akismet da tabela wp_commentmeta'
 ---
 

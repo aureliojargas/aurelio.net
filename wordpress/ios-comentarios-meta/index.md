@@ -1,6 +1,5 @@
 ---
 date: 2012-07-10
-permalink: wordpress/ios-comentarios-meta/
 title: 'WordPress para iOS: Mostrar campos adicionais (meta) nos comentários'
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2011-08-25
 layout: 2013-page
-permalink: trem-eurostar/tabela-de-precos-tarifas/
 title: 'Trem Eurostar: Tabela de preços (tarifas)'
 ---
 
