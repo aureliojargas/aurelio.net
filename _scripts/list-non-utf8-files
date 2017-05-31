@@ -4,18 +4,9 @@
 # Command to fix everything:
 # _scripts/list-non-utf8-files | while read file; do echo $file; iconv -f iso-8859-1 -t utf-8 $file > foo; cat foo > $file; rm foo; done
 
-find . \
-  -iname "*.html" -or \
-  -iname "*.css"  -or \
-  -iname "*.js"   -or \
-  -iname "*.txt"  -or \
-  -iname "*.t2t"  -or \
-  -iname "*.java" -or \
-  -iname "*.phps" -or \
-  -iname "*.py"   -or \
-  -iname "*.sh"   -or \
-  -iname "*.sql"  -or \
-  -iname "*.vim"  -or \
-  -iname "*.moin" -or \
-  -iname "*.md" |
-   xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+_scripts/list-text-files |
+  xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
