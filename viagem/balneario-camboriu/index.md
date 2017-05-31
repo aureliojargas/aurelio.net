@@ -3,7 +3,6 @@ date: 2012-04-29
 layout: 2013-page
 title: Balneário Camboriú - SC
 title_prefix: 'EU FUI: '
-permalink: viagem/balneario-camboriu/
 ---
 
 Em abril de 2012, passamos um ótimo final de semana em Balneário Camboriú.

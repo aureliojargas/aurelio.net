@@ -1,7 +1,6 @@
 ---
 date: 2000-03-01
 title: 'Expressões Regulares: Como "farejar" um texto e aumentar a produtividade'
-permalink: regex/rdl-regex-1.html
 hide_comments: true
 hide_tags: true
 hide_ads: true

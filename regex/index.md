@@ -2,7 +2,6 @@
 date: 2016-02-28
 title_prefix: 'Portal brasileiro de '
 title: Expressões Regulares
-permalink: regex/
 hide_date: true
 hide_comments: true
 hide_read_more: true

@@ -1,7 +1,6 @@
 ---
 date: 2000-03-01
 title: 'Expressões Regulares: Respostas dos exercícios Revista do Linux'
-permalink: regex/rdl-regex-1-respostas.html
 hide_comments: true
 hide_tags: true
 hide_ads: true

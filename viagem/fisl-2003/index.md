@@ -1,7 +1,6 @@
 ---
 date: 2003-06-05
 layout: 2013-page
-permalink: viagem/fisl-2003/
 title: IV Fórum Internacional do Software Livre (FISL 2003) - Porto Alegre - RS
 title_prefix: 'EU FUI: '
 #subtitle: 5, 6 e 7 de Junho de 2003, Porto Alegre - RS

@@ -12,14 +12,6 @@ name: Aurelio.net
 url: http://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
 
-### permalink
-# This config is valid for posts only.
-# But you can use it in individual pages YAML.
-#
-# /blog/2009/04/29/slap-chop/index.html
-permalink: /blog/:year/:month/:day/:title/
-# permalink: /:title
-
 ### Syntax Highlight
 highlighter: rouge  # Default since Jekyll 3.0
 
@@ -52,6 +44,13 @@ defaults:
     values:
       layout: "2014"
       author: aurelio
+  -
+    scope:  # all posts
+      path: ""
+      type: posts
+    values:
+      # /blog/2009/04/29/slap-chop/index.html
+      permalink: /blog/:year/:month/:day/:title/
   -
     scope:
       path: "curso"

@@ -1,7 +1,6 @@
 ---
 date: 2000-07-01
 title: 'Expressões Regulares: Conhecendo as ferramentas complementares'
-permalink: regex/rdl-regex-2.html
 hide_comments: true
 hide_tags: true
 hide_ads: true

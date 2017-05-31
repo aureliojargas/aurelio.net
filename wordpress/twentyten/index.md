@@ -1,7 +1,6 @@
 ---
 date: 2011-12-03
 title: 'WordPress: Dicas para o tema Twenty Ten'
-permalink: wordpress/twentyten/
 hide_date: true
 hide_comments: true
 hide_read_more: true
