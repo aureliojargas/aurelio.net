@@ -23,43 +23,43 @@
 Software Livre
 
 %size 7
-Experiências de um Desenvolvedor
+ExperiÃªncias de um Desenvolvedor
 
 %font "normal",size 6,fore "white"
-Aurélio Marinho Jargas
+AurÃ©lio Marinho Jargas
 
 %font "normal", size 5
 
 %page
 
-Conteúdo da Palestra
+ConteÃºdo da Palestra
 
 	
 %cont, fore "green"
 Parte 1:
 %cont, fore "white"
- O que é ser um desenvolvedor de Software Livre
+ O que Ã© ser um desenvolvedor de Software Livre
 %font "normal", size 5
 
 	
 %cont, fore "green"
 Parte 2:
 %cont, fore "white"
- Como criar e lançar um Software Livre
+ Como criar e lanÃ§ar um Software Livre
 %font "normal", size 5
 
 	
 %cont, fore "green"
 Parte 3:
 %cont, fore "white"
- Os Detalhes Que Fazem a Diferença
+ Os Detalhes Que Fazem a DiferenÃ§a
 %font "normal", size 5
 
 	
 %cont, fore "green"
 Parte 4:
 %cont, fore "white"
- Experiência recente: RAC
+ ExperiÃªncia recente: RAC
 
 %page
 
@@ -67,21 +67,21 @@ O Palestrante
 
 	
 %cont, fore "green"
-Experiência:
+ExperiÃªncia:
 %cont, fore "white"
- Desenvolvedor de Software Livre há 4 anos
+ Desenvolvedor de Software Livre hÃ¡ 4 anos
 %font "normal", size 5
 
 	
 %cont, fore "green"
 Programas:
 %cont, fore "white"
- Funções ZZ, txt2regex, txt2tags, sedsed, SedSokoban
+ FunÃ§Ãµes ZZ, txt2regex, txt2tags, sedsed, SedSokoban
 %font "normal", size 5
 
 	
 %cont, fore "green"
-Distribuições:
+DistribuiÃ§Ãµes:
 %cont, fore "white"
  Conectiva, Debian, FreeBSD, Knoppix, Gentoo e Fink
 %font "normal", size 5
@@ -108,7 +108,7 @@ GNU:
 
 %page
 
-O que é ser um desenvolvedor de Software Livre
+O que Ã© ser um desenvolvedor de Software Livre
 
 
 
@@ -117,7 +117,7 @@ O que é ser um desenvolvedor de Software Livre
 
 %page
 
-Características do Desenvolvedor
+CaracterÃ­sticas do Desenvolvedor
 
 	Programa nas horas vagas
 %font "normal", size 5
@@ -131,17 +131,17 @@ Características do Desenvolvedor
 	Quer ter seu trabalho reconhecido
 %font "normal", size 5
 
-	Não tem tempo de ver novela, navegar na Internet e dormir até tarde
+	NÃ£o tem tempo de ver novela, navegar na Internet e dormir atÃ© tarde
 
 %page
 
-A Minha Experiência
+A Minha ExperiÃªncia
 
 	
 %cont, font "mono"
 Fev/2000
 %cont, font "normal"
-: funções ZZ (
+: funÃ§Ãµes ZZ (
 %cont, fore "green"
 Shell, nacional, parceria, +40
 %cont, fore "white"
@@ -165,7 +165,7 @@ Jul/2001
 %cont, font "normal"
 : txt2tags (
 %cont, fore "green"
-Python, GNU, colaboração
+Python, GNU, colaboraÃ§Ã£o
 %cont, fore "white"
 )
 %font "normal", size 5
@@ -176,7 +176,7 @@ Dez/2001
 %cont, font "normal"
 : sedsed (
 %cont, fore "green"
-Python, uma idéia, 5 linhas
+Python, uma idÃ©ia, 5 linhas
 %cont, fore "white"
 )
 %font "normal", size 5
@@ -204,7 +204,7 @@ C, parceria++
 
 %page
 
-O Ritmo Frenético de Atualizações
+O Ritmo FrenÃ©tico de AtualizaÃ§Ãµes
 
 
 %font "mono", size 3
@@ -227,7 +227,7 @@ TOTAL | 3 |12 | 9 | 5 | 6 | 8 | 6 | 6 | 3 | 4 | 9 | 8 |  79
 
 Qual a Recompensa?
 
-	Satisfação pessoal
+	SatisfaÃ§Ã£o pessoal
 %font "normal", size 5
 
 	Amigos e contatos 
@@ -240,14 +240,14 @@ Qual a Recompensa?
 	Oportunidades
 %font "normal", size 5
 
-	Experiência, currículo
+	ExperiÃªncia, currÃ­culo
 %font "normal", size 5
 
 	Dinheiro!
 
 %page
 
-Como criar e lançar Software Livre
+Como criar e lanÃ§ar Software Livre
 
 
 
@@ -258,7 +258,7 @@ Como criar e lançar Software Livre
 
 O Ciclo de Vida de um Programa
 
-	A idéia
+	A idÃ©ia
 %font "normal", size 5
 
 	O projeto
@@ -267,16 +267,16 @@ O Ciclo de Vida de um Programa
 	O desenvolvimento
 %font "normal", size 5
 
-	O lançamento
+	O lanÃ§amento
 %font "normal", size 5
 
-	A manutenção
+	A manutenÃ§Ã£o
 
 %page
 
-A idéia
+A idÃ©ia
 
-	Melhorar um programa já existente - PATCH
+	Melhorar um programa jÃ¡ existente - PATCH
 %font "normal", size 5
 
 	Melhorar um programa, criando outro - FORK
@@ -290,15 +290,15 @@ Criar um programa novo
 
 %page
 
-O Desenvolvimento da Idéia
+O Desenvolvimento da IdÃ©ia
 
 	Identificar uma necessidade
 %font "normal", size 5
 
-	Encontrar uma solução
+	Encontrar uma soluÃ§Ã£o
 %font "normal", size 5
 
-	Simulações de uso, protótipo
+	SimulaÃ§Ãµes de uso, protÃ³tipo
 %font "normal", size 5
 
 	
@@ -311,16 +311,16 @@ Papel!
 
 O projeto
 
-	Especificação básica
+	EspecificaÃ§Ã£o bÃ¡sica
 %font "normal", size 5
 
-	Público alvo (nível, língua)
+	PÃºblico alvo (nÃ­vel, lÃ­ngua)
 %font "normal", size 5
 
 	Escopo do programa
 %font "normal", size 5
 
-	Interface com o usuário
+	Interface com o usuÃ¡rio
 %font "normal", size 5
 
 	Escolha da linguagem (Python, Shell, C, PHP)
@@ -331,52 +331,52 @@ O desenvolvimento
 
 %bar "white" 5
 
-	Especificação completa
+	EspecificaÃ§Ã£o completa
 %font "normal", size 5
 
-	Codificação
+	CodificaÃ§Ã£o
 %font "normal", size 5
 
-	Suíte de Testes
+	SuÃ­te de Testes
 
 %bar "white" 5
 
-	Documentação
+	DocumentaÃ§Ã£o
 
 %bar "white" 5
 
 %page
 
-Codificação e Testes
+CodificaÃ§Ã£o e Testes
 
-	Especificação completa
-		Escopo, objetivo, descrição
-		Sintaxe, opções, uso
+	EspecificaÃ§Ã£o completa
+		Escopo, objetivo, descriÃ§Ã£o
+		Sintaxe, opÃ§Ãµes, uso
 		Cronograma, planejamento
 %font "normal", size 5
 
-	Codificação
-		Controle de alterações (CVS)
-		Versões Alpha e Beta
-		Troca de idéias com testadores
+	CodificaÃ§Ã£o
+		Controle de alteraÃ§Ãµes (CVS)
+		VersÃµes Alpha e Beta
+		Troca de idÃ©ias com testadores
 %font "normal", size 5
 
-	Suíte de Testes
+	SuÃ­te de Testes
 		Completa
-		Sincronizada com o código
-		Prever erros do usuário
+		Sincronizada com o cÃ³digo
+		Prever erros do usuÃ¡rio
 
 %page
 
-Documentação
+DocumentaÃ§Ã£o
 
 	Tela de ajuda (--help)
 %font "normal", size 5
 
-	Página de Manual (man)
+	PÃ¡gina de Manual (man)
 %font "normal", size 5
 
-	FAQ, Guia do usuário, Tutorial
+	FAQ, Guia do usuÃ¡rio, Tutorial
 %font "normal", size 5
 
 	Exemplos 
@@ -387,7 +387,7 @@ Documentação
 
 %page
 
-O lançamento
+O lanÃ§amento
 
 	Testes completos e minuciosos 
 %cont, fore "green"
@@ -402,34 +402,34 @@ O lançamento
 	Empacotamento (.tar.gz)
 %font "normal", size 5
 
-	Homepage, Lista de discussão
+	Homepage, Lista de discussÃ£o
 %font "normal", size 5
 
-	Anúncio, Marketing
+	AnÃºncio, Marketing
 %font "normal", size 5
 
-	Atendimento aos usuários
+	Atendimento aos usuÃ¡rios
 
 %page
 
-A manutenção
+A manutenÃ§Ã£o
 
 	Arrumar problemas (bugs) encontrados
 %font "normal", size 5
 
 	Avaliar pedidos de funcionalidades 
 %cont, fore "green"
-[Difícil]
+[DifÃ­cil]
 %cont, fore "white"
 
 %font "normal", size 5
 
-	Código limpo para facilitar contribuições
+	CÃ³digo limpo para facilitar contribuiÃ§Ãµes
 %font "normal", size 5
 
 	Aceitar/rejeitar patches 
 %cont, fore "green"
-[Difícil]
+[DifÃ­cil]
 %cont, fore "white"
 
 %font "normal", size 5
@@ -437,11 +437,11 @@ A manutenção
 	Agradecimentos
 %font "normal", size 5
 
-	Atualizações constantes
+	AtualizaÃ§Ãµes constantes
 
 %page
 
-Os Detalhes Que Fazem a Diferença
+Os Detalhes Que Fazem a DiferenÃ§a
 
 
 
@@ -473,13 +473,13 @@ http://sf.net
 )
 %font "normal", size 5
 
-	Listas de discussão, fórums, assinatura de email
+	Listas de discussÃ£o, fÃ³rums, assinatura de email
 %font "normal", size 5
 
-	Sites de notícias
+	Sites de notÃ­cias
 %font "normal", size 5
 
-	Mascote, logo, frase, botão (Powered by)
+	Mascote, logo, frase, botÃ£o (Powered by)
 %font "normal", size 5
 
 	SlashDot (
@@ -490,16 +490,16 @@ http://slashdot.org
 
 %page
 
-Página da Internet
+PÃ¡gina da Internet
 
-	Endereço curto 
+	EndereÃ§o curto 
 %cont, fore "green"
 [Importante]
 %cont, fore "white"
 
 %font "normal", size 5
 
-	Texto rápido, direto ao ponto
+	Texto rÃ¡pido, direto ao ponto
 %font "normal", size 5
 
 	Screenshots 
@@ -509,26 +509,26 @@ Página da Internet
 
 %font "normal", size 5
 
-	Link para download bem visível
+	Link para download bem visÃ­vel
 %font "normal", size 5
 
-	Endereço para contato com o autor
+	EndereÃ§o para contato com o autor
 %font "normal", size 5
 
-	Apresentação profissional
+	ApresentaÃ§Ã£o profissional
 
 %page
 
 Programas GNU
 
-	Opções padrão de linhas de comando
+	OpÃ§Ãµes padrÃ£o de linhas de comando
 %font "normal", size 5
 
 		-h, --help
 		-V, --version
 %font "normal", size 5
 
-	Arquivos padrão
+	Arquivos padrÃ£o
 %font "normal", size 5
 
 		LICENSE
@@ -549,39 +549,39 @@ RAC
 
 %page
 
-RAC: Características
+RAC: CaracterÃ­sticas
 
-	Pensado para ser aceito pelas distribuições UNIX/Linux
+	Pensado para ser aceito pelas distribuiÃ§Ãµes UNIX/Linux
 %font "normal", size 5
 
 	Parceria bem definida para o desenvolvimento
 %font "normal", size 5
 
-	Lançamento nacional, ambição mundial
+	LanÃ§amento nacional, ambiÃ§Ã£o mundial
 %font "normal", size 5
 
 	Marketing mais agressivo (esta palestra! :)
 %font "normal", size 5
 
-	Cronograma com data de entrega da primeira versão
+	Cronograma com data de entrega da primeira versÃ£o
 
 %page
 
-RAC: O que é?
+RAC: O que Ã©?
 
 	Extrator de textos
 %font "normal", size 5
 
-	Engloba funções do grep, sed, head, tail, tac, cat, rev, cut e awk
+	Engloba funÃ§Ãµes do grep, sed, head, tail, tac, cat, rev, cut e awk
 %font "normal", size 5
 
-	O texto pode ser endereçado por número de linha/coluna, intervalos e saltos
+	O texto pode ser endereÃ§ado por nÃºmero de linha/coluna, intervalos e saltos
 %font "normal", size 5
 
-	Tem suporte a ordenação, repetição e contagem reversa
+	Tem suporte a ordenaÃ§Ã£o, repetiÃ§Ã£o e contagem reversa
 %font "normal", size 5
 
-	Versões futuras contarão com definição de campos, suporte a strings e expressões regulares
+	VersÃµes futuras contarÃ£o com definiÃ§Ã£o de campos, suporte a strings e expressÃµes regulares
 
 %page
 
@@ -594,28 +594,28 @@ RAC: Exemplos
 )
 %font "normal", size 5
 
-	Eu quero as 15 últimas linhas (
+	Eu quero as 15 Ãºltimas linhas (
 %cont, fore "green"
 -15:-1
 %cont, fore "white"
 )
 %font "normal", size 5
 
-	Eu quero somente as colunas ímpares (
+	Eu quero somente as colunas Ã­mpares (
 %cont, fore "green"
 [1~2]
 %cont, fore "white"
 )
 %font "normal", size 5
 
-	Eu quero o texto da coluna 25 da linha 7 até a penúltima coluna da penúltima linha (
+	Eu quero o texto da coluna 25 da linha 7 atÃ© a penÃºltima coluna da penÃºltima linha (
 %cont, fore "green"
 7[25]:-2[-2]
 %cont, fore "white"
 )
 %font "normal", size 5
 
-	Eu quero voltar de 3 em 3 linhas, à partir da linha 25 (
+	Eu quero voltar de 3 em 3 linhas, Ã  partir da linha 25 (
 %cont, fore "green"
 25~-3
 %cont, fore "white"
@@ -630,7 +630,7 @@ http://aurelio.net/rac
 
 %page
 
-É Isso
+Ã‰ Isso
 
 
 
@@ -641,7 +641,7 @@ http://aurelio.net/rac
 
 Letrinhas Que Sobem...
 
-	Esta apresentação foi 100% produzida com Softwares Livres.
+	Esta apresentaÃ§Ã£o foi 100% produzida com Softwares Livres.
 %font "normal", size 5
 
 	Foi usando o editor 
@@ -656,7 +656,7 @@ txt2tags
 %cont, fore "green"
 MagicPoint
 %cont, fore "white"
-, que gera as telas da apresentação.
+, que gera as telas da apresentaÃ§Ã£o.
 %font "normal", size 5
 
 	A interface utilizada foi o 
@@ -671,7 +671,7 @@ Yellow Dog Linux
 %cont, fore "green"
 ibook
 %cont, fore "white"
- joiado (também conhecido como laptop da Xuxa) 
+ joiado (tambÃ©m conhecido como laptop da Xuxa) 
 %center
 %newimage "ibook.jpg", left
 

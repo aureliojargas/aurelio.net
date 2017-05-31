@@ -23,42 +23,42 @@
 Software Livre
 
 %size 7
-Experiências de um Desenvolvedor
+ExperiÃªncias de um Desenvolvedor
 
 %font "mono", size 7, center
-Aurélio Marinho Jargas
+AurÃ©lio Marinho Jargas
 
 %page
 
-Conteúdo da Palestra
+ConteÃºdo da Palestra
 
 	
 %cont, fore "cyan"
 Parte 1:
 %cont, fore "white"
- Quem é o Aurélio
+ Quem Ã© o AurÃ©lio
 
 	
 %cont, fore "cyan"
 Parte 2:
 %cont, fore "white"
- O que é ser um desenvolvedor de Software Livre
+ O que Ã© ser um desenvolvedor de Software Livre
 
 	
 %cont, fore "cyan"
 Parte 3:
 %cont, fore "white"
- Como criar e lançar um Software Livre
+ Como criar e lanÃ§ar um Software Livre
 
 	
 %cont, fore "cyan"
 Parte 4:
 %cont, fore "white"
- Os Detalhes Que Fazem a Diferença
+ Os Detalhes Que Fazem a DiferenÃ§a
 
 %page
 
-Quem é o Aurélio
+Quem Ã© o AurÃ©lio
 
 %font "normal", size 5
    
@@ -69,23 +69,23 @@ Quem é o Aurélio
 
 %page
 
-Currículo das Horas Vagas
+CurrÃ­culo das Horas Vagas
 
 	
 %cont, fore "cyan"
-Experiência:
+ExperiÃªncia:
 %cont, fore "white"
- Desenvolvedor de Software Livre há 4 anos
+ Desenvolvedor de Software Livre hÃ¡ 4 anos
 
 	
 %cont, fore "cyan"
 Programas:
 %cont, fore "white"
- Funções ZZ, txt2regex, txt2tags, sedsed, SedSokoban, RAC
+ FunÃ§Ãµes ZZ, txt2regex, txt2tags, sedsed, SedSokoban, RAC
 
 	
 %cont, fore "cyan"
-Distribuições:
+DistribuiÃ§Ãµes:
 %cont, fore "white"
  Conectiva, Debian, FreeBSD, Knoppix, Gentoo e Fink
 
@@ -109,7 +109,7 @@ GNU:
 
 %page
 
-O que é ser um Desenvolvedor de Software Livre
+O que Ã© ser um Desenvolvedor de Software Livre
 
 %font "normal", size 5
 
@@ -119,7 +119,7 @@ O que é ser um Desenvolvedor de Software Livre
 
 %page
 
-Características do Desenvolvedor
+CaracterÃ­sticas do Desenvolvedor
 
 	Programa nas horas vagas
 
@@ -129,17 +129,17 @@ Características do Desenvolvedor
 
 	Quer ter seu trabalho reconhecido
 
-	Não tem tempo de ver novela, navegar na Internet e dormir até tarde
+	NÃ£o tem tempo de ver novela, navegar na Internet e dormir atÃ© tarde
 
 %page
 
-A Minha Experiência
+A Minha ExperiÃªncia
 
 	
 %cont, font "mono"
 Fev/2000
 %cont, font "normal"
-: funções ZZ (
+: funÃ§Ãµes ZZ (
 %cont, fore "cyan"
 Shell, nacional, parceria, +40
 %cont, fore "white"
@@ -161,7 +161,7 @@ Jul/2001
 %cont, font "normal"
 : txt2tags (
 %cont, fore "cyan"
-Python, GNU, colaboração
+Python, GNU, colaboraÃ§Ã£o
 %cont, fore "white"
 )
 
@@ -171,7 +171,7 @@ Dez/2001
 %cont, font "normal"
 : sedsed (
 %cont, fore "cyan"
-Python, uma idéia, 5 linhas
+Python, uma idÃ©ia, 5 linhas
 %cont, fore "white"
 )
 
@@ -197,7 +197,7 @@ C, parceria++, marketing++
 
 %page
 
-O Ritmo Frenético de Atualizações
+O Ritmo FrenÃ©tico de AtualizaÃ§Ãµes
 
 
 %font "mono", size 3
@@ -222,7 +222,7 @@ TOTAL | 3 |12 | 9 | 5 | 6 | 8 | 6 | 6 | 3 | 4 | 9 | 9 |  80
 
 Qual a Recompensa?
 
-	Satisfação pessoal
+	SatisfaÃ§Ã£o pessoal
 
 	Amigos e contatos         
 %cont, fore "cyan"
@@ -232,13 +232,13 @@ Qual a Recompensa?
 
 	Oportunidades
 
-	Experiência, currículo
+	ExperiÃªncia, currÃ­culo
 
 	Dinheiro!
 
 %page
 
-Como criar e lançar Software Livre
+Como criar e lanÃ§ar Software Livre
 
 %font "normal", size 5
 
@@ -252,7 +252,7 @@ O Ciclo de Vida de um Programa
 
 	
 %cont, fore "cyan"
-A idéia                  <<<-----------------------------
+A idÃ©ia                  <<<-----------------------------
 %cont, fore "white"
 
 
@@ -260,9 +260,9 @@ A idéia                  <<<-----------------------------
 
 	O desenvolvimento
 
-	O lançamento
+	O lanÃ§amento
 
-	A manutenção
+	A manutenÃ§Ã£o
 
 %font "normal", size 5
 %right, size 35, fore "cyan"
@@ -270,9 +270,9 @@ A idéia                  <<<-----------------------------
 
 %page
 
-A Idéia
+A IdÃ©ia
 
-	Melhorar um programa já existente - PATCH
+	Melhorar um programa jÃ¡ existente - PATCH
 
 	Melhorar um programa, criando outro - FORK
 
@@ -284,19 +284,19 @@ Criar um programa novo
 
 %page
 
-A Concepção de um Programa
+A ConcepÃ§Ã£o de um Programa
 
 	Identificar uma necessidade
 
-	Pesquisar soluções já existentes         
+	Pesquisar soluÃ§Ãµes jÃ¡ existentes         
 %cont, fore "cyan"
 [IMPORTANTE]
 %cont, fore "white"
 
 
-	Idealizar uma solução
+	Idealizar uma soluÃ§Ã£o
 
-	Simulações de uso, protótipo
+	SimulaÃ§Ãµes de uso, protÃ³tipo
 
 	
 %cont, fore "cyan"
@@ -306,23 +306,23 @@ Papel!
 
 %page
 
-A Importância do Papel
+A ImportÃ¢ncia do Papel
 
-	Visão geral da idéia
+	VisÃ£o geral da idÃ©ia
 
-	Desenhar/Rabiscar é mais rápido que programar
+	Desenhar/Rabiscar Ã© mais rÃ¡pido que programar
 
-	Rascunho da Interface com o usuário (aparência, navegação)
+	Rascunho da Interface com o usuÃ¡rio (aparÃªncia, navegaÃ§Ã£o)
 
-	Rascunho do fluxo de dados e organização interna do programa
+	Rascunho do fluxo de dados e organizaÃ§Ã£o interna do programa
 
-	O desenvolvimento da idéia não depende do computador! (ônibus, banheiro, viagem)
+	O desenvolvimento da idÃ©ia nÃ£o depende do computador! (Ã´nibus, banheiro, viagem)
 
 %page
 
 O Ciclo de Vida de um Programa
 
-	A idéia
+	A idÃ©ia
 
 	
 %cont, fore "cyan"
@@ -332,9 +332,9 @@ O projeto                  <<<-----------------------------
 
 	O desenvolvimento
 
-	O lançamento
+	O lanÃ§amento
 
-	A manutenção
+	A manutenÃ§Ã£o
 
 %font "normal", size 5
 %right, size 35, fore "cyan"
@@ -344,11 +344,11 @@ O projeto                  <<<-----------------------------
 
 O Projeto
 
-	Público alvo
+	PÃºblico alvo
 
 	Escolha da plataforma
 
-	Interface com o usuário
+	Interface com o usuÃ¡rio
 
 	Escolha da linguagem
 
@@ -360,63 +360,63 @@ O Projeto
 
 %page
 
-Público Alvo
+PÃºblico Alvo
 
-	Qual o idioma principal da interface e documentação?
+	Qual o idioma principal da interface e documentaÃ§Ã£o?
 
-	Qual o nível técnico dos usuários?
+	Qual o nÃ­vel tÃ©cnico dos usuÃ¡rios?
 
-	Qual a plataforma dos usuários?
+	Qual a plataforma dos usuÃ¡rios?
 
-	Serão usuários domésticos ou corporativos?
+	SerÃ£o usuÃ¡rios domÃ©sticos ou corporativos?
 
-	Serão usuários de interface gráfica ou console?
+	SerÃ£o usuÃ¡rios de interface grÃ¡fica ou console?
 
 %page
 
 Escolha da Plataforma
 
-	Diretamente ligada ao Público Alvo
+	Diretamente ligada ao PÃºblico Alvo
 
 	Define a escolha da Interface
 
 	Define a escolha da Linguagem
 
-	Pode ser uma ou várias (UNIX, Windows, Mac, Palm)
+	Pode ser uma ou vÃ¡rias (UNIX, Windows, Mac, Palm)
 
-	O desenvolvedor deve ter acesso à plataforma para testes
+	O desenvolvedor deve ter acesso Ã  plataforma para testes
 
 %page
 
-Interface com o Usuário
+Interface com o UsuÃ¡rio
 
-	É necessária interface modo texto (
+	Ã‰ necessÃ¡ria interface modo texto (
 %cont, fore "cyan"
 console
 %cont, fore "white"
 )?
 
-	É necessária interface gráfica (
+	Ã‰ necessÃ¡ria interface grÃ¡fica (
 %cont, fore "cyan"
 GUI
 %cont, fore "white"
 )?
 
-	É necessária interface Intranet/Internet (
+	Ã‰ necessÃ¡ria interface Intranet/Internet (
 %cont, fore "cyan"
 Web
 %cont, fore "white"
 )?
 
-	É necessária interface não interativa (
+	Ã‰ necessÃ¡ria interface nÃ£o interativa (
 %cont, fore "cyan"
 batch
 %cont, fore "white"
 )?
 
-	É necessária a integração com outros programas (
+	Ã‰ necessÃ¡ria a integraÃ§Ã£o com outros programas (
 %cont, fore "cyan"
-módulo
+mÃ³dulo
 %cont, fore "white"
 )?
 
@@ -424,31 +424,31 @@ módulo
 
 Escolha da Linguagem
 
-	Velocidade de processamento é crucial? (
+	Velocidade de processamento Ã© crucial? (
 %cont, fore "cyan"
 C
 %cont, fore "white"
 )
 
-	Legibilidade de código é crucial? (
+	Legibilidade de cÃ³digo Ã© crucial? (
 %cont, fore "cyan"
 Python, C
 %cont, fore "white"
 )
 
-	Portabilidade é crucial? (
+	Portabilidade Ã© crucial? (
 %cont, fore "cyan"
 Shell, Python
 %cont, fore "white"
 )
 
-	Ser independente de plataforma é crucial? (
+	Ser independente de plataforma Ã© crucial? (
 %cont, fore "cyan"
 PHP, Java
 %cont, fore "white"
 )
 
-	Ser ilegível, uma caixa preta e NÃO receber contribuições é crucial? (
+	Ser ilegÃ­vel, uma caixa preta e NÃƒO receber contribuiÃ§Ãµes Ã© crucial? (
 %cont, fore "cyan"
 Perl, C++
 %cont, fore "white"
@@ -470,11 +470,11 @@ Keep It Simple, Stupid!
 
 	O que exatamente meu programa vai fazer?
 
-	O que meu programa NÃO vai fazer?
+	O que meu programa NÃƒO vai fazer?
 
-	No mundo perfeito, como seria a "versão final" dele?
+	No mundo perfeito, como seria a "versÃ£o final" dele?
 
-	Evite ao máximo que seu programa seja um BLOATware
+	Evite ao mÃ¡ximo que seu programa seja um BLOATware
 
 	Anote  ->  Memorize  ->  Focalize  ->  Respeite!
 
@@ -482,7 +482,7 @@ Keep It Simple, Stupid!
 
 O Ciclo de Vida de um Programa
 
-	A idéia
+	A idÃ©ia
 
 	O projeto
 
@@ -492,9 +492,9 @@ O desenvolvimento                  <<<-----------------------------
 %cont, fore "white"
 
 
-	O lançamento
+	O lanÃ§amento
 
-	A manutenção
+	A manutenÃ§Ã£o
 
 %font "normal", size 5
 %right, size 35, fore "cyan"
@@ -506,27 +506,27 @@ O desenvolvimento
 
 %bar "white" 5
 
-	Especificação Completa
+	EspecificaÃ§Ã£o Completa
 
-	Codificação
+	CodificaÃ§Ã£o
 
-	Suíte de Testes
+	SuÃ­te de Testes
 
 %bar "white" 5
 
-	Documentação
+	DocumentaÃ§Ã£o
 
 %bar "white" 5
 
 %page
 
-Especificação Completa
+EspecificaÃ§Ã£o Completa
 
-	Descrição e Sumário do projeto
+	DescriÃ§Ã£o e SumÃ¡rio do projeto
 
 	Escopo
 
-	Sintaxe, opções, telas, arquivos
+	Sintaxe, opÃ§Ãµes, telas, arquivos
 
 	Definir esquema de versionamento
 
@@ -534,35 +534,35 @@ Especificação Completa
 
 %page
 
-Codificação
+CodificaÃ§Ã£o
 
-	Implementação da especificação
+	ImplementaÃ§Ã£o da especificaÃ§Ã£o
 
-	Controle de alterações (CVS, svn)
+	Controle de alteraÃ§Ãµes (CVS, svn)
 
-	Lançamento de versões Alpha e Beta
+	LanÃ§amento de versÃµes Alpha e Beta
 
-	Troca de idéias com testadores
+	Troca de idÃ©ias com testadores
 
-	Shhhhhhh! Ainda não faça muito barulho
+	Shhhhhhh! Ainda nÃ£o faÃ§a muito barulho
 
 %page
 
-Suíte de Testes
+SuÃ­te de Testes
 
 	Completa
 
-	Sincronizada com o código
+	Sincronizada com o cÃ³digo
 
-	Prever erros do usuário
+	Prever erros do usuÃ¡rio
 
-	Prever situações imprevisíveis (
+	Prever situaÃ§Ãµes imprevisÃ­veis (
 %cont, fore "cyan"
 !!?!
 %cont, fore "white"
 )
 
-	É chato fazer, mas 
+	Ã‰ chato fazer, mas 
 %cont, fore "cyan"
 compensa
 %cont, fore "white"
@@ -570,7 +570,7 @@ compensa
 
 %page
 
-Documentação
+DocumentaÃ§Ã£o
 
 	Tela de ajuda (
 %cont, fore "cyan"
@@ -578,7 +578,7 @@ Documentação
 %cont, fore "white"
 )
 
-	Página de Manual (
+	PÃ¡gina de Manual (
 %cont, fore "cyan"
 man page
 %cont, fore "white"
@@ -586,13 +586,13 @@ man page
 
 	README, INSTALL, Changelog
 
-	Perguntas Freqüentes (
+	Perguntas FreqÃ¼entes (
 %cont, fore "cyan"
 FAQ
 %cont, fore "white"
 )
 
-	Guia do usuário e/ou Tutorial
+	Guia do usuÃ¡rio e/ou Tutorial
 
 	Um exemplo vale por 1.000 man pages!         
 %cont, fore "cyan"
@@ -604,7 +604,7 @@ FAQ
 
 O Ciclo de Vida de um Programa
 
-	A idéia
+	A idÃ©ia
 
 	O projeto
 
@@ -612,11 +612,11 @@ O Ciclo de Vida de um Programa
 
 	
 %cont, fore "cyan"
-O lançamento                  <<<-----------------------------
+O lanÃ§amento                  <<<-----------------------------
 %cont, fore "white"
 
 
-	A manutenção
+	A manutenÃ§Ã£o
 
 %font "normal", size 5
 %right, size 35, fore "cyan"
@@ -624,7 +624,7 @@ O lançamento                  <<<-----------------------------
 
 %page
 
-O Lançamento
+O LanÃ§amento
 
 	Empacotamento
 
@@ -636,9 +636,9 @@ O Lançamento
 
 	Homepage
 
-	Canais de comunicação
+	Canais de comunicaÃ§Ã£o
 
-	Anúncio
+	AnÃºncio
 
 %page
 
@@ -646,39 +646,39 @@ Empacotamento
 
 	Escolha do formato (
 %cont, fore "cyan"
-.tar.gz, RPM, .ZIP, binário
+.tar.gz, RPM, .ZIP, binÃ¡rio
 %cont, fore "white"
 )
 
 	Incluir apenas os arquivos relevantes
 
-	Colocar a versão no nome do pacote
+	Colocar a versÃ£o no nome do pacote
 
-	Múltiplos pacotes pode ser uma boa idéia, OU NÃO!
+	MÃºltiplos pacotes pode ser uma boa idÃ©ia, OU NÃƒO!
 
 %page
 
 Testes completos e minuciosos
 
-	Antes de pensar em lançar: testar, testar e testar
+	Antes de pensar em lanÃ§ar: testar, testar e testar
 
-	Expandir o pacote num diretório limpo
+	Expandir o pacote num diretÃ³rio limpo
 
-	Rodar a suíte de testes
+	Rodar a suÃ­te de testes
 
 	Testar o funcionameto da interface
 
-	Simular o procedimento de instalação que será feito pelo usuário
+	Simular o procedimento de instalaÃ§Ã£o que serÃ¡ feito pelo usuÃ¡rio
 
 %page
 
 Homepage
 
-	Definir o endereço/domínio do programa
+	Definir o endereÃ§o/domÃ­nio do programa
 
-	Fazer a página do programa e colocar online
+	Fazer a pÃ¡gina do programa e colocar online
 
-	Testar todos os links e checar as informações (página == 100%)
+	Testar todos os links e checar as informaÃ§Ãµes (pÃ¡gina == 100%)
 
 	Colocar o pacote online
 
@@ -686,25 +686,25 @@ Homepage
 
 %page
 
-Canais de Comunicação
+Canais de ComunicaÃ§Ã£o
 
-	Lista de discussão no idioma oficial do programa
+	Lista de discussÃ£o no idioma oficial do programa
 
-	Lista de discussão no idioma do autor (caso diferente do oficial)
+	Lista de discussÃ£o no idioma do autor (caso diferente do oficial)
 
-	Fórum online
+	FÃ³rum online
 
-	Canal de IRC para suporte e confraternização de usuários
+	Canal de IRC para suporte e confraternizaÃ§Ã£o de usuÃ¡rios
 
-	Colocar o e-mail do autor na página do programa e na documentação
+	Colocar o e-mail do autor na pÃ¡gina do programa e na documentaÃ§Ã£o
 
 %page
 
-Anúncio
+AnÃºncio
 
-	Postar notícias em sites e fórums especializados
+	Postar notÃ­cias em sites e fÃ³rums especializados
 
-	Mandar mensagem para listas de discussão (
+	Mandar mensagem para listas de discussÃ£o (
 %cont, fore "cyan"
 CUIDADO!
 %cont, fore "white"
@@ -712,7 +712,7 @@ CUIDADO!
 
 	Avisar os amigos e interessados pessoalmente
 
-	Anunciar na página pessoal ou blog do autor
+	Anunciar na pÃ¡gina pessoal ou blog do autor
 
 	Esperar 
 %cont, fore "cyan"
@@ -728,17 +728,17 @@ pacientemente
 
 O Ciclo de Vida de um Programa
 
-	A idéia
+	A idÃ©ia
 
 	O projeto
 
 	O desenvolvimento
 
-	O lançamento
+	O lanÃ§amento
 
 	
 %cont, fore "cyan"
-A manutenção                  <<<-----------------------------
+A manutenÃ§Ã£o                  <<<-----------------------------
 %cont, fore "white"
 
 
@@ -748,7 +748,7 @@ A manutenção                  <<<-----------------------------
 
 %page
 
-A manutenção
+A manutenÃ§Ã£o
 
 	Corrigir problemas (
 %cont, fore "cyan"
@@ -762,27 +762,27 @@ features
 %cont, fore "white"
 )
 
-	Aceitar/rejeitar contribuições (
+	Aceitar/rejeitar contribuiÃ§Ãµes (
 %cont, fore "cyan"
 patches
 %cont, fore "white"
 )
 
-	Lidar com os usuários (
+	Lidar com os usuÃ¡rios (
 %cont, fore "cyan"
-política
+polÃ­tica
 %cont, fore "white"
 )
 
-	Manter a documentação atualizada
+	Manter a documentaÃ§Ã£o atualizada
 
-	Fazer atualizações constantes
+	Fazer atualizaÃ§Ãµes constantes
 
-	Não abandonar o projeto!
+	NÃ£o abandonar o projeto!
 
 %page
 
-Os Detalhes Que Fazem a Diferença
+Os Detalhes Que Fazem a DiferenÃ§a
 
 %font "normal", size 5
 
@@ -794,15 +794,15 @@ Os Detalhes Que Fazem a Diferença
 
 O Caminho das Pedras
 
-	Finalizar a primeira versão (
+	Finalizar a primeira versÃ£o (
 %cont, fore "cyan"
-tem que ser usável!
+tem que ser usÃ¡vel!
 %cont, fore "white"
 )
 
 	Finalizar a homepage do projeto e colocar no ar
 
-	Criar os canais de comunicação
+	Criar os canais de comunicaÃ§Ã£o
 
 	Hospedar o projeto no SourceForge (
 %cont, fore "cyan"
@@ -826,15 +826,15 @@ http://slashdot.org
 
 O Nome do Programa
 
-	Deve ser pronunciável no idioma do público alvo
+	Deve ser pronunciÃ¡vel no idioma do pÃºblico alvo
 
-	Deve ser inédito (vide Phoenix  ->  Firebird  ->  FireFox  ->  ???)
+	Deve ser inÃ©dito (vide Phoenix  ->  Firebird  ->  FireFox  ->  ???)
 
-	Deve ser curto, forte, impactante, descritivo, sonoro, memorizável
+	Deve ser curto, forte, impactante, descritivo, sonoro, memorizÃ¡vel
 
-	Quanto menos páginas o Google retornar, melhor
+	Quanto menos pÃ¡ginas o Google retornar, melhor
 
-	Veja se o domínio NOME.{org,net,com} está vago
+	Veja se o domÃ­nio NOME.{org,net,com} estÃ¡ vago
 
 	Matz, criador da linguagem Ruby: "
 %cont, font "normal-i"
@@ -848,9 +848,9 @@ a good name for a project will take care of
 
 %page
 
-A Página da Internet
+A PÃ¡gina da Internet
 
-	Endereço curto e fácil de lembrar         
+	EndereÃ§o curto e fÃ¡cil de lembrar         
 %cont, fore "cyan"
 [IMPORTANTE]
 %cont, fore "white"
@@ -862,69 +862,69 @@ A Página da Internet
 %cont, fore "white"
 
 
-	Link para download bem visível
+	Link para download bem visÃ­vel
 
-	Texto rápido, direto ao ponto
+	Texto rÃ¡pido, direto ao ponto
 
-	Endereço para contato com o autor
+	EndereÃ§o para contato com o autor
 
-	Apresentação profissional
+	ApresentaÃ§Ã£o profissional
 
 %page
 
 O Marketing
 
-	Invista nos testes para não lançar versões problemáticas
+	Invista nos testes para nÃ£o lanÃ§ar versÃµes problemÃ¡ticas
 
 	Incentive os outros a mostrarem que usam seu programa (
 %cont, fore "cyan"
-botão "Powered by"
+botÃ£o "Powered by"
 %cont, fore "white"
 )
 
-	Crie uma identidade visual para o programa e para a página (
+	Crie uma identidade visual para o programa e para a pÃ¡gina (
 %cont, fore "cyan"
 cores, formatos, estilos
 %cont, fore "white"
 )
 
-	Crie muitos acessórios inúteis! (
+	Crie muitos acessÃ³rios inÃºteis! (
 %cont, fore "cyan"
 mascote, logo, frase, temas, sons
 %cont, fore "white"
 )
 
-	Deixe claro porquê o seu programa é melhor que os outros
+	Deixe claro porquÃª o seu programa Ã© melhor que os outros
 
-	Divulgue testemunhos de usuários satisfeitos
+	Divulgue testemunhos de usuÃ¡rios satisfeitos
 
-	Crie concursos, faça screenshots lindos, livro de visitas, ...
+	Crie concursos, faÃ§a screenshots lindos, livro de visitas, ...
 
 %page
 
-A Atenção aos Usuários
+A AtenÃ§Ã£o aos UsuÃ¡rios
 
 	Crucial, complicado, desgastante e gratificante
 
-	Esteja sempre aberto a receber contribuições, críticas e bugs
+	Esteja sempre aberto a receber contribuiÃ§Ãµes, crÃ­ticas e bugs
 
-	Deixe o código sempre limpo para facilitar contribuições
+	Deixe o cÃ³digo sempre limpo para facilitar contribuiÃ§Ãµes
 
-	Agradeça publicamente a quem merece, sempre
+	AgradeÃ§a publicamente a quem merece, sempre
 
-	Usuários desprezam o KISS!
+	UsuÃ¡rios desprezam o KISS!
 
-	Aprenda a dizer NÃO sem desmerecer o tempo alheio
+	Aprenda a dizer NÃƒO sem desmerecer o tempo alheio
 
 	
 %cont, fore "cyan"
-Sem usuários, programar para quem?
+Sem usuÃ¡rios, programar para quem?
 %cont, fore "white"
 
 
 %page
 
-É Isso
+Ã‰ Isso
 
 %font "normal", size 5
 
@@ -939,7 +939,7 @@ Sem usuários, programar para quem?
 
 Letrinhas Que Sobem...
 
-	Esta apresentação foi 100% produzida com Softwares Livres.
+	Esta apresentaÃ§Ã£o foi 100% produzida com Softwares Livres.
 
 	Foi usando o editor 
 %cont, fore "cyan"
@@ -953,7 +953,7 @@ txt2tags
 %cont, fore "cyan"
 MagicPoint
 %cont, fore "white"
-, que gera as telas da apresentação.
+, que gera as telas da apresentaÃ§Ã£o.
 
 	A interface utilizada foi o 
 %cont, fore "cyan"
