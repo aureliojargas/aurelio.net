@@ -1,21 +1,10 @@
 # Sources for Aurelio.net website
 
-> This is a work in progress.
+The full sources for my personal website http://aurelio.net, online since 1999, now with 4500+ files.
 
-I've converted the WordPress part of my site to [Jekyll](http://jekyllrb.com/):
+At the beginning it was only HTML files, then I started to use my own software [txt2tags](http://txt2tags.org) to generate the pages, then I moved the blog part to WordPress and now it is back as a static site, powered by [Jekyll](http://jekyllrb.com/).
 
-- [The blog](http://aurelio.net/blog/)
-- The RSS feed
-- The pages groups
-  - [/artigos](http://aurelio.net/artigos/)
-  - [/viagem](http://aurelio.net/viagem/)
-  - [/wordpress](http://aurelio.net/wordpress/)
-- Some other small pages
-
-This git repository holds these contents.
-
-But the majority of the site (1000+ files) still remains as [txt2tags](http://txt2tags.org) text files. I'll try to integrate Jekyll with txt2tags, and them I'll add those files here.
-
+All these changes were slow and partial, I never moved the full site to the new tool. So now the tree is a complete mess with Markdown, HTML and txt2tags files living together. My goal ([issue #1](https://github.com/aureliojargas/aurelio.net/issues/1)) is to make it simpler.
 
 ## Local build
 
@@ -33,6 +22,16 @@ bundle exec jekyll serve --watch --limit_posts 10
 # Viewing at Cloud9
 bundle exec jekyll serve --watch --limit_posts 10 --port 8080 --host 0.0.0.0
 ```
+
+## Building txt2tags files
+
+Now there are two kinds of txt2tags files in my site:
+
+- Old legacy `.t2t` files that were added together with their relative `.html` file, with no front matter. They are not processed by Jekyll and **must be converted "by hand"** using txt2tags itself.
+
+- Pages that I have added to Jekyll as `.t2t` files and **are converted automatically** by the [txt2tags_converter.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/master/_plugins/txt2tags_converter.rb) when doing `jekyll build`.
+
+My long term goal is to convert both to Markdown or HTML and remove the txt2tags dependency. See [issue #5](https://github.com/aureliojargas/aurelio.net/issues/5). 
 
 ## License
 
