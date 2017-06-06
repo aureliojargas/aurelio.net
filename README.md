@@ -59,6 +59,22 @@ In HTML files, use the following structure:
 </p>
 ```
 
+## Hide optional page elements
+
+You can hide page elements, such as the ads or the comments section, using special flags in front matter:
+
+- `hide_title_suffix: true`
+- `hide_heading: true`
+- `hide_prev_next: true`
+- `hide_byline: true`
+- `hide_author: true`
+- `hide_date: true`
+- `hide_ads: true`
+- `hide_ad_top: true`
+- `hide_tags: true`
+- `hide_read_more: true`
+- `hide_share: true`
+- `hide_comments: true`
 
 ## License
 
