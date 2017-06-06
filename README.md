@@ -33,6 +33,33 @@ Now there are two kinds of txt2tags files in my site:
 
 My long term goal is to convert both to Markdown or HTML and remove the txt2tags dependency. See [issue #5](https://github.com/aureliojargas/aurelio.net/issues/5). 
 
+## Images with captions
+
+The only special markup I use in my articles is the centered image with caption at bottom.
+
+In txt2tags files, use borderless centered tables:
+
+```
+  | [image.jpg]
+  | Image caption
+```  
+
+In Markdown files, use the image tag solo in a paragraph of its own, and provide the caption. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/master/_plugins/imgcaption.rb) will generate the HTML markup at build:
+
+```md
+![Image caption](image.jpg)
+```
+
+In HTML files, use the following structure:
+
+```html
+<p class="figure">
+  <img src="image.jpg">
+  <span>Image caption</span>
+</p>
+```
+
+
 ## License
 
 Jekyll-related and Liquid codes are Public Domain.
