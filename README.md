@@ -76,6 +76,16 @@ You can hide page elements, such as the ads or the comments section, using speci
 - `hide_share: true`
 - `hide_comments: true`
 
+## Custom page configuration
+
+The site template ([_layouts/2014.html](https://github.com/aureliojargas/aurelio.net/blob/master/_layouts/2014.html)) supports some special configuration, to the used in page front matter:
+
+- `article_footer_after: include-file.html` — To insert a special footer at the end of the article.
+
+- `css_extra: foo.css` — To load an extra CSS file for this page.
+
+- `title_prefix: "Foo: "` — To add a prefix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
+
 ## License
 
 Jekyll-related and Liquid codes are Public Domain.
