@@ -1,0 +1,75 @@
+#!/bin/bash
+# Tidy to STDOUT the informed HTML file.
+# Will preserve Jekyll's Front Matter, if any.
+# Get tidy: http://www.html-tidy.org
+
+file="$1"
+
+# http://api.html-tidy.org/tidy/quickref_5.4.0.html
+config='
+anchor-as-name: no
+bare: no
+break-before-br: yes
+char-encoding: utf8
+clean: no
+css-prefix: tidy
+decorate-inferred-ul: no
+drop-empty-elements: yes
+drop-empty-paras: yes
+enclose-block-text: no
+enclose-text: yes
+fix-bad-comments: yes
+fix-uri: yes
+hide-comments: no
+indent-spaces: 2
+indent: auto
+input-xml: no
+logical-emphasis: no
+markup: yes
+newline: LF
+numeric-entities: no
+omit-optional-tags: no
+output-html: yes
+preserve-entities: yes
+quiet: yes
+quote-ampersand: yes
+quote-marks: no
+quote-nbsp: yes
+show-body-only: yes
+show-warnings: yes
+uppercase-attributes: no
+uppercase-tags: no
+tidy-mark: no
+vertical-space: no
+wrap: 0
+write-back: no
+'
+
+has_front_matter() {
+  test '---' = $(head -n 1 "$1")
+}
+
+get_front_matter() {
+  sed -n '/^---$/,/^---$/ p' "$1"
+}
+
+del_front_matter() {
+  sed '/^---$/,/^---$/ d' "$1"
+}
+
+tidy_stdin() {
+  tidy -config <(echo "$config") |
+    # Add a blank line before block elements (except on 1st line)
+    # Not using vertical-space config because it is too spacey
+    sed -r '1n; /^<(h[1-6]|div|p|blockquote|ul|ol|dl|table|pre)[ >]/{ H; s/.*//; x; }'
+}
+
+if has_front_matter "$file"
+then
+  # Tidy HTML only, not Front Matter
+  get_front_matter "$file"
+  echo
+  del_front_matter "$file" | tidy_stdin
+else
+  cat "$file" | tidy_stdin
+fi
