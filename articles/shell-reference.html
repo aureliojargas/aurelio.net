@@ -1,0 +1,2511 @@
+---
+layout: 2013-articles
+#worked: 0
+date: 2011-07-06
+title: Bash Shell Quick Reference
+tags: [shell, unix, reference]
+---
+
+<div id="toc">
+  <ol>
+    <li>
+      <a href="#operators">Operators</a>
+    </li>
+    <li>
+      <a href="#redir">Redirection</a>
+    </li>
+    <li>
+      <a href="#variables">Special variables</a>
+    </li>
+    <li>
+      <a href="#expansion">Variable expansion</a>
+    </li>
+    <li>
+      <a href="#grouping">Quoting and grouping</a>
+    </li>
+    <li>
+      <a href="#ifwhilefor">if, for, select, while, until, case</a>
+    </li>
+    <li>
+      <a href="#test">test or [ … ]</a>
+    </li>
+    <li>
+      <a href="#prompt">Prompt escapes ($PS1)</a>
+    </li>
+    <li>
+      <a href="#echo">echo escapes</a>
+    </li>
+    <li>
+      <a href="#date">date tokens</a>
+    </li>
+    <li>
+      <a href="#printf">printf tokens</a>
+    </li>
+    <li>
+      <a href="#ls">ls -l file identifiers</a>
+    </li>
+    <li>
+      <a href="#glob">Filenames wildcards (glob)</a>
+    </li>
+    <li>
+      <a href="#case">case wildcards</a>
+    </li>
+    <li>
+      <a href="#signals">trap/kill/killall signals</a>
+    </li>
+    <li>
+      <a href="#exit-codes">Exit codes</a>
+    </li>
+    <li>
+      <a href="#ansi-colors">Color codes (ANSI)</a>
+    </li>
+    <li>
+      <a href="#regex-meta">Regex metacharacters</a>
+    </li>
+    <li>
+      <a href="#regex-flavors">Regex flavors</a>
+    </li>
+    <li>
+      <a href="#ascii">Printable ASCII characters (ISO-8859-1) - text</a>
+    </li>
+    <li>
+      <a href="#ascii-image">Printable ASCII characters (ISO-8859-1) - image</a>
+    </li>
+    <li>
+      <a href="#copy-paste">Copy-paste friendly commands</a>
+    </li>
+    <li>
+      <a href="#emacs">Command line shortcuts (set -o emacs)</a>
+    </li>
+    <li>
+      <a href="#toolbox">Toolbox</a>
+    </li>
+  </ol>
+</div><!--toc-->
+
+<blockquote>
+  Note: This document was translated from <a href="http://aurelio.net/shell/canivete/">portuguese</a> to english by Luiz Miguel Axcar.
+</blockquote>
+
+<h2 id="operators">1. Operators</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th colspan="2">Arithmetic Operators</th>
+  </tr>
+  <tr>
+    <td class="center"><code>+</code></td>
+    <td>Addition</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-</code></td>
+    <td>Subtraction</td>
+  </tr>
+  <tr>
+    <td class="center"><code>*</code></td>
+    <td>Multiplication</td>
+  </tr>
+  <tr>
+    <td class="center"><code>/</code></td>
+    <td>Division</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%</code></td>
+    <td>Modulo</td>
+  </tr>
+  <tr>
+    <td class="center"><code>**</code></td>
+    <td>Exponentiation</td>
+  </tr>
+  <tr>
+    <th colspan="2">Attribution Operators</th>
+  </tr>
+  <tr>
+    <td class="center"><code>=</code></td>
+    <td>Attribute some value to a variable</td>
+  </tr>
+  <tr>
+    <td class="center"><code>+=</code></td>
+    <td>Increase a variable with a constant</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-=</code></td>
+    <td>Decrease a variable with a constant</td>
+  </tr>
+  <tr>
+    <td class="center"><code>*=</code></td>
+    <td>Multiply the variable by a constant</td>
+  </tr>
+  <tr>
+    <td class="center"><code>/=</code></td>
+    <td>Divide a variable by a constant</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%=</code></td>
+    <td>Remainder of division by a constant</td>
+  </tr>
+  <tr>
+    <td class="center"><code>++</code></td>
+    <td>Increase 1 to the variable value</td>
+  </tr>
+  <tr>
+    <td class="center"><code>--</code></td>
+    <td>Decrease 1 from the variable value</td>
+  </tr>
+  <tr>
+    <th colspan="2">Comparison Operators</th>
+  </tr>
+  <tr>
+    <td class="center"><code>==</code></td>
+    <td>Equals</td>
+  </tr>
+  <tr>
+    <td class="center"><code>!=</code></td>
+    <td>Not equals to (different)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;</code></td>
+    <td>Greater than</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;=</code></td>
+    <td>Greater than or equal to</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;</code></td>
+    <td>Less than</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;=</code></td>
+    <td>Less than or equal to</td>
+  </tr>
+  <tr>
+    <th colspan="2">Logical Operators</th>
+  </tr>
+  <tr>
+    <td class="center"><code>&amp;&amp;</code></td>
+    <td>Logical AND</td>
+  </tr>
+  <tr>
+    <td class="center"><code>||</code></td>
+    <td>Logical OR</td>
+  </tr>
+  <tr>
+    <th colspan="2">Bitwise Operators</th>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;&lt;</code></td>
+    <td>Left-shift</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&gt;</code></td>
+    <td>Right-shift</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&amp;</code></td>
+    <td>Bitwise AND</td>
+  </tr>
+  <tr>
+    <td class="center"><code>|</code></td>
+    <td>Bitwise OR</td>
+  </tr>
+  <tr>
+    <td class="center"><code>^</code></td>
+    <td>Bitwise Exclusive OR (XOR)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>~</code></td>
+    <td>Bitwise NOT (complement)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>!</code></td>
+    <td>NOT</td>
+  </tr>
+  <tr>
+    <th colspan="2">Bitwise Operators (attribution)</th>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;&lt;=</code></td>
+    <td>Left-shift</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&gt;=</code></td>
+    <td>Right-shift</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&amp;=</code></td>
+    <td>Bitwise AND</td>
+  </tr>
+  <tr>
+    <td class="center"><code>|=</code></td>
+    <td>Bitwise OR</td>
+  </tr>
+  <tr>
+    <td class="center"><code>^=</code></td>
+    <td>Bitwise Exclusive OR (XOR)</td>
+  </tr>
+</table>
+
+<h2 id="redir">2. Redirection</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Operator</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;</code></td>
+    <td>Redirect the standard input (STDIN)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;</code></td>
+    <td>Redirect the standard output (STDOUT)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;</code></td>
+    <td>Redirect the error output (STDERR)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&gt;</code></td>
+    <td>Redirect the standard output, appending</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;&gt;</code></td>
+    <td>Redirect the error output, appending</td>
+  </tr>
+  <tr>
+    <td class="center"><code>|</code></td>
+    <td>Connects the standard output with standard input of another command</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;&amp;1</code></td>
+    <td>Connects the error output with standard output</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&amp;2</code></td>
+    <td>Connects the standard output with error output</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&amp;-</code></td>
+    <td>Closes the standard output</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;&amp;-</code></td>
+    <td>Closes the error output</td>
+  </tr>
+  <tr>
+    <td class="center"><code>3&lt;&gt;file</code></td>
+    <td>Connects the file descriptor 3 to file 'file'</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;&lt;FIM</code></td>
+    <td>Feeds the standard input (Here Document)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;&lt;-FIM</code></td>
+    <td>Feeds the standard input, striping TABs</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;(cmd)</code></td>
+    <td>The output of command 'cmd' is a file: diff &lt;(cmd1) &lt;(cmd2)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;(cmd)</code></td>
+    <td>The input of command 'cmd' is a file: tar cf &gt;(bzip2 -c &gt;file.tbz) $dir</td>
+  </tr>
+</table>
+
+<h2 id="variables">3. Special variables</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Variable</th>
+    <th>Positioning parameters</th>
+  </tr>
+  <tr>
+    <td class="center"><code>$0</code></td>
+    <td>Parameter #0 (name of command or function)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$1</code></td>
+    <td>Parameter #1 (from command line or function)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>...</code></td>
+    <td>Parameter #N ...</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$9</code></td>
+    <td>Parameter #9 (from command line or function)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>${10}</code></td>
+    <td>Parameter #10 (from command line or function)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>...</code></td>
+    <td>Parameter #NN ...</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$#</code></td>
+    <td>Total number of parameters from command line or function</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$*</code></td>
+    <td>All the parameters, in a single string</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$@</code></td>
+    <td>All the parameters, in many protected strings</td>
+  </tr>
+  <tr>
+    <th>Variable</th>
+    <th>Misc</th>
+  </tr>
+  <tr>
+    <td class="center"><code>$$</code></td>
+    <td>PID of current process (or script)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$!</code></td>
+    <td>PID of last job in background</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$_</code></td>
+    <td>Last argument of last executed command</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$?</code></td>
+    <td>Error code of last executed command</td>
+  </tr>
+</table>
+
+<h2 id="expansion">4. Variable expansion</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Syntax</th>
+    <th>Conditional Expansion</th>
+  </tr>
+  <tr>
+    <td><code>${var:-text}</code></td>
+    <td>If var is undefined, returns 'text'</td>
+  </tr>
+  <tr>
+    <td><code>${var:=text}</code></td>
+    <td>If var is undefined, set as 'text'</td>
+  </tr>
+  <tr>
+    <td><code>${var:?text}</code></td>
+    <td>If var is undefined, returns error message 'text'</td>
+  </tr>
+  <tr>
+    <td><code>${var:+text}</code></td>
+    <td>If var is defined, returns 'text', else return empty</td>
+  </tr>
+  <tr>
+    <th>Syntax</th>
+    <th>String expansion</th>
+  </tr>
+  <tr>
+    <td><code>${var}</code></td>
+    <td>Is the same of $var, but not ambiguous</td>
+  </tr>
+  <tr>
+    <td><code>${#var}</code></td>
+    <td>Return the string length</td>
+  </tr>
+  <tr>
+    <td><code>${!var}</code></td>
+    <td>Executes the content of $var (like 'eval \$$var')</td>
+  </tr>
+  <tr>
+    <td><code>${!text*}</code></td>
+    <td>Return the names of variables starting with 'text'</td>
+  </tr>
+  <tr>
+    <td><code>${var:N}</code></td>
+    <td>Return the text from position 'N'</td>
+  </tr>
+  <tr>
+    <td><code>${var:N:len}</code></td>
+    <td>Return 'len' chars from position 'N'</td>
+  </tr>
+  <tr>
+    <td><code>${var#text}</code></td>
+    <td>Cut 'text' from beginning of string</td>
+  </tr>
+  <tr>
+    <td><code>${var##text}</code></td>
+    <td>Cut 'text' from beginning of string (*greedy)</td>
+  </tr>
+  <tr>
+    <td><code>${var%text}</code></td>
+    <td>Cut 'text' from end of string</td>
+  </tr>
+  <tr>
+    <td><code>${var%%text}</code></td>
+    <td>Cut 'text' from end of string (*greedy)</td>
+  </tr>
+  <tr>
+    <td><code>${var/text/new}</code></td>
+    <td>Replace 'text' by 'new', once</td>
+  </tr>
+  <tr>
+    <td><code>${var//text/new}</code></td>
+    <td>Replace 'text' by 'new', all</td>
+  </tr>
+  <tr>
+    <td><code>${var/#text/new}</code></td>
+    <td>If string starts with 'text', replace 'text' by 'new'</td>
+  </tr>
+  <tr>
+    <td><code>${var/%text/new}</code></td>
+    <td>If string ends with 'text', replace 'text' by 'new'</td>
+  </tr>
+</table>
+
+<h2 id="grouping">5. Quoting and grouping</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Syntax</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td class="center"><code>"..."</code></td>
+    <td>Protects a string, but parse $, \ and ` as special chars</td>
+    <td class="center">"abc"</td>
+  </tr>
+  <tr>
+    <td class="center"><code>'...'</code></td>
+    <td>Protects a string completely (no special chars recognized)</td>
+    <td class="center">'abc'</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$'...'</code></td>
+    <td>Protects a string completely, but interprets \n, \t, \a, etc</td>
+    <td class="center">$'abc\n'</td>
+  </tr>
+  <tr>
+    <td class="center"><code>`...`</code></td>
+    <td>Execute commands in a subshell, returning the result</td>
+    <td class="center">`ls`</td>
+  </tr>
+  <tr>
+    <td class="center"><code>{...}</code></td>
+    <td>Group commands</td>
+    <td class="center">{ ls ; }</td>
+  </tr>
+  <tr>
+    <td class="center"><code>(...)</code></td>
+    <td>Execute commands in a subshell</td>
+    <td class="center">( ls )</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$(...)</code></td>
+    <td>Execute commands in a subshell, returning the result</td>
+    <td class="center">$( ls )</td>
+  </tr>
+  <tr>
+    <td class="center"><code>((...))</code></td>
+    <td>Test an arithmetic operation, returning 0 or 1</td>
+    <td class="center">((5 &gt; 3))</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$((...))</code></td>
+    <td>Return the result of a arithmetic operation</td>
+    <td class="center">$((5+3))</td>
+  </tr>
+  <tr>
+    <td class="center"><code>[...]</code></td>
+    <td>Test an arithmetic expression, returning 0 or 1 (alias of command 'test')</td>
+    <td class="center">[ 5 -gt 3 ]</td>
+  </tr>
+  <tr>
+    <td class="center"><code>[[...]]</code></td>
+    <td>Test an expression, returning 0 or 1 (&amp;&amp; and || are allowed)</td>
+    <td class="center">[[ 5 &gt; 3 ]]</td>
+  </tr>
+</table>
+
+<h2 id="ifwhilefor">6. if, for, select, while, until, case</h2>
+
+<table>
+  <tr>
+    <th>if</th>
+    <th>for / select</th>
+    <th>while / until</th>
+    <th>case</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+if COMMAND
+then
+   ...
+elif COMMAND
+then
+   ...
+else
+   ...
+fi
+</pre>
+    </td>
+    <td>
+      <pre>
+for VAR in LIST
+do
+    ...
+done
+
+or:
+
+for ((exp1;exp2;exp3))
+</pre>
+    </td>
+    <td>
+      <pre>
+while COMMAND
+do
+    ...
+done
+</pre>
+    </td>
+    <td>
+      <pre>
+case $VAR in
+    txt1) ... ;;
+    txt2) ... ;;
+    txtN) ... ;;
+    *)    ... ;;
+esac
+</pre>
+    </td>
+  </tr>
+</table>
+
+<h2 id="test">7. test or [ … ]</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th colspan="2">Numeric comparison</th>
+  </tr>
+  <tr>
+    <td class="center"><code>-lt</code></td>
+    <td>Less Than</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-gt</code></td>
+    <td>Greater than</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-le</code></td>
+    <td>Less than or Equal to</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ge</code></td>
+    <td>Greater than or Equal to</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-eq</code></td>
+    <td>Equals</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ne</code></td>
+    <td>Not Equal to (different)</td>
+  </tr>
+  <tr>
+    <th colspan="2">String comparison</th>
+  </tr>
+  <tr>
+    <td class="center"><code>=</code></td>
+    <td>Equals</td>
+  </tr>
+  <tr>
+    <td class="center"><code>!=</code></td>
+    <td>Not Equal to (different)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-n</code></td>
+    <td>Not NULL</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-z</code></td>
+    <td>Is NULL</td>
+  </tr>
+  <tr>
+    <th colspan="2">Logical Operators</th>
+  </tr>
+  <tr>
+    <td class="center"><code>!</code></td>
+    <td>Logical NOT</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-a</code></td>
+    <td>Logical AND</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-o</code></td>
+    <td>Logical OR</td>
+  </tr>
+  <tr>
+    <th colspan="2">Testing files</th>
+  </tr>
+  <tr>
+    <td class="center"><code>-b</code></td>
+    <td>Is a block device</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-c</code></td>
+    <td>Is a char device</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-d</code></td>
+    <td>Is a directory</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-e</code></td>
+    <td>File exists</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-f</code></td>
+    <td>Is a regular file</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-g</code></td>
+    <td>SGID bit is switched on</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-G</code></td>
+    <td>Current user is in the file's group</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-k</code></td>
+    <td>Sticky-bit is switched on</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-L</code></td>
+    <td>File is a symlink</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-O</code></td>
+    <td>Current user owns the file</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-p</code></td>
+    <td>File is a named pipe</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-r</code></td>
+    <td>File has read permission</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-s</code></td>
+    <td>File size is greater than zero</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-S</code></td>
+    <td>File is a socket</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-t</code></td>
+    <td>File descriptor N is a terminal</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-u</code></td>
+    <td>SUID bit is switched on</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-w</code></td>
+    <td>File has write permission</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-x</code></td>
+    <td>File has execution permission</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-nt</code></td>
+    <td>File is Newer Than</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ot</code></td>
+    <td>File is Older Than</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ef</code></td>
+    <td>File is the same - Equal File</td>
+  </tr>
+</table>
+
+<h2 id="prompt">8. Prompt escapes ($PS1)</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Escape</th>
+    <th>Reminder</th>
+    <th>Expands to...</th>
+  </tr>
+  <tr>
+    <td class="center">\a</td>
+    <td><em>Alert</em></td>
+    <td>Alert (beep)</td>
+  </tr>
+  <tr>
+    <td class="center">\d</td>
+    <td><em>Date</em></td>
+    <td>Date in format "Week-day Month Day" (Sat Jan 15)</td>
+  </tr>
+  <tr>
+    <td class="center">\e</td>
+    <td><em>Escape</em></td>
+    <td>Esc character</td>
+  </tr>
+  <tr>
+    <td class="center">\h</td>
+    <td><em>Hostname</em></td>
+    <td>Hostname without the domain (dhcp11)</td>
+  </tr>
+  <tr>
+    <td class="center">\H</td>
+    <td><em>Hostname</em></td>
+    <td>Full hostname (dhcp11.company)</td>
+  </tr>
+  <tr>
+    <td class="center">\j</td>
+    <td><em>Jobs</em></td>
+    <td>Number of active jobs</td>
+  </tr>
+  <tr>
+    <td class="center">\l</td>
+    <td><em>Tty</em></td>
+    <td>Name of current terminal (ttyp1)</td>
+  </tr>
+  <tr>
+    <td class="center">\n</td>
+    <td><em>Newline</em></td>
+    <td>New Line</td>
+  </tr>
+  <tr>
+    <td class="center">\r</td>
+    <td><em>Return</em></td>
+    <td>Carriage return</td>
+  </tr>
+  <tr>
+    <td class="center">\s</td>
+    <td><em>Shell</em></td>
+    <td>Shell name (basename $0)</td>
+  </tr>
+  <tr>
+    <td class="center">\t</td>
+    <td><em>Time</em></td>
+    <td>Time in 24 hours format HH:MM:SS</td>
+  </tr>
+  <tr>
+    <td class="center">\T</td>
+    <td><em>Time</em></td>
+    <td>Time in 12 hours format HH:MM:SS</td>
+  </tr>
+  <tr>
+    <td class="center">\@</td>
+    <td><em>At</em></td>
+    <td>Time in 12 hours format HH:MM am/pm</td>
+  </tr>
+  <tr>
+    <td class="center">\A</td>
+    <td><em>At</em></td>
+    <td>Time in 24 hours format HH:MM</td>
+  </tr>
+  <tr>
+    <td class="center">\u</td>
+    <td><em>User</em></td>
+    <td>Current user login</td>
+  </tr>
+  <tr>
+    <td class="center">\v</td>
+    <td><em>Version</em></td>
+    <td>Bash Version (2.00)</td>
+  </tr>
+  <tr>
+    <td class="center">\V</td>
+    <td><em>Version</em></td>
+    <td>Bash Version + Subversion (2.00.0)</td>
+  </tr>
+  <tr>
+    <td class="center">\w</td>
+    <td><em>Working Dir</em></td>
+    <td>Full working dir ($PWD)</td>
+  </tr>
+  <tr>
+    <td class="center">\W</td>
+    <td><em>Working Dir</em></td>
+    <td>Last working dir (basename $PWD)</td>
+  </tr>
+  <tr>
+    <td class="center">\!</td>
+    <td><em>History</em></td>
+    <td>Number of current command in history</td>
+  </tr>
+  <tr>
+    <td class="center">\#</td>
+    <td><em>Number</em></td>
+    <td>Number of current command</td>
+  </tr>
+  <tr>
+    <td class="center">\$</td>
+    <td><em>ID</em></td>
+    <td>Show "#" if user is root, and "$" in case of a regular user</td>
+  </tr>
+  <tr>
+    <td class="center">\nnn</td>
+    <td><em>Octal</em></td>
+    <td>Char which Octal value is nnn</td>
+  </tr>
+  <tr>
+    <td class="center">\\</td>
+    <td><em>Backslash</em></td>
+    <td>Backslash \ literal</td>
+  </tr>
+  <tr>
+    <td class="center">\[</td>
+    <td><em>Escapes</em></td>
+    <td>Start a escape sequence (color codes)</td>
+  </tr>
+  <tr>
+    <td class="center">\]</td>
+    <td><em>Escapes</em></td>
+    <td>Finish a escape sequence</td>
+  </tr>
+</table>
+
+<h2 id="echo">9. echo escapes</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Escape</th>
+    <th>Reminder</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td class="center">\a</td>
+    <td><em>Alert</em></td>
+    <td>Alert (beep)</td>
+  </tr>
+  <tr>
+    <td class="center">\b</td>
+    <td><em>Backspace</em></td>
+    <td>Backspace character</td>
+  </tr>
+  <tr>
+    <td class="center">\c</td>
+    <td><em>EOS</em></td>
+    <td>Ends the string</td>
+  </tr>
+  <tr>
+    <td class="center">\e</td>
+    <td><em>Escape</em></td>
+    <td>Esc character</td>
+  </tr>
+  <tr>
+    <td class="center">\f</td>
+    <td><em>Form feed</em></td>
+    <td>Form Feed</td>
+  </tr>
+  <tr>
+    <td class="center">\n</td>
+    <td><em>Newline</em></td>
+    <td>Newline</td>
+  </tr>
+  <tr>
+    <td class="center">\r</td>
+    <td><em>Return</em></td>
+    <td>Carriage Return</td>
+  </tr>
+  <tr>
+    <td class="center">\t</td>
+    <td><em>Tab</em></td>
+    <td>Tab</td>
+  </tr>
+  <tr>
+    <td class="center">\v</td>
+    <td><em>Vtab</em></td>
+    <td>Vertical Tab</td>
+  </tr>
+  <tr>
+    <td class="center">\\</td>
+    <td><em>Backslash</em></td>
+    <td>Backslash</td>
+  </tr>
+  <tr>
+    <td class="center">\nnn</td>
+    <td><em>Octal</em></td>
+    <td>Character whose octal code is nn</td>
+  </tr>
+  <tr>
+    <td class="center">\xnn</td>
+    <td><em>Hexa</em></td>
+    <td>Character whose hexadecimal code is nn</td>
+  </tr>
+</table>
+
+<h2 id="date">10. date tokens</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Format</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td class="center"><code>%a</code></td>
+    <td>Day of the week - abbreviated name (Sun..Sat)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%A</code></td>
+    <td>Day of the week - full name (Sunday..Saturday)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%b</code></td>
+    <td>Month name - abbreviated (Jan..Dec)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%B</code></td>
+    <td>Month name - full (January..December)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%c</code></td>
+    <td>Locale's date and time (Thu 05 May 2011 11:41:41 AM EST)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%y</code></td>
+    <td>Year (two digits)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%Y</code></td>
+    <td>Year (four digits)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%m</code></td>
+    <td>Month (01..12)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%d</code></td>
+    <td>Day (01..31)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%j</code></td>
+    <td>Day of year (001..366)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%H</code></td>
+    <td>Hours (00..23)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%M</code></td>
+    <td>Minutes (00..59)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%S</code></td>
+    <td>Seconds (00..60)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%s</code></td>
+    <td>Seconds since 00:00:00, Jan 1, 1970 (Unix time)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%%</code></td>
+    <td>A literal %</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%t</code></td>
+    <td>A TAB</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%n</code></td>
+    <td>A newline</td>
+  </tr>
+</table>
+
+<h2 id="printf">11. printf tokens</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Format</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td class="center"><code>%d</code></td>
+    <td>Integer number</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%o</code></td>
+    <td>Octal number</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%x</code></td>
+    <td>Hexadecimal Number (a-f)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%X</code></td>
+    <td>Hexadecimal Number (A-F)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%f</code></td>
+    <td>Float number</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%e</code></td>
+    <td>Scientific notation x.xxxx e nnn. float, double (e+1)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%E</code></td>
+    <td>Same as %e, but with an upper-case E in the printed format</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%s</code></td>
+    <td>String</td>
+  </tr>
+</table>
+
+<h2 id="ls">12. ls -l file identifiers</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Letter</th>
+    <th>Reminder</th>
+    <th>File types (First char)</th>
+  </tr>
+  <tr>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td>Regular file</td>
+  </tr>
+  <tr>
+    <td class="center">d</td>
+    <td class="center">Directory</td>
+    <td>Directory</td>
+  </tr>
+  <tr>
+    <td class="center">l</td>
+    <td class="center">Link</td>
+    <td>Symbolic link</td>
+  </tr>
+  <tr>
+    <td class="center">b</td>
+    <td class="center">Block</td>
+    <td>Block Device (Hard drives)</td>
+  </tr>
+  <tr>
+    <td class="center">c</td>
+    <td class="center">Char</td>
+    <td>Character device (serial modem)</td>
+  </tr>
+  <tr>
+    <td class="center">s</td>
+    <td class="center">Socket</td>
+    <td>Mapped socket in a file (processes communication)</td>
+  </tr>
+  <tr>
+    <td class="center">p</td>
+    <td class="center">Pipe</td>
+    <td>FIFO or Named Pipe (processes communication)</td>
+  </tr>
+  <tr>
+    <th>Letter</th>
+    <th>Reminder</th>
+    <th>File permission (next nine chars)</th>
+  </tr>
+  <tr>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td>Deactivated</td>
+  </tr>
+  <tr>
+    <td class="center">r</td>
+    <td class="center">Read</td>
+    <td>Read Permission</td>
+  </tr>
+  <tr>
+    <td class="center">w</td>
+    <td class="center">Write</td>
+    <td>Write permission</td>
+  </tr>
+  <tr>
+    <td class="center">x</td>
+    <td class="center">eXecute</td>
+    <td>Execution permission (or directory access)</td>
+  </tr>
+  <tr>
+    <td class="center">X</td>
+    <td class="center">eXecute</td>
+    <td>Directory access only</td>
+  </tr>
+  <tr>
+    <td class="center">s</td>
+    <td class="center">Set ID</td>
+    <td>User/group for execution (SUID, SGID) - permission 'x' activated</td>
+  </tr>
+  <tr>
+    <td class="center">S</td>
+    <td class="center">Set ID</td>
+    <td>User/group for execution (SUID, SGID) - permission 'x' deactivated</td>
+  </tr>
+  <tr>
+    <td class="center">t</td>
+    <td class="center">sTicky</td>
+    <td>Users delete his own files only - permission 'x' activated</td>
+  </tr>
+  <tr>
+    <td class="center">T</td>
+    <td class="center">sTicky</td>
+    <td>Users delete his own files only - permission 'x' deactivated</td>
+  </tr>
+</table>
+
+<h2 id="glob">13. Filenames wildcards (glob)</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Wildcard</th>
+    <th>Matches...</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td class="center"><code>*</code></td>
+    <td>Anything</td>
+    <td><code>*.txt</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>?</code></td>
+    <td>Any char</td>
+    <td><code>file-??.zip</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[...]</code></td>
+    <td>Any char in the group</td>
+    <td><code>[Ff]ile.txt</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[^...]</code></td>
+    <td>Any char, except those in the group</td>
+    <td><code>[^A-Z]*.txt</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>{...}</code></td>
+    <td>Any text, comma separated</td>
+    <td><code>file.{txt,html}</code></td>
+  </tr>
+</table>
+
+<h2 id="case">14. case wildcards</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Wildcard</th>
+    <th>Matches...</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td class="center"><code>*</code></td>
+    <td>Anything</td>
+    <td class="right"><code>*.txt) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>?</code></td>
+    <td>Any char</td>
+    <td class="right"><code>file-??.zip) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[...]</code></td>
+    <td>Any char in the group</td>
+    <td class="right"><code>[0-9]) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[^...]</code></td>
+    <td>Any char, except those in the group</td>
+    <td class="right"><code>[^0-9]) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>...|...</code></td>
+    <td>Ant text, pipe separated</td>
+    <td class="right"><code>txt|html) echo ;;</code></td>
+  </tr>
+</table>
+
+<h2 id="signals">15. trap/kill/killall signals</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>#</th>
+    <th>Linux</th>
+    <th>Cygwin</th>
+    <th>SystemV</th>
+    <th>AIX</th>
+    <th>HP-UX</th>
+    <th>Solaris</th>
+    <th>BSD/Mac</th>
+  </tr>
+  <tr>
+    <td class="right">1</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+  </tr>
+  <tr>
+    <td class="right">2</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+  </tr>
+  <tr>
+    <td class="right">3</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+  </tr>
+  <tr>
+    <td class="right">4</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+  </tr>
+  <tr>
+    <td class="right">5</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+  </tr>
+  <tr>
+    <td class="right">6</td>
+    <td>ABRT</td>
+    <td>ABRT</td>
+    <td>IOT</td>
+    <td>LOST</td>
+    <td>ABRT</td>
+    <td>ABRT</td>
+    <td>ABRT</td>
+  </tr>
+  <tr>
+    <td class="right">7</td>
+    <td>BUS</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+  </tr>
+  <tr>
+    <td class="right">8</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+  </tr>
+  <tr>
+    <td class="right">9</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>USR1</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>USR2</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+  </tr>
+  <tr>
+    <th>#</th>
+    <th>Linux</th>
+    <th>Cygwin</th>
+    <th>SystemV</th>
+    <th>AIX</th>
+    <th>HP-UX</th>
+    <th>Solaris</th>
+    <th>BSD/Mac</th>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>-</td>
+    <td>URG</td>
+    <td>USR1</td>
+    <td>URG</td>
+    <td>USR1</td>
+    <td>USR1</td>
+    <td>URG</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>CHLD</td>
+    <td>STOP</td>
+    <td>USR2</td>
+    <td>STOP</td>
+    <td>USR2</td>
+    <td>USR2</td>
+    <td>STOP</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>CONT</td>
+    <td>TSTP</td>
+    <td>CHLD</td>
+    <td>TSTP</td>
+    <td>CHLD</td>
+    <td>CHLD</td>
+    <td>TSTP</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>STOP</td>
+    <td>CONT</td>
+    <td>PWR</td>
+    <td>CONT</td>
+    <td>PWR</td>
+    <td>PWR</td>
+    <td>CONT</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>TSTP</td>
+    <td>CHLD</td>
+    <td>WINCH</td>
+    <td>CHLD</td>
+    <td>VTALRM</td>
+    <td>WINCH</td>
+    <td>CHLD</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>TTIN</td>
+    <td>TTIN</td>
+    <td>URG</td>
+    <td>TTIN</td>
+    <td>PROF</td>
+    <td>URG</td>
+    <td>TTIN</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>TTOU</td>
+    <td>TTOU</td>
+    <td>IO</td>
+    <td>TTOU</td>
+    <td>IO</td>
+    <td>IO</td>
+    <td>TTOU</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>URG</td>
+    <td>IO</td>
+    <td>STOP</td>
+    <td>IO</td>
+    <td>WINCH</td>
+    <td>STOP</td>
+    <td>IO</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>XCPU</td>
+    <td>XCPU</td>
+    <td>TSTP</td>
+    <td>XCPU</td>
+    <td>STOP</td>
+    <td>TSTP</td>
+    <td>XCPU</td>
+  </tr>
+  <tr>
+    <th>#</th>
+    <th>Linux</th>
+    <th>Cygwin</th>
+    <th>SystemV</th>
+    <th>AIX</th>
+    <th>HP-UX</th>
+    <th>Solaris</th>
+    <th>BSD/Mac</th>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>XFSZ</td>
+    <td>XFSZ</td>
+    <td>CONT</td>
+    <td>XFSZ</td>
+    <td>TSTP</td>
+    <td>CONT</td>
+    <td>XFSZ</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>VTALRM</td>
+    <td>VTALRM</td>
+    <td>TTIN</td>
+    <td>-</td>
+    <td>CONT</td>
+    <td>TTIN</td>
+    <td>VTALRM</td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>PROF</td>
+    <td>PROF</td>
+    <td>TTOU</td>
+    <td>MSG</td>
+    <td>TTIN</td>
+    <td>TTOU</td>
+    <td>PROF</td>
+  </tr>
+  <tr>
+    <td>28</td>
+    <td>WINCH</td>
+    <td>WINCH</td>
+    <td>VTALRM</td>
+    <td>WINCH</td>
+    <td>TTOU</td>
+    <td>VTALRM</td>
+    <td>WINCH</td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>IO</td>
+    <td>LOST</td>
+    <td>PROF</td>
+    <td>PWR</td>
+    <td>URG</td>
+    <td>PROF</td>
+    <td>INFO</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>PWR</td>
+    <td>USR1</td>
+    <td>XCPU</td>
+    <td>USR1</td>
+    <td>LOST</td>
+    <td>XCPU</td>
+    <td>USR1</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>SYS</td>
+    <td>USR2</td>
+    <td>XFSZ</td>
+    <td>USR2</td>
+    <td>-</td>
+    <td>XFSZ</td>
+    <td>USR2</td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>PROF</td>
+    <td>-</td>
+    <td>WAITING</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>DANGER</td>
+    <td>-</td>
+    <td>LWP</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>VTALRM</td>
+    <td>-</td>
+    <td>FREEZE</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>MIGRATE</td>
+    <td>-</td>
+    <td>THAW</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>PRE</td>
+    <td>-</td>
+    <td>CANCEL</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>37</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>LOST</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<p>How you can get this list: trap -l, kill -l or killall -l
+<br>
+See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</a></p>
+
+<h2 id="exit-codes">16. Exit codes</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Code</th>
+    <th>Meaning</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td class="center">0</td>
+    <td>No errors</td>
+    <td>echo</td>
+  </tr>
+  <tr>
+    <td class="center">1</td>
+    <td>Catchall for most common errors</td>
+    <td>echo $((1/0))</td>
+  </tr>
+  <tr>
+    <td class="center">2</td>
+    <td>Misuse of shell builtins</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td class="center">126</td>
+    <td>Command cannot be executed (no permission)</td>
+    <td>touch a ; ./a</td>
+  </tr>
+  <tr>
+    <td class="center">127</td>
+    <td>Command not found</td>
+    <td>echooo</td>
+  </tr>
+  <tr>
+    <td class="center">128</td>
+    <td>Invalid argument to exit</td>
+    <td>exit 1.0</td>
+  </tr>
+  <tr>
+    <td class="center">128+n</td>
+    <td>128 + exit code which was killed</td>
+    <td>kill -9 $PPID #exit 137</td>
+  </tr>
+  <tr>
+    <td class="center">130</td>
+    <td>Script terminated by Ctrl+C (128 + 2)</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td class="center">255</td>
+    <td>'exit' parameter not between 0 and 255</td>
+    <td>exit -1</td>
+  </tr>
+</table>
+
+<h2 id="ansi-colors">17. Color codes (ANSI)</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Color</th>
+    <th>Letter</th>
+    <th>Background</th>
+  </tr>
+  <tr>
+    <td>Black</td>
+    <td class="center">30</td>
+    <td class="center">40</td>
+  </tr>
+  <tr>
+    <td>Red</td>
+    <td class="center">31</td>
+    <td class="center">41</td>
+  </tr>
+  <tr>
+    <td>Green</td>
+    <td class="center">32</td>
+    <td class="center">42</td>
+  </tr>
+  <tr>
+    <td>Yellow</td>
+    <td class="center">33</td>
+    <td class="center">43</td>
+  </tr>
+  <tr>
+    <td>Blue</td>
+    <td class="center">34</td>
+    <td class="center">44</td>
+  </tr>
+  <tr>
+    <td>Pink</td>
+    <td class="center">35</td>
+    <td class="center">45</td>
+  </tr>
+  <tr>
+    <td>Cyan</td>
+    <td class="center">36</td>
+    <td class="center">46</td>
+  </tr>
+  <tr>
+    <td>White</td>
+    <td class="center">37</td>
+    <td class="center">47</td>
+  </tr>
+  <tr>
+    <th colspan="2">Attribute</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td colspan="2">Reset</td>
+    <td class="center">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bold</td>
+    <td class="center">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Underline</td>
+    <td class="center">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Blinking</td>
+    <td class="center">5</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reverse</td>
+    <td class="center">7</td>
+  </tr>
+  <tr>
+    <th colspan="3">Examples: ESC [ &lt;N&gt;;&lt;N&gt; m</th>
+  </tr>
+  <tr>
+    <td colspan="2">Regular text (Turn color off)</td>
+    <td class="center"><code>ESC[m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Bold</td>
+    <td class="center"><code>ESC[1m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Yellow</td>
+    <td class="center"><code>ESC[33;1m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Blue background, gray letter</td>
+    <td class="center"><code>ESC[44;37m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Blinking red</td>
+    <td class="center"><code>ESC[31;5m</code></td>
+  </tr>
+  <tr>
+    <th colspan="3">On the command line</th>
+  </tr>
+  <tr>
+    <td colspan="3"><code>echo -e '\e[33;1m yellow \e[m'</code></td>
+  </tr>
+  <tr>
+    <td colspan="3"><code>echo -e '\033[33;1m yellow \033[m'</code></td>
+  </tr>
+</table>
+
+<p><img class="left" src="http://aurelio.net/img/articles/zzcores.gif" alt=""></p>
+
+<h2 id="regex-meta">18. Regex metacharacters</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Meta</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td class="center">.</td>
+    <td>Dot</td>
+    <td>Matches exactly one char (any char)</td>
+  </tr>
+  <tr>
+    <td class="center">[]</td>
+    <td>List</td>
+    <td>Matches any char in the group</td>
+  </tr>
+  <tr>
+    <td class="center">[^]</td>
+    <td>Negated list</td>
+    <td>Matches any char, except those in the group</td>
+  </tr>
+  <tr>
+    <td class="center">?</td>
+    <td>Optional</td>
+    <td>Matches the preceding item zero or one time</td>
+  </tr>
+  <tr>
+    <td class="center">*</td>
+    <td>Star</td>
+    <td>Matches the preceding item zero or more times</td>
+  </tr>
+  <tr>
+    <td class="center">+</td>
+    <td>Plus</td>
+    <td>Matches the preceding item one or more times</td>
+  </tr>
+  <tr>
+    <td class="center">{,}</td>
+    <td>Repeat</td>
+    <td>Matches the preceding item between m and n times {m,n}</td>
+  </tr>
+  <tr>
+    <td class="center">^</td>
+    <td>Caret</td>
+    <td>Matches the start of the line</td>
+  </tr>
+  <tr>
+    <td class="center">$</td>
+    <td>Dollar</td>
+    <td>Matches the end of the line</td>
+  </tr>
+  <tr>
+    <td class="center">\b</td>
+    <td>Boundary</td>
+    <td>Matches the word boundary</td>
+  </tr>
+  <tr>
+    <td class="center">\</td>
+    <td>Escape</td>
+    <td>Escapes a metacharacter, taking off its power</td>
+  </tr>
+  <tr>
+    <td class="center">|</td>
+    <td>OR</td>
+    <td>Alternatives (use inside a group)</td>
+  </tr>
+  <tr>
+    <td class="center">()</td>
+    <td>Group</td>
+    <td>Group slices of expression, nesting is allowed</td>
+  </tr>
+  <tr>
+    <td class="center">\1</td>
+    <td>Backreference</td>
+    <td>Returns group #1 contents</td>
+  </tr>
+  <tr>
+    <td class="center">\2</td>
+    <td>Backreference</td>
+    <td>Returns group #2 contents (until \9)</td>
+  </tr>
+  <tr>
+    <td class="center">.*</td>
+    <td>Catchall</td>
+    <td>Matches everything, even nothing</td>
+  </tr>
+  <tr>
+    <td class="center">??</td>
+    <td>Lazy Optional</td>
+    <td>Like regular Optional, but not greedy</td>
+  </tr>
+  <tr>
+    <td class="center">*?</td>
+    <td>Lazy Star</td>
+    <td>Like regular Star, but not greedy</td>
+  </tr>
+  <tr>
+    <td class="center">+?</td>
+    <td>Lazy Plus</td>
+    <td>Like regular Plus, but not greedy</td>
+  </tr>
+  <tr>
+    <td class="center">{}?</td>
+    <td>Lazy Repeat</td>
+    <td>Like regular Repeat, but not greedy</td>
+  </tr>
+</table>
+
+<h2 id="regex-flavors">19. Regex flavors</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Program</th>
+    <th>Opt</th>
+    <th>Plus</th>
+    <th>Repeat</th>
+    <th>Boundary</th>
+    <th>OR</th>
+    <th>Group</th>
+  </tr>
+  <tr>
+    <td>awk</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>ed</td>
+    <td class="center">\?</td>
+    <td class="center">\+</td>
+    <td class="center">\{,\}</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>egrep</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>emacs</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>expect</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>find</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>gawk</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\&lt;\&gt;</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>grep</td>
+    <td class="center">\?</td>
+    <td class="center">\+</td>
+    <td class="center">\{,\}</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>mawk</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>perl</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>php</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>python</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>sed</td>
+    <td class="center">\?</td>
+    <td class="center">\+</td>
+    <td class="center">\{,\}</td>
+    <td class="center">\&lt;\&gt;</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>vim</td>
+    <td class="center">\=</td>
+    <td class="center">\+</td>
+    <td class="center">\{,}</td>
+    <td class="center">\&lt;\&gt;</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+</table>
+
+<h2 id="ascii">20. Printable ASCII characters (ISO-8859-1) - text</h2>
+
+<pre>
+32        64  @     96  `    162  ¢    194  Â    226  â
+33  !     65  A     97  a    163  £    195  Ã    227  ã
+34  "     66  B     98  b    164  ¤    196  Ä    228  ä
+35  #     67  C     99  c    165  ¥    197  Å    229  å
+36  $     68  D    100  d    166  ¦    198  Æ    230  æ
+37  %     69  E    101  e    167  §    199  Ç    231  ç
+38  &amp;     70  F    102  f    168  ¨    200  È    232  è
+39  '     71  G    103  g    169  ©    201  É    233  é
+40  (     72  H    104  h    170  ª    202  Ê    234  ê
+41  )     73  I    105  i    171  «    203  Ë    235  ë
+42  *     74  J    106  j    172  ¬    204  Ì    236  ì
+43  +     75  K    107  k    173       205  Í    237  í
+44  ,     76  L    108  l    174  ®    206  Î    238  î
+45  -     77  M    109  m    175  ¯    207  Ï    239  ï
+46  .     78  N    110  n    176  °    208  Ð    240  ð
+47  /     79  O    111  o    177  ±    209  Ñ    241  ñ
+48  0     80  P    112  p    178  ²    210  Ò    242  ò
+49  1     81  Q    113  q    179  ³    211  Ó    243  ó
+50  2     82  R    114  r    180  ´    212  Ô    244  ô
+51  3     83  S    115  s    181  µ    213  Õ    245  õ
+52  4     84  T    116  t    182  ¶    214  Ö    246  ö
+53  5     85  U    117  u    183  ·    215  ×    247  ÷
+54  6     86  V    118  v    184  ¸    216  Ø    248  ø
+55  7     87  W    119  w    185  ¹    217  Ù    249  ù
+56  8     88  X    120  x    186  º    218  Ú    250  ú
+57  9     89  Y    121  y    187  »    219  Û    251  û
+58  :     90  Z    122  z    188  ¼    220  Ü    252  ü
+59  ;     91  [    123  {    189  ½    221  Ý    253  ý
+60  &lt;     92  \    124  |    190  ¾    222  Þ    254  þ
+61  =     93  ]    125  }    191  ¿    223  ß    255  ÿ
+62  &gt;     94  ^    126  ~    192  À    224  à
+63  ?     95  _    161  ¡    193  Á    225  á
+</pre>
+
+<h2 id="ascii-image">21. Printable ASCII characters (ISO-8859-1) - image</h2>
+
+<p><img class="left" src="http://aurelio.net/img/articles/ascii.gif" alt=""></p>
+
+<h2 id="copy-paste">22. Copy-paste friendly commands</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Conditions with IF</th>
+  </tr>
+  <tr>
+    <td><code>if [ -f "$file" ]; then echo 'File found'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ ! -d "$dir" ]; then echo 'Directory not found'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ $i -gt 5 ]; then echo 'Greater than 5'; else echo 'Lesser than 5'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ $i -ge 5 -a $i -le 10 ]; then echo 'Between 5 and 10, inclusive'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ $i -eq 5 ]; then echo '=5'; elif [ $i -gt 5 ]; then echo '&gt;5'; else echo '&lt;5'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ "$USER" = 'root' ]; then echo 'Hello root'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if grep -qs 'root' /etc/passwd; then echo 'User found'; fi</code></td>
+  </tr>
+  <tr>
+    <th>Conditions with AND (&amp;&amp;) and OR (||)</th>
+  </tr>
+  <tr>
+    <td><code>[ -f "$file" ] &amp;&amp; echo 'File found'</code></td>
+  </tr>
+  <tr>
+    <td><code>[ -d "$dir" ] || echo 'Directory not found'</code></td>
+  </tr>
+  <tr>
+    <td><code>grep -qs 'root' /etc/passwd &amp;&amp; echo 'User found'</code></td>
+  </tr>
+  <tr>
+    <td><code>cd "$dir" &amp;&amp; rm "$file" &amp;&amp; touch "$file" &amp;&amp; echo 'done!'</code></td>
+  </tr>
+  <tr>
+    <td><code>[ "$1" ] &amp;&amp; param=$1 || param='default value'</code></td>
+  </tr>
+  <tr>
+    <td><code>[ "$1" ] &amp;&amp; param=${1:-default value}</code></td>
+  </tr>
+  <tr>
+    <td><code>[ "$1" ] || { echo "Usage: $0 parameter" ; exit 1 ; }</code></td>
+  </tr>
+  <tr>
+    <th>Adds 1 to variable $i</th>
+  </tr>
+  <tr>
+    <td><code>i=$(expr $i + 1)</code></td>
+  </tr>
+  <tr>
+    <td><code>i=$((i+1))</code></td>
+  </tr>
+  <tr>
+    <td><code>let i=i+1</code></td>
+  </tr>
+  <tr>
+    <td><code>let i+=1</code></td>
+  </tr>
+  <tr>
+    <td><code>let i++</code></td>
+  </tr>
+  <tr>
+    <th>Loop from 1 to 10</th>
+  </tr>
+  <tr>
+    <td><code>for i in 1 2 3 4 5 6 7 8 9 10; do echo $i; done</code></td>
+  </tr>
+  <tr>
+    <td><code>for i in $(seq 10); do echo $i; done</code></td>
+  </tr>
+  <tr>
+    <td><code>for ((i=1;i&lt;=10;i++)); do echo $i; done</code></td>
+  </tr>
+  <tr>
+    <td><code>i=1 ; while [ $i -le 10 ]; do echo $i ; i=$((i+1)) ; done</code></td>
+  </tr>
+  <tr>
+    <td><code>i=1 ; until [ $i -gt 10 ]; do echo $i ; i=$((i+1)) ; done</code></td>
+  </tr>
+  <tr>
+    <th>Loop reading lines from a file or command output</th>
+  </tr>
+  <tr>
+    <td><code>cat /etc/passwd | while read LINE; do echo "$LINE"; done</code></td>
+  </tr>
+  <tr>
+    <td><code>grep 'root' /etc/passwd | while read LINE; do echo "$LINE"; done</code></td>
+  </tr>
+  <tr>
+    <td><code>while read LINE; do echo "$LINE"; done &lt; /etc/passwd</code></td>
+  </tr>
+  <tr>
+    <td><code>while read LINE; do echo "$LINE"; done &lt; &lt;(grep 'root' /etc/passwd)</code></td>
+  </tr>
+  <tr>
+    <th>Wildcards for case command</th>
+  </tr>
+  <tr>
+    <td><code>case "$dir" in /home/*) echo 'dir inside /home';; esac</code></td>
+  </tr>
+  <tr>
+    <td><code>case "$user" in root|john|mary) echo "Hello $user";; *) echo "I don't know you.";; esac</code></td>
+  </tr>
+  <tr>
+    <td><code>case "$var" in ?) echo '1 letter';; ??) echo '2 letters';; ??*) echo 'More than 2 letters';; esac</code></td>
+  </tr>
+  <tr>
+    <td><code>case "$i" in [0-9]) echo '1 digit';; [0-9][0-9]) echo '2 digits';; esac</code></td>
+  </tr>
+  <tr>
+    <th>Dialog boxes</th>
+  </tr>
+  <tr>
+    <td><code>dialog --calendar 'abc' 0 0 31 12 1999</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --checklist 'abc' 0 0 0 item1 'desc1' on item2 'desc2' off</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --fselect /tmp 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>(echo 50; sleep 2; echo 100) | dialog --gauge 'abc' 8 40 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --infobox 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --inputbox 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --passwordbox 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --menu 'abc' 0 0 0 item1 'desc1' item2 'desc2'</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --msgbox 'abc' 8 40</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --radiolist 'abc' 0 0 0 item1 'desc1' on item2 'desc2' off</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --tailbox /tmp/file.txt 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --textbox /tmp/file.txt 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --timebox 'abc' 0 0 23 59 00</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --yesno 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><strong>Hint 1:</strong> <code>Dialog ... &amp;&amp; echo 'You pressed OK/Yes' || echo 'You pressed Cancel/No'</code></td>
+  </tr>
+  <tr>
+    <td><strong>Hint 2:</strong> <code>result=$(Dialog --stdout --BOXTYPE 'abc' ...)</code></td>
+  </tr>
+</table>
+
+<h2 id="emacs">23. Command line shortcuts (set -o emacs)</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Shortcut</th>
+    <th>Description</th>
+    <th>Similar key</th>
+  </tr>
+  <tr>
+    <td>Ctrl+A</td>
+    <td>Move the cursor to the beginning of line</td>
+    <td class="center">Home</td>
+  </tr>
+  <tr>
+    <td>Ctrl+B</td>
+    <td>Move the cursor one position left</td>
+    <td class="center">←</td>
+  </tr>
+  <tr>
+    <td>Ctrl+C</td>
+    <td>Send EOF() to the system</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+D</td>
+    <td>Delete the char at right</td>
+    <td class="center">Delete</td>
+  </tr>
+  <tr>
+    <td>Ctrl+E</td>
+    <td>Move the cursor to the end of line</td>
+    <td class="center">End</td>
+  </tr>
+  <tr>
+    <td>Ctrl+F</td>
+    <td>Move the cursor one position at right</td>
+    <td class="center">→</td>
+  </tr>
+  <tr>
+    <td>Ctrl+H</td>
+    <td>Delete the char at left</td>
+    <td class="center">Backspace</td>
+  </tr>
+  <tr>
+    <td>Ctrl+I</td>
+    <td>Complete files and commands</td>
+    <td class="center">Tab</td>
+  </tr>
+  <tr>
+    <td>Ctrl+J</td>
+    <td>Line break</td>
+    <td class="center">Enter</td>
+  </tr>
+  <tr>
+    <td>Ctrl+K</td>
+    <td>Cut from cursor to the end of line</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+L</td>
+    <td>Clear screen</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+N</td>
+    <td>Next command</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+P</td>
+    <td>Previous command</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+Q</td>
+    <td>Unlock the shell (see Ctrl+S)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+R</td>
+    <td>Seek in the command history</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+S</td>
+    <td>Lock the shell (see Ctrl+Q)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+T</td>
+    <td>Exchange two chars position</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+U</td>
+    <td>Cut the whole line</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+V</td>
+    <td>Insert a literal character</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+W</td>
+    <td>Cut word at left</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+X</td>
+    <td>Move the cursor to end/beginning of line (2x)</td>
+    <td class="center">Home/End</td>
+  </tr>
+  <tr>
+    <td>Ctrl+Y</td>
+    <td>Paste the text</td>
+    <td></td>
+  </tr>
+</table>
+
+<h2 id="toolbox">24. Toolbox</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+  <tr>
+    <th>Command</th>
+    <th>Function</th>
+    <th>Useful options</th>
+  </tr>
+  <tr>
+    <td class="center"><strong>cat</strong></td>
+    <td><em>Show file contents</em></td>
+    <td>-n, -s</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>cut</strong></td>
+    <td><em>Extract fields</em></td>
+    <td>-d -f, -c</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>date</strong></td>
+    <td><em>Show date</em></td>
+    <td>-d, +'...'</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>diff</strong></td>
+    <td><em>Compare files</em></td>
+    <td>-u, -Nr, -i, -w</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>echo</strong></td>
+    <td><em>Show text</em></td>
+    <td>-e, -n</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>find</strong></td>
+    <td><em>Find files</em></td>
+    <td>-name, -iname, -type f, -exec, -or</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>fmt</strong></td>
+    <td><em>Format paragraph</em></td>
+    <td>-w, -u</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>grep</strong></td>
+    <td><em>Search for text</em></td>
+    <td>-i, -v, -r, -qs, -n, -l, -w -x, -A -B -C</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>head</strong></td>
+    <td><em>Show first lines</em></td>
+    <td>-n, -c</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>od</strong></td>
+    <td><em>Show chars</em></td>
+    <td>-a, -c, -o, -x</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>paste</strong></td>
+    <td><em>Merge files</em></td>
+    <td>-d, -s</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>printf</strong></td>
+    <td><em>Show text</em></td>
+    <td><em>nothing</em></td>
+  </tr>
+  <tr>
+    <td class="center"><strong>rev</strong></td>
+    <td><em>Reverse text</em></td>
+    <td><em>nothing</em></td>
+  </tr>
+  <tr>
+    <td class="center"><strong>sed</strong></td>
+    <td><em>Edit text</em></td>
+    <td>-n, -f, s/this/that/, p, d, q, N</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>seq</strong></td>
+    <td><em>Count numbers</em></td>
+    <td>-s, -f</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>sort</strong></td>
+    <td><em>Sort text</em></td>
+    <td>-n, -f, -r, -k -t, -o</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tac</strong></td>
+    <td><em>Reverse file</em></td>
+    <td><em>nothing</em></td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tail</strong></td>
+    <td><em>Show last lines</em></td>
+    <td>-n, -c, -f</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tee</strong></td>
+    <td><em>Save the stream</em></td>
+    <td>-a</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tr</strong></td>
+    <td><em>Transforms the text</em></td>
+    <td>-d, -s, A-Z a-z</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>uniq</strong></td>
+    <td><em>Remove duplicated</em></td>
+    <td>-i, -d, -u</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>wc</strong></td>
+    <td><em>Count letters</em></td>
+    <td>-c, -w, -l, -L</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>xargs</strong></td>
+    <td><em>Manage arguments</em></td>
+    <td>-n, -i</td>
+  </tr>
+</table>

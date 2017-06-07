@@ -1,0 +1,56 @@
+---
+layout: 2013-articles
+worked: "3:00"
+date: 2012-12-04
+title: Ignore a local folder inside Dropbox
+tags: [Dropbox]
+---
+
+<p>If you use <a href="http://dropbox.com/">Dropbox</a> to store all your working projects and personal media, you'll save space and bandwidth if you ignore (no syncing, no removing) the local folders that contain temporary data. Some examples:</p>
+
+<ul>
+  <li>The build folder for a Xcode app</li>
+  <li>The working folder with raw images to be edited</li>
+  <li>Cache folders, for example <code>iTunes/Album Artwork/Cache/</code></li>
+</ul>
+
+<p>First we must empty those folders in the Dropbox server to regain the precious quota space they're spending. Then we instruct Dropbox to stop syncing those folders, ignoring any local changes made to them. Now the local folders will grow, but their server version will always be empty.</p>
+
+<p>You can't use the <a href="https://www.dropbox.com/help/175/en">Selective Sync</a> feature alone to achieve this, because when you uncheck a folder, <a href="http://aurelio.net/articles/dropbox-selective-sync.html">it is removed from your drive</a> and is left untouched in the server. We want the opposite, so let's trick Dropbox to do it.</p>
+
+<h2 id="empty">1. Empty the remote folder</h2>
+
+<p>In your computer, find the folder you want to ignore and <strong>move</strong> it to another location <strong>outside</strong> your Dropbox folder (we will move it back in step 3). This will trigger Dropbox syncing and that folder will be removed from the server.</p>
+
+<p>Wait until Dropbox has finished syncing.</p>
+
+<p>Great. Quota space regained. But to use Selective Sync in the next step, we need a folder to uncheck. Just create a new empty folder, using the exact same name and location as the one just removed.</p>
+
+<p>Wait until Dropbox has finished syncing.</p>
+
+<p>Now the folder you want to ignore is an empty folder in both your computer and the server.</p>
+
+<pre>
+Unix translation:
+$ mv ~/Dropbox/MyProject/build /tmp
+$ mkdir ~/Dropbox/MyProject/build
+</pre>
+
+<h2 id="sync">2. Stop syncing the local folder</h2>
+
+<p>Go to the Dropbox's preferences and open Selective Sync settings. Now uncheck the folder we're playing with. You may have to switch to the Advanced view if it's your first time here. Confirm your changes and wait until Dropbox has finished applying them.</p>
+
+<p>Our dear empty local folder was removed, because <a href="http://aurelio.net/articles/dropbox-selective-sync.html">that's how Selective Sync works</a>. But if you create that folder again in your computer, now Dropbox will completely ignore it. That's what we want!</p>
+
+<h2 id="restore">3. Restore the original folder</h2>
+
+<p>Just move the original folder back to its place inside your Dropbox.</p>
+
+<p>Note that Dropbox will not start the syncing process, since this folder is now ignored. You can work on it without worrying about quota and bandwidth.</p>
+
+<p>To check if everything went fine, enter the Dropbox website and confirm that the folder is empty in the server.</p>
+
+<pre>
+Unix translation:
+$ mv /tmp/build ~/Dropbox/MyProject
+</pre>

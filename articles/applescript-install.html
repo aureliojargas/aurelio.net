@@ -1,0 +1,47 @@
+---
+layout: 2013-articles
+#worked: 0
+date: 2007-05-22
+title: How to install AppleScripts on your Mac
+tags: [AppleScript, reference]
+---
+
+<h2>1. Launch AppleScript Utility</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-utility-path.jpg" alt=""></p>
+
+<h2>2. Enable the menu bar icon</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-utility.png" alt=""></p>
+
+<h2>3. Open the User Scripts folder</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-menu-clear.jpg" alt=""></p>
+
+<h2>4. Create the Applications folder on it</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-applications-folder.jpg" alt=""></p>
+
+<h2>5. Create the iTunes, iPhoto, ... folders</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-apps-folders.jpg" alt=""></p>
+
+<h2>6. Move the AppleScripts to the App folder</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-script-path.jpg" alt=""></p>
+
+<h2>7. Have Fun!</h2>
+
+<p><img class="center" src="http://aurelio.net/img/articles/as-itunes-menu.png" alt=""></p>
+
+<h2>Appendix A - Command line version</h2>
+
+<pre>
+open -a "AppleScript Utility"
+mkdir -p ~/Library/Scripts/Applications
+cd $_
+mkdir "Address Book" iPhoto iTunes
+mv ~/Desktop/iTunes*.scpt iTunes
+
+# \o/
+</pre>

@@ -1,0 +1,127 @@
+---
+layout: 2013-articles
+#worked: 0
+date: 2012-12-14
+title: Dropbox and symlinks
+tags: [Dropbox]
+---
+
+<blockquote>
+  In short: <strong>The Dropbox server does not support symlinks. All your local symlinks are followed and uploaded as plain files and folders into your Dropbox account.</strong>
+</blockquote>
+
+<h2 id="none">No symlinks in the server</h2>
+
+<p>In order to support old Windows machines that do not have symlinks, the Dropbox team decided to cut symlink support from all platforms.</p>
+
+<blockquote>
+  Unfortunately this is a design decision that we made a very long time ago. There is no notion of symlinks in the Dropbox system (Windows XP didn't support symlinks) so our solution was to sync all the data within symlinks as if they were actual folders anyway. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;replies=85#post-164471">Rian H., Dropbox employee</a>
+</blockquote>
+
+<p>The fact is: the Dropbox server has no support for symlinks, it only syncs files and folders.</p>
+
+<p>Just browse your files in the Dropbox website and see it for yourself: all your symlinks were converted to plain files and folders.</p>
+
+<h2 id="followed">Local symlinks are followed</h2>
+
+<p>When you create a symlink inside your Dropbox folder in your computer, the syncing process will start. But instead of uploading the symlink itself, Dropbox will follow the symlink and will upload the file or folder it points to.</p>
+
+<p>It doesn't matter if your symlink points to a file that's inside or outside your Dropbox folder. Symlinks are always followed and Dropbox always treat your symlinks as if they were plain files or folders.</p>
+
+<p>This is the default behavior and cannot be changed.</p>
+
+<h2 id="external">External symlinks</h2>
+
+<p>Since symlinks are always followed, it's a common practice to use them to include external folders into your Dropbox without actually moving them there.</p>
+
+<p>To include your Desktop folder into Dropbox, just make the <code>~/Dropbox/Desktop</code> symlink pointing to <code>~/Desktop</code>.</p>
+
+<pre>
+$ ln -s ~/Desktop ~/Dropbox/Desktop
+</pre>
+
+<p>Note that this practice will become obsolete when (if?) the <a href="https://www.dropbox.com/votebox/11/watch-any-folder">#1 feature request</a> Watch Any Folder is implemented.</p>
+
+<h2 id="internal">Internal symlinks</h2>
+
+<p>Internal symlinks are complicated. Expect problems. Avoid if possible.</p>
+
+<p>When both the symlink and the target file reside inside your Dropbox folder, you end up with duplicated and possibly unsynchronized content.</p>
+
+<h2 id="duplicated">Duplicated files and your quota</h2>
+
+<p>Say you just made the symlink <code>~/Dropbox/mp3</code> pointing to your 5GB music collection folder in <code>~/Dropbox/iTunes/iTunes Media/Music/</code>. When syncing, Dropbox will follow the symlink and will upload it as a plain folder. Guess what? There goes all your music duplicated to the new <code>mp3</code> folder in your Dropbox account.</p>
+
+<p>Dropbox is smart enough to detect that those files were already uploaded, so it will do a server-side copy and will not spend your bandwidth uploading them again. But regardless, those "new" files will eat up your account quota: now your music spends 10GB of quota.</p>
+
+<blockquote>
+  Note: Mac users who upgraded to iPhoto '11, which <a href="http://aurelio.net/articles/iphoto-symlinks.html">uses symlinks in the photo library</a>, saw their Dropbox free space disappear as their photo collection got duplicated. Fortunately, <a href="http://aurelio.net/articles/dropbox-iphoto-11.html">there's a fix</a>.
+</blockquote>
+
+<p>To avoid the quota disaster, you can use <a href="http://aurelio.net/articles/dropbox-ignore-folder.html">a hack</a> to ignore the symlinks that point to huge folders. Or just avoid symlinks at all, if possible.</p>
+
+<h2 id="original">Symlink here, folder there</h2>
+
+<pre>
+$ cd ~/Dropbox
+$ mkdir foo
+$ touch foo/abc.txt
+$ ln -s foo bar
+</pre>
+
+<p>After Dropbox syncing:</p>
+
+<ul>
+  <li><code>foo</code> is a plain folder in both your machine and Dropbox server.</li>
+  <li><code>bar</code> is a symlink in your machine, but a plain independent folder in the server.</li>
+  <li><code>foo</code> and <code>bar</code> are two distinct folders in the server.</li>
+</ul>
+
+<p>The symlink is always preserved in the original computer it was created. But in any other instance it will be a plain folder: the Dropbox website and mobile app, a new computer you install Dropbox. This discrepancy between the main machine and the server can lead to unexpected problems.</p>
+
+<p>The symlink in the original computer is also the only thing that keeps both folders connected. If you change only one of the folders in the web interface, when the original computer syncs it will replicate the change to the other folder. If you format that computer, the connection is gone and each folder is now really independent of each other. They will become unsynchronized.</p>
+
+<h2 id="removing">Only remove symlinks in main computer</h2>
+
+<p>Never remove, via web or mobile interface, a folder that's in fact a symlink in the original computer. Both the symlink and the original folder contents will be removed.</p>
+
+<p>In the previous example, say you remove the <code>bar</code> folder in the web interface. It works, but when your original computer syncs this change, bad things happen. As you expect, the symlink <code>bar</code> will be removed from your computer. As you do not expect, the original folder <code>foo</code> is now empty!</p>
+
+<p>How it happens: The procedure to remove folders is to first remove all the folder contents (files and subfolders) and then remove the empty folder. Since the Dropbox client needs to remove the "folder" <code>bar</code> from your computer, that's what it does. But here <code>bar</code> is a symlink to <code>foo</code>, the original folder, which sadly get all its contents removed. When it's empty, Dropbox finally removes <code>bar</code>.</p>
+
+<h2 id="backup">Not a backup utility</h2>
+
+<blockquote>
+  Note that Dropbox is not a backup utility, but a file synchronization utility. We made the decision to handle symlinks transparently, so that the complete file tree would be exactly the same on all operating systems and on our servers, as presented by the file managers. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;page=3&amp;replies=85#post-172382">N.N., Dropbox forums moderator</a>
+</blockquote>
+
+<p>Since symlinks are not preserved, avoid using Dropbox as a backup utility. All your symlinks will be lost in a restore. You'll have to manually recreate them.</p>
+
+<h2 id="restore">Restoring the symlinks</h2>
+
+<p>If you install Dropbox in a new machine, you will have to manually recreate all the symlinks.</p>
+
+<ol>
+  <li>Wait for the initial download to complete.</li>
+  <li>Quit Dropbox.</li>
+  <li>Find the symlink location and remove the duplicated file or folder.</li>
+  <li>Recreate the symlink to the original file or folder.</li>
+  <li>Repeat steps 3 and 4 for each symlink that need to be restored.</li>
+  <li>Launch Dropbox.</li>
+</ol>
+
+<h2 id="list">Keep a list of your symlinks</h2>
+
+<p>It's a good practice to keep an updated list of all your symlinks, so you can restore them manually in a new computer, if needed.</p>
+
+<pre>
+$ find ~/Dropbox -type l -ls &gt; ~/Dropbox/symlinks.txt
+</pre>
+
+<h2 id="avoid">Avoid symlinks if you can</h2>
+
+<p>Given all these gotchas, it's better to avoid using symlinks inside your Dropbox folder until they add real support for them in the server.</p>
+
+<h2 id="vote">Vote</h2>
+
+<p>Use your Votebox credits to tell Dropbox you want symlink support: <a href="https://www.dropbox.com/votebox/350/preserve-implement-symlink-behaviour">https://www.dropbox.com/votebox/350/preserve-implement-symlink-behaviour</a></p>

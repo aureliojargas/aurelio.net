@@ -1,0 +1,375 @@
+---
+layout: 2013-articles
+worked: "20:38"
+date: 2014-03-17
+title: Dropbox iPhoto Import – The Missing FAQ
+tags: [Dropbox, iPhoto]
+---
+
+<blockquote>
+  Important: The information in this article is based on my personal experience using the following setup: Dropbox v2.6.2, iPhoto '11 (version 9.4.3) and OS X Mountain Lion 10.8.5. Different versions may have different behavior. Let me know in the comments!
+</blockquote>
+
+<p><img class="center" src="http://aurelio.net/img/articles/dropbox-iphoto-import.png" alt=""></p>
+
+<p>The wonderful Dropbox iPhoto Import feature. You just press a magic button and all your photos and videos will be copied from iPhoto into a Dropbox folder. That's great! But... How about the nerdy details?</p>
+
+<blockquote>
+  <a href="https://www.dropbox.com/help/1963/en">https://www.dropbox.com/help/1963/en</a>
+</blockquote>
+
+<blockquote>
+  The application will copy the photos to a top-level folder named Photos from iPhoto in your Dropbox. Within this folder, the photos will be organized into subfolders that correspond to the events from your iPhoto library.
+</blockquote>
+
+<p>Okay. But I still have a few questions...</p>
+
+<div id="toc">
+  <ul>
+    <li>
+      <a href="#iphoto-running">iPhoto must be running during the import?</a>
+    </li>
+    <li>
+      <a href="#original-modified">Both original and modified photos will be imported?</a>
+    </li>
+    <li>
+      <a href="#png">PNG files are also imported?</a>
+    </li>
+    <li>
+      <a href="#duration">It will take seconds, minutes or hours?</a>
+    </li>
+    <li>
+      <a href="#import-order">In what order the photos are imported?</a>
+    </li>
+    <li>
+      <a href="#folders">Events turn into folders?</a>
+    </li>
+    <li>
+      <a href="#albums">What about albums?</a>
+    </li>
+    <li>
+      <a href="#filename">What will be used as filenames?</a>
+    </li>
+    <li>
+      <a href="#permissions">What permissions will be set for the files and folders?</a>
+    </li>
+    <li>
+      <a href="#file-date">What date/time will be set to the photo file on disk?</a>
+    </li>
+    <li>
+      <a href="#photo-date">Photo date/time will be preserved?</a>
+    </li>
+    <li>
+      <a href="#exif">EXIF data will be preserved?</a>
+    </li>
+    <li>
+      <a href="#meta-data">Metadata will be preserved?</a>
+    </li>
+    <li>
+      <a href="#event-dups">Duplicated event names are OK?</a>
+    </li>
+    <li>
+      <a href="#event-symbols">Unicode characters and symbols in event names are OK?</a>
+    </li>
+    <li>
+      <a href="#multiple-runs">Can I run this import multiple times?</a>
+    </li>
+    <li>
+      <a href="#rename-folder">Can I rename or move the "Photos from iPhoto" folder?</a>
+    </li>
+    <li>
+      <a href="#rename-library">Can I rename or move the original iPhoto library?</a>
+    </li>
+    <li>
+      <a href="#multiple-libraries">What if I have multiple iPhoto libraries?</a>
+    </li>
+  </ul>
+</div><!--toc-->
+
+<h2 id="iphoto-running">iPhoto must be running during the import?</h2>
+
+<p>No, it doesn't matter. You can freely open and quit iPhoto during the import.</p>
+
+<p>Just don't add/remove/edit photos during the import to avoid weirdness.</p>
+
+<h2 id="original-modified">Both original and modified photos will be imported?</h2>
+
+<p>If you have edited the photo, only <strong>the modified</strong> version will be imported.</p>
+
+<p>If you haven't edited the photo, <strong>the original</strong> will be imported.</p>
+
+<h2 id="png">PNG files are also imported?</h2>
+
+<p>Yes.</p>
+
+<h2 id="duration">It will take seconds, minutes or hours?</h2>
+
+<p>My experience was slooooooow.</p>
+
+<p>The import process took 24 hours to copy my 14.6 GB iPhoto library (7792 photos, 348 videos) in my Mac mini (2.5 GHz Core i5 CPU, 10 GB RAM, 5400 rpm HD). And of course, some more hours to finish the upload (since it imports and uploads at the same time).</p>
+
+<p>For comparison, <a href="https://code.google.com/p/phoshare/">phoshare</a> took less than one hour to export the same library on the same machine.</p>
+
+<p>However, Dropbox is usually slow here with my 200,000 files inside it. <a href="http://en.wiktionary.org/wiki/your_mileage_may_vary">YMMV</a>.</p>
+
+<blockquote>
+  Now thinking about it, I should have used the "Pause Syncing" feature of Dropbox to avoid the uploading during the import process. Maybe it would have speed things up.
+</blockquote>
+
+<h2 id="import-order">In what order the photos are imported?</h2>
+
+<p>The import happens in reverse chronological order. Dropbox starts importing the photos from the most recent event and then goes back in time, event by event, until the very first one (the oldest).</p>
+
+<blockquote>
+  Note that this affects the auto numbering in <a href="#event-dups">repeated event names</a>.
+</blockquote>
+
+<h2 id="folders">Events turn into folders?</h2>
+
+<p>Yes, each event will be imported into a subfolder under the main "Photos from iPhoto" folder. Examples:</p>
+
+<pre>
+Dropbox/Photos from iPhoto/LOL Cats/
+Dropbox/Photos from iPhoto/Maria's Wedding/
+Dropbox/Photos from iPhoto/Trip to Rio/
+Dropbox/Photos from iPhoto/Weekend with Grandpa/
+Dropbox/Photos from iPhoto/Xmas 2013/
+</pre>
+
+<p>The full event name will be used for the folder name, except special treatment for <a href="#event-symbols">symbols</a> and <a href="#event-dups">repeated names</a>.</p>
+
+<blockquote>
+  Exception: If there's just a single event in iPhoto, the subfolder won't be created and all imported photos will appear directly under the "Photos from iPhoto" folder. Then if there's a second event in iPhoto in a <a href="#multiple-runs">future import</a>, this new event will have its own subfolder. The already imported photos from the first event will remain folder-less.
+</blockquote>
+
+<h2 id="albums">What about albums?</h2>
+
+<p>They are ignored. Only events are imported.</p>
+
+<h2 id="filename">What will be used as filenames?</h2>
+
+<p>Filenames follow the same pattern used in the Camera Uploads special folder. For example:</p>
+
+<pre>
+2012-12-20 23.59.00.jpg
+</pre>
+
+<p>It's a timestamp composed by the date (<code>yyyy-mm-dd</code>) and time (<code>hh.mm.ss</code>) when the photo was shot. Examples:</p>
+
+<pre>
+Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.12.24.jpg
+Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.15.49.jpg
+Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.39.11.jpg
+</pre>
+
+<blockquote>
+  Note that when the photo's EXIF date differs from the iPhoto Info pane's date, Dropbox always use the iPhoto date to compose the filename. <a href="#photo-date">Read more about it</a>.
+</blockquote>
+
+<h2 id="permissions">What permissions will be set for the files and folders?</h2>
+
+<ul>
+  <li><code>rwxr-xr-x</code> (755) for folders</li>
+  <li><code>rw-------</code> (600) for files</li>
+</ul>
+
+<h2 id="file-date">What date/time will be set to the photo file on disk?</h2>
+
+<p>The file modification time (mtime) will be set to the same timestamp used in the <a href="#filename">filename</a>.</p>
+
+<pre>
+-rw------- 1 aurelio  staff  855539 Jun 11  2009 2009-06-11 16.05.51.jpg
+-rw------- 1 aurelio  staff  799298 Jun 11  2009 2009-06-11 16.05.56.jpg
+-rw------- 1 aurelio  staff  844112 Jun 11  2009 2009-06-11 16.06.03.jpg
+-rw------- 1 aurelio  staff  795568 Jun 11  2009 2009-06-11 16.06.16.jpg
+-rw------- 1 aurelio  staff  737503 Jun 11  2009 2009-06-11 16.06.39.jpg
+</pre>
+
+<p>In other words, this means that in the Finder, a photo taken in the first day of 2010 will have 01/01/2010 in the Date Modified attribute.</p>
+
+<h2 id="photo-date">Photo date/time will be preserved?</h2>
+
+<p>Yes, but with a catch.</p>
+
+<p>There's the <strong>EXIF date</strong>, which is the date set by your camera at the moment the photo was shot. This date is stored in the EXIF tags named "Date/Time Original" or "Create Date" and <strong>is always preserved</strong>. Dropbox never changes it.</p>
+
+<p>There's the <strong>iPhoto date</strong>, which is the date that appears in the Info pane when the photo is selected in iPhoto. This is the date <strong>Dropbox uses for the filename</strong>.</p>
+
+<p>Usually these two dates are the same, then there's no problem.</p>
+
+<p>But the dates will differ when you use iPhoto to fix the photo date and forget to check the "Modify original files" option. Then the EXIF tags won't be updated and the new date will only be saved in iPhoto's internal database.</p>
+
+<p>Dropbox will use the fixed date for the <a href="#filename">filename</a>, but the original incorrect date will remain in the EXIF tags, which is a problem since most photo tools rely on the EXIF tags to get the photo date. For example, the photo order will appear correct in the Finder, but wrong in Picasa.</p>
+
+<p>After the Dropbox importer finishes its job, you can fix the photo's EXIF metadata with an external tool. I recommend the excellent <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a>. Here's some commands you can run on the Terminal.</p>
+
+<pre>
+# List all photos whose EXIF date differs from filename date:
+
+exiftool -createdate -filename \
+    -d '%Y-%m-%d %H.%M.%S' \
+    -csv \
+    ~/Dropbox/'Photos from iPhoto'/* |
+    egrep -v '.*,([^,]*),\1'
+
+#--------------------------------------------------------------------------
+
+# Update the EXIF dates from all photos to match the filename timestamp.
+#   AllDates is a shortcut for DateTimeOriginal, CreateDate and ModifyDate.
+#   Option -P is needed to preserve the file's current mtime.
+
+exiftool -P -alldates'&lt;filename' ~/Dropbox/'Photos from iPhoto'/*
+
+#--------------------------------------------------------------------------
+
+# Remove the _original files that exiftool created as backups:
+
+exiftool -delete_original ~/Dropbox/'Photos from iPhoto'/*
+
+# or restore from the backups if you want to revert the changes:
+
+exiftool -restore_original ~/Dropbox/'Photos from iPhoto'/*
+</pre>
+
+<h2 id="exif">EXIF data will be preserved?</h2>
+
+<p>Yes, no EXIF data will be lost.</p>
+
+<p>The Dropbox importer <strong>do not add nor remove EXIF tags</strong>, it will just rewrite these four tags:</p>
+
+<ul>
+  <li>Directory</li>
+  <li>File Name</li>
+  <li>File Permissions</li>
+  <li>File Modification Date/Time</li>
+</ul>
+
+<p>The first three must be changed because Dropbox is in fact changing the filename, location and permissions, so the tag contents must be updated to the new values.</p>
+
+<p>The last tag is set to the iPhoto info pane timestamp, which is the same timestamp used by Dropbox to compose the filename and to set the file modification date in the file system. Consistence is good.</p>
+
+<h2 id="meta-data">Metadata will be preserved?</h2>
+
+<p><strong>YES</strong>, for the EXIF metadata your photo already had before it was imported into iPhoto, such as GPS coordinates or the Rating tag. The Dropbox importer will not remove them.</p>
+
+<p><strong>NO</strong>, for any metadata you added using iPhoto:</p>
+
+<ul>
+  <li>Titles</li>
+  <li>Descriptions</li>
+  <li>Keywords</li>
+  <li>Flags</li>
+  <li>Ratings</li>
+  <li>GPS coordinates</li>
+  <li>Faces</li>
+</ul>
+
+<p>The photo's EXIF header would be the portable place to store most of this information, but neither iPhoto nor Dropbox importer add EXIF data to the photo.</p>
+
+<ul>
+  <li>iPhoto never changes the original photo file, so it saves the metadata in its internal database.</li>
+  <li>Dropbox importer <a href="#exif">do not create</a> new EXIF tags on the imported files.
+  </li>
+</ul>
+
+<p>If someday one of those changes, iPhoto metadata won't be lost.</p>
+
+<blockquote>
+  Note that in latest versions, <a href="https://groups.google.com/d/msg/phoshare-users/moWsMcD5SdQ/UbscpiKL1HsJ">iPhoto prevents third party apps from accessing keywords</a>. So even if the Dropbox importer starts to save metadata to EXIF, iPhoto keywords can't be read anymore :(
+</blockquote>
+
+<h2 id="event-dups">Duplicated event names are OK?</h2>
+
+<p>Yes. Dropbox will add numeric suffixes to avoid name collision in folder names.</p>
+
+<p>For example, if you have four distinct events called "My lunch" in your iPhoto library, this is how they will translate to folders in the import:</p>
+
+<pre>
+Dropbox/Photos from iPhoto/My lunch
+Dropbox/Photos from iPhoto/My lunch (1)
+Dropbox/Photos from iPhoto/My lunch (2)
+Dropbox/Photos from iPhoto/My lunch (3)
+</pre>
+
+<blockquote>
+  Note that since <a href="#import-order">the import is done from the most recent to the older event</a>, the folder name order is inverted. From the example, "My lunch (3)" will be the first (the oldest) event in iPhoto.
+</blockquote>
+
+<h2 id="event-symbols">Unicode characters and symbols in event names are OK?</h2>
+
+<p>Unicode characters won't be a problem. They will be used unchanged in folder names.</p>
+
+<p>But these special ASCII symbols will be replaced by hyphens:</p>
+
+<pre>
+" * / : &lt; &gt; ? \ |
+</pre>
+
+<p>So, if you have an event name with any of these symbols, the corresponding folder with be slightly different:</p>
+
+<pre>
+  iPhoto event name:  12/21/2012: The end of the world???
+Dropbox folder name:  12-21-2012- The end of the world-
+</pre>
+
+<p>Note that "???" turned into a single "-". Besides replacing symbols by hyphens, consecutive symbols are squeezed to just a single hyphen.</p>
+
+<blockquote>
+  Yes, dear Unix geek reader, it's like a <code>tr -s</code>
+</blockquote>
+
+<p>Squeezing makes prettier names, but also opens the possibility of generating duplicated names. When you have events where the only difference in their name is a single symbol, for example:</p>
+
+<pre>
+Pictures rated *
+Pictures rated **
+Pictures rated ***
+Pictures rated ****
+</pre>
+
+<p>They will end up with the same name: "Pictures rated -". Then comes in the <a href="#event-dups">automatic numbering</a> to differentiate them:</p>
+
+<pre>
+Pictures rated -
+Pictures rated - (1)
+Pictures rated - (2)
+Pictures rated - (3)
+</pre>
+
+<h2 id="multiple-runs">Can I run this import multiple times?</h2>
+
+<p>Yes.</p>
+
+<p>Dropbox remembers which photos were already imported and in subsequent runs will only import the new photos (if any). This is the same behavior as the Camera Uploads feature.</p>
+
+<p>If later in iPhoto you remove events or photos that were already imported into the "Photos from iPhoto" folder, Dropbox won't remove them in the next import. <strong>It's a one-time copy, not a sync.</strong></p>
+
+<h2 id="rename-folder">Can I rename or move the "Photos from iPhoto" folder?</h2>
+
+<p>Yes, but then it will turn into a normal folder.</p>
+
+<p>When you run the importer again, the default "Photos from iPhoto" folder will be recreated. But don't worry, it won't copy all the photos again. Dropbox remembers which photos were already imported and will just import the new ones (if any).</p>
+
+<h2 id="rename-library">Can I rename or move the original iPhoto library?</h2>
+
+<p>Better not.</p>
+
+<p>Once you did the first import, Dropbox will remember the exact location of your iPhoto library. If you plan to <a href="#multiple-runs">run the importer again</a>, it's safer to let the library location untouched.</p>
+
+<p><strong>If you rename or move the library and never open it in iPhoto</strong>, Dropbox won't be able to find the new library location. Then the importer will say that it haven't found any photos.</p>
+
+<p><strong>If you rename or move the library and open it in iPhoto</strong>, the references will be updated and Dropbox will find the new location. But it will copy all photos over again, creating duplicates.</p>
+
+<h2 id="multiple-libraries">What if I have multiple iPhoto libraries?</h2>
+
+<p>Prepare for weirdness.</p>
+
+<p>When you open a second library in iPhoto and run de importer again, it will detect the new photos, but will copy them to the old folders from the first library import! Even if you clear the "Photos from iPhoto" folder it will recreate the subfolders with the old event names. It's a bug and may be corrected in future versions of Dropbox.</p>
+
+<blockquote>
+  Meanwhile you can try to hack Dropbox to make it "forget" the old event names by emptying the cache or by renaming its internal folders (<code>~/.dropbox</code> and <code>~/.dropbox-master</code>). I don't know if that works because I didn't dive this deep in my tests.
+</blockquote>
+
+<p>I've also made some tests with multiple libraries in my old machine with Lion and iPhoto '09, but Dropbox showed a dialog with the following error: "Sorry, an error occurred. Please try again later...".</p>
+
+<p>It's safer to stay single-library for now.</p>

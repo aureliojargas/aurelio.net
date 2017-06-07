@@ -1,0 +1,1236 @@
+---
+layout: 2013-articles
+#worked: 0
+date: 2005-07-01
+title: "AppleScript for Python Programmers (Comparison Chart)"
+tags: [AppleScript, Python]
+---
+
+<p>I'm a Python programmer who switched to Mac OS X. Being nerd and needing to automate common tasks, the learning of the AppleScript language was unavoidable. To speed up the process I've took some notes, comparing the new commands to Python statements. The result is this document.</p>
+
+<p>As the name says, it's intended for Python programmers. But if you're an applescripter interested in Python you may also learn a lot.</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Python</th>
+    <th>AppleScript</th>
+  </tr>
+  <tr>
+    <td>indexes start with 0</td>
+    <td>indexes start with 1</td>
+  </tr>
+  <tr>
+    <td>string comparison considers case</td>
+    <td>string comparison ignores case</td>
+  </tr>
+  <tr>
+    <td><i># comments</i></td>
+    <td><i>-- comments</i></td>
+  </tr>
+  <tr>
+    <td>command <i># half-line comment</i></td>
+    <td>command <i>-- half-line comment</i></td>
+  </tr>
+  <tr>
+    <td>"""
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;multiline comment block (sort of)
+    <br>
+    """</td>
+    <td>(*
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;multiline comment block
+    <br>
+    *)</td>
+  </tr>
+  <tr>
+    <td>a = 5</td>
+    <td>set a to 5</td>
+  </tr>
+  <tr>
+    <td>a = "foo"</td>
+    <td>set a to "foo"</td>
+  </tr>
+  <tr>
+    <td>print "Hello World"</td>
+    <td>display dialog "Hello World"</td>
+  </tr>
+  <tr>
+    <td>syslog.syslog(msg)
+    <br>
+    <i>or</i>
+    <br>
+    print &gt;&gt;sys.stderr, msg</td>
+    <td>log(msg)</td>
+  </tr>
+  <tr>
+    <td>print "\a"</td>
+    <td>beep</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>say "Hello World"</td>
+  </tr>
+  <tr>
+    <th colspan="2">Data types</th>
+  </tr>
+  <tr>
+    <td>type("foo").__name__</td>
+    <td>class of "foo"</td>
+  </tr>
+  <tr>
+    <td>None</td>
+    <td>missing value</td>
+  </tr>
+  <tr>
+    <td>True, False</td>
+    <td>true, false</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>"foo"
+    <br>
+    <i>or</i>
+    <br>
+    'foo'</td>
+    <td>"foo"</td>
+  </tr>
+  <tr>
+    <td>"""foo
+    <br>
+    bar"""</td>
+    <td>"foo
+    <br>
+    bar"</td>
+  </tr>
+  <tr>
+    <td>[ 1, 2, 3 ]</td>
+    <td>{ 1, 2, 3 }</td>
+  </tr>
+  <tr>
+    <td>( 1, 2, 3 )</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>{ "foo": "bar" }</td>
+    <td>{ foo: "bar" }</td>
+  </tr>
+  <tr>
+    <td>str(5)</td>
+    <td>5 as text</td>
+  </tr>
+  <tr>
+    <td>int("5")</td>
+    <td>"5" as integer</td>
+  </tr>
+  <tr>
+    <td>float(5)</td>
+    <td>5 as real</td>
+  </tr>
+  <tr>
+    <td>float("5")</td>
+    <td>"5" as real</td>
+  </tr>
+  <tr>
+    <td>list("foo")</td>
+    <td>characters of "foo"</td>
+  </tr>
+  <tr>
+    <td>"".join([ "f","o","o" ])</td>
+    <td>{ "f","o","o" } as text</td>
+  </tr>
+  <tr>
+    <td>"".join([str(x) for x in [ 1, 2, 3 ]])</td>
+    <td>{ 1, 2, 3 } as text</td>
+  </tr>
+  <tr>
+    <th colspan="2">String</th>
+  </tr>
+  <tr>
+    <td>S = ""</td>
+    <td>set S to ""</td>
+  </tr>
+  <tr>
+    <td>S = "foo"</td>
+    <td>set S to "foo"</td>
+  </tr>
+  <tr>
+    <td>len(S)</td>
+    <td>length of S
+    <br>
+    <i>or</i>
+    <br>
+    count S</td>
+  </tr>
+  <tr>
+    <td>S[2]</td>
+    <td>item 3 of S</td>
+  </tr>
+  <tr>
+    <td>S[len(S)/2]</td>
+    <td>middle item of S</td>
+  </tr>
+  <tr>
+    <td>S[random.randint(0, len(S)-1)]</td>
+    <td>some item of S</td>
+  </tr>
+  <tr>
+    <td>S[2:-2]</td>
+    <td>items 3 thru -3 of S as text</td>
+  </tr>
+  <tr>
+    <td>S + "foo"</td>
+    <td>S &amp; "foo"</td>
+  </tr>
+  <tr>
+    <td>S.index("z")
+    <br>
+    <i>or</i>
+    <br>
+    S.find("z")</td>
+    <td>offset of "z" in S</td>
+  </tr>
+  <tr>
+    <td>S.startswith("z")</td>
+    <td>S starts with "z"</td>
+  </tr>
+  <tr>
+    <td>S.endswith("z")</td>
+    <td>S ends with "z"</td>
+  </tr>
+  <tr>
+    <td>S.count("z")</td>
+    <td>
+      <a href="#countSubstring">User function countSubstring()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.split()</td>
+    <td>words in S</td>
+  </tr>
+  <tr>
+    <td>S.split()[2]</td>
+    <td>word 2 of S</td>
+  </tr>
+  <tr>
+    <td>S.split(":")</td>
+    <td>set AppleScript's text item delimiters to ":"
+    <br>
+    text items of S
+    <br>
+    set AppleScript's text item delimiters to ""</td>
+  </tr>
+  <tr>
+    <td>":".join(LIST)</td>
+    <td>set AppleScript's text item delimiters to ":"
+    <br>
+    LIST as text
+    <br>
+    set AppleScript's text item delimiters to ""</td>
+  </tr>
+  <tr>
+    <td>S.lstrip()</td>
+    <td>
+      <a href="#lstripString">User function lstripString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.rstrip()</td>
+    <td>
+      <a href="#rstripString">User function rstripString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.strip()</td>
+    <td>
+      <a href="#stripString">User function stripString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.lower()</td>
+    <td>
+      <a href="#translateChars">User function lowerString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.upper()</td>
+    <td>
+      <a href="#translateChars">User function upperString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.capitalize()</td>
+    <td>
+      <a href="#translateChars">User function capitalizeString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>S.replace()</td>
+    <td>
+      <a href="#replaceString">User function replaceString()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>"z" in S</td>
+    <td>"z" is in S</td>
+  </tr>
+  <tr>
+    <td>\\ \" \t \n \r</td>
+    <td>\\ \" \t \r space tab return</td>
+  </tr>
+  <tr>
+    <td>S = "foo\nbar"</td>
+    <td>set S to "foo" &amp; return &amp; "bar"</td>
+  </tr>
+  <tr>
+    <td>S = """foo "bar" baz"""</td>
+    <td>set S to "foo \"bar\" baz"</td>
+  </tr>
+  <tr>
+    <th colspan="2">List</th>
+  </tr>
+  <tr>
+    <td>L = []</td>
+    <td>set L to {}</td>
+  </tr>
+  <tr>
+    <td>L = [ 77, "foo", True ]</td>
+    <td>set L to { 77, "foo", true }</td>
+  </tr>
+  <tr>
+    <td>L = [ 1, [ 2, [ 3 ]]]</td>
+    <td>set L to { 1, { 2, { 3 }}}</td>
+  </tr>
+  <tr>
+    <td>len(L)</td>
+    <td>length of L
+    <br>
+    <i>or</i>
+    <br>
+    count L</td>
+  </tr>
+  <tr>
+    <td>[x for x in L if isinstance(x, int)]</td>
+    <td>integers in L</td>
+  </tr>
+  <tr>
+    <td>[x for x in L if isinstance(x, str)]</td>
+    <td>strings in L</td>
+  </tr>
+  <tr>
+    <td>L[2]</td>
+    <td>item 3 of L</td>
+  </tr>
+  <tr>
+    <td>L[2][2]</td>
+    <td>item 3 of item 3 of L</td>
+  </tr>
+  <tr>
+    <td>L[len(L)/2]</td>
+    <td>middle item of L</td>
+  </tr>
+  <tr>
+    <td>L[random.randint(0, len(L)-1)]</td>
+    <td>some item of L</td>
+  </tr>
+  <tr>
+    <td>newlist = L[:]</td>
+    <td>set newlist to every item of L
+    <br>
+    <i>or</i>
+    <br>
+    copy L to newlist</td>
+  </tr>
+  <tr>
+    <td>L[2:-2]</td>
+    <td>items 3 thru -3 of L</td>
+  </tr>
+  <tr>
+    <td>L + [ 1, 2 ]
+    <br>
+    <i>or</i>
+    <br>
+    L.extend([ 1, 2 ])</td>
+    <td>L &amp; { 1, 2 }</td>
+  </tr>
+  <tr>
+    <td>L.append("foo")</td>
+    <td>set the end of L to "foo"
+    <br>
+    <i>or</i>
+    <br>
+    copy "foo" to the end of L</td>
+  </tr>
+  <tr>
+    <td>L[2] = "foo"</td>
+    <td>set item 3 of L to "foo"</td>
+  </tr>
+  <tr>
+    <td>del L[2]</td>
+    <td>set L to items 1 thru 2 of L &amp; items 4 thru -1 of L</td>
+  </tr>
+  <tr>
+    <td>L.index("foo")</td>
+    <td>
+      <a href="#getListItemIndex">User function getListItemIndex()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>L.count("foo")</td>
+    <td>
+      <a href="#countListItem">User function countListItem()</a>
+    </td>
+  </tr>
+  <tr>
+    <td>L.pop(0)</td>
+    <td>first item of L
+    <br>
+    set L to rest of L</td>
+  </tr>
+  <tr>
+    <td>L.pop(0) ; L[:]</td>
+    <td>rest of L</td>
+  </tr>
+  <tr>
+    <td>L.reverse()</td>
+    <td>reverse of L</td>
+  </tr>
+  <tr>
+    <td>L.sort()</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>"foo" in L</td>
+    <td>"foo" is in L</td>
+  </tr>
+  <tr>
+    <td>L[0] == "foo"</td>
+    <td>L starts with "foo"</td>
+  </tr>
+  <tr>
+    <td>L[-1] == "foo"</td>
+    <td>L ends with "foo"</td>
+  </tr>
+  <tr>
+    <th colspan="2">Dictionary / Record</th>
+  </tr>
+  <tr>
+    <td>D = {}</td>
+    <td>set D to {}</td>
+  </tr>
+  <tr>
+    <td>D = { "foo":"bar", "spam":"eggs" }</td>
+    <td>set D to { foo:"bar", spam:"eggs" }</td>
+  </tr>
+  <tr>
+    <td>len(D)</td>
+    <td>length of D
+    <br>
+    <i>or</i>
+    <br>
+    count D</td>
+  </tr>
+  <tr>
+    <td>D["foo"]</td>
+    <td>foo of D</td>
+  </tr>
+  <tr>
+    <td>D["foo"] = "bar"</td>
+    <td>set foo of D to "bar"</td>
+  </tr>
+  <tr>
+    <td>D + { "foo":"bar" }
+    <br>
+    <i>or</i>
+    <br>
+    D.update({ "foo":"bar" })</td>
+    <td>D &amp; { foo:"bar" }</td>
+  </tr>
+  <tr>
+    <td>newdic = D.copy()</td>
+    <td>copy D to newdic</td>
+  </tr>
+  <tr>
+    <td>del D["foo"]</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>D.keys()</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>D.values()</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>D.has_key()</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>D["foo"] == "bar"</td>
+    <td>foo of D is "bar"</td>
+  </tr>
+  <tr>
+    <td>D.get("foo") == "bar"</td>
+    <td>{ foo:"bar" } is in D</td>
+  </tr>
+  <tr>
+    <th colspan="2">Expressions</th>
+  </tr>
+  <tr>
+    <td>1 + 1</td>
+    <td>1 + 1</td>
+  </tr>
+  <tr>
+    <td>1 - 1</td>
+    <td>1 - 1</td>
+  </tr>
+  <tr>
+    <td>1 * 1</td>
+    <td>1 * 1</td>
+  </tr>
+  <tr>
+    <td>1 / 1</td>
+    <td>1 div 1</td>
+  </tr>
+  <tr>
+    <td>1.0 / 1.0</td>
+    <td>1 / 1
+    <br>
+    <i>or</i>
+    <br>
+    1 ÷ 1</td>
+  </tr>
+  <tr>
+    <td>1 % 1</td>
+    <td>1 mod 1</td>
+  </tr>
+  <tr>
+    <td>1 ** 1</td>
+    <td>1 ^ 1</td>
+  </tr>
+  <tr>
+    <td>(2 + 4) * 2</td>
+    <td>(2 + 4) * 2</td>
+  </tr>
+  <tr>
+    <td>1 == 1</td>
+    <td>1 = 1
+    <br>
+    <i>or</i>
+    <br>
+    1 is equal 1</td>
+  </tr>
+  <tr>
+    <td>1 != 1</td>
+    <td>1 ≠ 1
+    <br>
+    <i>or</i>
+    <br>
+    1 is not equal 1</td>
+  </tr>
+  <tr>
+    <td>1 &gt; 1</td>
+    <td>1 &gt; 1
+    <br>
+    <i>or</i>
+    <br>
+    1 is greater than 1</td>
+  </tr>
+  <tr>
+    <td>1 &lt; 1</td>
+    <td>1 &lt; 1
+    <br>
+    <i>or</i>
+    <br>
+    1 is less than 1</td>
+  </tr>
+  <tr>
+    <td>1 &gt;= 1</td>
+    <td>1 &gt;= 1
+    <br>
+    <i>or</i>
+    <br>
+    1 ≥ 1
+    <br>
+    <i>or</i>
+    <br>
+    1 isn't less than 1</td>
+  </tr>
+  <tr>
+    <td>1 &lt;= 1</td>
+    <td>1 &lt;= 1
+    <br>
+    <i>or</i>
+    <br>
+    1 ≤ 1
+    <br>
+    <i>or</i>
+    <br>
+    1 isn't greater than 1</td>
+  </tr>
+  <tr>
+    <td>1 is 1</td>
+    <td>1 is 1</td>
+  </tr>
+  <tr>
+    <td>1 is not 1</td>
+    <td>1 is not 1</td>
+  </tr>
+  <tr>
+    <td>1 is 1 or 2 is 2</td>
+    <td>1 is 1 or 2 is 2</td>
+  </tr>
+  <tr>
+    <td>1 is 1 and 2 is 2</td>
+    <td>1 is 1 and 2 is 2</td>
+  </tr>
+  <tr>
+    <td>(1 is 1) and (2 is 2)</td>
+    <td>(1 is 1) and (2 is 2)</td>
+  </tr>
+  <tr>
+    <th colspan="2">Conditionals</th>
+  </tr>
+  <tr>
+    <td>if VAR == 1: print "OK"</td>
+    <td>if VAR = 1 then display dialog "OK"</td>
+  </tr>
+  <tr>
+    <td>if VAR == 1:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print "OK"</td>
+    <td>if VAR = 1 then
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "OK"
+    <br>
+    end if</td>
+  </tr>
+  <tr>
+    <td>if VAR == 1:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print "OK"
+    <br>
+    else:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print "Error"</td>
+    <td>if VAR = 1 then
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "OK"
+    <br>
+    else
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Error"
+    <br>
+    end if</td>
+  </tr>
+  <tr>
+    <td>if VAR &lt; 10:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print "Need more!"
+    <br>
+    elif VAR &gt; 20:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print "Too much!"
+    <br>
+    else:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print "It's OK"</td>
+    <td>if VAR &lt; 10 then
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Need more!"
+    <br>
+    else if VAR &gt; 20 then
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Too much!"
+    <br>
+    else
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "It's OK"
+    <br>
+    end if</td>
+  </tr>
+  <tr>
+    <th colspan="2">Loops</th>
+  </tr>
+  <tr>
+    <td>for i in LIST:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;print i</td>
+    <td>repeat with i in LIST
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;display dialog i
+    <br>
+    end repeat</td>
+  </tr>
+  <tr>
+    <td>while 1:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;break</td>
+    <td>repeat
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;exit repeat
+    <br>
+    end repeat</td>
+  </tr>
+  <tr>
+    <td>while 1:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;continue</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>while VAR is False:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
+    <td>repeat while VAR is false
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    end repeat</td>
+  </tr>
+  <tr>
+    <td>while VAR is not False:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
+    <td>repeat until VAR is false
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    end repeat</td>
+  </tr>
+  <tr>
+    <td>for i in range(10):
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
+    <td>repeat 10 times
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    end repeat</td>
+  </tr>
+  <tr>
+    <td>for i in range(1, 10, 2):
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
+    <td>repeat with i from 1 to 10 by 2
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    end repeat</td>
+  </tr>
+  <tr>
+    <th colspan="2">Functions</th>
+  </tr>
+  <tr>
+    <td>def add_numbers(a, b):
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b</td>
+    <td>on add_numbers(a, b)
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return a + b
+    <br>
+    end add_numbers</td>
+  </tr>
+  <tr>
+    <td>five = add_numbers(2, 3)</td>
+    <td>set five to add_numbers(2, 3)</td>
+  </tr>
+  <tr>
+    <td>def optional(a=0, b=""):</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th colspan="2">Class / Script</th>
+  </tr>
+  <tr>
+    <td>class FooBar(Father):
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;VAR = 0
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;def setValue(self, val):
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.VAR = val</td>
+    <td>script FooBar
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;property parent : Father
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;property VAR : 0
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;on setValue(val)
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set my VAR to val
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;end setValue
+    <br>
+    end script</td>
+  </tr>
+  <tr>
+    <td>myFoo = FooBar()
+    <br>
+    myFoo.setValue(5)
+    <br>
+    myData = myFoo.VAR</td>
+    <td>copy FooBar to myFoo
+    <br>
+    tell myFoo to setValue(5)
+    <br>
+    set myData to VAR of myFoo</td>
+  </tr>
+  <tr>
+    <th colspan="2">File Read/Write</th>
+  </tr>
+  <tr>
+    <td>F = open("/tmp/foo")
+    <br>
+    TXT = F.read()
+    <br>
+    F.close()</td>
+    <td>set F to "/tmp/foo" as POSIX file
+    <br>
+    set TXT to read F</td>
+  </tr>
+  <tr>
+    <td>F = open("/tmp/foo")
+    <br>
+    LINES = F.readlines()
+    <br>
+    F.close()</td>
+    <td>set F to "/tmp/foo" as POSIX file
+    <br>
+    set LINES to read F using delimiter (ASCII character 10)</td>
+  </tr>
+  <tr>
+    <td>F = open("/tmp/foo", "w")
+    <br>
+    F.write("Hello!\n")
+    <br>
+    F.close()</td>
+    <td>set F to "/tmp/foo" as POSIX file
+    <br>
+    set F to open for access F with write permission
+    <br>
+    write "Hello!" &amp; return to F
+    <br>
+    close access F</td>
+  </tr>
+  <tr>
+    <th colspan="2">Path
+    <br>
+    (requires tell app "Finder")</th>
+  </tr>
+  <tr>
+    <td>os.path.isfile(F)</td>
+    <td>file F exists</td>
+  </tr>
+  <tr>
+    <td>os.path.isdir(F)</td>
+    <td>folder F exists</td>
+  </tr>
+  <tr>
+    <td>os.path.abspath(F)</td>
+    <td>file F as text</td>
+  </tr>
+  <tr>
+    <td>os.path.dirname(F)</td>
+    <td>folder of file F as text</td>
+  </tr>
+  <tr>
+    <td>os.path.basename(F)</td>
+    <td>name of file F</td>
+  </tr>
+  <tr>
+    <td>F.split(os.path.extsep)[-1]</td>
+    <td>name extension of file F</td>
+  </tr>
+  <tr>
+    <td>os.stat(F)[6]</td>
+    <td>size of file F</td>
+  </tr>
+  <tr>
+    <td>pwd.getpwuid(os.stat(F)[4])[0]</td>
+    <td>owner of file F</td>
+  </tr>
+  <tr>
+    <td>grp.getgrgid(os.stat(F)[5])[0]</td>
+    <td>group of file F</td>
+  </tr>
+  <tr>
+    <td>open(newfile, "w").write(open(F).read())</td>
+    <td>duplicate file F to file newfile</td>
+  </tr>
+  <tr>
+    <td>os.rename(F, newfile)</td>
+    <td>set name of file F to newfile</td>
+  </tr>
+  <tr>
+    <td>os.unlink(F)</td>
+    <td>delete file F</td>
+  </tr>
+  <tr>
+    <th colspan="2">Date &amp; Time</th>
+  </tr>
+  <tr>
+    <td>time.asctime()</td>
+    <td>current date as string</td>
+  </tr>
+  <tr>
+    <td>T = time.localtime()</td>
+    <td>set T to current date</td>
+  </tr>
+  <tr>
+    <td>T = time.strptime(
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Jan 31, 2005 17:59",
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%b %d, %Y %H:%M" )</td>
+    <td>set T to date "Jan 31, 2005 17:59"</td>
+  </tr>
+  <tr>
+    <td>orig = time.mktime(time.strptime(
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Jan 31, 2005 17:59",
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%b %d, %Y %H:%M" ))
+    <br>
+    plus = time.mktime(time.strptime(
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4 3 2 1970",
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%d %H %M %Y" ))
+    <br>
+    T = time.localtime(orig+plus)</td>
+    <td>set orig to date "Jan 31, 2005 17:59"
+    <br>
+    set plus to 4 * days + 3 * hours + 2 * minutes
+    <br>
+    set T to orig + plus</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%A", T)</td>
+    <td>weekday of T</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%d", T)</td>
+    <td>day of T</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%B", T)</td>
+    <td>month of T</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%m", T)</td>
+    <td>month of T as integer</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%Y", T)</td>
+    <td>year of T</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%X", T)</td>
+    <td>time string of T</td>
+  </tr>
+  <tr>
+    <td>time.strftime("%x", T)</td>
+    <td>date string of T</td>
+  </tr>
+  <tr>
+    <td>fmt = "%H*3600 + %M*60 + %S"
+    <br>
+    eval(time.strftime(fmt, T))</td>
+    <td>time of T <i>-- Seconds since midnight</i></td>
+  </tr>
+  <tr>
+    <th colspan="2">Other</th>
+  </tr>
+  <tr>
+    <td>try:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    <br>
+    except:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
+    <td>try
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    on error
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    end try</td>
+  </tr>
+  <tr>
+    <td>try:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    <br>
+    except error, errmsg:
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
+    <td>try
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    on error errMsg number errNum
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
+    <br>
+    end try</td>
+  </tr>
+  <tr>
+    <td>os.system("ls /etc/ | head -n 1")</td>
+    <td>do shell script "ls /etc/ | head -n 1"</td>
+  </tr>
+  <tr>
+    <td>global VAR</td>
+    <td>global VAR</td>
+  </tr>
+  <tr>
+    <td>eval("4 + 4")</td>
+    <td>run script "4 + 4"</td>
+  </tr>
+  <tr>
+    <td>chr(64)</td>
+    <td>ASCII character 64</td>
+  </tr>
+  <tr>
+    <td>ord("@")</td>
+    <td>ASCII number "@"</td>
+  </tr>
+  <tr>
+    <td>time.sleep(10)</td>
+    <td>delay 10</td>
+  </tr>
+  <tr>
+    <td>random.randint(5, 10)</td>
+    <td>random number from 5 to 11</td>
+  </tr>
+  <tr>
+    <td>foo, bar = 1, 2</td>
+    <td>set {foo, bar} to {1, 2}</td>
+  </tr>
+  <tr>
+    <td>D = {"foo":1, "bar":2 }
+    <br>
+    var1, var2 = D["foo"], D["bar"]</td>
+    <td>set {var1, var2} to {foo, bar} of {foo:1, bar:2}</td>
+  </tr>
+  <tr>
+    <td>[ 0, 1, { "foo":"bar" }][2]["foo"][0]</td>
+    <td>character 1 of foo of item 3 of {0, 1, {foo:"bar"}}</td>
+  </tr>
+  <tr>
+    <td>import foo
+    <br>
+    foo.do_something()</td>
+    <td>set foo to load script "foo.scpt"
+    <br>
+    tell foo to do_something()</td>
+  </tr>
+  <tr>
+    <td>"a" == "A" <i># returns False</i></td>
+    <td>"a" = "A" <i>-- returns true</i>
+    <br>
+    considering case
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"a" = "A" <i>-- returns false</i>
+    <br>
+    end considering</td>
+  </tr>
+  <tr>
+    <td>"1 2 3 4" == "1234" <i># returns False</i></td>
+    <td>"1 2 3 4" = "1234" <i>-- returns false</i>
+    <br>
+    ignoring white space
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;"1 2 3 4" = "1234" <i>-- returns true</i>
+    <br>
+    end ignoring</td>
+  </tr>
+  <tr>
+    <td>sys.exit()</td>
+    <td>tell me to quit</td>
+  </tr>
+</table>
+
+<h2 id="functions">Handy functions</h2>
+
+<p>The AppleScript language is very limited on data handling. The programmer must build his own tools (functions) to have Python-like functionality to manage strings and lists.</p>
+
+<h3 id="countSubstring">countSubstring()</h3>
+
+<pre>
+-- Counts how many times a string appears in a text
+-- Note: Its splits the text by the substring and count the items
+--
+on <b>countSubstring</b>(theText, theSubstring)
+   set AppleScript's text item delimiters to theSubstring
+   set counter to (count of every text item of theText) - 1
+   set AppleScript's text item delimiters to ""
+   return counter
+end countSubstring
+</pre>
+
+<h3 id="lstripString">lstripString()</h3>
+
+<pre>
+-- Trims the provided string from the text's beginning
+--
+on <b>lstripString</b>(theText, trimString)
+   set x to count trimString
+   try
+      repeat while theText begins with the trimString
+         set theText to characters (x + 1) thru -1 of theText as text
+      end repeat
+   on error
+      return ""
+   end try
+   return theText
+end lstripString
+</pre>
+
+<h3 id="rstripString">rstripString()</h3>
+
+<pre>
+-- Trims the provided string from the text's ending
+--
+on <b>rstripString</b>(theText, trimString)
+   set x to count trimString
+   try
+      repeat while theText ends with the trimString
+         set theText to characters 1 thru -(x + 1) of theText as text
+      end repeat
+   on error
+      return ""
+   end try
+   return theText
+end rstripString
+</pre>
+
+<h3 id="stripString">stripString()</h3>
+
+<pre>
+-- Trims the provided string from the text's boundaries
+-- Note: Requires the lstripString and rstripString functions
+--
+on <b>stripString</b>(theText, trimString)
+   set theText to lstripString(theText, trimString)
+   set theText to rstripString(theText, trimString)
+   return theText
+end stripString
+</pre>
+
+<h3 id="translateChars">lowerString() / upperString() / capitalizeString()</h3>
+
+<pre>
+-- Translate characters of a text
+-- Note: Pass the From and To tables as strings (same lenght!)
+--
+on <b>translateChars</b>(theText, fromChars, toChars)
+   set the newText to ""
+   if (count fromChars) is not equal to (count toChars) then
+      error "translateChars: From/To strings have different lenght"
+   end if
+   repeat with char in theText
+      set newChar to char
+      set x to offset of char in the fromChars
+      if x is not 0 then set newChar to character x of the toChars
+      set newText to newText &amp; newChar
+   end repeat
+   return the newText
+end translateChars
+
+
+-- Convert a text case to lower characters
+-- Note: Requires the translateChars function
+--
+on <b>lowerString</b>(theText)
+   set upper to "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+   set lower to "abcdefghijklmnopqrstuvwxyz"
+   return translateChars(theText, upper, lower)
+end lowerString
+
+
+-- Convert a text case to upper characters
+-- Note: Requires the translateChars function
+--
+on <b>upperString</b>(theText)
+   set lower to "abcdefghijklmnopqrstuvwxyz"
+   set upper to "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+   return translateChars(theText, lower, upper)
+end upperString
+
+
+-- Capitalize a text, returning only the first letter uppercased
+-- Note: Requires translateChars, lowerString and upperString
+--
+on <b>capitalizeString</b>(theText)
+   set firstChar to upperString(first character of theText)
+   set otherChars to lowerString(characters 2 thru -1 of theText)
+   return firstChar &amp; otherChars
+end capitalizeString
+</pre>
+
+<h3 id="replaceString">replaceString()</h3>
+
+<pre>
+-- Replace all occurences of one string for another in a text
+-- The trick here is to change the internal delimiter,
+-- spliting and joining the text
+--
+on <b>replaceString</b>(theText, oldString, newString)
+   set AppleScript's text item delimiters to oldString
+   set tempList to every text item of theText
+   set AppleScript's text item delimiters to newString
+   set theText to the tempList as string
+   set AppleScript's text item delimiters to ""
+   return theText
+end replaceString
+</pre>
+
+<h3 id="getListItemIndex">getListItemIndex()</h3>
+
+<pre>
+-- Returns the integer index of a list item (zero if not found)
+--
+on <b>getListItemIndex</b>(theList, theItem)
+   repeat with i from 1 to count of theList
+      if item i of theList is theItem then return i
+   end repeat
+   return 0
+end getListItemIndex
+</pre>
+
+<h3 id="countListItem">countListItem()</h3>
+
+<pre>
+-- Returns the total count of a specific item in a list
+--
+on <b>countListItem</b>(theList, theItem)
+   set counter to 0
+   repeat with i from 1 to count of theList
+      if item i of theList is equal to theItem then
+         set counter to counter + 1
+      end if
+   end repeat
+   return counter
+end countListItem
+</pre>
+
+<h2 id="thanks">Thank You Very Much!</h2>
+
+<p>This document was reviewed and got valuable contributions from:</p>
+
+<ul>
+  <li>Alfredo Kojima</li>
+  <li>André Ruiz</li>
+  <li>Osvaldo Santana Neto</li>
+  <li>Rudá Moura</li>
+  <li>Ryan Wilcox</li>
+  <li>Sérgio Bruder</li>
+</ul>

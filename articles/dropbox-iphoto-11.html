@@ -1,0 +1,104 @@
+---
+layout: 2013-articles
+worked: "4:00"
+date: 2012-12-05
+title: "Fix: iPhoto '11 library doubled size in Dropbox"
+tags: [Dropbox, iPhoto]
+---
+
+<h2 id="problem">The problem</h2>
+
+<ul>
+  <li>Your iPhoto library lives inside your Dropbox folder.</li>
+  <li>You have upgraded from a previous version to iPhoto '11.</li>
+  <li>Now the library doubled its size in Dropbox servers :(</li>
+</ul>
+
+<h2 id="explanation">The explanation</h2>
+
+<p>In the previous version of iPhoto, all your pictures and movies were stored in a folder named <strong>Originals</strong>, inside your library. In iPhoto '11 that folder was renamed to <strong>Masters</strong> and when you first launch it, your library is upgraded to the new structure.</p>
+
+<p>Dropbox knows how to handle folder renames, that's not the problem. The problem is that iPhoto also creates a symlink named Originals, pointing to the new folder Masters. As <a href="http://aurelio.net/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, you end up with <strong>two</strong> identical folders in the server, duplicating all your photos and videos.</p>
+
+<p>But unfortunately, there's more. The photos you have edited are saved to a different folder inside your library, named <strong>Modified</strong>. Guess what? This folder was also renamed and symlinked in iPhoto '11, now it's called <strong>Previews</strong>. And there goes another duplicates to the Dropbox server…</p>
+
+<p>Since photo libraries tend to be huge, all this duplication can easily fill up all the available space in your Dropbox account.</p>
+
+<blockquote>
+  Note that all this problem only affects <strong>upgraded</strong> libraries from previous versions of iPhoto. If you create a new library from scratch in iPhoto '11, the symlinks are not created and there's no duplication in Dropbox.
+</blockquote>
+
+<h2 id="symlinks">The symlinks</h2>
+
+<ul>
+  <li>Data → Data.noindex</li>
+  <li>Data.noindex → Thumbnails</li>
+  <li>Modified → Previews</li>
+  <li>Originals → Masters</li>
+</ul>
+
+<p>Those are the symlinks created inside an iPhoto library after the upgrade to iPhoto '11. Note that the thumbnails will be triplicated in Dropbox servers!</p>
+
+<h2 id="fake-solutions">The fake solutions</h2>
+
+<p>You could just remove the symlinks, they seem useless. But it may corrupt your library, as noted by <a href="https://forums.dropbox.com/topic.php?id=26377&amp;replies=85#post-164505">Thomas A. in the Dropbox Forums</a>:</p>
+
+<blockquote>
+  Removing the symlinks does not work. You can open your iPhoto library, but work with it for a while and you'll find new directories (yes, directories, not symlink) replacing the old symlinks. This, of course, leads to problems as you can imagine…
+</blockquote>
+
+<p>Do not use Selective Sync to uncheck those symlinks. It's not even a solution and due the <a href="http://aurelio.net/articles/dropbox-selective-sync.html#symlink">Dropbox inner workings</a>, all your pictures will be removed from the original folder!</p>
+
+<blockquote>
+  Well, I used Selective Sync and 'removed' Originals/Modified, now all my pics are gone. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;page=3&amp;replies=85#post-167338">Johan S.</a>
+</blockquote>
+
+<p>If you don't mind losing all your metadata (ratings, events, albums, etc.), just create a new library in iPhoto '11 (that comes with no symlink) and reimport all your photos and videos. But this is hardly an acceptable solution.</p>
+
+<p>You can also wait until Dropbox really support symlinks, or maybe implement an special workaround for iPhoto libraries. According to the forum posts, both seem intangible in the near future.</p>
+
+<blockquote>
+  We could write special exceptions in the client but then that's another case for us to manage and keep track of and educate the user base. How many different apps will require a special exception from us? It's a road on a slippery slope that unfortunately we can't follow. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;replies=85#post-164478">Rian H., Dropbox employee</a>
+</blockquote>
+
+<h2 id="solution">The real solution</h2>
+
+<p>You must setup Dropbox to ignore the symlinks: <a href="http://aurelio.net/articles/dropbox-ignore-folder.html">no syncing, no removing</a>. This is not a default feature, but it's feasible with some smart use of temporary empty folders and <a href="https://www.dropbox.com/help/175/en">Selective Sync</a>.</p>
+
+<p>Are you ready?</p>
+
+<p>Please, first make a backup of your iPhoto library, just in case. Then follow with full attention this excellent 10 steps guide, written by <a href="https://forums.dropbox.com/topic.php?id=26377&amp;page=3&amp;replies=85#post-172196">Dylan R. in the Dropbox forums</a>:</p>
+
+<ol>
+  <li>Quit Dropbox and iPhoto. We are gonna make some changes and don't want either program to freak out. If you have an automated backup (Time Machine, etc) running, either stop it or wait for it to finish, just to make sure that it doesn't pick up these changes.</li>
+  <li>Right (or Ctrl) Click your iPhoto Library (should be in your Pictures folder in your Home folder), select "View Package Contents".</li>
+  <li>Take any folder that is a symlink (they will have the little curly arrow overlay, like an alias) and drag it to your desktop (we'll be dragging them back later). Make note of all these file names as we'll use them several times. You can drag them anywhere really, so long as it isn't in your Dropbox folder. Just using Desktop as an example.</li>
+  <li>For each folder that you dragged to your desktop, make a normal folder in the original place with an identical name.</li>
+  <li>Restart Dropbox and let these empty folders sync. This should get your space back. Make sure you do NOT start iPhoto yet! We have to get that working again, first.</li>
+  <li>Go to Dropbox Preferences, click Advanced, then Selective Sync.</li>
+  <li>Click Switch to Advance View.</li>
+  <li>Find your iPhoto Library, and UNCHECK all the dummy folders we just made. ONLY uncheck the empty folders we just made. Dropbox will now delete the (empty) folders from your hard drive.</li>
+  <li>Drag all the symlinks back from you desktop into your iPhoto Library Bundle. They should hopefully have a gray minus sign on them, indicating that they are not being sync'd (what we want).</li>
+  <li>Restart iPhoto. Since nothing changed as far as it can tell, it should work just fine. Just don't start iPhoto at any point before this step!</li>
+</ol>
+
+<h2 id="solution-geek">The real solution - Geeky version</h2>
+
+<pre>
+### Quit iPhoto and Dropbox
+
+$ cd ~/Pictures/iPhoto\ Library/               # Enter library
+$ rm    Data Data.noindex Modified Originals   # Remove symlinks
+$ mkdir Data Data.noindex Modified Originals   # Create dummy folders
+$ open -a Dropbox                              # Launch Dropbox
+
+### Wait until Dropbox is 100% synced.
+### Uncheck the dummy folders in Selective Sync.
+### Wait until Dropbox is 100% synced.
+
+$ ln -s ./Thumbnails   Data.noindex            # Restore symlinks
+$ ln -s ./Data.noindex Data
+$ ln -s ./Previews     Modified
+$ ln -s ./Masters      Originals
+$ open -a iPhoto                               # \o/
+</pre>
