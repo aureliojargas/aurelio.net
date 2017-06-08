@@ -6,6 +6,16 @@ title: Dropbox iPhoto Import – The Missing FAQ
 tags: [Dropbox, iPhoto]
 ---
 
+<!--
+  Worked hours:
+  2014-03-06 2:00
+  2014-03-07 5:44 (4h testing)
+  2014-03-08 0:30
+  2014-03-10 4:00
+  2014-03-14 6:24
+  2014-03-17 2:00
+-->
+
 <blockquote>
   Important: The information in this article is based on my personal experience using the following setup: Dropbox v2.6.2, iPhoto '11 (version 9.4.3) and OS X Mountain Lion 10.8.5. Different versions may have different behavior. Let me know in the comments!
 </blockquote>
@@ -132,6 +142,8 @@ Dropbox/Photos from iPhoto/Xmas 2013/
 
 <p>It's a timestamp composed by the date (<code>yyyy-mm-dd</code>) and time (<code>hh.mm.ss</code>) when the photo was shot. Examples:</p>
 
+<!--<p>The photo timestamp (date and time) in the <code>YYYY-MM-DD HH.MM.SS.jpg</code> format. Yes, it's the same format already used in the special Camera Uploads folder. Examples:</p>-->
+
 <pre>
 Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.12.24.jpg
 Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.15.49.jpg
@@ -140,6 +152,7 @@ Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.39.11.jpg
 
 <blockquote>
   Note that when the photo's EXIF date differs from the iPhoto Info pane's date, Dropbox always use the iPhoto date to compose the filename. <a href="#photo-date">Read more about it</a>.
+  <!--This difference happens when you set the photo date manually in iPhoto without choosing the "Modify original files" option.-->
 </blockquote>
 
 <!-- ==================================================================== -->
@@ -180,6 +193,8 @@ Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.39.11.jpg
 <p>Usually these two dates are the same, then there's no problem.</p>
 
 <p>But the dates will differ when you use iPhoto to fix the photo date and forget to check the "Modify original files" option. Then the EXIF tags won't be updated and the new date will only be saved in iPhoto's internal database.</p>
+
+<!--<p>If the photo is not a camera photo, but a screenshot or an edited photo with none of the mentioned EXIF tags, iPhoto won't create them, even when the option is checked. In those cases, the fixed dates also remains in iPhoto only :(</p>-->
 
 <p>Dropbox will use the fixed date for the <a href="#filename">filename</a>, but the original incorrect date will remain in the EXIF tags, which is a problem since most photo tools rely on the EXIF tags to get the photo date. For example, the photo order will appear correct in the Finder, but wrong in Picasa.</p>
 
@@ -232,6 +247,24 @@ exiftool -restore_original ~/Dropbox/'Photos from iPhoto'/*
 
 <p>The last tag is set to the iPhoto info pane timestamp, which is the same timestamp used by Dropbox to compose the filename and to set the file modification date in the file system. Consistence is good.</p>
 
+<!--
+  $ diff -u foo1 foo2
+  --- foo1	2014-03-07 20:30:13.000000000 -0300
+  +++ foo2	2014-03-07 20:30:02.000000000 -0300
+  @@ -1,8 +1,8 @@
+   ExifTool Version Number         : 8.84
+  -File Name                       : 2011-09-28 13.12.24.jpg
+  -Directory                       : /Users/aurelio/Downloads/phoshare/DropboxTest 2/Masters/2011/Sep 28, 2011
+  +File Name                       : 2014-09-28 16.12.24.jpg
+  +Directory                       : Timestamp changed from 2011 to 2014 in iPhoto only, not saved to original file
+   File Size                       : 1755 kB
+  -File Modification Date/Time     : 2014:03:07 15:44:08-03:00
+  +File Modification Date/Time     : 2014:09:28 16:12:24-03:00
+   File Permissions                : rw-r--r--
+   File Type                       : JPEG
+   MIME Type                       : image/jpeg
+-->
+
 <!-- ==================================================================== -->
 
 <h2 id="meta-data">Metadata will be preserved?</h2>
@@ -250,6 +283,8 @@ exiftool -restore_original ~/Dropbox/'Photos from iPhoto'/*
   <li>Faces</li>
 </ul>
 
+<!--EXIF tags: ImageDescription/UserComment, Rating-->
+
 <p>The photo's EXIF header would be the portable place to store most of this information, but neither iPhoto nor Dropbox importer add EXIF data to the photo.</p>
 
 <ul>
@@ -261,7 +296,20 @@ exiftool -restore_original ~/Dropbox/'Photos from iPhoto'/*
 
 <blockquote>
   Note that in latest versions, <a href="https://groups.google.com/d/msg/phoshare-users/moWsMcD5SdQ/UbscpiKL1HsJ">iPhoto prevents third party apps from accessing keywords</a>. So even if the Dropbox importer starts to save metadata to EXIF, iPhoto keywords can't be read anymore :(
+  <!--That means the Dropbox importer will see no keywords, even if it tried to save them to EXIF :(-->
 </blockquote>
+
+<!--
+  http://www.iphototodisk.com/
+    Important note: In the latest iPhoto versions, Apple prevents third party apps from accessing keywords. Consequently, iPhoto To Disk is not able to export keywords anymore.
+
+  https://groups.google.com/d/msg/phoshare-users/moWsMcD5SdQ/UbscpiKL1HsJ
+    Phoshare author final message:
+    With iPhoto 9.4, the amount of data shared with other applications has been greatly reduced, and some features have already been lost: Keywords are completely gone. That is a big loss for Phoshare with iPhoto because iPhoto itself has no options to save metadata into the image files. [...] The information is still there, but only in the internal iPhoto/Aperture database. No API or documentation to these database tables are provided by Apple.
+
+  https://code.google.com/p/phoshare/
+    Aperture saves tags in the original photo file
+-->
 
 <!-- ==================================================================== -->
 
@@ -289,6 +337,12 @@ Dropbox/Photos from iPhoto/My lunch (3)
 <p>Unicode characters won't be a problem. They will be used unchanged in folder names.</p>
 
 <p>But these special ASCII symbols will be replaced by hyphens:</p>
+
+<!--
+  orig: !"#$%&'()*+,./:;<=>?@[\]^_`{|}~áãâ—★♥→
+  new:  !-#$%&'()-+,.- ;-=- @[-]^_`{-}~áãâ—★♥→
+  diff:  "       *   /: < >?  \     |
+-->
 
 <pre>
 " * / : &lt; &gt; ? \ |
@@ -361,6 +415,8 @@ Pictures rated - (3)
 
 <p>Prepare for weirdness.</p>
 
+<!--<p>Once the importer runs for the first time, it attaches to that iPhoto library and won't forget. I could not find a way to reset it.</p>-->
+
 <p>When you open a second library in iPhoto and run de importer again, it will detect the new photos, but will copy them to the old folders from the first library import! Even if you clear the "Photos from iPhoto" folder it will recreate the subfolders with the old event names. It's a bug and may be corrected in future versions of Dropbox.</p>
 
 <blockquote>
@@ -370,3 +426,24 @@ Pictures rated - (3)
 <p>I've also made some tests with multiple libraries in my old machine with Lion and iPhoto '09, but Dropbox showed a dialog with the following error: "Sorry, an error occurred. Please try again later...".</p>
 
 <p>It's safer to stay single-library for now.</p>
+
+<!--
+  It seems to me that the event list is gathered once and never refreshed again.
+
+  I've tried removing the import folder, removing the library, turning the import feature OFF then ON again, restarting Dropbox, even restarting the Mac (duh!). Nothing worked.
+
+  I've also tried to fool the importer by cleaning the Photos from iPhoto folder and renaming the new library to the same name and location to the first one. My hope was that it would see that "everything changed" and would import all photos from that new library.
+
+=============================================================================
+
+Notes:
+
+  Repeated event names with trailing spaces --- (White Space Conflict)
+
+  Preferences > Import > Import Photos from iPhoto...
+    Copy photos and videos from iPhoto into your Dropbox
+
+  The remaining time estimative was off. The dialog kept saying it would last "4 hours".
+
+  iPhoto Export tips: https://discussions.apple.com/docs/DOC-4921
+-->

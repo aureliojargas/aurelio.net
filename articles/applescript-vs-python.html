@@ -6,6 +6,18 @@ title: "AppleScript for Python Programmers (Comparison Chart)"
 tags: [AppleScript, Python]
 ---
 
+<!--
+  2006-11-30: PDF: 4h NeoOffice, 3h images+website
+  2012-12-05: moved from /doc to /articles/
+
+  PDF tweaks:
+  set AppleScript's text item delimiters to ":" -- Condensed 0.2pt
+  Replace: \nor\n   ' or\n'
+  multiline comment block (sort of) -- remove leading spaces
+  set theText to characters (x + 1) thru -1 of theText as text -- s/^ //
+  requires tell app "Finder" -- remove line break
+-->
+
 <p>I'm a Python programmer who switched to Mac OS X. Being nerd and needing to automate common tasks, the learning of the AppleScript language was unavoidable. To speed up the process I've took some notes, comparing the new commands to Python statements. The result is this document.</p>
 
 <p>As the name says, it's intended for Python programmers. But if you're an applescripter interested in Python you may also learn a lot.</p>
@@ -1088,6 +1100,8 @@ on <b>countSubstring</b>(theText, theSubstring)
    return counter
 end countSubstring
 </pre>
+
+<!--http://www.apple.com/applescript/guidebook/sbrt/pgs/sbrt.07.htm-->
 
 <h3 id="lstripString">lstripString()</h3>
 

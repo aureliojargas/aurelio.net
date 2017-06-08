@@ -55,6 +55,8 @@ $ ln -s ~/Desktop ~/Dropbox/Desktop
 
 <h2 id="duplicated">Duplicated files and your quota</h2>
 
+<!--<p>When your symlink points to a file that's already inside your Dropbox folder, you'll end up with two copies of this file in your Dropbox account. The same happens for folders.</p>-->
+
 <p>Say you just made the symlink <code>~/Dropbox/mp3</code> pointing to your 5GB music collection folder in <code>~/Dropbox/iTunes/iTunes Media/Music/</code>. When syncing, Dropbox will follow the symlink and will upload it as a plain folder. Guess what? There goes all your music duplicated to the new <code>mp3</code> folder in your Dropbox account.</p>
 
 <p>Dropbox is smart enough to detect that those files were already uploaded, so it will do a server-side copy and will not spend your bandwidth uploading them again. But regardless, those "new" files will eat up your account quota: now your music spends 10GB of quota.</p>
@@ -81,12 +83,22 @@ $ ln -s foo bar
   <li><code>foo</code> is a plain folder in both your machine and Dropbox server.</li>
   <li><code>bar</code> is a symlink in your machine, but a plain independent folder in the server.</li>
   <li><code>foo</code> and <code>bar</code> are two distinct folders in the server.</li>
+  <!--<li><code>foo/abc.txt</code> and <code>bar/abc.txt</code> are the same file locally, but different files in the server.</li>-->
 </ul>
 
 <p>The symlink is always preserved in the original computer it was created. But in any other instance it will be a plain folder: the Dropbox website and mobile app, a new computer you install Dropbox. This discrepancy between the main machine and the server can lead to unexpected problems.</p>
 
 <p>The symlink in the original computer is also the only thing that keeps both folders connected. If you change only one of the folders in the web interface, when the original computer syncs it will replicate the change to the other folder. If you format that computer, the connection is gone and each folder is now really independent of each other. They will become unsynchronized.</p>
 
+<!--
+  Your computer is the only place "bar" will remain as a symlink. As long as this is your main machine, you should not have any problem.
+
+  In your machine everything seems fine, the symlink you created is there. But the problem is in the server: "bar" became an independent folder, with the same contents as the original "foo" folder. They are not linked in any way in the server. If you install Dropbox in a new computer, it will download both folders and no symlink.
+
+  It's important no note that the symlinks are still there in the original computer they were created. When using that computer, it doesn't matter it you edit/copy/remove files inside the original folder or inside the symlink that points to it. You're always working at the same set of files.
+
+  That's a nightmare for symlink lovers.
+-->
 
 <h2 id="removing">Only remove symlinks in main computer</h2>
 
@@ -96,6 +108,10 @@ $ ln -s foo bar
 
 <p>How it happens: The procedure to remove folders is to first remove all the folder contents (files and subfolders) and then remove the empty folder. Since the Dropbox client needs to remove the "folder" <code>bar</code> from your computer, that's what it does. But here <code>bar</code> is a symlink to <code>foo</code>, the original folder, which sadly get all its contents removed. When it's empty, Dropbox finally removes <code>bar</code>.</p>
 
+<!--
+  I used to share folders with other Dropbox users by creating a symlink in ~/Dropbox to the actual folder I wanted to share. If I delete the symlink, the folder is no longer shared. Fine. If the other person deletes the shared folder (not a symlink for them, also fine), then not only the symlink on ~/Dropbox gets deleted (which is reasonable), but also the files on the original folder where the symlink pointed to! This is hardly expected behaviour and could lead to serious data loss. Please change this!
+  — Eduardo R. https://www.dropbox.com/votebox/350/preserve-implement-symlink-behaviour
+-->
 
 <h2 id="backup">Not a backup utility</h2>
 
@@ -137,3 +153,24 @@ $ find ~/Dropbox -type l -ls &gt; ~/Dropbox/symlinks.txt
 <h2 id="vote">Vote</h2>
 
 <p>Use your Votebox credits to tell Dropbox you want symlink support: <a href="https://www.dropbox.com/votebox/350/preserve-implement-symlink-behaviour">https://www.dropbox.com/votebox/350/preserve-implement-symlink-behaviour</a></p>
+
+<!--<p>Read the comments! Lots of use cases and problems.</p>-->
+
+<!--
+  Notes:
+
+  # Problems
+
+  Currently, having a mix of windows/linux machines AND using symlinks causes no end of woes, like duplicated content, conflicted versions, and disappearing files (especially when using a CVS/SVN/GIT checkout from a repository, which tends to add lots of files in a very short time).
+
+
+  # The good side of the current behavior
+
+  https://forums.dropbox.com/topic.php?id=26364#post-164003
+
+  I agree, for symlinks that are inside the dropbox folder, it is less than ideal. However, for linking a file that cannot be moved into dropbox, symlinks need to work the way they do. I just meant symlinks are widely used to implement "watch any folder" and if just the link was synced, that wouldn't work (I know that the suggested method is move the original and put a symlink in the location of the original, but I don't like seeing the green checks outside of dropbox folder so I do it the other way)
+
+  Another case for symlinks working as they do: I wrote a program, and I share the binary with two completely different groups of people. So, I symlinked the program (which is in my Dropbox folder) into both shared folders. That way, if I ever edit the program, both shared folders get the update program without me having to think (and since it's a compiled program, I know no one will change it, which would be bad). If just the link was synced, the shared folders would get a link pointing to nowhere. And some of the people I share with use Windows systems, including XP (so no symlinks or junctions).
+
+  Basically, dropbox has to work for the lowest common denominator, which means treating links as files, not as links.
+-->

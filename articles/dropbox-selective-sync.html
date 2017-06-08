@@ -8,6 +8,8 @@ tags: [Dropbox]
 
 <p>The <a href="https://www.dropbox.com/help/175/en">Selective Sync</a> feature of Dropbox allows you to select which folders will be synced to your computer.</p>
 
+<!--<p>If you're installing Dropbox for the first time in a new computer, using this feature before the initial download will be a huge saving in disk space and bandwidth when you uncheck the biggest folders. But if you already use Dropbox and have all your files synced, it's important to understand how this feature works before using it, to avoid problems.</p>-->
+
 <p>You're safe using this feature when installing Dropbox in a second computer, to speed up the initial download of your files by excluding the big folders. But in your working computer, with all your files already synced, it's important to understand how this feature works before using it, to avoid problems.</p>
 
 
@@ -47,5 +49,7 @@ $ ln -s a b
 </pre>
 
 <p>Now uncheck "b" in Selective Sync. As you expect, the symlink "b" will be removed. As you do not expect, the folder "a" is now empty.</p>
+
+<!--In the server, now "a" is also empty and "b" is a plain folder with foo.txt-->
 
 <p>Since <a href="http://aurelio.net/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, "b" is handled as a folder. So the Selective Sync unchecking first remove the folder contents before removing the folder itself. This is a dangerous combination for symlinked folders :(</p>

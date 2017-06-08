@@ -14,6 +14,12 @@ tags: [Dropbox, iPhoto]
   <li>Now the library doubled its size in Dropbox servers :(</li>
 </ul>
 
+<!--
+  https://forums.dropbox.com/topic.php?id=26377#post-164002
+  Inside the package there was only one folder named Originals before. That folder was renamed to Masters and perhaps to maintain backwards compatibility, now there's an alias (symlink) named Originals pointing to Masters. Dropbox tries to sync the symlink as it were a folder, doubling the space required.
+-->
+
+
 <h2 id="explanation">The explanation</h2>
 
 <p>In the previous version of iPhoto, all your pictures and movies were stored in a folder named <strong>Originals</strong>, inside your library. In iPhoto '11 that folder was renamed to <strong>Masters</strong> and when you first launch it, your library is upgraded to the new structure.</p>
@@ -28,16 +34,24 @@ tags: [Dropbox, iPhoto]
   Note that all this problem only affects <strong>upgraded</strong> libraries from previous versions of iPhoto. If you create a new library from scratch in iPhoto '11, the symlinks are not created and there's no duplication in Dropbox.
 </blockquote>
 
+
 <h2 id="symlinks">The symlinks</h2>
 
 <ul>
   <li>Data → Data.noindex</li>
   <li>Data.noindex → Thumbnails</li>
+  <!--<li>Database/BigBlobs.apdb → apdb/BigBlobs.apdb</li>-->
+  <!--<li>Database/Faces.db → apdb/Faces.db</li>-->
+  <!--<li>Database/History.apdb → apdb/History.apdb</li>-->
+  <!--<li>Database/ImageProxies.apdb → apdb/ImageProxies.apdb</li>-->
+  <!--<li>Database/Library.apdb → apdb/Library.apdb</li>-->
+  <!--<li>Database/Properties.apdb → apdb/Properties.apdb</li>-->
   <li>Modified → Previews</li>
   <li>Originals → Masters</li>
 </ul>
 
 <p>Those are the symlinks created inside an iPhoto library after the upgrade to iPhoto '11. Note that the thumbnails will be triplicated in Dropbox servers!</p>
+
 
 <h2 id="fake-solutions">The fake solutions</h2>
 
@@ -58,8 +72,13 @@ tags: [Dropbox, iPhoto]
 <p>You can also wait until Dropbox really support symlinks, or maybe implement an special workaround for iPhoto libraries. According to the forum posts, both seem intangible in the near future.</p>
 
 <blockquote>
+  Unfortunately this is a design decision that we made a very long time ago. There is no notion of symlinks in the Dropbox system (Windows XP didn't support symlinks) so our solution was to sync all the data within symlinks as if they were actual folders anyway. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;replies=85#post-164471">Rian H., Dropbox employee</a>
+</blockquote>
+
+<blockquote>
   We could write special exceptions in the client but then that's another case for us to manage and keep track of and educate the user base. How many different apps will require a special exception from us? It's a road on a slippery slope that unfortunately we can't follow. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;replies=85#post-164478">Rian H., Dropbox employee</a>
 </blockquote>
+
 
 <h2 id="solution">The real solution</h2>
 
@@ -68,6 +87,8 @@ tags: [Dropbox, iPhoto]
 <p>Are you ready?</p>
 
 <p>Please, first make a backup of your iPhoto library, just in case. Then follow with full attention this excellent 10 steps guide, written by <a href="https://forums.dropbox.com/topic.php?id=26377&amp;page=3&amp;replies=85#post-172196">Dylan R. in the Dropbox forums</a>:</p>
+
+<!--<p>There's a total of four symlinks to be ignored. The procedure is not so complicated, but there are several steps and you must follow them with absolute care. Please, first make a full backup of your iPhoto library.</p>-->
 
 <ol>
   <li>Quit Dropbox and iPhoto. We are gonna make some changes and don't want either program to freak out. If you have an automated backup (Time Machine, etc) running, either stop it or wait for it to finish, just to make sure that it doesn't pick up these changes.</li>
@@ -90,6 +111,18 @@ tags: [Dropbox, iPhoto]
 
   <li>Restart iPhoto. Since nothing changed as far as it can tell, it should work just fine. Just don't start iPhoto at any point before this step!</li>
 </ol>
+
+<!--
+  Summary:
+  https://forums.dropbox.com/topic.php?id=26364#post-164006
+
+  1) Quit iPhoto
+  2) Remove the symlink and make a folder named Originals. Let this sync (to get your space back).
+  3) Set up selective sync in the 0.8 branch to NOT sync that folder to your computer (you will need to use the Switch to Advanced View button to do this). This will delete the empty folder.
+  4) Recreate the link. It'll get a little gray minus icon on it, and won't sync back to the cloud.
+  And, since the link exists again, iPhoto should be happy.
+-->
+
 
 <h2 id="solution-geek">The real solution - Geeky version</h2>
 
