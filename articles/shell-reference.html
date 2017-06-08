@@ -39,12 +39,16 @@ tags: [shell, unix, reference]
   Note: This document was translated from <a href="http://aurelio.net/shell/canivete/">portuguese</a> to english by Luiz Miguel Axcar.
 </blockquote>
 
+
 <h2 id="operators">1. Operators</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th colspan="2">Arithmetic Operators</th>
   </tr>
+
   <tr>
     <td class="center"><code>+</code></td>
     <td>Addition</td>
@@ -69,9 +73,11 @@ tags: [shell, unix, reference]
     <td class="center"><code>**</code></td>
     <td>Exponentiation</td>
   </tr>
+
   <tr>
     <th colspan="2">Attribution Operators</th>
   </tr>
+
   <tr>
     <td class="center"><code>=</code></td>
     <td>Attribute some value to a variable</td>
@@ -104,9 +110,11 @@ tags: [shell, unix, reference]
     <td class="center"><code>--</code></td>
     <td>Decrease 1 from the variable value</td>
   </tr>
+
   <tr>
     <th colspan="2">Comparison Operators</th>
   </tr>
+
   <tr>
     <td class="center"><code>==</code></td>
     <td>Equals</td>
@@ -131,9 +139,11 @@ tags: [shell, unix, reference]
     <td class="center"><code>&lt;=</code></td>
     <td>Less than or equal to</td>
   </tr>
+
   <tr>
     <th colspan="2">Logical Operators</th>
   </tr>
+
   <tr>
     <td class="center"><code>&amp;&amp;</code></td>
     <td>Logical AND</td>
@@ -142,9 +152,11 @@ tags: [shell, unix, reference]
     <td class="center"><code>||</code></td>
     <td>Logical OR</td>
   </tr>
+
   <tr>
     <th colspan="2">Bitwise Operators</th>
   </tr>
+
   <tr>
     <td class="center"><code>&lt;&lt;</code></td>
     <td>Left-shift</td>
@@ -173,9 +185,11 @@ tags: [shell, unix, reference]
     <td class="center"><code>!</code></td>
     <td>NOT</td>
   </tr>
+
   <tr>
     <th colspan="2">Bitwise Operators (attribution)</th>
   </tr>
+
   <tr>
     <td class="center"><code>&lt;&lt;=</code></td>
     <td>Left-shift</td>
@@ -198,7 +212,9 @@ tags: [shell, unix, reference]
   </tr>
 </table>
 
+
 <h2 id="redir">2. Redirection</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -267,13 +283,17 @@ tags: [shell, unix, reference]
   </tr>
 </table>
 
+
 <h2 id="variables">3. Special variables</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th>Variable</th>
     <th>Positioning parameters</th>
   </tr>
+
   <tr>
     <td class="center"><code>$0</code></td>
     <td>Parameter #0 (name of command or function)</td>
@@ -310,10 +330,12 @@ tags: [shell, unix, reference]
     <td class="center"><code>$@</code></td>
     <td>All the parameters, in many protected strings</td>
   </tr>
+
   <tr>
     <th>Variable</th>
     <th>Misc</th>
   </tr>
+
   <tr>
     <td class="center"><code>$$</code></td>
     <td>PID of current process (or script)</td>
@@ -332,13 +354,17 @@ tags: [shell, unix, reference]
   </tr>
 </table>
 
+
 <h2 id="expansion">4. Variable expansion</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th>Syntax</th>
     <th>Conditional Expansion</th>
   </tr>
+
   <tr>
     <td><code>${var:-text}</code></td>
     <td>If var is undefined, returns 'text'</td>
@@ -355,10 +381,12 @@ tags: [shell, unix, reference]
     <td><code>${var:+text}</code></td>
     <td>If var is defined, returns 'text', else return empty</td>
   </tr>
+
   <tr>
     <th>Syntax</th>
     <th>String expansion</th>
   </tr>
+
   <tr>
     <td><code>${var}</code></td>
     <td>Is the same of $var, but not ambiguous</td>
@@ -417,7 +445,9 @@ tags: [shell, unix, reference]
   </tr>
 </table>
 
+
 <h2 id="grouping">5. Quoting and grouping</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -482,7 +512,9 @@ tags: [shell, unix, reference]
   </tr>
 </table>
 
+
 <h2 id="ifwhilefor">6. if, for, select, while, until, case</h2>
+
 
 <table>
   <tr>
@@ -538,12 +570,16 @@ esac
   </tr>
 </table>
 
+
 <h2 id="test">7. test or [ … ]</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th colspan="2">Numeric comparison</th>
   </tr>
+
   <tr>
     <td class="center"><code>-lt</code></td>
     <td>Less Than</td>
@@ -568,9 +604,11 @@ esac
     <td class="center"><code>-ne</code></td>
     <td>Not Equal to (different)</td>
   </tr>
+
   <tr>
     <th colspan="2">String comparison</th>
   </tr>
+
   <tr>
     <td class="center"><code>=</code></td>
     <td>Equals</td>
@@ -587,9 +625,11 @@ esac
     <td class="center"><code>-z</code></td>
     <td>Is NULL</td>
   </tr>
+
   <tr>
     <th colspan="2">Logical Operators</th>
   </tr>
+
   <tr>
     <td class="center"><code>!</code></td>
     <td>Logical NOT</td>
@@ -602,9 +642,11 @@ esac
     <td class="center"><code>-o</code></td>
     <td>Logical OR</td>
   </tr>
+
   <tr>
     <th colspan="2">Testing files</th>
   </tr>
+
   <tr>
     <td class="center"><code>-b</code></td>
     <td>Is a block device</td>
@@ -691,7 +733,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="prompt">8. Prompt escapes ($PS1)</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -831,7 +875,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="echo">9. echo escapes</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -901,7 +947,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="date">10. date tokens</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -978,7 +1026,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="printf">11. printf tokens</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -1019,14 +1069,18 @@ esac
   </tr>
 </table>
 
+
 <h2 id="ls">12. ls -l file identifiers</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th>Letter</th>
     <th>Reminder</th>
     <th>File types (First char)</th>
   </tr>
+
   <tr>
     <td class="center">-</td>
     <td class="center">-</td>
@@ -1062,11 +1116,13 @@ esac
     <td class="center">Pipe</td>
     <td>FIFO or Named Pipe (processes communication)</td>
   </tr>
+
   <tr>
     <th>Letter</th>
     <th>Reminder</th>
     <th>File permission (next nine chars)</th>
   </tr>
+
   <tr>
     <td class="center">-</td>
     <td class="center">-</td>
@@ -1114,7 +1170,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="glob">13. Filenames wildcards (glob)</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -1149,7 +1207,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="case">14. case wildcards</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -1184,7 +1244,9 @@ esac
   </tr>
 </table>
 
+
 <h2 id="signals">15. trap/kill/killall signals</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -1593,7 +1655,9 @@ esac
 <br>
 See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</a></p>
 
+
 <h2 id="exit-codes">16. Exit codes</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -1648,14 +1712,18 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   </tr>
 </table>
 
+
 <h2 id="ansi-colors">17. Color codes (ANSI)</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th>Color</th>
     <th>Letter</th>
     <th>Background</th>
   </tr>
+
   <tr>
     <td>Black</td>
     <td class="center">30</td>
@@ -1696,10 +1764,12 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
     <td class="center">37</td>
     <td class="center">47</td>
   </tr>
+
   <tr>
     <th colspan="2">Attribute</th>
     <th>Value</th>
   </tr>
+
   <tr>
     <td colspan="2">Reset</td>
     <td class="center">0</td>
@@ -1720,9 +1790,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
     <td colspan="2">Reverse</td>
     <td class="center">7</td>
   </tr>
+
   <tr>
     <th colspan="3">Examples: ESC [ &lt;N&gt;;&lt;N&gt; m</th>
   </tr>
+
   <tr>
     <td colspan="2">Regular text (Turn color off)</td>
     <td class="center"><code>ESC[m</code></td>
@@ -1743,9 +1815,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
     <td colspan="2">Blinking red</td>
     <td class="center"><code>ESC[31;5m</code></td>
   </tr>
+
   <tr>
     <th colspan="3">On the command line</th>
   </tr>
+
   <tr>
     <td colspan="3"><code>echo -e '\e[33;1m yellow \e[m'</code></td>
   </tr>
@@ -1756,7 +1830,9 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
 
 <p><img class="left" src="http://aurelio.net/img/articles/zzcores.gif" alt=""></p>
 
+
 <h2 id="regex-meta">18. Regex metacharacters</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -1866,7 +1942,9 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   </tr>
 </table>
 
+
 <h2 id="regex-flavors">19. Regex flavors</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -2006,7 +2084,9 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   </tr>
 </table>
 
+
 <h2 id="ascii">20. Printable ASCII characters (ISO-8859-1) - text</h2>
+
 
 <pre>
 32        64  @     96  `    162  ¢    194  Â    226  â
@@ -2043,16 +2123,22 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
 63  ?     95  _    161  ¡    193  Á    225  á
 </pre>
 
+
 <h2 id="ascii-image">21. Printable ASCII characters (ISO-8859-1) - image</h2>
+
 
 <p><img class="left" src="http://aurelio.net/img/articles/ascii.gif" alt=""></p>
 
+
 <h2 id="copy-paste">22. Copy-paste friendly commands</h2>
 
+
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
+
   <tr>
     <th>Conditions with IF</th>
   </tr>
+
   <tr>
     <td><code>if [ -f "$file" ]; then echo 'File found'; fi</code></td>
   </tr>
@@ -2074,9 +2160,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   <tr>
     <td><code>if grep -qs 'root' /etc/passwd; then echo 'User found'; fi</code></td>
   </tr>
+
   <tr>
     <th>Conditions with AND (&amp;&amp;) and OR (||)</th>
   </tr>
+
   <tr>
     <td><code>[ -f "$file" ] &amp;&amp; echo 'File found'</code></td>
   </tr>
@@ -2098,9 +2186,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   <tr>
     <td><code>[ "$1" ] || { echo "Usage: $0 parameter" ; exit 1 ; }</code></td>
   </tr>
+
   <tr>
     <th>Adds 1 to variable $i</th>
   </tr>
+
   <tr>
     <td><code>i=$(expr $i + 1)</code></td>
   </tr>
@@ -2116,9 +2206,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   <tr>
     <td><code>let i++</code></td>
   </tr>
+
   <tr>
     <th>Loop from 1 to 10</th>
   </tr>
+
   <tr>
     <td><code>for i in 1 2 3 4 5 6 7 8 9 10; do echo $i; done</code></td>
   </tr>
@@ -2134,9 +2226,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   <tr>
     <td><code>i=1 ; until [ $i -gt 10 ]; do echo $i ; i=$((i+1)) ; done</code></td>
   </tr>
+
   <tr>
     <th>Loop reading lines from a file or command output</th>
   </tr>
+
   <tr>
     <td><code>cat /etc/passwd | while read LINE; do echo "$LINE"; done</code></td>
   </tr>
@@ -2149,9 +2243,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   <tr>
     <td><code>while read LINE; do echo "$LINE"; done &lt; &lt;(grep 'root' /etc/passwd)</code></td>
   </tr>
+
   <tr>
     <th>Wildcards for case command</th>
   </tr>
+
   <tr>
     <td><code>case "$dir" in /home/*) echo 'dir inside /home';; esac</code></td>
   </tr>
@@ -2164,9 +2260,11 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   <tr>
     <td><code>case "$i" in [0-9]) echo '1 digit';; [0-9][0-9]) echo '2 digits';; esac</code></td>
   </tr>
+
   <tr>
     <th>Dialog boxes</th>
   </tr>
+
   <tr>
     <td><code>dialog --calendar 'abc' 0 0 31 12 1999</code></td>
   </tr>
@@ -2217,7 +2315,9 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   </tr>
 </table>
 
+
 <h2 id="emacs">23. Command line shortcuts (set -o emacs)</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>
@@ -2337,7 +2437,9 @@ See also: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</
   </tr>
 </table>
 
+
 <h2 id="toolbox">24. Toolbox</h2>
+
 
 <table style="margin-left: auto; margin-right: auto;" class="tableborder">
   <tr>

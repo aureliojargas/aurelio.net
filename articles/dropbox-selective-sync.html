@@ -10,6 +10,7 @@ tags: [Dropbox]
 
 <p>You're safe using this feature when installing Dropbox in a second computer, to speed up the initial download of your files by excluding the big folders. But in your working computer, with all your files already synced, it's important to understand how this feature works before using it, to avoid problems.</p>
 
+
 <h2 id="removed">The local folder is removed</h2>
 
 <p>When you open the Selective Sync settings, you have the option to uncheck any of your folders, to stop syncing them. This is the exact wording Dropbox provides at the top of the window:</p>
@@ -26,11 +27,13 @@ tags: [Dropbox]
 
 <p>In my opinion Dropbox does not make it as clear as it should be, since we're talking about deleting user data. In this case it's only local data, but when symlinks are involved, even remote data can be deleted. We'll talk about it later.</p>
 
+
 <h2 id="ignored">Recreated unchecked folders are ignored</h2>
 
 <p>When you uncheck a folder in Selective Sync, that folder is removed from your computer. But if you recreate that folder locally, in the same location with the same name, Dropbox will ignore it. You can add files to that folder and modify them, but Dropbox won't sync those changes to the server.</p>
 
 <p>This behavior is handy to <a href="http://aurelio.net/articles/dropbox-ignore-folder.html">ignore folders with temporary files</a> (caches, builds) that reside inside your Dropbox. But note that if you check again that same folder in the Selective Sync settings, you will get a <a href="https://www.dropbox.com/help/36/en">conflicted copy</a>.</p>
+
 
 <h2 id="symlink">Unchecked symlink remove original folder contents</h2>
 

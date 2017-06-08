@@ -71,14 +71,23 @@ tags: [Dropbox, iPhoto]
 
 <ol>
   <li>Quit Dropbox and iPhoto. We are gonna make some changes and don't want either program to freak out. If you have an automated backup (Time Machine, etc) running, either stop it or wait for it to finish, just to make sure that it doesn't pick up these changes.</li>
+
   <li>Right (or Ctrl) Click your iPhoto Library (should be in your Pictures folder in your Home folder), select "View Package Contents".</li>
+
   <li>Take any folder that is a symlink (they will have the little curly arrow overlay, like an alias) and drag it to your desktop (we'll be dragging them back later). Make note of all these file names as we'll use them several times. You can drag them anywhere really, so long as it isn't in your Dropbox folder. Just using Desktop as an example.</li>
+
   <li>For each folder that you dragged to your desktop, make a normal folder in the original place with an identical name.</li>
+
   <li>Restart Dropbox and let these empty folders sync. This should get your space back. Make sure you do NOT start iPhoto yet! We have to get that working again, first.</li>
+
   <li>Go to Dropbox Preferences, click Advanced, then Selective Sync.</li>
+
   <li>Click Switch to Advance View.</li>
+
   <li>Find your iPhoto Library, and UNCHECK all the dummy folders we just made. ONLY uncheck the empty folders we just made. Dropbox will now delete the (empty) folders from your hard drive.</li>
+
   <li>Drag all the symlinks back from you desktop into your iPhoto Library Bundle. They should hopefully have a gray minus sign on them, indicating that they are not being sync'd (what we want).</li>
+
   <li>Restart iPhoto. Since nothing changed as far as it can tell, it should work just fine. Just don't start iPhoto at any point before this step!</li>
 </ol>
 

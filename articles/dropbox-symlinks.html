@@ -10,6 +10,7 @@ tags: [Dropbox]
   In short: <strong>The Dropbox server does not support symlinks. All your local symlinks are followed and uploaded as plain files and folders into your Dropbox account.</strong>
 </blockquote>
 
+
 <h2 id="none">No symlinks in the server</h2>
 
 <p>In order to support old Windows machines that do not have symlinks, the Dropbox team decided to cut symlink support from all platforms.</p>
@@ -22,6 +23,7 @@ tags: [Dropbox]
 
 <p>Just browse your files in the Dropbox website and see it for yourself: all your symlinks were converted to plain files and folders.</p>
 
+
 <h2 id="followed">Local symlinks are followed</h2>
 
 <p>When you create a symlink inside your Dropbox folder in your computer, the syncing process will start. But instead of uploading the symlink itself, Dropbox will follow the symlink and will upload the file or folder it points to.</p>
@@ -29,6 +31,7 @@ tags: [Dropbox]
 <p>It doesn't matter if your symlink points to a file that's inside or outside your Dropbox folder. Symlinks are always followed and Dropbox always treat your symlinks as if they were plain files or folders.</p>
 
 <p>This is the default behavior and cannot be changed.</p>
+
 
 <h2 id="external">External symlinks</h2>
 
@@ -42,11 +45,13 @@ $ ln -s ~/Desktop ~/Dropbox/Desktop
 
 <p>Note that this practice will become obsolete when (if?) the <a href="https://www.dropbox.com/votebox/11/watch-any-folder">#1 feature request</a> Watch Any Folder is implemented.</p>
 
+
 <h2 id="internal">Internal symlinks</h2>
 
 <p>Internal symlinks are complicated. Expect problems. Avoid if possible.</p>
 
 <p>When both the symlink and the target file reside inside your Dropbox folder, you end up with duplicated and possibly unsynchronized content.</p>
+
 
 <h2 id="duplicated">Duplicated files and your quota</h2>
 
@@ -59,6 +64,7 @@ $ ln -s ~/Desktop ~/Dropbox/Desktop
 </blockquote>
 
 <p>To avoid the quota disaster, you can use <a href="http://aurelio.net/articles/dropbox-ignore-folder.html">a hack</a> to ignore the symlinks that point to huge folders. Or just avoid symlinks at all, if possible.</p>
+
 
 <h2 id="original">Symlink here, folder there</h2>
 
@@ -81,6 +87,7 @@ $ ln -s foo bar
 
 <p>The symlink in the original computer is also the only thing that keeps both folders connected. If you change only one of the folders in the web interface, when the original computer syncs it will replicate the change to the other folder. If you format that computer, the connection is gone and each folder is now really independent of each other. They will become unsynchronized.</p>
 
+
 <h2 id="removing">Only remove symlinks in main computer</h2>
 
 <p>Never remove, via web or mobile interface, a folder that's in fact a symlink in the original computer. Both the symlink and the original folder contents will be removed.</p>
@@ -89,6 +96,7 @@ $ ln -s foo bar
 
 <p>How it happens: The procedure to remove folders is to first remove all the folder contents (files and subfolders) and then remove the empty folder. Since the Dropbox client needs to remove the "folder" <code>bar</code> from your computer, that's what it does. But here <code>bar</code> is a symlink to <code>foo</code>, the original folder, which sadly get all its contents removed. When it's empty, Dropbox finally removes <code>bar</code>.</p>
 
+
 <h2 id="backup">Not a backup utility</h2>
 
 <blockquote>
@@ -96,6 +104,7 @@ $ ln -s foo bar
 </blockquote>
 
 <p>Since symlinks are not preserved, avoid using Dropbox as a backup utility. All your symlinks will be lost in a restore. You'll have to manually recreate them.</p>
+
 
 <h2 id="restore">Restoring the symlinks</h2>
 
@@ -110,6 +119,7 @@ $ ln -s foo bar
   <li>Launch Dropbox.</li>
 </ol>
 
+
 <h2 id="list">Keep a list of your symlinks</h2>
 
 <p>It's a good practice to keep an updated list of all your symlinks, so you can restore them manually in a new computer, if needed.</p>
@@ -118,9 +128,11 @@ $ ln -s foo bar
 $ find ~/Dropbox -type l -ls &gt; ~/Dropbox/symlinks.txt
 </pre>
 
+
 <h2 id="avoid">Avoid symlinks if you can</h2>
 
 <p>Given all these gotchas, it's better to avoid using symlinks inside your Dropbox folder until they add real support for them in the server.</p>
+
 
 <h2 id="vote">Vote</h2>
 
