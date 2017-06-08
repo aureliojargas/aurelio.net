@@ -97,8 +97,8 @@ code {
 #applescript-vs-python table i { color: #aaa; }
 #iphoto-symlinks table { border-width: 1px; }
 #iphoto-symlinks th { text-align: left; }
-#sed-abc .patt { color: lime; }
-#sed-abc .hold { color: yellow; }
+#sed-abc .p { color: lime; }
+#sed-abc .h { color: yellow; }
 #shell-reference #toc li { margin-bottom: 0; }
 #shell-reference table { width: 100%; }
 #shell-reference code { color: inherit; font-weight: normal; }

@@ -7,38 +7,38 @@ tags: [sed, reference]
 ---
 
 <pre>
-a    append        append some text after the <span class="patt">[PATT]</span>
+a    append        append some text after the <span class="p">[PATT]</span>
 b    branch        branch to label (GOTO)
-c    change        replace the <span class="patt">[PATT]</span> by some text
-d    delete        delete the <span class="patt">[PATT]</span>
-D    delete        delete the first line of <span class="patt">[PATT]</span>
+c    change        replace the <span class="p">[PATT]</span> by some text
+d    delete        delete the <span class="p">[PATT]</span>
+D    delete        delete the first line of <span class="p">[PATT]</span>
 e    execute       execute a system command #GNU-sed
 F    filename      print the current input's filename #GNU-sed
-g    get           copy <span class="hold">[HOLD]</span> contents to <span class="patt">[PATT]</span> (overwriting)
-G    get           copy <span class="hold">[HOLD]</span> contents to <span class="patt">[PATT]</span> (appending)
-h    hold          copy <span class="patt">[PATT]</span> contents to <span class="hold">[HOLD]</span> (overwriting)
-H    hold          copy <span class="patt">[PATT]</span> contents to <span class="hold">[HOLD]</span> (appending)
-i    insert        insert some text before the <span class="patt">[PATT]</span>
-l    list          print <span class="patt">[PATT]</span> showing invisible characters
-n    next          read the next line to <span class="patt">[PATT]</span>
-N    next          append the next line to <span class="patt">[PATT]</span>
-p    print         print <span class="patt">[PATT]</span> contents
-P    print         print first line of <span class="patt">[PATT]</span>
-q    quit          print <span class="patt">[PATT]</span> and quit sed
-Q    quit          discard <span class="patt">[PATT]</span> and quit sed #GNU-sed
-r    read          show file contents after <span class="patt">[PATT]</span>
-R    read          show one line of file after <span class="patt">[PATT]</span> #GNU-sed
+g    get           copy <span class="h">[HOLD]</span> contents to <span class="p">[PATT]</span> (overwriting)
+G    get           copy <span class="h">[HOLD]</span> contents to <span class="p">[PATT]</span> (appending)
+h    hold          copy <span class="p">[PATT]</span> contents to <span class="h">[HOLD]</span> (overwriting)
+H    hold          copy <span class="p">[PATT]</span> contents to <span class="h">[HOLD]</span> (appending)
+i    insert        insert some text before the <span class="p">[PATT]</span>
+l    list          print <span class="p">[PATT]</span> showing invisible characters
+n    next          read the next line to <span class="p">[PATT]</span>
+N    next          append the next line to <span class="p">[PATT]</span>
+p    print         print <span class="p">[PATT]</span> contents
+P    print         print first line of <span class="p">[PATT]</span>
+q    quit          print <span class="p">[PATT]</span> and quit sed
+Q    quit          discard <span class="p">[PATT]</span> and quit sed #GNU-sed
+r    read          show file contents after <span class="p">[PATT]</span>
+R    read          show one line of file after <span class="p">[PATT]</span> #GNU-sed
 s    substitute    search and replace
 t    tee           branch to label if one s/// matched
 T    tee           branch to label if no s/// matched #GNU-sed
 v    version       abort if sed version is incompatible #GNU-sed
-w    write         write <span class="patt">[PATT]</span> to a file
-W    write         write first line of <span class="patt">[PATT]</span> to a file #GNU-sed
-x    exchange      swap <span class="patt">[PATT]</span> and <span class="hold">[HOLD]</span> contents
+w    write         write <span class="p">[PATT]</span> to a file
+W    write         write first line of <span class="p">[PATT]</span> to a file #GNU-sed
+x    exchange      swap <span class="p">[PATT]</span> and <span class="h">[HOLD]</span> contents
 y    ?             translate characters
-z    zap           empty <span class="patt">[PATT]</span> contents #GNU-sed
+z    zap           empty <span class="p">[PATT]</span> contents #GNU-sed
 
 Note:
-   <span class="patt">[PATT]</span> - Pattern space
-   <span class="hold">[HOLD]</span> - Hold space
+   <span class="p">[PATT]</span> - Pattern space
+   <span class="h">[HOLD]</span> - Hold space
 </pre>
