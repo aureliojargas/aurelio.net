@@ -71,9 +71,11 @@ tags: [AppleScript, Python]
     <td>&nbsp;</td>
     <td>say "Hello World"</td>
   </tr>
+
   <tr>
     <th colspan="2">Data types</th>
   </tr>
+
   <tr>
     <td>type("foo").__name__</td>
     <td>class of "foo"</td>
@@ -146,9 +148,11 @@ tags: [AppleScript, Python]
     <td>"".join([str(x) for x in [ 1, 2, 3 ]])</td>
     <td>{ 1, 2, 3 } as text</td>
   </tr>
+
   <tr>
     <th colspan="2">String</th>
   </tr>
+
   <tr>
     <td>S = ""</td>
     <td>set S to ""</td>
@@ -289,9 +293,11 @@ tags: [AppleScript, Python]
     <td>S = """foo "bar" baz"""</td>
     <td>set S to "foo \"bar\" baz"</td>
   </tr>
+
   <tr>
     <th colspan="2">List</th>
   </tr>
+
   <tr>
     <td>L = []</td>
     <td>set L to {}</td>
@@ -414,9 +420,11 @@ tags: [AppleScript, Python]
     <td>L[-1] == "foo"</td>
     <td>L ends with "foo"</td>
   </tr>
+
   <tr>
     <th colspan="2">Dictionary / Record</th>
   </tr>
+
   <tr>
     <td>D = {}</td>
     <td>set D to {}</td>
@@ -477,9 +485,11 @@ tags: [AppleScript, Python]
     <td>D.get("foo") == "bar"</td>
     <td>{ foo:"bar" } is in D</td>
   </tr>
+
   <tr>
     <th colspan="2">Expressions</th>
   </tr>
+
   <tr>
     <td>1 + 1</td>
     <td>1 + 1</td>
@@ -592,9 +602,11 @@ tags: [AppleScript, Python]
     <td>(1 is 1) and (2 is 2)</td>
     <td>(1 is 1) and (2 is 2)</td>
   </tr>
+
   <tr>
     <th colspan="2">Conditionals</th>
   </tr>
+
   <tr>
     <td>if VAR == 1: print "OK"</td>
     <td>if VAR = 1 then display dialog "OK"</td>
@@ -656,6 +668,7 @@ tags: [AppleScript, Python]
   <tr>
     <th colspan="2">Loops</th>
   </tr>
+
   <tr>
     <td>for i in LIST:
     <br>
@@ -722,9 +735,11 @@ tags: [AppleScript, Python]
     <br>
     end repeat</td>
   </tr>
+
   <tr>
     <th colspan="2">Functions</th>
   </tr>
+
   <tr>
     <td>def add_numbers(a, b):
     <br>
@@ -743,6 +758,7 @@ tags: [AppleScript, Python]
     <td>def optional(a=0, b=""):</td>
     <td>&nbsp;</td>
   </tr>
+
   <tr>
     <th colspan="2">Class / Script</th>
   </tr>
@@ -780,9 +796,11 @@ tags: [AppleScript, Python]
     <br>
     set myData to VAR of myFoo</td>
   </tr>
+
   <tr>
     <th colspan="2">File Read/Write</th>
   </tr>
+
   <tr>
     <td>F = open("/tmp/foo")
     <br>
@@ -817,11 +835,13 @@ tags: [AppleScript, Python]
     <br>
     close access F</td>
   </tr>
+
   <tr>
     <th colspan="2">Path
     <br>
     (requires tell app "Finder")</th>
   </tr>
+
   <tr>
     <td>os.path.isfile(F)</td>
     <td>file F exists</td>
@@ -870,9 +890,11 @@ tags: [AppleScript, Python]
     <td>os.unlink(F)</td>
     <td>delete file F</td>
   </tr>
+
   <tr>
     <th colspan="2">Date &amp; Time</th>
   </tr>
+
   <tr>
     <td>time.asctime()</td>
     <td>current date as string</td>
@@ -943,9 +965,11 @@ tags: [AppleScript, Python]
     eval(time.strftime(fmt, T))</td>
     <td>time of T <i>-- Seconds since midnight</i></td>
   </tr>
+
   <tr>
     <th colspan="2">Other</th>
   </tr>
+
   <tr>
     <td>try:
     <br>
