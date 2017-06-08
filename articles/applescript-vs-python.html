@@ -32,16 +32,16 @@ tags: [AppleScript, Python]
     <td>command <i>-- half-line comment</i></td>
   </tr>
   <tr>
-    <td>"""
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;multiline comment block (sort of)
-    <br>
-    """</td>
-    <td>(*
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;multiline comment block
-    <br>
-    *)</td>
+    <td>
+      """<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;multiline comment block (sort of)<br>
+      """
+    </td>
+    <td>
+      (*<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;multiline comment block<br>
+      *)
+    </td>
   </tr>
   <tr>
     <td>a = 5</td>
@@ -56,11 +56,11 @@ tags: [AppleScript, Python]
     <td>display dialog "Hello World"</td>
   </tr>
   <tr>
-    <td>syslog.syslog(msg)
-    <br>
-    <i>or</i>
-    <br>
-    print &gt;&gt;sys.stderr, msg</td>
+    <td>
+      syslog.syslog(msg)<br>
+      <i>or</i><br>
+      print &gt;&gt;sys.stderr, msg
+    </td>
     <td>log(msg)</td>
   </tr>
   <tr>
@@ -93,20 +93,22 @@ tags: [AppleScript, Python]
     <td>2</td>
   </tr>
   <tr>
-    <td>"foo"
-    <br>
-    <i>or</i>
-    <br>
-    'foo'</td>
+    <td>
+      "foo"<br>
+      <i>or</i><br>
+      'foo'
+    </td>
     <td>"foo"</td>
   </tr>
   <tr>
-    <td>"""foo
-    <br>
-    bar"""</td>
-    <td>"foo
-    <br>
-    bar"</td>
+    <td>
+      """foo<br>
+      bar"""
+    </td>
+    <td>
+      "foo<br>
+      bar"
+    </td>
   </tr>
   <tr>
     <td>[ 1, 2, 3 ]</td>
@@ -163,11 +165,11 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>len(S)</td>
-    <td>length of S
-    <br>
-    <i>or</i>
-    <br>
-    count S</td>
+    <td>
+      length of S<br>
+      <i>or</i><br>
+      count S
+    </td>
   </tr>
   <tr>
     <td>S[2]</td>
@@ -190,11 +192,11 @@ tags: [AppleScript, Python]
     <td>S &amp; "foo"</td>
   </tr>
   <tr>
-    <td>S.index("z")
-    <br>
-    <i>or</i>
-    <br>
-    S.find("z")</td>
+    <td>
+      S.index("z")<br>
+      <i>or</i><br>
+      S.find("z")
+    </td>
     <td>offset of "z" in S</td>
   </tr>
   <tr>
@@ -221,19 +223,19 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>S.split(":")</td>
-    <td>set AppleScript's text item delimiters to ":"
-    <br>
-    text items of S
-    <br>
-    set AppleScript's text item delimiters to ""</td>
+    <td>
+      set AppleScript's text item delimiters to ":"<br>
+      text items of S<br>
+      set AppleScript's text item delimiters to ""
+    </td>
   </tr>
   <tr>
     <td>":".join(LIST)</td>
-    <td>set AppleScript's text item delimiters to ":"
-    <br>
-    LIST as text
-    <br>
-    set AppleScript's text item delimiters to ""</td>
+    <td>
+      set AppleScript's text item delimiters to ":"<br>
+      LIST as text<br>
+      set AppleScript's text item delimiters to ""
+    </td>
   </tr>
   <tr>
     <td>S.lstrip()</td>
@@ -312,11 +314,11 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>len(L)</td>
-    <td>length of L
-    <br>
-    <i>or</i>
-    <br>
-    count L</td>
+    <td>
+      length of L<br>
+      <i>or</i><br>
+      count L
+    </td>
   </tr>
   <tr>
     <td>[x for x in L if isinstance(x, int)]</td>
@@ -344,31 +346,31 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>newlist = L[:]</td>
-    <td>set newlist to every item of L
-    <br>
-    <i>or</i>
-    <br>
-    copy L to newlist</td>
+    <td>
+      set newlist to every item of L<br>
+      <i>or</i><br>
+      copy L to newlist
+    </td>
   </tr>
   <tr>
     <td>L[2:-2]</td>
     <td>items 3 thru -3 of L</td>
   </tr>
   <tr>
-    <td>L + [ 1, 2 ]
-    <br>
-    <i>or</i>
-    <br>
-    L.extend([ 1, 2 ])</td>
+    <td>
+      L + [ 1, 2 ]<br>
+      <i>or</i><br>
+      L.extend([ 1, 2 ])
+    </td>
     <td>L &amp; { 1, 2 }</td>
   </tr>
   <tr>
     <td>L.append("foo")</td>
-    <td>set the end of L to "foo"
-    <br>
-    <i>or</i>
-    <br>
-    copy "foo" to the end of L</td>
+    <td>
+      set the end of L to "foo"<br>
+      <i>or</i><br>
+      copy "foo" to the end of L
+    </td>
   </tr>
   <tr>
     <td>L[2] = "foo"</td>
@@ -392,9 +394,10 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>L.pop(0)</td>
-    <td>first item of L
-    <br>
-    set L to rest of L</td>
+    <td>
+      first item of L<br>
+      set L to rest of L
+    </td>
   </tr>
   <tr>
     <td>L.pop(0) ; L[:]</td>
@@ -435,11 +438,11 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>len(D)</td>
-    <td>length of D
-    <br>
-    <i>or</i>
-    <br>
-    count D</td>
+    <td>
+      length of D<br>
+      <i>or</i><br>
+      count D
+    </td>
   </tr>
   <tr>
     <td>D["foo"]</td>
@@ -450,11 +453,11 @@ tags: [AppleScript, Python]
     <td>set foo of D to "bar"</td>
   </tr>
   <tr>
-    <td>D + { "foo":"bar" }
-    <br>
-    <i>or</i>
-    <br>
-    D.update({ "foo":"bar" })</td>
+    <td>
+      D + { "foo":"bar" }<br>
+      <i>or</i><br>
+      D.update({ "foo":"bar" })
+    </td>
     <td>D &amp; { foo:"bar" }</td>
   </tr>
   <tr>
@@ -508,11 +511,11 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>1.0 / 1.0</td>
-    <td>1 / 1
-    <br>
-    <i>or</i>
-    <br>
-    1 ÷ 1</td>
+    <td>
+      1 / 1<br>
+      <i>or</i><br>
+      1 ÷ 1
+    </td>
   </tr>
   <tr>
     <td>1 % 1</td>
@@ -528,59 +531,55 @@ tags: [AppleScript, Python]
   </tr>
   <tr>
     <td>1 == 1</td>
-    <td>1 = 1
-    <br>
-    <i>or</i>
-    <br>
-    1 is equal 1</td>
+    <td>
+      1 = 1<br>
+      <i>or</i><br>
+      1 is equal 1
+    </td>
   </tr>
   <tr>
     <td>1 != 1</td>
-    <td>1 ≠ 1
-    <br>
-    <i>or</i>
-    <br>
-    1 is not equal 1</td>
+    <td>
+      1 ≠ 1<br>
+      <i>or</i><br>
+      1 is not equal 1
+    </td>
   </tr>
   <tr>
     <td>1 &gt; 1</td>
-    <td>1 &gt; 1
-    <br>
-    <i>or</i>
-    <br>
-    1 is greater than 1</td>
+    <td>
+      1 &gt; 1<br>
+      <i>or</i><br>
+      1 is greater than 1
+    </td>
   </tr>
   <tr>
     <td>1 &lt; 1</td>
-    <td>1 &lt; 1
-    <br>
-    <i>or</i>
-    <br>
-    1 is less than 1</td>
+    <td>
+      1 &lt; 1<br>
+      <i>or</i><br>
+      1 is less than 1
+    </td>
   </tr>
   <tr>
     <td>1 &gt;= 1</td>
-    <td>1 &gt;= 1
-    <br>
-    <i>or</i>
-    <br>
-    1 ≥ 1
-    <br>
-    <i>or</i>
-    <br>
-    1 isn't less than 1</td>
+    <td>
+      1 &gt;= 1<br>
+      <i>or</i><br>
+      1 ≥ 1<br>
+      <i>or</i><br>
+      1 isn't less than 1
+    </td>
   </tr>
   <tr>
     <td>1 &lt;= 1</td>
-    <td>1 &lt;= 1
-    <br>
-    <i>or</i>
-    <br>
-    1 ≤ 1
-    <br>
-    <i>or</i>
-    <br>
-    1 isn't greater than 1</td>
+    <td>
+      1 &lt;= 1<br>
+      <i>or</i><br>
+      1 ≤ 1<br>
+      <i>or</i><br>
+      1 isn't greater than 1
+    </td>
   </tr>
   <tr>
     <td>1 is 1</td>
@@ -612,128 +611,127 @@ tags: [AppleScript, Python]
     <td>if VAR = 1 then display dialog "OK"</td>
   </tr>
   <tr>
-    <td>if VAR == 1:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print "OK"</td>
-    <td>if VAR = 1 then
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "OK"
-    <br>
-    end if</td>
+    <td>
+      if VAR == 1:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print "OK"
+    </td>
+    <td>
+      if VAR = 1 then<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog "OK"<br>
+      end if
+    </td>
   </tr>
   <tr>
-    <td>if VAR == 1:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print "OK"
-    <br>
-    else:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print "Error"</td>
-    <td>if VAR = 1 then
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "OK"
-    <br>
-    else
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Error"
-    <br>
-    end if</td>
+    <td>
+      if VAR == 1:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print "OK"<br>
+      else:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print "Error"
+    </td>
+    <td>
+      if VAR = 1 then<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog "OK"<br>
+      else<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Error"<br>
+      end if
+    </td>
   </tr>
   <tr>
-    <td>if VAR &lt; 10:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print "Need more!"
-    <br>
-    elif VAR &gt; 20:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print "Too much!"
-    <br>
-    else:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print "It's OK"</td>
-    <td>if VAR &lt; 10 then
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Need more!"
-    <br>
-    else if VAR &gt; 20 then
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Too much!"
-    <br>
-    else
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog "It's OK"
-    <br>
-    end if</td>
+    <td>
+      if VAR &lt; 10:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print "Need more!"<br>
+      elif VAR &gt; 20:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print "Too much!"<br>
+      else:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print "It's OK"
+    </td>
+    <td>
+      if VAR &lt; 10 then<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Need more!"<br>
+      else if VAR &gt; 20 then<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog "Too much!"<br>
+      else<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog "It's OK"<br>
+      end if
+    </td>
   </tr>
+
   <tr>
     <th colspan="2">Loops</th>
   </tr>
 
   <tr>
-    <td>for i in LIST:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;print i</td>
-    <td>repeat with i in LIST
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;display dialog i
-    <br>
-    end repeat</td>
+    <td>
+      for i in LIST:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;print i
+    </td>
+    <td>
+      repeat with i in LIST<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;display dialog i<br>
+      end repeat
+    </td>
   </tr>
   <tr>
-    <td>while 1:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;break</td>
-    <td>repeat
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;exit repeat
-    <br>
-    end repeat</td>
+    <td>
+      while 1:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;break
+    </td>
+    <td>
+      repeat<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;exit repeat<br>
+      end repeat
+    </td>
   </tr>
   <tr>
-    <td>while 1:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;continue</td>
+    <td>
+      while 1:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;continue
+    </td>
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td>while VAR is False:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
-    <td>repeat while VAR is false
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    end repeat</td>
+    <td>
+      while VAR is False:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    </td>
+    <td>
+      repeat while VAR is false<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      end repeat
+    </td>
   </tr>
   <tr>
-    <td>while VAR is not False:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
-    <td>repeat until VAR is false
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    end repeat</td>
+    <td>
+      while VAR is not False:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    </td>
+    <td>
+      repeat until VAR is false<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      end repeat
+    </td>
   </tr>
   <tr>
-    <td>for i in range(10):
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
-    <td>repeat 10 times
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    end repeat</td>
+    <td>
+      for i in range(10):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    </td>
+    <td>
+      repeat 10 times<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      end repeat
+    </td>
   </tr>
   <tr>
-    <td>for i in range(1, 10, 2):
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
-    <td>repeat with i from 1 to 10 by 2
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    end repeat</td>
+    <td>
+      for i in range(1, 10, 2):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    </td>
+    <td>
+      repeat with i from 1 to 10 by 2<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      end repeat
+    </td>
   </tr>
 
   <tr>
@@ -741,14 +739,15 @@ tags: [AppleScript, Python]
   </tr>
 
   <tr>
-    <td>def add_numbers(a, b):
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;return a + b</td>
-    <td>on add_numbers(a, b)
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;return a + b
-    <br>
-    end add_numbers</td>
+    <td>
+      def add_numbers(a, b):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;return a + b
+    </td>
+    <td>
+      on add_numbers(a, b)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+      end add_numbers
+    </td>
   </tr>
   <tr>
     <td>five = add_numbers(2, 3)</td>
@@ -762,39 +761,35 @@ tags: [AppleScript, Python]
   <tr>
     <th colspan="2">Class / Script</th>
   </tr>
+
   <tr>
-    <td>class FooBar(Father):
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;VAR = 0
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;def setValue(self, val):
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.VAR = val</td>
-    <td>script FooBar
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;property parent : Father
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;property VAR : 0
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;on setValue(val)
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set my VAR to val
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;end setValue
-    <br>
-    end script</td>
+    <td>
+      class FooBar(Father):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;VAR = 0<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;def setValue(self, val):<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.VAR = val
+    </td>
+    <td>
+      script FooBar<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;property parent : Father<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;property VAR : 0<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;on setValue(val)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set my VAR to val<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;end setValue<br>
+      end script
+    </td>
   </tr>
   <tr>
-    <td>myFoo = FooBar()
-    <br>
-    myFoo.setValue(5)
-    <br>
-    myData = myFoo.VAR</td>
-    <td>copy FooBar to myFoo
-    <br>
-    tell myFoo to setValue(5)
-    <br>
-    set myData to VAR of myFoo</td>
+    <td>
+      myFoo = FooBar()<br>
+      myFoo.setValue(5)<br>
+      myData = myFoo.VAR
+    </td>
+    <td>
+      copy FooBar to myFoo<br>
+      tell myFoo to setValue(5)<br>
+      set myData to VAR of myFoo
+    </td>
   </tr>
 
   <tr>
@@ -802,44 +797,46 @@ tags: [AppleScript, Python]
   </tr>
 
   <tr>
-    <td>F = open("/tmp/foo")
-    <br>
-    TXT = F.read()
-    <br>
-    F.close()</td>
-    <td>set F to "/tmp/foo" as POSIX file
-    <br>
-    set TXT to read F</td>
+    <td>
+      F = open("/tmp/foo")<br>
+      TXT = F.read()<br>
+      F.close()
+    </td>
+    <td>
+      set F to "/tmp/foo" as POSIX file<br>
+      set TXT to read F
+    </td>
   </tr>
   <tr>
-    <td>F = open("/tmp/foo")
-    <br>
-    LINES = F.readlines()
-    <br>
-    F.close()</td>
-    <td>set F to "/tmp/foo" as POSIX file
-    <br>
-    set LINES to read F using delimiter (ASCII character 10)</td>
+    <td>
+      F = open("/tmp/foo")<br>
+      LINES = F.readlines()<br>
+      F.close()
+    </td>
+    <td>
+      set F to "/tmp/foo" as POSIX file<br>
+      set LINES to read F using delimiter (ASCII character 10)
+    </td>
   </tr>
   <tr>
-    <td>F = open("/tmp/foo", "w")
-    <br>
-    F.write("Hello!\n")
-    <br>
-    F.close()</td>
-    <td>set F to "/tmp/foo" as POSIX file
-    <br>
-    set F to open for access F with write permission
-    <br>
-    write "Hello!" &amp; return to F
-    <br>
-    close access F</td>
+    <td>
+      F = open("/tmp/foo", "w")<br>
+      F.write("Hello!\n")<br>
+      F.close()
+    </td>
+    <td>
+      set F to "/tmp/foo" as POSIX file<br>
+      set F to open for access F with write permission<br>
+      write "Hello!" &amp; return to F<br>
+      close access F
+    </td>
   </tr>
 
   <tr>
-    <th colspan="2">Path
-    <br>
-    (requires tell app "Finder")</th>
+    <th colspan="2">
+      Path<br>
+      (requires tell app "Finder")
+    </th>
   </tr>
 
   <tr>
@@ -904,32 +901,28 @@ tags: [AppleScript, Python]
     <td>set T to current date</td>
   </tr>
   <tr>
-    <td>T = time.strptime(
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Jan 31, 2005 17:59",
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%b %d, %Y %H:%M" )</td>
+    <td>
+      T = time.strptime(<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Jan 31, 2005 17:59",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%b %d, %Y %H:%M" )
+    </td>
     <td>set T to date "Jan 31, 2005 17:59"</td>
   </tr>
   <tr>
-    <td>orig = time.mktime(time.strptime(
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Jan 31, 2005 17:59",
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%b %d, %Y %H:%M" ))
-    <br>
-    plus = time.mktime(time.strptime(
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4 3 2 1970",
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%d %H %M %Y" ))
-    <br>
-    T = time.localtime(orig+plus)</td>
-    <td>set orig to date "Jan 31, 2005 17:59"
-    <br>
-    set plus to 4 * days + 3 * hours + 2 * minutes
-    <br>
-    set T to orig + plus</td>
+    <td>
+      orig = time.mktime(time.strptime(<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Jan 31, 2005 17:59",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%b %d, %Y %H:%M" ))<br>
+      plus = time.mktime(time.strptime(<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4 3 2 1970",<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"%d %H %M %Y" ))<br>
+      T = time.localtime(orig+plus)
+    </td>
+    <td>
+      set orig to date "Jan 31, 2005 17:59"<br>
+      set plus to 4 * days + 3 * hours + 2 * minutes<br>
+      set T to orig + plus
+    </td>
   </tr>
   <tr>
     <td>time.strftime("%A", T)</td>
@@ -960,9 +953,10 @@ tags: [AppleScript, Python]
     <td>date string of T</td>
   </tr>
   <tr>
-    <td>fmt = "%H*3600 + %M*60 + %S"
-    <br>
-    eval(time.strftime(fmt, T))</td>
+    <td>
+      fmt = "%H*3600 + %M*60 + %S"<br>
+      eval(time.strftime(fmt, T))
+    </td>
     <td>time of T <i>-- Seconds since midnight</i></td>
   </tr>
 
@@ -971,40 +965,34 @@ tags: [AppleScript, Python]
   </tr>
 
   <tr>
-    <td>try:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
-    <br>
-    except:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
-    <td>try
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    on error
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    end try</td>
+    <td>
+      try:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i><br>
+      except:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    </td>
+    <td>
+      try<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      on error<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      end try
+    </td>
   </tr>
   <tr>
-    <td>try:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
-    <br>
-    except error, errmsg:
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i></td>
-    <td>try
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    on error errMsg number errNum
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i>
-    <br>
-    end try</td>
+    <td>
+      try:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i><br>
+      except error, errmsg:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i># do something</i>
+    </td>
+    <td>
+      try<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      on error errMsg number errNum<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<i>-- do something</i><br>
+      end try
+    </td>
   </tr>
   <tr>
     <td>os.system("ls /etc/ | head -n 1")</td>
@@ -1039,9 +1027,10 @@ tags: [AppleScript, Python]
     <td>set {foo, bar} to {1, 2}</td>
   </tr>
   <tr>
-    <td>D = {"foo":1, "bar":2 }
-    <br>
-    var1, var2 = D["foo"], D["bar"]</td>
+    <td>
+      D = {"foo":1, "bar":2 }<br>
+      var1, var2 = D["foo"], D["bar"]
+    </td>
     <td>set {var1, var2} to {foo, bar} of {foo:1, bar:2}</td>
   </tr>
   <tr>
@@ -1049,32 +1038,32 @@ tags: [AppleScript, Python]
     <td>character 1 of foo of item 3 of {0, 1, {foo:"bar"}}</td>
   </tr>
   <tr>
-    <td>import foo
-    <br>
-    foo.do_something()</td>
-    <td>set foo to load script "foo.scpt"
-    <br>
-    tell foo to do_something()</td>
+    <td>
+      import foo<br>
+      foo.do_something()
+    </td>
+    <td>
+      set foo to load script "foo.scpt"<br>
+      tell foo to do_something()
+    </td>
   </tr>
   <tr>
     <td>"a" == "A" <i># returns False</i></td>
-    <td>"a" = "A" <i>-- returns true</i>
-    <br>
-    considering case
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"a" = "A" <i>-- returns false</i>
-    <br>
-    end considering</td>
+    <td>
+      "a" = "A" <i>-- returns true</i><br>
+      considering case<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"a" = "A" <i>-- returns false</i><br>
+      end considering
+    </td>
   </tr>
   <tr>
     <td>"1 2 3 4" == "1234" <i># returns False</i></td>
-    <td>"1 2 3 4" = "1234" <i>-- returns false</i>
-    <br>
-    ignoring white space
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;"1 2 3 4" = "1234" <i>-- returns true</i>
-    <br>
-    end ignoring</td>
+    <td>
+      "1 2 3 4" = "1234" <i>-- returns false</i><br>
+      ignoring white space<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;"1 2 3 4" = "1234" <i>-- returns true</i><br>
+      end ignoring
+    </td>
   </tr>
   <tr>
     <td>sys.exit()</td>
