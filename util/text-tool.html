@@ -54,6 +54,13 @@
       return result.join('');
     }
 
+    function grep(txt) {
+      var regex = new RegExp($('#grep-regex').val());
+
+      return $.grep(txt.split('\n'), function (line, i) {
+        return line.match(regex);
+      }).join('\n');
+    }
     function replace(txt) {
       var mode = $('#replace-mode').val();
       var from = $('#replace-from').val();
@@ -264,6 +271,13 @@
 
   <div id="filters">
     <ul>
+      <li>
+        <span class="button">grep</span>
+        <span class="options">
+          -E
+          <input id="grep-regex" type="text" value="[0-9]">
+        </span>
+      </li>
       <li>
         <span class="button">join</span>
         <span class="options">
