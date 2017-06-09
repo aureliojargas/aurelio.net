@@ -126,21 +126,21 @@ tags: [Dropbox, iPhoto]
 
 <h2 id="solution-geek">The real solution - Geeky version</h2>
 
-<pre>
+<pre><code class="lang-shell">
 ### Quit iPhoto and Dropbox
 
-$ cd ~/Pictures/iPhoto\ Library/               # Enter library
-$ rm    Data Data.noindex Modified Originals   # Remove symlinks
-$ mkdir Data Data.noindex Modified Originals   # Create dummy folders
-$ open -a Dropbox                              # Launch Dropbox
+cd ~/Pictures/iPhoto\ Library/               # Enter library
+rm    Data Data.noindex Modified Originals   # Remove symlinks
+mkdir Data Data.noindex Modified Originals   # Create dummy folders
+open -a Dropbox                              # Launch Dropbox
 
 ### Wait until Dropbox is 100% synced.
 ### Uncheck the dummy folders in Selective Sync.
 ### Wait until Dropbox is 100% synced.
 
-$ ln -s ./Thumbnails   Data.noindex            # Restore symlinks
-$ ln -s ./Data.noindex Data
-$ ln -s ./Previews     Modified
-$ ln -s ./Masters      Originals
-$ open -a iPhoto                               # \o/
-</pre>
+ln -s ./Thumbnails   Data.noindex            # Restore symlinks
+ln -s ./Data.noindex Data
+ln -s ./Previews     Modified
+ln -s ./Masters      Originals
+open -a iPhoto                               # \o/
+</code></pre>
