@@ -16,6 +16,7 @@ tags: [Dropbox, iPhoto]
   2014-03-17 2:00
 -->
 
+
 <blockquote>
   Important: The information in this article is based on my personal experience using the following setup: Dropbox v2.6.2, iPhoto '11 (version 9.4.3) and OS X Mountain Lion 10.8.5. Different versions may have different behavior. Let me know in the comments!
 </blockquote>
@@ -200,7 +201,13 @@ Dropbox/Photos from iPhoto/Trip to Rio/2014-01-28 16.39.11.jpg
 
 <p>After the Dropbox importer finishes its job, you can fix the photo's EXIF metadata with an external tool. I recommend the excellent <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">exiftool</a>. Here's some commands you can run on the Terminal.</p>
 
-<pre>
+
+<pre><code class="javascript">
+var a = 1 + 'foo';
+</code></pre>
+
+<pre><code class="shell">
+<!--<pre class="prettyprint lang-shell">-->
 # List all photos whose EXIF date differs from filename date:
 
 exiftool -createdate -filename \
@@ -226,7 +233,8 @@ exiftool -delete_original ~/Dropbox/'Photos from iPhoto'/*
 # or restore from the backups if you want to revert the changes:
 
 exiftool -restore_original ~/Dropbox/'Photos from iPhoto'/*
-</pre>
+<!--</pre>-->
+</code></pre>
 
 <!-- ==================================================================== -->
 
@@ -447,3 +455,8 @@ Notes:
 
   iPhoto Export tips: https://discussions.apple.com/docs/DOC-4921
 -->
+
+<!--<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>-->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+

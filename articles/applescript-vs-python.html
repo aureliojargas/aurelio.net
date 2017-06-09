@@ -1089,26 +1089,26 @@ tags: [AppleScript, Python]
 
 <h3 id="countSubstring">countSubstring()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Counts how many times a string appears in a text
 -- Note: Its splits the text by the substring and count the items
 --
-on <b>countSubstring</b>(theText, theSubstring)
+on countSubstring(theText, theSubstring)
    set AppleScript's text item delimiters to theSubstring
    set counter to (count of every text item of theText) - 1
    set AppleScript's text item delimiters to ""
    return counter
 end countSubstring
-</pre>
+{% endhighlight %}
 
 <!--http://www.apple.com/applescript/guidebook/sbrt/pgs/sbrt.07.htm-->
 
 <h3 id="lstripString">lstripString()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Trims the provided string from the text's beginning
 --
-on <b>lstripString</b>(theText, trimString)
+on lstripString(theText, trimString)
    set x to count trimString
    try
       repeat while theText begins with the trimString
@@ -1119,14 +1119,14 @@ on <b>lstripString</b>(theText, trimString)
    end try
    return theText
 end lstripString
-</pre>
+{% endhighlight %}
 
 <h3 id="rstripString">rstripString()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Trims the provided string from the text's ending
 --
-on <b>rstripString</b>(theText, trimString)
+on rstripString(theText, trimString)
    set x to count trimString
    try
       repeat while theText ends with the trimString
@@ -1137,28 +1137,28 @@ on <b>rstripString</b>(theText, trimString)
    end try
    return theText
 end rstripString
-</pre>
+{% endhighlight %}
 
 <h3 id="stripString">stripString()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Trims the provided string from the text's boundaries
 -- Note: Requires the lstripString and rstripString functions
 --
-on <b>stripString</b>(theText, trimString)
+on stripString(theText, trimString)
    set theText to lstripString(theText, trimString)
    set theText to rstripString(theText, trimString)
    return theText
 end stripString
-</pre>
+{% endhighlight %}
 
 <h3 id="translateChars">lowerString() / upperString() / capitalizeString()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Translate characters of a text
 -- Note: Pass the From and To tables as strings (same lenght!)
 --
-on <b>translateChars</b>(theText, fromChars, toChars)
+on translateChars(theText, fromChars, toChars)
    set the newText to ""
    if (count fromChars) is not equal to (count toChars) then
       error "translateChars: From/To strings have different lenght"
@@ -1167,7 +1167,7 @@ on <b>translateChars</b>(theText, fromChars, toChars)
       set newChar to char
       set x to offset of char in the fromChars
       if x is not 0 then set newChar to character x of the toChars
-      set newText to newText &amp; newChar
+      set newText to newText & newChar
    end repeat
    return the newText
 end translateChars
@@ -1176,7 +1176,7 @@ end translateChars
 -- Convert a text case to lower characters
 -- Note: Requires the translateChars function
 --
-on <b>lowerString</b>(theText)
+on lowerString(theText)
    set upper to "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
    set lower to "abcdefghijklmnopqrstuvwxyz"
    return translateChars(theText, upper, lower)
@@ -1186,7 +1186,7 @@ end lowerString
 -- Convert a text case to upper characters
 -- Note: Requires the translateChars function
 --
-on <b>upperString</b>(theText)
+on upperString(theText)
    set lower to "abcdefghijklmnopqrstuvwxyz"
    set upper to "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
    return translateChars(theText, lower, upper)
@@ -1196,21 +1196,21 @@ end upperString
 -- Capitalize a text, returning only the first letter uppercased
 -- Note: Requires translateChars, lowerString and upperString
 --
-on <b>capitalizeString</b>(theText)
+on capitalizeString(theText)
    set firstChar to upperString(first character of theText)
    set otherChars to lowerString(characters 2 thru -1 of theText)
-   return firstChar &amp; otherChars
+   return firstChar & otherChars
 end capitalizeString
-</pre>
+{% endhighlight %}
 
 <h3 id="replaceString">replaceString()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Replace all occurences of one string for another in a text
 -- The trick here is to change the internal delimiter,
 -- spliting and joining the text
 --
-on <b>replaceString</b>(theText, oldString, newString)
+on replaceString(theText, oldString, newString)
    set AppleScript's text item delimiters to oldString
    set tempList to every text item of theText
    set AppleScript's text item delimiters to newString
@@ -1218,27 +1218,27 @@ on <b>replaceString</b>(theText, oldString, newString)
    set AppleScript's text item delimiters to ""
    return theText
 end replaceString
-</pre>
+{% endhighlight %}
 
 <h3 id="getListItemIndex">getListItemIndex()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Returns the integer index of a list item (zero if not found)
 --
-on <b>getListItemIndex</b>(theList, theItem)
+on getListItemIndex(theList, theItem)
    repeat with i from 1 to count of theList
       if item i of theList is theItem then return i
    end repeat
    return 0
 end getListItemIndex
-</pre>
+{% endhighlight %}
 
 <h3 id="countListItem">countListItem()</h3>
 
-<pre>
+{% highlight applescript %}
 -- Returns the total count of a specific item in a list
 --
-on <b>countListItem</b>(theList, theItem)
+on countListItem(theList, theItem)
    set counter to 0
    repeat with i from 1 to count of theList
       if item i of theList is equal to theItem then
@@ -1247,7 +1247,7 @@ on <b>countListItem</b>(theList, theItem)
    end repeat
    return counter
 end countListItem
-</pre>
+{% endhighlight %}
 
 <h2 id="thanks">Thank You Very Much!</h2>
 
