@@ -46,7 +46,7 @@ write-back: no
 '
 
 has_front_matter() {
-  test '---' = $(head -n 1 "$1")
+  test '---' = "$(head -n 1 "$1")"
 }
 
 get_front_matter() {
