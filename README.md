@@ -25,13 +25,9 @@ bundle exec jekyll serve --watch --limit_posts 10 --port 8080 --host 0.0.0.0
 
 ## Building txt2tags files
 
-Now there are two kinds of txt2tags files in my site:
+All the `.t2t` files on this repository are not processed by Jekyll. They have no front matter and must be converted by hand using the txt2tags script stored in the `_scripts` folder. The resultant HTML files must also be added to the repository.
 
-- Old legacy `.t2t` files that were added together with their relative `.html` file, with no front matter. They are not processed by Jekyll and **must be converted "by hand"** using txt2tags itself.
-
-- Pages that I have added to Jekyll as `.t2t` files and **are converted automatically** by the [txt2tags_converter.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/master/_plugins/txt2tags_converter.rb) when doing `jekyll build`.
-
-My long term goal is to convert both to Markdown or HTML and remove the txt2tags dependency. See [issue #5](https://github.com/aureliojargas/aurelio.net/issues/5). 
+My long term goal is to convert all those files to Markdown or HTML and remove the txt2tags dependency.
 
 ## Images with captions
 
