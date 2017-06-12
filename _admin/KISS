@@ -1,0 +1,30 @@
+- config complicado
+- byline cheia de regras
+- author name with auto linking
+- date showing or not
+- too many on/off frontmatter flags
+- using permalink attribute
+- solo images, centered
+- txt2tags files
+- toc
+- ads on/off
+- comments on/off
+- too many layouts
+- use .html or not?
+- htaccess
+- tables
+- images together (same folder) or separated (/img, cdn)?
+- plugins
+
+
+- KISS
+- Minimize Jekyll dependency, easier migration to new tool
+- Use less Jekyll features, easier upgrades
+- Minimize conversions: build time, consistency
+- document in github my conventions and patterns
+
+- Markdown (vanilla)
+- frontmatter
+- layout
+- partials
+- datafiles?
