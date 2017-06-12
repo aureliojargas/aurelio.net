@@ -1,0 +1,29 @@
+#!/bin/bash
+# Updates the aurelio.net website files using rsync
+
+set -eu
+
+# Dry run when no arguments. Any argument triggers the upload.
+test $# = 0 && dryrun='-n' || dryrun=
+
+cd $(dirname $0) || exit 1
+
+rsync $dryrun \
+	--rsh=ssh \
+	--recursive \
+	--progress \
+	--perms \
+	--checksum \
+	--delete \
+	--copy-links \
+        --exclude=.git \
+        --exclude=.gitignore \
+	../../aurelio.net.html/ \
+	$REMOTE_USER@aurelio.net:~/aurelio.net
+echo
+
+# --checksum \
+# --delete-excluded \
+# --delete-after \
+# --compress \
+# --times \
