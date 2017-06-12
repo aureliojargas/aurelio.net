@@ -1,0 +1,263 @@
+
+
+
+
+
+    Expressões Regulares
+    em JavaScript
+
+
+Aurelio Jargas
+aurelio.net
+@oreio
+
+
+
+
+
+----------------------------------------------------------------------
+
+## Metacaracteres
+
+^          início da linha
+$          fim da linha
+.          qualquer caractere
+.*         qualquer coisa
+foo|bar    foo ou bar
+[abc]      a ou b ou c
+[a-z]      de a até z
+{1,42}     de 1 a 42
+{42}       exatamente 42
+{42,}      de 42 em diante
+?          {0,1} -- opcional, zero ou um
+*          {0,} -- zero ou mais vezes
++          {1,} -- uma ou mais vezes
+(…)        agrupa
+\          escapa
+
+----------------------------------------------------------------------
+
+## Regex demo
+
+http://www.regexpal.com
+
+Missão: extrair todos os números de um texto qualquer
+Como você faria?
+Algoritmo: loop, parser, char a char
+
+https://pt.wikipedia.org/wiki/Joinville#Aeroporto_de_Joinville
+\d+
+Em 2012, o Aeroporto de Joinville registrou um movimento de 484742 passageiros e cerca de 10000 pousos e decolagens. Para 2014, a tendência é de crescimento de 40% em pousos e decolagens, através da implantação do sistema de aproximação ILS. No dia 08/03/2004, em meio às comemorações de 153 anos de Joinville, a cidade ganhou um novo aeroporto.
+
+Em 2012, o Aeroporto de Joinville registrou um
+movimento de 484742 passageiros e cerca de 10000
+pousos e decolagens. Para 2014, a tendência é de
+crescimento de 40% em pousos e decolagens, através
+da implantação do sistema de aproximação ILS. No
+dia 08/03/2004, em meio às comemorações de 153 anos
+de Joinville, a cidade ganhou um novo aeroporto.
+
+\d
+\d+
+\d{4,}
+\d{4}(?!\d)
+\d{4}\b
+\w+
+[\w\s]+
+[^\w\s]+
+[0-9]+
+[a-z0-9A-Z ]+
+^.
+^.....
+^.{15}
+...$
+^.[aeiou]
+^.[aeiou]+
+[a-zA-Z 0-9À-ü]+
+\D
+\W
+\s
+\S
+.*
+foo|bar
+
+----------------------------------------------------------------------
+
+## Regex em JavaScript
+
+Desde JavaScript v1.2, 1997.
+Desde IE4.
+
+texto.match(/\d/g)
+texto.match(/\d+/g)
+texto.match(/\d\d\d/g)
+texto.match(/\d\d\d\d/g)
+texto.match(/\d{4}/g)
+texto.match(/\d{5,}/g)
+texto.match(/\d+/g).map(parseInt)
+
+texto.replace(/\d+/g, 'XXX')
+texto.replace(/(\d+)/g, '{{$1}}')
+texto.replace(/(\d+)/g, '<b>$1</b>')
+texto.replace(/(\d+)/g, '<span class="destaque">$1</span>')
+texto.replace(/(\d+)/g, function(x) { return parseInt(x) + 1;})
+texto.replace(/(\d+)/g, function(x) { return parseInt(x) + 1000;})
+
+\d\d\d[.-]\d\d\d[.-]\d\d\d-\d\d
+
+123.456.789-00
+123-456-789-00
+123.456-678-99
+
+cpf = '123.456-7 8 9***00'
+cpf.replace(/[^\d]/g, '')
+
+cpf = '12345678900'
+cpf.substring(0, 3) + '.' + cpf.substring(3, 6) + '.' ...
+cpf.replace(/(...)(...)(...)(..)/, '$1.$2.$3-$4')
+
+function formata_cpf(x) {
+  x.replace(/(...)(...)(...)(..)/, '$1.$2.$3-$4')
+}
+cpf.replace(/.*/, formata_cpf)
+cpfs = "foo 12345678900 foo 98765432100 foo"
+cpfs.match(/\d{11}/)
+cpfs.match(/\d{11}/).map(formata_cpf)
+
+cpf.match(/(...)(...)(...)(..)/)
+["12345678900", "123", "456", "789", "00"]
+
+// resumo
+cpf = '123.456-7 8 9***00'
+cpf2 = cpf.replace(/[^\d]/g, '')
+cpf2.replace(/(...)(...)(...)(..)/, '$1.$2.$3-$4')
+
+// data
+texto.replace(/(\d\d)\/(\d\d)\/(\d\d\d\d)/, '$3-$2-$1')
+meses = { '03': 'Março' }
+texto.replace(
+  /(\d\d)\/(\d\d)\/(\d\d\d\d)/,
+  function(texto_casado, dd, mm, aaaa) {
+    //return dd + " de " + meses[mm] + " de " + aaaa;
+    return [dd, mm, aaaa].join(" de ");             // passo 1
+    return [dd, meses[mm], aaaa].join(" de ");      // passo 2 (antes crie o hash) 
+  }
+)
+
+// hora, extrair as partes
+"12:34".match(/\d+/)
+"12:34".match(/(\d{2}):(\d{2})/)   // array com match e grupos
+"12:34".replace(/(\d{2}):(\d{2})/, function(_, hh, mm) { return hh + " horas e " + mm + " minutos";} )
+"01:30".replace(/(\d{2}):(\d{2})/, function(_, hh, mm) { return hh*60 + parseInt(mm);} )  // "90"
+function time2minutes(hh, mm) {
+  return parseInt(hh) * 60 + parseInt(mm);
+}
+"01:30".replace(/(\d{2}):(\d{2})/, function(_, hh, mm) { return time2minutes(hh, mm);} )
+
+// lista de palavras
+proibidas = ['Aeroporto', 'passageiros', 'pousos']
+proibidas.join('|')
+regex_proibidas = new RegExp('', '')
+regex_proibidas = new RegExp(proibidas.join('|'), 'g')
+texto.match(regex_proibidas)
+texto.replace(regex_proibidas, 'XXXX')
+texto.replace(regex_proibidas, '<del>$&</del>')
+
+// split
+"31/12/2015".split('/')
+"31-12-2015".split('/')
+"31-12-2015".split(/[/-]/)
+"31.12.2015".split(/[./-]/)
+
+texto_datas = "foo 31/12/2015 foo 30-12-2015 foo 29.12.2015 foo"
+datas = texto_datas.match(/\d{2}.\d{2}.\d{4}/g)
+datas.map(function(x) { return x.split(/\D/);} )[0]
+
+----------------------------------------------------------------------
+
+## Edição avançada
+
+(\d\d)/(\d\d)/(\d\d\d\d) --> $3-$2-$1
+
+17/02/2015 - Carnaval
+08/03/2015 - Dia Internacional da Mulher
+05/04/2015 - Páscoa
+01/05/2015 - Dia do Trabalho
+07/09/2015 - Independência do Brasil
+15/10/2015 - Dia dos Professores
+15/11/2015 - Proclamação da República
+25/12/2015 - Natal
+
+nomes = "Santos, Fulano\nSilva, Cicrano\nSouza, Beltrano"
+nomes.replace(/^(.*), (.*)/mg, '$2 $1')
+Santos, Fulano
+Silva, Cicrano
+Souza, Beltrano
+
+--------------------------------------------------------------------------
+
+# Parte 2 - Ensinando como fazer uma regex
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+carlos:x:500:500:carlos:/home/carlos:/bin/bash
+ana:x:501:501:Ana Paula Mora:/home/ana:/bin/bash
+acs:x:502:502:Antonio Carlos:/home/acs:/bin/bash
+
+\d
+root
+^
+$
+^[aeiou]
+^.[aeiou]
+^.[aeiou].*
+^[aeiou].*bash$     AND
+^[aeiou]|bash$      OR
+ana|carlos
+ana.*501            GULOSO
+ana.*?501           GULOSO
+
+^.............................................
+^.{40}
+^.{40}$
+^.{35,40}$
+^.{1,35}$
+^.{40,}$
+
+\d\d\d
+\d{3}
+
+{0,1} == ?
+{0,}  == *
+{1,}  == +
+
+\w
+\w+
+
+\   ESCAPA
+
+
+M(i|ue|ü|u)ll?er
+O nome daquele pesquisador alemão é Fritz Miller. Ou será que o sobrenome era Mueller? Péra, acho que tinha um trema: Müller. E era um ou dois éles? Talvez era só Müler mesmo. Nem sei mais, também pode ser Miler, Muler, Mueler... Mas nunca Mulher! :)
+
+hora?
+
+data
+
+----------------------------------------------------------------------
+
+http://aurelio.net/regex
+http://aurelio.net/regex/javascript
+http://aurelio.net/regex/html5
+
+http://aurelio.net/curso/material/apostila-expressoes-intro.pdf
+http://www.piazinho.com.br/download/expressoes-regulares-3-tabelas.pdf
+
+http://codepen.io/anon/pen/pJZVJE
+
+https://en.wikipedia.org/wiki/ASCII
+https://en.wikipedia.org/wiki/ISO/IEC_8859-1
