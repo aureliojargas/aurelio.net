@@ -61,6 +61,17 @@
         return line.match(regex);
       }).join('\n');
     }
+    function number(txt) {
+      var separator = $('#number-sep').val();
+      var count = $('#number-start').val() || 1;
+      var lines = txt.split('\n');
+
+      for (var i = 0; i < lines.length; i++) {
+        lines[i] = count + separator + lines[i];
+        count++;
+      }
+      return lines.join('\n');
+    }
     function replace(txt) {
       var mode = $('#replace-mode').val();
       var from = $('#replace-from').val();
@@ -228,6 +239,9 @@
     input[type=text] {
       width: 1.5em;
     }
+    input[type=number] {
+      width: 2.5em;  /* make room for the browser arrows */
+    }
     #filters ul {
       padding: 0;
     }
@@ -287,6 +301,15 @@
       </li>
       <li>
         <span class="button">lower</span>
+      </li>
+      <li>
+        <span class="button">number</span>
+        <span class="options">
+          lines: start by
+          <input id="number-start" type="number" value="1">,
+          separate by
+          <input id="number-sep" type="text" value=". ">
+        </span>
       </li>
       <li>
         <span class="button">replace</span>
