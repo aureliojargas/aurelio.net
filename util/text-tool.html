@@ -72,6 +72,13 @@
       }
       return lines.join('\n');
     }
+    function prefix(txt) {
+      var prefix = $('#prefix-string').val();
+
+      return $.map(txt.split('\n'), function (line, i) {
+        return prefix + line;
+      }).join('\n');
+    }
     function replace(txt) {
       var mode = $('#replace-mode').val();
       var from = $('#replace-from').val();
@@ -89,6 +96,13 @@
     function reverse(txt) {
       var mode = $('#reverse-mode').val();
       return (mode === 'lines') ? tac(txt) : rev(txt);
+    }
+    function suffix(txt) {
+      var suffix = $('#suffix-string').val();
+
+      return $.map(txt.split('\n'), function (line, i) {
+        return line + suffix;
+      }).join('\n');
     }
     function tac(txt) {
       return txt.split('\n').reverse().join('\n');
@@ -312,6 +326,13 @@
         </span>
       </li>
       <li>
+        <span class="button">prefix</span>
+        <span class="options">
+          lines with
+          <input id="prefix-string" type="text" value="@">
+        </span>
+      </li>
+      <li>
         <span class="button">replace</span>
         <span class="options">
           <select id="replace-mode">
@@ -357,6 +378,13 @@
             <option>left</option>
             <option>right</option>
           </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">suffix</span>
+        <span class="options">
+          lines with
+          <input id="suffix-string" type="text" value="@">
         </span>
       </li>
       <li>
