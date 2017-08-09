@@ -154,6 +154,9 @@ Artigo da Wikipédia sobre as Expressões Regulares, bem completo e cheio de lin
 Artigo de leitura rápida, aconselhável a quem é totalmente leigo no
 assunto e quer ter uma visão geral.
 
+* [Expressões regulares, o básico](https://giovannireisnunes.wordpress.com/2017/07/07/expressoes-regulares-o-basico-parte-1/) *por Giovanni Nunes*
+Excelente tutorial, lotado de exemplos, que ensina passo a passo o básico das expressões, usando o egrep na linha de comando.
+
 * [Expressões Regulares e Gramáticas Regulares](http://66.102.11.104/search?q=cache:bNk224By3ycJ:ia.ucpel.tche.br/~lpalazzo/Aulas/LFA/LFA-T02.doc+express%C3%B5es+regulares&hl=en) *por Prof. Luiz A M Palazzo*
 Abordagem teórico-acadêmica sobre Expressões Regulares e autômatos.
 
