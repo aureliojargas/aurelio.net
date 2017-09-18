@@ -36,6 +36,21 @@
       return this.split(from).join(to);
       // http://stackoverflow.com/a/17606289/1623438
     };
+    String.prototype.tr = function (set1, set2) { // unix: tr abc123 xyz789
+      var i, j, letter;
+      var result = [];
+      for (i = 0; i < this.length; i++) {
+        letter = this[i];
+        for (j = 0; j < set1.length; j++) {
+          if (letter == set1[j]) {
+            letter = set2[j];
+            break;
+          }
+        }
+        result.push(letter);
+      }
+      return result.join('');
+    };
 
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
     function escapeRegExp(string) {
@@ -103,6 +118,38 @@
       return (mode === 'lines') ? tac(txt) : rev(txt);
     }
 
+    function rotate(txt) {
+      var mode = $('#rotate-mode').val();
+      switch (mode) {
+        case 'ROT5': return rot5(txt);
+        case 'ROT13': return rot13(txt);
+        case 'ROT47': return rot47(txt);
+        case 'ROT13.5': return rot13(rot5(txt));
+        default: return txt ;
+      }
+    }
+
+    function rot5(txt) {
+      return txt.tr(
+        '1234567890',
+        '6789012345'
+      );
+    }
+  
+    function rot13(txt) {
+      return txt.tr(
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+      );
+    }
+  
+    function rot47(txt) {
+      return txt.tr(
+        '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~',
+        'PQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNO'
+      );
+    }
+  
     function suffix(txt) {
       var suffix = $('#suffix-string').val();
 
@@ -367,6 +414,18 @@
           <select id="reverse-mode">
             <option>lines</option>
             <option>letters</option>
+          </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">rotate</span>
+        <span class="options">
+          using
+          <select id="rotate-mode">
+            <option>ROT5</option>
+            <option selected>ROT13</option>
+            <option>ROT13.5</option>
+            <option>ROT47</option>
           </select>
         </span>
       </li>
