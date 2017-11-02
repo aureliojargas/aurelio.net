@@ -32,6 +32,7 @@ exclude:
   - vendor
 include:
   - .htaccess
+  - _redirects
 # Cannot specify the full path in Jekyll :(
 # https://github.com/mojombo/jekyll/issues/906
 #  - sed/programas/txt2sgml-sed/_cabecalho.sgml
