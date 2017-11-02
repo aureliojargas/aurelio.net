@@ -5,9 +5,6 @@
 # True to turn on Disqus, Analytics, etc.
 production: true
 
-# Save the final HTMLs here
-destination: ../aurelio.net.html
-
 name: Aurelio.net
 url: http://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
