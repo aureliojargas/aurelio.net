@@ -96,7 +96,6 @@
 #
 # txt2tags temp redir
 /projects/txt2tags                                http://txt2tags.org    302
-/projects/txt2tags/                               http://txt2tags.org    302
 #
 # And finally, the catchall rule
 /soft                                             /projects
