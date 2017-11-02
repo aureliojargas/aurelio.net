@@ -7,8 +7,6 @@
 /aurelio.rss                                      http://feeds.feedburner.com/AurelioJargas
 /blog/feed/                                       http://feeds.feedburner.com/AurelioJargas
 /feed/                                            http://feeds.feedburner.com/AurelioJargas
-# /comments/feed/ points to FeedBurner, who read http://aurelionet.disqus.com/latest.rss
-/comments/feed/                                   http://feeds.feedburner.com/AurelioJargasComentarios
 
 # Page -> Post
 /wordpress/css-sprites/                           /blog/2011/12/05/css-sprites-na-pratica/
@@ -283,3 +281,6 @@
 /blog/2012/                                       /410.html  410
 /blog/2013/                                       /410.html  410
 /blog/2014/                                       /410.html  410
+
+# 2017-11-02
+/comments/feed/                                   /410.html  410

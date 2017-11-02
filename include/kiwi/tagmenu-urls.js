@@ -171,7 +171,6 @@ var allLinks = [
 // eu
 [1, 'Orkut',	'http://www.orkut.com/Profile.aspx?uid=2039382754798085041',	'eu foto'],
 [0, 'Blog - Feed (RSS)',	'http://aurelio.net/feed/',	'eu site blog'],
-[0, 'Blog - Feed dos comentários (RSS)',	'http://aurelio.net/comments/feed/',	'eu site blog'],
 [2, '* Blog do Aurelio',	'http://aurelio.net/blog',	'eu foto site blog'],
 [0, 'Sobre mim',	'/mim.html',	'eu'],
 [0, '$$$ Campanha Aurelio Trilhardário $$$',	'/1000000000000.html',	'eu'],
