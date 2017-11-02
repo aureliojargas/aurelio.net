@@ -31,7 +31,6 @@ exclude:
   - /**/TODO
   - vendor
 include:
-  - .htaccess
   - _redirects
 # Cannot specify the full path in Jekyll :(
 # https://github.com/mojombo/jekyll/issues/906
