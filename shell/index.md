@@ -12,7 +12,7 @@ article_footer_after: false
 
 {% include shell-book-banner.html %}
 
-<img style="float:right" src="/img/icon/128/shell.png">
+<img style="float:right" src="http://aurelio.net/img/icon/128/shell.png">
 
 Olá, eu sou o Aurelio e esta é a minha página sobre shell script.
 
