@@ -108,7 +108,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ![](img/octus.png)
 
-![](/img/t2tpowered.png)
+![](http://aurelio.net/img/t2tpowered.png)
 
 É um conversor de arquivos texto para vários formatos: HTML, XHTML, Sgml, LaTeX, Lout, Man Page, Wikipedia, Google Code Wiki, DokuWiki, MoinMoin, MagicPoint (mgp) e Adobe PageMaker, entre outros. Você escreve seu texto normalmente e coloca marcações mínimas, como ****negrito**** e **//itálico//**, e o programa o converte para o formato desejado. Este programa eu utilizo para tudo: gerar as páginas do meu site (como esta que você está lendo), gerar os artigos e documentos que escrevo, slides de palestras, site da banda, site dos outros programas... É também utilizado por diversos sites nacionais e gringos (já são mais de 100, veja a [lista completa](http://txt2tags.org/children.html)) e é o formato original do meu [Guia de Expressões Regulares](http://aurelio.net/regex/guia/). Também tem listas de discussão em português e inglês, uma grande comunidade de usuários, tradução para várias línguas e vasta documentação. Ufa! Esse já virou um monstro.
 
@@ -188,13 +188,13 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 - Nascimento: 15 de Março de 2002
 - Versão Atual: 0.3
 
-![](/img/sedsokoban.gif)
+![](http://aurelio.net/img/sedsokoban.gif)
 
 Isso mesmo, o lendário jogo de empurrar caixas, Sokoban, inteiramente escrito em [SED](/sed/) :) O jogo está bem completo, com 90 níveis, cores, comandos, detecção de vitória e movimentação do personagem usando as setinhas! Tudo começou como uma brincadeira, mas se transformou num projeto desafiador. Foram 8 horas de programação intensa e abstrata. "*Viajar na maionese*" de repente ganhou um significado palpável para mim. A recompensa veio logo. No dia seguinte ao anúncio, ele se espalhou de maneira impressionante, conseguindo algo que eu nunca imaginei atingir: [uma notícia no Slashdot](http://developers.slashdot.org/article.pl?sid=02/03/21/0217219), a central mundial dos nerds. Foi uma felicidade tremenda, meu joguinho tosco sendo visto por centenas (talvez milhares?) de pessoas do mundo todo. Foram vários comentários, muitos deles perguntando: "MAS POR QUÊ?". Porque programar é divertido, oras.
 
 **Aviso:** Este não é um jogo que lhe cativará pelo seu visual ou jogabilidade, o seu único charme é ter sido escrito em SED, uma mini-linguagem de manipulação de texto. O mérito é pela tosquice. É algo como fazer uma casa com palitos de sorvete, não é pela casa em si, mas pelo desafio da construção.
 
-![](/img/arkanoid.png)
+![](http://aurelio.net/img/arkanoid.png)
 
 **Extra:** Se você gostou do Sokoban, saiba que também tem o [SedArkanoid](/projects/sedarkanoid/) :) Este é BEM chato de jogar, tendo que apertar a tecla ENTER para que a bolinha se mova. Mas está completo, com cores, explosões cadenciadas, possibilidade de segurar a bolinha no bastão e tem 3 vidas. O joguinho tem alguns segredos. O comando "#" faz você ficar invencível. Legal para segurar o ENTER e ver a bolinha andando rápido e destruindo tudo. Os níveis escondidos t1, t2, t3 e t4 são legais para demonstrar o algoritmo das explosões cadenciadas.
 
