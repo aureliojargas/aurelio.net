@@ -5,7 +5,7 @@
 %!includeconf: /a/www/include/global.t2t
 
 % CSS
-%!style: SITEROOT/include/kiwi/kiwi.css
+%!style: /include/kiwi/kiwi.css
 
 % TITLE append
 %!postproc: (</TITLE>)	' :: aurelio.net\1'
@@ -14,8 +14,8 @@
 %!postproc: '<DIV CLASS="body" ID="body">'	'<DIV ID="main">'
 
 % Javascript (order matters!)
-%!postproc: (<TITLE>)	<script type="text/javascript" src="SITEROOT/include/kiwi/tagmenu-diet.js"></script>\n\1
-%!postproc: (<TITLE>)	<script type="text/javascript" src="SITEROOT/include/kiwi/tagmenu-urls.js"></script>\n\1
+%!postproc: (<TITLE>)	<script type="text/javascript" src="/include/kiwi/tagmenu-diet.js"></script>\n\1
+%!postproc: (<TITLE>)	<script type="text/javascript" src="/include/kiwi/tagmenu-urls.js"></script>\n\1
 
 % Breadcrumb
 % 
@@ -30,7 +30,7 @@
 %!postproc: '^<H3>/(.*?)</H3>$'	'<H3><a href="/">aurelio.net</a> / <a href="/\1">\1</a></H3>'
 
 % Compose menu icons (sidebar.t2t)
-%!postproc: @i@([A-Z0-9_]+)	'<A\n\n HREF="_\1_URL"\nTITLE="_\1_NAME"><IMG BORDER="0"\n  ALT="_\1_NAME"\n  SRC="SITEROOT/img/icon/32/_\1_ID.jpg"></A>'
+%!postproc: @i@([A-Z0-9_]+)	'<A\n\n HREF="_\1_URL"\nTITLE="_\1_NAME"><IMG BORDER="0"\n  ALT="_\1_NAME"\n  SRC="/img/icon/32/_\1_ID.jpg"></A>'
 
 % Sidebar link descriptions
 %!postproc: '(<A) (HREF="/">)'	'\1 title="Voltar ao início do site" \2'

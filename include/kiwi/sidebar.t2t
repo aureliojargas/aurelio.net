@@ -8,7 +8,7 @@
 % Ads Skyscraper
 %!include(html): ''/a/www/include/kiwi/ads-sky160.html''
 
-[[SITEROOT/include/kiwi/aurelionet.jpg] /]
+[[/include/kiwi/aurelionet.jpg] /]
 
 % Tags
 %!include(html): ''/a/www/include/kiwi/tags.html''
@@ -26,13 +26,13 @@
 
 % Twitter
 % **[Siga-me no twitter _MYTWEET]**
-[[SITEROOT/img/twitter-button.png] _MYTWEET]
+[[/img/twitter-button.png] _MYTWEET]
 
 % Livros
 ''' <div class="livros">
 Meus livros:
-| [[SITEROOT/img/icon/32/livroregex.jpg] _LIVROREGEX_URL] | [Expressões Regulares _LIVROREGEX_URL]
-| [[SITEROOT/img/icon/32/livroshell.jpg] _LIVROSHELL_URL]   | [Shell Script Profissional _LIVROSHELL_URL]
+| [[/img/icon/32/livroregex.jpg] _LIVROREGEX_URL] | [Expressões Regulares _LIVROREGEX_URL]
+| [[/img/icon/32/livroshell.jpg] _LIVROSHELL_URL]   | [Shell Script Profissional _LIVROSHELL_URL]
 ''' </div>
 
 % Google search
