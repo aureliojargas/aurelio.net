@@ -1,8 +1,6 @@
 
 % Global config
-%%!includeconf:		../../include/kiwi/config.t2t
 %!includeconf:		../../include/10anos/config.t2t
-%%!style:		../../include/10anos/tutorial.css
 %!style:		../../include/10anos/livro.css
 
 %!postproc: SITEROOT 	../..
