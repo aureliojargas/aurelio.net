@@ -23,6 +23,7 @@
 %!postproc: ^<H3>/a/pessoal/aurelio.net		<H3>
 %!postproc: ^<H3>/a/www				<H3>
 %!postproc: ^<H3>/Users/aurelio/Dropbox/a/www	<H3>
+%!postproc: ^<H3>/home/ubuntu/workspace/aurelio.net	<H3>
 % %%infile(%d) -> aurelio.net / shell / canivete
 %!postproc: '^<H3>/(.*?)/(.*?)/(.*?)</H3>$'	'<H3><a href="/">aurelio.net</a> / <a href="/\1">\1</a> / <a href="/\1/\2">\2</a> / <a href="/\1/\2/\3">\3</a></H3>'
 %!postproc: '^<H3>/(.*?)/(.*?)</H3>$'	'<H3><a href="/">aurelio.net</a> / <a href="/\1">\1</a> / <a href="/\1/\2">\2</a></H3>'
