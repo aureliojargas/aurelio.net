@@ -1,0 +1,27 @@
+#!/bin/bash
+# Check for errors on the generated site
+
+error() {
+    echo "**** ERROR: $1"
+    echo "$2" | head -n 40
+    exit 1
+}
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+relative_urls=$(
+    # ./
+    git grep -E '(src|href)="\./'
+    git grep -E '(src|href)="[^"]*/\./'
+
+    # ../
+    git grep -E '(src|href)="\.\./'
+    git grep -E '(src|href)="[^"]*/\.\./'
+)
+
+
+test -n "$relative_urls" && error "Do not use relative URLs" "$relative_urls"
+
+
