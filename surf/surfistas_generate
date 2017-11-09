@@ -10,7 +10,7 @@ header() {
     echo '
         <html>
         <head>
-            <link rel="stylesheet" type="text/css" href="../site-sub.css">
+            <link rel="stylesheet" type="text/css" href="/surf/site-sub.css">
             <link rel="icon" type="image/png" href="/img/favhead.png">
             <title>Fotos de surf de @@@@@ em Matinhos</title>
         </head>
@@ -67,7 +67,7 @@ photos_grid() {
         photo_id=$(grep '<br><br><b>S[0-9][0-9][0-9]</b>' "$html_path" | grep -o 'S...')
 
         echo '    <td align="center">'
-        echo "        <a href=\"../$html_path\"><img src=\"../$mini_path\"></a>"
+        echo "        <a href=\"/surf/$html_path\"><img src=\"/surf/$mini_path\"></a>"
         echo "        <br><b>$photo_id</b>"
         echo '    </td>'
     done
@@ -78,7 +78,7 @@ photos_grid() {
 
 footer() {
     echo '
-            <p style="margin-top:3em;"><a href="../index.html">&lt; &lt; Voltar à principal</a></p>
+            <p style="margin-top:3em;"><a href="/surf/">&lt; &lt; Voltar à principal</a></p>
 
         </div>
         <div class="footer"></div>
