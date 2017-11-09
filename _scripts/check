@@ -21,7 +21,13 @@ relative_urls=$(
     git grep -E '(src|href)="[^"]*/\.\./'
 )
 
+unquoted_attributes=$(
+    # Grep for <tag foo=bar> instead of <tag foo="bar">
+    git grep -E '<[a-z]+ [^>]*[a-z]=[^"]' |
+        grep -F -v 'content="text/html; charset=utf-8"'
+)
 
 test -n "$relative_urls" && error "Do not use relative URLs" "$relative_urls"
+test -n "$unquoted_attributes" && error "Unquoted HTML attributes" "$unquoted_attributes"
 
 
