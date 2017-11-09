@@ -4,9 +4,9 @@
 <meta name="author" content="Aurelio Jargas">
 <META NAME="generator" CONTENT="http://txt2tags.org">
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../../include/10anos/tutorial.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/tutorial.css">
 <link rel="shortcut icon" href="/favicon.ico">
 <TITLE>Canivete Suíço do Shell (Bash) :: aurelio.net</TITLE>
 </HEAD>
@@ -23,7 +23,7 @@
 
 <TABLE BORDER="1">
 <TR>
-<TD><A HREF="http://www.shellscript.com.br"><IMG ALIGN="middle" SRC="../../img/icon/128/livroshell.png" BORDER="0" ALT=""></A></TD>
+<TD><A HREF="http://www.shellscript.com.br"><IMG ALIGN="middle" SRC="/img/icon/128/livroshell.png" BORDER="0" ALT=""></A></TD>
 <TD>Este Canivete Suíço do Shell é um apêndice do meu livro <A HREF="http://www.shellscript.com.br">Shell Script Profissional</A>. O livro é enorme, são quase 500 páginas de puro shell, explicado de maneira clara e didática. Você vai dominar o assunto, além de aprender a escrever programas de verdade em vez de meros scripts toscos. Sou escritor e ganho a vida com meus livros, então comprando o livro você também me ajuda a manter esse site no ar e assim eu continuo escrevendo para você ler. Combinado? :)</TD>
 </TR>
 </TABLE>
@@ -75,28 +75,76 @@
 <TR>
 <TH COLSPAN="2">Operadores Aritméticos</TH>
 </TR>
-<TR><TD ALIGN="center"><CODE>+</CODE></TD><TD>Adição</TD></TR>
-<TR><TD ALIGN="center"><CODE>-</CODE></TD><TD>Subtração</TD></TR>
-<TR><TD ALIGN="center"><CODE>*</CODE></TD><TD>Multiplicação</TD></TR>
-<TR><TD ALIGN="center"><CODE>/</CODE></TD><TD>Divisão</TD></TR>
-<TR><TD ALIGN="center"><CODE>%</CODE></TD><TD>Módulo</TD></TR>
-<TR><TD ALIGN="center"><CODE>**</CODE></TD><TD>Exponenciação</TD></TR>
+<TR>
+<TD ALIGN="center"><CODE>+</CODE></TD>
+<TD>Adição</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>-</CODE></TD>
+<TD>Subtração</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>*</CODE></TD>
+<TD>Multiplicação</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>/</CODE></TD>
+<TD>Divisão</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>%</CODE></TD>
+<TD>Módulo</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>**</CODE></TD>
+<TD>Exponenciação</TD>
+</TR>
 <TR>
 <TH COLSPAN="2">Operadores de Atribuição</TH>
 </TR>
-<TR><TD ALIGN="center"><CODE>=</CODE></TD><TD>Atribui valor a uma variável</TD></TR>
-<TR><TD ALIGN="center"><CODE>+=</CODE></TD><TD>Incrementa a variável por uma constante</TD></TR>
-<TR><TD ALIGN="center"><CODE>-=</CODE></TD><TD>Decrementa a variável por uma constante</TD></TR>
-<TR><TD ALIGN="center"><CODE>*=</CODE></TD><TD>Multiplica a variável por uma constante</TD></TR>
-<TR><TD ALIGN="center"><CODE>/=</CODE></TD><TD>Divide a variável por uma constante</TD></TR>
-<TR><TD ALIGN="center"><CODE>%=</CODE></TD><TD>Resto da divisão por uma constante</TD></TR>
-<TR><TD ALIGN="center"><CODE>++</CODE></TD><TD>Incrementa em 1 o valor da variável</TD></TR>
-<TR><TD ALIGN="center"><CODE>--</CODE></TD><TD>Decrementa em 1 o valor da variável</TD></TR>
+<TR>
+<TD ALIGN="center"><CODE>=</CODE></TD>
+<TD>Atribui valor a uma variável</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>+=</CODE></TD>
+<TD>Incrementa a variável por uma constante</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>-=</CODE></TD>
+<TD>Decrementa a variável por uma constante</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>*=</CODE></TD>
+<TD>Multiplica a variável por uma constante</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>/=</CODE></TD>
+<TD>Divide a variável por uma constante</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>%=</CODE></TD>
+<TD>Resto da divisão por uma constante</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>++</CODE></TD>
+<TD>Incrementa em 1 o valor da variável</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>--</CODE></TD>
+<TD>Decrementa em 1 o valor da variável</TD>
+</TR>
 <TR>
 <TH COLSPAN="2">Operadores Relacionais</TH>
 </TR>
-<TR><TD ALIGN="center"><CODE>==</CODE></TD><TD>Igual</TD></TR>
-<TR><TD ALIGN="center"><CODE>!=</CODE></TD><TD>Diferente</TD></TR>
+<TR>
+<TD ALIGN="center"><CODE>==</CODE></TD>
+<TD>Igual</TD>
+</TR>
+<TR>
+<TD ALIGN="center"><CODE>!=</CODE></TD>
+<TD>Diferente</TD>
+</TR>
 <TR>
 <TD ALIGN="center"><CODE>&gt;</CODE></TD>
 <TD>Maior</TD>
@@ -2019,13 +2067,13 @@ $ <a href="http://funcoeszz.net/todas.html">zzascii</a>
 59  ;     91  [    123  {    189  ½    221  Ý    253  ý
 60  &lt;     92  \    124  |    190  ¾    222  Þ    254  þ
 61  =     93  ]    125  }    191  ¿    223  ß    255  ÿ
-62  &gt;     94  ^    126  ~    192  À    224  à
-63  ?     95  _    161  ¡    193  Á    225  á
+62  &gt;     94  ^    126  ~    192  À    224  à   
+63  ?     95  _    161  ¡    193  Á    225  á   
 </PRE>
 
 <H2 ID="asciiimg">21. Caracteres ASCII imprimíveis (ISO-8859-1) - imagem</H2>
 
-          <center><IMG ALIGN="middle" SRC="ascii.gif" BORDER="0" ALT=""></center>
+          <center><IMG ALIGN="middle" SRC="ascii.gif" BORDER="0" ALT=""></center>          
 
 <H2 ID="codigos">22. Códigos prontos para copiar e colar</H2>
 
@@ -2453,7 +2501,7 @@ $ <a href="http://funcoeszz.net/todas.html">zzascii</a>
 </UL>
 
 <P>
-<a href="http://aurelio.net/shell/" class="linkblock"><IMG ALIGN="middle" SRC="../../img/icon/128/shell.png" BORDER="0" ALT=""> Aprenda mais sobre Shell Script</a>
+<a href="http://aurelio.net/shell/" class="linkblock"><IMG ALIGN="middle" SRC="/img/icon/128/shell.png" BORDER="0" ALT=""> Aprenda mais sobre Shell Script</a>
 </P>
 </div> <!-- close #main -->
 <div id="nav">
@@ -2462,9 +2510,9 @@ $ <a href="http://funcoeszz.net/todas.html">zzascii</a>
 <tr>
 	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
 </tr>
-<tr>
+<tr>	
 	<th class="search" colspan="5">
-
+ 
 <form action="http://aurelio.net/achei.html" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
@@ -2621,6 +2669,6 @@ Contato:
 
 </DIV>
 
-<!-- html code generated by txt2tags 2.6.896 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags index.t2t -->
+<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags shell/canivete/index.t2t -->
 </BODY></HTML>

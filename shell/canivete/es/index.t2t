@@ -9,9 +9,6 @@ Traducido al español por Gonzalo Nemmi
 
 %!postproc: 'Aprenda mais sobre'  'Obtenga más información sobre'
 
-% Fix image path
-%!postproc: (img/icon/128/)   ../\1
-
 %%TOC
 
 	Traducciones: [Português ../], [Español ../es/], [English ../en/] || [txt2tags source file %%infile]

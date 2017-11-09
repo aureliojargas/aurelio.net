@@ -3,9 +3,7 @@ _MYNAME
 %%mtime(%B, %Y)
 
 %!includeconf:		config.t2t
-%!style:		livro.css
-%!postproc: SITEROOT 	../..
-
+%!style:		/include/10anos/livro.css
 
 == Comparativo da largura com a de livros impressos ==
 

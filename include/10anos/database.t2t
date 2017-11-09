@@ -14,7 +14,7 @@
 % Macro to build a local link for a product
 % Example: _ZZ_LLINK -> [_ZZ_NAME _ZZ_PATH]
 %
-%!preproc: \b_([A-Z0-9_]+)_LLINK	[_\1_NAME SITEROOT_\1_PATH]
+%!preproc: \b_([A-Z0-9_]+)_LLINK	[_\1_NAME _\1_PATH]
 
 % Macro to build an image link for a product
 % Example: _ZZ_LINK -> [[_ZZ_128] _ZZ_URL]
@@ -268,7 +268,7 @@
 %!postproc: _TXT2TAGS_PATH		http://txt2tags.org/pt/
 %!postproc: _TXT2TAGS_URL		http://txt2tags.org/pt/
 %!postproc: _TXT2TAGS_ROOT		http://txt2tags.org/pt
-%!preproc : _TXT2TAGS_128		SITEROOT/projects/img/icon/128/_TXT2TAGS_ID.png
+%!preproc : _TXT2TAGS_128		/projects/img/icon/128/_TXT2TAGS_ID.png
 %!postproc: _TXT2TAGS_NAME		txt2tags
 %!postproc: _TXT2TAGS_ID		txt2tags
 
@@ -286,7 +286,7 @@
 %!postproc: _EMOMEMORY_PATH		/projects/emomemory/
 %!postproc: _EMOMEMORY_URL		http://aurelio.net/projects/emomemory/
 %!postproc: _EMOMEMORY_ROOT		http://aurelio.net/projects/emomemory
-%!preproc : _EMOMEMORY_128		SITEROOT/projects/img/icon/128/_EMOMEMORY_ID.png
+%!preproc : _EMOMEMORY_128		/projects/img/icon/128/_EMOMEMORY_ID.png
 %!postproc: _EMOMEMORY_NAME		EmoMemory
 %!postproc: _EMOMEMORY_ID		emomemory
 
@@ -294,7 +294,7 @@
 %!postproc: _ADIUMBOOK_PATH		/projects/adiumbook/
 %!postproc: _ADIUMBOOK_URL		http://aurelio.net/projects/adiumbook/
 %!postproc: _ADIUMBOOK_ROOT		http://aurelio.net/projects/adiumbook
-%!preproc : _ADIUMBOOK_128		SITEROOT/projects/img/icon/128/_ADIUMBOOK_ID.png
+%!preproc : _ADIUMBOOK_128		/projects/img/icon/128/_ADIUMBOOK_ID.png
 %!postproc: _ADIUMBOOK_NAME		AdiumBook
 %!postproc: _ADIUMBOOK_ID		adiumbook
 
@@ -302,7 +302,7 @@
 %!postproc: _APPLESCRIPT_PATH		/projects/
 %!postproc: _APPLESCRIPT_URL		http://aurelio.net/projects/
 %!postproc: _APPLESCRIPT_ROOT		http://aurelio.net/projects
-%!preproc : _APPLESCRIPT_128		SITEROOT/projects/img/icon/128/_APPLESCRIPT_ID.png
+%!preproc : _APPLESCRIPT_128		/projects/img/icon/128/_APPLESCRIPT_ID.png
 %!postproc: _APPLESCRIPT_NAME		AppleScript
 %!postproc: _APPLESCRIPT_ID		applescript
 
@@ -310,7 +310,7 @@
 %!postproc: _TXT2REGEX_PATH		http://aurelio.net/projects/txt2regex/
 %!postproc: _TXT2REGEX_URL		http://aurelio.net/projects/txt2regex/
 %!postproc: _TXT2REGEX_ROOT		http://aurelio.net/projects/txt2regex/
-%!preproc : _TXT2REGEX_128		SITEROOT/projects/img/icon/128/_TXT2REGEX_ID.png
+%!preproc : _TXT2REGEX_128		/projects/img/icon/128/_TXT2REGEX_ID.png
 %!postproc: _TXT2REGEX_NAME		txt2regex
 %!postproc: _TXT2REGEX_ID		txt2regex
 
@@ -318,7 +318,7 @@
 %!postproc: _SEDSOKOBAN_PATH		/projects/sedsokoban/
 %!postproc: _SEDSOKOBAN_URL		http://aurelio.net/projects/sedsokoban/
 %!postproc: _SEDSOKOBAN_ROOT		http://aurelio.net/projects/sedsokoban
-%!preproc : _SEDSOKOBAN_128		SITEROOT/projects/img/icon/128/_SEDSOKOBAN_ID.png
+%!preproc : _SEDSOKOBAN_128		/projects/img/icon/128/_SEDSOKOBAN_ID.png
 %!postproc: _SEDSOKOBAN_NAME		SedSokoban
 %!postproc: _SEDSOKOBAN_ID		sedsokoban
 %!postproc: _SEDSOKOBAN_DESC		O clássico jogo de empurrar caixas, Sokoban, inteiramente escrito em Sed. O jogo está bem completo, com 90 níveis, cores, comandos, detecção de vitória e movimentação do personagem usando as setinhas do teclado.
@@ -327,7 +327,7 @@
 %!postproc: _SEDARKANOID_PATH		/projects/sedarkanoid/
 %!postproc: _SEDARKANOID_URL		http://aurelio.net/projects/sedarkanoid/
 %!postproc: _SEDARKANOID_ROOT		http://aurelio.net/projects/sedarkanoid
-%!preproc : _SEDARKANOID_128		SITEROOT/projects/img/icon/128/_SEDARKANOID_ID.png
+%!preproc : _SEDARKANOID_128		/projects/img/icon/128/_SEDARKANOID_ID.png
 %!postproc: _SEDARKANOID_NAME		SedArkanoid
 %!postproc: _SEDARKANOID_ID		sedarkanoid
 %!postproc: _SEDARKANOID_DESC		O clássico jogo Arkanoid (Breakout) inteiramente escrito em Sed. O jogo está bem completo, com cores, explosões cadenciadas, possibilidade de segurar a bolinha no bastão e tem 3 vidas.
@@ -336,7 +336,7 @@
 %!postproc: _SEDSED_PATH		/projects/sedsed/
 %!postproc: _SEDSED_URL			http://aurelio.net/projects/sedsed/
 %!postproc: _SEDSED_ROOT		http://aurelio.net/projects/sedsed/
-%!preproc : _SEDSED_128			SITEROOT/projects/img/icon/128/_SEDSED_ID.png
+%!preproc : _SEDSED_128			/projects/img/icon/128/_SEDSED_ID.png
 %!postproc: _SEDSED_NAME		sedsed
 %!postproc: _SEDSED_ID			sedsed
 
@@ -344,7 +344,7 @@
 %!postproc: _RAC_PATH			/rac/
 %!postproc: _RAC_URL			http://aurelio.net/rac/
 %!postproc: _RAC_ROOT			http://aurelio.net/rac
-%%!preproc : _RAC_128			SITEROOT/projects/img/icon/128/_RAC_ID.png
+%%!preproc : _RAC_128			/projects/img/icon/128/_RAC_ID.png
 %!postproc: _RAC_NAME			RAC
 %!postproc: _RAC_ID			rac
 
@@ -500,8 +500,8 @@
 
 
 % Default icon path
-%!postproc: _PATH_ICON128		SITEROOT/img/icon/128
-%!postproc: _PATH_ICON256		SITEROOT/img/icon/256
+%!postproc: _PATH_ICON128		/img/icon/128
+%!postproc: _PATH_ICON256		/img/icon/256
 
 
 % eu

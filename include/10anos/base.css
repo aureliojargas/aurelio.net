@@ -302,7 +302,7 @@ body.livroregexref #main table.nav td {
 /*-------------------------- SEE ME! ------*/
 
 #seeme {
-	background:#cf6 url(../../img/favhead.png) no-repeat left;
+	background:#cf6 url(/img/favhead.png) no-repeat left;
 	position:fixed;
 	top:0;
 	right:0;
