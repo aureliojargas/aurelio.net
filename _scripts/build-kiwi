@@ -1,11 +1,9 @@
 #!/bin/bash
 # Build all txt2tags pages using the kiwi theme
 
-if test $(basename "$PWD") != 'aurelio.net'
-then
-    echo 'No no no. Run me from the main repo dir.'
-    exit 1
-fi
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
 
 # build it
 git grep -l 'include/kiwi/config.t2t' |
