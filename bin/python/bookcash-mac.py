@@ -6,7 +6,8 @@
 # License: Public domain, use at your own risk, no support.
 # URL: http://aurelio.net/bin/python/bookcash.py
 #
-# Informações em Português: http://blog.aurelio.net/?s=bookcash
+# Informações em Português:
+# http://aurelio.net/blog/2007/04/04/bookcash-software-de-controle-de-vendas-de-livros/
 #
 # Notes:
 #
