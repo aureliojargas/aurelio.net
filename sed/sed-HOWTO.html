@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
-<META NAME="generator" CONTENT="http://txt2tags.sf.net">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<meta name="author" content="Aurelio Jargas">
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 
 
 
-<link rel="icon" type="image/png" href="../../img/favhead.png">
+<link rel="shortcut icon" href="/favicon.ico">
 <TITLE>Sed HOWTO :: aurelio.net</TITLE>
 </HEAD>
 <BODY class="sedhowto">
@@ -136,11 +136,9 @@
 </DIV>
 <DIV ID="main">
 
-<A NAME="toc1"></A>
-<H1>1. Sobre este documento</H1>
+<H1 ID="toc1">1. Sobre este documento</H1>
 
-<A NAME="toc2"></A>
-<H2>1.1. Descrição</H2>
+<H2 ID="toc2">1.1. Descrição</H2>
 
 <P>
 Este documento se propõe a ser um <B>tutorial</B> e um <B>guia de consulta</B> de
@@ -156,7 +154,7 @@ Este documento se propõe a ser um <B>tutorial</B> e um <B>guia de consulta</B> 
 </UL>
 
 <P>
-Este documento <B>NÃO</B> abordará as <A HREF="http://aurelio.net/er">Expressões Regulares</A>,
+Este documento <B>NÃO</B> abordará as <A HREF="http://aurelio.net/regex/">Expressões Regulares</A>,
 que são um tema complexo, e embora façam parte da essência do <I>Sed</I>,
 seu funcionamento independe delas.
 </P>
@@ -167,8 +165,7 @@ Resumindo, o <I>Sed HOWTO</I> fala sobre <I>Sed</I>.
 Este documento pode (deve) ser distribuído <B>à vontade</B>.
 </P>
 
-<A NAME="toc3"></A>
-<H2>1.2. Anúncio</H2>
+<H2 ID="toc3">1.2. Anúncio</H2>
 
 <P>
 Este documento é algo que eu estava me devendo há séculos: uma
@@ -180,7 +177,7 @@ exemplos práticos. A idéia é que sirva tanto aos principiantes
 quanto aos iniciados, abrangendo conceitos básicos e complexos.
 </P>
 <P>
-<B>http://aurelio.net/sed/sed-HOWTO</B>
+<B>http://aurelio.net/sed/sed-HOWTO/</B>
 </P>
 <P>
 Convido todos a visitarem e dar uma lida.
@@ -198,8 +195,7 @@ Com certeza, ainda tem <B>MUITA</B> coisa a melhorar/acrescentar.
 Qualquer sugestão é bem-vinda.
 </P>
 
-<A NAME="toc4"></A>
-<H2>1.3. Onde encontrá-lo</H2>
+<H2 ID="toc4">1.3. Onde encontrá-lo</H2>
 
 <P>
 A casa oficial deste documento é na seção <I>Sed</I> do Site do Aurelio.
@@ -230,8 +226,7 @@ quaisquer dos formatos seguintes:
 </TR>
 </TABLE>
 
-<A NAME="toc5"></A>
-<H2>1.4. Registro de mudanças</H2>
+<H2 ID="toc5">1.4. Registro de mudanças</H2>
 
 <DL>
 <DT>2009-06-26 — v0.6</DT><DD>
@@ -244,6 +239,7 @@ quaisquer dos formatos seguintes:
   <LI>Todos os links externos foram verificados e atualizados
   <LI>Agora as referências internas para outros tópicos são links
   <LI>Padronizado o nome "Sed" em vez de "sed" e "SED" ao referir-se ao programa
+  <LI>Adicionado link para o manual do GNU Sed, em <U>Onde obter mais informações</U>.
   <LI>Adicionado link e melhorada a tabela em <U>Emulando outros comandos</U>
   <LI>Melhorias nos desenhos ASCII (curvas com + e alinhamento)
   <LI>Melhorias de formatação na lista de agradecimentos
@@ -256,7 +252,7 @@ quaisquer dos formatos seguintes:
   <LI>Adicionada versão HTML (tudo em uma página) e retirada a versão em
     PostScript (basta fazer <CODE>sgml2latex -o ps sed-HOWTO.sgml</CODE>)
   <LI>Retirado também o <CODE>.tgz</CODE> do ar
-  <LI>O txt2tags (<A HREF="http://txt2tags.sf.net">http://txt2tags.sf.net</A>) agora é o conversor utilizado
+  <LI>O <A HREF="http://txt2tags.org/pt/">txt2tags</A> agora é o conversor utilizado
     para gerar o Sed HOWTO - acabaram os títulos em CAPSLOCK
   <P></P>
   </UL>
@@ -293,8 +289,7 @@ quaisquer dos formatos seguintes:
   </UL>
 </DL>
 
-<A NAME="toc6"></A>
-<H2>1.5. Agradecimentos</H2>
+<H2 ID="toc6">1.5. Agradecimentos</H2>
 
 <P>
 Meus agradecimentos sinceros àqueles que comentaram, enviaram sugestões e
@@ -315,16 +310,14 @@ correções, ou ajudaram na divulgação, via e-mail ou internet.
 <LI>Tiago Barros &amp; senha.org
 </UL>
 
-<A NAME="toc7"></A>
-<H1>2. Conhecendo o sed</H1>
+<H1 ID="toc7">2. Conhecendo o sed</H1>
 
 <P>
 Vamos conhecer um pouco o <I>Sed</I>, mostrar que ele não é o bicho de
 <I>Sed</I> cabeças que aparenta :)
 </P>
 
-<A NAME="toc8"></A>
-<H2>2.1. Descrição do Sed</H2>
+<H2 ID="toc8">2.1. Descrição do Sed</H2>
 
 <P>
 O <I>Sed</I> é um editor de textos <B>não interativo</B>.
@@ -334,23 +327,20 @@ Ele pode editar automaticamente, sem interação do usuário, vários arquivos
 seguindo um conjunto de regras especificadas.
 </P>
 
-<A NAME="toc9"></A>
-<H2>2.2. O que significa a palavra Sed</H2>
+<H2 ID="toc9">2.2. O que significa a palavra Sed</H2>
 
 <P>
 Vem do inglês "Stream EDitor", ou seja, editor de fluxos (de texto).
 </P>
 
-<A NAME="toc10"></A>
-<H2>2.3. Como saber se devo usar o Sed</H2>
+<H2 ID="toc10">2.3. Como saber se devo usar o Sed</H2>
 
 <P>
 Sendo um editor de textos não interativo, o <I>Sed</I> é excelente para
 desempenhar algumas tarefas, mas em outras seu uso não é aconselhado.
 </P>
 
-<A NAME="toc11"></A>
-<H3>2.3.1. Quando usar o Sed</H3>
+<H3 ID="toc11">2.3.1. Quando usar o Sed</H3>
 
 <P>
 A característica principal do <I>Sed</I> é poder editar arquivos automaticamente.
@@ -385,8 +375,7 @@ simples, bastando definir uma série de regras de procura e troca, e o
 programa se encarregará de executá-las e arrumar os relatórios.
 </P>
 
-<A NAME="toc12"></A>
-<H3>2.3.2. Quando não usar o Sed</H3>
+<H3 ID="toc12">2.3.2. Quando não usar o Sed</H3>
 
 <P>
 <B>Nenhuma</B> ferramenta é ideal para todas as tarefas, e o <I>Sed</I> não é uma
@@ -418,11 +407,9 @@ o seu programa em <I>Sed</I> começou a inchar muito, é aconselhável reescrev�
 numa linguagem com mais recursos, como o <I>perl</I>.
 </P>
 
-<A NAME="toc13"></A>
-<H1>3. Perdendo o medo do sed</H1>
+<H1 ID="toc13">3. Perdendo o medo do sed</H1>
 
-<A NAME="toc14"></A>
-<H2>3.1. Como ele funciona</H2>
+<H2 ID="toc14">3.1. Como ele funciona</H2>
 
 <P>
 O <I>Sed</I> funciona como um filtro, por onde você passa um texto <CODE>X</CODE> e ele joga
@@ -455,8 +442,7 @@ utilizada, a batata sai cortada de uma maneira diferente :)
 <LI>o <I>Sed</I> é macho :)
 </UL>
 
-<A NAME="toc15"></A>
-<H2>3.2. Sua sintaxe</H2>
+<H2 ID="toc15">3.2. Sua sintaxe</H2>
 
 <P>
 A sintaxe genérica de um comando <I>Sed</I> é:
@@ -474,8 +460,7 @@ Sendo que <CODE>regras</CODE> tem a forma genérica de:
 [endereço1 [, endereço2]] comando [argumento]
 </PRE>
 
-<A NAME="toc16"></A>
-<H3>3.2.1. Exemplo</H3>
+<H3 ID="toc16">3.2.1. Exemplo</H3>
 
 <P>
 Como notação tradicional, o que está <CODE>[entre colchetes]</CODE> é opcional, então a
@@ -492,8 +477,7 @@ via duto <B><CODE>|</CODE></B>, aplica o comando <B><CODE>p</CODE></B> para toda
 as duplica.
 </P>
 
-<A NAME="toc17"></A>
-<H3>3.2.2. Outros exemplos</H3>
+<H3 ID="toc17">3.2.2. Outros exemplos</H3>
 
 <P>
 Um outro exemplo do <I>Sed</I> com <CODE>opções</CODE> e recebendo um arquivo como parâmetro
@@ -516,8 +500,7 @@ prompt$ sed -n 5p texto.txt
 Ou seja, este comando imprime apenas a <B>linha 5</B> do <I>texto.txt</I>
 </P>
 
-<A NAME="toc18"></A>
-<H2>3.3. Como executá-lo</H2>
+<H2 ID="toc18">3.3. Como executá-lo</H2>
 
 <P>
 A execução do <I>Sed</I> é igual a de outro aplicativo qualquer de manipulação de
@@ -541,11 +524,9 @@ Com outra opção ainda, pode-se executar diretamente um arquivo com comandos
 Sed. Para mais informações, veja o tópico <i>Tornando arquivos Sed executáveis</i>.
 </P>
 
-<A NAME="toc19"></A>
-<H1>4. Os comandos do sed</H1>
+<H1 ID="toc19">4. Os comandos do sed</H1>
 
-<A NAME="toc20"></A>
-<H2>4.1. Descrição de todos os comandos</H2>
+<H2 ID="toc20">4.1. Descrição de todos os comandos</H2>
 
 <PRE>
 prompt$ man sed
@@ -605,8 +586,7 @@ q	finaliza o Sed imediatamente
 
 </PRE>
 
-<A NAME="toc21"></A>
-<H2>4.2. Lista de todos os comandos por categoria</H2>
+<H2 ID="toc21">4.2. Lista de todos os comandos por categoria</H2>
 
 <PRE>
                    informações =
@@ -624,19 +604,16 @@ q	finaliza o Sed imediatamente
        registradores dinâmicos \1 \2 ... \9
 </PRE>
 
-<A NAME="toc22"></A>
-<H1>5. Conceitos básicos</H1>
+<H1 ID="toc22">5. Conceitos básicos</H1>
 
 <P>
 Aqui vão conhecimentos que você <B>precisa</B> assimilar para fazer um bom uso do
 <I>Sed</I>.
 </P>
 
-<A NAME="toc23"></A>
-<H2>5.1. Suprimindo a saída padrão</H2>
+<H2 ID="toc23">5.1. Suprimindo a saída padrão</H2>
 
-<A NAME="toc24"></A>
-<H3>5.1.1. Saída normal</H3>
+<H3 ID="toc24">5.1.1. Saída normal</H3>
 
 <P>
 Normalmente o <I>Sed</I> sempre imprime na <B>saída padrão</B> todas as linhas do
@@ -657,8 +634,7 @@ aplicado o comando <B><CODE>p</CODE></B> em cada uma, que diz "imprima esta linh
 com que ela apareça duas vezes.
 </P>
 
-<A NAME="toc25"></A>
-<H3>5.1.2. Saída suprimida</H3>
+<H3 ID="toc25">5.1.2. Saída suprimida</H3>
 
 <P>
 Temos como modificar este comportamento com a opção <B><CODE>-n</CODE></B>, que significa
@@ -689,8 +665,7 @@ Ok, a explicação daquele <B>5</B> ali perdido vem logo a seguir no tópico
 O endereço :)
 </P>
 
-<A NAME="toc26"></A>
-<H2>5.2. O endereço</H2>
+<H2 ID="toc26">5.2. O endereço</H2>
 
 <P>
 O endereço serve para você dizer ao <I>Sed</I> para aplicar um determinado
@@ -703,8 +678,7 @@ Caso o endereço não seja informado, o comando <I>Sed</I> será aplicado para
 <B>todas</B> as linhas.
 </P>
 
-<A NAME="toc27"></A>
-<H3>5.2.1. Endereço simples</H3>
+<H3 ID="toc27">5.2.1. Endereço simples</H3>
 
 <P>
 Por exemplo, referenciando a linha pelo seu número, como já foi visto
@@ -733,8 +707,7 @@ funcionamento idêntico ao comando:
 prompt$ grep -v estorvo texto.txt
 </PRE>
 
-<A NAME="toc28"></A>
-<H3>5.2.2. Intervalo</H3>
+<H3 ID="toc28">5.2.2. Intervalo</H3>
 
 <P>
 Como endereço, ainda se pode especificar um <B>intervalo</B>, como da linha
@@ -756,8 +729,7 @@ No endereço, temos um caractere especial, o <B><CODE>$</CODE></B> que referenci
 prompt$ sed '10,$d' texto.txt
 </PRE>
 
-<A NAME="toc29"></A>
-<H3>5.2.3. Outros</H3>
+<H3 ID="toc29">5.2.3. Outros</H3>
 
 <P>
 No <I>Sed</I> da GNU, a partir da versão <B>3.02a</B>(*), foi adicionada uma maneira
@@ -785,8 +757,7 @@ prompt$ sed 'd' texto.txt
 (*) veja o tópico <i>Nota sobre os adicionais GNU</i>
 </P>
 
-<A NAME="toc30"></A>
-<H2>5.3. Interrompendo o processamento</H2>
+<H2 ID="toc30">5.3. Interrompendo o processamento</H2>
 
 <P>
 A qualquer hora você pode <B>abortar</B> o comando <I>Sed</I> com o comando <B><CODE>q</CODE></B>.
@@ -809,8 +780,7 @@ são separados do corpo da mensagem por uma linha em branco:
 sed '/^$/q'       pare na primeira linha em branco que achar
 </PRE>
 
-<A NAME="toc31"></A>
-<H2>5.4. Invertendo a lógica</H2>
+<H2 ID="toc31">5.4. Invertendo a lógica</H2>
 
 <P>
 No <I>Sed</I> temos o modificador <B><CODE>!</CODE></B> que <B>inverte</B> a lógica do comando, ou seja
@@ -844,11 +814,9 @@ determinadas linhas, isso quer dizer implicitamente que este comando
 <B>será aplicado</B> em todas as outras linhas. É estranho, mas acostuma :)
 </P>
 
-<A NAME="toc32"></A>
-<H2>5.5. Aplicando vários comandos de uma vez</H2>
+<H2 ID="toc32">5.5. Aplicando vários comandos de uma vez</H2>
 
-<A NAME="toc33"></A>
-<H3>5.5.1. Comandos normais</H3>
+<H3 ID="toc33">5.5.1. Comandos normais</H3>
 
 <P>
 É possível aplicar vários comandos <I>Sed</I>, em <B>seqüência</B>. Basta
@@ -864,8 +832,7 @@ Este comando apaga as linhas 5, 10 e as que têm <CODE>estorvo</CODE> do arquivo
 <I>texto.txt</I>.
 </P>
 
-<A NAME="toc34"></A>
-<H3>5.5.2. Comandos com parâmetros</H3>
+<H3 ID="toc34">5.5.2. Comandos com parâmetros</H3>
 
 <P>
 Os comandos que recebem parâmetros (<B><CODE>r</CODE></B>, <B><CODE>w</CODE></B>, <B><CODE>i</CODE></B>, <B><CODE>a</CODE></B>, <B><CODE>c</CODE></B>), não aceitam
@@ -886,8 +853,7 @@ Este comando insere a frase <CODE>começo de tudo</CODE> antes da primeira linha
 apaga a quinta linha do arquivo <I>texto.txt</I>.
 </P>
 
-<A NAME="toc35"></A>
-<H3>5.5.3. Terceira via</H3>
+<H3 ID="toc35">5.5.3. Terceira via</H3>
 
 <P>
 Outra maneira de especificar vários comandos (e a mais consistente e
@@ -895,16 +861,14 @@ garantida) é colocá-los num arquivo, um por linha. Veja o tópico
 <i>Colocando comandos Sed num arquivo</i>.
 </P>
 
-<A NAME="toc36"></A>
-<H1>6. Conceitos complementares</H1>
+<H1 ID="toc36">6. Conceitos complementares</H1>
 
 <P>
 Estes são conhecimentos que possivelmente surgirão como dúvidas em sua
 cabeça após utilizar o <I>Sed</I> por um tempo.
 </P>
 
-<A NAME="toc37"></A>
-<H2>6.1. Sed e shell</H2>
+<H2 ID="toc37">6.1. Sed e shell</H2>
 
 <P>
 Com o <I>Sed</I> sendo invocado na linha de comando, deve-se ter alguns cuidados
@@ -937,11 +901,9 @@ preocupar com aspas, coloque os comandos Sed num arquivo. Veja o tópico
 <i>Colocando comandos Sed num arquivo</i>.
 </P>
 
-<A NAME="toc38"></A>
-<H2>6.2. Usando outros delimitadores</H2>
+<H2 ID="toc38">6.2. Usando outros delimitadores</H2>
 
-<A NAME="toc39"></A>
-<H3>6.2.1. No comando s</H3>
+<H3 ID="toc39">6.2.1. No comando s</H3>
 
 <P>
 É comum ao fazer um comando de substituição <B><CODE>s///</CODE></B> conter uma
@@ -974,8 +936,7 @@ Evitando-se de ter que ficar escapando as barras. A mesma dica vale para o
 comando <B><CODE>y</CODE></B>.
 </P>
 
-<A NAME="toc40"></A>
-<H3>6.2.2. No endereço</H3>
+<H3 ID="toc40">6.2.2. No endereço</H3>
 
 <P>
 E se precisássemos apagar as linhas que contém o <CODE>/usr/local/bin</CODE>? Teríamos
@@ -1002,8 +963,7 @@ acontecer, então se algo não está funcionando como deveria, olhe com
 cuidado para ver se não há conflitos entre eles.
 </P>
 
-<A NAME="toc41"></A>
-<H2>6.3. Escapes para caracteres especiais</H2>
+<H2 ID="toc41">6.3. Escapes para caracteres especiais</H2>
 
 <P>
 No <I>Sed</I> da GNU, a partir da versão <B>3.02.80</B>(*), vários escapes novos
@@ -1026,11 +986,9 @@ foram adicionados e podem ser usados nas duas partes do comando <B><CODE>s///</C
 (*) veja o tópico <i>Nota sobre os adicionais GNU</i>
 </P>
 
-<A NAME="toc42"></A>
-<H2>6.4. Gravando o resultado no mesmo arquivo</H2>
+<H2 ID="toc42">6.4. Gravando o resultado no mesmo arquivo</H2>
 
-<A NAME="toc43"></A>
-<H3>6.4.1. Problema inicial</H3>
+<H3 ID="toc43">6.4.1. Problema inicial</H3>
 
 <P>
 O procedimento comum quando se quer gravar num arquivo o resultado de um
@@ -1065,8 +1023,7 @@ lendo um arquivo <I>texto.txt</I> vazio, e aplicados qualquer comandos
 arquivo vazio, o resultado será o próprio arquivo vazio.
 </P>
 
-<A NAME="toc44"></A>
-<H3>6.4.2. Solução genérica</H3>
+<H3 ID="toc44">6.4.2. Solução genérica</H3>
 
 <P>
 Para evitar isso, voltamos a primeira tática de gravar o resultado num
@@ -1088,8 +1045,7 @@ atributos padrão do sistema, sobre o original, este perderá seus atributos
 e ficará com os padrões do sistema, <B>herdado</B> do arquivo novo.
 </P>
 
-<A NAME="toc45"></A>
-<H3>6.4.3. Solução segura</H3>
+<H3 ID="toc45">6.4.3. Solução segura</H3>
 
 <P>
 Para evitar isso, a abordagem mais ortodoxa e segura seria aplicar o
@@ -1110,11 +1066,9 @@ principalmente saber o porque de utilizá-la, sendo este conhecimento
 aplicável a qualquer outro comando do sistema que leia e grave arquivos.
 </P>
 
-<A NAME="toc46"></A>
-<H1>7. Tarefas diversas</H1>
+<H1 ID="toc46">7. Tarefas diversas</H1>
 
-<A NAME="toc47"></A>
-<H2>7.1. Como substituir alguma coisa por uma quebra de linha</H2>
+<H2 ID="toc47">7.1. Como substituir alguma coisa por uma quebra de linha</H2>
 
 <P>
 No <I>Sed</I> da GNU, a partir da versão <B>3.02.80</B>(*), foi adicionado o <B><CODE>\n</CODE></B>
@@ -1150,8 +1104,7 @@ prompt$ sed ':a;$!N;s/\n/ /g;ta'
 (*) veja o tópico <i>Nota sobre os adicionais GNU</i>
 </P>
 
-<A NAME="toc48"></A>
-<H2>7.2. Apagando linhas específicas</H2>
+<H2 ID="toc48">7.2. Apagando linhas específicas</H2>
 
 <P>
 O comando para apagar linhas é o <B><CODE>d</CODE></B>.
@@ -1161,8 +1114,7 @@ O único detalhe nesta tarefa é especificar <B>quais</B> linhas você vai quere
 apagar. Isso está  completamente coberto no tópico <i>O endereço</i>.
 </P>
 
-<A NAME="toc49"></A>
-<H2>7.3. Como ignorar maiúsculas e minúsculas</H2>
+<H2 ID="toc49">7.3. Como ignorar maiúsculas e minúsculas</H2>
 
 <P>
 O jeito padrão do <I>Sed</I> ser "ignore-case", é dizendo literalmente todas as
@@ -1199,11 +1151,9 @@ prompt$ sed 's/root/administrador/Ig' texto.txt
 (*) veja o tópico <i>Nota sobre os adicionais GNU</i>
 </P>
 
-<A NAME="toc50"></A>
-<H2>7.4. Lendo e gravando em arquivos externos</H2>
+<H2 ID="toc50">7.4. Lendo e gravando em arquivos externos</H2>
 
-<A NAME="toc51"></A>
-<H3>7.4.1. Lendo arquivos</H3>
+<H3 ID="toc51">7.4.1. Lendo arquivos</H3>
 
 <P>
 Uma tarefa comum é incluir cabeçalho e rodapé num arquivo qualquer. O
@@ -1224,8 +1174,7 @@ Para incluir o cabeçalho após a linha <B>1</B> e incluir o rodapé após a
 <i>Aplicando vários comandos de uma vez</i>.
 </P>
 
-<A NAME="toc52"></A>
-<H3>7.4.2. Gravando arquivos</H3>
+<H3 ID="toc52">7.4.2. Gravando arquivos</H3>
 
 <P>
 O comando <B><CODE>w</CODE></B> grava num arquivo a linha atual, ou melhor, o conteúdo do
@@ -1253,8 +1202,7 @@ tão flexível. Mais informações sobre o <I>espaço reserva</I> no tópico
 <i>Conhecendo os registradores internos</i>.
 </P>
 
-<A NAME="toc53"></A>
-<H2>7.5. Trocando um trecho de texto por outro</H2>
+<H2 ID="toc53">7.5. Trocando um trecho de texto por outro</H2>
 
 <P>
 Uma tarefa que parece simples mas confunde, é trocar um trecho de texto,
@@ -1262,8 +1210,7 @@ como um parágrafo inteiro por exemplo, por outro trecho, independente do
 número de linhas de ambos.
 </P>
 
-<A NAME="toc54"></A>
-<H3>7.5.1. Trocar várias linhas por uma</H3>
+<H3 ID="toc54">7.5.1. Trocar várias linhas por uma</H3>
 
 <P>
 Essa é simples, basta usar o comando <B><CODE>c</CODE></B>, que "Coloca" um texto no lugar da
@@ -1296,8 +1243,7 @@ prompt$ sed '/&lt;pre&gt;/,/&lt;\/pre&gt;/c aqui tinha texto pré-formatado' tex
 (*) veja o tópico <i>Nota sobre os adicionais GNU</i>
 </P>
 
-<A NAME="toc55"></A>
-<H3>7.5.2. Trocar várias linhas por outras</H3>
+<H3 ID="toc55">7.5.2. Trocar várias linhas por outras</H3>
 
 <P>
 Similarmente a trocar por apenas uma linha, pode-se usar o comando <B><CODE>c</CODE></B> e
@@ -1356,15 +1302,14 @@ destas alterações poderem ser feitas por alguém que nem saiba o que é
 <P>
 Note que sempre que o <CODE>&lt;/pre&gt;</CODE> foi referenciado nos <I>endereços</I>, a
 barra foi escapada, ficando <CODE>&lt;\/pre&gt;</CODE>. A explicação desse escape está em
-<U>Usando outros delimitadores</U>
+<i>Usando outros delimitadores</i>.
 </P>
 <P>
 <B>obs.:</B> talvez o <CODE>&lt;pre&gt;&lt;/pre&gt;</CODE> não seja um exemplo dos mais didáticos, mas
 não me veio algo mais comum à mente...
 </P>
 
-<A NAME="toc56"></A>
-<H2>7.6. Emulando outros comandos</H2>
+<H2 ID="toc56">7.6. Emulando outros comandos</H2>
 
 <P>
 Aqui vão alguns exemplos de emulações de outros comandos usando-se o
@@ -1415,16 +1360,14 @@ A lista completa e atualizada pode ser encontrada em:
 <A HREF="http://sed.sourceforge.net/local/docs/emulating_unix.txt">http://sed.sourceforge.net/local/docs/emulating_unix.txt</A>
 </P>
 
-<A NAME="toc57"></A>
-<H1>8. Conceitos avançados</H1>
+<H1 ID="toc57">8. Conceitos avançados</H1>
 
 <P>
 Estes são conhecimentos necessários àqueles que fazem uso intensivo do
 <I>Sed</I>, fazendo programas grandes e/ou complexos.
 </P>
 
-<A NAME="toc58"></A>
-<H2>8.1. Monitorando um arquivo</H2>
+<H2 ID="toc58">8.1. Monitorando um arquivo</H2>
 
 <P>
 No <I>Sed</I> da GNU, a partir da versão <B>3.02.80</B>(*), foi adicionada a opção
@@ -1448,8 +1391,7 @@ Cuidado com -nu perto de crianças! :)
 (*) veja o tópico <i>Nota sobre os adicionais GNU</i>
 </P>
 
-<A NAME="toc59"></A>
-<H2>8.2. Colocando comandos Sed num arquivo</H2>
+<H2 ID="toc59">8.2. Colocando comandos Sed num arquivo</H2>
 
 <P>
 Como os comandos <I>Sed</I> vão ficando extensos e complicados, é conveniente
@@ -1483,8 +1425,7 @@ basta usar a opção <B><CODE>-f</CODE></B>
 prompt$ sed -f programa.sed texto.txt
 </PRE>
 
-<A NAME="toc60"></A>
-<H2>8.3. Tornando arquivos Sed executáveis</H2>
+<H2 ID="toc60">8.3. Tornando arquivos Sed executáveis</H2>
 
 <P>
 O interpretador de comandos mais utilizado (<I>bash</I>) sempre procura na
@@ -1526,11 +1467,9 @@ prompt$ ./programa.sed texto.txt
 prompt$ cat texto.txt | ./programa.sed
 </PRE>
 
-<A NAME="toc61"></A>
-<H2>8.4. Conhecendo os registradores internos</H2>
+<H2 ID="toc61">8.4. Conhecendo os registradores internos</H2>
 
-<A NAME="toc62"></A>
-<H3>8.4.1. Apresentação</H3>
+<H3 ID="toc62">8.4.1. Apresentação</H3>
 
 <P>
 O <I>Sed</I> possui 2 registradores ("buffers") internos, que são usados para a
@@ -1567,8 +1506,7 @@ seguido do texto manipulado. Para entender melhor, veja o exemplo gráfico
 a seguir.
 </P>
 
-<A NAME="toc63"></A>
-<H3>8.4.2. Exemplo</H3>
+<H3 ID="toc63">8.4.2. Exemplo</H3>
 
 <P>
 Um exemplo didático de uso do <I>espaço reserva</I> é ir guardando nele algumas
@@ -1585,8 +1523,7 @@ palavra <CODE>root</CODE> e na última linha do arquivo (endereço <B><CODE>$</C
 conteúdo do <I>espaço reserva</I> (comando <B><CODE>g</CODE></B>).
 </P>
 
-<A NAME="toc64"></A>
-<H3>8.4.3. Exemplo gráfico</H3>
+<H3 ID="toc64">8.4.3. Exemplo gráfico</H3>
 
 <P>
 Como os registradores são a parte mais <B>obscura</B> do <I>Sed</I> (mais por falta
@@ -1795,8 +1732,7 @@ Ufa! Depois dessa não venha me dizer que não sabe como funcionam os
 <I>registradores internos</I> do <I>Sed</I> ;)
 </P>
 
-<A NAME="toc65"></A>
-<H3>8.4.4. Resumão</H3>
+<H3 ID="toc65">8.4.4. Resumão</H3>
 
 <UL>
 <LI>Cada linha nova lida é colocada (sobrescrevendo) no <I>espaço padrão</I>
@@ -1806,19 +1742,16 @@ Ufa! Depois dessa não venha me dizer que não sabe como funcionam os
 <LI>Registradores são simples! ;)
 </UL>
 
-<A NAME="toc66"></A>
-<H3>8.4.5. Fluxograma</H3>
+<H3 ID="toc66">8.4.5. Fluxograma</H3>
 
 <P>
 Para uma representação gráfica dos fluxos e comandos que manipulam estes
 registradores, veja o tópico <i>Fluxos dos registradores internos</i>.
 </P>
 
-<A NAME="toc67"></A>
-<H1>9. Fluxogramas</H1>
+<H1 ID="toc67">9. Fluxogramas</H1>
 
-<A NAME="toc68"></A>
-<H2>9.1. Fluxos do texto</H2>
+<H2 ID="toc68">9.1. Fluxos do texto</H2>
 
 <PRE>
                                   _________
@@ -1836,8 +1769,7 @@ ENTRADA  -------&gt;|    S E D    |-------------------&gt;
 
 </PRE>
 
-<A NAME="toc69"></A>
-<H2>9.2. Fluxos da execução dos comandos</H2>
+<H2 ID="toc69">9.2. Fluxos da execução dos comandos</H2>
 
 <PRE>
            _________
@@ -1862,8 +1794,7 @@ COMEÇO   ---------&gt;|  COMANDOS  |----------&gt; FIM DO PROGRAMA
 
 </PRE>
 
-<A NAME="toc70"></A>
-<H2>9.3. Fluxos dos registradores internos</H2>
+<H2 ID="toc70">9.3. Fluxos dos registradores internos</H2>
 
 <PRE>
  _________________               __________________
@@ -1879,8 +1810,7 @@ Veja explicação sobre estes registradores no tópico
 <i>Conhecendo os registradores internos</i>.
 </P>
 
-<A NAME="toc71"></A>
-<H1>10. Nota sobre os adicionais GNU</H1>
+<H1 ID="toc71">10. Nota sobre os adicionais GNU</H1>
 
 <P>
 O <I>Sed</I> da GNU, atualmente é o utilizado pela maioria das distribuições de
@@ -1897,8 +1827,7 @@ trabalham com apenas um tipo de sistema operacional, mas o recado fica
 dado.
 </P>
 
-<A NAME="toc72"></A>
-<H1>11. Onde obter mais informações</H1>
+<H1 ID="toc72">11. Onde obter mais informações</H1>
 
 <P>
 Informações em português:
@@ -1913,6 +1842,7 @@ Informações em inglês:
 </P>
 
 <UL>
+<LI><A HREF="http://www.gnu.org/software/sed/manual/sed.html">http://www.gnu.org/software/sed/manual/sed.html</A>
 <LI><A HREF="http://sed.sourceforge.net/sed1line.txt">http://sed.sourceforge.net/sed1line.txt</A>
 <LI><A HREF="http://sed.sourceforge.net/sedfaq.html">http://sed.sourceforge.net/sedfaq.html</A>
 <LI><A HREF="http://www.dreamwvr.com/sed-info/sed-faq.html">http://www.dreamwvr.com/sed-info/sed-faq.html</A>
@@ -1924,11 +1854,10 @@ Informações em inglês:
 </P>
 
 <UL>
-<LI><A HREF="ftp://alpha.gnu.org/gnu/sed">ftp://alpha.gnu.org/gnu/sed</A>
+<LI><A HREF="ftp://ftp.unicamp.br/pub/gnu/sed/">ftp://ftp.unicamp.br/pub/gnu/sed/</A>
 </UL>
 
 </DIV>
-
-<!-- html code generated by txt2tags 2.6b (http://txt2tags.sf.net) -->
+<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
 <!-- cmdline: txt2tags sed-HOWTO/tudo.t2t -->
 </BODY></HTML>

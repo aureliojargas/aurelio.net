@@ -3,7 +3,7 @@ _MYNAME
 
 
 %!includeconf:		../../include/10anos/config.t2t
-%!style: 		../../include/10anos/normal.css
+%!style: 		/include/10anos/normal.css
 %!postproc: SITEROOT 	../..
 %!postproc: (<BODY)	\1 class="coluna doc"
 %!options: 		--toc
@@ -23,7 +23,7 @@ _MYNAME
 
 
 % _LINKBLOCK_ manual
-''<a href="SITEROOT/doc/nerd.html#coluna" class="linkblock">''[_DOC_128] Saiba mais sobre a história da _COLUNA_NAME''</a>''
+''<a href="/doc/nerd.html#coluna" class="linkblock">''[_DOC_128] Saiba mais sobre a história da _COLUNA_NAME''</a>''
 
 
 %!include: ../../include/10anos/footer.t2t

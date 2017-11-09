@@ -10,7 +10,7 @@ by
 
 %!includeconf: ../config.t2t
 
-%!postproc: '(</HEAD>)'	'<link rel="stylesheet" href="../../assets/gh-fork-ribbon.css">\n\1'
+%!postproc: '(</HEAD>)'	'<link rel="stylesheet" href="/assets/gh-fork-ribbon.css">\n\1'
 %!postproc: '(</HEAD>)'	'<!--[if lt IE 9]><style>.github-fork-ribbon-wrapper { display: none; }</style><![endif]-->\n\1'
 
 
