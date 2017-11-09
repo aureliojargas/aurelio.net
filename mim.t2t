@@ -67,9 +67,9 @@ palestras e cursos. Hoje estou de férias disso tudo.
 %
 Curto muito viajar, sou baterista de banda de hardcore e praticante
 de esportes: surfe, ciclismo, carveboard, escalada e bumerangue.
-Não uso drogas, cigarro, álcool, jeans, tênis, sunga
-%celular (MERDA!)
-e óculos escuros.
+Não uso drogas, cigarro, álcool, --jeans--, --tênis--, sunga,
+--celular--
+e --óculos escuros-- (ops, sucumbi...).
 %
 Caso tenha interesse, as novidades sobre minha existência estão no
 [Blog _MYBLOG]. Tem aquele tal de [Orkut _MYORKUT] também.
@@ -160,7 +160,6 @@ Como você já deve ter percebido, eu não sou o Aurelio do dicionário.
 
 
 
-%%%
 == Linha do Tempo ==[linha-do-tempo]
 
 %TODO cefet, 1a tatuagem, vestibulares, concurso publico
@@ -252,9 +251,8 @@ mãe deixa você ver esse tipo de coisa na internet. Você aceita estes
 termos?
 
 
-            | [ACEITO foto/pe] |  | [NÃO ACEITO foto/pe]
+            | [ACEITO foto/pe/] |  | [NÃO ACEITO foto/pe/]
 
-%%%
 
 == Trabalho, trabalho, trabalho... ==[trabalho]
 
@@ -291,7 +289,7 @@ termos?
   programação, documentação, treinamento, ... Fiquei na empresa até
   Setembro de 2005.
 
-+ Mudei-me então para a praia em Janeiro de 2006 e hoje vivo uma vida mais simples e tranqüila, escrevendo [livros SITEROOT/livro] e [programas SITEROOT/bin], atualizando o site e contando histórias no [blog _MYBLOG].
++ Mudei-me então para a praia em Janeiro de 2006 e hoje vivo uma vida mais simples e tranqüila, escrevendo [livros /livro/] e [programas /bin/], atualizando o site e contando histórias no [blog _MYBLOG].
 +
 
 
@@ -306,7 +304,6 @@ empenhar ao máximo nas atividades nerds e chegar o mais alto que
 conseguir, pois tem prazo de validade. Qual será a profissão nova? Não
 sei, mas tenho uma certeza (uma fé) que ela virá de maneira natural.
 
-% **Atualização (Set 2005):** Agora tenho a chance de adiantar estes planos. 2006 promete ser o ano em conseguirei atingir essa meta. Se não, volto para as nerdices, fazer o que... :)
 
 
 
@@ -500,7 +497,34 @@ Segue a lista dos meus programas preferidos em cada sistema:
   Curitiba é uma boa pedida para um carve. Tem fotos e vídeos de
   nossas brincadeiras [aqui nessa outra página carve/].
 
-:
+: **VALETA**
+
+  Morreu. Infelizmente não deu pra gravar nem uma demo sequer. Eu
+  curtia pra caramba as músicas... :(
+
+: **NO SNACKS**
+
+  Tive que sair da banda porque me mudei para Floripa. Mas agora
+  voltei. Voltamos a ensaiar, ainda sem baixista, mas voltamos!
+  E já parou de novo...
+
+: **TOYOTA**
+
+  Precisava de uma reforma geral na lata, que ficou cheio de podres do
+  sal do deserto e da maresia de Floripa. Ao custo de 6 a 8 mil reais e
+  com 90 dias de molho na oficina, pulei fora e a vendi. Com o dinheiro
+  que ia gastar na reforma comprei um Uno 1.0 ano 96.
+
+: **tatuagem**
+
+  A do pé cada vez mais fica sem cor por causa do sol e eu fico toda
+  hora me machucando, raspando, detonando a coitada... Eu tenho um
+  grande desejo de fazer uma tatuagem-monstro que ocupe todas as
+  costas, de um corte transversal que mostre as costelas e os músculos.
+  Algumas coisas mecânico-eletrônicas no meio. Mais um protesto
+  anti-tecnoescravatura. Como mataram o pica-pau, fiquei órfão e sem
+  tesão. :(
+
 
 
 
@@ -753,28 +777,7 @@ buscadores, siga todos os links abaixo e seja feliz.
 
 
 
-% : **VALETA**
-%   Morreu. Infelizmente não deu pra gravar nem uma demo sequer. Eu
-%   curtia pra caramba as músicas... :(
-%
-% : **NO SNACKS**
-%   Tive que sair da banda porque me mudei para Floripa. Mas agora
-%   voltei. Voltamos a ensaiar, ainda sem baixista, mas voltamos!
-%
-% : **TOYOTA**
-%   Precisava de uma reforma geral na lata, que ficou cheio de podres do
-%   sal do deserto e da maresia de Floripa. Ao custo de 6 a 8 mil reais e
-%   com 90 dias de molho na oficina, pulei fora e a vendi. Com o dinheiro
-%   que ia gastar na reforma comprei um Uno 1.0 ano 96.
-%
-% : **tatuagem**
-%   A do pé cada vez mais fica sem cor por causa do sol e eu fico toda
-%   hora me machucando, raspando, detonando a coitada... Eu tenho um
-%   grande desejo de fazer uma tatuagem-monstro que ocupe todas as
-%   costas, de um corte transversal que mostre as costelas e os músculos.
-%   Algumas coisas mecânico-eletrônicas no meio. Mais um protesto
-%   anti-tecnoescravatura. Como mataram o pica-pau, fiquei órfão e sem
-%   tesão. :(
+
 
 %!include: include/kiwi/footer.t2t
 
