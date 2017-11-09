@@ -1,0 +1,40 @@
+#!/bin/bash
+# Build all txt2tags pages using the 10anos theme
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+# build it
+git grep -l 'include/10anos/config.t2t' |
+
+    # skip false positives
+    grep -v '^_scripts/' |
+    grep -v '^shell/dialog/index-v6.t2t' |
+    grep -v '^moneylog/_config.t2t' |
+
+    # skip those who need custom conversion
+    grep -v '^shell/canivete/canivete.conf' |
+    grep -v '^sed/sed-HOWTO/config.t2t' |
+
+    xargs -n 1 _scripts/txt2tags-2.6.1102
+
+# build the extra pages
+_scripts/txt2tags-2.6.1102 shell/canivete/es/index.t2t
+_scripts/txt2tags-2.6.1102 shell/canivete/index.t2t
+
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/tudo.t2t
+#_scripts/txt2tags-2.6.1102 -t txt sed/sed-HOWTO/tudo.t2t  # error :(
+
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/index.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-1.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-2.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-3.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-4.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-5.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-6.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-7.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-8.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-9.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-10.t2t
+_scripts/txt2tags-2.6.1102 sed/sed-HOWTO/sed-HOWTO-11.t2t
