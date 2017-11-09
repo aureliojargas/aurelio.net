@@ -1,0 +1,55 @@
+#!/bin/bash
+# Migrate txt2tags pages to plain HTML files.
+# Also adds Jekyll front matter and tidy the markup.
+
+# in/out
+infile="$1"                       # foo.t2t
+outfile="${infile%.t2t}.html"     # foo.html
+
+# setup
+site_root=$(pwd | sed 's@\(/aurelio.net/\).*@\1@')
+txt2tags="$site_root/_scripts/txt2tags-2.6.1102"
+tidy="$site_root/_scripts/html-tidy"
+
+front_matter() {
+    echo "---"
+    echo "date: 1999-12-31"
+    echo "title: Converted $infile"
+    echo "---"
+    echo
+}
+
+clean_infile() {
+    cat "$infile" |
+        # Remove theme header/footer
+        grep -v -E '^%!include: .*/clean/cabecalho.t2t' |
+        grep -v -E '^%!include: .*/(kiwi|clean|massa|10anos)/footer.t2t'
+}
+
+comments_warning() {
+    local c n
+
+    c=$(grep '^%[^!]' "$infile" | grep -v '^%%% *$')
+    if test -n "$c"
+    then
+        echo
+        echo "**** WARNING: Hidden comments that will be lost:"
+        echo "$c"
+    fi
+
+    n=$(grep -c '^%%% *$' "$infile")
+    if test $n -gt 0
+    then
+        echo
+        echo "**** WARNING: There are $n block comments markers: %%%"
+    fi
+}
+
+# convert
+front_matter > "$outfile"
+clean_infile | $txt2tags -t html5 --no-headers -i - -o - >> "$outfile"
+
+# tidy
+$tidy "$outfile" > "${outfile%.html}.tidy.html"
+
+comments_warning
