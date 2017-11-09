@@ -4,7 +4,7 @@ FAQ do MoneyLog
 % F A Q • M O N E Y L O G
 
 %!postproc: SITEROOT    ../..
-%!postproc: MLROOT    ..
+%!postproc: MLROOT /moneylog
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="faq"
 %!options: --toc
@@ -161,7 +161,7 @@ Você também pode [inserir automaticamente seu extrato bancário #banco], para 
 
 === Quais as novidades da versão CURRENT? ===[vCURRENT]
 
-Há um guia completo explicando todas as novidades do _ML CURRENT. [Confira! ../vCURRENT/]
+Há um guia completo explicando todas as novidades do _ML CURRENT. [Confira! MLROOT/vCURRENT/]
 
 % === Como atualizar para uma versão nova do _ML? ===[atualizar]
 % 
@@ -671,7 +671,7 @@ https://github.com/aureliojargas/moneylog/issues
 
 === Como fazer uma doação para apoiar o projeto? ===[doacao]
 
-Obrigado pelo interesse em ajudar! Para doar é fácil, basta ir na [página de doações ../donate/].
+Obrigado pelo interesse em ajudar! Para doar é fácil, basta ir na [página de doações MLROOT/donate/].
 
 
 == Problemas ==[problemas]

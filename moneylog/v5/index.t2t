@@ -3,7 +3,7 @@ Novidades do _ML 5
 Março de 2012
 
 %!postproc: SITEROOT    ../..
-%!postproc: MLROOT    ..
+%!postproc: MLROOT /moneylog
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="v5"
 %!options: --toc

@@ -30,11 +30,11 @@
 
 %%%%%%%%%%%%%%%%%%% MONEYLOG
 
+%!postproc: MLROOT /moneylog
 
 % CSS padrão para todos
-%%!style: SITEROOT/include/reset-meyer.css
-%!style: SITEROOT/include/clean-2012/base.css
-%!style: SITEROOT/include/clean-2012/article.css
+%!style: /include/clean-2012/base.css
+%!style: /include/clean-2012/article.css
 
 %!includeconf: _urls.t2t
 
@@ -42,7 +42,7 @@
 %!preproc: @([A-Za-z0-9_]+)	[@\1 http://twitter.com/\1]
 
 % H2 auto-link
-%!postproc: '(<H[23] ID="(.+?)">)(.+?)(</H[23]>)'   '\1<a href="#\2">\3</a>\4' 
+%!postproc: '(<H[23] ID="(.+?)">)(.+?)(</H[23]>)'   '\1<a href="#\2">\3</a>\4'
 
 %%!postproc: '(:: aurelio.net)?</TITLE>'    '— MoneyLog</TITLE>'
 %!postproc: '(:: aurelio.net)?</TITLE>'    '</TITLE>'
@@ -50,6 +50,6 @@
 % fav icon
 %!postproc: (</HEAD>)  <link rel="shortcut icon" href="/favicon.ico">\n\1
 
-% iPhone 
+% iPhone
 %!postproc: (</HEAD>)  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n\1
 

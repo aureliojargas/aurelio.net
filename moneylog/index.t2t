@@ -3,7 +3,7 @@ E aí chefia, qual sabor vai ser hoje?
 
 
 %!postproc: SITEROOT    ..
-%!postproc: MLROOT    .
+%!postproc: MLROOT /moneylog
 %!includeconf: _config.t2t
 %!postproc: (<BODY)     \1 class="index"
 %!style: index.css

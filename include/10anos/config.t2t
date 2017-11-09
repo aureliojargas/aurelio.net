@@ -6,8 +6,8 @@
 %!includeconf: /a/www/include/global.t2t
 
 % CSS padrão para todos
-%!style: SITEROOT/include/yui-2.7.0.css
-%!style: SITEROOT/include/10anos/base.css
+%!style: /include/yui-2.7.0.css
+%!style: /include/10anos/base.css
 
 % TITLE append
 %!postproc: (</TITLE>)	' :: aurelio.net\1'

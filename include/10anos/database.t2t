@@ -276,7 +276,7 @@
 %!postproc: _MONEYLOG_PATH		/moneylog/
 %!postproc: _MONEYLOG_URL		http://aurelio.net/moneylog/
 %!postproc: _MONEYLOG_ROOT		http://aurelio.net/moneylog
-%!preproc : _MONEYLOG_128		SITEROOT/projects/img/icon/128/_MONEYLOG_ID.png
+%!preproc : _MONEYLOG_128		/projects/img/icon/128/_MONEYLOG_ID.png
 %!postproc: _MONEYLOG_NAME		MoneyLog
 %%!postproc: _MONEYLOG_NAME		MoneyLog Experience
 %!postproc: _MONEYLOG_TAGLINE		Finanças descomplicadas

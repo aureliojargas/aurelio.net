@@ -4,7 +4,7 @@ Configuração do MoneyLog
 %  M o n e y L o g • C O N F I G
 
 %!postproc: SITEROOT    ../..
-%!postproc: MLROOT    ..
+%!postproc: MLROOT /moneylog
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="config"
 %!options: --toc
@@ -62,7 +62,7 @@ Você pode definir uma senha de acesso, para impedir que outras pessoas vejam se
 
 ``` myPassword = 'abc123';
 
-% [img/password.png]
+% [MLROOT/config/img/password.png]
 
 _CELULAR
 
@@ -72,7 +72,7 @@ if (isMobile) {
 }
 ```
 
-[img/password-iphone.png]
+[MLROOT/config/img/password-iphone.png]
 
 
 == Idioma ==[idioma]
@@ -107,11 +107,11 @@ Que tal iniciar já no modo Tela Cheia? É aquele em que a barra de ferramentas 
 
 ``` initFullScreen = S;      // Iniciar em Tela Cheia?
 
-[img/initFullScreen-on.png]
+[MLROOT/config/img/initFullScreen-on.png]
 
 ``` initFullScreen = N;      // Iniciar em Tela Cheia?
 
-[img/initFullScreen-off.png]
+[MLROOT/config/img/initFullScreen-off.png]
 
 _CELULAR
 
@@ -151,7 +151,7 @@ Se você costuma usar a caixa de pesquisa mais para excluir lançamentos do que 
 
 ``` checkNegate = S;        // Marcar a opção [X] excluir?
 
-[img/negate.png]
+[MLROOT/config/img/negate.png]
 
 Ou ainda, pode ser útil se usada em conjunto com a configuração anterior. Digamos que ultimamente você não quer saber dos gastos com supermercado. Para que eles não apareçam no extrato ao iniciar o _ML, faça:
 
@@ -173,7 +173,7 @@ Liga/desliga a opção **[X] regex**, da caixa de busca.
 checkRegex = S;        // Marcar a opção [X] regex?
 ```
 
-[img/regex.png]
+[MLROOT/config/img/regex.png]
 
 
 == Período - data inicial e final ==[periodo]
@@ -183,7 +183,7 @@ checkRegex = S;        // Marcar a opção [X] regex?
 
 Liga/desliga as opções **[X] De:** e **[X] Até:**.
 
-[img/widget-view.png]
+[MLROOT/config/img/widget-view.png]
 
 Você pode optar por ativar ou não cada um dos dois seletores de data **De:** e **Até:**, quando o _ML se inicia.
 
@@ -200,7 +200,7 @@ Agora, se você quiser carregar somente os últimos seis meses, ou quem sabe no 
 === initMonthOffsetFrom ===[initMonthOffsetFrom]
 === initMonthOffsetUntil ===[initMonthOffsetUntil]
 
-[img/widget-view.png]
+[MLROOT/config/img/widget-view.png]
 
 Estas configurações servem para escolher qual será o valor padrão que virá escolhido nos seletores de data **De:** e **Até:**.
 
@@ -243,7 +243,7 @@ Liga/desliga a opção **[X] Parciais Mensais**, no extrato diário.
 
 ``` checkMonthPartials = S;   // Marcar a opção [X] Parciais Mensais?
 
-[img/widget-view.png]
+[MLROOT/config/img/widget-view.png]
 
 
 == Somente valores ==[somente-valores]
@@ -254,9 +254,9 @@ Ainda não há uma configuração específica para estes filtros. Mas dê uma ol
 == Widgets ==[widgets]
 
 ''' <div class="inline">
-[img/widget-view.png]
-[img/widget-tag-cloud.png]
-[img/widget-tag-summary.png]
+[MLROOT/config/img/widget-view.png]
+[MLROOT/config/img/widget-tag-cloud.png]
+[MLROOT/config/img/widget-tag-summary.png]
 
 ''' </div>
 
@@ -285,7 +285,7 @@ if (isMobile) {
 }
 ```
 
-[img/widget-closed.png]
+[MLROOT/config/img/widget-closed.png]
 
 A configuração da caixa "Somatório de Tags" tem um formato diferente, mas o funcionamento é o mesmo. Saiba mais detalhes em [TagSummary.config.opened #TagSummary-config-opened].
 
@@ -314,7 +314,7 @@ showTagCloud = N;
 
 == Widget: Somatório de tags ==[widget-somatorio-de-tags]
 
-[img/widget-tag-summary.png]
+[MLROOT/config/img/widget-tag-summary.png]
 
 Este widget tem as configurações em um formato diferente, mas elas funcionam de maneira similar às configurações anteriores.
 
@@ -352,7 +352,7 @@ Liga/desliga a opção **[X] Ordenar por valor**, no somatório de tags.
 
 ``` TagSummary.config.checkSort = S;
 
-[img/widget-tag-summary-by-value.png]
+[MLROOT/config/img/widget-tag-summary-by-value.png]
 
 == Tabela do extrato ==[extrato]
 
@@ -364,11 +364,11 @@ Se desligar, esta coluna desaparecerá de todos os extratos: diário, mensal e a
 
 ``` showBalance = S;
 
-[img/showBalance-d-on.png]
+[MLROOT/config/img/showBalance-d-on.png]
 
 ``` showBalance = N;
 
-[img/showBalance-d-off.png]
+[MLROOT/config/img/showBalance-d-off.png]
 
 
 === showRowCount ===[showRowCount]
@@ -377,11 +377,11 @@ Liga/desliga a numeração das linhas do extrato.
 
 ``` showRowCount = S;
 
-[img/showRowCount-on.png]
+[MLROOT/config/img/showRowCount-on.png]
 
 ``` showRowCount = N;
 
-[img/showRowCount-off.png]
+[MLROOT/config/img/showRowCount-off.png]
 
 === monthlyRowCount ===[monthlyRowCount]
 
@@ -393,7 +393,7 @@ Note que esta configuração somente será utilizada caso a opção **[X] Parcia
 monthlyRowCount = S;       // O número da linha recomeça a cada mês?
 ```
 
-[img/monthlyRowCount-on.png]
+[MLROOT/config/img/monthlyRowCount-on.png]
 
 === highlightWords ===[highlightWords]
 === highlightTags ===[highlightTags]
@@ -405,7 +405,7 @@ highlightWords = 'XXX parcelado';  // Destacar estas palavras
 highlightTags = 'luz água';        // Destacar estas tags
 ```
 
-[img/highlightWords-Tags.png]
+[MLROOT/config/img/highlightWords-Tags.png]
 
 _ARRAY_TAG
 
@@ -453,7 +453,7 @@ sortData.y.rev = S;       // Anual : Usar a ordem inversa?
 
 O gráfico de barras aparece sempre depois da tabela dos extratos, sendo uma maneira prática de ter uma visão geral sobre os valores.
 
-[../img/v4-grafico-barras.png]
+[MLROOT/img/v4-grafico-barras.png]
 
 === showCharts ===[showCharts]
 
@@ -479,11 +479,11 @@ Se você desligar esta configuração, terá um gráfico mais limpo, porém meno
 
 ``` showChartBarLabel = N;
 
-[img/showChartBarLabel-off.png]
+[MLROOT/config/img/showChartBarLabel-off.png]
 
 ``` showChartBarLabel = S;
 
-[img/showChartBarLabel-on.png]
+[MLROOT/config/img/showChartBarLabel-on.png]
 
 
 === initChartDaily ===[initChartDaily]
@@ -504,7 +504,7 @@ initChartMonthly = 1;    // Mostrar este item no gráfico mensal [1-4]
 initChartYearly = 1;     // Mostrar este item no gráfico anual [1-4]
 ```
 
-[../img/v4-menu-colunas-grafico.png]
+[MLROOT/img/v4-menu-colunas-grafico.png]
 
 == Barra de porcentagem ==[grafico-de-porcentagem]
 
@@ -525,7 +525,7 @@ Liga/desliga os números dentro das barras de porcentagem. Se você desligar est
 
 ``` showMiniBarsLabels = N;
 
-[../img/grafico-vazio.png]
+[MLROOT/img/grafico-vazio.png]
 
 
 === miniBarWidth ===[miniBarWidth]
@@ -534,7 +534,7 @@ Muda a largura das barras de porcentagem. Se você quiser barras maiores ou meno
 
 ``` miniBarWidth = 150;     // Largura da barra de porcentagem
 
-[../img/grafico-largura.png]
+[MLROOT/img/grafico-largura.png]
 
 
 == Tags ==[tags]
@@ -595,7 +595,7 @@ initSelectedTags = 'água aluguel';   // Iniciar já com estas tags marcadas
 initExcludedTags = 'livro mercado';  // Iniciar já com estas tags riscadas
 ```
 
-[img/tag-cloud-selected-excluded.png]
+[MLROOT/config/img/tag-cloud-selected-excluded.png]
 
 É útil quando você precisa focar em tipos específicos de gastos, durante um certo tempo. Por exemplo, se você vai demorar alguns dias para fazer a contabilidade de uma longa viagem, coloque a tag "viagem" na configuração ``initSelectedTags``. Assim, ao iniciar o _ML, já vão aparecer os gastos da viagem.
 
@@ -620,11 +620,11 @@ Liga/desliga a opção **[X] Esconder as tags relacionadas**, que às vezes apar
 
 ``` showLocaleDate = S;    // Usar datas regionais
 
-[img/showLocaleDate-on.png]
+[MLROOT/config/img/showLocaleDate-on.png]
 
 ``` showLocaleDate = N;   // Não formatar a data
 
-[img/showLocaleDate-off.png]
+[MLROOT/config/img/showLocaleDate-off.png]
 
 === i18nDatabase.pt.dateFormat ===[i18nDatabase-pt-dateFormat]
 === i18nDatabase.pt.dateFormatMonth ===[i18nDatabase-pt-dateFormatMonth]

@@ -2,7 +2,7 @@ _MLP_NAME
 
 
 %!postproc: SITEROOT    ../..
-%!postproc: MLROOT    ..
+%!postproc: MLROOT /moneylog
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="portable"
 %!options: --toc --toc-level 2

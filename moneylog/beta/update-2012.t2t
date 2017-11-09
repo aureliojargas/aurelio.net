@@ -3,7 +3,7 @@ Guia de migração para usuários do SVN
 Fevereiro de 2012
 
 %!postproc: SITEROOT    ../..
-%!postproc: MLROOT    ..
+%!postproc: MLROOT /moneylog
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="beta-update"
 %!options: --toc

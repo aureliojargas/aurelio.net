@@ -8,16 +8,16 @@ Agosto de 2009
 
 %!includeconf:  /a/www/include/10anos/config.t2t
 %!includeconf:	../_config-old.t2t
-%!style: 	../../include/10anos/index.css
+%!style: 	/include/10anos/index.css
 %!options: 	--toc
 %!postproc: SITEROOT ../..
-%!postproc: MLROOT ..
+%!postproc: MLROOT /moneylog
 
 % spacer
 %!postproc: @@@ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 % img link
-%!postproc: '(.*<IMG.*SRC="../moneylog4.jpg".*)'	<a href="../moneylog4.html">\1</a>
+%!postproc: '(.*<IMG.*SRC="/moneylog/moneylog4.jpg".*)'	<a href="/moneylog/moneylog4.html">\1</a>
 
 % doação
 %!postproc: URLDOACAO_ https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&tipo=CP&moeda=BRL&item_id_1=1&item_descr_1=Doacao+ao+projeto+MoneyLog&item_quant_1=1&item_frete_1=000&item_valor_1=

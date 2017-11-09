@@ -2,7 +2,7 @@ Sobre o _ML
 
 
 %!postproc: SITEROOT    ../..
-%!postproc: MLROOT    ..
+%!postproc: MLROOT /moneylog
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="about"
 %%!options: --toc
@@ -48,7 +48,7 @@ DEMODEMO
 - Personalizável com diversas [configurações MLROOT/config/] ★
 % - Opção para ver somente o mês atual ou os últimos N meses
 % - Opção para mostrar os totais mensais: saldo, positivo e negativo
-- Filtro em tempo real a cada tecla digitada, usa [regex SITEROOT/regex/]
+- Filtro em tempo real a cada tecla digitada, usa [regex /regex/]
 - Filtragem invertida, para excluir dados do extrato
 - Ordenamento automático, não precisa adicionar cronologicamente
 % - Clique nos nomes das colunas para mudar a ordenação ou inverter
