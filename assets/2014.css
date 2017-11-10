@@ -291,6 +291,21 @@ a.camouflage:hover {
 
 /* ----------------------------------------------------- */
 
+.linkblock {
+	display: block;
+	text-align: center;
+	margin: 5em 0;
+	padding: 5px 0;
+	background: #222;         /* same as sidebar */
+	color: white !important;
+}
+.linkblock img {
+	width: 64px;
+	height: 64px;
+}
+
+/* ----------------------------------------------------- */
+
 #eof {
   text-align: center;
   color: #ddd;
