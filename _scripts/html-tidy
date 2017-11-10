@@ -61,7 +61,7 @@ tidy_stdin() {
   tidy -config <(echo "$config") |
     # Add a blank line before block elements (except on 1st line)
     # Not using vertical-space config because it is too spacey
-    sed -r '1n; /^<(h[1-6]|div|p|blockquote|ul|ol|dl|table|pre)[ >]/{ H; s/.*//; x; }'
+    sed -r '1n; /^<(h[1-6]|div|nav|p|blockquote|ul|ol|dl|table|pre)[ >]/{ H; s/.*//; x; }'
 }
 
 if has_front_matter "$file"
