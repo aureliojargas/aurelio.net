@@ -151,7 +151,7 @@ hide_ads: true
 
 <ul>
   <li>Abra o Xcode</li>
-  <li>New Project &gt; Application &gt; PyObjC Application</li>
+  <li>New Project → Application → PyObjC Application</li>
   <li>Project Directory: ~/Desktop/<strong>Dolar</strong></li>
 </ul>
 
@@ -196,15 +196,15 @@ hide_ads: true
 
 <ul>
   <li>Chame o Interface Builder <em>Duplo clique no MainMenu.nib</em></li>
-  <li>Mostre o Inspetor <em>Tools &gt; Show Inspector</em></li>
-  <li>Dê um título para a janela <em>Inspetor &gt; Attributes &gt; Window Title: Conversor Dólar - Real</em></li>
-  <li>Ligue as guias de posicionamento <em>Layout &gt; Guides &gt; Enable Aqua Guidelines</em></li>
-  <li>Mostre as paletas <em>Tools &gt; Palettes &gt; Show Palettes</em></li>
+  <li>Mostre o Inspetor <em>Tools → Show Inspector</em></li>
+  <li>Dê um título para a janela <em>Inspetor → Attributes → Window Title: Conversor Dólar - Real</em></li>
+  <li>Ligue as guias de posicionamento <em>Layout → Guides → Enable Aqua Guidelines</em></li>
+  <li>Mostre as paletas <em>Tools → Palettes → Show Palettes</em></li>
   <li>Arraste os elementos para a janela
     <ul>
-      <li>3 labels <em>Paleta &gt; Text &gt; System Font Text</em></li>
-      <li>3 caixas de texto <em>Paleta &gt; Text &gt; NSTextField</em></li>
-      <li>1 botão <em>Paleta &gt; Controls &gt; Button</em></li>
+      <li>3 labels <em>Paleta → Text → System Font Text</em></li>
+      <li>3 caixas de texto <em>Paleta → Text → NSTextField</em></li>
+      <li>1 botão <em>Paleta → Controls → Button</em></li>
     </ul>
   </li>
   <li>Coloque nomes nos labels e no botão <em>Duplo clique no elemento</em>
@@ -221,14 +221,14 @@ hide_ads: true
 
 <ul>
   <li>Duplo clique na instância do AppDelegate (cubo azul)</li>
-  <li>Adicione outlets para as caixas de texto <em>Inspetor &gt; Attributes &gt; Outlets &gt; Add</em>
+  <li>Adicione outlets para as caixas de texto <em>Inspetor → Attributes → Outlets → Add</em>
     <ul>
       <li>cotacao</li>
       <li>dolares</li>
       <li>reais</li>
     </ul>
   </li>
-  <li>Adicione um action para o botão <em>Inspetor &gt; Attributes &gt; Action &gt; Add</em>
+  <li>Adicione um action para o botão <em>Inspetor → Attributes → Action → Add</em>
     <ul>
       <li>converte:</li>
     </ul>
@@ -242,7 +242,7 @@ hide_ads: true
     <ul>
       <li>Ctrl-click na instância do AppDelegate (cubo azul)</li>
       <li>Arrasta até a caixa de texto da cotação</li>
-      <li>Inspetor &gt; Connections &gt; Outlets &gt; cotacao &gt; Connect</li>
+      <li>Inspetor → Connections → Outlets → cotacao → Connect</li>
       <li>Repita para as outras caixas de texto</li>
     </ul>
   </li>
@@ -250,7 +250,7 @@ hide_ads: true
     <ul>
       <li>Ctrl-click no botão</li>
       <li>Arrasta até a instância do AppDelegate</li>
-      <li>Inspetor &gt; Connections &gt; Target/Action &gt; converte: &gt; Connect</li>
+      <li>Inspetor → Connections → Target/Action → converte: → Connect</li>
     </ul>
   </li>
 </ul>
@@ -259,14 +259,14 @@ hide_ads: true
 
 <ul>
   <li>Volte ao Xcode</li>
-  <li>Project &gt; New Custom Executable...
+  <li>Project → New Custom Executable...
     <ul>
       <li>Executable Name: <strong>Dolar</strong> (uma palavra para não complicar)</li>
       <li>Executable Path: /usr/bin/env</li>
     </ul>
   </li>
-  <li>Groups &amp; Files &gt; Executables &gt; Seleciona teu executável</li>
-  <li>File &gt; Get Info &gt; Arguments &gt; Botão [+]
+  <li>Groups &amp; Files → Executables → Seleciona teu executável</li>
+  <li>File → Get Info → Arguments → Botão [+]
     <ul>
       <li>Argument: <strong>Dolar</strong>.app/Contents/MacOS/<strong>Dolar</strong></li>
     </ul>
@@ -276,7 +276,7 @@ hide_ads: true
 <h3 id="toc10">2.8. Teste o programa</h3>
 
 <ul>
-  <li>Build &gt; Build and Run</li>
+  <li>Build → Build and Run</li>
   <li>Botão não faz nada</li>
   <li>Veja no log a mensagem sobre falha na conexão do action converte:</li>
 </ul>
@@ -307,7 +307,7 @@ hide_ads: true
   <li>Rode e teste o programa</li>
   <li>Descubra os métodos do NSTextField
     <ul>
-      <li>Chame a Ajuda para o Cocoa <em>Help &gt; Documentation &gt; Search Groups &gt; Cocoa</em></li>
+      <li>Chame a Ajuda para o Cocoa <em>Help → Documentation → Search Groups → Cocoa</em></li>
       <li>Faça a pesquisa pelo elemento <em>Digite NSTextField na caixa de busca</em></li>
     </ul>
   </li>
@@ -363,8 +363,8 @@ hide_ads: true
 
 <ul>
   <li>Vá no IB</li>
-  <li>Arraste o formatador de dinheiro para cada caixa de texto da cotação <em>Paleta &gt; Text &gt; NSNumberFormatter</em></li>
-  <li>Configure o formatador para nossa moeda <em>Inspetor &gt; Formatter &gt; [x] Localize</em></li>
+  <li>Arraste o formatador de dinheiro para cada caixa de texto da cotação <em>Paleta → Text → NSNumberFormatter</em></li>
+  <li>Configure o formatador para nossa moeda <em>Inspetor → Formatter → [x] Localize</em></li>
   <li>Repita o procedimento para as caixas de dólares e reais</li>
   <li>Rode e teste o programa</li>
 </ul>
@@ -383,15 +383,15 @@ hide_ads: true
   <li>Duplique o diretório do projeto <em>Command-D</em></li>
   <li>Renomeie a pasta nova para: Dolar Bindings</li>
   <li>Entre nessa pasta e abra o arquivo <strong>Dolar</strong>.xcodeproj</li>
-  <li>Rode o programa para ter certeza que tudo continua funcionando <em>Build &gt; Build and Run</em></li>
+  <li>Rode o programa para ter certeza que tudo continua funcionando <em>Build → Build and Run</em></li>
 </ul>
 
 <h3 id="toc18">3.2. Limpe os Outlets e Actions</h3>
 
 <ul>
   <li>Vá no IB <em>Duplo clique no MainMenu.nib</em></li>
-  <li>Apague todos os outlets <em>Duplo clique na instância do AppDelegate (cubo azul)</em> <em>Inspetor &gt; Attributes &gt; Outlets &gt; Remove</em></li>
-  <li>Apague o Action <em>Inspetor &gt; Attributes &gt; Action &gt; Remove</em></li>
+  <li>Apague todos os outlets <em>Duplo clique na instância do AppDelegate (cubo azul)</em> <em>Inspetor → Attributes → Outlets → Remove</em></li>
+  <li>Apague o Action <em>Inspetor → Attributes → Action → Remove</em></li>
   <li>Apague o botão "Converter", pois não será mais usado <em>Selecione o botão na janela e aperte Delete</em></li>
 </ul>
 
@@ -399,7 +399,7 @@ hide_ads: true
 
 <ul>
   <li>Selecione a caixa de texto da cotação</li>
-  <li>Inspetor &gt; Bindings &gt; Value &gt; value
+  <li>Inspetor → Bindings → Value → value
     <ul>
       <li>Bind to: <strong>Dolar</strong>AppDelegate</li>
       <li>Model Key Path: cotacao</li>
@@ -496,7 +496,7 @@ hide_ads: true
   <li>Usabilidade
     <ul>
       <li>Use um binding para esconder as caixas de dólares e reais enquanto a cotação não for digitada</li>
-      <li>Inspetor &gt; Bindings &gt; Availability &gt; hidden
+      <li>Inspetor → Bindings → Availability → hidden
         <ul>
           <li>Bind to: <strong>Dolar</strong>AppDelegate</li>
           <li>Model Key Path: cotacao</li>
