@@ -54,4 +54,7 @@ cp "$outfile" "$outfile.temp"
 $tidy "$outfile.temp" > "$outfile"
 rm "$outfile.temp"
 
+echo
+echo "Saved $outfile"
+
 comments_warning
