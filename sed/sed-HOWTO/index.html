@@ -33,24 +33,14 @@
         <ul>
           <li>2.1. <a href="#toc8">Descrição do Sed</a></li>
           <li>2.2. <a href="#toc9">O que significa a palavra Sed</a></li>
-          <li>2.3. <a href="#toc10">Como saber se devo usar o Sed</a>
-            <ul>
-              <li>2.3.1. <a href="#toc11">Quando usar o Sed</a></li>
-              <li>2.3.2. <a href="#toc12">Quando não usar o Sed</a></li>
-            </ul>
-          </li>
+          <li>2.3. <a href="#toc10">Como saber se devo usar o Sed</a></li>
         </ul>
       </li>
       <li>
         <a href="#toc13">Perdendo o medo do sed</a>
         <ul>
           <li>3.1. <a href="#toc14">Como ele funciona</a></li>
-          <li>3.2. <a href="#toc15">Sua sintaxe</a>
-            <ul>
-              <li>3.2.1. <a href="#toc16">Exemplo</a></li>
-              <li>3.2.2. <a href="#toc17">Outros exemplos</a></li>
-            </ul>
-          </li>
+          <li>3.2. <a href="#toc15">Sua sintaxe</a></li>
           <li>3.3. <a href="#toc18">Como executá-lo</a></li>
         </ul>
       </li>
@@ -64,48 +54,20 @@
       <li>
         <a href="#toc22">Conceitos básicos</a>
         <ul>
-          <li>5.1. <a href="#toc23">Suprimindo a saída padrão</a>
-            <ul>
-              <li>5.1.1. <a href="#toc24">Saída normal</a></li>
-              <li>5.1.2. <a href="#toc25">Saída suprimida</a></li>
-            </ul>
-          </li>
-          <li>5.2. <a href="#toc26">O endereço</a>
-            <ul>
-              <li>5.2.1. <a href="#toc27">Endereço simples</a></li>
-              <li>5.2.2. <a href="#toc28">Intervalo</a></li>
-              <li>5.2.3. <a href="#toc29">Outros</a></li>
-            </ul>
-          </li>
+          <li>5.1. <a href="#toc23">Suprimindo a saída padrão</a></li>
+          <li>5.2. <a href="#toc26">O endereço</a></li>
           <li>5.3. <a href="#toc30">Interrompendo o processamento</a></li>
           <li>5.4. <a href="#toc31">Invertendo a lógica</a></li>
-          <li>5.5. <a href="#toc32">Aplicando vários comandos de uma vez</a>
-            <ul>
-              <li>5.5.1. <a href="#toc33">Comandos normais</a></li>
-              <li>5.5.2. <a href="#toc34">Comandos com parâmetros</a></li>
-              <li>5.5.3. <a href="#toc35">Terceira via</a></li>
-            </ul>
-          </li>
+          <li>5.5. <a href="#toc32">Aplicando vários comandos de uma vez</a></li>
         </ul>
       </li>
       <li>
         <a href="#toc36">Conceitos complementares</a>
         <ul>
           <li>6.1. <a href="#toc37">Sed e shell</a></li>
-          <li>6.2. <a href="#toc38">Usando outros delimitadores</a>
-            <ul>
-              <li>6.2.1. <a href="#toc39">No comando s</a></li>
-              <li>6.2.2. <a href="#toc40">No endereço</a></li>
-            </ul>
-          </li>
+          <li>6.2. <a href="#toc38">Usando outros delimitadores</a></li>
           <li>6.3. <a href="#toc41">Escapes para caracteres especiais</a></li>
-          <li>6.4. <a href="#toc42">Gravando o resultado no mesmo arquivo</a>
-            <ul>
-              <li>6.4.1. <a href="#toc43">Problema inicial</a></li>
-              <li>6.4.2. <a href="#toc44">Solução genérica</a></li>
-              <li>6.4.3. <a href="#toc45">Solução segura</a></li>
-            </ul>
-          </li>
+          <li>6.4. <a href="#toc42">Gravando o resultado no mesmo arquivo</a></li>
         </ul>
       </li>
       <li>
@@ -114,18 +76,8 @@
           <li>7.1. <a href="#toc47">Como substituir alguma coisa por uma quebra de linha</a></li>
           <li>7.2. <a href="#toc48">Apagando linhas específicas</a></li>
           <li>7.3. <a href="#toc49">Como ignorar maiúsculas e minúsculas</a></li>
-          <li>7.4. <a href="#toc50">Lendo e gravando em arquivos externos</a>
-            <ul>
-              <li>7.4.1. <a href="#toc51">Lendo arquivos</a></li>
-              <li>7.4.2. <a href="#toc52">Gravando arquivos</a></li>
-            </ul>
-          </li>
-          <li>7.5. <a href="#toc53">Trocando um trecho de texto por outro</a>
-            <ul>
-              <li>7.5.1. <a href="#toc54">Trocar várias linhas por uma</a></li>
-              <li>7.5.2. <a href="#toc55">Trocar várias linhas por outras</a></li>
-            </ul>
-          </li>
+          <li>7.4. <a href="#toc50">Lendo e gravando em arquivos externos</a></li>
+          <li>7.5. <a href="#toc53">Trocando um trecho de texto por outro</a></li>
           <li>7.6. <a href="#toc56">Emulando outros comandos</a></li>
         </ul>
       </li>
@@ -135,15 +87,7 @@
           <li>8.1. <a href="#toc58">Monitorando um arquivo</a></li>
           <li>8.2. <a href="#toc59">Colocando comandos Sed num arquivo</a></li>
           <li>8.3. <a href="#toc60">Tornando arquivos Sed executáveis</a></li>
-          <li>8.4. <a href="#toc61">Conhecendo os registradores internos</a>
-            <ul>
-              <li>8.4.1. <a href="#toc62">Apresentação</a></li>
-              <li>8.4.2. <a href="#toc63">Exemplo</a></li>
-              <li>8.4.3. <a href="#toc64">Exemplo gráfico</a></li>
-              <li>8.4.4. <a href="#toc65">Resumão</a></li>
-              <li>8.4.5. <a href="#toc66">Fluxograma</a></li>
-            </ul>
-          </li>
+          <li>8.4. <a href="#toc61">Conhecendo os registradores internos</a></li>
         </ul>
       </li>
       <li>
