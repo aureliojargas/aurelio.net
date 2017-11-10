@@ -74,6 +74,15 @@ defaults:
       hide_ads: true
       hide_read_more: true
 
+  -
+    scope:
+      path: "sed"
+    values:
+      css_extra: /regex/regex.css
+      article_footer_after: sed-learn-more.html
+      hide_ads: true
+      hide_read_more: true
+
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
