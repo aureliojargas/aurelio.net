@@ -407,7 +407,7 @@ prompt$ sed -n 5p texto.txt
 
   <p>A execução do <em>Sed</em> é igual a de outro aplicativo qualquer de manipulação de texto, aceitando como parâmetro um nome de arquivo, ou na falta deste, lê o texto da <strong>entrada padrão</strong>, via duto <strong><code>|</code></strong> ou redirecionamento <strong><code>&lt;</code></strong>.</p>
 
-  <p>E como dica geral <strong>SEMPRE</strong> coloque os comandos do <em>Sed</em> entre aspas simples '', para evitar que o <em>shell</em> os interprete erroneamente. Veja mais detalhes no tópico <a href="sed-HOWTO-6.html#toc1">Sed e shell</a>.</p>
+  <p>E como dica geral <strong>SEMPRE</strong> coloque os comandos do <em>Sed</em> entre aspas simples '', para evitar que o <em>shell</em> os interprete erroneamente. Veja mais detalhes no tópico <a href="#toc37">Sed e shell</a>.</p>
 
   <pre>
 prompt$ sed 'p' texto.txt
@@ -415,7 +415,7 @@ prompt$ cat texto.txt | sed 'p'
 prompt$ sed 'p' &lt; texto.txt
 </pre>
 
-  <p>Com outra opção ainda, pode-se executar diretamente um arquivo com comandos Sed. Para mais informações, veja o tópico <a href="sed-HOWTO-8.html#toc3">Tornando arquivos Sed executáveis</a>.</p>
+  <p>Com outra opção ainda, pode-se executar diretamente um arquivo com comandos Sed. Para mais informações, veja o tópico <a href="#toc60">Tornando arquivos Sed executáveis</a>.</p>
 
   <h1 id="toc19">4. Os comandos do sed</h1>
 
@@ -588,7 +588,7 @@ prompt$ sed '/estorvo/,+3d' texto.txt
 prompt$ sed 'd' texto.txt
 </pre>
 
-  <p>(*) veja o tópico <a href="sed-HOWTO-10.html">Nota sobre os adicionais GNU</a></p>
+  <p>(*) veja o tópico <a href="#toc71">Nota sobre os adicionais GNU</a></p>
 
   <h2 id="toc30">5.3. Interrompendo o processamento</h2>
 
@@ -652,7 +652,7 @@ prompt$ sed -e '1i começo de tudo' -e '5d' texto.txt
 
   <h3 id="toc35">5.5.3. Terceira via</h3>
 
-  <p>Outra maneira de especificar vários comandos (e a mais consistente e garantida) é colocá-los num arquivo, um por linha. Veja o tópico <a href="sed-HOWTO-8.html#toc2">Colocando comandos Sed num arquivo</a>.</p>
+  <p>Outra maneira de especificar vários comandos (e a mais consistente e garantida) é colocá-los num arquivo, um por linha. Veja o tópico <a href="#toc59">Colocando comandos Sed num arquivo</a>.</p>
 
   <h1 id="toc36">6. Conceitos complementares</h1>
 
@@ -674,7 +674,7 @@ prompt$ sed 's/isso/aquilo/' texto.txt
 prompt$ sed "s/$HOME/aquilo/" texto.txt
 </pre>
 
-  <p>Ou ainda, para evitar completamente a interpretação do shell, sem se preocupar com aspas, coloque os comandos Sed num arquivo. Veja o tópico <a href="sed-HOWTO-8.html#toc2">Colocando comandos Sed num arquivo</a>.</p>
+  <p>Ou ainda, para evitar completamente a interpretação do shell, sem se preocupar com aspas, coloque os comandos Sed num arquivo. Veja o tópico <a href="#toc59">Colocando comandos Sed num arquivo</a>.</p>
 
   <h2 id="toc38">6.2. Usando outros delimitadores</h2>
 
@@ -728,7 +728,7 @@ prompt$ sed '\,/usr/local/bin,d' texto.txt
    \xNN    o caractere de valor hexadecimal NN
 </pre>
 
-  <p>(*) veja o tópico <a href="sed-HOWTO-10.html">Nota sobre os adicionais GNU</a></p>
+  <p>(*) veja o tópico <a href="#toc71">Nota sobre os adicionais GNU</a></p>
 
   <h2 id="toc42">6.4. Gravando o resultado no mesmo arquivo</h2>
 
@@ -796,13 +796,13 @@ prompt$ /g' texto.txt
 prompt$ sed ':a;$!N;s/\n/ /g;ta'
 </pre>
 
-  <p>(*) veja o tópico <a href="sed-HOWTO-10.html">Nota sobre os adicionais GNU</a></p>
+  <p>(*) veja o tópico <a href="#toc71">Nota sobre os adicionais GNU</a></p>
 
   <h2 id="toc48">7.2. Apagando linhas específicas</h2>
 
   <p>O comando para apagar linhas é o <strong><code>d</code></strong>.</p>
 
-  <p>O único detalhe nesta tarefa é especificar <strong>quais</strong> linhas você vai querer apagar. Isso está completamente coberto no tópico <a href="sed-HOWTO-5.html#toc4">O endereço</a>.</p>
+  <p>O único detalhe nesta tarefa é especificar <strong>quais</strong> linhas você vai querer apagar. Isso está completamente coberto no tópico <a href="#toc26">O endereço</a>.</p>
 
   <h2 id="toc49">7.3. Como ignorar maiúsculas e minúsculas</h2>
 
@@ -826,7 +826,7 @@ prompt$ sed '/root/Id' texto.txt
 prompt$ sed 's/root/administrador/Ig' texto.txt
 </pre>
 
-  <p>(*) veja o tópico <a href="sed-HOWTO-10.html">Nota sobre os adicionais GNU</a></p>
+  <p>(*) veja o tópico <a href="#toc71">Nota sobre os adicionais GNU</a></p>
 
   <h2 id="toc50">7.4. Lendo e gravando em arquivos externos</h2>
 
@@ -840,7 +840,7 @@ prompt$ sed -e '1r cabecalho.txt' -e '$r rodape.txt' texto.txt
 
   <p>Para incluir o cabeçalho após a linha <strong>1</strong> e incluir o rodapé após a <strong>última</strong> linha.</p>
 
-  <p>(*) a explicação do porquê das opções <strong><code>-e</code></strong> está no tópico <a href="sed-HOWTO-5.html#toc10">Aplicando vários comandos de uma vez</a>.</p>
+  <p>(*) a explicação do porquê das opções <strong><code>-e</code></strong> está no tópico <a href="#toc32">Aplicando vários comandos de uma vez</a>.</p>
 
   <h3 id="toc52">7.4.2. Gravando arquivos</h3>
 
@@ -856,7 +856,7 @@ prompt$ grep 'estorvo' texto.txt &gt; estorvos.txt
 prompt$ sed '/estorvo/w estorvos.txt' texto.txt
 </pre>
 
-  <p>Gravar dados num arquivo também pode servir de <strong>espaço auxiliar</strong> caso o <em>espaço reserva</em> não seja suficiente. Mas esta é uma opção drástica, não tão flexível. Mais informações sobre o <em>espaço reserva</em> no tópico <a href="sed-HOWTO-8.html#toc4">Conhecendo os registradores internos</a>.</p>
+  <p>Gravar dados num arquivo também pode servir de <strong>espaço auxiliar</strong> caso o <em>espaço reserva</em> não seja suficiente. Mas esta é uma opção drástica, não tão flexível. Mais informações sobre o <em>espaço reserva</em> no tópico <a href="#toc61">Conhecendo os registradores internos</a>.</p>
 
   <h2 id="toc53">7.5. Trocando um trecho de texto por outro</h2>
 
@@ -879,7 +879,7 @@ prompt$ aqui tinha texto pré-formatado' texto.html
 prompt$ sed '/&lt;pre&gt;/,/&lt;\/pre&gt;/c aqui tinha texto pré-formatado' texto.html
 </pre>
 
-  <p>(*) veja o tópico <a href="sed-HOWTO-10.html">Nota sobre os adicionais GNU</a></p>
+  <p>(*) veja o tópico <a href="#toc71">Nota sobre os adicionais GNU</a></p>
 
   <h3 id="toc55">7.5.2. Trocar várias linhas por outras</h3>
 
@@ -893,7 +893,7 @@ prompt$ porque?\
 prompt$ porque sim' texto.html
 </pre>
 
-  <p>É claro, quando o comando começa a ficar grande desse jeito, é melhor colocá-lo num arquivo. Saiba mais detalhes sobre isso no tópico <a href="sed-HOWTO-8.html#toc2">Colocando comandos sed num arquivo</a>.</p>
+  <p>É claro, quando o comando começa a ficar grande desse jeito, é melhor colocá-lo num arquivo. Saiba mais detalhes sobre isso no tópico <a href="#toc59">Colocando comandos sed num arquivo</a>.</p>
 
   <p>Mas melhor ainda é separar o comando <em>Sed</em> do texto, colocando-o num arquivo separado. Assim, quando se precisar alterar este texto, basta editá-lo, sem mudar o comando <em>Sed</em>, e sem precisar ficar colocando <strong><code>\</code></strong> no final de cada linha.</p>
 
@@ -909,7 +909,7 @@ prompt$ sed -e '/&lt;\/pre&gt;/r desculpa.txt' -e '/&lt;pre&gt;/,/&lt;\/pre&gt;/
 
   <p>Esta segunda solução é mais difícil de entender e implementar, mas é muito mais prática caso a alteração do texto a ser colocado seja freqüente, além destas alterações poderem ser feitas por alguém que nem saiba o que é <em>Sed</em>, pois será apenas um texto normal.</p>
 
-  <p>Note que sempre que o <code>&lt;/pre&gt;</code> foi referenciado nos <em>endereços</em>, a barra foi escapada, ficando <code>&lt;\/pre&gt;</code>. A explicação desse escape está em <a href="sed-HOWTO-6.html#toc2">Usando outros delimitadores</a>.</p>
+  <p>Note que sempre que o <code>&lt;/pre&gt;</code> foi referenciado nos <em>endereços</em>, a barra foi escapada, ficando <code>&lt;\/pre&gt;</code>. A explicação desse escape está em <a href="#toc38">Usando outros delimitadores</a>.</p>
 
   <p><strong>obs.:</strong> talvez o <code>&lt;pre&gt;&lt;/pre&gt;</code> não seja um exemplo dos mais didáticos, mas não me veio algo mais comum à mente...</p>
 
@@ -974,7 +974,7 @@ prompt$ tail -f /var/log/messages | sed -nu '/sshd/p'
 
   <p>Cuidado com -nu perto de crianças! :)</p>
 
-  <p>(*) veja o tópico <a href="sed-HOWTO-10.html">Nota sobre os adicionais GNU</a></p>
+  <p>(*) veja o tópico <a href="#toc71">Nota sobre os adicionais GNU</a></p>
 
   <h2 id="toc59">8.2. Colocando comandos Sed num arquivo</h2>
 
@@ -1229,7 +1229,7 @@ abacaxi
 
   <h3 id="toc66">8.4.5. Fluxograma</h3>
 
-  <p>Para uma representação gráfica dos fluxos e comandos que manipulam estes registradores, veja o tópico <a href="sed-HOWTO-9.html#toc3">Fluxos dos registradores internos</a>.</p>
+  <p>Para uma representação gráfica dos fluxos e comandos que manipulam estes registradores, veja o tópico <a href="#toc70">Fluxos dos registradores internos</a>.</p>
 
   <h1 id="toc67">9. Fluxogramas</h1>
 
@@ -1287,7 +1287,7 @@ COMEÇO   ---------&gt;|  COMANDOS  |----------&gt; FIM DO PROGRAMA
 
 </pre>
 
-  <p>Veja explicação sobre estes registradores no tópico <a href="sed-HOWTO-8.html#toc4">Conhecendo os registradores internos</a>.</p>
+  <p>Veja explicação sobre estes registradores no tópico <a href="#toc61">Conhecendo os registradores internos</a>.</p>
 
   <h1 id="toc71">10. Nota sobre os adicionais GNU</h1>
 
