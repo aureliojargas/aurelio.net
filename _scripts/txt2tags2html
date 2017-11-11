@@ -10,6 +10,8 @@ outfile="${infile%.t2t}.html"     # foo.html
 site_root=$(pwd | sed 's@\(/aurelio.net/\).*@\1@')
 txt2tags="$site_root/_scripts/txt2tags-2.6.1102"
 tidy="$site_root/_scripts/html-tidy"
+replace="$site_root/_scripts/replace"
+replace_templates="$site_root/_scripts/replace-templates"
 
 front_matter() {
     echo "---"
@@ -56,5 +58,22 @@ rm "$outfile.temp"
 
 echo
 echo "Saved $outfile"
+
+
+echo
+echo "Will try to apply image+caption fix"
+
+# Txt2tags files use <table> to align images with captions.
+# Let's convert that to proper HTML tags and styling.
+
+"$replace" --regex --in-place \
+    --from-file "$replace_templates/txt2tags-image-caption-from.html" \
+    --to-file   "$replace_templates/txt2tags-image-caption-to.html" \
+    "$outfile"
+
+"$replace" --regex --in-place \
+    --from-file "$replace_templates/txt2tags-linked-image-caption-from.html" \
+    --to-file   "$replace_templates/txt2tags-linked-image-caption-to.html" \
+    "$outfile"
 
 comments_warning
