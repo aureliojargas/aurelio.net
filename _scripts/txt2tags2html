@@ -13,6 +13,11 @@ tidy="$site_root/_scripts/html-tidy"
 replace="$site_root/_scripts/replace"
 replace_templates="$site_root/_scripts/replace-templates"
 
+info() {
+    echo
+    echo "-------------------------- $*"
+}
+
 front_matter() {
     echo "---"
     echo "date: 1999-12-31"
@@ -34,37 +39,33 @@ comments_warning() {
     c=$(grep '^%[^!]' "$infile" | grep -v '^%%% *$')
     if test -n "$c"
     then
-        echo
-        echo "**** WARNING: Hidden comments that will be lost:"
+        info "WARNING: Hidden comments that will be lost:"
         echo "$c"
     fi
 
     n=$(grep -c '^%%% *$' "$infile")
     if test $n -gt 0
     then
-        echo
-        echo "**** WARNING: There are $n block comments markers: %%%"
+        info "WARNING: There are $n block comments markers: %%%"
     fi
 }
 
-# convert
+info "Convert to HTML"
 front_matter > "$outfile"
 clean_infile | "$txt2tags" -t html5 --no-headers -i - -o - >> "$outfile"
+echo "Saved $outfile"
 
-# tidy
+info "Tidy up"
 cp "$outfile" "$outfile.temp"
 "$tidy" "$outfile.temp" > "$outfile"
 rm "$outfile.temp"
-
-echo
 echo "Saved $outfile"
 
 
-echo
-echo "Will try to apply image+caption fix"
-
 # Txt2tags files use <table> to align images with captions.
 # Let's convert that to proper HTML tags and styling.
+
+info "Fix image+caption markup"
 
 "$replace" --regex --in-place \
     --from-file "$replace_templates/txt2tags-image-caption-from.html" \
