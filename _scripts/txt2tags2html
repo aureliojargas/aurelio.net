@@ -47,11 +47,11 @@ comments_warning() {
 
 # convert
 front_matter > "$outfile"
-clean_infile | $txt2tags -t html5 --no-headers -i - -o - >> "$outfile"
+clean_infile | "$txt2tags" -t html5 --no-headers -i - -o - >> "$outfile"
 
 # tidy
 cp "$outfile" "$outfile.temp"
-$tidy "$outfile.temp" > "$outfile"
+"$tidy" "$outfile.temp" > "$outfile"
 rm "$outfile.temp"
 
 echo
