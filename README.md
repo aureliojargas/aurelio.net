@@ -38,7 +38,7 @@ In txt2tags files, use borderless centered tables:
 ```
   | [image.jpg]
   | Image caption
-```  
+```
 
 In Markdown files, use the image tag solo in a paragraph of its own, and provide the caption. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/master/_plugins/imgcaption.rb) will generate the HTML markup at build:
 
@@ -52,6 +52,21 @@ In HTML files, use the following structure:
 <p class="figure">
   <img src="image.jpg">
   <span>Image caption</span>
+</p>
+
+<!-- Linked image: -->
+
+<p class="figure">
+  <a href="foo.html">
+    <img src="image.jpg">
+  </a>
+  <span>Image caption</span>
+</p>
+
+<!-- No caption: -->
+
+<p class="figure">
+  <img src="image.jpg">
 </p>
 ```
 
