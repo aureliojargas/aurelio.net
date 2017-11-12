@@ -97,6 +97,18 @@ The site template ([_layouts/2014.html](https://github.com/aureliojargas/aurelio
 
 - `title_prefix: "Foo: "` — To add a prefix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
 
+## Setup local development
+
+Execute those commands from the repository root.
+
+```bash
+# Easier access to the repo scripts
+export PATH="$PWD/_scripts:$PATH"
+
+# Setup under Termux
+termux-fix-shebang _scripts/*
+```
+
 ## License
 
 Jekyll-related and Liquid codes are Public Domain.
