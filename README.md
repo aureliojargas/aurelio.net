@@ -101,12 +101,33 @@ The site template ([_layouts/2014.html](https://github.com/aureliojargas/aurelio
 
 Execute those commands from the repository root.
 
+For all platforms:
+
 ```bash
 # Easier access to the repo scripts
 export PATH="$PWD/_scripts:$PATH"
+```
 
-# Setup under Termux
+Setup under Termux:
+
+```bash
+# Fix scripts' shebang
 termux-fix-shebang _scripts/*
+
+# Python2 for txt2tags
+pkg install python2
+sed '1 s/python/python2/' -i _scripts/txt2tags-2.6.1102
+
+# Fix include paths for txt2tags files
+replace -f /a/www/ -t $PWD/ -i include/*/config.t2t
+
+# Install Jekyll requirements for bundler
+apt install clang make ruby-dev libffi-dev
+
+# Get the public IP for Jekyll serve
+ifconfig wlan0
+
+# html-tidy: cannot install nor compile :(
 ```
 
 ## License
