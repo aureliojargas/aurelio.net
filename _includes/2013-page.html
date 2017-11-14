@@ -9,6 +9,10 @@
 
 {{ content | imgcaption }}
 
+{% if page.article_footer_after %}
+{% include {{ page.article_footer_after }} %}
+{% endif %}
+
 	</div><!--article-body-->
 
 {% include article-footer.html more_url=".." %}

@@ -83,6 +83,12 @@ defaults:
       hide_ads: true
       hide_read_more: true
 
+  -
+    scope:
+      path: "viagem/atacama"
+    values:
+      article_footer_after: atacama-nav.html
+
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
