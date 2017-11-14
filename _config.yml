@@ -87,6 +87,7 @@ defaults:
     scope:
       path: "viagem/atacama"
     values:
+      layout: 2013-page
       article_footer_after: atacama-nav.html
 
 ### Page config (to insert in Front Matter)
