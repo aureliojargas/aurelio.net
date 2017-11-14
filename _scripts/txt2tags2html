@@ -62,10 +62,10 @@ rm "$outfile.temp"
 echo "Saved $outfile"
 
 
+info "Fix images markup"
+
 # Txt2tags files use <table> to align images with captions.
 # Let's convert that to proper HTML tags and styling.
-
-info "Fix image+caption markup"
 
 "$replace" --regex --in-place \
     --from-file "$replace_templates/txt2tags-image-caption-from.html" \
@@ -76,5 +76,13 @@ info "Fix image+caption markup"
     --from-file "$replace_templates/txt2tags-linked-image-caption-from.html" \
     --to-file   "$replace_templates/txt2tags-linked-image-caption-to.html" \
     "$outfile"
+
+# Plain "solo" images in a paragraph
+
+"$replace" --regex --in-place \
+    --from-file "$replace_templates/txt2tags-image-solo-from.html" \
+    --to-file   "$replace_templates/txt2tags-image-solo-to.html" \
+    "$outfile"
+
 
 comments_warning
