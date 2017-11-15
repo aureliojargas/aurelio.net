@@ -214,7 +214,6 @@ table.grid tr:hover td {
 #article-body > p > img + em, /* Markdown image\n*caption* */
 .figure span {
   font-family: Arial, sans-serif;
-  font-size: 75%;
   margin: 0;
   display: block;
   color: gray;
