@@ -90,6 +90,13 @@ defaults:
       layout: 2013-page
       article_footer_after: atacama-nav.html
 
+  -
+    scope:
+      path: "viagem/atacama/album"
+    values:
+      layout: 2013-page
+      article_footer_after: atacama-albuns.html
+
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
