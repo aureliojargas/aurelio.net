@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="/assets/2013/topbar.css">
 	<link rel="stylesheet" href="/assets/monokai.css">
 {% endif %}
+{% if page.css_extra %}
+	<link rel="stylesheet" href="{{ page.css_extra }}">
+{% endif %}
 {% include head-open-graph.html %}
 {% include analytics.html %}
 {% include ad-mobile.html %}
