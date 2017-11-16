@@ -21,9 +21,14 @@ info() {
 front_matter() {
     echo "---"
     echo "date: 1999-12-31"
-    echo "title: Converted $infile"
+    echo "title: $(get_txt2tags_title)"
     echo "---"
     echo
+}
+
+get_txt2tags_title() {
+    # Join first two lines
+    cat "$infile" | sed 2q | sed 'N;s/\n/ - /'
 }
 
 clean_infile() {
