@@ -268,7 +268,9 @@ code {
   background-color: #e8e8e8;
 }
 ul.compact li,
-#content ul.compact li {
+ol.compact li,
+#content ul.compact li,
+#content ol.compact li {
   margin-bottom: 0;
 }
 #content table.compact {
