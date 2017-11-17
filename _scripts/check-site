@@ -1,11 +1,11 @@
 #!/bin/bash
 # Check for errors on the generated site
 
-set -eu
-
 error() {
-    echo "**** ERROR: $1"
-    echo "$2" | head -n 40
+    echo
+    echo "**** FAILED :("
+    echo
+    echo "$*" | head -n 40
     exit 1
 }
 
@@ -16,21 +16,43 @@ cd ..
 # Enter the generated site folder
 cd _site
 
-relative_urls=$(
-    # ./
-    grep -r -i -E '(src|href)="\./' .
-    grep -r -i -E '(src|href)="[^"]*/\./' .
+# Do not use relative URLs in links and images
+check_relative_urls() {
+    local wrong
 
-    # ../
-    grep -r -i -E '(src|href)="\.\./' .
-    grep -r -i -E '(src|href)="[^"]*/\.\./' .
-)
+    wrong=$(
+        # ./
+        grep -r -i -E '(src|href)="\./' .
+        grep -r -i -E '(src|href)="[^"]*/\./' .
 
-unquoted_attributes=$(
-    # Grep for <tag foo=bar> instead of <tag foo="bar">
-    grep -r -i -E '<[a-z]+ [^>]*[a-z]=[^"]' . |
-        grep -F -v 'content="text/html; charset=utf-8"'
-)
+        # ../
+        grep -r -i -E '(src|href)="\.\./' .
+        grep -r -i -E '(src|href)="[^"]*/\.\./' .
+    )
 
-test -n "$relative_urls" && error "Do not use relative URLs" "$relative_urls"
-test -n "$unquoted_attributes" && error "Unquoted HTML attributes" "$unquoted_attributes"
+    test -n "$wrong" && error "$wrong"
+}
+
+
+# Grep for <tag foo=bar> instead of <tag foo="bar">
+check_unquoted_attributes() {
+    local wrong
+
+    wrong=$(
+        grep -r -i -E '<[a-z]+ [^>]*[a-z]=[^"]' . |
+            grep -F -i -v 'content="text/html; charset=utf-8"'
+    )
+
+    test -n "$wrong" && error "$wrong"
+}
+
+active_checks="
+    check_unquoted_attributes
+    check_relative_urls
+"
+
+for check in $active_checks
+do
+    echo "Running $check..."
+    $check
+done
