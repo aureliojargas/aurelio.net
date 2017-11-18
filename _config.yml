@@ -3,99 +3,99 @@
 # Restart Jekyll --watch after editing here.
 
 # True to turn on Disqus, Analytics, etc.
-production: true
+#production: true
 
 name: Aurelio.net
 url: http://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
 
 ### Syntax Highlight
-highlighter: rouge  # Default since Jekyll 3.0
+#highlighter: rouge  # Default since Jekyll 3.0
 
 ### Markdown
-markdown: redcarpet
-redcarpet:
-  extensions: ["fenced_code_blocks", "autolink"]
+#markdown: redcarpet
+##redcarpet:
+#  extensions: ["fenced_code_blocks", "autolink"]
 # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - /**/README.md
-  - /**/TODO
-  - vendor
-include:
-  - _redirects
+#exclude:
+#  - Gemfile
+#  - Gemfile.lock
+#  - README.md
+#  - /**/README.md
+#  - /**/TODO
+#  - vendor
+#include:
+#  - _redirects
 # Cannot specify the full path in Jekyll :(
 # https://github.com/mojombo/jekyll/issues/906
 #  - sed/programas/txt2sgml-sed/_cabecalho.sgml
-  - _cabecalho.sgml
+#  - _cabecalho.sgml
 
-defaults:
-  -
-    scope:
-      path: ""  # all files in the project
-    values:
-      layout: "2014"
-      author: aurelio
-  -
-    scope:  # all posts
-      path: ""
-      type: posts
-    values:
-      # /blog/2009/04/29/slap-chop/index.html
-      permalink: /blog/:year/:month/:day/:title/
-  -
-    scope:
-      path: "curso"
-    values:
-      title_prefix: "Evento: "
-      hide_ads: true
-      hide_date: true
-      hide_tags: true
-      hide_share: true
-  -
-    scope:
-      path: "regex"
-    values:
-      css_extra: /regex/regex.css
-      article_footer_after: regex-footer.html
-      hide_ads: true
-      hide_read_more: true
-  -
-    scope:
-      path: "shell"
-    values:
-      css_extra: /regex/regex.css
-      article_footer_after: shell-learn-more.html
-      hide_ads: true
-      hide_read_more: true
+# defaults:
+#   -
+#     scope:
+#       path: ""  # all files in the project
+#     values:
+#       layout: "2014"
+#       author: aurelio
+#   -
+#     scope:  # all posts
+#       path: ""
+#       type: posts
+#     values:
+#       # /blog/2009/04/29/slap-chop/index.html
+#       permalink: /blog/:year/:month/:day/:title/
+#   -
+#     scope:
+#       path: "curso"
+#     values:
+#       title_prefix: "Evento: "
+#       hide_ads: true
+#       hide_date: true
+#       hide_tags: true
+#       hide_share: true
+#   -
+#     scope:
+#       path: "regex"
+#     values:
+#       css_extra: /regex/regex.css
+#       article_footer_after: regex-footer.html
+#       hide_ads: true
+#       hide_read_more: true
+#   -
+#     scope:
+#       path: "shell"
+#     values:
+#       css_extra: /regex/regex.css
+#       article_footer_after: shell-learn-more.html
+#       hide_ads: true
+#       hide_read_more: true
 
-  -
-    scope:
-      path: "sed"
-    values:
-      css_extra: /regex/regex.css
-      article_footer_after: sed-learn-more.html
-      hide_ads: true
-      hide_read_more: true
+#   -
+#     scope:
+#       path: "sed"
+#     values:
+#       css_extra: /regex/regex.css
+#       article_footer_after: sed-learn-more.html
+#       hide_ads: true
+#       hide_read_more: true
 
-  -
-    scope:
-      path: "viagem/atacama"
-    values:
-      layout: 2013-page
-      article_footer_after: atacama-nav.html
+#   -
+#     scope:
+#       path: "viagem/atacama"
+#     values:
+#       layout: 2013-page
+#       article_footer_after: atacama-nav.html
 
-  -
-    scope:
-      path: "viagem/atacama/album"
-    values:
-      layout: 2013-page
-      article_footer_after: atacama-albuns.html
+#   -
+#     scope:
+#       path: "viagem/atacama/album"
+#     values:
+#       layout: 2013-page
+#       article_footer_after: atacama-albuns.html
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
