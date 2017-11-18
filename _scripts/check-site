@@ -16,27 +16,6 @@ cd ..
 # Enter the generated site folder
 cd _site
 
-# All folders must have a redirect for trailing slash
-# See https://github.com/aureliojargas/aurelio.net/issues/34
-check_folder_redirects() {
-    local wrong
-
-    for path in $(find . -type d | cut -c2- | sort)
-    do
-        # Skip false positives
-        case "$path" in
-            /blog/20[0-9][0-9]) continue;;
-            /blog/20[0-9][0-9]/[0-9][0-9]) continue;;
-            /blog/20[0-9][0-9]/[0-9][0-9]/[0-9][0-9]) continue;;
-        esac
-
-        # Is this folder already redirected?
-        grep -q "^$path  " _redirects || wrong="$wrong $path"
-    done
-
-    test -n "$wrong" && error "$(echo "$wrong" | tr ' ' '\n')"
-}
-
 # Do not use relative URLs in links and images
 check_relative_urls() {
     local wrong
@@ -68,7 +47,6 @@ check_unquoted_attributes() {
 }
 
 active_checks="
-    check_folder_redirects
     check_unquoted_attributes
     check_relative_urls
 "
