@@ -6,13 +6,13 @@ RAC - Informações e Documentação
 
 %!preproc:  '\| ([1-9]) '	'| **\1** '
 %!postproc: '^(\$ .*)'  '<B>\1</B>'
-%!postproc: <TD>@<	'<td bgcolor=cyan   >&nbsp;<'
-%!postproc: <TD>#<	'<td bgcolor=blue   >&nbsp;<'
-%!postproc: <TD>=<	'<td bgcolor=silver >&nbsp;<'
-%!postproc: <TD>:<	'<td bgcolor=lightgreen>&nbsp;<'
-%!postproc: <TD>\^<	'<td bgcolor=magenta>&nbsp;<'
-%!postproc: <TD>\$<	'<td bgcolor=red    >&nbsp;<'
-%!postproc: <TD>&amp;<	'<td bgcolor=orange >&nbsp;<'
+%!postproc: <TD>@<	'<td bgcolor="cyan"   >&nbsp;<'
+%!postproc: <TD>#<	'<td bgcolor="blue"   >&nbsp;<'
+%!postproc: <TD>=<	'<td bgcolor="silver" >&nbsp;<'
+%!postproc: <TD>:<	'<td bgcolor="lightgreen">&nbsp;<'
+%!postproc: <TD>\^<	'<td bgcolor="magenta">&nbsp;<'
+%!postproc: <TD>\$<	'<td bgcolor="red"    >&nbsp;<'
+%!postproc: <TD>&amp;<	'<td bgcolor="orange" >&nbsp;<'
 
 %!include: ../menu.t2t
 %!include: menu.t2t
