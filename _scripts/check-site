@@ -39,7 +39,7 @@ check_unquoted_attributes() {
     local wrong
 
     wrong=$(
-        grep -r -i -E '<[a-z]+ ([^>]* )?[a-z]+=[^"]' . |
+        grep -r -i --binary-files=without-match -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' . |
             # Remove false positives
             grep -F -i -v 'content="text/html; charset=utf-8"' |
             grep -E -v '^\./surf/misc/fix_iphoto_pages:' |
