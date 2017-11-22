@@ -52,7 +52,21 @@ check_unquoted_attributes() {
     test -n "$wrong" && error "$wrong"
 }
 
+check_windows_linebreak() {
+    local wrong
+
+    wrong=$(
+        find . -not -type d -exec file {} \; | grep CRLF |
+            # Remove false positives
+            grep -v '^\./projects/moneylog/' |
+            grep -v '^\./moneylog/'
+    )
+
+    test -n "$wrong" && error "$wrong"
+}
+
 active_checks="
+    check_windows_linebreak
     check_unquoted_attributes
     check_relative_urls
 "
