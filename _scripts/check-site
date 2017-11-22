@@ -42,8 +42,11 @@ check_unquoted_attributes() {
         grep -r -i --binary-files=without-match -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' . |
             # Remove false positives
             grep -F -i -v 'content="text/html; charset=utf-8"' |
-            grep -E -v '^\./surf/misc/fix_iphoto_pages:' |
-            grep -E -v '^\./surf/surfistas_generate:'
+            grep -E -v '^\./bin/python/txt2tags-r900.py:' |
+            grep -E -v '^\./sed/programas/yahoogroups-kill-sig.sed:' |
+            grep -E -v '^\./vim/vimrc-ivan.txt:' |
+            #XXX txt2tags generated files, won't fix now
+            grep -E -v '<HR NOSHADE SIZE=1>'
     )
 
     test -n "$wrong" && error "$wrong"
