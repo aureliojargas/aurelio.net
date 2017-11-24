@@ -57,6 +57,12 @@ comments_warning() {
     fi
 }
 
+if ! test -f "$infile"
+then
+    echo "Input file not found: $infile"
+    exit 1
+fi
+
 info "Convert to HTML"
 front_matter > "$outfile"
 clean_infile | "$txt2tags" -t html5 --no-headers -i - -o - >> "$outfile"
