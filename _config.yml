@@ -76,6 +76,12 @@ defaults:
 
   -
     scope:
+      path: "shell/apostila"
+    values:
+      article_footer_after: nav-shell-apostila.html
+
+  -
+    scope:
       path: "sed"
     values:
       css_extra: /regex/regex.css
