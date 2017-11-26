@@ -78,6 +78,10 @@ table {
   margin: 2em auto;
 }
 
+table.left {
+  margin-left: 0;
+}
+
 td,
 th {
   line-height: 1.2em;
