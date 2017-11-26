@@ -77,9 +77,12 @@ th {
 td {
   padding: 4px 5px;
 }
-td.center { text-align: center; }
-td.right  { text-align: right; }
-
+th.center, td.center {
+  text-align: center;
+}
+th.right, td.right {
+  text-align: right;
+}
 table.tableborder td,
 table.tableborder th {
   border-width: 1px;
