@@ -65,7 +65,17 @@ check_windows_linebreak() {
     test -n "$wrong" && error "$wrong"
 }
 
+check_missing_article_date() {
+    local wrong
+
+    # This is the default date inserted by the txt2tags2html script
+    git grep '^date: 1999-12-31'
+
+    test -n "$wrong" && error "$wrong"
+}
+
 active_checks="
+    check_missing_article_date
     check_windows_linebreak
     check_unquoted_attributes
     check_relative_urls
