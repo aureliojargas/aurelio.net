@@ -1,375 +1,62 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/kiwi/kiwi.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<script type="text/javascript" src="/include/kiwi/tagmenu-diet.js"></script>
-<script type="text/javascript" src="/include/kiwi/tagmenu-urls.js"></script>
-<TITLE>Apostila Programação Profissional em Shell Script :: aurelio.net</TITLE>
-</HEAD>
-<BODY class="apostila">
+---
+date: 2003-08-27
+title: Conteúdo da Apostila Programação Profissional em Shell Script
+---
 
-<DIV ID="header">
-<H1>Apostila Programação Profissional em Shell Script</H1>
-<H2>Conteúdo</H2>
-<H3><a href="/">aurelio.net</a> / <a href="/shell">shell</a> / <a href="/shell/apostila">apostila</a></H3>
-</DIV>
+<h2>Sobre o conteúdo</h2>
 
-<DIV ID="main">
-<div style="background:#eee;border:1px solid #ccc;margin:3em auto">
+<ul>
+  <li>O conteúdo não é específico de Bash, Ksh ou Zsh, é Shell.</li>
+  <li>O conteúdo é Shell, sem usar das características obscuras, funcionando em UNIX, AIX, Linux, Cygwin, etc.</li>
+  <li>Todos os exemplos de código foram testados e são funcionais.</li>
+  <li>Os exemplos estão escritos em Bourne Shell. Alguns são em Bash.</li>
+  <li>Os capítulos estão divididos por aulas não seqüenciais. A leitura pode ser feita em qualquer ordem.</li>
+  <li>A escrita está em forma didática e narrativa (não é resumida ou em listagem de tópicos).</li>
+  <li>O conteúdo é completo, podendo ser lido e entendido sem a necessidade de materiais complementares.</li>
+</ul>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><A HREF="http://www.shellscript.com.br"><IMG ALIGN="middle" SRC="../../img/capa-livro-shell.jpg" BORDER="0" ALT=""></A></TD>
-<TD><B>LANÇAMENTO!</B><br><br><A HREF="http://www.shellscript.com.br">Livro Shell Script Profissional</A><br><br>480 páginas.<br>O sucessor da apostila.<br><br>Prepare-se para uma<br>imersão em shell.</TD>
-</TR>
-</TABLE>
+<h2>Sobre os assuntos</h2>
 
-</div>
+<p>Estes são os assuntos tratados pela apostila:</p>
 
-<H2>Sobre o conteúdo</H2>
+<ul>
+  <li>Revisão do Básico</li>
+  <li>Programas Não São Scripts</li>
+  <li>Explorando as Possibilidades do Shell</li>
+  <li>As Ferramentas do Sistema</li>
+  <li>Caracteres de Controle</li>
+  <li>Expressões Regulares</li>
+  <li>Arquivos de Configuração</li>
+  <li>Banco de Dados com Arquivos Texto</li>
+  <li>Interfaces Amigáveis com o Dialog</li>
+  <li>CGI em Shell</li>
+</ul>
 
-<UL>
-<LI>O conteúdo não é específico de Bash, Ksh ou Zsh, é Shell.
-<P></P>
-<LI>O conteúdo é Shell, sem usar das características obscuras,
-  funcionando em UNIX, AIX, Linux, Cygwin, etc.
-<P></P>
-<LI>Todos os exemplos de código foram testados e são funcionais.
-<P></P>
-<LI>Os exemplos estão escritos em Bourne Shell. Alguns são em Bash.
-<P></P>
-<LI>Os capítulos estão divididos por aulas não seqüenciais. A leitura
-  pode ser feita em qualquer ordem.
-<P></P>
-<LI>A escrita está em forma didática e narrativa (não é resumida ou em
-  listagem de tópicos).
-<P></P>
-<LI>O conteúdo é completo, podendo ser lido e entendido sem a
-  necessidade de materiais complementares.
-</UL>
+<h2>Tour pelo conteúdo</h2>
 
-<H2>Sobre os assuntos</H2>
+<dl>
+  <dt>AULA 1</dt>
+  <dd>A revisão de Shell básico é feita com 10 exercícios relativamente simples para quem já conhece bem o Shell, mas desafiadores e didáticos para o aprendizado, pois envolvem raciocínio e uso das estruturas da linguagem e das ferramentas do sistema. Na revisão estão várias tabelas que resumem os comandos, estruturas e detalhes do Shell, que servem para consulta rápida.</dd>
+  <dt>AULA 2</dt>
+  <dd>A diferença entre um Script e um Programa é vista com detalhes. Nessa aula o aluno percebe que há muitos outros elementos necessários para que seus Scripts atuais se tornem Programas de verdade. São vistos conceitos de programação como cabeçalho, comentários e código limpo e estruturado. Também são dadas dicas para o uso racional de variáveis e funções.</dd>
+  <dt>AULA 3</dt>
+  <dd>Tópicos de programação são vistos em detalhes, como uso de Chaves (Flags) e depuração de várias maneiras diferentes. Também é aprendido como fazer o Programa aceitar opções de linha de comando e são vistos os padrões em uso atualmente para essa funcionalidade. Para completar o conjunto de características de um programa profissional, é aprendido como fazer o versionamento, o histórico de mudanças (ChangeLog) e os agradecimentos aos possíveis colaboradores.</dd>
+  <dt>AULA 4</dt>
+  <dd>É visto com grande riqueza de detalhes as 25 ferramentas mais importantes de um ambiente UNIX/Linux, suas opções mais úteis e onde e como aplicar cada uma delas. Esta parte da apostila também serve para referência futura, tornando desnecessária a leitura de páginas de manual. Em seguida os Caracteres de Controle assumem a pauta e deliciam o leitor com seu poder de movimentação do cursor e possibilidade de adicionar sons e cores a programas do modo texto.</dd>
+  <dt>AULA 5</dt>
+  <dd>Aqui entra o grande assunto controverso, que todos já ouviram falar mas poucos dominam: Expressões Regulares. É feita uma "tour" pelo assunto, apresentando de maneira simples e amigável os metacaracteres mais importantes e suas funções. Para praticar o aprendizado, é mostrado passo-a-passo como lidar com dados de uma página HTML (Internet).</dd>
+  <dt>AULA 6</dt>
+  <dd>Os Arquivos de Configuração são desmistificados e é ensinado como fazer para que qualquer programa os utilize. É visto o funcionamento do "parser" que extrai (e também grava) informações e como integrar um programa já existente com este parser.</dd>
+  <dt>AULA 7</dt>
+  <dd>Explicação e aplicação do conceito de Banco de Dados Textuais, instruindo desde a escolha do formato interno do arquivo de dados (CSV simplificado) até a escrita do gerenciador que irá ler e gravar informações. As vantagens e desvantagens dos bancos textuais também são vistas.</dd>
+  <dt>AULA 8</dt>
+  <dd>A mais divertida, que ensina como utilizar o Dialog, o programa que desenha "caixas" na tela, deixando os programas do modo texto com botões, menus e outros componentes geralmente encontrados no modo gráfico (X). Também é mostrada a integração do Dialog com programas, demonstrando como fazer a navegação e a ligação entre as telas.</dd>
+  <dt>AULA 9</dt>
+  <dd>Para finalizar, uma passada completa em CGI, com dicas de configuração do Apache, explicação do conceito e prática, com códigos prontos para um formulário HTML e o CGI que lidará com os dados recebidos.</dd>
+</dl>
 
-<P>
-Estes são os assuntos tratados pela apostila:
-</P>
+<h2>Esse conteúdo é livre (free)?</h2>
 
-<UL>
-<LI>Revisão do Básico
-<LI>Programas Não São Scripts
-<LI>Explorando as Possibilidades do Shell
-<LI>As Ferramentas do Sistema
-<LI>Caracteres de Controle
-<LI>Expressões Regulares
-<LI>Arquivos de Configuração
-<LI>Banco de Dados com Arquivos Texto
-<LI>Interfaces Amigáveis com o Dialog
-<LI>CGI em Shell
-</UL>
+<p>Não.</p>
 
-<H2>Tour pelo conteúdo</H2>
-
-<DL>
-<DT>AULA 1</DT><DD>
-<P></P>
-A revisão de Shell básico é feita com 10 exercícios relativamente
-simples para quem já conhece bem o Shell, mas desafiadores e didáticos
-para o aprendizado, pois envolvem raciocínio e uso das estruturas da
-linguagem e das ferramentas do sistema. Na revisão estão várias
-tabelas que resumem os comandos, estruturas e detalhes do Shell, que
-servem para consulta rápida.
-<P></P>
-<DT>AULA 2</DT><DD>
-<P></P>
-A diferença entre um Script e um Programa é vista com detalhes. Nessa
-aula o aluno percebe que há muitos outros elementos necessários para
-que seus Scripts atuais se tornem Programas de verdade. São vistos
-conceitos de programação como cabeçalho, comentários e código limpo e
-estruturado. Também são dadas dicas para o uso racional de variáveis e
-funções.
-<P></P>
-<DT>AULA 3</DT><DD>
-<P></P>
-Tópicos de programação são vistos em detalhes, como uso de Chaves
-(Flags) e depuração de várias maneiras diferentes. Também é aprendido
-como fazer o Programa aceitar opções de linha de comando e são vistos
-os padrões em uso atualmente para essa funcionalidade. Para completar
-o conjunto de características de um programa profissional, é aprendido
-como fazer o versionamento, o histórico de mudanças (ChangeLog) e os
-agradecimentos aos possíveis colaboradores.
-<P></P>
-<DT>AULA 4</DT><DD>
-<P></P>
-É visto com grande riqueza de detalhes as 25 ferramentas mais
-importantes de um ambiente UNIX/Linux, suas opções mais úteis e onde e
-como aplicar cada uma delas. Esta parte da apostila também serve para
-referência futura, tornando desnecessária a leitura de páginas de
-manual. Em seguida os Caracteres de Controle assumem a pauta e
-deliciam o leitor com seu poder de movimentação do cursor e
-possibilidade de adicionar sons e cores a programas do modo texto.
-<P></P>
-<DT>AULA 5</DT><DD>
-<P></P>
-Aqui entra o grande assunto controverso, que todos já ouviram falar
-mas poucos dominam: Expressões Regulares. É feita uma "tour" pelo
-assunto, apresentando de maneira simples e amigável os metacaracteres
-mais importantes e suas funções. Para praticar o aprendizado, é
-mostrado passo-a-passo como lidar com dados de uma página HTML
-(Internet).
-<P></P>
-<DT>AULA 6</DT><DD>
-<P></P>
-Os Arquivos de Configuração são desmistificados e é ensinado como
-fazer para que qualquer programa os utilize. É visto o funcionamento
-do "parser" que extrai (e também grava) informações e como integrar um
-programa já existente com este parser.
-<P></P>
-<DT>AULA 7</DT><DD>
-<P></P>
-Explicação e aplicação do conceito de Banco de Dados Textuais,
-instruindo desde a escolha do formato interno do arquivo de dados (CSV
-simplificado) até a escrita do gerenciador que irá ler e gravar
-informações. As vantagens e desvantagens dos bancos textuais também
-são vistas.
-<P></P>
-<DT>AULA 8</DT><DD>
-<P></P>
-A mais divertida, que ensina como utilizar o Dialog, o programa que
-desenha "caixas" na tela, deixando os programas do modo texto com
-botões, menus e outros componentes geralmente encontrados no modo
-gráfico (X). Também é mostrada a integração do Dialog com programas,
-demonstrando como fazer a navegação e a ligação entre as telas.
-<P></P>
-<DT>AULA 9</DT><DD>
-<P></P>
-Para finalizar, uma passada completa em CGI, com dicas de configuração
-do Apache, explicação do conceito e prática, com códigos prontos para
-um formulário HTML e o CGI que lidará com os dados recebidos.
-</DL>
-
-<H2>Esse conteúdo é livre (free)?</H2>
-
-<P>
-Não.
-</P>
-<P>
-É um trabalho literário registrado no escritório de Direitos Autorais
-(tem Copyright) e não é um texto livre para ser copiado como todos os
-outros que estão disponíveis em meu site na Internet.
-</P>
-<div style="text-align:center;padding-top:2em"> 
-<P>
-<A HREF=".">Principal</A> |
-<A HREF="historia.html">História</A> |
-<A HREF="leitores.html">Depoimentos</A> |
-<A HREF="papel.html">Versão impressa</A>
-</P>
-</div>
-</div><div id="sidebar">
-
-<!--Begin Google Ads Wide Skyscraper 160x600-->
-
-<div class="adsky160">
-<script type="text/javascript"><!--
-google_ad_client = "pub-0009608813278754";
-/* Sky 160x600 */
-google_ad_slot = "3387680546";
-google_ad_width = 160;
-google_ad_height = 600;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-<!--End Skyscraper-->
-
-<P>
-<A title="Voltar ao início do site" HREF="/"><IMG ALIGN="middle" SRC="/include/kiwi/aurelionet.jpg" BORDER="0" ALT=""></A>
-</P>
-
-<!--tagmenu.js populates menutags and menulinks-->
-<div id="menutags">
-<noscript>
-<a href="http://aurelio.net/blog">blog</a>
-<a href="/carve/">carve</a>
-<a href="/curso/">cursos</a>
-<a href="/doc/">doc</a>
-<a href="/mim.html">eu</a>
-<a href="/foto/">fotos</a>
-<a href="/livro/">livros</a>
-<a href="/mac/">mac</a>
-<a href="/musica/">música</a>
-<a href="/er/">regex</a>
-<a href="/sed/">sed</a>
-<a href="/shell/">shell</a>
-<a href="/bin/">software</a>
-<a href="/surf/">surf</a>
-<a href="/viagem/">viagens</a>
-<a href="/vim/">vim</a>
-</noscript>
-</div><!--menutags-->
-<div id="icons">
-<P>
-<A
-
- HREF="http://www.shellscript.com.br"
-TITLE="Shell Script Profissional"><IMG BORDER="0"
-  ALT="Shell Script Profissional"
-  SRC="/img/icon/32/livroshell.jpg"></A><A
-
- HREF="http://www.piazinho.com.br"
-TITLE="Expressões Regulares - Uma abordagem divertida (4ª edição)"><IMG BORDER="0"
-  ALT="Expressões Regulares - Uma abordagem divertida (4ª edição)"
-  SRC="/img/icon/32/livroregex4.jpg"></A><A
-
- HREF="http://aurelio.net/shell/canivete/"
-TITLE="Canivete Suíço do Shell"><IMG BORDER="0"
-  ALT="Canivete Suíço do Shell"
-  SRC="/img/icon/32/canivete.jpg"></A><A
-
- HREF="http://aurelio.net/shell/dialog/"
-TITLE="Dialog --tudo"><IMG BORDER="0"
-  ALT="Dialog --tudo"
-  SRC="/img/icon/32/dialog.jpg"></A><A
-
- HREF="http://txt2tags.org/pt/"
-TITLE="txt2tags"><IMG BORDER="0"
-  ALT="txt2tags"
-  SRC="/img/icon/32/txt2tags.jpg"></A><A
-
- HREF="http://funcoeszz.net"
-TITLE="Funções ZZ"><IMG BORDER="0"
-  ALT="Funções ZZ"
-  SRC="/img/icon/32/zz.jpg"></A><A
-
- HREF="http://aurelio.net/moneylog/"
-TITLE="MoneyLog"><IMG BORDER="0"
-  ALT="MoneyLog"
-  SRC="/img/icon/32/moneylog.jpg"></A><A
-
- HREF="http://aurelio.net/projects/css-sandbox/"
-TITLE="CSS Sandbox"><IMG BORDER="0"
-  ALT="CSS Sandbox"
-  SRC="/img/icon/32/css-sandbox.jpg"></A><A
-
- HREF="http://aurelio.net/fvm/"
-TITLE="Faça Você Mesmo"><IMG BORDER="0"
-  ALT="Faça Você Mesmo"
-  SRC="/img/icon/32/fvm.jpg"></A><A
-
- HREF="http://aurelio.net/baterna/"
-TITLE="Baterna - Curso de bateria online e gratuito"><IMG BORDER="0"
-  ALT="Baterna - Curso de bateria online e gratuito"
-  SRC="/img/icon/32/baterna.jpg"></A><A
-
- HREF="http://www.coisinha.com.br/miguxeitor/"
-TITLE="MiGuXeiToR"><IMG BORDER="0"
-  ALT="MiGuXeiToR"
-  SRC="/img/icon/32/miguxeitor.jpg"></A><A
-
- HREF="http://www.coisinha.com.br/engripeitor/"
-TITLE="Engripeitor"><IMG BORDER="0"
-  ALT="Engripeitor"
-  SRC="/img/icon/32/engripeitor.jpg"></A><A
-
- HREF="http://aurelio.net/viagem/"
-TITLE="Viagens"><IMG BORDER="0"
-  ALT="Viagens"
-  SRC="/img/icon/32/viagem.jpg"></A><A
-
- HREF="http://aurelio.net/pogo/"
-TITLE="Roda de Pogo - A Dança Punk"><IMG BORDER="0"
-  ALT="Roda de Pogo - A Dança Punk"
-  SRC="/img/icon/32/pogo.jpg"></A><A
-
- HREF="http://aurelio.net/carve/"
-TITLE="Carveboard"><IMG BORDER="0"
-  ALT="Carveboard"
-  SRC="/img/icon/32/carve.jpg"></A><A
-
- HREF="http://aurelio.net/surf/"
-TITLE="Fotos de Surfe"><IMG BORDER="0"
-  ALT="Fotos de Surfe"
-  SRC="/img/icon/32/surf.jpg"></A>
-</P>
-</div>
-<P>
-<B><A title="Visite meu Blog!" HREF="http://aurelio.net/blog">Visite o blog</A></B>
-</P>
-<P>
-<A HREF="http://twitter.com/oreio"><IMG ALIGN="middle" SRC="/img/twitter-button.png" BORDER="0" ALT=""></A>
-</P>
-<div class="livros">
-<P>
-Meus livros:
-</P>
-
-<TABLE>
-<TR>
-<TD><A HREF="http://www.piazinho.com.br"><IMG ALIGN="middle" SRC="/img/icon/32/livroregex.jpg" BORDER="0" ALT=""></A></TD>
-<TD><A HREF="http://www.piazinho.com.br">Expressões Regulares</A></TD>
-</TR>
-<TR>
-<TD><A HREF="http://www.shellscript.com.br"><IMG ALIGN="middle" SRC="/img/icon/32/livroshell.jpg" BORDER="0" ALT=""></A></TD>
-<TD><A HREF="http://www.shellscript.com.br">Shell Script Profissional</A></TD>
-</TR>
-</TABLE>
-
-</div>
-
-<!-- SiteSearch Google -->
-<form action="http://aurelio.net/search.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:b3yrms-qdqp" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="20" /><br />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-<!-- SiteSearch Google -->
-
-</div>
-
-<div id="menulinks">
-<noscript>
-</noscript>
-</div><!--menulinks-->
-
-</div><div id="footer">
-<P>
-<A HREF="/sobre.html">AURELIO.NET</A> é o site pessoal de Aurelio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
-<br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</div>
-</P>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags shell/apostila/conteudo.t2t -->
-</BODY></HTML>
+<p>É um trabalho literário registrado no escritório de Direitos Autorais (tem Copyright) e não é um texto livre para ser copiado como todos os outros que estão disponíveis em meu site na Internet.</p>
