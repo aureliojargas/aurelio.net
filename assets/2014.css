@@ -1,7 +1,6 @@
 /* http://aurelio.net 2014 theme */
 /* by Aurelio Jargas, 2014-09-21, MIT licensed */
 
-
 .clearfix {
   clear: both
 }
@@ -15,15 +14,18 @@
 pre {
   overflow: auto;
 }
+
 .mog {
   color: #800000;
   background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
   padding: 0 58px 0 0;
   min-height: 48px;
 }
+
 .unicode-char {
   font-family: Arial, sans-serif;  /* most Unicode chars available */
 }
+
 .heart,
 #footer:hover .heart {
   color: #C00;
@@ -36,12 +38,15 @@ pre {
 #footer a:visited {
   color: gray;
 }
+
 #footer:hover a {
   color: blue;
 }
+
 #footer:hover a:visited {
   color: purple;
 }
+
 #footer:hover a:hover {
   color: red;
 }
@@ -52,41 +57,58 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #444;
 }
+
 blockquote {
   font-size: 95%;
 }
+
 li {
   margin-bottom: 0.5em;
 }
-table, tr, td, th {
+
+table,
+tr,
+td,
+th {
   border: 0 solid #ccc;
 }
+
 table {
   border-collapse: collapse;
   margin: 2em auto;
 }
-td, th {
+
+td,
+th {
   line-height: 1.2em;
   font-size: 80%;
 }
+
 th {
   padding: 0.7em 5px;
   background-color: #eee;
   font-weight: bold;
 }
+
 td {
   padding: 4px 5px;
 }
-th.center, td.center {
+
+th.center,
+td.center {
   text-align: center;
 }
-th.right, td.right {
+
+th.right,
+td.right {
   text-align: right;
 }
+
 table.tableborder td,
 table.tableborder th {
   border-width: 1px;
 }
+
 table.caderno td,
 table.caderno th {
   border-width: 0 0 1px 0;
@@ -95,11 +117,13 @@ table.caderno th {
 img {
   max-width: 100%;
 }
+
 img.center {
   clear: both;
   display: block;
   margin: 0 auto;
 }
+
 img.right {
   float: right;
   margin-left: 1em;
@@ -107,22 +131,27 @@ img.right {
 
 /* ------------------------------------ From twentyten.css */
 
-.aligncenter, img.aligncenter {
+.aligncenter,
+img.aligncenter {
   clear: both;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 .no-bullet {
   list-style-type: none;
 }
+
 ul.tags .count {
   font-size: small;
 }
+
 ul.posts {
   margin-left: 0;
   font-size: small;
 }
+
 ul.posts .date {
   font-size: smaller;
   margin-right: 0.5em;
@@ -135,6 +164,7 @@ table.grid td {
   padding: 0;
   vertical-align: top;
 }
+
 table.grid tr:hover td {
   background: transparent;
 }
@@ -143,17 +173,20 @@ table.grid tr:hover td {
   display: block;
   margin: 1.5em auto;
 }
+
 .figure,
 .image {
   text-align: center;
 }
+
 .figure img,
 .image img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
 }
-#article-body > p > img + em, /* Markdown image\n*caption* */
+
+#article-body > p > img + em,  /* Markdown image\n*caption* */
 .figure span {
   font-family: Arial, sans-serif;
   font-size: 75%;
@@ -168,13 +201,16 @@ table.grid tr:hover td {
   background-color: #27ae60;  /* flatuicolors.com */
   color: white;
 }
+
 #content-action {
   background-color: #eee;
 }
+
 #sidebar {
   background-color: #333;
   color: #aaa;
 }
+
 #footer {
   background-color: #eee;
 }
@@ -184,6 +220,7 @@ table.grid tr:hover td {
 #header {
   text-align: center;
 }
+
 #site-title {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 200%;
@@ -191,25 +228,31 @@ table.grid tr:hover td {
   font-weight: bold;
   margin-bottom: 0.5em;
 }
+
 #site-title a {
   text-decoration: none;
   color: inherit;
 }
+
 #site-title a:hover {
   text-decoration: underline;
 }
+
 #social-icons {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 #social-icons li {
   display: inline;
   padding: 0;
 }
+
 #social-icons .fa-stack-1x {
   color: #27ae60;
 }
+
 #social-icons .fa-stack-2x {
   color: white;
 }
@@ -219,15 +262,18 @@ table.grid tr:hover td {
 #content {
   overflow: auto;  /* Wide tables */
 }
+
 #article-header {
   margin-bottom: 2em;
 }
+
 #article-header h2 {  /* page.subtitle */
   margin: 0.25em 0 0 0;
   font-size: 100%;
   font-weight: normal;
   color: gray;
 }
+
 #content h1 {
   margin: 0;
   line-height: 1.1em;
@@ -235,59 +281,74 @@ table.grid tr:hover td {
   font-weight: normal;
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
 #content .byline {
   margin: 0.5em 0 0 0;
   font-size: small;
   color: gray;
 }
+
 #content .byline a {
   text-decoration: none;
   color: blue;  /* always blue, even when visited */
 }
+
 #content .byline a:hover {
   text-decoration: underline;
   color: red;
 }
+
 #content li {
   margin-bottom: 1em;
 }
+
 #content li ul,
 #content li ol {
   margin-top: 1em;
 }
+
 #content p.image {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
 #content pre {
   margin: 2em 0;
   padding: 1.5em;
 }
-pre, code {
+
+pre,
+code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
 code {
   color: inherit;
   background-color: #e8e8e8;
 }
+
 ul.compact li,
 ol.compact li,
 #content ul.compact li,
 #content ol.compact li {
   margin-bottom: 0;
 }
+
 #content table.compact {
   font-size: 85%;
   line-height: 125%;
   font-family: Arial;
 }
+
 .small {
   font-size: small;
 }
+
 a.camouflage {
   text-decoration: none;
   color: inherit;
 }
+
 a.camouflage:hover {
   text-decoration: underline;
   color: red;
@@ -297,16 +358,17 @@ a.camouflage:hover {
 /* ----------------------------------------------------- */
 
 .linkblock {
-	display: block;
-	text-align: center;
-	margin: 5em 0;
-	padding: 5px 0;
-	background: #222;         /* same as sidebar */
-	color: white !important;
+  display: block;
+  text-align: center;
+  margin: 5em 0;
+  padding: 5px 0;
+  background: #222;  /* same as sidebar */
+  color: white !important;
 }
+
 .linkblock img {
-	width: 64px;
-	height: 64px;
+  width: 64px;
+  height: 64px;
 }
 
 /* ----------------------------------------------------- */
@@ -328,15 +390,18 @@ a.camouflage:hover {
 #prev-next {
   line-height: 18px;
 }
+
 #prev-next a:link {
   font-size: 12px;
   font-size: small;
   text-decoration: none;
 }
+
 #prev-next .nav-previous {
   float: left;
   width: 45%;
 }
+
 #prev-next .nav-next {
   float: right;
   width: 45%;
@@ -348,11 +413,13 @@ a.camouflage:hover {
 #ad-bottom {
   padding-top: 0;
 }
+
 .ad-blog-box-top {
   float: right;
   margin: 0 0 5px 1em;
   border: 1px solid silver;  /* to clearly separate from article text */
 }
+
 .ad-blog-box-bottom {
   margin: 0 auto;
   width: 336px;
@@ -363,6 +430,7 @@ a.camouflage:hover {
 .sidebar-box {
   margin-top: 1em;
 }
+
 .sidebar-box:first-child {
   margin-top: 0;
 }
@@ -371,29 +439,36 @@ a.camouflage:hover {
   text-decoration: none;
   color: #27ae60;
 }
+
 #sidebar a:hover {
   text-decoration: underline;
   color: red;
 }
+
 #sidebar ul {
   margin-left: 1em;
 }
+
 #bio p {
   padding: 6px 9px 6px 2px;
 }
+
 #bio img {
   float: left;
   width: 64px;
   height: 64px;
 }
+
 #meus-livros {
   clear: left;
   margin-top: 2em;
 }
+
 #jaba ul {
   list-style: none;
   margin-left: 0;
 }
+
 .twitter-tweet {  /* embedded tweet */
   margin: 2em auto !important;
 }
