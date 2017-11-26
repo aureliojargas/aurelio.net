@@ -97,5 +97,11 @@ info "Fix images markup"
     --to-file   "$replace_templates/txt2tags-image-solo-to.html" \
     "$outfile"
 
+info "Remove unused table styling"
+
+"$replace" --in-place \
+    --from '<table style="margin-left: auto; margin-right: auto;"' \
+    --to   '<table' \
+    "$outfile"
 
 comments_warning
