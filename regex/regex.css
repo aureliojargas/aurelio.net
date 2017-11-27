@@ -4,7 +4,9 @@
 }
 
 /* by John Doe */
-#content li em {
+#content li em,
+#content dt em
+{
   display: block;
   color: gray;
   font-size: 85%;
