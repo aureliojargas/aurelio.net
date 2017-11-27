@@ -11,29 +11,30 @@ article_footer_after: false
 {% include shell-book-banner.html %}
 
 <table class="tableborder">
-<tr>
-<td>
-  <p>Destaques:</p>
-  <ul>
-    <li><a href="/shell/apostila-introducao-shell.pdf">Apostila Shell Básico</a></li>
-    <li><a href="/shell/canivete/">Canivete Suíço</a></li>
-    <li><a href="/shell/miniman/">miniman</a></li>
-    <li><a href="/shell/dialog/">Dialog --tudo</a></li>
-    <li><a href="http://funcoeszz.net">Funções ZZ</a></li>
-    <li><a href="http://codare.net/category/shell/">Shell no CODARE</a></li>
-  </ul>
-</td>
-<td>
-  <p>Veja também:</p>
-  <uL>
-    <li><a href="/sed/">Sed</a></li>
-    <li><a href="/regex/">Expressões Regulares</a></li>
-    <li><a href="/vim/">Vim</a></li>
-    <li><a href="/cygwin/">Cygwin</a></li>
-    <li><a href="http://codare.net">CODARE</a></li>
-    <li><a href="/doc/nerd.html">docz nerdz</a></li>
-  </ul>
-</td>
+  <tr>
+    <td>
+      <p>Destaques:</p>
+      <ul>
+        <li><a href="/shell/apostila-introducao-shell.pdf">Apostila Shell Básico</a></li>
+        <li><a href="/shell/canivete/">Canivete Suíço</a></li>
+        <li><a href="/shell/miniman/">miniman</a></li>
+        <li><a href="/shell/dialog/">Dialog --tudo</a></li>
+        <li><a href="http://funcoeszz.net">Funções ZZ</a></li>
+        <li><a href="http://codare.net/category/shell/">Shell no CODARE</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>Veja também:</p>
+      <uL>
+        <li><a href="/sed/">Sed</a></li>
+        <li><a href="/regex/">Expressões Regulares</a></li>
+        <li><a href="/vim/">Vim</a></li>
+        <li><a href="/cygwin/">Cygwin</a></li>
+        <li><a href="http://codare.net">CODARE</a></li>
+        <li><a href="/doc/nerd.html">docz nerdz</a></li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 <img style="float:right" src="http://aurelio.net/img/icon/128/shell.png">
