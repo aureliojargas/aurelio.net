@@ -2,7 +2,7 @@ body {
 	padding		: 2em 3em 3em 200px;
 	line-height	: 150%;
 	font-family	: sans-serif;
-	background	: white url(http://aurelio.net/include/kiwi/aureliolga.jpg) no-repeat right bottom fixed
+	background	: white url(/img/avatar-alpha.png) no-repeat right bottom fixed
 }
 pre {
 	border		: 1px solid #666;
