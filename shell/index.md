@@ -1,8 +1,6 @@
 ---
-date: 2016-03-14
 title_prefix: 'Portal brasileiro de '
 title: Shell Script
-hide_date: true
 hide_comments: true
 hide_read_more: true
 hide_tags: true
