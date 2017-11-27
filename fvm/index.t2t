@@ -25,7 +25,6 @@ Aqui é tudo grátis, aproveite as dicas!
 % <LI><A HREF="../a-vida-de-um-...buffett.html">A vida de um ... Buffett</A> 
 %!postproc: '(^<LI><A HREF=")\.\./([a-z0-9])'    '\1/email/\2'
 
-%%!include: ''/a/www/include/kiwi/ads-twins.html''
 %%!include: ''/a/www/include/massa/ads-twins-musica.html''
 
 %!include: /a/www/include/clean/cabecalho.t2t
