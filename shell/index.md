@@ -12,6 +12,32 @@ article_footer_after: false
 
 {% include shell-book-banner.html %}
 
+<table class="tableborder">
+<tr>
+<td>
+  <p>Destaques:</p>
+  <ul>
+    <li><a href="/shell/apostila-introducao-shell.pdf">Apostila Shell Básico</a></li>
+    <li><a href="/shell/canivete/">Canivete Suíço</a></li>
+    <li><a href="/shell/miniman/">miniman</a></li>
+    <li><a href="/shell/dialog/">Dialog --tudo</a></li>
+    <li><a href="http://funcoeszz.net">Funções ZZ</a></li>
+    <li><a href="http://codare.net/category/shell/">Shell no CODARE</a></li>
+  </ul>
+</td>
+<td>
+  <p>Veja também:</p>
+  <uL>
+    <li><a href="/sed/">Sed</a></li>
+    <li><a href="/regex/">Expressões Regulares</a></li>
+    <li><a href="/vim/">Vim</a></li>
+    <li><a href="/cygwin/">Cygwin</a></li>
+    <li><a href="http://codare.net">CODARE</a></li>
+    <li><a href="/doc/nerd.html">docz nerdz</a></li>
+  </ul>
+</td>
+</table>
+
 <img style="float:right" src="http://aurelio.net/img/icon/128/shell.png">
 
 Olá, eu sou o Aurelio e esta é a minha página sobre shell script.
@@ -25,22 +51,6 @@ Mas com o tempo, paciência, dedicação e muitos, **muitos** arquivos apagados 
 A idéia dessa página é juntar links de qualidade relativos a shell script **em português**. Um ponto de partida para o aprendizado ou consulta rápida. Aceito colaborações!
 
 O primeiro e mais importante link é a [lista de discussão shell script](http://br.groups.yahoo.com/group/shell-script/). É um lugar especial, onde centenas de shelleiros conversam sobre o assunto. Melhor do quer ler documentação, é interagir com outras pessoas. Assine agora mesmo e aprenda rápido!
-
-> Destaques:
-> [Apostila Shell Básico](/shell/apostila-introducao-shell.pdf),
-> [Canivete Suíço](/shell/canivete/),
-> [miniman](/shell/miniman/),
-> [Dialog --tudo](/shell/dialog/),
-> [Funções ZZ](http://funcoeszz.net),
-> [Shell no CODARE](http://codare.net/category/shell/).
-
-> Veja também:
-> [Sed](/sed/),
-> [Expressões Regulares](/regex/),
-> [Vim](/vim/),
-> [Cygwin](/cygwin/),
-> [CODARE](http://codare.net),
-> [docz nerdz](/doc/nerd.html).
 
 
 ## O que é shell?
