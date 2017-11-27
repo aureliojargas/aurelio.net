@@ -64,7 +64,7 @@ fi
 
 info "Convert to HTML"
 front_matter > "$outfile"
-clean_infile | "$txt2tags" -t html5 --no-headers -i - -o - >> "$outfile"
+clean_infile | "$txt2tags" -t html5 --no-headers --css-sugar -i - -o - >> "$outfile"
 echo "Saved $outfile"
 
 info "Tidy up"
