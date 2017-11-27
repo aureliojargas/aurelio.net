@@ -1,78 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/index.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<TITLE>Sed - Portal brasileiro do Stream EDitor do UNIX/Linux :: aurelio.net</TITLE>
-</HEAD>
-<BODY class="sed">
+---
+title: Sed - Portal brasileiro do Stream EDitor do UNIX/Linux
+hide_comments: true
+hide_tags: true
+article_footer_after: false
+---
 
-<DIV ID="header">
-<H1>Sed</H1>
-<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
-</DIV>
-
-<DIV ID="main">
-<div id="sidebar">
- <center><IMG ALIGN="middle" SRC="/img/icon/128/sed.png" BORDER="0" ALT=""></center> 
-<DIV CLASS="toc">
-
-    <UL>
-    <LI><A HREF="#lista">Lista de discussão</A>
-    <LI><A HREF="#docs">Documentação</A>
-      <UL>
-      <LI><A HREF="#docs-pt">Em português</A>
-      <LI><A HREF="#docs-en">Em inglês</A>
-      </UL>
-    <LI><A HREF="#sedsed">Depurador (debug)</A>
-    <LI><A HREF="#scripts">Programas / Scripts</A>
-    <LI><A HREF="#mensagens">Mensagens de erro</A>
-    <LI><A HREF="#gnu-sed">GNU Sed 3.02.80</A>
-    <LI><A HREF="#palestra">Palestra sobre Sed</A>
-    <LI><A HREF="#divirta-se">Divirta-se!</A>
-      <UL>
-      <LI><A HREF="#superman">Sed Superman</A>
-      <LI><A HREF="#linguas">Evolução das línguas</A>
-      </UL>
-    </UL>
-
-</DIV>
-
-<H4>Destaques:</H4>
-
-<UL>
-<LI><A HREF="alfabeto.html">Alfabeto do sed</A>
-<LI><A HREF="/sed/sed-HOWTO/">Sed HOWTO</A>
-<LI><A HREF="/sed/livro/">Dominando o Sed</A>
-<LI><A HREF="1liners-ptBR.txt">Sed 1liners</A>
-<LI><A HREF="http://thobias.org/doc/sosed.html">Só Sed</A>
-<LI><A HREF="/projects/sedsokoban/">SedSokoban</A>
-</UL>
-
-<H4>Veja também:</H4>
-
-<UL>
-<LI><A HREF="/regex/">Expressões Regulares</A>
-<LI><A HREF="/shell/">Shell Script</A>
-<LI><A HREF="/vim/">Vim</A>
-<LI><A HREF="../cygwin/">Cygwin</A>
-<LI><A HREF="http://codare.net">CODARE</A>
-<LI><A HREF="../doc/nerd.html">docz nerdz</A>
-</UL>
-
-</div>
-<p class="image">
-    <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">
-        <img src="http://aurelio.net/img/banner-curso-regex-novatec.png" alt="Curso de Expressões Regulares">
-    </a>
+<p class="figure">
+  <img src="/img/icon/128/sed.png">
 </p>
 
-<PRE>
+<pre>
 #!/bin/sed -fn
 
 /^Bem-vind[oa]/!{
@@ -83,576 +20,461 @@
 
 }
 $!N
+</pre>
 
-</PRE>
-
-<P>
-Seja bem-vindo(a) ao portal do Sed. Ele é um editor de textos? É uma linguagem de programação? É um comando do UNIX? É um filtro? Na verdade, é isso tudo e mais um pouco :)
-</P>
-<P>
-Acompanhe aqui vários artigos sobre o Sed, escritos em <B>português</B>.
-</P>
-<P>
-Lá no meu blog eu contei <A HREF="http://aurelio.net/blog/2009/07/03/10anos-sed/">a minha história com o Sed</A>, que começou em 1997 e mudou minha vida, culminando com a escrita de <A HREF="http://www.piazinho.com.br">um livro sobre Expressões Regulares</A>.
-</P>
-
-<H2 ID="lista">Lista de discussão</H2>
-
-<P>
-Você ainda não assina a <A HREF="http://br.groups.yahoo.com/group/sed-br/">sed-br</A>? Demorou. <A HREF="mailto:sed-br-subscribe@yahoogrupos.com.br">Inscreva-se já</A> para conversar com outros coleguinhas sobre Sed e <A HREF="http://aurelio.net/regex/">Expressões Regulares</A>.
-</P>
-<P>
-Your book is on the table? So <A HREF="http://tech.groups.yahoo.com/group/sed-users/">try this one</A> for advanced topics in english.
-</P>
-
-<H2 ID="docs">Documentação</H2>
-
-<H3 ID="docs-pt">Em português</H3>
-
-<DL>
-<DT><A HREF="alfabeto.html">Alfabeto do sed</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-<P></P>
-Uma cola rápida de todos os comandos do sed, em ordem alfabética.
-<P></P>
-<DT><A HREF="/sed/sed-HOWTO/">Sed HOWTO</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-<P></P>
-Este documento se propõe a ser um tutorial e um guia de consulta de Sed ao mesmo tempo. Ele apresenta o Sed aos poucos, explicando seu funcionamento, mas também conta com dicas avançadas. Este guia é exclusivo de Sed, as Expressões Regulares não são abordadas.
-<P></P>
-<DT><A HREF="/sed/livro/">Dominando o Sed</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-<P></P>
-Um livro inacabado sobre Sed, disponível gratuitamente em PDF. Ele cobre instalação, todos os detalhes dos endereços, como lidar com arquivos, quebras de linha,  maiúsculas e minúsculas, contando com vários exemplos didáticos com que podem ser testados em sua máquina.
-<P></P>
-<DT><A HREF="1liners-ptBR.txt">Sed 1liners</A> <I>por Ricardo Sartori</I></DT><DD>
-<P></P>
-Comandos Sed de apenas 1 linha, prontos para copiar e colar.
-<P></P>
-<DT><A HREF="http://thobias.org/doc/sosed.html">Só Sed</A> <I>por Thobias Salazar Trevisan</I></DT><DD>
-<P></P>
-Rápido e rasteiro, exemplos do Sed em ação resolvendo problemas comuns.
-<P></P>
-<DT><A HREF="http://thobias.org/doc/inc_sed.html">Usando o sed para contar</A> <I>por Thobias Salazar Trevisan</I></DT><DD>
-<P></P>
-Explicação didática de como incrementar números (e letras) usando o Sed.
-<P></P>
-<DT><A HREF="http://thobias.org/doc/lookup_tables_sed.html">Lookup Tables &amp; Incrementando em sed</A> <I>por Thobias Salazar Trevisan</I></DT><DD>
-<P></P>
-Demonstração do uso da técnica de Lookup Tables em Sed.
-<P></P>
-<DT><A HREF="http://thobias.org/doc/sedbranch.html">Branches no sed</A> <I>por Thobias Salazar Trevisan</I></DT><DD>
-<P></P>
-Explicação dos comandos de branch (pulo, tipo GOTO) em Sed.
-<P></P>
-<DT><A HREF="http://aurelio.net/er/">Expressões Regulares</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-<P></P>
-Vários documentos e um livro inteiro para você entender que <B><CODE>^#!.*$</CODE></B> não é um xingamento.
-<P></P>
-<DT><A HREF="sed-dicas.txt">Dicas soltas de Sed</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-<P></P>
-Diquinhas soltas, rápidas, para ler e esquecer.
-</DL>
-
-<H3 ID="docs-en">Em inglês</H3>
-
-<DL>
-<DT><A HREF="http://sed.sourceforge.net">Portal mundial do Sed</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-<P></P>
-Este é o portal mundial do Sed, com dezenas de links para programas, artigos, sites e até jogos! Prepare-se para gastar MUITAS horas lendo todo o conteúdo.
-<P></P>
-<DT><A HREF="http://www.grymoire.com/Unix/Sed.html">Sed - An Introduction and Tutorial</A></DT><DD>
-<P></P>
-Um guia bem completo, cheio de exemplos, que explica em detalhes o funcionamento do Sed.
-</DL>
-
-<H2 ID="sedsed">Depurador (debug)</H2>
-
-<P>
-O <A HREF="http://aurelio.net/projects/sedsed/">sedsed</A> é um depurador (debugger) para scripts Sed escrito em Python. Sempre que seu script crescer e ficar confuso, ou estiver usando o <A HREF="sed-HOWTO/sed-HOWTO-8.html#toc4">HOLD SPACE</A>, esse depurador salvará a sua vida lhe mostrando o conteúdo dos buffers internos do Sed enquanto o script é executado.
-</P>
-<P>
-Além disso o mesmo programa também serve como embelezador de código ("<I>indentation</I>") e também converte scripts Sed para páginas HTML coloridas. Veja por exemplo como ficou o <A HREF="sokoban/sokoban.sed.html">SedSokoban em HTML</A>.
-</P>
-
-<H2 ID="scripts">Programas / Scripts</H2>
-
-<P>
-Aqui estão alguns programinhas em Sed que eu fiz. Alguns estão com o nome e comentários em inglês porque eu os postei em listas gringas e não tive tempo/saco de traduzir. Se você tem, traduza e me mande que eu coloco aqui :D
-</P>
-
-<DL>
-<DT><A HREF="http://aurelio.net/projects/sedsokoban/">sokoban.sed</A></DT><DD>
-O clássico jogo de empurrar caixas, Sokoban, inteiramente escrito em Sed. O jogo está bem completo, com 90 níveis, cores, comandos, detecção de vitória e movimentação do personagem usando as setinhas do teclado.
-<center><A HREF="http://aurelio.net/projects/sedsokoban/"><IMG ALIGN="middle" SRC="/projects/img/icon/128/sedsokoban.png" BORDER="0" ALT=""></A></center>
-<P></P>
-<DT><A HREF="http://aurelio.net/projects/sedarkanoid/">arkanoid.sed</A></DT><DD>
-O clássico jogo Arkanoid (Breakout) inteiramente escrito em Sed. O jogo está bem completo, com cores, explosões cadenciadas, possibilidade de segurar a bolinha no bastão e tem 3 vidas.
-<center><A HREF="http://aurelio.net/projects/sedarkanoid/"><IMG ALIGN="middle" SRC="/projects/img/icon/128/sedarkanoid.png" BORDER="0" ALT=""></A></center>
-<P></P>
-<DT><A HREF="programas/justify.sed">justify.sed</A></DT><DD>
-Justificador de texto.
-<P></P>
-<DT><A HREF="programas/mail-iso2txt.sed">mail-iso2txt.sed</A></DT><DD>
-Traduz os =20 e outros aliens que às vezes aparecem em mensagens de e-mail.
-<P></P>
-<DT><A HREF="programas/wrap-forced.sed">wrap-forced.sed</A></DT><DD>
-Quebra as linhas exatamente na coluna especificada, sem se importar com o contexto.
-<P></P>
-<DT><A HREF="programas/yahoogroups-kill-sig.sed">yahoogroups-kill-sig.sed</A></DT><DD>
-Apaga a propaganda do Yahoo! das mensagens de e-mail (TXT ou HTML).
-<P></P>
-<DT><A HREF="programas/escape.sed">escape.sed</A></DT><DD>
-Converte os símbolos <CODE>[^A-Za-z0-9_]</CODE> para hexadecimais, usando a notação de internet como %20.
-<P></P>
-<DT><A HREF="programas/unescape.sed">unescape.sed</A></DT><DD>
-Desconverte o que o escape.sed converteu.
-<P></P>
-<DT><A HREF="programas/txt2sgml-sed">txt2sgml-sed</A></DT><DD>
-Um conversor simples de arquivos texto puro (TXT) para SGML. Este é um script bem antigo, que deu origem ao <A HREF="http://txt2tags.org/pt/">txt2tags</A>.
-</DL>
-
-<H2 ID="mensagens">Mensagens de erro</H2>
-
-<P>
-Eu sou o tradutor do GNU Sed para o português. Isso inclui todas as mensagens que o programa mostra na tela durante o uso, como a tela de ajuda (--help) e as mensagens de erro.
-</P>
-<P>
-As mensagens originais são bem curtas e difíceis de entender, eu tentei torná-las mais amigáveis, colocando dicas adicionais sobre a possível causa dos problemas. Veja alguns exemplos:
-</P>
-
-<DL>
-<DT><CODE>unterminated `s' command</CODE></DT><DD>
-Comando `s' inacabado (s/// - faltou delimitador)
-<DT><CODE>unknown option to `s'</CODE></DT><DD>
-Opção desconhecida para o comando `s' (s///?)
-<DT><CODE>Invalid content of \\{\\}</CODE></DT><DD>
-Conteúdo inválido no \\{\\} (permitidos números e vírgula)
-</DL>
-
-<P>
-Se o seu Sed está em inglês e você está tendo problemas para decifrar alguma mensagem, dê uma olhada no <A HREF="http://translationproject.org/PO-files/pt_BR/sed-4.2.0.pt_BR.po">arquivo de tradução</A> e procure pela frase em questão, pois a tradução pode te ajudar.
-</P>
-
-<H2 ID="gnu-sed">GNU Sed 3.02.80</H2>
-
-<P>
-Nem lembro mais porque eu guardava essa versão específica do Sed, mas tem algo a ver com a troca de mantenedor do programa. A versão seguinte a essa contava com firulas inúteis, que eu não gostei. Hoje isso já não faz mais diferença na minha vida (hehe), então que fique aqui para fins meramente arqueológicos:
-</P>
-
-<UL>
-<LI><A HREF="sed-3.02.80.tar.gz">GNU Sed 3.02.80 — Linux (.tar.gz)</A> (342 Kb)
-<LI><A HREF="sed-3.02.80-4cl.i386.rpm">GNU Sed 3.02.80 — Linux (RPM)</A> (63 Kb)
-<LI><A HREF="sed3028a.zip">GNU Sed 3.02.80 — Windows (EXE)</A> (68 Kb)
-</UL>
-
-<H2 ID="palestra">Palestra sobre Sed</H2>
-
-<P>
-Nos dias 27 e 28 de outubro de 1999 (é, faz tempo, tou véio), eu fiz uma palestra sobre Sed e <A HREF="http://aurelio.net/regex/">Expressões Regulares</A> para os funcionários da Conectiva.
-</P>
-<P>
-A palestra foi gravada e aqui está um resumão dela, divido em dois arquivos. Provavelmente quase nada é aproveitável desses arquivos, visto que não é a palestra corrida e sim apenas o supra-sumo de cada tópico, mas se servir pra alguém já vale.
-</P>
-<P>
-É uma pena que eu cortei demais. As frases ficaram grudadas e há poucos trechos com as falas do pessoal que estava assistindo. Dá pra identificar as vozes do <A HREF="http://oops.ghostprotocols.net:81/blog/">Acme</A> e do <A HREF="http://pt.wikipedia.org/wiki/Marcelo_Tosatti">Marcelo Tosatti</A>, em trechos curtos.
-</P>
-<P>
-Nas tabelas seguintes, há uma descrição breve do assunto de cada trecho. Acompanhe os bips para saber quando passou de um trecho para o outro.
-</P>
-<P>
-Obrigado ao amigo Fernando Rodrigues por ter convertido para MP3 os arquivos originais que estavam em Real Audio.
-</P>
-
-<UL>
-<LI><A HREF="sed1-19991027.mp3">sed1-19991027.mp3</A> (2,3 Mb):
-  Como o Sed funciona e seus comandos básicos
-<LI><A HREF="sed2-19991028.mp3">sed2-19991028.mp3</A> (2,6 Mb):
-  Expressões Regulares em Sed
-</UL>
-
-<P>
-Segue uma descrição dos tópicos abordados em cada arquivo:
-</P>
-
-<TABLE ALIGN="center" BORDER="1">
-<TR>
-<TD ALIGN="center" COLSPAN="3"><I>27 de Outubro de 1999, 13:09 minutos</I></TD>
-</TR>
-<TR>
-<TH>#</TH>
-<TH>assunto</TH>
-<TH>descrição</TH>
-</TR>
-<TR>
-<TD ALIGN="right">1</TD>
-<TD ALIGN="center"><B>nome func</B></TD>
-<TD>s+ed, fluxo, funcionamento, STDIN/STDOUT, regras</TD>
-</TR>
-<TR>
-<TD ALIGN="right">2</TD>
-<TD ALIGN="center"><B>util</B></TD>
-<TD>substituição de padrões</TD>
-</TR>
-<TR>
-<TD ALIGN="right">3</TD>
-<TD ALIGN="center"><B>chamada</B></TD>
-<TD>cat A |sed; sed 's///' A &gt; A2</TD>
-</TR>
-<TR>
-<TD ALIGN="right">4</TD>
-<TD ALIGN="center"><B>cp</B></TD>
-<TD>tática cp;sed;rm - permissões, ligações e atributos</TD>
-</TR>
-<TR>
-<TD ALIGN="right">5</TD>
-<TD ALIGN="center"><B>delimitador</B></TD>
-<TD>barras, tem que ser 3</TD>
-</TR>
-<TR>
-<TD ALIGN="right">6</TD>
-<TD ALIGN="center"><B>s///g</B></TD>
-<TD>modificador g: global, + de 1 ocorrência</TD>
-</TR>
-<TR>
-<TD ALIGN="right">7</TD>
-<TD ALIGN="center"><B>s/\///</B></TD>
-<TD>escapar a / com um \ para não confundir com o delim</TD>
-</TR>
-<TR>
-<TD ALIGN="right">8</TD>
-<TD ALIGN="center"><B>s@@@</B></TD>
-<TD>s/$velho/$novo/, barra é padrão</TD>
-</TR>
-<TR>
-<TD ALIGN="right">9</TD>
-<TD ALIGN="center"><B>" ou '</B></TD>
-<TD>bash. sempre use '' ou "" ao redor</TD>
-</TR>
-<TR>
-<TD>10</TD>
-<TD ALIGN="center"><B>$aux</B></TD>
-<TD>aux=/1998 ; echo sed s,$aux,lala,</TD>
-</TR>
-<TR>
-<TD>11</TD>
-<TD ALIGN="center"><B>echo sed</B></TD>
-<TD>faz as substituições normais do bash</TD>
-</TR>
-<TR>
-<TD>12</TD>
-<TD ALIGN="center"><B>-n s///p</B></TD>
-<TD>geralmente com -n usa-se o p</TD>
-</TR>
-<TR>
-<TD>13</TD>
-<TD ALIGN="center"><B>dica</B></TD>
-<TD>?</TD>
-</TR>
-<TR>
-<TD>14</TD>
-<TD ALIGN="center"><B>s<I>/ ; s/</I></B></TD>
-<TD>vários comandos seguidos</TD>
-</TR>
-<TR>
-<TD>15</TD>
-<TD ALIGN="center"><B>dica</B></TD>
-<TD>vantagem s<I>/ ; s/</I> por sed|sed</TD>
-</TR>
-<TR>
-<TD>16</TD>
-<TD ALIGN="center"><B>aplicativos</B></TD>
-<TD>grep, cat, rev, etc</TD>
-</TR>
-<TR>
-<TD>17</TD>
-<TD ALIGN="center"><B>=</B></TD>
-<TD>= mostra o número da linha</TD>
-</TR>
-<TR>
-<TD>18</TD>
-<TD ALIGN="center"><B>N</B></TD>
-<TD>N grude a próxima linha com a minha atual</TD>
-</TR>
-</TABLE>
-
-<TABLE ALIGN="center" BORDER="1">
-<TR>
-<TD ALIGN="center" COLSPAN="3"><I>20 de Outubro de 1999, 14:39 minutos</I></TD>
-</TR>
-<TR>
-<TH>#</TH>
-<TH>assunto</TH>
-<TH>descrição</TH>
-</TR>
-<TR>
-<TD ALIGN="right">1</TD>
-<TD ALIGN="center"><B>âncoras</B></TD>
-<TD>^$</TD>
-</TR>
-<TR>
-<TD ALIGN="right">2</TD>
-<TD ALIGN="center"><B>.</B></TD>
-<TD>qualquer caractere</TD>
-</TR>
-<TR>
-<TD ALIGN="right">3</TD>
-<TD ALIGN="center"><B>classe char</B></TD>
-<TD>[], nada é interpretado</TD>
-</TR>
-<TR>
-<TD ALIGN="right">4</TD>
-<TD ALIGN="center"><B>intervalo</B></TD>
-<TD>0-9 = 0123456789, tabela ASCII, A-z != A-Za-z</TD>
-</TR>
-<TR>
-<TD ALIGN="right">5</TD>
-<TD ALIGN="center"><B>chk domínio</B></TD>
-<TD>^[A-Za-z0-9.]*, zero uma ou mais vezes</TD>
-</TR>
-<TR>
-<TD ALIGN="right">6</TD>
-<TD ALIGN="center"><B>.*</B></TD>
-<TD>tudo ou nada, curinga</TD>
-</TR>
-<TR>
-<TD ALIGN="right">7</TD>
-<TD ALIGN="center"><B>o * guloso</B></TD>
-<TD><U>http:</U>//www.lala.com.br:80 — ^.*:</TD>
-</TR>
-<TR>
-<TD ALIGN="right">8</TD>
-<TD ALIGN="center"><B>\+</B></TD>
-<TD>motivos históricos, escapado para ser especial</TD>
-</TR>
-<TR>
-<TD ALIGN="right">9</TD>
-<TD ALIGN="center"><B>\?</B></TD>
-<TD>.html* casa .htmllllll, então faz .html\?</TD>
-</TR>
-<TR>
-<TD>10</TD>
-<TD ALIGN="center"><B>classe neg</B></TD>
-<TD>1º caractere deve ser ^, ! é negação no sed</TD>
-</TR>
-<TR>
-<TD>11</TD>
-<TD ALIGN="center"><B>tags html</B></TD>
-<TD>abordagem inversa: o que NÃO pode ter, &lt;[^&gt;]*&gt;</TD>
-</TR>
-<TR>
-<TD>12</TD>
-<TD ALIGN="center"><B>técnica</B></TD>
-<TD>nega pois ele é o delimitador</TD>
-</TR>
-<TR>
-<TD>13</TD>
-<TD ALIGN="center"><B>é fácil</B></TD>
-<TD>encarar a ER como pequenas partes, ler um a um</TD>
-</TR>
-<TR>
-<TD>14</TD>
-<TD ALIGN="center"><B>\|</B></TD>
-<TD>devem ser escapados os (), código C</TD>
-</TR>
-<TR>
-<TD>15</TD>
-<TD ALIGN="center"><B>aninhando</B></TD>
-<TD>parênteses dentro de parênteses</TD>
-</TR>
-<TR>
-<TD>16</TD>
-<TD ALIGN="center"><B>buffer</B></TD>
-<TD>()s, conta da esquerda para a direita, até 9, \1</TD>
-</TR>
-<TR>
-<TD>17</TD>
-<TD ALIGN="center"><B>dica</B></TD>
-<TD>sem escapar, depois sai escapando tudo</TD>
-</TR>
-<TR>
-<TD>18</TD>
-<TD ALIGN="center"><B>cut</B></TD>
-<TD>trocar a ordem de 2 campos</TD>
-</TR>
-</TABLE>
-
-<H2 ID="divirta-se">Divirta-se!</H2>
-
-<H3 ID="superman">Sed Superman</H3>
-
-<P>
-<A HREF="img/sed-superman.png"><IMG ALIGN="middle" SRC="img/sed-superman.png" BORDER="0" ALT=""></A>
-</P>
-
-<H3 ID="linguas">Evolução das línguas</H3>
-
-<P>
-<A HREF="http://www.userfriendly.org/cartoons/archives/99aug/19990815.html"><IMG ALIGN="middle" SRC="img/grep-awk-sed.gif" BORDER="0" ALT=""></A>
-</P>
-</div> <!-- close #main -->
-<div id="nav">
-
-<table>
-<tr>
-	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
-</tr>
-<tr>	
-	<th class="search" colspan="5">
- 
-<form action="http://aurelio.net/achei.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
-
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-	</th>
-</tr>
-<tr><td>
-<P>
-<B>Nerdices</B>
-</P>
-
-<UL>
-<LI><A HREF="/misc/adventure-mapa.txt">adventure</A>
-<LI><A HREF="/doc/as4pp.html">applescript</A>
-<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
-<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
-<LI><A HREF="http://codare.net">codare</A>
-<LI><A HREF="/doc/coluna/">coluna</A>
-<LI><A HREF="http://aurelio.net/curso/">curso</A>
-<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
-<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
-<LI><A HREF="/doc/dort.html">dort</A>
-<LI><A HREF="/er/">er</A>
-<LI><A HREF="/log/">log</A>
-<LI><A HREF="/mac/">mac</A>
-<LI><A HREF="/curso/">palestra</A>
-<LI><A HREF="/misc/eu_odeio_perl.txt">perl</A>
-<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
-<LI><A HREF="/bin/python/">python</A>
-<LI><A HREF="/sed/">sed</A>
-<LI><A HREF="http://aurelio.net/shell/">shell</A>
-<LI><A HREF="/bin/sql/">sql</A>
-<LI><A HREF="http://aurelio.net/vim/">vim</A>
-<LI><A HREF="/doc/nerd.html">mais...</A>
-<LI><A HREF="/en/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Programas</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
-<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
-<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
-<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
-<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
-<LI><A HREF="/bin/lelolab/">lelolab</A>
-<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
-<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
-<LI><A HREF="http://aurelio.net/rac/">rac</A>
-<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
-<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
-<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
-<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
-<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
-<LI><A HREF="http://funcoeszz.net">zz</A>
-<LI><A HREF="/bin/">mais...</A>
-<LI><A HREF="/soft/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Livros</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
-<LI><A HREF="http://www.piazinho.com.br">regex</A>
-<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
-<LI><A HREF="http://www.shellscript.com.br">shell</A>
-</UL>
-
-</td><td>
-<P>
-<B>Eu</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/blog">blog</A>
-<LI><A HREF="/cv">cv</A>
-<LI><A HREF="/img/emeio.png">e-mail</A>
-<LI><A HREF="/faq">faq</A>
-<LI><A HREF="/mim.html">raio-x</A>
-<LI><A HREF="http://twitter.com/oreio">twitter</A>
-</UL>
-
-</td><td>
-<P>
-<B>Diversos</B>
-</P>
-
-<UL>
-<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
-<LI><A HREF="/adsense/">adsense</A>
-<LI><A HREF="/atacama">atacama</A>
-<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
-<LI><A HREF="http://aurelio.net/carve/">carve</A>
-<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
-<LI><A HREF="/correria/">correria</A>
-<LI><A HREF="/dumbs/">dumbs</A>
-<LI><A HREF="/foto/">foto</A>
-<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
-<LI><A HREF="/musica/">musica</A>
-<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
-<LI><A HREF="/doc/ramones.txt">ramones</A>
-<LI><A HREF="/sobre.html">sobre</A>
-<LI><A HREF="http://aurelio.net/surf/">surf</A>
-<LI><A HREF="/misc/toyota/">toyota</A>
-<LI><A HREF="http://umportugues.com">umportugues</A>
-<LI><A HREF="/valeta/">valeta</A>
-<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
-<LI><A HREF="/doc/videogame.html">videogame</A>
-</UL>
-
-</td><tr>
+<table class="tableborder">
+  <tr>
+    <td>
+      <p>Destaques:</p>
+      <ul>
+        <li><a href="/sed/alfabeto.html">Alfabeto do sed</a></li>
+        <li><a href="/sed/sed-HOWTO/">Sed HOWTO</a></li>
+        <li><a href="/sed/livro/">Dominando o Sed</a></li>
+        <li><a href="/sed/1liners-ptBR.txt">Sed 1liners</a></li>
+        <li><a href="http://thobias.org/doc/sosed.html">Só Sed</a></li>
+        <li><a href="/projects/sedsokoban/">SedSokoban</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>Veja também:</p>
+      <uL>
+        <li><a href="/regex/">Expressões Regulares</a></li>
+        <li><a href="/shell/">Shell Script</a></li>
+        <li><a href="/vim/">Vim</a></li>
+        <li><a href="/cygwin/">Cygwin</a></li>
+        <li><a href="http://codare.net">CODARE</a></li>
+        <li><a href="/doc/nerd.html">docz nerdz</a></li>
+      </ul>
+    </td>
+  </tr>
 </table>
-</div> <!-- #nav -->
 
-<div id="footer">
-<P>
-<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
-<br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</P>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="http://aurelio.net/include/10anos/aureliolga.jpg"></a>
+<p>Seja bem-vindo(a) ao portal do Sed. Ele é um editor de textos? É uma linguagem de programação? É um comando do UNIX? É um filtro? Na verdade, é isso tudo e mais um pouco :)</p>
 
-<script type="text/javascript">
+<p>Acompanhe aqui vários artigos sobre o Sed, escritos em <strong>português</strong>.</p>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
+<p>Lá no meu blog eu contei <a href="/blog/2009/07/03/10anos-sed/">a minha história com o Sed</a>, que começou em 1997 e mudou minha vida, culminando com a escrita de <a href="http://www.piazinho.com.br">um livro sobre Expressões Regulares</a>.</p>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+<nav>
+  <ul>
+    <li><a href="#lista">Lista de discussão</a></li>
+    <li><a href="#docs">Documentação</a></li>
+    <li><a href="#sedsed">Depurador (debug)</a></li>
+    <li><a href="#scripts">Programas / Scripts</a></li>
+    <li><a href="#mensagens">Mensagens de erro</a></li>
+    <li><a href="#gnu-sed">GNU Sed 3.02.80</a></li>
+    <li><a href="#palestra">Palestra sobre Sed</a></li>
+    <li><a href="#divirta-se">Divirta-se!</a></li>
+  </ul>
+</nav>
 
-</script>
+<p class="figure">
+  <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">
+    <img src="/img/banner-curso-regex-novatec.png">
+  </a>
+</p>
 
-</DIV>
+<h2 id="lista">Lista de discussão</h2>
 
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags sed/index.t2t -->
-</BODY></HTML>
+<p>Você ainda não assina a <a href="http://br.groups.yahoo.com/group/sed-br/">sed-br</a>? Demorou. <a href="mailto:sed-br-subscribe@yahoogrupos.com.br">Inscreva-se já</a> para conversar com outros coleguinhas sobre Sed e <a href="/regex/">Expressões Regulares</a>.</p>
+
+<p>Your book is on the table? So <a href="http://tech.groups.yahoo.com/group/sed-users/">try this one</a> for advanced topics in english.</p>
+
+<h2 id="docs">Documentação</h2>
+
+<h3>Em português</h3>
+
+<dl>
+  <dt>
+    <a href="alfabeto.html">Alfabeto do sed</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Uma cola rápida de todos os comandos do sed, em ordem alfabética.</dd>
+  <dt>
+    <a href="/sed/sed-HOWTO/">Sed HOWTO</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Este documento se propõe a ser um tutorial e um guia de consulta de Sed ao mesmo tempo. Ele apresenta o Sed aos poucos, explicando seu funcionamento, mas também conta com dicas avançadas. Este guia é exclusivo de Sed, as Expressões Regulares não são abordadas.</dd>
+  <dt>
+    <a href="/sed/livro/">Dominando o Sed</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Um livro inacabado sobre Sed, disponível gratuitamente em PDF. Ele cobre instalação, todos os detalhes dos endereços, como lidar com arquivos, quebras de linha, maiúsculas e minúsculas, contando com vários exemplos didáticos com que podem ser testados em sua máquina.</dd>
+  <dt>
+    <a href="/sed/1liners-ptBR.txt">Sed 1liners</a> <em>por Ricardo Sartori</em>
+  </dt>
+  <dd>Comandos Sed de apenas 1 linha, prontos para copiar e colar.</dd>
+  <dt>
+    <a href="http://thobias.org/doc/sosed.html">Só Sed</a> <em>por Thobias Salazar Trevisan</em>
+  </dt>
+  <dd>Rápido e rasteiro, exemplos do Sed em ação resolvendo problemas comuns.</dd>
+  <dt>
+    <a href="http://thobias.org/doc/inc_sed.html">Usando o sed para contar</a> <em>por Thobias Salazar Trevisan</em>
+  </dt>
+  <dd>Explicação didática de como incrementar números (e letras) usando o Sed.</dd>
+  <dt>
+    <a href="http://thobias.org/doc/lookup_tables_sed.html">Lookup Tables &amp; Incrementando em sed</a> <em>por Thobias Salazar Trevisan</em>
+  </dt>
+  <dd>Demonstração do uso da técnica de Lookup Tables em Sed.</dd>
+  <dt>
+    <a href="http://thobias.org/doc/sedbranch.html">Branches no sed</a> <em>por Thobias Salazar Trevisan</em>
+  </dt>
+  <dd>Explicação dos comandos de branch (pulo, tipo GOTO) em Sed.</dd>
+  <dt>
+    <a href="/regex/">Expressões Regulares</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Vários documentos e um livro inteiro para você entender que <strong><code>^#!.*$</code></strong> não é um xingamento.</dd>
+  <dt>
+    <a href="/sed/sed-dicas.txt">Dicas soltas de Sed</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Diquinhas soltas, rápidas, para ler e esquecer.</dd>
+</dl>
+
+<h3>Em inglês</h3>
+
+<dl>
+  <dt>
+    <a href="http://sed.sourceforge.net">Portal mundial do Sed</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Este é o portal mundial do Sed, com dezenas de links para programas, artigos, sites e até jogos! Prepare-se para gastar MUITAS horas lendo todo o conteúdo.</dd>
+  <dt>
+    <a href="http://www.grymoire.com/Unix/Sed.html">Sed - An Introduction and Tutorial</a>
+  </dt>
+  <dd>Um guia bem completo, cheio de exemplos, que explica em detalhes o funcionamento do Sed.</dd>
+</dl>
+
+<h2 id="sedsed">Depurador (debug)</h2>
+
+<p>O <a href="/projects/sedsed/">sedsed</a> é um depurador (debugger) para scripts Sed escrito em Python. Sempre que seu script crescer e ficar confuso, ou estiver usando o <a href="/sed/sed-howto/#registradores-internos">HOLD SPACE</a>, esse depurador salvará a sua vida lhe mostrando o conteúdo dos buffers internos do Sed enquanto o script é executado.</p>
+
+<p>Além disso o mesmo programa também serve como embelezador de código ("<em>indentation</em>") e também converte scripts Sed para páginas HTML coloridas. Veja por exemplo como ficou o <a href="/sed/sokoban/sokoban.sed.html">SedSokoban em HTML</a>.</p>
+
+<h2 id="scripts">Programas / Scripts</h2>
+
+<p>Aqui estão alguns programinhas em Sed que eu fiz. Alguns estão com o nome e comentários em inglês porque eu os postei em listas gringas e não tive tempo/saco de traduzir. Se você tem, traduza e me mande que eu coloco aqui :D</p>
+
+<dl>
+  <dt>
+    <a href="/projects/sedsokoban/">sokoban.sed</a>
+  </dt>
+  <dd>
+    <p>O clássico jogo de empurrar caixas, Sokoban, inteiramente escrito em Sed. O jogo está bem completo, com 90 níveis, cores, comandos, detecção de vitória e movimentação do personagem usando as setinhas do teclado.</p>
+    <p class="figure">
+      <a href="/projects/sedsokoban/">
+        <img src="/projects/img/icon/128/sedsokoban.png">
+      </a>
+    </p>
+  </dd>
+  <dt>
+    <a href="/projects/sedarkanoid/">arkanoid.sed</a>
+  </dt>
+  <dd>
+    <p>O clássico jogo Arkanoid (Breakout) inteiramente escrito em Sed. O jogo está bem completo, com cores, explosões cadenciadas, possibilidade de segurar a bolinha no bastão e tem 3 vidas.</p>
+    <p class="figure">
+      <a href="/projects/sedarkanoid/">
+        <img src="/projects/img/icon/128/sedarkanoid.png">
+      </a>
+    </p>
+  </dd>
+  <dt>
+    <a href="programas/justify.sed">justify.sed</a>
+  </dt>
+  <dd>Justificador de texto.</dd>
+  <dt>
+    <a href="programas/mail-iso2txt.sed">mail-iso2txt.sed</a>
+  </dt>
+  <dd>Traduz os =20 e outros aliens que às vezes aparecem em mensagens de e-mail.</dd>
+  <dt>
+    <a href="programas/wrap-forced.sed">wrap-forced.sed</a>
+  </dt>
+  <dd>Quebra as linhas exatamente na coluna especificada, sem se importar com o contexto.</dd>
+  <dt>
+    <a href="programas/yahoogroups-kill-sig.sed">yahoogroups-kill-sig.sed</a>
+  </dt>
+  <dd>Apaga a propaganda do Yahoo! das mensagens de e-mail (TXT ou HTML).</dd>
+  <dt>
+    <a href="programas/escape.sed">escape.sed</a>
+  </dt>
+  <dd>Converte os símbolos <code>[^A-Za-z0-9_]</code> para hexadecimais, usando a notação de internet como %20.</dd>
+  <dt>
+    <a href="programas/unescape.sed">unescape.sed</a>
+  </dt>
+  <dd>Desconverte o que o escape.sed converteu.</dd>
+  <dt>
+    <a href="programas/txt2sgml-sed">txt2sgml-sed</a>
+  </dt>
+  <dd>
+    Um conversor simples de arquivos texto puro (TXT) para SGML. Este é um script bem antigo, que deu origem ao <a href="http://txt2tags.org/pt/">txt2tags</a>.
+  </dd>
+</dl>
+
+<h2 id="mensagens">Mensagens de erro</h2>
+
+<p>Eu sou o tradutor do GNU Sed para o português. Isso inclui todas as mensagens que o programa mostra na tela durante o uso, como a tela de ajuda (--help) e as mensagens de erro.</p>
+
+<p>As mensagens originais são bem curtas e difíceis de entender, eu tentei torná-las mais amigáveis, colocando dicas adicionais sobre a possível causa dos problemas. Veja alguns exemplos:</p>
+
+<dl>
+  <dt><code>unterminated `s' command</code></dt>
+  <dd>Comando `s' inacabado (s/// - faltou delimitador)</dd>
+  <dt><code>unknown option to `s'</code></dt>
+  <dd>Opção desconhecida para o comando `s' (s///?)</dd>
+  <dt><code>Invalid content of \\{\\}</code></dt>
+  <dd>Conteúdo inválido no \\{\\} (permitidos números e vírgula)</dd>
+</dl>
+
+<p>Se o seu Sed está em inglês e você está tendo problemas para decifrar alguma mensagem, dê uma olhada no <a href="http://translationproject.org/PO-files/pt_BR/sed-4.2.0.pt_BR.po">arquivo de tradução</a> e procure pela frase em questão, pois a tradução pode te ajudar.</p>
+
+<h2 id="gnu-sed">GNU Sed 3.02.80</h2>
+
+<p>Nem lembro mais porque eu guardava essa versão específica do Sed, mas tem algo a ver com a troca de mantenedor do programa. A versão seguinte a essa contava com firulas inúteis, que eu não gostei. Hoje isso já não faz mais diferença na minha vida (hehe), então que fique aqui para fins meramente arqueológicos:</p>
+
+<ul>
+  <li>
+    <a href="sed-3.02.80.tar.gz">GNU Sed 3.02.80 — Linux (.tar.gz)</a> (342 Kb)
+  </li>
+  <li>
+    <a href="sed-3.02.80-4cl.i386.rpm">GNU Sed 3.02.80 — Linux (RPM)</a> (63 Kb)
+  </li>
+  <li>
+    <a href="sed3028a.zip">GNU Sed 3.02.80 — Windows (EXE)</a> (68 Kb)
+  </li>
+</ul>
+
+<h2 id="palestra">Palestra sobre Sed</h2>
+
+<p>Nos dias 27 e 28 de outubro de 1999 (é, faz tempo, tou véio), eu fiz uma palestra sobre Sed e <a href="/regex/">Expressões Regulares</a> para os funcionários da Conectiva.</p>
+
+<p>A palestra foi gravada e aqui está um resumão dela, divido em dois arquivos. Provavelmente quase nada é aproveitável desses arquivos, visto que não é a palestra corrida e sim apenas o supra-sumo de cada tópico, mas se servir pra alguém já vale.</p>
+
+<p>É uma pena que eu cortei demais. As frases ficaram grudadas e há poucos trechos com as falas do pessoal que estava assistindo. Dá pra identificar as vozes do <a href="http://oops.ghostprotocols.net:81/blog/">Acme</a> e do <a href="http://pt.wikipedia.org/wiki/Marcelo_Tosatti">Marcelo Tosatti</a>, em trechos curtos.</p>
+
+<p>Nas tabelas seguintes, há uma descrição breve do assunto de cada trecho. Acompanhe os bips para saber quando passou de um trecho para o outro.</p>
+
+<p>Obrigado ao amigo Fernando Rodrigues por ter convertido para MP3 os arquivos originais que estavam em Real Audio.</p>
+
+<ul>
+  <li>
+    <a href="sed1-19991027.mp3">sed1-19991027.mp3</a> (2,3 Mb): Como o Sed funciona e seus comandos básicos
+  </li>
+  <li>
+    <a href="sed2-19991028.mp3">sed2-19991028.mp3</a> (2,6 Mb): Expressões Regulares em Sed
+  </li>
+</ul>
+
+<p>Segue uma descrição dos tópicos abordados em cada arquivo:</p>
+
+<table class="tableborder">
+  <tr>
+    <td class="center" colspan="3"><em>27 de Outubro de 1999, 13:09 minutos</em></td>
+  </tr>
+  <tr>
+    <th>#</th>
+    <th>assunto</th>
+    <th>descrição</th>
+  </tr>
+  <tr>
+    <td class="right">1</td>
+    <td class="center"><strong>nome func</strong></td>
+    <td>s+ed, fluxo, funcionamento, STDIN/STDOUT, regras</td>
+  </tr>
+  <tr>
+    <td class="right">2</td>
+    <td class="center"><strong>util</strong></td>
+    <td>substituição de padrões</td>
+  </tr>
+  <tr>
+    <td class="right">3</td>
+    <td class="center"><strong>chamada</strong></td>
+    <td>cat A |sed; sed 's///' A &gt; A2</td>
+  </tr>
+  <tr>
+    <td class="right">4</td>
+    <td class="center"><strong>cp</strong></td>
+    <td>tática cp;sed;rm - permissões, ligações e atributos</td>
+  </tr>
+  <tr>
+    <td class="right">5</td>
+    <td class="center"><strong>delimitador</strong></td>
+    <td>barras, tem que ser 3</td>
+  </tr>
+  <tr>
+    <td class="right">6</td>
+    <td class="center"><strong>s///g</strong></td>
+    <td>modificador g: global, + de 1 ocorrência</td>
+  </tr>
+  <tr>
+    <td class="right">7</td>
+    <td class="center"><strong>s/\///</strong></td>
+    <td>escapar a / com um \ para não confundir com o delim</td>
+  </tr>
+  <tr>
+    <td class="right">8</td>
+    <td class="center"><strong>s@@@</strong></td>
+    <td>s/$velho/$novo/, barra é padrão</td>
+  </tr>
+  <tr>
+    <td class="right">9</td>
+    <td class="center"><strong>" ou '</strong></td>
+    <td>bash. sempre use '' ou "" ao redor</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td class="center"><strong>$aux</strong></td>
+    <td>aux=/1998 ; echo sed s,$aux,lala,</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td class="center"><strong>echo sed</strong></td>
+    <td>faz as substituições normais do bash</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td class="center"><strong>-n s///p</strong></td>
+    <td>geralmente com -n usa-se o p</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td class="center"><strong>dica</strong></td>
+    <td>?</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td class="center"><strong>s<em>/ ; s/</em></strong></td>
+    <td>vários comandos seguidos</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td class="center"><strong>dica</strong></td>
+    <td>vantagem s<em>/ ; s/</em> por sed|sed</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td class="center"><strong>aplicativos</strong></td>
+    <td>grep, cat, rev, etc</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td class="center"><strong>=</strong></td>
+    <td>= mostra o número da linha</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td class="center"><strong>N</strong></td>
+    <td>N grude a próxima linha com a minha atual</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <td class="center" colspan="3"><em>20 de Outubro de 1999, 14:39 minutos</em></td>
+  </tr>
+  <tr>
+    <th>#</th>
+    <th>assunto</th>
+    <th>descrição</th>
+  </tr>
+  <tr>
+    <td class="right">1</td>
+    <td class="center"><strong>âncoras</strong></td>
+    <td>^$</td>
+  </tr>
+  <tr>
+    <td class="right">2</td>
+    <td class="center"><strong>.</strong></td>
+    <td>qualquer caractere</td>
+  </tr>
+  <tr>
+    <td class="right">3</td>
+    <td class="center"><strong>classe char</strong></td>
+    <td>[], nada é interpretado</td>
+  </tr>
+  <tr>
+    <td class="right">4</td>
+    <td class="center"><strong>intervalo</strong></td>
+    <td>0-9 = 0123456789, tabela ASCII, A-z != A-Za-z</td>
+  </tr>
+  <tr>
+    <td class="right">5</td>
+    <td class="center"><strong>chk domínio</strong></td>
+    <td>^[A-Za-z0-9.]*, zero uma ou mais vezes</td>
+  </tr>
+  <tr>
+    <td class="right">6</td>
+    <td class="center"><strong>.*</strong></td>
+    <td>tudo ou nada, curinga</td>
+  </tr>
+  <tr>
+    <td class="right">7</td>
+    <td class="center"><strong>o * guloso</strong></td>
+    <td><span class="underline">http:</span>//www.lala.com.br:80 — ^.*:</td>
+  </tr>
+  <tr>
+    <td class="right">8</td>
+    <td class="center"><strong>\+</strong></td>
+    <td>motivos históricos, escapado para ser especial</td>
+  </tr>
+  <tr>
+    <td class="right">9</td>
+    <td class="center"><strong>\?</strong></td>
+    <td>.html* casa .htmllllll, então faz .html\?</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td class="center"><strong>classe neg</strong></td>
+    <td>1º caractere deve ser ^, ! é negação no sed</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td class="center"><strong>tags html</strong></td>
+    <td>abordagem inversa: o que NÃO pode ter, &lt;[^&gt;]*&gt;</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td class="center"><strong>técnica</strong></td>
+    <td>nega pois ele é o delimitador</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td class="center"><strong>é fácil</strong></td>
+    <td>encarar a ER como pequenas partes, ler um a um</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td class="center"><strong>\|</strong></td>
+    <td>devem ser escapados os (), código C</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td class="center"><strong>aninhando</strong></td>
+    <td>parênteses dentro de parênteses</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td class="center"><strong>buffer</strong></td>
+    <td>()s, conta da esquerda para a direita, até 9, \1</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td class="center"><strong>dica</strong></td>
+    <td>sem escapar, depois sai escapando tudo</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td class="center"><strong>cut</strong></td>
+    <td>trocar a ordem de 2 campos</td>
+  </tr>
+</table>
+
+<h2 id="divirta-se">Divirta-se!</h2>
+
+<h3>Sed Superman</h3>
+
+<p class="figure">
+  <img src="/sed/img/sed-superman.png">
+</p>
+
+<h3>Evolução das línguas</h3>
+
+<p class="figure">
+  <a href="http://www.userfriendly.org/cartoons/archives/99aug/19990815.html">
+    <img src="/sed/img/grep-awk-sed.gif">
+  </a>
+</p>
