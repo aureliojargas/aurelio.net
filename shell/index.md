@@ -46,7 +46,7 @@ Conheci o shell em 1997, quando comecei a trabalhar na Conectiva, e fui apresent
 
 Mas com o tempo, paciência, dedicação e muitos, **muitos** arquivos apagados acidentalmente e **muita** leitura sem noção de páginas de manual em inglês**¹**, finalmente eu vi a luz do shell e hoje o temível Sr. Bash me obedece. Bem... nem sempre ;)
 
-> [1] Ler o "man bash" em inglês, inteiro, é algo memorável que só se faz uma vez na vida...
+> Ler o "man bash" em inglês, inteiro, é algo memorável que só se faz uma vez na vida...
 
 A idéia dessa página é juntar links de qualidade relativos a shell script **em português**. Um ponto de partida para o aprendizado ou consulta rápida. Aceito colaborações!
 
