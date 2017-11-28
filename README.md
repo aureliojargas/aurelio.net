@@ -27,7 +27,7 @@ bundle exec jekyll build
 # Viewing
 bundle exec jekyll serve --watch --limit_posts 10
 
-# Viewing at Cloud9
+# Viewing at Cloud9 or CodeAnywhere
 bundle exec jekyll serve --watch --limit_posts 10 --port 8080 --host 0.0.0.0
 ```
 
