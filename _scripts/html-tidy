@@ -2,6 +2,9 @@
 # Tidy to STDOUT the informed HTML file.
 # Will preserve Jekyll's Front Matter, if any.
 # Get tidy: http://www.html-tidy.org
+# Install:
+#     sudo dpkg -i tidy-*.deb
+#     sudo apt-get install -f
 
 file="$1"
 
