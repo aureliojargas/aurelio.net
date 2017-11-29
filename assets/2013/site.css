@@ -128,6 +128,18 @@ pre {
   text-decoration: none;
 }
 
+nav {
+  border: 1px solid black;
+  border-width: 1px 0;
+  line-height: 200%;
+}
+nav ul {
+  list-style-type: none;
+}
+nav > ul {
+  margin-left: 0;
+}
+
 /* ------------------------------------  special */
 
 tr:hover td {
