@@ -156,12 +156,13 @@ td, th {
   border-bottom: 1px solid #ccc;
   padding: 0 4px;
 }
+th.center,
+td.center {
+  text-align: center;
+}
 th {
   font-style: italic;
   background-color: #eee;
-}
-table {
-/*  font-size: 15px;*/
 }
 
 #article-header {
