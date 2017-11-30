@@ -116,13 +116,6 @@ For all platforms:
 export PATH="$PWD/_scripts:$PATH"
 ```
 
-Setup for CodeAnywhere:
-
-```bash
-# Esc not working on Android, back to ed
-git config --global core.editor ed
-```
-
 Setup for Termux:
 
 ```bash
