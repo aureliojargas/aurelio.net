@@ -59,6 +59,17 @@ defaults:
       hide_share: true
   -
     scope:
+      path: "fvm"
+    values:
+      layout: 2013-page
+      article_footer_after: nav-fvm.html
+      hide_title_suffix: true
+      hide_byline: true
+      hide_read_more: true
+      hide_share: true
+      hide_comments: true
+  -
+    scope:
       path: "regex"
     values:
       css_extra: /regex/regex.css
