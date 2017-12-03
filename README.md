@@ -27,7 +27,7 @@ bundle exec jekyll build
 # Viewing
 bundle exec jekyll serve --watch --limit_posts 10
 
-# Viewing at Cloud9 or CodeAnywhere
+# Viewing at Cloud9 or Codeanywhere
 bundle exec jekyll serve --watch --limit_posts 10 --port 8080 --host 0.0.0.0
 ```
 
@@ -114,6 +114,23 @@ For all platforms:
 ```bash
 # Easier access to the repo scripts
 export PATH="$PWD/_scripts:$PATH"
+```
+
+Setup for Codeanywhere:
+
+```bash
+# Fix locale
+export LANG="C.UTF-8"
+
+# Fix include paths for txt2tags files
+sudo mkdir /a
+sudo ln -s $PWD /a/www
+
+# Python2 for txt2tags
+sudo apt-get install python
+
+# Install rbenv and a recent ruby 2.x
+# https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-8
 ```
 
 Setup for Termux:
