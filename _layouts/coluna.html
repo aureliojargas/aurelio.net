@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <TITLE>{{ page.title | escape }}: {{ page.subtitle | escape }} | Aurelio.net</TITLE>
+
+  <STYLE TYPE="text/css">
+    h1, h3    { color: green     ; }
+    h2        { color: lightgreen; }
+    code      { color: white     ;      font-weight: bold   ; }
+    a         { color: yellow    ;  text-decoration: none   ; }
+    a:visited { color: purple    ; }
+    body      { color: silver    ; background-color: black  ;
+               margin: 2em       ;       text-align: justify; }
+    pre       { color: orange    ;      margin-left: 2em    ; }
+  </STYLE>
+</HEAD>
+<BODY>
+
+<DIV CLASS="header" ID="header">
+  <H1>{{ page.title | escape }}</H1>
+  <H2>{{ page.subtitle | escape }}</H2>
+  <H3>http://aurelio.net/doc/coluna</H3>
+</DIV>
+
+<DIV CLASS="body" ID="body">
+
+{{ content }}
+
+<HR NOSHADE SIZE="1">
+
+<P><A HREF=".">&lt;--- Voltar para o índice</A></P>
+
+{% include analytics.html %}
+
+</DIV><!-- #body -->
+
+</BODY></HTML>
