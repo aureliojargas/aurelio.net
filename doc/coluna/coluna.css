@@ -1,8 +1,0 @@
-/* --css-inside: Se mudar algo, regerar todas as colunas */
-h1, h3    { color: green     ; }
-h2        { color: lightgreen; }
-code      { color: white     ;      font-weight: bold   ; }
-a         { color: yellow    ;  text-decoration: none   ; }
-a:visited { color: purple    ; }
-body      { color: silver    ; background-color: black  ;
-           margin: 2em       ;       text-align: justify; }

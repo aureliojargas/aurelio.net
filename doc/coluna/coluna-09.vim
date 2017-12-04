@@ -1,5 +1,5 @@
 " http://aurelio.net/doc/coluna
-" coluna do aurelio 09 [maio/2001]
+" coluna do aurelio 09 [2001-06-28]
 " vim (um vimrc diferente)
 "
 " original em http://aurelio.net/doc/coluna/coluna-09.vim

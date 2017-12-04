@@ -1,176 +1,46 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.sf.net">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>coluna do aurelio 07</TITLE>
+---
+layout: coluna
+date: 2001-04-12
+title: coluna do aurelio 07
+subtitle: screen (janelizando o modo texto - parte 1)
+---
 
-<!-- Included coluna.css -->
-<STYLE TYPE="text/css">
-/* --css-inside: Se mudar algo, regerar todas as colunas */
-h1, h3    { color: green     ; }
-h2        { color: lightgreen; }
-code      { color: white     ;      font-weight: bold   ; }
-a         { color: yellow    ;  text-decoration: none   ; }
-a:visited { color: purple    ; }
-body      { color: silver    ; background-color: black  ;
-           margin: 2em       ;       text-align: justify; }
-</STYLE>
+<p>olás. como começar a escrever sobre o <code>screen</code>? ele tem tantas vantagens e seu uso pode ser para tantos fins diferentes que realmente é difícil encontrar um ponto de partida. por definição, ele é um gerenciador de console que cria "janelas" e permite toda sorte de facilidades e interações entre elas, como alternar, copiar, colar, monitorar, capturar, travar, dividir, redimensionar, interromper, guardar, restaurar e destruir.</p>
 
-</HEAD>
-<BODY>
+<p>então com apenas um acesso ("login") na máquina, você pode ter várias janelas, independentes, cada uma com seu próprio ambiente, como no <code>X</code>. o efeito é parecido com ter várias seções abertas nos <code>alt+F1</code>, <code>alt+F2</code> da vida, mas sem precisar ficar informando usuário e senha a cada seção nova e com possibilidade de interação total entre elas.</p>
 
-<DIV CLASS="header" ID="header">
-<H1>coluna do aurelio 07</H1>
-<H2>screen (janelizando o modo texto - parte 1)</H2>
-<H3>http://aurelio.net/doc/coluna</H3>
-</DIV>
+<p>essa "janela", não é gráfica ou visual, portanto o modo texto continua o mesmo de sempre, em tela cheia. se preferir, você pode sacrificar a última linha da tela para ter uma "barra de tarefas", podendo colocar nela a data, horário, informações de consumo de memória e CPU da máquina, e nomes para cada janela criada. vale a pena, é muito útil.</p>
 
-<DIV CLASS="body" ID="body">
-<P>
-olás. como começar a escrever sobre o <CODE>screen</CODE>? ele tem tantas vantagens
-e  seu  uso pode ser para tantos fins diferentes que realmente é difícil
-encontrar  um  ponto  de partida. por definição, ele é um gerenciador de
-console  que  cria  "janelas"  e  permite  toda  sorte  de facilidades e
-interações   entre   elas,  como  alternar,  copiar,  colar,  monitorar,
-capturar,   travar,   dividir,   redimensionar,   interromper,  guardar,
-restaurar e destruir.
-</P>
-<P>
-então  com  apenas  um acesso ("login") na máquina, você pode ter várias
-janelas,  independentes, cada uma com seu próprio ambiente, como no <CODE>X</CODE>.
-o efeito é parecido com ter várias seções abertas nos <CODE>alt+F1</CODE>, <CODE>alt+F2</CODE>
-da  vida, mas sem precisar ficar informando usuário e senha a cada seção
-nova e com possibilidade de interação total entre elas.
-</P>
-<P>
-essa "janela", não é gráfica ou visual, portanto o modo texto continua o
-mesmo  de  sempre,  em  tela  cheia. se preferir, você pode sacrificar a
-última  linha  da  tela para ter uma "barra de tarefas", podendo colocar
-nela  a  data,  horário,  informações  de  consumo  de  memória e CPU da
-máquina, e nomes para cada janela criada. vale a pena, é muito útil.
-</P>
-<P>
-bem,  vamos dar uma brincada com ele então? a página do programa está em
-<A HREF="http://www.gnu.org/software/screen">http://www.gnu.org/software/screen</A>,  mas  ele  também  vem  com a grande
-maioria (todas?) das distribuições de linux, procure na sua. instalado o
-programa, simplesmente o chame na linha de comando:
-</P>
-<PRE>
-    $ screen
-</PRE>
-<P></P>
-<P>
-apareceu  uma  tela  de  boas-vindas.  aperte  <CODE>ENTER</CODE>. pronto, este é o
-<CODE>screen</CODE>!  apareceu  nada? então está certo &amp;:) como já dito, ele é tela
-cheia,  então  não  interfere  na  aparência de seu console, mas já está
-funcionando. para saber os comandos mais usados, digite <CODE>ctrl+a ?</CODE>. este
-<CODE>ctrl+a</CODE>  é  a tecla-chave do <CODE>screen</CODE> e precede todos os seus comandos.
-esta  combinação será referenciada como <CODE>^a</CODE> daqui adiante, então <CODE>^a ?</CODE>
-é a ajuda, use-a sempre que precisar.
-</P>
-<P>
-primeiramente, para ficar mais "visual" o processo de criação e troca de
-janelas, vamos colocar a "barra de tarefas". como o <CODE>vi</CODE>, o <CODE>screen</CODE> tem
-uma  linha  de  comando  própria,  para aceitar comandos literais ou que
-recebem  parâmetros,  invocada pelo comando <CODE>:</CODE>. então, primeiro chame a
-linha  de  comando  com  o  <CODE>^a :</CODE> (veja a linha láááá embaixo) e digite
-<CODE>hardstatus alwayslastline "%c %w"</CODE>.  agora temos  uma barra  permanente
-com  o  horário e as janelas abertas, por enquanto apenas uma "0* bash",
-sendo  zero  o  número da janela, o asterisco indica que é esta a janela
-ativa e "bash" é o nome desta janela.
-</P>
-<P>
-para  Criar  uma  janela nova, <CODE>^a c</CODE>. note que ela apareceu na barra lá
-embaixo  também,  com  o número 1 e com o mesmo nome da janela anterior.
-para não confundir, vamos trocar o nome desta janela: <CODE>^a A</CODE> (note que é
-um  "a"  maiúsculo), e aparecerá um prompt para você digitar o nome novo
-da  janela,  suponhamos  "www",  e nesta janela você chama o <CODE>lynx</CODE> para
-navegar.
-</P>
-<P>
-para  Alternar  entre duas janelas (igual com os canais da tv), <CODE>^a ^a</CODE>.
-este  além  de útil no uso diário é bom para se ter um <CODE>diff</CODE> bem visual
-entre  dois arquivos, abrindo um em cada janela e simplesmente segurando
-o <CODE>^a</CODE> até cansar.
-</P>
-<P>
-crie  uma  terceira  janela <CODE>^a c</CODE>, e a nomeie como "email" por exemplo.
-agora  vamos  ver  mais de uma janela simultaneamente na tela ("Split"),
-apertando <CODE>^a S</CODE> para dividir a tela em 2 partes. para mais partes, siga
-apertando <CODE>^a S</CODE> até se satisfazer.  ao dividir  a tela, a janela  atual
-fica  na parte de cima e na parte debaixo, NÃO há janelas, ela se inicia
-vazia. então vamos com o cursor para a parte de baixo <CODE>^a TAB</CODE> e colocar
-a  janela  do  <CODE>lynx</CODE> (que tem número 1) nela <CODE>^a 1</CODE>. quer voltar para a
-parte superior? <CODE>^a TAB</CODE> novamente.
-</P>
-<P>
-se  por  acaso você apertou por engano <CODE>^a s</CODE>, com o "s" minúsculo, verá
-que a tela "congelou". basta apertar <CODE>^a q</CODE> pra ela se descongelar. esta
-é a função de "scroll lock", igual como apertar a tecla de mesmo nome do
-teclado.  ela  é praticamente inútil pois o próprio <CODE>ctrl+s</CODE> já faz isso
-(além de existir a tecla física), então podemos anular este comando para
-evitar  apertá-lo  sem  querer: <CODE>^a :bind s</CODE>, ou  ainda redefini-lo para
-outra  função  qualquer: <CODE>^a :bind s help</CODE>. e assim  pode-se  anular  ou
-redefinir  qualquer outro comando. e note que ao consultar a ajuda, suas
-redefinições aparecerão lá!
-</P>
-<P>
-para  voltar  à tela cheia, <CODE>^a Q</CODE> "maximizará" a tela ativa, voltando à
-condição  anterior  à  da  divisão. cada janela desaparecerá normalmente
-quando  você der o "logout" do <CODE>shell</CODE>, ou para forçar, ou melhor dizer,
-"matar"  uma  janela,  <CODE>^a k</CODE>.  muito útil caso  você tenha rodado algum
-programa  que travou na tela. ao invés de ir numa outra console, ter que
-descobrir  o <CODE>PID</CODE> dele e dar um <CODE>kill -9</CODE>, simplesmente mate a janela e
-tudo o que estiver rodando (ou zumbi) nela será morto também.
-</P>
-<P>
-ao sair da última janela, o <CODE>screen</CODE> também se encerrará e você volta ao
-<CODE>shell</CODE>  normal.  ou  melhor  ainda,  o  <CODE>screen</CODE> conta com o recurso de
-guardar  uma  seção,  então  você  pode  começar a baixar aquele arquivo
-gigantesco  da  internet  no  trabalho,  guardar  a  seção  do  <CODE>screen</CODE>
-("Detach") <CODE>^a d</CODE>,  sair  com   seu   usuário  do  sistema   normalmente
-("logout"),  e  dia  seguinte, como todos os dias, você acessa o sistema
-("login") e Restaura a seção <CODE>screen</CODE> do dia anterior:
-</P>
-<PRE>
-    $ screen -r
-</PRE>
-<P></P>
-<P>
-mágica!  os processos continuaram rodando durante a noite mesmo você não
-estando na máquina. essa funcionalidade de guardar e restaurar a seção é
-com  certeza  uma  das  melhores do <CODE>screen</CODE>, e útil em várias situações
-onde  você  não  pode  estar o tempo todo acessando a máquina. se houver
-mais de uma seção guardada, um <CODE>screen -ls</CODE> lhe listará as disponíveis.
-</P>
-<P>
-e  como  última  dica  de hoje, para capturar a tela toda e gravar em um
-arquivo,  <CODE>^a h</CODE>.  o nome do arquivo  gravado aparecerá  no rodapé, algo
-como "hardcopy.1".
-</P>
-<P>
-há  listas  de  discussão  em português (<A HREF="mailto:screen-br@yahoogroups.com">screen-br@yahoogroups.com</A>) e em
-inglês (<A HREF="mailto:gnu-screen@yahoogroups.com">gnu-screen@yahoogroups.com</A>) para usuários iniciantes e gurus.
-</P>
-<P>
-na próxima coluna a continuação com dicas avançadas de uso,  como copiar
-e colar texto sem o mouse, fazer monitoração de janelas, rodar programas
-automaticamente e ter um <CODE>~/.screenrc</CODE> incrementado.
-</P>
-<HR NOSHADE SIZE=1>
-<P>
- <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
-<A HREF=".">&lt;--- Voltar para o índice</A>
-</P>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-280222-1";
-urchinTracker();
-</script>
-</DIV>
+<p>bem, vamos dar uma brincada com ele então? a página do programa está em <a href="http://www.gnu.org/software/screen">http://www.gnu.org/software/screen</a>, mas ele também vem com a grande maioria (todas?) das distribuições de linux, procure na sua. instalado o programa, simplesmente o chame na linha de comando:</p>
 
-<!-- html code generated by txt2tags 2.3.3-dev (http://txt2tags.sf.net) -->
-<!-- cmdline: txt2tags -C config.t2t coluna-07.t2t -->
-</BODY></HTML>
+<pre>
+$ screen
+</pre>
+
+<p>apareceu uma tela de boas-vindas. aperte <code>ENTER</code>. pronto, este é o <code>screen</code>! apareceu nada? então está certo &amp;:) como já dito, ele é tela cheia, então não interfere na aparência de seu console, mas já está funcionando. para saber os comandos mais usados, digite <code>ctrl+a ?</code>. este <code>ctrl+a</code> é a tecla-chave do <code>screen</code> e precede todos os seus comandos. esta combinação será referenciada como <code>^a</code> daqui adiante, então <code>^a ?</code> é a ajuda, use-a sempre que precisar.</p>
+
+<p>primeiramente, para ficar mais "visual" o processo de criação e troca de janelas, vamos colocar a "barra de tarefas". como o <code>vi</code>, o <code>screen</code> tem uma linha de comando própria, para aceitar comandos literais ou que recebem parâmetros, invocada pelo comando <code>:</code>. então, primeiro chame a linha de comando com o <code>^a :</code> (veja a linha láááá embaixo) e digite <code>hardstatus alwayslastline "%c %w"</code>. agora temos uma barra permanente com o horário e as janelas abertas, por enquanto apenas uma "0* bash", sendo zero o número da janela, o asterisco indica que é esta a janela ativa e "bash" é o nome desta janela.</p>
+
+<p>para Criar uma janela nova, <code>^a c</code>. note que ela apareceu na barra lá embaixo também, com o número 1 e com o mesmo nome da janela anterior. para não confundir, vamos trocar o nome desta janela: <code>^a A</code> (note que é um "a" maiúsculo), e aparecerá um prompt para você digitar o nome novo da janela, suponhamos "www", e nesta janela você chama o <code>lynx</code> para navegar.</p>
+
+<p>para Alternar entre duas janelas (igual com os canais da tv), <code>^a ^a</code>. este além de útil no uso diário é bom para se ter um <code>diff</code> bem visual entre dois arquivos, abrindo um em cada janela e simplesmente segurando o <code>^a</code> até cansar.</p>
+
+<p>crie uma terceira janela <code>^a c</code>, e a nomeie como "email" por exemplo. agora vamos ver mais de uma janela simultaneamente na tela ("Split"), apertando <code>^a S</code> para dividir a tela em 2 partes. para mais partes, siga apertando <code>^a S</code> até se satisfazer. ao dividir a tela, a janela atual fica na parte de cima e na parte debaixo, NÃO há janelas, ela se inicia vazia. então vamos com o cursor para a parte de baixo <code>^a TAB</code> e colocar a janela do <code>lynx</code> (que tem número 1) nela <code>^a 1</code>. quer voltar para a parte superior? <code>^a TAB</code> novamente.</p>
+
+<p>se por acaso você apertou por engano <code>^a s</code>, com o "s" minúsculo, verá que a tela "congelou". basta apertar <code>^a q</code> pra ela se descongelar. esta é a função de "scroll lock", igual como apertar a tecla de mesmo nome do teclado. ela é praticamente inútil pois o próprio <code>ctrl+s</code> já faz isso (além de existir a tecla física), então podemos anular este comando para evitar apertá-lo sem querer: <code>^a :bind s</code>, ou ainda redefini-lo para outra função qualquer: <code>^a :bind s help</code>. e assim pode-se anular ou redefinir qualquer outro comando. e note que ao consultar a ajuda, suas redefinições aparecerão lá!</p>
+
+<p>para voltar à tela cheia, <code>^a Q</code> "maximizará" a tela ativa, voltando à condição anterior à da divisão. cada janela desaparecerá normalmente quando você der o "logout" do <code>shell</code>, ou para forçar, ou melhor dizer, "matar" uma janela, <code>^a k</code>. muito útil caso você tenha rodado algum programa que travou na tela. ao invés de ir numa outra console, ter que descobrir o <code>PID</code> dele e dar um <code>kill -9</code>, simplesmente mate a janela e tudo o que estiver rodando (ou zumbi) nela será morto também.</p>
+
+<p>ao sair da última janela, o <code>screen</code> também se encerrará e você volta ao <code>shell</code> normal. ou melhor ainda, o <code>screen</code> conta com o recurso de guardar uma seção, então você pode começar a baixar aquele arquivo gigantesco da internet no trabalho, guardar a seção do <code>screen</code> ("Detach") <code>^a d</code>, sair com seu usuário do sistema normalmente ("logout"), e dia seguinte, como todos os dias, você acessa o sistema ("login") e Restaura a seção <code>screen</code> do dia anterior:</p>
+
+<pre>
+$ screen -r
+</pre>
+
+<p>mágica! os processos continuaram rodando durante a noite mesmo você não estando na máquina. essa funcionalidade de guardar e restaurar a seção é com certeza uma das melhores do <code>screen</code>, e útil em várias situações onde você não pode estar o tempo todo acessando a máquina. se houver mais de uma seção guardada, um <code>screen -ls</code> lhe listará as disponíveis.</p>
+
+<p>e como última dica de hoje, para capturar a tela toda e gravar em um arquivo, <code>^a h</code>. o nome do arquivo gravado aparecerá no rodapé, algo como "hardcopy.1".</p>
+
+<p>há listas de discussão em português (<a href="mailto:screen-br@yahoogroups.com">screen-br@yahoogroups.com</a>) e em inglês (<a href="mailto:gnu-screen@yahoogroups.com">gnu-screen@yahoogroups.com</a>) para usuários iniciantes e gurus.</p>
+
+<p>na próxima coluna a continuação com dicas avançadas de uso, como copiar e colar texto sem o mouse, fazer monitoração de janelas, rodar programas automaticamente e ter um <code>~/.screenrc</code> incrementado.</p>

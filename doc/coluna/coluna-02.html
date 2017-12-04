@@ -1,129 +1,32 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.sf.net">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>coluna do aurelio 02</TITLE>
+---
+layout: coluna
+date: 2000-10-15
+title: coluna do aurelio 02
+subtitle: ICQ
+---
 
-<!-- Included coluna.css -->
-<STYLE TYPE="text/css">
-/* --css-inside: Se mudar algo, regerar todas as colunas */
-h1, h3    { color: green     ; }
-h2        { color: lightgreen; }
-code      { color: white     ;      font-weight: bold   ; }
-a         { color: yellow    ;  text-decoration: none   ; }
-a:visited { color: purple    ; }
-body      { color: silver    ; background-color: black  ;
-           margin: 2em       ;       text-align: justify; }
-</STYLE>
+<p>olás. após a introdução rápida da edição passada, vamos passar ao campo prático, com dicas de execução de uma tarefa bem comum de nossos dias conectados: conversar pelo ICQ.</p>
 
-</HEAD>
-<BODY>
+<p>bem, como o protocolo do ICQ é algo relativamente simples de ser implementado, vários clones apareceram para linux. dos que conheci, destaco 3 clientes de ICQ que servem para todos os gostos: <code>mICQ</code>, orientado a linha, simples e poderoso, <code>zicq</code>, que hoje se chama <code>krolden ICQ</code>, é o <code>micq</code> em tela cheia, mas com funcionalidades reduzidas e o <code>centerICQ</code>, que usa o conceito de menus. todos estes programas podem ser encontrados em <a href="http://freshmeat.net/appindex/Console/Communication.html">http://freshmeat.net/appindex/Console/Communication.html</a></p>
 
-<DIV CLASS="header" ID="header">
-<H1>coluna do aurelio 02</H1>
-<H2>ICQ</H2>
-<H3>http://aurelio.net/doc/coluna</H3>
-</DIV>
+<p>o <code>mICQ</code> é aconselhado para sessões remotas com conexão lenta, como em contas linux gratuitas que existem na internet. é bem simples, as mensagens vão pipocando e rolando na tela, bem como os avisos de pessoas que estão on line. a adição de pessoas novas em sua lista e configurações gerais como retirar a cor ou redefinir os comandos são colocadas no arquivo <code>~/.micqrc</code>. sua principal vantagem é ser simples e funcionar em qualquer tipo de terminal.</p>
 
-<DIV CLASS="body" ID="body">
-<P>
-olás.  após a introdução rápida da edição passada, vamos passar ao campo
-prático,  com  dicas  de execução de uma tarefa bem comum de nossos dias
-conectados: conversar pelo ICQ.
-</P>
-<P>
-bem,  como  o  protocolo  do  ICQ  é  algo  relativamente simples de ser
-implementado,  vários  clones  apareceram  para  linux. dos que conheci,
-destaco  3  clientes  de  ICQ  que  servem para todos os gostos: <CODE>mICQ</CODE>,
-orientado  a  linha,  simples  e  poderoso,  <CODE>zicq</CODE>,  que  hoje se chama
-<CODE>krolden  ICQ</CODE>,  é  o  <CODE>micq</CODE>  em  tela  cheia,  mas com funcionalidades
-reduzidas  e  o  <CODE>centerICQ</CODE>,  que  usa o conceito de menus. todos estes
-programas podem ser encontrados em
-<A HREF="http://freshmeat.net/appindex/Console/Communication.html">http://freshmeat.net/appindex/Console/Communication.html</A>
-</P>
-<P>
-o  <CODE>mICQ</CODE>  é aconselhado para sessões remotas com conexão lenta, como em
-contas  linux  gratuitas  que  existem  na  internet.  é bem simples, as
-mensagens vão pipocando e rolando na tela, bem como os avisos de pessoas
-que   estão  on  line.  a  adição  de  pessoas  novas  em  sua  lista  e
-configurações  gerais  como  retirar  a cor ou redefinir os comandos são
-colocadas no arquivo <CODE>~/.micqrc</CODE>. sua principal vantagem é ser simples e
-funcionar em qualquer tipo de terminal.
-</P>
-<P>
-o <CODE>zicq</CODE> é basicamente uma carinha mais amigável do <CODE>mICQ</CODE>. o código foi
-reescrito  utilizando-se  a biblioteca <CODE>ncurses</CODE>. esta biblioteca é para
-programas  de  modo  texto utilizarem tela cheia, bem como trabalhar com
-janelas  e  áreas  distintas numa mesma tela. a vantagem é que você pode
-ver  sua  lista  de  contatos, com os estados atuais de cada um, além de
-haverem  áreas  específicas  para  ler e para escrever mensagens. amigos
-podem  ser  adicionados  à  sua  lista  com  o comando <CODE>add</CODE>, mas outras
-configurações  são feitas no arquivo <CODE>~/.zicqrc</CODE>, inclusive o arquivo de
-som,  para você ouvir aquele "á-ou" quando chega uma mensagem nova. este
-é  o  que  eu  uso diariamente e fora umas quebras eventuais na conexão,
-funciona que é uma beleza.
-</P>
-<P>
-para os amantes de programas de menu, como <CODE>minicom</CODE>, <CODE>mc</CODE> e <CODE>emacs</CODE>, há
-o  <CODE>centerICQ</CODE>,  que  é  bem  mais organizado e intuitivo de usar que os
-outros  icqs  de modo texto, pois além das áreas da tela separadas, seus
-comandos  são  divididos  em  menus, acessados pelas teclas de função do
-teclado.  o  lado negativo dessa "janelização" de todas as funções é que
-se  demora mais para mandar uma mensagem ou obter algum informação, pois
-ao  invés  de  digitar  um comando direto, você tem que obrigatoriamente
-seguir  menus.  sua  configuração  é  separada  em arquivos no diretório
-<CODE>~/.center</CODE>  e  ele  já  vem  com  os  arquivos  de som para mensagens e
-notificações.
-</P>
-<P>
-estes  clientes  de  icq  não  possuem  todas  as funcionalidades do icq
-original, como chat, envio de arquivos e integração com o navegador, mas
-na  característica  principal de enviar e receber mensagens rapidamente,
-não há do que reclamar.
-</P>
-<P>
-voltando  ao  <CODE>zicq</CODE>  e  seu  problema  de  queda  de conexão, usamos um
-artifício  do  shell  para  que  ele  sempre se reconecte quando caia, o
-"laço".  digite  na  linha  de  comando  ou coloque no seu <CODE>~/.bashrc</CODE> a
-linha:
-</P>
-<PRE>
-    alias icq="rm -f /tmp/zicq; while [ ! -f /tmp/zicq ]; do zicq; done"
-</PRE>
-<P></P>
-<P>
-aqui temos vários conceitos do <CODE>bash</CODE>, o primeiro é o <CODE>alias</CODE>, onde você
-define  um  apelido  para  um comando. seu sistema já tem alguns, digite
-<CODE>alias</CODE>  para  vê-los.  então  sempre  que  você  digitar  <CODE>icq</CODE>, o bash
-executará  o comando entre aspas duplas. o comando em si apaga &lt;<CODE>rm -f</CODE>&gt;
-um  arquivo de trava &lt;<CODE>/tmp/zicq</CODE>&gt; e enquanto &lt;<CODE>while</CODE>&gt; este arquivo NÃO
-existir  &lt;<CODE>!  -f</CODE>&gt;,  o  zicq  será executado. agora nosso <CODE>zicq</CODE> é quase
-eterno.  para derrubá-lo, temos que criar &lt;<CODE>touch</CODE>&gt; o arquivo de trava e
-matar &lt;<CODE>killall</CODE>&gt; o zicq ativo.
-</P>
-<PRE>
-    alias icqk="touch /tmp/zicq ; killall zicq"
-</PRE>
-<P></P>
-<P>
-este foi um pontapé inicial para o uso do icq no modo texto, escolha seu
-preferido  e  não  fique  mais  incomunicável.  sugestões para temas das
-próximas colunas são bem-vindas.
-</P>
-<HR NOSHADE SIZE=1>
-<P>
- <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
-<A HREF=".">&lt;--- Voltar para o índice</A>
-</P>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-280222-1";
-urchinTracker();
-</script>
-</DIV>
+<p>o <code>zicq</code> é basicamente uma carinha mais amigável do <code>mICQ</code>. o código foi reescrito utilizando-se a biblioteca <code>ncurses</code>. esta biblioteca é para programas de modo texto utilizarem tela cheia, bem como trabalhar com janelas e áreas distintas numa mesma tela. a vantagem é que você pode ver sua lista de contatos, com os estados atuais de cada um, além de haverem áreas específicas para ler e para escrever mensagens. amigos podem ser adicionados à sua lista com o comando <code>add</code>, mas outras configurações são feitas no arquivo <code>~/.zicqrc</code>, inclusive o arquivo de som, para você ouvir aquele "á-ou" quando chega uma mensagem nova. este é o que eu uso diariamente e fora umas quebras eventuais na conexão, funciona que é uma beleza.</p>
 
-<!-- html code generated by txt2tags 2.3.3-dev (http://txt2tags.sf.net) -->
-<!-- cmdline: txt2tags -C config.t2t coluna-02.t2t -->
-</BODY></HTML>
+<p>para os amantes de programas de menu, como <code>minicom</code>, <code>mc</code> e <code>emacs</code>, há o <code>centerICQ</code>, que é bem mais organizado e intuitivo de usar que os outros icqs de modo texto, pois além das áreas da tela separadas, seus comandos são divididos em menus, acessados pelas teclas de função do teclado. o lado negativo dessa "janelização" de todas as funções é que se demora mais para mandar uma mensagem ou obter algum informação, pois ao invés de digitar um comando direto, você tem que obrigatoriamente seguir menus. sua configuração é separada em arquivos no diretório <code>~/.center</code> e ele já vem com os arquivos de som para mensagens e notificações.</p>
+
+<p>estes clientes de icq não possuem todas as funcionalidades do icq original, como chat, envio de arquivos e integração com o navegador, mas na característica principal de enviar e receber mensagens rapidamente, não há do que reclamar.</p>
+
+<p>voltando ao <code>zicq</code> e seu problema de queda de conexão, usamos um artifício do shell para que ele sempre se reconecte quando caia, o "laço". digite na linha de comando ou coloque no seu <code>~/.bashrc</code> a linha:</p>
+
+<pre>
+alias icq="rm -f /tmp/zicq; while [ ! -f /tmp/zicq ]; do zicq; done"
+</pre>
+
+<p>aqui temos vários conceitos do <code>bash</code>, o primeiro é o <code>alias</code>, onde você define um apelido para um comando. seu sistema já tem alguns, digite <code>alias</code> para vê-los. então sempre que você digitar <code>icq</code>, o bash executará o comando entre aspas duplas. o comando em si apaga &lt;<code>rm -f</code>&gt; um arquivo de trava &lt;<code>/tmp/zicq</code>&gt; e enquanto &lt;<code>while</code>&gt; este arquivo NÃO existir &lt;<code>! -f</code>&gt;, o zicq será executado. agora nosso <code>zicq</code> é quase eterno. para derrubá-lo, temos que criar &lt;<code>touch</code>&gt; o arquivo de trava e matar &lt;<code>killall</code>&gt; o zicq ativo.</p>
+
+<pre>
+alias icqk="touch /tmp/zicq ; killall zicq"
+</pre>
+
+<p>este foi um pontapé inicial para o uso do icq no modo texto, escolha seu preferido e não fique mais incomunicável. sugestões para temas das próximas colunas são bem-vindas.</p>

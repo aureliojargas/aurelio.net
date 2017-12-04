@@ -1,183 +1,66 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.sf.net">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>coluna do aurelio 01</TITLE>
+---
+layout: coluna
+date: 2000-09-15
+title: coluna do aurelio 01
+subtitle: introdução
+---
 
-<!-- Included coluna.css -->
-<STYLE TYPE="text/css">
-/* --css-inside: Se mudar algo, regerar todas as colunas */
-h1, h3    { color: green     ; }
-h2        { color: lightgreen; }
-code      { color: white     ;      font-weight: bold   ; }
-a         { color: yellow    ;  text-decoration: none   ; }
-a:visited { color: purple    ; }
-body      { color: silver    ; background-color: black  ;
-           margin: 2em       ;       text-align: justify; }
-</STYLE>
+<p>olás. eu sou o aurelio e me deram uma coluna na revista para escrever sobre o modo texto. não sou guru em linux, apenas não uso <code>x</code> nem mouse, então utilizo os poderes da boa e velha linha de comando para interagir com a máquina. muitos vêem nisso um retrocesso, uma perda de tempo, considerando todos os maravilhosos recursos dos menus e das janelas disponíveis. pode ser, tudo depende do uso que se faz do sistema e da familiaridade com as ferramentas. neste espaço, vou tentar mostrar aos já iniciados dicas para agilizar ainda mais seu uso, e aos incrédulos, apresentar a luz divina dos caracteres cinza sob o fundo preto &amp;:)</p>
 
-</HEAD>
-<BODY>
+<p>bem, para usar o modo texto de maneira integral, o usuário precisa basicamente de duas coisas: saber se virar com seu interpretador de comandos (shell) e ter em mãos uma gama de programas para console capazes de satisfazer todas as suas necessidades computacionais, como ler email, navegar na internet, editar um texto, tocar cd/mp3, manipular/visualizar imagens, jogos, calculadora, calendário, irc, icq, etc.</p>
 
-<DIV CLASS="header" ID="header">
-<H1>coluna do aurelio 01</H1>
-<H2>introdução</H2>
-<H3>http://aurelio.net/doc/coluna</H3>
-</DIV>
+<p>o foco desta coluna será apresentar e dar dicas sobre diversos programas para o modo texto, além de passar dicas de uso da linha de comando e de automatização de tarefas.</p>
 
-<DIV CLASS="body" ID="body">
-<P>
-olás.  eu  sou  o aurelio e me deram uma coluna na revista para escrever
-sobre o modo texto. não sou guru em linux, apenas não uso <CODE>x</CODE> nem mouse,
-então  utilizo os poderes da boa e velha linha de comando para interagir
-com  a  máquina.  muitos  vêem  nisso um retrocesso, uma perda de tempo,
-considerando  todos  os  maravilhosos  recursos  dos menus e das janelas
-disponíveis.  pode  ser,  tudo depende do uso que se faz do sistema e da
-familiaridade  com  as ferramentas. neste espaço, vou tentar mostrar aos
-já  iniciados  dicas para agilizar ainda mais seu uso, e aos incrédulos,
-apresentar a luz divina dos caracteres cinza sob o fundo preto &amp;:)
-</P>
-<P>
-bem,  para  usar  o  modo  texto  de maneira integral, o usuário precisa
-basicamente  de  duas  coisas:  saber  se virar com seu interpretador de
-comandos  (shell)  e  ter  em  mãos  uma  gama de programas para console
-capazes  de  satisfazer  todas as suas necessidades computacionais, como
-ler   email,  navegar  na  internet,  editar  um  texto,  tocar  cd/mp3,
-manipular/visualizar  imagens, jogos, calculadora, calendário, irc, icq,
-etc.
-</P>
-<P>
-o foco desta coluna será apresentar e dar dicas sobre diversos programas
-para  o modo texto, além de passar dicas de uso da linha de comando e de
-automatização de tarefas.
-</P>
-<P>
-se  você  é  usuário  somente  da  interface  gráfica e tem interesse em
-aprender,  ou  pelo  menos  entender  porque  ainda se usa o modo texto,
-acompanhe  os  artigos,  experimente  os  programas,  utilize-os  no seu
-dia-a-dia, brinque com as opções, realmente dedique um tempo a eles. aos
-poucos tente ir substituindo os programas gráficos pelos texto, devagar,
-e  quando  você perceber, já estará se sentindo à vontade trabalhando na
-tela preta.
-</P>
-<P>
-primeiramente,  o  interpretador  de  comandos.  o  <CODE>bash</CODE> (bourne again
-shell)  é o padrão na maioria das distribuições de linux, então ele será
-utilizado  nos  exemplos.  ele  possui  várias características poderosas
-tanto  para  o  uso  normal  quanto  para programação de roteiros (shell
-scripts).
-</P>
-<P>
-sabe  aquele  item  do  seu  menu chamado <CODE>xterm</CODE>? pois é, ele simula um
-console,  quando  lhe  é  apresentanda  uma  linha  de comando, este é o
-<CODE>bash</CODE>.  este  <CODE>xterm</CODE> pode ser considerado um pseudo modo texto, mas os
-exemplos  que  serão  citados nesta coluna, serão melhor aproveitados se
-executados  no modo texto mesmo, fora da interface gráfica, até para uma
-ambientação  mais  completa.  para  acessá-lo,  segure ao mesmo tempo as
-teclas  <CODE>Ctrl+Alt+F1</CODE>  e  entre com seu usuário e senha. não acesse como
-superusuário (<CODE>root</CODE>) para prevenir danos ao sistema.
-</P>
-<P>
-nosso primeiro amigo é o famoso <CODE>[usuário@localhost usuário]$</CODE>. esta é a
-linha  de comando (<CODE>prompt</CODE>). o sistema (<CODE>bash</CODE>) está esperando que você
-digite  um  comando  para que ele possa executar. este formato padrão de
-sua linha de comando é bem informativo, mostrando primeiro o nome de seu
-usuário, o nome de sua máquina (<CODE>localhost</CODE> é o nome padrão) e o nome do
-diretório   no   qual   você   se   encontra   (ao  acessar  o  sistema,
-<CODE>/home/usuário</CODE>).  estas informações podem ser configuradas para mostrar
-horas,  data,  textos, e isso ainda pode ser em cores. daqui pra frente,
-para  indicar  uma  linha de comando, vou simplesmente indicar uma linha
-começando com <CODE>$</CODE>.
-</P>
-<PRE>
-    $ cat /etc/bashrc
-</PRE>
-<P></P>
-<P>
-na busca de mais detalhes sobre este ou qualquer outro tópico específico
-do  modo  texto,  utilize  as  páginas  de manual on line. sim, elas são
-densas  e  às  vezes criptográficas à primeira vista, mas são essenciais
-para  o  aprendizado  de  qualquer  comando ou programa do sistema, para
-saber sua sintaxe, opções e detalhes. as páginas de manual são invocadas
-com o comando <CODE>man</CODE>, como no exemplo:
-</P>
-<PRE>
-    $ man cat
-</PRE>
-<P></P>
-<P>
-muitos  aplicativos  estão  deixando de lado o formato <CODE>man</CODE>, com apenas
-uma  página e várias seções, e estão colocando a documentação atualizada
-no formato <CODE>info</CODE>, que permite a navegação entre páginas.
-</P>
-<P>
-por  exemplo,  o comando <CODE>cat</CODE> acima, mostra o conteúdo de um arquivo na
-tela.  ele  tem  algumas  opções, que são modificadores, que alteram seu
-comportamento normal, fazendo o comando tomar outra ação, ou mostrar uma
-saída  diferente  da  normal.  ele pode por exemplo numerar as linhas do
-arquivo com a opção <CODE>-n</CODE>
-</P>
-<PRE>
-    $ cat -n /etc/bashrc
-</PRE>
-<P></P>
-<P>
-para  ver rapidamente quais são as opções disponíveis em um comando, use
-o parâmetro <CODE>--help</CODE>:
-</P>
-<PRE>
-    $ cat --help
-</PRE>
-<P></P>
-<P>
-e  para  fechar esta introdução rápida aos conceitos básicos da linha de
-comando, temos o redirecionamento, que pode ser tanto para comandos:
-</P>
-<PRE>
-    $ cat -n /etc/passwd | sort -nr
-</PRE>
-<P></P>
-<P>
-como para arquivos:
-</P>
-<PRE>
-    $ cat -n /etc/passwd &gt; /tmp/passwd-numerado
-</PRE>
-<P></P>
-<P>
-ou para dispositivos:
-</P>
-<PRE>
-    $ cat musica.au &gt; /dev/audio
-</PRE>
-<P></P>
-<P>
-estes são os conceitos básicos que se precisa saber para operar na linha
-de  comando  sem  ficar  (muito)  perdido.  oportunamente,  nos próximos
-textos,  cada  um  dos  aspectos  do  uso  da  linha de comando terá uma
-demonstração mais aprofundada e acompanhada por exemplos práticos.
-</P>
-<P>
-espero   que   esta   coluna  possa  servir  como  um  pequeno  guia  de
-sobrevivência  para  aqueles que, por um motivo ou outro, estão passando
-apuros  na linha de comando, e quem sabe ainda "relembrar" algumas dicas
-aos "gurus" de plantão.
-</P>
-<HR NOSHADE SIZE=1>
-<P>
- <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
-<A HREF=".">&lt;--- Voltar para o índice</A>
-</P>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-280222-1";
-urchinTracker();
-</script>
-</DIV>
+<p>se você é usuário somente da interface gráfica e tem interesse em aprender, ou pelo menos entender porque ainda se usa o modo texto, acompanhe os artigos, experimente os programas, utilize-os no seu dia-a-dia, brinque com as opções, realmente dedique um tempo a eles. aos poucos tente ir substituindo os programas gráficos pelos texto, devagar, e quando você perceber, já estará se sentindo à vontade trabalhando na tela preta.</p>
 
-<!-- html code generated by txt2tags 2.3.3-dev (http://txt2tags.sf.net) -->
-<!-- cmdline: txt2tags -C config.t2t coluna-01.t2t -->
-</BODY></HTML>
+<p>primeiramente, o interpretador de comandos. o <code>bash</code> (bourne again shell) é o padrão na maioria das distribuições de linux, então ele será utilizado nos exemplos. ele possui várias características poderosas tanto para o uso normal quanto para programação de roteiros (shell scripts).</p>
+
+<p>sabe aquele item do seu menu chamado <code>xterm</code>? pois é, ele simula um console, quando lhe é apresentanda uma linha de comando, este é o <code>bash</code>. este <code>xterm</code> pode ser considerado um pseudo modo texto, mas os exemplos que serão citados nesta coluna, serão melhor aproveitados se executados no modo texto mesmo, fora da interface gráfica, até para uma ambientação mais completa. para acessá-lo, segure ao mesmo tempo as teclas <code>Ctrl+Alt+F1</code> e entre com seu usuário e senha. não acesse como superusuário (<code>root</code>) para prevenir danos ao sistema.</p>
+
+<p>nosso primeiro amigo é o famoso <code>[usuário@localhost usuário]$</code>. esta é a linha de comando (<code>prompt</code>). o sistema (<code>bash</code>) está esperando que você digite um comando para que ele possa executar. este formato padrão de sua linha de comando é bem informativo, mostrando primeiro o nome de seu usuário, o nome de sua máquina (<code>localhost</code> é o nome padrão) e o nome do diretório no qual você se encontra (ao acessar o sistema, <code>/home/usuário</code>). estas informações podem ser configuradas para mostrar horas, data, textos, e isso ainda pode ser em cores. daqui pra frente, para indicar uma linha de comando, vou simplesmente indicar uma linha começando com <code>$</code>.</p>
+
+<pre>
+$ cat /etc/bashrc
+</pre>
+
+<p>na busca de mais detalhes sobre este ou qualquer outro tópico específico do modo texto, utilize as páginas de manual on line. sim, elas são densas e às vezes criptográficas à primeira vista, mas são essenciais para o aprendizado de qualquer comando ou programa do sistema, para saber sua sintaxe, opções e detalhes. as páginas de manual são invocadas com o comando <code>man</code>, como no exemplo:</p>
+
+<pre>
+$ man cat
+</pre>
+
+<p>muitos aplicativos estão deixando de lado o formato <code>man</code>, com apenas uma página e várias seções, e estão colocando a documentação atualizada no formato <code>info</code>, que permite a navegação entre páginas.</p>
+
+<p>por exemplo, o comando <code>cat</code> acima, mostra o conteúdo de um arquivo na tela. ele tem algumas opções, que são modificadores, que alteram seu comportamento normal, fazendo o comando tomar outra ação, ou mostrar uma saída diferente da normal. ele pode por exemplo numerar as linhas do arquivo com a opção <code>-n</code></p>
+
+<pre>
+$ cat -n /etc/bashrc
+</pre>
+
+<p>para ver rapidamente quais são as opções disponíveis em um comando, use o parâmetro <code>--help</code>:</p>
+
+<pre>
+$ cat --help
+</pre>
+
+<p>e para fechar esta introdução rápida aos conceitos básicos da linha de comando, temos o redirecionamento, que pode ser tanto para comandos:</p>
+
+<pre>
+$ cat -n /etc/passwd | sort -nr
+</pre>
+
+<p>como para arquivos:</p>
+
+<pre>
+$ cat -n /etc/passwd &gt; /tmp/passwd-numerado
+</pre>
+
+<p>ou para dispositivos:</p>
+
+<pre>
+$ cat musica.au &gt; /dev/audio
+</pre>
+
+<p>estes são os conceitos básicos que se precisa saber para operar na linha de comando sem ficar (muito) perdido. oportunamente, nos próximos textos, cada um dos aspectos do uso da linha de comando terá uma demonstração mais aprofundada e acompanhada por exemplos práticos.</p>
+
+<p>espero que esta coluna possa servir como um pequeno guia de sobrevivência para aqueles que, por um motivo ou outro, estão passando apuros na linha de comando, e quem sabe ainda "relembrar" algumas dicas aos "gurus" de plantão.</p>
