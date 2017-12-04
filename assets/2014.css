@@ -348,6 +348,11 @@ ol.compact li,
   font-family: Arial;
 }
 
+#content table.spaced td {
+  padding-top: .75em;
+  padding-bottom: .75em;
+}
+
 .small {
   font-size: small;
 }
