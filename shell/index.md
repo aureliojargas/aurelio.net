@@ -126,6 +126,15 @@ Histórico da linha de comando de uma palestra ministrada pelo Aurelio para os f
 * [Shell Script para Iniciantes](http://www.openslack.org/~piterpk/artigos/aposhell.ps) *por Roberto Freires Batista (Piter Punk)*
 Apostila completa, com mais de 60 páginas que começa explicando os conceitos da linha de comando e depois entra no shell script. O interessante é que seu conteúdo está dividido por temas, facilitando a consulta posterior. A linguagem é descontraída e leve. Leitura altamente recomendada!
 
+* [Mpage — Impressão ágil em PostScript](http://aurelio.net/doc/coluna/coluna-10.html) *por Aurelio Marinho Jargas*
+Conheça o comando mpage, que é uma ferramenta versátil para paginar seu texto e mandá-lo para a impressora, tudo direto pela linha de comando.
+
+* [Zgv/ImageMagick — Manipulação de imagens](http://aurelio.net/doc/coluna/coluna-03.html) *por Aurelio Marinho Jargas*
+Aprenda a mostrar e editar imagens pelo modo texto, com o comando zgv e as ferramentas poderosas do ImageMagick.
+
+* [Caracteres de Controle — Não fuja, domine-os](http://aurelio.net/doc/coluna/coluna-11.html) *por Aurelio Marinho Jargas*
+Uma viagem ao mundo estranho e avançado dos caracteres de controle, cheio de exemplos para você perder o medo e conseguir movimentar o cursor, usar texto colorido, entre outros.
+
 ## Ferramentas e conceitos
 
 * [Artigos traduzidos](http://geocities.yahoo.com.br/cesarakg/artigos.html#programacao) *por César A. K. Grossmann*
