@@ -4,6 +4,8 @@
 {% when 'aurelio+mog' %}
 			<a class="author" rel="author" href="http://www.moguinha.com.br">Mog</a> &amp;
 			<a class="author" rel="author" href="{{ site.url }}/aurelio/">Aurelio Jargas</a>
-{% else %}
+{% when 'aurelio' or blank or nil or '' %}
 			<a class="author" rel="author" href="{{ site.url }}/aurelio/">Aurelio Jargas</a>
+{% else %}
+			<b>{{ page.author }}</b>
 {% endcase %}
