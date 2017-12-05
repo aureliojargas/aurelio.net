@@ -84,13 +84,11 @@ defaults:
       article_footer_after: shell-learn-more.html
       hide_ads: true
       hide_read_more: true
-
   -
     scope:
       path: "shell/apostila"
     values:
       article_footer_after: nav-shell-apostila.html
-
   -
     scope:
       path: "sed"
@@ -99,20 +97,27 @@ defaults:
       article_footer_after: sed-learn-more.html
       hide_ads: true
       hide_read_more: true
-
   -
     scope:
       path: "viagem/atacama"
     values:
       layout: 2013-page
       article_footer_after: atacama-nav.html
-
   -
     scope:
       path: "viagem/atacama/album"
     values:
       layout: 2013-page
       article_footer_after: atacama-albuns.html
+  -
+    scope:
+      path: "vim"
+    values:
+      css_extra: /regex/regex.css
+      article_footer_after: vim-learn-more.html
+      hide_ads: true
+      hide_read_more: true
+
 
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
