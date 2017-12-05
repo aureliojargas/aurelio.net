@@ -1,282 +1,80 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/livro.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<TITLE>VI, Vim e venci - Artigo da Revista do Linux :: aurelio.net</TITLE>
-</HEAD>
-<BODY>
+---
+date: 2000-03-01
+title: VI, Vim e venci
+---
 
-<DIV ID="header">
-<H1>VI, Vim e venci</H1>
-<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
-<H3>Abril, 2000</H3>
-</DIV>
+<blockquote>Saiba tudo sobre o editor Vim (VI), sua história, seu arqui-inimigo Emacs, as doações para Uganda e aprenda desde o básico até a utilização dos comandos mais avançados.</blockquote>
 
-<DIV ID="main">
-<p class="intro"> Saiba tudo sobre o editor Vim (VI), sua história, seu arqui-inimigo Emacs, as doações para Uganda e aprenda desde o básico até a utilização dos comandos mais avançados. </p>
-<P>
-Primeiro uma apresentação breve. O Vim é o sucessor mais difundido do vi, que é filho do ex com o ed, que por sua vez são filhos do qed, e por aí vai. O "vi" é a sigla de Visual Interface. Note que naquela época (início dos anos 80), não era comum como hoje, você ter um editor de textos visual, ou seja, você ver na tela o texto que está sendo editado. Tente imaginar como é editar um texto sem vê-lo. Quer tentar? Experimente o editor ed, presente em qualquer distribuição Linux.
-</P>
-<P>
-Muito mais tarde, em 1992, apareceu no mundo Unix um concorrente do vi, o Vim (de "Vi IMitator", o imitador do vi) e logo se tornou popular, pois além de ser um clone muito bem feito do vi, possuía muitas outras funcionalidades, como uso da tecla TAB para completar nomes de arquivos, vários níveis de "undo" (desfazer comando), reconhecimento de sintaxe e histórico de linha de comando.
-</P>
-<P>
-Então de "imitator" ele passou a ser chamado de "Vi IMproved", o vi melhorado. O Vim se tornou padrão em sistemas Linux, onde o /bin/vi é uma ligação simbólica para o /usr/vim, e conseqüentemente, a grande maioria usa Vim, mas acha que usa vi. Acabaram quase que virando sinônimos, mas, lembre-se, vi é diferente de Vim, e é sobre Vim que este artigo comentará.
-</P>
-<P>
-Apesar do Vim ser um editor de textos extremamente voltado para programação, ele também é poderoso para editar textos comuns (como esse) e possui muitas funcionalidades avançadas que outros editores gráficos como o Microsoft Word® têm, como abrir vários arquivos ao mesmo tempo, autocorreção, auto-identação, seleção visual, macros e outras que outro editor nem sonha ter, como seleção vertical de texto, interação total com o sistema operacional, uso de expressões regulares, sintaxe colorida, etc.
-</P>
-<P>
-O Vim não é uma exclusividade de sistemas Unix, ele já foi portado para várias outras plataformas, como Amiga®, MacOs®, SunOs®, DOS®, Windows® e muitas outras. E como atrativo maior para os usuários novatos, também existe o gVim, para usar no X, com o mouse, menus, botões e todas as facilidades de uma aplicaçã o gráfica. Sendo o gVim apenas uma interface mais amigável do Vim, todas as funcionalidades deste funcionam naquele.
-</P>
-<P>
-Então vamos começar nossa viagem ao mundo maravilhoso do Vim. Primeiramente, a característica básica dele: ele tem dois modos de operação, um de inserção, em que as letras do teclado são puramente letras, como em qualquer outro editor, identificado por um <CODE>— INSERT —</CODE> na parte inferior esquerda da tela, e o outro que é o modo de comandos, em que as letras são comandos de edição e é o modo padrão ativo quando você abre um arquivo no Vim. Para entrar no modo de inserção basta digitar <CODE>i</CODE>. Para sair do modo de inserção e voltar ao de comandos, basta apertar a tecla Esc. Todos os comandos que serão apresentados neste artigo deverão ser executados no modo de comandos.
-</P>
-<P>
-Pode parecer redundante dizer isso, mas para quem não está acostumado com os dois modos, no início pode confundir um pouco. E Se você entrou no Vim e não faz idéia de como sair, basta um <CODE>ZZ</CODE>. Lembre-se, no modo de comandos.
-</P>
-<P>
-Sendo um editor de textos feito para funcionar no modo texto, ele tem suas limitações visuais, que não lhe permitem deixar uma palavra em itálico por exemplo. Mas o que pode ser feito, o Vim faz. Por exemplo, como centralizar a linha atual? Basta um <CODE>:ce</CODE>, ou o nome completo, <CODE>:center</CODE>. De maneira similar temos o <CODE>:left</CODE> e o <CODE>:right</CODE>. E para fazer isso em várias linhas? Temos a seleção visual no Vim também.
-</P>
-<P>
-Digite <CODE>v</CODE> e com as setas selecione o texto, depois um <CODE>:ce</CODE> centraliza todo o texto. Como característica tradicional do vi, um mesmo comando com letra maiúscula faz uma operação complementar, ou similar, mas com uma variante. No caso da seleção, se usar <CODE>V</CODE> (<CODE>Shift+v</CODE>) ao invés de <CODE>v</CODE>, a seleção automaticamente pega a linha toda. E para seu deleite, e inveja de outros editores, com o <CODE>Ctrl+v</CODE>, temos a seleção vertical! Como selecionar as três primeiras letras de várias linhas? O <CODE>Ctrl+v</CODE> faz isso pra você. E seguindo essa filosofia podemos deduzir o funcionamento de outros comandos do Vim. Mais um exemplo: o comando <CODE>x</CODE> apaga um caractere à direita, enquanto o <CODE>X</CODE> apaga à esquerda (como as teclas Delete e Backspace).
-</P>
-<P>
-Também podemos editar dois ou mais arquivos ao mesmo tempo e ver todos simultaneamente, separados horizontalmente. Experimente, editando um arquivo qualquer no Vim, digite <CODE>:split /etc/passwd</CODE>. Para alternar entre as janelas, basta dois <CODE>Ctrl+w</CODE> (w de window). Como na linha de comando, a tecla TAB funciona para completar nomes de arquivos (e também de comandos do próprio Vim). Então no split anterior, apenas um <CODE>:split /etc/pas&lt;TAB&gt;</CODE> já funcionaria.
-</P>
-<P>
-Já que o TAB foi citado, no interpretador de comandos Bash, basta digitar <CODE>set -o vi</CODE> para utilizar os comandos do vi na linha de comando. Procura, substituição, deleção, entre outros para agilizar seu uso do console.
-</P>
-<P>
-Para escritores de textos em geral, o Vim tem facilidades muito úteis. Uma delas é a autocorreção (abbreviation), que funciona como apelidos, por exemplo <CODE>:ab AMJ aurelio marinho jargas</CODE>. Então sempre que eu estiver digitando um texto qualquer e digitar <CODE>AMJ</CODE>, o Vim automaticamente o expandirá para meu nome completo. Outra característica simples e eficiente é a definição de marcas ao longo do texto. Por exemplo, na linha em que começa a conclusão do texto, você faz uma marca de nome c: <CODE>mc</CODE>, em que <CODE>m</CODE> é o comando de marcação e <CODE>c</CODE> é o nome da marca, que pode ser qualquer letra ou número. De maneira similar, na introdução você pode fazer um <CODE>mi</CODE> e no meio do texto você faz um <CODE>mm</CODE>. Para pular para uma marca o comando é <CODE>`</CODE>. Então para ir para a marca c, da conclusão, basta um <CODE>`c</CODE>. Infelizmente como nós utilizamos o sinal ` para representar a crase, fica incômodo utilizá-lo como comando. A solução é fazer um mapeamento de teclas, por exemplo mapear esse comando para a tecla de função F4: <CODE>:map &lt;f4&gt; `</CODE>. Pronto, agora para irmos para a marca c, basta digitar <CODE>&lt;f4&gt;c</CODE>.
-</P>
-<P>
-Com o mapeamento de teclas, podemos colocar qualquer seqüência complexa de comandos do Vim numa tecla de função. Mais um exemplo, um mapeamento útil para inserir a data atual pegando a saída do comando do Linux chamado <CODE>date</CODE>, fica <CODE>:map &lt;f5&gt; r!date&lt;cr&gt;</CODE>. O <CODE>r!</CODE> joga para o arquivo a saída do comando date e o <CODE>&lt;cr&gt;</CODE> representa a tecla Enter.
-</P>
-<P>
-Para programadores, o Vim só falta codificar, pois do resto ele toma conta. O principal é o reconhecimento automático da sintaxe de várias linguagens de programação. Na versão 5.5, são mais de 150 linguagens e padrões, que vão desde as mais famosas como Python, C, Perl, Clipper e sql até monstros como dracula, simula e z8a. O Vim identifica a linguagem, colorindo o código, tornando imediatamente visível qualquer erro cometido pelo programador, enquanto este digita (<CODE>:set syntax on</CODE>). Tem identação automática (<CODE>:set autoindent</CODE>), utilizando tabulação ou espaços (<CODE>:set expandtab</CODE>) e mostra o par que complementa as chaves e colchetes quando você os fecha (<CODE>:set showmatch</CODE>). E para fechar, ele converte todo o código colorizado para HTML, para você imprimi-lo (<CODE>2html.vim</CODE>). Imbatível.
-</P>
-<P>
-E para os aficionados, o Vim tem uma linguagem própria de programação, em que você pode construir seus próprios comandos, utilizando algoritmos e várias funções pré-definidas como qualquer outra linguagem de programação. Como conseqüência direta disso, existem vários aplicativos feitos pelos usuários que rodam dentro do Vim, sendo talvez o de maior expressão um leitor de correio eletrônico inteiramente feito com funções do Vim e Perl, chamado Vine.
-</P>
-<P>
-A maioria dos comandos aqui citados que começam com :, são comandos de configuração, e para você não ter que digitá-los a cada vez que entra no Vim, ele tem um arquivo de configuração, que fica no diretório base do usuário: <CODE>~/.vimrc</CODE>. Veja nas referências um endereço em que tem um .vimrc comentado em português.
-</P>
-<P>
-Outro tópico interessante são os dígrafos. Para sistemas que não têm solução de acentuação ou que estão mal configurados, o Vim resolve o problema. Enquanto digita o texto, basta um <CODE>Ctrl+k</CODE> seguido dos dois caracteres que compõem o dígrafo, assim:
-</P>
+<p>Primeiro uma apresentação breve. O Vim é o sucessor mais difundido do vi, que é filho do ex com o ed, que por sua vez são filhos do qed, e por aí vai. O "vi" é a sigla de Visual Interface. Note que naquela época (início dos anos 80), não era comum como hoje, você ter um editor de textos visual, ou seja, você ver na tela o texto que está sendo editado. Tente imaginar como é editar um texto sem vê-lo. Quer tentar? Experimente o editor ed, presente em qualquer distribuição Linux.</p>
 
-<PRE>
+<p>Muito mais tarde, em 1992, apareceu no mundo Unix um concorrente do vi, o Vim (de "Vi IMitator", o imitador do vi) e logo se tornou popular, pois além de ser um clone muito bem feito do vi, possuía muitas outras funcionalidades, como uso da tecla TAB para completar nomes de arquivos, vários níveis de "undo" (desfazer comando), reconhecimento de sintaxe e histórico de linha de comando.</p>
+
+<p>Então de "imitator" ele passou a ser chamado de "Vi IMproved", o vi melhorado. O Vim se tornou padrão em sistemas Linux, onde o /bin/vi é uma ligação simbólica para o /usr/vim, e conseqüentemente, a grande maioria usa Vim, mas acha que usa vi. Acabaram quase que virando sinônimos, mas, lembre-se, vi é diferente de Vim, e é sobre Vim que este artigo comentará.</p>
+
+<p>Apesar do Vim ser um editor de textos extremamente voltado para programação, ele também é poderoso para editar textos comuns (como esse) e possui muitas funcionalidades avançadas que outros editores gráficos como o Microsoft Word® têm, como abrir vários arquivos ao mesmo tempo, autocorreção, auto-identação, seleção visual, macros e outras que outro editor nem sonha ter, como seleção vertical de texto, interação total com o sistema operacional, uso de expressões regulares, sintaxe colorida, etc.</p>
+
+<p>O Vim não é uma exclusividade de sistemas Unix, ele já foi portado para várias outras plataformas, como Amiga®, MacOs®, SunOs®, DOS®, Windows® e muitas outras. E como atrativo maior para os usuários novatos, também existe o gVim, para usar no X, com o mouse, menus, botões e todas as facilidades de uma aplicaçã o gráfica. Sendo o gVim apenas uma interface mais amigável do Vim, todas as funcionalidades deste funcionam naquele.</p>
+
+<p>Então vamos começar nossa viagem ao mundo maravilhoso do Vim. Primeiramente, a característica básica dele: ele tem dois modos de operação, um de inserção, em que as letras do teclado são puramente letras, como em qualquer outro editor, identificado por um <code>— INSERT —</code> na parte inferior esquerda da tela, e o outro que é o modo de comandos, em que as letras são comandos de edição e é o modo padrão ativo quando você abre um arquivo no Vim. Para entrar no modo de inserção basta digitar <code>i</code>. Para sair do modo de inserção e voltar ao de comandos, basta apertar a tecla Esc. Todos os comandos que serão apresentados neste artigo deverão ser executados no modo de comandos.</p>
+
+<p>Pode parecer redundante dizer isso, mas para quem não está acostumado com os dois modos, no início pode confundir um pouco. E Se você entrou no Vim e não faz idéia de como sair, basta um <code>ZZ</code>. Lembre-se, no modo de comandos.</p>
+
+<p>Sendo um editor de textos feito para funcionar no modo texto, ele tem suas limitações visuais, que não lhe permitem deixar uma palavra em itálico por exemplo. Mas o que pode ser feito, o Vim faz. Por exemplo, como centralizar a linha atual? Basta um <code>:ce</code>, ou o nome completo, <code>:center</code>. De maneira similar temos o <code>:left</code> e o <code>:right</code>. E para fazer isso em várias linhas? Temos a seleção visual no Vim também.</p>
+
+<p>Digite <code>v</code> e com as setas selecione o texto, depois um <code>:ce</code> centraliza todo o texto. Como característica tradicional do vi, um mesmo comando com letra maiúscula faz uma operação complementar, ou similar, mas com uma variante. No caso da seleção, se usar <code>V</code> (<code>Shift+v</code>) ao invés de <code>v</code>, a seleção automaticamente pega a linha toda. E para seu deleite, e inveja de outros editores, com o <code>Ctrl+v</code>, temos a seleção vertical! Como selecionar as três primeiras letras de várias linhas? O <code>Ctrl+v</code> faz isso pra você. E seguindo essa filosofia podemos deduzir o funcionamento de outros comandos do Vim. Mais um exemplo: o comando <code>x</code> apaga um caractere à direita, enquanto o <code>X</code> apaga à esquerda (como as teclas Delete e Backspace).</p>
+
+<p>Também podemos editar dois ou mais arquivos ao mesmo tempo e ver todos simultaneamente, separados horizontalmente. Experimente, editando um arquivo qualquer no Vim, digite <code>:split /etc/passwd</code>. Para alternar entre as janelas, basta dois <code>Ctrl+w</code> (w de window). Como na linha de comando, a tecla TAB funciona para completar nomes de arquivos (e também de comandos do próprio Vim). Então no split anterior, apenas um <code>:split /etc/pas&lt;TAB&gt;</code> já funcionaria.</p>
+
+<p>Já que o TAB foi citado, no interpretador de comandos Bash, basta digitar <code>set -o vi</code> para utilizar os comandos do vi na linha de comando. Procura, substituição, deleção, entre outros para agilizar seu uso do console.</p>
+
+<p>Para escritores de textos em geral, o Vim tem facilidades muito úteis. Uma delas é a autocorreção (abbreviation), que funciona como apelidos, por exemplo <code>:ab AMJ aurelio marinho jargas</code>. Então sempre que eu estiver digitando um texto qualquer e digitar <code>AMJ</code>, o Vim automaticamente o expandirá para meu nome completo. Outra característica simples e eficiente é a definição de marcas ao longo do texto. Por exemplo, na linha em que começa a conclusão do texto, você faz uma marca de nome c: <code>mc</code>, em que <code>m</code> é o comando de marcação e <code>c</code> é o nome da marca, que pode ser qualquer letra ou número. De maneira similar, na introdução você pode fazer um <code>mi</code> e no meio do texto você faz um <code>mm</code>. Para pular para uma marca o comando é <code>`</code>. Então para ir para a marca c, da conclusão, basta um <code>`c</code>. Infelizmente como nós utilizamos o sinal ` para representar a crase, fica incômodo utilizá-lo como comando. A solução é fazer um mapeamento de teclas, por exemplo mapear esse comando para a tecla de função F4: <code>:map &lt;f4&gt; `</code>. Pronto, agora para irmos para a marca c, basta digitar <code>&lt;f4&gt;c</code>.</p>
+
+<p>Com o mapeamento de teclas, podemos colocar qualquer seqüência complexa de comandos do Vim numa tecla de função. Mais um exemplo, um mapeamento útil para inserir a data atual pegando a saída do comando do Linux chamado <code>date</code>, fica <code>:map &lt;f5&gt; r!date&lt;cr&gt;</code>. O <code>r!</code> joga para o arquivo a saída do comando date e o <code>&lt;cr&gt;</code> representa a tecla Enter.</p>
+
+<p>Para programadores, o Vim só falta codificar, pois do resto ele toma conta. O principal é o reconhecimento automático da sintaxe de várias linguagens de programação. Na versão 5.5, são mais de 150 linguagens e padrões, que vão desde as mais famosas como Python, C, Perl, Clipper e sql até monstros como dracula, simula e z8a. O Vim identifica a linguagem, colorindo o código, tornando imediatamente visível qualquer erro cometido pelo programador, enquanto este digita (<code>:set syntax on</code>). Tem identação automática (<code>:set autoindent</code>), utilizando tabulação ou espaços (<code>:set expandtab</code>) e mostra o par que complementa as chaves e colchetes quando você os fecha (<code>:set showmatch</code>). E para fechar, ele converte todo o código colorizado para HTML, para você imprimi-lo (<code>2html.vim</code>). Imbatível.</p>
+
+<p>E para os aficionados, o Vim tem uma linguagem própria de programação, em que você pode construir seus próprios comandos, utilizando algoritmos e várias funções pré-definidas como qualquer outra linguagem de programação. Como conseqüência direta disso, existem vários aplicativos feitos pelos usuários que rodam dentro do Vim, sendo talvez o de maior expressão um leitor de correio eletrônico inteiramente feito com funções do Vim e Perl, chamado Vine.</p>
+
+<p>A maioria dos comandos aqui citados que começam com :, são comandos de configuração, e para você não ter que digitá-los a cada vez que entra no Vim, ele tem um arquivo de configuração, que fica no diretório base do usuário: <code>~/.vimrc</code>. Veja nas referências um endereço em que tem um .vimrc comentado em português.</p>
+
+<p>Outro tópico interessante são os dígrafos. Para sistemas que não têm solução de acentuação ou que estão mal configurados, o Vim resolve o problema. Enquanto digita o texto, basta um <code>Ctrl+k</code> seguido dos dois caracteres que compõem o dígrafo, assim:</p>
+
+<pre>
 á = Ctrl+k ‘a
 ç = Ctrl+k ,c
 ® = Ctrl+k rO
-</PRE>
+</pre>
 
-<P>
-para uma lista completa de todos os dígrafos, <CODE>:dig</CODE>. E todas essas funcionalidades estão extensivamente descritas na documentação on-line que acompanha o editor <CODE>:help</CODE>, que pode ser facilmente navegada entre tópicos, como numa página HTML, e é um exemplo de documentação eficiente de um programa, com cerca de 1Mb de texto puro!
-</P>
-<P>
-A tecla Tab ajuda muito aqui também, então para ver os tópicos de ajuda sobre o mouse por exemplo, <CODE>:help mous&lt;TAB&gt;</CODE>.
-</P>
-<P>
-Para este ano de 2000, a versão 6.0 promete duas funcionalidades há muito pedidas pelos usuários: "vertical split" para ver dois ou mais arquivos abertos na tela, separados por barras verticais; "folding" para como no MS Word, você ter aquela visão estruturada, dos tópicos do documento, expansível e retrátil. É difícil de implementar e será um marco na história do Vim.
-</P>
-<P>
-Um detalhe peculiar é o fanatismo e fidelidade ao programa que existe por parte dos usuários. É como se fosse uma religião, uma seita, em que todos os seguidores defendem seu editor até o último argumento e uma preferência por outro editor pode gerar segmentação de grupos.
-</P>
-<P>
-O Vim tem um arquiinimigo, que se chama Emacs, e tem usuários igualmente fanáticos.
-</P>
-<P>
-É desnecessário dizer que quem usa Vim odeia o Emacs e vice-versa. Discussões entre usuários dos dois editores são intermináveis e são chamadas de "guerras santas". E não poderia ser diferente, pois esses editores seguem filosofias completamente opostas.
-</P>
-<P>
-O Emacs tenta ser uma central de aplicações, tendo embutido nele várias outras tarefas que normalmente não estão num editor de textos como telnet, navegador, jogo e leitor de correio eletrônico/notícias, entre outros, e todos os seus comandos são mnemônicos e extensos como: calendar-mouse-insert-islamic-diary-entry e gnus-summary-lower-same-subject-and-select.
-</P>
-<P>
-Enquanto isso o Vim é apenas um editor de textos, para editar textos! Seus comandos são todos compostos por uma ou duas letras (ou símbolos), como <CODE>p</CODE>, <CODE>x</CODE>, <CODE>/</CODE>, <CODE>#</CODE> e <CODE>gq</CODE>. Simples, rápido e eficiente.
-</P>
-<P>
-E se mesmo com tudo isso você ainda não se convenceu do quão bom o Vim é, saiba que ele é chamado de "charityware", algo como software de caridade, pois apesar de ser um aplicativo de livre distribuição, doações são incentivadas para ajudar órfãos de Uganda, na África. O autor do Vim, Bram Moolenaar, já esteve lá e se comoveu tanto com a situação, que além de ajudar na construção de uma escola para as crianças, quando voltou à Holanda, criou uma fundação, que só em 1998, conseguiu arrecadar US$12mil! Para mais detalhes digite <CODE>:help uganda</CODE>. Se você não achou o Vim atraente, pelo menos considere o fato de usá-lo pelo lado humanitário :)
-</P>
-	<BLOCKQUOTE>
-	Artigo originalmente publicado na Revista do Linux edição 4, de abril de 2000.
-	</BLOCKQUOTE>
-<P>
-<a href="http://aurelio.net/vim/" class="linkblock"><IMG ALIGN="middle" SRC="/img/icon/128/vim.png" BORDER="0" ALT=""> Aprenda mais sobre Vim</a>
-</P>
-</div> <!-- close #main -->
-<div id="nav">
+<p>para uma lista completa de todos os dígrafos, <code>:dig</code>. E todas essas funcionalidades estão extensivamente descritas na documentação on-line que acompanha o editor <code>:help</code>, que pode ser facilmente navegada entre tópicos, como numa página HTML, e é um exemplo de documentação eficiente de um programa, com cerca de 1Mb de texto puro!</p>
 
-<table>
-<tr>
-	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
-</tr>
-<tr>	
-	<th class="search" colspan="5">
- 
-<form action="http://aurelio.net/achei.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
+<p>A tecla Tab ajuda muito aqui também, então para ver os tópicos de ajuda sobre o mouse por exemplo, <code>:help mous&lt;TAB&gt;</code>.</p>
 
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-	</th>
-</tr>
-<tr><td>
-<P>
-<B>Nerdices</B>
-</P>
+<p>Para este ano de 2000, a versão 6.0 promete duas funcionalidades há muito pedidas pelos usuários: "vertical split" para ver dois ou mais arquivos abertos na tela, separados por barras verticais; "folding" para como no MS Word, você ter aquela visão estruturada, dos tópicos do documento, expansível e retrátil. É difícil de implementar e será um marco na história do Vim.</p>
 
-<UL>
-<LI><A HREF="/misc/adventure-mapa.txt">adventure</A>
-<LI><A HREF="/doc/as4pp.html">applescript</A>
-<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
-<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
-<LI><A HREF="http://codare.net">codare</A>
-<LI><A HREF="/doc/coluna/">coluna</A>
-<LI><A HREF="http://aurelio.net/curso/">curso</A>
-<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
-<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
-<LI><A HREF="/doc/dort.html">dort</A>
-<LI><A HREF="/er/">er</A>
-<LI><A HREF="/log/">log</A>
-<LI><A HREF="/mac/">mac</A>
-<LI><A HREF="/curso/">palestra</A>
-<LI><A HREF="/misc/eu_odeio_perl.txt">perl</A>
-<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
-<LI><A HREF="/bin/python/">python</A>
-<LI><A HREF="/sed/">sed</A>
-<LI><A HREF="http://aurelio.net/shell/">shell</A>
-<LI><A HREF="/bin/sql/">sql</A>
-<LI><A HREF="http://aurelio.net/vim/">vim</A>
-<LI><A HREF="/doc/nerd.html">mais...</A>
-<LI><A HREF="/en/">more...</A>
-</UL>
+<p>Um detalhe peculiar é o fanatismo e fidelidade ao programa que existe por parte dos usuários. É como se fosse uma religião, uma seita, em que todos os seguidores defendem seu editor até o último argumento e uma preferência por outro editor pode gerar segmentação de grupos.</p>
 
-</td><td>
-<P>
-<B>Programas</B>
-</P>
+<p>O Vim tem um arquiinimigo, que se chama Emacs, e tem usuários igualmente fanáticos.</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
-<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
-<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
-<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
-<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
-<LI><A HREF="/bin/lelolab/">lelolab</A>
-<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
-<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
-<LI><A HREF="http://aurelio.net/rac/">rac</A>
-<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
-<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
-<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
-<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
-<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
-<LI><A HREF="http://funcoeszz.net">zz</A>
-<LI><A HREF="/bin/">mais...</A>
-<LI><A HREF="/soft/">more...</A>
-</UL>
+<p>É desnecessário dizer que quem usa Vim odeia o Emacs e vice-versa. Discussões entre usuários dos dois editores são intermináveis e são chamadas de "guerras santas". E não poderia ser diferente, pois esses editores seguem filosofias completamente opostas.</p>
 
-</td><td>
-<P>
-<B>Livros</B>
-</P>
+<p>O Emacs tenta ser uma central de aplicações, tendo embutido nele várias outras tarefas que normalmente não estão num editor de textos como telnet, navegador, jogo e leitor de correio eletrônico/notícias, entre outros, e todos os seus comandos são mnemônicos e extensos como: calendar-mouse-insert-islamic-diary-entry e gnus-summary-lower-same-subject-and-select.</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
-<LI><A HREF="http://www.piazinho.com.br">regex</A>
-<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
-<LI><A HREF="http://www.shellscript.com.br">shell</A>
-</UL>
+<p>Enquanto isso o Vim é apenas um editor de textos, para editar textos! Seus comandos são todos compostos por uma ou duas letras (ou símbolos), como <code>p</code>, <code>x</code>, <code>/</code>, <code>#</code> e <code>gq</code>. Simples, rápido e eficiente.</p>
 
-</td><td>
-<P>
-<B>Eu</B>
-</P>
+<p>E se mesmo com tudo isso você ainda não se convenceu do quão bom o Vim é, saiba que ele é chamado de "charityware", algo como software de caridade, pois apesar de ser um aplicativo de livre distribuição, doações são incentivadas para ajudar órfãos de Uganda, na África. O autor do Vim, Bram Moolenaar, já esteve lá e se comoveu tanto com a situação, que além de ajudar na construção de uma escola para as crianças, quando voltou à Holanda, criou uma fundação, que só em 1998, conseguiu arrecadar US$12mil! Para mais detalhes digite <code>:help uganda</code>. Se você não achou o Vim atraente, pelo menos considere o fato de usá-lo pelo lado humanitário :)</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/blog">blog</A>
-<LI><A HREF="/cv">cv</A>
-<LI><A HREF="/img/emeio.png">e-mail</A>
-<LI><A HREF="/faq">faq</A>
-<LI><A HREF="/mim.html">raio-x</A>
-<LI><A HREF="http://twitter.com/oreio">twitter</A>
-</UL>
+<!--
+  Para saber mais:
 
-</td><td>
-<P>
-<B>Diversos</B>
-</P>
+  - Site oficial: www.vim.org
+  - Vi lovers: www.thomer.com/thomer/vi/vi.html
+  - Vi vs Emacs: www.emacs.org/vi.html
+  - Vine (leitor de e-mail): www.mossbayeng.com/~ron/vim/vine.html
+  - Tutorial em português: linux.trix.net/vim_intro.htm
+  - Dicas em português: www.conectiva.com.br/~aurelio/vim
+  - Vimrc comentado: www.conectiva.com.br/~aurelio/vim/nvimrc.txt
+  - Lista de discussão oficial: vim@vim.org
+  - Lista de discussão nacional: vi-br@egroups.com
+-->
 
-<UL>
-<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
-<LI><A HREF="/adsense/">adsense</A>
-<LI><A HREF="/atacama">atacama</A>
-<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
-<LI><A HREF="http://aurelio.net/carve/">carve</A>
-<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
-<LI><A HREF="/correria/">correria</A>
-<LI><A HREF="/dumbs/">dumbs</A>
-<LI><A HREF="/foto/">foto</A>
-<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
-<LI><A HREF="/musica/">musica</A>
-<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
-<LI><A HREF="/doc/ramones.txt">ramones</A>
-<LI><A HREF="/sobre.html">sobre</A>
-<LI><A HREF="http://aurelio.net/surf/">surf</A>
-<LI><A HREF="/misc/toyota/">toyota</A>
-<LI><A HREF="http://umportugues.com">umportugues</A>
-<LI><A HREF="/valeta/">valeta</A>
-<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
-<LI><A HREF="/doc/videogame.html">videogame</A>
-</UL>
-
-</td><tr>
-</table>
-</div> <!-- #nav -->
-
-<div id="footer">
-<P>
-<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
-<br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</P>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="http://aurelio.net/include/10anos/aureliolga.jpg"></a>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags vim/vi-vim-venci.t2t -->
-</BODY></HTML>
+<blockquote>Artigo originalmente publicado na Revista do Linux edição 4, de abril de 2000.</blockquote>

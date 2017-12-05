@@ -1,58 +1,38 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/livro.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<TITLE>Editando arquivos do OpenOffice.org no Vim :: aurelio.net</TITLE>
-</HEAD>
-<BODY class="ooo-vi">
+---
+date: 2004-08-31
+title: Editando arquivos do OpenOffice.org no Vim
+---
 
-<DIV ID="header">
-<H1>Editando arquivos do OpenOffice.org no Vim</H1>
-<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
-<H3>Agosto, 2004</H3>
-</DIV>
+<!--
+  30 Ago 2004: 2h (escrita + screenshots)
+  31 Ago 2004: 2h (escrita + finalização)
+  24 Mar 2005: divulgação no AURELIO.NET
+-->
 
-<DIV ID="main">
-<p class="intro"> Aprenda como editar arquivos .SXW do OpenOffice.org diretamente no Vim! </p>
-<P>
-Com a popularização do Linux, os arquivos com a extensão <CODE>.sxw</CODE>
-estão se proliferando em ritmo acelerado. São arquivos no formato do
-Writer, o poderoso processador de texto de código aberto, parte
-integrante da suíte OpenOffice.org.
-</P>
-<P>
-Em situações normais, é preciso ter o Writer instalado na máquina para
-poder visualizar o conteúdo de um arquivo gravado em seu formato. Este
-artigo mostrará como visualizar e <B>editar</B> um arquivo .sxw usando
-um editor de textos comum, como o Vim.
-</P>
-<P>
-Mas afinal, que formato é esse tal de .sxw? É um binário, algo
-compilado ou escrito em alguma linguagem estranha? Pelo contrário,
-como tecnologia recente e sem pretensões de estabelecer monopólio,
-nenhum formato novo foi inventado. Acompanhe:
-</P>
+<style>
+  pre b {
+    color: orange;
+  }
+</style>
 
-<PRE>
-$ file teste.sxw 
+<blockquote>Aprenda como editar arquivos .SXW do OpenOffice.org diretamente no Vim!</blockquote>
+
+<p>Com a popularização do Linux, os arquivos com a extensão <code>.sxw</code> estão se proliferando em ritmo acelerado. São arquivos no formato do Writer, o poderoso processador de texto de código aberto, parte integrante da suíte OpenOffice.org.</p>
+
+<p>Em situações normais, é preciso ter o Writer instalado na máquina para poder visualizar o conteúdo de um arquivo gravado em seu formato. Este artigo mostrará como visualizar e <strong>editar</strong> um arquivo .sxw usando um editor de textos comum, como o Vim.</p>
+
+<p>Mas afinal, que formato é esse tal de .sxw? É um binário, algo compilado ou escrito em alguma linguagem estranha? Pelo contrário, como tecnologia recente e sem pretensões de estabelecer monopólio, nenhum formato novo foi inventado. Acompanhe:</p>
+
+<pre>
+$ file teste.sxw
 teste.sxw: Zip archive data, at least v2.0 to extract
 $
-</PRE>
+</pre>
 
-<P>
-Um arquivo .sxw é simplesmente um arquivo compactado no formato ZIP.
-Como tal, fica fácil de manipulá-lo tanto na interface gráfica quanto
-na linha de comando. Vamos ver o que tem dentro desse ZIP:
-</P>
+<p>Um arquivo .sxw é simplesmente um arquivo compactado no formato ZIP. Como tal, fica fácil de manipulá-lo tanto na interface gráfica quanto na linha de comando. Vamos ver o que tem dentro desse ZIP:</p>
 
-<PRE>
-$ unzip -l teste.sxw 
+<pre>
+$ unzip -l teste.sxw
 Archive:  teste.sxw
   Length     Date   Time    Name
  --------    ----   ----    ----
@@ -65,89 +45,54 @@ Archive:  teste.sxw
  --------                   -------
     17690                   6 files
 $
-</PRE>
+</pre>
 
-<P>
-Seis arquivos, sendo cinco arquivos XML. O XML é um formato de
-marcação simples, similar ao HTML. A grande vantagem desse formato é
-que o seu conteúdo é texto puro, editável em qualquer editor de textos
-do sistema. O arquivos mais importante de todos é o <B>content.xml</B>,
-que contém o texto do documento e também a sua formatação.
-</P>
-<P>
-O que faremos a seguir, é descompactar o ZIP e editar o texto. Depois
-basta compactá-lo novamente e abrir no OpenOffice. Mas antes, uma
-rápida olhada no conteúdo do documento <CODE>teste.sxw</CODE>:
-</P>
-  <center><IMG ALIGN="middle" SRC="ooo-vi-1.png" BORDER="0" ALT=""></center>  
-<P>
-Um texto curto com dois parágrafos, tendo uma palavra em azul e outra
-em fonte monoespaçada no primeiro, e uma palavra em negrito no
-segundo. A tarefa será trocar de azul para vermelho e corrigir o erro
-ortográfico.
-</P>
-<P>
-Primeiro, é necessário descompactar o conteúdo do ZIP em um diretório
-limpo:
-</P>
+<p>Seis arquivos, sendo cinco arquivos XML. O XML é um formato de marcação simples, similar ao HTML. A grande vantagem desse formato é que o seu conteúdo é texto puro, editável em qualquer editor de textos do sistema. O arquivos mais importante de todos é o <strong>content.xml</strong>, que contém o texto do documento e também a sua formatação.</p>
 
-<PRE>
+<p>O que faremos a seguir, é descompactar o ZIP e editar o texto. Depois basta compactá-lo novamente e abrir no OpenOffice. Mas antes, uma rápida olhada no conteúdo do documento <code>teste.sxw</code>:</p>
+
+<p class="figure">
+  <img src="ooo-vi-1.png">
+</p>
+
+<p>Um texto curto com dois parágrafos, tendo uma palavra em azul e outra em fonte monoespaçada no primeiro, e uma palavra em negrito no segundo. A tarefa será trocar de azul para vermelho e corrigir o erro ortográfico.</p>
+
+<p>Primeiro, é necessário descompactar o conteúdo do ZIP em um diretório limpo:</p>
+
+<pre>
 $ mkdir teste
 $ cd teste
 $ unzip ../teste.sxw
 Archive:  ../teste.sxw
- extracting: mimetype                
-  inflating: content.xml             
-  inflating: styles.xml              
- extracting: meta.xml                
-  inflating: settings.xml            
-  inflating: META-INF/manifest.xml   
+ extracting: mimetype
+  inflating: content.xml
+  inflating: styles.xml
+ extracting: meta.xml
+  inflating: settings.xml
+  inflating: META-INF/manifest.xml
 $ ls -F
 META-INF/  content.xml  meta.xml  mimetype  settings.xml  styles.xml
 $
-</PRE>
+</pre>
 
-<P>
-Para alterar o conteúdo do documento, basta editar o arquivo
-<CODE>content.xml</CODE>. Porém há uma pequena dificuldade: todo o conteúdo é
-guardado em uma única linha. Ao abrir o arquivo no editor de textos, o
-que se vê é uma grande sopa de letrinhas.
-</P>
-<P>
-Para a edição ficar mais clara, com uma separação visual entre as
-marcações XML e seu conteúdo, é preciso inserir quebras de linha em
-pontos estratégicos. Dentro do Vim, execute o comando "<CODE>:%s/&gt;/&gt;^M/g</CODE>"
-para fazer com que cada marcação se inicie em uma nova linha (o <CODE>^M</CODE>
-deve ser inserido pela combinação <CODE>Ctrl+V</CODE>, <CODE>Enter</CODE>). Caso prefira
-fazer isso pela linha de comando ou estiver utilizando outro editor,
-execute o seguinte comando:
-</P>
+<p>Para alterar o conteúdo do documento, basta editar o arquivo <code>content.xml</code>. Porém há uma pequena dificuldade: todo o conteúdo é guardado em uma única linha. Ao abrir o arquivo no editor de textos, o que se vê é uma grande sopa de letrinhas.</p>
 
-<PRE>
+<p>Para a edição ficar mais clara, com uma separação visual entre as marcações XML e seu conteúdo, é preciso inserir quebras de linha em pontos estratégicos. Dentro do Vim, execute o comando "<code>:%s/&gt;/&gt;^M/g</code>" para fazer com que cada marcação se inicie em uma nova linha (o <code>^M</code> deve ser inserido pela combinação <code>Ctrl+V</code>, <code>Enter</code>). Caso prefira fazer isso pela linha de comando ou estiver utilizando outro editor, execute o seguinte comando:</p>
+
+<pre>
 $ sed -i 's/&gt;/&gt;\n/g' content.xml
-</PRE>
+</pre>
 
-<P>
-Outro detalhe é que a codificação padrão dos caracteres dos arquivos
-XML é UTF-8, e não ISO-8859-1. Com isso, caso seu sistema não esteja
-configurado para o UTF, os acentos aparecerão estranhos como em
-"parÃ¡grafo". No Vim, use os seguintes comandos para poder editar o
-arquivo em UTF:
-</P>
+<p>Outro detalhe é que a codificação padrão dos caracteres dos arquivos XML é UTF-8, e não ISO-8859-1. Com isso, caso seu sistema não esteja configurado para o UTF, os acentos aparecerão estranhos como em "parÃ¡grafo". No Vim, use os seguintes comandos para poder editar o arquivo em UTF:</p>
 
-<PRE>
+<pre>
 :set encoding=utf-8
 :set termencoding=iso-8859-1
-</PRE>
+</pre>
 
-<P>
-Pronto, agora basta editar o texto do arquivo conforme necessário. No
-início do arquivo estão várias marcações em XML com as definições de
-fonte, e estilos de parágrafo, que veremos adiante. O texto mesmo está
-no final do arquivo, com algumas marcações ao redor:
-</P>
+<p>Pronto, agora basta editar o texto do arquivo conforme necessário. No início do arquivo estão várias marcações em XML com as definições de fonte, e estilos de parágrafo, que veremos adiante. O texto mesmo está no final do arquivo, com algumas marcações ao redor:</p>
 
-<PRE>
+<pre>
 &lt;text:p text:style-name="P1"&gt;
 Meu <b>&lt;text:span text:style-name="T1"&gt;
 primeiro&lt;/text:span&gt;</b>
@@ -159,91 +104,47 @@ OpenOffice.org&lt;/text:span&gt;
 E aqui o &lt;text:span text:style-name="T3"&gt;
 <b>cegundo</b>&lt;/text:span&gt;
 .&lt;/text:p&gt;
-</PRE>
+</pre>
 
-<P>
-Primeiro, vamos corrigir o erro ortográfico, trocando "cegundo" por
-"segundo". Outros textos também podem ser adicionados normalmente caso
-necessário, basta não confundi-los com o conteúdo das marcações XML,
-que são colocadas dentro de sinais menor e maior, "<CODE>&lt;assim&gt;</CODE>". Caso
-precise colocar os caracteres "<CODE>&lt;</CODE>" e "<CODE>&gt;</CODE>" no texto, use
-"<CODE>&amp;lt;</CODE>" e "<CODE>&amp;gt;</CODE>", respectivamente.
-</P>
-<P>
-Já para trocar a cor da palavra "primeiro" é um pouco mais trabalhoso.
-Há uma separação entre o conteúdo e a sua formatação. Note que a
-palavra está marcada com um "<CODE>text:span</CODE>" e o conteúdo do atributo
-"<CODE>text:style-name</CODE>" é "<CODE>T1</CODE>". É esse estilo chamado T1 que contém
-as informações de formatação da palavra, no caso a cor que precisamos
-trocar. Procurando nas linhas acima, está a definição desse estilo:
-</P>
+<p>Primeiro, vamos corrigir o erro ortográfico, trocando "cegundo" por "segundo". Outros textos também podem ser adicionados normalmente caso necessário, basta não confundi-los com o conteúdo das marcações XML, que são colocadas dentro de sinais menor e maior, "<code>&lt;assim&gt;</code>". Caso precise colocar os caracteres "<code>&lt;</code>" e "<code>&gt;</code>" no texto, use "<code>&amp;lt;</code>" e "<code>&amp;gt;</code>", respectivamente.</p>
 
-<PRE>
+<p>Já para trocar a cor da palavra "primeiro" é um pouco mais trabalhoso. Há uma separação entre o conteúdo e a sua formatação. Note que a palavra está marcada com um "<code>text:span</code>" e o conteúdo do atributo "<code>text:style-name</code>" é "<code>T1</code>". É esse estilo chamado T1 que contém as informações de formatação da palavra, no caso a cor que precisamos trocar. Procurando nas linhas acima, está a definição desse estilo:</p>
+
+<pre>
 &lt;style:style style:name="<b>T1</b>" style:family="text"&gt;
 &lt;style:properties fo:color="<b>#0000ff</b>"/&gt;
 &lt;/style:style&gt;
-</PRE>
+</pre>
 
-<P>
-Dentro da marcação de propriedades ("<CODE>style:proprerties</CODE>"), o
-atributo "<CODE>fo:color</CODE>" contém o texto "<CODE>#0000ff</CODE>", que é a
-definição da cor azul, escrita no formato <CODE>#RRGGBB</CODE> (Red, Green,
-Blue). Este formato usa números hexadecimais (0123456789ABCDEF) para
-indicar a intensidade de cada uma das cores base (Vermelho, Verde,
-Azul), que combinadas compõem a cor final. Para um vermelho puro,
-basta deixá-lo saturado (FF) e zerar o verde e o azul: "<CODE>#ff0000</CODE>".
-</P>
-<P>
-Não é necessário saber indicar cores usando a notação RGB. A grande
-maioria dos programas gráficos possui uma paleta de seleção de cores
-onde o código é mostrado, ou outra alternativa é consultar amostras de
-cores, disponíveis na Internet
-(<A HREF="http://www.hitmill.com/html/color_safe.html">http://www.hitmill.com/html/color_safe.html</A>).
-</P>
-<P>
-E claro, além da cor da fonte, todos os outros atributos como negrito,
-itálico, alinhamento e cor de fundo, entre outros, podem ser
-adicionados e alterados dentro da marcação de propriedades. Segue um
-exemplo de um texto que foi colocado na fonte Luxi Sans, pintado de
-azul, aumentado para o tamanho 32, colocado em negrito, itálico,
-sublinhado, centralizado, e com fundo em verde.
-</P>
+<p>Dentro da marcação de propriedades ("<code>style:proprerties</code>"), o atributo "<code>fo:color</code>" contém o texto "<code>#0000ff</code>", que é a definição da cor azul, escrita no formato <code>#RRGGBB</code> (Red, Green, Blue). Este formato usa números hexadecimais (0123456789ABCDEF) para indicar a intensidade de cada uma das cores base (Vermelho, Verde, Azul), que combinadas compõem a cor final. Para um vermelho puro, basta deixá-lo saturado (FF) e zerar o verde e o azul: "<code>#ff0000</code>".</p>
 
-<PRE>
+<p>Não é necessário saber indicar cores usando a notação RGB. A grande maioria dos programas gráficos possui uma paleta de seleção de cores onde o código é mostrado, ou outra alternativa é consultar amostras de cores, disponíveis na Internet (<a href="http://www.hitmill.com/html/color_safe.html">http://www.hitmill.com/html/color_safe.html</a>).</p>
+
+<p>E claro, além da cor da fonte, todos os outros atributos como negrito, itálico, alinhamento e cor de fundo, entre outros, podem ser adicionados e alterados dentro da marcação de propriedades. Segue um exemplo de um texto que foi colocado na fonte Luxi Sans, pintado de azul, aumentado para o tamanho 32, colocado em negrito, itálico, sublinhado, centralizado, e com fundo em verde.</p>
+
+<pre>
 &lt;style:properties
 
    style:font-name="Luxi Sans"
    style:text-underline="single"
    style:text-underline-color="font-color"
    style:text-background-color="#00ff00"
- 
+
    fo:font-size="32pt"
    fo:color="#0000ff"
    fo:font-weight="bold"
    fo:font-style="italic"
    fo:text-align="center"
 /&gt;
-</PRE>
+</pre>
 
-<P>
-E assim o arquivo "content.xml" pode ser alterado livremente,
-adicionando-se texto e formatação. Só cuide para deixar a primeira
-linha do arquivo intacta: <CODE>&lt;?xml version ...&gt;</CODE>. Se a primeira linha
-ficar em branco, o OpenOffice não conseguirá ler o arquivo ("Erro de
-leitura").
-</P>
-<P>
-Voltando a nossa tarefa: erro ortográfico já corrigido e "#0000ff"
-trocado por "#ff0000". Agora só resta remontar o arquivo .sxw e
-abri-lo no OpenOffice para conferir as mudanças.
-</P>
-<P>
-Lembra que um .sxw é um ZIP? Então basta compactar todos os arquivos
-e pronto. É necessário usar o opção "<CODE>-r</CODE>" do comando <CODE>zip</CODE> para
-que os diretórios também sejam incluídos corretamente:
-</P>
+<p>E assim o arquivo "content.xml" pode ser alterado livremente, adicionando-se texto e formatação. Só cuide para deixar a primeira linha do arquivo intacta: <code>&lt;?xml version ...&gt;</code>. Se a primeira linha ficar em branco, o OpenOffice não conseguirá ler o arquivo ("Erro de leitura").</p>
 
-<PRE>
+<p>Voltando a nossa tarefa: erro ortográfico já corrigido e "#0000ff" trocado por "#ff0000". Agora só resta remontar o arquivo .sxw e abri-lo no OpenOffice para conferir as mudanças.</p>
+
+<p>Lembra que um .sxw é um ZIP? Então basta compactar todos os arquivos e pronto. É necessário usar o opção "<code>-r</code>" do comando <code>zip</code> para que os diretórios também sejam incluídos corretamente:</p>
+
+<pre>
 $ ls
 META-INF  content.xml  meta.xml  mimetype  settings.xml  styles.xml
 $ zip -r ../teste.sxw *
@@ -254,228 +155,32 @@ updating: meta.xml (deflated 56%)
 updating: settings.xml (deflated 79%)
 updating: META-INF/manifest.xml (deflated 66%)
   adding: META-INF/ (stored 0%)
-$ 
-</PRE>
+$
+</pre>
 
-<P>
-Um detalhe interessante é que para regerar o .sxw, não é necessário
-voltar o arquivo XML para o seu formato original de tudo-em-uma-linha,
-ele pode ser zipado com as quebras de linha e o OpenOffice o entenderá
-normalmente.
-</P>
-<P>
-E pronto, está feito o arquivo SXW "artesanal". Agora o teste final,
-a visualização do arquivo no OpenOffice, para se ter a certeza que
-está tudo certo:
-</P>
-  <center><IMG ALIGN="middle" SRC="ooo-vi-2.png" BORDER="0" ALT=""></center>  
-<P>
-Um último detalhe que foge ao escopo deste artigo, mas que merece ser
-mencionado, é que caso o documento possua imagens, estas ficarão
-armazenadas no diretório <CODE>Pictures</CODE>, dentro do ZIP. Assim como o
-texto, as imagens também podem ser alteradas conforme necessário,
-inclusive redimensionadas, sem corromper o documento. Os programadores
-do OpenOffice realmente fizeram um excelente trabalho na definição do
-formato do arquivo SXW.
-</P>
-<P>
-E assim se edita arquivos SXW no Vim. As grandes vantagens deste
-procedimento são:
-</P>
+<p>Um detalhe interessante é que para regerar o .sxw, não é necessário voltar o arquivo XML para o seu formato original de tudo-em-uma-linha, ele pode ser zipado com as quebras de linha e o OpenOffice o entenderá normalmente.</p>
 
-<UL>
-<LI>Visualização rápida do conteúdo de um arquivo SXW, sem a necessidade
-  de ter o OpenOffice instalado ou acesso à interface gráfica. Um
-  comando prático para remover as marcações XML, restando apenas o
-  texto é: <CODE>sed 's/&lt;[^&gt;]*&gt;//g' content.xml | tr -d '\n' | fmt -w 70</CODE>
-<P></P>
-<LI>Edição de arquivos SXW em um ambiente limitado ou com poucos
-  recursos, basta ter o comando <CODE>zip</CODE> e um editor de textos comum.
-<P></P>
-<LI>Edição automatizada de arquivos SXW ("em batch"), aplicando
-  alterações de texto e formatação, bem como tratamento de imagens.
-<P></P>
-<LI>Não depender do abominável mouse para editar textos do Office ;)
-</UL>
+<p>E pronto, está feito o arquivo SXW "artesanal". Agora o teste final, a visualização do arquivo no OpenOffice, para se ter a certeza que está tudo certo:</p>
 
-<P>
-Mais informações:
-</P>
+<p class="figure">
+  <img src="ooo-vi-2.png">
+</p>
 
-<UL>
-<LI><A HREF="http://www.xml.com/pub/a/2005/01/26/hacking-ooo.html">Hacking Open Office</A>
-  (em inglês)
-</UL>
+<p>Um último detalhe que foge ao escopo deste artigo, mas que merece ser mencionado, é que caso o documento possua imagens, estas ficarão armazenadas no diretório <code>Pictures</code>, dentro do ZIP. Assim como o texto, as imagens também podem ser alteradas conforme necessário, inclusive redimensionadas, sem corromper o documento. Os programadores do OpenOffice realmente fizeram um excelente trabalho na definição do formato do arquivo SXW.</p>
 
-<P>
-<a href="http://aurelio.net/vim/" class="linkblock"><IMG ALIGN="middle" SRC="/img/icon/128/vim.png" BORDER="0" ALT=""> Aprenda mais sobre Vim</a>
-</P>
-</div> <!-- close #main -->
-<div id="nav">
+<p>E assim se edita arquivos SXW no Vim. As grandes vantagens deste procedimento são:</p>
 
-<table>
-<tr>
-	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
-</tr>
-<tr>	
-	<th class="search" colspan="5">
- 
-<form action="http://aurelio.net/achei.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
+<ul>
+  <li>Visualização rápida do conteúdo de um arquivo SXW, sem a necessidade de ter o OpenOffice instalado ou acesso à interface gráfica. Um comando prático para remover as marcações XML, restando apenas o texto é: <code>sed 's/&lt;[^&gt;]*&gt;//g' content.xml | tr -d '\n' | fmt -w 70</code></li>
+  <li>Edição de arquivos SXW em um ambiente limitado ou com poucos recursos, basta ter o comando <code>zip</code> e um editor de textos comum.</li>
+  <li>Edição automatizada de arquivos SXW ("em batch"), aplicando alterações de texto e formatação, bem como tratamento de imagens.</li>
+  <li>Não depender do abominável mouse para editar textos do Office ;)</li>
+</ul>
 
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-	</th>
-</tr>
-<tr><td>
-<P>
-<B>Nerdices</B>
-</P>
+<p>Mais informações:</p>
 
-<UL>
-<LI><A HREF="/misc/adventure-mapa.txt">adventure</A>
-<LI><A HREF="/doc/as4pp.html">applescript</A>
-<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
-<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
-<LI><A HREF="http://codare.net">codare</A>
-<LI><A HREF="/doc/coluna/">coluna</A>
-<LI><A HREF="http://aurelio.net/curso/">curso</A>
-<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
-<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
-<LI><A HREF="/doc/dort.html">dort</A>
-<LI><A HREF="/er/">er</A>
-<LI><A HREF="/log/">log</A>
-<LI><A HREF="/mac/">mac</A>
-<LI><A HREF="/curso/">palestra</A>
-<LI><A HREF="/misc/eu_odeio_perl.txt">perl</A>
-<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
-<LI><A HREF="/bin/python/">python</A>
-<LI><A HREF="/sed/">sed</A>
-<LI><A HREF="http://aurelio.net/shell/">shell</A>
-<LI><A HREF="/bin/sql/">sql</A>
-<LI><A HREF="http://aurelio.net/vim/">vim</A>
-<LI><A HREF="/doc/nerd.html">mais...</A>
-<LI><A HREF="/en/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Programas</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
-<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
-<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
-<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
-<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
-<LI><A HREF="/bin/lelolab/">lelolab</A>
-<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
-<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
-<LI><A HREF="http://aurelio.net/rac/">rac</A>
-<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
-<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
-<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
-<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
-<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
-<LI><A HREF="http://funcoeszz.net">zz</A>
-<LI><A HREF="/bin/">mais...</A>
-<LI><A HREF="/soft/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Livros</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
-<LI><A HREF="http://www.piazinho.com.br">regex</A>
-<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
-<LI><A HREF="http://www.shellscript.com.br">shell</A>
-</UL>
-
-</td><td>
-<P>
-<B>Eu</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/blog">blog</A>
-<LI><A HREF="/cv">cv</A>
-<LI><A HREF="/img/emeio.png">e-mail</A>
-<LI><A HREF="/faq">faq</A>
-<LI><A HREF="/mim.html">raio-x</A>
-<LI><A HREF="http://twitter.com/oreio">twitter</A>
-</UL>
-
-</td><td>
-<P>
-<B>Diversos</B>
-</P>
-
-<UL>
-<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
-<LI><A HREF="/adsense/">adsense</A>
-<LI><A HREF="/atacama">atacama</A>
-<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
-<LI><A HREF="http://aurelio.net/carve/">carve</A>
-<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
-<LI><A HREF="/correria/">correria</A>
-<LI><A HREF="/dumbs/">dumbs</A>
-<LI><A HREF="/foto/">foto</A>
-<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
-<LI><A HREF="/musica/">musica</A>
-<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
-<LI><A HREF="/doc/ramones.txt">ramones</A>
-<LI><A HREF="/sobre.html">sobre</A>
-<LI><A HREF="http://aurelio.net/surf/">surf</A>
-<LI><A HREF="/misc/toyota/">toyota</A>
-<LI><A HREF="http://umportugues.com">umportugues</A>
-<LI><A HREF="/valeta/">valeta</A>
-<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
-<LI><A HREF="/doc/videogame.html">videogame</A>
-</UL>
-
-</td><tr>
-</table>
-</div> <!-- #nav -->
-
-<div id="footer">
-<P>
-<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
-<br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</P>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="http://aurelio.net/include/10anos/aureliolga.jpg"></a>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags vim/ooo-vi.t2t -->
-</BODY></HTML>
+<ul>
+  <li>
+    <a href="http://www.xml.com/pub/a/2005/01/26/hacking-ooo.html">Hacking Open Office</a> (em inglês)
+  </li>
+</ul>
