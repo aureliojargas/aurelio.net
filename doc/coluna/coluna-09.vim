@@ -2,7 +2,7 @@
 " coluna do aurelio 09 [2001-06-28]
 " vim (um vimrc diferente)
 "
-" original em http://aurelio.net/doc/coluna/coluna-09.vim
+" original em http://aurelio.net/doc/coluna/coluna-09.html
 "
 " olás. creio que o  vim  não precisa de  apresentação não é mesmo? pois
 " bem,  então que tal explorarmos aquele mundo  misterioso que o arquivo

@@ -130,7 +130,7 @@ var allLinks = [
 [0, 'Coluna 06 - Arte Ascii (artistas do teclado)', 'doc/coluna/coluna-06.html', 'doc'],
 [0, 'Coluna 07 - Screen (janelizando o modo texto - parte 1)', 'doc/coluna/coluna-07.html', 'doc linux'],
 [0, 'Coluna 08 - Screen (janelizando o modo texto - parte 2)', 'doc/coluna/coluna-08.html', 'doc linux'],
-[0, 'Coluna 09 - Vim (um vimrc diferente)', 'doc/coluna/coluna-09.vim', 'doc vim'],
+[0, 'Coluna 09 - Vim (um vimrc diferente)', 'doc/coluna/coluna-09.html', 'doc vim'],
 [0, 'Coluna 10 - Mpage (impressão ágil em postscript)', 'doc/coluna/coluna-10.html', 'doc linux'],
 [0, 'Coluna 11 - Caracteres de Controle (não fuja, domine-os)', 'doc/coluna/coluna-11.html', 'doc'],
 [0, 'Coluna 12 - Lynx (navegação turbinada)', 'doc/coluna/coluna-12.html', 'doc linux web'],
