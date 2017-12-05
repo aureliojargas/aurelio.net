@@ -34,7 +34,8 @@ get_txt2tags_title() {
 clean_infile() {
     cat "$infile" |
         # Remove theme header/footer/ads
-        grep -v -E '^%!include: .*/(massa|10anos)/footer.t2t'
+        grep -v -E '^%!include: .*/(massa|10anos)/footer.t2t' |
+        grep -v '^_LINKBLOCK_'
 }
 
 comments_warning() {
