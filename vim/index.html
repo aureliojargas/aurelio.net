@@ -1,425 +1,227 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../include/10anos/index.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<TITLE>Vim - Portal brasileiro do editor de textos Vim (VI) :: aurelio.net</TITLE>
-</HEAD>
-<BODY class="vim">
+---
+title: Vim - Portal brasileiro do editor de textos Vim (VI)
+hide_comments: true
+hide_tags: true
+article_footer_after: false
+---
 
-<DIV ID="header">
-<H1>Vim</H1>
-<H2><a href="http://aurelio.net">Aurelio Marinho Jargas</a></H2>
-</DIV>
+<!--Desde 1999-12-17 no site-->
 
-<DIV ID="main">
-<div id="sidebar">
- <center><IMG ALIGN="middle" SRC="/img/icon/128/vim.png" BORDER="0" ALT=""></center> 
-<DIV CLASS="toc">
-
-    <UL>
-    <LI><A HREF="#mapa">Mapa de teclas</A>
-    <LI><A HREF="#docs">Documentação</A>
-      <UL>
-      <LI><A HREF="#docs-meus">Meus textos</A>
-      <LI><A HREF="#docs-outros">Outros textos</A>
-      </UL>
-    <LI><A HREF="#ferramentas">Ferramentas</A>
-    <LI><A HREF="#vimrc">Configuração (vimrc)</A>
-    <LI><A HREF="#sintaxe">Arquivos de sintaxe</A>
-    <LI><A HREF="#divirta-se">Divirta-se!</A>
-      <UL>
-      <LI><A HREF="#curva">Curva de aprendizado</A>
-      <LI><A HREF="#msvim">Microsoft Vim</A>
-      </UL>
-    </UL>
-
-</DIV>
-
-<H4>Destaques:</H4>
-
-<UL>
-<LI><A HREF="/vim/vi-vim-venci.html">VI, Vim e venci</A>
-<LI><A HREF="tutor.pt_BR">Tutorial do Vim</A>
-<LI><A HREF="/vim/pulando.html">Pulando com o Vim</A>
-<LI><A HREF="/vim/selecao-vi-sual.html">Seleção VI-sual</A>
-<LI><A HREF="/doc/coluna/coluna-09.html">Um vimrc diferente</A>
-<LI><A HREF="vimcard.txt">Cartão de Referência</A>
-</UL>
-
-<H4>Veja também:</H4>
-
-<UL>
-<LI><A HREF="/regex/">Expressões Regulares</A>
-<LI><A HREF="/sed/">Sed</A>
-<LI><A HREF="/shell/">Shell Script</A>
-<LI><A HREF="../cygwin/">Cygwin</A>
-<LI><A HREF="http://codare.net">CODARE</A>
-<LI><A HREF="../doc/nerd.html">docz nerdz</A>
-</UL>
-
-</div>
-<p class="image">
-    <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">
-        <img src="http://aurelio.net/img/banner-curso-regex-novatec.png" alt="Curso de Expressões Regulares">
-    </a>
+<p class="figure">
+  <img src="/img/icon/128/vim.png">
 </p>
-<P>
-Seja bem-vindo(a) ao portal do editor <A HREF="http://www.vim.org">Vim</A> (evolução do VI). Aqui você encontra links para vários artigos e tutoriais para aprender a utilizar o editor, bem como guias mais aprofundados que ensinam a tirar proveito de suas características mais avançadas. E a melhor parte: tudo em <B>português</B>.
-</P>
-<P>
-Estude com calma, pratique, experimente. Em caso de dúvida, ou se quiser conversar com outros usuários do Vim, junte-se a nós na <A HREF="http://tech.groups.yahoo.com/group/vi-br/">lista vi-br</A>.
-</P>
-<P>
-Lá no meu blog eu contei <A HREF="http://aurelio.net/blog/2009/06/30/10anos-vim/">a minha história com o Vim</A>, que começou em 1997 e teve muitos Bip, Bip, Bip até eu aprender a usar o editor direito :)
-</P>
 
-<H2 ID="mapa">Mapa de teclas</H2>
-
-<P>
-Excelente mapa visual de todos os comandos do teclado. Bom para imprimir e deixar na mesa, facilitando a consulta. Obrigado Rodolfo Faria pela dica.
-</P>
-
-<TABLE ALIGN="center">
-<TR>
-<TD ALIGN="center"><A HREF="vi-teclado.png"><IMG ALIGN="middle" SRC="vi-teclado-mini.jpg" BORDER="0" ALT=""></A></TD>
-</TR>
-<TR>
-<TD ALIGN="center">Original em <A HREF="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html</A></TD>
-</TR>
-</TABLE>
-
-<H2 ID="docs">Documentação</H2>
-
-<H3 ID="docs-meus">Meus textos</H3>
-
-<DL>
-<DT><A HREF="vim-basico.txt">Curso Rápido - Vim básico</A></DT><DD>
-<P></P>
-<DT><A HREF="vim-medio.txt">Curso Rápido - Vim médio</A></DT><DD>
-<P></P>
-<DT><A HREF="vim-avancado.txt">Curso Rápido - Vim avançado</A></DT><DD>
-<P></P>
-<DT><A HREF="/vim/vi-vim-venci.html">VI, Vim e venci</A></DT><DD>
-<P></P>
-Artigo publicado na Revista do Linux, edição 4 (abr/2000).
-<P></P>
-Artigo completo sobre o editor Vim, que conta sua história (VI), demonstra suas qualidades, comenta sobre as doações arrecadadas para órfãos de Uganda (África) e explica sua rixa com o editor Emacs. Iniciando pelo uso básico, o artigo evolui para demonstrar várias funções avançadas como seleção vertical, abrir vários arquivos ao mesmo tempo, abreviações, marcas, mapeamentos (macros), programação e configuração.
-<P></P>
-<DT><A HREF="/vim/pulando.html">Pulando com o Vim</A></DT><DD>
-<P></P>
-Artigo publicado na Revista do Linux, edição 49 (jan/2004).
-<P></P>
-Este artigo explica como ganhar tempo usando os vários comandos internos do editor Vim para movimentar o cursor, ao invés de usar as setinhas do teclado. Também são demonstrados os comandos para apagar textos, que dispensam o uso das teclas Delete e Backspace.
-<P></P>
-<DT><A HREF="/vim/selecao-vi-sual.html">Seleção VI-sual</A></DT><DD>
-<P></P>
-Artigo publicado na revista Linux Magazine, edição 2 (out/2004).
-<P></P>
-Este artigo dá várias dicas de uso do modo visual do Vim (VI). O modo visual serve para selecionar textos, podendo ser feito orientado a caracteres, linhas ou colunas. Uma vez selecionado, o texto pode ser recortado, copiado ou alterado. O artigo vai fundo e demonstra técnicas avançadas na seleção vertical (de colunas).
-<P></P>
-<DT><A HREF="/doc/coluna/coluna-09.html">Um vimrc diferente</A></DT><DD>
-<P></P>
-Artigo publicado na Coluna do Aurelio, número 9 (mai/2002).
-<P></P>
-Este artigo é na verdade um arquivo de configuração do Vim, cheio de opções bacanas, que são explicadas nos comentários. Basta salvar este arquivo e lê-lo diretamente no Vim. Os comandos aparecerão em cores, facilitando o entendimento. Experimente!
-<P></P>
-<DT><A HREF="/vim/ooo-vi.html">Editando arquivos do OpenOffice.org no Vim</A></DT><DD>
-<P></P>
-Um artigo que analisa a estrutura de um arquivo .SXW (arquivo do Writer do OpenOffice.org) e ensina como editá-lo utilizando um editor de textos comum como o Vim.
-<P></P>
-<DT><A HREF="../curso/material/vim-ref.html">Editor VI - Guia de Referência</A></DT><DD>
-<P></P>
-Material de apoio utilizado no meu curso de VI. Mistura tabelas com descrição de comandos e procedimentos prontos para executar, servindo de referência rápida. É apenas uma página, útil para imprimir e deixar ao alcance da mão.
-</DL>
-
-<H3 ID="docs-outros">Outros textos</H3>
-
-<DL>
-<DT><A HREF="tutor.pt_BR">Tutorial do Vim</A> <I>traduzido por Marcelo Drudi Miranda</I></DT><DD>
-<P></P>
-Baixe e faça "<CODE>vi tutor.pt_BR</CODE>"
-<P></P>
-<DT><A HREF="http://geraldo-ribeiro.sites.uol.com.br/vim.htm">Vim em lições</A> <I>por Geraldo Luís da Silva Ribeiro</I></DT><DD>
-<P></P>
-Um artigo completo e de leitura rápida que faz uma passada pelos principais comandos do Vim, dividido em lições curtas. Confira!
-<P></P>
-<DT><A HREF="http://www.ademar.org/texts/vim.txt">VIM - VI Improved</A> <I>por Ademar Souza Reis Jr</I></DT><DD>
-<P></P>
-Um artigo introdutório sobre o Vim, que explica suas diferenças do VI original e fornece dicas de configuração do editor.
-<P></P>
-<DT><A HREF="vim-comandos.html">Comandos do Vim</A> <I>por Gustavo Roberto Rodrigues Gonçalves</I></DT><DD>
-<P></P>
-Página com uma listagem extensa de comandos e sua descrição.
-<P></P>
-<DT><A HREF="vim-dicas-ivan.html">Dicas de Vim</A> <I>por Ivan Carlos da Silva Lopes</I></DT><DD>
-<P></P>
-Um documento com várias dicas do editor, incluindo dicas avançadas de mapeamento e comandos não tão conhecidos.
-<P></P>
-<DT><A HREF="vimcard.txt">Cartão de Referência</A> <I>por Ivan Carlos da Silva Lopes</I></DT><DD>
-<P></P>
-Uma versão texto do refcard da GNU, com correções. Está bem completo, uma ótima fonte de referência e aprendizado.
-</DL>
-
-<H2 ID="ferramentas">Ferramentas</H2>
-
-<DL>
-<DT><A HREF="http://www.openvim.com/tutorial.html">Tutorial online interativo (em inglês)</A></DT><DD>
-<P></P>
-Excelente tutorial online, que você acessa direto pelo navegador, não precisa instalar nada. Se você entende inglês e é 100% leigo em Vim, este é o melhor lugar para começar.
-<P></P>
-<DT><A HREF="http://www.openvim.com/sandbox.html">Vim Sandbox</A></DT><DD>
-<P></P>
-Uma versão online simplificada do Vim, para você brincar com os comandos básicos. Funciona direto no navegador, ótimo para brincar com os comandos que você acabou de aprender.
-</DL>
-
-<H2 ID="vimrc">Configuração (vimrc)</H2>
-
-<DL>
-<DT><A HREF="../doc/dotfiles/vimrc.txt">.vimrc do Aurelio</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-Arquivo de configuração comentado, cheio de firulas.
-<P></P>
-<DT><A HREF="vimrc-voyeg3r.txt">.vimrc do voyeg3r</A> <I>por voyeg3r</I></DT><DD>
-Arquivo de configuração comentado, com bastante coisas.
-<P></P>
-<DT><A HREF="vimrc-ivan.txt">.vimrc do Ivan</A> <I>por Ivan Carlos da Silva Lopes</I></DT><DD>
-Arquivo de configuração bem completo, bastante comentado e didático.
-</DL>
-
-<H2 ID="sintaxe">Arquivos de sintaxe</H2>
-
-<P>
-O Vim possui o utilíssimo recurso de colorir trechos de arquivos, seguindo regras pré-definidas. Isso é geralmente utilizado para colorir estruturas de uma linguagem de programação, identificando as palavras-chave, nomes de função, etc. As regras de cada linguagem ficam guardadas em arquivos especiais chamados "<I>Arquivo de Sintaxe</I>".
-</P>
-<P>
-O usuário pode fazer seus próprios arquivos de sintaxe, para virtualmente qualquer tipo de arquivo, basta saber como descrever ao Vim a estrutura de seu arquivo. Segue uma coletânea desses arquivos especiais, criados por brasileiros.
-</P>
-
-<DL>
-<DT><A HREF="txt.vim">txt.vim</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-  <B>Sintaxe para arquivos texto.</B>
-  Ler textos se torna mais fácil e rápido quando números, valores monetários, emails, URLs, citações, trechos entre parênteses e caracteres especiais aparecem em destaque. É exatamente isso que este arquivo faz. Experimente.
-<P></P>
-<DT><A HREF="spec.vim">spec.vim</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-  <B>Sintaxe para arquivos .spec, utilizados pelo RPM.</B>
-  O Vim já tem um padrão, mas é muito fraquinho. Este está "bombado" e reconhece todas as estruturas que um .spec pode ter.
-<P></P>
-<DT><A HREF="php3.vim">php3.vim</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-  <B>Sintaxe para arquivos PHP3.</B>
-  Este está bem trabalhado, com suporte a temas, podendo mudar toda a configuração de cores apenas definindo uma variável, e até fazer suas próprias definições, de maneira bem fácil.
-<P></P>
-<DT><A HREF="pagemaker.vim">pagemaker.vim</A> <I>por Aurelio Marinho Jargas</I></DT><DD>
-  <B>Sintaxe para arquivos do PageMaker.</B>
-  O PageMaker 6.5, além do formato compilado, também pode ler/gravar arquivos num formato com marcações (tipo HTML). Este é o arquivo do Vim para colori-lo.
-<P></P>
-<DT><A HREF="xlib.vim">xlib.vim</A> <I>por Augusto César Radtke</I></DT><DD>
-  <B>Sintaxe para "typesets" da Xlib.</B>
-  Nele estão definidas todas as palavras-chave da Xlib do XFree86-3.3.6, que aparecerão coloridas no seu código.
-<P></P>
-<DT><A HREF="dic.vim">dic.vim</A> <I>por Gustavo Niemeyer</I></DT><DD>
-  <B>Sintaxe para arquivos dicionário do Linuxconf.</B>
-  Identifica e coloriza as estruturas do arquivo de mensagens traduzidas do Linuxconf, diminuindo as chances de erro na tradução.
-</DL>
-
-<P>
-Para testar e utilizar estes arquivos de sintaxe, basta carregá-lo na edição do arquivo atual, com o comando <B><CODE>:source arquivo.vim</CODE></B>. Se quiser configurar o Vim para sempre utilizar este arquivo de sintaxe, basta associá-lo com uma extensão de arquivo em seu <B><CODE>~/.vimrc</CODE></B>:
-</P>
-
-<PRE>
-au BufNewFile,BufRead *.txt source ~/rota/para/arquivo.vim
-</PRE>
-
-<P>
-Onde <CODE>.txt</CODE> é a extensão de arquivos que estamos associando ao arquivo de sintaxe <CODE>arquivo.vim</CODE>.
-</P>
-
-<H2 ID="divirta-se">Divirta-se!</H2>
-
-<H3 ID="curva">Curva de aprendizado</H3>
-
-<P>
-<IMG ALIGN="middle" SRC="curva.jpg" BORDER="0" ALT="">
-</P>
-
-<H3 ID="msvim">Microsoft Vim</H3>
-
-<P>
-<IMG ALIGN="middle" SRC="msvim.gif" BORDER="0" ALT="">
-</P>
-<P>
-:)
-</P>
-</div> <!-- close #main -->
-<div id="nav">
-
-<table>
-<tr>
-	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
-</tr>
-<tr>	
-	<th class="search" colspan="5">
- 
-<form action="http://aurelio.net/achei.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
-
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-	</th>
-</tr>
-<tr><td>
-<P>
-<B>Nerdices</B>
-</P>
-
-<UL>
-<LI><A HREF="/misc/adventure-mapa.txt">adventure</A>
-<LI><A HREF="/doc/as4pp.html">applescript</A>
-<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
-<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
-<LI><A HREF="http://codare.net">codare</A>
-<LI><A HREF="/doc/coluna/">coluna</A>
-<LI><A HREF="http://aurelio.net/curso/">curso</A>
-<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
-<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
-<LI><A HREF="/doc/dort.html">dort</A>
-<LI><A HREF="/er/">er</A>
-<LI><A HREF="/log/">log</A>
-<LI><A HREF="/mac/">mac</A>
-<LI><A HREF="/curso/">palestra</A>
-<LI><A HREF="/misc/eu_odeio_perl.txt">perl</A>
-<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
-<LI><A HREF="/bin/python/">python</A>
-<LI><A HREF="/sed/">sed</A>
-<LI><A HREF="http://aurelio.net/shell/">shell</A>
-<LI><A HREF="/bin/sql/">sql</A>
-<LI><A HREF="http://aurelio.net/vim/">vim</A>
-<LI><A HREF="/doc/nerd.html">mais...</A>
-<LI><A HREF="/en/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Programas</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
-<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
-<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
-<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
-<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
-<LI><A HREF="/bin/lelolab/">lelolab</A>
-<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
-<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
-<LI><A HREF="http://aurelio.net/rac/">rac</A>
-<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
-<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
-<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
-<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
-<LI><A HREF="http://txt2tags.org/pt/">txt2tags</A>
-<LI><A HREF="http://funcoeszz.net">zz</A>
-<LI><A HREF="/bin/">mais...</A>
-<LI><A HREF="/soft/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Livros</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
-<LI><A HREF="http://www.piazinho.com.br">regex</A>
-<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
-<LI><A HREF="http://www.shellscript.com.br">shell</A>
-</UL>
-
-</td><td>
-<P>
-<B>Eu</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/blog">blog</A>
-<LI><A HREF="/cv">cv</A>
-<LI><A HREF="/img/emeio.png">e-mail</A>
-<LI><A HREF="/faq">faq</A>
-<LI><A HREF="/mim.html">raio-x</A>
-<LI><A HREF="http://twitter.com/oreio">twitter</A>
-</UL>
-
-</td><td>
-<P>
-<B>Diversos</B>
-</P>
-
-<UL>
-<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
-<LI><A HREF="/adsense/">adsense</A>
-<LI><A HREF="/atacama">atacama</A>
-<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
-<LI><A HREF="http://aurelio.net/carve/">carve</A>
-<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
-<LI><A HREF="/correria/">correria</A>
-<LI><A HREF="/dumbs/">dumbs</A>
-<LI><A HREF="/foto/">foto</A>
-<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
-<LI><A HREF="/musica/">musica</A>
-<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
-<LI><A HREF="/doc/ramones.txt">ramones</A>
-<LI><A HREF="/sobre.html">sobre</A>
-<LI><A HREF="http://aurelio.net/surf/">surf</A>
-<LI><A HREF="/misc/toyota/">toyota</A>
-<LI><A HREF="http://umportugues.com">umportugues</A>
-<LI><A HREF="/valeta/">valeta</A>
-<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
-<LI><A HREF="/doc/videogame.html">videogame</A>
-</UL>
-
-</td><tr>
+<table class="tableborder">
+  <tr>
+    <td>
+      <p>Destaques:</p>
+      <ul>
+        <li><a href="/vim/vi-vim-venci.html">VI, Vim e venci</a></li>
+        <li><a href="/vim/tutor.pt_BR">Tutorial do Vim</a></li>
+        <li><a href="/vim/pulando.html">Pulando com o Vim</a></li>
+        <li><a href="/vim/selecao-vi-sual.html">Seleção VI-sual</a></li>
+        <li><a href="/doc/coluna/coluna-09.html">Um vimrc diferente</a></li>
+        <li><a href="/vim/vimcard.txt">Cartão de Referência</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>Veja também:</p>
+      <ul>
+        <li><a href="/regex/">Expressões Regulares</a></li>
+        <li><a href="/sed/">Sed</a></li>
+        <li><a href="/shell/">Shell Script</a></li>
+        <li><a href="/cygwin/">Cygwin</a></li>
+        <li><a href="http://codare.net">CODARE</a></li>
+        <li><a href="/doc/nerd.html">docz nerdz</a></li>
+      </ul>
+    </td>
+  </tr>
 </table>
-</div> <!-- #nav -->
 
-<div id="footer">
-<P>
-<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org/pt/">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
-<br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</P>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="http://aurelio.net/include/10anos/aureliolga.jpg"></a>
+<p>Seja bem-vindo(a) ao portal do editor <a href="http://www.vim.org">Vim</a> (evolução do VI). Aqui você encontra links para vários artigos e tutoriais para aprender a utilizar o editor, bem como guias mais aprofundados que ensinam a tirar proveito de suas características mais avançadas. E a melhor parte: tudo em <strong>português</strong>.</p>
 
-<script type="text/javascript">
+<p>Estude com calma, pratique, experimente. Em caso de dúvida, ou se quiser conversar com outros usuários do Vim, junte-se a nós na <a href="http://tech.groups.yahoo.com/group/vi-br/">lista vi-br</a>.</p>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
+<p>Lá no meu blog eu contei <a href="http://aurelio.net/blog/2009/06/30/10anos-vim/">a minha história com o Vim</a>, que começou em 1997 e teve muitos Bip, Bip, Bip até eu aprender a usar o editor direito :)</p>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+<nav>
+  <ul>
+    <li><a href="#mapa">Mapa de teclas</a></li>
+    <li><a href="#docs">Documentação</a></li>
+    <li><a href="#ferramentas">Ferramentas</a></li>
+    <li><a href="#vimrc">Configuração (vimrc)</a></li>
+    <li><a href="#sintaxe">Arquivos de sintaxe</a></li>
+    <li><a href="#divirta-se">Divirta-se!</a></li>
+  </ul>
+</nav>
 
-</script>
+<p class="figure">
+  <a href="http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/">
+    <img src="/img/banner-curso-regex-novatec.png">
+  </a>
+</p>
 
-</DIV>
+<h2 id="mapa">Mapa de teclas</h2>
 
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags vim/index.t2t -->
-</BODY></HTML>
+<p>Excelente mapa visual de todos os comandos do teclado. Bom para imprimir e deixar na mesa, facilitando a consulta. Obrigado Rodolfo Faria pela dica.</p>
+
+<p class="figure">
+  <a href="/vim/vi-teclado.png">
+    <img src="/vim/vi-teclado-mini.jpg">
+  </a>
+  <span>
+    Clique na figura pra ver grandão. Fonte:
+    <a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">viemu.com</a>
+  </span>
+</p>
+
+<h2 id="docs">Documentação</h2>
+
+<h3 id="docs-meus">Meus textos</h3>
+
+<dl>
+  <dt><a href="/vim/vim-basico.txt">Curso Rápido - Vim básico</a></dt>
+  <dt><a href="/vim/vim-medio.txt">Curso Rápido - Vim médio</a></dt>
+  <dt><a href="/vim/vim-avancado.txt">Curso Rápido - Vim avançado</a></dt>
+  <dd>Arquivos txt com um resumo dos principais comandos do Vim.</dd>
+  <dt>
+    <a href="/vim/vi-vim-venci.html">VI, Vim e venci</a>
+  </dt>
+  <dd>Artigo publicado na Revista do Linux, edição 4 (abr/2000). Artigo completo sobre o editor Vim, que conta sua história (VI), demonstra suas qualidades, comenta sobre as doações arrecadadas para órfãos de Uganda (África) e explica sua rixa com o editor Emacs. Iniciando pelo uso básico, o artigo evolui para demonstrar várias funções avançadas como seleção vertical, abrir vários arquivos ao mesmo tempo, abreviações, marcas, mapeamentos (macros), programação e configuração.</dd>
+  <dt>
+    <a href="/vim/pulando.html">Pulando com o Vim</a>
+  </dt>
+  <dd>Artigo publicado na Revista do Linux, edição 49 (jan/2004). Este artigo explica como ganhar tempo usando os vários comandos internos do editor Vim para movimentar o cursor, ao invés de usar as setinhas do teclado. Também são demonstrados os comandos para apagar textos, que dispensam o uso das teclas Delete e Backspace.</dd>
+  <dt>
+    <a href="/vim/selecao-vi-sual.html">Seleção VI-sual</a>
+  </dt>
+  <dd>Artigo publicado na revista Linux Magazine, edição 2 (out/2004). Este artigo dá várias dicas de uso do modo visual do Vim (VI). O modo visual serve para selecionar textos, podendo ser feito orientado a caracteres, linhas ou colunas. Uma vez selecionado, o texto pode ser recortado, copiado ou alterado. O artigo vai fundo e demonstra técnicas avançadas na seleção vertical (de colunas).</dd>
+  <dt>
+    <a href="/doc/coluna/coluna-09.html">Um vimrc diferente</a>
+  </dt>
+  <dd>Artigo publicado na Coluna do Aurelio, número 9 (mai/2002). Este artigo é na verdade um arquivo de configuração do Vim, cheio de opções bacanas, que são explicadas nos comentários. Basta salvar este arquivo e lê-lo diretamente no Vim. Os comandos aparecerão em cores, facilitando o entendimento. Experimente!</dd>
+  <dt>
+    <a href="/vim/ooo-vi.html">Editando arquivos do OpenOffice.org no Vim</a>
+  </dt>
+  <dd>Um artigo que analisa a estrutura de um arquivo .SXW (arquivo do Writer do OpenOffice.org) e ensina como editá-lo utilizando um editor de textos comum como o Vim.</dd>
+  <dt>
+    <a href="/curso/material/vim-ref.html">Editor VI - Guia de Referência</a>
+  </dt>
+  <dd>Material de apoio utilizado no meu curso de VI. Mistura tabelas com descrição de comandos e procedimentos prontos para executar, servindo de referência rápida. É apenas uma página, útil para imprimir e deixar ao alcance da mão.</dd>
+</dl>
+
+<h3 id="docs-outros">Outros textos</h3>
+
+<dl>
+  <dt>
+    <a href="/vim/tutor.pt_BR">Tutorial do Vim</a> <em>traduzido por Marcelo Drudi Miranda</em>
+  </dt>
+  <dd>Baixe e faça "<code>vi tutor.pt_BR</code>"</dd>
+  <dt>
+    <a href="http://geraldo-ribeiro.sites.uol.com.br/vim.htm">Vim em lições</a> <em>por Geraldo Luís da Silva Ribeiro</em>
+  </dt>
+  <dd>Um artigo completo e de leitura rápida que faz uma passada pelos principais comandos do Vim, dividido em lições curtas. Confira!</dd>
+  <dt>
+    <a href="http://www.ademar.org/texts/vim.txt">VIM - VI Improved</a> <em>por Ademar Souza Reis Jr</em>
+  </dt>
+  <dd>Um artigo introdutório sobre o Vim, que explica suas diferenças do VI original e fornece dicas de configuração do editor.</dd>
+  <dt>
+    <a href="/vim/vim-comandos.html">Comandos do Vim</a> <em>por Gustavo Roberto Rodrigues Gonçalves</em>
+  </dt>
+  <dd>Página com uma listagem extensa de comandos e sua descrição.</dd>
+  <dt>
+    <a href="/vim/vim-dicas-ivan.html">Dicas de Vim</a> <em>por Ivan Carlos da Silva Lopes</em>
+  </dt>
+  <dd>Um documento com várias dicas do editor, incluindo dicas avançadas de mapeamento e comandos não tão conhecidos.</dd>
+  <dt>
+    <a href="/vim/vimcard.txt">Cartão de Referência</a> <em>por Ivan Carlos da Silva Lopes</em>
+  </dt>
+  <dd>Uma versão texto do refcard da GNU, com correções. Está bem completo, uma ótima fonte de referência e aprendizado.</dd>
+</dl>
+
+<h2 id="ferramentas">Ferramentas</h2>
+
+<dl>
+  <dt>
+    <a href="http://www.openvim.com/tutorial.html">Tutorial online interativo (em inglês)</a>
+  </dt>
+  <dd>Excelente tutorial online, que você acessa direto pelo navegador, não precisa instalar nada. Se você entende inglês e é 100% leigo em Vim, este é o melhor lugar para começar.</dd>
+  <dt>
+    <a href="http://www.openvim.com/sandbox.html">Vim Sandbox</a>
+  </dt>
+  <dd>Uma versão online simplificada do Vim, para você brincar com os comandos básicos. Funciona direto no navegador, ótimo para brincar com os comandos que você acabou de aprender.</dd>
+</dl>
+
+<h2 id="vimrc">Configuração (vimrc)</h2>
+
+<dl>
+  <dt>
+    <a href="/doc/dotfiles/vimrc.txt">.vimrc do Aurelio</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd>Arquivo de configuração comentado, cheio de firulas.</dd>
+  <dt>
+    <a href="/vim/vimrc-voyeg3r.txt">.vimrc do voyeg3r</a> <em>por voyeg3r</em>
+  </dt>
+  <dd>Arquivo de configuração comentado, com bastante coisas.</dd>
+  <dt>
+    <a href="/vim/vimrc-ivan.txt">.vimrc do Ivan</a> <em>por Ivan Carlos da Silva Lopes</em>
+  </dt>
+  <dd>Arquivo de configuração bem completo, bastante comentado e didático.</dd>
+</dl>
+
+<h2 id="sintaxe">Arquivos de sintaxe</h2>
+
+<p>O Vim possui o utilíssimo recurso de colorir trechos de arquivos, seguindo regras pré-definidas. Isso é geralmente utilizado para colorir estruturas de uma linguagem de programação, identificando as palavras-chave, nomes de função, etc. As regras de cada linguagem ficam guardadas em arquivos especiais chamados "<em>Arquivo de Sintaxe</em>".</p>
+
+<p>O usuário pode fazer seus próprios arquivos de sintaxe, para virtualmente qualquer tipo de arquivo, basta saber como descrever ao Vim a estrutura de seu arquivo. Segue uma coletânea desses arquivos especiais, criados por brasileiros.</p>
+
+<dl>
+  <dt>
+    <a href="/vim/txt.vim">txt.vim</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd><strong>Sintaxe para arquivos texto.</strong> Ler textos se torna mais fácil e rápido quando números, valores monetários, emails, URLs, citações, trechos entre parênteses e caracteres especiais aparecem em destaque. É exatamente isso que este arquivo faz. Experimente.</dd>
+  <dt>
+    <a href="/vim/spec.vim">spec.vim</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd><strong>Sintaxe para arquivos .spec, utilizados pelo RPM.</strong> O Vim já tem um padrão, mas é muito fraquinho. Este está "bombado" e reconhece todas as estruturas que um .spec pode ter.</dd>
+  <dt>
+    <a href="/vim/php3.vim">php3.vim</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd><strong>Sintaxe para arquivos PHP3.</strong> Este está bem trabalhado, com suporte a temas, podendo mudar toda a configuração de cores apenas definindo uma variável, e até fazer suas próprias definições, de maneira bem fácil.</dd>
+  <dt>
+    <a href="/vim/pagemaker.vim">pagemaker.vim</a> <em>por Aurelio Marinho Jargas</em>
+  </dt>
+  <dd><strong>Sintaxe para arquivos do PageMaker.</strong> O PageMaker 6.5, além do formato compilado, também pode ler/gravar arquivos num formato com marcações (tipo HTML). Este é o arquivo do Vim para colori-lo.</dd>
+  <dt>
+    <a href="/vim/xlib.vim">xlib.vim</a> <em>por Augusto César Radtke</em>
+  </dt>
+  <dd><strong>Sintaxe para "typesets" da Xlib.</strong> Nele estão definidas todas as palavras-chave da Xlib do XFree86-3.3.6, que aparecerão coloridas no seu código.</dd>
+  <dt>
+    <a href="/vim/dic.vim">dic.vim</a> <em>por Gustavo Niemeyer</em>
+  </dt>
+  <dd><strong>Sintaxe para arquivos dicionário do Linuxconf.</strong> Identifica e coloriza as estruturas do arquivo de mensagens traduzidas do Linuxconf, diminuindo as chances de erro na tradução.</dd>
+</dl>
+
+<p>Para testar e utilizar estes arquivos de sintaxe, basta carregá-lo na edição do arquivo atual, com o comando <code>:source arquivo.vim</code>. Se quiser configurar o Vim para sempre utilizar este arquivo de sintaxe, basta associá-lo com uma extensão de arquivo em seu <code>~/.vimrc</code>:</p>
+
+<pre>
+au BufNewFile,BufRead *.txt source ~/rota/para/arquivo.vim
+</pre>
+
+<p>Onde <code>.txt</code> é a extensão de arquivos que estamos associando ao arquivo de sintaxe <code>arquivo.vim</code>.</p>
+
+<h2 id="divirta-se">Divirta-se!</h2>
+
+<h3>Curva de aprendizado</h3>
+
+<p class="figure">
+  <img src="/vim/curva.jpg">
+</p>
+
+<h3>Microsoft Vim</h3>
+
+<p class="figure">
+  <img src="/vim/msvim.gif">
+</p>
+
+<p>:)</p>
