@@ -90,7 +90,7 @@
 % URL
 %!postproc: _COLUNA_(\d\d)_URL	_MYSITE_COLUNA_\1_PATH
 % PATH
-%!postproc: _COLUNA_09_PATH	_COLUNA_PATH_COLUNA_09_ID.vim
+%!postproc: _COLUNA_09_PATH	_COLUNA_PATH_COLUNA_09_ID.html
 %!postproc: _COLUNA_(\d\d)_PATH	_COLUNA_PATH_COLUNA_\1_ID.html
 % ID
 %!postproc: _COLUNA_(\d\d)_ID	coluna-\1
