@@ -50,6 +50,11 @@ check_accidental_liquid_markup() {
     cd "$site_root"
 }
 
+check_missing_article_date() {
+    # This is the default date inserted by the txt2tags2html script
+    git grep '^date: 1999-12-31'
+}
+
 # Do not use relative URLs in links and images
 check_relative_urls() {
     # ./
@@ -82,11 +87,6 @@ check_windows_linebreak() {
         # Remove false positives
         grep -v '^\./projects/moneylog/' |
         grep -v '^\./moneylog/'
-}
-
-check_missing_article_date() {
-    # This is the default date inserted by the txt2tags2html script
-    git grep '^date: 1999-12-31'
 }
 
 active_checks="
