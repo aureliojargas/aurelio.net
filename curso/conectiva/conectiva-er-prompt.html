@@ -1,357 +1,327 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../prompt-doc.css">
-<TITLE>Prompt-doc: Expressões Regulares - Introdução</TITLE>
-</HEAD><BODY BGCOLOR="white" TEXT="black">
-<CENTER>
-<H1>Prompt-doc: Expressões Regulares - Introdução</H1>
-<FONT SIZE="4"><I>Aurelio Marinho Jargas</I></FONT><BR>
-<FONT SIZE="4">Curitiba, 17 de Dezembro de 2003</FONT>
-</CENTER>
-
-<P></P>
-<HR NOSHADE SIZE=1>
-<P></P>
-
-    <UL>
-    <LI><A HREF="#toc1">Os Metacaracteres</A>
-    <LI><A HREF="#toc2">O arquivo de exemplo</A>
-    <LI><A HREF="#toc3">Âncoras para início de fim de linha</A>
-    <LI><A HREF="#toc4">Aspas duplas caso use variáveis</A>
-    <LI><A HREF="#toc5">Use os colchetes para listar possibilidades para uma posição</A>
-    <LI><A HREF="#toc6">Misture os metacaracteres a gosto</A>
-    <LI><A HREF="#toc7">A lista serve para lidar com acentuação também</A>
-    <LI><A HREF="#toc8">Como casar linhas em branco</A>
-    <LI><A HREF="#toc9">Listas negadas e intervalos</A>
-    <LI><A HREF="#toc10">Intervalos respeitam a tabela ASCII</A>
-    <LI><A HREF="#toc11">Classes POSIX respeitam o LOCALE</A>
-    <LI><A HREF="#toc12">O curinga: o ponto</A>
-    <LI><A HREF="#toc13">Egrep e chaves para repetições</A>
-    <LI><A HREF="#toc14">Mais sobre chaves</A>
-    <LI><A HREF="#toc15">Linhas de tamanho fixo</A>
-    <LI><A HREF="#toc16">Repetição de listas</A>
-    <LI><A HREF="#toc17">? * e + são atalhos para as chaves {}</A>
-    <LI><A HREF="#toc18">O opcional ?</A>
-    <LI><A HREF="#toc19">Não há como negar strings no meio da linha</A>
-    <LI><A HREF="#toc20">Grupos são legais!</A>
-    <LI><A HREF="#toc21">Os retrovisores (máximo de nove, marca o texto e não a ER)</A>
-    <LI><A HREF="#toc22">Como procurar palavras repetidas</A>
-    <LI><A HREF="#toc23">Usando ? * e +</A>
-    <LI><A HREF="#toc24">O tudo e o nada: ponto-asterisco .*</A>
-    <LI><A HREF="#toc25">? * e + são gulosos!</A>
-    <LI><A HREF="#toc26">Ou isso ou aquilo</A>
-    <LI><A HREF="#toc27">Procurar por palavras repetidas na mesma linha</A>
-    <LI><A HREF="#toc28">Usuários com shell e que o $HOME é diferente do login</A>
-    <LI><A HREF="#toc29">Ou isso ou aquilo também se aplica a ERs complicadas!</A>
-    <LI><A HREF="#toc30">Uma ER bem simples para casar um email</A>
-    <LI><A HREF="#toc31">Trocando a ordem de campos</A>
-    </UL>
-
-<P></P>
-<HR NOSHADE SIZE=1>
-<P></P>
-<P>
-Este é o histórico da linha de comando de uma palestra que fiz para
-funcionários da Conectiva, sobre Expressões Regulares. O objetivo era
-apresentar todos os metacaracteres básicos e sua utilidade.
-</P>
-
-<UL>
-<LI><B>Data:</B> 17-Dez-2003
-<LI><B>Local:</B> Auditório da Conectiva, Curitiba
-<LI><B>Duração:</B> 2 horas
-<LI><B>Requisitos:</B> Nenhum
-</UL>
-
-<HR NOSHADE SIZE=1>
-
-<H2 ID="toc1">Os Metacaracteres</H2>
-
-<PRE>
-    $ #         ^ $ + * {} () | ? [] .
-</PRE>
-
-<H2 ID="toc2">O arquivo de exemplo</H2>
-
-<PRE>
-    $ cd /etc
-    $ cat passwd
-</PRE>
-
-<H2 ID="toc3">Âncoras para início de fim de linha</H2>
-
-<PRE>
-    $ grep root passwd
-    $ grep ^root passwd
-    $ grep bash$ passwd
-    $ grep sh$ passwd
-    $ grep 'sh$' passwd          # proteger com aspas
-</PRE>
-
-<H2 ID="toc4">Aspas duplas caso use variáveis</H2>
-
-<PRE>
-    $ zzz=ro
-    $ grep "$zzzot" passwd
-    $ grep "${zzz}ot" passwd     # proteger com {}
-</PRE>
-
-<H2 ID="toc5">Use os colchetes para listar possibilidades para uma posição</H2>
-
-<PRE>
-    $ echo Carlos | grep 'Carlos'
-    $ echo Carlos | grep '[Cc]arlos'
-    $ echo carlos | grep '[Cc]arlos'
-    $ echo harlos | grep '[Cchfg]arlos'
-</PRE>
-
-<H2 ID="toc6">Misture os metacaracteres a gosto</H2>
-
-<PRE>
-    $ echo Carlos | grep '^[Cc]arlos$'
-</PRE>
-
-<H2 ID="toc7">A lista serve para lidar com acentuação também</H2>
-
-<PRE>
-    $ vi /tmp/acao.txt                 # acao, ACAO, Açao, aÇãO, AÇao, etc...    
-    $ cat /tmp/acao.txt | grep 'acao'
-    $ cat /tmp/acao.txt | grep 'a[cç]ao'
-    $ cat /tmp/acao.txt | grep 'a[cç][aã]o'
-    $ cat /tmp/acao.txt | grep -i 'a[cç][aã]o'
-    $ cat /tmp/acao.txt | grep '[Aa][CÇcç][AÃaã][Oo]'  # todas possibilidades
-</PRE>
-
-<H2 ID="toc8">Como casar linhas em branco</H2>
-
-<PRE>
-    $ grep '^$' passwd
-</PRE>
-
-<H2 ID="toc9">Listas negadas e intervalos</H2>
-
-<PRE>
-    $ grep '^[aeiou]' passwd
-    $ grep '^[bcdfghjklmnpqrstvwxyz]' passwd
-    $ grep '^[^aeiou]' passwd
-    $ grep '[^^]' passwd             # negando o chapéuzinho
-    $ grep '^[a-z]' passwd           # o hífen indica intervalo
-    $ grep '^[a-]' passwd            # sem letras ao redor, hífen normal
-    $ grep '^[-z]' passwd
-    $ grep '^[az-]' passwd
-    $ grep '^[0-9]' passwd           # linhas iniciadas por números
-    $ grep '[0-9]' passwd
-    $ grep '[0-90-9]' passwd         # errado
-    $ grep '[0-9][0-9]' passwd       # certo
-    $ grep '[0-9][0-9][0-9]' passwd
-</PRE>
-
-<H2 ID="toc10">Intervalos respeitam a tabela ASCII</H2>
-
-<PRE>
-    $ man ascii
-</PRE>
-
-<H2 ID="toc11">Classes POSIX respeitam o LOCALE</H2>
-
-<PRE>
-    $ echo ááá | grep '[a-z]'
-    $ echo $LANG
-    $ echo ááá | grep '[[:lower:]]'
-    $ echo ááá | grep '[0-9[:lower:]ABC ]'
-</PRE>
-
-<H2 ID="toc12">O curinga: o ponto</H2>
-
-<PRE>
-    $ grep '^[aeiou]' passwd         # começa com vogal
-    $ grep '^.[aeiou]' passwd        # segunda letra vogal
-    $ grep '^..[aeiou]' passwd       # terceira letra vogal
-</PRE>
-
-<H2 ID="toc13">Egrep e chaves para repetições</H2>
-
-<PRE>
-    $ grep '^.......................[aeiou]' passwd
-    $ grep '^.{25}[aeiou]' passwd     # errado
-    $ grep '^.{5}[aeiou]' passwd      # errado
-    $ grep '^.\{5\}[aeiou]' passwd    # deve escapar!
-    $ egrep '^.{5}[aeiou]' passwd     # ou usar o egrep
-    $ egrep 'f{995}' passwd           # 995 efes
-    $ egrep 'f{1,995}' passwd         # de 1 a 995 efes
-</PRE>
-
-<H2 ID="toc14">Mais sobre chaves</H2>
-
-<PRE>
-    $ egrep '^.{5}[aeiou]' passwd      # sexta letra vogal
-    $ egrep '^.{4,5}[aeiou]' passwd    # quinta ou sexta letra vogal
-    $ egrep '^.{1,5}[aeiou]' passwd    # de segunda a sexta letra vogal
-    $ egrep '^.{5,}[aeiou]' passwd     # sexta (ou mais) vogal
-</PRE>
-
-<H2 ID="toc15">Linhas de tamanho fixo</H2>
-
-<PRE>
-    $ echo aaaaaaaaaaaaaaaa | egrep 'a{6}'
-    $ echo aaaaaaaaaaaaaaaa | egrep '^a{6}$'
-    $ echo aaaaaaaaaaaaaaaa | egrep '^a{6,}$'
-    $ echo aaaaaaaaaaaaaaaa | egrep 'a{6,}'
-    $ echo aaaaaaaaaaaaaaaa | egrep 'a{2,6}'
-</PRE>
-
-<H2 ID="toc16">Repetição de listas</H2>
-
-<PRE>
-    $ egrep '[aeiou]{2}' passwd        # duas vogais seguidas
-    $ egrep '^.[aeiou]{2}' passwd      # segunda e terceira vogais
-</PRE>
-
-<H2 ID="toc17">? * e + são atalhos para as chaves {}</H2>
-
-<PRE>
-    $ #       ?  {0,1}        *  {0,}      +  {1,}
-</PRE>
-
-<H2 ID="toc18">O opcional ?</H2>
-
-<PRE>
-    $ echo mala | egrep mala
-    $ echo malas | egrep malas?
-    $ echo mala | egrep malas?
-    $ echo mala | egrep mal(as)?           # erro!
-    $ echo mala | egrep 'mal(as)?'         # deve proteger com 'aspas'
-    $ echo mal | egrep 'mal(as)?'
-</PRE>
-
-<H2 ID="toc19">Não há como negar strings no meio da linha</H2>
-
-<PRE>
-    $ echo mala | egrep '[^l][^a]'
-    $ echo mala | egrep '(^la)'
-    $ echo mala | egrep '(^ma)'
-</PRE>
-
-<H2 ID="toc20">Grupos são legais!</H2>
-
-<PRE>
-    $ echo mala | egrep '(((((((((a)))))))))'
-    $ echo mala | egrep '((((((((((a))))))))))'
-    $ echo mala | egrep '((((((((((a)))))))))'
-    $ echo mala | grep '\(\(\(\(\(\(\(\(\(\(a\)\)\)\)\)\)\)\)\)\)'
-</PRE>
-
-<H2 ID="toc21">Os retrovisores (máximo de nove, marca o texto e não a ER)</H2>
-
-<PRE>
-    $ echo mala | egrep '(a)l\1'
-    $ echo aja | egrep '(a).\1'
-    $ echo a.a | egrep '(a).\1'
-    $ echo a.a | egrep '([0-9]).\1'
-    $ echo 7a7 | egrep '([0-9]).\1'
-    $ echo 788 | egrep '([0-9])\1\1'      # não casa
-    $ echo 888 | egrep '([0-9])\1\1'      # casa
-    $ echo 888 | egrep '([0-9])\1{2}'     # casa
-</PRE>
-
-<H2 ID="toc22">Como procurar palavras repetidas</H2>
-
-<PRE>
-    $ echo "por que que eu sou" | egrep '([a-z]{2,8}) \1'
-    $ echo "por que qu eu sou" | egrep '([a-z]{2,8}) \1'
-    $ echo "quero-quero" | egrep '([a-z]{2,8})-\1'
-</PRE>
-
-<H2 ID="toc23">Usando ? * e +</H2>
-
-<PRE>
-    $ echo b | egrep 'a*'
-    $ echo b | egrep 'a+'
-    $ echo b | egrep 'a?'
-    $ echo ab | egrep 'a+'
-    $ echo aaaaaa | egrep 'a+'
-    $ echo aaaaaa | egrep '^a+$'
-    $ echo aaaaaa | egrep '^a*$'
-</PRE>
-
-<H2 ID="toc24">O tudo e o nada: ponto-asterisco .*</H2>
-
-<PRE>
-    $ echo aaaaaa | egrep '.*'
-    $ echo | egrep '.*'
-    $ echo dayukafukdfkidrifhiioyohgoyiejeoueou | egrep '.*'
-</PRE>
-
-<H2 ID="toc25">? * e + são gulosos!</H2>
-
-<PRE>
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.*&gt;//g'
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{0,\}&gt;//g'
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{1,\}&gt;//g'
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{2,\}&gt;//g'
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{2\}&gt;//g'
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{1,2\}&gt;//g'
-    $ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;[^&gt;]*&gt;//g'
-</PRE>
-
-<H2 ID="toc26">Ou isso ou aquilo</H2>
-
-<PRE>
-    $ egrep 'root|ftp' passwd
-    $ egrep '^root|FTP' passwd
-    $ egrep '^(root|FTP)' passwd
-    $ egrep '^(root|ftp)' passwd
-    $ egrep '^(root|ftp).*\1' passwd
-</PRE>
-
-<H2 ID="toc27">Procurar por palavras repetidas na mesma linha</H2>
-
-<PRE>
-    $ cat passwd | egrep '(mail).*\1.*\1'
-    $ cat passwd | egrep '([a-z]{3,}).*\1.*\1'
-    $ cat passwd | egrep '^([a-z]{3,}).*\1.*\1'
-    $ cat passwd | egrep '^([a-z]{3,}).*/home/\1'
-    $ cat passwd | egrep '^([a-z]{3,}).*/var/spool/\1'
-</PRE>
-
-<H2 ID="toc28">Usuários com shell e que o $HOME é diferente do login</H2>
-
-<PRE>
-    $ cat passwd | egrep 'bash$' | egrep -v '^([a-z]{3,}).*/var/spool/\1'
-    $ cat passwd | egrep 'bash$' | egrep -v '^([a-z]{3,}).*/home/\1'
-</PRE>
-
-<H2 ID="toc29">Ou isso ou aquilo também se aplica a ERs complicadas!</H2>
-
-<PRE>
-    $ cat passwd | egrep '^[aeiou]{2}|bash$'
-    $ cat passwd | egrep '(^[aeiou]{2})|(bash$)'
-    $ cat passwd | sed -nr 's/((^[aeiou]{2})|(bash$))/XXXX/gp'
-</PRE>
-
-<H2 ID="toc30">Uma ER bem simples para casar um email</H2>
-
-<PRE>
-    $ #         [A-Za-z0-9._]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,6}
-</PRE>
-
-<H2 ID="toc31">Trocando a ordem de campos</H2>
-
-<PRE>
-    $ grep root passwd | cut -d: -f1,6
-    $ grep root passwd | cut -d: -f1,6 | sed -r 's/(.*):(.*)/\2:\1/'
-</PRE>
-
-<HR NOSHADE SIZE=1>
-
-<P>
- <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
-<A HREF=".">Voltar para a página dos cursos na Conectiva</A>
-</P>
-
-<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags conectiva-er-prompt.t2t -->
-</BODY></HTML>
+---
+date: 2003-12-17
+title: "Prompt-doc: Expressões Regulares - Introdução"
+subtitle: Conectiva - Curitiba, 17 de Dezembro de 2003
+---
+
+<p>Este é o histórico da linha de comando de <a href="/curso/conectiva/">uma palestra</a> que fiz para funcionários da Conectiva, sobre Expressões Regulares. O objetivo era apresentar todos os metacaracteres básicos e sua utilidade.</p>
+
+<ul class="compact">
+  <li><strong>Data:</strong> 17-Dez-2003</li>
+  <li><strong>Local:</strong> Auditório da Conectiva, Curitiba</li>
+  <li><strong>Duração:</strong> 2 horas</li>
+  <li><strong>Requisitos:</strong> Nenhum</li>
+</ul>
+
+<nav>
+  <ul>
+    <li><a href="#toc1">Os Metacaracteres</a></li>
+    <li><a href="#toc2">O arquivo de exemplo</a></li>
+    <li><a href="#toc3">Âncoras para início de fim de linha</a></li>
+    <li><a href="#toc4">Aspas duplas caso use variáveis</a></li>
+    <li><a href="#toc5">Use os colchetes para listar possibilidades para uma posição</a></li>
+    <li><a href="#toc6">Misture os metacaracteres a gosto</a></li>
+    <li><a href="#toc7">A lista serve para lidar com acentuação também</a></li>
+    <li><a href="#toc8">Como casar linhas em branco</a></li>
+    <li><a href="#toc9">Listas negadas e intervalos</a></li>
+    <li><a href="#toc10">Intervalos respeitam a tabela ASCII</a></li>
+    <li><a href="#toc11">Classes POSIX respeitam o LOCALE</a></li>
+    <li><a href="#toc12">O curinga: o ponto</a></li>
+    <li><a href="#toc13">Egrep e chaves para repetições</a></li>
+    <li><a href="#toc14">Mais sobre chaves</a></li>
+    <li><a href="#toc15">Linhas de tamanho fixo</a></li>
+    <li><a href="#toc16">Repetição de listas</a></li>
+    <li><a href="#toc17">? * e + são atalhos para as chaves {}</a></li>
+    <li><a href="#toc18">O opcional ?</a></li>
+    <li><a href="#toc19">Não há como negar strings no meio da linha</a></li>
+    <li><a href="#toc20">Grupos são legais!</a></li>
+    <li><a href="#toc21">Os retrovisores (máximo de nove, marca o texto e não a ER)</a></li>
+    <li><a href="#toc22">Como procurar palavras repetidas</a></li>
+    <li><a href="#toc23">Usando ? * e +</a></li>
+    <li><a href="#toc24">O tudo e o nada: ponto-asterisco .*</a></li>
+    <li><a href="#toc25">? * e + são gulosos!</a></li>
+    <li><a href="#toc26">Ou isso ou aquilo</a></li>
+    <li><a href="#toc27">Procurar por palavras repetidas na mesma linha</a></li>
+    <li><a href="#toc28">Usuários com shell e que o $HOME é diferente do login</a></li>
+    <li><a href="#toc29">Ou isso ou aquilo também se aplica a ERs complicadas!</a></li>
+    <li><a href="#toc30">Uma ER bem simples para casar um email</a></li>
+    <li><a href="#toc31">Trocando a ordem de campos</a></li>
+  </ul>
+</nav>
+
+<h2 id="toc1">Os Metacaracteres</h2>
+
+<pre>
+$ #         ^ $ + * {} () | ? [] .
+</pre>
+
+<h2 id="toc2">O arquivo de exemplo</h2>
+
+<pre>
+$ cd /etc
+$ cat passwd
+</pre>
+
+<h2 id="toc3">Âncoras para início de fim de linha</h2>
+
+<pre>
+$ grep root passwd
+$ grep ^root passwd
+$ grep bash$ passwd
+$ grep sh$ passwd
+$ grep 'sh$' passwd          # proteger com aspas
+</pre>
+
+<h2 id="toc4">Aspas duplas caso use variáveis</h2>
+
+<pre>
+$ zzz=ro
+$ grep "$zzzot" passwd
+$ grep "${zzz}ot" passwd     # proteger com {}
+</pre>
+
+<h2 id="toc5">Use os colchetes para listar possibilidades para uma posição</h2>
+
+<pre>
+$ echo Carlos | grep 'Carlos'
+$ echo Carlos | grep '[Cc]arlos'
+$ echo carlos | grep '[Cc]arlos'
+$ echo harlos | grep '[Cchfg]arlos'
+</pre>
+
+<h2 id="toc6">Misture os metacaracteres a gosto</h2>
+
+<pre>
+$ echo Carlos | grep '^[Cc]arlos$'
+</pre>
+
+<h2 id="toc7">A lista serve para lidar com acentuação também</h2>
+
+<pre>
+$ vi /tmp/acao.txt                 # acao, ACAO, Açao, aÇãO, AÇao, etc...
+$ cat /tmp/acao.txt | grep 'acao'
+$ cat /tmp/acao.txt | grep 'a[cç]ao'
+$ cat /tmp/acao.txt | grep 'a[cç][aã]o'
+$ cat /tmp/acao.txt | grep -i 'a[cç][aã]o'
+$ cat /tmp/acao.txt | grep '[Aa][CÇcç][AÃaã][Oo]'  # todas possibilidades
+</pre>
+
+<h2 id="toc8">Como casar linhas em branco</h2>
+
+<pre>
+$ grep '^$' passwd
+</pre>
+
+<h2 id="toc9">Listas negadas e intervalos</h2>
+
+<pre>
+$ grep '^[aeiou]' passwd
+$ grep '^[bcdfghjklmnpqrstvwxyz]' passwd
+$ grep '^[^aeiou]' passwd
+$ grep '[^^]' passwd             # negando o chapéuzinho
+$ grep '^[a-z]' passwd           # o hífen indica intervalo
+$ grep '^[a-]' passwd            # sem letras ao redor, hífen normal
+$ grep '^[-z]' passwd
+$ grep '^[az-]' passwd
+$ grep '^[0-9]' passwd           # linhas iniciadas por números
+$ grep '[0-9]' passwd
+$ grep '[0-90-9]' passwd         # errado
+$ grep '[0-9][0-9]' passwd       # certo
+$ grep '[0-9][0-9][0-9]' passwd
+</pre>
+
+<h2 id="toc10">Intervalos respeitam a tabela ASCII</h2>
+
+<pre>
+$ man ascii
+</pre>
+
+<h2 id="toc11">Classes POSIX respeitam o LOCALE</h2>
+
+<pre>
+$ echo ááá | grep '[a-z]'
+$ echo $LANG
+$ echo ááá | grep '[[:lower:]]'
+$ echo ááá | grep '[0-9[:lower:]ABC ]'
+</pre>
+
+<h2 id="toc12">O curinga: o ponto</h2>
+
+<pre>
+$ grep '^[aeiou]' passwd         # começa com vogal
+$ grep '^.[aeiou]' passwd        # segunda letra vogal
+$ grep '^..[aeiou]' passwd       # terceira letra vogal
+</pre>
+
+<h2 id="toc13">Egrep e chaves para repetições</h2>
+
+<pre>
+$ grep '^.......................[aeiou]' passwd
+$ grep '^.{25}[aeiou]' passwd     # errado
+$ grep '^.{5}[aeiou]' passwd      # errado
+$ grep '^.\{5\}[aeiou]' passwd    # deve escapar!
+$ egrep '^.{5}[aeiou]' passwd     # ou usar o egrep
+$ egrep 'f{995}' passwd           # 995 efes
+$ egrep 'f{1,995}' passwd         # de 1 a 995 efes
+</pre>
+
+<h2 id="toc14">Mais sobre chaves</h2>
+
+<pre>
+$ egrep '^.{5}[aeiou]' passwd      # sexta letra vogal
+$ egrep '^.{4,5}[aeiou]' passwd    # quinta ou sexta letra vogal
+$ egrep '^.{1,5}[aeiou]' passwd    # de segunda a sexta letra vogal
+$ egrep '^.{5,}[aeiou]' passwd     # sexta (ou mais) vogal
+</pre>
+
+<h2 id="toc15">Linhas de tamanho fixo</h2>
+
+<pre>
+$ echo aaaaaaaaaaaaaaaa | egrep 'a{6}'
+$ echo aaaaaaaaaaaaaaaa | egrep '^a{6}$'
+$ echo aaaaaaaaaaaaaaaa | egrep '^a{6,}$'
+$ echo aaaaaaaaaaaaaaaa | egrep 'a{6,}'
+$ echo aaaaaaaaaaaaaaaa | egrep 'a{2,6}'
+</pre>
+
+<h2 id="toc16">Repetição de listas</h2>
+
+<pre>
+$ egrep '[aeiou]{2}' passwd        # duas vogais seguidas
+$ egrep '^.[aeiou]{2}' passwd      # segunda e terceira vogais
+</pre>
+
+<h2 id="toc17">? * e + são atalhos para as chaves {}</h2>
+
+<pre>
+$ #       ?  {0,1}        *  {0,}      +  {1,}
+</pre>
+
+<h2 id="toc18">O opcional ?</h2>
+
+<pre>
+$ echo mala | egrep mala
+$ echo malas | egrep malas?
+$ echo mala | egrep malas?
+$ echo mala | egrep mal(as)?           # erro!
+$ echo mala | egrep 'mal(as)?'         # deve proteger com 'aspas'
+$ echo mal | egrep 'mal(as)?'
+</pre>
+
+<h2 id="toc19">Não há como negar strings no meio da linha</h2>
+
+<pre>
+$ echo mala | egrep '[^l][^a]'
+$ echo mala | egrep '(^la)'
+$ echo mala | egrep '(^ma)'
+</pre>
+
+<h2 id="toc20">Grupos são legais!</h2>
+
+<pre>
+$ echo mala | egrep '(((((((((a)))))))))'
+$ echo mala | egrep '((((((((((a))))))))))'
+$ echo mala | egrep '((((((((((a)))))))))'
+$ echo mala | grep '\(\(\(\(\(\(\(\(\(\(a\)\)\)\)\)\)\)\)\)\)'
+</pre>
+
+<h2 id="toc21">Os retrovisores (máximo de nove, marca o texto e não a ER)</h2>
+
+<pre>
+$ echo mala | egrep '(a)l\1'
+$ echo aja | egrep '(a).\1'
+$ echo a.a | egrep '(a).\1'
+$ echo a.a | egrep '([0-9]).\1'
+$ echo 7a7 | egrep '([0-9]).\1'
+$ echo 788 | egrep '([0-9])\1\1'      # não casa
+$ echo 888 | egrep '([0-9])\1\1'      # casa
+$ echo 888 | egrep '([0-9])\1{2}'     # casa
+</pre>
+
+<h2 id="toc22">Como procurar palavras repetidas</h2>
+
+<pre>
+$ echo "por que que eu sou" | egrep '([a-z]{2,8}) \1'
+$ echo "por que qu eu sou" | egrep '([a-z]{2,8}) \1'
+$ echo "quero-quero" | egrep '([a-z]{2,8})-\1'
+</pre>
+
+<h2 id="toc23">Usando ? * e +</h2>
+
+<pre>
+$ echo b | egrep 'a*'
+$ echo b | egrep 'a+'
+$ echo b | egrep 'a?'
+$ echo ab | egrep 'a+'
+$ echo aaaaaa | egrep 'a+'
+$ echo aaaaaa | egrep '^a+$'
+$ echo aaaaaa | egrep '^a*$'
+</pre>
+
+<h2 id="toc24">O tudo e o nada: ponto-asterisco .*</h2>
+
+<pre>
+$ echo aaaaaa | egrep '.*'
+$ echo | egrep '.*'
+$ echo dayukafukdfkidrifhiioyohgoyiejeoueou | egrep '.*'
+</pre>
+
+<h2 id="toc25">? * e + são gulosos!</h2>
+
+<pre>
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.*&gt;//g'
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{0,\}&gt;//g'
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{1,\}&gt;//g'
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{2,\}&gt;//g'
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{2\}&gt;//g'
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;.\{1,2\}&gt;//g'
+$ echo "antes &lt;b&gt;bold&lt;i&gt;ital&lt;/i&gt;&lt;/b&gt; texto" | sed 's/&lt;[^&gt;]*&gt;//g'
+</pre>
+
+<h2 id="toc26">Ou isso ou aquilo</h2>
+
+<pre>
+$ egrep 'root|ftp' passwd
+$ egrep '^root|FTP' passwd
+$ egrep '^(root|FTP)' passwd
+$ egrep '^(root|ftp)' passwd
+$ egrep '^(root|ftp).*\1' passwd
+</pre>
+
+<h2 id="toc27">Procurar por palavras repetidas na mesma linha</h2>
+
+<pre>
+$ cat passwd | egrep '(mail).*\1.*\1'
+$ cat passwd | egrep '([a-z]{3,}).*\1.*\1'
+$ cat passwd | egrep '^([a-z]{3,}).*\1.*\1'
+$ cat passwd | egrep '^([a-z]{3,}).*/home/\1'
+$ cat passwd | egrep '^([a-z]{3,}).*/var/spool/\1'
+</pre>
+
+<h2 id="toc28">Usuários com shell e que o $HOME é diferente do login</h2>
+
+<pre>
+$ cat passwd | egrep 'bash$' | egrep -v '^([a-z]{3,}).*/var/spool/\1'
+$ cat passwd | egrep 'bash$' | egrep -v '^([a-z]{3,}).*/home/\1'
+</pre>
+
+<h2 id="toc29">Ou isso ou aquilo também se aplica a ERs complicadas!</h2>
+
+<pre>
+$ cat passwd | egrep '^[aeiou]{2}|bash$'
+$ cat passwd | egrep '(^[aeiou]{2})|(bash$)'
+$ cat passwd | sed -nr 's/((^[aeiou]{2})|(bash$))/XXXX/gp'
+</pre>
+
+<h2 id="toc30">Uma ER bem simples para casar um email</h2>
+
+<pre>
+$ #         [A-Za-z0-9._]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,6}
+</pre>
+
+<h2 id="toc31">Trocando a ordem de campos</h2>
+
+<pre>
+$ grep root passwd | cut -d: -f1,6
+$ grep root passwd | cut -d: -f1,6 | sed -r 's/(.*):(.*)/\2:\1/'
+</pre>

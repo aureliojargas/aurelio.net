@@ -1,612 +1,581 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="../prompt-doc.css">
-<TITLE>Prompt-doc: "Tira Dúvidas" sobre Shell</TITLE>
-</HEAD><BODY BGCOLOR="white" TEXT="black">
-<CENTER>
-<H1>Prompt-doc: "Tira Dúvidas" sobre Shell</H1>
-<FONT SIZE="4"><I>Aurelio Marinho Jargas</I></FONT><BR>
-<FONT SIZE="4">Curitiba, 04 de Dezembro de 2003</FONT>
-</CENTER>
-
-<P></P>
-<HR NOSHADE SIZE=1>
-<P></P>
-
-    <UL>
-    <LI><A HREF="#toc1">Shell scripts no sistema (exemplos!)</A>
-    <LI><A HREF="#toc2">Como executar um script (chmod)</A>
-    <LI><A HREF="#toc3">Expansão de variáveis com ${VAR:-} e amigos</A>
-    <LI><A HREF="#toc4">Expansão avançada do bash2 (tipo sed)</A>
-    <LI><A HREF="#toc5">Eval</A>
-    <LI><A HREF="#toc6">Diferença do echo com aspas (mantém espaços) e sem</A>
-    <LI><A HREF="#toc7">Subshell com crase ou $(), prefira o $()</A>
-    <LI><A HREF="#toc8">As aspas simples protegem, não expandem vars nem comandos</A>
-    <LI><A HREF="#toc9">Ao definir uma variável não pode ter espaços!</A>
-    <LI><A HREF="#toc10">O pesadelo dos escapes...</A>
-    <LI><A HREF="#toc11">O sed e os escapes (use o echo para ajudar!)</A>
-    <LI><A HREF="#toc12">O sed pode usar qualquer delimitador fora o s///</A>
-    <LI><A HREF="#toc13">Como "ver" se é um TAB ou espaços</A>
-    <LI><A HREF="#toc14">Como depurar (debug) scripts: sh -x, set -x, ...</A>
-    <LI><A HREF="#toc15">Como pegar a saída de erro (STDERR, 2)</A>
-    <LI><A HREF="#toc16">O comando test, seu sósia [ e o código de retorno $?</A>
-    <LI><A HREF="#toc17">O [[ para fazer testes</A>
-    <LI><A HREF="#toc18">Os operadores lógicos AND &amp;&amp; e OR ||</A>
-    <LI><A HREF="#toc19">Checagem de parâmetros da linha de comando ($1)</A>
-    <LI><A HREF="#toc20">Como passar parâmetros vazios</A>
-    <LI><A HREF="#toc21">As ferramentas: cut</A>
-    <LI><A HREF="#toc22">As ferramentas: awk</A>
-    <LI><A HREF="#toc23">As ferramentas: tr</A>
-    <LI><A HREF="#toc24">As ferramentas: sort</A>
-    <LI><A HREF="#toc25">As ferramentas: rev, tac</A>
-    <LI><A HREF="#toc26">As ferramentas: sort, uniq</A>
-    <LI><A HREF="#toc27">As ferramentas: wc</A>
-    <LI><A HREF="#toc28">As ferramentas: cat, paste</A>
-    <LI><A HREF="#toc29">As ferramentas: tee</A>
-    <LI><A HREF="#toc30">As ferramentas: head, tail</A>
-    <LI><A HREF="#toc31">As ferramentas: seq</A>
-    <LI><A HREF="#toc32">As ferramentas: printf</A>
-    <LI><A HREF="#toc33">As ferramentas: grep</A>
-    <LI><A HREF="#toc34">As ferramentas: find</A>
-    <LI><A HREF="#toc35">As ferramentas: date</A>
-    <LI><A HREF="#toc36">As ferramentas: diff, vi -d</A>
-    <LI><A HREF="#toc37">Funções separadas em uma biblioteca</A>
-    </UL>
-
-<P></P>
-<HR NOSHADE SIZE=1>
-<P></P>
-<P>
-Este é o histórico da linha de comando de uma palestra que fiz para
-funcionários da Conectiva, sobre Shell Script. O objetivo não era
-ensinar Shell, mas sim passar dicas e sanar as dúvidas dos
-participantes, que já conheciam a linguagem e já faziam scripts.
-</P>
-
-<UL>
-<LI><B>Data:</B> 04-Dez-2003
-<LI><B>Local:</B> Auditório da Conectiva, Curitiba
-<LI><B>Duração:</B> 2 horas
-<LI><B>Requisitos:</B> Conhecer o shell, já ter feito scripts
-</UL>
-
-<HR NOSHADE SIZE=1>
-
-<H2 ID="toc1">Shell scripts no sistema (exemplos!)</H2>
-
-<PRE>
-    $ cd /usr/bin
-    $ file * | grep -i shell
-    $ vi xtrace
-</PRE>
-
-<H2 ID="toc2">Como executar um script (chmod)</H2>
-
-<PRE>
-    $ cd /tmp
-    $ vi teste.sh
-    $ ./teste.sh
-    $ ls -l teste.sh
-    $ chmod +x teste.sh
-    $ ls -l teste.sh
-    $ ./teste.sh
-    $ vi teste.sh
-    $ which sh
-    $ l /bin/sh
-    $ vi teste.sh
-    $ ./teste.sh
-    $ vi teste.sh
-</PRE>
-
-<H2 ID="toc3">Expansão de variáveis com ${VAR:-} e amigos</H2>
-
-<PRE>
-    $ a="abcde"
-    $ echo $a
-    $ echo ${a}
-    $ echo ${#a}
-    $ echo ${a:-FOO}
-    $ unset a
-    $ echo $a
-    $ echo ${a:-FOO}
-    $ if [ -z "$a" ]; then a=FOO ; fi
-    $ unset a
-    $ echo $a
-    $ echo ${a:-FOO}
-    $ echo ${a:=FOO}
-    $ echo $a
-    $ echo ${a:+FOOoooooooo}
-</PRE>
-
-<H2 ID="toc4">Expansão avançada do bash2 (tipo sed)</H2>
-
-<PRE>
-    $ echo $a
-    $ echo ${a/O/.}      # sed s///
-    $ echo ${a//O/.}     # sed s///g
-    $ echo $a | sed 's/O/./g'
-    $ echo ${a//O/.tyturtu}
-    $ rpm -q bash
-    $ b=O
-    $ echo ${a//$b/.}
-</PRE>
-
-<H2 ID="toc5">Eval</H2>
-
-<PRE>
-    $ a="ls"
-    $ echo $a
-    $ eval $a
-    $ ${!a}
-    $ : ${!a}
-    $ echo ${!a}
-</PRE>
-
-<H2 ID="toc6">Diferença do echo com aspas (mantém espaços) e sem</H2>
-
-<PRE>
-    $ echo ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf
-    $ echo "ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf"
-    $ a="ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf"
-    $ echo $a
-    $ echo "$a"
-    $ cat /etc/fstab
-    $ cat /etc/fstab | grep swap
-    $ cat /etc/fstab | grep swap | sed -n l
-    $ var=$(cat /etc/fstab | grep swap)
-    $ echo $var
-    $ echo "$var"
-</PRE>
-
-<H2 ID="toc7">Subshell com crase ou $(), prefira o $()</H2>
-
-<PRE>
-    $ var=`date`
-    $ echo $var
-    $ var=$(date)
-    $ echo $var
-    $ var=$(echo `cat /etc`)
-</PRE>
-
-<H2 ID="toc8">As aspas simples protegem, não expandem vars nem comandos</H2>
-
-<PRE>
-    $ a="abc"
-    $ echo $a
-    $ echo "$a"
-    $ echo '$a'
-    $ echo '$a $(date)'
-    $ echo "$a $(date)"
-</PRE>
-
-<H2 ID="toc9">Ao definir uma variável não pode ter espaços!</H2>
-
-<PRE>
-    $ a = ''
-</PRE>
-
-<H2 ID="toc10">O pesadelo dos escapes...</H2>
-
-<PRE>
-    $ a='\'
-    $ echo $a
-    $ a="\"
-    $ echo $a
-    $ echo \$a
-    $ a="\"
-    $ "
-    $ a=' \'    '
-    $ a="\\"
-    $ echo $a
-</PRE>
-
-<H2 ID="toc11">O sed e os escapes (use o echo para ajudar!)</H2>
-
-<PRE>
-    $ echo "//bla//"   # mudar para \\bla\\
-    $ echo "//bla//" | sed "s///\/"
-    $ echo "//bla//" | sed "s/\//\\/"
-    $ echo "s/\//\\/"
-    $ echo 's/\//\\/'
-    $ echo "//bla//" | sed 's/\//\\/'
-    $ echo "//bla//" | sed 's/\//\\/g'
-    $ a='/'
-    $ echo "//bla//" | sed "s/$a/\\/g"
-    $ echo "s/$a/\\/g"
-    $ a="\\/"
-    $ echo $a
-    $ echo "//bla//" | sed "s/$a/\\/g"
-    $ echo "s/$a/\\/g"
-    $ echo "//bla//" | sed "s/$a/\\\/g"
-    $ $(echo "//bla//" | sed "s/$a/\\\/g")
-    $ echo $(echo "//bla//" | sed "s/$a/\\\/g")
-</PRE>
-
-<H2 ID="toc12">O sed pode usar qualquer delimitador fora o s///</H2>
-
-<PRE>
-    $ echo isso | sed s/isso/aquilo/g
-    $ echo isso | sed s,isso,aquilo,g
-    $ echo isso | sed s isso aquilo g
-    $ echo isso | sed 's isso aquilo g'
-    $ echo isso | sed 's9isso9aquilo9g'
-    $ echo isso | sed 's
-    $ isso
-    $ aquilo
-    $ g'
-    $ echo isso | sed 's|isso|aquilo|g'
-    $ echo isso | sed 'sáissoáaquiloág'
-    $ echo isso | sed 's§isso§aquilo§g'
-    $ echo isso | sed 's"isso"aquilo"'
-    $ echo isso | sed 's	isso	aquilo'
-    $ echo isso | sed 's	isso	aquilo	'
-</PRE>
-
-<H2 ID="toc13">Como "ver" se é um TAB ou espaços</H2>
-
-<PRE>
-    $ echo -e "\ta\ta"
-    $ echo -e "\ta\ta" | sed -n l
-    $ echo -e "\ta\ta" | od -c
-    $ echo -ne "\ta\ta" | od -c
-    $ echo -n "bla"
-    $ echo -ne "bla\n"
-    $ echo "bla"
-</PRE>
-
-<H2 ID="toc14">Como depurar (debug) scripts: sh -x, set -x, ...</H2>
-
-<PRE>
-    $ sh -x teste.sh
-    $ sh teste.sh
-    $ vi teste.sh
-    $ ./teste.sh
-    $ set -x
-    $ ./teste.sh
-    $ echo
-    $ vi teste.sh
-    $ ./teste.sh
-    $ vi teste.sh
-    $ set +x
-    $ vi teste.sh
-</PRE>
-
-<H2 ID="toc15">Como pegar a saída de erro (STDERR, 2)</H2>
-
-<PRE>
-    $ cp
-    $ cp | grep arqu
-    $ ls &gt; foo
-    $ cat foo
-    $ cp &gt; foo
-    $ cat foo
-    $ cp 1&gt; foo
-    $ cp 1&gt; foo 2&gt; foo
-    $ cat foo
-    $ cp 2&gt; foo
-    $ ./teste.sh
-    $ ./teste.sh 2&gt; foo
-    $ ./teste.sh &gt; foo
-    $ ./teste.sh &gt; foo 2&gt; foo
-    $ cat foo
-    $ ./teste.sh &gt; foo 2&gt;&amp;1
-    $ cat foo
-    $ ./teste.sh &gt; foo 2&gt;&amp;1
-    $ ./teste.sh 2&gt;&amp;1
-    $ cp
-    $ cp 2&gt;&amp;1
-    $ cp 2&gt;&amp;1 | grep arqui
-</PRE>
-
-<H2 ID="toc16">O comando test, seu sósia [ e o código de retorno $?</H2>
-
-<PRE>
-    $ if [ $var = 'abc' ] ; then echo OK ; fi
-    $ which [
-    $ l /usr/bin/[
-    $ if test $var = 'abc' ; then echo OK ; fi
-    $ if grep -qs root /etc/passwd ; then echo tem ; fi
-    $ grep -qs root /etc/passwd
-    $ echo $?
-    $ grep -qs roiiiiiiot /etc/passwd
-    $ echo $?
-    $ cp
-    $ echo $?
-    $ exit abnc
-    $ cp 2&gt;/dev/null
-    $ echo $?
-    $ ls /dev/null
-</PRE>
-
-<H2 ID="toc17">O [[ para fazer testes</H2>
-
-<PRE>
-    $ if [ 1 -gt 5 ]; then echo é menor ; fi
-    $ if [ 8 -gt 5 ]; then echo é maior ; fi
-    $ if [[ 8 -gt 5 ]]; then echo é maior ; fi
-    $ if [[ 8  5 ]]; then echo é maior ; fi
-</PRE>
-
-<H2 ID="toc18">Os operadores lógicos AND &amp;&amp; e OR ||</H2>
-
-<PRE>
-    $ cp 2&gt;/dev/null ; echo $?
-    $ cp 2&gt;/dev/null &amp;&amp; echo OK
-    $ ls 2&gt;/dev/null &amp;&amp; echo OK
-    $ ls &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo OK
-    $ ls &gt;/dev/null 2&gt;&amp;1 || echo OK
-    $ cp 2&gt;/dev/null || echo OK
-    $ cp 2&gt;/dev/null || echo OK &amp;&amp; echo NOK
-    $ echo &amp;&amp; echo OK || echo NOK
-    $ echo &amp;&amp; cp 2&gt;/dev/null || echo NOK
-    $ false &amp;&amp; cp 2&gt;/dev/null || echo NOK
-    $ false &amp;&amp; cp || echo NOK
-    $ true &amp;&amp; cp || echo NOK
-    $ false &amp;&amp; cp || echo NOK
-    $ false &amp;&amp; cp || echo NOK &amp;&amp; echo OKDENOVO
-    $ false &amp;&amp; { cp || echo NOK &amp;&amp; echo OKDENOVO ; }
-    $ true &amp;&amp; { cp || echo NOK &amp;&amp; echo OKDENOVO ; }
-</PRE>
-
-<H2 ID="toc19">Checagem de parâmetros da linha de comando ($1)</H2>
-
-<PRE>
-    $ test -z "$1" || { echo uso: blabla ; exit 1  ; }
-    $ [ "$1" ] || { echo uso: blabla ; exit 1  ; }
-    $ [ "$1" ] || { echo uso: blabla ; echo exit 1  ; }
-    $ [ $1 ] || { echo uso: blabla ; echo exit 1  ; }
-    $ [ $1 = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
-    $ [ "$1" = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
-    $ [  = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
-</PRE>
-
-<H2 ID="toc20">Como passar parâmetros vazios</H2>
-
-<PRE>
-    $ vi teste.sh
-    $ ./teste.sh
-    $ ./teste.sh ""
-    $ ./teste.sh "" dois
-    $ ./teste.sh "" "" dois
-</PRE>
-
-<H2 ID="toc21">As ferramentas: cut</H2>
-
-<PRE>
-    $ cat /etc/passwd | cut -d: -f5
-    $ cat /etc/passwd | cut -d: -f5,2
-    $ cat /etc/passwd | cut -d: -f5,2,1
-    $ cat /etc/passwd | cut -d: -f5-
-    $ cat /etc/passwd | cut -d: -f5-6
-    $ cat /etc/passwd | cut -d: -f5-7
-    $ cat /etc/passwd | cut -c 1-10
-    $ cat /etc/passwd | cut -c 10-
-</PRE>
-
-<H2 ID="toc22">As ferramentas: awk</H2>
-
-<PRE>
-    $ cat /etc/passwd | awk '{print $3}'
-    $ cat /etc/passwd | awk '{print $3}'
-    $ cat /etc/passwd | awk '{print $2}'
-    $ cat /etc/passwd | awk '{print $1}'
-    $ cat /etc/passwd | awk '{print $2}'
-    $ cat /etc/passwd | awk -F: '{print $2}'
-    $ cat /etc/fstab
-    $ cat /etc/fstab | cut -d" " -f4
-    $ cat /etc/fstab | awk '{print $4}'
-</PRE>
-
-<H2 ID="toc23">As ferramentas: tr</H2>
-
-<PRE>
-    $ a="asd asd       k		ioioio"
-    $ echo $a
-    $ echo "$a"
-    $ echo "$a" | tr -s ' '
-    $ echo aaaaabbbb | tr -s a
-    $ echo aaaaabbbb | tr -s ab
-    $ echo aaaaabbbb | tr a-z A-Z
-    $ echo aaaaabbbb | tr abcdef ABCDEF
-    $ echo aaaaabbbb | tr abcdef XVDGFFG
-</PRE>
-
-<H2 ID="toc24">As ferramentas: sort</H2>
-
-<PRE>
-    $ cat /etc/passwd
-    $ cat /etc/passwd | sort
-    $ cat /etc/passwd | sort -r
-</PRE>
-
-<H2 ID="toc25">As ferramentas: rev, tac</H2>
-
-<PRE>
-    $ cat /etc/passwd | rev
-    $ echo abcde | rev
-    $ echo cat | rev
-    $ tac /etc/passwd
-    $ tac /etc/passwd| rev
-</PRE>
-
-<H2 ID="toc26">As ferramentas: sort, uniq</H2>
-
-<PRE>
-    $ vi txt
-    $ cat txt | sort
-    $ cat txt | sort | uniq
-    $ cat txt | uniq
-    $ cat txt | sort -u
-    $ cat txt | sort | uniq
-</PRE>
-
-<H2 ID="toc27">As ferramentas: wc</H2>
-
-<PRE>
-    $ cat /etc/passwd | wc
-    $ cat /etc/passwd | wc -w
-    $ cat /etc/passwd | wc -l
-    $ cat /etc/passwd | wc -c
-</PRE>
-
-<H2 ID="toc28">As ferramentas: cat, paste</H2>
-
-<PRE>
-    $ vi txt2
-    $ cat txt txt2
-    $ paste txt txt2
-    $ paste -s txt txt2
-</PRE>
-
-<H2 ID="toc29">As ferramentas: tee</H2>
-
-<PRE>
-    $ echo abc
-    $ echo abc | sed 's/a/./'
-    $ echo abc | tee a | sed 's/a/./'
-    $ cat a
-</PRE>
-
-<H2 ID="toc30">As ferramentas: head, tail</H2>
-
-<PRE>
-    $ head /etc/passwd
-    $ head -2 /etc/passwd
-    $ tail -2 /etc/passwd
-    $ tail  /etc/passwd
-</PRE>
-
-<H2 ID="toc31">As ferramentas: seq</H2>
-
-<PRE>
-    $ for i in 1 2 3 4 5 5 6 7 8 9 10; do echo $i-- ; done
-    $ for i in 1 2 3 4 5 5 6 abd hjerer jrtj 8 9 10; do echo $i-- ; done
-    $ for i in $(seq 10); do echo $i-- ; done
-    $ seq 10
-    $ seq 2
-    $ seq 2 5
-    $ seq 5 2
-    $ seq 4 8 50
-</PRE>
-
-<H2 ID="toc32">As ferramentas: printf</H2>
-
-<PRE>
-    $ printf "%s" bla
-    $ printf "%s\n" bla
-    $ printf "%10s\n" bla
-    $ printf "%-10s\n" bla
-    $ printf "%10s----\n" bla
-    $ printf "%-10s----\n" bla
-    $ printf "%10s----\n" blaasdasdasdasd
-    $ printf "%d" 5
-    $ printf "%d\n" 5
-    $ printf "%4d\n" 5
-    $ printf "%4d\n" 5 | sed 's/ /0/g'
-    $ printf "%.4d\n" 5
-    $ printf "%4.2f\n" 5
-</PRE>
-
-<H2 ID="toc33">As ferramentas: grep</H2>
-
-<PRE>
-    $ cat /etc/passwd
-    $ cat /etc/passwd | grep root
-    $ cat /etc/passwd | grep -i root
-    $ cat /etc/passwd | grep -i ROOT
-    $ cp
-    $ echo $LANG
-    $ cat /etc/passwd | grep -w root
-    $ cat /etc/passwd | grep -w roo
-    $ cat /etc/passwd | grep -x roo
-    $ cat /etc/passwd | grep -l roo
-    $ grep -l roo /etc/passwd
-    $ grep -v roo /etc/passwd
-    $ grep -v root /etc/passwd
-    $ VAR=root
-    $ grep -i $VAR /etc/passwd
-    $ grep g /etc/passwd
-    $ grep g\$ /etc/passwd
-    $ fgrep g\$ /etc/passwd
-    $ fgrep g /etc/passwd
-    $ cd /bin
-    $ l grep egrep fgrep
-</PRE>
-
-<H2 ID="toc34">As ferramentas: find</H2>
-
-<PRE>
-    $ find . -type f
-    $ find . -type d
-    $ find . -type l
-    $ ln -s a z
-    $ find . -type l
-    $ find . -type f
-    $ find . -type f -exec echo rm -f {} \;
-    $ find . -type f -ok echo rm -f {} \;
-    $ find . -type f | while read BOZO; do echo $BOZO; done
-    $ cat /etc/passwd | while read BOZO; do echo $BOZO; done
-    $ cat /etc/passwd | while read BOZO; do echo {{$BOZO}}; done
-    $ cat /etc/passwd | while read BOZO; do echo $BOZO | grep -qs root &amp;&amp; echo $BOZO; done
-    $ find . -type f -exec echo rm -f {}\;
-</PRE>
-
-<H2 ID="toc35">As ferramentas: date</H2>
-
-<PRE>
-    $ date
-    $ date +'%y %m %d'
-    $ date +'%Y %m %d'
-    $ date --help
-    $ date +'%Y-%m-%d'
-    $ date +'%Y-%m-%d %H:%M'
-    $ date +'hoje é %Y-%m-%d %H:%M ... '
-    $ date +'%s'
-    $ date +'%s'
-    $ date +'%s'
-</PRE>
-
-<H2 ID="toc36">As ferramentas: diff, vi -d</H2>
-
-<PRE>
-    $ cat txt txt2
-    $ diff txt txt2
-    $ vi txt2
-    $ cp txt txt3
-    $ vi txt3
-    $ diff txt txt3
-    $ diff -u txt txt3
-    $ diff -u txt txt3 | vi -
-    $ vi txt3
-    $ diff -u txt txt3 | vi -
-    $ vi txt3
-    $ diff -u txt txt3 | vi -
-    $ vi txt3
-    $ diff -u txt txt3 | vi -
-    $ vi -d txt txt3
-</PRE>
-
-<H2 ID="toc37">Funções separadas em uma biblioteca</H2>
-
-<PRE>
-    $ cds
-    $ vi functions
-    $ ./functions
-    $ source functions
-    $ . functions
-    $ vi inet
-</PRE>
-
-<HR NOSHADE SIZE=1>
-
-<P>
-  <IMG ALIGN="right" SRC="../../img/t2tpowered.png" BORDER="0" ALT="">
-<A HREF=".">Voltar para a página dos cursos na Conectiva</A>
-</P>
-
-<!-- html code generated by txt2tags 2.6.641 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags conectiva-shell-prompt.t2t -->
-</BODY></HTML>
+---
+date: 2003-12-04
+title: "Prompt-doc: “Tira Dúvidas” sobre Shell"
+subtitle: Conectiva - Curitiba, 4 de Dezembro de 2003
+---
+
+<p>Este é o histórico da linha de comando de <a href="/curso/conectiva/">uma palestra</a> que fiz para funcionários da Conectiva, sobre Shell Script. O objetivo não era ensinar Shell, mas sim passar dicas e sanar as dúvidas dos participantes, que já conheciam a linguagem e já faziam scripts.</p>
+
+<ul class="compact">
+  <li><strong>Data:</strong> 04-Dez-2003</li>
+  <li><strong>Local:</strong> Auditório da Conectiva, Curitiba</li>
+  <li><strong>Duração:</strong> 2 horas</li>
+  <li><strong>Requisitos:</strong> Conhecer o shell, já ter feito scripts</li>
+</ul>
+
+<nav>
+  <ul>
+    <li><a href="#toc1">Shell scripts no sistema (exemplos!)</a></li>
+    <li><a href="#toc2">Como executar um script (chmod)</a></li>
+    <li><a href="#toc3">Expansão de variáveis com ${VAR:-} e amigos</a></li>
+    <li><a href="#toc4">Expansão avançada do bash2 (tipo sed)</a></li>
+    <li><a href="#toc5">Eval</a></li>
+    <li><a href="#toc6">Diferença do echo com aspas (mantém espaços) e sem</a></li>
+    <li><a href="#toc7">Subshell com crase ou $(), prefira o $()</a></li>
+    <li><a href="#toc8">As aspas simples protegem, não expandem vars nem comandos</a></li>
+    <li><a href="#toc9">Ao definir uma variável não pode ter espaços!</a></li>
+    <li><a href="#toc10">O pesadelo dos escapes...</a></li>
+    <li><a href="#toc11">O sed e os escapes (use o echo para ajudar!)</a></li>
+    <li><a href="#toc12">O sed pode usar qualquer delimitador fora o s///</a></li>
+    <li><a href="#toc13">Como "ver" se é um TAB ou espaços</a></li>
+    <li><a href="#toc14">Como depurar (debug) scripts: sh -x, set -x, ...</a></li>
+    <li><a href="#toc15">Como pegar a saída de erro (STDERR, 2)</a></li>
+    <li><a href="#toc16">O comando test, seu sósia [ e o código de retorno $?</a></li>
+    <li><a href="#toc17">O [[ para fazer testes</a></li>
+    <li><a href="#toc18">Os operadores lógicos AND &amp;&amp; e OR ||</a></li>
+    <li><a href="#toc19">Checagem de parâmetros da linha de comando ($1)</a></li>
+    <li><a href="#toc20">Como passar parâmetros vazios</a></li>
+    <li><a href="#toc21">As ferramentas: cut</a></li>
+    <li><a href="#toc22">As ferramentas: awk</a></li>
+    <li><a href="#toc23">As ferramentas: tr</a></li>
+    <li><a href="#toc24">As ferramentas: sort</a></li>
+    <li><a href="#toc25">As ferramentas: rev, tac</a></li>
+    <li><a href="#toc26">As ferramentas: sort, uniq</a></li>
+    <li><a href="#toc27">As ferramentas: wc</a></li>
+    <li><a href="#toc28">As ferramentas: cat, paste</a></li>
+    <li><a href="#toc29">As ferramentas: tee</a></li>
+    <li><a href="#toc30">As ferramentas: head, tail</a></li>
+    <li><a href="#toc31">As ferramentas: seq</a></li>
+    <li><a href="#toc32">As ferramentas: printf</a></li>
+    <li><a href="#toc33">As ferramentas: grep</a></li>
+    <li><a href="#toc34">As ferramentas: find</a></li>
+    <li><a href="#toc35">As ferramentas: date</a></li>
+    <li><a href="#toc36">As ferramentas: diff, vi -d</a></li>
+    <li><a href="#toc37">Funções separadas em uma biblioteca</a></li>
+  </ul>
+</nav>
+
+<h2 id="toc1">Shell scripts no sistema (exemplos!)</h2>
+
+<pre>
+$ cd /usr/bin
+$ file * | grep -i shell
+$ vi xtrace
+</pre>
+
+<h2 id="toc2">Como executar um script (chmod)</h2>
+
+<pre>
+$ cd /tmp
+$ vi teste.sh
+$ ./teste.sh
+$ ls -l teste.sh
+$ chmod +x teste.sh
+$ ls -l teste.sh
+$ ./teste.sh
+$ vi teste.sh
+$ which sh
+$ l /bin/sh
+$ vi teste.sh
+$ ./teste.sh
+$ vi teste.sh
+</pre>
+
+<h2 id="toc3">Expansão de variáveis com ${VAR:-} e amigos</h2>
+
+<pre>
+$ a="abcde"
+$ echo $a
+$ echo ${a}
+$ echo ${#a}
+$ echo ${a:-FOO}
+$ unset a
+$ echo $a
+$ echo ${a:-FOO}
+$ if [ -z "$a" ]; then a=FOO ; fi
+$ unset a
+$ echo $a
+$ echo ${a:-FOO}
+$ echo ${a:=FOO}
+$ echo $a
+$ echo ${a:+FOOoooooooo}
+</pre>
+
+<h2 id="toc4">Expansão avançada do bash2 (tipo sed)</h2>
+
+<pre>
+$ echo $a
+$ echo ${a/O/.}      # sed s///
+$ echo ${a//O/.}     # sed s///g
+$ echo $a | sed 's/O/./g'
+$ echo ${a//O/.tyturtu}
+$ rpm -q bash
+$ b=O
+$ echo ${a//$b/.}
+</pre>
+
+<h2 id="toc5">Eval</h2>
+
+<pre>
+$ a="ls"
+$ echo $a
+$ eval $a
+$ ${!a}
+$ : ${!a}
+$ echo ${!a}
+</pre>
+
+<h2 id="toc6">Diferença do echo com aspas (mantém espaços) e sem</h2>
+
+<pre>
+$ echo ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf
+$ echo "ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf"
+$ a="ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf"
+$ echo $a
+$ echo "$a"
+$ cat /etc/fstab
+$ cat /etc/fstab | grep swap
+$ cat /etc/fstab | grep swap | sed -n l
+$ var=$(cat /etc/fstab | grep swap)
+$ echo $var
+$ echo "$var"
+</pre>
+
+<h2 id="toc7">Subshell com crase ou $(), prefira o $()</h2>
+
+<pre>
+$ var=`date`
+$ echo $var
+$ var=$(date)
+$ echo $var
+$ var=$(echo `cat /etc`)
+</pre>
+
+<h2 id="toc8">As aspas simples protegem, não expandem vars nem comandos</h2>
+
+<pre>
+$ a="abc"
+$ echo $a
+$ echo "$a"
+$ echo '$a'
+$ echo '$a $(date)'
+$ echo "$a $(date)"
+</pre>
+
+<h2 id="toc9">Ao definir uma variável não pode ter espaços!</h2>
+
+<pre>
+$ a = ''
+</pre>
+
+<h2 id="toc10">O pesadelo dos escapes...</h2>
+
+<pre>
+$ a='\'
+$ echo $a
+$ a="\"
+$ echo $a
+$ echo \$a
+$ a="\"
+$ "
+$ a=' \'    '
+$ a="\\"
+$ echo $a
+</pre>
+
+<h2 id="toc11">O sed e os escapes (use o echo para ajudar!)</h2>
+
+<pre>
+$ echo "//bla//"   # mudar para \\bla\\
+$ echo "//bla//" | sed "s///\/"
+$ echo "//bla//" | sed "s/\//\\/"
+$ echo "s/\//\\/"
+$ echo 's/\//\\/'
+$ echo "//bla//" | sed 's/\//\\/'
+$ echo "//bla//" | sed 's/\//\\/g'
+$ a='/'
+$ echo "//bla//" | sed "s/$a/\\/g"
+$ echo "s/$a/\\/g"
+$ a="\\/"
+$ echo $a
+$ echo "//bla//" | sed "s/$a/\\/g"
+$ echo "s/$a/\\/g"
+$ echo "//bla//" | sed "s/$a/\\\/g"
+$ $(echo "//bla//" | sed "s/$a/\\\/g")
+$ echo $(echo "//bla//" | sed "s/$a/\\\/g")
+</pre>
+
+<h2 id="toc12">O sed pode usar qualquer delimitador fora o s///</h2>
+
+<pre>
+$ echo isso | sed s/isso/aquilo/g
+$ echo isso | sed s,isso,aquilo,g
+$ echo isso | sed s isso aquilo g
+$ echo isso | sed 's isso aquilo g'
+$ echo isso | sed 's9isso9aquilo9g'
+$ echo isso | sed 's
+&gt; isso
+&gt; aquilo
+&gt; g'
+$ echo isso | sed 's|isso|aquilo|g'
+$ echo isso | sed 'sáissoáaquiloág'
+$ echo isso | sed 's§isso§aquilo§g'
+$ echo isso | sed 's"isso"aquilo"'
+$ echo isso | sed 's  isso    aquilo'
+$ echo isso | sed 's  isso    aquilo  '
+</pre>
+
+<h2 id="toc13">Como "ver" se é um TAB ou espaços</h2>
+
+<pre>
+$ echo -e "\ta\ta"
+$ echo -e "\ta\ta" | sed -n l
+$ echo -e "\ta\ta" | od -c
+$ echo -ne "\ta\ta" | od -c
+$ echo -n "bla"
+$ echo -ne "bla\n"
+$ echo "bla"
+</pre>
+
+<h2 id="toc14">Como depurar (debug) scripts: sh -x, set -x, ...</h2>
+
+<pre>
+$ sh -x teste.sh
+$ sh teste.sh
+$ vi teste.sh
+$ ./teste.sh
+$ set -x
+$ ./teste.sh
+$ echo
+$ vi teste.sh
+$ ./teste.sh
+$ vi teste.sh
+$ set +x
+$ vi teste.sh
+</pre>
+
+<h2 id="toc15">Como pegar a saída de erro (STDERR, 2)</h2>
+
+<pre>
+$ cp
+$ cp | grep arqu
+$ ls &gt; foo
+$ cat foo
+$ cp &gt; foo
+$ cat foo
+$ cp 1&gt; foo
+$ cp 1&gt; foo 2&gt; foo
+$ cat foo
+$ cp 2&gt; foo
+$ ./teste.sh
+$ ./teste.sh 2&gt; foo
+$ ./teste.sh &gt; foo
+$ ./teste.sh &gt; foo 2&gt; foo
+$ cat foo
+$ ./teste.sh &gt; foo 2&gt;&amp;1
+$ cat foo
+$ ./teste.sh &gt; foo 2&gt;&amp;1
+$ ./teste.sh 2&gt;&amp;1
+$ cp
+$ cp 2&gt;&amp;1
+$ cp 2&gt;&amp;1 | grep arqui
+</pre>
+
+<h2 id="toc16">O comando test, seu sósia [ e o código de retorno $?</h2>
+
+<pre>
+$ if [ $var = 'abc' ] ; then echo OK ; fi
+$ which [
+$ l /usr/bin/[
+$ if test $var = 'abc' ; then echo OK ; fi
+$ if grep -qs root /etc/passwd ; then echo tem ; fi
+$ grep -qs root /etc/passwd
+$ echo $?
+$ grep -qs roiiiiiiot /etc/passwd
+$ echo $?
+$ cp
+$ echo $?
+$ exit abnc
+$ cp 2&gt;/dev/null
+$ echo $?
+$ ls /dev/null
+</pre>
+
+<h2 id="toc17">O [[ para fazer testes</h2>
+
+<pre>
+$ if [ 1 -gt 5 ]; then echo é menor ; fi
+$ if [ 8 -gt 5 ]; then echo é maior ; fi
+$ if [[ 8 -gt 5 ]]; then echo é maior ; fi
+$ if [[ 8  5 ]]; then echo é maior ; fi
+</pre>
+
+<h2 id="toc18">Os operadores lógicos AND &amp;&amp; e OR ||</h2>
+
+<pre>
+$ cp 2&gt;/dev/null ; echo $?
+$ cp 2&gt;/dev/null &amp;&amp; echo OK
+$ ls 2&gt;/dev/null &amp;&amp; echo OK
+$ ls &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo OK
+$ ls &gt;/dev/null 2&gt;&amp;1 || echo OK
+$ cp 2&gt;/dev/null || echo OK
+$ cp 2&gt;/dev/null || echo OK &amp;&amp; echo NOK
+$ echo &amp;&amp; echo OK || echo NOK
+$ echo &amp;&amp; cp 2&gt;/dev/null || echo NOK
+$ false &amp;&amp; cp 2&gt;/dev/null || echo NOK
+$ false &amp;&amp; cp || echo NOK
+$ true &amp;&amp; cp || echo NOK
+$ false &amp;&amp; cp || echo NOK
+$ false &amp;&amp; cp || echo NOK &amp;&amp; echo OKDENOVO
+$ false &amp;&amp; { cp || echo NOK &amp;&amp; echo OKDENOVO ; }
+$ true &amp;&amp; { cp || echo NOK &amp;&amp; echo OKDENOVO ; }
+</pre>
+
+<h2 id="toc19">Checagem de parâmetros da linha de comando ($1)</h2>
+
+<pre>
+$ test -z "$1" || { echo uso: blabla ; exit 1  ; }
+$ [ "$1" ] || { echo uso: blabla ; exit 1  ; }
+$ [ "$1" ] || { echo uso: blabla ; echo exit 1  ; }
+$ [ $1 ] || { echo uso: blabla ; echo exit 1  ; }
+$ [ $1 = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
+$ [ "$1" = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
+$ [  = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
+</pre>
+
+<h2 id="toc20">Como passar parâmetros vazios</h2>
+
+<pre>
+$ vi teste.sh
+$ ./teste.sh
+$ ./teste.sh ""
+$ ./teste.sh "" dois
+$ ./teste.sh "" "" dois
+</pre>
+
+<h2 id="toc21">As ferramentas: cut</h2>
+
+<pre>
+$ cat /etc/passwd | cut -d: -f5
+$ cat /etc/passwd | cut -d: -f5,2
+$ cat /etc/passwd | cut -d: -f5,2,1
+$ cat /etc/passwd | cut -d: -f5-
+$ cat /etc/passwd | cut -d: -f5-6
+$ cat /etc/passwd | cut -d: -f5-7
+$ cat /etc/passwd | cut -c 1-10
+$ cat /etc/passwd | cut -c 10-
+</pre>
+
+<h2 id="toc22">As ferramentas: awk</h2>
+
+<pre>
+$ cat /etc/passwd | awk '{print $3}'
+$ cat /etc/passwd | awk '{print $3}'
+$ cat /etc/passwd | awk '{print $2}'
+$ cat /etc/passwd | awk '{print $1}'
+$ cat /etc/passwd | awk '{print $2}'
+$ cat /etc/passwd | awk -F: '{print $2}'
+$ cat /etc/fstab
+$ cat /etc/fstab | cut -d" " -f4
+$ cat /etc/fstab | awk '{print $4}'
+</pre>
+
+<h2 id="toc23">As ferramentas: tr</h2>
+
+<pre>
+$ a="asd asd       k          ioioio"
+$ echo $a
+$ echo "$a"
+$ echo "$a" | tr -s ' '
+$ echo aaaaabbbb | tr -s a
+$ echo aaaaabbbb | tr -s ab
+$ echo aaaaabbbb | tr a-z A-Z
+$ echo aaaaabbbb | tr abcdef ABCDEF
+$ echo aaaaabbbb | tr abcdef XVDGFFG
+</pre>
+
+<h2 id="toc24">As ferramentas: sort</h2>
+
+<pre>
+$ cat /etc/passwd
+$ cat /etc/passwd | sort
+$ cat /etc/passwd | sort -r
+</pre>
+
+<h2 id="toc25">As ferramentas: rev, tac</h2>
+
+<pre>
+$ cat /etc/passwd | rev
+$ echo abcde | rev
+$ echo cat | rev
+$ tac /etc/passwd
+$ tac /etc/passwd| rev
+</pre>
+
+<h2 id="toc26">As ferramentas: sort, uniq</h2>
+
+<pre>
+$ vi txt
+$ cat txt | sort
+$ cat txt | sort | uniq
+$ cat txt | uniq
+$ cat txt | sort -u
+$ cat txt | sort | uniq
+</pre>
+
+<h2 id="toc27">As ferramentas: wc</h2>
+
+<pre>
+$ cat /etc/passwd | wc
+$ cat /etc/passwd | wc -w
+$ cat /etc/passwd | wc -l
+$ cat /etc/passwd | wc -c
+</pre>
+
+<h2 id="toc28">As ferramentas: cat, paste</h2>
+
+<pre>
+$ vi txt2
+$ cat txt txt2
+$ paste txt txt2
+$ paste -s txt txt2
+</pre>
+
+<h2 id="toc29">As ferramentas: tee</h2>
+
+<pre>
+$ echo abc
+$ echo abc | sed 's/a/./'
+$ echo abc | tee a | sed 's/a/./'
+$ cat a
+</pre>
+
+<h2 id="toc30">As ferramentas: head, tail</h2>
+
+<pre>
+$ head /etc/passwd
+$ head -2 /etc/passwd
+$ tail -2 /etc/passwd
+$ tail  /etc/passwd
+</pre>
+
+<h2 id="toc31">As ferramentas: seq</h2>
+
+<pre>
+$ for i in 1 2 3 4 5 5 6 7 8 9 10; do echo $i-- ; done
+$ for i in 1 2 3 4 5 5 6 abd hjerer jrtj 8 9 10; do echo $i-- ; done
+$ for i in $(seq 10); do echo $i-- ; done
+$ seq 10
+$ seq 2
+$ seq 2 5
+$ seq 5 2
+$ seq 4 8 50
+</pre>
+
+<h2 id="toc32">As ferramentas: printf</h2>
+
+<pre>
+$ printf "%s" bla
+$ printf "%s\n" bla
+$ printf "%10s\n" bla
+$ printf "%-10s\n" bla
+$ printf "%10s----\n" bla
+$ printf "%-10s----\n" bla
+$ printf "%10s----\n" blaasdasdasdasd
+$ printf "%d" 5
+$ printf "%d\n" 5
+$ printf "%4d\n" 5
+$ printf "%4d\n" 5 | sed 's/ /0/g'
+$ printf "%.4d\n" 5
+$ printf "%4.2f\n" 5
+</pre>
+
+<h2 id="toc33">As ferramentas: grep</h2>
+
+<pre>
+$ cat /etc/passwd
+$ cat /etc/passwd | grep root
+$ cat /etc/passwd | grep -i root
+$ cat /etc/passwd | grep -i ROOT
+$ cp
+$ echo $LANG
+$ cat /etc/passwd | grep -w root
+$ cat /etc/passwd | grep -w roo
+$ cat /etc/passwd | grep -x roo
+$ cat /etc/passwd | grep -l roo
+$ grep -l roo /etc/passwd
+$ grep -v roo /etc/passwd
+$ grep -v root /etc/passwd
+$ VAR=root
+$ grep -i $VAR /etc/passwd
+$ grep g /etc/passwd
+$ grep g\$ /etc/passwd
+$ fgrep g\$ /etc/passwd
+$ fgrep g /etc/passwd
+$ cd /bin
+$ l grep egrep fgrep
+</pre>
+
+<h2 id="toc34">As ferramentas: find</h2>
+
+<pre>
+$ find . -type f
+$ find . -type d
+$ find . -type l
+$ ln -s a z
+$ find . -type l
+$ find . -type f
+$ find . -type f -exec echo rm -f {} \;
+$ find . -type f -ok echo rm -f {} \;
+$ find . -type f | while read BOZO; do echo $BOZO; done
+$ cat /etc/passwd | while read BOZO; do echo $BOZO; done
+$ cat /etc/passwd | while read BOZO; do echo {$BOZO}; done
+$ cat /etc/passwd | while read BOZO; do echo $BOZO | grep -qs root &amp;&amp; echo $BOZO; done
+$ find . -type f -exec echo rm -f {}\;
+</pre>
+
+<h2 id="toc35">As ferramentas: date</h2>
+
+<pre>
+$ date
+$ date +'%y %m %d'
+$ date +'%Y %m %d'
+$ date --help
+$ date +'%Y-%m-%d'
+$ date +'%Y-%m-%d %H:%M'
+$ date +'hoje é %Y-%m-%d %H:%M ... '
+$ date +'%s'
+$ date +'%s'
+$ date +'%s'
+</pre>
+
+<h2 id="toc36">As ferramentas: diff, vi -d</h2>
+
+<pre>
+$ cat txt txt2
+$ diff txt txt2
+$ vi txt2
+$ cp txt txt3
+$ vi txt3
+$ diff txt txt3
+$ diff -u txt txt3
+$ diff -u txt txt3 | vi -
+$ vi txt3
+$ diff -u txt txt3 | vi -
+$ vi txt3
+$ diff -u txt txt3 | vi -
+$ vi txt3
+$ diff -u txt txt3 | vi -
+$ vi -d txt txt3
+</pre>
+
+<h2 id="toc37">Funções separadas em uma biblioteca</h2>
+
+<pre>
+$ cds
+$ vi functions
+$ ./functions
+$ source functions
+$ . functions
+$ vi inet
+</pre>
