@@ -21,95 +21,72 @@ cd _site
 
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
-    local wrong
 
     # This is the only check running at the repo root
-    cd "$repo_root"
-    wrong=$(
-        git grep -I '{{.*}}' |
-            # Remove false positives
-            grep -v '^_includes/' |
-            grep -v '^_layouts/' |
-            grep -v '^_plugins/' |
-            grep -v '^_scripts/' |
-            grep -v '^bin/python/txt2tags-r900\.py' |
-            grep -v '^blog/index\.html' |
-            grep -v '^curso/index\.md' |
-            grep -v '^feed\.xml' |
-            grep -v '^index\.html' |
-            grep -v '^tags/index\.html' |
-            grep -v '^tela-preta/index\.md' |
-            grep -v '^vim/vimrc-ivan\.txt' |
-            # txt2tags files
-            grep -v '^include/config' |
-            grep -v '^include/global\.t2t' |
-            grep -v '^projects/config.t2t' |
-            grep -v '^projects/emomemory/index.t2t' |
-            grep -v '^shell/dialog/index' |
-            grep -v '^[^:]*\.t2t:.*{{br}}' |
-            cat -
-    )
-    cd "$site_root"
+    cd "$repo_root" && git grep -I '{{.*}}' |
 
-    test -n "$wrong" && error "$wrong"
+        # Remove false positives
+        grep -v '^_includes/' |
+        grep -v '^_layouts/' |
+        grep -v '^_plugins/' |
+        grep -v '^_scripts/' |
+        grep -v '^bin/python/txt2tags-r900\.py' |
+        grep -v '^blog/index\.html' |
+        grep -v '^curso/index\.md' |
+        grep -v '^feed\.xml' |
+        grep -v '^index\.html' |
+        grep -v '^tags/index\.html' |
+        grep -v '^tela-preta/index\.md' |
+        grep -v '^vim/vimrc-ivan\.txt' |
+
+        # txt2tags files
+        grep -v '^include/config' |
+        grep -v '^include/global\.t2t' |
+        grep -v '^projects/config.t2t' |
+        grep -v '^projects/emomemory/index.t2t' |
+        grep -v '^shell/dialog/index' |
+        grep -v '^[^:]*\.t2t:.*{{br}}' |
+        cat -
+    cd "$site_root"
 }
 
 # Do not use relative URLs in links and images
 check_relative_urls() {
-    local wrong
+    # ./
+    grep -r -i -E '(src|href)="\./' .
+    grep -r -i -E '(src|href)="[^"]*/\./' .
 
-    wrong=$(
-        # ./
-        grep -r -i -E '(src|href)="\./' .
-        grep -r -i -E '(src|href)="[^"]*/\./' .
-
-        # ../
-        grep -r -i -E '(src|href)="\.\./' .
-        grep -r -i -E '(src|href)="[^"]*/\.\./' .
-    )
-
-    test -n "$wrong" && error "$wrong"
+    # ../
+    grep -r -i -E '(src|href)="\.\./' .
+    grep -r -i -E '(src|href)="[^"]*/\.\./' .
 }
 
 
 # Grep for <tag foo=bar> instead of <tag foo="bar">
 check_unquoted_attributes() {
-    local wrong
+    grep -r -i --binary-files=without-match -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' . |
 
-    wrong=$(
-        grep -r -i --binary-files=without-match -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' . |
-            # Remove false positives
-            grep -F -i -v 'content="text/html; charset=utf-8"' |
-            grep -E -v '^\./bin/python/txt2tags-r900.py:' |
-            grep -E -v '^\./sed/programas/yahoogroups-kill-sig.sed:' |
-            grep -E -v '^\./vim/vimrc-ivan.txt:' |
-            #XXX txt2tags generated files, won't fix now
-            grep -E -v '<HR NOSHADE SIZE=1>'
-    )
+        # Remove false positives
+        grep -F -i -v 'content="text/html; charset=utf-8"' |
+        grep -E -v '^\./bin/python/txt2tags-r900.py:' |
+        grep -E -v '^\./sed/programas/yahoogroups-kill-sig.sed:' |
+        grep -E -v '^\./vim/vimrc-ivan.txt:' |
 
-    test -n "$wrong" && error "$wrong"
+        #XXX txt2tags generated files, won't fix now
+        grep -E -v '<HR NOSHADE SIZE=1>'
 }
 
 check_windows_linebreak() {
-    local wrong
+    find . -not -type d -exec file {} \; | grep CRLF |
 
-    wrong=$(
-        find . -not -type d -exec file {} \; | grep CRLF |
-            # Remove false positives
-            grep -v '^\./projects/moneylog/' |
-            grep -v '^\./moneylog/'
-    )
-
-    test -n "$wrong" && error "$wrong"
+        # Remove false positives
+        grep -v '^\./projects/moneylog/' |
+        grep -v '^\./moneylog/'
 }
 
 check_missing_article_date() {
-    local wrong
-
     # This is the default date inserted by the txt2tags2html script
     git grep '^date: 1999-12-31'
-
-    test -n "$wrong" && error "$wrong"
 }
 
 active_checks="
@@ -123,5 +100,6 @@ active_checks="
 for check in $active_checks
 do
     echo "Running $check..."
-    $check
+    wrong=$($check)
+    test -n "$wrong" && error "$wrong"
 done
