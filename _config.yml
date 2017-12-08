@@ -50,6 +50,11 @@ defaults:
       permalink: /blog/:year/:month/:day/:title/
   -
     scope:
+      path: "correria"
+    values:
+      layout: correria
+  -
+    scope:
       path: "curso"
     values:
       title_prefix: "Evento: "
