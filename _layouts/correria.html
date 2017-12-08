@@ -5,29 +5,15 @@
 <title>Banda CORRERIA HC :: {{ page.title | escape }}</title>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 {% if page.url == '/correria/' %}
 <meta name="Description" content="Site da banda CORRERIA HC">
 <meta name="Keywords" content="correria, banda, curitiba, brasil, hardcore, punk, punkrock, pesado, tosco, show, dumbs">
 {% endif %}
 
 <style>
-  /*
-    555555  Fundo cinza escuro
-    444444  Fundo cinza mais escuro
-    88DD44  Verde brilhante
-    BBEE88  Verde palido acinzentado
-    CCCC11  Amarelo escuro
-    CCCC55  Verde nojo
-    BBCC77  Verde nojo2
-    EEEE77  Amarelo palido
-    EE9922  Laranjado
-    FFCC55  Laranjado palido
-    33DD88  Verde piscina
-    DDCC55  Marrom barro
-    DDFFCC  Gelo
-    88CCEE  Azul claro
-  */
-
   body {
     background-color: #333;
     color: #333;
@@ -36,16 +22,7 @@
   }
 
   a {
-    text-decoration: none;
     font-weight: bold;
-  }
-
-  a:visited {
-    color: purple;
-  }
-
-  a:hover {
-    color: red;
   }
 
   h3 {
@@ -54,30 +31,28 @@
   }
 
   td {
-    padding: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 15px;
   }
 
   pre {
     background-color: white;
     color: black;
-    margin: 2em;
     padding: 8px;
     border: 1px solid #444;
+    white-space: pre-wrap;
+    line-height: 125%;
   }
 
   img {
     border: 1px solid #444;
   }
 
-  img.novo,
-  img.noborder {
-    border-width: 0px;
-  }
-
   table {
     margin: 1em auto;
+  }
+
+  .noborder {
+    border-width: 0px;
   }
 
   .figure,
@@ -85,109 +60,103 @@
     text-align: center;
   }
 
+  .figure img {
+    max-width: 100%;
+  }
+
   /* ----------------------------------------------------------- */
 
   #topo {
+    padding: 10px 0 0 0;
     color: #999;
     text-align: center;
     font-style: italic;
-    font-size: 300%;
   }
 
   #topo a {
-      color: #999;
+    color: #999;
+    font-size: 300%;
+    text-decoration: none;
   }
 
   #topo img {
     border-style: none;
-    padding: 10px 0;
     vertical-align: middle;
-  }
-
-  #topo h1 {
-    display: none;
   }
 
   /* ----------------------------------------------------------- */
 
   #menu {
-    float: left;
-    width: 9em;
-    padding: 0;
+    padding: 2.5em 0;
     text-align: center;
   }
 
   #menu ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
   }
 
   #menu li {
-    margin: 1em 0;
+    display: inline-block;
+    margin: 0 .5em;
+    line-height: 2em;
   }
 
   #menu a {
-    display: block;
     color: yellow;
-    font-weight: normal;
-  }
-
-  #menu a:hover {
-    text-decoration: underline;
-    font-weight: bold;
   }
 
   /* ----------------------------------------------------------- */
 
   #corpo {
     background-color: #ccc;
-    margin: 0 2em 0 10em;
+    margin: 0 2em;
     padding: .5em;
     line-height: 150%;
-    text-align: justify;
   }
 
   #corpo h1 {
     text-align: center;
+    line-height: 100%;
   }
 
   /* ----------------------------------------------------------- */
 
   #rodape {
     color: #999;
-    clear: both;
     padding-top: 0.5em;
     text-align: center;
     font-style: italic;
   }
 
-  #rodape a {
-    color: yellow;
+  /* ----------------------------------------------------------- */
+
+  @media (max-width: 600px) {
+    #corpo {
+      margin: 0 10px;
+    }
   }
+  
 </style>
 </head>
 
-<body bgcolor="white" text="black">
+<body>
 
 <div id="topo">
-  <h1>
-      <a href="/correria/">Banda Correria HC</a>
-  </h1>
-  <p class="figure">
+  <div class="figure">
     <a href="/correria/">
-        <img src="/correria/img/logo-cinza.gif"> HC
+        <img src="/correria/img/logo-cinza.gif" alt="Banda Correria"> HC
     </a>
-  </p>
+  </div>
 </div>
 
 <div id="menu">
   <ul>
-  <li><a href="/correria/">PRINCIPAL</a>
-  <li><a href="/correria/blog.html">BLOG</a>
-  <li><a href="/correria/letras.html">LETRAS</a>
-  <li><a href="/correria/video.html">VÍDEO</a>
-  <li><a href="/correria/mp3.html">MP3</a>
+    <!--<li><a href="/correria/">PRINCIPAL</a>-->
+    <li><a href="/correria/mp3.html">MP3</a>
+    <li><a href="/correria/letras.html">LETRAS</a>
+    <li><a href="/correria/video.html">VÍDEO</a>
+    <li><a href="/correria/blog.html">BLOG</a>
   </ul>
 </div>
 
