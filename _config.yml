@@ -67,6 +67,11 @@ defaults:
       hide_share: true
   -
     scope:
+      path: "email"
+    values:
+      layout: email
+  -
+    scope:
       path: "fvm"
     values:
       layout: 2013-page
