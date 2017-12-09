@@ -70,6 +70,7 @@ defaults:
       path: "email"
     values:
       layout: email
+      title_suffix: " — Textos de E-mail"
   -
     scope:
       path: "fvm"

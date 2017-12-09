@@ -1,105 +1,106 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>{{ page.title | escape }} — Textos de E-mail</TITLE>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+{% include head-base.html %}
 
 <style>
-	body {
-		margin:0 0 4em 0;
-		padding:10px;
-		font-family:sans-serif;
-	}
+  body {
+    margin: 0;
+    padding: 10px;
+    font-family: sans-serif;
+  }
 
-	/* --- HEADER ---------------------------------------------- */
+  /* --- HEADER ---------------------------------------------- */
 
-	#header {
-		margin:1em auto;
-		max-width:40em;
-		text-align:center;
-		font-size:150%;
-	}
+  #header {
+    margin: 1em auto;
+    max-width: 40em;
+    text-align: center;
+    font-size: 150%;
+  }
 
-	/* --- MAIN ---------------------------------------------- */
+  /* --- MAIN ---------------------------------------------- */
 
-	#main {
-		max-width:30em;
-		margin:1em auto 4em auto;
-		text-align:justify;
-		font-size:120%;
-		line-height:170%;
-	}
-	#main h2,
-	#main blockquote {
-		text-align:left;
-	}
-	#main li {
-		margin: .5em 0;
-	}
-	#main li i {
-		color:green;
-	}
+  #main {
+    max-width: 30em;
+    margin: 1em auto 3em auto;
+    padding-bottom: 3em;
+    border-bottom: 1px solid black;
+    text-align: justify;
+    font-size: 120%;
+    line-height: 170%;
+  }
 
-	/* --- AUTOR ---------------------------------------------- */
-	#autor {
-		margin-top:3em;
-		background-color:#EEEEEE;
-		font-style:italic;
-		line-height:120%;
-	}
-	#disclaimer {
-		margin-top:3em;
-		background-color:#FFFE6F;
-		font-weight:bold;
-	}
+  #main h2,
+  #main blockquote {
+    text-align: left;
+  }
 
-	/* --- MAIS ---------------------------------------------- */
+  #main li {
+    margin: .5em 0;
+  }
 
-	.nav {
-		margin:4em auto;
-		max-width:30em;
-	}
-	.nav ul {
-		padding:0;
-	}
-	.nav li {
-		padding-bottom:1em;
-	}
+  #main li i {
+    color: green;
+  }
 
-	/* --- ADS ---------------------------------------------- */
+  /* --- AUTOR ---------------------------------------------- */
 
-	.ad-in-article {
-		max-width:40em;  /* same as #header */
-		margin:3em auto 3em auto;
-	}
+  #autor {
+    margin-top: 3em;
+    background-color: #EEEEEE;
+    font-style: italic;
+    line-height: 120%;
+  }
+
+  #disclaimer {
+    margin-top: 3em;
+    background-color: #FFFE6F;
+    font-weight: bold;
+  }
+
+  /* --- MAIS ---------------------------------------------- */
+
+  .nav {
+    margin: 0 auto 5em auto;
+    max-width: 30em;
+  }
+
+  .nav ul {
+    padding: 0;
+  }
+
+  .nav li {
+    padding-bottom: 1em;
+  }
+
+  /* --- ADS ---------------------------------------------- */
+
+  .ad-in-article {
+    max-width: 40em;  /* same as #header */
+    margin: 3em auto 3em auto;
+  }
 </style>
 
 {% include analytics.html %}
 {% include ad-mobile.html %}
 
-</HEAD>
-<BODY>
+</head>
+<body>
 
-<DIV CLASS="header" ID="header">
-<H1>{{ page.title | escape }}</H1>
-</DIV>
-
-<DIV CLASS="body" ID="body">
+<div id="header">
+  <h1>{{ page.title | escape }}</h1>
+</div>
 
 {% include ad-in-article.html %}
 
 <div id="main">
-{{ content }}
-</div>  <!--main-->
-
-<HR NOSHADE SIZE="1">
+  {{ content }}
+</div>  <!-- #main -->
 
 <div class="nav">
+  {% include nav-email.html %}
+</div>  <!-- .nav -->
 
-{% include nav-email.html %}
-
-</div> <!--nav-->
-</DIV> <!--body-->
-</BODY></HTML>
+</body>
+</html>
