@@ -67,6 +67,11 @@ defaults:
       hide_share: true
   -
     scope:
+      path: "doc/coluna"
+    values:
+      layout: coluna
+  -
+    scope:
       path: "email"
     values:
       layout: email
