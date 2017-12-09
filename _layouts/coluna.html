@@ -1,38 +1,60 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-  <TITLE>{{ page.title | escape }} | Aurelio.net</TITLE>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    {% include head-base.html %}
 
-  <STYLE TYPE="text/css">
-    h1        { color: lightgreen; }
-    h3        { color: green     ; }
-    code      { color: white     ;      font-weight: bold   ; }
-    a         { color: yellow    ;  text-decoration: none   ; }
-    a:visited { color: purple    ; }
-    body      { color: silver    ; background-color: black  ;
-               margin: 2em       ;       text-align: justify; }
-    pre       { color: orange    ;      margin-left: 2em    ; }
-  </STYLE>
-</HEAD>
-<BODY>
+    <style>
+      body {
+        margin: 2em;
+        background-color: black;
+        color: silver;
+        text-align: justify;
+      }
 
-<DIV CLASS="header" ID="header">
-  <H1>{{ page.title | escape }}</H1>
-  <H3>http://aurelio.net/doc/coluna</H3>
-</DIV>
+      h1 {
+        color: lightgreen;
+      }
 
-<DIV CLASS="body" ID="body">
+      h3 {
+        color: green;
+      }
 
-{{ content }}
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
 
-<HR NOSHADE SIZE="1">
+      a:visited {
+        color: purple;
+      }
 
-<P><A HREF=".">&lt;--- Voltar para o índice</A></P>
+      code {
+        color: white;
+        font-weight: bold;
+      }
 
-{% include analytics.html %}
+      pre {
+        color: orange;
+        margin-left: 2em;
+      }
 
-</DIV><!-- #body -->
+      .footer {
+        padding-top: 1em;
+        border-top: 1px solid silver;
+      }
+    </style>
 
-</BODY></HTML>
+    {% include analytics.html %}
+  </head>
+
+  <body>
+    <h1>{{ page.title | escape }}</h1>
+    <h3>http://aurelio.net/doc/coluna</h3>
+
+    {{ content }}
+
+    <p class="footer">
+      <a href="/doc/coluna/">&lt;--- Voltar para o índice</a>
+    </p>
+  </body>
+</html>
