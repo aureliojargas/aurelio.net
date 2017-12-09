@@ -53,6 +53,8 @@ defaults:
       path: "correria"
     values:
       layout: correria
+      title_prefix: "Banda CORRERIA HC :: "
+      hide_title_suffix: true
   -
     scope:
       path: "curso"
