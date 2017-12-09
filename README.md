@@ -82,7 +82,6 @@ In HTML files, use the following structure:
 
 You can hide page elements, such as the ads or the comments section, using special flags in front matter:
 
-- `hide_title_suffix: true`
 - `hide_heading: true`
 - `hide_prev_next: true`
 - `hide_byline: true`

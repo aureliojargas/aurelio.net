@@ -41,6 +41,7 @@ defaults:
     values:
       layout: "2014"
       author: aurelio
+      title_suffix: " | Aurelio.net"
   -
     scope:  # all posts
       path: ""
@@ -54,7 +55,7 @@ defaults:
     values:
       layout: correria
       title_prefix: "Banda CORRERIA HC :: "
-      hide_title_suffix: true
+      title_suffix: ""
   -
     scope:
       path: "curso"
@@ -70,7 +71,7 @@ defaults:
     values:
       layout: 2013-page
       article_footer_after: nav-fvm.html
-      hide_title_suffix: true
+      title_suffix: ""
       hide_byline: true
       hide_read_more: true
       hide_share: true
@@ -129,9 +130,9 @@ defaults:
 ### Page config (to insert in Front Matter)
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
+# title_suffix: " | Foo"
 # css_extra: foo.css
 # article_footer_after: include-file.html
-# hide_title_suffix: true
 # hide_heading: true
 # hide_prev_next: true
 # hide_byline: true
