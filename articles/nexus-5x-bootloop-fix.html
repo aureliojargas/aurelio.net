@@ -1,0 +1,152 @@
+---
+layout: 2013-articles
+worked: "3:30"
+date: 2017-12-15
+title: Nexus 5X bootloop fix - Install Android monthly security updates
+---
+
+<p>This article is my checklist to install the monthly Android security updates into my Nexus 5X.</p>
+
+<p>Since my phone is cursed with the Bootloop of Death (BLOD) hardware problem, I cannot install the vanilla OTA updates. Instead I have to manually download the official Android image from Google, edit it to apply the fix, and then flash the fixed image into the phone.</p>
+
+<blockquote>
+  <p><strong>About the bootloop:</strong> One day, while using my Nexus 5X, it suddely restarted and became unusable, stuck in an endless boot process (bootloop). Unfortunately, this is a known hardware problem that occurs in both the Nexus 5X and Nexus 6P phones. There is a hacky fix: via software, you should disable two of the six available cores in the phone processor (<a href="https://en.wikipedia.org/wiki/System_on_a_chip">SoC</a>). Read more about it <a href="https://www.thepetitionsite.com/takeaction/577/779/992/">here</a>, <a href="https://www.xda-developers.com/nexus-5x-bootloop-fix-boot-phone/">here</a> and <a href="https://forum.xda-developers.com/nexus-5x/general/untested-nexus-5x-bootloop-death-fix-t3641199">here</a>.</p>
+</blockquote>
+
+<h2 id="step-1">Step 1 - Unlock the bootloader</h2>
+
+<p>The phone’s bootloader must be unlocked so you can flash the fixed images.</p>
+
+<blockquote>
+  <p>Tutorial: <a href="https://www.androidcentral.com/how-unlock-nexus-5x-bootloader">How to unlock the Nexus 5X bootloader</a></p>
+</blockquote>
+
+<h2 id="step-2">Step 2 - Download the necessary files</h2>
+
+<p>Download and unzip the official Android SDK Platform Tools, which contains the required <code>fastboot</code> binary:</p>
+
+<ul>
+  <li>
+    <a href="https://developer.android.com/studio/releases/platform-tools.html">https://developer.android.com/studio/releases/platform-tools.html</a>
+  </li>
+</ul>
+
+<p>Download the Python script used to modify the Android boot images, disabling the faulty hardware:</p>
+
+<ul>
+  <li>
+    <a href="https://github.com/pawitp/nexus-5x-blod-fix">https://github.com/pawitp/nexus-5x-blod-fix</a>
+  </li>
+</ul>
+
+<p>Download from Google the official, most recent Android image for the Nexus 5X (nicknamed <em>bullhead</em>):</p>
+
+<ul>
+  <li>
+    <a href="https://developers.google.com/android/images#bullhead">https://developers.google.com/android/images#bullhead</a>
+  </li>
+</ul>
+
+<h2 id="step-3">Step 3 - Prepare the files</h2>
+
+<p>Unzip the Android image into a new folder. This will be our work folder.</p>
+
+<p>Inside there will be another zip file which contains the boot images. Unzip that too.</p>
+
+<pre>
+# Using Oreo 8.1 files as an example
+
+unzip bullhead-opm1.171019.011-factory-3be6fd1c.zip
+
+cd bullhead-opm1.171019.011
+
+unzip image-bullhead-opm1.171019.011.zip
+</pre>
+
+<p>Now copy here the downloaded Python script:</p>
+
+<pre>
+cp ~/Downloads/disable_cpu_cores.py .
+</pre>
+
+<p>Also copy here the <code>fastboot</code> binary:</p>
+
+<pre>
+cp ~/Downloads/platform-tools/fastboot .
+</pre>
+
+<p>At this point, all the necessary files are on the same folder:</p>
+
+<pre>
+android-info.txt
+boot.img
+bootloader-bullhead-bhz31a.img
+disable_cpu_cores.py
+fastboot
+flash-all.bat
+flash-all.sh
+flash-base.sh
+radio-bullhead-m8994f-2.6.40.4.04.img
+recovery.img
+system.img
+vendor.img
+</pre>
+
+<h2 id="step-4">Step 4 - Apply the image fix</h2>
+
+<p>Run the Python script on both the <em>boot</em> and <em>recovery</em> images:</p>
+
+<pre>
+python disable_cpu_cores.py boot.img boot_4c.img
+
+python disable_cpu_cores.py recovery.img recovery_4c.img
+</pre>
+
+<p>Note that the fixed files have a <code>_4c</code> suffix to make it clear that those are the modified images (limited to 4 cores).</p>
+
+<h2 id="step-5">Step 5 - Prepare the phone</h2>
+
+<p>Put the phone in Fastboot Mode: turn off the phone and hold Volume Down and Power buttons until the fastboot screen appears.</p>
+
+<blockquote>
+  <p>Tutorial: <a href="https://www.androidexplained.com/nexus-5x-fastboot-mode/">Nexus 5X: How to Boot into Fastboot Mode</a></p>
+</blockquote>
+
+<p>Plug the phone to your computer and make sure it is listed as an available device:</p>
+
+<pre>
+./fastboot devices
+</pre>
+
+<p>If nothing appears, try using another cable. Some cables I tried here were charging-only.</p>
+
+<h2 id="step-6">Step 6 - Flash all the images to your phone</h2>
+
+<p>Run the official Google script to install the base system images to your phone (<em>bootloader</em> and <em>radio</em>):</p>
+
+<pre>
+./flash-base.sh
+</pre>
+
+<p>Now flash all the other images, making sure your are using the <code>_4c</code> version for the <em>boot</em> and <em>recovery</em> images.</p>
+
+<pre>
+./fastboot flash boot boot_4c.img
+./fastboot flash recovery recovery_4c.img
+./fastboot flash system system.img
+./fastboot flash vendor vendor.img
+</pre>
+
+<p>Now just reboot your phone and enjoy the updated Android!</p>
+
+<pre>
+./fastboot reboot
+</pre>
+
+<h2 id="clear-cache">Troubleshooting: Clear cache partition</h2>
+
+<p>Only one time this update process failed on me and I was back stuck on the bootloop. The fix was simple: booting into Recovery Mode and clearing the cache partition.</p>
+
+<blockquote>
+  <p>Tutorial: <a href="https://www.androidexplained.com/nexus-5x-wipe-cache-partition/">Nexus 5X: How to Wipe the Cache Partition</a></p>
+</blockquote>
