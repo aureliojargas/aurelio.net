@@ -314,3 +314,7 @@ Mepis). Ele também remasteriza a distro a partir do CD, de uma imagem ISO
 ou do sistema instalado no HD. É a base na qual foi construído o
 [Dreamlinux](http://www.dreamlinux.com.br), que virou um projeto de distro
 brasileira, com visual inovador (à Mac OS).
+
+## Divirta-se!
+
+![Veja como é fácil corrigir erros em seu script](/shell/img/bash-errors-quoting.jpg)
