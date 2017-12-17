@@ -479,7 +479,7 @@ Aproveite para [visitar o site do Nerdson](http://hacktoon.com/grandware/courses
 
 ### Autor desconhecido
 
-![](http://aurelio.net/regex/img/mastering.jpg)]
+![](http://aurelio.net/regex/img/mastering.jpg)
 
 ### Regex-cruzadas
 
