@@ -104,6 +104,8 @@ The site template ([_layouts/2014.html](https://github.com/aureliojargas/aurelio
 
 - `title_prefix: "Foo: "` — To add a prefix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
 
+- `title_suffix: " | Foo"` — To add a suffix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
+
 ## Setup local development
 
 Execute those commands from the repository root.
