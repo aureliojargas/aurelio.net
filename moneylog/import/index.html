@@ -49,6 +49,10 @@ function formatDescription(s, doc_nr) {
 	if (document.getElementById('lowerdesc').checked) {
 		s = s.toLowerCase();
 	}
+	// truncated
+	if (document.getElementById('truncatedesc').checked) {
+		s = s.substring(0, document.getElementById('truncatedescvalue').value);
+	}
 	return s;
 }
 function convertOFX(rawData) {
@@ -369,6 +373,7 @@ function convert() {
 	<br><input id="lowerdesc" type="checkbox" onclick="convert();"> Forçar a descrição em minúsculas
 	<br><input id="hidedocnumber" type="checkbox" onclick="convert();"> Descartar o Número do Documento
 	<br><input id="sortoutput" type="checkbox" onclick="convert();"> Ordenar o resultado por data
+	<br><input id="truncatedesc" type="checkbox" onclick="convert();"> Limitar descrição em <input id="truncatedescvalue" type="text" value="22"> caracteres
 	</div>
 
 	<p><strong>CONFIRA O RESULTADO.</strong> Este é um processo automático, pode haver falhas.</p>
