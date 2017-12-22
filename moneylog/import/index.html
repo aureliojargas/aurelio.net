@@ -298,7 +298,6 @@ function convert() {
 	// Reset output
 	document.getElementById('output_data').value = '';
 
-
 	mode = document.getElementById('mode').value;
 	if (mode == 'myml') {
 		parsedData = convertMyMoneyLog(rawData);
@@ -308,6 +307,11 @@ function convert() {
 		parsedData = convertQIF(rawData, mode);
 	} else if (mode == 'ofx' || mode == 'ofc') {
 		parsedData = convertOFX(rawData);
+	}
+
+	// Maybe sort it?
+	if (document.getElementById('sortoutput').checked) {
+		parsedData.sort();
 	}
 
 	// Save output
@@ -364,6 +368,7 @@ function convert() {
 	<input id="usecommas" type="checkbox" onclick="convert();"> Forçar o uso de vírgulas nos valores
 	<br><input id="lowerdesc" type="checkbox" onclick="convert();"> Forçar a descrição em minúsculas
 	<br><input id="hidedocnumber" type="checkbox" onclick="convert();"> Descartar o Número do Documento
+	<br><input id="sortoutput" type="checkbox" onclick="convert();"> Ordenar o resultado por data
 	</div>
 
 	<p><strong>CONFIRA O RESULTADO.</strong> Este é um processo automático, pode haver falhas.</p>
