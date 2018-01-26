@@ -198,7 +198,7 @@ Caso esteja no _MLC, no final também há um link para o commit do backend que e
 
 Na [v4 MLROOT/v4/], os filtros (pesquisa, tags selecionadas, somente valores) só funcionavam no extrato diário. Quando você mudava para o mensal ou anual, eles eram desabilitados e sumiam da interface.
 
-Não mais! Agora você pode aplicar todos os filtros também nos relatórios mensal e anual: digitar um texto de busca, clicar na nuvem de tags, etc. Se bater a dúvida de quais lançamentos estão entrando na conta, basta voltar ao extrato mensal para ver a lista.
+Não mais! Agora você pode aplicar todos os filtros também nos relatórios mensal e anual: digitar um texto de busca, clicar na nuvem de tags, etc. Se bater a dúvida de quais lançamentos estão entrando na conta, basta voltar ao extrato diário para ver a lista.
 
 % - Now all filters are also available in Monthly and Yearly reports. (thanks @denilsonsa, @eeev2011) [r514]
 
