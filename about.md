@@ -55,6 +55,10 @@ I've worked for 7 years with Linux in Conectiva (now [Mandriva](http://www.mandr
 
 > Both books are written in Portuguese.
 
+## My talks
+
+- http://aurelio.net/curso/
+
 ## My articles
 
 - [Bash Shell Quick Reference](http://aurelio.net/articles/shell-reference.html) — Extensive reference for the shell.
