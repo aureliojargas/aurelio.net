@@ -265,9 +265,9 @@
 %!postproc: _ZZ_ID			zz
 
 % txt2tags
-%!postproc: _TXT2TAGS_PATH		http://txt2tags.org/pt/
-%!postproc: _TXT2TAGS_URL		http://txt2tags.org/pt/
-%!postproc: _TXT2TAGS_ROOT		http://txt2tags.org/pt
+%!postproc: _TXT2TAGS_PATH		http://txt2tags.org
+%!postproc: _TXT2TAGS_URL		http://txt2tags.org
+%!postproc: _TXT2TAGS_ROOT		http://txt2tags.org
 %!preproc : _TXT2TAGS_128		/projects/img/icon/128/_TXT2TAGS_ID.png
 %!postproc: _TXT2TAGS_NAME		txt2tags
 %!postproc: _TXT2TAGS_ID		txt2tags
@@ -533,13 +533,13 @@
 
 %%% TODO
 %
-% %!postproc: URL_TXT2TAGSPT 		http://txt2tags.org/pt
+% %!postproc: URL_TXT2TAGSPT 		http://txt2tags.org
 %
 % txt2tags
 % %!preproc: __TAGLINE_EN_TXT2TAGS	Text to HTML, LaTeX, Man page, ...
 % %!preproc: __TAGLINE_PT_TXT2TAGS	Texto para HTML, LaTeX, Man page, ...
 % %!preproc: __URL_EN_TXT2TAGS		http://txt2tags.org
-% %!preproc: __URL_PT_TXT2TAGS		http://txt2tags.org/pt
+% %!preproc: __URL_PT_TXT2TAGS		http://txt2tags.org
 %
 % MoneyLog
 % %!preproc: __TAGLINE_EN_MONEYLOG	Personal finances made real simple

@@ -136,7 +136,7 @@ Agora que tudo está funcionando bem, tenho a liberdade de poder converter uma p
 
 Essa liberdade para mim é crucial, pois o plano de longo (longuíssimo) prazo é converter as páginas mais simples do site estático para o WordPress, facilitando minha manutenção. E se por acaso eu perceber que ficou pior depois da conversão, basta voltar a versão anterior (estática) e pronto. O endereço não muda, todo mundo fica feliz.
 
-Seria legal ter um site 100% WordPress para ficar tudo num lugar só, com o mesmo leiaute, plugins e tudo mais. Mas a maioria das páginas estáticas de meu site são geradas pelo meu programa [txt2tags](http://txt2tags.org/pt/), e ele me traz inúmeras facilidades que não tenho hoje no WordPress, principalmente para documentos técnicos mais complexos.
+Seria legal ter um site 100% WordPress para ficar tudo num lugar só, com o mesmo leiaute, plugins e tudo mais. Mas a maioria das páginas estáticas de meu site são geradas pelo meu programa [txt2tags](http://txt2tags.org), e ele me traz inúmeras facilidades que não tenho hoje no WordPress, principalmente para documentos técnicos mais complexos.
 
 Mas é isso, tá bom do jeito que tá :)
 

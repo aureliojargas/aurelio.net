@@ -97,7 +97,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ### txt2tags
 
-- Site: http://txt2tags.org/pt/
+- Site: http://txt2tags.org
 - Linguagem: Python
 - Interface: Linha de comando, Web e Gráfica
 - Idioma: Português, Inglês e outros

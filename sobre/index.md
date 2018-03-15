@@ -58,7 +58,7 @@ Estar bem na pesquisa é bom porque com isso o site ganha muitas visitas. São m
 
 Com tantas visitas, em 2006 decidi colocar anúncios no site (Google AdSense). Se o visitante clica num anúncio eu ganho alguns centavinhos. Um esquema simples, mas que dá resultado. Foram meses ganhando alguns poucos dólares, mas com o passar dos anos tudo foi aumentando: as visitas e os ganhos. Hoje tenho o privilégio de [ter o site como minha principal fonte de renda](http://aurelio.net/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/).
 
-Nos primórdios eu escrevia as páginas do site na mão, direto em HTML. Em 2001 criei o [txt2tags](http://txt2tags.org/pt/), ferramenta que uso até hoje para fazer o site. Eu escrevo somente o texto e a ferramenta o converte para o formato da Internet.
+Nos primórdios eu escrevia as páginas do site na mão, direto em HTML. Em 2001 criei o [txt2tags](http://txt2tags.org), ferramenta que uso até hoje para fazer o site. Eu escrevo somente o texto e a ferramenta o converte para o formato da Internet.
 
 Em 2011 [meu blog foi integrado com o site](http://aurelio.net/blog/2011/04/13/site-blog-ambos/), tornando-se uma coisa só. Agora conteúdo dinâmico (blog) e estático (site) coexistem debaixo dessa entidade abstrata que me acompanha há tantos anos chamada site pessoal.
 
