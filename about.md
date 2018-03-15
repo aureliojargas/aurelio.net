@@ -23,7 +23,7 @@ Hi, I'm Aurelio Jargas, 40, from [Curitiba city](https://www.google.com/search?q
 [LinkedIn](http://www.linkedin.com/in/aureliojargas) and
 [GitHub](https://github.com/aureliojargas).
 
-My personal interests include nature, waves, mountains, dogs, bike, carveboard, drums and punk rock.
+My personal interests include nature, waves, mountains, dogs, bike, carveboard, drums, punk rock and <a href="https://www.duolingo.com/aureliojargas">languages</a>.
 
 My nerd interests include regex, Unix, Bash, sed, Python, JavaScript, HTML, text files and AppleScript. I enjoy text handling: parse, extract, filter, translate, format. I do follow the [KISS principle](http://en.wikipedia.org/wiki/KISS_principle).
 
