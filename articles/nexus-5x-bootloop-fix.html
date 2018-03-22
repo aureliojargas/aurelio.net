@@ -125,8 +125,12 @@ python disable_cpu_cores.py recovery.img recovery_4c.img
 <p>Run the official Google script to install the base system images to your phone (<em>bootloader</em> and <em>radio</em>):</p>
 
 <pre>
-./flash-base.sh
+PATH="$PWD:$PATH" ./flash-base.sh
 </pre>
+
+<blockquote>
+  <p>The <code>PATH</code> variable is necessary so the script can find the <code>./fastboot</code> file.</p>
+</blockquote>
 
 <p>Now flash all the other images, making sure your are using the <code>_4c</code> version for the <em>boot</em> and <em>recovery</em> images.</p>
 
