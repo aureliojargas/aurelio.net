@@ -28,13 +28,13 @@ Agora em agosto vou tirar férias [do trabalho](http://aurelio.net/blog/2014/11/
 
 Combinamos de fazer um “intensivão”, uma maratona de 5 cursos diferentes em 4 dias:
 
-* 19/08 (Qua) 9h às 18h — [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/)
+* 19/08 (Qua) 9h às 18h — [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/)
 * 20/08 (Qui) 9h às 18h — [Shell Script Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/)
 * 21/08 (Sex) 9h às 18h — [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/)
 * 22/08 (Sáb) 9h às 13h — [Expressões Regulares em Python](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/)
 * 22/08 (Sáb) 14h às 18h — [Expressões Regulares em JavaScript](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-javascript/)
 
-Na quarta, quinta e sexta, serão cursos de um dia inteiro (8 horas). É aquele dia mágico, intenso, em que você começa sabendo zero e termina conhecedor do assunto. Um bom exemplo é o [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/), indicado até para quem nem sabe que bicho é esse. É pra aprender de verdade. No fim do dia, meu objetivo é que todos os alunos, sem exceção, saibam ler e entender uma expressão longa e intimidadora como esta: `((0?[1-9]|1[0-9]|2[0-8])/(0?[1-9]|1[012])|(29|30)/(0?[13-9]|1[012])|31/(0?[13578]|1[02]))/[012][0-9]{3}`. E aí, vamos lá?
+Na quarta, quinta e sexta, serão cursos de um dia inteiro (8 horas). É aquele dia mágico, intenso, em que você começa sabendo zero e termina conhecedor do assunto. Um bom exemplo é o [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/), indicado até para quem nem sabe que bicho é esse. É pra aprender de verdade. No fim do dia, meu objetivo é que todos os alunos, sem exceção, saibam ler e entender uma expressão longa e intimidadora como esta: `((0?[1-9]|1[0-9]|2[0-8])/(0?[1-9]|1[012])|(29|30)/(0?[13-9]|1[012])|31/(0?[13578]|1[02]))/[012][0-9]{3}`. E aí, vamos lá?
 
 Já os cursos de shell, tem o [Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/) que não assume nenhum conhecimento prévio e começa lá do início, ensinando os conceitos básicos do Unix e da linha de comando, e vai progredindo gradativamente, até todos conseguirem fazer seus próprios scripts. Já o outro curso [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/) será mais avançado, um papo de programador para programador, ensinando as peculiaridades do ambiente Unix para programação e o “[jeito shell script](http://aurelio.net/tela-preta/)” de resolver problemas. Indico esse se você já é programador em uma ou mais linguagens, mas ainda não é ninja em Unix.
 

@@ -8,7 +8,7 @@ date: 2015-08-19
 
 Após 7 anos de hiato, voltei a dar cursos nerds. Aproveitei as férias no trabalho e dei cinco cursos diferentes durante quatro dias consecutivos, em São Paulo capital (de 19 a 22/08/2015) no [Centro de Treinamento da Novatec Editora](http://ctnovatec.com.br).
 
-* 19/08/2015 (Qua) 9h às 18h — [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/)
+* 19/08/2015 (Qua) 9h às 18h — [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/)
 * 20/08/2015 (Qui) 9h às 18h — [Shell Script Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/)
 * 21/08/2015 (Sex) 9h às 18h — [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/)
 * 22/08/2015 (Sáb) 9h às 13h — [Expressões Regulares em Python](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/)

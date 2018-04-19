@@ -282,7 +282,7 @@
   duracao: 8
   tema: "Expressões Regulares: Imersão"
   evento: Centro de Treinamento da Novatec
-  # site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+  # site: http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/
   cidade: São Paulo
   estado: SP
   participantes: 18
@@ -428,7 +428,7 @@
   cidade: São Paulo
   estado: SP
   participantes: 17
-  site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+  site: http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/
 
 - data: 2016-09-22
   duracao: 1
@@ -463,5 +463,5 @@
   cidade: São Paulo
   estado: SP
   participantes: 0
-  site: http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-imersao/
+  site: http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/
 
