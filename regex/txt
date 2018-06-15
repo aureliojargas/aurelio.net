@@ -293,7 +293,7 @@ http://www.piazinho.com.br/download/expressoes-regulares-3-tabelas.pdf
 
 --------------------------------------------------
 
-^          início da linha:q
+^          início da linha
 $          fim da linha
 .          qualquer caractere
 .*         qualquer coisa
