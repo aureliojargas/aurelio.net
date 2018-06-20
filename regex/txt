@@ -66,6 +66,27 @@ hipermercado
 ____________Não_
 mercador
 mini
+miniminimercado
+valtermercado
+
+--------------------------------------------------
+
+____________Sim_
+mercado
+minimercado
+supermercado
+hipermercado
+mercados
+minimercados
+supermercados
+hipermercados
+
+____________Não_
+mercador
+mercadoss
+mini
+minis
+miniminimercado
 valtermercado
 
 --------------------------------------------------
@@ -96,19 +117,26 @@ ____________Não_
 oitava-feira
 sexta-
 sextafeira
+sexta--feira
 sexta-feira-feira
+sexta-sexta-feira
 -feira
 feira
 22ª
 1ª
 7ª
+2
 ª
 2-feira
+ª-feira
+2feira
+ªfeira
 aquartado
 sextavado
 
 --------------------------------------------------
 
+____________Sim_
 #000
 #123
 #90a
@@ -120,6 +148,7 @@ sextavado
 #ABCDEF
 #ffffff
 
+____________Não_
 #1
 #12
 #1234
@@ -168,6 +197,7 @@ Desafio:
 
 --------------------------------------------------
 
+____________Sim_
 00:00
 00:01
 01:00
@@ -177,6 +207,7 @@ Desafio:
 19:45
 23:59
 
+____________Não_
 23:60
 23:99
 24:00
@@ -186,6 +217,7 @@ Desafio:
 
 --------------------------------------------------
 
+____________Sim_
 17/02/2015 - Carnaval
 08/03/2015 - Dia Internacional da Mulher
 05/04/2015 - Páscoa
@@ -201,6 +233,7 @@ Desafio:
 28/02/2016
 29/02/2016
 
+____________Não_
 00/00/0000
 30/02/2016
 32/03/2000
@@ -211,6 +244,7 @@ Desafio:
 
 --------------------------------------------------
 
+____________Sim_
 0
 1
 5
@@ -226,6 +260,7 @@ Desafio:
 201
 255
 
+____________Não_
 256
 999
 1000
@@ -235,6 +270,7 @@ Desafio:
 
 --------------------------------------------------
 
+____________Sim_
 0.0.0.0
 8.8.8.8
 10.0.0.1
@@ -244,6 +280,7 @@ Desafio:
 254.199.99.9
 255.255.255.255
 
+____________Não_
 0
 0.0
 0.0.0
@@ -259,6 +296,7 @@ Desafio:
 
 --------------------------------------------------
 
+____________Sim_
 fulano@example.com
 fulano@example.org
 fulano@example.com.br
@@ -269,6 +307,7 @@ fulano-ciclano@example.com.br
 fulano+beltrano@example.com.br
 fulano@example-foo.com.br
 
+____________Não_
 fulano@example.com.foobarbaz
 fulano@example_foo.com
 fulano..ciclano@example.com
@@ -308,5 +347,9 @@ foo|bar    foo ou bar
 +          {1,} -- uma ou mais vezes
 (…)        agrupa
 \          escapa
+??         ? versão não-gulosa
+*?         * versão não-gulosa
++?         + versão não-gulosa
+{}?        {} versão não-gulosa
 
 --------------------------------------------------
