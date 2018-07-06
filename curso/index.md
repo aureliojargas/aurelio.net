@@ -60,8 +60,6 @@ Próximos cursos/palestras que farei:
     </tbody>
 </table>
 
-{% include banner-course-regex.html %}
-
 Já ministrados:
 {% endif %}
 

@@ -8,8 +8,6 @@ hide_ads: true
 article_footer_after: false
 ---
 
-{% include banner-course-regex.html %}
-
 {% include shell-book-banner.html %}
 
 <table class="tableborder">
