@@ -10,6 +10,7 @@ tags: [shell, unix, reference]
   2003-07-09 created, in portuguese
   2011-07-06 translated to english and put in /shell/canivete/en/
   2012-12-19 moved to /articles/shell-reference.html
+  2018-09-25 added more variable expansions: ^ ^^ , ,, ~ ~~
 -->
 
 <div id="toc">
@@ -448,6 +449,30 @@ tags: [shell, unix, reference]
   <tr>
     <td><code>${var/%text/new}</code></td>
     <td>If string ends with 'text', replace 'text' by 'new'</td>
+  </tr>
+  <tr>
+    <td><code>${var^}</code></TD>
+    <td>Uppercase the first character</TD>
+  </tr>
+  <tr>
+    <td><code>${var^^}</code></TD>
+    <td>Uppercase all the characters</TD>
+  </tr>
+  <tr>
+    <td><code>${var,}</code></TD>
+    <td>Lowercase the first character</TD>
+  </tr>
+  <tr>
+    <td><code>${var,,}</code></TD>
+    <td>Lowercase all the characters</TD>
+  </tr>
+  <tr>
+    <td><code>${var~}</code></TD>
+    <td>Reverse the case of the first character</TD>
+  </tr>
+  <tr>
+    <td><code>${var~~}</code></TD>
+    <td>Reverse the case of all the characters</TD>
   </tr>
 </table>
 

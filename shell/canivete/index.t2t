@@ -36,6 +36,7 @@ Desde 2003
 % 24mai2010 s/à partir/a partir/ (valeu Denilson Sá)
 % 05abr2011 Link para o fonte .t2t
 % 06jul2011 Tradução pro inglês por Luiz Miguel Axcar
+% 25set2018 Mais expansões de variáveis: ^ ^^ , ,, ~ ~~
 %
 %-----------------------------------------------------------------------
 %
@@ -173,6 +174,12 @@ Desde 2003
  | ``${var//texto/novo}`` | Substitui 'texto' por 'novo', sempre
  | ``${var/#texto/novo}`` | Se a string começar com 'texto', substitui 'texto' por 'novo'
  | ``${var/%texto/novo}`` | Se a string terminar com 'texto', substitui 'texto' por 'novo'
+ | ``${var^}``            | Converte para maiúscula o primeiro caractere
+ | ``${var^^}``           | Converte para maiúscula todos os caracteres
+ | ``${var,}``            | Converte para minúscula o primeiro caractere
+ | ``${var,,}``           | Converte para minúscula todos os caracteres
+ | ``${var~}``            | Inverte maiúscula/minúscula do primeiro caractere
+ | ``${var~~}``           | Inverte maiúscula/minúscula de todos os caracteres
 
 
 == Blocos e agrupamentos ==[blocos]
