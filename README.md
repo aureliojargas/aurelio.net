@@ -14,32 +14,102 @@ The deploy logs are in https://app.netlify.com/sites/aurelio/deploys.
 
 If you want to test locally the Netlify build, use their [Docker image](https://github.com/netlify/build-image).
 
-## Local build
+## Setup local development
+
+Those are the initial steps for all the platforms:
 
 ```bash
-# Ruby setup (use the following OR rbenv)
+# First enter this repo directory
+cd aurelio.net
+
+# Install Ruby and gem (use the following OR rbenv)
 sudo apt install ruby ruby-dev
 echo 'export GEM_HOME="$HOME/.gem/ruby/2.3.0"' >> ~/.bashrc  # check your ruby version
 echo 'export BUNDLE_PATH="$GEM_HOME"' >> ~/.bashrc
 echo 'export PATH="$GEM_HOME/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 
-# Install the required gems
+# Install bundler and Jekyll required gems
 gem install bundler
 bundle install
 
+# Make sure you have Python 2 (for txt2tags)
+
+# Install http://www.html-tidy.org
+
+# Setup easier access to the repo scripts
+export PATH="$PWD/_scripts:$PATH"
+```
+
+Extra setup for **Codeanywhere**:
+
+```bash
+# Fix locale
+export LANG="C.UTF-8"
+
+# Fix include paths for txt2tags files
+sudo mkdir /a
+sudo ln -s $PWD /a/www
+
+# Python2 for txt2tags
+sudo apt-get install python
+
+# Install rbenv and a recent ruby 2.x
+# https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-8
+```
+
+Extra setup for **Android Termux**:
+
+```bash
+# Install the required packages
+pkg install clang make ruby-dev libffi-dev file
+
+# Python2 for txt2tags
+pkg install python2
+sed '1 s/python/python2/' -i _scripts/txt2tags-2.6.1102
+
+# Fix scripts' shebang
+termux-fix-shebang _scripts/*
+
+# Fix include paths for txt2tags files
+replace -f /a/www/ -t $PWD/ -i include/*/config.t2t
+
+# html-tidy: cannot install nor compile :(
+```
+
+Extra setup for **Chrome OS Linux**:
+
+```bash
+# Install the required packages
+sudo apt install ruby ruby-dev python tidy file
+
+# Fix include paths for txt2tags files
+sudo mkdir /a
+sudo ln -s $PWD /a/www
+```
+
+## Local Jekyll build
+
+```bash
 # Building the site
 bundle exec jekyll build
 
-# Viewing
-bundle exec jekyll serve --watch --limit_posts 10
+# Viewing at local Linux or macOS
+bundle exec jekyll serve --watch --limit_posts 10 --incremental
 
-# Viewing at Cloud9 or Codeanywhere
-bundle exec jekyll serve --watch --limit_posts 10 --port 8080 --host 0.0.0.0
+# Viewing at Chrome OS Linux or Android Termux
+# To get the instance IP address:
+#   - Chrome OS: hostname -I
+#   - Android: ifconfig wlan0
+bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0
+
+# Viewing at Cloud9 or Codeanywhere, port must be 8080
+bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0 --port 8080
 ```
 
 ## Building txt2tags files
 
-All the `.t2t` files on this repository are not processed by Jekyll. They have no front matter and must be converted by hand using the txt2tags script stored in the `_scripts` folder. The resultant HTML files must also be added to the repository.
+All the `.t2t` files on this repository are not processed by Jekyll. They have no front matter and must be converted by hand using the txt2tags script (Python 2) stored in the `_scripts` folder. The resultant HTML files must also be added to the repository.
 
 My long term goal is to convert all those files to Markdown or HTML and remove the txt2tags dependency.
 
@@ -111,56 +181,6 @@ The site template ([_layouts/2014.html](https://github.com/aureliojargas/aurelio
 - `title_prefix: "Foo: "` — To add a prefix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
 
 - `title_suffix: " | Foo"` — To add a suffix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
-
-## Setup local development
-
-Execute those commands from the repository root.
-
-For all platforms:
-
-```bash
-# Easier access to the repo scripts
-export PATH="$PWD/_scripts:$PATH"
-```
-
-Setup for Codeanywhere:
-
-```bash
-# Fix locale
-export LANG="C.UTF-8"
-
-# Fix include paths for txt2tags files
-sudo mkdir /a
-sudo ln -s $PWD /a/www
-
-# Python2 for txt2tags
-sudo apt-get install python
-
-# Install rbenv and a recent ruby 2.x
-# https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-8
-```
-
-Setup for Termux:
-
-```bash
-# Fix scripts' shebang
-termux-fix-shebang _scripts/*
-
-# Python2 for txt2tags
-pkg install python2
-sed '1 s/python/python2/' -i _scripts/txt2tags-2.6.1102
-
-# Fix include paths for txt2tags files
-replace -f /a/www/ -t $PWD/ -i include/*/config.t2t
-
-# Install Jekyll requirements for bundler
-apt install clang make ruby-dev libffi-dev
-
-# Get the public IP for Jekyll serve
-ifconfig wlan0
-
-# html-tidy: cannot install nor compile :(
-```
 
 ## License
 
