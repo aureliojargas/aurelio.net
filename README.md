@@ -17,7 +17,13 @@ If you want to test locally the Netlify build, use their [Docker image](https://
 ## Local build
 
 ```bash
-# Initial setup
+# Ruby setup (use the following OR rbenv)
+sudo apt install ruby ruby-dev
+echo 'export GEM_HOME="$HOME/.gem/ruby/2.3.0"' >> ~/.bashrc  # check your ruby version
+echo 'export BUNDLE_PATH="$GEM_HOME"' >> ~/.bashrc
+echo 'export PATH="$GEM_HOME/bin:$PATH"' >> ~/.bashrc
+
+# Install the required gems
 gem install bundler
 bundle install
 
