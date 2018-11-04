@@ -14,7 +14,7 @@ hide_comments: true
     }
 </style>
 
-![](img/aurelio.jpg)
+![](/img/aurelio.jpg)
 
 Hi, I'm Aurelio Jargas, 41, from [Curitiba city](https://www.google.com/search?q=curitiba&tbm=isch), Brazil. Find me in
 [email](mailto:aurelio@aurelio.net),
