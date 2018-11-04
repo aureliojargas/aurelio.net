@@ -66,6 +66,10 @@ check_relative_urls() {
     grep -r -i -E '(src|href)="[^"]*/\.\./' .
 }
 
+# No http:// for resources (mixed content) - #18
+check_mixed_content() {
+    grep -r -i -F 'src="http://aurelio.net' .
+}
 
 # Grep for <tag foo=bar> instead of <tag foo="bar">
 check_unquoted_attributes() {
@@ -95,6 +99,7 @@ active_checks="
     check_missing_article_date
     check_windows_linebreak
     check_unquoted_attributes
+    check_mixed_content
     check_relative_urls
 "
 
