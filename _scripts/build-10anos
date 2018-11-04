@@ -5,8 +5,8 @@
 cd $(dirname "$0")
 cd ..
 
-# build it
-git grep -l 'include/10anos/config.t2t' |
+detected_files=$(
+    git grep -l 'include/10anos/config.t2t' |
 
     # skip false positives
     grep -v '^_scripts/' |
@@ -15,9 +15,18 @@ git grep -l 'include/10anos/config.t2t' |
 
     # skip those who need custom conversion
     grep -v '^shell/canivete/canivete.conf'
+)
 
-    xargs -n 1 _scripts/txt2tags-2.6.1102
+hardcoded_files="
+    shell/canivete/es/index.t2t
+    shell/canivete/index.t2t
+"
 
-# build the extra pages
-_scripts/txt2tags-2.6.1102 shell/canivete/es/index.t2t
-_scripts/txt2tags-2.6.1102 shell/canivete/index.t2t
+# build it
+echo "$detected_files $hardcoded_files" |
+    grep . |
+    while read file
+    do
+        # echo "Will process $file"  # debug
+        _scripts/txt2tags-2.6.1102 "$file"
+    done
