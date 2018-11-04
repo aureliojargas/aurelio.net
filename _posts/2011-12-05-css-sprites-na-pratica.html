@@ -18,7 +18,7 @@ tags: [site]
 <p>Fiquei indignado ao saber que a página principal do meu site (home) estava levando <strong>inacreditáveis 40 segundos para carregar</strong> completamente! Uma eternidade para a internet.</p>
 <p>Uma das sugestões que a ferramenta me deu para melhorar isso, foi justamente… o CSS Sprites. Tá, você venceu. Não vou mais te ignorar. Bora aprender de vez o que é isso e como implementar.</p>
 <p>Mas antes, deixa eu te mostrar qual era o meu problema. Esta é uma foto da home do meu site, a página lerda:</p>
-<p><img class="aligncenter size-full wp-image-3410" title="Home, Matrix de ícones" src="http://aurelio.net/wp/wp-content/uploads/2011/09/home-matrix.jpg" alt="" width="450" height="350" /></p>
+<p><img class="aligncenter size-full wp-image-3410" title="Home, Matrix de ícones" src="/wp/wp-content/uploads/2011/09/home-matrix.jpg" alt="" width="450" height="350" /></p>
 <p>Tá vendo aquela tabela cheia de ícones ali? São 30 ao todo. Pois é, eu sempre achei que era melhor ter várias imagens pequenas, que o navegador poderia baixar rapidamente cada uma e fazer cache. Na minha cabeça isso era melhor do que uma única imagem enorme com todos aqueles ícones.</p>
 <p><a href="http://yuiblog.com/blog/2006/11/28/performance-research-part-1/">Mas é justo o contrário!</a></p>
 <p>No fim das contas o navegador consegue baixar mais rápido uma única imagem maior do que várias pequenas, pelo fato de que ele não pode abrir muitas conexões simultâneas. O número varia, mas consideremos que é no máximo quatro conexões.</p>
@@ -28,7 +28,7 @@ tags: [site]
 <h2>Ok, e como implementar o CSS Sprites?</h2>
 <p>Nem perca tempo querendo fazer isso “na mão” que já tem várias ferramentas prontas na web. Basta procurar por <a href="http://www.google.com.br/search?q=CSS+Sprites+generator">CSS Sprites generator</a>.</p>
 <p>A que eu mais gostei foi a <a href="http://spritegen.website-performance.org">http://spritegen.website-performance.org</a>. Você coloca todas as imagens dentro de um ZIP (no meu caso, os ícones) e manda para o generator, que te retorna uma única imagem e ainda de brinde já te dá as regras CSS prontinhas para usar.</p>
-<p><a href="http://spritegen.website-performance.org"><img class="aligncenter" title="CSS Sprite Generator" src="http://aurelio.net/wp/wp-content/uploads/2011/09/css-sprite-generator.png" alt="" width="500" height="318" /></a></p>
+<p><a href="http://spritegen.website-performance.org"><img class="aligncenter" title="CSS Sprite Generator" src="/wp/wp-content/uploads/2011/09/css-sprite-generator.png" alt="" width="500" height="318" /></a></p>
 <p>Dê uma olhada lá, há várias opções para você escolher na hora de compor a imagem final, como formato (PNG, JPG, GIF), número de cores e qualidade (ambos importantes para deixar o arquivo pequeno!). Também há opções para as regras do CSS, como adicionar prefixo ou sufixo para cada uma.</p>
 <blockquote><p><strong>Dica:</strong> Para facilitar sua vida, atente para o nome de cada imagem antes de fazer o ZIP, deixe curto e descritivo, pois ele usará os nomes para gerar as regras do CSS.</p></blockquote>
 <p>Usei este site para gerar <a href="http://aurelio.net/img/index-sprites.png">um PNG com todos os meus ícones</a>, e depois passei este PNG no <a title="Usando Smush.it e shell script para otimizar imagens de um site" href="http://aurelio.net/blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/">Smush.it</a> para garantir que ele não fique pesado.</p>

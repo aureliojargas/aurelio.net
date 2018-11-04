@@ -43,18 +43,18 @@ tags: [programador]
 <p>Perdoem-me pelo imperdoável deslize anti-automação, mas essa tarefa eu gosto de fazer “na mão”. Assim sendo, nada melhor do que configurar o editor de textos para destacar em uma cor diferente estes espaços, para que eu possa apagá-los um por um, sem piedade.</p>
 <blockquote><p>Aleluia! Finalmente consegui chegar no assunto do post :)</p></blockquote>
 <h2>TextMate</h2>
-<div id="attachment_3533" class="wp-caption aligncenter" style="width: 406px"><img class="size-full wp-image-3533" title="TextMate highlight blank spaces" src="http://aurelio.net/wp/wp-content/uploads/2012/02/textmate-blanks.png" alt="" width="396" height="305" /><p class="wp-caption-text">Sabe quando você vê uma barata, dá aquele alerta interno e você tem que agir rápido? Tenho uma sensação parecida cada vez que vejo um vermelhinho destes em meus códigos. Apaga! Apaga! Apaga!</p></div>
+<div id="attachment_3533" class="wp-caption aligncenter" style="width: 406px"><img class="size-full wp-image-3533" title="TextMate highlight blank spaces" src="/wp/wp-content/uploads/2012/02/textmate-blanks.png" alt="" width="396" height="305" /><p class="wp-caption-text">Sabe quando você vê uma barata, dá aquele alerta interno e você tem que agir rápido? Tenho uma sensação parecida cada vez que vejo um vermelhinho destes em meus códigos. Apaga! Apaga! Apaga!</p></div>
 <p>Eu uso o TextMate, e é fácil configurá-lo para destacar estes espaços inúteis, usando a expressão regular mágica. Abra o Bundle Editor (⌃⌥⌘B), escolha a linguagem, e encontre o item cinza marcado com a letra L. No conteúdo dele, já no início tem um array chamado patterns. Ali dentro você vai colar as seguintes linhas:</p>
 <pre>{	name = 'invalid.js';
 	match = '^(\t+ | +\t)|[\t ]+$';
 },</pre>
-<p><img class="aligncenter" title="TextMate Bundle Editor - Show blanks" src="http://aurelio.net/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" width="500" height="384"/></p>
+<p><img class="aligncenter" title="TextMate Bundle Editor - Show blanks" src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" width="500" height="384"/></p>
 <p>Aperte o botão Test para salvar, os vermelhinhos já vão aparecer em seus códigos. Você pode fazer isso para outras linguagens, basta repetir o procedimento, trocando js pelo identificador da outra linguagem.</p>
 <h2>Vim</h2>
 <p>Já faz alguns anos que parei de usar o Vim, mas ainda tenho aqui no <a href="http://aurelio.net/doc/dotfiles/vimrc.txt">meu vimrc</a> a linha mágica que eu usava para mostrar os espaços inúteis:</p>
 <pre>" Mostra os espaços em branco inúteis no final da linha
 au BufNewFile,BufRead * syn match brancomala '\s\+$' | hi brancomala ctermbg=red</pre>
-<p><img class="aligncenter" title="Vim highlight blank spaces" src="http://aurelio.net/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="" width="500" height="379" /></p>
+<p><img class="aligncenter" title="Vim highlight blank spaces" src="/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="" width="500" height="379" /></p>
 <p>Fica como lição de casa para o leitor atualizar a expressão regular para também pegar os espaços no meio dos Tabs do início da linha ;)</p>
 <h2>Outros</h2>
 <p>E você, usa algum outro editor de textos?</p>
