@@ -20,7 +20,7 @@ Andamos por tudo, no sobe e desce de ladeiras vimos muitas casas antigas e bem c
 
 Enfim, Ouro Preto é uma cidade que vale a pena conhecer!
 
-![](http://aurelio.net/img/viagem/ouro-preto/noite.jpg)
+![](/img/viagem/ouro-preto/noite.jpg)
 
 
 ## Ida
@@ -43,7 +43,7 @@ O centro da cidade ficava a poucas quadras. Era fim de tarde e saímos à pé pa
 
 Ficamos na **Pousada Tiradentes**, que fica em um prédio bem antigo (e conservado) em frente à Praça Tiradentes. Como eram quatro diárias em baixa temporada, pagamos **R$ 70,00** por dia, o casal. Quarto simples e limpo, café da manhã simples, era o que procurávamos. Localizada no coração do centro da cidade, pegamos o quarto dos fundos, assim não ouvíamos o barulho da praça e ganhamos uma vista animal:
 
-![](http://aurelio.net/img/viagem/ouro-preto/janela.jpg)
+![](/img/viagem/ouro-preto/janela.jpg)
 
 <div class="mog">
 O massa das pousadas é que como são casarões muito antigos, eles não são grandes por dentro. Então, cada pousada tem no máximo uns 7 quartos. E é ótimo assim! Dá um tom intimista pra pousada!
@@ -60,7 +60,7 @@ E isso com o agravante de as ruas serem de pedra (irregulares e escorregadias) e
 O engraçado é que logo que chegamos, ao andar pela rua, tropeçávamos um monte com aquele calçamento irregular. No último dia já conseguíamos subir e descer as ladeiras tranqüilamente, e sem muito esforço. Éramos nativos! E tínhamos academia de graça e ao ar livre.
 </div>
 
-![](http://aurelio.net/img/viagem/ouro-preto/ladeira.jpg)
+![](/img/viagem/ouro-preto/ladeira.jpg)
 
 Por falar em **trânsito**, ele é insano:
 
@@ -78,7 +78,7 @@ A **paisagem** é muito bonita: a cidade é um sobe-desce composto por várias i
 O que chama atenção logo que se chega na cidade, saindo da rodoviária, é o <a href="http://pt.wikipedia.org/wiki/Pico_do_Itacolomi_(Minas_Gerais)">Pico Itacolomi</a>. É muito contrastante ver aquela cidade com um amontoado de casinhas coloridas, sem uma árvore plantada, e gente subindo e descendo ladeiras a todo instante. E ali, no alto e tão perto, um morro tão bonito com uma pedrona. Mais tarde ficamos sabendo que aquele pico era muito importante, pois dali também era retirado o ouro de Ouro Preto! — Atualizado em 14/01/2013: Segundo o Jean Rodrigues (vide comentários), não retiravam ouro do pico.
 </div>
 
-![](http://aurelio.net/img/viagem/ouro-preto/paisagem.jpg)
+![](/img/viagem/ouro-preto/paisagem.jpg)
 
 O **centro histórico** é muito bem preservado. Todas as casas estão restauradas e bem pintadas, é bonito de ver. Disseram-nos que a prefeitura obriga os proprietários a manter as características arquitetônicas das casas, impedindo reformas que as modifiquem. Ruim para eles, bom para nós. Além das casas, há fontes, adornos, muros de pedra e outros componentes que completam o ambiente.
 
@@ -97,13 +97,13 @@ A maioria das igrejas cobra uma **entrada barata** (dois, três reais) dos visit
 Estudantes são abençoados com a lei da meia-entrada!
 </div>
 
-![](http://aurelio.net/img/viagem/ouro-preto/porta.jpg)
+![](/img/viagem/ouro-preto/porta.jpg)
 
 > Curiosidade: O **furto** em igrejas era muito comum, todas as que visitamos em algum ponto o guia fala "aqui tinha um XXX que foi roubado". Uma pena. As igrejas contavam apenas com a proteção divina... Hoje há câmeras e alarmes para evitar os roubos.
 
 É impressionante ver as obras pintadas no teto e entalhadas nas paredes, feitas por gênios como **Aleijadinho** e **Mestre Athayde**, entre outros. Cada igreja levou vários anos para ser construída e outros tantos para ser decorada. Algumas esculturas em madeira foram feitas diretamente no local e são cobertas por lâminas (ou pó) de ouro, dando-lhes um aspecto ainda mais imponente. Algumas pinturas do teto foram feitas no chão e depois suspensas e outras foram pintadas diretamente na "nave" da igreja. [LER](http://aurelio.net/doc/dort.html)? [DORT](http://aurelio.net/doc/dort.html)? Não, que isso, imagina...
 
-![](http://aurelio.net/img/viagem/ouro-preto/igreja.jpg)
+![](/img/viagem/ouro-preto/igreja.jpg)
 
 Das igrejas que vimos destacam-se a **Igreja de São Francisco de Assis** e a **Matriz Nossa Senhora do Pilar** por sua abundância em ouro, prata e obras belíssimas. Por um motivo inverso, outra igreja nos chamou a atenção pela sua simplicidade: **Igreja Nossa Senhora do Rosário dos Pretos**, que foi a igreja construída e freqüentada pelos escravos.
 
@@ -116,7 +116,7 @@ Das igrejas que vimos destacam-se a **Igreja de São Francisco de Assis** e a **
 
 ## Feira de Pedra Sabão
 
-![](http://aurelio.net/img/viagem/ouro-preto/feira.jpg)
+![](/img/viagem/ouro-preto/feira.jpg)
 
 A feira fica a uma quadra da Praça Tiradentes e tem várias bancas onde os artistas locais produzem e vendem seu artesanato. Fora poucas obras feitas de algum outro material, a grande maioria das peças é de pedra sabão.
 
@@ -131,7 +131,7 @@ Dá pra ver muitos artistas esculpindo a pedra na hora, fazendo potes, quadros, 
 
 ## Museu da Inconfidência
 
-![](http://aurelio.net/img/viagem/ouro-preto/museu.jpg)
+![](/img/viagem/ouro-preto/museu.jpg)
 
 Gostamos de visitar o museu (**R$ 6,00**), que fica na Praça Tiradentes* (sempre ela). É um prédio antigo, porém muito bem conservado. Antigamente era uma cadeia e hoje é um museu modernoso.
 
@@ -152,7 +152,7 @@ Hã?
 
 ## Casa dos Contos
 
-![](http://aurelio.net/img/viagem/ouro-preto/contos.jpg)
+![](/img/viagem/ouro-preto/contos.jpg)
 
 Outro lugar que gostamos muito de visitar foi a Casa dos Contos (**R$ 3,00**), um casarão enorme construído para abrigar um único morador e seus 40 escravos, que mantinham tudo funcionando.
 
@@ -179,7 +179,7 @@ Vale mesmo a visita.
 
 ## Mina de Santa Rita
 
-![](http://aurelio.net/img/viagem/ouro-preto/mina.jpg)
+![](/img/viagem/ouro-preto/mina.jpg)
 
 A visita à mina de ouro desativada foi o melhor passeio que fizemos. Uma viagem aos tempos da escravidão e da febre do ouro da "Vila Rica".
 
@@ -187,7 +187,7 @@ Custa **R$ 10,00** por pessoa e vale cada centavo. Um guia acompanhada toda a ex
 
 Antes de entrar, vestimos touca no cabelo e colocamos um **capacete** de peão de obra, para proteger a cabeça. É necessário pois o buraco é pequeno, tivemos que nos agachar em vários trechos.
 
-![](http://aurelio.net/img/viagem/ouro-preto/capacete.jpg)
+![](/img/viagem/ouro-preto/capacete.jpg)
 
 > Cada vez que eu batia o capacete no teto agradecia por ele estar ali, entre a rocha dura e a cabeça de um turista distraído, que parecem atrair-se :)
 
@@ -201,7 +201,7 @@ O guia resolveu fazer uma brincadeira: raspou uma pedra, tirando dali um pouco d
 
 A sensação é de prisão. Nós ali encolhidos, naquele ambiente sem luz natural, sem barulho, sem nada. É fácil imaginar o terror que é ficar preso em um lugar desse. Andamos cerca de **200 metros** mina adentro, até chegar em um trecho onde só podia continuar arrastando-se pelo chão enlameado. Voltamos, e ao ver a luz do dia, que alívio :)
 
-![](http://aurelio.net/img/viagem/ouro-preto/agachado.jpg)
+![](/img/viagem/ouro-preto/agachado.jpg)
 
 Um pouco de história, que ouvimos do guia:
 
@@ -220,19 +220,19 @@ Um pouco de história, que ouvimos do guia:
 O nome Ouro Preto se deve ao fato do ouro lá ser encontrado grudado ao minério de ferro (que é preto... Sério?!). Numa cidadezinha vizinha o ouro era encontrado junto ao quartzo. E nome da cidade é... Ouro Branco!
 </div>
 
-![](http://aurelio.net/img/viagem/ouro-preto/ouro-pedra.jpg)
+![](/img/viagem/ouro-preto/ouro-pedra.jpg)
 
 São muito populares as "**negonas**", bustos de mulheres (de barro, pintados) numa pose como se estivessem debruçadas na janela. De fato, o pessoal gosta de colocá-las nas janelas, de longe parecem gente de verdade.
 
-![](http://aurelio.net/img/viagem/ouro-preto/negona.jpg)
+![](/img/viagem/ouro-preto/negona.jpg)
 
 Há muitas repúblicas de estudantes na cidade (mais de 200), só que para morar em algumas delas, antes o bixo (calouro) precisa passar pelo **trote**. Ele/ela ganha uma placa enorme e ridícula, e deve utilizá-la sempre, em todo lugar que vá. Alguns ainda precisam colocar perucas ou deixar que raspem seus cabelos de maneira "criativa". São vários deles andando pelas ruas, isso já faz parte da cultura local.
 
-![](http://aurelio.net/img/viagem/ouro-preto/bixo.jpg)
+![](/img/viagem/ouro-preto/bixo.jpg)
 
 Ele cheira. Você também? :)
 
-![](http://aurelio.net/img/viagem/ouro-preto/xequinha.jpg)
+![](/img/viagem/ouro-preto/xequinha.jpg)
 
 <div class="mog">
 Vou entregar o Aurelio: ele leu a placa, mas achou normal. Não teve maldade no coração. Só depois entendeu do que eu estava rindo.
@@ -240,7 +240,7 @@ Vou entregar o Aurelio: ele leu a placa, mas achou normal. Não teve maldade no 
 
 **Atualização:** Em janeiro de 2011 o amigo [Osni Passos](http://osnipassos.com/) mandou uma foto recente da placa, que agora deixou de ser uma atração turística:
 
-![](http://aurelio.net/img/viagem/ouro-preto/xequinha2.jpg)
+![](/img/viagem/ouro-preto/xequinha2.jpg)
 
 <div class="mog">
 Outra curiosidade que o Aurelio percebeu num dia que estava sentado na Praça Tiradentes olhando o movimento, é que todo mundo anda de calça lá. Não dá pra entender. Naquele calorão, e a galera de calça.

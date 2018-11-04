@@ -69,7 +69,7 @@ Mesmo depois de descoberto o sexo, ainda levamos mais dois meses pra escolher o 
 
 Escrevemos em alguns post-it os nomes que mais gostávamos (todos dos anos 80) e deixamos ali, na cozinha, para ver todos os dias e ir se acostumando. Aos poucos fomos retirando os nomes que não gostávamos mais tanto assim, e no final o escolhido foi: **Marcelo**.
 
-![](http://aurelio.net/img/blog/marcelo-piazinho.jpg)
+![](/img/blog/marcelo-piazinho.jpg)
 
 <p style="text-align:center;letter-spacing:2em;">👶👶👶👶👶</p>
 
@@ -83,7 +83,7 @@ Nessa mesma época, **eu e a Mog completaremos 10 anos juntos**! O Marcelo será
 [casamento](http://aurelio.net/blog/2011/05/13/casamento/),
 entre [outros](http://aurelio.net/tags/#mog).
 
-![](http://aurelio.net/img/blog/marcelo-ultrassom.jpg)
+![](/img/blog/marcelo-ultrassom.jpg)
 
 - Sei que deve ser coisa de papai babão, mas eu JURO que ele se mexe quando eu coloco [hardcore](http://aurelio.net/musica/) pra tocar. Já tá lá pogando, cara! 🤘
 

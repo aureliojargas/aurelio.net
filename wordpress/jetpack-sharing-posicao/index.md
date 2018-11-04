@@ -3,7 +3,7 @@ date: 2012-04-12
 title: 'WordPress: Jetpack: Mudar a posição dos botões de compartilhamento (sharing)'
 ---
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/04/jetpack-sharing-panel.png)
+![](/wp/wp-content/uploads/2012/04/jetpack-sharing-panel.png)
 
 Quando você usa o plugin [Jetpack](http://jetpack.me) e ativa o módulo Sharing (Compartilhando), no final de seus posts aparecem os botões bacanas do Twitter, Facebook, Google+, entre outros.
 

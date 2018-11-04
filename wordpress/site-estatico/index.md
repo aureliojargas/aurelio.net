@@ -108,7 +108,7 @@ E para que as categorias e tags também fiquem debaixo do /blog, é preciso alte
 
 Também criei uma página [/blog](http://aurelio.net/blog/) no WordPress e a configurei para ser a página principal do blog, aquela onde são listados os posts mais recentes. A página inicial (Home) ficou vazia por enquanto. Veja como fazer esta configuração no menu Configurações → Leitura:
 
-![](http://aurelio.net/img/wp/wp-site-estatico-config.png)
+![](/img/wp/wp-site-estatico-config.png)
 
 
 ## A página principal

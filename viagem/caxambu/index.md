@@ -10,7 +10,7 @@ Em Outubro de 2007, fui para Belo Horizonte dar uma semana de curso de [shell sc
 
 Ambos moramos no Paraná (Matinhos e Curitiba) e eu nunca tinha pisado em Minas. É, não podíamos desperdiçar essa oportunidade. Depois do curso fui até Caxambu para encontrá-la e assim passearmos pela região. Além desse relato que você vai ler agora, também visitamos [Ouro Preto](http://aurelio.net/viagem/ouro-preto/) e [Mariana](http://aurelio.net/viagem/mariana/).
 
-![](http://aurelio.net/img/viagem/caxambu/cadeirinhas.jpg)
+![](/img/viagem/caxambu/cadeirinhas.jpg)
 
 
 ## Ida
@@ -54,13 +54,13 @@ Detalhe: eu estava em Caxambu fazia 5 dias. Desde que cheguei, SÓ choveu. O Aur
 
 Tem a **praça**. É bem cuidada, com bastante árvores e bancos para sentar e papear. Nela tem também um coreto. Tudo estava bem conservado, pintado e limpo. Fomos lá à noite para digerir a janta e apreciar a lua cheia que roubava a cena no céu. Moradores ocupavam outros bancos e o coreto, fazendo o mesmo. É tranqüilo caminhar de noite pela cidade.
 
-![](http://aurelio.net/img/viagem/caxambu/praca.jpg)
+![](/img/viagem/caxambu/praca.jpg)
 
 Tem o **calçadão**. São duas quadras em que os carros não passam, povoadas por bares e restaurantes diversos. Em uma noite fomos lá comer pizza, e outra jantamos em um buffet à vontade ("self-service sem balança" como diriam os mineiros) de comida caseira. Em outra noite, na lanchonete da esquina comemos batata assada, macarrão e panqueca. Comida boa e sem preços abusivos.
 
 Tem as **charretes**. São carroças de madeira enfeitadas e puxadas por cavalos. São bem comuns em cidades pequenas aqui do sul. É o táxi rural dos turistas. Tem desde as menores para duas pessoas até os "microônibus" que levam a família toda. Eu queria ter passeado em uma delas, mas era tudo tão perto que íamos à pé mesmo.
 
-![](http://aurelio.net/img/viagem/caxambu/charrete.jpg)
+![](/img/viagem/caxambu/charrete.jpg)
 
 
 ## Parque das Águas
@@ -73,7 +73,7 @@ Entendeu? Na prática isso quer dizer que você pode tomar **12 tipos** diferent
 Isso é verdade... A maioria tem gosto de ferro, parece chupar prego. Eu nunca chupei um prego, mas deve ser assim...
 </div>
 
-![](http://aurelio.net/img/viagem/caxambu/parque.jpg)
+![](/img/viagem/caxambu/parque.jpg)
 
 Brincadeiras à parte, o parque é imperdível. A entrada custa somente **R$ 3,00** (se for usar a piscina aumenta para R$ 12,00) e você pode levar para casa até 10 litros de água. Tem que trazer as garrafas Pet de casa, ou comprar da tiazinha que vende ali na entrada do parque por um real, e vem com uma alça bacana.
 
@@ -101,7 +101,7 @@ Fora as fontes o parque tem muitas árvores, jardins e um lago, que nos renderam
 O prédio de massagens oferecia diversos tratamentos, desde osteoporose, até acne, por exemplo. Pena que estava fechado. Mas o mais interessante era a fachada, onde se lia: hydroterapia. É, com y mesmo. Pra ver como é novinho o negócio.
 </div>
 
-![](http://aurelio.net/img/viagem/caxambu/tarzan.jpg)
+![](/img/viagem/caxambu/tarzan.jpg)
 
 Mas naquela tarde ensolarada o que mais gostamos foi da **piscina de água mineral** (a maior do mundo, disseram), que usa a água de uma das fontes. Tá, na prática é uma piscina normal. Mas é ou não é chique mergulhar em água mineral? :)
 
@@ -113,7 +113,7 @@ Ignorem a dica. Doeu porque o Aurelio fez cirurgia nos "zóio" um pouco antes...
 
 Tem também um tobogã, que usa água mineral, claro!
 
-![](http://aurelio.net/img/viagem/caxambu/piscina.jpg)
+![](/img/viagem/caxambu/piscina.jpg)
 
 <div class="mog">
 O Aurelio é ninja no tobogã. Eu entalei vergonhosamente.
@@ -128,7 +128,7 @@ Nós gostamos muito de subir morros. Pelo exercício, pela integração com a na
 Além de eu adorar caminhar, tinha mais: eu estava com medo do teleférico. Ele parecia ser muito tosco.
 </div>
 
-![](http://aurelio.net/img/viagem/caxambu/morro.jpg)
+![](/img/viagem/caxambu/morro.jpg)
 
 Nos informamos* e subimos. Foi muito mais fácil do que esperávamos. Para chegar no início da "trilha", seguimos a rua do calçadão até o fim, passando por uma escola (prédio antigo e bonito!). A rua vira à direita passando pelo hospital, depois viramos à esquerda e já vimos a estrada de chão (desativada) que sobe até o topo.
 
@@ -138,7 +138,7 @@ Nos informamos* e subimos. Foi muito mais fácil do que esperávamos. Para chega
 
 Foram **30 minutos** de caminhada lenta, parando para olhar a paisagem e tirar fotos. Pela falta de chuva dos últimos meses, a vegetação estava toda queimada. Uma paisagem triste de ver, ainda mais assim, de perto.
 
-![](http://aurelio.net/img/viagem/caxambu/queimada.jpg)
+![](/img/viagem/caxambu/queimada.jpg)
 
 > Dica para os motorizados: é possível subir de **carro** também, basta pegar a estrada que contorna o morro, por trás.
 
@@ -148,7 +148,7 @@ Confesso que olhando de baixo parece que a subida demora muito. Mas é rapidinho
 
 Do topo tivemos uma **vista** ampla da cidade e das montanhas que a cercam. Estávamos lá apreciando, descansando e comendo frutas, quando vimos uma chuva chegando. Muito interessante isso de ver a chuva por cima. Vimos a coluna de água caindo sobre os morros, e ela estava vindo em nossa direção.
 
-![](http://aurelio.net/img/viagem/caxambu/chuva.jpg)
+![](/img/viagem/caxambu/chuva.jpg)
 
 Entramos na **lanchonete** que tem lá em cima, anexa à estação do teleférico. Beirando à extinção, eles tinham apenas salgadinhos (Cheetos) e bebidas enlatadas. O sanduíche gostoso que esperávamos comer lá, ficou para uma próxima vez :)
 
@@ -170,7 +170,7 @@ Em mais uma das várias "coincidências" que aconteceram nesta viagem, a chuva p
 Apesar do medo inicial, a descida é muito tranqüila. A paisagem é bonita e passamos por cima do Parque, no meio das árvores, sobre o lago, os patinhos. Valeu muito a pena. Meu... E de graça!
 </div>
 
-![](http://aurelio.net/img/viagem/caxambu/teleferico.jpg)
+![](/img/viagem/caxambu/teleferico.jpg)
 
 
 ## Não deu

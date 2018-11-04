@@ -17,7 +17,7 @@ Então vamos lá, para começar entre no site da Eurostar: [www.eurostar.com](ht
 
 Como é sua primeira visita no site, você deve informar qual o seu país de origem. Veja na foto seguinte, ali onde está escrito **Country / Language**, clique e escolha **Brazil / English**.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/01-splash-explicado.jpg)
+![](/wp/wp-content/uploads/2011/08/01-splash-explicado.jpg)
 
 Se você não mora no Brasil, encontre o seu país na lista. Escolher o país correto é importante senão depois pode dar problema na hora da compra das passagens.
 
@@ -25,11 +25,11 @@ Há poucas opções de idioma, então a grande maioria dos países somente terá
 
 Tudo certo? Então agora clique no botão **Go**.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/01-botao-go.png)
+![](/wp/wp-content/uploads/2011/08/01-botao-go.png)
 
 Agora sim, você entrará na página principal do site da Eurostar, que aparecerá em **inglês** e com os preços em **Euros**.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/01-principal-completa-euro.jpg)
+![](/wp/wp-content/uploads/2011/08/01-principal-completa-euro.jpg)
 
 > **Dica:** Se você escolheu o país errado e os preços aparecerem em libras (£) ou outra moeda, será preciso [apagar os cookies de seu navegador](http://www.google.com.br/support/accounts/bin/answer.py?answer=32050) e tentar novamente.
 
@@ -38,7 +38,7 @@ Agora sim, você entrará na página principal do site da Eurostar, que aparecer
 
 Já na tela principal do site da Eurostar é possível informar os dados da viagem para fazer a pesquisa de preços. Veja ali no canto, com o título **Book Online**.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/02-book-online-zoom-explicado.png)
+![](/wp/wp-content/uploads/2011/08/02-book-online-zoom-explicado.png)
 
 É ali que você vai preencher os dados de sua viagem, como origem, destino, data e passageiros. Como você pode ver na foto, eu já preenchi alguns dados: vou pesquisar o preço de uma viagem de ida e volta de dois adultos, saindo de Paris para Londres em 07/10/2011 e voltando de Londres para Paris em 14/10/2011.
 
@@ -49,21 +49,21 @@ Vou detalhar cada um destes campos para você saber exatamente como e o que pree
 
 Cidades de origem e destino. Não é preciso digitar o nome da cidade, pois ao clicar no campo em branco vai aparecer uma lista de opções, então basta você clicar no nome da cidade. Lembre-se que os nomes das cidades são sempre informados em inglês: **London** (Londres) e **Brussels** (Bruxelas).
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/02-lista-cidades-explicado.jpg)
+![](/wp/wp-content/uploads/2011/08/02-lista-cidades-explicado.jpg)
 
 
 ### Departing
 
 Data de partida (ida). Assim como na escolha das cidades, aqui você também não precisará digitar a data. Basta clicar no campo que aparecerá um calendário para você escolher o dia de sua viagem. Se precisar de um mês que não está aparecendo, clique em **Next months** para aparecer os meses seguintes.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/02-calendario-explicado.png)
+![](/wp/wp-content/uploads/2011/08/02-calendario-explicado.png)
 
 
 ### One Way
 
 Se esta é uma viagem somente de ida, marque esta opção. Se for viagem de ida e volta, deixe esta opção desmarcada.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/02-book-online-one-way-explicado.png)
+![](/wp/wp-content/uploads/2011/08/02-book-online-one-way-explicado.png)
 
 > **Diferença no preço**: Viagens só de ida são um pouco mais caras. Por exemplo, em uma simulação que fiz Paris-Londres saiu por €96, quando somente de ida (one way). Ao mudar para ida e volta, no mesmo horário, a ida ficou por €85.
 
@@ -91,14 +91,14 @@ Tudo preenchido? Maravilha!
 
 Confira com atenção todos os dados para ter certeza que sua consulta está correta. Agora basta agora apertar o botão **Search** para ver os preços e horários.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/02-book-online-botao-search.png)
+![](/wp/wp-content/uploads/2011/08/02-book-online-botao-search.png)
 
 
 ## ★ PASSO 3 — Resultado
 
 O resultado de sua pesquisa será uma tabela com todos os horários e preços para a viagem de ida. Os preços da viagem de volta (se for o caso), aparecem em uma tela seguinte, após você apertar o botão **Continue**, lá no final da tabela.
 
-![](http://aurelio.net/wp/wp-content/uploads/2011/08/03-search-resultado-explicado.jpg)
+![](/wp/wp-content/uploads/2011/08/03-search-resultado-explicado.jpg)
 
 Os horários de partida (**Departs**) e chegada (**Arrives**) são sempre locais, levando-se em conta o fuso horário. Assim sendo, como Londres tem um fuso horário diferente do continente (uma hora atrasado), uma viagem Paris-Londres, que tem duração de duas horas, parece durar apenas uma hora ao olhar os horários da tabela. Da mesma maneira, a viagem de volta parecerá ter três horas. Na dúvida confira a terceira coluna da tabela (**Journey time**) que indica a duração real da viagem.
 

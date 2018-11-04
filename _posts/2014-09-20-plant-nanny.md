@@ -19,7 +19,7 @@ Sei que tomar água faz bem pra saúde. Eu queria seguir aquela recomendação c
 
 Tentei alguns métodos, mas o que funcionou pra mim foi o aplicativo [Plant Nanny][] (Android, iOS). Instalei em junho de 2013 e continuo usando até hoje, e graças a ele consigo atingir a meta diária na maioria dos dias.
 
-![](http://aurelio.net/img/blog/plant-nanny.jpg)
+![](/img/blog/plant-nanny.jpg)
 
 No aplicativo, você tem uma planta e deve regá-la várias vezes ao dia, senão ela morre. Para regar a sua planta virtual, você deve tomar água no mundo real e informar a quantidade no app. Bebeu um copo d'água de 200ml? Então você rega a sua plantinha com 200ml. E assim vai, durante o dia, até chegar na meta diária de cerca de 2 litros.
 

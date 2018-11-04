@@ -19,7 +19,7 @@ No outro extremo da **Praia Central**, chamado **Pontal Norte**, fizemos um pass
 
 Passeamos de **Bondindinho**, o colorido ônibus panorâmico para turistas que circula pela praia. Ele vai pela Avenida Atlântica e volta pela Avenida Brasil, mostrando de uma vez a praia, os prédios e as lojas. É um passeio bacana, recomendo! Basta acenar que ele para, e a passagem custa R$3 por pessoa. [Saiba mais sobre o Bondidinho](http://aurelio.net/viagem/balneario-camboriu/bondindinho/).
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/04/bondindinho.jpg)
+![](/wp/wp-content/uploads/2012/04/bondindinho.jpg)
 
 No fim de tarde fomos à **Avenida Brasil** conhecer as lojas. São muitas, várias, diversas, dezenas, arriscaria até dizer, centenas :) Também tem alguns shoppings e um pequeno camelódromo com suas barraquinhas vendendo quinquilharias eletrônicas.
 

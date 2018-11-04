@@ -57,9 +57,9 @@ Quer assistir também? Felizmente essa palestra foi gravada (boa FISL!), então 
 
 Logo após a palestra, rolou uma sessão de autógrafos no meio da feira. A lojinha do FISL, além das camisetas, canecas, mochilas e outros apetrechos, estava vendendo [meus livros](http://aurelio.net/livro/) também.
 
-![](http://aurelio.net/curso/fisl-17/autografo-1.jpg)
+![](/curso/fisl-17/autografo-1.jpg)
 
-![](http://aurelio.net/curso/fisl-17/autografo-2.jpg)
+![](/curso/fisl-17/autografo-2.jpg)
 
 
 ## O evento
@@ -97,7 +97,7 @@ Pior ainda quando o avião vai pro lado errado.
 
 Joinville não é capital (apesar de ser a maior cidade do estado de Santa Catarina), e não tem voo direto pra Porto Alegre. Tem que dar um pulinho lá em São Paulo antes de descer novamente pro sul.
 
-![](http://aurelio.net/curso/fisl-17/trajeto-joi-poa.jpg)
+![](/curso/fisl-17/trajeto-joi-poa.jpg)
 
 
 ## Agradecimentos

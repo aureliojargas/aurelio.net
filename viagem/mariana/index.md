@@ -16,7 +16,7 @@ Um guia nos disse que antigamente Mariana e Ouro Preto tinham uma rixa: o pessoa
 
 Distante apenas **12 Km** de Ouro Preto, é fácil chegar à Mariana de carro, ônibus e até bicicleta. Mas preferimos usar um meio de locomoção mais turístico: a **Maria Fumaça**.
 
-![](http://aurelio.net/img/viagem/mariana/locomotiva.jpg)
+![](/img/viagem/mariana/locomotiva.jpg)
 
 A estação do trem fica lá embaixo, depois do Centro de Convenções. Saindo da Praça Tiradentes, pegamos a rua à esquerda do Museu da Inconfidência e descemos até o final. Deu uns 10 minutos de caminhada tranqüila, ladeira abaixo.
 
@@ -36,7 +36,7 @@ Vou entregar: nós dois, espertos, sentamos do lado esquerdo. E tínhamos que fi
 
 Chegando em Mariana, ficamos impressionados com a **Estação Ferroviária** deles. Tudo limpo e bem pintado, com biblioteca, acesso à Internet e uma espécie de parque de diversões musical. Usando metais que parecem ter sido reaproveitados de pedaços de outros trens, há vários instrumentos musicais que fazem a alegria da criançada (e dos adultos). São vários tons e notas diferentes, tocadas por várias pessoas ao mesmo tempo, um barulho caótico e animado. Não resisti e fiquei lá batucando também, gostei!
 
-![](http://aurelio.net/img/viagem/mariana/musical.jpg)
+![](/img/viagem/mariana/musical.jpg)
 
 
 ## Passeio
@@ -51,7 +51,7 @@ Pegamos o <strong>último</strong> mapa do Terminal Turístico. Nessa hora já d
 
 Passando pela **Rua Direita** pudemos ver vários casarões antigos, todos grudados. No fim da rua tem uma praça (**Praça da Sé**) e a Catedral Basílica Nossa Senhora da Assunção (**Igreja da Sé**). Nessa igreja pegamos um guia que nos contou muitas histórias sobre sua construção e que depois nos acompanhou por um giro pela cidade.
 
-![](http://aurelio.net/img/viagem/mariana/direita.jpg)
+![](/img/viagem/mariana/direita.jpg)
 
 > Curiosidade: A Praça da Sé estava sendo reformada, com a ajuda de arqueólogos. É que como ali era um antigo cemitério, ossos começaram a aparecer durante as obras, então foi tudo embargado e os Indiana Jones brasileiros foram chamados para preservar os achados.
 
@@ -63,13 +63,13 @@ Diferente das igrejas de Ouro Preto, as de Mariana não estão restauradas. É i
 O guia nos explicou que Ouro Preto sempre se preocupou em preservar os casarões e a história da cidade. E por isso foi elevada a Patrimônio Mundial da Humanidade. Já Mariana acabou percebendo isso tarde, então não conseguiu o título mundial, só o nacional. E isso representa menos verba para restaurações e preservação do patrimônio artístico.
 </div>
 
-![](http://aurelio.net/img/viagem/mariana/altar.jpg)
+![](/img/viagem/mariana/altar.jpg)
 
 Depois fomos até a **Antiga Casa de Câmara e Cadeia**, com sua escadaria de pedra e móveis antigos. Esta é uma casa que foi restaurada, deixaram umas "janelas" na parede, onde pudemos ver como elas são por dentro: cheias de barro e restos de madeira.
 
 Atravessando a rua vimos a **Igreja de Nossa Senhora do Carmo**, que segundo o guia foi quase inteiramente destruída por um incêndio (acidental). Como a maioria das pinturas e esculturas originais foram perdidas, artistas locais refizeram a ornamentação da igreja. Como queríamos ver as velharias, não entramos nessa igreja.
 
-![](http://aurelio.net/img/viagem/mariana/igrejas.jpg)
+![](/img/viagem/mariana/igrejas.jpg)
 
 Já ao lado fica a **Igreja de São Francisco de Assis** que é uma das poucas igrejas que ainda guardam sob o assoalho os restos mortais de seus antigos freqüentadores. Entre eles está o autor das belas pinturas de seu teto: **Mestre Athayde**. Há números no chão que indicam os túmulos, o do Athayde está logo na entrada. Por falar em pinturas, em uma delas a caveira que o Santo ?????? segura fica te olhando enquanto você anda pela sala :)
 
@@ -83,7 +83,7 @@ Dali fomos almoçar em um restaurante de comida mineira chamado **Rancho da Pra�
 Dica preciosa: compre frutas durante toda a viagem. A comida mineira é uma delícia, mas é muito gordurosa. Intercalar as coisas gordas e as saudáveis é uma boa. Mas nunca deixe de comer a comida de lá! É barato comer e é uma delícia!
 </div>
 
-![](http://aurelio.net/img/viagem/mariana/almoco.jpg)
+![](/img/viagem/mariana/almoco.jpg)
 
 Para nos recuperarmos da batalha alimentícia, sentamos em um banco da praça e ficamos apreciando a paisagem pacata de uma cidade pequena que ainda não sofre dos males das grandes metrópoles. Famílias inteiras ali descansavam, passeavam, alimentavam os peixes, conversavam alegremente.
 

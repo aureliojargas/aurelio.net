@@ -31,7 +31,7 @@ O coração ♥ está na terceira parte do teclado, que você acessa primeiro to
 
 <!-- http://gifmaker.me, canvas: 268x477, speed: 1000ms -->
 
-![](http://aurelio.net/img/blog/unicode-android.gif)
+![](/img/blog/unicode-android.gif)
 
 Bem, eu tive a paciência de tocar em cada uma das teclas e anotar todos os caracteres que aparecem. Então aqui está, mastigada, a lista completa de todos os símbolos “escondidos” atrás das teclas.
 

@@ -7,7 +7,7 @@ title_prefix: 'EU FUI: '
 
 O Bondindinho é um ônibus para turistas, que circula pela praia de [Balneário Camboriú](http://aurelio.net/viagem/balneario-camboriu/). Andei nele em abril de 2012, e vou contar os detalhes.
 
-[![](http://aurelio.net/wp/wp-content/uploads/2012/04/bondindinho.jpg)](http://shw.onibusecia.fotopages.com/20870238/Bondindinho-05.html)
+[![](/wp/wp-content/uploads/2012/04/bondindinho.jpg)](http://shw.onibusecia.fotopages.com/20870238/Bondindinho-05.html)
 
   * O Bondindinho é na verdade um caminhão que puxa um bonde panorâmico, uma espécie de jardineira.
 
@@ -36,14 +36,14 @@ O Bondindinho é um ônibus para turistas, que circula pela praia de [Balneário
 
 ## Fotos do Bondindinho
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/04/bondindinho-fotos.jpg)
+![](/wp/wp-content/uploads/2012/04/bondindinho-fotos.jpg)
 
 [Veja mais fotos do Bondindinho](https://www.google.com.br/search?q=bondindinho&hl=pt-BR&safe=off&prmd=imvns&tbm=isch&tbo=u&source=univ&sa=X&ei=HHeVT6HKApGbtwforrC2Cw&ved=0CC8QsAQ&biw=999&bih=660&sei=J3eVT87cD8bDgQeyurngBA#hl=pt-BR&safe=off&tbs=itp:photo&tbm=isch&q=bondindinho&revid=0&sa=X&ei=3cmVT8TsKsfyggeEjYHNAQ&ved=0CEQQxw4&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&fp=14c8b58367cb7414&biw=999&bih=660)
 
 
 ## Mapa do trajeto do Bondindinho (itinerário)
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/04/bondindinho-trajeto.png)
+![](/wp/wp-content/uploads/2012/04/bondindinho-trajeto.png)
 
 [Veja este mapa no Google Maps](http://g.co/maps/anuuz)
 

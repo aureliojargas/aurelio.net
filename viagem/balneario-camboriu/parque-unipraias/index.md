@@ -25,7 +25,7 @@ Fomos de carro, mas também é fácil chegar lá pegando o **Bondindinho**, ôni
 
 Lá chegando, vimos de perto os bondinhos "voadores", entrando e saindo da estação, e a ansiedade aumentou. É legal acompanhar com os olhos, lentamente, o longo trajeto dos bondinhos até lá em cima do morro.
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-teleferico-inicio.jpg)
+![](/wp/wp-content/uploads/2012/04/camboriu-teleferico-inicio.jpg)
 
 > O morro é alto, então quem tem medo de altura terá que se preparar psicologicamente para fazer o passeio. Vou dar a dica: encare o medo que o passeio vale a pena!
 
@@ -129,7 +129,7 @@ Além destas atrações, também tem barraquinhas vendendo lanches, água de coc
 
 Ah, somente quando cheguei em casa e fui ver no Google as fotos aéreas deste morro, percebi como fizeram um trabalho exemplar na construção deste parque. Mesmo com todas a atrações (estação do teleférico, trilhas, mirantes, pista de trenó, arvorismo), **a mata continua fechada**:
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/04/parque-unipraias-mata-fechada.jpg)
+![](/wp/wp-content/uploads/2012/04/parque-unipraias-mata-fechada.jpg)
 
 [Veja este mapa no Google Maps](http://maps.google.com.br/maps?q=-27.001612,-48.599889&hl=pt-BR&ll=-27.001775,-48.598237&spn=0.005573,0.00662&sll=-27.001612,-48.599889&sspn=0.005573,0.00662&t=h&z=17)
 

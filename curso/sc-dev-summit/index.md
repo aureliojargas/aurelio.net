@@ -5,7 +5,7 @@ date: 2016-05-21
 worked: 3:30
 ---
 
-![](http://aurelio.net/curso/sc-dev-summit/cartaz.jpg)
+![](/curso/sc-dev-summit/cartaz.jpg)
 
 * Palestra: O poder da linha de comando
 * Evento: [SC Dev Summit](http://scdevsummit.com.br/)
@@ -63,7 +63,7 @@ O assunto linha de comando é vasto e eu poderia [ficar um dia todo falando só 
 
 ## A palestra
 
-![](http://aurelio.net/curso/sc-dev-summit/aurelio.jpg)
+![](/curso/sc-dev-summit/aurelio.jpg)
 
 Felizmente, o evento foi aqui na minha cidade, Joinville. Não precisei me estressar com aeroportos, voos, hotéis e toda a burocracia normalmente envolvida. Que alívio.
 
@@ -73,7 +73,7 @@ O evento foi na Univille, universidade particular que tem uma estrutura excelent
 
 Tinha cerca de 150 pessoas durante minha palestra.
 
-![](http://aurelio.net/curso/sc-dev-summit/publico.jpg)
+![](/curso/sc-dev-summit/publico.jpg)
 
 O início, pra mim, é sempre a pior parte. Fora aquele nervosismozinho besta que sempre dá nos primeiros momentos, eu já quero ir logo pro assunto, que é o que interessa. Assim, a parte de me apresentar, falar um pouco sobre o que faço, sempre sai ruim e esquisita.
 
@@ -86,7 +86,7 @@ Fora a apresentação estranha, dali pra frente tudo fluiu bem. Consegui trazer 
 
 ## A demonstração ao vivo
 
-![](http://aurelio.net/curso/sc-dev-summit/demo.jpg)
+![](/curso/sc-dev-summit/demo.jpg)
 
 Terminados os slides, era a hora de demonstrar ali ao vivo como é usar a linha de comando para resolver problemas, exatamente como faço nos vídeos do [Tela Preta](http://aurelio.net/tela-preta/).
 
@@ -163,14 +163,14 @@ echo $((RANDOM % 999))     # 3 dígitos
 
 Essa é uma foto [lá de 2004](http://aurelio.net/curso/linuxchix/):
 
-![](http://aurelio.net/curso/linuxchix/papeis.jpg)
+![](/curso/linuxchix/papeis.jpg)
 
 E agora repetido doze anos depois, fazendo o pessoal vasculhar suas carteiras:
 
-![](http://aurelio.net/curso/sc-dev-summit/sorteio-1.jpg)
+![](/curso/sc-dev-summit/sorteio-1.jpg)
 
-![](http://aurelio.net/curso/sc-dev-summit/sorteio-2.jpg)
+![](/curso/sc-dev-summit/sorteio-2.jpg)
 
-![](http://aurelio.net/curso/sc-dev-summit/sorteio-3.jpg)
+![](/curso/sc-dev-summit/sorteio-3.jpg)
 
 Doze. Anos. 😮

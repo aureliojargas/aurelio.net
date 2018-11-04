@@ -7,7 +7,7 @@ title_prefix: 'EU FUI: '
 
 Conheci a praia da Lagoinha em Janeiro de 2007. Para chegar lá são duas horas de trilha pelo mato, subindo e descendo a encosta do morro. Vale a pena, realmente a beleza do lugar impressiona. Já no caminho são várias paisagens de encher os olhos, culminando em uma praia ainda selvagem e paradisíaca. Ah sim, com uma lagoinha no meio, é claro :)
 
-![](http://aurelio.net/img/viagem/lagoinha-do-leste/lagoinha.jpg)
+![](/img/viagem/lagoinha-do-leste/lagoinha.jpg)
 
 > "Os turistas a consideram a mais bonita da Ilha. Os moradores do Sul da Ilha garantem que ela é a mais misteriosa de Florianópolis. Os ecologistas a defendem como se fosse a última praia do mundo. Seja qual for a opinião sobre a Lagoinha do Leste, ela é única. A praia ainda preserva as características de quando os primeiros imigrantes aportaram nestas terras. A Lagoinha, como é carinhosamente chamada pelos ilhéus, impressiona seus visitantes com sua beleza, seu ar selvagem e seus mistérios." — Fonte: [Guia Floripa](http://www.guiafloripa.com.br/trilhas/11_lagoinha/lagoinha.html)
 

@@ -66,7 +66,7 @@ Agora você pode copiar os toques para todos os dispositivos que sincronizam com
 
 Conecte seu iPhone ao iTunes (via cabo USB ou Wi-Fi), certifique-se que o item **Sincronizar Toques** está marcado (ligado) e faça a sincronização.
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/05/ringtones-sync.png)
+![](/wp/wp-content/uploads/2012/05/ringtones-sync.png)
 
 
 ## Configurar os toques
@@ -84,7 +84,7 @@ No iPhone, entre em **Ajustes → Sons**. Ali você pode configurar os toques no
 
 Os toques novos aparecerão antes dos toques originais do telefone, todos possuem o prefixo **smb** em seu nome:
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/05/ringtones-iphone.png)
+![](/wp/wp-content/uploads/2012/05/ringtones-iphone.png)
 
 Outro lugar que você pode usar estes toques é nos alarmes do aplicativo **Relógio**. Você pode colocar a música do Super Mario como seu despertador de manhã!
 

@@ -15,7 +15,7 @@ Gosto de moderar comentários no sofá, usando o [aplicativo oficial do WordPres
 
 Então, como fazer para cidade/estado aparecer no app?
 
-![](http://aurelio.net/img/wp/ios-comment-meta.png)
+![](/img/wp/ios-comment-meta.png)
 
 Assim como outros clientes para WordPress, o app para iOS comunica-se com o seu blog usando a [interface XML-RPC](http://codex.wordpress.org/XML-RPC_Support). Eles se conversam, trocando dados pra lá e pra cá. O que temos que fazer é nos metermos no meio da conversa, para quando o iPhone pedir "me dê o conteúdo do comentário número 1234", nosso servidor enfiar os campos Cidade e Estado junto com a resposta.
 

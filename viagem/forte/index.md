@@ -7,11 +7,11 @@ title_prefix: 'EU FUI: '
 
 Eu um raro sábado ensolarado no meio do verão mais chuvoso de todos os tempos, eu e a Mog aproveitamos para passar o final de semana na Praia do Forte, em São Francisco do Sul. É um lugar ainda preservado, com poucas casas e uma paisagem de sonho. Um excelente passeio para quem prefere natureza a asfalto. Lá também tem o Forte Marechal Luz, de 1909, com seus canhões e trincheiras conservados.
 
-![](http://aurelio.net/img/viagem/forte/canhao.jpg)
+![](/img/viagem/forte/canhao.jpg)
 
 Chegar lá foi muito fácil. É só seguir em direção às praias de São Chico pela SC-280, mais especificamente Ubatuba. A Praia do Forte é mais adiante, basta seguir a **estrada** até o final, passando por Itaguaçu, chegando na ponta da ilha.
 
-[![](http://aurelio.net/img/viagem/forte/mapa.jpg)](http://maps.google.com.br/maps/ms?f=q&hl=pt-BR&geocode=&ie=UTF8&msa=0&msid=103982191405517542813.00043e2ea7d818c4f0331&ll=-26.284796,-48.725739&spn=0.652585,0.756683&z=10&om=0)
+[![](/img/viagem/forte/mapa.jpg)](http://maps.google.com.br/maps/ms?f=q&hl=pt-BR&geocode=&ie=UTF8&msa=0&msid=103982191405517542813.00043e2ea7d818c4f0331&ll=-26.284796,-48.725739&spn=0.652585,0.756683&z=10&om=0)
 
 Antes de ir colocar a ponta do dedão do pé direito na areia, precisávamos achar um lugar para ficar. Já na beira-mar tem uma **pousada** chamada [Recanto do Motta](http://www.recantomotta.com.br/), entramos para perguntar o preço e olhar o quarto. Estávamos em dúvida se íamos até a Praia do Capri ali perto ou se ficaríamos no Forte, mas como gostamos da pousada e o preço estava bom, ficamos por ali mesmo.
 
@@ -27,17 +27,17 @@ O passeio obrigatório é **subir o morro** para conhecer a artilharia do Forte.
 
 Lá no topo, uma **vista** privilegiada da região. É possível ver as ilhas próximas, a Praia de Capri, a Baía da Babitonga, o continente, Itapoá e outras praias do sul do Paraná. Do outro lado vimos Enseada e região.
 
-![](http://aurelio.net/img/viagem/forte/vista.jpg)
+![](/img/viagem/forte/vista.jpg)
 
 Há um **mirante** que estava interditado pois "a escada não oferece segurança aos visitantes". É uma escada de metal que estava enferrujada, com alguns degraus faltando. Mesmo assim resolvemos subir, sabe como é a curiosidade né? :)
 
 O problema não foi a escada, mas sim a multidão de **aranhas** que escolheram aquele local semi-abandonado para fazer suas teias. É impressionante, lembrou o filme do Indiana Jones. Muitas teias, muitas aranhas, de todos os tamanhos, uma do lado da outra. A maior preencheria a palma da mão com folga. Elas gostaram dos corrimãos da escada estreita, então tivemos que subir sem encostar em nada, torcendo para que elas ignorassem nossa presença.
 
-![](http://aurelio.net/img/viagem/forte/aranhas.jpg)
+![](/img/viagem/forte/aranhas.jpg)
 
 Depois da adrenalina aracnídea, fomos ver os **canhões** do Forte. Estão todos pintados e bem conservados, alguns com mais de um séculos de existência. No meio do círculo de canhões há **trincheiras** interligadas que dão acesso a todos eles.
 
-![](http://aurelio.net/img/viagem/forte/trincheira.jpg)
+![](/img/viagem/forte/trincheira.jpg)
 
 Também cravado no solo está o **museu** que guarda relíquias militares das décadas passadas. Gostei de alguns instrumentos gigantes que eram usados para calcular e corrigir a rota dos tiros de canhão. Também há fotos, espadas, armas, uniformes, binóculos e outros acessórios de guerra. Ah, convém frisar que o Forte nunca foi utilizado de verdade, pois ninguém nunca tentou invadir a região :)
 

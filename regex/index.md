@@ -467,23 +467,23 @@ Relacionado com o item anterior, aqui está uma explicação de como determinada
 
 ### Nerdson/Hacktoon
 
-[![](http://aurelio.net/regex/img/nerdson93.png)](http://hacktoon.com/grandware/courses/regex/)
+[![](/regex/img/nerdson93.png)](http://hacktoon.com/grandware/courses/regex/)
 
 Aproveite para [visitar o site do Nerdson](http://hacktoon.com/grandware/courses/regex/) e ler o artigo introdutório que acompanha a tirinha original. É de fácil entendimento e mostra vários exemplos de uso das Expressões Regulares.
 
 ### xkcd
 
-[![](http://aurelio.net/regex/img/xkcd.png)](http://xkcd.com/208/)
+[![](/regex/img/xkcd.png)](http://xkcd.com/208/)
 
-[![](http://aurelio.net/regex/img/xkcd-regex-golf.png)](https://xkcd.com/1313/)
+[![](/regex/img/xkcd-regex-golf.png)](https://xkcd.com/1313/)
 
 ### Autor desconhecido
 
-![](http://aurelio.net/regex/img/mastering.jpg)
+![](/regex/img/mastering.jpg)
 
 ### Regex-cruzadas
 
-[![](http://aurelio.net/regex/img/regex-crosswords.png)](http://regexcrossword.com)
+[![](/regex/img/regex-crosswords.png)](http://regexcrossword.com)
 
 E não é que tem dois sites só pra gerar palavras-cruzadas com regex?
 

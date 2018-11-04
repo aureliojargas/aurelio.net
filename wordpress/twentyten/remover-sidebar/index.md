@@ -67,7 +67,7 @@ Não é a solução mais eficiente, mas é a mais simples.
 
 Legal, você conseguiu esconder a sidebar e o que aconteceu? O conteúdo dela sumiu, mas ela continua lá ocupando o mesmo espaço no leiaute. No lugar dela ficou um grande retângulo branco :/
 
-![](http://aurelio.net/img/wp/2010-sidebar-vazia.jpg)
+![](/img/wp/2010-sidebar-vazia.jpg)
 
 Para acabar com este espaço e fazer o conteúdo do post se esticar até a borda direita, basta usar este código em seu style.css:
 
@@ -84,11 +84,11 @@ Bem, já que agora você não tem mais sidebar, é bom também tirar lá da inte
 
 Antes:
 
-![](http://aurelio.net/img/wp/2010-widgets-sidebar-footer.png)
+![](/img/wp/2010-widgets-sidebar-footer.png)
 
 Depois:
 
-![](http://aurelio.net/img/wp/2010-widgets-footer.png)
+![](/img/wp/2010-widgets-footer.png)
 
 Basta colocar o código seguinte no functions.php de seu tema filho e pronto.
 

@@ -27,17 +27,17 @@ Não faz sentido, mas acontece. E pelas estatísticas de acesso ao meu site, con
 
 E o que ¼ das pessoas que acessaram meu site em setembro encontraram? [Um site](http://web.archive.org/web/20140625095047/http://aurelio.net/blog/2014/04/12/meu-cerebro-me-enganou/) não responsivo e não adaptado para telas pequenas, que requer zoom e movimentação constante para conseguir ler o texto e tocar em links.
 
-![](http://aurelio.net/img/blog/mobile-first-antes.png)
+![](/img/blog/mobile-first-antes.png)
 
 Refiz o leiaute do site e hoje ele está mais limpo e bem legível, mesmo em telas pequenas. O zoom não é mais necessário e basta rolar a página para ler o texto. Veja como ficou o mesmo artigo da foto anterior:
 
-![](http://aurelio.net/img/blog/mobile-first-depois.png)
+![](/img/blog/mobile-first-depois.png)
 
 Mas eu não quero falar sobre o leiaute em si, e sim em como cheguei nele. Foi a primeira vez que usei a técnica chamada [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/#page) e gostei muito da experiência.
 
 Tradicionalmente, primeiro você cria o site completo para o desktop (a tela grande) e depois o adapta para telas menores: reorganiza, reformata e até exclui elementos. No mobile first é o contrário. Primeiro você cria o site para a tela pequena do celular, depois o expande para telas maiores.
 
-![](http://aurelio.net/img/blog/mobile-first-desktop-first.png)
+![](/img/blog/mobile-first-desktop-first.png)
 
 Eu pensava assim: “tanto faz do grande pro pequeno ou do pequeno pro grande, no fim das contas dá no mesmo”. Mas que nada, iniciar pelo mobile mudou a concepção do site e foi mais fácil chegar no resultado final para todas as telas.
 
@@ -79,7 +79,7 @@ No meu caso, decidi que a partir de 990 pixels de largura havia espaço suficien
 
 > Está lendo este artigo no tablet? Gire-o agora para ver a diferença. Se você estiver no computador, aumente e diminua a largura da janela do navegador para ver como o site se adapta.
 
-![](http://aurelio.net/img/blog/mobile-first-all.png)
+![](/img/blog/mobile-first-all.png)
 
 Para telas maiores (computador), a partir de 1100 pixels de largura faço outra mudança: o site torna-se centralizado e com uma largura fixa. Afinal, não faz sentido aumentar a largura do texto indefinidamente, pois fica horrível de ler.
 

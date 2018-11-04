@@ -4,7 +4,7 @@ title: Suporte para notebook 13" feito com cano de PVC
 hide_tags: true
 ---
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/08/notebook-suporte-pvc.jpg)
+![](/wp/wp-content/uploads/2012/08/notebook-suporte-pvc.jpg)
 
 O projeto original eu achei [neste site](http://handymidia.com/blog/faca-voce-mesmo-suporte-para-notebook/), porém usei medidas menores nos pedaços de cano, para que ficasse um suporte bem pequeno, sob medida para meu MacBook 13.3" de 2007.
 
@@ -12,7 +12,7 @@ O projeto original eu achei [neste site](http://handymidia.com/blog/faca-voce-me
 
 Estou usando este suporte há uma semana e estou satisfeito. A tela do notebook ficou bem alta, na altura dos meus olhos, ficou mais confortável. E a ponta do cano que sobra na frente ainda pode servir de porta-caneta ;)
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/08/suporte-pvc-frente.jpg)
+![](/wp/wp-content/uploads/2012/08/suporte-pvc-frente.jpg)
 
 
 ## Compre as peças
@@ -31,14 +31,14 @@ Com as peças na mão, basta usar a serrinha amarela para cortar o cano em peda�
 
 Cano cortado, é só encaixar as peças. Faça força para que elas encaixem bem firmes. Não precisa colar!
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/08/suporte-pvc-1.jpg)
+![](/wp/wp-content/uploads/2012/08/suporte-pvc-1.jpg)
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/08/suporte-pvc-2.jpg)
+![](/wp/wp-content/uploads/2012/08/suporte-pvc-2.jpg)
 
 
 ## Serve para o iPad!
 
-![](http://aurelio.net/wp/wp-content/uploads/2012/08/ipad-suporte-pvc.jpg)
+![](/wp/wp-content/uploads/2012/08/ipad-suporte-pvc.jpg)
 
 Se juntar as duas pontas da frente, o seu maravilhoso suporte de canos serve também como um suporte para iPad, esteja ele deitado ou em pé. Fica feio, tosco e brega. Mas na necessidade, serve :)
 

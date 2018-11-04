@@ -5,7 +5,7 @@ date: 2016-09-22
 worked: 2:30
 ---
 
-![](http://aurelio.net/curso/udesc/banner.png)
+![](/curso/udesc/banner.png)
 
 * Palestra: Expressões Regulares
 * Evento: [XVIII Semana da Computação](http://www.semanadacomputacao.joinville.udesc.br)
@@ -35,6 +35,6 @@ Tudo correu bem. Consegui falar o que queria e apesar de ver algumas “pescadas
 
 No final da palestra os organizadores me deram um certificado de participação no evento e uma caneca de presente. Eba! E como já era hora da pausa para o lanche, ainda pude aproveitar uma mesa cheia de guloseimas à vontade. Hooray!
 
-![](http://aurelio.net/curso/udesc/facebook.jpg)
+![](/curso/udesc/facebook.jpg)
 
 Muito obrigado ao pessoal bacana da UDESC pela oportunidade e pela hospitalidade!

@@ -43,7 +43,7 @@ Estava eu [escrevendo meu livro novo](https://twitter.com/oreio/status/471377226
 
 O ideal seria converter somente quando eu salvasse o arquivo, assim não afetaria a performance durante a digitação. Foi exatamente isso que eu pedi ao abrir [este issue](https://github.com/atom/markdown-preview/issues/91):
 
-[![](http://aurelio.net/img/blog/github-reply-30s.png)](https://github.com/atom/markdown-preview/issues/91)
+[![](/img/blog/github-reply-30s.png)](https://github.com/atom/markdown-preview/issues/91)
 
 Olha que inacreditável o que aconteceu: **o responsável pelo plugin me respondeu em 30 segundos**! Trinta. Segundos.
 
@@ -77,7 +77,7 @@ Como a correção era bem simples, decidi fazê-la eu mesmo e enviar para os car
 
 Mais uma vez, fui surpreendido pela rapidez. Em apenas 40 minutos minha correção já tinha sido lida, avaliada e incluída no projeto original. Pense nisso, menos de uma hora!
 
-[![](http://aurelio.net/img/blog/gitlab-merge-40min.png)](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/447)
+[![](/img/blog/gitlab-merge-40min.png)](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/447)
 
 Fiquei bastante impressionado e empolgado com a resposta rápida, então fiz o que qualquer homem de família respeitável faria nessa hora: [contei sobre o ocorrido no twitter](https://twitter.com/oreio/status/580490368522825728) :) Uma hora depois, veio outra surpresa:
 

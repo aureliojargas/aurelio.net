@@ -34,29 +34,29 @@ Como posso afirmar isso? Porque vi acontecendo na minha frente, várias vezes, n
 
 Para ter algum tipo de métrica, no início do curso eu peço para cada aluno dar uma nota de zero a dez para o que ele/ela julga ser o seu conhecimento atual em expressões regulares. No fim do curso, mesma pergunta. Meu objetivo é que todos saiam melhores do que entraram, e felizmente isso sempre aconteceu.
 
-![](http://aurelio.net/curso/novatec-2/notas.jpg)
+![](/curso/novatec-2/notas.jpg)
 
 Em geral, no final do curso, todos já estão tão imersos no assunto, que surgem discussões abstratas sobre eficiência ou qual a melhor maneira de fazer uma expressão complexa, como a do IP ou a da data.
 
 > Qualquer um que entre na sala nesse momento, ficará chocado com o “papo de louco” :)
 
-![](http://aurelio.net/curso/sdsl-3/quadro.jpg)
+![](/curso/sdsl-3/quadro.jpg)
 
 Pra mim, é muito gratificante perceber essa enorme evolução em tão pouco tempo. Ter essa confirmação de que consegui passar esse conhecimento adiante, e que agora mais pessoas poderão usufruir dos benefícios das expressões, e quem sabe no futuro também passar isso adiante.
 
-[![](http://aurelio.net/curso/sdsl-2/img/turma-er.jpg)](http://aurelio.net/curso/sdsl-2/)
+[![](/curso/sdsl-2/img/turma-er.jpg)](http://aurelio.net/curso/sdsl-2/)
 
-[![](http://aurelio.net/curso/sucesu/sucesu-seder-turma.jpg)](http://aurelio.net/curso/sucesu/)
+[![](/curso/sucesu/sucesu-seder-turma.jpg)](http://aurelio.net/curso/sucesu/)
 
-[![](http://aurelio.net/curso/scsl/turma-er1.jpg)](http://aurelio.net/curso/scsl/)
+[![](/curso/scsl/turma-er1.jpg)](http://aurelio.net/curso/scsl/)
 
-[![](http://aurelio.net/curso/sdsl-3/turma-quadro.jpg)](http://aurelio.net/curso/sdsl-3/)
+[![](/curso/sdsl-3/turma-quadro.jpg)](http://aurelio.net/curso/sdsl-3/)
 
-[![](http://aurelio.net/curso/novatec-1/turma-regex.jpg)](http://aurelio.net/curso/novatec-1/)
+[![](/curso/novatec-1/turma-regex.jpg)](http://aurelio.net/curso/novatec-1/)
 
-[![](http://aurelio.net/curso/novatec-2/turma-800.jpg)](http://aurelio.net/curso/novatec-2/)
+[![](/curso/novatec-2/turma-800.jpg)](http://aurelio.net/curso/novatec-2/)
 
-[![](http://aurelio.net/curso/novatec-3/turma-800.jpg)](http://aurelio.net/curso/novatec-3/turma.jpg)
+[![](/curso/novatec-3/turma-800.jpg)](http://aurelio.net/curso/novatec-3/turma.jpg)
 
 Quer aprender também? [Veja as datas dos próximos cursos](http://aurelio.net/curso/).
 
