@@ -59,27 +59,27 @@ article_footer_after: false
 
 <table class="livros">
     <tr>
-        <td><a href="http://www.piazinho.com.br"><img src="http://aurelio.net/img/icon/128/livroregex5.png"></a></td>
+        <td><a href="http://www.piazinho.com.br"><img src="/img/icon/128/livroregex5.png"></a></td>
         <td><a href="http://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a><br><br>Livro de 248 páginas lançado em fevereiro de 2016, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Está à venda na maioria das livrarias do país, na versão impressa <b>e também em e-book</b> (livro digital). ISBN: 978-85-7522-474-8</td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed4/"><img src="http://aurelio.net/img/icon/128/livroregex4.png"></a></td>
+        <td><a href="http://www.piazinho.com.br/ed4/"><img src="/img/icon/128/livroregex4.png"></a></td>
         <td><a href="http://www.piazinho.com.br/ed4/">Expressões Regulares - Uma abordagem divertida (4ª edição)</a><br><br>Livro de 224 páginas lançado em novembro de 2012, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-337-6 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed3/"><img src="http://aurelio.net/img/icon/128/livroregex3.png"></a></td>
+        <td><a href="http://www.piazinho.com.br/ed3/"><img src="/img/icon/128/livroregex3.png"></a></td>
         <td><a href="http://www.piazinho.com.br/ed3/">Expressões Regulares - Uma abordagem divertida (3ª edição)</a><br><br>Livro de 208 páginas lançado em outubro de 2009, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-212-6 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed2/"><img src="http://aurelio.net/img/icon/128/livroregex2.png"></a></td>
+        <td><a href="http://www.piazinho.com.br/ed2/"><img src="/img/icon/128/livroregex2.png"></a></td>
         <td><a href="http://www.piazinho.com.br/ed2/">Expressões Regulares - Uma abordagem divertida (2ª edição)</a><br><br>Livro de 168 páginas lançado em 2008, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-173-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed1/"><img src="http://aurelio.net/img/icon/128/livroregex1.png"></a></td>
+        <td><a href="http://www.piazinho.com.br/ed1/"><img src="/img/icon/128/livroregex1.png"></a></td>
         <td><a href="http://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br><br> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://aurelio.net/regex/guia/"><img src="http://aurelio.net/img/icon/128/guiaregex.png"></a></td>
+        <td><a href="http://aurelio.net/regex/guia/"><img src="/img/icon/128/guiaregex.png"></a></td>
         <td><a href="http://aurelio.net/regex/guia/">Expressões Regulares - Guia de Consulta Rápida</a> — <a href="http://aurelio.net/regex/guia/">LEIA ONLINE</a><br><br>Livro de 96 páginas lançado em 2001, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Tem o formato "de bolso", fácil de carregar. Também pode ser <a href="http://aurelio.net/regex/guia/">consultado integral e gratuitamente na Internet</a>. ISBN: 85-7522-011-X <b>[ESGOTADO]</b></td>
     </tr>
 </table>
