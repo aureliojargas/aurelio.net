@@ -62,7 +62,7 @@ Extra setup for **Android Termux**:
 
 ```bash
 # Install the required packages
-pkg install clang make ruby-dev libffi-dev file
+pkg install ruby ruby-dev clang make libffi-dev file
 
 # Python2 for txt2tags
 pkg install python2
