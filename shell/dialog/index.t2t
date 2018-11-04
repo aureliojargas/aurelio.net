@@ -30,7 +30,7 @@ _MYNAME
 %!postproc: '<h2>(Dialog --tudo)</h2>'	<h1>\1</h1>
 %!postproc: '<h3>(Aurelio .*)</h3>'	<h2>\1</h2>
 
-''' <div style="width:620px; margin:0 auto 2em auto;"><a href="http://www.piazinho.com.br/"><img src="http://aurelio.net/img/banner-piazinho4.png" style="padding:0;border:1px solid black;"></a></div>
+''' <div style="width:620px; margin:0 auto 2em auto;"><a href="http://www.piazinho.com.br/"><img src="/img/banner-piazinho4.png" style="padding:0;border:1px solid black;"></a></div>
 
 ''' <div class="banner">
 | [[_LIVROSHELL_128] _LIVROSHELL_URL] | Este artigo sobre o Dialog é um resumo do capítulo 11  do meu livro [_LIVROSHELL_NAME _LIVROSHELL_URL]. O livro é enorme, são quase 500 páginas de puro shell, explicado de maneira clara e didática. Você vai dominar o assunto, além de aprender a escrever programas de verdade em vez de meros scripts toscos. Sou escritor e ganho a vida com meus livros, então comprando o livro você também me ajuda a manter esse site no ar e assim eu continuo escrevendo para você ler. Combinado? :) |
