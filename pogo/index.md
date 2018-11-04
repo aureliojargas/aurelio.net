@@ -20,7 +20,7 @@ Essa é a "**Roda de Pogo**" (pronuncia-se _pôgo_), também chamada de "**Roda 
   * A etiqueta do pogo
   * O fim
 
-![Pogo no show do Cólera](http://aurelio.net/musica/img/colera.jpg)
+![Pogo no show do Cólera](/musica/img/colera.jpg)
 
 
 ## O ambiente, vazio
@@ -68,7 +68,7 @@ Pogar é simplesmente "dançar" num contexto punk. O termo "poguear" também pod
 
 O pogo clássico foi eternizado com o desenho da banda Circle Jerks:
 
-![O pogo clássico](http://aurelio.net/musica/img/pogando.jpg)
+![O pogo clássico](/musica/img/pogando.jpg)
 
 O movimento é o seguinte: você anda, dando os passos no ritmo da música. A cada passo, a perna é levantada e esticada, dando-se um chute no ar, como se estivesse chutando uma bola de futebol. Um chute médio, nem fraco nem forte.
 

@@ -48,7 +48,7 @@ Uma semana antes fizemos uma prévia, saindo do Parque Barigüi e indo até a en
 
 Por falar em marchas, a minha bicicleta tem uma peculiaridade: ela não tem marchas. Também não tem amortecedor, banco de gel e outras frescuras que essas bicicletas novas trazem. Pode-se dizer que é uma autêntica bike "das antigas".
 
-![Como diz minha amiga Fabíola: uma mistura brega de bicicleta de pedreiro e Ceci](http://aurelio.net/foto/tosco/bike.jpg)
+![Como diz minha amiga Fabíola: uma mistura brega de bicicleta de pedreiro e Ceci](/foto/tosco/bike.jpg)
 
 Eu não gosto de marchas, minha bike é uma tipo Barra Forte, com garupa, banco confortável de molas e freio de tambor (no pé). Ela tem um guidão especial, tipo de moto que é alto e largo, podendo ficar com a coluna reta enquanto pedala. Ela foi comprada em Balneário Camboriú. "Coisa de catarina", como dizemos por aqui :)
 
@@ -59,11 +59,11 @@ Domingo de manhã. Frio, ameaça de chuva. Parte do grupo sai do Barigüi e outr
 
 Saímos daqui de casa eu e o Gabriel às 08:00. Levamos 45 minutos para cruzar a cidade (Oeste → Leste) do Parque Barigüi até o ponto de encontro, sendo os primeiros 12 Km da viagem.
 
-![Aurelio e Gabriel no início da estrada](http://aurelio.net/img/viagem/matinhos-bike-2004/inicio.jpg)
+![Aurelio e Gabriel no início da estrada](/img/viagem/matinhos-bike-2004/inicio.jpg)
 
 Poucos minutos depois chegou o resto do comboio e tiramos a foto oficial da "largada".
 
-![Largada: Roberval, Nata, Edenilson, Gabriel, Aurelio](http://aurelio.net/img/viagem/matinhos-bike-2004/largada.jpg)
+![Largada: Roberval, Nata, Edenilson, Gabriel, Aurelio](/img/viagem/matinhos-bike-2004/largada.jpg)
 
 Saímos na empolgação, mas em velocidade normal de cruzeiro. A idéia é fazer um grande passeio, não se arrebentar para chegar logo.
 
@@ -81,15 +81,15 @@ Já no pé da serra, paramos na lanchonete Bela Vista para o almoço. Essas lanc
 
 A parada foi um alívio pois as mãos no guidão já estavam roxas de frio, e o pé ensopado. Há uma bica na entrada da lanchonete e ali nos lavamos e limpamos o barro acumulado até então. Já dentro do local, comemos sanduíches e chocomilks aquecidos.
 
-![Metade do caminho: ensopados e sujos, a chuva deu uma trégua](http://aurelio.net/img/viagem/matinhos-bike-2004/belavista.jpg)
+![Metade do caminho: ensopados e sujos, a chuva deu uma trégua](/img/viagem/matinhos-bike-2004/belavista.jpg)
 
 Saímos da lanchonete e a chuva felizmente havia parado. De ânimos renovados, continuamos a viagem. Como a serra terminou, começou o show de retas. O sol até apareceu durante alguns minutos, mas depois tudo foi ficando cinza novamente.
 
-![Quer bananas?](http://aurelio.net/img/viagem/matinhos-bike-2004/bananas.jpg)
+![Quer bananas?](/img/viagem/matinhos-bike-2004/bananas.jpg)
 
 Mais uma parada em outra banca da estrada. Lá compramos uma penca de banana ouro e comemos um monte. Ao voltar às bikes, uma surpresa: meu pneu traseiro estava completamente murcho :( Na dúvida se ele tinha furado ou não, o enchemos e continuamos a pedalar. Em pouco tempo ele havia murchado novamente e foi preciso mais três enchidas até chegarmos no SAU (posto de atendimento do pedágio), que tinha uma borracharia na frente.
 
-![Ufa, estamos quase chegando na Alexandra-Matinhos](http://aurelio.net/img/viagem/matinhos-bike-2004/meio.jpg)
+![Ufa, estamos quase chegando na Alexandra-Matinhos](/img/viagem/matinhos-bike-2004/meio.jpg)
 
 Foram 40 longos minutos para o furo ser consertado e dali para frente começava o trecho mais temido: a estrada Alexandra-Matinhos, com suas retas intermináveis e a pista sem acostamento. Para piorar, a chuva voltou. Ah, e o banco da bicicleta que era tão confortável no início, já estava insuportável, doía tudo.
 
@@ -99,7 +99,7 @@ Mais uma parada em outra banca para descansar e tomar uma água de côco. Voltam
 
 Conversa rápida, elas foram embora e continuamos a pedalada do trecho final. Aí já não tinha mais segredo: a placa clássica de chegada em Matinhos, a rodoviária, o centro e finalmente a avenida beira-mar e a visão do oceano.
 
-![Chegamos! Nunca demorou tanto para ver o mar, mas valeu!](http://aurelio.net/img/viagem/matinhos-bike-2004/praia.jpg)
+![Chegamos! Nunca demorou tanto para ver o mar, mas valeu!](/img/viagem/matinhos-bike-2004/praia.jpg)
 
 Quando chegamos na praia eram 18:00, 10 horas após o início da jornada em Curitiba. A bicicleta do Gabriel tinha velocímetro e odômetro, ficando o total percorrido em exatos 120 Km, da porta de casa à beira-mar.
 

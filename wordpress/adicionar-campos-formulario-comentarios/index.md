@@ -16,7 +16,7 @@ Há quatro passos a serem executados:
 
 Nos exemplos seguintes, vou mostrar como adicionar dois campos ao formulário: cidade e estado. Para ficar mais elegante, o campo Estado será um menu que lista todos os estados brasileiros. Assim:
 
-![Formulário WordPress com campos para Cidade e Estado](http://aurelio.net/img/wp/formulario-cidade-estado.png)
+![Formulário WordPress com campos para Cidade e Estado](/img/wp/formulario-cidade-estado.png)
 
 
 ## Passo 1 - Adicionar o campo no formulário

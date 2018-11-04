@@ -9,7 +9,7 @@ Em abril de 2012, passamos um ótimo final de semana em Balneário Camboriú.
 
 Começamos com uma volta de carro pela **Avenida Atlântica**, desde lá na ponta, na **Barra Sul**. Como qualquer novato na cidade, ficamos impressionados com os prédios gigantes (e fininhos) à beira-mar, alguns chegando perto dos 50 andares. Aqui em Joinville, é raro ver um prédio de 20 andares...
 
-![Foto: http://www.leoneconstrutora.com.br/site/balneario-camboriu/](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-predios.jpg)
+![Foto: http://www.leoneconstrutora.com.br/site/balneario-camboriu/](/wp/wp-content/uploads/2012/04/camboriu-predios.jpg)
 
 Vimos muitos carros importados e caros circulando também, parece que a cidade atrai gente com bastante dinheiro. Como este não é o nosso caso, ficamos apenas olhando :)
 
@@ -29,7 +29,7 @@ Muitas pessoas na rua. Era sábado, mas o trânsito estava intenso. Nas calçada
 
 No dia seguinte, um domingo de sol forte, aproveitamos para curtir a natureza.
 
-![Foto: Marlon Gaspar http://www.flickr.com/photos/marlonflp/3229769040/](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-brava.jpg)
+![Foto: Marlon Gaspar http://www.flickr.com/photos/marlonflp/3229769040/](/wp/wp-content/uploads/2012/04/camboriu-brava.jpg)
 
 Fomos ao **Morro do Careca**, local preferido dos praticantes de voo livre da região. É bem fácil chegar lá, basta vir pela Avenida Atlântica e continuar sempre reto, mesmo quando a praia "acabar". Você vai subir e descer um morrinho, aí basta virar a primeira à direita e logo a direita mais uma vez. A estrada que leva até o topo do morro está toda asfaltada, ficou muito boa.
 
@@ -39,7 +39,7 @@ A vista de cima do morro é linda, de um lado a orla da Praia Central, do outro 
 
 Depois fomos ao outro extremo da praia, na Barra Sul, para pegar o **teleférico** e conhecer o **Parque Unipraias** e a **Praia de Laranjeiras**. Este é outro passeio incrível, que recomendo fortemente. Escrevi um relato completo desse passeio, com informações sobre o bondinho, sobre as atrações no topo do morro (trilhas, mirantes, trenó de montanha, arvorismo) e a Praia de Laranjeiras, confira: [Teleférico Camboriú-Laranjeiras – Parque Unipraias](http://aurelio.net/viagem/balneario-camboriu/parque-unipraias/).
 
-![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-teleferico-subida.jpg)
+![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](/wp/wp-content/uploads/2012/04/camboriu-teleferico-subida.jpg)
 
 Na volta já era fim de tarde, então só deu tempo de passear de carro pela **Avenida Interpraias** e dar uma espiada em: Praia de Taquarinhas, Praia de Taquaras, Praia do Pinho (a dos peladões! :), Praia do Estaleiro e Praia do Estaleirinho.
 

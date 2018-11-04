@@ -16,7 +16,7 @@ Nunca tinha ido lá, mas gostei e recomendo. A estrutura é muito boa, com vári
 
 ## Reencontrando os amigos
 
-![Fejão, Aurelio, Nissin, Daniel](http://aurelio.net/img/blog/correria-2016.jpg)
+![Fejão, Aurelio, Nissin, Daniel](/img/blog/correria-2016.jpg)
 
 Eu não via os caras desde nosso último ensaio em 2014. Como é bom rever os amigos, dar aquele abraço apertado e ter aquela sensação que nem passou tanto tempo assim. Continuamos com uma ligação forte independentemente da distância. Somos amigos há mais de 20 anos. O Nissin (guitarra) conheço desde a adolescência e o Fejão (baixo, vocal) e o Daniel (guitarra) desde o CEFET-PR (hoje UTFPR).
 

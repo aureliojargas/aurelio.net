@@ -11,7 +11,7 @@ No meio do caminho, lá no topo do morro, dá pra descer do bondinho e curtir as
 
 É um passeio completo, que pode ocupar o dia todo se for bem aproveitado. E foi isso o que fizemos. Era um domingo de sol, nenhuma nuvem no céu, um dia perfeito para curtir a natureza.
 
-![Foto: http://www.youhooo.com.br/sobre-o-youhooo.php](http://aurelio.net/wp/wp-content/uploads/2012/04/mapa-parque-unipraias.jpg)
+![Foto: http://www.youhooo.com.br/sobre-o-youhooo.php](/wp/wp-content/uploads/2012/04/mapa-parque-unipraias.jpg)
 
 
 ## Como chegar
@@ -35,11 +35,11 @@ Já de cara, percebemos como é **tudo muito moderno e bem cuidado**, passa aque
 
 Logo na entrada da estação tem a bilheteria. **Pagamos R$30 por pessoa**. Minha mãe pagou R$15 por ter mais de 60 anos. Esse preço já inclui a ida e a volta, só cuide para não perder o bilhete (ticket)!
 
-![Instruções na parte de trás do bilhete](http://aurelio.net/wp/wp-content/uploads/2012/04/unipraias-bilhete.jpg)
+![Instruções na parte de trás do bilhete](/wp/wp-content/uploads/2012/04/unipraias-bilhete.jpg)
 
 Com o bilhete na mão, subimos a escada e demos de cara com a área de embarque. É impressionante. Uma espécie de roldana gigante, que gira continuamente, movimentando o cabo de aço que sustenta e movimenta todos os 47 bondinhos.
 
-![Foto: Marcelo Miziara https://picasaweb.google.com/lh/photo/9nxjlbno6t06QTKbty33Fw"](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-teleferico-embarque.jpg)
+![Foto: Marcelo Miziara https://picasaweb.google.com/lh/photo/9nxjlbno6t06QTKbty33Fw"](/wp/wp-content/uploads/2012/04/camboriu-teleferico-embarque.jpg)
 
 Dentro desta área de embarque, os bondinhos diminuem a velocidade, para permitir que as pessoas entrem e saiam. Ele não chega a parar, mas vai devagar o suficiente para você poder entrar tranquilamente.
 
@@ -56,7 +56,7 @@ Depois que você entra no bondinho, a porta fecha automaticamente e ele inicia o
 
 ## Subindo o morro
 
-![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-teleferico-subida.jpg)
+![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](/wp/wp-content/uploads/2012/04/camboriu-teleferico-subida.jpg)
 
 Já na saída da estação você passa sobre o rio. É bom para olhar de cima as pessoas, as casas e os barcos, numa altura ainda baixa. É um aquecimento para a grande subida que está por vir.
 
@@ -74,7 +74,7 @@ Ele parou uma vez durante a nossa subida. Não é uma parada súbita, ele freia 
 
 Quanto mais o bondinho sobe, melhor fica a vista. A Barra Sul vai ficando pequena e você vê bem o rio à esquerda, e toda a orla da praia com seus prédio enormes à direita. É lindo!
 
-![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-vista-barra-sul.jpg)
+![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](/wp/wp-content/uploads/2012/04/camboriu-vista-barra-sul.jpg)
 
 Eu não marquei o tempo que leva a subida, mas acho que deu uns 5 minutos.
 
@@ -99,7 +99,7 @@ Aqui foi um quarto do trajeto. Depois iremos descer o morro até Laranjeiras par
 
 Pelas trilhas chegamos até os **dois mirantes**. Um que mostra a praia central de Balneário Camboriú, que é a mesma vista que tivemos durante a subida do teleférico, porém mais ampla. O outro mirante mostra o outro lado: a belíssima praia de Laranjeiras. Vale a pena ir até estes mirantes, tirar lindas fotos e contemplar a paisagem.
 
-![Vista da Praia de Laranjeiras](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-vista-laranjeiras.jpg)
+![Vista da Praia de Laranjeiras](/wp/wp-content/uploads/2012/04/camboriu-vista-laranjeiras.jpg)
 
 Pelas trilhas também conhecemos outras atrações menores: **Casa do Chocolate**, que estava com o Coelhinho da Páscoa, e o **Oratório**, que tem uma estátua de bronze e uma máquina com velas "eletrônicas" que acendem se você colocar uma moedinha.
 
@@ -107,7 +107,7 @@ Passeando pelas trilhas, ouvíamos os gritos das pessoas que desciam com os carr
 
 Certos trechos da pista do trenó passam rente às trilhas de caminhada, então íamos acompanhando os carrinhos passando. Aí não tem jeito, bate a vontade de brincar no trenó também. Quando saímos da trilha, fomos direto à bilheteria comprar os ingressos para o trenó.
 
-![Trenó de montanha — Foto: http://www.unipraias.com.br/estacao-mata-atlantica.php](http://aurelio.net/wp/wp-content/uploads/2012/04/camboriu-treno.jpg)
+![Trenó de montanha — Foto: http://www.unipraias.com.br/estacao-mata-atlantica.php](/wp/wp-content/uploads/2012/04/camboriu-treno.jpg)
 
 Cabem duas pessoas em cada trenó, mas se quiser você pode descer sozinho também. O preço era R$15 solo e R$25 em dupla, aceitam cartão de crédito. Compramos o nosso ingresso duplo e fomos empolgados até a área de saída dos trenós. Mas ali, tivemos uma decepção: uma fila grande :(
 

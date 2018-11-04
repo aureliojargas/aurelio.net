@@ -19,4 +19,4 @@ A tabela completa com todos os horários de saída e chegada de Londres, Bruxela
 
 Sendo esta uma tabela completa, traz muitas informações, o que pode ser confuso para uma consulta esporádica. Uma outra maneira de saber os horários de uma linha em determinado dia é [fazer uma consulta no site da Eurostar](http://www.eurostar.com/dynamic/booking.search?VT=TT), informando as cidades de partida e chegada, a data e também a hora aproximada que você deseja.
 
-![Exemplo de consulta no site da Eurostar: viagem de Paris a Londres no dia 07/10/2011 saindo perto do meio-dia — Só ida, sem volta (one-way)](http://aurelio.net/wp/wp-content/uploads/2011/08/eurostar-timetable-search.png)
+![Exemplo de consulta no site da Eurostar: viagem de Paris a Londres no dia 07/10/2011 saindo perto do meio-dia — Só ida, sem volta (one-way)](/wp/wp-content/uploads/2011/08/eurostar-timetable-search.png)

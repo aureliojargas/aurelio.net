@@ -79,7 +79,7 @@ Data de retorno (volta). É o mesmo esquema que você já fez na data de ida: cl
 
 Contagem dos passageiros. Aqui você informa quantos passageiros estão em cada faixa etária. Use os botões **(-)** e **(+)**. Há preços diferenciados dependendo da idade do passageiro.
 
-![Este exemplo serve para um casal com dois filhos: um de 9 anos (criança) e outro de 13 anos (jovem).](http://aurelio.net/wp/wp-content/uploads/2011/08/02-passageiros-exemplo.png)
+![Este exemplo serve para um casal com dois filhos: um de 9 anos (criança) e outro de 13 anos (jovem).](/wp/wp-content/uploads/2011/08/02-passageiros-exemplo.png)
 
   * **Adults:** Adultos, de 26 a 59 anos.
   * **Seniors:** Idosos, 60 anos ou mais.
@@ -124,7 +124,7 @@ Fora as classes, a flexibilidade de troca/cancelamento de cada passagem após ef
 
 Para saber todos os detalhes sobre cada tipo de passagem, clique nos links que aparecem lá no início da tabela:
 
-![Apesar das cores diferentes, todas as palavras sublinhadas são links.](http://aurelio.net/wp/wp-content/uploads/2011/08/03-search-resultado-links.png)
+![Apesar das cores diferentes, todas as palavras sublinhadas são links.](/wp/wp-content/uploads/2011/08/03-search-resultado-links.png)
 
 
 ## ★ PASSO 4 — Dê sua opinião :)

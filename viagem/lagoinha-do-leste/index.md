@@ -14,7 +14,7 @@ Conheci a praia da Lagoinha em Janeiro de 2007. Para chegar lá são duas horas 
 
 ## Situando-se
 
-![Fonte: http://www.aoredordailha.com.br/trekking-florianopolis/lagoinha-do-leste.asp](http://aurelio.net/img/viagem/lagoinha-do-leste/lagoinha-mapa.png)
+![Fonte: http://www.aoredordailha.com.br/trekking-florianopolis/lagoinha-do-leste.asp](/img/viagem/lagoinha-do-leste/lagoinha-mapa.png)
 
 Primeiro você precisa chegar à ilha de Florianópolis, aquela no sul do país, em Santa Catarina, sabe qual?
 
@@ -48,15 +48,15 @@ Saindo do centrinho da Armação, fomos até a praia do Matadeiro e caminhamos p
 
 A trilha já começou divertida, com mata fechada e pedras para subir. Nada comparado a uma escalada, mas já esquentou os músculos das pernas. Sobe, sobe, sobe. Em alguns momentos a mata abria e era possível contemplar a paisagem. E que paisagem!
 
-![Uau! (Campeche ao fundo)](http://aurelio.net/img/viagem/lagoinha-do-leste/mar.jpg)
+![Uau! (Campeche ao fundo)](/img/viagem/lagoinha-do-leste/mar.jpg)
 
 Lá pelos 40 minutos de caminhada chegamos no córrego que cruza a trilha, proporcionando sombra e água fresca, literalmente. Bem, era na verdade um filete d’água quase imperceptível que fazia algumas poças entre as pedras. Não sabíamos se aquela água era "bebível" ou não, mas como nossa garrafinha era pequena (300 ml) e ainda tínhamos mais de uma hora de trilha pela frente, melhor morrer intoxicado do que desidratado ;)
 
-![Camuflados: Kimie, Aurelio, Rafa, André](http://aurelio.net/img/viagem/lagoinha-do-leste/riacho.jpg)
+![Camuflados: Kimie, Aurelio, Rafa, André](/img/viagem/lagoinha-do-leste/riacho.jpg)
 
 De garrafa e bexiga cheias, continuamos. A trilha mudou completamente, ficando aberta com vegetação rasteira e pedras. Ah, muitos espinhos! O sol castigava, mas o visual compensava e o vento forte arrefecia.
 
-![Quem jogou estas pedras ali?](http://aurelio.net/img/viagem/lagoinha-do-leste/pedras.jpg)
+![Quem jogou estas pedras ali?](/img/viagem/lagoinha-do-leste/pedras.jpg)
 
 Alguns trechos ladeavam a encosta do morro bem na pontinha, fazendo pensar: "e se eu escorregar aqui?". Desaconselhado para cardíacos e frescos.
 
@@ -64,7 +64,7 @@ Na última curva, quando finalmente avistamos a praia da Lagoinha lá embaixo, o
 
 A primeira visão da praia é uma imagem que fica na sua mente por muito tempo. Seria verdade um lugar como aquele? Seria uma miragem? Em uma visão panorâmica você vê a praia toda: mata fechada, areia limpa e água transparente. E claro, a lagoinha!
 
-![E finalmente: a Praia da Lagoinha](http://aurelio.net/img/viagem/lagoinha-do-leste/lagoinha.jpg)
+![E finalmente: a Praia da Lagoinha](/img/viagem/lagoinha-do-leste/lagoinha.jpg)
 
 
 ## Chegamos!
@@ -75,7 +75,7 @@ No segundo seguinte, foi fácil perceber que mesmo com aquele sol escaldante, Fl
 
 Na areia foi construída uma tenda que faz uma baita sombra, ótima para deixar a mochila, comer, deitar e descansar. À alma bondosa que a construiu: Deus lhe pague (que eu não vou). Pelo que entendi, é a tenda de espera para os passageiros dos barcos que levam e trazem pessoas que não querem/podem seguir as trilhas. Mas naquele domingo não tinha barco algum. Ali fizemos um lanche e recuperamos as energias.
 
-![Tenda Sagrada do Marinheiro Samaritano](http://aurelio.net/img/viagem/lagoinha-do-leste/tenda.jpg)
+![Tenda Sagrada do Marinheiro Samaritano](/img/viagem/lagoinha-do-leste/tenda.jpg)
 
 Renovados, fomos explorar o local. No meio da praia fica a lagoinha, uma piscina natural com cerca de um metro de profundidade máxima, água quente e levemente esverdeada, com micro coisinhas flutuantes.
 
@@ -88,13 +88,13 @@ No final da praia há mais um córrego com água potável. Tem até um cano que 
 
 Já era perto das cinco da tarde quando resolvemos levantar acampamento. A trilha de volta começa no final da praia, perto do córrego de água. É mais curta e chata que a trilha de ida, mas depois de um dia todo de aventura e contemplação, já estávamos saciados.
 
-![Despedida do canto direito da praia...](http://aurelio.net/img/viagem/lagoinha-do-leste/canto-direito.jpg)
+![Despedida do canto direito da praia...](/img/viagem/lagoinha-do-leste/canto-direito.jpg)
 
 A trilha é assim: sobe, sobe, sobe, mirante, desce, desce, desce.
 
 No meio do caminho há um mirante bacana com vista da lagoinha e do Pântano do Sul. Foi revigorante ter parado ali por alguns minutos, pois as pernas já não estavam mais tão dispostas quanto de manhã.
 
-![Vista do mirante: Pântano do Sul e Açores](http://aurelio.net/img/viagem/lagoinha-do-leste/pantano.jpg)
+![Vista do mirante: Pântano do Sul e Açores](/img/viagem/lagoinha-do-leste/pantano.jpg)
 
 No final da trilha tive uma sensação pra lá de esquisita. Depois de um dia todo de mato e praia, de repente você sai em uma rua normal, com casas dos dois lados e carros passando. Caiu a ficha. "O sonho acabou" e você voltou para a civilização.
 
@@ -104,7 +104,7 @@ Dinheiro, barulho, fumaça, chacoalhação. É, realmente o sonho acabou.
 
 Mas no rosto há um sorriso de satisfação ao lembrar de tantos momentos felizes que "um dia no mato" proporcionou. Recomendo!
 
-![Ei, quase me esqueci da foto poser! :D](http://aurelio.net/img/viagem/lagoinha-do-leste/poser.jpg)
+![Ei, quase me esqueci da foto poser! :D](/img/viagem/lagoinha-do-leste/poser.jpg)
 
 
 ## Dicas

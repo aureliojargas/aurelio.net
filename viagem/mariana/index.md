@@ -28,7 +28,7 @@ O trem partiu pontualmente às **11 da manhã**. O trajeto durou cerca de uma ho
 Os atores eram realmente desnecessários. Eram MUITO sem graça, e não conseguiam cativar o público. Uma pena. Pois seria legal saber mais da história do lugar, em vez de ficar pensando "Cala a boca palhaço...".
 </div>
 
-![Dica: Sente no lado direito!](http://aurelio.net/img/viagem/mariana/trem.jpg)
+![Dica: Sente no lado direito!](/img/viagem/mariana/trem.jpg)
 
 <div class="mog">
 Vou entregar: nós dois, espertos, sentamos do lado esquerdo. E tínhamos que ficar nos contorcendo pra ver a paisagem do lado direito. Culpa do Guia Quatro Rodas!

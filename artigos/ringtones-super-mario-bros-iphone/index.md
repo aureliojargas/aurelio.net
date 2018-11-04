@@ -47,7 +47,7 @@ Baixe o pacote que traz todos os ringtones: arquivo **iTones-Super-Mario-Bros.zi
 
 Uma vez baixado, dê um clique duplo no arquivo ZIP para descompactá-lo. Será criada a pasta **iTones - Super Mario Bros**. Ali dentro estarão todos os ringtones.
 
-![Pasta com os toques, arquivos com a extensão .m4r](http://aurelio.net/wp/wp-content/uploads/2012/05/ringtones-finder.png)
+![Pasta com os toques, arquivos com a extensão .m4r](/wp/wp-content/uploads/2012/05/ringtones-finder.png)
 
 ## Adicionar no iTunes
 
@@ -55,7 +55,7 @@ Você precisa adicionar os toques ao [iTunes](http://pt.wikipedia.org/wiki/ITune
 
 Abra o iTunes e arraste para dentro da janela dele aquela pasta com os toques. O iTunes vai automaticamente adicionar os toques à sua biblioteca, e um novo item chamado **Toques** vai aparecer ali na barra lateral. Veja na foto como vai ficar:
 
-![Toques já adicionados ao iTunes](http://aurelio.net/wp/wp-content/uploads/2012/05/ringtones-itunes.png)
+![Toques já adicionados ao iTunes](/wp/wp-content/uploads/2012/05/ringtones-itunes.png)
 
 Agora que os toques estão em sua biblioteca, você já pode ouvi-los pelo iTunes mesmo, diversão garantida!
 

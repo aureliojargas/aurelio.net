@@ -7,7 +7,7 @@ title_prefix: 'EU FUI: '
 
 > **Resumo:** Férias no trabalho, fiquei na praia (Matinhos-PR) 30 dias, só surfando, andando de bicicleta e jogando joguinhos no computador. Sozinho, sem Internet, sem e-mail, uma verdadeira terapia. De 09-jan a 09-fev de 2005.
 
-![Visual da praia de Matinhos numa manhã de sol](http://aurelio.net/img/viagem/matinhos-2005/praia.jpg)
+![Visual da praia de Matinhos numa manhã de sol](/img/viagem/matinhos-2005/praia.jpg)
 
 
 ## A Idéia
@@ -62,7 +62,7 @@ Dessa vez, Matinhos me surpreendeu. **Todo dia** tinha onda. Às vezes pequenas,
 
 E para ficar melhor ainda, na sexta-feira dia 28 de Janeiro entrou uma ondulação forte que fez o mar subir e quebrar ondas de até 2 metros de altura (de frente). Foi um êxtase, primeiro porque as ondas em Matinhos geralmente são pequenas (de meio metro a um metro) e segundo porque a ondulação agüentou SETE dias, que maravilha!
 
-![Mar nervoso em Matinhos, no verão. Dá pra acreditar?](http://aurelio.net/img/viagem/matinhos-2005/ondao.jpg)
+![Mar nervoso em Matinhos, no verão. Dá pra acreditar?](/img/viagem/matinhos-2005/ondao.jpg)
 
 Me esbaldei, era surfe de manhã e de tarde, numa média de 5 horas por dia com ondas grandes e fortes. Alguns dias estava liso e tubular, outros mexidão e quebra-côco, mas a diversão era garantida.
 
@@ -77,7 +77,7 @@ Levei cerca de uma semana para voltar a ter intimidade com a prancha e as ondas,
 
 Da terceira semana em diante comecei a progredir lentamente, aprendendo dicas novas e tentando outras manobras. Se consolidou uma preferência pelo backside em ondas grandes e o frontside nas menores.
 
-![Fantasia de carnaval: surfista](http://aurelio.net/img/viagem/matinhos-2005/surfista.jpg)
+![Fantasia de carnaval: surfista](/img/viagem/matinhos-2005/surfista.jpg)
 
 
 ### O Iluminado
@@ -144,7 +144,7 @@ A visão do inferno: aquele barulho forte e grave de estouro e aquela espuma bra
 
 Como a onda quebrou na minha frente, ela ia me atingir com força total. Não havia muito o que fazer, já era tarde para tentar um peixinho (que leva cerca de 1 segundo para se posicionar e afundar a prancha o suficiente), então joguei a prancha para o lado e mergulhei, no melhor estilo socorro-mamãe. Mas a onda já estava em cima, no auge do seu poder. No mergulho os pés são os últimos que afundam e a onda jogou a prancha de volta contra mim. Podia ter batido qualquer parte, mas foram justo as quilhas que fizeram o serviço no meu pé direito. Ainda bem que não foi no [meu pé tatuado](http://aurelio.net/foto/pe/) &:)
 
-![Ganhei um olho (para não dizer outra coisa) no meu pé](http://aurelio.net/img/viagem/matinhos-2005/olho.jpg)
+![Ganhei um olho (para não dizer outra coisa) no meu pé](/img/viagem/matinhos-2005/olho.jpg)
 
 Se cortar com a quilha é sempre igual: dói e tem carninha branca. Dói porque é sempre uma pancada forte. A quilha é meio afiada mas não chega a cortar. Só que geralmente vem uma pancada junto, aí o corte é feito na força, como uma faca cega. Assim sendo, geralmente é fundo e largo. Não sei se é o mar, mas nos primeiros segundos não sangra, então você tem tempo de apreciar aquele buraco lindo e uma carne **branca** nele. É a sua carne! Será que somos mais próximos das galinhas do que das vacas? Só depois vem o sangue e faz a lambança.
 
@@ -154,7 +154,7 @@ Já na areia, peguei a prancha e olhei novamente para a carne branca no pé e ag
 
 Fazer o quê... Fui até em casa (tirei a foto), peguei a bicicleta e fui para o hospital. Como era SUS, já fui preparado para ficar horas por lá. No fim foi rapidinho, em menos de uma hora eu estava de volta em casa com o pé costurado e enfaixado. Show de bola!
 
-![Pé retalhado e costurado, fim do surfe nessas férias :/](http://aurelio.net/img/viagem/matinhos-2005/pontos.jpg)
+![Pé retalhado e costurado, fim do surfe nessas férias :/](/img/viagem/matinhos-2005/pontos.jpg)
 
 Foram três pontos mesmo. Quatro, se contar que o primeiro soltou e o médico teve que furar de novo. Fiz sem anestesia, para sentir a dor e lembrar dela na próxima vez que estiver remando distraído em dia de mar grande &;)
 
