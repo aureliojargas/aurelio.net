@@ -6,11 +6,11 @@ Versões antigas do _ML
 %!includeconf: ../_config.t2t
 %!postproc: (<BODY)     \1 class="history"
 
-%!postproc: ML1_SHOT.png  http://aurelio.net/wp/wp-content/uploads/2009/08/moneylog1.png
-%!postproc: ML2_SHOT.png  http://aurelio.net/wp/wp-content/uploads/2009/08/moneylog2.png
-%!postproc: ML3_SHOT.png  http://aurelio.net/wp/wp-content/uploads/2009/08/moneylog3.png
-%!postproc: ML4_SHOT1.png  http://aurelio.net/wp/wp-content/uploads/2009/08/moneylog4.png
-%!postproc: ML4_SHOT2.png  http://aurelio.net/wp/wp-content/uploads/2009/08/moneylog4-mensal.png
+%!postproc: ML1_SHOT.png  /wp/wp-content/uploads/2009/08/moneylog1.png
+%!postproc: ML2_SHOT.png  /wp/wp-content/uploads/2009/08/moneylog2.png
+%!postproc: ML3_SHOT.png  /wp/wp-content/uploads/2009/08/moneylog3.png
+%!postproc: ML4_SHOT1.png  /wp/wp-content/uploads/2009/08/moneylog4.png
+%!postproc: ML4_SHOT2.png  /wp/wp-content/uploads/2009/08/moneylog4-mensal.png
 
 == _ML v1 ==[v1]
 
