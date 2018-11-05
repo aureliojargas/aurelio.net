@@ -24,7 +24,7 @@ article_footer_after: false
     }
 </style>
 
-<img style="float:right" src="http://aurelio.net/img/icon/128/er.png">
+<img style="float:right" src="/img/icon/128/er.png">
 
 <div style="background:#F6E568; padding:1em 1em 2em 2em;" class="banner">
     <h3 style="margin: 1em 0">Avisos importantes</h3>
