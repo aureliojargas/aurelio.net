@@ -1,0 +1,24 @@
+#!/bin/bash
+# List all non-binary files in the generated site folder
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+find _site -type f \
+    -a -not -name \*.png \
+    -a -not -name \*.jpg \
+    -a -not -name \*.gif \
+    -a -not -name \*.bmp \
+    -a -not -name \*.ico \
+    -a -not -name \*.mp3 \
+    -a -not -name \*.wav \
+    -a -not -name \*.ogg \
+    -a -not -name \*.zip \
+    -a -not -name \*.tgz \
+    -a -not -name \*.gz  \
+    -a -not -name \*.dmg \
+    -a -not -name \*.rpm \
+    -a -not -name \*.EXE \
+    -a -not -name \*.pdf \
+    -a -not -name \*.scpt
