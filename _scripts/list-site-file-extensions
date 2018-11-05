@@ -1,0 +1,12 @@
+#!/bin/bash
+# List all unique file extensions in the generated site
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+find _site -type f |
+    grep -o '\.[^.]*$' |
+    sed 's/^\.//' |
+    sort |
+    uniq
