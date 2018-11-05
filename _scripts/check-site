@@ -15,14 +15,12 @@ cd ..
 
 repo_root="$PWD"
 site_root="$repo_root/_site"
-
-# Enter the generated site folder
-cd _site
+files=$(_scripts/list-site-text-files)
 
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
 
-    # This is the only check running at the repo root
+    # This check runs at the repo root
     cd "$repo_root" && git grep -I '{{.*}}' |
 
         # Remove false positives
@@ -51,6 +49,7 @@ check_accidental_liquid_markup() {
 }
 
 check_missing_article_date() {
+    # This check runs at the repo root
     # This is the default date inserted by the txt2tags2html script
     git grep '^date: 1999-12-31'
 }
@@ -58,40 +57,46 @@ check_missing_article_date() {
 # Do not use relative URLs in links and images
 check_relative_urls() {
     # ./
-    grep -r -i -E '(src|href)="\./' .
-    grep -r -i -E '(src|href)="[^"]*/\./' .
+    grep -i -E '(src|href)="\./' $files
+    grep -i -E '(src|href)="[^"]*/\./' $files
 
     # ../
-    grep -r -i -E '(src|href)="\.\./' .
-    grep -r -i -E '(src|href)="[^"]*/\.\./' .
+    grep -i -E '(src|href)="\.\./' $files
+    grep -i -E '(src|href)="[^"]*/\.\./' $files
 }
 
 # No http:// for resources (mixed content) - #18
 check_mixed_content() {
-    grep -r -i -F 'src="http://aurelio.net' .
+    grep -i -F 'src="http://aurelio.net' $files
 }
 
 # Grep for <tag foo=bar> instead of <tag foo="bar">
 check_unquoted_attributes() {
-    grep -r -i --binary-files=without-match -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' . |
+    echo "$files" |
+
+        # Remove false positives
+        grep -F -x -v '_site/bin/python/txt2tags-r900.py' |
+        grep -F -x -v '_site/doc/coluna/coluna-09.html' |
+        grep -F -x -v '_site/sed/programas/yahoogroups-kill-sig.sed' |
+        grep -F -x -v '_site/vim/vimrc-ivan.txt' |
+
+        # Check
+        xargs grep -i -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' |
 
         # Remove false positives
         grep -F -i -v 'content="text/html; charset=utf-8"' |
-        grep -E -v '^\./bin/python/txt2tags-r900\.py:' |
-        grep -E -v '^\./doc/coluna/coluna-09\.html:' |
-        grep -E -v '^\./sed/programas/yahoogroups-kill-sig\.sed:' |
-        grep -E -v '^\./vim/vimrc-ivan\.txt:' |
-
         #XXX txt2tags generated files, won't fix now
         grep -E -v '<HR NOSHADE SIZE=1>'
 }
 
 check_windows_linebreak() {
-    find . -not -type d -exec file {} \; | grep CRLF |
+    echo "$files" |
 
         # Remove false positives
-        grep -v '^\./projects/moneylog/' |
-        grep -v '^\./moneylog/'
+        grep -v '^_site/projects/moneylog/' |
+        grep -v '^_site/moneylog/' |
+
+        xargs file | grep CRLF
 }
 
 active_checks="
