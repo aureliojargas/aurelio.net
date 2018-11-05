@@ -68,6 +68,7 @@ check_relative_urls() {
 # No http:// for resources (mixed content) - #18
 check_mixed_content() {
     grep -i -F 'src="http://aurelio.net' $files
+    grep -i '<link [^>]*href="http://aurelio.net' $files
 }
 
 # Grep for <tag foo=bar> instead of <tag foo="bar">
