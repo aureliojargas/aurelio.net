@@ -8,5 +8,5 @@
 cd $(dirname "$0")
 cd ..
 
-_scripts/list-text-files |
+_scripts/list-repo-text-files |
   xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
