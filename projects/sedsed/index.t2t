@@ -75,7 +75,7 @@ Visit the [sed Website http://sed.sourceforge.net/local/scripts] for examples of
 
 - File: [sedsed-1.0 sedsed-1.0]
 - Language: Python
-- License: GPL
+- License: MIT
 -
 
 Feeling wild? You can also try the fresh [GitHub version https://github.com/aureliojargas/sedsed].
