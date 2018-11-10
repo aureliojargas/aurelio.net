@@ -302,6 +302,11 @@ table.grid tr:hover td {
   color: red;
 }
 
+nav {
+   margin-top: 2em;
+   margin-bottom: 2em;
+}
+
 #content h2 {
   clear: both;  /* clear floated ads */
 }
