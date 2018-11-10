@@ -1,14 +1,16 @@
 ---
-date: 1999-12-31
-title: _CANIVETE_NAME (Bash) - _MYNAME
+title: Canivete Suíço do Shell (Bash)
+date: 2003-07-09
 ---
 
-<div class="banner">
-  <table class="caderno">
+<div class="note">
+  <table class="">
     <tr>
       <td>
         <a href="http://www.shellscript.com.br"><img class="center" src="/img/icon/128/livroshell.png" alt=""></a>
       </td>
+    </tr>
+    <tr>
       <td>
         Este Canivete Suíço do Shell é um apêndice do meu livro <a href="http://www.shellscript.com.br">Shell Script Profissional</a>. O livro é enorme, são quase 500 páginas de puro shell, explicado de maneira clara e didática. Você vai dominar o assunto, além de aprender a escrever programas de verdade em vez de meros scripts toscos. Sou escritor e ganho a vida com meus livros, então comprando o livro você também me ajuda a manter esse site no ar e assim eu continuo escrevendo para você ler. Combinado? :)
       </td>
@@ -17,44 +19,39 @@ title: _CANIVETE_NAME (Bash) - _MYNAME
 </div>
 
 <nav>
-  <ul>
-    <li><a href="#operadores">1. Operadores</a></li>
-    <li><a href="#redir">2. Redirecionamento</a></li>
-    <li><a href="#variaveis">3. Variáveis especiais</a></li>
-    <li><a href="#expansao">4. Expansão de variáveis</a></li>
-    <li><a href="#blocos">5. Blocos e agrupamentos</a></li>
-    <li><a href="#ifwhilefor">6. if, for, select, while, until, case</a></li>
-    <li><a href="#test">7. Opções do comando test ou [</a></li>
-    <li><a href="#prompt">8. Escapes especiais para usar no prompt (PS1)</a></li>
-    <li><a href="#echo">9. Escapes reconhecidos pelo comando echo</a></li>
-    <li><a href="#date">10. Formatadores do comando date</a></li>
-    <li><a href="#printf">11. Formatadores do comando printf</a></li>
-    <li><a href="#ls">12. Letras identificadoras de arquivos no comando ls -l</a></li>
-    <li><a href="#glob">13. Curingas para nomes de arquivo (glob)</a></li>
-    <li><a href="#case">14. Curingas para os itens do comando case</a></li>
-    <li><a href="#sinais">15. Sinais para usar com trap/kill/killall</a></li>
-    <li><a href="#exitcode">16. Códigos de retorno de comandos</a></li>
-    <li><a href="#cores">17. Códigos de cores (ANSI)</a></li>
-    <li><a href="#metacaracteres">18. Os metacaracteres das expressões regulares</a></li>
-    <li><a href="#metadif">19. Metacaracteres que são diferentes nos aplicativos</a></li>
-    <li><a href="#ascii">20. Caracteres ASCII imprimíveis (ISO-8859-1) - texto</a></li>
-    <li><a href="#asciiimg">21. Caracteres ASCII imprimíveis (ISO-8859-1) - imagem</a></li>
-    <li><a href="#codigos">22. Códigos prontos para copiar e colar</a></li>
-    <li><a href="#emacs">23. Atalhos da linha de comando (set -o emacs)</a></li>
-    <li><a href="#ferramentas">24. A caixa de ferramentas do shelleiro</a></li>
-  </ul>
+  <ol>
+    <li><a href="#operadores">Operadores</a></li>
+    <li><a href="#redir">Redirecionamento</a></li>
+    <li><a href="#variaveis">Variáveis especiais</a></li>
+    <li><a href="#expansao">Expansão de variáveis</a></li>
+    <li><a href="#blocos">Blocos e agrupamentos</a></li>
+    <li><a href="#ifwhilefor">if, for, select, while, until, case</a></li>
+    <li><a href="#test">Opções do comando test ou [</a></li>
+    <li><a href="#prompt">Escapes especiais para usar no prompt (PS1)</a></li>
+    <li><a href="#echo">Escapes reconhecidos pelo comando echo</a></li>
+    <li><a href="#date">Formatadores do comando date</a></li>
+    <li><a href="#printf">Formatadores do comando printf</a></li>
+    <li><a href="#ls">Letras identificadoras de arquivos no comando ls -l</a></li>
+    <li><a href="#glob">Curingas para nomes de arquivo (glob)</a></li>
+    <li><a href="#case">Curingas para os itens do comando case</a></li>
+    <li><a href="#sinais">Sinais para usar com trap/kill/killall</a></li>
+    <li><a href="#exitcode">Códigos de retorno de comandos</a></li>
+    <li><a href="#cores">Códigos de cores (ANSI)</a></li>
+    <li><a href="#metacaracteres">Os metacaracteres das expressões regulares</a></li>
+    <li><a href="#metadif">Metacaracteres que são diferentes nos aplicativos</a></li>
+    <li><a href="#ascii">Caracteres ASCII imprimíveis (ISO-8859-1) - texto</a></li>
+    <li><a href="#asciiimg">Caracteres ASCII imprimíveis (ISO-8859-1) - imagem</a></li>
+    <li><a href="#codigos">Códigos prontos para copiar e colar</a></li>
+    <li><a href="#emacs">Atalhos da linha de comando (set -o emacs)</a></li>
+    <li><a href="#ferramentas">A caixa de ferramentas do shelleiro</a></li>
+  </ol>
 </nav>
 
-<div class="banner">
-  <ul>
-    <li>Quer imprimir o canivete? <a href="pdf/">Baixe o PDF</a>.
-    </li>
-    <li>Veja também: <a href="/shell/miniman/">miniman</a>, o irmãozinho do canivete suíço.
-    </li>
-    <li>Veja o <a href="-">código-fonte do canivete</a>, no formato <a href="http://txt2tags.org">txt2tags</a>.
-    </li>
-    <li>Traduções do canivete: <a href="es/">Español</a>, <a href="en/">English</a>
-    </li>
+<div class="note">
+  <ul class="compact">
+    <li><a href="/shell/canivete/pdf/">Versão PDF</a></li>
+    <li>Traduções: <a href="/shell/canivete/es/">Español</a>, <a href="/articles/shell-reference.html">English</a></li>
+    <li>Veja também: <a href="/shell/miniman/">miniman</a>, o irmãozinho do canivete</li>
   </ul>
 </div>
 
@@ -2641,16 +2638,3 @@ $ <a href="http://funcoeszz.net/todas.html">zzascii</a>
     <td>-n, -i</td>
   </tr>
 </table>
-
-<div class="banner">
-  <ul>
-    <li>Quer imprimir o canivete? <a href="pdf/">Baixe o PDF</a>.
-    </li>
-    <li>Veja também: <a href="/shell/miniman/">miniman</a>, o irmãozinho do canivete suíço.
-    </li>
-    <li>Veja o <a href="-">código-fonte do canivete</a>, no formato <a href="http://txt2tags.org">txt2tags</a>.
-    </li>
-    <li>Traduções do canivete: <a href="es/">Español</a>, <a href="en/">English</a>
-    </li>
-  </ul>
-</div>
