@@ -358,6 +358,11 @@ ol.compact li,
   padding-bottom: .75em;
 }
 
+.vspace {
+   margin-top: 2em;
+   margin-bottom: 2em;
+}
+
 .small {
   font-size: small;
 }
