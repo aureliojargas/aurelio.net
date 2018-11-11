@@ -173,10 +173,7 @@
 /shell/canivete-pdf.html                          /shell/canivete/pdf/
 /shell/canivete-shell.pdf                         /shell/canivete/pdf/canivete-shell.pdf
 /shell/canivete-es.html                           /shell/canivete/es/
-/shell/canivete-es.t2t                            /shell/canivete/es/canivete-es.t2t
 /shell/canivete.html                              /shell/canivete/
-/shell/canivete.t2t                               /shell/canivete/canivete.t2t
-/shell/canivete.conf                              /shell/canivete/canivete.conf
 /shell/ascii.gif                                  /shell/canivete/ascii.gif
 /shell/zzcores.gif                                /shell/canivete/zzcores.gif
 /shell/miniman.html                               /shell/miniman/
@@ -280,3 +277,8 @@
 
 # 2017-11-02
 /comments/feed/                                   /410.html  410
+
+# 2018-11-11
+/shell/canivete/canivete.conf                     /410.html  410
+/shell/canivete/index.t2t                         /410.html  410
+/shell/canivete/es/index.t2t                      /410.html  410

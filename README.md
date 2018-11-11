@@ -72,7 +72,7 @@ sed '1 s/python/python2/' -i _scripts/txt2tags-2.6.1102
 termux-fix-shebang _scripts/*
 
 # Fix include paths for txt2tags files
-replace -f /a/www/ -t $PWD/ -i include/*/config.t2t include/10anos/footer*.t2t moneylog/{_config,_footer,index,v4/index}.t2t shell/canivete/{canivete.conf,index.t2t,es/index.t2t}
+replace -f /a/www/ -t $PWD/ -i include/*/config.t2t include/10anos/footer*.t2t moneylog/{_config,_footer,index,v4/index}.t2t
 
 # html-tidy: cannot install nor compile :(
 ```

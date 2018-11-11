@@ -11,19 +11,11 @@ detected_files=$(
     # skip false positives
     grep -v '^_scripts/' |
     grep -v '^shell/dialog/index-v6.t2t' |
-    grep -v '^moneylog/_config.t2t' |
-
-    # skip those who need custom conversion
-    grep -v '^shell/canivete/canivete.conf'
+    grep -v '^moneylog/_config.t2t'
 )
 
-hardcoded_files="
-    shell/canivete/es/index.t2t
-    shell/canivete/index.t2t
-"
-
 # build it
-echo "$detected_files $hardcoded_files" |
+echo "$detected_files" |
     grep . |
     while read file
     do
