@@ -3,6 +3,53 @@ title: Canivete Suíço do Shell (Bash)
 date: 2003-07-09
 ---
 
+<!--
+       AGRADECIMENTOS e CHANGELOG
+       --------------------------
+
+09jul2003 created
+11jul2003 Andreyev Dia de Melo (man 7 signal)
+16jul2003 Moysés Placin (pediu comandos prontos p/copiar&colar)
+17jul2003 Luciano Espírito Santo (glob de lista negada [^...])
+18jul2003 Mateus Caruccio (3<>arq)
+05ago2003 Julio Cezar Neves (sinais do linux, não cygwin)
+09out2003 Fagner Goncalves (atalhos set -o emacs)
+28out2003 Rodolfo Villanova (letras do 'ls')
+04nov2003 Rodolfo Villanova (comando test: -b, -c, -g, -k, -u)
+21out2004 adicionadas âncoras com nome para cada seção
+04nov2004 Diego Búrigo Zacarão (sinais cygwin), gwm (sinais freebsd)
+04nov2004 sinais++, --css-sugar, Rodrigo Carvalhaes (elif)
+11nov2004 escapes do PS1 (tirado da Dicas-L 2004-11-09)
+18nov2005 Rodrigo Monteiro (while ... < <(comando), faltava um <
+18nov2005 tópicos numerados, títulos sem borda inferior
+01nov2006 Usando formato padrão do aurelio.net (tema Genius)
+06dez2006 PDF por 5ão
+01jan2007 Caractere 183 arrumado na tabela ASCII
+21mar2008 exitcode: removido * do 255*
+21mar2008 date: %y dois dígitos, %Y quatro dígitos
+21mar2008 Blocos: `...` retornando o resultado, $ do $'abc\n'
+21mar2008 s/Mnemônico/Lembrete/, ASCII (ISO-8859-1), iniciais em maiúsculas
+27mar2008 Tabela if/for/while/case arrumada, elif/then arrumado
+25abr2008 UTF-8, tema kiwi, todas tabelas com borda, setas Unicode no emacs
+04abr2009 Tema livro, tabelas simplificadas
+05jan2010 PDF com vendas suspensas
+07mai2010 PDF ficou gratuito
+07mai2010 Tradução para o espanhol
+24mai2010 s/à partir/a partir/ (valeu Denilson Sá)
+05abr2011 Link para o fonte .t2t
+06jul2011 Tradução pro inglês por Luiz Miguel Axcar
+25set2018 Mais expansões de variáveis: ^ ^^ , ,, ~ ~~
+
+-----------------------------------------------------------------------
+
+TODO exemplos de sed e find (Raimundo Fernando de Carvalho Bahia)
+TODO zzascii (botar os octais/hexa tb)
+TODO getopts
+TODO char 183 ASCII (imagem) está errada
+TODO atualizar tabela metacaracteres (Danilo Marques)
+TODO Classes POSIX regex (Renan Wagner)
+-->
+
 <div class="note">
   <table class="">
     <tr>
@@ -1306,6 +1353,8 @@ esac
 <h2 id="sinais">15. Sinais para usar com trap/kill/killall</h2>
 
 
+<!-- kill -l | tr '\t' '\n' | sed 's/)/ |/;s/^/ | /' -->
+
 <table class="caderno">
 
   <tr>
@@ -2389,6 +2438,8 @@ $ <a href="http://funcoeszz.net/todas.html">zzascii</a>
 
 <h2 id="emacs">23. Atalhos da linha de comando (set -o emacs)</h2>
 
+
+<!-- os atalhos com a tecla Alt não funcionam no Mac, por isso não coloquei no canivete. -->
 
 <table class="caderno">
 
