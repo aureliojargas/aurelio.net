@@ -3,6 +3,49 @@ title: miniman
 date: 2009-08-26
 ---
 
+<!--
+Sugestão inicial: Ricardo Monjardim Duarte
+Anúncio: http://aurelio.net/blog/2009/08/26/miniman/
+
+TODO
+----
+Fabiano Pires em 27 Agosto 2009
+grep: –color (destaca em vermelho o que bate com o padrão passado)
+uniq: -c (conta quantas ocorrencias de cada linha foram encontradas)
+date: %e (dia do mês sem zeros à esquerda. já me ajudou em scripts por causa da interpretação do bash, pois numeros iniciados com 0 são interpretados em octal – que vai de 00 a 07)
+
+Guilherme Gall em 27 Agosto 2009
+opção -r ou –regexp-extended do sed, que habilita o uso de expressões regulares estendidas.
+
+- simplificar tabelas echo -e e date %Y, só com os mais usados.
+
+cat -vet: Ajuda a encontrar a problemática e a criar uma solucionática!
+seq -w: quando se precisa de zeros a esquerda!
+
+
+PDF
+===
+Modificações em relação ao livro:
+removido ponto final de cada coluna
+
+Modificações do PDF em relação ao HTML:
+geral: s/Lembrete/Dica/
+date: -d resumido
+date: +%?: quebra em Ex.
+date: coluna Fmt
+diff: -u resumido
+find: -ok resumido
+fmt: -w resumido
+grep: -q resumido
+grep: -s resumido
+grep -i condensado 0.1
+grep -C resumido
+tr: coluna Arg.
+
+v2:
+diff -r    Recursive (faltava o segundo r) tks Lucas
+-->
+
 <p>Você também boceja quando lê aquelas chatíssimas man pages? Milhares de opções, explicações confusas, textos em inglês, formatação arcaica, chato, chato, chato.</p>
 
 <p>Que tal uma versão rápida, resumida, com tabelas que listam somente as opções mais utilizadas dos comandos mais utilizados?</p>
@@ -1088,3 +1131,121 @@ date: 2009-08-26
     <td>Troca a string {} pelo argumento da vez</td>
   </tr>
 </table>
+
+<!--
+Gostou do miniman?
+Que tal imprimi-lo para ter sempre à mão nos momentos de dúvida?
+
+Versão PDF:
+- São quatro colunas dentro de **uma única página** (A4).
+- Você pode deixar sobre a mesa ou colar na parede.
+- Você pode dobrar fazendo um **folheto** pequeno e prático de carregar.
+- Você pode consultar o arquivo no seu smartphone, PDA, netbook…
+- **Consulta rápida**: comandos em destaque (tarjas pretas) e em ordem alfabética.
+- **Personalizado:** eu coloco seu nome no rodapé, gero o PDF e envio para o seu email.
+-
+
+Como comprar:
+
+- Em 01/11/2013 as vendas foram encerradas. Muito obrigado a todos que contribuíram adquirindo o PDF ♥
+
+% %- No dia 1º de setembro vou iniciar a venda do arquivo PDF (nos mesmos moldes do [canivete PDF canivete-pdf.html]), mas por enquanto ele está [disponível apenas para clientes VIP das Organizações Verde Inc. LINKBLOG] :)
+% %-
+%
+% - O arquivo PDF custa apenas **R$ 5,00**.
+% - Ele é enviado para o seu email logo após o pagamento.
+% ''<br>''
+% (exceto finais de semana, pois o envio é manual)
+%
+% - [Clique aqui para comprar LINKPAGSEGURO] (PagSeguro)
+% - É rápido e fácil, aceita pagamento online, cartões de crédito e boleto.
+% % ''<br>''
+% [[SITEROOT/img/pagseguro-pagamento.png] LINKPAGSEGURO]
+% ''<br>''
+% - Se preferir, você também pode pagar pelo PayPal: [em reais LINKPAYPALBR], ou [em dólares LINKPAYPAL].
+% -
+% %- Entenda "logo" como o tempo que eu levar para ver o email com a confirmação do teu pagamento, gerar o PDF e te enviar. Geralmente isso leva cerca de uma hora, durante o horário comercial.
+% % - O PDF é personalizado: eu coloco seu nome no rodapé, gero o PDF e envio para o seu email.
+%
+% % 	**ATENÇÃO:** Estarei viajando entre os dias 18/12/2009 e 05/01/2010. Se você comprar o PDF neste período, só poderei enviá-lo no dia 06/01/2010.
+% % 	**ATENÇÃO:** Estarei viajando entre os dias 11/09/2011 e 05/10/2011. As vendas estão interrompidas neste período. Quando eu voltar, colocarei aqui novamente os links de compra.
+% % 	Se você comprar o PDF neste período, só poderei enviá-lo no dia 11/10/2011.
+%
+% Muito obrigado ♥
+% - Comprando este PDF você também me ajuda a manter este site no ar.''<br>''
+% % - Além É uma forma de apoio e agradecimento.
+% -
+% % 	♥ Comprando este PDF você me ajuda a manter este site no ar.''<br>''
+% % 	♥ É uma forma de apoio e agradecimento.
+
+
+
+% === Promoções de lançamento ===[promocao]
+%
+% - [Ganha o PDF quem comentar no blog (os 5 primeiros) LINKBLOG] — **PROMOÇÃO ENCERRADA**
+% - [Ganha o PDF quem responder no twitter http://twitter.com/oreio/status/3687688632] ([os 5 primeiros http://twitter.com/oreio/status/3687881259]) — **PROMOÇÃO ENCERRADA**
+% % http://twitter.com/oreio/status/3687749735 anúncio fim da promoção
+% % @dsaraujo @badnetmask @pogao @flamarion @julianosene
+% - [Ganha o PDF quem já comprou 2 livros meus LINKBLOG] — **PROMOÇÃO ENCERRADA**
+% - Quem já comprou um livro meu, compra o miniman e ganha o PDF do [_CANIVETE_NAME _CANIVETE_URL]. As instruções estão [lá no cadastro /livro/cadastro/].  — **PROMOÇÃO ENCERRADA**
+% -
+
+
+=== Depoimentos ===[depoimentos]
+
+''' <div class="testimonial">
+: Ótima iniciativa Aurelio! O Shell não é exatamente complicado, mas é muito comando mesmo. **Uma miniman assim faz MUITA falta**. É muito comum eu ficar escrevendo os parâmetros num papel enquanto leio a man com um pequeno resumo deles. Chega num ponto que tu não lembra mais o que o -a faz quando tá no -x.
+— Bruno Merino-Bailón
+
+: O miniman é muito bom mesmo. **Economiza** o que temos de mais precioso que é o nosso **tempo**. Valeu Aurelio!
+— Marcelo Nomoto
+
+: **Deixo no meu smartphone**, surgiu dúvida rapidinho busco o PDF sem estresse. Recomendo.
+— Almir Freitas de Carvalho Neto
+%
+% : Show cara (como o restante das coisas com a marca da OV Inc. – Morra de inveja Seu Craysson ;-) ) !!!
+% — Fabiano Pires
+%
+% : Legal demais, só o Aurelio mesmo para ter estas idéias super legais :-)
+% — Ataliba
+
+: Recebi o miniman enviado pelo Aurelio, quero compartilhar com todos a felicidade de ter disponível uma ferramenta como esta! É conciso porém **claro e explicativo**, as principais opções das principais ferramentas shell apresentadas juntas, poupando-nos o trabalho (muitas vezes cansativo) de ficar por aí caçando um exemplo de aplicação. **Já está impresso**, dentro de uma pasta que levo pra cima e pra baixo, e outra cópia vai ficar do ladinho do pc!
+— Claudinei
+
+% COMPREM, seu bando de pirangueiros! Pô, 5 pilas tá de graça!!!
+: Pô, 5 pilas tá de graça!!!
+— LES
+
+: Fonte de consulta e referência rápida e objetiva. Vou imprimir, plastificar e ter sempre em minha mesa.
+— José Allan
+
+: Recebi o miniman e é **simplesmente maravilhoso**, ótimo para consultas principalmente quando precisa rápido da informação e não quer perder tempo procurando no man ou na internet. Vale a pena ótimo material para consultas.
+— Sandro M. Silva
+
+% Recebi o miniman hoje de tarde, mas as atividades na masmorra só me deixaram abri-lo agora. Já deu para ver que vai me economizar um tempão de alternância entre o editor de textos e as manpages quando estiver fazendo um script ou trabalhando no shell. Ao pessoal não VIP que usa o shell diariamente, digo que vale mais que os cinco mangos. O negócio sem um resumão desses é que nem um camarada já comentou: você abre a manpage, vai lendo para ver que opções podem te ser úteis, mas esquece o que faz -a quando já está lendo a descrição do -x
+: Recebi o miniman hoje de tarde, ele vai me economizar um tempão de alternância entre o editor de textos e as manpages quando estiver fazendo um script ou trabalhando no shell. Para quem usa o shell diariamente, digo que **vale mais que os cinco mangos**.
+— Guilherme Gall
+
+: Já tá aqui impresso num lugar bem acessível. Obrigado pela iniciativa, vai me ajudar muito. **Recomendo fortemente**.
+— Fabricio B. Ferreira
+
+: **É simples, prático e direto**. Resume bem os comandos utilizados pelo sysadmin no nosso shell de cada dia.
+— Flamarion Jorge
+
+: O miniman foi muito bem preparado para nos auxiliar no dia a dia, colocando os 21 comandos e suas opções mais utilizados **de forma clara e objetiva**.
+— Marco Antonio Pereira
+
+: **Esse miniman era tudo o que faltava** para o shell se tornar 100% prático. Ficar usando --help e lendo man pages o tempo todo, por mais que seja um aprendizado, é muito frustrante quando você só quer fazer um script rápido pra processar alguns arquivos ou ajeitar alguns textos.
+— Piteco
+
+: Transformei o miniman no **wallpaper do meu pc**, agora tenho agilidade pra achar as coisas os detalhes mais comuns dos principais comandos. Valeu mesmo.
+— Jeferson A. dos Santos
+
+: Muito bom esse miniman, já está **colado em minha mesa** de trabalho.
+— Rodrigo Felix
+
+% : Aee Aurelio, de novo entendendo as necessidades humanas :-) Nada como a simplicidade :-)
+% — Tiago Oliveira de Jesus
+: [Dê sua opinião _MYBLOG/2009/08/26/miniman/]
+:
+-->
