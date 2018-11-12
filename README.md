@@ -74,7 +74,19 @@ termux-fix-shebang _scripts/*
 # Fix include paths for txt2tags files
 replace -f /a/www/ -t $PWD/ -i include/*/config.t2t include/10anos/footer*.t2t moneylog/{_config,_footer,index,v4/index}.t2t
 
-# html-tidy: cannot install nor compile :(
+# html-tidy
+git clone https://github.com/htacg/tidy-html5.git
+cd tidy-html5
+git checkout master
+cd build/cmake
+pkg install cmake
+cmake ../.. -DCMAKE_BUILD_TYPE=Release
+make
+# error: unknown type name 'ulong'
+# see https://github.com/htacg/tidy-html5/issues/773
+vi src/config.h include/tidy.h
+make
+cp tidy ~/bin
 ```
 
 Extra setup for **Chrome OS Linux**:
