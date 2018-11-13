@@ -1,0 +1,12 @@
+#!/bin/bash
+# Build all txt2tags pages under /rac
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+# build it
+find rac -name '[^_]*.t2t' |
+    egrep -v '/(menu|config)\.t2t$' |
+    xargs -n 1 _scripts/txt2tags-2.6.1102
+
