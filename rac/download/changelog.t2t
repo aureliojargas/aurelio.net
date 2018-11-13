@@ -12,5 +12,85 @@ RAC - Download
 
 === Mudanças Feitas ===
 
-%!include: /a/rac/ChangeLog.t2t
+: **??-???-2005, v1.4**
+  - Portabilidade: Diretórios do tarball com permissão 777
+    (obrigado Marcelo Toledo pela dica)
 
+  - LEIAME: Colocada referência ao subdiretório "src" na compilação
+    (obrigado Daniel Duclós pela dica)
+
+: **11-Abr-2005, v1.3**
+
+  - Adicionado suporte a endereçamento por expressões regulares (regex),
+    nos formatos BRE e ERE (default é ERE)
+    (obrigado Silvano B. Dias pelo patch)
+
+  - Opções novas -b e --bre para usar expressões regulares no formato
+    antigo, chamado BRE (\+, \{\}, etc)
+
+  - Opções novas -i e --ignore-case para tratar maiúsculas e
+    minúsculas como iguais
+
+  - Makefile: Adicionado target noopt para compilar sem otimização
+    (obrigado Alan Kelon pela dica)
+
+  - Bugfix: Agora remove o arquivo temporário quando finalizado com
+    Ctrl+C
+
+  - Bugfix: Agora endereços com 0 (zero) funcionam corretamente
+
+  - Bugfix: Agora mostra a última letra no "echo -n"
+    (obrigado lnas_90 pelo aviso)
+
+  - Bugfix: Não estava escapando corretamente a \
+    (obrigado Silvano B. Dias pelo patch)
+
+: **23-Dez-2004, v1.2**
+
+  - Adicionado suporte a endereçamento por texto (string)
+    (obrigado Silvano B. Dias pelo patch)
+
+  - Makefile: entradas para compilar no FreeBSD e similares
+    (obrigado Rudá Moura pelo patch)
+
+  - Makefile: agora depende de objetos, não sources
+    (obrigado Felipe Kellermann pelo patch)
+
+  - Makefile: arrumada instalação da man page
+    (obrigado Bruno Tadeu Russo pela dica)
+
+  - LEIAME: retirada referência à versão 1.0
+    (obrigado Bruno Tadeu Russo pela dica)
+
+: **20-Abr-2004, v1.1**
+
+  - Várias partes do código reescritas e remodeladas, está mais rápido
+    e consome menos memória, não quebrando em arquivos gigantes
+    (obrigado Alfredo Kojima e Elvis Pfützenreuter pelas dicas)
+
+  - Código limpo e melhor documentado, para incentivar contribuições
+    externas
+
+  - Para melhorar a portabilidade, o programa não usa mais o getopt
+
+  - Makefile: pequenos ajustes visando a portabilidade
+
+  - Makefile: novos targets install, uninstall e debug
+    (obrigado Cesar Grossman "crg3k" pela dica)
+
+  - Adicionada uma estrutura com as variáveis globais
+    (obrigado Cesar Grossman "crg3k" pela dica)
+
+  - Arrumado erro de ortografia no --help
+    (obrigado Paulo Saldanha pela dica)
+
+: **12-Dez-2003, v1.0**
+
+  - Versão inicial
+
+  - Obrigado ao Guilherme Wünsch Manika pela sugestão do nome RAC
+
+  - Obrigado aos amigos do #d00dz pela ajuda com o nome e dicas de código
+
+
+% vim:tw=70
