@@ -20,7 +20,14 @@ Assistente para Expressões Regulares
 %----------------------------------------
 
 : **Descrição**
-%!include: ""/a/txt2regex/description-pt.txt""
+O txt2regex é um assistente que converte frases humanas para
+Expressões Regulares. Com uma interface para console, simples
+e intuitiva, o usuário responde perguntas e o programa
+constrói expressões regulares para mais de 20 programas
+diferentes. Alguns deles: Vim, Emacs, Perl, PHP, Python,
+Procmail e OpenOffice.org. O programa é um Script Shell que
+utiliza apenas os comandos internos do interpretador. Não é
+preciso compilá-lo, basta baixar e executar.
 
 : **Programas suportados (23)**
   AWK, ed, egrep, Emacs, expect, find, gawk, grep, lex, lisp, mawk, MySQL,
