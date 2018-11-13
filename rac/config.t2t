@@ -11,8 +11,8 @@
 %!preproc: L_GUESTBOOK	[Recados U_GUESTBOOK]
 
 % site links
-%!preproc: U_HOME	/rac/index.html
-%!preproc: U_INFO	/rac/info/index.html
+%!preproc: U_HOME	/rac/
+%!preproc: U_INFO	/rac/info/
 %!preproc: U_SCREENSHOT	/rac/info/screenshots.html
 %!preproc: U_BEGINNER	/rac/info/iniciante.html
 %!preproc: U_DOCS	/rac/info/docs.html
@@ -23,8 +23,8 @@
 %!preproc: U_STRING	/rac/info/string.html
 %!preproc: U_REGEX	/rac/info/regex.html
 %!preproc: U_ADDRSPEC	/rac/info/ADDRESSING
-%!preproc: U_TUTOR	/rac/info/tutorial/index.html
-%!preproc: U_DOWNLOAD	/rac/download/index.html
+%!preproc: U_TUTOR	/rac/info/tutorial/
+%!preproc: U_DOWNLOAD	/rac/download/
 %!preproc: U_ANNOUNCE	/rac/download/anteriores.html
 %!preproc: U_CHANGELOG	/rac/download/changelog.html
 %!preproc: U_FUTURE	/rac/download/futuro.html
