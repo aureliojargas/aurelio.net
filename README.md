@@ -74,6 +74,9 @@ termux-fix-shebang _scripts/*
 # Fix include paths for txt2tags files
 replace -f /a/www/ -t $PWD/ -i include/*/config.t2t include/10anos/footer*.t2t moneylog/{_config,_footer,index,v4/index}.t2t
 
+# Fix for Jekyll 3.8.5
+# https://github.com/jekyll/jekyll/pull/7267
+
 # html-tidy
 git clone https://github.com/htacg/tidy-html5.git
 cd tidy-html5
