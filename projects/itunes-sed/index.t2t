@@ -48,7 +48,7 @@ Now just type your nice SED command. Imagine you are on the Terminal, all the SE
 
  [step-2.png] 
 
-**Note:** You may also like [iTunes Run Script ROOTPATH/../bin/as/iTunesRunScript-1.1.zip], a modified version of iTunes SED made by Bobby Holley. It accepts any command besides SED, makes differentiation between input field and output field, and has the ability to read from the filename.
+**Note:** You may also like [iTunes Run Script /bin/as/iTunesRunScript-1.1.zip], a modified version of iTunes SED made by Bobby Holley. It accepts any command besides SED, makes differentiation between input field and output field, and has the ability to read from the filename.
 
 % close CONTENT
 ''' </div>

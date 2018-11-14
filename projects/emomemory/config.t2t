@@ -12,4 +12,4 @@
 %!postproc: URLBUY		buy.php
 
 % Left align AdiumBook image at sidebar
-%!postproc(html): '(ALIGN=")middle(" SRC="../../bin/img/adiumbook.png")'	'\1left\2'
+%!postproc(html): '(ALIGN=")middle(" SRC="/bin/img/adiumbook.png")'	'\1left\2'

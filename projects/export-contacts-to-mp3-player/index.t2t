@@ -24,7 +24,7 @@ Features: Runs fast, export all contacts or choose a group, removes accents from
 - [User reviews http://aureliosoft.wordpress.com/export-contacts-to-mp3-player/]
 -
 
-Not a Mac user? You can download [this Python script ROOTPATH/../bin/python/s1mp3-import-contacts.py] that imports your contacts to the player, reading a CSV file.
+Not a Mac user? You can download [this Python script /bin/python/s1mp3-import-contacts.py] that imports your contacts to the player, reading a CSV file.
 
 ''' <div class="downloadbox">
  | {IMG_DOWNLOAD} | [Download http://aurelio.googlecode.com/files/Export_Contacts_To_MP3_Player-1.1.zip] | {IMG_FINDER}
