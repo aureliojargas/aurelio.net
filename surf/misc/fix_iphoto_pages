@@ -51,7 +51,7 @@ cd ../$newfolder
 cp index.html index.old &&
 sed "
 s|<title>|&$TITLE_PREFIX|
-s|<head>|& <LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"../../site-sub.css\">|
+s|<head>|& <LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"/surf/site-sub.css\">|
 s|$folder-Pages/||g
 s|$folder-Thumbnails|mini|g
 s|Image\\([0-9]*\\.html\\)|\\1|g
@@ -70,7 +70,7 @@ s|^\\(     <br>\\)\\([^<]*\\)$|\\1<font size=\"-1\">\\2</font>|
 <br><br><font size=\"3\"><b>Dica:</b> Clique na foto para v&ecirc;-la \\
 maior.<br><br><b>Dica:</b> Anote o c&oacute;digo das fotos \\
 que voc&ecirc; gostar! Exemplo de c&oacute;digo: S134</font><br><br>\\
-<p><a href=\"../../index.html\">&lt; &lt; Voltar &agrave; principal</a></p>
+<p><a href=\"/surf/\">&lt; &lt; Voltar &agrave; principal</a></p>
 
 /<body /a\\
 <div class=\"body\">
@@ -90,7 +90,7 @@ for page in [0-9]*.html ; do
 	cp "$page" "$page.old" &&
 	sed "
 s|<title>|&$TITLE_PREFIX|
-s|<head>|& <LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"../../site-sub.css\">|
+s|<head>|& <LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\"/surf/site-sub.css\">|
 s|$folder-Images|foto|g
 s|HREF=\"\.\./index.html\"|HREF=\"index.html\"|
 s|Image\\([0-9]*\\.html\\)|\\1|g
@@ -102,11 +102,11 @@ s|src=\"\.\./foto/|src=\"foto/|
 		<td align=\"center\">\\1\\&Iacute;ndice</A></td>|
 	s|\\(<A HREF[^>]*>\\)Next--></A>|\\
 		<td class=\"noborder\" width=\"100\" align=\"right\">\\
-		\\1<img src=\"../../img/seta-direita.gif\"\\
+		\\1<img src=\"/surf/img/seta-direita.gif\"\\
 			alt=\"Proxima\" title=\"Proxima\"></A>\\&nbsp;</td>|
 	s|\\(<A HREF[^>]*>\\)<--Previous</A>\\(&nbsp;\\)*|\\
 		<td class=\"noborder\" width=\"100\">\\
-		\\1<img src=\"../../img/seta-esquerda.gif\"\\
+		\\1<img src=\"/surf/img/seta-esquerda.gif\"\\
 			alt=\"Anterior\" title=\"Anterior\"></A></td>|
 	
 	# 0.html and LAST.html needs it (no previous/next)
