@@ -2,7 +2,7 @@ NAME_ADIUMBOOK
 TAGLINE_ADIUMBOOK
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_ADIUMBOOK\1'
 % BODY name

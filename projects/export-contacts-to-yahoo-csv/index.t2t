@@ -2,7 +2,7 @@ NAME_EXPORTYAHOO
 TAGLINE_EXPORTYAHOO
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_EXPORTYAHOO\1'
 % BODY name

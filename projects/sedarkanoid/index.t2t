@@ -2,7 +2,7 @@ NAME_ARKANOID
 TAGLINE_ARKANOID
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_ARKANOID\1'
 % BODY name

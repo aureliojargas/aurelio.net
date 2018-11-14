@@ -2,7 +2,7 @@ NAME_ITUNESRENAME
 TAGLINE_ITUNESRENAME
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_ITUNESRENAME\1'
 % BODY name

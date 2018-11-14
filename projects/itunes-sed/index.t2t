@@ -2,7 +2,7 @@ NAME_ITUNESSED
 TAGLINE_ITUNESSED
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_ITUNESSED\1'
 % BODY name

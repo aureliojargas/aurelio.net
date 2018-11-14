@@ -2,7 +2,7 @@ NAME_IPHOTOSED
 TAGLINE_IPHOTOSED
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_IPHOTOSED\1'
 % BODY name

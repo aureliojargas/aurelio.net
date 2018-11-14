@@ -2,7 +2,7 @@ NAME_EXPORTMP3
 TAGLINE_EXPORTMP3
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_EXPORTMP3\1'
 % BODY name

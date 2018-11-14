@@ -2,7 +2,7 @@ NAME_ITUNESARTLESS
 TAGLINE_ITUNESARTLESS
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_ITUNESARTLESS\1'
 % BODY name

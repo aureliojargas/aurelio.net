@@ -2,7 +2,7 @@ NAME_GMAILJABBER
 TAGLINE_GMAILJABBER
 by
 
-%!postproc: ROOTPATH	..
+%!postproc: ROOTPATH	/projects
 % Extra TITLE
 %!postproc: '(</TITLE>)'	' - TAGLINE_GMAILJABBER\1'
 % BODY name
