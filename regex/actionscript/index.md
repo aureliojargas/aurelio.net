@@ -10,4 +10,4 @@ Documentação oficial de Expressões Regulares no Flex/Flash para o ActionScrip
 * http://probertson.com/resources/projects/actionscript-regexp-test/RegExpTestHarness.html
 Testador online de Expressões Regulares para o ActionScript.
 
-Veja também [o tópico sobre JavaScript](../javascript/), que usa a mesma sintaxe do ActionScript.
+Veja também [o tópico sobre JavaScript](/regex/javascript/), que usa a mesma sintaxe do ActionScript.

@@ -11,7 +11,7 @@ Esse curso é o que eu mais gosto de fazer. É um intensivão, o dia todo viajan
 
 ## Joinville ↔︎ São Paulo, de avião+táxi
 
-Esta foi segunda vez que fui dar curso no CT da Novatec. Na primeira eu fui de ônibus leito (9h de viagem), mas não consegui dormir e cheguei lá quebrado ([leia o relato completo](../i/)). Dessa vez resolvi fazer diferente e fui de avião.
+Esta foi segunda vez que fui dar curso no CT da Novatec. Na primeira eu fui de ônibus leito (9h de viagem), mas não consegui dormir e cheguei lá quebrado ([leia o relato completo](/curso/novatec-1/)). Dessa vez resolvi fazer diferente e fui de avião.
 
 Odiei.
 

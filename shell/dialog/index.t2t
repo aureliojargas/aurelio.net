@@ -7,8 +7,8 @@ _MYNAME
 %!postproc: (</TITLE>)	' - O guia completo sobre o dialog, em português\1'
 
 %!includeconf:		../../include/10anos/config.t2t
-%!style:		../../include/10anos/tutorial.css
-%!postproc: SITEROOT 	../..
+%!style:		/include/10anos/tutorial.css
+%!postproc: SITEROOT 	''
 %!postproc: (<BODY)	\1 class="dialog"
 
 %%!options: --style tema.css
@@ -47,7 +47,7 @@ Dialog escrita em português.
 O Dialog é um programa usado para desenhar interfaces amigáveis para o
 usuário, com botões e menus, a partir de um Shell Script.
 
-Um [Shell Script SITEROOT/shell] é um programa feito para funcionar no interpretador de
+Um [Shell Script /shell] é um programa feito para funcionar no interpretador de
 comandos (prompt) padrão do UNIX/Linux, como o Bourne Shell, ou o Bash.
 
 %%%

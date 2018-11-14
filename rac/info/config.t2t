@@ -7,7 +7,7 @@
 %!preproc: L_TECH 	[Ficha Técnica U_TECH]
 
 %!includeconf: ../config.t2t
-%!style: ../site.css
+%!style: /rac/site.css
 
 % other
 %!preproc: '\[(Info) .*?]'  	'//\1//'

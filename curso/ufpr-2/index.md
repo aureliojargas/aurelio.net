@@ -21,7 +21,7 @@ oportunidade.
 
 * [Slides da palestra](http://aurelio.net/curso/material/desenvolvedor/)
 
-Há cinco meses atrás, participei da [I Semana do Sofware Livre](../i/)
+Há cinco meses atrás, participei da [I Semana do Sofware Livre](/curso/ufpr-1/)
 na UFPR. Agora estou novamente nessa II Semana, com a mesma palestra
 sobre desenvolvimento de Software Livre.
 

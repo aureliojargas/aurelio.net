@@ -68,7 +68,7 @@ elogiaram bastante a apostila, dizendo ser bem escrita, completa e com
 conteúdo. Parece que meu tiro acertou algo :)
 
 Todos os detalhes sobre a apostila, índice, amostra e informações de
-venda avulsa estão [nesta outra página](../../shell/apostila/).
+venda avulsa estão [nesta outra página](/shell/apostila/).
 
 ## A Viagem
 

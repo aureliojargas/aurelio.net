@@ -3,7 +3,7 @@ RAC - Download
 
 %!includeconf: config.t2t
 %!preproc: '\[(Versões Anteriores) .*?]'	'//\1//'
-%!preproc: SRC	../src
+%!preproc: SRC	/rac/src
 %!include: ../menu.t2t
 %!include: menu.t2t
 

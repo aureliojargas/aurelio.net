@@ -6,7 +6,7 @@
 %!preproc: L_FUTURE	[Futuro U_FUTURE]
 
 %!includeconf: ../config.t2t
-%!style: ../site.css
+%!style: /rac/site.css
 
 % other
 %!preproc: '\[(Download) .*?]'  '//\1//'

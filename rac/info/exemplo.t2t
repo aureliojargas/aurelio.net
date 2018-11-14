@@ -2,7 +2,7 @@ RAC - Exemplos de Endereçamento
 
 
 %!includeconf: config.t2t
-%!options: --toc --css-inside --style exemplo.css
+%!options: --toc --style exemplo.css
 % tabela: negrito nos endereços, itálico nos nomes
 %!preproc: '^( +\| +)(.*?)( +\| +)(.*?)( +\|)'   '\1**\2**\3//\4//\5'
 % remover a borda da tabela

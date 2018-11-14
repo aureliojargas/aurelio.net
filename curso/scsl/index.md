@@ -87,7 +87,7 @@ após todos terem dito suas falas, os cursos começaram.
 
 ## 26.Abr.2004 ::: O Editor VI
 
-* [Material de Apoio](../material/vim-ref.html)
+* [Material de Apoio](/curso/material/vim-ref.html)
 
 Com o início atrasado por causa da cerimônia de abertura, o curso de
 VI não durou as 4 horas previstas, indo das 11 às 14 horas. Eram 15
