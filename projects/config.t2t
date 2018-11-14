@@ -5,7 +5,7 @@
 %!options: --css-sugar
 %!style: ROOTPATH/soft4.css
 
-%!postproc: ROOTPATH	.
+%!postproc: ROOTPATH	/projects
 
 % set common BODY class for every page
 %!postproc
@@ -45,7 +45,7 @@
 % Misc paths
 %!preproc: PATH_PADFILES	ROOTPATH/padfiles
 %!preproc: PATH_ICON32		ROOTPATH/img/icon/32
-%!preproc: PATH_ICON96		ROOTPATH/../img/icon/96
+%!preproc: PATH_ICON96		/img/icon/96
 %!postproc: URL_BLOG		http://aureliosoft.wordpress.com
 %!preproc: URL_PADFILES		http://aurelio.net/projects/padfiles/
 
