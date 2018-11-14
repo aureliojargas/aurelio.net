@@ -7,10 +7,10 @@ Txt2regex Screenshots
 
   |  Support for POSIX classes, as [:alpha:], [:lower:] and friends | [img/posix.png]
   |  Full support for groups, including a very nice opened/closed balance control | [img/group.png]
-  |  Use --showmeta command line option to get information about programs metacharacters | [img/showmeta.png]
-  |  Use --showinfo command line option to get information about a specific program | [img/showinfo.png]
-  |  Use --whitebg to run txt2regex on a white background terminal | [img/whitebg.png]
-  |  Use --make to generate ready-to-use regexes for all programs (--all) or for specific programs (--prog) | [img/readyregex.png]
+  |  Use ``--showmeta`` command line option to get information about programs metacharacters | [img/showmeta.png]
+  |  Use ``--showinfo`` command line option to get information about a specific program | [img/showinfo.png]
+  |  Use ``--whitebg`` to run txt2regex on a white background terminal | [img/whitebg.png]
+  |  Use ``--make`` to generate ready-to-use regexes for all programs (``--all``) or for specific programs (``--prog``) | [img/readyregex.png]
   |  Full support for localization, see the program in japanese | [img/japanese.png]
 
 --------------------------------------------------------------------
