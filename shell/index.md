@@ -102,11 +102,11 @@ Uma coleção preciosa com vários artigos rápidos dando dicas de Shell. Dê um
 * [Curso de Shell Online](http://olinux.uol.com.br/Programacao) *por Alex Borro*
 Curso em várias aulas sobre shell. Nesse mesmo link também tem um curso sobre Algoritmos. Aparentemente essa página só abre direito no IE :(
 
-* [Introdução ao Shell Script](../shell/apostila-introducao-shell.pdf) *por Aurelio Marinho Jargas*
+* [Introdução ao Shell Script](/shell/apostila-introducao-shell.pdf) *por Aurelio Marinho Jargas*
 Apostila introdutória sobre Shell Script, com 22 páginas de uma abordagem rápida e direta sobre como fazer scripts em shell. Útil para quem já usa o UNIX/Linux na linha de comando e quer começar a fazer alguns scripts para automatizar tarefas.
 
 * [Guia de programação Shell Script](http://www.inf.ufpr.br/afms03/shell.html) *por Alexandre Felipe Muller De Souza*
-Um guia completo sobre shell, que ensina tanto os conceitos básicos como sintaxe e comandos, quanto tópicos avançados como [expressões regulares](../er) e criação segura de arquivos temporários. Leitura recomendada!
+Um guia completo sobre shell, que ensina tanto os conceitos básicos como sintaxe e comandos, quanto tópicos avançados como [expressões regulares](/regex/) e criação segura de arquivos temporários. Leitura recomendada!
 
 * [O que o #! realmente faz](http://geocities.yahoo.com.br/cesarakg/tips-shell-programming.html) *por Mo Budlong*
 Artigo traduzido que explica a função do #! no início dos scripts shell.
@@ -236,7 +236,7 @@ Script interativo que usa o Dialog para mostrar um menu com a lista
 de arquivos mp3 do usuário. Ao selecionar a música, o mpg213 é
 chamado para tocá-la.
 
-* [oofind](../bin/bash/oofind) *por Aurelio Marinho Jargas*
+* [oofind](/bin/bash/oofind) *por Aurelio Marinho Jargas*
 É um "grep" para arquivos .SXW do OpenOffice.org. Você informa o
 texto de pesquisa e ele lhe diz se o(s) arquivo(s) .SXW possui
 este texto ou não.
