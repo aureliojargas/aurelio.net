@@ -126,7 +126,7 @@ bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0 -
 
 All the `.t2t` files on this repository are not processed by Jekyll. They have no front matter and must be converted by hand using the txt2tags script (Python 2) stored in the `_scripts` folder. The resultant HTML files must also be added to the repository.
 
-My long term goal is to convert all those files to Markdown or HTML and remove the txt2tags dependency. See issue #11.
+My long term goal is to convert all those files to Markdown or HTML and remove the txt2tags dependency. See [issue #11]( https://github.com/aureliojargas/aurelio.net/issues/11).
 
 ## Images with captions
 
