@@ -1,390 +1,409 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/tutorial.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<TITLE>Dialog --tudo - O guia completo sobre o dialog, em português :: aurelio.net</TITLE>
-</HEAD>
-<BODY class="dialog">
+---
+date: 1999-12-31
+title: Dialog --tudo - _MYNAME
+---
 
-<DIV ID="header">
-<h1>Dialog --tudo</h1>
-<h3><a href="http://aurelio.net">Aurelio Marinho Jargas</a></h3>
-<H3>2003-2018</H3>
-</DIV>
-
-<DIV ID="main">
-<div style="width:620px; margin:0 auto 2em auto;"><a href="http://www.piazinho.com.br/"><img src="/img/banner-piazinho4.png" style="padding:0;border:1px solid black;"></a></div>
-<div class="banner">
-
-<TABLE BORDER="1">
-<TR>
-<TD><A HREF="http://www.shellscript.com.br"><IMG ALIGN="middle" SRC="/img/icon/128/livroshell.png" BORDER="0" ALT=""></A></TD>
-<TD>Este artigo sobre o Dialog é um resumo do capítulo 11  do meu livro <A HREF="http://www.shellscript.com.br">Shell Script Profissional</A>. O livro é enorme, são quase 500 páginas de puro shell, explicado de maneira clara e didática. Você vai dominar o assunto, além de aprender a escrever programas de verdade em vez de meros scripts toscos. Sou escritor e ganho a vida com meus livros, então comprando o livro você também me ajuda a manter esse site no ar e assim eu continuo escrevendo para você ler. Combinado? :)</TD>
-</TR>
-</TABLE>
-
+<div style="width:620px; margin:0 auto 2em auto;">
+  <a href="http://www.piazinho.com.br/"><img src="/img/banner-piazinho4.png" style="padding:0;border:1px solid black;"></a>
 </div>
-<DIV CLASS="toc">
 
-  <OL>
-  <LI><A HREF="#prefacio">Prefácio</A>
-  <LI><A HREF="#intro">Introdução</A>
-    <UL>
-    <LI><A HREF="#oqueeh">2.1. O que é o Dialog</A>
-    <LI><A HREF="#historia">2.2. Breve histórico do Dialog</A>
-    <LI><A HREF="#primeiro">2.3. Seu primeiro comando com o Dialog</A>
-    <LI><A HREF="#caixas">2.4. Listagem dos 15 tipos de caixas</A>
-    </UL>
-  <LI><A HREF="#exemplos">Exemplos dos tipos de caixa</A>
-    <UL>
-    <LI><A HREF="#calendar">3.1. Calendar</A>
-    <LI><A HREF="#checklist">3.2. Checklist</A>
-    <LI><A HREF="#fselect">3.3. Fselect</A>
-    <LI><A HREF="#gauge">3.4. Gauge</A>
-    <LI><A HREF="#infobox">3.5. Infobox</A>
-    <LI><A HREF="#inputbox">3.6. Inputbox, Passwordbox</A>
-    <LI><A HREF="#menu">3.7. Menu</A>
-    <LI><A HREF="#msgbox">3.8. Msgbox</A>
-    <LI><A HREF="#radiolist">3.9. Radiolist</A>
-    <LI><A HREF="#tailbox">3.10. Tailbox, Tailboxbg</A>
-    <LI><A HREF="#textbox">3.11. Textbox</A>
-    <LI><A HREF="#timebox">3.12. Timebox</A>
-    <LI><A HREF="#yesno">3.13. Yesno</A>
-    </UL>
-  <LI><A HREF="#funcionamento">Como o Dialog funciona</A>
-    <UL>
-    <LI><A HREF="#parametros">4.1. Entendendo os parâmetros obrigatórios da linha de comando</A>
-    <LI><A HREF="#simnao">4.2. Como reconhecer respostas SIM ou NÃO</A>
-    <LI><A HREF="#textodigitado">4.3. Como obter o texto que o usuário digitou</A>
-    <LI><A HREF="#itemescolhido">4.4. Como obter o item único escolhido de um Menu ou Radiolist</A>
-    <LI><A HREF="#itensescolhidos">4.5. Como obter os itens múltiplos escolhidos de um Checklist</A>
-    <LI><A HREF="#botaocancelar">4.6. E se o usuário apertar o botão CANCELAR?</A>
-    <LI><A HREF="#teclaesc">4.7. E se o usuário apertar a tecla ESC?</A>
-    <LI><A HREF="#botaohelp">4.8. E se o usuário apertar o botão HELP?</A>
-    <LI><A HREF="#tratarbotoes">4.9. Como tratar todos os botões e teclas de uma vez?</A>
-    </UL>
-  <LI><A HREF="#mergulhando">Mergulhando de cabeça no Dialog</A>
-    <UL>
-    <LI><A HREF="#menuloop">5.1. Exemplo de menu amarrado (em loop)</A>
-    <LI><A HREF="#encadeado">5.2. Exemplo de telas encadeadas (navegação sem volta)</A>
-    <LI><A HREF="#idaevolta">5.3. Exemplo de telas com navegação completa (ida e volta)</A>
-    <LI><A HREF="#confirmacao">5.4. Exemplo de pedido de confirmação (uma caixa sobre outra)</A>
-    <LI><A HREF="#posicionar">5.5. Exemplo de posicionamento de caixas (não centralizado)</A>
-    <LI><A HREF="#multicaixas">5.6. Exemplo de várias caixas na mesma tela (multicaixas!)</A>
-    <LI><A HREF="#menudinamico">5.7. Exemplo de menu com itens dinâmicos (definidos em execução)</A>
-    <LI><A HREF="#copiagauge">5.8. Exemplo de cópia de arquivos com barra de progresso (Gauge)</A>
-    <LI><A HREF="#cores">5.9. Configurando as cores das caixas</A>
-    </UL>
-  <LI><A HREF="#opcoes">APÊNDICE A: Lista das opções de linha de comando</A>
-    <UL>
-    <LI><A HREF="#opcoes-textos">6.1. Opções para definir os textos da caixa</A>
-    <LI><A HREF="#opcoes-ajustes-textos">6.2. Opções para fazer ajustes no texto da caixa</A>
-    <LI><A HREF="#opcoes-ajustes">6.3. Opções para fazer ajustes na caixa</A>
-    <LI><A HREF="#opcoes-dados">6.4. Opções relativas aos dados informados pelo usuário</A>
-    <LI><A HREF="#opcoes-sozinhas">6.5. Opções que devem ser usadas sozinhas na linha de comando</A>
-    <LI><A HREF="#opcoes-outras">6.6. Outras opções</A>
-    </UL>
-  <LI><A HREF="#clones">APÊNDICE B: Os clones: Xdialog, Kdialog, gdialog, ...</A>
-    <UL>
-    <LI><A HREF="#whiptail">7.1. Whiptail</A>
-    <LI><A HREF="#xdialog">7.2. Xdialog</A>
-    <LI><A HREF="#kdialog">7.3. Kdialog</A>
-    <LI><A HREF="#gdialog">7.4. gdialog</A>
-    <LI><A HREF="#zenity">7.5. Zenity</A>
-    <LI><A HREF="#udpm">7.6. Udpm</A>
-    <LI><A HREF="#pythondialog">7.7. pythondialog</A>
-    </UL>
-  <LI><A HREF="#sobre">Sobre este documento</A>
-    <UL>
-    <LI><A HREF="#download">8.1. Disponibilidade (download)</A>
-    <LI><A HREF="#changelog">8.2. Histórico de versões (Changelog)</A>
-    <LI><A HREF="#licenca">8.3. Licença / Copyright</A>
-    <LI><A HREF="#maisinfo">8.4. Onde obter mais informações</A>
-    </UL>
-  </OL>
+<div class="banner">
+  <table class="tableborder">
+    <tr>
+      <td>
+        <a href="http://www.shellscript.com.br"><img class="center" src="/img/icon/128/livroshell.png" alt=""></a>
+      </td>
+      <td>
+        Este artigo sobre o Dialog é um resumo do capítulo 11 do meu livro <a href="http://www.shellscript.com.br">Shell Script Profissional</a>. O livro é enorme, são quase 500 páginas de puro shell, explicado de maneira clara e didática. Você vai dominar o assunto, além de aprender a escrever programas de verdade em vez de meros scripts toscos. Sou escritor e ganho a vida com meus livros, então comprando o livro você também me ajuda a manter esse site no ar e assim eu continuo escrevendo para você ler. Combinado? :)
+      </td>
+    </tr>
+  </table>
+</div>
 
-</DIV>
+<nav>
+  <ol>
+    <li>
+      <a href="#prefacio">Prefácio</a>
+    </li>
+    <li>
+      <a href="#intro">Introdução</a>
+      <ul>
+        <li>
+          <a href="#oqueeh">2.1. O que é o Dialog</a>
+        </li>
+        <li>
+          <a href="#historia">2.2. Breve histórico do Dialog</a>
+        </li>
+        <li>
+          <a href="#primeiro">2.3. Seu primeiro comando com o Dialog</a>
+        </li>
+        <li>
+          <a href="#caixas">2.4. Listagem dos 15 tipos de caixas</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#exemplos">Exemplos dos tipos de caixa</a>
+      <ul>
+        <li>
+          <a href="#calendar">3.1. Calendar</a>
+        </li>
+        <li>
+          <a href="#checklist">3.2. Checklist</a>
+        </li>
+        <li>
+          <a href="#fselect">3.3. Fselect</a>
+        </li>
+        <li>
+          <a href="#gauge">3.4. Gauge</a>
+        </li>
+        <li>
+          <a href="#infobox">3.5. Infobox</a>
+        </li>
+        <li>
+          <a href="#inputbox">3.6. Inputbox, Passwordbox</a>
+        </li>
+        <li>
+          <a href="#menu">3.7. Menu</a>
+        </li>
+        <li>
+          <a href="#msgbox">3.8. Msgbox</a>
+        </li>
+        <li>
+          <a href="#radiolist">3.9. Radiolist</a>
+        </li>
+        <li>
+          <a href="#tailbox">3.10. Tailbox, Tailboxbg</a>
+        </li>
+        <li>
+          <a href="#textbox">3.11. Textbox</a>
+        </li>
+        <li>
+          <a href="#timebox">3.12. Timebox</a>
+        </li>
+        <li>
+          <a href="#yesno">3.13. Yesno</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#funcionamento">Como o Dialog funciona</a>
+      <ul>
+        <li>
+          <a href="#parametros">4.1. Entendendo os parâmetros obrigatórios da linha de comando</a>
+        </li>
+        <li>
+          <a href="#simnao">4.2. Como reconhecer respostas SIM ou NÃO</a>
+        </li>
+        <li>
+          <a href="#textodigitado">4.3. Como obter o texto que o usuário digitou</a>
+        </li>
+        <li>
+          <a href="#itemescolhido">4.4. Como obter o item único escolhido de um Menu ou Radiolist</a>
+        </li>
+        <li>
+          <a href="#itensescolhidos">4.5. Como obter os itens múltiplos escolhidos de um Checklist</a>
+        </li>
+        <li>
+          <a href="#botaocancelar">4.6. E se o usuário apertar o botão CANCELAR?</a>
+        </li>
+        <li>
+          <a href="#teclaesc">4.7. E se o usuário apertar a tecla ESC?</a>
+        </li>
+        <li>
+          <a href="#botaohelp">4.8. E se o usuário apertar o botão HELP?</a>
+        </li>
+        <li>
+          <a href="#tratarbotoes">4.9. Como tratar todos os botões e teclas de uma vez?</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#mergulhando">Mergulhando de cabeça no Dialog</a>
+      <ul>
+        <li>
+          <a href="#menuloop">5.1. Exemplo de menu amarrado (em loop)</a>
+        </li>
+        <li>
+          <a href="#encadeado">5.2. Exemplo de telas encadeadas (navegação sem volta)</a>
+        </li>
+        <li>
+          <a href="#idaevolta">5.3. Exemplo de telas com navegação completa (ida e volta)</a>
+        </li>
+        <li>
+          <a href="#confirmacao">5.4. Exemplo de pedido de confirmação (uma caixa sobre outra)</a>
+        </li>
+        <li>
+          <a href="#posicionar">5.5. Exemplo de posicionamento de caixas (não centralizado)</a>
+        </li>
+        <li>
+          <a href="#multicaixas">5.6. Exemplo de várias caixas na mesma tela (multicaixas!)</a>
+        </li>
+        <li>
+          <a href="#menudinamico">5.7. Exemplo de menu com itens dinâmicos (definidos em execução)</a>
+        </li>
+        <li>
+          <a href="#copiagauge">5.8. Exemplo de cópia de arquivos com barra de progresso (Gauge)</a>
+        </li>
+        <li>
+          <a href="#cores">5.9. Configurando as cores das caixas</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#opcoes">APÊNDICE A: Lista das opções de linha de comando</a>
+      <ul>
+        <li>
+          <a href="#opcoes-textos">6.1. Opções para definir os textos da caixa</a>
+        </li>
+        <li>
+          <a href="#opcoes-ajustes-textos">6.2. Opções para fazer ajustes no texto da caixa</a>
+        </li>
+        <li>
+          <a href="#opcoes-ajustes">6.3. Opções para fazer ajustes na caixa</a>
+        </li>
+        <li>
+          <a href="#opcoes-dados">6.4. Opções relativas aos dados informados pelo usuário</a>
+        </li>
+        <li>
+          <a href="#opcoes-sozinhas">6.5. Opções que devem ser usadas sozinhas na linha de comando</a>
+        </li>
+        <li>
+          <a href="#opcoes-outras">6.6. Outras opções</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#clones">APÊNDICE B: Os clones: Xdialog, Kdialog, gdialog, ...</a>
+      <ul>
+        <li>
+          <a href="#whiptail">7.1. Whiptail</a>
+        </li>
+        <li>
+          <a href="#xdialog">7.2. Xdialog</a>
+        </li>
+        <li>
+          <a href="#kdialog">7.3. Kdialog</a>
+        </li>
+        <li>
+          <a href="#gdialog">7.4. gdialog</a>
+        </li>
+        <li>
+          <a href="#zenity">7.5. Zenity</a>
+        </li>
+        <li>
+          <a href="#udpm">7.6. Udpm</a>
+        </li>
+        <li>
+          <a href="#pythondialog">7.7. pythondialog</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#sobre">Sobre este documento</a>
+      <ul>
+        <li>
+          <a href="#download">8.1. Disponibilidade (download)</a>
+        </li>
+        <li>
+          <a href="#changelog">8.2. Histórico de versões (Changelog)</a>
+        </li>
+        <li>
+          <a href="#licenca">8.3. Licença / Copyright</a>
+        </li>
+        <li>
+          <a href="#maisinfo">8.4. Onde obter mais informações</a>
+        </li>
+      </ul>
+    </li>
+  </ol>
+</nav>
 
-<H1 ID="prefacio">1. Prefácio</h2>
+<h1 id="prefacio">1. Prefácio</h1>
 
-<P>
-Bem-vindo(a) ao "Dialog --tudo", uma documentação completa do programa
-Dialog escrita em português.
-</P>
-<P>
-O Dialog é um programa usado para desenhar interfaces amigáveis para o
-usuário, com botões e menus, a partir de um Shell Script.
-</P>
-<P>
-Um <A HREF="/shell">Shell Script</A> é um programa feito para funcionar no interpretador de
-comandos (prompt) padrão do UNIX/Linux, como o Bourne Shell, ou o Bash.
-</P>
-<P>
-Para obter os conhecimentos que este documento se
-propõe a transmitir, o leitor deve ter:
-</P>
+<p>Bem-vindo(a) ao "Dialog --tudo", uma documentação completa do programa Dialog escrita em português.</p>
 
-<UL>
-<LI>Conhecimento prévio de programação Shell;
-<LI>Uma Shell disponível para testar os exemplos;
-<LI>O Dialog instalado e funcionando em sua máquina.
-</UL>
+<p>O Dialog é um programa usado para desenhar interfaces amigáveis para o usuário, com botões e menus, a partir de um Shell Script.</p>
 
-<P>
-Se você ainda não tem o Dialog, instale o programa direto do CD
-da sua distribuição de Linux, ou
-<A HREF="http://dickey.his.com/dialog/">baixe os fontes</A>.
-</P>
-<P>
-Tudo certo? Então boa leitura!
-</P>
+<p>Um <a href="/shell">Shell Script</a> é um programa feito para funcionar no interpretador de comandos (prompt) padrão do UNIX/Linux, como o Bourne Shell, ou o Bash.</p>
 
-<H1 ID="intro">2. Introdução</h2>
+<p>Para obter os conhecimentos que este documento se propõe a transmitir, o leitor deve ter:</p>
 
-<H2 ID="oqueeh">2.1. O que é o Dialog</h3>
+<ul>
+  <li>Conhecimento prévio de programação Shell;</li>
+  <li>Uma Shell disponível para testar os exemplos;</li>
+  <li>O Dialog instalado e funcionando em sua máquina.</li>
+</ul>
 
-<P>
-O Dialog é um programa para console (modo texto) que desenha caixas de
-diálogo ("dialog boxes") na tela, similares as do modo gráfico, com
-botões, entradas para texto e menu. Essas caixas são utilizadas para
-compor interfaces amigáveis com o usuário, para que ele responda
-perguntas ou escolha opções.
-</P>
-<P>
-O Dialog é um executável e recebe todos os parâmetros via linha de
-comando, então ele geralmente é usado dentro de um Shell Script. Serve
-para fazer programas <B>interativos</B>, que o usuário precisa operar
-durante sua execução. Tarefas comuns feitas com o Dialog são escolher
-uma opção em um menu, escolher um arquivo, uma data, e digitar frases ou
-senhas.
-</P>
-<P>
-Com o Dialog é possível fazer programas em shell que se "parecem" com
-programas gráficos, onde o usuário vê apenas telas e navega entre elas
-apertando os botões de "OK" e "CANCELAR". Um exemplo clássico desse
-tipo de interface são os programas de instalação de software.
-</P>
-<P>
-Utilizando este conceito de telas, é possível "amarrar" o usuário ao
-programa, lhe apresentando as opções disponíveis, sem que ele precise
-ter acesso direto à linha de comando. Útil para logins restritos e para
-ajudar iniciantes.
-</P>
+<p>Se você ainda não tem o Dialog, instale o programa direto do CD da sua distribuição de Linux, ou <a href="http://dickey.his.com/dialog/">baixe os fontes</a>.</p>
 
-<H2 ID="historia">2.2. Breve histórico do Dialog</h3>
+<p>Tudo certo? Então boa leitura!</p>
 
-<UL>
-<LI>O Dialog original é antigo e não é mais desenvolvido, foi até a versão
-  0.3
-<LI>Outros programadores o adotaram e continuaram o desenvolvimento até a
-  versão 0.7.
-<LI>Depois surgiu o "cdialog" (ComeOn Dialog), como um Dialog melhorado,
-  baseado no original.
-<LI>O cdialog continuou evoluindo e acabou se tornando o oficial, sendo
-  renomeado para "dialog". <B>Este é o Dialog que veremos aqui.</B>
-</UL>
+<h1 id="intro">2. Introdução</h1>
 
-<H2 ID="primeiro">2.3. Seu primeiro comando com o Dialog</h3>
+<h2 id="oqueeh">2.1. O que é o Dialog</h2>
 
-<P>
-Mas vamos direto a um exemplo para que você conheça "a cara" do Dialog.
-Sente numa posição confortável e digite na shell o seguinte comando:
-</P>
+<p>O Dialog é um programa para console (modo texto) que desenha caixas de diálogo ("dialog boxes") na tela, similares as do modo gráfico, com botões, entradas para texto e menu. Essas caixas são utilizadas para compor interfaces amigáveis com o usuário, para que ele responda perguntas ou escolha opções.</p>
 
-<PRE>
+<p>O Dialog é um executável e recebe todos os parâmetros via linha de comando, então ele geralmente é usado dentro de um Shell Script. Serve para fazer programas <strong>interativos</strong>, que o usuário precisa operar durante sua execução. Tarefas comuns feitas com o Dialog são escolher uma opção em um menu, escolher um arquivo, uma data, e digitar frases ou senhas.</p>
+
+<p>Com o Dialog é possível fazer programas em shell que se "parecem" com programas gráficos, onde o usuário vê apenas telas e navega entre elas apertando os botões de "OK" e "CANCELAR". Um exemplo clássico desse tipo de interface são os programas de instalação de software.</p>
+
+<p>Utilizando este conceito de telas, é possível "amarrar" o usuário ao programa, lhe apresentando as opções disponíveis, sem que ele precise ter acesso direto à linha de comando. Útil para logins restritos e para ajudar iniciantes.</p>
+
+<h2 id="historia">2.2. Breve histórico do Dialog</h2>
+
+<ul>
+  <li>O Dialog original é antigo e não é mais desenvolvido, foi até a versão 0.3</li>
+  <li>Outros programadores o adotaram e continuaram o desenvolvimento até a versão 0.7.</li>
+  <li>Depois surgiu o "cdialog" (ComeOn Dialog), como um Dialog melhorado, baseado no original.</li>
+  <li>O cdialog continuou evoluindo e acabou se tornando o oficial, sendo renomeado para "dialog". <strong>Este é o Dialog que veremos aqui.</strong></li>
+</ul>
+
+<h2 id="primeiro">2.3. Seu primeiro comando com o Dialog</h2>
+
+<p>Mas vamos direto a um exemplo para que você conheça "a cara" do Dialog. Sente numa posição confortável e digite na shell o seguinte comando:</p>
+
+<pre>
 $ dialog --msgbox 'minha primeira tela' 5 40
-</PRE>
+</pre>
 
-<P>
-Imediatamente sua tela ficará assim:
-</P>
-          <center><IMG ALIGN="middle" SRC="primeira.png" BORDER="0" ALT=""></center>          
-<P>
-Fácil não? Desenhamos uma caixa de mensagens (msgbox) de tamanho 5 por 40.
-</P>
-<P>
-O Dialog reconhece vários tipos de "caixas", e esta <I>msgbox</I> é uma
-das mais simples. Os dois números passados no final do comando definem o
-tamanho da caixa que queremos desenhar, nesse caso 5 linhas e 40
-colunas (Não confundir com pixels, pois estamos no console!).
-</P>
+<p>Imediatamente sua tela ficará assim:</p>
 
-<H2 ID="caixas">2.4. Listagem dos 15 tipos de caixas</h3>
+<p class="figure">
+  <img src="primeira.png">
+</p>
 
-<P>
-Para saciar a curiosidade do leitor, aqui estão listados todos os
-tipos de caixa suportadas pelo Dialog:
-</P>
+<p>Fácil não? Desenhamos uma caixa de mensagens (msgbox) de tamanho 5 por 40.</p>
 
-<TABLE ALIGN="center" BORDER="1">
-<TR>
-<TH>Tipo da caixa</TH>
-<TH>Desenha uma caixa onde o usuário...</TH>
-</TR>
-<TR>
-<TD>calendar</TD>
-<TD>Vê um calendário e escolhe uma data</TD>
-</TR>
-<TR>
-<TD>checklist</TD>
-<TD>Vê uma lista de opções e escolhe várias</TD>
-</TR>
-<TR>
-<TD>fselect</TD>
-<TD>Digita ou escolhe um arquivo</TD>
-</TR>
-<TR>
-<TD>gauge</TD>
-<TD>Vê uma barra de progresso (porcentagem)</TD>
-</TR>
-<TR>
-<TD>infobox</TD>
-<TD>Vê uma mensagem, sem botões</TD>
-</TR>
-<TR>
-<TD>inputbox</TD>
-<TD>Digita um texto qualquer</TD>
-</TR>
-<TR>
-<TD>menu</TD>
-<TD>Vê um menu e escolhe um item</TD>
-</TR>
-<TR>
-<TD>msgbox</TD>
-<TD>Vê uma mensagem e aperta o botão OK</TD>
-</TR>
-<TR>
-<TD>passwordbox</TD>
-<TD>Digita uma senha</TD>
-</TR>
-<TR>
-<TD>radiolist</TD>
-<TD>Vê uma lista de opções e escolhe uma</TD>
-</TR>
-<TR>
-<TD>tailbox</TD>
-<TD>Vê a saída do comando tail -f</TD>
-</TR>
-<TR>
-<TD>tailboxbg</TD>
-<TD>Vê a saída do comando tail -f (em segundo plano)</TD>
-</TR>
-<TR>
-<TD>textbox</TD>
-<TD>Vê o conteúdo de um arquivo</TD>
-</TR>
-<TR>
-<TD>timebox</TD>
-<TD>Escolhe um horário</TD>
-</TR>
-<TR>
-<TD>yesno</TD>
-<TD>Vê uma pergunta e aperta o botão YES ou o NO</TD>
-</TR>
-</TABLE>
+<p>O Dialog reconhece vários tipos de "caixas", e esta <em>msgbox</em> é uma das mais simples. Os dois números passados no final do comando definem o tamanho da caixa que queremos desenhar, nesse caso 5 linhas e 40 colunas (Não confundir com pixels, pois estamos no console!).</p>
 
-<P>
-É notável que a variedade é grande e temos caixas para vários tipos de
-tarefas. Algumas caixas são novas e foram introduzidas em versões mais
-recentes do Dialog.
-</P>
-<P>
-Caso alguma dessas caixas não funcione na sua máquina, atualize o seu
-Dialog para a versão mais recente ou confira se ele foi compilado com
-todas as caixas disponíveis.
-</P>
+<h2 id="caixas">2.4. Listagem dos 15 tipos de caixas</h2>
 
-<H1 ID="exemplos">3. Exemplos dos tipos de caixa</h2>
+<p>Para saciar a curiosidade do leitor, aqui estão listados todos os tipos de caixa suportadas pelo Dialog:</p>
 
-<P>
-Agora que já sabemos como é a cara do Dialog, e quais são todos os tipos
-de caixas disponíveis, com certeza o leitor deve estar afoito para
-cruzar essas duas informações e ver a cara de todas as caixas, não?
-</P>
-<P>
-É isso o que veremos agora, uma listagem completa com um exemplo
-funcional de cada tipo de caixa, constando um foto da tela e a linha de
-comando usada para gerá-la.
-</P>
-<P>
-Como uma maneira de contextualizar nossa listagem, inventamos o <B>IIV</B>,
-que é o <I>Instalador Imaginário do Vi</I>. As telas seguintes fazem
-parte desse instalador, que instala e configura o editor de textos Vi em
-sua máquina.
-</P>
-<P>
-<B>Instruções Importantes:</B>
-</P>
+<table class="tableborder">
+  <tr>
+    <th>Tipo da caixa</th>
+    <th>Desenha uma caixa onde o usuário...</th>
+  </tr>
+  <tr>
+    <td>calendar</td>
+    <td>Vê um calendário e escolhe uma data</td>
+  </tr>
+  <tr>
+    <td>checklist</td>
+    <td>Vê uma lista de opções e escolhe várias</td>
+  </tr>
+  <tr>
+    <td>fselect</td>
+    <td>Digita ou escolhe um arquivo</td>
+  </tr>
+  <tr>
+    <td>gauge</td>
+    <td>Vê uma barra de progresso (porcentagem)</td>
+  </tr>
+  <tr>
+    <td>infobox</td>
+    <td>Vê uma mensagem, sem botões</td>
+  </tr>
+  <tr>
+    <td>inputbox</td>
+    <td>Digita um texto qualquer</td>
+  </tr>
+  <tr>
+    <td>menu</td>
+    <td>Vê um menu e escolhe um item</td>
+  </tr>
+  <tr>
+    <td>msgbox</td>
+    <td>Vê uma mensagem e aperta o botão OK</td>
+  </tr>
+  <tr>
+    <td>passwordbox</td>
+    <td>Digita uma senha</td>
+  </tr>
+  <tr>
+    <td>radiolist</td>
+    <td>Vê uma lista de opções e escolhe uma</td>
+  </tr>
+  <tr>
+    <td>tailbox</td>
+    <td>Vê a saída do comando tail -f</td>
+  </tr>
+  <tr>
+    <td>tailboxbg</td>
+    <td>Vê a saída do comando tail -f (em segundo plano)</td>
+  </tr>
+  <tr>
+    <td>textbox</td>
+    <td>Vê o conteúdo de um arquivo</td>
+  </tr>
+  <tr>
+    <td>timebox</td>
+    <td>Escolhe um horário</td>
+  </tr>
+  <tr>
+    <td>yesno</td>
+    <td>Vê uma pergunta e aperta o botão YES ou o NO</td>
+  </tr>
+</table>
 
-<UL>
-<LI>Não veja essa lista com pressa.
-<P></P>
-<LI>Analise com atenção os detalhes de cada tela, acompanhe na linha de
-  comando as opções e parâmetros utilizados, redigite (ou copie e
-  cole) os comandos na sua Shell e veja os exemplos "ao vivo".
-<P></P>
-<LI>Experimente mudar alguns parâmetros e ver o que acontece, explore as
-  possibilidades.
-<P></P>
-<LI>Não se preocupe agora em "como" o Dialog funciona, mas sim com "o
-  quê" ele faz.
-<P></P>
-<LI>Descubra-o, experimente-o, é de graça!
-<P></P>
-<LI>Faça desse momento uma apresentação, imersão e aprendizado, para
-  entrar no mundo do Dialog.
-</UL>
+<p>É notável que a variedade é grande e temos caixas para vários tipos de tarefas. Algumas caixas são novas e foram introduzidas em versões mais recentes do Dialog.</p>
 
-	<BLOCKQUOTE>
-	<B>IMPORTANTE:</B> Releia e siga as instruções acima!
-	</BLOCKQUOTE>
-<P>
-Ao final dessa viagem, se você seguir as instruções acima, com certeza
-você terá uma boa idéia dos poderes do Dialog, do quanto ele pode lhe
-ser útil e de onde você poderá aplicá-lo.
-</P>
-<P>
-Não se assuste se de repente você ficar cheio de idéias e ter vontade de
-fazer uns 5 programas diferentes agora mesmo, <I>isso é normal! :)</I>. O
-Dialog tem esse poder de sedução por sua simplicidade e flexibilidade.
-</P>
-	<BLOCKQUOTE>
-	<B>Nota:</B> A quebra dos comandos em várias linhas é apenas estética, não obrigatória.
-	</BLOCKQUOTE>
-<P>
-                      <center> <table border="0">
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="calendar.png" BORDER="0" ALT=""></center>          
-                            </td> <td>
-</P>
+<p>Caso alguma dessas caixas não funcione na sua máquina, atualize o seu Dialog para a versão mais recente ou confira se ele foi compilado com todas as caixas disponíveis.</p>
 
-<H2 ID="calendar">3.1. Calendar</h3>
+<h1 id="exemplos">3. Exemplos dos tipos de caixa</h1>
 
-<PRE>
+<p>Agora que já sabemos como é a cara do Dialog, e quais são todos os tipos de caixas disponíveis, com certeza o leitor deve estar afoito para cruzar essas duas informações e ver a cara de todas as caixas, não?</p>
+
+<p>É isso o que veremos agora, uma listagem completa com um exemplo funcional de cada tipo de caixa, constando um foto da tela e a linha de comando usada para gerá-la.</p>
+
+<p>Como uma maneira de contextualizar nossa listagem, inventamos o <strong>IIV</strong>, que é o <em>Instalador Imaginário do Vi</em>. As telas seguintes fazem parte desse instalador, que instala e configura o editor de textos Vi em sua máquina.</p>
+
+<p><strong>Instruções Importantes:</strong></p>
+
+<ul>
+  <li>Não veja essa lista com pressa.</li>
+  <li>Analise com atenção os detalhes de cada tela, acompanhe na linha de comando as opções e parâmetros utilizados, redigite (ou copie e cole) os comandos na sua Shell e veja os exemplos "ao vivo".</li>
+  <li>Experimente mudar alguns parâmetros e ver o que acontece, explore as possibilidades.</li>
+  <li>Não se preocupe agora em "como" o Dialog funciona, mas sim com "o quê" ele faz.</li>
+  <li>Descubra-o, experimente-o, é de graça!</li>
+  <li>Faça desse momento uma apresentação, imersão e aprendizado, para entrar no mundo do Dialog.</li>
+</ul>
+
+<blockquote>
+  <strong>IMPORTANTE:</strong> Releia e siga as instruções acima!
+</blockquote>
+
+<p>Ao final dessa viagem, se você seguir as instruções acima, com certeza você terá uma boa idéia dos poderes do Dialog, do quanto ele pode lhe ser útil e de onde você poderá aplicá-lo.</p>
+
+<p>Não se assuste se de repente você ficar cheio de idéias e ter vontade de fazer uns 5 programas diferentes agora mesmo, <em>isso é normal! :)</em>. O Dialog tem esse poder de sedução por sua simplicidade e flexibilidade.</p>
+
+<blockquote>
+  <strong>Nota:</strong> A quebra dos comandos em várias linhas é apenas estética, não obrigatória.
+</blockquote>
+<center>
+  <table border="0">
+    <tr>
+      <td><img class="center" src="calendar.png" alt=""></td>
+      <td>
+        <h2 id="calendar">3.1. Calendar</h2>
+        <pre>
 dialog                       \
    --title 'Escolha a data'  \
    --calendar ''             \
    0 0                       \
    31 12 1999
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="checklist.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="checklist">3.2. Checklist</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="checklist.png" alt=""></td>
+      <td>
+        <h2 id="checklist">3.2. Checklist</h2>
+        <pre>
 dialog                                      \
    --title 'Seleção dos Componentes'        \
    --checklist 'O que você quer instalar?'  \
@@ -394,86 +413,66 @@ dialog                                      \
    color   'Suporte a cores'          on    \
    beep    'Driver avançado de som'   off
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="fselect.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="fselect">3.3. Fselect</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="fselect.png" alt=""></td>
+      <td>
+        <h2 id="fselect">3.3. Fselect</h2>
+        <pre>
 dialog                              \
    --title 'Escolha onde instalar'  \
    --fselect /usr/share/vim/        \
    0 0
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="gauge.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="gauge">3.4. Gauge</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="gauge.png" alt=""></td>
+      <td>
+        <h2 id="gauge">3.4. Gauge</h2>
+        <pre>
 dialog                                     \
    --title 'Instalação dos Pacotes'        \
    --gauge '\nInstalando Vim-6.0a.tgz...'  \
    8 40 60
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="infobox.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="infobox">3.5. Infobox</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="infobox.png" alt=""></td>
+      <td>
+        <h2 id="infobox">3.5. Infobox</h2>
+        <pre>
 dialog                                         \
    --title 'Aguarde'                           \
    --infobox '\nFinalizando em 5 segundos...'  \
    0 0
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="passwordbox.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="inputbox">3.6. Inputbox, Passwordbox</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="passwordbox.png" alt=""></td>
+      <td>
+        <h2 id="inputbox">3.6. Inputbox, Passwordbox</h2>
+        <pre>
 dialog                                           \
    --title 'Confirmação'                         \
    --passwordbox 'Por favor, confirme a senha:'  \
    0 0
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="menu.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="menu">3.7. Menu</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="menu.png" alt=""></td>
+      <td>
+        <h2 id="menu">3.7. Menu</h2>
+        <pre>
 dialog                                       \
    --title 'Perfil'                          \
    --menu 'Escolha o perfil da instalação:'  \
@@ -482,35 +481,27 @@ dialog                                       \
    completa     'Instala tudo'               \
    customizada  'Você escolhe'
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="msgbox.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="msgbox">3.8. Msgbox</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="msgbox.png" alt=""></td>
+      <td>
+        <h2 id="msgbox">3.8. Msgbox</h2>
+        <pre>
 dialog                                            \
    --title 'Parabéns'                             \
    --msgbox 'Instalação finalizada com sucesso.'  \
    6 40
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="radiolist.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="radiolist">3.9. Radiolist</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="radiolist.png" alt=""></td>
+      <td>
+        <h2 id="radiolist">3.9. Radiolist</h2>
+        <pre>
 dialog                                           \
    --title 'Pergunta'                            \
    --radiolist 'Há quanto tempo você usa o Vi?'  \
@@ -519,18 +510,14 @@ dialog                                           \
    experiente 'mais de 1 ano'  off               \
    guru       'mais de 3 anos' off
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="tailbox.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="tailbox">3.10. Tailbox, Tailboxbg</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="tailbox.png" alt=""></td>
+      <td>
+        <h2 id="tailbox">3.10. Tailbox, Tailboxbg</h2>
+        <pre>
 tail -f /var/log/messages &gt; out &amp;
 
 dialog                                         \
@@ -538,248 +525,165 @@ dialog                                         \
    --tailbox out                               \
    0 0
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="textbox.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="textbox">3.11. Textbox</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="textbox.png" alt=""></td>
+      <td>
+        <h2 id="textbox">3.11. Textbox</h2>
+        <pre>
 dialog                                        \
    --title 'Visualizando Arquivo'             \
    --textbox /usr/share/vim/vim60/indent.vim  \
    0 0
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="timebox.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="timebox">3.12. Timebox</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="timebox.png" alt=""></td>
+      <td>
+        <h2 id="timebox">3.12. Timebox</h2>
+        <pre>
 dialog                                        \
    --title 'Ajuste o Relógio'                 \
    --timebox '\nDICA: Use as setas e o TAB.'  \
    0 0                                        \
    23 59 30
 
-</PRE>
-
-<P>
-                                                     </td> </tr>
-                                                       <tr> <td>
-          <center><IMG ALIGN="middle" SRC="yesno.png" BORDER="0" ALT=""></center>          
-                                       </td> <td>
-</P>
-
-<H2 ID="yesno">3.13. Yesno</h3>
-
-<PRE>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="center" src="yesno.png" alt=""></td>
+      <td>
+        <h2 id="yesno">3.13. Yesno</h2>
+        <pre>
 dialog                                          \
    --title 'AVISO'                              \
    --yesno '\nO Vi foi instalado e configurado.
             Você quer executá-lo agora?\n\n'    \
    0 0
 
-</PRE>
+</pre>
+      </td>
+    </tr>
+  </table>
+</center>
 
-<P>
-                                                     </td> </tr>
-                                              </table> </center>
-</P>
-<P>
-Agora que você já ficou horas copiando e colando os exemplos, ou
-redigitando os comandos, já está apto a conhecer o
-<A HREF="dialog-tour.sh">dialog-tour</A>, um script pronto para ser executado
-que mostra todas as caixas para você :)
-</P>
+<p>Agora que você já ficou horas copiando e colando os exemplos, ou redigitando os comandos, já está apto a conhecer o <a href="dialog-tour.sh">dialog-tour</a>, um script pronto para ser executado que mostra todas as caixas para você :)</p>
 
-<H1 ID="funcionamento">4. Como o Dialog funciona</h2>
+<h1 id="funcionamento">4. Como o Dialog funciona</h1>
 
-<P>
-E então, já está cheio de idéias?
-</P>
+<p>E então, já está cheio de idéias?</p>
 
-<DL>
-<DT><B>Sim</B></DT><DD>
-  Ótimo! Então vamos continuar o aprendizado e conhecer os detalhes do
-  Dialog para poder usá-lo em scripts.
-<P></P>
-<DT><B>Não</B></DT><DD>
-  Você seguiu as instruções do tópico anterior?
-<P></P>
-  <DL>
-  <DT><B>Sim</B></DT><DD>
-    Então invista mais um tempo na shell, executando os exemplos,
-    modificando-os, avaliando as possibilidades do Dialog. Veja as
-    figuras, imagine onde você poderia utilizar aquelas telinhas, nos
-    seus programas atuais, em programas novos que você poderia fazer...
-    Depois volte aqui e continuamos a leitura.
-  <P></P>
-  <DT><B>Não</B></DT><DD>
-    É uma pena. Nesse ponto do documento você já seria um conhecedor do
-    Dialog. Considere voltar ao tópico anterior e tentar de novo.
-  </DL>
-</DL>
+<dl>
+  <dt><strong>Sim</strong></dt>
+  <dd>Ótimo! Então vamos continuar o aprendizado e conhecer os detalhes do Dialog para poder usá-lo em scripts.</dd>
+  <dt><strong>Não</strong></dt>
+  <dd>
+    Você seguiu as instruções do tópico anterior?
+    <dl>
+      <dt><strong>Sim</strong></dt>
+      <dd>Então invista mais um tempo na shell, executando os exemplos, modificando-os, avaliando as possibilidades do Dialog. Veja as figuras, imagine onde você poderia utilizar aquelas telinhas, nos seus programas atuais, em programas novos que você poderia fazer... Depois volte aqui e continuamos a leitura.</dd>
+      <dt><strong>Não</strong></dt>
+      <dd>É uma pena. Nesse ponto do documento você já seria um conhecedor do Dialog. Considere voltar ao tópico anterior e tentar de novo.</dd>
+    </dl>
+  </dd>
+</dl>
 
-<P>
-O Dialog é relativamente simples de usar, mas como ele age um pouco
-"diferente" dos outros programas do sistema, pode assustar e parecer
-confuso numa primeira tentativa.
-</P>
-<P>
-Como agora você já sabe "o quê" o Dialog pode fazer, adiante veremos em
-detalhes como construir e obter dados das caixas, e aprenderemos algumas
-características do Dialog como:
-</P>
+<p>O Dialog é relativamente simples de usar, mas como ele age um pouco "diferente" dos outros programas do sistema, pode assustar e parecer confuso numa primeira tentativa.</p>
 
-<UL>
-<LI>A linha de comando é longa, cheia de opções
-<LI>Ele redimensiona o texto e a caixa automaticamente
-<LI>Usa código de retorno para botões Sim/Não, Ok/Cancel
-<LI>Usa a saída de erro (STDERR) para textos e itens escolhidos
-</UL>
+<p>Como agora você já sabe "o quê" o Dialog pode fazer, adiante veremos em detalhes como construir e obter dados das caixas, e aprenderemos algumas características do Dialog como:</p>
 
-<H2 ID="parametros">4.1. Entendendo os parâmetros obrigatórios da linha de comando</h3>
+<ul>
+  <li>A linha de comando é longa, cheia de opções</li>
+  <li>Ele redimensiona o texto e a caixa automaticamente</li>
+  <li>Usa código de retorno para botões Sim/Não, Ok/Cancel</li>
+  <li>Usa a saída de erro (STDERR) para textos e itens escolhidos</li>
+</ul>
 
-<P>
-No Dialog, é obrigatório passar o texto e o tamanho da caixa, sempre.
-Com isso, a cada chamada do programa, devem haver pelo menos 4 opções na
-linha de comando.
-</P>
-<P>
-O formato genérico de chamada é:
-</P>
+<h2 id="parametros">4.1. Entendendo os parâmetros obrigatórios da linha de comando</h2>
 
-<PRE>
+<p>No Dialog, é obrigatório passar o texto e o tamanho da caixa, sempre. Com isso, a cada chamada do programa, devem haver pelo menos 4 opções na linha de comando.</p>
+
+<p>O formato genérico de chamada é:</p>
+
+<pre>
 dialog --tipo-da-caixa '&lt;texto&gt;' &lt;altura&gt; &lt;largura&gt;
-</PRE>
+</pre>
 
-<DL>
-<DT><I>texto</I></DT><DD>
-  O texto é a palavra ou frase que aparece no início da caixa, logo após
-  a primeira linha (borda superior). Passe uma string vazia '' caso não
-  deseje texto.
-<P></P>
-  Caso o texto seja maior que o tamanho da janela, ele
-  será ajustado automaticamente, quebrando a linha. Para colocar as
-  quebras de linhas manualmente, insira o padrão '\n' (barra-ene) onde
-  desejar as quebras. Exemplo: '<I>Primeira linha.\nSegunda.</I>'
-<P></P>
-<DT><I>altura</I></DT><DD>
-  A altura é o número de linhas que serão utilizadas para desenhar a
-  caixa, inclusive a primeira e a última que fazem as bordas superior e
-  inferior.
-<P></P>
-  Se informado o número zero, o Dialog ajusta automaticamente a altura
-  da caixa para caber o conteúdo.
-<P></P>
-<DT><I>largura</I></DT><DD>
-  A largura é o número de colunas que serão utilizadas para desenhar a
-  caixa, inclusive a primeira e a última que fazem as bordas esquerda e
-  direita.
-<P></P>
-  Se informado o número zero, o Dialog ajusta automaticamente a largura
-  da caixa para caber o conteúdo.
-</DL>
+<dl>
+  <dt><em>texto</em></dt>
+  <dd>O texto é a palavra ou frase que aparece no início da caixa, logo após a primeira linha (borda superior). Passe uma string vazia '' caso não deseje texto. Caso o texto seja maior que o tamanho da janela, ele será ajustado automaticamente, quebrando a linha. Para colocar as quebras de linhas manualmente, insira o padrão '\n' (barra-ene) onde desejar as quebras. Exemplo: '<em>Primeira linha.\nSegunda.</em>'</dd>
+  <dt><em>altura</em></dt>
+  <dd>A altura é o número de linhas que serão utilizadas para desenhar a caixa, inclusive a primeira e a última que fazem as bordas superior e inferior. Se informado o número zero, o Dialog ajusta automaticamente a altura da caixa para caber o conteúdo.</dd>
+  <dt><em>largura</em></dt>
+  <dd>A largura é o número de colunas que serão utilizadas para desenhar a caixa, inclusive a primeira e a última que fazem as bordas esquerda e direita. Se informado o número zero, o Dialog ajusta automaticamente a largura da caixa para caber o conteúdo.</dd>
+</dl>
 
-<P>
-Na prática, é melhor deixar que o Dialog quebre o texto e ajuste o
-tamanho das caixas automaticamente. Então nos exemplos desse documento
-não haverá quebras de linha manuais (\n) e os tamanhos serão sempre
-especificados como "0 0" (zero zero).
-</P>
-	<BLOCKQUOTE>
-	<B>Nota:</B> Em caixas como o menu, onde também é preciso passar todos os itens pela linha de comando, há mais parâmetros obrigatórios além dos já citados. Eles serão abordados adiante, no momento oportuno.
-	</BLOCKQUOTE>
+<p>Na prática, é melhor deixar que o Dialog quebre o texto e ajuste o tamanho das caixas automaticamente. Então nos exemplos desse documento não haverá quebras de linha manuais (\n) e os tamanhos serão sempre especificados como "0 0" (zero zero).</p>
 
-<H2 ID="simnao">4.2. Como reconhecer respostas SIM ou NÃO</h3>
+<blockquote>
+  <strong>Nota:</strong> Em caixas como o menu, onde também é preciso passar todos os itens pela linha de comando, há mais parâmetros obrigatórios além dos já citados. Eles serão abordados adiante, no momento oportuno.
+</blockquote>
 
-<P>
-A forma mais básica de se comunicar com o usuário é fazendo perguntas
-que ele possa responder com Sim ou Não. É possível fazer um
-configurador, ou até mesmo um programinha simples com essas respostas.
-Já foi visto como fazer uma telinha desse tipo:
-</P>
+<h2 id="simnao">4.2. Como reconhecer respostas SIM ou NÃO</h2>
 
-<PRE>
+<p>A forma mais básica de se comunicar com o usuário é fazendo perguntas que ele possa responder com Sim ou Não. É possível fazer um configurador, ou até mesmo um programinha simples com essas respostas. Já foi visto como fazer uma telinha desse tipo:</p>
+
+<pre>
 dialog --yesno 'sim ou não?' 0 0
-</PRE>
+</pre>
 
-<P>
-Mas, e dentro de um script, como saber qual foi a resposta do usuário?
-Qual foi o botão que ele apertou?
-</P>
-<P>
-O Dialog utiliza o código de retorno ("<I>Return Code</I>") para informar
-qual foi o botão apertado. Como sabemos, o shell guarda esse código
-dentro da variável <CODE>$?</CODE>.
-</P>
-<P>
-Então que tal descobrirmos a solução do problema testando? Execute o
-seguinte comando duas vezes, e note qual o código de retorno que aparece
-quando se escolhe "Yes" e quando se escolhe "No".
-</P>
+<p>Mas, e dentro de um script, como saber qual foi a resposta do usuário? Qual foi o botão que ele apertou?</p>
 
-<PRE>
+<p>O Dialog utiliza o código de retorno ("<em>Return Code</em>") para informar qual foi o botão apertado. Como sabemos, o shell guarda esse código dentro da variável <code>$?</code>.</p>
+
+<p>Então que tal descobrirmos a solução do problema testando? Execute o seguinte comando duas vezes, e note qual o código de retorno que aparece quando se escolhe "Yes" e quando se escolhe "No".</p>
+
+<pre>
 dialog --yesno 'sim ou não?' 0 0 ; echo Retorno: $?
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="simnao.png" BORDER="0" ALT=""></center>          
-<P>
-Fácil! Zero para Sim, um para não.
-</P>
-<P>
-Se lembrarmos que todos os comandos UNIX/Linux retornam zero em sucesso
-e qualquer coisa diferente de zero (geralmente 1) quando ocorre algum
-erro, fica fácil memorizar. O zero é sempre positivo, beleza, sem erro,
-<B>SIM</B>. O um é problema, erro, <B>NÃO</B>.
-</P>
-	<BLOCKQUOTE>
-	<B>Memorizando:</B> SIM=0, NÃO=1
-	</BLOCKQUOTE>
-<P>
-Agora que sabemos isso, fica fácil lidar com as respostas do usuário.
-Basta usar o <CODE>if</CODE> para testar o valor do <CODE>$?</CODE>. Um exemplo bem simples:
-</P>
+<p class="figure">
+  <img src="simnao.png">
+</p>
 
-<PRE>
+<p>Fácil! Zero para Sim, um para não.</p>
+
+<p>Se lembrarmos que todos os comandos UNIX/Linux retornam zero em sucesso e qualquer coisa diferente de zero (geralmente 1) quando ocorre algum erro, fica fácil memorizar. O zero é sempre positivo, beleza, sem erro, <strong>SIM</strong>. O um é problema, erro, <strong>NÃO</strong>.</p>
+
+<blockquote>
+  <strong>Memorizando:</strong> SIM=0, NÃO=1
+</blockquote>
+
+<p>Agora que sabemos isso, fica fácil lidar com as respostas do usuário. Basta usar o <code>if</code> para testar o valor do <code>$?</code>. Um exemplo bem simples:</p>
+
+<pre>
 dialog --yesno 'Quer ver as horas?' 0 0
 
 if [ $? = 0 ]; then
-	echo "Agora são: $( date )"
+        echo "Agora são: $( date )"
 else
-	echo 'Ok, não vou mostrar as horas.'
+        echo 'Ok, não vou mostrar as horas.'
 fi
-</PRE>
+</pre>
 
-<P>
-Caso a mensagem do <CODE>else</CODE> não seja necessária, podemos usar o operador
-<CODE>&amp;&amp;</CODE> (AND) e deixar o comando bem mais simples:
-</P>
+<p>Caso a mensagem do <code>else</code> não seja necessária, podemos usar o operador <code>&amp;&amp;</code> (AND) e deixar o comando bem mais simples:</p>
 
-<PRE>
+<pre>
 dialog --yesno 'Quer ver as horas?' 0 0 &amp;&amp; echo "Agora são: $(date)"
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="horas.png" BORDER="0" ALT=""></center>          
-<P>
-Usando o Dialog fica fácil definir variáveis de estado ("<I>flags</I>")
-ou opções antes da execução de um programa! Por exemplo, um programa
-simples para listar arquivos do diretório atual:
-</P>
+<p class="figure">
+  <img src="horas.png">
+</p>
 
-<PRE>
+<p>Usando o Dialog fica fácil definir variáveis de estado ("<em>flags</em>") ou opções antes da execução de um programa! Por exemplo, um programa simples para listar arquivos do diretório atual:</p>
+
+<pre>
 #!/bin/sh
 # lsj.sh -- o script do "ls joiado"
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -795,481 +699,333 @@ dialog --yesno 'Mostrar visão detalhada?'  0 0 &amp;&amp; detalhes='-l'
 
 # Mostrando os arquivos
 ls $cor $ocultos $subdir $detalhes
-</PRE>
+</pre>
 
-<P>
-<A HREF="lsj.sh">Baixar este script</A>
-</P>
+<p><a href="lsj.sh">Baixar este script</a></p>
 
-<H2 ID="textodigitado">4.3. Como obter o texto que o usuário digitou</h3>
+<h2 id="textodigitado">4.3. Como obter o texto que o usuário digitou</h2>
 
-<P>
-A caixa <CODE>Inputbox</CODE> serve para pedir que o usuário digite algo. A sua
-prima é a <CODE>Passwordbox</CODE>, que tem funcionamento idêntico, apenas não
-mostra na tela o que o usuário digita (útil para senhas).
-</P>
-<P>
-Por exemplo, se quisermos que o usuário digite seu nome. Primeiro
-construímos a telinha:
-</P>
+<p>A caixa <code>Inputbox</code> serve para pedir que o usuário digite algo. A sua prima é a <code>Passwordbox</code>, que tem funcionamento idêntico, apenas não mostra na tela o que o usuário digita (útil para senhas).</p>
 
-<PRE>
+<p>Por exemplo, se quisermos que o usuário digite seu nome. Primeiro construímos a telinha:</p>
+
+<pre>
 dialog --inputbox 'Digite seu nome:' 0 0
-</PRE>
+</pre>
 
-<P>
-Tudo bem, o usuário digita seu nome, aperta OK e poft! O nome é repetido
-na tela e volta o prompt. Como guardar o que foi digitado numa variável,
-para usar depois?
-</P>
-<P>
-O funcionamento padrão do Dialog é: após o usuário digitar seu nome e
-apertar o OK, esse texto é mandado para a saída de erro (<CODE>STDERR</CODE>).
-Temos três maneiras de "pescar" esse texto:
-</P>
+<p>Tudo bem, o usuário digita seu nome, aperta OK e poft! O nome é repetido na tela e volta o prompt. Como guardar o que foi digitado numa variável, para usar depois?</p>
 
-<OL>
-<LI>Redirecionar a STDERR para um arquivo e ler o conteúdo desse arquivo
-<LI>Redirecionar a STDERR para a STDOUT
-<LI>Usar a opção --stdout do Dialog
-</OL>
+<p>O funcionamento padrão do Dialog é: após o usuário digitar seu nome e apertar o OK, esse texto é mandado para a saída de erro (<code>STDERR</code>). Temos três maneiras de "pescar" esse texto:</p>
 
-<P>
-Veremos então essas três táticas. A primeira consiste em redirecionar
-para um arquivo, e é com certeza a maneira mais incômoda por precisar de
-um arquivo temporário, mas também é mais portável e que funciona em
-qualquer Shell. Como todos sabemos como fazer um redirecionamento, vamos
-direto ao exemplo:
-</P>
+<ol>
+  <li>Redirecionar a STDERR para um arquivo e ler o conteúdo desse arquivo</li>
+  <li>Redirecionar a STDERR para a STDOUT</li>
+  <li>Usar a opção --stdout do Dialog</li>
+</ol>
 
-<PRE>
+<p>Veremos então essas três táticas. A primeira consiste em redirecionar para um arquivo, e é com certeza a maneira mais incômoda por precisar de um arquivo temporário, mas também é mais portável e que funciona em qualquer Shell. Como todos sabemos como fazer um redirecionamento, vamos direto ao exemplo:</p>
+
+<pre>
 dialog --inputbox 'Digite seu nome:' 0 0  2&gt;/tmp/nome.txt
 
 nome=$( cat /tmp/nome.txt )
 echo "O seu nome é: $nome"
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="nome.png" BORDER="0" ALT=""></center>          
-<P>
-Guardamos na variável 'nome' o conteúdo do arquivo temporário. A notação
-<CODE>$(comando)</CODE> para subshell será a utilizada em todo o documento. A
-similar usando crases também funciona, mas é facilmente confundida com
-aspas simples, então será evitada.
-</P>
-<P>
-A segunda maneira é mais limpa por não precisar criar o arquivo
-temporário. Basta utilizar o operador <CODE>2&gt;&amp;1</CODE> para redirecionar a saída
-de erro para a saída padrão. Com o texto desejado na saída padrão,
-podemos definir a variável 'nome' diretamente:
-</P>
+<p class="figure">
+  <img src="nome.png">
+</p>
 
-<PRE>
+<p>Guardamos na variável 'nome' o conteúdo do arquivo temporário. A notação <code>$(comando)</code> para subshell será a utilizada em todo o documento. A similar usando crases também funciona, mas é facilmente confundida com aspas simples, então será evitada.</p>
+
+<p>A segunda maneira é mais limpa por não precisar criar o arquivo temporário. Basta utilizar o operador <code>2&gt;&amp;1</code> para redirecionar a saída de erro para a saída padrão. Com o texto desejado na saída padrão, podemos definir a variável 'nome' diretamente:</p>
+
+<pre>
 nome=$( dialog --inputbox 'Digite seu nome:' 0 0  2&gt;&amp;1 )
 echo "O seu nome é: $nome"
-</PRE>
+</pre>
 
-<P>
-Mas acaba sendo incômodo ter que ficar redirecionando a saída de erro
-sempre, a cada chamada do Dialog. A terceira maneira de obter o texto
-leva isso em conta e usa uma opção do próprio programa para redirecionar
-o texto para a saída padrão, a <CODE>--stdout</CODE>:
-</P>
+<p>Mas acaba sendo incômodo ter que ficar redirecionando a saída de erro sempre, a cada chamada do Dialog. A terceira maneira de obter o texto leva isso em conta e usa uma opção do próprio programa para redirecionar o texto para a saída padrão, a <code>--stdout</code>:</p>
 
-<PRE>
+<pre>
 nome=$( dialog --stdout --inputbox 'Digite seu nome:' 0 0 )
 echo "O seu nome é: $nome"
-</PRE>
+</pre>
 
-<P>
-Das três formas apresentadas, esta é a mais limpa. Assim, nos exemplos
-seguintes, a opção <CODE>--stdout</CODE> será sempre utilizada.
-</P>
-<P>
-Ah! A caixa Inputbox também aceita um último parâmetro opcional que é o
-texto inicial já preechido no campo. Exemplo:
-</P>
+<p>Das três formas apresentadas, esta é a mais limpa. Assim, nos exemplos seguintes, a opção <code>--stdout</code> será sempre utilizada.</p>
 
-<PRE>
+<p>Ah! A caixa Inputbox também aceita um último parâmetro opcional que é o texto inicial já preechido no campo. Exemplo:</p>
+
+<pre>
 dialog --stdout --inputbox 'Digite seu nome:' 0 0 "seu nome aqui"
-</PRE>
+</pre>
 
-<H2 ID="itemescolhido">4.4. Como obter o item único escolhido de um Menu ou Radiolist</h3>
+<h2 id="itemescolhido">4.4. Como obter o item único escolhido de um Menu ou Radiolist</h2>
 
-<P>
-Já sabemos como fazer telas tipo Sim/Não. Mas e se precisarmos ampliar o
-leque de respostas possíveis do usuário, onde também poderíamos ter
-"Talvez" ou "Não sei" como respostas válidas? Ou ainda, se precisarmos
-que o usuário escolha um item de um menu para saber qual das opções ele
-quer executar?
-</P>
-<P>
-Nesse caso o Sim/Não é insuficiente, e precisamos usar a caixa do tipo
-Menu, onde podemos especificar vários itens diferentes e o usuário
-escolhe um (e apenas um). Para começar, vamos fazer um exemplo bem bobo:
-</P>
+<p>Já sabemos como fazer telas tipo Sim/Não. Mas e se precisarmos ampliar o leque de respostas possíveis do usuário, onde também poderíamos ter "Talvez" ou "Não sei" como respostas válidas? Ou ainda, se precisarmos que o usuário escolha um item de um menu para saber qual das opções ele quer executar?</p>
 
-<PRE>
+<p>Nesse caso o Sim/Não é insuficiente, e precisamos usar a caixa do tipo Menu, onde podemos especificar vários itens diferentes e o usuário escolhe um (e apenas um). Para começar, vamos fazer um exemplo bem bobo:</p>
+
+<pre>
 user=$( dialog --stdout --menu 'Bobice:' 0 0 0   1 um 2 dois 3 três )
 echo Você escolheu o número $user
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="bobice1.png" BORDER="0" ALT=""></center>          
-<P>
-A primeira grande diferença a se notar é que a linha de comando do
-Dialog ficou gigante, cheia de parâmetros! Vamos destrinchá-la.
-</P>
-<P>
-Até o 'Bobice:', nenhuma novidade. Mas seguido dele estão três zeros
-onde geralmente só tinha dois! Não, isso não é erro de digitação :)
-</P>
-<P>
-Os dois primeiros zeros continuam sendo a altura e largura da caixa,
-isso nunca muda. Já o terceiro zero é uma propriedade especial do Menu,
-que indica quantos itens serão "visíveis" de uma vez na caixa. Veja a
-diferença de trocar este zero por um:
-</P>
+<p class="figure">
+  <img src="bobice1.png">
+</p>
 
-<PRE>
+<p>A primeira grande diferença a se notar é que a linha de comando do Dialog ficou gigante, cheia de parâmetros! Vamos destrinchá-la.</p>
+
+<p>Até o 'Bobice:', nenhuma novidade. Mas seguido dele estão três zeros onde geralmente só tinha dois! Não, isso não é erro de digitação :)</p>
+
+<p>Os dois primeiros zeros continuam sendo a altura e largura da caixa, isso nunca muda. Já o terceiro zero é uma propriedade especial do Menu, que indica quantos itens serão "visíveis" de uma vez na caixa. Veja a diferença de trocar este zero por um:</p>
+
+<pre>
 dialog --stdout --menu 'Bobice:' 0 0 1   1 um 2 dois 3 três
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="bobice2.png" BORDER="0" ALT=""></center>          
-<P>
-Agora apenas um item é visível por vez, diminuindo o tamanho da caixa.
-Isso pode ser útil quando o Menu tem muitas opções, mas para que a caixa
-fique num tamanho aceitável, mostra-se apenas parte delas por vez e
-deve-se fazer uma "rolagem" para ver o resto.
-</P>
-<P>
-Logo após esta definição do número de itens, colocamos enfileirados
-todos os itens do Menu, no formato "<I>&lt;item&gt; &lt;descrição&gt;</I>". Em nosso
-exemplo são três itens numéricos.
-</P>
-<P>
-Este é o formato genérico da linha de comando da caixa Menu:
-</P>
+<p class="figure">
+  <img src="bobice2.png">
+</p>
 
-<PRE>
+<p>Agora apenas um item é visível por vez, diminuindo o tamanho da caixa. Isso pode ser útil quando o Menu tem muitas opções, mas para que a caixa fique num tamanho aceitável, mostra-se apenas parte delas por vez e deve-se fazer uma "rolagem" para ver o resto.</p>
+
+<p>Logo após esta definição do número de itens, colocamos enfileirados todos os itens do Menu, no formato "<em>&lt;item&gt; &lt;descrição&gt;</em>". Em nosso exemplo são três itens numéricos.</p>
+
+<p>Este é o formato genérico da linha de comando da caixa Menu:</p>
+
+<pre>
 dialog --menu '&lt;texto&gt;' 0 0 &lt;núm-itens&gt; &lt;item1&gt; &lt;desc1&gt; ... &lt;itemN&gt; &lt;descN&gt;
-</PRE>
+</pre>
 
-<DL>
-<DT><I>núm-itens</I></DT><DD>
-  O número máximo de itens do menu que serão mostrados na caixa. Os
-  demais ficarão ocultos e podem ser acessados rolando a lista com as
-  setas do teclado.
-<P></P>
-  Caso especificado como zero, o Dialog mostra todos os itens, ou
-  ajusta automaticamente o número ideal para que a caixa caiba na tela.
-<P></P>
-<DT><I>item</I></DT><DD>
-  O item deve ser um nome único, diferente para cada item.
-<P></P>
-  O item é o texto retornado pelo Dialog ao script, quando o usuário
-  escolhe uma opção.
-<P></P>
-<DT><I>descrição</I></DT><DD>
-  A descrição é um texto explicativo que serve para detalhar do
-  que se trata o item.
-<P></P>
-  A descrição pode ser omitida passando a string vazia ''. Exemplo:
-  <CODE>dialog --menu 'texto' 0 0 0 item1 '' item2 '' item3 ''</CODE>
-</DL>
+<dl>
+  <dt><em>núm-itens</em></dt>
+  <dd>O número máximo de itens do menu que serão mostrados na caixa. Os demais ficarão ocultos e podem ser acessados rolando a lista com as setas do teclado. Caso especificado como zero, o Dialog mostra todos os itens, ou ajusta automaticamente o número ideal para que a caixa caiba na tela.</dd>
+  <dt><em>item</em></dt>
+  <dd>O item deve ser um nome único, diferente para cada item. O item é o texto retornado pelo Dialog ao script, quando o usuário escolhe uma opção.</dd>
+  <dt><em>descrição</em></dt>
+  <dd>A descrição é um texto explicativo que serve para detalhar do que se trata o item. A descrição pode ser omitida passando a string vazia ''. Exemplo: <code>dialog --menu 'texto' 0 0 0 item1 '' item2 '' item3 ''</code></dd>
+</dl>
 
-<P>
-Agora que sabemos compor esse monstro que é a linha de comando de um
-Menu, vamos fazer mais um exemplo, com nomes ao invés de números nos
-itens do menu:
-</P>
+<p>Agora que sabemos compor esse monstro que é a linha de comando de um Menu, vamos fazer mais um exemplo, com nomes ao invés de números nos itens do menu:</p>
 
-<PRE>
+<pre>
 cor=$( dialog --stdout --menu 'As cores:' 0 0 0 amarelo 'a cor do sol' verde 'a cor da grama' azul 'a cor do céu' )
 echo Você escolheu a cor $cor
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="cor1.png" BORDER="0" ALT=""></center>          
-<P>
-Não é tão difícil hein? A dica para não se confundir é enxergar a linha
-de comando como várias pequena partes, identificando e isolando cada uma
-delas:
-</P>
+<p class="figure">
+  <img src="cor1.png">
+</p>
 
-<PRE>
+<p>Não é tão difícil hein? A dica para não se confundir é enxergar a linha de comando como várias pequena partes, identificando e isolando cada uma delas:</p>
+
+<pre>
 dialog
-	--stdout                     # usa o STDOUT
-	--menu  'As cores:'          # texto do menu
-	0 0 0                        # altura, largura e núm. itens
-	amarelo 'a cor do sol'       # item 1
-	verde   'a cor da grama'     # item 2
-	azul    'a cor do céu'       # item 3
-</PRE>
+        --stdout                     # usa o STDOUT
+        --menu  'As cores:'          # texto do menu
+        0 0 0                        # altura, largura e núm. itens
+        amarelo 'a cor do sol'       # item 1
+        verde   'a cor da grama'     # item 2
+        azul    'a cor do céu'       # item 3
+</pre>
 
-<P>
-Por isso que geralmente os comandos Dialog são colocados em várias
-linhas, para fazer essa separação em partes e facilitar o entendimento.
-Para tal, basta "escapar" o final de cada linha do comando (exceto a
-última) com uma barra \. Veja como fica o exemplo anterior quebrado em
-várias linhas:
-</P>
+<p>Por isso que geralmente os comandos Dialog são colocados em várias linhas, para fazer essa separação em partes e facilitar o entendimento. Para tal, basta "escapar" o final de cada linha do comando (exceto a última) com uma barra \. Veja como fica o exemplo anterior quebrado em várias linhas:</p>
 
-<PRE>
+<pre>
 cor=$( dialog \
-	--stdout \
-	--menu 'As cores:' \
-	0 0 0 \
-	amarelo 'a cor do sol' \
-	verde 'a cor da grama' \
-	azul 'a cor do céu' )
+        --stdout \
+        --menu 'As cores:' \
+        0 0 0 \
+        amarelo 'a cor do sol' \
+        verde 'a cor da grama' \
+        azul 'a cor do céu' )
 echo Você escolheu a cor $cor
-</PRE>
+</pre>
 
-<P>
-Bem melhor não? Adicionalmente, pode-se alinhar os escapes e os itens
-para facilitar ainda mais a leitura:
-</P>
+<p>Bem melhor não? Adicionalmente, pode-se alinhar os escapes e os itens para facilitar ainda mais a leitura:</p>
 
-<PRE>
+<pre>
 cor=$( dialog                    \
-	--stdout                 \
-	--menu 'As cores:'       \
-	0 0 0                    \
-	amarelo 'a cor do sol'   \
-	verde   'a cor da grama' \
-	azul    'a cor do céu'   )
+        --stdout                 \
+        --menu 'As cores:'       \
+        0 0 0                    \
+        amarelo 'a cor do sol'   \
+        verde   'a cor da grama' \
+        azul    'a cor do céu'   )
 echo Você escolheu a cor $cor
-</PRE>
+</pre>
 
-<P>
-Esta será a notação utilizada nos exemplos, por ser a mais didática.
-</P>
-<P>
-<B>CUIDADO!</B> Não coloque comentários ou espaços em branco após a barra
-de escape, ela deve ser o último caractere da linha.
-</P>
+<p>Esta será a notação utilizada nos exemplos, por ser a mais didática.</p>
 
-<PRE>
+<p><strong>CUIDADO!</strong> Não coloque comentários ou espaços em branco após a barra de escape, ela deve ser o último caractere da linha.</p>
+
+<pre>
 dialog --stdout      \  # Esse comando é inválido. Estes
        --yesno texto \  # comentários não podem estar aqui.
        0 0
-</PRE>
+</pre>
 
-<P>
-O primo próximo do Menu é o Radiolist. A única diferença entre os dois,
-é que no Radiolist é possível definir qual será o item que já iniciará
-selecionado. Para isso, cada item é composto por três parâmetros:
-<I>nome, descrição, status</I>. O status deve ser <CODE>ON</CODE> ou <CODE>OFF</CODE>, para
-informar se o item está "ligado" (marcado) ou não.
-</P>
-<P>
-Como na Radiolist o usuário só pode escolher um único item, cuidado na
-hora de compor o comando, pois apenas um item pode ter o status ON,
-todos os outros devem ser OFF. Caso precise de uma lista de múltipla
-escolha, veja o Checklist no tópico seguinte.
-</P>
-<P>
-Usando o exemplo anterior, podemos iniciar a caixa com a cor "verde"
-já selecionada:
-</P>
+<p>O primo próximo do Menu é o Radiolist. A única diferença entre os dois, é que no Radiolist é possível definir qual será o item que já iniciará selecionado. Para isso, cada item é composto por três parâmetros: <em>nome, descrição, status</em>. O status deve ser <code>ON</code> ou <code>OFF</code>, para informar se o item está "ligado" (marcado) ou não.</p>
 
-<PRE>
+<p>Como na Radiolist o usuário só pode escolher um único item, cuidado na hora de compor o comando, pois apenas um item pode ter o status ON, todos os outros devem ser OFF. Caso precise de uma lista de múltipla escolha, veja o Checklist no tópico seguinte.</p>
+
+<p>Usando o exemplo anterior, podemos iniciar a caixa com a cor "verde" já selecionada:</p>
+
+<pre>
 dialog --radiolist 'As cores:' 0 0 0 \
-	amarelo 'a cor do sol'   OFF \
-	verde   'a cor da grama' ON  \
-	azul    'a cor do céu'   OFF
-</PRE>
+        amarelo 'a cor do sol'   OFF \
+        verde   'a cor da grama' ON  \
+        azul    'a cor do céu'   OFF
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="cor2.png" BORDER="0" ALT=""></center>          
-<P>
-Ah! A outra diferença do Radiolist para o Menu é que ele usa os
-parênteses <CODE>(X)</CODE> para marcar o item.
-</P>
+<p class="figure">
+  <img src="cor2.png">
+</p>
 
-<H2 ID="itensescolhidos">4.5. Como obter os itens múltiplos escolhidos de um Checklist</h3>
+<p>Ah! A outra diferença do Radiolist para o Menu é que ele usa os parênteses <code>(X)</code> para marcar o item.</p>
 
-<P>
-A caixa Checklist é idêntica a Radiolist já vista, a única diferença é
-o usuário poder escolher mais de um item; é uma caixa de múltipla
-escolha.
-</P>
-<P>
-Primeiro, vamos fazer um menu com opções para o usuário escolher:
-</P>
+<h2 id="itensescolhidos">4.5. Como obter os itens múltiplos escolhidos de um Checklist</h2>
 
-<PRE>
+<p>A caixa Checklist é idêntica a Radiolist já vista, a única diferença é o usuário poder escolher mais de um item; é uma caixa de múltipla escolha.</p>
+
+<p>Primeiro, vamos fazer um menu com opções para o usuário escolher:</p>
+
+<pre>
 estilos=$( dialog --stdout \
-	--checklist 'Você gosta de:' 0 0 0 \
-	rock  '' ON  \
-	samba '' OFF \
-	metal '' ON  \
-	jazz  '' OFF \
-	pop   '' ON  \
-	mpb   '' OFF )
+        --checklist 'Você gosta de:' 0 0 0 \
+        rock  '' ON  \
+        samba '' OFF \
+        metal '' ON  \
+        jazz  '' OFF \
+        pop   '' ON  \
+        mpb   '' OFF )
 echo "Você escolheu: $estilos"
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="rock1.png" BORDER="0" ALT=""></center>          
-<P>
-A sintaxe é a mesma da Radiolist, e compomos uma lista onde os itens não
-têm descrição (usando as aspas vazias ''). A diferença agora é que temos
-mais de um item selecionado.
-</P>
-<P>
-Note que o Dialog retorna todos na mesma linha, com cada item escolhido
-entre aspas duplas. Esse retorno em apenas uma linha requer conhecimento
-em Sed, Awk ou outro editor programável para se identificar e extrair
-corretamente os itens escolhidos.
-</P>
-<P>
-Como isso dificulta o uso do Dialog, ele possui uma opção de linha de
-comando chamada <CODE>--separate-output</CODE>, que ao invés de retornar tudo em
-uma linha, retorna os itens selecionados um por linha, e sem as aspas.
-Dessa maneira fica bem mais fácil varrer e descobrir os itens escolhidos
-com o 'while':
-</P>
+<p class="figure">
+  <img src="rock1.png">
+</p>
 
-<PRE>
+<p>A sintaxe é a mesma da Radiolist, e compomos uma lista onde os itens não têm descrição (usando as aspas vazias ''). A diferença agora é que temos mais de um item selecionado.</p>
+
+<p>Note que o Dialog retorna todos na mesma linha, com cada item escolhido entre aspas duplas. Esse retorno em apenas uma linha requer conhecimento em Sed, Awk ou outro editor programável para se identificar e extrair corretamente os itens escolhidos.</p>
+
+<p>Como isso dificulta o uso do Dialog, ele possui uma opção de linha de comando chamada <code>--separate-output</code>, que ao invés de retornar tudo em uma linha, retorna os itens selecionados um por linha, e sem as aspas. Dessa maneira fica bem mais fácil varrer e descobrir os itens escolhidos com o 'while':</p>
+
+<pre>
 estilos=$( dialog --stdout \
-	--separate-output \
-	--checklist 'Você gosta de:' 0 0 0 \
-	rock  '' ON  \
-	samba '' OFF \
-	metal '' ON  \
-	jazz  '' OFF \
-	pop   '' ON  \
-	mpb   '' OFF )
+        --separate-output \
+        --checklist 'Você gosta de:' 0 0 0 \
+        rock  '' ON  \
+        samba '' OFF \
+        metal '' ON  \
+        jazz  '' OFF \
+        pop   '' ON  \
+        mpb   '' OFF )
 
 echo "$estilos" | while read LINHA
 do
- 	echo "--- $LINHA"
+        echo "--- $LINHA"
 done
-</PRE>
+</pre>
 
-          <center><IMG ALIGN="middle" SRC="rock2.png" BORDER="0" ALT=""></center>          
+<p class="figure">
+  <img src="rock2.png">
+</p>
 
-<H2 ID="botaocancelar">4.6. E se o usuário apertar o botão CANCELAR?</h3>
+<h2 id="botaocancelar">4.6. E se o usuário apertar o botão CANCELAR?</h2>
 
-<P>
-Você faz as telinhas, apronta os menus, deixa tudo certinho para
-funcionar redondo. Mas, no meio do programa, o usuário desiste de tudo e
-aperta o botão CANCELAR. Como detectar isso?
-</P>
-<P>
-Assim como acontece com os botões Yes/No, o Dialog usa os Códigos de
-Retorno para informar se o usuário pressionou o OK ou o CANCELAR.
-</P>
-	<BLOCKQUOTE>
-	OK=0, CANCELAR=1
-	</BLOCKQUOTE>
-<P>
-Então sempre após cada telinha do dialog, coloque o seguinte teste para
-saber se o CANCELAR foi apertado:
-</P>
+<p>Você faz as telinhas, apronta os menus, deixa tudo certinho para funcionar redondo. Mas, no meio do programa, o usuário desiste de tudo e aperta o botão CANCELAR. Como detectar isso?</p>
 
-<PRE>
+<p>Assim como acontece com os botões Yes/No, o Dialog usa os Códigos de Retorno para informar se o usuário pressionou o OK ou o CANCELAR.</p>
+
+<blockquote>
+  OK=0, CANCELAR=1
+</blockquote>
+
+<p>Então sempre após cada telinha do dialog, coloque o seguinte teste para saber se o CANCELAR foi apertado:</p>
+
+<pre>
 [ $? -eq 1 ] &amp;&amp; echo 'Botão CANCELAR apertado'
-</PRE>
+</pre>
 
-<P>
-Dependendo de como funciona seu programa, você pode fazer o aperto do
-CANCELAR retornar à tela anterior, ao menu principal, ou ainda ser mais
-drástico e abandonar o programa. Tudo depende do tipo de navegação que
-você quer usar.
-</P>
-<P>
-Além de apertar o botão CANCELAR, o usuário também pode apertar a tecla
-Esc do teclado. Veja o tópico seguinte.
-</P>
+<p>Dependendo de como funciona seu programa, você pode fazer o aperto do CANCELAR retornar à tela anterior, ao menu principal, ou ainda ser mais drástico e abandonar o programa. Tudo depende do tipo de navegação que você quer usar.</p>
 
-<H2 ID="teclaesc">4.7. E se o usuário apertar a tecla ESC?</h3>
+<p>Além de apertar o botão CANCELAR, o usuário também pode apertar a tecla Esc do teclado. Veja o tópico seguinte.</p>
 
-<P>
-Em qualquer tela do Dialog, apertar a tecla Esc gera o código de retorno
-255, e abandona a caixa. Então além de tratar do botão OK (retorno zero)
-e do CANCELAR (retorno 1), também é preciso cuidar da tecla Esc.
-</P>
-<P>
-Dependendo do tipo de sua aplicação, a tecla Esc pode gerar o mesmo
-procedimento que apertar o botão CANCELAR geraria. Ou ainda, você pode
-ter dois procedimentos diferentes, um para cada evento. Tudo depende do
-tipo de navegação que seu programa utiliza, algumas sugestões:
-</P>
+<h2 id="teclaesc">4.7. E se o usuário apertar a tecla ESC?</h2>
 
-<DL>
-<DT><B>Navegação amarrada a um Menu Principal</B></DT><DD>
-  <UL>
-  <LI>Se apertar CANCELAR no Menu Principal, sai do programa
-  <LI>Se apertar CANCELAR numa tela secundária, volta ao Menu Principal
-  <LI>Se apertar ESC em qualquer tela, sai do programa
-  <P></P>
-  </UL>
-<DT><B>Navegação tipo Ida e Volta</B></DT><DD>
-  <UL>
-  <LI>Se apertar CANCELAR volta à tela anterior
-  <LI>Se apertar ESC sai do programa
-  </UL>
-</DL>
+<p>Em qualquer tela do Dialog, apertar a tecla Esc gera o código de retorno 255, e abandona a caixa. Então além de tratar do botão OK (retorno zero) e do CANCELAR (retorno 1), também é preciso cuidar da tecla Esc.</p>
 
-<P>
-Veja exemplos completos desses tipos de navegação e do tratamento dos
-eventos no tópico seguinte.
-</P>
-<P>
-Caso queira mapear o Esc para o mesmo funcionamento do CANCELAR, você
-pode fazer um teste mais genérico como, "se não for o OK":
-</P>
+<p>Dependendo do tipo de sua aplicação, a tecla Esc pode gerar o mesmo procedimento que apertar o botão CANCELAR geraria. Ou ainda, você pode ter dois procedimentos diferentes, um para cada evento. Tudo depende do tipo de navegação que seu programa utiliza, algumas sugestões:</p>
 
-<PRE>
+<dl>
+  <dt><strong>Navegação amarrada a um Menu Principal</strong></dt>
+  <dd>
+    <ul>
+      <li>Se apertar CANCELAR no Menu Principal, sai do programa</li>
+      <li>Se apertar CANCELAR numa tela secundária, volta ao Menu Principal</li>
+      <li>Se apertar ESC em qualquer tela, sai do programa</li>
+    </ul>
+  </dd>
+  <dt><strong>Navegação tipo Ida e Volta</strong></dt>
+  <dd>
+    <ul>
+      <li>Se apertar CANCELAR volta à tela anterior</li>
+      <li>Se apertar ESC sai do programa</li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Veja exemplos completos desses tipos de navegação e do tratamento dos eventos no tópico seguinte.</p>
+
+<p>Caso queira mapear o Esc para o mesmo funcionamento do CANCELAR, você pode fazer um teste mais genérico como, "se não for o OK":</p>
+
+<pre>
 [ $? -ne 0 ] &amp;&amp; echo 'Esc ou CANCELAR apertado'
-</PRE>
+</pre>
 
-<P>
-Claro, se estiver usando botão de HELP, ele também será mapeado para o
-CANCELAR, então cuidado.
-</P>
+<p>Claro, se estiver usando botão de HELP, ele também será mapeado para o CANCELAR, então cuidado.</p>
 
-<H2 ID="botaohelp">4.8. E se o usuário apertar o botão HELP?</h3>
+<h2 id="botaohelp">4.8. E se o usuário apertar o botão HELP?</h2>
 
-<P>
-O botão de ajuda (HELP) foi adicionado no dialog-0.9b, para usá-lo basta
-adicionar a opção <CODE>--help-button</CODE>. O seu código de retorno quando
-apertado é dois. Vamos lá, memorizando novamente:
-</P>
-	<BLOCKQUOTE>
-	OK=0, CANCELAR=1, HELP=2
-	</BLOCKQUOTE>
-<P>
-O teste primário para saber se ele foi apertado é:
-</P>
+<p>O botão de ajuda (HELP) foi adicionado no dialog-0.9b, para usá-lo basta adicionar a opção <code>--help-button</code>. O seu código de retorno quando apertado é dois. Vamos lá, memorizando novamente:</p>
 
-<PRE>
+<blockquote>
+  OK=0, CANCELAR=1, HELP=2
+</blockquote>
+
+<p>O teste primário para saber se ele foi apertado é:</p>
+
+<pre>
 [ $? -eq 2 ] &amp;&amp; echo 'Botão HELP apertado'
-</PRE>
+</pre>
 
-<P>
-Para mostrar o texto de ajuda para o usuário, basta usar uma caixa
-Msgbox se for curto, ou uma Textbox se for algo mais extenso. Depois é
-só voltar para a caixa anterior.
-</P>
+<p>Para mostrar o texto de ajuda para o usuário, basta usar uma caixa Msgbox se for curto, ou uma Textbox se for algo mais extenso. Depois é só voltar para a caixa anterior.</p>
 
-<H2 ID="tratarbotoes">4.9. Como tratar todos os botões e teclas de uma vez?</h3>
+<h2 id="tratarbotoes">4.9. Como tratar todos os botões e teclas de uma vez?</h2>
 
-<PRE>
+<pre>
 case $? in
-	  0) echo O usuário apertou o botão OK (ou o Yes) ;;
-	  1) echo O usuário apertou o botão CANCELAR (ou o No) ;;
-	  2) echo O usuário apertou o botão HELP ;;
-	255) echo O usuário apertou a tecla ESC ;;
-	  *) echo Retorno desconhecido;;
+          0) echo O usuário apertou o botão OK (ou o Yes) ;;
+          1) echo O usuário apertou o botão CANCELAR (ou o No) ;;
+          2) echo O usuário apertou o botão HELP ;;
+        255) echo O usuário apertou a tecla ESC ;;
+          *) echo Retorno desconhecido;;
 esac
-</PRE>
+</pre>
 
-<H1 ID="mergulhando">5. Mergulhando de cabeça no Dialog</h2>
+<h1 id="mergulhando">5. Mergulhando de cabeça no Dialog</h1>
 
-<H2 ID="menuloop">5.1. Exemplo de menu amarrado (em loop)</h3>
+<h2 id="menuloop">5.1. Exemplo de menu amarrado (em loop)</h2>
 
-          <center><IMG ALIGN="middle" SRC="tia.png" BORDER="0" ALT=""></center>          
+<p class="figure">
+  <img src="tia.png">
+</p>
 
-<PRE>
+<pre>
 #!/bin/bash
 # tia.sh - o script da tia que precisa usar o computador
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1324,17 +1080,17 @@ done
 
 # Mensagem final :)
 echo 'Tchau Tia!'
-</PRE>
+</pre>
 
-<P>
-<A HREF="tia.sh">Baixar este script</A>
-</P>
+<p><a href="tia.sh">Baixar este script</a></p>
 
-<H2 ID="encadeado">5.2. Exemplo de telas encadeadas (navegação sem volta)</h3>
+<h2 id="encadeado">5.2. Exemplo de telas encadeadas (navegação sem volta)</h2>
 
-          <center><IMG ALIGN="middle" SRC="encadeado.png" BORDER="0" ALT=""></center>          
+<p class="figure">
+  <img src="encadeado.png">
+</p>
 
-<PRE>
+<pre>
 #!/bin/sh
 # encadeado.sh - o script que chega até o final
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1381,36 +1137,34 @@ echo 'Você chegou até o final!'             &amp;&amp; exit
 # Este trecho já não faz mais parte do encadeamento, e só
 # será alcançado caso o usuário tenha apertado CANCELAR/Esc.
 echo Você desistiu antes de chegar no final...
-</PRE>
+</pre>
 
-<P>
-<A HREF="encadeado.sh">Baixar este script</A>
-</P>
+<p><a href="encadeado.sh">Baixar este script</a></p>
 
-<H2 ID="idaevolta">5.3. Exemplo de telas com navegação completa (ida e volta)</h3>
+<h2 id="idaevolta">5.3. Exemplo de telas com navegação completa (ida e volta)</h2>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><IMG ALIGN="middle" SRC="nav1.png" BORDER="0" ALT=""></TD>
-<TD>→</TD>
-<TD><IMG ALIGN="middle" SRC="nav2.png" BORDER="0" ALT=""></TD>
-<TD>→</TD>
-</TR>
-<TR>
-<TD><IMG ALIGN="middle" SRC="nav3.png" BORDER="0" ALT=""></TD>
-<TD>→</TD>
-<TD><IMG ALIGN="middle" SRC="nav4.png" BORDER="0" ALT=""></TD>
-<TD>→</TD>
-</TR>
-<TR>
-<TD><IMG ALIGN="middle" SRC="nav5.png" BORDER="0" ALT=""></TD>
-<TD>→</TD>
-<TD><IMG ALIGN="middle" SRC="nav6.png" BORDER="0" ALT=""></TD>
-<TD>fim</TD>
-</TR>
-</TABLE>
+<table>
+  <tr>
+    <td><img class="center" src="nav1.png" alt=""></td>
+    <td>→</td>
+    <td><img class="center" src="nav2.png" alt=""></td>
+    <td>→</td>
+  </tr>
+  <tr>
+    <td><img class="center" src="nav3.png" alt=""></td>
+    <td>→</td>
+    <td><img class="center" src="nav4.png" alt=""></td>
+    <td>→</td>
+  </tr>
+  <tr>
+    <td><img class="center" src="nav5.png" alt=""></td>
+    <td>→</td>
+    <td><img class="center" src="nav6.png" alt=""></td>
+    <td>fim</td>
+  </tr>
+</table>
 
-<PRE>
+<pre>
 #!/bin/bash
 # navegando.sh - o script que vai e volta
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1527,17 +1281,17 @@ while : ; do
     [ $retorno -eq 255 ] &amp;&amp; break               # Esc
 
 done
-</PRE>
+</pre>
 
-<P>
-<A HREF="navegando.sh">Baixar este script</A>
-</P>
+<p><a href="navegando.sh">Baixar este script</a></p>
 
-<H2 ID="confirmacao">5.4. Exemplo de pedido de confirmação (uma caixa sobre outra)</h3>
+<h2 id="confirmacao">5.4. Exemplo de pedido de confirmação (uma caixa sobre outra)</h2>
 
-          <center><IMG ALIGN="middle" SRC="duas.png" BORDER="0" ALT=""></center>          
+<p class="figure">
+  <img src="duas.png">
+</p>
 
-<PRE>
+<pre>
 #!/bin/sh
 # duas.sh - o script que pede confirmação
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1554,17 +1308,17 @@ done
 dialog --title 'LICENÇA do Software' --textbox $0 16 65 \
        --and-widget \
        --yesno '\nVocê aceita os Termos da Licença?' 8 30 
-</PRE>
+</pre>
 
-<P>
-<A HREF="duas.sh">Baixar este script</A>
-</P>
+<p><a href="duas.sh">Baixar este script</a></p>
 
-<H2 ID="posicionar">5.5. Exemplo de posicionamento de caixas (não centralizado)</h3>
+<h2 id="posicionar">5.5. Exemplo de posicionamento de caixas (não centralizado)</h2>
 
-          <center><IMG ALIGN="middle" SRC="posicao.png" BORDER="0" ALT=""></center>          
+<p class="figure">
+  <img src="posicao.png">
+</p>
 
-<PRE>
+<pre>
 #!/bin/sh
 # posicao.sh - o script que posiciona a janela
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1579,18 +1333,21 @@ dialog --title 'LICENÇA do Software' --textbox $0 16 65 \
 
 dialog --begin 5 0 \
        --msgbox 'Eu estou grudada no canto esquerdo' 10 30
-</PRE>
+</pre>
 
-<P>
-<A HREF="posicao.sh">Baixar este script</A>
-</P>
+<p><a href="posicao.sh">Baixar este script</a></p>
 
-<H2 ID="multicaixas">5.6. Exemplo de várias caixas na mesma tela (multicaixas!)</h3>
+<h2 id="multicaixas">5.6. Exemplo de várias caixas na mesma tela (multicaixas!)</h2>
 
-          <center><IMG ALIGN="middle" SRC="multi1.png" BORDER="0" ALT=""></center>          
-          <center><IMG ALIGN="middle" SRC="multi2.png" BORDER="0" ALT=""></center>          
+<p class="figure">
+  <img src="multi1.png">
+</p>
 
-<PRE>
+<p class="figure">
+  <img src="multi2.png">
+</p>
+
+<pre>
 #!/bin/sh
 # multi.sh - o script que desenha várias janelas
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1663,17 +1420,17 @@ dialog --no-shadow \
        --begin 12 40 --infobox DIALOG 6 20 --and-widget \
        --begin 18 20 --infobox DIALOG 6 20 --and-widget \
        --sleep 6 --begin 18 60 --infobox DIALOG 6 20
-</PRE>
+</pre>
 
-<P>
-<A HREF="multi.sh">Baixar este script</A>
-</P>
+<p><a href="multi.sh">Baixar este script</a></p>
 
-<H2 ID="menudinamico">5.7. Exemplo de menu com itens dinâmicos (definidos em execução)</h3>
+<h2 id="menudinamico">5.7. Exemplo de menu com itens dinâmicos (definidos em execução)</h2>
 
-          <center><IMG ALIGN="middle" SRC="users.png" BORDER="0" ALT=""></center>         
+<p class="figure">
+  <img src="users.png">
+</p>
 
-<PRE>
+<pre>
 #!/bin/bash
 # users.sh - Compõe menus com os usuários do sistema
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1720,37 +1477,35 @@ dialog --no-shadow \
 ARQUIVO=/etc/passwd
 
 dialog --menu 'Lista normal de um campo por linha' \
-	0 0 10 $(cat $ARQUIVO | cut -d: -f1 | sed 's/$/ o/')
+        0 0 10 $(cat $ARQUIVO | cut -d: -f1 | sed 's/$/ o/')
 
 dialog --menu 'Dois campos por linha, sem espaços nos itens' \
-	0 0 10 $(cat $ARQUIVO | cut -d: -f1,3 | tr : ' ')
+        0 0 10 $(cat $ARQUIVO | cut -d: -f1,3 | tr : ' ')
 
 eval \
 dialog --menu \"Dois campos por linha, 2o item com espaços\" \
-	0 40 10 $(
-		IFS=:
-		while read login senha uid gid nome resto; do
-			echo $login \"$nome\"
-		done &lt; $ARQUIVO
-	)
-</PRE>
+        0 40 10 $(
+                IFS=:
+                while read login senha uid gid nome resto; do
+                        echo $login \"$nome\"
+                done &lt; $ARQUIVO
+        )
+</pre>
 
-<P>
-<A HREF="users.sh">Baixar este script</A>
-</P>
+<p><a href="users.sh">Baixar este script</a></p>
 
-<H2 ID="copiagauge">5.8. Exemplo de cópia de arquivos com barra de progresso (Gauge)</h3>
+<h2 id="copiagauge">5.8. Exemplo de cópia de arquivos com barra de progresso (Gauge)</h2>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><IMG ALIGN="middle" SRC="copydir1.png" BORDER="0" ALT=""></TD>
-</TR>
-<TR>
-<TD><IMG ALIGN="middle" SRC="copydir2.png" BORDER="0" ALT=""></TD>
-</TR>
-</TABLE>
+<table>
+  <tr>
+    <td><img class="center" src="copydir1.png" alt=""></td>
+  </tr>
+  <tr>
+    <td><img class="center" src="copydir2.png" alt=""></td>
+  </tr>
+</table>
 
-<PRE>
+<pre>
 #!/bin/bash
 # copydir.sh - Copia o diretório mostrando uma barra de progresso
 # Este script faz parte do http://aurelio.net/shell/dialog
@@ -1810,12 +1565,12 @@ running(){ ps $1 | grep $1 &gt;/dev/null; }
 
 # mesmo dir?
 [ "$ORIGEM" = "$DESTINO" ] &amp;&amp;
-	die "A origem e o destino são o mesmo diretório"
+        die "A origem e o destino são o mesmo diretório"
 
 # o diretório de destino está vazio?
 DIR_DESTINO="$DESTINO/${ORIGEM##*/}"
 [ -d "$DIR_DESTINO" ] &amp;&amp; [ $(sizeof $DIR_DESTINO) -gt 4 ] &amp;&amp;
-	die "O dir de destino '$DIR_DESTINO' deveria estar vazio"
+        die "O dir de destino '$DIR_DESTINO' deveria estar vazio"
 
 #................................................................
 
@@ -1836,155 +1591,125 @@ trap "kill $CPPID" 2 15
 
 # loop de checagem de status da cópia
 (
-	# enquanto o processo de cópia estiver rodando
-	while running $CPPID; do
-	
-		# quanto já foi copiado?
-		COPIADO=$(sizeof $DIR_DESTINO)
-		
-		# qual a porcentagem do total?
-		PORCENTAGEM=$((COPIADO*100/TOTAL))
-		
-		# envia a porcentagem para o dialog
-		echo $PORCENTAGEM
-		
-		# aguarda até a próxima checagem
-		sleep $INTERVALO
-	done	
+        # enquanto o processo de cópia estiver rodando
+        while running $CPPID; do
+        
+                # quanto já foi copiado?
+                COPIADO=$(sizeof $DIR_DESTINO)
+                
+                # qual a porcentagem do total?
+                PORCENTAGEM=$((COPIADO*100/TOTAL))
+                
+                # envia a porcentagem para o dialog
+                echo $PORCENTAGEM
+                
+                # aguarda até a próxima checagem
+                sleep $INTERVALO
+        done    
 
-	# cópia finalizada, mostra a porcentagem final
-	echo 100
-	
+        # cópia finalizada, mostra a porcentagem final
+        echo 100
+        
 ) | dialog --title "$TITLE" --gauge "$MSG" 8 40 0
 
 #................................................................
 
 echo OK - Diretório copiado
-</PRE>
+</pre>
 
-<P>
-<A HREF="copydir.sh">Baixar este script</A>
-</P>
+<p><a href="copydir.sh">Baixar este script</a></p>
 
-<H2 ID="cores">5.9. Configurando as cores das caixas</h3>
+<h2 id="cores">5.9. Configurando as cores das caixas</h2>
 
-<P>
-É possível configurar as cores de TODOS os componentes das caixas, como
-textos, borda, botões e fundo da tela. Dessa maneira pode-se
-personalizar os programas que usam o Dialog para a empresa ou indivíduo
-que o utilizará.
-</P>
-<P>
-Para obter o arquivo padrão de configuração do Dialog, basta usar a
-opção <CODE>--create-rc</CODE>. Como o programa procura dentro de seu $HOME por um
-arquivo chamado <CODE>.dialogrc</CODE>, use este comando para começar a brincar de
-trocar as cores do Dialog:
-</P>
+<p>É possível configurar as cores de TODOS os componentes das caixas, como textos, borda, botões e fundo da tela. Dessa maneira pode-se personalizar os programas que usam o Dialog para a empresa ou indivíduo que o utilizará.</p>
 
-<PRE>
+<p>Para obter o arquivo padrão de configuração do Dialog, basta usar a opção <code>--create-rc</code>. Como o programa procura dentro de seu $HOME por um arquivo chamado <code>.dialogrc</code>, use este comando para começar a brincar de trocar as cores do Dialog:</p>
+
+<pre>
 dialog --create-rc $HOME/.dialogrc
-</PRE>
+</pre>
 
-<P>
-Agora basta editar o arquivo <CODE>.dialogrc</CODE> recém-criado no seu $HOME e
-executar o Dialog para ver a diferença. As cores que ele reconhece são:
-</P>
+<p>Agora basta editar o arquivo <code>.dialogrc</code> recém-criado no seu $HOME e executar o Dialog para ver a diferença. As cores que ele reconhece são:</p>
 
-<TABLE ALIGN="center">
-<TR>
-<TH>Cor no Dialog</TH>
-<TH>Cor</TH>
-</TR>
-<TR>
-<TD>BLACK</TD>
-<TD>Preto</TD>
-</TR>
-<TR>
-<TD>RED</TD>
-<TD>Vermelho</TD>
-</TR>
-<TR>
-<TD>GREEN</TD>
-<TD>Verde</TD>
-</TR>
-<TR>
-<TD>YELLOW</TD>
-<TD>Amarelo</TD>
-</TR>
-<TR>
-<TD>BLUE</TD>
-<TD>Azul</TD>
-</TR>
-<TR>
-<TD>MAGENTA</TD>
-<TD>Rosa</TD>
-</TR>
-<TR>
-<TD>CYAN</TD>
-<TD>Ciano</TD>
-</TR>
-<TR>
-<TD>WHITE</TD>
-<TD>Branco</TD>
-</TR>
-</TABLE>
+<table>
+  <tr>
+    <th>Cor no Dialog</th>
+    <th>Cor</th>
+  </tr>
+  <tr>
+    <td>BLACK</td>
+    <td>Preto</td>
+  </tr>
+  <tr>
+    <td>RED</td>
+    <td>Vermelho</td>
+  </tr>
+  <tr>
+    <td>GREEN</td>
+    <td>Verde</td>
+  </tr>
+  <tr>
+    <td>YELLOW</td>
+    <td>Amarelo</td>
+  </tr>
+  <tr>
+    <td>BLUE</td>
+    <td>Azul</td>
+  </tr>
+  <tr>
+    <td>MAGENTA</td>
+    <td>Rosa</td>
+  </tr>
+  <tr>
+    <td>CYAN</td>
+    <td>Ciano</td>
+  </tr>
+  <tr>
+    <td>WHITE</td>
+    <td>Branco</td>
+  </tr>
+</table>
 
-<P>
-O formato das configurações de cores é:
-</P>
+<p>O formato das configurações de cores é:</p>
 
-<PRE>
+<pre>
 nome_do_componente = (letra, fundo, letra brilhante?)
-</PRE>
+</pre>
 
-<P>
-Onde para <I>letra</I> e <I>fundo</I> basta colocar os nomes das cores em
-inglês, e no terceiro parâmetro, coloque ON ou OFF para que as letras
-fiquem brilhantes ou não (claras ou escuras). Exemplo:
-</P>
+<p>Onde para <em>letra</em> e <em>fundo</em> basta colocar os nomes das cores em inglês, e no terceiro parâmetro, coloque ON ou OFF para que as letras fiquem brilhantes ou não (claras ou escuras). Exemplo:</p>
 
-<TABLE ALIGN="center">
-<TR>
-<TD>(GREEN, BLACK, OFF)</TD>
-<TD>=</TD>
-<TD>fundo preto, letra verde escuro</TD>
-</TR>
-<TR>
-<TD>(GREEN, BLACK, ON)</TD>
-<TD>=</TD>
-<TD>fundo preto, letra verde claro</TD>
-</TR>
-</TABLE>
+<table>
+  <tr>
+    <td>(GREEN, BLACK, OFF)</td>
+    <td>=</td>
+    <td>fundo preto, letra verde escuro</td>
+  </tr>
+  <tr>
+    <td>(GREEN, BLACK, ON)</td>
+    <td>=</td>
+    <td>fundo preto, letra verde claro</td>
+  </tr>
+</table>
 
-<P>
-Depois de terminar de configurar as cores, você pode salvar tudo num
-arquivo separado, e fazer vários arquivos diferentes para vários "temas"
-ou configurações diferentes.
-</P>
-<P>
-Para instruir o Dialog a utilizar um arquivo de configuração específico,
-e não o padrão <CODE>$HOME/.dialogrc</CODE>, basta definir a variável de ambiente
-<CODE>$DIALOGRC</CODE> com o nome arquivo a ser utilizado, por exemplo:
-</P>
+<p>Depois de terminar de configurar as cores, você pode salvar tudo num arquivo separado, e fazer vários arquivos diferentes para vários "temas" ou configurações diferentes.</p>
 
-<PRE>
+<p>Para instruir o Dialog a utilizar um arquivo de configuração específico, e não o padrão <code>$HOME/.dialogrc</code>, basta definir a variável de ambiente <code>$DIALOGRC</code> com o nome arquivo a ser utilizado, por exemplo:</p>
+
+<pre>
 export DIALOGRC=$HOME/dialog/tema-verde.cfg
 ./navegando.sh
-</PRE>
+</pre>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><IMG ALIGN="middle" SRC="temaverde1.png" BORDER="0" ALT=""></TD>
-<TD><IMG ALIGN="middle" SRC="temaverde2.png" BORDER="0" ALT=""></TD>
-</TR>
-</TABLE>
+<table>
+  <tr>
+    <td><img class="center" src="temaverde1.png" alt=""></td>
+    <td><img class="center" src="temaverde2.png" alt=""></td>
+  </tr>
+</table>
 
-<P>
-Como exemplo, este é o arquivo que configurou o Dialog para este tema
-tipo console verde:
-</P>
+<p>Como exemplo, este é o arquivo que configurou o Dialog para este tema tipo console verde:</p>
 
-<PRE>
+<pre>
 # Tema "Verde" tipo console para o Dialog.
 # Autor: Aurelio Marinho Jargas
 #   Salvar este arquivo como $HOME/.dialogrc
@@ -2029,684 +1754,397 @@ uarrow_color           = (GREEN,BLACK,ON)
 darrow_color           = (GREEN,BLACK,ON)
 # Menu item help
 itemhelp_color         = (GREEN,BLACK,ON)
-</PRE>
+</pre>
 
-<P>
-<A HREF="tema-verde.cfg">Baixar este arquivo</A>
-</P>
+<p><a href="tema-verde.cfg">Baixar este arquivo</a></p>
 
-<H1 ID="opcoes">6. APÊNDICE A: Lista das opções de linha de comando</h2>
+<h1 id="opcoes">6. APÊNDICE A: Lista das opções de linha de comando</h1>
 
-<H2 ID="opcoes-textos">6.1. Opções para definir os textos da caixa</h3>
+<h2 id="opcoes-textos">6.1. Opções para definir os textos da caixa</h2>
 
-  <DL>
-  <DT><CODE>--backtitle &lt;texto&gt;</CODE></DT><DD>
-      Especifica o título do topo da tela, que fica no plano de fundo,
-      atrás da caixa (Veja exemplo do "Pegador de Dados").
-  <P></P>
-  <DT><CODE>--title &lt;texto&gt;</CODE></DT><DD>
-      Define o título da caixa, colocado centralizado na borda superior.
-  <P></P>
-  <DT><CODE>--cancel-label &lt;texto&gt;</CODE></DT><DD>
-      Especifica o texto para ser mostrado no botão "Cancel".
-  <P></P>
-  <DT><CODE>--exit-label &lt;texto&gt;</CODE></DT><DD>
-      Especifica o texto para ser mostrado no botão "Exit".
-  <P></P>
-  <DT><CODE>--help-label &lt;texto&gt;</CODE></DT><DD>
-      Especifica o texto para ser mostrado no botão "Help".
-  <P></P>
-  <DT><CODE>--ok-label &lt;texto&gt;</CODE></DT><DD>
-      Especifica o texto para ser mostrado no botão "OK".
-  </DL>
+<dl>
+  <dt><code>--backtitle &lt;texto&gt;</code></dt>
+  <dd>Especifica o título do topo da tela, que fica no plano de fundo, atrás da caixa (Veja exemplo do "Pegador de Dados").</dd>
+  <dt><code>--title &lt;texto&gt;</code></dt>
+  <dd>Define o título da caixa, colocado centralizado na borda superior.</dd>
+  <dt><code>--cancel-label &lt;texto&gt;</code></dt>
+  <dd>Especifica o texto para ser mostrado no botão "Cancel".</dd>
+  <dt><code>--exit-label &lt;texto&gt;</code></dt>
+  <dd>Especifica o texto para ser mostrado no botão "Exit".</dd>
+  <dt><code>--help-label &lt;texto&gt;</code></dt>
+  <dd>Especifica o texto para ser mostrado no botão "Help".</dd>
+  <dt><code>--ok-label &lt;texto&gt;</code></dt>
+  <dd>Especifica o texto para ser mostrado no botão "OK".</dd>
+</dl>
 
-<H2 ID="opcoes-ajustes-textos">6.2. Opções para fazer ajustes no texto da caixa</h3>
+<h2 id="opcoes-ajustes-textos">6.2. Opções para fazer ajustes no texto da caixa</h2>
 
-  <DL>
-  <DT><CODE>--cr-wrap</CODE></DT><DD>
-      Mantém as quebras de linha originais do texto da caixa, para não
-      precisar colocar os '\n'. Mas lembre-se que caso a linha fique
-      muito grande, o Dialog a quebrará no meio para caber na caixa.
-  <P></P>
-  <DT><CODE>--no-collapse</CODE></DT><DD>
-      Mantém o espaçamento original do texto, não retirando os TABs nem
-      os espaços em branco consecutivos.
-  <P></P>
-  <DT><CODE>--tab-correct</CODE></DT><DD>
-      Converte cada TAB para N espaços. O N é especificado na opção
-      '--tab-len' ou o padrão 8 é assumido.
-  <P></P>
-  <DT><CODE>--tab-len &lt;N&gt;</CODE></DT><DD>
-      Especifica o número de espaços que serão colocados no lugar de
-      cada TAB, quando usar o opção '--tab-correct'.
-  <P></P>
-  <DT><CODE>--trim</CODE></DT><DD>
-      Limpa o texto da caixa, apagando espaços em branco no início,
-      espaços consecutivos e quebras de linha literais.
-  </DL>
+<dl>
+  <dt><code>--cr-wrap</code></dt>
+  <dd>Mantém as quebras de linha originais do texto da caixa, para não precisar colocar os '\n'. Mas lembre-se que caso a linha fique muito grande, o Dialog a quebrará no meio para caber na caixa.</dd>
+  <dt><code>--no-collapse</code></dt>
+  <dd>Mantém o espaçamento original do texto, não retirando os TABs nem os espaços em branco consecutivos.</dd>
+  <dt><code>--tab-correct</code></dt>
+  <dd>Converte cada TAB para N espaços. O N é especificado na opção '--tab-len' ou o padrão 8 é assumido.</dd>
+  <dt><code>--tab-len &lt;N&gt;</code></dt>
+  <dd>Especifica o número de espaços que serão colocados no lugar de cada TAB, quando usar o opção '--tab-correct'.</dd>
+  <dt><code>--trim</code></dt>
+  <dd>Limpa o texto da caixa, apagando espaços em branco no início, espaços consecutivos e quebras de linha literais.</dd>
+</dl>
 
-<H2 ID="opcoes-ajustes">6.3. Opções para fazer ajustes na caixa</h3>
+<h2 id="opcoes-ajustes">6.3. Opções para fazer ajustes na caixa</h2>
 
-  <DL>
-  <DT><CODE>--aspect &lt;taxa&gt;</CODE></DT><DD>
-      Taxa que ajusta o dimensionamento automático das caixas. É a
-      relação largura / altura, sendo o padrão 9, que significa 9
-      colunas para cada linha.
-  <P></P>
-  <DT><CODE>--begin &lt;y&gt; &lt;x&gt;</CODE></DT><DD>
-      Especifica a posição inicial da caixa, relativo ao canto superior
-      esquerdo.
-  <P></P>
-  <DT><CODE>--defaultno</CODE></DT><DD>
-      Faz o botão 'Não' ser o padrão da caixa YesNo.
-  <P></P>
-  <DT><CODE>--default-item &lt;item&gt;</CODE></DT><DD>
-      Define qual vai ser o item pré-selecionado do Menu. Se não
-      especificado, o primeiro item será o selecionado.
-  <P></P>
-  <DT><CODE>--shadow</CODE></DT><DD>
-      Desenha a sombra da caixa. Opção já usada normalmente.
-  <P></P>
-  <DT><CODE>--no-shadow</CODE></DT><DD>
-      Não desenha a sombra da caixa.
-  <P></P>
-  <DT><CODE>--no-cancel</CODE> ou <CODE>--nocancel</CODE></DT><DD>
-      Não mostra o botão CANCELAR nas caixas Checklist, Inputbox e Menu.
-      A tecla Esc continua valendo para sair da caixa.
-  <P></P>
-  <DT><CODE>--item-help</CODE></DT><DD>
-      Usada nas caixas Checklist, Radiolist ou Menu, mostra uma linha de
-      ajuda no rodapé da tela para o item selecionado. Esse texto é
-      declarado se adicionando uma nova coluna no final da definição de
-      cada item.
-  <P></P>
-  <DT><CODE>--help-button</CODE></DT><DD>
-      Mostra um botão de "Help". Seu código de retorno é 2.
-  </DL>
+<dl>
+  <dt><code>--aspect &lt;taxa&gt;</code></dt>
+  <dd>Taxa que ajusta o dimensionamento automático das caixas. É a relação largura / altura, sendo o padrão 9, que significa 9 colunas para cada linha.</dd>
+  <dt><code>--begin &lt;y&gt; &lt;x&gt;</code></dt>
+  <dd>Especifica a posição inicial da caixa, relativo ao canto superior esquerdo.</dd>
+  <dt><code>--defaultno</code></dt>
+  <dd>Faz o botão 'Não' ser o padrão da caixa YesNo.</dd>
+  <dt><code>--default-item &lt;item&gt;</code></dt>
+  <dd>Define qual vai ser o item pré-selecionado do Menu. Se não especificado, o primeiro item será o selecionado.</dd>
+  <dt><code>--shadow</code></dt>
+  <dd>Desenha a sombra da caixa. Opção já usada normalmente.</dd>
+  <dt><code>--no-shadow</code></dt>
+  <dd>Não desenha a sombra da caixa.</dd>
+  <dt><code>--no-cancel</code> ou <code>--nocancel</code></dt>
+  <dd>Não mostra o botão CANCELAR nas caixas Checklist, Inputbox e Menu. A tecla Esc continua valendo para sair da caixa.</dd>
+  <dt><code>--item-help</code></dt>
+  <dd>Usada nas caixas Checklist, Radiolist ou Menu, mostra uma linha de ajuda no rodapé da tela para o item selecionado. Esse texto é declarado se adicionando uma nova coluna no final da definição de cada item.</dd>
+  <dt><code>--help-button</code></dt>
+  <dd>Mostra um botão de "Help". Seu código de retorno é 2.</dd>
+</dl>
 
-<H2 ID="opcoes-dados">6.4. Opções relativas aos dados informados pelo usuário</h3>
+<h2 id="opcoes-dados">6.4. Opções relativas aos dados informados pelo usuário</h2>
 
-  <DL>
-  <DT><CODE>--separate-output</CODE></DT><DD>
-      Na caixa Checklist, retorna os itens selecionados, um por linha e
-      sem aspas. Bom para scripts!
-  <P></P>
-  <DT><CODE>--separate-widget &lt;separador&gt;</CODE></DT><DD>
-      Define o separador que será colocado entre os retornos de cada
-      caixa. Útil quando se trabalha com múltiplas caixas. O separador
-      padrão é o TAB.
-  <P></P>
-  <DT><CODE>--stderr</CODE></DT><DD>
-      Retorna os dados na Saída de Erros (STDERR). Opção já usada
-      normalmente.
-  <P></P>
-  <DT><CODE>--stdout</CODE></DT><DD>
-      Retorna os dados na Saída Padrão (STDOUT) ao invés da STDERR.
-  <P></P>
-  <DT><CODE>--max-input &lt;tamanho&gt;</CODE></DT><DD>
-      Tamanho máximo do texto que o usuário pode digitar nas caixas.
-      O tamanho padrão é 2000 caracteres.
-  </DL>
+<dl>
+  <dt><code>--separate-output</code></dt>
+  <dd>Na caixa Checklist, retorna os itens selecionados, um por linha e sem aspas. Bom para scripts!</dd>
+  <dt><code>--separate-widget &lt;separador&gt;</code></dt>
+  <dd>Define o separador que será colocado entre os retornos de cada caixa. Útil quando se trabalha com múltiplas caixas. O separador padrão é o TAB.</dd>
+  <dt><code>--stderr</code></dt>
+  <dd>Retorna os dados na Saída de Erros (STDERR). Opção já usada normalmente.</dd>
+  <dt><code>--stdout</code></dt>
+  <dd>Retorna os dados na Saída Padrão (STDOUT) ao invés da STDERR.</dd>
+  <dt><code>--max-input &lt;tamanho&gt;</code></dt>
+  <dd>Tamanho máximo do texto que o usuário pode digitar nas caixas. O tamanho padrão é 2000 caracteres.</dd>
+</dl>
 
-<H2 ID="opcoes-sozinhas">6.5. Opções que devem ser usadas sozinhas na linha de comando</h3>
+<h2 id="opcoes-sozinhas">6.5. Opções que devem ser usadas sozinhas na linha de comando</h2>
 
-  <DL>
-  <DT><CODE>--clear</CODE></DT><DD>
-      Restaura a tela caso o Dialog a tenha bagunçado.
-  <P></P>
-  <DT><CODE>--create-rc &lt;arquivo&gt;</CODE></DT><DD>
-      Gera uma arquivo de configuração do Dialog.
-  <P></P>
-  <DT><CODE>--help</CODE></DT><DD>
-      Mostra a ajuda do dialog, com as opções disponíveis.
-  <P></P>
-  <DT><CODE>--print-maxsize</CODE></DT><DD>
-      Mostra o tamanho atual da tela na STDERR.
-  <P></P>
-  <DT><CODE>--print-version</CODE></DT><DD>
-      Mostra a versão do Dialog na STDERR.
-  <P></P>
-  <DT><CODE>--version</CODE></DT><DD>
-      O mesmo que '--print-version'.
-  </DL>
+<dl>
+  <dt><code>--clear</code></dt>
+  <dd>Restaura a tela caso o Dialog a tenha bagunçado.</dd>
+  <dt><code>--create-rc &lt;arquivo&gt;</code></dt>
+  <dd>Gera uma arquivo de configuração do Dialog.</dd>
+  <dt><code>--help</code></dt>
+  <dd>Mostra a ajuda do dialog, com as opções disponíveis.</dd>
+  <dt><code>--print-maxsize</code></dt>
+  <dd>Mostra o tamanho atual da tela na STDERR.</dd>
+  <dt><code>--print-version</code></dt>
+  <dd>Mostra a versão do Dialog na STDERR.</dd>
+  <dt><code>--version</code></dt>
+  <dd>O mesmo que '--print-version'.</dd>
+</dl>
 
-<H2 ID="opcoes-outras">6.6. Outras opções</h3>
+<h2 id="opcoes-outras">6.6. Outras opções</h2>
 
-  <DL>
-  <DT><CODE>--ignore</CODE></DT><DD>
-      Ignora as opções inválidas. Serve para manter compatibilidade
-      apenas.
-  <P></P>
-  <DT><CODE>--size-err</CODE></DT><DD>
-      Opção antiga que não é mais usada.
-  <P></P>
-  <DT><CODE>--beep</CODE></DT><DD>
-      Apita cada vez que a tela é desenhada.
-  <P></P>
-  <DT><CODE>--beep-after</CODE></DT><DD>
-      Apita na saída com o Ctrl+C
-  <P></P>
-  <DT><CODE>--sleep &lt;N&gt;</CODE></DT><DD>
-      Faz uma pausa de N segundos após processar a caixa. Útil para a
-      Infobox.
-  <P></P>
-  <DT><CODE>--timeout &lt;N&gt;</CODE></DT><DD>
-      Sai do programa com erro caso o usuário não faça nada em N
-      segundos.
-  <P></P>
-  <DT><CODE>--no-kill</CODE></DT><DD>
-      Coloca a caixa Tailboxbg em segundo plano (desabilitando seu
-      SIGHUP) e mostra o ID de seu processo na STDERR.
-  <P></P>
-  <DT><CODE>--print-size</CODE></DT><DD>
-      Mostra o tamanho de cada caixa na STDERR.
-  <P></P>
-  <DT><CODE>--and-widget</CODE></DT><DD>
-      Junta uma ou mais caixas numa mesma tela (sem limpá-la).
-  </DL>
+<dl>
+  <dt><code>--ignore</code></dt>
+  <dd>Ignora as opções inválidas. Serve para manter compatibilidade apenas.</dd>
+  <dt><code>--size-err</code></dt>
+  <dd>Opção antiga que não é mais usada.</dd>
+  <dt><code>--beep</code></dt>
+  <dd>Apita cada vez que a tela é desenhada.</dd>
+  <dt><code>--beep-after</code></dt>
+  <dd>Apita na saída com o Ctrl+C</dd>
+  <dt><code>--sleep &lt;N&gt;</code></dt>
+  <dd>Faz uma pausa de N segundos após processar a caixa. Útil para a Infobox.</dd>
+  <dt><code>--timeout &lt;N&gt;</code></dt>
+  <dd>Sai do programa com erro caso o usuário não faça nada em N segundos.</dd>
+  <dt><code>--no-kill</code></dt>
+  <dd>Coloca a caixa Tailboxbg em segundo plano (desabilitando seu SIGHUP) e mostra o ID de seu processo na STDERR.</dd>
+  <dt><code>--print-size</code></dt>
+  <dd>Mostra o tamanho de cada caixa na STDERR.</dd>
+  <dt><code>--and-widget</code></dt>
+  <dd>Junta uma ou mais caixas numa mesma tela (sem limpá-la).</dd>
+</dl>
 
-<H1 ID="clones">7. APÊNDICE B: Os clones: Xdialog, Kdialog, gdialog, ...</h2>
+<h1 id="clones">7. APÊNDICE B: Os clones: Xdialog, Kdialog, gdialog, ...</h1>
 
-<P>
-Todos os programas listados aqui são "clones" do Dialog, pois foram
-feitos para substituir o Dialog, ou dar uma nova roupagem a ele usando
-bibliotecas gráficas.
-</P>
-<P>
-Os clones usam a mesma sintaxe, as mesmas opções de linha de comando,
-e todos têm o mesmo propósito: ser como o Dialog, só que diferente :)
-</P>
-<P>
-Além de fazer tudo o que o Dialog faz, alguns clones evoluíram e
-adicionaram novos tipos de caixa e funcionalidades novas.
-</P>
-	<BLOCKQUOTE>
-	<B>Dica:</B> É possível fazer um Shell Script que escolha usar o Dialog texto ou o gráfico, dependendo se o usuário está no X ou não. Basta checar a existência da variável <CODE>$DISPLAY</CODE>, que só é definida quando o X está sendo executado.
-	</BLOCKQUOTE>
+<p>Todos os programas listados aqui são "clones" do Dialog, pois foram feitos para substituir o Dialog, ou dar uma nova roupagem a ele usando bibliotecas gráficas.</p>
 
-<H2 ID="whiptail">7.1. Whiptail</h3>
+<p>Os clones usam a mesma sintaxe, as mesmas opções de linha de comando, e todos têm o mesmo propósito: ser como o Dialog, só que diferente :)</p>
 
-       <center><IMG ALIGN="middle" SRC="whiptail.png" BORDER="0" ALT=""></center>  
-<P>
-Clone modo texto, que usa a biblioteca <CODE>newt</CODE> ao invés da <CODE>ncurses</CODE>.
-</P>
-<P>
-Ele foi escrito pela Red Hat Software para ser utilizado na instalação
-modo texto do Red Hat Linux. Como é baseado numa versão antiga do
-Dialog, não tem suporte às caixas novas como calendar, fselect e
-tailbox.
-</P>
+<p>Além de fazer tudo o que o Dialog faz, alguns clones evoluíram e adicionaram novos tipos de caixa e funcionalidades novas.</p>
 
-<UL>
-<LI><A HREF="http://packages.debian.org/stable/base/whiptail.html">Pacote Debian</A>
-<LI><A HREF="http://linux.math.tifr.res.in/manuals/man/whiptail.html">Página de Manual</A>
-</UL>
+<blockquote>
+  <strong>Dica:</strong> É possível fazer um Shell Script que escolha usar o Dialog texto ou o gráfico, dependendo se o usuário está no X ou não. Basta checar a existência da variável <code>$DISPLAY</code>, que só é definida quando o X está sendo executado.
+</blockquote>
 
-<H2 ID="xdialog">7.2. Xdialog</h3>
+<h2 id="whiptail">7.1. Whiptail</h2>
 
-       <center><IMG ALIGN="middle" SRC="xdialog.png" BORDER="0" ALT=""></center>  
-<P>
-É o Dialog para a interface gráfica, que usa a biblioteca Gtk+.
-</P>
-<P>
-É de longe o Dialog mais "turbinado", pois também tem o botão Help que
-chama a tela de Ajuda da caixa e introduziu vários tipos novos de
-caixa como: treeview, buildlist, editbox, rangebox, logbox, spin
-boxes, combobox, colorsel, fontsel.
-</P>
-<P>
-É também o clone mais bem documentado, possuindo uma excelente
-homepage e documentação online. Em especial
-<A HREF="http://thgodef.nerim.net/xdialog/doc/box.html">esta parte</A>
-da documentação mostra figuras (screenshots) de todas as caixas novas
-implementadas.
-</P>
+<p class="figure">
+  <img src="whiptail.png">
+</p>
 
-<UL>
-<LI><A HREF="http://xdialog.dyns.net">Site oficial</A>
-<LI><A HREF="http://thgodef.nerim.net/xdialog/doc/index.html">Documentação Online</A>
-</UL>
+<p>Clone modo texto, que usa a biblioteca <code>newt</code> ao invés da <code>ncurses</code>.</p>
 
-<H2 ID="kdialog">7.3. Kdialog</h3>
+<p>Ele foi escrito pela Red Hat Software para ser utilizado na instalação modo texto do Red Hat Linux. Como é baseado numa versão antiga do Dialog, não tem suporte às caixas novas como calendar, fselect e tailbox.</p>
 
-       <center><IMG ALIGN="middle" SRC="kdialog.png" BORDER="0" ALT=""></center>  
-<P>
-O Dialog do time do KDE, que usa a biblioteca Qt.
-</P>
-<P>
-Como os grandes "ambientes gráficos" gostam de reescrever todos os
-aplicativos existentes, com o Dialog não podia ser diferente. O
-Kdialog é o Dialog integrado com o ambiente KDE.
-</P>
+<ul>
+  <li>
+    <a href="http://packages.debian.org/stable/base/whiptail.html">Pacote Debian</a>
+  </li>
+  <li>
+    <a href="http://linux.math.tifr.res.in/manuals/man/whiptail.html">Página de Manual</a>
+  </li>
+</ul>
 
-<UL>
-<LI><A HREF="ftp://ftp.kde.org/pub/kde/unstable/apps/utils/">FTP</A>
-<LI><A HREF="http://developer.kde.org/documentation/tutorials/kdialog/t1.html">Tutorial bem completo em inglês</A>
-</UL>
+<h2 id="xdialog">7.2. Xdialog</h2>
 
-<H2 ID="gdialog">7.4. gdialog</h3>
+<p class="figure">
+  <img src="xdialog.png">
+</p>
 
-       <center><IMG ALIGN="middle" SRC="gdialog.png" BORDER="0" ALT=""></center>  
-<P>
-O antigo Dialog do time do Gnome, que usa a biblioteca Gtk.
-</P>
-<P>
-Aparentemente o Zenity (ver adiante) é o novo "Dialog oficial" do
-Gnome e o gdialog vai ser aposentado. O interessante desse clone
-é que carrega o nome do ilustre Alan Cox como desenvolvedor
-participante.
-</P>
+<p>É o Dialog para a interface gráfica, que usa a biblioteca Gtk+.</p>
 
-<H2 ID="zenity">7.5. Zenity</h3>
+<p>É de longe o Dialog mais "turbinado", pois também tem o botão Help que chama a tela de Ajuda da caixa e introduziu vários tipos novos de caixa como: treeview, buildlist, editbox, rangebox, logbox, spin boxes, combobox, colorsel, fontsel.</p>
 
-       <center><IMG ALIGN="middle" SRC="zenity.png" BORDER="0" ALT=""></center>  
-<P>
-O Dialog do time do Gnome, que usa a biblioteca Gtk.
-</P>
-<P>
-Foi projetado para ser mais limpo e bem escrito do que o gdialog,
-porém se tornou <B>incompatível</B> com o dialog, pois usa opções
-diferentes na linha de comando (mais Zen e simples, segundo os
-autores). Há um script que garante a compatibilidade com o gdialog.
-</P>
+<p>É também o clone mais bem documentado, possuindo uma excelente homepage e documentação online. Em especial <a href="http://thgodef.nerim.net/xdialog/doc/box.html">esta parte</a> da documentação mostra figuras (screenshots) de todas as caixas novas implementadas.</p>
 
-<UL>
-<LI><A HREF="http://freshmeat.net/projects/zenity">Página no FreshMeat</A>
-<LI><A HREF="http://ftp.gnome.org/pub/GNOME/sources/zenity/">FTP</A>
-<LI><A HREF="http://cvs.gnome.org/bonsai/rview.cgi?cvsroot=/cvs/gnome&amp;dir=zenity">CVS</A>
-<LI><A HREF="http://www.gustavoroberto.blog.br/2007/09/21/algumas-coisas-sobre-zenity-parte-i/">Artigo em português, com exemplos</A>
-</UL>
+<ul>
+  <li>
+    <a href="http://xdialog.dyns.net">Site oficial</a>
+  </li>
+  <li>
+    <a href="http://thgodef.nerim.net/xdialog/doc/index.html">Documentação Online</a>
+  </li>
+</ul>
 
-<H2 ID="udpm">7.6. Udpm</h3>
+<h2 id="kdialog">7.3. Kdialog</h2>
 
-<P>
-O "User Dialog Perl Module" não é um clone do Dialog, mas uma
-interface Perl para trabalhar de maneira padronizada com os seguintes
-"sabores": dialog, cdialog, whiptail, gdialog e Kdialog.
-</P>
+<p class="figure">
+  <img src="kdialog.png">
+</p>
 
-<UL>
-<LI><A HREF="http://udpm.sourceforge.net/">Site oficial</A>
-</UL>
+<p>O Dialog do time do KDE, que usa a biblioteca Qt.</p>
 
-<H2 ID="pythondialog">7.7. pythondialog</h3>
+<p>Como os grandes "ambientes gráficos" gostam de reescrever todos os aplicativos existentes, com o Dialog não podia ser diferente. O Kdialog é o Dialog integrado com o ambiente KDE.</p>
 
-<P>
-Módulo em Python para usar trabalhar de maneira padronizada com os
-seguintes "sabores": dialog, whiptail e Xdialog.
-</P>
+<ul>
+  <li>
+    <a href="ftp://ftp.kde.org/pub/kde/unstable/apps/utils/">FTP</a>
+  </li>
+  <li>
+    <a href="http://developer.kde.org/documentation/tutorials/kdialog/t1.html">Tutorial bem completo em inglês</a>
+  </li>
+</ul>
 
-<UL>
-<LI><A HREF="http://people.via.ecp.fr/~flo/2002/pythondialog/pythondialog.html">Site oficial</A>
-</UL>
+<h2 id="gdialog">7.4. gdialog</h2>
 
-<H1 ID="sobre">8. Sobre este documento</h2>
+<p class="figure">
+  <img src="gdialog.png">
+</p>
 
-<P>
-A primeira versão levou 5 dias para ser feita, totalizando 27 horas de
-escrita. Além da escrita do conteúdo, nesse tempo também foram feitas
-outras tarefas dignas de uma primeira versão:
-</P>
+<p>O antigo Dialog do time do Gnome, que usa a biblioteca Gtk.</p>
 
-<UL>
-<LI>(Re)aprendizado do Dialog e leitura de sua documentação,
-<LI>Definição do formato do documento (ordem dos tópicos, layout),
-<LI>Definição do aspecto do documento (fazer o arquivo de estilo CSS),
-<LI>Produção de todas as imagens (testes, screenshot e tratamento).
-</UL>
+<p>Aparentemente o Zenity (ver adiante) é o novo "Dialog oficial" do Gnome e o gdialog vai ser aposentado. O interessante desse clone é que carrega o nome do ilustre Alan Cox como desenvolvedor participante.</p>
 
-<P>
-Este documento foi feito do zero, utilizando 100% Linux e Softwares
-Livres.
-</P>
+<h2 id="zenity">7.5. Zenity</h2>
 
-<DL>
-<DT><I>Testes</I></DT><DD>
-   <UL>
-   <LI>Conectiva Linux 8 como Sistema Operacional
-   <LI>Bash 2.04 como Shell
-   <LI>Dialog versão 0.9a
-   </UL>
-<DT><I>Texto</I></DT><DD>
-   <UL>
-   <LI><A HREF="http://www.vim.org">Vim</A> para escrever os textos
-   <LI><A HREF="http://txt2tags.sf.net/pt/">Txt2tags</A> para converter o
-     <A HREF="index.t2t">texto fonte</A> para HTML
-   </UL>
-<DT><I>Imagens</I></DT><DD>
-   <UL>
-   <LI>Xterm para executar o Dialog no modo gráfico (xterm +sb -b 0)
-   <LI>xwd (do XFree86) para fazer o dump da janela do Xterm (xwd &gt;
-     arquivo.xwd)
-   <LI>ImageMagick para converter de .xwd para .png (convert arquivo.xwd
-     arquivo.png)
-   </UL>
-</DL>
+<p class="figure">
+  <img src="zenity.png">
+</p>
 
-<P>
-Atualmente, os testes são feitos com o dialog versão 0.9b. As novidades
-em relação à versão 0.9a são o botão de Help e as opções novas de linha
-de comando, registradas no Changelog da versão 5 deste documento.
-</P>
+<p>O Dialog do time do Gnome, que usa a biblioteca Gtk.</p>
 
-<H2 ID="download">8.1. Disponibilidade (download)</h3>
+<p>Foi projetado para ser mais limpo e bem escrito do que o gdialog, porém se tornou <strong>incompatível</strong> com o dialog, pois usa opções diferentes na linha de comando (mais Zen e simples, segundo os autores). Há um script que garante a compatibilidade com o gdialog.</p>
 
-<P>
-Este documento está disponível para leitura e download no formato
-HTML neste endereço:
-</P>
-<P>
-<A HREF="http://aurelio.net/shell/dialog">http://aurelio.net/shell/dialog</A>
-</P>
-<P>
-Para fazer o download do documento, de todas as suas figuras e scripts
-de exemplo, use os seguintes comandos:
-</P>
+<ul>
+  <li>
+    <a href="http://freshmeat.net/projects/zenity">Página no FreshMeat</a>
+  </li>
+  <li>
+    <a href="http://ftp.gnome.org/pub/GNOME/sources/zenity/">FTP</a>
+  </li>
+  <li>
+    <a href="http://cvs.gnome.org/bonsai/rview.cgi?cvsroot=/cvs/gnome&amp;dir=zenity">CVS</a>
+  </li>
+  <li>
+    <a href="http://www.gustavoroberto.blog.br/2007/09/21/algumas-coisas-sobre-zenity-parte-i/">Artigo em português, com exemplos</a>
+  </li>
+</ul>
 
-<PRE>
+<h2 id="udpm">7.6. Udpm</h2>
+
+<p>O "User Dialog Perl Module" não é um clone do Dialog, mas uma interface Perl para trabalhar de maneira padronizada com os seguintes "sabores": dialog, cdialog, whiptail, gdialog e Kdialog.</p>
+
+<ul>
+  <li>
+    <a href="http://udpm.sourceforge.net/">Site oficial</a>
+  </li>
+</ul>
+
+<h2 id="pythondialog">7.7. pythondialog</h2>
+
+<p>Módulo em Python para usar trabalhar de maneira padronizada com os seguintes "sabores": dialog, whiptail e Xdialog.</p>
+
+<ul>
+  <li>
+    <a href="http://people.via.ecp.fr/~flo/2002/pythondialog/pythondialog.html">Site oficial</a>
+  </li>
+</ul>
+
+<h1 id="sobre">8. Sobre este documento</h1>
+
+<p>A primeira versão levou 5 dias para ser feita, totalizando 27 horas de escrita. Além da escrita do conteúdo, nesse tempo também foram feitas outras tarefas dignas de uma primeira versão:</p>
+
+<ul>
+  <li>(Re)aprendizado do Dialog e leitura de sua documentação,</li>
+  <li>Definição do formato do documento (ordem dos tópicos, layout),</li>
+  <li>Definição do aspecto do documento (fazer o arquivo de estilo CSS),</li>
+  <li>Produção de todas as imagens (testes, screenshot e tratamento).</li>
+</ul>
+
+<p>Este documento foi feito do zero, utilizando 100% Linux e Softwares Livres.</p>
+
+<dl>
+  <dt><em>Testes</em></dt>
+  <dd>
+    <ul>
+      <li>Conectiva Linux 8 como Sistema Operacional</li>
+      <li>Bash 2.04 como Shell</li>
+      <li>Dialog versão 0.9a</li>
+    </ul>
+  </dd>
+  <dt><em>Texto</em></dt>
+  <dd>
+    <ul>
+      <li>
+        <a href="http://www.vim.org">Vim</a> para escrever os textos
+      </li>
+      <li>
+        <a href="http://txt2tags.sf.net/pt/">Txt2tags</a> para converter o <a href="index.t2t">texto fonte</a> para HTML
+      </li>
+    </ul>
+  </dd>
+  <dt><em>Imagens</em></dt>
+  <dd>
+    <ul>
+      <li>Xterm para executar o Dialog no modo gráfico (xterm +sb -b 0)</li>
+      <li>xwd (do XFree86) para fazer o dump da janela do Xterm (xwd &gt; arquivo.xwd)</li>
+      <li>ImageMagick para converter de .xwd para .png (convert arquivo.xwd arquivo.png)</li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Atualmente, os testes são feitos com o dialog versão 0.9b. As novidades em relação à versão 0.9a são o botão de Help e as opções novas de linha de comando, registradas no Changelog da versão 5 deste documento.</p>
+
+<h2 id="download">8.1. Disponibilidade (download)</h2>
+
+<p>Este documento está disponível para leitura e download no formato HTML neste endereço:</p>
+
+<p><a href="http://aurelio.net/shell/dialog">http://aurelio.net/shell/dialog</a></p>
+
+<p>Para fazer o download do documento, de todas as suas figuras e scripts de exemplo, use os seguintes comandos:</p>
+
+<pre>
 mkdir dialog
 cd dialog
 wget -m -L http://aurelio.net/shell/dialog/
-</PRE>
+</pre>
 
-<H2 ID="changelog">8.2. Histórico de versões (Changelog)</h3>
+<h2 id="changelog">8.2. Histórico de versões (Changelog)</h2>
 
-<DL>
-<DT><B>versão 1 — 25 de junho de 2003</B></DT><DD>
-  <UL>
-  <LI>Versão inicial lançada.
-  <P></P>
-  </UL>
-<DT><B>versão 2 — 29 de junho de 2003</B></DT><DD>
-  <UL>
-  <LI>Adicionado sub-seção "Changelog" (esta aqui!)
-  <LI>Adicionada seção "Breve Histórico do Dialog"
-  <LI>Adicionadas informações resumidas de download e instalação
-  <LI>Adicionado "Apêndice B" com informações sobre os clones do Dialog
-    (<I>Obrigado Eri Ramos Bastos pela dica</I>)
-  <P></P>
-  </UL>
-<DT><B>versão 3 — 05 de julho de 2003</B></DT><DD>
-  <UL>
-  <LI>Adicionado tópico sobre licença/copyright
-    (<I>Obrigado Marcelo Toledo pela dica</I>)
-  <LI>Adicionado tópico sobre download do documento
-  <LI>Reorganização de tópicos, melhoria da aparência (CSS)
-  <P></P>
-  </UL>
-<DT><B>versão 4 — 27 de agosto de 2003</B></DT><DD>
-  <UL>
-  <LI>Novo endereço oficial: http://aurelio.net/shell/dialog
-  <LI>Comando de download arrumado (wget)
-  <LI>Os scripts de exemplo foram reformatados
-  <LI>Incluídos os scripts: dialog-tour, posicao, duas e multi
-  <LI>Adicionada a opção --and-widget no Apêndice A
-  <LI>Corrijidos eros de Protuguês :)
-    (<I>Obrigado Marcelo Toledo por apontá-los</I>)
-  <P></P>
-  </UL>
-<DT><B>versão 5 — 13 de agosto de 2004</B></DT><DD>
-  <UL>
-  <LI>Adicionados nomes a cada título do documento (#âncoras), para ficarem
-    mais descritivos os links diretos para seções específicas
-  <LI>Incluído exemplo funcional de Gauge: copydir
-  <LI>Incluído exemplo funcional de Menu Dinâmico: users
-  <LI>Adicionado tópico sobre o botão HELP
-  <LI>Adicionada menção ao valor inicial do texto da Inputbox
-  <LI>Opções do Apêndice A reorganizadas por categorias
-  <LI>Adicionados screenshots dos clones: whiptail, Xdialog, Kdialog,
-    gdialog e zenity
-  <LI>Adicionado link para tutorial do Kdialog
-  <LI>Adicionadas informações sobre o módulo em Python do dialog
-  <LI>Adicionadas no Apêndice A as opções novas de linha de comando da
-    versão 0.9b do dialog: cancel-label, exit-label, help-label,
-    ok-label, no-collapse, help-button, max-input e timeout
-  <P></P>
-  </UL>
-<DT><B>versão 6 — junho de 2009</B></DT><DD>
-  <UL>
-  <LI>Corrigido o ano da versão 5: s/2003/2004/
-    (<I>Obrigado Tiago F Bianchini por apontá-lo</I>)
-  <LI>Títulos com iniciais maiúsculas (e não todas as palavras)
-  <LI>Documento e exemplos convertidos para UTF-8
-  <LI>Melhorias na formatação (tema novo)
-  <LI>Resumido o Prefácio, que estava "acadêmico" demais
-  </UL>
-</DL>
+<dl>
+  <dt><strong>versão 1 — 25 de junho de 2003</strong></dt>
+  <dd>
+    <ul>
+      <li>Versão inicial lançada.</li>
+    </ul>
+  </dd>
+  <dt><strong>versão 2 — 29 de junho de 2003</strong></dt>
+  <dd>
+    <ul>
+      <li>Adicionado sub-seção "Changelog" (esta aqui!)</li>
+      <li>Adicionada seção "Breve Histórico do Dialog"</li>
+      <li>Adicionadas informações resumidas de download e instalação</li>
+      <li>Adicionado "Apêndice B" com informações sobre os clones do Dialog (<em>Obrigado Eri Ramos Bastos pela dica</em>)</li>
+    </ul>
+  </dd>
+  <dt><strong>versão 3 — 05 de julho de 2003</strong></dt>
+  <dd>
+    <ul>
+      <li>Adicionado tópico sobre licença/copyright (<em>Obrigado Marcelo Toledo pela dica</em>)</li>
+      <li>Adicionado tópico sobre download do documento</li>
+      <li>Reorganização de tópicos, melhoria da aparência (CSS)</li>
+    </ul>
+  </dd>
+  <dt><strong>versão 4 — 27 de agosto de 2003</strong></dt>
+  <dd>
+    <ul>
+      <li>Novo endereço oficial: http://aurelio.net/shell/dialog</li>
+      <li>Comando de download arrumado (wget)</li>
+      <li>Os scripts de exemplo foram reformatados</li>
+      <li>Incluídos os scripts: dialog-tour, posicao, duas e multi</li>
+      <li>Adicionada a opção --and-widget no Apêndice A</li>
+      <li>Corrijidos eros de Protuguês :) (<em>Obrigado Marcelo Toledo por apontá-los</em>)</li>
+    </ul>
+  </dd>
+  <dt><strong>versão 5 — 13 de agosto de 2004</strong></dt>
+  <dd>
+    <ul>
+      <li>Adicionados nomes a cada título do documento (#âncoras), para ficarem mais descritivos os links diretos para seções específicas</li>
+      <li>Incluído exemplo funcional de Gauge: copydir</li>
+      <li>Incluído exemplo funcional de Menu Dinâmico: users</li>
+      <li>Adicionado tópico sobre o botão HELP</li>
+      <li>Adicionada menção ao valor inicial do texto da Inputbox</li>
+      <li>Opções do Apêndice A reorganizadas por categorias</li>
+      <li>Adicionados screenshots dos clones: whiptail, Xdialog, Kdialog, gdialog e zenity</li>
+      <li>Adicionado link para tutorial do Kdialog</li>
+      <li>Adicionadas informações sobre o módulo em Python do dialog</li>
+      <li>Adicionadas no Apêndice A as opções novas de linha de comando da versão 0.9b do dialog: cancel-label, exit-label, help-label, ok-label, no-collapse, help-button, max-input e timeout</li>
+    </ul>
+  </dd>
+  <dt><strong>versão 6 — junho de 2009</strong></dt>
+  <dd>
+    <ul>
+      <li>Corrigido o ano da versão 5: s/2003/2004/ (<em>Obrigado Tiago F Bianchini por apontá-lo</em>)</li>
+      <li>Títulos com iniciais maiúsculas (e não todas as palavras)</li>
+      <li>Documento e exemplos convertidos para UTF-8</li>
+      <li>Melhorias na formatação (tema novo)</li>
+      <li>Resumido o Prefácio, que estava "acadêmico" demais</li>
+    </ul>
+  </dd>
+</dl>
 
-<H2 ID="licenca">8.3. Licença / Copyright</h3>
+<h2 id="licenca">8.3. Licença / Copyright</h2>
 
-<P>
-Este documento pode ser copiado, distribuído e divulgado livremente,
-parcial ou na íntegra, desde que não alterado seu conteúdo e citado o
-nome do autor:
-</P>
-	<BLOCKQUOTE>
-	Aurelio Marinho Jargas
-	</BLOCKQUOTE>
-<P>
-Se você encontrar erros, quiser adicionar conteúdo ou tiver qualquer
-alteração em mente, <B>contate o autor</B> <I>&lt;verde (a) aurelio net&gt;</I>
-para que o documento original seja editado e toda a comunidade possa
-usufruir de suas melhorias.
-</P>
-<P>
-Em vez de colocar uma cópia
-deste documento em seu site, faça um link para a versão original em
-<A HREF="http://aurelio.net/shell/dialog">http://aurelio.net/shell/dialog</A>, para que seus usuários possam ler sempre
-a versão mais atualizada.
-</P>
-<P>
-O plágio (dizer que foi você quem escreveu) e a utilização desse
-documento para fins comerciais (sites, livros e apostilas não-livres)
-são abominados e serão tomadas as atitudes cabíveis para coibi-los.
-</P>
+<p>Este documento pode ser copiado, distribuído e divulgado livremente, parcial ou na íntegra, desde que não alterado seu conteúdo e citado o nome do autor:</p>
 
-<H2 ID="maisinfo">8.4. Onde obter mais informações</h3>
+<blockquote>
+  Aurelio Marinho Jargas
+</blockquote>
 
-<P>
-Uma pesquisa no <A HREF="http://www.google.com.br/search?q=dialog+tutorial">Google</A>
-mostra que a Internet está deficiente em documentação para o Dialog. O
-mais relevante é um artigo introdutório em inglês no
-<A HREF="http://www.linuxjournal.com/article.php?sid=2807">Linux Journal</A>.
-</P>
-<P>
-Junto com o programa Dialog, tem alguma documentação em inglês.
-Tem a sua
-<A HREF="http://www.cl.cam.ac.uk/cgi-bin/manpage?1+dialog">página de manual</A>
-("man page") que numa linguagem direta e sucinta traz detalhes sobre o
-seu funcionamento. Há também um diretório chamado "samples", onde tem
-scripts funcionais de exemplo de todos os tipos de caixa.
-</P>
-<P>
-Na <A HREF="http://dickey.his.com/dialog/">página do Thomas Dickey</A>, o mantenedor
-atual do Dialog, há poucas informações, porém lá está o link para os
-fontes do programa.
-</P>
-<P>
-Em português, a melhor fonte de informações é utilizar a
-<A HREF="http://br.groups.yahoo.com/group/shell-script/">lista shell-script</A>
-para obter ajuda e compartilhar experiências com outros usuários do
-Dialog.
-</P>
-<P>
-O endereço oficial deste documento é
-</P>
-<P>
-<A HREF="http://aurelio.net/shell/dialog/">http://aurelio.net/shell/dialog/</A>
-</P>
-<P>
-Fim.
-</P>
-<P>
-<a href="http://aurelio.net/shell/" class="linkblock"><IMG ALIGN="middle" SRC="/img/icon/128/shell.png" BORDER="0" ALT=""> Aprenda mais sobre Shell Script</a>
-</P>
-</div> <!-- close #main -->
-<div id="nav">
+<p>Se você encontrar erros, quiser adicionar conteúdo ou tiver qualquer alteração em mente, <strong>contate o autor</strong> <em>&lt;verde (a) aurelio net&gt;</em> para que o documento original seja editado e toda a comunidade possa usufruir de suas melhorias.</p>
 
-<table>
-<tr>
-	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
-</tr>
-<tr>	
-	<th class="search" colspan="5">
- 
-<form action="http://aurelio.net/achei.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
+<p>Em vez de colocar uma cópia deste documento em seu site, faça um link para a versão original em <a href="http://aurelio.net/shell/dialog">http://aurelio.net/shell/dialog</a>, para que seus usuários possam ler sempre a versão mais atualizada.</p>
 
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-	</th>
-</tr>
-<tr><td>
-<P>
-<B>Nerdices</B>
-</P>
+<p>O plágio (dizer que foi você quem escreveu) e a utilização desse documento para fins comerciais (sites, livros e apostilas não-livres) são abominados e serão tomadas as atitudes cabíveis para coibi-los.</p>
 
-<UL>
-<LI><A HREF="/misc/adventure-mapa.txt">adventure</A>
-<LI><A HREF="/doc/as4pp.html">applescript</A>
-<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
-<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
-<LI><A HREF="http://codare.net">codare</A>
-<LI><A HREF="/doc/coluna/">coluna</A>
-<LI><A HREF="http://aurelio.net/curso/">curso</A>
-<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
-<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
-<LI><A HREF="/doc/dort.html">dort</A>
-<LI><A HREF="/er/">er</A>
-<LI><A HREF="/log/">log</A>
-<LI><A HREF="/mac/">mac</A>
-<LI><A HREF="/curso/">palestra</A>
-<LI><A HREF="/misc/eu_odeio_perl.txt">perl</A>
-<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
-<LI><A HREF="/bin/python/">python</A>
-<LI><A HREF="/sed/">sed</A>
-<LI><A HREF="http://aurelio.net/shell/">shell</A>
-<LI><A HREF="/bin/sql/">sql</A>
-<LI><A HREF="http://aurelio.net/vim/">vim</A>
-<LI><A HREF="/doc/nerd.html">mais...</A>
-<LI><A HREF="/en/">more...</A>
-</UL>
+<h2 id="maisinfo">8.4. Onde obter mais informações</h2>
 
-</td><td>
-<P>
-<B>Programas</B>
-</P>
+<p>Uma pesquisa no <a href="http://www.google.com.br/search?q=dialog+tutorial">Google</a> mostra que a Internet está deficiente em documentação para o Dialog. O mais relevante é um artigo introdutório em inglês no <a href="http://www.linuxjournal.com/article.php?sid=2807">Linux Journal</a>.</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
-<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
-<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
-<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
-<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
-<LI><A HREF="/bin/lelolab/">lelolab</A>
-<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
-<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
-<LI><A HREF="http://aurelio.net/rac/">rac</A>
-<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
-<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
-<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
-<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
-<LI><A HREF="http://txt2tags.org">txt2tags</A>
-<LI><A HREF="http://funcoeszz.net">zz</A>
-<LI><A HREF="/bin/">mais...</A>
-<LI><A HREF="/soft/">more...</A>
-</UL>
+<p>Junto com o programa Dialog, tem alguma documentação em inglês. Tem a sua <a href="http://www.cl.cam.ac.uk/cgi-bin/manpage?1+dialog">página de manual</a> ("man page") que numa linguagem direta e sucinta traz detalhes sobre o seu funcionamento. Há também um diretório chamado "samples", onde tem scripts funcionais de exemplo de todos os tipos de caixa.</p>
 
-</td><td>
-<P>
-<B>Livros</B>
-</P>
+<p>Na <a href="http://dickey.his.com/dialog/">página do Thomas Dickey</a>, o mantenedor atual do Dialog, há poucas informações, porém lá está o link para os fontes do programa.</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
-<LI><A HREF="http://www.piazinho.com.br">regex</A>
-<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
-<LI><A HREF="http://www.shellscript.com.br">shell</A>
-</UL>
+<p>Em português, a melhor fonte de informações é utilizar a <a href="http://br.groups.yahoo.com/group/shell-script/">lista shell-script</a> para obter ajuda e compartilhar experiências com outros usuários do Dialog.</p>
 
-</td><td>
-<P>
-<B>Eu</B>
-</P>
+<p>O endereço oficial deste documento é</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/blog">blog</A>
-<LI><A HREF="/cv">cv</A>
-<LI><A HREF="/img/emeio.png">e-mail</A>
-<LI><A HREF="/faq">faq</A>
-<LI><A HREF="/mim.html">raio-x</A>
-<LI><A HREF="http://twitter.com/oreio">twitter</A>
-</UL>
+<p><a href="http://aurelio.net/shell/dialog/">http://aurelio.net/shell/dialog/</a></p>
 
-</td><td>
-<P>
-<B>Diversos</B>
-</P>
-
-<UL>
-<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
-<LI><A HREF="/adsense/">adsense</A>
-<LI><A HREF="/atacama">atacama</A>
-<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
-<LI><A HREF="http://aurelio.net/carve/">carve</A>
-<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
-<LI><A HREF="/correria/">correria</A>
-<LI><A HREF="/dumbs/">dumbs</A>
-<LI><A HREF="/foto/">foto</A>
-<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
-<LI><A HREF="/musica/">musica</A>
-<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
-<LI><A HREF="/doc/ramones.txt">ramones</A>
-<LI><A HREF="/sobre.html">sobre</A>
-<LI><A HREF="http://aurelio.net/surf/">surf</A>
-<LI><A HREF="/misc/toyota/">toyota</A>
-<LI><A HREF="http://umportugues.com">umportugues</A>
-<LI><A HREF="/valeta/">valeta</A>
-<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
-<LI><A HREF="/doc/videogame.html">videogame</A>
-</UL>
-
-</td><tr>
-</table>
-</div> <!-- #nav -->
-
-<div id="footer">
-<P>
-<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
-<br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</P>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags shell/dialog/index.t2t -->
-</BODY></HTML>
+<p>Fim.</p>
