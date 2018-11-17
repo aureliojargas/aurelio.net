@@ -381,27 +381,22 @@ $ dialog --msgbox 'minha primeira tela' 5 40
 <blockquote>
   <strong>Nota:</strong> A quebra dos comandos em várias linhas é apenas estética, não obrigatória.
 </blockquote>
-<center>
-  <table border="0">
-    <tr>
-      <td><img class="center" src="calendar.png" alt=""></td>
-      <td>
-        <h3 id="calendar">3.1. Calendar</h3>
-        <pre>
+
+<h3 id="calendar">3.1. Calendar</h3>
+
+<pre>
 dialog                       \
    --title 'Escolha a data'  \
    --calendar ''             \
    0 0                       \
    31 12 1999
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="checklist.png" alt=""></td>
-      <td>
-        <h3 id="checklist">3.2. Checklist</h3>
-        <pre>
+
+<img class="center" src="calendar.png" alt="">
+
+<h3 id="checklist">3.2. Checklist</h3>
+
+<pre>
 dialog                                      \
    --title 'Seleção dos Componentes'        \
    --checklist 'O que você quer instalar?'  \
@@ -410,67 +405,57 @@ dialog                                      \
    mouse   'Suporte a mouse'          off   \
    color   'Suporte a cores'          on    \
    beep    'Driver avançado de som'   off
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="fselect.png" alt=""></td>
-      <td>
-        <h3 id="fselect">3.3. Fselect</h3>
-        <pre>
+
+<img class="center" src="checklist.png" alt="">
+
+<h3 id="fselect">3.3. Fselect</h3>
+
+<pre>
 dialog                              \
    --title 'Escolha onde instalar'  \
    --fselect /usr/share/vim/        \
    0 0
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="gauge.png" alt=""></td>
-      <td>
-        <h3 id="gauge">3.4. Gauge</h3>
-        <pre>
+
+<img class="center" src="fselect.png" alt="">
+
+<h3 id="gauge">3.4. Gauge</h3>
+
+<pre>
 dialog                                     \
    --title 'Instalação dos Pacotes'        \
    --gauge '\nInstalando Vim-6.0a.tgz...'  \
    8 40 60
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="infobox.png" alt=""></td>
-      <td>
-        <h3 id="infobox">3.5. Infobox</h3>
-        <pre>
+
+<img class="center" src="gauge.png" alt="">
+
+<h3 id="infobox">3.5. Infobox</h3>
+
+<pre>
 dialog                                         \
    --title 'Aguarde'                           \
    --infobox '\nFinalizando em 5 segundos...'  \
    0 0
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="passwordbox.png" alt=""></td>
-      <td>
-        <h3 id="inputbox">3.6. Inputbox, Passwordbox</h3>
-        <pre>
+
+<img class="center" src="infobox.png" alt="">
+
+<h3 id="inputbox">3.6. Inputbox, Passwordbox</h3>
+
+<pre>
 dialog                                           \
    --title 'Confirmação'                         \
    --passwordbox 'Por favor, confirme a senha:'  \
    0 0
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="menu.png" alt=""></td>
-      <td>
-        <h3 id="menu">3.7. Menu</h3>
-        <pre>
+
+<img class="center" src="passwordbox.png" alt="">
+
+<h3 id="menu">3.7. Menu</h3>
+
+<pre>
 dialog                                       \
    --title 'Perfil'                          \
    --menu 'Escolha o perfil da instalação:'  \
@@ -478,28 +463,24 @@ dialog                                       \
    mínima       'Instala o mínimo'           \
    completa     'Instala tudo'               \
    customizada  'Você escolhe'
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="msgbox.png" alt=""></td>
-      <td>
-        <h3 id="msgbox">3.8. Msgbox</h3>
-        <pre>
+
+<img class="center" src="menu.png" alt="">
+
+<h3 id="msgbox">3.8. Msgbox</h3>
+
+<pre>
 dialog                                            \
    --title 'Parabéns'                             \
    --msgbox 'Instalação finalizada com sucesso.'  \
    6 40
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="radiolist.png" alt=""></td>
-      <td>
-        <h3 id="radiolist">3.9. Radiolist</h3>
-        <pre>
+
+<img class="center" src="msgbox.png" alt="">
+
+<h3 id="radiolist">3.9. Radiolist</h3>
+
+<pre>
 dialog                                           \
    --title 'Pergunta'                            \
    --radiolist 'Há quanto tempo você usa o Vi?'  \
@@ -507,68 +488,57 @@ dialog                                           \
    iniciante  'até 1 ano'      on                \
    experiente 'mais de 1 ano'  off               \
    guru       'mais de 3 anos' off
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="tailbox.png" alt=""></td>
-      <td>
-        <h3 id="tailbox">3.10. Tailbox, Tailboxbg</h3>
-        <pre>
+
+<img class="center" src="radiolist.png" alt="">
+
+<h3 id="tailbox">3.10. Tailbox, Tailboxbg</h3>
+
+<pre>
 tail -f /var/log/messages &gt; out &amp;
 
 dialog                                         \
    --title 'Monitorando Mensagens do Sistema'  \
    --tailbox out                               \
    0 0
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="textbox.png" alt=""></td>
-      <td>
-        <h3 id="textbox">3.11. Textbox</h3>
-        <pre>
+
+<img class="center" src="tailbox.png" alt="">
+
+<h3 id="textbox">3.11. Textbox</h3>
+
+<pre>
 dialog                                        \
    --title 'Visualizando Arquivo'             \
    --textbox /usr/share/vim/vim60/indent.vim  \
    0 0
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="timebox.png" alt=""></td>
-      <td>
-        <h3 id="timebox">3.12. Timebox</h3>
-        <pre>
+
+<img class="center" src="textbox.png" alt="">
+
+<h3 id="timebox">3.12. Timebox</h3>
+
+<pre>
 dialog                                        \
    --title 'Ajuste o Relógio'                 \
    --timebox '\nDICA: Use as setas e o TAB.'  \
    0 0                                        \
    23 59 30
-
 </pre>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="center" src="yesno.png" alt=""></td>
-      <td>
-        <h3 id="yesno">3.13. Yesno</h3>
-        <pre>
+
+<img class="center" src="timebox.png" alt="">
+
+<h3 id="yesno">3.13. Yesno</h3>
+
+<pre>
 dialog                                          \
    --title 'AVISO'                              \
    --yesno '\nO Vi foi instalado e configurado.
             Você quer executá-lo agora?\n\n'    \
    0 0
-
 </pre>
-      </td>
-    </tr>
-  </table>
-</center>
+
+<img class="center" src="yesno.png" alt="">
 
 <p>Agora que você já ficou horas copiando e colando os exemplos, ou redigitando os comandos, já está apto a conhecer o <a href="dialog-tour.sh">dialog-tour</a>, um script pronto para ser executado que mostra todas as caixas para você :)</p>
 
