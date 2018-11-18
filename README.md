@@ -115,7 +115,7 @@ bundle exec jekyll serve --watch --limit_posts 10 --incremental
 # Viewing at Chrome OS Linux or Android Termux
 # To get the instance IP address:
 #   - Chrome OS: hostname -I
-#   - Android: ifconfig wlan0
+#   - Android: ifconfig | grep inet
 bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0
 
 # Viewing at Cloud9 or Codeanywhere, port must be 8080
