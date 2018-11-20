@@ -1,170 +1,71 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/clean-2012/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/clean-2012/article.css">
-<TITLE>MoneyLog Browser</TITLE>
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</HEAD>
-<BODY class="browser">
+---
+date: 1999-12-31
+title: MoneyLog Browser
+---
 
-<DIV ID="header">
-<H1>MoneyLog Browser</H1>
-</DIV>
+<p>Esta é uma versão especial do MoneyLog, que roda inteiramente dentro do navegador: leitura, edição e gravação dos lançamentos. Não há nenhum tipo de armazenamento externo, todos os seus dados ficam gravados na memória do próprio navegador (<a href="#localStorage">localStorage</a>).</p>
 
-<DIV ID="main">
-<P>
-Esta é uma versão especial do MoneyLog, que roda inteiramente dentro do navegador: leitura, edição e gravação dos lançamentos. Não há nenhum tipo de armazenamento externo, todos os seus dados ficam gravados na memória do próprio navegador (<A HREF="#localStorage">localStorage</A>).
-</P>
-<P>
-Acesse agora: <A HREF="http://aurelio.net/moneylog/browser/app/">http://aurelio.net/moneylog/browser/app/</A>
-</P>
-<DIV CLASS="toc">
+<p>Acesse agora: <a href="http://aurelio.net/moneylog/browser/app/">http://aurelio.net/moneylog/browser/app/</a></p>
 
-    <UL>
-    <LI><A HREF="#aviso">Aviso importante</A>
-    <LI><A HREF="#inserir">Inserir seus lançamentos</A>
-    <LI><A HREF="#offline">Funcionamento offline</A>
-    <LI><A HREF="#localStorage">Detalhes sobre o localStorage</A>
-    </UL>
+<nav>
+  <ul>
+    <li><a href="#aviso">Aviso importante</a></li>
+    <li><a href="#inserir">Inserir seus lançamentos</a></li>
+    <li><a href="#offline">Funcionamento offline</a></li>
+    <li><a href="#localStorage">Detalhes sobre o localStorage</a></li>
+  </ul>
+</nav>
 
-</DIV>
+<h2 id="aviso">Aviso importante</h2>
 
-<H2 ID="aviso"><a href="#aviso">Aviso importante</a></H2>
+<p>Esta versão é indicada para demonstração e testes rápidos, porém <strong>não recomendo a sua utilização como aplicativo</strong>.</p>
 
-<P>
-Esta versão é indicada para demonstração e testes rápidos, porém <B>não recomendo a sua utilização como aplicativo</B>.
-</P>
-<P>
-Como os seus lançamentos ficam atrelados ao navegador, é fácil perdê-los. Por exemplo, se você remover o navegador, resetá-lo, trocar de navegador ou trocar de máquina, seus dados não estarão mais acessíveis.
-</P>
-<P>
-Utilize apenas se você estiver ciente destas limitações, ou seja, se você usa sempre o mesmo navegador na mesma máquina. Mesmo assim, recomendo que faça becape dos seus lançamentos de tempos em tempos.
-</P>
+<p>Como os seus lançamentos ficam atrelados ao navegador, é fácil perdê-los. Por exemplo, se você remover o navegador, resetá-lo, trocar de navegador ou trocar de máquina, seus dados não estarão mais acessíveis.</p>
 
-<H2 ID="inserir"><a href="#inserir">Inserir seus lançamentos</a></H2>
+<p>Utilize apenas se você estiver ciente destas limitações, ou seja, se você usa sempre o mesmo navegador na mesma máquina. Mesmo assim, recomendo que faça becape dos seus lançamentos de tempos em tempos.</p>
 
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/browser-edit-button.png" BORDER="0" ALT="">
-</P>
-<P>
-Para inserir seus próprios lançamentos, clique no botão <I>Editar</I>. Vai abrir uma janela com um editor de textos simples. Você pode usar os lançamentos de exemplo como base e ir inserindo os seus aos poucos.
-</P>
-<P>
-O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o <A HREF="/moneylog/input/">Guia de Lançamentos</A>.
-</P>
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/browser-edit-screen-400.png" BORDER="0" ALT="">
-</P>
-<P>
-Sempre que quiser conferir como está ficando, aperte o botão <I>Salvar</I>. Suas edições serão salvas e o MoneyLog Browser mostrará o extrato atualizado já com seus dados novos.
-</P>
-<P>
-Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <A HREF="/moneylog/import/">conversor do MoneyLog</A>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).
-</P>
+<h2 id="inserir">Inserir seus lançamentos</h2>
 
-<H2 ID="offline"><a href="#offline">Funcionamento offline</a></H2>
+<p class="figure">
+  <img src="/moneylog/img/browser-edit-button.png">
+</p>
 
-<P>
-Esta versão também funciona de maneira offline. Basta você <A HREF="http://aurelio.net/moneylog/browser/app/">salvar o arquivo html</A> e abrir no seu navegador.
-</P>
-<P>
-Você pode salvar o arquivo em qualquer pasta, renomeá-lo, mudar de pasta, não importa. O navegador lembrará dele e mostrará os seus lançamentos corretamente.
-</P>
-	<BLOCKQUOTE>
-	<B>Firefox:</B> Dos navegadores que testei, o Firefox foi o único que não funcionou com o MoneyLog Browser no modo offline. Ele mostra a tela de edição e parece que salva os dados, mas ao recarregar a página volta-se à estaca zero.
-	</BLOCKQUOTE>
+<p>Para inserir seus próprios lançamentos, clique no botão <em>Editar</em>. Vai abrir uma janela com um editor de textos simples. Você pode usar os lançamentos de exemplo como base e ir inserindo os seus aos poucos.</p>
 
-<H2 ID="localStorage"><a href="#localStorage">Detalhes sobre o localStorage</a></H2>
+<p>O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o <a href="/moneylog/input/">Guia de Lançamentos</a>.</p>
 
-<P>
-O localStorage tem um funcionamento similar aos cookies: é atrelado a um navegador e usuário, e é usado para guardar dados. No caso do MoneyLog Browser, são guardados os lançamentos do usuário. A chave utilizada chama-se <CODE>moneylogData</CODE>.
-</P>
-<P>
-Se você quiser limpar todos os seus dados do navegador, você pode usar o próprio MoneyLog Browser e limpar tudo na tela de edição, ou procurar pela chave <CODE>moneylogData</CODE> nas configurações/preferências de seu navegador.
-</P>
-<P>
-Saiba mais:
-<A HREF="http://en.wikipedia.org/wiki/Web_storage">http://en.wikipedia.org/wiki/Web_storage</A>
-</P>
-<div id="footer">
-<hr>
-<div class="footer-col">
+<p class="figure">
+  <img src="/moneylog/img/browser-edit-screen-400.png">
+</p>
 
-<H4>Sabores</H4>
+<p>Sempre que quiser conferir como está ficando, aperte o botão <em>Salvar</em>. Suas edições serão salvas e o MoneyLog Browser mostrará o extrato atualizado já com seus dados novos.</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
-<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
-<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
-<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
-</UL>
+<p>Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <a href="/moneylog/import/">conversor do MoneyLog</a>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).</p>
 
-</div>
-<div class="footer-col">
+<h2 id="offline">Funcionamento offline</h2>
 
-<H4>Docs</H4>
+<p>Esta versão também funciona de maneira offline. Basta você <a href="http://aurelio.net/moneylog/browser/app/">salvar o arquivo html</a> e abrir no seu navegador.</p>
 
-<UL>
-<LI><A HREF="/moneylog/about/">sobre</A>
-<LI><A HREF="/moneylog/v5/">novidades v5</A> ★
-<LI><A HREF="/moneylog/faq/">FAQ</A>
-<LI><A HREF="/moneylog/input/">lançamentos</A>
-<LI><A HREF="/moneylog/config/">configuração</A>
-</UL>
+<p>Você pode salvar o arquivo em qualquer pasta, renomeá-lo, mudar de pasta, não importa. O navegador lembrará dele e mostrará os seus lançamentos corretamente.</p>
 
-</div>
-<div class="footer-col last">
+<blockquote>
+  <strong>Firefox:</strong> Dos navegadores que testei, o Firefox foi o único que não funcionou com o MoneyLog Browser no modo offline. Ele mostra a tela de edição e parece que salva os dados, mas ao recarregar a página volta-se à estaca zero.
+</blockquote>
 
-<H4>Misc</H4>
+<h2 id="localStorage">Detalhes sobre o localStorage</h2>
 
-<UL>
-<LI><A HREF="/moneylog/import/">conversor</A>
-<LI><A HREF="/moneylog/donate/">doação</A> ♥
-<LI><A HREF="/moneylog/history/">versões antigas</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
-</UL>
+<p>O localStorage tem um funcionamento similar aos cookies: é atrelado a um navegador e usuário, e é usado para guardar dados. No caso do MoneyLog Browser, são guardados os lançamentos do usuário. A chave utilizada chama-se <code>moneylogData</code>.</p>
 
-</div>
-<hr style="clear: both;">
-<a id="footer-home" href="/moneylog/">← início</a>
-<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
-<div style="clear: both;"></div>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+<p>Se você quiser limpar todos os seus dados do navegador, você pode usar o próprio MoneyLog Browser e limpar tudo na tela de edição, ou procurar pela chave <code>moneylogData</code> nas configurações/preferências de seu navegador.</p>
 
-<script type="text/javascript">
+<!--
+  Remoto é uma chave por domínio.
+  Local é uma chave só, não importa URL.
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
+  Firefox: remoto OK, local não salva (perde no reload).
+  Safari: remoto OK, local OK.
+  Chrome: remoto OK, local OK.
+  Opera: remoto OK, local OK.
+-->
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<div id="disqus_thread"></div>
-<script>
-    function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aurelionet.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags moneylog/browser/index.t2t -->
-</BODY></HTML>
+<p>Saiba mais: <a href="http://en.wikipedia.org/wiki/Web_storage">http://en.wikipedia.org/wiki/Web_storage</a></p>

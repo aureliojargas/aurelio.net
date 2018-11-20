@@ -1,644 +1,474 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/clean-2012/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/clean-2012/faq.css">
-<TITLE>FAQ do MoneyLog</TITLE>
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</HEAD>
-<BODY class="faq">
+---
+title: FAQ do MoneyLog
+---
 
-<DIV ID="header">
-<H1>FAQ do MoneyLog</H1>
-</DIV>
+<nav>
+  <ul>
+    <li>
+      <a href="#preparativos">Primeiro contato</a>
+      <ul>
+        <li><a href="#sobre">O que é este MoneyLog?</a></li>
+        <li><a href="#escolher-sabor">Qual sabor escolher?</a></li>
+        <li><a href="#instalar">Como baixar / instalar?</a></li>
+        <li><a href="#inserir">Como inserir meus lançamentos?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#migracao">Migração</a>
+      <ul>
+        <li><a href="#v5">Quais as novidades da versão 5?</a></li>
+        <li><a href="#banco">Como inserir o extrato do meu banco (Internet Banking)?</a></li>
+        <li><a href="#formatos-banco">OFX, OFC, QIF — Que isso?</a></li>
+        <li><a href="#mymoneylog">Como migrar meus dados do myMoneyLog?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#busca">Busca</a>
+      <ul>
+        <li><a href="#busca-como">Como fazer uma busca?</a></li>
+        <li><a href="#regex">O que é esse "regex" na caixa de busca?</a></li>
+        <li><a href="#excluir">O que é esse "excluir" na caixa de busca?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#tags">Tags (categorias)</a>
+      <ul>
+        <li><a href="#tags-usar">Como usar tags?</a></li>
+        <li><a href="#tag-vazia">O que é o (sem tag)?</a></li>
+        <li><a href="#combinar">O que faz a opção Combinar?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#lancamentos">Lançamentos</a>
+      <ul>
+        <li><a href="#periodicos">Como fazer lançamentos periódicos (parcelado, recorrente)?</a></li>
+        <li><a href="#pendente">Como marcar um lançamento como PAGO ou PENDENTE?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#graficos">Gráficos</a>
+      <ul>
+        <li><a href="#notacao-k">No gráfico aparece coisas como 2k e -1k5 — Que isso?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#adaptacoes">Adaptações</a>
+      <ul>
+        <li><a href="#config">Quais configurações posso fazer?</a></li>
+        <li><a href="#lang">Posso usar o programa em inglês ou espanhol?</a></li>
+        <li><a href="#recentes-primeiro">Como deixar os lançamentos mais recentes em cima?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#outros">Outros</a>
+      <ul>
+        <li><a href="#shrubbery">O que é um Shrubbery?</a></li>
+        <li><a href="#maiores-gastos">Como saber em que eu gasto mais?</a></li>
+        <li><a href="#rotina-inserir">Como lembrar de sempre registrar os meus gastos?</a></li>
+        <li><a href="#sincronizar">Como sincronizar os dados entre várias máquinas?</a></li>
+        <li><a href="#saldo-final">Por que o saldo final muda conforme o período?</a></li>
+        <li><a href="#sort">A ordem dos lançamentos de um mesmo dia está errada!</a></li>
+        <li><a href="#sugestao">Tenho uma sugestão. Para onde mando?</a></li>
+        <li><a href="#doacao">Como fazer uma doação para apoiar o projeto?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#problemas">Problemas</a>
+      <ul>
+        <li><a href="#aviso-ie">O Internet Explorer reclama do MoneyLog!</a></li>
+        <li><a href="#noscript">"Ops! Seu navegador está sem JavaScript"</a></li>
+        <li><a href="#checkbox-reload">Eu atualizo a página (reload) e os checkbox ficam loucos!</a></li>
+        <li><a href="#ie-hover">As linhas não mudam de cor ao passar o mouse!</a></li>
+        <li><a href="#chrome">Google Chrome: Travou em Carregando arquivo.txt…</a></li>
+        <li><a href="#vermelhinhos">Eu odeio esses vermelhinhos!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-<DIV CLASS="toc">
+<h2 id="preparativos">Primeiro contato</h2>
 
-  <UL>
-  <LI><A HREF="#inicio">FAQ do MoneyLog</A>
-    <UL>
-    <LI><A HREF="#preparativos">Primeiro contato</A>
-      <UL>
-      <LI><A HREF="#sobre">O que é este MoneyLog?</A>
-      <LI><A HREF="#escolher-sabor">Qual sabor escolher?</A>
-      <LI><A HREF="#instalar">Como baixar / instalar?</A>
-      <LI><A HREF="#inserir">Como inserir meus lançamentos?</A>
-      </UL>
-    <LI><A HREF="#migracao">Migração</A>
-      <UL>
-      <LI><A HREF="#v5">Quais as novidades da versão 5?</A>
-      <LI><A HREF="#banco">Como inserir o extrato do meu banco (Internet Banking)?</A>
-      <LI><A HREF="#formatos-banco">OFX, OFC, QIF — Que isso?</A>
-      <LI><A HREF="#mymoneylog">Como migrar meus dados do myMoneyLog?</A>
-      </UL>
-    <LI><A HREF="#busca">Busca</A>
-      <UL>
-      <LI><A HREF="#busca-como">Como fazer uma busca?</A>
-      <LI><A HREF="#regex">O que é esse "regex" na caixa de busca?</A>
-      <LI><A HREF="#excluir">O que é esse "excluir" na caixa de busca?</A>
-      </UL>
-    <LI><A HREF="#tags">Tags (categorias)</A>
-      <UL>
-      <LI><A HREF="#tags-usar">Como usar tags?</A>
-      <LI><A HREF="#tag-vazia">O que é o (sem tag)?</A>
-      <LI><A HREF="#combinar">O que faz a opção Combinar?</A>
-      </UL>
-    <LI><A HREF="#lancamentos">Lançamentos</A>
-      <UL>
-      <LI><A HREF="#periodicos">Como fazer lançamentos periódicos (parcelado, recorrente)?</A>
-      <LI><A HREF="#pendente">Como marcar um lançamento como PAGO ou PENDENTE?</A>
-      </UL>
-    <LI><A HREF="#graficos">Gráficos</A>
-      <UL>
-      <LI><A HREF="#notacao-k">No gráfico aparece coisas como 2k e -1k5 — Que isso?</A>
-      </UL>
-    <LI><A HREF="#adaptacoes">Adaptações</A>
-      <UL>
-      <LI><A HREF="#config">Quais configurações posso fazer?</A>
-      <LI><A HREF="#lang">Posso usar o programa em inglês ou espanhol?</A>
-      <LI><A HREF="#recentes-primeiro">Como deixar os lançamentos mais recentes em cima?</A>
-      </UL>
-    <LI><A HREF="#outros">Outros</A>
-      <UL>
-      <LI><A HREF="#shrubbery">O que é um Shrubbery?</A>
-      <LI><A HREF="#maiores-gastos">Como saber em que eu gasto mais?</A>
-      <LI><A HREF="#rotina-inserir">Como lembrar de sempre registrar os meus gastos?</A>
-      <LI><A HREF="#sincronizar">Como sincronizar os dados entre várias máquinas?</A>
-      <LI><A HREF="#saldo-final">Por que o saldo final muda conforme o período?</A>
-      <LI><A HREF="#sort">A ordem dos lançamentos de um mesmo dia está errada!</A>
-      <LI><A HREF="#sugestao">Tenho uma sugestão. Para onde mando?</A>
-      <LI><A HREF="#doacao">Como fazer uma doação para apoiar o projeto?</A>
-      </UL>
-    <LI><A HREF="#problemas">Problemas</A>
-      <UL>
-      <LI><A HREF="#aviso-ie">O Internet Explorer reclama do MoneyLog!</A>
-      <LI><A HREF="#noscript">"Ops! Seu navegador está sem JavaScript"</A>
-      <LI><A HREF="#checkbox-reload">Eu atualizo a página (reload) e os checkbox ficam loucos!</A>
-      <LI><A HREF="#ie-hover">As linhas não mudam de cor ao passar o mouse!</A>
-      <LI><A HREF="#chrome">Google Chrome: Travou em Carregando arquivo.txt…</A>
-      <LI><A HREF="#vermelhinhos">Eu odeio esses vermelhinhos!</A>
-      </UL>
-    <LI><A HREF="#fim">Fim.</A>
-    </UL>
-  </UL>
+<h3 id="sobre">O que é este MoneyLog?</h3>
 
-</DIV>
-<DIV ID="main">
+<p>O MoneyLog é um programa simples e rápido para te ajudar a controlar seu dinheiro, que funciona direto em seu navegador.</p>
 
-<H1 ID="inicio">FAQ do MoneyLog</H1>
+<p>Você informa seus ganhos e gastos e ele gera extratos interativos (diário, mensal, anual), com gráficos, totais, pesquisa, tags e várias outras ferramentas para você enxergar para onde vai o seu dinheiro.</p>
 
-<H2 ID="preparativos"><a href="#preparativos">Primeiro contato</a></H2>
+<p><a href="/moneylog/about/">Saiba mais…</a></p>
 
-<H3 ID="sobre"><a href="#sobre">O que é este MoneyLog?</a></H3>
+<h3 id="escolher-sabor">Qual sabor escolher?</h3>
 
-<P>
-O MoneyLog é um programa simples e rápido para te ajudar a controlar seu dinheiro, que funciona direto em seu navegador.
-</P>
-<P>
-Você informa seus ganhos e gastos e ele gera extratos interativos (diário, mensal, anual), com gráficos, totais, pesquisa, tags e várias outras ferramentas para você enxergar para onde vai o seu dinheiro.
-</P>
-<P>
-<A HREF="/moneylog/about/">Saiba mais…</A>
-</P>
+<p>O MoneyLog possui quatro sabores diferentes, cada um visando um tipo de uso.</p>
 
-<H3 ID="escolher-sabor"><a href="#escolher-sabor">Qual sabor escolher?</a></H3>
+<p><strong>Se você nunca usou</strong> o MoneyLog, vá agora no <a href="http://aurelio.net/moneylog/browser/app/">MoneyLog Browser</a>. Não é preciso instalar nem baixar nada, é só usar. Esta é uma versão de demonstração.</p>
 
-<P>
-O MoneyLog possui quatro sabores diferentes, cada um visando um tipo de uso.
-</P>
-<P>
-<B>Se você nunca usou</B> o MoneyLog, vá agora no <A HREF="http://aurelio.net/moneylog/browser/app/">MoneyLog Browser</A>. Não é preciso instalar nem baixar nada, é só usar. Esta é uma versão de demonstração.
-</P>
-<P>
-<B>Se você quer usar online</B> (via internet), escolha o <A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>. Caso você ainda não tenha uma conta no Dropbox, crie uma, é rápido e gratuito.
-</P>
-<P>
-<B>Se você quer usar offline</B> (sua máquina), escolha o <A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>.
-</P>
-<P>
-<B>Se você é nerd</B>, sabe usar o Git, e não tem medo de arquivos de configuração, o poder total está ao seu alcance com o <A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>.
-</P>
+<p><strong>Se você quer usar online</strong> (via internet), escolha o <a href="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</a>. Caso você ainda não tenha uma conta no Dropbox, crie uma, é rápido e gratuito.</p>
 
-<H3 ID="instalar"><a href="#instalar">Como baixar / instalar?</a></H3>
+<p><strong>Se você quer usar offline</strong> (sua máquina), escolha o <a href="http://aurelio.net/moneylog/portable/">MoneyLog Portable</a>.</p>
 
-<P>
-<A HREF="/moneylog/portable/#download">Instruções para baixar o MoneyLog Portable</A>.
-</P>
-<P>
-<A HREF="/moneylog/beta/#download">Instruções para baixar o MoneyLog Beta</A>.
-</P>
-<P>
-O <A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A> e o <A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A> rodam online, não é preciso baixar nem instalar.
-</P>
+<p><strong>Se você é nerd</strong>, sabe usar o Git, e não tem medo de arquivos de configuração, o poder total está ao seu alcance com o <a href="http://aurelio.net/moneylog/beta/">MoneyLog Beta</a>.</p>
 
-<H3 ID="inserir"><a href="#inserir">Como inserir meus lançamentos?</a></H3>
+<h3 id="instalar">Como baixar / instalar?</h3>
 
-<P>
-Ao iniciar o uso do MoneyLog, ele ainda estará mostrando no extrato os lançamentos de exemplo. Para inserir os seus próprios lançamentos, veja as instruções:
-</P>
+<p><a href="/moneylog/portable/#download">Instruções para baixar o MoneyLog Portable</a>.</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/moneylog/browser/#inserir">Inserir no MoneyLog Browser</A>
-<LI><A HREF="http://aurelio.net/moneylog/cloud/#inserir">Inserir no MoneyLog Cloud</A>
-<LI><A HREF="http://aurelio.net/moneylog/portable/#inserir">Inserir no MoneyLog Portable</A>
-<LI><A HREF="http://aurelio.net/moneylog/beta/#inserir">Inserir no MoneyLog Beta</A>
-</UL>
+<p><a href="/moneylog/beta/#download">Instruções para baixar o MoneyLog Beta</a>.</p>
 
-<P>
-Você também pode <A HREF="#banco">inserir automaticamente seu extrato bancário</A>, para não precisar inserir os lançamentos um a um.
-</P>
+<p>O <a href="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</a> e o <a href="http://aurelio.net/moneylog/browser/">MoneyLog Browser</a> rodam online, não é preciso baixar nem instalar.</p>
 
-<H2 ID="migracao"><a href="#migracao">Migração</a></H2>
+<h3 id="inserir">Como inserir meus lançamentos?</h3>
 
-<H3 ID="v5"><a href="#v5">Quais as novidades da versão 5?</a></H3>
+<p>Ao iniciar o uso do MoneyLog, ele ainda estará mostrando no extrato os lançamentos de exemplo. Para inserir os seus próprios lançamentos, veja as instruções:</p>
 
-<P>
-Há um guia completo explicando todas as novidades do MoneyLog 5. <A HREF="/moneylog/v5/">Confira!</A>
-</P>
+<ul>
+  <li>
+    <a href="http://aurelio.net/moneylog/browser/#inserir">Inserir no MoneyLog Browser</a>
+  </li>
+  <li>
+    <a href="http://aurelio.net/moneylog/cloud/#inserir">Inserir no MoneyLog Cloud</a>
+  </li>
+  <li>
+    <a href="http://aurelio.net/moneylog/portable/#inserir">Inserir no MoneyLog Portable</a>
+  </li>
+  <li>
+    <a href="http://aurelio.net/moneylog/beta/#inserir">Inserir no MoneyLog Beta</a>
+  </li>
+</ul>
 
-<H3 ID="banco"><a href="#banco">Como inserir o extrato do meu banco (Internet Banking)?</a></H3>
+<p>Você também pode <a href="#banco">inserir automaticamente seu extrato bancário</a>, para não precisar inserir os lançamentos um a um.</p>
 
-<P>
-Basta exportar/salvar seu extrato e usar o <A HREF="/moneylog/import/">conversor</A> para convertê-lo para o formato do MoneyLog. Veja as instruções de como fazer isso:
-</P>
+<h2 id="migracao">Migração</h2>
 
-<UL>
-<LI>Vá no site do seu banco, acesse sua conta e veja o seu extrato.
-<LI>Na tela do extrato, procure por algum botão ou opção para <I>exportar</I>, <I>guardar</I>, <I>baixar</I> ou <I>salvar em arquivo</I>. O nome também pode ser <I>extrato eletrônico</I>.
-<LI>Você precisará escolher um formato de arquivo. Procure por: <I>OFX</I>, <I>OFC</I>, <I>QIF</I>, <I>MS Money</I> ou <I>Quicken</I>. Você pode escolher qualquer um destes formatos.
-<LI>Confirme, e um arquivo com seu extrato será baixado para seu computador.
-<LI>Agora abra este arquivo em um <A HREF="#editor">editor de textos simples</A>.
-<LI>Copie todo seu conteúdo e cole no <A HREF="/moneylog/import/">conversor</A>.
-<LI>Escolha o tipo do arquivo na opção <I>De:</I>.
-<LI>Copie o resultado do conversor <A HREF="#inserir">para dentro do MoneyLog</A>.
-<LI>Pronto!
-</UL>
+<h3 id="v5">Quais as novidades da versão 5?</h3>
 
-<P>
-Bancos que usam o formato <I>OFX</I>:
-</P>
+<p>Há um guia completo explicando todas as novidades do MoneyLog 5. <a href="/moneylog/v5/">Confira!</a></p>
 
-<UL>
-<LI>Banco do Brasil
-<LI>Banco Real
-<LI>Caixa Econômica (CEF)
-<LI>Citibank
-<LI>Itaú
-<LI>Nossa Caixa
-<LI>Santander
-<LI>Unibanco
-</UL>
+<h3 id="banco">Como inserir o extrato do meu banco (Internet Banking)?</h3>
 
-<P>
-Bancos que usam o formato <I>OFC</I>:
-</P>
+<p>Basta exportar/salvar seu extrato e usar o <a href="/moneylog/import/">conversor</a> para convertê-lo para o formato do MoneyLog. Veja as instruções de como fazer isso:</p>
 
-<UL>
-<LI>Bradesco
-<LI>HSBC
-</UL>
+<ul>
+  <li>Vá no site do seu banco, acesse sua conta e veja o seu extrato.</li>
+  <li>Na tela do extrato, procure por algum botão ou opção para <em>exportar</em>, <em>guardar</em>, <em>baixar</em> ou <em>salvar em arquivo</em>. O nome também pode ser <em>extrato eletrônico</em>.</li>
+  <li>Você precisará escolher um formato de arquivo. Procure por: <em>OFX</em>, <em>OFC</em>, <em>QIF</em>, <em>MS Money</em> ou <em>Quicken</em>. Você pode escolher qualquer um destes formatos.</li>
+  <li>Confirme, e um arquivo com seu extrato será baixado para seu computador.</li>
+  <li>Agora abra este arquivo em um <a href="#editor">editor de textos simples</a>.
+  </li>
+  <li>Copie todo seu conteúdo e cole no <a href="/moneylog/import/">conversor</a>.
+  </li>
+  <li>Escolha o tipo do arquivo na opção <em>De:</em>.</li>
+  <li>Copie o resultado do conversor <a href="#inserir">para dentro do MoneyLog</a>.
+  </li>
+  <li>Pronto!</li>
+</ul>
 
-<P>
-Seu banco não está listado aqui e ele usa OFX, OFC ou QIF? <A HREF="http://twitter.com/oreio">Me avise!</A>
-</P>
+<p>Bancos que usam o formato <em>OFX</em>:</p>
 
-<H3 ID="formatos-banco"><a href="#formatos-banco">OFX, OFC, QIF — Que isso?</a></H3>
+<ul>
+  <li>Banco do Brasil</li>
+  <li>Banco Real</li>
+  <li>Caixa Econômica (CEF)</li>
+  <li>Citibank</li>
+  <li>Itaú</li>
+  <li>Nossa Caixa</li>
+  <li>Santander</li>
+  <li>Unibanco</li>
+</ul>
 
-<P>
-Estes são arquivos especiais usados pelos programas financeiros MS Money e Quicken.
-</P>
-<P>
-Mas o que importa para nós, usuários do MoneyLog, é que os bancos brasileiros deixam que você baixe uma versão eletrônica de seu extrato bancário usando um destes formatos. De posse deste arquivo, você <A HREF="#banco">inserir seu extrato no MoneyLog</A> com facilidade, sem precisar ficar digitando seus lançamentos.
-</P>
-<P>
-Então a próxima vez que você acessar seu banco pela Internet, procure pela opção de salvar seu extrato em um destes formatos. Isso facilitará bastante seu uso do MoneyLog!
-</P>
+<p>Bancos que usam o formato <em>OFC</em>:</p>
 
-<H3 ID="mymoneylog"><a href="#mymoneylog">Como migrar meus dados do myMoneyLog?</a></H3>
+<ul>
+  <li>Bradesco</li>
+  <li>HSBC</li>
+</ul>
 
-<P>
-Se você usa o <A HREF="http://nishimura.eti.br/blog/mymoneylog">myMoneyLog</A>, programa derivado do MoneyLog que adota um formato diferente para os lançamentos, use <A HREF="/moneylog/import/">o conversor</A> para transformar seus dados para o formato do MoneyLog.
-</P>
+<p>Seu banco não está listado aqui e ele usa OFX, OFC ou QIF? <a href="http://twitter.com/oreio">Me avise!</a></p>
 
-<H2 ID="busca"><a href="#busca">Busca</a></H2>
+<h3 id="formatos-banco">OFX, OFC, QIF — Que isso?</h3>
 
-<H3 ID="busca-como"><a href="#busca-como">Como fazer uma busca?</a></H3>
+<p>Estes são arquivos especiais usados pelos programas financeiros MS Money e Quicken.</p>
 
-<P>
-Basta digitar o texto desejado na caixa de busca, lá no canto superior esquerdo do MoneyLog.
-</P>
+<p>Mas o que importa para nós, usuários do MoneyLog, é que os bancos brasileiros deixam que você baixe uma versão eletrônica de seu extrato bancário usando um destes formatos. De posse deste arquivo, você <a href="#banco">inserir seu extrato no MoneyLog</a> com facilidade, sem precisar ficar digitando seus lançamentos.</p>
 
-<UL>
-<LI>Serão mostrados apenas os lançamentos que possuírem o texto pesquisado.
-<LI>Os valores totais, parciais e acumulados serão atualizados de acordo.
-<LI>Não é preciso apertar nenhum botão ou pressionar Enter, a pesquisa é feita instantaneamente enquanto você digita.
-</UL>
+<p>Então a próxima vez que você acessar seu banco pela Internet, procure pela opção de salvar seu extrato em um destes formatos. Isso facilitará bastante seu uso do MoneyLog!</p>
 
-<H3 ID="regex"><a href="#regex">O que é esse "regex" na caixa de busca?</a></H3>
+<h3 id="mymoneylog">Como migrar meus dados do myMoneyLog?</h3>
 
-<P>
-Esta opção é usada para você fazer uma pesquisa utilizando <A HREF="http://aurelio.net/regex/">Expressões Regulares</A> em vez de usar texto normal. Com estas expressões é possível fazer filtros realmente poderosos!
-</P>
-<P>
-Um exemplo rápido, para ver todos os lançamentos parcelados e recorrentes (aqueles que terminam em 1/3, 2/3, ...)
-</P>
+<p>Se você usa o <a href="http://nishimura.eti.br/blog/mymoneylog">myMoneyLog</a>, programa derivado do MoneyLog que adota um formato diferente para os lançamentos, use <a href="/moneylog/import/">o conversor</a> para transformar seus dados para o formato do MoneyLog.</p>
 
-<PRE>
+<h2 id="busca">Busca</h2>
+
+<h3 id="busca-como">Como fazer uma busca?</h3>
+
+<p>Basta digitar o texto desejado na caixa de busca, lá no canto superior esquerdo do MoneyLog.</p>
+
+<ul>
+  <li>Serão mostrados apenas os lançamentos que possuírem o texto pesquisado.</li>
+  <li>Os valores totais, parciais e acumulados serão atualizados de acordo.</li>
+  <li>Não é preciso apertar nenhum botão ou pressionar Enter, a pesquisa é feita instantaneamente enquanto você digita.</li>
+</ul>
+
+<h3 id="regex">O que é esse "regex" na caixa de busca?</h3>
+
+<p>Esta opção é usada para você fazer uma pesquisa utilizando <a href="http://aurelio.net/regex/">Expressões Regulares</a> em vez de usar texto normal. Com estas expressões é possível fazer filtros realmente poderosos!</p>
+
+<p>Um exemplo rápido, para ver todos os lançamentos parcelados e recorrentes (aqueles que terminam em 1/3, 2/3, ...)</p>
+
+<pre>
 \d/\d+$
-</PRE>
-
-<H3 ID="excluir"><a href="#excluir">O que é esse "excluir" na caixa de busca?</a></H3>
-
-<P>
-Marque esta opção para inverter o sentido do filtro, ou seja, pesquisar "tudo menos o filtrado". Assim você pode excluir lançamentos do extrato.
-</P>
-<P>
-Por exemplo, se digitar "recarga" na caixa de pesquisa e marcar a opção "excluir", todos os lançamentos referentes às recargas de seu celular serão omitidas. Os valores também serão deduzidos dos totais, é como se os lançamentos não existissem.
-</P>
-	<BLOCKQUOTE>
-	Dica: Se você quer excluir uma tag do extrato, clique duas vezes sobre a tag indesejada, na <A HREF="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</A>, até que ela fique riscada.
-	</BLOCKQUOTE>
-
-<H2 ID="tags"><a href="#tags">Tags (categorias)</a></H2>
-
-<H3 ID="tags-usar"><a href="#tags-usar">Como usar tags?</a></H3>
-
-<P>
-As tags aparecem na <A HREF="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</A>, ali na barra lateral, quando há uma ou mais tags nos lançamentos visíveis.
-</P>
-<P>
-Basta clicar em uma tag para que sejam mostrados somente os lançamentos que possuem aquela tag. Clique novamente para excluir a tag do extrato. Um terceiro clique desmarca a tag e volta para o extrato normal.
-</P>
-<P>
-Se você ainda não usou nenhuma tag em seus lançamentos, veja como fazer isso no <A HREF="/moneylog/input/#tags">Guia de Lançamentos</A>.
-</P>
-
-<H3 ID="tag-vazia"><a href="#tag-vazia">O que é o (sem tag)?</a></H3>
-
-<P>
-Marque esta tag para mostrar todos os lançamentos que não possuem nenhuma tag. Útil para ver quais dados ainda precisam ser "tagueados".
-</P>
-
-<H3 ID="combinar"><a href="#combinar">O que faz a opção Combinar?</a></H3>
-
-<P>
-Esta opção aparece abaixo da <A HREF="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</A> quando você escolhe duas ou mais tags.
-</P>
-
-<UL>
-<LI>Se esta opção for marcada, serão listados os lançamentos que possuírem <B>todas</B> as tags escolhidas.
-<LI>Se esta opção for desmarcada, serão listados os lançamentos que possuírem <B>pelo menos uma</B> das tags escolhidas.
-</UL>
-
-<H2 ID="lancamentos"><a href="#lancamentos">Lançamentos</a></H2>
-
-<H3 ID="periodicos"><a href="#periodicos">Como fazer lançamentos periódicos (parcelado, recorrente)?</a></H3>
-
-<P>
-Veja o tópico relacionado no <A HREF="/moneylog/input/#parcelado-recorrente">Guia de Lançamentos</A>.
-</P>
-
-<H3 ID="pendente"><a href="#pendente">Como marcar um lançamento como PAGO ou PENDENTE?</a></H3>
-
-<P>
-É fácil, basta usar tags. Você pode usar as tags PAGO e PENDENTE para classificar seus lançamentos, atualizando sempre que o estado mudar.
-</P>
-<P>
-Mas pense bem, se um lançamento só pode ser pago ou pendente, então basta usar a tag PENDENTE, pois todos os outros serão pagos.
-</P>
-<P>
-Então faça assim: coloque a tag PENDENTE em cada lançamento novo que você ainda não pagou. Quando fizer o pagamento, remova a tag e pronto.
-</P>
-<P>
-Para listar todos os seus pagamentos pendentes, basta clicar na tag PENDENTE, lá na <A HREF="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</A>.
-</P>
-
-<H2 ID="graficos"><a href="#graficos">Gráficos</a></H2>
-
-<H3 ID="notacao-k"><a href="#notacao-k">No gráfico aparece coisas como 2k e -1k5 — Que isso?</a></H3>
-
-<P>
-Esta é uma notação resumida para os valores R$ 2.000,00 e R$ -1.500,00.
-</P>
-<P>
-As barras dos gráficos não podem ser muito largas nem espaçadas, senão o gráfico ficará muito grande e não caberá na tela. Por isso ao mostrar o valor dentro do gráfico, é preciso que ele não seja muito extenso.
-</P>
-<P>
-Para contornar esta limitação, o MoneyLog usa uma notação resumida, comum nos meios técnicos e financeiros, que representa mil com a letra <B>k</B> e milhão com a letra <B>m</B>.
-</P>
-<P>
-Alguns exemplos:
-</P>
-
-<TABLE ALIGN="center" BORDER="1">
-<TR>
-<TH>Valor</TH>
-<TH>Arredondado</TH>
-<TH>Resumido</TH>
-</TR>
-<TR>
-<TD>R$         1,23</TD>
-<TD>1</TD>
-<TD>1</TD>
-</TR>
-<TR>
-<TD>R$        12,34</TD>
-<TD>12</TD>
-<TD>12</TD>
-</TR>
-<TR>
-<TD>R$       123,45</TD>
-<TD>123</TD>
-<TD>123</TD>
-</TR>
-<TR>
-<TD>R$     1.234,56</TD>
-<TD>1,2 mil</TD>
-<TD>1k2</TD>
-</TR>
-<TR>
-<TD>R$    12.345,67</TD>
-<TD>12,3 mil</TD>
-<TD>12k3</TD>
-</TR>
-<TR>
-<TD>R$   123.456,78</TD>
-<TD>123,4 mil</TD>
-<TD>123k4</TD>
-</TR>
-<TR>
-<TD>R$ 1.234.567,89</TD>
-<TD>1,2 milhão</TD>
-<TD>1m2</TD>
-</TR>
-</TABLE>
-
-<P>
-Se quiser o valor preciso, basta repousar o cursor do mouse sobre o valor resumido. Em alguns segundos o valor original aparecerá. Veja um exemplo:
-</P>
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v5-chart-tooltip.png" BORDER="0" ALT="">
-</P>
-
-<H2 ID="adaptacoes"><a href="#adaptacoes">Adaptações</a></H2>
-
-<H3 ID="config"><a href="#config">Quais configurações posso fazer?</a></H3>
-
-<P>
-Várias! Consulte o <A HREF="/moneylog/config/">Guia de Configuração</A> para ver a lista completa de configurações, com exemplos de uso e instruções.
-</P>
-
-<H3 ID="lang"><a href="#lang">Posso usar o programa em inglês ou espanhol?</a></H3>
-
-<P>
-Sim, basta alterar a configuração <A HREF="/moneylog/config/#lang">lang</A>.
-</P>
-
-<H3 ID="recentes-primeiro"><a href="#recentes-primeiro">Como deixar os lançamentos mais recentes em cima?</a></H3>
-
-<P>
-Basta clicar no título da coluna "<B>Mês</B>" que a ordenação dos lançamentos é invertida.
-</P>
-<P>
-Mas note que com isso as parciais mensais são ocultadas. Isso porque com a ordem invertida, estas parciais teriam que vir antes do dados, o que pode causar confusão. Por isso as parciais só aparecem na listagem tradicional cronológica.
-</P>
-
-<H2 ID="outros"><a href="#outros">Outros</a></H2>
-
-<H3 ID="shrubbery"><a href="#shrubbery">O que é um Shrubbery?</a></H3>
-
-<P>
-<A HREF="http://en.wikipedia.org/wiki/Shrubbery">http://en.wikipedia.org/wiki/Shrubbery</A>
-</P>
-
-<H3 ID="maiores-gastos"><a href="#maiores-gastos">Como saber em que eu gasto mais?</a></H3>
-
-<OL>
-<LI>Vá no extrato diário.
-<LI>Limpe a caixa de busca.
-<LI>Desmarque todas as opções na caixa <I>Visualizar</I>.
-<LI>Desmarque todas as tags.
-</OL>
-
-<P>
-Com isso todos os seus lançamentos aparecerão na tela, de uma só vez.
-</P>
-<P>
-Agora lá no extrato, clique no título da coluna <I>Valor</I> duas vezes para reordenar as linhas e ver quem são os seus principais sugadores de dinheiro.
-</P>
-<P>
-Quer mais?
-</P>
-<P>
-Agora vá no extrato mensal, e lá no <A HREF="/moneylog/v5/#relatorio-de-tags">Relatório de Tags</A>, clique na coluna <I>Total</I> para reordenar as linhas e saber quais tags são as mais "vermelhas".
-</P>
-
-<H3 ID="rotina-inserir"><a href="#rotina-inserir">Como lembrar de sempre registrar os meus gastos?</a></H3>
-
-<UL>
-<LI>Sempre guarde todos os comprovantes das compras que fizer.
-<LI>Se comprar no cartão, Maestro ou Visa Electron, não jogue fora o papelzinho!
-<LI>De vez em quando, quando lembrar, tire todos os comprovantes da carteira e IMEDIATAMENTE insira os valores no MoneyLog.
-</UL>
-
-	<BLOCKQUOTE>
-	<B>Importante:</B> Não jogue fora os comprovantes enquanto eles não tiverem sido cadastrados!
-	</BLOCKQUOTE>
-
-<UL>
-<LI>Gastos soltos em dinheiro vá colocando quando lembrar. Quanto mais frequente, melhor.
-<LI>E é isso. Simples, sem perda de tempo.
-</UL>
-
-<H3 ID="sincronizar"><a href="#sincronizar">Como sincronizar os dados entre várias máquinas?</a></H3>
-
-<P>
-Se você usa o <A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>, o Dropbox já se encarrega de sincronizar tudo pra você, não precisa fazer nada.
-</P>
-<P>
-Se você usa o <A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A> ou o <A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>, considere instalar o <A HREF="https://www.dropbox.com/referrals/NTEwNDU4OQ">Dropbox</A> e colocar os arquivos do MoneyLog dentro dele. Assim, automaticamente, todas as suas máquinas terão sempre a versão mais atualizada dos seus dados, não importa em qual delas você fizer a edição.
-</P>
-
-<H3 ID="saldo-final"><a href="#saldo-final">Por que o saldo final muda conforme o período?</a></H3>
-
-<P>
-Se você ver somente os meses recentes, o saldo final é um. Se você ver todos os meses, o saldo final é outro.
-</P>
-<P>
-Esse é o comportamento esperado, pois é o mais flexível:
-</P>
-
-<UL>
-<LI>Se você quiser que o acumulado das parciais seja relativo ao período escolhido, tudo certo, este é o comportamento padrão.
-<LI>Se preferir que o acumulado seja a partir do saldo inicial, basta desmarcar a opção <I>De:</I> que os valores serão calculados desde o dia zero.
-</UL>
-
-<H3 ID="sort"><a href="#sort">A ordem dos lançamentos de um mesmo dia está errada!</a></H3>
-
-<P>
-A ordem de inserção dos dados no arquivo <A HREF="/moneylog/input/#ordem-nao-importa">não importa</A>. Na hora de ver no navegador eles são sempre ordenados automaticamente pelo programa. Com isso você tem a flexibilidade de não precisar se preocupar em adicionar os dados cronologicamente.
-</P>
-<P>
-A ordenação padrão é por data, já a ordem dos lançamentos do mesmo dia não é previsível, depende do humor da função sort() do JavaScript :)
-</P>
-
-<H3 ID="sugestao"><a href="#sugestao">Tenho uma sugestão. Para onde mando?</a></H3>
-
-<P>
-<A HREF="https://github.com/aureliojargas/moneylog/issues">https://github.com/aureliojargas/moneylog/issues</A>
-</P>
-
-<H3 ID="doacao"><a href="#doacao">Como fazer uma doação para apoiar o projeto?</a></H3>
-
-<P>
-Obrigado pelo interesse em ajudar! Para doar é fácil, basta ir na <A HREF="/moneylog/donate/">página de doações</A>.
-</P>
-
-<H2 ID="problemas"><a href="#problemas">Problemas</a></H2>
-
-<H3 ID="aviso-ie"><a href="#aviso-ie">O Internet Explorer reclama do MoneyLog!</a></H3>
-
-<P>
-No Windows, o Internet Explorer pode mostrar um aviso dizendo que "a página tem conteúdo ativo", ou que ele "impediu esta página da web de executar scripts ou controles ActiveX".
-</P>
-<P>
-Clique no aviso e escolha <I>Permitir conteúdo bloqueado</I> para que você possa usar o MoneyLog.
-</P>
-
-<H3 ID="noscript"><a href="#noscript">"Ops! Seu navegador está sem JavaScript"</a></H3>
-
-<P>
-Caso esteja vendo uma mensagem "Ops! Seu navegador está sem JavaScript" no lugar do extrato, <A HREF="http://support.google.com/adsense/bin/answer.py?hl=pt-BR&amp;hlrm=pt&amp;answer=12654">veja as intruções de como ligar o JavaScript</A>.
-</P>
-
-<H3 ID="checkbox-reload"><a href="#checkbox-reload">Eu atualizo a página (reload) e os checkbox ficam loucos!</a></H3>
-
-<P>
-O Firefox tem uma "esperteza" de lembrar as seleções do usuário (radio, checkboxes, select, etc), mesmo ao recarregar a página.
-</P>
-<P>
-Útil em alguns casos, um desastre no MoneyLog.
-</P>
-<P>
-Para contornar este problema, segure a tecla Shift ao apertar o botão Reload, ou clique no endereço da página e aperte Enter. Assim a página será recarregada para o seu estado original.
-</P>
-<P>
-Nos outros navegadores não há problema, o estado inicial de todas as configurações é recuperado a cada recarregada.
-</P>
-
-<H3 ID="ie-hover"><a href="#ie-hover">As linhas não mudam de cor ao passar o mouse!</a></H3>
-
-<P>
-Isso é uma limitação do Internet Explorer versões 5.5 e 6, que só aceita <CODE>:hover</CODE> em links. Nos outros navegadores, e versões mais recentes do IE, funciona normalmente.
-</P>
-<P>
-Não há o que arrumar no MoneyLog. Se você fizer questão deste comportamento, atualize seu Internet Explorer para as versões 7 ou 8 que vai funcionar.
-</P>
-
-<H3 ID="chrome"><a href="#chrome">Google Chrome: Travou em Carregando arquivo.txt…</a></H3>
-
-<P>
-A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <A HREF="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</A> a leitura de arquivos locais, mesmo que estejam na mesma pasta.
-</P>
-<P>
-Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:
-</P>
-	<BLOCKQUOTE>
-	Carregando arquivo.txt...
-	</BLOCKQUOTE>
-<P>
-As soluções:
-</P>
-
-<UL>
-<LI>Usar outro navegador. Só o Chrome tem essa nova política extrema.
-<LI>Usar uma versão antiga do Chrome como a 4.x.
-<LI>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
-  <UL>
-  <LI><B>Linux:</B> google-chrome --allow-file-access-from-files
-  <LI><B>Mac:</B> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1
-  <LI><B>Windows:</B> "…\Application\chrome.exe" --allow-file-access-from-files
-  </UL>
-</UL>
-
-<H3 ID="vermelhinhos"><a href="#vermelhinhos">Eu odeio esses vermelhinhos!</a></H3>
-
-<P>
-Eu também :)
-</P>
-<P>
-Mas sumir com os números em vermelho (negativos) é a sua missão. Quanto mais dados você inserir no MoneyLog, melhor poderá analisar suas despesas e poder identificar onde que a torneira está aberta.
-</P>
-
-<H2 ID="fim"><a href="#fim">Fim.</a></H2>
-
-<div id="footer">
-<hr>
-<div class="footer-col">
-
-<H4>Sabores</H4>
-
-<UL>
-<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
-<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
-<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
-<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
-</UL>
-
-</div>
-<div class="footer-col">
-
-<H4>Docs</H4>
-
-<UL>
-<LI><A HREF="/moneylog/about/">sobre</A>
-<LI><A HREF="/moneylog/v5/">novidades v5</A> ★
-<LI><A HREF="/moneylog/faq/">FAQ</A>
-<LI><A HREF="/moneylog/input/">lançamentos</A>
-<LI><A HREF="/moneylog/config/">configuração</A>
-</UL>
-
-</div>
-<div class="footer-col last">
-
-<H4>Misc</H4>
-
-<UL>
-<LI><A HREF="/moneylog/import/">conversor</A>
-<LI><A HREF="/moneylog/donate/">doação</A> ♥
-<LI><A HREF="/moneylog/history/">versões antigas</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
-</UL>
-
-</div>
-<hr style="clear: both;">
-<a id="footer-home" href="/moneylog/">← início</a>
-<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
-<div style="clear: both;"></div>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags moneylog/faq/index.t2t -->
-</BODY></HTML>
+</pre>
+
+<h3 id="excluir">O que é esse "excluir" na caixa de busca?</h3>
+
+<p>Marque esta opção para inverter o sentido do filtro, ou seja, pesquisar "tudo menos o filtrado". Assim você pode excluir lançamentos do extrato.</p>
+
+<p>Por exemplo, se digitar "recarga" na caixa de pesquisa e marcar a opção "excluir", todos os lançamentos referentes às recargas de seu celular serão omitidas. Os valores também serão deduzidos dos totais, é como se os lançamentos não existissem.</p>
+
+<blockquote>
+  Dica: Se você quer excluir uma tag do extrato, clique duas vezes sobre a tag indesejada, na <a href="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</a>, até que ela fique riscada.
+</blockquote>
+
+<h2 id="tags">Tags (categorias)</h2>
+
+<h3 id="tags-usar">Como usar tags?</h3>
+
+<p>As tags aparecem na <a href="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</a>, ali na barra lateral, quando há uma ou mais tags nos lançamentos visíveis.</p>
+
+<p>Basta clicar em uma tag para que sejam mostrados somente os lançamentos que possuem aquela tag. Clique novamente para excluir a tag do extrato. Um terceiro clique desmarca a tag e volta para o extrato normal.</p>
+
+<p>Se você ainda não usou nenhuma tag em seus lançamentos, veja como fazer isso no <a href="/moneylog/input/#tags">Guia de Lançamentos</a>.</p>
+
+<h3 id="tag-vazia">O que é o (sem tag)?</h3>
+
+<p>Marque esta tag para mostrar todos os lançamentos que não possuem nenhuma tag. Útil para ver quais dados ainda precisam ser "tagueados".</p>
+
+<h3 id="combinar">O que faz a opção Combinar?</h3>
+
+<p>Esta opção aparece abaixo da <a href="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</a> quando você escolhe duas ou mais tags.</p>
+
+<ul>
+  <li>Se esta opção for marcada, serão listados os lançamentos que possuírem <strong>todas</strong> as tags escolhidas.</li>
+  <li>Se esta opção for desmarcada, serão listados os lançamentos que possuírem <strong>pelo menos uma</strong> das tags escolhidas.</li>
+</ul>
+
+<h2 id="lancamentos">Lançamentos</h2>
+
+<h3 id="periodicos">Como fazer lançamentos periódicos (parcelado, recorrente)?</h3>
+
+<p>Veja o tópico relacionado no <a href="/moneylog/input/#parcelado-recorrente">Guia de Lançamentos</a>.</p>
+
+<h3 id="pendente">Como marcar um lançamento como PAGO ou PENDENTE?</h3>
+
+<p>É fácil, basta usar tags. Você pode usar as tags PAGO e PENDENTE para classificar seus lançamentos, atualizando sempre que o estado mudar.</p>
+
+<p>Mas pense bem, se um lançamento só pode ser pago ou pendente, então basta usar a tag PENDENTE, pois todos os outros serão pagos.</p>
+
+<p>Então faça assim: coloque a tag PENDENTE em cada lançamento novo que você ainda não pagou. Quando fizer o pagamento, remova a tag e pronto.</p>
+
+<p>Para listar todos os seus pagamentos pendentes, basta clicar na tag PENDENTE, lá na <a href="/moneylog/v5/#widget-nuvem-de-tags">Nuvem de Tags</a>.</p>
+
+<h2 id="graficos">Gráficos</h2>
+
+<h3 id="notacao-k">No gráfico aparece coisas como 2k e -1k5 — Que isso?</h3>
+
+<p>Esta é uma notação resumida para os valores R$ 2.000,00 e R$ -1.500,00.</p>
+
+<p>As barras dos gráficos não podem ser muito largas nem espaçadas, senão o gráfico ficará muito grande e não caberá na tela. Por isso ao mostrar o valor dentro do gráfico, é preciso que ele não seja muito extenso.</p>
+
+<p>Para contornar esta limitação, o MoneyLog usa uma notação resumida, comum nos meios técnicos e financeiros, que representa mil com a letra <strong>k</strong> e milhão com a letra <strong>m</strong>.</p>
+
+<p>Alguns exemplos:</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Valor</th>
+    <th>Arredondado</th>
+    <th>Resumido</th>
+  </tr>
+  <tr>
+    <td>R$ 1,23</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>R$ 12,34</td>
+    <td>12</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>R$ 123,45</td>
+    <td>123</td>
+    <td>123</td>
+  </tr>
+  <tr>
+    <td>R$ 1.234,56</td>
+    <td>1,2 mil</td>
+    <td>1k2</td>
+  </tr>
+  <tr>
+    <td>R$ 12.345,67</td>
+    <td>12,3 mil</td>
+    <td>12k3</td>
+  </tr>
+  <tr>
+    <td>R$ 123.456,78</td>
+    <td>123,4 mil</td>
+    <td>123k4</td>
+  </tr>
+  <tr>
+    <td>R$ 1.234.567,89</td>
+    <td>1,2 milhão</td>
+    <td>1m2</td>
+  </tr>
+</table>
+
+<p>Se quiser o valor preciso, basta repousar o cursor do mouse sobre o valor resumido. Em alguns segundos o valor original aparecerá. Veja um exemplo:</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v5-chart-tooltip.png">
+</p>
+
+<h2 id="adaptacoes">Adaptações</h2>
+
+<h3 id="config">Quais configurações posso fazer?</h3>
+
+<p>Várias! Consulte o <a href="/moneylog/config/">Guia de Configuração</a> para ver a lista completa de configurações, com exemplos de uso e instruções.</p>
+
+<h3 id="lang">Posso usar o programa em inglês ou espanhol?</h3>
+
+<p>Sim, basta alterar a configuração <a href="/moneylog/config/#lang">lang</a>.</p>
+
+<h3 id="recentes-primeiro">Como deixar os lançamentos mais recentes em cima?</h3>
+
+<p>Basta clicar no título da coluna "<strong>Mês</strong>" que a ordenação dos lançamentos é invertida.</p>
+
+<p>Mas note que com isso as parciais mensais são ocultadas. Isso porque com a ordem invertida, estas parciais teriam que vir antes do dados, o que pode causar confusão. Por isso as parciais só aparecem na listagem tradicional cronológica.</p>
+
+<h2 id="outros">Outros</h2>
+
+<h3 id="shrubbery">O que é um Shrubbery?</h3>
+
+<p><a href="http://en.wikipedia.org/wiki/Shrubbery">http://en.wikipedia.org/wiki/Shrubbery</a></p>
+
+<h3 id="maiores-gastos">Como saber em que eu gasto mais?</h3>
+
+<ol>
+  <li>Vá no extrato diário.</li>
+  <li>Limpe a caixa de busca.</li>
+  <li>Desmarque todas as opções na caixa <em>Visualizar</em>.</li>
+  <li>Desmarque todas as tags.</li>
+</ol>
+
+<p>Com isso todos os seus lançamentos aparecerão na tela, de uma só vez.</p>
+
+<p>Agora lá no extrato, clique no título da coluna <em>Valor</em> duas vezes para reordenar as linhas e ver quem são os seus principais sugadores de dinheiro.</p>
+
+<p>Quer mais?</p>
+
+<p>Agora vá no extrato mensal, e lá no <a href="/moneylog/v5/#relatorio-de-tags">Relatório de Tags</a>, clique na coluna <em>Total</em> para reordenar as linhas e saber quais tags são as mais "vermelhas".</p>
+
+<h3 id="rotina-inserir">Como lembrar de sempre registrar os meus gastos?</h3>
+
+<ul>
+  <li>Sempre guarde todos os comprovantes das compras que fizer.</li>
+  <li>Se comprar no cartão, Maestro ou Visa Electron, não jogue fora o papelzinho!</li>
+  <li>De vez em quando, quando lembrar, tire todos os comprovantes da carteira e IMEDIATAMENTE insira os valores no MoneyLog.</li>
+</ul>
+
+<blockquote>
+  <strong>Importante:</strong> Não jogue fora os comprovantes enquanto eles não tiverem sido cadastrados!
+</blockquote>
+
+<ul>
+  <li>Gastos soltos em dinheiro vá colocando quando lembrar. Quanto mais frequente, melhor.</li>
+  <li>E é isso. Simples, sem perda de tempo.</li>
+</ul>
+
+<h3 id="sincronizar">Como sincronizar os dados entre várias máquinas?</h3>
+
+<p>Se você usa o <a href="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</a>, o Dropbox já se encarrega de sincronizar tudo pra você, não precisa fazer nada.</p>
+
+<p>Se você usa o <a href="http://aurelio.net/moneylog/portable/">MoneyLog Portable</a> ou o <a href="http://aurelio.net/moneylog/beta/">MoneyLog Beta</a>, considere instalar o <a href="https://www.dropbox.com/referrals/NTEwNDU4OQ">Dropbox</a> e colocar os arquivos do MoneyLog dentro dele. Assim, automaticamente, todas as suas máquinas terão sempre a versão mais atualizada dos seus dados, não importa em qual delas você fizer a edição.</p>
+
+<h3 id="saldo-final">Por que o saldo final muda conforme o período?</h3>
+
+<p>Se você ver somente os meses recentes, o saldo final é um. Se você ver todos os meses, o saldo final é outro.</p>
+
+<p>Esse é o comportamento esperado, pois é o mais flexível:</p>
+
+<ul>
+  <li>Se você quiser que o acumulado das parciais seja relativo ao período escolhido, tudo certo, este é o comportamento padrão.</li>
+  <li>Se preferir que o acumulado seja a partir do saldo inicial, basta desmarcar a opção <em>De:</em> que os valores serão calculados desde o dia zero.</li>
+</ul>
+
+<h3 id="sort">A ordem dos lançamentos de um mesmo dia está errada!</h3>
+
+<p>A ordem de inserção dos dados no arquivo <a href="/moneylog/input/#ordem-nao-importa">não importa</a>. Na hora de ver no navegador eles são sempre ordenados automaticamente pelo programa. Com isso você tem a flexibilidade de não precisar se preocupar em adicionar os dados cronologicamente.</p>
+
+<p>A ordenação padrão é por data, já a ordem dos lançamentos do mesmo dia não é previsível, depende do humor da função sort() do JavaScript :)</p>
+
+<h3 id="sugestao">Tenho uma sugestão. Para onde mando?</h3>
+
+<p><a href="https://github.com/aureliojargas/moneylog/issues">https://github.com/aureliojargas/moneylog/issues</a></p>
+
+<h3 id="doacao">Como fazer uma doação para apoiar o projeto?</h3>
+
+<p>Obrigado pelo interesse em ajudar! Para doar é fácil, basta ir na <a href="/moneylog/donate/">página de doações</a>.</p>
+
+<h2 id="problemas">Problemas</h2>
+
+<h3 id="aviso-ie">O Internet Explorer reclama do MoneyLog!</h3>
+
+<p>No Windows, o Internet Explorer pode mostrar um aviso dizendo que "a página tem conteúdo ativo", ou que ele "impediu esta página da web de executar scripts ou controles ActiveX".</p>
+
+<p>Clique no aviso e escolha <em>Permitir conteúdo bloqueado</em> para que você possa usar o MoneyLog.</p>
+
+<h3 id="noscript">"Ops! Seu navegador está sem JavaScript"</h3>
+
+<p>Caso esteja vendo uma mensagem "Ops! Seu navegador está sem JavaScript" no lugar do extrato, <a href="http://support.google.com/adsense/bin/answer.py?hl=pt-BR&amp;hlrm=pt&amp;answer=12654">veja as intruções de como ligar o JavaScript</a>.</p>
+
+<h3 id="checkbox-reload">Eu atualizo a página (reload) e os checkbox ficam loucos!</h3>
+
+<p>O Firefox tem uma "esperteza" de lembrar as seleções do usuário (radio, checkboxes, select, etc), mesmo ao recarregar a página.</p>
+
+<p>Útil em alguns casos, um desastre no MoneyLog.</p>
+
+<p>Para contornar este problema, segure a tecla Shift ao apertar o botão Reload, ou clique no endereço da página e aperte Enter. Assim a página será recarregada para o seu estado original.</p>
+
+<p>Nos outros navegadores não há problema, o estado inicial de todas as configurações é recuperado a cada recarregada.</p>
+
+<h3 id="ie-hover">As linhas não mudam de cor ao passar o mouse!</h3>
+
+<p>Isso é uma limitação do Internet Explorer versões 5.5 e 6, que só aceita <code>:hover</code> em links. Nos outros navegadores, e versões mais recentes do IE, funciona normalmente.</p>
+
+<p>Não há o que arrumar no MoneyLog. Se você fizer questão deste comportamento, atualize seu Internet Explorer para as versões 7 ou 8 que vai funcionar.</p>
+
+<h3 id="chrome">Google Chrome: Travou em Carregando arquivo.txt…</h3>
+
+<p>A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <a href="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</a> a leitura de arquivos locais, mesmo que estejam na mesma pasta.</p>
+
+<p>Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:</p>
+
+<blockquote>
+  Carregando arquivo.txt...
+</blockquote>
+
+<p>As soluções:</p>
+
+<ul>
+  <li>Usar outro navegador. Só o Chrome tem essa nova política extrema.</li>
+  <li>Usar uma versão antiga do Chrome como a 4.x.</li>
+  <li>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
+    <ul>
+      <li><strong>Linux:</strong> google-chrome --allow-file-access-from-files</li>
+      <li><strong>Mac:</strong> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1</li>
+      <li><strong>Windows:</strong> "…\Application\chrome.exe" --allow-file-access-from-files</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="vermelhinhos">Eu odeio esses vermelhinhos!</h3>
+
+<p>Eu também :)</p>
+
+<p>Mas sumir com os números em vermelho (negativos) é a sua missão. Quanto mais dados você inserir no MoneyLog, melhor poderá analisar suas despesas e poder identificar onde que a torneira está aberta.</p>

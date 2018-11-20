@@ -1,821 +1,593 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/yui-2.7.0.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/10anos/index.css">
-<link rel="shortcut icon" href="/favicon.ico">
-<TITLE>Novidades do MoneyLog 4 </TITLE>
-</HEAD>
-<BODY>
-
-<DIV ID="header">
-<H1>Novidades do MoneyLog 4</H1>
-<H3>Agosto de 2009</H3>
-</DIV>
-
-<DIV ID="main">
-<div id="sidebar">
- <center><IMG ALIGN="middle" SRC="/projects/img/icon/128/moneylog.png" BORDER="0" ALT=""></center> 
-<DIV CLASS="toc">
-
-    <UL>
-    <LI><A HREF="#lista">Lista de novidades</A>
-    <LI><A HREF="#interface">Interface Nova</A>
-      <UL>
-      <LI><A HREF="#extrato-diaro">Extrato Diário</A>
-      <LI><A HREF="#extrato-mensal">Extrato Mensal</A>
-      <LI><A HREF="#toolbar">Barra de Tarefas</A>
-      <LI><A HREF="#tagbar">Barra de Tags</A>
-      </UL>
-    <LI><A HREF="#graficos">Gráficos</A>
-      <UL>
-      <LI><A HREF="#grafico-porcento">Gráfico de %</A>
-      <LI><A HREF="#grafico-barras">Gráfico de barras</A>
-      </UL>
-    <LI><A HREF="#filtro-valor">Filtro de valores</A>
-    <LI><A HREF="#parcelado-recorrente">Parcelado e recorrente</A>
-    <LI><A HREF="#codigo">Código melhorado</A>
-    <LI><A HREF="#navegadores">Navegadores</A>
-    <LI><A HREF="#txt">Arquivo TXT</A>
-      <UL>
-      <LI><A HREF="#chrome">Google Chrome e TXT</A>
-      </UL>
-    <LI><A HREF="#varios-txt">Vários TXT</A>
-    <LI><A HREF="#beta">Versão BETA</A>
-    <LI><A HREF="#doacao">Doação ao projeto</A>
-    </UL>
-
-</DIV>
-</div>
-	<BLOCKQUOTE>
-	<B>Atenção:</B> Esta é uma versão antiga do MoneyLog. Veja <A HREF="/moneylog/v5/">a versão mais recente</A> do programa.
-	</BLOCKQUOTE>
-<P>
-Após 88 horas de trabalho em algumas semanas de desenvolvimento ativo da <A HREF="#beta">versão Beta</A>, que foi programada "ao vivo" <A HREF="http://twitter.com/search?q=%23moneylog">via twitter</A> e contou com a ajuda de <A HREF="#beta">vários usuários</A> dando sugestões e apontando problemas, saiu a <A HREF="/moneylog/moneylog4.html">versão final do MoneyLog 4</A> em 15 de agosto de 2009.
-</P>
-<a href="/moneylog/moneylog4.html"> <center><IMG ALIGN="middle" SRC="/moneylog/moneylog4.jpg" BORDER="0" ALT=""></center> </a>
-	<BLOCKQUOTE>
-	<B>Dica:</B> Já é usuário do MoneyLog 3 e quer saber como migrar seus dados para esta versão nova? <A HREF="/moneylog/faq/#atualizar">É fácil</A>!
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	<B>Dica:</B> Já é usuário do <A HREF="/moneylog/beta/">MoneyLog Beta</A>? Ué, então pra quê estagnar na v4? Continue na beta e seja feliz! :)
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	<B>Dica:</B> Nunca usou o MoneyLog? <A HREF="/moneylog/moneylog4.html">Experimente agora</A> e depois <A HREF="/moneylog/faq/">leia o FAQ</A> e importe seu extrato bancário com <A HREF="/moneylog/import/">o conversor</A>!
-	</BLOCKQUOTE>
-
-<H2 ID="lista">Lista de novidades</H2>
-
-<P>
-<B>Opções:</B>
-</P>
-
-<UL>
-<LI>Opção nova: Mostrar Lançamentos Futuros
-<LI>Opção nova: Somente Valores: positivo, negativo, maior que N, menor que N <A HREF="#filtro-valor">+info</A>
-</UL>
-
-<P>
-<B>Gráficos:</B>
-</P>
-
-<UL>
-<LI>Gráfico de porcentagem <A HREF="#grafico-porcento">+info</A>
-<LI>Gráfico de barras <A HREF="#grafico-barras">+info</A>
-</UL>
-
-<P>
-<B>Lançamentos:</B>
-</P>
-
-<UL>
-<LI>Pagamentos parcelados: <CODE>-100/3</CODE> é compra de R$ 100,00 parcelada em 3x <A HREF="#parcelado-recorrente">+info</A>
-<LI>Ganhos parcelados: <CODE>100/3</CODE> é venda de R$ 100,00 parcelada em 3x <A HREF="#parcelado-recorrente">+info</A>
-<LI>Pagamentos recorrentes: <CODE>-600*12</CODE> é a mensalidade de R$ 600,00 do ano todo <A HREF="#parcelado-recorrente">+info</A>
-<LI>Ganhos recorrentes: <CODE>600*12</CODE> é o aluguel mensal de R$ 600,00 de seu inquilino <A HREF="#parcelado-recorrente">+info</A>
-<LI>Segurança: checagem completa em seus lançamentos (os erros antes eram ignorados) <A HREF="#codigo">+info</A>
-<LI>Usar um (ou mais) arquivo TXT externo para os lançamentos (opcional) <A HREF="#txt">+info</A> <A HREF="#varios-txt">+info</A>
-<LI>Trocar arquivo de dados (TXT) sem precisar de Reload, mantendo visão atual
-<LI>Botão para recarregar somente os dados (quando o TXT externo foi editado)
-</UL>
-
-<P>
-<B>Extratos:</B>
-</P>
-
-<UL>
-<LI>Extratos diários, mensais e anuais
-<LI>Coluna nova Acumulado no extrato diário
-<LI>Destaque de palavras e tags importantes
-<LI>Velocidade: extratos instantâneos, mesmo com grande volume de lançamentos
-<LI>Linhas novas no final do extrato mensal (e anual): total, mínima, máxima
-<LI>Linhas numeradas no extrato mensal (e anual)
-<LI>Totais positivo e negativo na última linha do diário (sem parciais)
-</UL>
-
-<P>
-<B>Tags:</B>
-</P>
-
-<UL>
-<LI>Novo menu de tags, agora no rodapé <A HREF="#tagbar">+info</A>
-<LI>Menu de tags ordenado corretamente, independente de minúsculas, maiúsculas ou acentuação
-</UL>
-
-<P>
-<B>Geral:</B>
-</P>
-
-<UL>
-<LI>Codificação UTF-8 <A HREF="#codigo">+info</A>
-<LI>Doctype HTML 4.01 STRICT <A HREF="#codigo">+info</A>
-<LI>JSLint no código JavaScript <A HREF="#codigo">+info</A>
-<LI>Código do programa foi colocado no SVN do Google Code
-<LI>Visual consistente entre navegadores (YUI reset.css) <A HREF="#navegadores">+info</A>
-<LI>Adicionado suporte aos navegadores IE7 e IE8 <A HREF="#navegadores">+info</A>
-<LI>O suporte ao IE5.5 e IE6 foi abandonado <A HREF="#navegadores">+info</A>
-<LI>Tema vermelho para sair da rotina :)
-</UL>
-
-<P>
-Quanta coisa né? Não perca tempo, teste e baixe a versão nova agora:<br>
-<A HREF="http://aurelio.net/moneylog/moneylog4.html">http://aurelio.net/moneylog/moneylog4.html</A>
-</P>
-
-<H2 ID="interface">Interface Nova</H2>
-
-<H3 ID="extrato-diaro">Extrato Diário</H3>
-
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v4-daily.jpg" BORDER="0" ALT="">
-</P>
-<P>
-Tema vermelho, mais opções no topo, tabela mais bonita no extrato, coluna nova de Acumulado, menu de tags agora fica no rodapé.
-</P>
-
-<H3 ID="extrato-mensal">Extrato Mensal</H3>
-
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v4-monthly.jpg" BORDER="0" ALT="">
-</P>
-<P>
-Opção de mostrar lançamentos futuros, gráficos de porcentagem ao lado do extrato, gráfico de barras após o extrato (pode escolher qual coluna mostrar), linhas de total, mínimo e máximo no final.
-</P>
-
-<H3 ID="toolbar">Barra de Tarefas</H3>
-
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v4-toolbar.png" BORDER="0" ALT="">
-</P>
-
-<UL>
-<LI><B>Período do extrato:</B> O antigo "Relatório Geral" agora chama-se extrato mensal. Foi criado também o extrato anual para aqueles que usam o MoneyLog a bastante tempo. Clique no nome do extrato para mostrá-lo.
-<P></P>
-<LI><B>Opções do extrato:</B> "Somente Recentes" e "Mostrar Parciais Mensais" você já conhece. As novidades são a opção de mostrar/esconder os lançamentos futuros (aqueles em cinza) e o novo <A HREF="#filtro-valor">filtro de valores</A>.
-<P></P>
-<LI><B>Filtro e ajuda:</B> Nada de novo por aqui. Aliás, tem uma novidade sim: no filtro você pode digitar algo como <CODE>v:&gt;50</CODE> para filtrar por valores acima de R$ 50,00. É um atalho para a opção nova "Somente Valores". <A HREF="#filtro-valor">+info</A>
-<P></P>
-<LI><B>Arquivo de dados (TXT):</B> Só aparece para quem usa o <A HREF="#txt">arquivo TXT externo</A> para guardar os lançamentos. Se houver mais de um arquivo, aparecerá esse menu para escolher qual arquivo carregar. O botão <B>®</B> recarrega o arquivo atual, caso você o tenha editado (melhor que o Reload do navegador, pois não perde as opções atuais).
-</UL>
-
-<H3 ID="tagbar">Barra de Tags</H3>
-
-<P>
-O antigo menu de tags que ficava no canto esquerdo foi movido lá para o rodapé, liberando um precioso espaço lateral para que o extrato brilhe sozinho no meio da tela. Mas o funcionamento continua o mesmo: clique para marcar e desmarcar tags e o extrato será atualizado de acordo.
-</P>
-<P>
-Veja como ficou bem mais fácil perceber quando uma tag está selecionada:
-</P>
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v4-tagbar-1sel.png" BORDER="0" ALT="">
-</P>
-<P>
-Quando duas ou mais tags são selecionadas, aparece a opção para uni-las, ou seja, serão mostrados apenas os lançamentos que possuírem <B>todas</B> as tags selecionadas. Esta opção é o mesmo que aquele antigo "+" que aparecia no topo menu de tags.
-</P>
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v4-tagbar-2sel.png" BORDER="0" ALT="">
-</P>
-	<BLOCKQUOTE>
-	<B>Nota:</B> Esta barra nova é um alívio para aqueles que usam muitas tags (eu!) e tinham que ficar rolando a tela para ver o final da lista.
-	</BLOCKQUOTE>
-
-<H2 ID="graficos">Gráficos</H2>
-
-	<BLOCKQUOTE>
-	<B>Aviso:</B> Não se preocupe! Apesar dos gráficos, o MoneyLog continua sendo um programinha minúsculo, rápido e simples. Nenhuma biblioteca JavaScript externa foi adicionada, esta é uma solução "caseira" para gráficos, utilizando apenas HTML+CSS.
-	</BLOCKQUOTE>
-
-<H3 ID="grafico-porcento">Gráfico de %</H3>
-
-<P>
-Nos extratos mensal e anual, há uma coluna nova que mostra a porcentagem entre <B>ganhos</B> e <B>gastos</B> durante aquele mês/ano.
-</P>
-<P>
-Mas o mais legal é que essas porcentagens são mostradas em um gráfico de barras nas cores azul e vermelho, ficando muito fácil achar os grandes vilões:
-</P>
- <center><IMG ALIGN="middle" SRC="/moneylog/img/v4-grafico-porcento.png" BORDER="0" ALT=""></center> 
-
-<H3 ID="grafico-barras">Gráfico de barras</H3>
-
-<P>
-Nos extratos mensal e anual, agora tem um gráfico bacana no final, que mostra a evolução de uma determinada coluna (ganhos, gastos, saldo, acumulado) durante aquele mês/ano.
-</P>
- <center><IMG ALIGN="middle" SRC="/moneylog/img/v4-menu-colunas-grafico.png" BORDER="0" ALT=""></center> 
-
-<UL>
-<LI>Basta clicar no menu acima do gráfico para escolher a coluna desejada.
-<LI>Valores positivos em azul, negativos em vermelho.
-</UL>
-
- <center><IMG ALIGN="middle" SRC="/moneylog/img/v4-grafico-barras.png" BORDER="0" ALT=""></center> 
-	<BLOCKQUOTE>
-	<B>Dica:</B> Se você mudar a ordenação das linhas do extrato (basta clicar nos títulos das colunas), o gráfico também vai mudar, respeitando a nova ordem!
-	</BLOCKQUOTE>
-
-<H2 ID="filtro-valor">Filtro de valores</H2>
-
- <center><IMG ALIGN="middle" SRC="/moneylog/img/v4-filtro-valor.png" BORDER="0" ALT=""></center> 
-<P>
-Agora é possível filtrar os dados pelo seu valor. Você tem as seguintes opções:
-</P>
-
-<UL>
-<LI>Mostrar somente valores positivos
-<LI>Mostrar somente valores negativos
-<LI>Mostrar somente valores maiores do que N
-<LI>Mostrar somente valores menores do que N
-</UL>
-
-<P>
-Útil para ver rapidamente somente os ganhos do período, ou para excluir valores muito pequenos (ou muito grandes) do extrato.
-</P>
-<P>
-Os mais aventureiros gostarão de saber que também é possível fazer a mesma filtragem pela caixa de busca, usando o prefixo "<CODE>v:</CODE>". Alguns exemplos:
-</P>
-
-<TABLE ALIGN="center">
-<TR>
-<TD><CODE>v:+</CODE></TD>
-<TD>positivos</TD>
-</TR>
-<TR>
-<TD><CODE>v:-</CODE></TD>
-<TD>negativos</TD>
-</TR>
-<TR>
-<TD><CODE>v:&gt;50</CODE></TD>
-<TD>maior que 50</TD>
-</TR>
-<TR>
-<TD><CODE>v:&lt;-100</CODE></TD>
-<TD>menor que -100</TD>
-</TR>
-<TR>
-<TD><CODE>v:=100</CODE></TD>
-<TD>igual a 100</TD>
-</TR>
-<TR>
-<TD><CODE>v:&gt;=100</CODE></TD>
-<TD>maior ou igual a 100</TD>
-</TR>
-</TABLE>
-
-<H2 ID="parcelado-recorrente">Parcelado e recorrente</H2>
-
-<P>
-Agora é possível cadastrar lançamentos que possuem seu valor parcelado, ou lançamentos que se repetem um determinado número de meses.
-</P>
-<P>
-O formato é bem simples, basta adicionar uma barra ou um asterisco após o valor, seguido do número de parcelas/repetições:
-</P>
-
-<TABLE ALIGN="center">
-<TR>
-<TD><B>/</B></TD>
-<TD>Divisor</TD>
-<TD>Indica que o valor será dividido, ou seja, parcelado</TD>
-</TR>
-<TR>
-<TD><B>*</B></TD>
-<TD>Repetidor</TD>
-<TD>Indica que o valor será repetido, ou seja, recorrente</TD>
-</TR>
-</TABLE>
-
-<P>
-Por exemplo, se você fez uma compra de R$ 120,00 no cartão de crédito e a parcelou em três vezes, cadastre este lançamento assim:
-</P>
-
-<PRE>
-2009-08-15	-120/3	Vestido novo no shopping
-</PRE>
-
-<P>
-O MoneyLog vai calcular automaticamente o valor de cada parcela e vai lançá-las para os meses seguintes. No seu extrato vai aparecer assim:
-</P>
-
-<PRE>
-2009-08-15	-40	Vestido novo no shopping 1/3
-2009-09-15	-40	Vestido novo no shopping 2/3
-2009-10-15	-40	Vestido novo no shopping 3/3
-</PRE>
-
-<P>
-Note que o mês é aumentado, é colocado o valor da parcela e não o total, e no final da descrição há números que indicam qual a parcela atual e quantas ainda faltam. Igual na sua fatura do cartão.
-</P>
-<P>
-De maneira similar, se você vendeu algo e vai receber o valor em parcelas, basta colocar um número positivo antes da barra:
-</P>
-
-<PRE>
-2009-08-20	100/5	Vendi o vestido (semi-)novo pra Maria
-</PRE>
-
-<P>
-No extrato, vão aparecer os seguintes lançamentos:
-</P>
-
-<PRE>
-2009-08-20	20	Vendi o vestido (semi-)novo pra Maria 1/5
-2009-09-20	20	Vendi o vestido (semi-)novo pra Maria 2/5
-2009-10-20	20	Vendi o vestido (semi-)novo pra Maria 3/5
-2009-11-20	20	Vendi o vestido (semi-)novo pra Maria 4/5
-2009-12-20	20	Vendi o vestido (semi-)novo pra Maria 5/5
-</PRE>
-
-<P>
-Fácil e prático!
-</P>
-<P>
-Já os pagamentos/ganhos recorrentes, você usa o asterisco em vez da barra e informa o valor da parcela e não o valor total.
-</P>
-<P>
-Por exemplo, se você quiser cadastrar de uma vez todas as mensalidades da escola de seu filho para o ano de 2010. O valor da mensalidade é R$ 500,00 e o pagamento deve ser feito até o dia 5. Basta fazer:
-</P>
-
-<PRE>
-2010-01-05	-500*12	Mensalidade da escolinha do Júnior
-</PRE>
-
-<P>
-E novamente, o MoneyLog vai expandir os lançamentos futuros, deixando você chocado(a) ao ver no extrato com o tanto de dinheiro que vai sair do seu bolso:
-</P>
-
-<PRE>
-2010-01-05	-500	Mensalidade da escolinha do Júnior 1/12
-2010-02-05	-500	Mensalidade da escolinha do Júnior 2/12
-2010-03-05	-500	Mensalidade da escolinha do Júnior 3/12
-2010-04-05	-500	Mensalidade da escolinha do Júnior 4/12
-2010-05-05	-500	Mensalidade da escolinha do Júnior 5/12
-2010-06-05	-500	Mensalidade da escolinha do Júnior 6/12
-2010-07-05	-500	Mensalidade da escolinha do Júnior 7/12
-2010-08-05	-500	Mensalidade da escolinha do Júnior 8/12
-2010-09-05	-500	Mensalidade da escolinha do Júnior 9/12
-2010-10-05	-500	Mensalidade da escolinha do Júnior 10/12
-2010-11-05	-500	Mensalidade da escolinha do Júnior 11/12
-2010-12-05	-500	Mensalidade da escolinha do Júnior 12/12
-</PRE>
-
-<P>
-Para cadastrar ganhos recorrentes é a mesma coisa, basta colocar um valor positivo. Por exemplo, se você aluga um imóvel e quer cadastrar o recebimento do aluguel de R$ 400,00 durante dois anos, faça <CODE>400*24</CODE>.
-</P>
-	<BLOCKQUOTE>
-	<B>Não confunda:</B> a barra divide (parcela) o valor total, o asterisco multiplica (repete) o valor parcial.
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	<B>Agradecimento:</B> A ideia de fazer estes lançamentos parcelados e recorrentes veio do Ricardo Nishimura, com seu excelente <A HREF="http://nishimura.eti.br/blog/mymoneylog">myMoneyLog</A>, que é uma versão modificada do MoneyLog. Obrigado Ricardo!
-	</BLOCKQUOTE>
-
-<H2 ID="codigo">Código melhorado</H2>
-
-<P>
-O código do MoneyLog foi inteiramente reformado:
-</P>
-<P>
-HTML:
-</P>
-
-<UL>
-<LI>Agora usa o doctype HTML 4.01 <B>STRICT</B>, que é mais rígido em suas regras, tornando o programa mais compatível com navegadores modernos.
-<LI>Agora usa a codificação <B>UTF-8</B> em vez da antiga ISO-8859-1. Você pode colocar caracteres bem estranhos em seus lançamentos, como ☺ ♫ ↑ ↓ ♣ ♥ que eles vão aparecer corretamente. É divertido usar estes caracteres como tags!
-</UL>
-
-<P>
-CSS:
-</P>
-
-<UL>
-<LI>Desisti do formato compacto, que economiza espaço mas prejudica a legibilidade.
-<LI>Agora tudo está bem <B>alinhado</B> e estruturado.
-<LI>Há comentários para explicar regras complicadas.
-</UL>
-
-<P>
-JavaScript:
-</P>
-
-<UL>
-<LI>Código <B>reorganizado</B>, dividindo as funções por tipo: protótipos, ferramentas, interface, eventos, etc.
-<LI>Vários <B>comentários</B> novos para explicar trechos intrincados.
-<LI>Várias mudanças para seguir os padrões rígidos ditados pelo <A HREF="http://www.jslint.com/">JSLint</A>, que tornam o código JavaScript mais robusto e compatível entre os navegadores.
-</UL>
-
-<P>
-Lançamentos:
-</P>
-
-<UL>
-<LI>O formato dos seus lançamentos continua o mesmo, a novidade é que agora é feita uma verificação completa neles, para ter certeza que está tudo digitado corretamente.
-<LI>Lançamentos com erros antes eram ignorados (por exemplo, trocar TAB por espaços), mas agora o programa avisa sobre o erro e te força a arrumá-lo. Assim nenhum lançamento vai ficar de fora do extrato!
-<P></P>
-<IMG ALIGN="middle" SRC="/moneylog/img/v4-erro-tabs.png" BORDER="0" ALT="">
-</UL>
-
-<H2 ID="navegadores">Navegadores</H2>
-
-<P>
-Agora o MoneyLog tem uma mesma aparência, independente de qual o navegador utilizado, pois estou usando regras de CSS que eliminam as diferenças entre eles (<A HREF="http://developer.yahoo.com/yui/reset/">reset.css</A>). Com isso pude refinar mais a interface, sem medo de que algum elemento apareça fora de esquadro em um ou outro navegador.
-</P>
-<P>
-Esta versão marca o abandono de navegadores antigos e problemáticos, como o Internet Explorer versões 5.5 e 6. Hoje o MoneyLog ainda parece funcionar neles, mas eu não faço mais nenhum teste. Se funcionar, funcionou. Senão...
-</P>
-<P>
-Felizmente estes navegadores estão ficando cada vez mais no passado e a própria Microsoft quer forçar a atualização para versões mais novas. Em virtude disto, agora o MoneyLog é testado somente nas versões 7 e 8 do Internet Explorer.
-</P>
-<P>
-Esta é a lista de navegadores que eu faço testes intensivos:
-</P>
-
-<UL>
-<LI>Safari 4
-<LI>Firefox 3
-<LI>Opera 9
-<LI>Camino
-<LI>IE7
-<LI>IE8
-</UL>
-
-<P>
-Outros navegadores devem funcionar, mas eu não sei pois não tenho como testar. De fato, o MoneyLog funcionará em qualquer navegador moderno que tenha um suporte decente a CSS e JavaScript.
-</P>
-
-<H2 ID="txt">Arquivo TXT</H2>
-
-<P>
-Nas versões anteriores do MoneyLog, você tinha que colocar seus lançamentos (ganhos e gastos) lá no final do programa, pertinho dos códigos HTML feiosos. Bem, você pode continuar fazendo isso nesta versão nova também, sem problemas.
-</P>
-<P>
-Mas para ficar mais confortável e evitar danos ao programa por mexer acidentalmente em seu código, que tal deixar seus lançamentos em um arquivo TXT separado, que vai ter apenas os lançamentos e mais nada?
-</P>
-<P>
-Agora isto é possível.
-</P>
-<P>
-Escolha uma pasta em seu computador e baixe para dentro dela estes dois arquivos:
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/moneylog/moneylog4-txt.html">moneylog4-txt.html</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog/blob/413ec2f3e9e6068d6382d7280ce89d43614a452c/moneylog.txt">moneylog.txt</A>
-</UL>
-
-<P>
-Edite o <CODE>moneylog.txt</CODE> e troque os dados de exemplo pelos seus próprios lançamentos.
-</P>
-	<BLOCKQUOTE>
-	<B>Dica:</B> Se você já usava versões anteriores do MoneyLog, migre seus dados copiando com o mouse todos os lançamentos lá no final do seu <CODE>moneylog.html</CODE> antigo e cole-os neste TXT novo.
-	</BLOCKQUOTE>
-<P>
-Pronto! Agora basta abrir em seu navegador preferido o <CODE>moneylog4-txt.html</CODE> que você acabou de baixar e aproveitar as novidades dessa versão nova.
-</P>
-<P>
-De agora em diante, sempre edite o TXT para cadastrar lançamentos novos.
-</P>
-	<BLOCKQUOTE>
-	<B>Nota:</B> Você também pode importar automaticamente os dados de seu extrato bancário, caso ele use um dos formatos conhecidos pelo <A HREF="/moneylog/import/">conversor</A>.
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	<B>Nota:</B> Outra vantagem do TXT separado é que não é mais necessário escapar os caracteres especiais do HTML, como <CODE>&amp;</CODE>, <CODE>&lt;</CODE> e <CODE>&gt;</CODE>. Se você fez uma compra na C&amp;A, pode escrever normalmente, não precisa mais do feioso <CODE>C&amp;amp;A</CODE> de antigamente.
-	</BLOCKQUOTE>
-
-<H3 ID="chrome">Google Chrome e TXT</H3>
-
-<P>
-A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <A HREF="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</A> a leitura de arquivos locais, mesmo que estejam na mesma pasta.
-</P>
-<P>
-Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:
-</P>
-	<BLOCKQUOTE>
-	Carregando arquivo.txt...
-	</BLOCKQUOTE>
-<P>
-As soluções:
-</P>
-
-<UL>
-<LI>Usar outro navegador. Só o Chrome tem essa nova política extrema.
-<LI>Usar uma versão antiga do Chrome como a 4.x.
-<LI>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
-  <UL>
-  <LI><B>Linux:</B> google-chrome --allow-file-access-from-files
-  <LI><B>Mac:</B> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1
-  <LI><B>Windows:</B> "…\Application\chrome.exe" --allow-file-access-from-files
-  </UL>
-</UL>
-
-<H2 ID="varios-txt">Vários TXT</H2>
-
-<P>
-Uma vez que você começar a usar <A HREF="#txt">um arquivo TXT</A> separado para seus lançamentos e gosta da ideia, é normal depois de um tempo querer usar dois ou mais arquivos para separar melhor seus dados.
-</P>
-<P>
-Alguns casos onde este cenário pode ser útil:
-</P>
-
-<UL>
-<LI>Mais de uma pessoa utiliza o MoneyLog no mesmo computador. Para quê ter duas cópias do programa quando você pode ter apenas uma, e usar um arquivo TXT para cada usuário?
-  <UL>
-  <LI><CODE>joao.txt</CODE>
-  <LI><CODE>maria.txt</CODE>
-  <LI><CODE>junior.txt</CODE>
-  <P></P>
-  </UL>
-<LI>Você quer controlar em separado suas despesas pessoais de suas despesas profissionais. Isso é complicado e confuso, principalmente para quem viaja muito a trabalho. Então o MoneyLog pode ser um aliado importante para a sua organização!
-  <UL>
-  <LI><CODE>pessoal.txt</CODE>
-  <LI><CODE>profissional.txt</CODE>
-  <P></P>
-  </UL>
-<LI>Você já usa o MoneyLog há alguns anos e quer arquivar dados antigos, para despoluir a visão dos recentes:
-  <UL>
-  <LI><CODE>2009.txt</CODE>
-  <LI><CODE>2008.txt</CODE>
-  <LI><CODE>2007.txt</CODE>
-  <LI><CODE>2006.txt</CODE>
-  </UL>
-</UL>
-
-<P>
-Ao usar mais de um arquivo TXT, aparecerá um menu no topo, onde você pode escolher qual arquivo utilizar.
-</P>
-<P>
- <IMG ALIGN="middle" SRC="/moneylog/img/v4-varios-txt.png" BORDER="0" ALT=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG ALIGN="middle" SRC="/moneylog/img/v4-varios-txt-aberto.png" BORDER="0" ALT=""> 
-</P>
-<P>
-O legal é que a mudança de arquivos é feita na hora, sem precisar recarregar a página, mantendo as mesmas configurações de visualização: opções, filtro, tags, ordenação, tudo.
-</P>
-<P>
-Mas como dizer ao MoneyLog para usar estes arquivos?
-</P>
-<P>
-Edite o MoneyLog e faça uma alteração na linha 438. Troque de:
-</P>
-
-<PRE>
-var dataFiles = ['moneylog.txt'];
-</PRE>
-
-<P>
-para:
-</P>
-
-<PRE>
-var dataFiles = ['2009.txt', '2008.txt', '2007.txt', '2006.txt'];
-</PRE>
-
-<P>
-Ou seja, você vai tirar o nome padrão <CODE>moneylog.txt</CODE> e vai colocar os nomes dos seus arquivos. Sempre coloque os nomes entre aspas, e separados por vírgulas. Na dúvida, cole esta linha de exemplo e a altere.
-</P>
-<P>
-Ah, na linha anterior (437), é importante que o <CODE>oneFile</CODE> esteja com o valor falso. Caso não esteja, troque de
-</P>
-
-<PRE>
-var oneFile = true;       // Full app is at moneylog.html single file?
-</PRE>
-
-<P>
-para:
-</P>
-
-<PRE>
-var oneFile = false;      // Full app is at moneylog.html single file?
-</PRE>
-
-<P>
-Ou seja, basta trocar a palavra "true" por "false".
-</P>
-	<BLOCKQUOTE>
-	<B>Dica:</B> Por padrão é sempre carregado o primeiro arquivo da lista, então coloque por primeiro aquele que você for utilizar mais frequentemente.
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	<B>Dica:</B> Aconselho que estes arquivos estejam todos dentro da mesma pasta do MoneyLog, para evitar problemas no acesso.
-	</BLOCKQUOTE>
-
-<H2 ID="beta">Versão BETA</H2>
-
-<P>
-Você sabia que o MoneyLog tem uma <A HREF="/moneylog/beta/">versão beta</A> (estável) que está em constante evolução?
-</P>
-<P>
-Se você não quer esperar meses (às vezes anos) por uma versão nova, use a versão beta que novidades são adicionadas frequentemente. A próxima versão do MoneyLog (v5), por exemplo, eu não faço ideia de quando vai sair, se é em 2009 ou 2010. Mas em compensação semana que vem já deve ter novidade na beta.
-</P>
-<P>
-Não se preocupe, apesar do nome beta, ela é bem estável pois é a versão que eu utilizo diariamente, então qualquer problema arrumarei rapidinho.
-</P>
-<P>
-Eu anuncio <A HREF="http://twitter.com/oreio">no twitter</A> as novidades, então é bem fácil acompanhar.
-</P>
-	<BLOCKQUOTE>
-	Meu MUITO OBRIGADO a todos aqueles que participaram: <A HREF="http://twitter.com/adolfont">@adolfont</A>, <A HREF="http://twitter.com/arthurfurlan">@arthurfurlan</A>, <A HREF="http://twitter.com/AYHarano">@AYHarano</A>, <A HREF="http://twitter.com/battisti">@battisti</A>, <A HREF="http://twitter.com/brolesi">@brolesi</A>, <A HREF="http://twitter.com/carlosjvaz">@carlosjvaz</A>, <A HREF="http://twitter.com/denilsonsa">@denilsonsa</A>, <A HREF="http://twitter.com/digoreisnet">@digoreisnet</A>, <A HREF="http://twitter.com/farleyrangel">@farleyrangel</A>, <A HREF="http://twitter.com/_Felipe">@_Felipe</A>, <A HREF="http://twitter.com/InFog9">@InFog9</A>, <A HREF="http://twitter.com/jamilson">@jamilson</A>, <A HREF="http://twitter.com/lornlab">@lornlab</A>, <A HREF="http://twitter.com/lorrenec">@lorrenec</A>, <A HREF="http://twitter.com/lucasdsd">@lucasdsd</A>, <A HREF="http://twitter.com/lucmove">@lucmove</A>, <A HREF="http://twitter.com/marrcandre">@marrcandre</A>, <A HREF="http://twitter.com/matheusbonela">@matheusbonela</A>, <A HREF="http://twitter.com/mayckxavier">@mayckxavier</A>, <A HREF="http://twitter.com/netum">@netum</A>, <A HREF="http://twitter.com/ralcantara">@ralcantara</A>, <A HREF="http://twitter.com/renatolond">@renatolond</A>, <A HREF="http://twitter.com/ricobl">@ricobl</A>, <A HREF="http://twitter.com/rochacon">@rochacon</A>, <A HREF="http://twitter.com/rodrigospillere">@rodrigospillere</A>, <A HREF="http://twitter.com/taiar">@taiar</A>, <A HREF="http://twitter.com/urso">@urso</A>, <A HREF="http://twitter.com/vmmello">@vmmello</A>. Tomara que eu não tenha esquecido de ninguém!
-	</BLOCKQUOTE>
-<P>
-Consegui te deixar curioso(a)?<br>
-Então experimente: <A HREF="/moneylog/beta/">MoneyLog Beta</A>.
-</P>
-
-<H2 ID="doacao">Doação ao projeto</H2>
-
-<UL>
-<LI>Você usa bastante o MoneyLog?<br>
-<LI>Está satisfeito(a) com o programa?<br>
-<LI>Está conseguindo controlar melhor o seu dinheiro?
-</UL>
-
-<P>
-<A HREF="/moneylog/donate/">Que tal doar R$ 5,00 para ajudar o projeto?</A>
-</P>
-</div> <!-- close #main -->
-<div id="nav">
+---
+title: Novidades do MoneyLog 4
+date: 2009-08-15
+---
+
+<nav>
+  <ul>
+    <li><a href="#lista">Lista de novidades</a></li>
+    <li>
+      <a href="#interface">Interface Nova</a>
+      <ul>
+        <li><a href="#extrato-diaro">Extrato Diário</a></li>
+        <li><a href="#extrato-mensal">Extrato Mensal</a></li>
+        <li><a href="#toolbar">Barra de Tarefas</a></li>
+        <li><a href="#tagbar">Barra de Tags</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#graficos">Gráficos</a>
+      <ul>
+        <li><a href="#grafico-porcento">Gráfico de %</a></li>
+        <li><a href="#grafico-barras">Gráfico de barras</a></li>
+      </ul>
+    </li>
+    <li><a href="#filtro-valor">Filtro de valores</a></li>
+    <li><a href="#parcelado-recorrente">Parcelado e recorrente</a></li>
+    <li><a href="#codigo">Código melhorado</a></li>
+    <li><a href="#navegadores">Navegadores</a></li>
+    <li>
+      <a href="#txt">Arquivo TXT</a>
+      <ul>
+        <li><a href="#chrome">Google Chrome e TXT</a></li>
+      </ul>
+    </li>
+    <li><a href="#varios-txt">Vários TXT</a></li>
+    <li><a href="#beta">Versão BETA</a></li>
+    <li><a href="#doacao">Doação ao projeto</a></li>
+  </ul>
+</nav>
+
+<blockquote>
+  <strong>Atenção:</strong> Esta é uma versão antiga do MoneyLog. Veja <a href="/moneylog/v5/">a versão mais recente</a> do programa.
+</blockquote>
+
+<p>Após 88 horas de trabalho em algumas semanas de desenvolvimento ativo da <a href="#beta">versão Beta</a>, que foi programada "ao vivo" <a href="http://twitter.com/search?q=%23moneylog">via twitter</a> e contou com a ajuda de <a href="#beta">vários usuários</a> dando sugestões e apontando problemas, saiu a <a href="/moneylog/moneylog4.html">versão final do MoneyLog 4</a> em 15 de agosto de 2009.</p>
+
+<p class="figure">
+  <img src="/moneylog/moneylog4.jpg">
+</p>
+
+<blockquote>
+  <strong>Dica:</strong> Já é usuário do MoneyLog 3 e quer saber como migrar seus dados para esta versão nova? <a href="/moneylog/faq/#atualizar">É fácil</a>!
+</blockquote>
+
+<blockquote>
+  <strong>Dica:</strong> Já é usuário do <a href="/moneylog/beta/">MoneyLog Beta</a>? Ué, então pra quê estagnar na v4? Continue na beta e seja feliz! :)
+</blockquote>
+
+<blockquote>
+  <strong>Dica:</strong> Nunca usou o MoneyLog? <a href="/moneylog/moneylog4.html">Experimente agora</a> e depois <a href="/moneylog/faq/">leia o FAQ</a> e importe seu extrato bancário com <a href="/moneylog/import/">o conversor</a>!
+</blockquote>
+
+<h2 id="lista">Lista de novidades</h2>
+
+<p><strong>Opções:</strong></p>
+
+<ul>
+  <li>Opção nova: Mostrar Lançamentos Futuros</li>
+  <li>Opção nova: Somente Valores: positivo, negativo, maior que N, menor que N <a href="#filtro-valor">+info</a>
+  </li>
+</ul>
+
+<p><strong>Gráficos:</strong></p>
+
+<ul>
+  <li>Gráfico de porcentagem <a href="#grafico-porcento">+info</a>
+  </li>
+  <li>Gráfico de barras <a href="#grafico-barras">+info</a>
+  </li>
+</ul>
+
+<p><strong>Lançamentos:</strong></p>
+
+<ul>
+  <li>Pagamentos parcelados: <code>-100/3</code> é compra de R$ 100,00 parcelada em 3x <a href="#parcelado-recorrente">+info</a>
+  </li>
+  <li>Ganhos parcelados: <code>100/3</code> é venda de R$ 100,00 parcelada em 3x <a href="#parcelado-recorrente">+info</a>
+  </li>
+  <li>Pagamentos recorrentes: <code>-600*12</code> é a mensalidade de R$ 600,00 do ano todo <a href="#parcelado-recorrente">+info</a>
+  </li>
+  <li>Ganhos recorrentes: <code>600*12</code> é o aluguel mensal de R$ 600,00 de seu inquilino <a href="#parcelado-recorrente">+info</a>
+  </li>
+  <li>Segurança: checagem completa em seus lançamentos (os erros antes eram ignorados) <a href="#codigo">+info</a>
+  </li>
+  <li>Usar um (ou mais) arquivo TXT externo para os lançamentos (opcional) <a href="#txt">+info</a> <a href="#varios-txt">+info</a>
+  </li>
+  <li>Trocar arquivo de dados (TXT) sem precisar de Reload, mantendo visão atual</li>
+  <li>Botão para recarregar somente os dados (quando o TXT externo foi editado)</li>
+</ul>
+
+<p><strong>Extratos:</strong></p>
+
+<ul>
+  <li>Extratos diários, mensais e anuais</li>
+  <li>Coluna nova Acumulado no extrato diário</li>
+  <li>Destaque de palavras e tags importantes</li>
+  <li>Velocidade: extratos instantâneos, mesmo com grande volume de lançamentos</li>
+  <li>Linhas novas no final do extrato mensal (e anual): total, mínima, máxima</li>
+  <li>Linhas numeradas no extrato mensal (e anual)</li>
+  <li>Totais positivo e negativo na última linha do diário (sem parciais)</li>
+</ul>
+
+<p><strong>Tags:</strong></p>
+
+<ul>
+  <li>Novo menu de tags, agora no rodapé <a href="#tagbar">+info</a>
+  </li>
+  <li>Menu de tags ordenado corretamente, independente de minúsculas, maiúsculas ou acentuação</li>
+</ul>
+
+<p><strong>Geral:</strong></p>
+
+<ul>
+  <li>Codificação UTF-8 <a href="#codigo">+info</a>
+  </li>
+  <li>Doctype HTML 4.01 STRICT <a href="#codigo">+info</a>
+  </li>
+  <li>JSLint no código JavaScript <a href="#codigo">+info</a>
+  </li>
+  <li>Código do programa foi colocado no SVN do Google Code</li>
+  <li>Visual consistente entre navegadores (YUI reset.css) <a href="#navegadores">+info</a>
+  </li>
+  <li>Adicionado suporte aos navegadores IE7 e IE8 <a href="#navegadores">+info</a>
+  </li>
+  <li>O suporte ao IE5.5 e IE6 foi abandonado <a href="#navegadores">+info</a>
+  </li>
+  <li>Tema vermelho para sair da rotina :)</li>
+</ul>
+
+<p>Quanta coisa né? Não perca tempo, teste e baixe a versão nova agora:
+<br>
+<a href="http://aurelio.net/moneylog/moneylog4.html">http://aurelio.net/moneylog/moneylog4.html</a></p>
+
+<h2 id="interface">Interface Nova</h2>
+
+<h3 id="extrato-diaro">Extrato Diário</h3>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-daily.jpg">
+</p>
+
+<p>Tema vermelho, mais opções no topo, tabela mais bonita no extrato, coluna nova de Acumulado, menu de tags agora fica no rodapé.</p>
+
+<h3 id="extrato-mensal">Extrato Mensal</h3>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-monthly.jpg">
+</p>
+
+<p>Opção de mostrar lançamentos futuros, gráficos de porcentagem ao lado do extrato, gráfico de barras após o extrato (pode escolher qual coluna mostrar), linhas de total, mínimo e máximo no final.</p>
+
+<h3 id="toolbar">Barra de Tarefas</h3>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-toolbar.png">
+</p>
+
+<ul>
+  <li><strong>Período do extrato:</strong> O antigo "Relatório Geral" agora chama-se extrato mensal. Foi criado também o extrato anual para aqueles que usam o MoneyLog a bastante tempo. Clique no nome do extrato para mostrá-lo.</li>
+  <li>
+    <strong>Opções do extrato:</strong> "Somente Recentes" e "Mostrar Parciais Mensais" você já conhece. As novidades são a opção de mostrar/esconder os lançamentos futuros (aqueles em cinza) e o novo <a href="#filtro-valor">filtro de valores</a>.
+  </li>
+  <li>
+    <strong>Filtro e ajuda:</strong> Nada de novo por aqui. Aliás, tem uma novidade sim: no filtro você pode digitar algo como <code>v:&gt;50</code> para filtrar por valores acima de R$ 50,00. É um atalho para a opção nova "Somente Valores". <a href="#filtro-valor">+info</a>
+  </li>
+  <li>
+    <strong>Arquivo de dados (TXT):</strong> Só aparece para quem usa o <a href="#txt">arquivo TXT externo</a> para guardar os lançamentos. Se houver mais de um arquivo, aparecerá esse menu para escolher qual arquivo carregar. O botão <strong>®</strong> recarrega o arquivo atual, caso você o tenha editado (melhor que o Reload do navegador, pois não perde as opções atuais).
+  </li>
+</ul>
+
+<h3 id="tagbar">Barra de Tags</h3>
+
+<p>O antigo menu de tags que ficava no canto esquerdo foi movido lá para o rodapé, liberando um precioso espaço lateral para que o extrato brilhe sozinho no meio da tela. Mas o funcionamento continua o mesmo: clique para marcar e desmarcar tags e o extrato será atualizado de acordo.</p>
+
+<p>Veja como ficou bem mais fácil perceber quando uma tag está selecionada:</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-tagbar-1sel.png">
+</p>
+
+<p>Quando duas ou mais tags são selecionadas, aparece a opção para uni-las, ou seja, serão mostrados apenas os lançamentos que possuírem <strong>todas</strong> as tags selecionadas. Esta opção é o mesmo que aquele antigo "+" que aparecia no topo menu de tags.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-tagbar-2sel.png">
+</p>
+
+<blockquote>
+  <strong>Nota:</strong> Esta barra nova é um alívio para aqueles que usam muitas tags (eu!) e tinham que ficar rolando a tela para ver o final da lista.
+</blockquote>
+
+<h2 id="graficos">Gráficos</h2>
+
+<blockquote>
+  <strong>Aviso:</strong> Não se preocupe! Apesar dos gráficos, o MoneyLog continua sendo um programinha minúsculo, rápido e simples. Nenhuma biblioteca JavaScript externa foi adicionada, esta é uma solução "caseira" para gráficos, utilizando apenas HTML+CSS.
+</blockquote>
+
+<h3 id="grafico-porcento">Gráfico de %</h3>
+
+<p>Nos extratos mensal e anual, há uma coluna nova que mostra a porcentagem entre <strong>ganhos</strong> e <strong>gastos</strong> durante aquele mês/ano.</p>
+
+<p>Mas o mais legal é que essas porcentagens são mostradas em um gráfico de barras nas cores azul e vermelho, ficando muito fácil achar os grandes vilões:</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-grafico-porcento.png">
+</p>
+
+<h3 id="grafico-barras">Gráfico de barras</h3>
+
+<p>Nos extratos mensal e anual, agora tem um gráfico bacana no final, que mostra a evolução de uma determinada coluna (ganhos, gastos, saldo, acumulado) durante aquele mês/ano.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-menu-colunas-grafico.png">
+</p>
+
+<ul>
+  <li>Basta clicar no menu acima do gráfico para escolher a coluna desejada.</li>
+  <li>Valores positivos em azul, negativos em vermelho.</li>
+</ul>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-grafico-barras.png">
+</p>
+
+<blockquote>
+  <strong>Dica:</strong> Se você mudar a ordenação das linhas do extrato (basta clicar nos títulos das colunas), o gráfico também vai mudar, respeitando a nova ordem!
+</blockquote>
+
+<h2 id="filtro-valor">Filtro de valores</h2>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-filtro-valor.png">
+</p>
+
+<p>Agora é possível filtrar os dados pelo seu valor. Você tem as seguintes opções:</p>
+
+<ul>
+  <li>Mostrar somente valores positivos</li>
+  <li>Mostrar somente valores negativos</li>
+  <li>Mostrar somente valores maiores do que N</li>
+  <li>Mostrar somente valores menores do que N</li>
+</ul>
+
+<p>Útil para ver rapidamente somente os ganhos do período, ou para excluir valores muito pequenos (ou muito grandes) do extrato.</p>
+
+<p>Os mais aventureiros gostarão de saber que também é possível fazer a mesma filtragem pela caixa de busca, usando o prefixo "<code>v:</code>". Alguns exemplos:</p>
 
 <table>
-<tr>
-	<th colspan="5" align="center"><a href="http://aurelio.net">AURELIO.NET</a></th>
-</tr>
-<tr>	
-	<th class="search" colspan="5">
- 
-<form action="http://aurelio.net/achei.html" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-0009608813278754:22aq1wdkwbb" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Pesquisar" />
-  </div>
-</form>
-
-<script type="text/javascript" src="http://www.google.com.br/coop/cse/brand?form=cse-search-box&amp;lang=pt"></script>
-	</th>
-</tr>
-<tr><td>
-<P>
-<B>Nerdices</B>
-</P>
-
-<UL>
-<LI><A HREF="/misc/adventure-mapa.txt">adventure</A>
-<LI><A HREF="/doc/as4pp.html">applescript</A>
-<LI><A HREF="http://aurelio.net/shell/canivete/">canivete</A>
-<LI><A HREF="/doc/CAPSLOCK.txt">capslock</A>
-<LI><A HREF="http://codare.net">codare</A>
-<LI><A HREF="/doc/coluna/">coluna</A>
-<LI><A HREF="http://aurelio.net/curso/">curso</A>
-<LI><A HREF="http://aurelio.net/cygwin/">cygwin</A>
-<LI><A HREF="http://aurelio.net/shell/dialog/">dialog</A>
-<LI><A HREF="/doc/dort.html">dort</A>
-<LI><A HREF="/er/">er</A>
-<LI><A HREF="/log/">log</A>
-<LI><A HREF="/mac/">mac</A>
-<LI><A HREF="/curso/">palestra</A>
-<LI><A HREF="/misc/eu_odeio_perl.txt">perl</A>
-<LI><A HREF="http://aurelio.net/mac/dev/tutorial-pyobjc/">pyobjc</A>
-<LI><A HREF="/bin/python/">python</A>
-<LI><A HREF="/sed/">sed</A>
-<LI><A HREF="http://aurelio.net/shell/">shell</A>
-<LI><A HREF="/bin/sql/">sql</A>
-<LI><A HREF="http://aurelio.net/vim/">vim</A>
-<LI><A HREF="/doc/nerd.html">mais...</A>
-<LI><A HREF="/en/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Programas</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/projects/adiumbook/">adiumbook</A>
-<LI><A HREF="http://aurelio.net/projects/css-sandbox/">css-sandbox</A>
-<LI><A HREF="http://www.coisinha.com.br/embriagueitor/">embriagueitor</A>
-<LI><A HREF="http://aurelio.net/projects/emomemory/">emomemory</A>
-<LI><A HREF="http://www.coisinha.com.br/engripeitor/">engripeitor</A>
-<LI><A HREF="/bin/lelolab/">lelolab</A>
-<LI><A HREF="http://www.coisinha.com.br/miguxeitor/">miguxeitor</A>
-<LI><A HREF="http://aurelio.net/moneylog/">moneylog</A>
-<LI><A HREF="http://aurelio.net/rac/">rac</A>
-<LI><A HREF="http://aurelio.net/projects/sedsed/">sedsed</A>
-<LI><A HREF="http://aurelio.net/projects/sedsokoban/">sedsokoban</A>
-<LI><A HREF="http://aurelio.net/projects/sedarkanoid/">sedarkanoid</A>
-<LI><A HREF="http://aurelio.net/projects/txt2regex/">txt2regex</A>
-<LI><A HREF="http://txt2tags.org">txt2tags</A>
-<LI><A HREF="http://funcoeszz.net">zz</A>
-<LI><A HREF="/bin/">mais...</A>
-<LI><A HREF="/soft/">more...</A>
-</UL>
-
-</td><td>
-<P>
-<B>Livros</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/regex/guia/">guia-er</A>
-<LI><A HREF="http://www.piazinho.com.br">regex</A>
-<LI><A HREF="http://aurelio.net/sed/livro/">sed</A>
-<LI><A HREF="http://www.shellscript.com.br">shell</A>
-</UL>
-
-</td><td>
-<P>
-<B>Eu</B>
-</P>
-
-<UL>
-<LI><A HREF="http://aurelio.net/blog">blog</A>
-<LI><A HREF="/cv">cv</A>
-<LI><A HREF="/img/emeio.png">e-mail</A>
-<LI><A HREF="/faq">faq</A>
-<LI><A HREF="/mim.html">raio-x</A>
-<LI><A HREF="http://twitter.com/oreio">twitter</A>
-</UL>
-
-</td><td>
-<P>
-<B>Diversos</B>
-</P>
-
-<UL>
-<LI><A HREF="/1000000000000.html">10<sup>12</sup></A>
-<LI><A HREF="/adsense/">adsense</A>
-<LI><A HREF="/atacama">atacama</A>
-<LI><A HREF="http://aurelio.net/baterna/">baterna</A>
-<LI><A HREF="http://aurelio.net/carve/">carve</A>
-<LI><A HREF="http://www.coisinha.com.br">coisinha</A>
-<LI><A HREF="/correria/">correria</A>
-<LI><A HREF="/dumbs/">dumbs</A>
-<LI><A HREF="/foto/">foto</A>
-<LI><A HREF="http://aurelio.net/fvm/">fvm</A>
-<LI><A HREF="/musica/">musica</A>
-<LI><A HREF="http://aurelio.net/pogo/">pogo</A>
-<LI><A HREF="/doc/ramones.txt">ramones</A>
-<LI><A HREF="/sobre.html">sobre</A>
-<LI><A HREF="http://aurelio.net/surf/">surf</A>
-<LI><A HREF="/misc/toyota/">toyota</A>
-<LI><A HREF="http://umportugues.com">umportugues</A>
-<LI><A HREF="/valeta/">valeta</A>
-<LI><A HREF="http://aurelio.net/viagem/">viagem</A>
-<LI><A HREF="/doc/videogame.html">videogame</A>
-</UL>
-
-</td><tr>
+  <tr>
+    <td><code>v:+</code></td>
+    <td>positivos</td>
+  </tr>
+  <tr>
+    <td><code>v:-</code></td>
+    <td>negativos</td>
+  </tr>
+  <tr>
+    <td><code>v:&gt;50</code></td>
+    <td>maior que 50</td>
+  </tr>
+  <tr>
+    <td><code>v:&lt;-100</code></td>
+    <td>menor que -100</td>
+  </tr>
+  <tr>
+    <td><code>v:=100</code></td>
+    <td>igual a 100</td>
+  </tr>
+  <tr>
+    <td><code>v:&gt;=100</code></td>
+    <td>maior ou igual a 100</td>
+  </tr>
 </table>
-</div> <!-- #nav -->
 
-<div id="footer">
-<P>
-<A HREF="/sobre/">AURELIO.NET</A> é o site pessoal de Aur<A HREF="http://aurelio.net/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</A>lio Marinho Jargas.<br>
-Mais de <A HREF="http://aurelio.net/blog/2009/06/27/10-anos-de-saite/">10 anos no ar</A> (desde 1999), feito com <A HREF="http://txt2tags.org">txt2tags</A>
-e <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>.
+<h2 id="parcelado-recorrente">Parcelado e recorrente</h2>
+
+<p>Agora é possível cadastrar lançamentos que possuem seu valor parcelado, ou lançamentos que se repetem um determinado número de meses.</p>
+
+<p>O formato é bem simples, basta adicionar uma barra ou um asterisco após o valor, seguido do número de parcelas/repetições:</p>
+
+<table>
+  <tr>
+    <td><strong>/</strong></td>
+    <td>Divisor</td>
+    <td>Indica que o valor será dividido, ou seja, parcelado</td>
+  </tr>
+  <tr>
+    <td><strong>*</strong></td>
+    <td>Repetidor</td>
+    <td>Indica que o valor será repetido, ou seja, recorrente</td>
+  </tr>
+</table>
+
+<p>Por exemplo, se você fez uma compra de R$ 120,00 no cartão de crédito e a parcelou em três vezes, cadastre este lançamento assim:</p>
+
+<pre>
+2009-08-15      -120/3  Vestido novo no shopping
+</pre>
+
+<p>O MoneyLog vai calcular automaticamente o valor de cada parcela e vai lançá-las para os meses seguintes. No seu extrato vai aparecer assim:</p>
+
+<pre>
+2009-08-15      -40     Vestido novo no shopping 1/3
+2009-09-15      -40     Vestido novo no shopping 2/3
+2009-10-15      -40     Vestido novo no shopping 3/3
+</pre>
+
+<p>Note que o mês é aumentado, é colocado o valor da parcela e não o total, e no final da descrição há números que indicam qual a parcela atual e quantas ainda faltam. Igual na sua fatura do cartão.</p>
+
+<p>De maneira similar, se você vendeu algo e vai receber o valor em parcelas, basta colocar um número positivo antes da barra:</p>
+
+<pre>
+2009-08-20      100/5   Vendi o vestido (semi-)novo pra Maria
+</pre>
+
+<p>No extrato, vão aparecer os seguintes lançamentos:</p>
+
+<pre>
+2009-08-20      20      Vendi o vestido (semi-)novo pra Maria 1/5
+2009-09-20      20      Vendi o vestido (semi-)novo pra Maria 2/5
+2009-10-20      20      Vendi o vestido (semi-)novo pra Maria 3/5
+2009-11-20      20      Vendi o vestido (semi-)novo pra Maria 4/5
+2009-12-20      20      Vendi o vestido (semi-)novo pra Maria 5/5
+</pre>
+
+<p>Fácil e prático!</p>
+
+<p>Já os pagamentos/ganhos recorrentes, você usa o asterisco em vez da barra e informa o valor da parcela e não o valor total.</p>
+
+<p>Por exemplo, se você quiser cadastrar de uma vez todas as mensalidades da escola de seu filho para o ano de 2010. O valor da mensalidade é R$ 500,00 e o pagamento deve ser feito até o dia 5. Basta fazer:</p>
+
+<pre>
+2010-01-05      -500*12 Mensalidade da escolinha do Júnior
+</pre>
+
+<p>E novamente, o MoneyLog vai expandir os lançamentos futuros, deixando você chocado(a) ao ver no extrato com o tanto de dinheiro que vai sair do seu bolso:</p>
+
+<pre>
+2010-01-05      -500    Mensalidade da escolinha do Júnior 1/12
+2010-02-05      -500    Mensalidade da escolinha do Júnior 2/12
+2010-03-05      -500    Mensalidade da escolinha do Júnior 3/12
+2010-04-05      -500    Mensalidade da escolinha do Júnior 4/12
+2010-05-05      -500    Mensalidade da escolinha do Júnior 5/12
+2010-06-05      -500    Mensalidade da escolinha do Júnior 6/12
+2010-07-05      -500    Mensalidade da escolinha do Júnior 7/12
+2010-08-05      -500    Mensalidade da escolinha do Júnior 8/12
+2010-09-05      -500    Mensalidade da escolinha do Júnior 9/12
+2010-10-05      -500    Mensalidade da escolinha do Júnior 10/12
+2010-11-05      -500    Mensalidade da escolinha do Júnior 11/12
+2010-12-05      -500    Mensalidade da escolinha do Júnior 12/12
+</pre>
+
+<p>Para cadastrar ganhos recorrentes é a mesma coisa, basta colocar um valor positivo. Por exemplo, se você aluga um imóvel e quer cadastrar o recebimento do aluguel de R$ 400,00 durante dois anos, faça <code>400*24</code>.</p>
+
+<blockquote>
+  <strong>Não confunda:</strong> a barra divide (parcela) o valor total, o asterisco multiplica (repete) o valor parcial.
+</blockquote>
+
+<blockquote>
+  <strong>Agradecimento:</strong> A ideia de fazer estes lançamentos parcelados e recorrentes veio do Ricardo Nishimura, com seu excelente <a href="http://nishimura.eti.br/blog/mymoneylog">myMoneyLog</a>, que é uma versão modificada do MoneyLog. Obrigado Ricardo!
+</blockquote>
+
+<h2 id="codigo">Código melhorado</h2>
+
+<p>O código do MoneyLog foi inteiramente reformado:</p>
+
+<p>HTML:</p>
+
+<ul>
+  <li>Agora usa o doctype HTML 4.01 <strong>STRICT</strong>, que é mais rígido em suas regras, tornando o programa mais compatível com navegadores modernos.</li>
+  <li>Agora usa a codificação <strong>UTF-8</strong> em vez da antiga ISO-8859-1. Você pode colocar caracteres bem estranhos em seus lançamentos, como ☺ ♫ ↑ ↓ ♣ ♥ que eles vão aparecer corretamente. É divertido usar estes caracteres como tags!</li>
+</ul>
+
+<p>CSS:</p>
+
+<ul>
+  <li>Desisti do formato compacto, que economiza espaço mas prejudica a legibilidade.</li>
+  <li>Agora tudo está bem <strong>alinhado</strong> e estruturado.</li>
+  <li>Há comentários para explicar regras complicadas.</li>
+</ul>
+
+<p>JavaScript:</p>
+
+<ul>
+  <li>Código <strong>reorganizado</strong>, dividindo as funções por tipo: protótipos, ferramentas, interface, eventos, etc.</li>
+  <li>Vários <strong>comentários</strong> novos para explicar trechos intrincados.</li>
+  <li>Várias mudanças para seguir os padrões rígidos ditados pelo <a href="http://www.jslint.com/">JSLint</a>, que tornam o código JavaScript mais robusto e compatível entre os navegadores.
+  </li>
+</ul>
+
+<p>Lançamentos:</p>
+
+<ul>
+  <li>O formato dos seus lançamentos continua o mesmo, a novidade é que agora é feita uma verificação completa neles, para ter certeza que está tudo digitado corretamente.</li>
+  <li>Lançamentos com erros antes eram ignorados (por exemplo, trocar TAB por espaços), mas agora o programa avisa sobre o erro e te força a arrumá-lo. Assim nenhum lançamento vai ficar de fora do extrato! <img class="center" src="/moneylog/img/v4-erro-tabs.png" alt=""></li>
+</ul>
+
+<h2 id="navegadores">Navegadores</h2>
+
+<p>Agora o MoneyLog tem uma mesma aparência, independente de qual o navegador utilizado, pois estou usando regras de CSS que eliminam as diferenças entre eles (<a href="http://developer.yahoo.com/yui/reset/">reset.css</a>). Com isso pude refinar mais a interface, sem medo de que algum elemento apareça fora de esquadro em um ou outro navegador.</p>
+
+<p>Esta versão marca o abandono de navegadores antigos e problemáticos, como o Internet Explorer versões 5.5 e 6. Hoje o MoneyLog ainda parece funcionar neles, mas eu não faço mais nenhum teste. Se funcionar, funcionou. Senão...</p>
+
+<p>Felizmente estes navegadores estão ficando cada vez mais no passado e a própria Microsoft quer forçar a atualização para versões mais novas. Em virtude disto, agora o MoneyLog é testado somente nas versões 7 e 8 do Internet Explorer.</p>
+
+<p>Esta é a lista de navegadores que eu faço testes intensivos:</p>
+
+<ul>
+  <li>Safari 4</li>
+  <li>Firefox 3</li>
+  <li>Opera 9</li>
+  <li>Camino</li>
+  <li>IE7</li>
+  <li>IE8</li>
+</ul>
+
+<p>Outros navegadores devem funcionar, mas eu não sei pois não tenho como testar. De fato, o MoneyLog funcionará em qualquer navegador moderno que tenha um suporte decente a CSS e JavaScript.</p>
+
+<h2 id="txt">Arquivo TXT</h2>
+
+<p>Nas versões anteriores do MoneyLog, você tinha que colocar seus lançamentos (ganhos e gastos) lá no final do programa, pertinho dos códigos HTML feiosos. Bem, você pode continuar fazendo isso nesta versão nova também, sem problemas.</p>
+
+<p>Mas para ficar mais confortável e evitar danos ao programa por mexer acidentalmente em seu código, que tal deixar seus lançamentos em um arquivo TXT separado, que vai ter apenas os lançamentos e mais nada?</p>
+
+<p>Agora isto é possível.</p>
+
+<p>Escolha uma pasta em seu computador e baixe para dentro dela estes dois arquivos:</p>
+
+<ul>
+  <li>
+    <a href="http://aurelio.net/moneylog/moneylog4-txt.html">moneylog4-txt.html</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/moneylog/blob/413ec2f3e9e6068d6382d7280ce89d43614a452c/moneylog.txt">moneylog.txt</a>
+  </li>
+</ul>
+
+<p>Edite o <code>moneylog.txt</code> e troque os dados de exemplo pelos seus próprios lançamentos.</p>
+
+<blockquote>
+  <strong>Dica:</strong> Se você já usava versões anteriores do MoneyLog, migre seus dados copiando com o mouse todos os lançamentos lá no final do seu <code>moneylog.html</code> antigo e cole-os neste TXT novo.
+</blockquote>
+
+<p>Pronto! Agora basta abrir em seu navegador preferido o <code>moneylog4-txt.html</code> que você acabou de baixar e aproveitar as novidades dessa versão nova.</p>
+
+<p>De agora em diante, sempre edite o TXT para cadastrar lançamentos novos.</p>
+
+<blockquote>
+  <strong>Nota:</strong> Você também pode importar automaticamente os dados de seu extrato bancário, caso ele use um dos formatos conhecidos pelo <a href="/moneylog/import/">conversor</a>.
+</blockquote>
+
+<blockquote>
+  <strong>Nota:</strong> Outra vantagem do TXT separado é que não é mais necessário escapar os caracteres especiais do HTML, como <code>&amp;</code>, <code>&lt;</code> e <code>&gt;</code>. Se você fez uma compra na C&amp;A, pode escrever normalmente, não precisa mais do feioso <code>C&amp;amp;A</code> de antigamente.
+</blockquote>
+
+<h3 id="chrome">Google Chrome e TXT</h3>
+
+<p>A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <a href="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</a> a leitura de arquivos locais, mesmo que estejam na mesma pasta.</p>
+
+<p>Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:</p>
+
+<blockquote>
+  Carregando arquivo.txt...
+</blockquote>
+
+<p>As soluções:</p>
+
+<ul>
+  <li>Usar outro navegador. Só o Chrome tem essa nova política extrema.</li>
+  <li>Usar uma versão antiga do Chrome como a 4.x.</li>
+  <li>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
+    <ul>
+      <li><strong>Linux:</strong> google-chrome --allow-file-access-from-files</li>
+      <li><strong>Mac:</strong> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1</li>
+      <li><strong>Windows:</strong> "…\Application\chrome.exe" --allow-file-access-from-files</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="varios-txt">Vários TXT</h2>
+
+<p>Uma vez que você começar a usar <a href="#txt">um arquivo TXT</a> separado para seus lançamentos e gosta da ideia, é normal depois de um tempo querer usar dois ou mais arquivos para separar melhor seus dados.</p>
+
+<p>Alguns casos onde este cenário pode ser útil:</p>
+
+<ul>
+  <li>Mais de uma pessoa utiliza o MoneyLog no mesmo computador. Para quê ter duas cópias do programa quando você pode ter apenas uma, e usar um arquivo TXT para cada usuário?
+    <ul>
+      <li><code>joao.txt</code></li>
+      <li><code>maria.txt</code></li>
+      <li><code>junior.txt</code></li>
+    </ul>
+  </li>
+  <li>Você quer controlar em separado suas despesas pessoais de suas despesas profissionais. Isso é complicado e confuso, principalmente para quem viaja muito a trabalho. Então o MoneyLog pode ser um aliado importante para a sua organização!
+    <ul>
+      <li><code>pessoal.txt</code></li>
+      <li><code>profissional.txt</code></li>
+    </ul>
+  </li>
+  <li>Você já usa o MoneyLog há alguns anos e quer arquivar dados antigos, para despoluir a visão dos recentes:
+    <ul>
+      <li><code>2009.txt</code></li>
+      <li><code>2008.txt</code></li>
+      <li><code>2007.txt</code></li>
+      <li><code>2006.txt</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ao usar mais de um arquivo TXT, aparecerá um menu no topo, onde você pode escolher qual arquivo utilizar.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-varios-txt.png" alt=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="center" src="/moneylog/img/v4-varios-txt-aberto.png">
+</p>
+
+<p>O legal é que a mudança de arquivos é feita na hora, sem precisar recarregar a página, mantendo as mesmas configurações de visualização: opções, filtro, tags, ordenação, tudo.</p>
+
+<p>Mas como dizer ao MoneyLog para usar estes arquivos?</p>
+
+<p>Edite o MoneyLog e faça uma alteração na linha 438. Troque de:</p>
+
+<pre>
+var dataFiles = ['moneylog.txt'];
+</pre>
+
+<p>para:</p>
+
+<pre>
+var dataFiles = ['2009.txt', '2008.txt', '2007.txt', '2006.txt'];
+</pre>
+
+<p>Ou seja, você vai tirar o nome padrão <code>moneylog.txt</code> e vai colocar os nomes dos seus arquivos. Sempre coloque os nomes entre aspas, e separados por vírgulas. Na dúvida, cole esta linha de exemplo e a altere.</p>
+
+<p>Ah, na linha anterior (437), é importante que o <code>oneFile</code> esteja com o valor falso. Caso não esteja, troque de</p>
+
+<pre>
+var oneFile = true;       // Full app is at moneylog.html single file?
+</pre>
+
+<p>para:</p>
+
+<pre>
+var oneFile = false;      // Full app is at moneylog.html single file?
+</pre>
+
+<p>Ou seja, basta trocar a palavra "true" por "false".</p>
+
+<blockquote>
+  <strong>Dica:</strong> Por padrão é sempre carregado o primeiro arquivo da lista, então coloque por primeiro aquele que você for utilizar mais frequentemente.
+</blockquote>
+
+<blockquote>
+  <strong>Dica:</strong> Aconselho que estes arquivos estejam todos dentro da mesma pasta do MoneyLog, para evitar problemas no acesso.
+</blockquote>
+
+<h2 id="beta">Versão BETA</h2>
+
+<p>Você sabia que o MoneyLog tem uma <a href="/moneylog/beta/">versão beta</a> (estável) que está em constante evolução?</p>
+
+<p>Se você não quer esperar meses (às vezes anos) por uma versão nova, use a versão beta que novidades são adicionadas frequentemente. A próxima versão do MoneyLog (v5), por exemplo, eu não faço ideia de quando vai sair, se é em 2009 ou 2010. Mas em compensação semana que vem já deve ter novidade na beta.</p>
+
+<p>Não se preocupe, apesar do nome beta, ela é bem estável pois é a versão que eu utilizo diariamente, então qualquer problema arrumarei rapidinho.</p>
+
+<p>Eu anuncio <a href="http://twitter.com/oreio">no twitter</a> as novidades, então é bem fácil acompanhar.</p>
+
+<blockquote>
+  Meu MUITO OBRIGADO a todos aqueles que participaram: <a href="http://twitter.com/adolfont">@adolfont</a>, <a href="http://twitter.com/arthurfurlan">@arthurfurlan</a>, <a href="http://twitter.com/AYHarano">@AYHarano</a>, <a href="http://twitter.com/battisti">@battisti</a>, <a href="http://twitter.com/brolesi">@brolesi</a>, <a href="http://twitter.com/carlosjvaz">@carlosjvaz</a>, <a href="http://twitter.com/denilsonsa">@denilsonsa</a>, <a href="http://twitter.com/digoreisnet">@digoreisnet</a>, <a href="http://twitter.com/farleyrangel">@farleyrangel</a>, <a href="http://twitter.com/_Felipe">@_Felipe</a>, <a href="http://twitter.com/InFog9">@InFog9</a>, <a href="http://twitter.com/jamilson">@jamilson</a>, <a href="http://twitter.com/lornlab">@lornlab</a>, <a href="http://twitter.com/lorrenec">@lorrenec</a>, <a href="http://twitter.com/lucasdsd">@lucasdsd</a>, <a href="http://twitter.com/lucmove">@lucmove</a>, <a href="http://twitter.com/marrcandre">@marrcandre</a>, <a href="http://twitter.com/matheusbonela">@matheusbonela</a>, <a href="http://twitter.com/mayckxavier">@mayckxavier</a>, <a href="http://twitter.com/netum">@netum</a>, <a href="http://twitter.com/ralcantara">@ralcantara</a>, <a href="http://twitter.com/renatolond">@renatolond</a>, <a href="http://twitter.com/ricobl">@ricobl</a>, <a href="http://twitter.com/rochacon">@rochacon</a>, <a href="http://twitter.com/rodrigospillere">@rodrigospillere</a>, <a href="http://twitter.com/taiar">@taiar</a>, <a href="http://twitter.com/urso">@urso</a>, <a href="http://twitter.com/vmmello">@vmmello</a>. Tomara que eu não tenha esquecido de ninguém!
+</blockquote>
+
+<p>Consegui te deixar curioso(a)?
 <br>
-Contato:
-<A HREF="/img/emeio.png">e-mail</A>, <A HREF="http://twitter.com/oreio">twitter</A>.
-</P>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
+Então experimente: <a href="/moneylog/beta/">MoneyLog Beta</a>.</p>
 
-<script type="text/javascript">
+<h2 id="doacao">Doação ao projeto</h2>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
+<ul>
+  <li>Você usa bastante o MoneyLog?
+  <br></li>
+  <li>Está satisfeito(a) com o programa?
+  <br></li>
+  <li>Está conseguindo controlar melhor o seu dinheiro?</li>
+</ul>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags moneylog/v4/index.t2t -->
-</BODY></HTML>
+<p><a href="/moneylog/donate/">Que tal doar R$ 5,00 para ajudar o projeto?</a></p>

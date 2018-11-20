@@ -1,358 +1,225 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<meta name="author" content="Aurelio Jargas">
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/clean-2012/base.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/include/clean-2012/article.css">
-<TITLE>MoneyLog Beta</TITLE>
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</HEAD>
-<BODY class="beta">
+---
+title: MoneyLog Beta
+---
 
-<DIV ID="header">
-<H1>MoneyLog Beta</H1>
-</DIV>
+<p>O MoneyLog Beta é para os nerds. É para quem prefere o poder e a flexibilidade, mesmo sendo mais difícil de lidar.</p>
 
-<DIV ID="main">
-<P>
-O MoneyLog Beta é para os nerds. É para quem prefere o poder e a flexibilidade, mesmo sendo mais difícil de lidar.
-</P>
-<P>
-O seu código é sempre o mais atualizado, pois vem direto do GitHub. Funciona offline, pois só usa arquivos locais. Usa arquivos TXT para guardar os dados. Totalmente configurável (e raqueável) via arquivo JavaScript local. Pode usar <A HREF="#cloud">junto com o Cloud</A>. E a cor da interface é preta, a única cor verdadeiramente nerd :)
-</P>
-<P>
-Pode quebrar? Claro! Por isso o nome Beta. Mas <B>esta é a versão que eu uso</B>, então eu tenho muito cuidado para deixá-la sempre funcionando.
-</P>
-	<BLOCKQUOTE>
-	Nota: Se você já usava a versão Beta antes de 2012, leia o <A HREF="/moneylog/beta/update-2012.html">Guia de Migração</A> pois há algumas mudanças importantes que requerem sua ação.
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	Nota: <A HREF="#bug-chrome">O Google Chrome é feio, bobo e chato</A> :(
-	</BLOCKQUOTE>
-<P>
-Acesse a demonstração online: Que demo o que… <A HREF="#download">Baixa logo aí</A>.
-</P>
-<DIV CLASS="toc">
+<p>O seu código é sempre o mais atualizado, pois vem direto do GitHub. Funciona offline, pois só usa arquivos locais. Usa arquivos TXT para guardar os dados. Totalmente configurável (e raqueável) via arquivo JavaScript local. Pode usar <a href="#cloud">junto com o Cloud</a>. E a cor da interface é preta, a única cor verdadeiramente nerd :)</p>
 
-    <UL>
-    <LI><A HREF="#download">Download</A>
-    <LI><A HREF="#update">Atualização</A>
-    <LI><A HREF="#config">Arquivo de configuração</A>
-    <LI><A HREF="#txt">Arquivo TXT para os lançamentos</A>
-    <LI><A HREF="#inserir">Inserir seus lançamentos</A>
-    <LI><A HREF="#parabens">Parabéns!</A>
-    <LI><A HREF="#seu-widget">Faça seu próprio Widget</A>
-    <LI><A HREF="#online">Funcionamento Online</A>
-    <LI><A HREF="#cloud">Usar o MoneyLog Cloud ao mesmo tempo</A>
-    <LI><A HREF="#bug-acentos">Problemas com acentuação?</A>
-    <LI><A HREF="#bug-chrome">Não funciona no Google Chrome</A>
-    </UL>
+<p>Pode quebrar? Claro! Por isso o nome Beta. Mas <strong>esta é a versão que eu uso</strong>, então eu tenho muito cuidado para deixá-la sempre funcionando.</p>
 
-</DIV>
+<blockquote>
+  Nota: Se você já usava a versão Beta antes de 2012, leia o <a href="/moneylog/beta/update-2012.html">Guia de Migração</a> pois há algumas mudanças importantes que requerem sua ação.
+</blockquote>
 
-<H2 ID="download"><a href="#download">Download</a></H2>
+<blockquote>
+  Nota: <a href="#bug-chrome">O Google Chrome é feio, bobo e chato</a> :(
+</blockquote>
 
-<PRE>
+<p>Acesse a demonstração online: Que demo o que… <a href="#download">Baixa logo aí</a>.</p>
+
+<nav>
+  <ul>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#update">Atualização</a></li>
+    <li><a href="#config">Arquivo de configuração</a></li>
+    <li><a href="#txt">Arquivo TXT para os lançamentos</a></li>
+    <li><a href="#inserir">Inserir seus lançamentos</a></li>
+    <li><a href="#parabens">Parabéns!</a></li>
+    <li><a href="#seu-widget">Faça seu próprio Widget</a></li>
+    <li><a href="#online">Funcionamento Online</a></li>
+    <li><a href="#cloud">Usar o MoneyLog Cloud ao mesmo tempo</a></li>
+    <li><a href="#bug-acentos">Problemas com acentuação?</a></li>
+    <li><a href="#bug-chrome">Não funciona no Google Chrome</a></li>
+  </ul>
+</nav>
+
+<h2 id="download">Download</h2>
+
+<pre>
 git clone \
     https://github.com/aureliojargas/moneylog.git \
     moneylog-beta
-</PRE>
+</pre>
 
-<P>
-O repositório será copiado para a pasta local <CODE>moneylog-beta</CODE>. Quando ele terminar de baixar, abra o arquivo <CODE>moneylog.html</CODE> em seu navegador (<A HREF="#bug-chrome">que não seja o Google Chrome…</A>).
-</P>
+<p>O repositório será copiado para a pasta local <code>moneylog-beta</code>. Quando ele terminar de baixar, abra o arquivo <code>moneylog.html</code> em seu navegador (<a href="#bug-chrome">que não seja o Google Chrome…</a>).</p>
 
-<H2 ID="update"><a href="#update">Atualização</a></H2>
+<h2 id="update">Atualização</h2>
 
-<P>
-Para sincronizar a sua versão local com os arquivos mais recentes do GitHub:
-</P>
+<p>Para sincronizar a sua versão local com os arquivos mais recentes do GitHub:</p>
 
-<PRE>
+<pre>
 cd moneylog-beta
 git pull
-</PRE>
+</pre>
 
-<P>
-Rode este comando de tempos em tempos, ou coloque no cron.
-</P>
+<p>Rode este comando de tempos em tempos, ou coloque no cron.</p>
 
-<H2 ID="config"><a href="#config">Arquivo de configuração</a></H2>
+<h2 id="config">Arquivo de configuração</h2>
 
-<P>
-Todas as <A HREF="/moneylog/config/">configurações</A> devem ser colocadas no arquivo <CODE>config.js</CODE>.
-</P>
-<P>
-Este arquivo não existe, você deve criá-lo dentro de sua pasta do MoneyLog Beta, já na raiz. Basta copiar o modelo comentado, que vem na pasta sample:
-</P>
+<p>Todas as <a href="/moneylog/config/">configurações</a> devem ser colocadas no arquivo <code>config.js</code>.</p>
 
-<PRE>
+<p>Este arquivo não existe, você deve criá-lo dentro de sua pasta do MoneyLog Beta, já na raiz. Basta copiar o modelo comentado, que vem na pasta sample:</p>
+
+<pre>
 cp sample/config-pt.js config.js
-</PRE>
+</pre>
 
-<P>
-Pode ficar tranquilo, suas alterações no <CODE>config.js</CODE> não serão perdidas quando você <A HREF="#update">atualizar</A> o MoneyLog Beta.
-</P>
+<p>Pode ficar tranquilo, suas alterações no <code>config.js</code> não serão perdidas quando você <a href="#update">atualizar</a> o MoneyLog Beta.</p>
 
-<H2 ID="txt"><a href="#txt">Arquivo TXT para os lançamentos</a></H2>
+<h2 id="txt">Arquivo TXT para os lançamentos</h2>
 
-<P>
-Por padrão o MoneyLog Beta carrega os lançamentos do arquivo de exemplo: <CODE>sample/data-pt.txt</CODE>. NÃO coloque seus dados neste arquivo.
-</P>
-<P>
-Crie uma pasta chamada <CODE>txt</CODE> dentro de sua pasta do MoneyLog Beta. E ali dentro crie os arquivos TXT para guardar seus lançamentos. Para começar simples, crie um único arquivo.
-</P>
+<p>Por padrão o MoneyLog Beta carrega os lançamentos do arquivo de exemplo: <code>sample/data-pt.txt</code>. NÃO coloque seus dados neste arquivo.</p>
 
-<PRE>
+<p>Crie uma pasta chamada <code>txt</code> dentro de sua pasta do MoneyLog Beta. E ali dentro crie os arquivos TXT para guardar seus lançamentos. Para começar simples, crie um único arquivo.</p>
+
+<pre>
 mkdir txt
 echo &gt; txt/dados.txt
-</PRE>
+</pre>
 
-	<BLOCKQUOTE>
-	Nota: O arquivo TXT poderia estar em qualquer pasta de seu computador, mas é melhor deixar aqui dentro da pasta do MoneyLog Beta para evitar problemas com <A HREF="https://developer.mozilla.org/en/Same-origin_policy_for_file%3a_URIs">navegadores paranóicos</A>.
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	Nota: Usar uma pasta chamada txt vai facilitar a <A HREF="#cloud">integração com o Cloud</A>.
-	</BLOCKQUOTE>
-	<BLOCKQUOTE>
-	Importante: Todos os arquivos TXT devem usar a codificação UTF-8.
-	</BLOCKQUOTE>
-<P>
-Agora que você criou o arquivo, precisa configurar o MoneyLog para utilizá-lo. Edite o <A HREF="#config">config.js</A> e procure pela configuração <CODE>dataFiles</CODE>. Descomente a linha e coloque o path do seu arquivo, assim:
-</P>
+<blockquote>
+  Nota: O arquivo TXT poderia estar em qualquer pasta de seu computador, mas é melhor deixar aqui dentro da pasta do MoneyLog Beta para evitar problemas com <a href="https://developer.mozilla.org/en/Same-origin_policy_for_file%3a_URIs">navegadores paranóicos</a>.
+</blockquote>
 
-<PRE>
+<blockquote>
+  Nota: Usar uma pasta chamada txt vai facilitar a <a href="#cloud">integração com o Cloud</a>.
+</blockquote>
+
+<blockquote>
+  Importante: Todos os arquivos TXT devem usar a codificação UTF-8.
+</blockquote>
+
+<p>Agora que você criou o arquivo, precisa configurar o MoneyLog para utilizá-lo. Edite o <a href="#config">config.js</a> e procure pela configuração <code>dataFiles</code>. Descomente a linha e coloque o path do seu arquivo, assim:</p>
+
+<pre>
 dataFiles = ['txt/dados.txt'];
-</PRE>
+</pre>
 
-<P>
-Abra o MoneyLog Beta em seu navegador. Se aparecer a mensagem "<I>Nenhum lançamento</I>", sorria. Está tudo configurado e funcionando corretamente.
-</P>
-<P>
-<IMG ALIGN="middle" SRC="/moneylog/img/beta-txt-ok-400.png" BORDER="0" ALT="">
-</P>
+<p>Abra o MoneyLog Beta em seu navegador. Se aparecer a mensagem "<em>Nenhum lançamento</em>", sorria. Está tudo configurado e funcionando corretamente.</p>
 
-<H2 ID="inserir"><a href="#inserir">Inserir seus lançamentos</a></H2>
+<p class="figure">
+  <img src="/moneylog/img/beta-txt-ok-400.png">
+</p>
 
-<P>
-Agora é seu momento de glória, a hora de inserir seus próprios lançamentos no MoneyLog. Já sabe onde, né? No <CODE>dados.txt</CODE>, claro.
-</P>
-<P>
-O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o arquivo de exemplo <CODE>sample/data-pt.txt</CODE> e o <A HREF="/moneylog/input/">Guia de Lançamentos</A>.
-</P>
-<P>
-Sempre que quiser conferir como está ficando, salve o arquivo no editor de textos e recarregue o MoneyLog Beta no navegador.
-</P>
-<P>
-Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <A HREF="/moneylog/import/">conversor do MoneyLog</A>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).
-</P>
+<h2 id="inserir">Inserir seus lançamentos</h2>
 
-<H2 ID="parabens"><a href="#parabens">Parabéns!</a></H2>
+<p>Agora é seu momento de glória, a hora de inserir seus próprios lançamentos no MoneyLog. Já sabe onde, né? No <code>dados.txt</code>, claro.</p>
 
-<P>
-Seu MoneyLog Beta está funcionando corretamente e agora você já pode dominar seus gastos, não deixando nem um centavinho sequer esquecido.
-</P>
-<P>
-Aconselho que você use um tempo o MoneyLog Beta para se acostumar bem com ele, antes de continuar a leitura deste artigo, que aborda tópicos mais avançados.
-</P>
+<p>O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o arquivo de exemplo <code>sample/data-pt.txt</code> e o <a href="/moneylog/input/">Guia de Lançamentos</a>.</p>
 
-<HR NOSHADE SIZE=1>
+<p>Sempre que quiser conferir como está ficando, salve o arquivo no editor de textos e recarregue o MoneyLog Beta no navegador.</p>
 
-<H2 ID="seu-widget"><a href="#seu-widget">Faça seu próprio Widget</a></H2>
+<p>Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <a href="/moneylog/import/">conversor do MoneyLog</a>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).</p>
 
-<P>
-Se você manja de HTML e JavaScript, saiba que é muito fácil criar um widget novo ali na barra lateral, bastam poucas linhas de código no final de seu <A HREF="#config">config.js</A>.
-</P>
-<P>
-Há quatro widgets de exemplo:
-</P>
+<h2 id="parabens">Parabéns!</h2>
 
-<UL>
-<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-world.js">widget-hello-world.js</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-translation.js">widget-hello-translation.js</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-checkbox.js">widget-hello-checkbox.js</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-nerd-toy.js">widget-nerd-toy.js</A>
-</UL>
+<p>Seu MoneyLog Beta está funcionando corretamente e agora você já pode dominar seus gastos, não deixando nem um centavinho sequer esquecido.</p>
 
-<P>
-E o teu widget, vai ser do que? Lembretes? Algum somatório especial? Exportar os dados do extrato para CSV? Use a criatividade! E depois contribua lá no repositório: <A HREF="https://github.com/aureliojargas/moneylog-plugins">https://github.com/aureliojargas/moneylog-plugins</A>
-</P>
+<p>Aconselho que você use um tempo o MoneyLog Beta para se acostumar bem com ele, antes de continuar a leitura deste artigo, que aborda tópicos mais avançados.</p>
+<hr class="light">
 
-<H2 ID="online"><a href="#online">Funcionamento Online</a></H2>
+<h2 id="seu-widget">Faça seu próprio Widget</h2>
 
-<P>
-O MoneyLog Beta foi criado para funcionar offline, em sua máquina. Mas você também pode ter fazê-lo funcionar (read-only) pela rede.
-</P>
-<P>
-Para poder consultar o MoneyLog Beta <B>na rede local</B>, rode o Apache em sua máquina e coloque os arquivos do MoneyLog nele. Acesse normalmente pelo navegador, usando o endereço de sua máquina.
-</P>
-<P>
-Para poder consultar o MoneyLog Beta <B>pela internet</B>, suba os arquivos para um servidor remoto (tipo o <A HREF="http://www.dreamhost.com/r.cgi?251258">DreamHost</A>) e coloque-os em uma pasta escondida de algum site que você já possua.
-</P>
-<P>
-De uma forma ou de outra, aconselho também <A HREF="/moneylog/config/#myPassword">colocar uma senha de acesso</A> para evitar curiosos.
-</P>
-<P>
-Mas a melhor solução mesmo, é usar o MoneyLog Cloud para acesso remoto. Veja o próximo tópico.
-</P>
+<p>Se você manja de HTML e JavaScript, saiba que é muito fácil criar um widget novo ali na barra lateral, bastam poucas linhas de código no final de seu <a href="#config">config.js</a>.</p>
 
-<H2 ID="cloud"><a href="#cloud">Usar o MoneyLog Cloud ao mesmo tempo</a></H2>
+<p>Há quatro widgets de exemplo:</p>
 
-<P>
-Que tal ter uma solução completa, offline e online, usando dois sabores do MoneyLog ao mesmo tempo?
-</P>
+<ul>
+  <li>
+    <a href="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-world.js">widget-hello-world.js</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-translation.js">widget-hello-translation.js</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-hello-checkbox.js">widget-hello-checkbox.js</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/moneylog-plugins/blob/master/widget-nerd-toy.js">widget-nerd-toy.js</a>
+  </li>
+</ul>
 
-<UL>
-<LI>Para acesso local, use o MoneyLog Beta.
-<LI>Quando estiver longe de sua máquina, use o <A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>.
-</UL>
+<p>E o teu widget, vai ser do que? Lembretes? Algum somatório especial? Exportar os dados do extrato para CSV? Use a criatividade! E depois contribua lá no repositório: <a href="https://github.com/aureliojargas/moneylog-plugins">https://github.com/aureliojargas/moneylog-plugins</a></p>
 
-<P>
-Para que este esquema funcione, você deve usar o mesmo <A HREF="#config">arquivo de configuração</A> e os mesmos <A HREF="#txt">arquivos TXT</A> para as duas versões. Veja como conseguir isso:
-</P>
+<h2 id="online">Funcionamento Online</h2>
 
-<OL>
-<LI>Vá lá no <A HREF="http://moneylog-cloud.aurelio.net">Cloud</A> e <A HREF="http://aurelio.net/moneylog/cloud/#conectar">conecte-se</A>.
-<LI>Entre na pasta /Apps/MoneyLog Cloud, que foi criada em seu Dropbox:
+<p>O MoneyLog Beta foi criado para funcionar offline, em sua máquina. Mas você também pode ter fazê-lo funcionar (read-only) pela rede.</p>
 
-<PRE>
+<p>Para poder consultar o MoneyLog Beta <strong>na rede local</strong>, rode o Apache em sua máquina e coloque os arquivos do MoneyLog nele. Acesse normalmente pelo navegador, usando o endereço de sua máquina.</p>
+
+<p>Para poder consultar o MoneyLog Beta <strong>pela internet</strong>, suba os arquivos para um servidor remoto (tipo o <a href="http://www.dreamhost.com/r.cgi?251258">DreamHost</a>) e coloque-os em uma pasta escondida de algum site que você já possua.</p>
+
+<p>De uma forma ou de outra, aconselho também <a href="/moneylog/config/#myPassword">colocar uma senha de acesso</a> para evitar curiosos.</p>
+
+<p>Mas a melhor solução mesmo, é usar o MoneyLog Cloud para acesso remoto. Veja o próximo tópico.</p>
+
+<h2 id="cloud">Usar o MoneyLog Cloud ao mesmo tempo</h2>
+
+<p>Que tal ter uma solução completa, offline e online, usando dois sabores do MoneyLog ao mesmo tempo?</p>
+
+<ul>
+  <li>Para acesso local, use o MoneyLog Beta.</li>
+  <li>Quando estiver longe de sua máquina, use o <a href="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</a>.
+  </li>
+</ul>
+
+<p>Para que este esquema funcione, você deve usar o mesmo <a href="#config">arquivo de configuração</a> e os mesmos <a href="#txt">arquivos TXT</a> para as duas versões. Veja como conseguir isso:</p>
+
+<ol>
+  <li>Vá lá no <a href="http://moneylog-cloud.aurelio.net">Cloud</a> e <a href="http://aurelio.net/moneylog/cloud/#conectar">conecte-se</a>.
+  </li>
+  <li>Entre na pasta /Apps/MoneyLog Cloud, que foi criada em seu Dropbox:
+    <pre>
 cd ~/Dropbox/Apps/MoneyLog Cloud
-</PRE>
-
-<LI>Crie symlinks para os seus arquivos originais do MoneyLog Beta:
-
-<PRE>
+</pre>
+  </li>
+  <li>Crie symlinks para os seus arquivos originais do MoneyLog Beta:
+    <pre>
 rm -rf config.js txt/
 ln -s /caminho/para/moneylog-beta/config.js .
 ln -s /caminho/para/moneylog-beta/txt/ .
-</PRE>
+</pre>
+  </li>
+  <li>Espere o Dropbox sincronizar tudo.</li>
+  <li>Acesse novamente o <a href="http://moneylog-cloud.aurelio.net">Cloud</a>, agora os seus dados devem aparecer.
+  </li>
+</ol>
 
-<LI>Espere o Dropbox sincronizar tudo.
-<LI>Acesse novamente o <A HREF="http://moneylog-cloud.aurelio.net">Cloud</A>, agora os seus dados devem aparecer.
-</OL>
+<h2 id="bug-acentos">Problemas com acentuação?</h2>
 
-<H2 ID="bug-acentos"><a href="#bug-acentos">Problemas com acentuação?</a></H2>
+<p>O <strong>Firefox</strong> parece ter algum problema em alguns casos, de carregar os acentos incorretamente da primeira vez. Mas basta recarregar a página e tudo fica normal. É um comportamento estranho, que não ocorre com todo mundo. Aqui no meu Firefox do Mac, por exemplo, isso não acontece. De qualquer forma, fica o recado: <strong>Reload</strong> em caso de problemas.</p>
 
-<P>
-O <B>Firefox</B> parece ter algum problema em alguns casos, de carregar os acentos incorretamente da primeira vez. Mas basta recarregar a página e tudo fica normal. É um comportamento estranho, que não ocorre com todo mundo. Aqui no meu Firefox do Mac, por exemplo, isso não acontece. De qualquer forma, fica o recado: <B>Reload</B> em caso de problemas.
-</P>
-<P>
-O <B>Camino</B> (derivado do Firefox pro Mac), não aceita os acentos nem com Reload. A única solução é mudar a codificação do seu arquivo TXT do padrão UTF-8 para o antigo ISO-8859-1. A troca é fácil:
-</P>
+<p>O <strong>Camino</strong> (derivado do Firefox pro Mac), não aceita os acentos nem com Reload. A única solução é mudar a codificação do seu arquivo TXT do padrão UTF-8 para o antigo ISO-8859-1. A troca é fácil:</p>
 
-<PRE>
+<pre>
 # Converter os dados de UTF-8 para ISO-8859-1
 cp dados.txt dados-utf.txt
 iconv -f utf-8 -t iso-8859-1 dados-utf.txt &gt; dados.txt
-</PRE>
+</pre>
 
-<P>
-Outros navegadores (inclusive IE7 e IE8) não apresentaram problemas com acentos em meus testes.
-</P>
+<p>Outros navegadores (inclusive IE7 e IE8) não apresentaram problemas com acentos em meus testes.</p>
 
-<H2 ID="bug-chrome"><a href="#bug-chrome">Não funciona no Google Chrome</a></H2>
+<h2 id="bug-chrome">Não funciona no Google Chrome</h2>
 
-<P>
-A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <A HREF="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</A> a leitura de arquivos locais, mesmo que estejam na mesma pasta.
-</P>
-<P>
-Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:
-</P>
-	<BLOCKQUOTE>
-	Carregando arquivo.txt...
-	</BLOCKQUOTE>
-<P>
-As soluções:
-</P>
+<p>A partir da versão 5.0.335, o Google Chrome endureceu as regras de segurança e <a href="http://code.google.com/p/chromium/issues/detail?id=4197">bloqueou completamente</a> a leitura de arquivos locais, mesmo que estejam na mesma pasta.</p>
 
-<UL>
-<LI>Usar outro navegador. Só o Chrome tem essa nova política extrema.
-<LI>Usar uma versão antiga do Chrome como a 4.x.
-<LI>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
-  <UL>
-  <LI><B>Linux:</B> google-chrome --allow-file-access-from-files
-  <LI><B>Mac:</B> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1
-  <LI><B>Windows:</B> "…\Application\chrome.exe" --allow-file-access-from-files
-  </UL>
-</UL>
+<p>Sabe o seu querido arquivo TXT com os lançamentos do MoneyLog? Pois é, o Chrome não deixa mais fazer a leitura dele, e na tela só aparecerá a seguinte mensagem:</p>
 
-<div id="footer">
-<hr>
-<div class="footer-col">
+<blockquote>
+  Carregando arquivo.txt...
+</blockquote>
 
-<H4>Sabores</H4>
+<p>As soluções:</p>
 
-<UL>
-<LI><A HREF="http://aurelio.net/moneylog/cloud/">MoneyLog Cloud</A>
-<LI><A HREF="http://aurelio.net/moneylog/portable/">MoneyLog Portable</A>
-<LI><A HREF="http://aurelio.net/moneylog/browser/">MoneyLog Browser</A>
-<LI><A HREF="http://aurelio.net/moneylog/beta/">MoneyLog Beta</A>
-</UL>
-
-</div>
-<div class="footer-col">
-
-<H4>Docs</H4>
-
-<UL>
-<LI><A HREF="/moneylog/about/">sobre</A>
-<LI><A HREF="/moneylog/v5/">novidades v5</A> ★
-<LI><A HREF="/moneylog/faq/">FAQ</A>
-<LI><A HREF="/moneylog/input/">lançamentos</A>
-<LI><A HREF="/moneylog/config/">configuração</A>
-</UL>
-
-</div>
-<div class="footer-col last">
-
-<H4>Misc</H4>
-
-<UL>
-<LI><A HREF="/moneylog/import/">conversor</A>
-<LI><A HREF="/moneylog/donate/">doação</A> ♥
-<LI><A HREF="/moneylog/history/">versões antigas</A>
-<LI><A HREF="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</A> ★
-</UL>
-
-</div>
-<hr style="clear: both;">
-<a id="footer-home" href="/moneylog/">← início</a>
-<a id="footer-twitter" href="http://twitter.com/oreio" title="Fale comigo">&#64;oreio</a>
-<div style="clear: both;"></div>
-</div> <!-- #footer -->
-<a class="cabecao" href="/" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="/include/10anos/aureliolga.jpg"></a>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-280222-1']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<div id="disqus_thread"></div>
-<script>
-    function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://aurelionet.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags moneylog/beta/index.t2t -->
-</BODY></HTML>
+<ul>
+  <li>Usar outro navegador. Só o Chrome tem essa nova política extrema.</li>
+  <li>Usar uma versão antiga do Chrome como a 4.x.</li>
+  <li>Usar uma opção mágica na linha de comando, para que o Chrome desligue esta nova política:
+    <ul>
+      <li><strong>Linux:</strong> google-chrome --allow-file-access-from-files</li>
+      <li><strong>Mac:</strong> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-file-access-from-files &gt;/dev/null 2&gt;&amp;1</li>
+      <li><strong>Windows:</strong> "…\Application\chrome.exe" --allow-file-access-from-files</li>
+    </ul>
+  </li>
+</ul>
