@@ -89,6 +89,13 @@ defaults:
       hide_comments: true
   -
     scope:
+      path: "moneylog"
+    values:
+      article_footer_after: nav-moneylog.html
+      hide_ads: true
+      hide_read_more: true
+  -
+    scope:
       path: "regex"
     values:
       css_extra: /regex/regex.css
