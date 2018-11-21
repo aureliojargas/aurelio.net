@@ -52,6 +52,11 @@ check_missing_article_date() {
     git grep '^date: 1999-12-31'
 }
 
+# Do not link foo/index.html, but foo/
+check_link_to_index_html() {
+    grep 'href="[^"]*/index\.html"' $files
+}
+
 # Do not use relative URLs in links and images
 check_relative_urls() {
     # ./
@@ -101,6 +106,7 @@ check_windows_linebreak() {
 active_checks="
     check_accidental_liquid_markup
     check_missing_article_date
+    check_link_to_index_html
     check_windows_linebreak
     check_unquoted_attributes
     check_mixed_content
