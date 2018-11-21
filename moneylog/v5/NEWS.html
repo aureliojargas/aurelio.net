@@ -86,22 +86,22 @@ title: NEWS — MoneyLog v5 - March, 2012
 <ul>
   <li><strong>New data separator:</strong> spaces are now allowed, the TAB is no longer mandatory. DO NOT use spaces inside values. [r268] [r392]</li>
   <li>Out-of-range days (2000-01-99) will turn to last month day (2000-01-31). [r496]</li>
-  <li>New config <code>dataFilesDefault</code> to set the default file when using multiple TXT files (local or Dropbox). [r260]</li>
-  <li>New config <code>ignoreDataOlderThan</code>, to ignore entries older than the specified date. [r415]</li>
-  <li>New config <code>ignoreDataNewerThan</code>, to ignore entries newer than the specified date. [r417]</li>
+  <li>New config <a href="/moneylog/config/#dataFilesDefault">dataFilesDefault</a> to set the default file when using multiple TXT files (local or Dropbox). [r260]</li>
+  <li>New config <a href="/moneylog/config/#ignoreDataOlderThan">ignoreDataOlderThan</a>, to ignore entries older than the specified date. [r415]</li>
+  <li>New config <a href="/moneylog/config/#ignoreDataNewerThan">ignoreDataNewerThan</a>, to ignore entries newer than the specified date. [r417]</li>
 </ul>
 
 <h2 id="password">Password</h2>
 
 <ul>
-  <li><strong>New feature: access password.</strong> Use the <code>myPassword</code> config. (thanks @bebetasso) [r434]</li>
+  <li><strong>New feature: access password.</strong> Use the <a href="/moneylog/config/#myPassword">myPassword</a> config. (thanks @bebetasso) [r434]</li>
 </ul>
 
 <h2 id="full-screen">Full Screen mode</h2>
 
 <ul>
   <li>New button for Full Screen mode. [r119]</li>
-  <li>New config <code>initFullScreen</code> to start app in Full Screen mode. (thanks @xupisco) [r324]</li>
+  <li>New config <a href="/moneylog/config/#initFullScreen">initFullScreen</a> to start app in Full Screen mode. (thanks @xupisco) [r324]</li>
 </ul>
 
 <h2 id="filters-all">Filters for all reports</h2>
@@ -113,8 +113,8 @@ title: NEWS — MoneyLog v5 - March, 2012
 <h2 id="widget-view">View widget</h2>
 
 <ul>
-  <li>New config <code>showViewWidget</code> to enable/disable the View widget. [r387]</li>
-  <li>New config <code>initViewWidgetOpen</code> to open/close the View widget. [r386]</li>
+  <li>New config <a href="/moneylog/config/#showViewWidget">showViewWidget</a> to enable/disable the View widget. [r387]</li>
+  <li>New config <a href="/moneylog/config/#initViewWidgetOpen">initViewWidgetOpen</a> to open/close the View widget. [r386]</li>
 </ul>
 
 <h2 id="widget-tag-cloud">Tag Cloud widget</h2>
@@ -122,12 +122,12 @@ title: NEWS — MoneyLog v5 - March, 2012
 <ul>
   <li>New option in Tag Cloud: [X] Reset. (thanks @wcomnisky) [r383]</li>
   <li><strong>New tri-state Tag Cloud:</strong> first click select, second exclude (negate), third unselect. The option "[X] Group selected tags" does not affect excluded tags. [r451]</li>
-  <li>New config <code>showTagCloud</code> to enable/disable the Tag Cloud. [r387]</li>
-  <li>New config <code>initTagCloudOpen</code> to open/close the Tag Cloud. [r386]</li>
-  <li>New config <code>initSelectedTags</code>, to select some tags at start up. [r444]</li>
-  <li>New config <code>initExcludedTags</code>, to exclude some tags at start up. [r452]</li>
-  <li>New config <code>ignoreTags</code> to ignore all entries with one of the specified tags. (thanks @erickmor) [r435]</li>
-  <li>The config <code>highlightTags</code> now can also be an array. Useful for tags with spaces. [r431]</li>
+  <li>New config <a href="/moneylog/config/#showTagCloud">showTagCloud</a> to enable/disable the Tag Cloud. [r387]</li>
+  <li>New config <a href="/moneylog/config/#initTagCloudOpen">initTagCloudOpen</a> to open/close the Tag Cloud. [r386]</li>
+  <li>New config <a href="/moneylog/config/#initSelectedTags">initSelectedTags</a>, to select some tags at start up. [r444]</li>
+  <li>New config <a href="/moneylog/config/#initExcludedTags">initExcludedTags</a>, to exclude some tags at start up. [r452]</li>
+  <li>New config <a href="/moneylog/config/#ignoreTags">ignoreTags</a> to ignore all entries with one of the specified tags. (thanks @erickmor) [r435]</li>
+  <li>The config <a href="/moneylog/config/#highlightTags">highlightTags</a> now can also be an array. Useful for tags with spaces. [r431]</li>
 </ul>
 
 <h2 id="widget-tag-summary">Tag Summary widget</h2>
@@ -135,10 +135,10 @@ title: NEWS — MoneyLog v5 - March, 2012
 <ul>
   <li>New feature: Tag Summary. [r194] [r511]</li>
   <li>New option in Tag Summary: [X] Sort by value. [r429]</li>
-  <li>New config <code>TagSummary.config.active</code> to enable/disable the Tag Summary. [r387] [r511]</li>
-  <li>New config <code>TagSummary.config.opened</code> to open/close the Tag Summary. [r386] [r511]</li>
-  <li>New config <code>TagSummary.config.showTagless</code> to show/hide the EMPTY tag. (thanks @denilsonsa) [r211] [r511]</li>
-  <li>New config <code>TagSummary.config.checkSort</code> to check the option [X] Order by value. [r430] [r511]</li>
+  <li>New config <a href="/moneylog/config/#TagSummary-config-active">TagSummary.config.active</a> to enable/disable the Tag Summary. [r387] [r511]</li>
+  <li>New config <a href="/moneylog/config/#TagSummary-config-opened">TagSummary.config.opened</a> to open/close the Tag Summary. [r386] [r511]</li>
+  <li>New config <a href="/moneylog/config/#TagSummary-config-showTagless">TagSummary.config.showTagless</a> to show/hide the EMPTY tag. (thanks @denilsonsa) [r211] [r511]</li>
+  <li>New config <a href="/moneylog/config/#TagSummary-config-checkSort">TagSummary.config.checkSort</a> to check the option [X] Order by value. [r430] [r511]</li>
 </ul>
 
 <h2 id="widget-about">About widget</h2>
@@ -152,8 +152,8 @@ title: NEWS — MoneyLog v5 - March, 2012
 <ul>
   <li><strong>New feature: Tag Report</strong> in monthly and yearly reports. Table headings are clickable for sorting. (thanks @denilsonsa) [r524]</li>
   <li>New option in Tag Report: [X] Hide related tags. [r527]</li>
-  <li>New config <code>checkHideRelatedTags</code>, to check/uncheck the option [X] Hide related tags. [r527]</li>
-  <li>New config <code>showTagReport</code>, to enable/disable the Tag Report. [r533]</li>
+  <li>New config <a href="/moneylog/config/#checkHideRelatedTags">checkHideRelatedTags</a>, to check/uncheck the option [X] Hide related tags. [r527]</li>
+  <li>New config <a href="/moneylog/config/#showTagReport">showTagReport</a>, to enable/disable the Tag Report. [r533]</li>
 </ul>
 
 <h2 id="rows-summary">Rows Summary</h2>
@@ -169,7 +169,7 @@ title: NEWS — MoneyLog v5 - March, 2012
 <h2 id="date-format">Date format</h2>
 
 <ul>
-  <li><strong>New configs to set locale date</strong>: <code>showLocaleDate</code>, <code>i18nDatabase.pt.dateFormat</code>, <code>i18nDatabase.pt.dateFormatMonth</code>, <code>i18nDatabase.pt.dateFormatYear</code>. Change "pt" to "en", "es"…. (thanks @g_nemmi) [r113] [r352]</li>
+  <li><strong>New configs to set locale date</strong>: <a href="/moneylog/config/#showLocaleDate">showLocaleDate</a>, <a href="/moneylog/config/#i18nDatabase-pt-dateFormat">i18nDatabase.pt.dateFormat</a>, <a href="/moneylog/config/#i18nDatabase-pt-dateFormatMonth">i18nDatabase.pt.dateFormatMonth</a>, <a href="/moneylog/config/#i18nDatabase-pt-dateFormatYear">i18nDatabase.pt.dateFormatYear</a>. Change "pt" to "en", "es"…. (thanks @g_nemmi) [r113] [r352]</li>
   <li>New tokens for locale dates: B = full month name, b = abbreviated month name. [r356]</li>
   <li><strong>Now showing locale dates by default.</strong> [r412]</li>
   <li>Now using month names instead numbers in default locale format. [r420]</li>
@@ -179,10 +179,10 @@ title: NEWS — MoneyLog v5 - March, 2012
 
 <ul>
   <li><strong>New date filter:</strong> combos to choose an initial and final month for the reports. It disables the Recent Only and Future Data options. (thanks @denilsonsa, @adolfont, @magasine) [r358]</li>
-  <li>Now the new date filter is the default. New config <code>useLegacyDateFilter</code> to bring the old options back. (thanks @denilsonsa) [r369]</li>
-  <li>New configs <code>checkDateFrom</code> and <code>checkDateUntil</code>, to check/uncheck date filters at startup. [r378]</li>
-  <li>New config <code>initMonthsOffsetFrom</code> to set the initial selected item for From:. [r405]</li>
-  <li>New config <code>initMonthsOffsetUntil</code> to set the initial selected item for Until:. [r407]</li>
+  <li>Now the new date filter is the default. New config <a href="/moneylog/config/#useLegacyDateFilter">useLegacyDateFilter</a> to bring the old options back. (thanks @denilsonsa) [r369]</li>
+  <li>New configs <a href="/moneylog/config/#checkDateFrom">checkDateFrom</a> and <a href="/moneylog/config/#checkDateUntil">checkDateUntil</a>, to check/uncheck date filters at startup. [r378]</li>
+  <li>New config <a href="/moneylog/config/#initMonthsOffsetFrom">initMonthsOffsetFrom</a> to set the initial selected item for From:. [r405]</li>
+  <li>New config <a href="/moneylog/config/#initMonthsOffsetUntil">initMonthsOffsetUntil</a> to set the initial selected item for Until:. [r407]</li>
 </ul>
 
 <h2 id="charts">Charts</h2>
@@ -190,7 +190,7 @@ title: NEWS — MoneyLog v5 - March, 2012
 <ul>
   <li>Now showing chart bar original value as a tooltip. (by @_Felipe) [r144]</li>
   <li><strong>New feature: charts at daily reports.</strong> [r190]</li>
-  <li>New configs to set the initial selected item for each chart type: <code>initChartDaily</code>, <code>initChartMonthly</code>, <code>initChartYearly</code>. [r192]</li>
+  <li>New configs to set the initial selected item for each chart type: <a href="/moneylog/config/#initChartDaily">initChartDaily</a>, <a href="/moneylog/config/#initChartMonthly">initChartMonthly</a>, <a href="/moneylog/config/#initChartYearly">initChartYearly</a>. [r192]</li>
   <li>Fixed two bugs in the chart bar label. (thanks @xupisco) [r350]
     <ul>
       <li>When the value was exactly 1000, it was showing 1 instead 1k.</li>
@@ -213,10 +213,10 @@ title: NEWS — MoneyLog v5 - March, 2012
 
 <ul>
   <li>New sample config file, in Portuguese. [r274]</li>
-  <li>Renamed some config names from default* to check*: <code>checkMonthPartials</code>, <code>checkRegex</code>, <code>checkNegate</code>. [r380]</li>
-  <li>New config <code>showBalance</code>, to show/hide the Balance column in all reports. [r529]</li>
-  <li>New configs for the default report sorting: <code>sortData.d.index</code>, <code>sortData.d.rev</code>, <code>sortData.m.index</code>, <code>sortData.m.rev</code>, <code>sortData.y.index</code>, <code>sortData.y.rev</code>. [r523]</li>
-  <li>The config <code>oneFile</code> was removed. [r288]</li>
+  <li>Renamed some config names from default* to check*: <a href="/moneylog/config/#checkMonthPartials">checkMonthPartials</a>, <a href="/moneylog/config/#checkRegex">checkRegex</a>, <a href="/moneylog/config/#checkNegate">checkNegate</a>. [r380]</li>
+  <li>New config <a href="/moneylog/config/#showBalance">showBalance</a>, to show/hide the Balance column in all reports. [r529]</li>
+  <li>New configs for the default report sorting: <a href="/moneylog/config/#sortData-d-index">sortData.d.index</a>, <a href="/moneylog/config/#sortData-d-rev">sortData.d.rev</a>, <a href="/moneylog/config/#sortData-m-index">sortData.m.index</a>, <a href="/moneylog/config/#sortData-m-rev">sortData.m.rev</a>, <a href="/moneylog/config/#sortData-y-index">sortData.y.index</a>, <a href="/moneylog/config/#sortData-y-rev">sortData.y.rev</a>. [r523]</li>
+  <li>The config <a href="/moneylog/config/#oneFile">oneFile</a> was removed. [r288]</li>
   <li>Check the new config guide <a href="http://aurelio.net/moneylog/config/">http://aurelio.net/moneylog/config/</a>
   </li>
 </ul>
