@@ -1,24 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
+---
+title: Importar dados para o MoneyLog
+hide_byline: true
+---
 
 <!--
-2009-08-19
-BB: OFX, OFC, TXT, PALM, CSV, PDF (@botobr)
-Caixa: TXT, OFC, OFX (@oreio)
-Citibank: QIF, OFX, CSV e XLS (@badnetmask)
-Itau: XLS, OFC 1.0, OFC 1.6, OFX e TXT (@badnetmask)
-Real: OFX, QIF (Quicken, Money 97, Money 98, Money 99), XLS, DOC (@oreio)
-2009-08-21
-HSBC: OFC (MS Money 2002, Quicken 6.0), TXT, XLS, DOC (@dsracoon @polvaceo @daniel_pm @xexa_sl)
+  2009-08-19
+  BB: OFX, OFC, TXT, PALM, CSV, PDF (@botobr)
+  Caixa: TXT, OFC, OFX (@oreio)
+  Citibank: QIF, OFX, CSV e XLS (@badnetmask)
+  Itau: XLS, OFC 1.0, OFC 1.6, OFX e TXT (@badnetmask)
+  Real: OFX, QIF (Quicken, Money 97, Money 98, Money 99), XLS, DOC (@oreio)
+  2009-08-21
+  HSBC: OFC (MS Money 2002, Quicken 6.0), TXT, XLS, DOC (@dsracoon @polvaceo @daniel_pm @xexa_sl)
 -->
 
-	<title>Importar dados para o MoneyLog</title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
-
 <style type="text/css">
-	textarea { font-family: monospace; }
+  textarea {
+    font-family: monospace;
+    width: 100%;
+  }
 </style>
 
 <script type="text/javascript">
@@ -30,356 +30,343 @@ var dataTagSeparator = ',';
 var commentChar = '#';   // Must be at line start (column 1)
 
 String.prototype.strip = function () {
-	return this.replace(/^\s+/, '').replace(/\s+$/, '');
+    return this.replace(/^\s+/, '').replace(/\s+$/, '');
 };
 
 function formatValue(n) {
-	return (document.getElementById('usecommas').checked) ? n.replace('.', ',') : n;
+    return (document.getElementById('usecommas').checked) ? n.replace('.', ',') : n;
 }
 function formatDocNumber(n) {
-	return '(Doc. ' + n + ') ';
+    return '(Doc. ' + n + ') ';
 }
 function formatDescription(s, doc_nr) {
-	s = s.strip();
-	// Prepend Doc number
-	if (doc_nr && !document.getElementById('hidedocnumber').checked) {
-		s = formatDocNumber(doc_nr) + s;
-	}
-	// lowercased
-	if (document.getElementById('lowerdesc').checked) {
-		s = s.toLowerCase();
-	}
-	// truncated
-	if (document.getElementById('truncatedesc').checked) {
-		s = s.substring(0, document.getElementById('truncatedescvalue').value);
-		s = s.strip();
-	}
-	return s;
+    s = s.strip();
+    // Prepend Doc number
+    if (doc_nr && !document.getElementById('hidedocnumber').checked) {
+        s = formatDocNumber(doc_nr) + s;
+    }
+    // lowercased
+    if (document.getElementById('lowerdesc').checked) {
+        s = s.toLowerCase();
+    }
+    // truncated
+    if (document.getElementById('truncatedesc').checked) {
+        s = s.substring(0, document.getElementById('truncatedescvalue').value);
+        s = s.strip();
+    }
+    return s;
 }
 function convertOFX(rawData) {
 
-	// Handles OFX and OFC.
-	// There are little differences, noted on the comments.
-	// As a XML file, it can be indented by spaces or TABs (or both)
-	// and tags could be closed or left open (<foo>bar or <foo>bar</foo>)
+    // Handles OFX and OFC.
+    // There are little differences, noted on the comments.
+    // As a XML file, it can be indented by spaces or TABs (or both)
+    // and tags could be closed or left open (<foo>bar or <foo>bar</foo>)
 
-	var i, newline, parsedData, rowDate, rowAmount, rowDescription, rowDocNumber, matches, m;
+    var i, newline, parsedData, rowDate, rowAmount, rowDescription, rowDocNumber, matches, m;
 
-	newline = /\r?\n[\t ]*/g;  // \r\n Windows, \n Linux/Mac (plus leading TABS/spaces)
-	parsedData = [];
+    newline = /\r?\n[\t ]*/g;  // \r\n Windows, \n Linux/Mac (plus leading TABS/spaces)
+    parsedData = [];
 
-	rawData = rawData.replace(newline, ''); // one big line
+    rawData = rawData.replace(newline, ''); // one big line
 
-	matches = rawData.match(/<STMTTRN>.*?<\/STMTTRN>/g);
-	if (!matches) {
-		return [];
-	}
+    matches = rawData.match(/<STMTTRN>.*?<\/STMTTRN>/g);
+    if (!matches) {
+        return [];
+    }
 
-	for (i = 0; i < matches.length; i++) {
+    for (i = 0; i < matches.length; i++) {
 
-		rowDate = rowAmount = rowDocNumber = rowDescription = '';
+        rowDate = rowAmount = rowDocNumber = rowDescription = '';
 
-		// <DTPOSTED>20090801080000 (OFX - Real)
-		// <DTPOSTED>20090211120000[-3:BRT]</DTPOSTED> (OFX - Caixa)
-		// <DTPOSTED>20090801 (OFC - Caixa)
-		m = matches[i].match(/<DTPOSTED>(\d\d\d\d)(\d\d)(\d\d)/);
-		if (m) {
-			rowDate = m[1] + '-' + m[2] + '-' + m[3];
-		} else {
-			rowDate = 'DATA_INVÁLIDA';
-		}
+        // <DTPOSTED>20090801080000 (OFX - Real)
+        // <DTPOSTED>20090211120000[-3:BRT]</DTPOSTED> (OFX - Caixa)
+        // <DTPOSTED>20090801 (OFC - Caixa)
+        m = matches[i].match(/<DTPOSTED>(\d\d\d\d)(\d\d)(\d\d)/);
+        if (m) {
+            rowDate = m[1] + '-' + m[2] + '-' + m[3];
+        } else {
+            rowDate = 'DATA_INVÁLIDA';
+        }
 
-		// <TRNAMT>1234.00
-		// <TRNAMT>-1234.00
-		// <TRNAMT>-1234.00</TRNAMT>
-		m = matches[i].match(/<TRNAMT>(-?[\d.]+)/);
-		if (m) {
-			rowAmount = m[1];
-		} else {
-			rowAmount = 'VALOR_INVÁLIDO';
-		}
+        // <TRNAMT>1234.00
+        // <TRNAMT>-1234.00
+        // <TRNAMT>-1234.00</TRNAMT>
+        m = matches[i].match(/<TRNAMT>(-?[\d.]+)/);
+        if (m) {
+            rowAmount = m[1];
+        } else {
+            rowAmount = 'VALOR_INVÁLIDO';
+        }
 
-		// <CHECKNUM>0223456 (OFX - Real)
-		// <CHECKNUM>0223456</CHECKNUM> (OFX - Caixa)
-		// <CHKNUM>0223456 (OFC - Caixa)
-		m = matches[i].match(/<(CHK|CHECK)NUM>(\d+)/);
-		if (m) {
-			rowDocNumber = m[2];
-		} else {
-			rowDocNumber = 'NUMDOC_INVÁLIDO';
-		}
+        // <CHECKNUM>0223456 (OFX - Real)
+        // <CHECKNUM>0223456</CHECKNUM> (OFX - Caixa)
+        // <CHKNUM>0223456 (OFC - Caixa)
+        m = matches[i].match(/<(CHK|CHECK)NUM>(\d+)/);
+        if (m) {
+            rowDocNumber = m[2];
+        } else {
+            rowDocNumber = 'NUMDOC_INVÁLIDO';
+        }
 
-		// <MEMO>CORRECAO POUPANCA
-		// <MEMO>CORRECAO POUPANCA</MEMO>
-		m = matches[i].match(/<MEMO>(.*?)[<]/);
-		if (m) {
-			rowDescription = m[1];
-		}
+        // <MEMO>CORRECAO POUPANCA
+        // <MEMO>CORRECAO POUPANCA</MEMO>
+        m = matches[i].match(/<MEMO>(.*?)[<]/);
+        if (m) {
+            rowDescription = m[1];
+        }
 
-		parsedData.push([
-			rowDate,
-			formatValue(rowAmount),
-			formatDescription(rowDescription, rowDocNumber)
-		].join(dataFieldSeparator));
-	}
-	return parsedData;
+        parsedData.push([
+            rowDate,
+            formatValue(rowAmount),
+            formatDescription(rowDescription, rowDocNumber)
+        ].join(dataFieldSeparator));
+    }
+    return parsedData;
 }
 function convertQIF(rawData, version) {
-	// Thanks Leslie Harlley Watter
+    // Thanks Leslie Harlley Watter
 
-	// The only difference between QIF versions are in the date format:
-	// Quicken    : @@@D12/31'09
-	// MS Money 97: @@@D31/12'09
-	// MS Money 98: @@@D31/12'09
-	// MS Money 99: @@@D31/12/09
+    // The only difference between QIF versions are in the date format:
+    // Quicken    : @@@D12/31'09
+    // MS Money 97: @@@D31/12'09
+    // MS Money 98: @@@D31/12'09
+    // MS Money 99: @@@D31/12/09
 
-	var i, m, newline, sep, parsedData, rows, rowDate, rowDateCentury, rowAmount, rowDescription, rowDocNumber;
+    var i, m, newline, sep, parsedData, rows, rowDate, rowDateCentury, rowAmount, rowDescription, rowDocNumber;
 
-	newline = /\r?\n/g;  // \r\n Windows, \n Linux/Mac
-	sep = '@@@';
-	parsedData = [];
+    newline = /\r?\n/g;  // \r\n Windows, \n Linux/Mac
+    sep = '@@@';
+    parsedData = [];
 
-	rawData = rawData.replace(newline, sep);
-	rawData = rawData.replace(new RegExp(sep + '\\^', 'g'), '\n^');
+    rawData = rawData.replace(newline, sep);
+    rawData = rawData.replace(new RegExp(sep + '\\^', 'g'), '\n^');
 
-	// Split lines
-	rows = rawData.split('\n');
+    // Split lines
+    rows = rawData.split('\n');
 
-	for (i = 0; i < rows.length; i++) {
+    for (i = 0; i < rows.length; i++) {
 
-		rowDate = rowAmount = rowDocNumber = rowDescription = rowDateCentury = '';
+        rowDate = rowAmount = rowDocNumber = rowDescription = rowDateCentury = '';
 
-		// ^@@@D04/07'09@@@T4.59@@@N0002313@@@MJUROS POUPANCA
+        // ^@@@D04/07'09@@@T4.59@@@N0002313@@@MJUROS POUPANCA
 
-		// Invalid Line
-		if (rows[i].substring(0, 1) != '^') {
-			continue;
-		}
-		if (rows[i].length < 10) {
-			continue;
-		}
+        // Invalid Line
+        if (rows[i].substring(0, 1) != '^') {
+            continue;
+        }
+        if (rows[i].length < 10) {
+            continue;
+        }
 
-		// @@@D31/12'09 or @@@D31/12/09 or @@@D12/31'09 --> 09-12-31		
-		m = rows[i].match(/@@@D(\d\d)\/(\d\d)['\/](\d\d)/);
-		if (m) {
-			if (version == 'quicken') {
-				rowDate = m[3] + '-' + m[1] + '-' + m[2]; // m/d/y > y-m-d
-			} else {
-				rowDate = m[3] + '-' + m[2] + '-' + m[1]; // d/m/y > y-m-d
-			}
+        // @@@D31/12'09 or @@@D31/12/09 or @@@D12/31'09 --> 09-12-31		
+        m = rows[i].match(/@@@D(\d\d)\/(\d\d)['\/](\d\d)/);
+        if (m) {
+            if (version == 'quicken') {
+                rowDate = m[3] + '-' + m[1] + '-' + m[2]; // m/d/y > y-m-d
+            } else {
+                rowDate = m[3] + '-' + m[2] + '-' + m[1]; // d/m/y > y-m-d
+            }
 
-			// YY-MM-DD --> YYYY-MM-DD (where YYYY == 19* || 20*)
-			// Our range: 1960 - 2059
-			rowDateCentury = (m[3].substring(0, 1) >= 6) ? '19' : '20';
-			rowDate = rowDateCentury + rowDate;
-		} else {
-			rowDate = 'DATA_INVÁLIDA';
-		}
+            // YY-MM-DD --> YYYY-MM-DD (where YYYY == 19* || 20*)
+            // Our range: 1960 - 2059
+            rowDateCentury = (m[3].substring(0, 1) >= 6) ? '19' : '20';
+            rowDate = rowDateCentury + rowDate;
+        } else {
+            rowDate = 'DATA_INVÁLIDA';
+        }
 
-		// @@@T4.59
-		// @@@T-4.59
-		m = rows[i].match(/@@@T(-?[\d.]+)/);
-		if (m) {
-			rowAmount = m[1];
-		} else {
-			rowAmount = 'VALOR_INVÁLIDO';
-		}
+        // @@@T4.59
+        // @@@T-4.59
+        m = rows[i].match(/@@@T(-?[\d.]+)/);
+        if (m) {
+            rowAmount = m[1];
+        } else {
+            rowAmount = 'VALOR_INVÁLIDO';
+        }
 
-		// @@@N0002313
-		m = rows[i].match(/@@@N(\d+)/);
-		if (m) {
-			rowDocNumber = m[1];
-		} else {
-			rowDocNumber = 'NUMDOC_INVÁLIDO';
-		}
+        // @@@N0002313
+        m = rows[i].match(/@@@N(\d+)/);
+        if (m) {
+            rowDocNumber = m[1];
+        } else {
+            rowDocNumber = 'NUMDOC_INVÁLIDO';
+        }
 
-		// @@@MJUROS POUPANCA
-		m = rows[i].match(/@@@M(.*?)(@@@|$)/);
-		rowDescription = m[1];
+        // @@@MJUROS POUPANCA
+        m = rows[i].match(/@@@M(.*?)(@@@|$)/);
+        rowDescription = m[1];
 
-		parsedData.push([
-			rowDate,
-			formatValue(rowAmount),
-			formatDescription(rowDescription, rowDocNumber)
-		].join(dataFieldSeparator));
-	}
-	return parsedData;
+        parsedData.push([
+            rowDate,
+            formatValue(rowAmount),
+            formatDescription(rowDescription, rowDocNumber)
+        ].join(dataFieldSeparator));
+    }
+    return parsedData;
 }
 
 function convertMyMoneyLog(rawData) {
-	var i, parsedData, rows, rowDate, rowAmount, rowTags, fields, rowDescription, rowCategories, rowAccount;
+    var i, parsedData, rows, rowDate, rowAmount, rowTags, fields, rowDescription, rowCategories, rowAccount;
 
-	// Reset the data holder
-	parsedData = [];
-	// Split lines
-	rows = rawData.split(dataRecordSeparator);
-	// Scan data rows
-	for (i = 0; i < rows.length; i++) {
-		rowDate = rowAmount = rowDescription = rowAccount = '';
-		rowTags = [];
-		rowCategories = [];
+    // Reset the data holder
+    parsedData = [];
+    // Split lines
+    rows = rawData.split(dataRecordSeparator);
+    // Scan data rows
+    for (i = 0; i < rows.length; i++) {
+        rowDate = rowAmount = rowDescription = rowAccount = '';
+        rowTags = [];
+        rowCategories = [];
 
-		// Preserve commented rows
-		if (rows[i].indexOf(commentChar) === 0) {
-			parsedData.push(rows[i]);
-			continue;
-		}
-		// Preserve blank lines
-		if (!rows[i].strip()) {
-			parsedData.push('');
-			continue;
-		}
+        // Preserve commented rows
+        if (rows[i].indexOf(commentChar) === 0) {
+            parsedData.push(rows[i]);
+            continue;
+        }
+        // Preserve blank lines
+        if (!rows[i].strip()) {
+            parsedData.push('');
+            continue;
+        }
 
-		// Separate fields
-		fields = rows[i].split(dataFieldSeparator);
+        // Separate fields
+        fields = rows[i].split(dataFieldSeparator);
 
-		rowDate = fields[0];
-		rowAmount = fields[1];
-		rowDescription = fields[2];
-		rowCategories = fields[3];
-		rowAccount = fields[4];
+        rowDate = fields[0];
+        rowAmount = fields[1];
+        rowDescription = fields[2];
+        rowCategories = fields[3];
+        rowAccount = fields[4];
 
-		// Account turns to Tag
-		if (rowAccount) {
-			rowTags.push(rowAccount);
-		}
-		// Categories turns to Tags
-		if (rowCategories) {
-			rowTags = rowTags.concat(rowCategories.split(/ *; */));
-		}
-		// Compose tags
-		if (rowTags.length > 0) {
-			rowTags = rowTags.join(dataTagSeparator) + dataTagTerminator;
-		} else {
-			rowTags = '';
-		}
+        // Account turns to Tag
+        if (rowAccount) {
+            rowTags.push(rowAccount);
+        }
+        // Categories turns to Tags
+        if (rowCategories) {
+            rowTags = rowTags.concat(rowCategories.split(/ *; */));
+        }
+        // Compose tags
+        if (rowTags.length > 0) {
+            rowTags = rowTags.join(dataTagSeparator) + dataTagTerminator;
+        } else {
+            rowTags = '';
+        }
 
-		parsedData.push([
-			rowDate,
-			formatValue(rowAmount),
-			rowTags + formatDescription(rowDescription)
-		].join(dataFieldSeparator));
-	}
-	return parsedData;
+        parsedData.push([
+            rowDate,
+            formatValue(rowAmount),
+            rowTags + formatDescription(rowDescription)
+        ].join(dataFieldSeparator));
+    }
+    return parsedData;
 }
 
 function convertMoneyLog4(rawData) {
-	// Removes the extra spaces that are now invalid:
-	// Spaces after the signal :  - 1.23  or  + 10
-	// Spaces before reccurring: 1.23 *2  or  10 /2
+    // Removes the extra spaces that are now invalid:
+    // Spaces after the signal :  - 1.23  or  + 10
+    // Spaces before reccurring: 1.23 *2  or  10 /2
 
-	// From MoneyLog v4:
-	//
-	// var dataPatterns = {
-	// 	date:
-	// 		// YYYY-MM-DD
-	// 		/^ *(\d{4}-\d\d-\d\d) *$/,
-	// 	amountNumber:
-	// 		// 7  +7  -7  7.00  7,00  1234567,89  1.234.567,89  1,234,567.89 1234567,89
-	// 		/^ *([+\-]? *(\d+|\d{1,3}([.,]\d{3})*)([.,]\d\d)?) *$/,
-	// 	amountCents:
-	// 		// .12  ,12
-	// 		/[.,](\d\d) *$/,
-	// 	amountRecurrent:
-	// 		// *N or /N where N>0
-	// 		/([*\/])([1-9][0-9]*) *$/
-	// };
+    // From MoneyLog v4:
+    //
+    // var dataPatterns = {
+    // 	date:
+    // 		// YYYY-MM-DD
+    // 		/^ *(\d{4}-\d\d-\d\d) *$/,
+    // 	amountNumber:
+    // 		// 7  +7  -7  7.00  7,00  1234567,89  1.234.567,89  1,234,567.89 1234567,89
+    // 		/^ *([+\-]? *(\d+|\d{1,3}([.,]\d{3})*)([.,]\d\d)?) *$/,
+    // 	amountCents:
+    // 		// .12  ,12
+    // 		/[.,](\d\d) *$/,
+    // 	amountRecurrent:
+    // 		// *N or /N where N>0
+    // 		/([*\/])([1-9][0-9]*) *$/
+    // };
 
-	// So let's just join all these regexes together in an ugly monster
-	// and fix the formatting
-	return [rawData.replace(
-		/^ *(\d{4}-\d\d-\d\d *\t *)([+\-]?)( *)(\d+|\d{1,3}([.,]\d{3})*)([.,]\d\d)?( *)([*\/][1-9][0-9]*)?( *\t)/gm,
-		'$1$3$2$4$6$8$7$9'
-		// Note: I'm not deleting the extra spaces, just swapping positions.
-		//       Making this way, I keep the original align intact.
-	)];
+    // So let's just join all these regexes together in an ugly monster
+    // and fix the formatting
+    return [rawData.replace(
+        /^ *(\d{4}-\d\d-\d\d *\t *)([+\-]?)( *)(\d+|\d{1,3}([.,]\d{3})*)([.,]\d\d)?( *)([*\/][1-9][0-9]*)?( *\t)/gm,
+        '$1$3$2$4$6$8$7$9'
+        // Note: I'm not deleting the extra spaces, just swapping positions.
+        //       Making this way, I keep the original align intact.
+    )];
 }
 
 function convert() {
-	var mode, rawData, parsedData;
+    var mode, rawData, parsedData;
 
-	// Read input data
-	rawData = document.getElementById('input_data').value;
-	// Reset output
-	document.getElementById('output_data').value = '';
+    // Read input data
+    rawData = document.getElementById('input_data').value;
+    // Reset output
+    document.getElementById('output_data').value = '';
 
-	mode = document.getElementById('mode').value;
-	if (mode == 'myml') {
-		parsedData = convertMyMoneyLog(rawData);
-	} else if (mode == 'moneylog4') {
-		parsedData = convertMoneyLog4(rawData);
-	} else if (mode == 'money97' || mode == 'money98' || mode == 'money99' || mode == 'quicken') {
-		parsedData = convertQIF(rawData, mode);
-	} else if (mode == 'ofx' || mode == 'ofc') {
-		parsedData = convertOFX(rawData);
-	}
+    mode = document.getElementById('mode').value;
+    if (mode == 'myml') {
+        parsedData = convertMyMoneyLog(rawData);
+    } else if (mode == 'moneylog4') {
+        parsedData = convertMoneyLog4(rawData);
+    } else if (mode == 'money97' || mode == 'money98' || mode == 'money99' || mode == 'quicken') {
+        parsedData = convertQIF(rawData, mode);
+    } else if (mode == 'ofx' || mode == 'ofc') {
+        parsedData = convertOFX(rawData);
+    }
 
-	// Maybe sort it?
-	if (document.getElementById('sortoutput').checked) {
-		parsedData.sort();
-	}
+    // Maybe sort it?
+    if (document.getElementById('sortoutput').checked) {
+        parsedData.sort();
+    }
 
-	// Save output
-	document.getElementById('output_data').value = parsedData.join('\n');
+    // Save output
+    document.getElementById('output_data').value = parsedData.join('\n');
 
-	// Show options?
-	if (mode == 'moneylog4') {
-		document.getElementById('options').style.display = 'none';
-	} else {
-		document.getElementById('options').style.display = 'block';
-	}
+    // Show options?
+    if (mode == 'moneylog4') {
+        document.getElementById('options').style.display = 'none';
+    } else {
+        document.getElementById('options').style.display = 'block';
+    }
 
 }
 </script>
 
-</head>
-<body>
+<p>Converta lançamentos para o formato do MoneyLog.</p>
 
-<h2>Converta lançamentos para o formato do MoneyLog</h2>
-
-<p>Dúvidas? <a href="http://aurelio.net/moneylog/faq/#banco">Aprenda como salvar o extrato de seu banco e usar este conversor.</a></p>
+<p>Dúvidas? <a href="/moneylog/faq/#banco">Aprenda como salvar o extrato de seu banco e usar este conversor.</a></p>
 
 <noscript>
-<p style="color:red;background:yellow;padding:10px;">
-	Ops! Seu navegador está sem JavaScript, sem ele não vai funcionar.
-	</p>
+  <p style="color:red;background:yellow;padding:10px;">
+    Ops! Seu navegador está sem JavaScript, sem ele não vai funcionar.
+  </p>
 </noscript>
 
-<p><br></p>
-
 <p>De:
-	<select id="mode" onchange="convert();">
-		<option value="moneylog4">MoneyLog v4, v3, v2, v1</option>
-		<option value="ofx" selected>OFX</option>
-		<option value="ofc">OFC</option>
-		<option value="quicken">QIF — Quicken</option>
-		<option value="money97">QIF — MS Money 97</option>
-		<option value="money98">QIF — MS Money 98</option>
-		<option value="money99">QIF — MS Money 99</option>
-		<option value="myml">myMoneyLog</option>
-	</select>
+  <select id="mode" onchange="convert();">
+    <option value="moneylog4">MoneyLog v4, v3, v2, v1</option>
+    <option value="ofx" selected>OFX</option>
+    <option value="ofc">OFC</option>
+    <option value="quicken">QIF — Quicken</option>
+    <option value="money97">QIF — MS Money 97</option>
+    <option value="money98">QIF — MS Money 98</option>
+    <option value="money99">QIF — MS Money 99</option>
+    <option value="myml">myMoneyLog</option>
+  </select>
 </p>
-<blockquote>
-	<textarea id="input_data" rows="12" cols="80" onkeyup="convert();"></textarea>
-</blockquote>
 
-<p><br><br></p>
+<textarea id="input_data" rows="12" onkeyup="convert();"></textarea>
 
-<p>Para: <a href="http://aurelio.net/moneylog/">MoneyLog</a></p>
+<p>Para: <a href="/moneylog/">MoneyLog</a></p>
 
-<blockquote>
-	<textarea id="output_data" rows="12" cols="80"></textarea>
-	<div id="options" style="display: none;">
-	<input id="usecommas" type="checkbox" onclick="convert();"> Forçar o uso de vírgulas nos valores
-	<br><input id="lowerdesc" type="checkbox" onclick="convert();"> Forçar a descrição em minúsculas
-	<br><input id="hidedocnumber" type="checkbox" onclick="convert();"> Descartar o Número do Documento
-	<br><input id="sortoutput" type="checkbox" onclick="convert();"> Ordenar o resultado por data
-	<br><input id="truncatedesc" type="checkbox" onclick="convert();"> Limitar descrição em <input id="truncatedescvalue" type="text" value="22" size="3"> caracteres
-	</div>
+<textarea id="output_data" rows="12"></textarea>
+<div id="options">
+  <input id="usecommas" type="checkbox" onclick="convert();"> Forçar o uso de vírgulas nos valores
+  <br><input id="lowerdesc" type="checkbox" onclick="convert();"> Forçar a descrição em minúsculas
+  <br><input id="hidedocnumber" type="checkbox" onclick="convert();"> Descartar o Número do Documento
+  <br><input id="sortoutput" type="checkbox" onclick="convert();"> Ordenar o resultado por data
+  <br><input id="truncatedesc" type="checkbox" onclick="convert();"> Limitar descrição em
+      <input id="truncatedescvalue" type="text" value="22" size="3"> caracteres
+</div>
 
-	<p><strong>CONFIRA O RESULTADO.</strong> Este é um processo automático, pode haver falhas.</p>
-</blockquote>
-
-
-</body>
-</html>
+<p><strong>CONFIRA O RESULTADO.</strong> Este é um processo automático, pode haver falhas.</p>
