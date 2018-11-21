@@ -38,8 +38,6 @@ check_accidental_liquid_markup() {
         grep -v '^vim/vimrc-ivan\.txt' |
 
         # txt2tags files
-        grep -v '^include/config' |
-        grep -v '^include/global\.t2t' |
         grep -v '^projects/config.t2t' |
         grep -v '^projects/emomemory/index.t2t' |
         grep -v '^shell/dialog/index' |

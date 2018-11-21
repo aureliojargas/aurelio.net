@@ -47,10 +47,6 @@ Extra setup for **Codeanywhere**:
 # Fix locale
 export LANG="C.UTF-8"
 
-# Fix include paths for txt2tags files
-sudo mkdir /a
-sudo ln -s $PWD /a/www
-
 # Python2 for txt2tags
 sudo apt-get install python
 
@@ -70,9 +66,6 @@ sed '1 s/python/python2/' -i _scripts/txt2tags-2.6.1102
 
 # Fix scripts' shebang
 termux-fix-shebang _scripts/*
-
-# Fix include paths for txt2tags files
-replace -f /a/www/ -t $PWD/ -i include/*/config.t2t include/10anos/footer*.t2t moneylog/{_config,_footer,index,v4/index}.t2t
 
 # Fix for Jekyll 3.8.5
 # https://github.com/jekyll/jekyll/pull/7267
@@ -97,10 +90,6 @@ Extra setup for **Chrome OS Linux**:
 ```bash
 # Install the required packages
 sudo apt install ruby ruby-dev python tidy file
-
-# Fix include paths for txt2tags files
-sudo mkdir /a
-sudo ln -s $PWD /a/www
 ```
 
 ## Local Jekyll build
