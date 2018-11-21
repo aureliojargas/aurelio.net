@@ -178,6 +178,7 @@ table.grid tr:hover td {
   margin: 1.5em auto;
 }
 
+.figures,
 .figure,
 .image {
   text-align: center;
