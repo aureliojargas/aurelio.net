@@ -66,7 +66,9 @@ check_link_to_gone() {
 
 # Do not link URLs that are redirected (301)
 check_link_to_redirected() {
-    _scripts/list-urls-redirected | while read url
+    _scripts/list-urls-redirected |
+    grep -Ev '^(/feed/|/blog/feed/)$' | # wontfix
+    while read url
     do
         if echo "$url" | grep -Fq '*'
         then
