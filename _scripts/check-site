@@ -64,6 +64,24 @@ check_link_to_gone() {
     done
 }
 
+# Do not link URLs that are redirected (301)
+check_link_to_redirected() {
+    _scripts/list-urls-redirected | while read url
+    do
+        if echo "$url" | grep -Fq '*'
+        then
+            # Handle Netlify glob
+            # Example: /img/icon16/*  /img/icon/16/:splat
+            url=$(echo "$url" | sed 's/\*/[^"]*/g')
+            cgrep -i "href=\"$url\"" $files
+            cgrep -i  "src=\"$url\"" $files
+        else
+            cgrep -Fi "href=\"$url\"" $files
+            cgrep -Fi  "src=\"$url\"" $files
+        fi
+    done
+}
+
 # Do not link foo/index.html, but foo/
 check_link_to_index_html() {
     cgrep 'href="[^"]*/index\.html"' $files
@@ -119,6 +137,7 @@ active_checks="
     check_accidental_liquid_markup
     check_missing_article_date
     check_link_to_gone
+    check_link_to_redirected
     check_link_to_index_html
     check_windows_linebreak
     check_unquoted_attributes
