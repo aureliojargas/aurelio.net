@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+# Remove everything that is not a 301 redirect
+cat _redirects |
+    grep -v 410$ | # gone
+    grep -v 302$ | # temporary redirect
+    grep -v '^#' | # comments
+    grep -v '^$' | # empty lines
+    cut -d ' ' -f 1 |
+    sort
