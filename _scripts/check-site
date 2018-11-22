@@ -55,6 +55,15 @@ check_missing_article_date() {
     git grep '^date: 1999-12-31'
 }
 
+# Do not link URLs that are gone (410)
+check_link_to_gone() {
+    _scripts/list-urls-gone | while read url
+    do
+        cgrep -Fi "href=\"$url\"" $files
+        cgrep -Fi  "src=\"$url\"" $files
+    done
+}
+
 # Do not link foo/index.html, but foo/
 check_link_to_index_html() {
     cgrep 'href="[^"]*/index\.html"' $files
@@ -109,6 +118,7 @@ check_windows_linebreak() {
 active_checks="
     check_accidental_liquid_markup
     check_missing_article_date
+    check_link_to_gone
     check_link_to_index_html
     check_windows_linebreak
     check_unquoted_attributes
