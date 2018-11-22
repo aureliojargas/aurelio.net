@@ -59,8 +59,9 @@ check_missing_article_date() {
 check_link_to_gone() {
     _scripts/list-urls-gone | while read url
     do
-        cgrep -Fi "href=\"$url\"" $files
-        cgrep -Fi  "src=\"$url\"" $files
+        # The last ? matches URLs missing the trailing slash
+        cgrep -Ei "href=\"(https?://aurelio\.net)?$url?\"" $files
+        cgrep -Ei  "src=\"(https?://aurelio\.net)?$url?\"" $files
     done
 }
 
@@ -75,11 +76,12 @@ check_link_to_redirected() {
             # Handle Netlify glob
             # Example: /img/icon16/*  /img/icon/16/:splat
             url=$(echo "$url" | sed 's/\*/[^"]*/g')
-            cgrep -i "href=\"$url\"" $files
-            cgrep -i  "src=\"$url\"" $files
+            cgrep -i "href=\"(https?://aurelio\.net)?$url\"" $files
+            cgrep -i  "src=\"(https?://aurelio\.net)?$url\"" $files
         else
-            cgrep -Fi "href=\"$url\"" $files
-            cgrep -Fi  "src=\"$url\"" $files
+            # The last ? matches URLs missing the trailing slash
+            cgrep -Ei "href=\"(https?://aurelio\.net)?$url?\"" $files
+            cgrep -Ei  "src=\"(https?://aurelio\.net)?$url?\"" $files
         fi
     done
 }
