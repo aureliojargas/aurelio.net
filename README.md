@@ -6,6 +6,8 @@ At the beginning it was only HTML files, then I started to use my own software [
 
 All these changes were slow and partial, I never moved the full site to the new tool. So now the tree is a complete mess with Markdown, HTML and txt2tags files living together. My goal ([issue #1](https://github.com/aureliojargas/aurelio.net/issues/1)) is to make it simpler.
 
+It took me more than a decade to finally put my local `/a/www` folder into version control. This repo initial commit is aa6ea5939daac0c46b90986314e5278388e0c778 from Nov 2013.
+
 ## Build & Deploy
 
 Every commit to the `master` branch triggers a complete site build and deploy in Netlify.
