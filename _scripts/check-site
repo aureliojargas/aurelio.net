@@ -57,7 +57,9 @@ check_missing_article_date() {
 
 # Do not link URLs that are gone (410)
 check_link_to_gone() {
-    _scripts/list-urls-gone | while read url
+    _scripts/list-urls-gone |
+    grep -Fxv '/recados.php' | # historical
+    while read url
     do
         # The last ? matches URLs missing the trailing slash
         cgrep -Ei "href=\"(https?://aurelio\.net)?$url?\"" $files
