@@ -162,7 +162,6 @@ var allLinks = [
 
 // site
 [0, 'Sobre o site',		'sobre.html', 'site'],
-[0, 'Mapa do site',		'mapa.html', 'site'],
 [0, 'Página Principal',		'index.html', 'site'],
 [1, 'Deixe seu recado',		'recados.php', 'site eu'],
 [0, 'Contador de acessos',	'bin/php/counter.phps', 'site software php'],
