@@ -8,6 +8,9 @@ error() {
     echo "$*" | head -n 40
     exit 1
 }
+cgrep() {
+    grep --color=always "$@"
+}
 
 # Make sure we are at the repository root
 cd $(dirname "$0")
@@ -54,24 +57,24 @@ check_missing_article_date() {
 
 # Do not link foo/index.html, but foo/
 check_link_to_index_html() {
-    grep 'href="[^"]*/index\.html"' $files
+    cgrep 'href="[^"]*/index\.html"' $files
 }
 
 # Do not use relative URLs in links and images
 check_relative_urls() {
     # ./
-    grep -i -E '(src|href)="\./' $files
-    grep -i -E '(src|href)="[^"]*/\./' $files
+    cgrep -i -E '(src|href)="\./' $files
+    cgrep -i -E '(src|href)="[^"]*/\./' $files
 
     # ../
-    grep -i -E '(src|href)="\.\./' $files
-    grep -i -E '(src|href)="[^"]*/\.\./' $files
+    cgrep -i -E '(src|href)="\.\./' $files
+    cgrep -i -E '(src|href)="[^"]*/\.\./' $files
 }
 
 # No http:// for resources (mixed content) - #18
 check_mixed_content() {
-    grep -i -F 'src="http://aurelio.net' $files
-    grep -i '<link [^>]*href="http://aurelio.net' $files
+    cgrep -i -F 'src="http://aurelio.net' $files
+    cgrep -i '<link [^>]*href="http://aurelio.net' $files
 }
 
 # Grep for <tag foo=bar> instead of <tag foo="bar">
