@@ -256,11 +256,11 @@
 /blog/page                                        /410.html  410
 
 # 2014-02-23 Disable old WordPress archive pages by date
-# http://aurelio.net/blog/2014/12/31/
-# http://aurelio.net/blog/2014/12/
-# http://aurelio.net/blog/2014/
-# http://aurelio.net/blog/2014/page/
-# http://aurelio.net/blog/2014/page/3
+# /blog/2014/12/31/
+# /blog/2014/12/
+# /blog/2014/
+# /blog/2014/page/
+# /blog/2014/page/3
 #RedirectMatch gone "^/blog/20\d\d/(../)?(../)?$"
 #RedirectMatch gone "^/blog/20\d\d/page/"
 /blog/2004/                                       /410.html  410
