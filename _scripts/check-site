@@ -57,13 +57,25 @@ check_missing_article_date() {
 
 # Do not link URLs that are gone (410)
 check_link_to_gone() {
+
     _scripts/list-urls-gone |
     grep -Fxv '/recados.php' | # historical
     while read url
     do
-        # The last ? matches URLs missing the trailing slash
-        cgrep -Ei "href=\"(https?://aurelio\.net)?$url?\"" $files
-        cgrep -Ei  "src=\"(https?://aurelio\.net)?$url?\"" $files
+        # search HTML tags
+        # Hack: add optional trailing slash to all URLs
+        # - when dir, matches both (with and without slash)
+        # - when file, the extra trailing / is inocuous
+        cgrep -Ei "(href|src)=\"(https?://aurelio\.net)?${url%/}/?[\"#]" $files
+
+        # search full URL broadly
+        if echo "$url" | grep -q '/$'
+        then
+            cgrep -Ei "https?://aurelio\.net$url($|[^a-z0-9])" $files
+            cgrep -Ei "https?://aurelio\.net${url%/}($|[^/a-z0-9_-])" $files
+        else
+            cgrep -Ei "https?://aurelio\.net$url($|[^/a-z0-9_-])" $files
+        fi
     done
 }
 
@@ -78,12 +90,22 @@ check_link_to_redirected() {
             # Handle Netlify glob
             # Example: /img/icon16/*  /img/icon/16/:splat
             url=$(echo "$url" | sed 's/\*/[^"]*/g')
-            cgrep -i "href=\"(https?://aurelio\.net)?$url\"" $files
-            cgrep -i  "src=\"(https?://aurelio\.net)?$url\"" $files
+            cgrep -Ei "(href|src)=\"(https?://aurelio\.net)?$url\"" $files
         else
-            # The last ? matches URLs missing the trailing slash
-            cgrep -Ei "href=\"(https?://aurelio\.net)?$url?\"" $files
-            cgrep -Ei  "src=\"(https?://aurelio\.net)?$url?\"" $files
+            # search HTML tags
+            # Hack: add optional trailing slash to all URLs
+            # - when dir, matches both (with and without slash)
+            # - when file, the extra trailing / is inocuous
+            cgrep -Ei "(href|src)=\"(https?://aurelio\.net)?${url%/}/?[\"#]" $files
+
+            # search full URL broadly
+            if echo "$url" | grep -q '/$'
+            then
+                cgrep -Ei "https?://aurelio\.net$url($|[^a-z0-9])" $files
+                cgrep -Ei "https?://aurelio\.net${url%/}($|[^/a-z0-9_-])" $files
+            else
+                cgrep -Ei "https?://aurelio\.net$url($|[^/a-z0-9_-])" $files
+            fi
         fi
     done
 }
