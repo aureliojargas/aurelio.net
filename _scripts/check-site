@@ -125,18 +125,18 @@ check_windows_linebreak() {
 active_checks="
     check_accidental_liquid_markup
     check_missing_article_date
+    check_unquoted_attributes
+    check_link_to_index_html
     check_link_to_gone
     check_link_to_redirected
-    check_link_to_index_html
-    check_windows_linebreak
-    check_unquoted_attributes
     check_mixed_content
     check_relative_urls
+    check_windows_linebreak
 "
 
 for check in $active_checks
 do
     echo "Running $check..."
-    wrong=$($check)
+    wrong=$(time $check)
     test -n "$wrong" && error "$wrong"
 done
