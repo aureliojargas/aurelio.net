@@ -17,7 +17,7 @@ tags: [site]
 <p>Cada palavra daquelas é um link para o endereço:</p>
 <p><code>http://aurelio.net/PALAVRA</code></p>
 <p>Por exemplo, se você quer usar o MiGuXeiToR, não precisa mais daquele endereço enorme</p>
-<p><code>http://aurelio.net/web/miguxeitor.html</code></p>
+<p><code>http://aurelio.net/coisinha/miguxeitor/</code></p>
 <p>Agora basta digitar</p>
 <p><code>http://aurelio.net/miguxeitor</code></p>
 <p>E você vai cair na página do tradutor. Quer ver o Canivete Suíço do Shell? É</p>
@@ -31,8 +31,8 @@ tags: [site]
 <blockquote><p>Pelo que pude notar, o Google gosta de atalhos. Apesar de milhares de links na Internet apontarem para o endereço completo do MiGuXeiToR, o primeiro resultado da pesquisa é o endereço curto (atalho). <a href="http://www.google.com/search?rls=pt-pt&amp;q=miguxeitor&amp;ie=UTF-8&amp;oe=UTF-8">Confira</a>.</p></blockquote>
 <p>O que mais gostei desse esquema foi a simplicidade de criação e manutenção de todos os atalhos: um único arquivo texto.</p>
 <p>O servidor Apache usa o arquivo especial .htaccess para guardar algumas regras especiais que podem ser aplicadas a um site. Entre estas regras, está o redirecionamento. Com uma única linha é fácil fazer o atalho já mencionado do MiGuXeiToR:</p>
-<p><code>Redirect 302 /miguxeitor http://aurelio.net/web/miguxeitor.html</code></p>
-<blockquote><p>Traduzindo: “Estimado Apache, por obséquio, seria possível vossa mercê redirecionar todas as visitas destinadas à área /miguxeitor deste site, para o endereço http://aurelio.net/web/miguxeitor.html? Ah, se não fosse pedir muito, gostaria que o código 302 fosse usado para identificar este redirecionamento. Grato por sua atenção, subscrevo-me. Obrigado.”</p></blockquote>
+<p><code>Redirect 302 /miguxeitor http://aurelio.net/coisinha/miguxeitor/</code></p>
+<blockquote><p>Traduzindo: “Estimado Apache, por obséquio, seria possível vossa mercê redirecionar todas as visitas destinadas à área /miguxeitor deste site, para o endereço http://aurelio.net/coisinha/miguxeitor/? Ah, se não fosse pedir muito, gostaria que o código 302 fosse usado para identificar este redirecionamento. Grato por sua atenção, subscrevo-me. Obrigado.”</p></blockquote>
 <p>Basta colocar várias linhas para fazer vários atalhos. Fácil, não?</p>
 <p>Tá, tem alguns detalhes importantes :)</p>
 <ul>

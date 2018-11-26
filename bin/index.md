@@ -52,7 +52,7 @@ Ingredientes:
 
 Resultado:
 
-- [LELOLAB](lelolab/) - Jogo de labirinto em Batch para MS-DOS
+- [LELOLAB](/bin/lelolab/) - Jogo de labirinto em Batch para MS-DOS
 
 
 ## Filhos mimados
@@ -212,7 +212,7 @@ Este é o programa que uso para gerar o relatório de vendas de meus livros e ap
 Vá na sua agenda (Outlook, Kontact, Yahoo!, ...) e exporte os contatos para o formato CSV. Então rode este programa e ele criará um arquivo binário com os seus contatos. Este arquivo pode ser então copiado para o seu tocador de MP3 do Paraguai (China, Coréia, ...) e ele lerá os dados, incluindo-os em sua agendinha. Mais informações no código do programa.
 
 - [iTunes SED](/projects/itunes-sed/) e [iPhoto SED](/projects/iphoto-sed/) (**AppleScript**):
-Que tal usar todo o poder do SED para fazer substituições automáticas (com [expressões regulares](/er/)) nas tags ID3 (nome da música, artista, álbum, etc) de suas músicas do iTunes? Ou então fazer o mesmo nos dados das fotos do iPhoto (título, comentários)? É isso que estes dois scripts fazem.
+Que tal usar todo o poder do SED para fazer substituições automáticas (com [expressões regulares](/regex/)) nas tags ID3 (nome da música, artista, álbum, etc) de suas músicas do iTunes? Ou então fazer o mesmo nos dados das fotos do iPhoto (título, comentários)? É isso que estes dois scripts fazem.
 
 - [iTunes Rename Disk File](/projects/itunes-rename-disk-file/) (**AppleScript**):
 Esse script renomeia os arquivos de áudio (MP3, AAC, etc) selecionados no iTunes, baseando-se nas informações da música (nome, banda, disco, etc). Ele remove os caracteres estranhos e tem a opção de usar ou não espaços em branco. Além dos formatos pré-cadastrados, o usuário pode fazer um formato personalizado.

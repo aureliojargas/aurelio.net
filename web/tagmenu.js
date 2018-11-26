@@ -57,10 +57,10 @@ var tagTitles = {
 // Format: [ Importance (0-3), 'Link name', 'URL', 'tags' ]
 var allLinks = [
 // bin
-[0, 'txt2regex',	'http://aurelio.net/txt2regex/', 'software shell regex'],
+[0, 'txt2regex',	'http://aurelio.net/projects/txt2regex/', 'software shell regex'],
 [1, 'Funções ZZ',	'http://funcoeszz.net', 'software shell'],
 [2, 'txt2tags',		'http://txt2tags.sf.net/pt', 'software python web site'],
-[0, 'Sedsed',		'http://aurelio.net/sedsed/', 'software sed python'],
+[0, 'Sedsed',		'http://aurelio.net/projects/sedsed/', 'software sed python'],
 [1, 'Sed Sokoban',	'sed/sokoban/', 'software sed game'],
 [0, 'Sed Arkanoid',	'bin/sed/arkanoid/', 'software sed game'],
 [0, 'RAC',		'rac', 'software'],
