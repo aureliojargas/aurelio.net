@@ -1,0 +1,76 @@
+#!/bin/bash
+# Inform a URL (full with domain or root-relative) to grep.
+#
+# The script will always search for both full and root-relative when it's a
+# URL from my own site, regardless of which type the user informed.
+#
+# Tip: you can use Perl regexes as URL, i.e. '.*?\.svg'
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+domain='https?://aurelio\.net'
+files=$(_scripts/list-site-text-files)
+
+check() {
+    local user_url=$1
+
+    # It's a full url from my site
+    if echo "$user_url" | grep -q "^$domain"
+    then
+        full_url=$user_url
+        root_relative_url=$(echo "$full_url" | sed -E "s/^$domain//")
+
+    # It's an external url
+    elif echo "$user_url" | grep -q '^https?://'
+    then
+        full_url=$user_url
+        root_relative_url=
+
+    # It's a root-relative url from my site
+    else
+        root_relative_url="/${user_url#/}"
+        full_url="$domain$root_relative_url"
+    fi
+
+    # If $root_relative_url is set, it's a URL from my own site.
+    # Then I always have to search with and without the domain prefix.
+    #
+    # Don't bother searching relative URLs, they will all be converted to
+    # root-relative at some point (issue #20).
+    #
+    # Folders also have to be searched with and without the trailing slash.
+    # Currently, I'm using an ugly hack for it: always add an optional trailing
+    # slash to all URLs.
+    # - when URL is a folder, matches both (with and without slash)
+    # - when URL is a file, the extra trailing / is (hopefullt) inocuous
+    # FIXME remove this hack when issue #44 is fixed
+
+    # Search HTML tags
+    if test -n "$root_relative_url"
+    then
+        url="($domain)?$root_relative_url"
+    else
+        url=$full_url
+    fi
+
+    regexes="(href|src)=\"${url%/}/?[\"#]"
+
+    # Search full URL broadly (text files, etc)
+    if echo "$full_url" | grep -q '/$'
+    then
+        regexes="$regexes|$full_url($|[^a-z0-9])"
+        regexes="$regexes|${full_url%/}($|[^/a-z0-9_-])"
+    else
+        regexes="$regexes|$full_url($|[^/a-z0-9_-])"
+    fi
+
+    # grep once all the regexes to make it faster
+    grep --color=always -Pi "$regexes" $files
+}
+
+for this_url
+do
+    check "$this_url"
+done
