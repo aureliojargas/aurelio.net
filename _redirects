@@ -152,6 +152,7 @@
 /moneylog/beta.html                               /moneylog/beta/
 /moneylog/online/                                 /moneylog/browser/app/
 /moneylog/svn/v5-migracao.html                    /moneylog/beta/update-2012.html
+/moneylog/svn/NEWS.html                           /moneylog/v5/NEWS.html
 /moneylog/svn/                                    https://github.com/aureliojargas/moneylog/tree/master
 /musica/baterna/                                  /baterna/
 /musica/pogo.php                                  /pogo/
