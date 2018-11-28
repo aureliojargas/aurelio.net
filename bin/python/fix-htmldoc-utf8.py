@@ -3,7 +3,7 @@
 #
 # Name   : fix-htmldoc-utf8
 # Summary: Program to fix UTF-8 characters that HTMLDOC has messed
-# Author : Aurelio Jargas www.aurelio.net/soft
+# Author : Aurelio Jargas www.aurelio.net/projects
 # License: BSD
 # Release: April, 2008
 #
