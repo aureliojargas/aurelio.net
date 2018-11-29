@@ -198,6 +198,10 @@
 # PHP code moved to a subdomain (2017-05-26)
 /livro/cadastro/                                  https://cadastro.aurelio.net
 
+# Removed duplicated images (2018-11-29)
+/rac/img/madeinbr.png                             /img/madeinbr.png
+/projects/sedsed/madeinbr.png                     /img/madeinbr.png
+
 # Mog
 /monografia-morgana-laemmle.pdf                   /misc/monografia-morgana-laemmle.pdf
 /mog/monografia-morgana-laemmle.pdf               /misc/monografia-morgana-laemmle.pdf
