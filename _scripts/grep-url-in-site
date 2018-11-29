@@ -4,6 +4,10 @@
 # The script will always search for both full and root-relative when it's a
 # URL from my own site, regardless of which type the user informed.
 #
+# Files are full matches and folders are partially matched in the text search
+# (children will show up in the output). End it with /? if you want full match
+# for a folder.
+#
 # Tip: you can use Perl regexes as URL, i.e. '.*?\.svg'
 
 # Make sure we are at the repository root
@@ -41,13 +45,8 @@ check() {
     # root-relative at some point (issue #20).
     #
     # Folders also have to be searched with and without the trailing slash.
-    # Currently, I'm using an ugly hack for it: always add an optional trailing
-    # slash to all URLs.
-    # - when URL is a folder, matches both (with and without slash)
-    # - when URL is a file, the extra trailing / is (hopefullt) inocuous
-    # FIXME remove this hack when issue #44 is fixed
+    # FIXME remove this exception when issue #44 is fixed
 
-    # Search HTML tags
     if test -n "$root_relative_url"
     then
         url="($domain)?$root_relative_url"
@@ -55,14 +54,15 @@ check() {
         url=$full_url
     fi
 
-    regexes="(href|src)=\"${url%/}/?[\"#]"
-
-    # Search full URL broadly (text files, etc)
-    if echo "$full_url" | grep -q '/$'
+    # Search HTML tags and URL-only (text files, etc)
+    if echo "$url" | grep -q '/$'
     then
-        regexes="$regexes|$full_url($|[^a-z0-9])"
-        regexes="$regexes|${full_url%/}($|[^/a-z0-9_-])"
+        # dir, dir/, dir/*
+        regexes="(href|src)=\"${url%/}(/.*?)?[\"#]"
+        regexes="$regexes|${full_url%/}(/|[^a-z0-9_-])"
     else
+        # file
+        regexes="(href|src)=\"$url[\"#]"
         regexes="$regexes|$full_url($|[^/a-z0-9_-])"
     fi
 
