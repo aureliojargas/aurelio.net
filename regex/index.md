@@ -129,11 +129,11 @@ Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular
 
 * Como extrair e formatar texto usando Expressões Regulares (14 minutos, [blog](http://aurelio.net/blog/2011/05/05/como-extrair-e-formatar-texto-usando-expressoes-regulares/), [YouTube](https://www.youtube.com/watch?v=LZcTSKIwZqI))
 
-<iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/LZcTSKIwZqI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/LZcTSKIwZqI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
 
 * Expressões Regulares - Quantificadores Gulosos (8 minutos, [blog](http://aurelio.net/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/), [YouTube](https://www.youtube.com/watch?v=0O2yQgRXnLU))
 
-<iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
 
 ## Grupo no Telegram
 

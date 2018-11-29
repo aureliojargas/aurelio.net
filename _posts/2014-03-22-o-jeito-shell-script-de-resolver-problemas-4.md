@@ -31,7 +31,7 @@ Mas como usar a zzarrumacidade (um programa que está em meu computador) para ar
 
 > Esse é o mantra do shelleiro “de raiz”, repita comigo: Entra texto, sai texto. Entra texto, sai texto. Entra texto, sai texto...
 
-<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/woN4BZjr0Os?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0"></iframe></span></p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/woN4BZjr0Os?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0"></iframe></span></p>
 
 Resumo dos comandos:
 
