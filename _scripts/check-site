@@ -60,6 +60,9 @@ check_link_to_gone() {
 
     _scripts/list-urls-gone |
         grep -Fxv '/recados.php' | # historical
+        # Exception: top dir is gone, but not its children
+        # Add harmless ? at the end to avoid /$ detectionin grep-* script
+        sed -E '/^\/blog\/20..\/$/ s/$/?/' |
         xargs _scripts/grep-url-in-site
 }
 
@@ -67,8 +70,15 @@ check_link_to_gone() {
 check_link_to_redirected() {
     _scripts/list-urls-redirected |
         grep -Ev '^(/feed/|/blog/feed/)$' | # wontfix
-        sed 's/\*/.*?/g' | # Netlify glob: /icon16/* /icon/16/:splat
-        xargs _scripts/grep-url-in-site
+        # Netlify glob: /icon16/* /icon/16/:splat
+        # Just remove trailing *, dirs are already matched partially
+        sed 's|/\*$|/|g' |
+        xargs _scripts/grep-url-in-site |
+        # Remove false positives
+        grep -vF '_site/sed/programas/rss.sed' |
+        grep -vF '_site/articles/hungry-sumo-high-scores.html' |
+        grep -vE '_site/shell/dialog/index-v.\.t2t.*https?://aurelio.net/doc/dialog' |
+        grep -vE '_site/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/index.html.*https?://aurelio.net/(canivete|miguxeitor)'
 }
 
 # Do not link foo/index.html, but foo/
