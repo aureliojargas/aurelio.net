@@ -183,7 +183,7 @@ var allLinks = [
 [0, 'Free as in BIRD',		'http://aurelio.net/blog/2005/09/23/free-as-in-bird/', 'eu linux mac'],
 [0, 'Currículo',		'doc/cv-aurelio.html', 'eu'],
 [0, 'Flickr',			'http://www.flickr.com/photos/aureliojargas', 'eu foto'],
-[1, 'Doação Paypal',		'http://sourceforge.net/donate/index.php?user_id=1345338', 'software doc site'],
+[1, 'Doação Paypal',		'https://sourceforge.net/donate/index.php?user_id=1345338', 'software doc site'],
 
 // curso
 [0, '4Linux - SP',		'curso/4linux/', 'curso'],

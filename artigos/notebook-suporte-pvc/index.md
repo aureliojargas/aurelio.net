@@ -45,7 +45,7 @@ Se juntar as duas pontas da frente, o seu maravilhoso suporte de canos serve tam
 
 ## Outro modelo de suporte PVC
 
-[![](http://farm7.staticflickr.com/6234/7001695669_e48c6ed4e2.jpg)](http://www.superziper.com/2012/03/diy-suporte-para-notebook.html)
+[![](https://farm7.staticflickr.com/6234/7001695669_e48c6ed4e2.jpg)](http://www.superziper.com/2012/03/diy-suporte-para-notebook.html)
 
 Este é um outro formato de suporte com canos de PVC, que usa praticamente as mesmas peças deste, com a diferença de o cano da base ficar inclinado. Eu fiquei com a impressão que este não seria tão estável, mas é uma questão de gosto. [O site SuperZiper ensina como fazer](http://www.superziper.com/2012/03/diy-suporte-para-notebook.html).
 
