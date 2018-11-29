@@ -147,7 +147,7 @@ listas são malas, você *SEMPRE* deve fechá-las.
 
 para ficar mais massa ainda, edite seu arquivo texto no vim, com as regras
 de sintaxe txt.vim, que coloriza várias estruturas reconhecidas por este
-conversor. ele está em http://aurelio.net/doc/vim/txt.vim
+conversor. ele está em http://aurelio.net/vim/txt.vim
 
 você escreveu seu texto. como gerar o sgml e o html?
 

@@ -166,7 +166,7 @@ Entrevista: Aurélio Marinho Jargas
        para escrever um livro com dicas sobre o assunto. Para
        quem quer começar, vale uma olhada nos slides da palestra
        "Como ser um Desenvolvedor de Software Livre", disponíveis
-       em http://aurelio.net/curso/IIsdsl/palestra-desenvolvedor/
+       em http://aurelio.net/curso/sdsl-2/desenvolvedor/
 
        Eu respondo sempre os e-mails que recebo (às vezes isso demora
        meses), então podem me escrever com dúvidas que ajudarei com
