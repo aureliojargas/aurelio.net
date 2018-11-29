@@ -12,7 +12,7 @@ ad1='
 	//-->
 	</script>
 	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>'
 ad2='
 	<script type="text/javascript"><!--
@@ -24,11 +24,11 @@ ad2='
 	//-->
 	</script>
 	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>'
 track='
 <!-- All your hits are belong to us -->
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
 _uacct = "UA-280222-1";
