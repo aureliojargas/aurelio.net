@@ -151,7 +151,7 @@ Pra quem usa Mac, o `pbcopy` copia a saída do comando anterior para a Área de 
 
 ## O sorteio dos livros, usando shell
 
-No final da palestra, sorteei dois livros meus, o [Shell Script Profissional](http://www.shellscript.com.br) que eu levei um exemplar que eu tinha aqui em casa, e o [Expressões Regulares](http://www.piazinho.com.br), que a Novatec Editora enviou de cortesia para os organizadores do evento.
+No final da palestra, sorteei dois livros meus, o [Shell Script Profissional](https://www.shellscript.com.br) que eu levei um exemplar que eu tinha aqui em casa, e o [Expressões Regulares](http://www.piazinho.com.br), que a Novatec Editora enviou de cortesia para os organizadores do evento.
 
 Reaproveitei uma ideia que tive lá em 2004, numa [palestra de 3h](http://aurelio.net/curso/linuxchix/) 😱 que dei no II Encontro Nacional LinuxChix-BR: usar a shell para gerar um número aleatório e ganha o sorteio quem tiver aquele número **impresso** em algum documento, cartão, papel, o que for. Foi bem divertido!
 

@@ -179,7 +179,7 @@ linguagem extremamente descontraída, o autor explica e ensina os conceitos
 envolvidos, com bastante exemplos e códigos prontos. A leitura é light e
 agradável, como uma conversa ao vivo, acelerando o aprendizado.
 
-* [Shell Script Profissional](http://www.shellscript.com.br) *por Aurelio Marinho Jargas*
+* [Shell Script Profissional](https://www.shellscript.com.br) *por Aurelio Marinho Jargas*
 Se você não é mais leigo e já faz os seus scripts, com este livro você mergulhar de vez no assunto, aprendendo a fazer programas de qualidade em shell, com ênfase em código legível, portabilidade e manutenção futura. Muito didático e de fácil entendimento, o livro ensina opções de linha de comando, arquivo de configuração, banco de dados, interface amigável ao usuário com dialog, CGI, ferramentas do sistema, expressões regulares e caracteres de controle, entre outros.
 
 * [BASH - Guia de Consulta Rápida](http://novateceditora.com.br/guias/bash/) *por Joel Saade*

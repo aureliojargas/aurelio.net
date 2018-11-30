@@ -47,7 +47,7 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 
 ## My books
 
-- [Shell Script Profissional](http://www.shellscript.com.br) *(Professional Shell Script)*
+- [Shell Script Profissional](https://www.shellscript.com.br) *(Professional Shell Script)*
   <br>480 pages, ISBN 978-85-7522-152-5.
 
 - [Expressões Regulares](http://www.piazinho.com.br) *(Regular Expressions)*

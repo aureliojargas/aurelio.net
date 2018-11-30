@@ -38,7 +38,7 @@ Depois papeamos sobre minha [saída da Conectiva](http://aurelio.net/blog/2005/0
 Enfim, falamos sobre meus [oito anos desempregado](http://aurelio.net/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/), trabalhando em casa, onde aproveitei a mente livre para criar sites, softwares e livros. Também contei como é processo de escrever um livro, com dicas pra quem também quer escrever o seu.
 
 Hora do spam: [![Livro Regex](/img/icon/128/livroregex4.png)](http://www.piazinho.com.br)
-[![Livro Shell](/img/icon/128/livroshell.png)](http://www.shellscript.com.br)
+[![Livro Shell](/img/icon/128/livroshell.png)](https://www.shellscript.com.br)
 
 Finalizamos falando de alguns dos meus softwares: as ferramentas de linha de comando [Funções ZZ](http://funcoeszz.net), o testador de linha de comando [clitest](https://github.com/aureliojargas/clitest), o minigereciador financeiro [Moneylog](http://aurelio.net/moneylog/) e o infame [Miguxeitor](http://aurelio.net/coisinha/miguxeitor/).
 

@@ -6,7 +6,7 @@ title: Caxambu - MG
 title_prefix: 'EU FUI: '
 ---
 
-Em Outubro de 2007, fui para Belo Horizonte dar uma semana de curso de [shell script avançado](http://www.shellscript.com.br/) em uma empresa. Por uma coincidência dessas que não dá para chamar apenas de coincidência, na mesmíssima semana minha namorada Mog viajou para Caxambu para ir a um evento de Ciências Sociais (ANPOCS).
+Em Outubro de 2007, fui para Belo Horizonte dar uma semana de curso de [shell script avançado](https://www.shellscript.com.br/) em uma empresa. Por uma coincidência dessas que não dá para chamar apenas de coincidência, na mesmíssima semana minha namorada Mog viajou para Caxambu para ir a um evento de Ciências Sociais (ANPOCS).
 
 Ambos moramos no Paraná (Matinhos e Curitiba) e eu nunca tinha pisado em Minas. É, não podíamos desperdiçar essa oportunidade. Depois do curso fui até Caxambu para encontrá-la e assim passearmos pela região. Além desse relato que você vai ler agora, também visitamos [Ouro Preto](http://aurelio.net/viagem/ouro-preto/) e [Mariana](http://aurelio.net/viagem/mariana/).
 

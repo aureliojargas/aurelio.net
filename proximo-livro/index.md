@@ -8,7 +8,7 @@ hide_ads: true
 hide_tags: true
 ---
 
-Já escrevi um livro sobre [expressões regulares](http://www.piazinho.com.br) e outro sobre [shell script](http://www.shellscript.com.br).
+Já escrevi um livro sobre [expressões regulares](http://www.piazinho.com.br) e outro sobre [shell script](https://www.shellscript.com.br).
 
 Qual você gostaria que fosse o próximo?
 
