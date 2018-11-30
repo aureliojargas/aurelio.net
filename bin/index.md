@@ -127,7 +127,7 @@ Uma ferramenta de extração de texto, feita em parceria com meu amigo [Thobias]
 
 ### Funções ZZ
 
-- Site: http://funcoeszz.net
+- Site: https://funcoeszz.net
 - Linguagem: Bash
 - Interface: Linha de comando
 - Idioma: Português

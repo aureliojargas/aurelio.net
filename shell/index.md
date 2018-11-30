@@ -19,7 +19,7 @@ article_footer_after: false
         <li><a href="/shell/canivete/">Canivete Suíço</a></li>
         <li><a href="/shell/miniman/">miniman</a></li>
         <li><a href="/shell/dialog/">Dialog --tudo</a></li>
-        <li><a href="http://funcoeszz.net">Funções ZZ</a></li>
+        <li><a href="https://funcoeszz.net">Funções ZZ</a></li>
         <li><a href="http://codare.net/category/shell/">Shell no CODARE</a></li>
       </ul>
     </td>
@@ -251,7 +251,7 @@ Os programas aqui listados nada mais são do que shell scripts escritos
 em Bash, mas que por terem documentação, usuários, página na Internet
 e tudo mais, podem ser considerados programas completos.
 
-* [Funções ZZ](http://funcoeszz.net) *por Aurelio Marinho Jargas e Thobias Salazar Trevisan*
+* [Funções ZZ](https://funcoeszz.net) *por Aurelio Marinho Jargas e Thobias Salazar Trevisan*
 Coletânea de microfunções para bash (compatíveis com bash1), com
 funcionalidades diversas, algumas com pesquisa na internet. Útil
 para carregá-las no seu ~/.bashrc e usar no dia-a-dia. O script é

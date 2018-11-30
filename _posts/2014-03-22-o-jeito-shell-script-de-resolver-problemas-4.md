@@ -19,7 +19,7 @@ O problema é o seguinte: tenho um site no WordPress, e peço que os visitantes 
 - sp
 - …entre outras variações bizarras com erros ortográficos.
 
-As [Funções ZZ](http://funcoeszz.net/) possuem a utilíssima [zzarrumacidade](http://funcoeszz.net/man.html#zzarrumacidade), que é especialista em nomes de cidades brasileiras, arrumando a bagunça de maiúsculas e minúsculas, adicionando acentos e expandindo abreviações.
+As [Funções ZZ](https://funcoeszz.net/) possuem a utilíssima [zzarrumacidade](https://funcoeszz.net/man.html#zzarrumacidade), que é especialista em nomes de cidades brasileiras, arrumando a bagunça de maiúsculas e minúsculas, adicionando acentos e expandindo abreviações.
 
 > Curiosidade: Veja [o código da zzarrumacidade](https://github.com/aureliojargas/funcoeszz/blob/master/zz/zzarrumacidade.sh), é um único sed mágico!
 

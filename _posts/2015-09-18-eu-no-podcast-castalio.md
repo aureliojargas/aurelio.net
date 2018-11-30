@@ -40,7 +40,7 @@ Enfim, falamos sobre meus [oito anos desempregado](http://aurelio.net/blog/2010/
 Hora do spam: [![Livro Regex](/img/icon/128/livroregex4.png)](https://www.piazinho.com.br)
 [![Livro Shell](/img/icon/128/livroshell.png)](https://www.shellscript.com.br)
 
-Finalizamos falando de alguns dos meus softwares: as ferramentas de linha de comando [Funções ZZ](http://funcoeszz.net), o testador de linha de comando [clitest](https://github.com/aureliojargas/clitest), o minigereciador financeiro [Moneylog](http://aurelio.net/moneylog/) e o infame [Miguxeitor](http://aurelio.net/coisinha/miguxeitor/).
+Finalizamos falando de alguns dos meus softwares: as ferramentas de linha de comando [Funções ZZ](https://funcoeszz.net), o testador de linha de comando [clitest](https://github.com/aureliojargas/clitest), o minigereciador financeiro [Moneylog](http://aurelio.net/moneylog/) e o infame [Miguxeitor](http://aurelio.net/coisinha/miguxeitor/).
 
 No final dei uma minha [lista de bandas que gosto](http://aurelio.net/musica/), alguns sites que leio e [podcasts que escuto](http://aurelio.net/blog/2015/03/17/top-podcasts-2015/). Lá no [post original](http://castalio.info/episodio-68-aurelio-jargas-projetos.html) do podcast tem a lista completa de tudo o que citei (e alguns adicionais que passei por email pós-gravação).
 
