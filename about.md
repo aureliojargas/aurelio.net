@@ -50,7 +50,7 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 - [Shell Script Profissional](https://www.shellscript.com.br) *(Professional Shell Script)*
   <br>480 pages, ISBN 978-85-7522-152-5.
 
-- [Expressões Regulares](http://www.piazinho.com.br) *(Regular Expressions)*
+- [Expressões Regulares](https://www.piazinho.com.br) *(Regular Expressions)*
   <br>248 pages, ISBN 978-85-7522-475-5.
 
 > Both books are written in Portuguese.

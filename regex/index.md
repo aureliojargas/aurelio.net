@@ -28,7 +28,7 @@ article_footer_after: false
 
 <div style="background:#F6E568; padding:1em 1em 2em 2em;" class="banner">
     <h3 style="margin: 1em 0">Avisos importantes</h3>
-    <p>Saiu a <a href="http://piazinho.com.br/">5ª edição do livro de Expressões Regulares</a>, em papel e <a href="http://piazinho.com.br/#comprar">e-book</a>!</p>
+    <p>Saiu a <a href="https://www.piazinho.com.br/">5ª edição do livro de Expressões Regulares</a>, em papel e <a href="https://www.piazinho.com.br/#comprar">e-book</a>!</p>
     <p>Que tal fazer um <a href="http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/">curso presencial de imersão em Expressões Regulares</a> comigo lá em São Paulo?</p>
 </div>
 
@@ -42,7 +42,7 @@ article_footer_after: false
 
 > Destaques:
 > [Apostila de introdução](/regex/apostila-conhecendo-regex.pdf),
-> [Livro em português](http://www.piazinho.com.br),
+> [Livro em português](https://www.piazinho.com.br),
 > [Testador online](http://regex101.com),
 > [10 anos de regex](http://aurelio.net/blog/2009/07/17/10anos-expressoes-regulares/).
 
@@ -59,24 +59,24 @@ article_footer_after: false
 
 <table class="livros">
     <tr>
-        <td><a href="http://www.piazinho.com.br"><img src="/img/icon/128/livroregex5.png"></a></td>
-        <td><a href="http://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a><br><br>Livro de 248 páginas lançado em fevereiro de 2016, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Está à venda na maioria das livrarias do país, na versão impressa <b>e também em e-book</b> (livro digital). ISBN: 978-85-7522-474-8</td>
+        <td><a href="https://www.piazinho.com.br"><img src="/img/icon/128/livroregex5.png"></a></td>
+        <td><a href="https://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a><br><br>Livro de 248 páginas lançado em fevereiro de 2016, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Está à venda na maioria das livrarias do país, na versão impressa <b>e também em e-book</b> (livro digital). ISBN: 978-85-7522-474-8</td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed4/"><img src="/img/icon/128/livroregex4.png"></a></td>
-        <td><a href="http://www.piazinho.com.br/ed4/">Expressões Regulares - Uma abordagem divertida (4ª edição)</a><br><br>Livro de 224 páginas lançado em novembro de 2012, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-337-6 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed4/"><img src="/img/icon/128/livroregex4.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed4/">Expressões Regulares - Uma abordagem divertida (4ª edição)</a><br><br>Livro de 224 páginas lançado em novembro de 2012, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-337-6 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed3/"><img src="/img/icon/128/livroregex3.png"></a></td>
-        <td><a href="http://www.piazinho.com.br/ed3/">Expressões Regulares - Uma abordagem divertida (3ª edição)</a><br><br>Livro de 208 páginas lançado em outubro de 2009, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-212-6 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed3/"><img src="/img/icon/128/livroregex3.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed3/">Expressões Regulares - Uma abordagem divertida (3ª edição)</a><br><br>Livro de 208 páginas lançado em outubro de 2009, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-212-6 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed2/"><img src="/img/icon/128/livroregex2.png"></a></td>
-        <td><a href="http://www.piazinho.com.br/ed2/">Expressões Regulares - Uma abordagem divertida (2ª edição)</a><br><br>Livro de 168 páginas lançado em 2008, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-173-0 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed2/"><img src="/img/icon/128/livroregex2.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed2/">Expressões Regulares - Uma abordagem divertida (2ª edição)</a><br><br>Livro de 168 páginas lançado em 2008, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-173-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://www.piazinho.com.br/ed1/"><img src="/img/icon/128/livroregex1.png"></a></td>
-        <td><a href="http://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br><br> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed1/"><img src="/img/icon/128/livroregex1.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br><br> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
         <td><a href="http://aurelio.net/regex/guia/"><img src="/img/icon/128/guiaregex.png"></a></td>
@@ -96,7 +96,7 @@ article_footer_after: false
 *(Apostila em PDF) ★*
 Apostila introdutória sobre Expressões Regulares, que apresenta o conceito e explora todos os metacaracteres básicos, um a um e de maneira sequencial. A explicação se dá por exemplos que podem (devem) ser executados pelo leitor na linha de comando. Boa para quem nem faz idéia do que sejam as expressões e quer aprender a usá-las.
 
-* [Resumo das Expressões Regulares](http://www.piazinho.com.br/download/expressoes-regulares-3-tabelas.pdf)
+* [Resumo das Expressões Regulares](https://www.piazinho.com.br/download/expressoes-regulares-3-tabelas.pdf)
 *(cheat sheet, PDF) ★*
 Várias tabelas resumindo os metacaracteres, escapes, classes POSIX, precedência e outros detalhes das Expressões Regulares. Tudo numa única página A4, pronta para imprimir.
 

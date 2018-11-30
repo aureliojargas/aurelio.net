@@ -138,10 +138,10 @@
 /doc/rdl/regex-2.html                             /er/rdl-regex-2.html
 /doc/rdl/vi-vim-venci.html                        /vim/vi-vim-venci.html
 /doc/vim/                                         /vim/
-/er/guia/galeria/                                 http://www.piazinho.com.br/galeria.html
-/er/livro/galeria/                                http://www.piazinho.com.br/galeria.html
+/er/guia/galeria/                                 https://www.piazinho.com.br/galeria.html
+/er/livro/galeria/                                https://www.piazinho.com.br/galeria.html
 /er/livro/cadastro/                               /livro/cadastro/
-/er/livro/                                        http://www.piazinho.com.br/ed1/
+/er/livro/                                        https://www.piazinho.com.br/ed1/
 /er/                                              /regex/
 /moneylog/importar.html                           /moneylog/conversor.html
 /moneylog/conversor.html                          /moneylog/import/

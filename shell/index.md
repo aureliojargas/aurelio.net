@@ -190,7 +190,7 @@ pincelando todos os conceitos envolvidos no Bash. Este guia não serve para
 leigos em shell, pois seu formato está mais para "man page" do que para
 tutorial.
 
-* [Expressões Regulares - Uma abordagem divertida (5ª edição)](http://www.piazinho.com.br) *por Aurelio Marinho Jargas*
+* [Expressões Regulares - Uma abordagem divertida (5ª edição)](https://www.piazinho.com.br) *por Aurelio Marinho Jargas*
 Pode um shelleiro sobreviver sem nunca aprender Expressões Regulares? Pode.
 Mas somente quem experimenta as expressões sabe como elas poupam tempo e
 dores de cabeça, servindo para diversas áreas da informática, inclusive ao

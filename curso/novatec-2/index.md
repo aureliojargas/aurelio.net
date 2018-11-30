@@ -26,7 +26,7 @@ Uma viagem que tem somente 45 minutos de voo durou 5 horas no total. Saí direto
 
 Passado o estresse da viagem do dia anterior, o sábado foi inteiro dedicado ao curso e foi muito bom. Pude ir à pé até o CT, pois ele fica a poucas quadras do hotel.
 
-Com a caminhada matinal revigorante, cheguei uns 40 minutos antes do horário do curso. Pude ver “ao vivo” pela primeira vez a [capa vermelha luxo](https://twitter.com/novateceditora/status/699232860134367232) da 5ª edição do [meu livro de regex](http://www.piazinho.com.br), que tinha sido recém-lançada. Cada aluno também ganhou um exemplar, que autografei no fim do curso.
+Com a caminhada matinal revigorante, cheguei uns 40 minutos antes do horário do curso. Pude ver “ao vivo” pela primeira vez a [capa vermelha luxo](https://twitter.com/novateceditora/status/699232860134367232) da 5ª edição do [meu livro de regex](https://www.piazinho.com.br), que tinha sido recém-lançada. Cada aluno também ganhou um exemplar, que autografei no fim do curso.
 
 [![Sala lotada no curso de Expressões Regulares](turma-800.jpg)](turma.jpg)
 

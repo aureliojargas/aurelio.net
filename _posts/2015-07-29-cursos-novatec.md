@@ -20,7 +20,7 @@ Desde então “me aposentei” dos cursos, pois as viagens afetam bastante minh
 
 **Sete anos depois**, adivinha quem vai quebrar o jejum?
 
-O Rubens Prates (meu amigo e editor/dono da Novatec Editora) é um cara incansável e muito paciente. Ele está sempre me incentivando (empurrando) e se não fosse pela sua insistência, não haveria [piazinho](http://www.piazinho.com.br) nem [concha galáctica](https://www.shellscript.com.br). Pois bem, há cerca de um ano ele está insistindo para eu dar cursos lá no [Centro de Treinamento](http://ctnovatec.com.br/) que eles montaram. Conversa vai, conversa vem, mais uma vez ele venceu :)
+O Rubens Prates (meu amigo e editor/dono da Novatec Editora) é um cara incansável e muito paciente. Ele está sempre me incentivando (empurrando) e se não fosse pela sua insistência, não haveria [piazinho](https://www.piazinho.com.br) nem [concha galáctica](https://www.shellscript.com.br). Pois bem, há cerca de um ano ele está insistindo para eu dar cursos lá no [Centro de Treinamento](http://ctnovatec.com.br/) que eles montaram. Conversa vai, conversa vem, mais uma vez ele venceu :)
 
 Agora em agosto vou tirar férias [do trabalho](http://aurelio.net/blog/2014/11/08/funcionario-publico/), e vou aproveitar o tempo livre para… trabalhar mais!
 
@@ -44,7 +44,7 @@ Alguns detalhes:
 
 * **Localização:** Os cursos serão em São Paulo capital, no CT da Novatec, que fica colado com a estação Carandiru do metrô. Bem fácil de chegar. ([mapa](http://ctnovatec.com.br/como-chegar/))
 
-* **Meus livros de material.** Cada aluno receberá como material do curso, um exemplar de meus livros de [shell](https://www.shellscript.com.br) ou [regex](http://www.piazinho.com.br). Então além do curso, você ainda volta com um livro pra casa (autografado, se preferir).
+* **Meus livros de material.** Cada aluno receberá como material do curso, um exemplar de meus livros de [shell](https://www.shellscript.com.br) ou [regex](https://www.piazinho.com.br). Então além do curso, você ainda volta com um livro pra casa (autografado, se preferir).
 
 * **Abordagem didática e 100% prática.** Não há slides enfadonhos. É tudo explicado e demonstrado na hora, usando a linha de comando, o console JavaScript ou o prompt interativo do Python. Você leva teu notebook e vai acompanhando tudo, digitando, testando. Surgiu uma dúvida? Pergunte na hora. E assim vamos levando o curso, conforme o interesse da turma. O objetivo é ensinar de verdade, em vez de ler slides.
 

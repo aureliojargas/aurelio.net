@@ -16,7 +16,7 @@ Dentro do editor de textos para fazer edições mais avançadas, dentro dos cód
 
 É muito bom saber usar regex e ter tantas possibilidades diferentes de lugares onde posso aplicar este conhecimento. E melhor, diferente da maioria dos assuntos em informática, este é um que não fica obsoleto. Você aprende uma vez e usa por anos a fio, não há o que se atualizar ou aprender a versão nova. Regex é regex e pronto.
 
-Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vida, que acho lastimável que esse conhecimento não seja universal na área nerd. Todos deveriam saber pelo menos o básico, e aplicar no seu dia a dia para economizar tempo. Tento fazer minha parte para ajudar a difundí-las: criei [um site](http://aurelio.net/regex/), escrevi [um livro](http://www.piazinho.com.br), fiz [vídeos](https://www.youtube.com/user/aureliojargas), e dou [palestras e cursos](http://aurelio.net/curso/).
+Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vida, que acho lastimável que esse conhecimento não seja universal na área nerd. Todos deveriam saber pelo menos o básico, e aplicar no seu dia a dia para economizar tempo. Tento fazer minha parte para ajudar a difundí-las: criei [um site](http://aurelio.net/regex/), escrevi [um livro](https://www.piazinho.com.br), fiz [vídeos](https://www.youtube.com/user/aureliojargas), e dou [palestras e cursos](http://aurelio.net/curso/).
 
 
 ## Não é tão difícil quanto parece
