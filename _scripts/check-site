@@ -129,19 +129,22 @@ check_windows_linebreak() {
         grep -v '^_site/projects/moneylog/' |
         grep -v '^_site/moneylog/' |
 
-        xargs file | grep CRLF
+        # Disable all file tests except the CRLF-related: ascii, text.
+        # Execution time gains: from 30s to 0.4s \o/
+        xargs file -e apptype -e cdf -e compress -e elf -e encoding -e soft -e tar -e json -e tokens |
+        grep -F CRLF
 }
 
 active_checks="
     check_accidental_liquid_markup
     check_missing_article_date
+    check_windows_linebreak
     check_unquoted_attributes
     check_link_to_index_html
     check_link_to_gone
     check_link_to_redirected
     check_mixed_content
     check_relative_urls
-    check_windows_linebreak
 "
 
 for check in $active_checks
