@@ -45,3 +45,6 @@
 % other
 %!preproc: VERSION	1.3
 %!preproc: PATH		.
+
+% Fix unquoted HR attribute
+%!postproc: '^<HR NOSHADE SIZE=1>' '<HR NOSHADE SIZE="1">'

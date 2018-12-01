@@ -8,6 +8,9 @@ RAC - Recados
 %!postproc: {(.*?)}	<\1>
 %!postproc: (.*t2tpowered.*)	<a href="http://txt2tags.org">\1</a>
 
+% Fix unquoted HR attribute
+%!postproc: '^<HR NOSHADE SIZE=1>' '<HR NOSHADE SIZE="1">'
+
 %!include: ''recados-inc.html''
 
 _______________________________________________________

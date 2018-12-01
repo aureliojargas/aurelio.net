@@ -11,6 +11,7 @@ Aurélio Marinho Jargas, Thobias Salazar Trevisan
 %!postproc(html): 	<DL>	<BLOCKQUOTE><DL>
 %!postproc(html): 	</DL>	</DL></BLOCKQUOTE>
 %!postproc(html): '<H4>(rac)</H4>' '<H2>\1</H2>'
+%!postproc(html): '^<HR NOSHADE SIZE=1>' '<HR NOSHADE SIZE="1">'
 
 -------------------------------------------------------------
 
