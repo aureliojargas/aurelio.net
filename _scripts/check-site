@@ -117,8 +117,8 @@ check_unquoted_attributes() {
 
         # Remove false positives
         grep -F -i -v 'content="text/html; charset=utf-8"' |
-        #XXX txt2tags generated files, won't fix now
-        grep -E -v '<HR NOSHADE SIZE=1>'
+        # txt2tags postproc filter to fix unquoted
+        grep -F -v '.t2t:%!postproc'
 }
 
 check_windows_linebreak() {
