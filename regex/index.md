@@ -51,7 +51,7 @@ article_footer_after: false
 > [Vim](/vim/),
 > [Shell Script](/shell/),
 > [Cygwin](/cygwin/),
-> [CODARE](http://codare.net),
+> [CODARE](https://codare.aurelio.net),
 > [docz nerdz](/doc/nerd.html).
 
 

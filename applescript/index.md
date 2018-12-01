@@ -8,6 +8,6 @@ hide_comments: true
 
 - Vídeo-tutorial: [Brincando com AppleScript - say e iTunes](http://aurelio.net/blog/2009/11/26/quer-brincar-de-applescript/)
 
-- [Dicas rápidas de AppleScript no CODARE](http://codare.net/category/applescript/)
+- [Dicas rápidas de AppleScript no CODARE](https://codare.aurelio.net/category/applescript/)
 
 - [Aplicativos e ferramentas que fiz em AppleScript](http://aurelio.net/projects/)
