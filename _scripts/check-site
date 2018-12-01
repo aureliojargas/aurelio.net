@@ -109,7 +109,6 @@ check_unquoted_attributes() {
 
         # Remove false positives
         grep -F -x -v '_site/bin/python/txt2tags-r900.py' |
-        grep -F -x -v '_site/doc/coluna/coluna-09.html' |
         grep -F -x -v '_site/sed/programas/yahoogroups-kill-sig.sed' |
         grep -F -x -v '_site/vim/vimrc-ivan.txt' |
 
