@@ -2,9 +2,8 @@
 @image@
 The console Regular Expression Wizard
 
-%!target: html
+%!includeconf: _config.t2t
 
-%!options: --css-sugar --style site.css
 %!postproc: @image@     	'<img src="img/txt2regex.png">'
 % Highlights
 %!postproc: '(interactive|20 programs|Shell Script)'  '<b>\1</b>'

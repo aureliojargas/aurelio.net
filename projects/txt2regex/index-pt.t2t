@@ -2,12 +2,8 @@
 @image@
 Assistente para Expressões Regulares
 
-%!target: html
-%!encoding: UTF-8
-%!options: --css-sugar --style site.css
+%!includeconf: _config.t2t
 %!postproc: @image@     	'<img src="img/txt2regex.png">'
-% Highlights
-%!postproc: '(interactive|20 programs|Shell Script)'  '<b>\1</b>'
 
 ''' <div class="language">
 [[img/flag-en.gif] .] [in english .]

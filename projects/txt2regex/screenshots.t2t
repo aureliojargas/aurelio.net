@@ -1,8 +1,7 @@
 Txt2regex Screenshots
 
 
-%!target: html
-%!options: --css-sugar --style site.css
+%!includeconf: _config.t2t
 %!postproc: (</HEAD>) '<STYLE TYPE="text/css">table{font-size:120%;}</STYLE>\1'
 
   |  Support for POSIX classes, as [:alpha:], [:lower:] and friends | [img/posix.png]

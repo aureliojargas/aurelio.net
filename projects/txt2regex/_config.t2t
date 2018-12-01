@@ -1,0 +1,7 @@
+
+%!target: html
+%!options: --css-sugar --style site.css
+%!encoding: UTF-8
+
+% Fix unquoted HR attribute
+%!postproc: '^<HR NOSHADE SIZE=1>' '<HR NOSHADE SIZE="1">'
