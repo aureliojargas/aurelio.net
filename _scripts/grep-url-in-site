@@ -21,13 +21,13 @@ check() {
     local user_url=$1
 
     # It's a full url from my site
-    if echo "$user_url" | grep -q "^$domain"
+    if echo "$user_url" | grep -E -q "^$domain"
     then
         full_url=$user_url
         root_relative_url=$(echo "$full_url" | sed -r "s/^$domain//")
 
     # It's an external url
-    elif echo "$user_url" | grep -q '^https?://'
+    elif echo "$user_url" | grep -E -q '^https?://'
     then
         full_url=$user_url
         root_relative_url=
