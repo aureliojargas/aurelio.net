@@ -62,7 +62,7 @@ check_link_to_gone() {
         grep -Fxv '/recados.php' | # historical
         # Exception: top dir is gone, but not its children
         # Add harmless ? at the end to avoid /$ detectionin grep-* script
-        sed -E '/^\/blog\/20..\/$/ s/$/?/' |
+        sed -r '/^\/blog\/20..\/$/ s/$/?/' |
         xargs _scripts/grep-url-in-site
 }
 

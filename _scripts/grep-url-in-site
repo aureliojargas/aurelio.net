@@ -24,7 +24,7 @@ check() {
     if echo "$user_url" | grep -q "^$domain"
     then
         full_url=$user_url
-        root_relative_url=$(echo "$full_url" | sed -E "s/^$domain//")
+        root_relative_url=$(echo "$full_url" | sed -r "s/^$domain//")
 
     # It's an external url
     elif echo "$user_url" | grep -q '^https?://'
