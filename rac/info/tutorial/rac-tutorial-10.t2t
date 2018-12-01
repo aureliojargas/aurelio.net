@@ -1,8 +1,7 @@
 RAC 10/12 - Linhas e Colunas
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

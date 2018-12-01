@@ -1,8 +1,7 @@
 Tutorial do Programa RAC
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

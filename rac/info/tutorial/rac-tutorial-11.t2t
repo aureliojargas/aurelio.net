@@ -1,8 +1,7 @@
 RAC 11/12 - Pratique, complique!
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

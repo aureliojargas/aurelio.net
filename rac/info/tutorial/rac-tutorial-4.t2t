@@ -1,8 +1,7 @@
 RAC 4/12 - Várias Linhas
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

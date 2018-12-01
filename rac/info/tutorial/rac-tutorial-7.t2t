@@ -1,8 +1,7 @@
 RAC 7/12 - Mais Detalhes
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

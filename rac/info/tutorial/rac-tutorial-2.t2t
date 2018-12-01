@@ -1,8 +1,7 @@
 RAC 2/12 - Os Endereços
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

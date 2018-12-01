@@ -1,8 +1,7 @@
 RAC 1/12 - O que é
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

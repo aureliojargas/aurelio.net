@@ -1,8 +1,7 @@
 RAC 5/12 - A Última Linha
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 

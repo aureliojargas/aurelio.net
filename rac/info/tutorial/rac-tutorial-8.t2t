@@ -1,8 +1,7 @@
 RAC 8/12 - Saltos
 
 
-%!target: html
-%!style: tutorial.css
+%!includeconf: config.t2t
 
 ------------------------------------------------------------------------
 
