@@ -11,7 +11,7 @@ hide_comments: true
 
 {% for post in site.posts limit:20 %}
 	<h2 style="margin: 1.5em 0 0.5em 0; font-size: 150%;">
-		<a href="{{ site.url}}{{ post.url }}"
+		<a href="{{ post.url }}"
 		   title="Link permanente para {{ post.title | escape }}"
 		   class="camouflage"
 		   rel="bookmark">{{ post.title | escape }}</a>
@@ -19,7 +19,7 @@ hide_comments: true
 
 	<p>
 		{{ post.content | strip_html | truncatewords: 70 }}
-		→ <a href="{{ site.url}}{{ post.url }}">Veja o post completo</a>
+		→ <a href="{{ post.url }}">Veja o post completo</a>
 	</p>
 {% endfor %}
 

@@ -30,7 +30,7 @@ Mas se preferir, aqui está a lista completa de todos os episódios, com links p
         {{ video.youtube.title }}
         <br>
         <small>
-            <a href="{{ site.url }}{{ video.blog.url }}">Blog</a>,
+            <a href="{{ video.blog.url }}">Blog</a>,
             <a href="https://www.youtube.com/watch?v={{ video.youtube.id }}&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
             <br>
             {{ video.date | date: "%d/%m/%Y"}}
