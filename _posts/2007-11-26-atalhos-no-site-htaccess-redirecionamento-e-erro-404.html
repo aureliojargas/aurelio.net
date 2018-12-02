@@ -15,13 +15,13 @@ tags: [site]
 <p>Se você visitou o <a href="/">AURELIO.NET</a> recentemente, deve ter notado que a <a href="/">página principal</a> ganhou vários links novos no final, chamados “Atalhos”.</p>
 <p><a href="/"><img src="/wp/wp-content/uploads/2007/11/atalhos-site.jpg" alt="Atalhos no site" /></a></p>
 <p>Cada palavra daquelas é um link para o endereço:</p>
-<p><code>http://aurelio.net/PALAVRA</code></p>
+<p><code>https://aurelio.net/PALAVRA</code></p>
 <p>Por exemplo, se você quer usar o MiGuXeiToR, não precisa mais daquele endereço enorme</p>
-<p><code>http://aurelio.net/coisinha/miguxeitor/</code></p>
+<p><code>https://aurelio.net/coisinha/miguxeitor/</code></p>
 <p>Agora basta digitar</p>
-<p><code>http://aurelio.net/miguxeitor</code></p>
+<p><code>https://aurelio.net/miguxeitor</code></p>
 <p>E você vai cair na página do tradutor. Quer ver o Canivete Suíço do Shell? É</p>
-<p><code>http://aurelio.net/canivete</code></p>
+<p><code>https://aurelio.net/canivete</code></p>
 <p>Simples assim.</p>
 <p>Basta usar a palavra-chave que identifica a área desejada do site, que você vai cair no lugar certo. Dê uma olhada em todos os nomes dos atalhos. Da próxima vez que for acessar o site, use o endereço curto!</p>
 <p>Se você não é nerd, pode parar de ler aqui que agora vai ficar chaaaaaaaatoooooo.</p>
@@ -31,8 +31,8 @@ tags: [site]
 <blockquote><p>Pelo que pude notar, o Google gosta de atalhos. Apesar de milhares de links na Internet apontarem para o endereço completo do MiGuXeiToR, o primeiro resultado da pesquisa é o endereço curto (atalho). <a href="http://www.google.com/search?rls=pt-pt&amp;q=miguxeitor&amp;ie=UTF-8&amp;oe=UTF-8">Confira</a>.</p></blockquote>
 <p>O que mais gostei desse esquema foi a simplicidade de criação e manutenção de todos os atalhos: um único arquivo texto.</p>
 <p>O servidor Apache usa o arquivo especial .htaccess para guardar algumas regras especiais que podem ser aplicadas a um site. Entre estas regras, está o redirecionamento. Com uma única linha é fácil fazer o atalho já mencionado do MiGuXeiToR:</p>
-<p><code>Redirect 302 /miguxeitor http://aurelio.net/coisinha/miguxeitor/</code></p>
-<blockquote><p>Traduzindo: “Estimado Apache, por obséquio, seria possível vossa mercê redirecionar todas as visitas destinadas à área /miguxeitor deste site, para o endereço http://aurelio.net/coisinha/miguxeitor/? Ah, se não fosse pedir muito, gostaria que o código 302 fosse usado para identificar este redirecionamento. Grato por sua atenção, subscrevo-me. Obrigado.”</p></blockquote>
+<p><code>Redirect 302 /miguxeitor https://aurelio.net/coisinha/miguxeitor/</code></p>
+<blockquote><p>Traduzindo: “Estimado Apache, por obséquio, seria possível vossa mercê redirecionar todas as visitas destinadas à área /miguxeitor deste site, para o endereço https://aurelio.net/coisinha/miguxeitor/? Ah, se não fosse pedir muito, gostaria que o código 302 fosse usado para identificar este redirecionamento. Grato por sua atenção, subscrevo-me. Obrigado.”</p></blockquote>
 <p>Basta colocar várias linhas para fazer vários atalhos. Fácil, não?</p>
 <p>Tá, tem alguns detalhes importantes :)</p>
 <ul>
@@ -45,7 +45,7 @@ tags: [site]
 <blockquote><p><strong>Atualização:</strong> Usar o redirecionamento temporário (302) não garante cache. Já o redirecionamento permanente (301), sim. (Obrigado <a href="/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/#comment-3858">Denilson</a>)</p></blockquote>
 </li>
 <li>Não esqueça da barra / no início do atalho.</li>
-<li>O atalho pode ser para um subdiretório também:<code>Redirect 302 <strong>/viagem/farol-imbituba-2001</strong> http://aurelio.net/viagem/farol-imbituba</code></li>
+<li>O atalho pode ser para um subdiretório também:<code>Redirect 302 <strong>/viagem/farol-imbituba-2001</strong> https://aurelio.net/viagem/farol-imbituba</code></li>
 <li>
 <p>O endereço para onde o atalho aponta sempre deve ser completo, com http:// e tudo mais. Sim, mesmo que o atalho seja para o próprio site.</p>
 <blockquote><p><strong>Atualização:</strong> No Apache 2 é possível especificar somente o path no destino do redirecionamento, sem precisar do http://seuservidor.com.br. Mas para garantir é melhor usar a notação completa mesmo. (Obrigado <a href="/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/#comment-3858">Denilson</a>)</p></blockquote>
