@@ -151,6 +151,6 @@ active_checks="
 for check in $active_checks
 do
     echo "Running $check..."
-    wrong=$(time $check)
+    wrong=$($check)
     test -n "$wrong" && error "$wrong"
 done
