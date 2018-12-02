@@ -53,4 +53,4 @@ E pronto!
 
 ## Veja também
 
-Agora que você já sabe remover, que tal aprender a [adicionar campos no formulário](http://aurelio.net/wordpress/adicionar-campos-formulario-comentarios/)?
+Agora que você já sabe remover, que tal aprender a [adicionar campos no formulário](/wordpress/adicionar-campos-formulario-comentarios/)?

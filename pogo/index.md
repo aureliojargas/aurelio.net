@@ -197,15 +197,15 @@ E o principal: há um BAITA sorrisão em seu rosto e você se sente renovado, vi
 
 ----
 
-**Sobre o autor:** [Aurelio Marinho Jargas](http://aurelio.net), nascido em 77, programador, baterista, já tocou nas seguintes bandas de hardcore: [CORRERIA HC](http://aurelio.net/correria/), [DUMBS](http://aurelio.net/dumbs/), SCARECROW, [VALETA](http://aurelio.net/valeta/) e NO SNACKS. Praticante da pogoterapia.
+**Sobre o autor:** [Aurelio Marinho Jargas](http://aurelio.net), nascido em 77, programador, baterista, já tocou nas seguintes bandas de hardcore: [CORRERIA HC](/correria/), [DUMBS](/dumbs/), SCARECROW, [VALETA](/valeta/) e NO SNACKS. Praticante da pogoterapia.
 
 **Sobre o artigo:** Nenhuma pesquisa ou invenção foram feitas. Todo o conteúdo reflete a vivência do autor. Não há nenhuma pretensão a não ser o registro escrito da experiência.
 
 Artigos similares neste site:
 
-  * [Show do Toy Dolls em Curitiba](http://aurelio.net/blog/2006/10/31/show-toy-dolls-curitiba/)
-  * [Baterna - Curso de bateria online e gratuito](http://aurelio.net/baterna/)
-  * [Musicalidades - Bandas, álbuns, shows, bateria](http://aurelio.net/musica/)
+  * [Show do Toy Dolls em Curitiba](/blog/2006/10/31/show-toy-dolls-curitiba/)
+  * [Baterna - Curso de bateria online e gratuito](/baterna/)
+  * [Musicalidades - Bandas, álbuns, shows, bateria](/musica/)
 
 Links da Wikipedia sobre o assunto (em inglês):
 

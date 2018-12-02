@@ -4,7 +4,7 @@ layout: 2013-page
 title: 'Trem Eurostar: Guia ilustrado para pesquisar preços de passagens'
 ---
 
-> O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](http://aurelio.net/trem-eurostar/)
+> O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](/trem-eurostar/)
 
 As passagens do trem Eurostar são como passagens aéreas: não possuem preço fixo e podem mudar a qualquer momento. Para saber o preço atual de uma viagem você tem que fazer uma consulta no próprio site da Eurostar.
 

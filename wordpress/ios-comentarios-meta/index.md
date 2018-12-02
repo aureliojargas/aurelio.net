@@ -5,7 +5,7 @@ title: 'WordPress para iOS: Mostrar campos adicionais (meta) nos comentários'
 
 > **Atualização importante em 2013-07-17:** Só muito tempo depois fui descobrir que esta dica traz um efeito colateral indesejado. Ao aprovar o comentário pelo aplicativo do WordPress no iOS, a linha adicional com os campos meta é inserida como se fosse parte do comentário original. Para o meu uso, isso invalida a esta dica :(
 
-Já ensinei aqui [como adicionar campos personalizados nos comentários de seu blog](http://aurelio.net/wordpress/adicionar-campos-formulario-comentarios/). Muito útil para coletar dados extras de seu leitor, como por exemplo a cidade/estado, ou quem sabe o login do twitter.
+Já ensinei aqui [como adicionar campos personalizados nos comentários de seu blog](/wordpress/adicionar-campos-formulario-comentarios/). Muito útil para coletar dados extras de seu leitor, como por exemplo a cidade/estado, ou quem sabe o login do twitter.
 
 Lá no final do artigo também ensinei como mostrar na tela o conteúdo destes campos, tanto publicamente, no próprio post, quanto na interface de administração do WordPress (backend). É importante que você tenha entendido este passo, pois o que faremos aqui é similar.
 

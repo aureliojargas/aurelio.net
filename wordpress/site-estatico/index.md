@@ -26,7 +26,7 @@ Com filosofias tão diferentes, na verdade opostas, é possível mesclar WordPre
 
 Meu site estático, Aurelio.net, foi criado em 1999. Durante esses anos todos, ele cresceu, cresceu e se tornou um monstro com 3.746 arquivos e 369 pastas.
 
-Meu blog também nasceu em 1999, como [uma página](http://aurelio.net/blog-arquivo.html) dentro de meu site estático. Somente em 2006 que finalmente [migrei para o WordPress](http://aurelio.net/blog/2006/04/23/blog-novo-de-novo-dessa-vez-definitivo-e-bombado/) e o blog separou-se do site. Hoje, fevereiro de 2011, o blog conta com 245 posts e 7590 comentários.
+Meu blog também nasceu em 1999, como [uma página](/blog-arquivo.html) dentro de meu site estático. Somente em 2006 que finalmente [migrei para o WordPress](/blog/2006/04/23/blog-novo-de-novo-dessa-vez-definitivo-e-bombado/) e o blog separou-se do site. Hoje, fevereiro de 2011, o blog conta com 245 posts e 7590 comentários.
 
 Agora quero desfazer esta separação: quero que o blog volte para dentro do meu site. Mais do que isso, **quero que o WordPress e o site estático fundam-se, mesclem-se, compartilhem o mesmo espaço**. Quero que ao acessar um endereço qualquer como _aurelio.net/foobar/_, seja indiferente se ali está uma pasta estática ou uma página do WordPress. Quero poder alternar entre um e outro conforme precisar. O que hoje é estático, amanhã pode estar no WordPress, ou então voltar a ser estático, e o endereço sempre permanece o mesmo. Quero ter essa flexibilidade.
 
@@ -48,7 +48,7 @@ Meu site estático já está na raiz. Então, agora só falta instalar o WordPre
   * Se for o WordPress, ele irá entregar também os arquivos do site estático ou dirá que não encontrou aquele post/página, já que eles não estão em sua base de dados?
   * Se tiver uma página do WordPress com o mesmo endereço de uma pasta já existente do site estático, quem ganha?
 
-Encontrei as respostas no místico e indecifrável arquivo [.htaccess](http://aurelio.net/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/) do Apache. O WordPress cria algumas regras especiais para lidar com este dilema. Não quero estragar a sua diversão, então vou deixar que você analise as regras antes de contar o que elas fazem ;)
+Encontrei as respostas no místico e indecifrável arquivo [.htaccess](/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/) do Apache. O WordPress cria algumas regras especiais para lidar com este dilema. Não quero estragar a sua diversão, então vou deixar que você analise as regras antes de contar o que elas fazem ;)
 
 ```apache
 # BEGIN WordPress
@@ -106,7 +106,7 @@ E para que as categorias e tags também fiquem debaixo do /blog, é preciso alte
     Base da categoria: blog/category
     Base das tags    : blog/tag
 
-Também criei uma página [/blog](http://aurelio.net/blog/) no WordPress e a configurei para ser a página principal do blog, aquela onde são listados os posts mais recentes. A página inicial (Home) ficou vazia por enquanto. Veja como fazer esta configuração no menu Configurações → Leitura:
+Também criei uma página [/blog](/blog/) no WordPress e a configurei para ser a página principal do blog, aquela onde são listados os posts mais recentes. A página inicial (Home) ficou vazia por enquanto. Veja como fazer esta configuração no menu Configurações → Leitura:
 
 ![](/img/wp/wp-site-estatico-config.png)
 
@@ -115,14 +115,14 @@ Também criei uma página [/blog](http://aurelio.net/blog/) no WordPress e a con
 
 O site já tinha um _index.html_ na raiz, e agora também tem o _index.php_ do WordPress lá. É preciso escolher um ou outro como o oficial para ser a página principal de seu site.
 
-Escolhi o WordPress como responsável pela principal, para ganhar de brinde os menus e a integração com o blog. Incrementei essa página com os links e alguns elementos da [antiga página principal estática](http://aurelio.net/misc/aurelionet-2011.pdf), e o resultado ficou uma mistura de ambos: [confira](http://aurelio.net).
+Escolhi o WordPress como responsável pela principal, para ganhar de brinde os menus e a integração com o blog. Incrementei essa página com os links e alguns elementos da [antiga página principal estática](/misc/aurelionet-2011.pdf), e o resultado ficou uma mistura de ambos: [confira](http://aurelio.net).
 
 
 ## O menu
 
 O esquema de menus do WordPress (Aparência → Menus) é muito bacana, permite montar um menu com links para posts, páginas, categorias e endereços arbitrários. Este último é o que me permite colocar links para áreas do site estático direto dentro do menu do WordPress, aumentando ainda mais a integração entre ambos. Quem chega para ler um post no blog, com um clique pode ir parar num longo artigo do site.
 
-O caminho inverso é mais complicado. O site estático não tem como acompanhar o ritmo de atualizações do blog. Qualquer tentativa de manter manualmente no site um menu atualizado com as novidades do blog tende a falhar. Então hoje sigo o caminho mais fácil e simplesmente coloco um link genérico para a [página principal do blog](http://aurelio.net/blog/).
+O caminho inverso é mais complicado. O site estático não tem como acompanhar o ritmo de atualizações do blog. Qualquer tentativa de manter manualmente no site um menu atualizado com as novidades do blog tende a falhar. Então hoje sigo o caminho mais fácil e simplesmente coloco um link genérico para a [página principal do blog](/blog/).
 
 
 ## O que mais?
@@ -140,4 +140,4 @@ Seria legal ter um site 100% WordPress para ficar tudo num lugar só, com o mesm
 
 Mas é isso, tá bom do jeito que tá :)
 
-**Leia também:** [Plugins do WordPress que uso e recomendo](http://aurelio.net/wordpress/plugins/)
+**Leia também:** [Plugins do WordPress que uso e recomendo](/wordpress/plugins/)

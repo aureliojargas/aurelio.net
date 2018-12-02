@@ -7,7 +7,7 @@ hide_read_more: true
 worked: 5:00
 ---
 
-por [Aurelio Jargas](http://aurelio.net/aurelio/)
+por [Aurelio Jargas](/aurelio/)
 
 <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen></iframe>
 <br><i>Curta o vídeo em tela cheia!</i></span></p>
@@ -47,7 +47,7 @@ Sou programador, então estou acostumado a usar loops, condicionais e algoritmos
 
 Este ambiente é especialmente poderoso para manipular texto. Se você conseguir transformar o seu problema atual em um problema de texto, a solução sairá naturalmente na linha de comando. O ideal é que o fluxo seja: **entra texto, sai texto**, ou seja, você começa com um texto de início, o manipula com as ferramentas do Unix, e o resultado é um novo texto.
 
-O [episódio 7](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/) ilustra bem essa diferença de pensamento:
+O [episódio 7](/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/) ilustra bem essa diferença de pensamento:
 
 > Mas como usar a zzarrumacidade (um programa que está em meu computador) para arrumar os dados que estão dentro do banco de dados do WordPress (uma entidade que está lá no servidor)?
 >
@@ -72,7 +72,7 @@ O [episódio 7](http://aurelio.net/blog/2014/03/22/o-jeito-shell-script-de-resol
     PS1='----------------------------------------\n▶ '
     ```
 
-    As cores você pode colocar com caracteres ANSI, veja referência no [Canivete Suíço do Shell](http://aurelio.net/shell/canivete/#cores):
+    As cores você pode colocar com caracteres ANSI, veja referência no [Canivete Suíço do Shell](/shell/canivete/#cores):
 
     ```bash
     PS1='\[\e[32;1m\]----------------------------------------\n▶ \[\e[m\]'

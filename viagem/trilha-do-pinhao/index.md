@@ -29,7 +29,7 @@ Mais ou menos no meio do caminho, subimos, subimos e quando percebemos, estávam
 
 ![](/img/viagem/trilha-do-pinhao/pinhao5.jpg)
 
-É muito massa estar com o carro parado no meio do nada. No [deserto do Atacama](http://aurelio.net/viagem/atacama/) é assim também: 360 graus de nada. Ahhhh o nada... Nada como o nada. O nada é o tudo nesses momentos...
+É muito massa estar com o carro parado no meio do nada. No [deserto do Atacama](/viagem/atacama/) é assim também: 360 graus de nada. Ahhhh o nada... Nada como o nada. O nada é o tudo nesses momentos...
 
 ![](/img/viagem/trilha-do-pinhao/pinhao6.jpg)
 

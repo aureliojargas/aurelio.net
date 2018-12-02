@@ -31,17 +31,17 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 
 ## My softwares
 
-- [AdiumBook](http://aurelio.net/projects/adiumbook/) — sync Adium and Address Book contacts (Mac).
+- [AdiumBook](/projects/adiumbook/) — sync Adium and Address Book contacts (Mac).
 - [clitest](https://github.com/aureliojargas/clitest) — Unix command line tester.
-- [CSS Sandbox](http://aurelio.net/projects/css-sandbox/) — webapp to play with CSS properties on-the-fly.
-- [iPhoto sed](http://aurelio.net/projects/iphoto-sed/) — batch change title/comments using sed and regex.
-- [iTunes sed](http://aurelio.net/projects/itunes-sed/) — batch change ID3 info using sed and regex.
-- [MoneyLog](http://aurelio.net/projects/moneylog/) — personal finances in one single HTML file.
+- [CSS Sandbox](/projects/css-sandbox/) — webapp to play with CSS properties on-the-fly.
+- [iPhoto sed](/projects/iphoto-sed/) — batch change title/comments using sed and regex.
+- [iTunes sed](/projects/itunes-sed/) — batch change ID3 info using sed and regex.
+- [MoneyLog](/projects/moneylog/) — personal finances in one single HTML file.
 - [txt2tags](http://txt2tags.org) — converts text files to multiple formats.
-- [txt2regex](http://aurelio.net/projects/txt2regex/) — regular expression wizard for the console.
-- [sedsed](http://aurelio.net/projects/sedsed/) — debugger and HTMLizer for sed scripts.
-- [SedSokoban](http://aurelio.net/projects/sedsokoban/) — the Sokoban game written in sed.
-- [more…](http://aurelio.net/projects/)
+- [txt2regex](/projects/txt2regex/) — regular expression wizard for the console.
+- [sedsed](/projects/sedsed/) — debugger and HTMLizer for sed scripts.
+- [SedSokoban](/projects/sedsokoban/) — the Sokoban game written in sed.
+- [more…](/projects/)
 
 > All my softwares are [Open Source](http://en.wikipedia.org/wiki/Open-source_software).
 
@@ -61,11 +61,11 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 
 ## My articles
 
-- [Bash Shell Quick Reference](http://aurelio.net/articles/shell-reference.html) — Extensive reference for the shell.
-- [AppleScript for Python Programmers](http://aurelio.net/articles/applescript-vs-python.html) — Languages comparison chart.
-- [Dropbox and symlinks](http://aurelio.net/articles/dropbox-symlinks.html) — Not a happy couple.
-- [How to install AppleScripts on your Mac](http://aurelio.net/articles/applescript-install.html) — A visual guide.
-- [more…](http://aurelio.net/articles/)
+- [Bash Shell Quick Reference](/articles/shell-reference.html) — Extensive reference for the shell.
+- [AppleScript for Python Programmers](/articles/applescript-vs-python.html) — Languages comparison chart.
+- [Dropbox and symlinks](/articles/dropbox-symlinks.html) — Not a happy couple.
+- [How to install AppleScripts on your Mac](/articles/applescript-install.html) — A visual guide.
+- [more…](/articles/)
 
 ----
 

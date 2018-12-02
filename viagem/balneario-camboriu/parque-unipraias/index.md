@@ -5,7 +5,7 @@ title: Teleférico (bondinho) Camboriú-Laranjeiras - Parque Unipraias - SC
 title_prefix: 'EU FUI: '
 ---
 
-Estávamos lá em [Balneário Camboriú](http://aurelio.net/viagem/balneario-camboriu/) e fomos experimentar o famoso passeio de teleférico: um bondinho que, pendurado num cabo de aço, sobe e desce o morro e vai sair lá do outro lado, na Praia de Laranjeiras.
+Estávamos lá em [Balneário Camboriú](/viagem/balneario-camboriu/) e fomos experimentar o famoso passeio de teleférico: um bondinho que, pendurado num cabo de aço, sobe e desce o morro e vai sair lá do outro lado, na Praia de Laranjeiras.
 
 No meio do caminho, lá no topo do morro, dá pra descer do bondinho e curtir as atrações: apreciar a vista de toda a orla, caminhar pelas trilhas, praticar arvorismo (andar em cima das árvores) e andar num carrinho (trenó) que desce um trecho do morro numa pista, parecido com uma montanha-russa.
 
@@ -18,7 +18,7 @@ No meio do caminho, lá no topo do morro, dá pra descer do bondinho e curtir as
 
 Primeiro precisávamos chegar até a estação do teleférico, que fica lá no final (ou seria o início?) da Praia Central de Camboriú, bem na ponta, chamada **Barra Sul**.
 
-Fomos de carro, mas também é fácil chegar lá pegando o **Bondindinho**, ônibus para turistas que circula pela praia. Ele passa pela Avenida Atlântica e pela Avenida Brasil, basta acenar que ele para, e seu ponto final é justo na estação do teleférico, não tem erro. A passagem custa R$3 por pessoa. [Saiba mais sobre o Bondidinho](http://aurelio.net/viagem/balneario-camboriu/bondindinho/).
+Fomos de carro, mas também é fácil chegar lá pegando o **Bondindinho**, ônibus para turistas que circula pela praia. Ele passa pela Avenida Atlântica e pela Avenida Brasil, basta acenar que ele para, e seu ponto final é justo na estação do teleférico, não tem erro. A passagem custa R$3 por pessoa. [Saiba mais sobre o Bondidinho](/viagem/balneario-camboriu/bondindinho/).
 
 
 ## Embarque: Estação Barra Sul

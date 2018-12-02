@@ -20,7 +20,7 @@ Professor Carlos A. Miglinski pela oportunidade e
 hospitalidade.
 
 Links:
-[Slides da Palestra](http://aurelio.net/curso/material/desenvolvedor/),
+[Slides da Palestra](/curso/material/desenvolvedor/),
 [Fotos oficiais do evento](http://www.auri.com.br/semana/fotos.php)
 
 ## Curitiba → Campinas → Hotel → Academia

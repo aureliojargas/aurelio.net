@@ -55,7 +55,7 @@ Quer assistir também? Felizmente essa palestra foi gravada (boa FISL!), então 
 
 ## Os autógrafos
 
-Logo após a palestra, rolou uma sessão de autógrafos no meio da feira. A lojinha do FISL, além das camisetas, canecas, mochilas e outros apetrechos, estava vendendo [meus livros](http://aurelio.net/livro/) também.
+Logo após a palestra, rolou uma sessão de autógrafos no meio da feira. A lojinha do FISL, além das camisetas, canecas, mochilas e outros apetrechos, estava vendendo [meus livros](/livro/) também.
 
 ![](/curso/fisl-17/autografo-1.jpg)
 
@@ -64,7 +64,7 @@ Logo após a palestra, rolou uma sessão de autógrafos no meio da feira. A loji
 
 ## O evento
 
-[A última vez que eu tinha ido ao FISL](http://aurelio.net/blog/2008/04/22/a-mog-foi-no-fisl/) foi em 2008, para o lançamento do [meu livro de Shell Script](https://www.shellscript.com.br/). Faz tempo…
+[A última vez que eu tinha ido ao FISL](/blog/2008/04/22/a-mog-foi-no-fisl/) foi em 2008, para o lançamento do [meu livro de Shell Script](https://www.shellscript.com.br/). Faz tempo…
 
 Como este foi um ano de crise no país, os organizadores estavam com menos verba e fizeram um **evento reduzido**, numa área menor do pavilhão. Eu prefiro assim, menor, mais aconchegante.
 

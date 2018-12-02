@@ -37,7 +37,7 @@ function adiciona_campos($campos) {
 ?>
 ```
 
-Não se preocupe (ainda) com a parte 'conteúdo HTML', isso colocaremos daqui dois parágrafos. Mas olhando este esqueleto, perceba que o funcionamento é simples, similar ao procedimento de [remover campos](http://aurelio.net/wordpress/remover-campos-formulario-comentarios/), porém preenchendo em vez de esvaziar.
+Não se preocupe (ainda) com a parte 'conteúdo HTML', isso colocaremos daqui dois parágrafos. Mas olhando este esqueleto, perceba que o funcionamento é simples, similar ao procedimento de [remover campos](/wordpress/remover-campos-formulario-comentarios/), porém preenchendo em vez de esvaziar.
 
 A primeira linha liga a nossa função `adiciona_campos()` com o filtro responsável por alterar os campos padrão do formulário. A função recebe e retorna um array `$campos`, que contém os campos do formulário. Mas antes de retornar o array, é claro, faremos a mágica de adicionar os campos que precisamos: cidade e estado.
 
@@ -187,7 +187,7 @@ function checa_campos($commentdata) {
 
 Há um filtro chamado `pre_comment_author_name` que é usado para limpar o conteúdo do campo Nome. Podemos usá-lo para limpar também os nossos campos novos, e é isso que o código anterior faz. Entre outras faxinas, este filtro remove códigos HTML e escapa caracteres especiais como `<` e `&`.
 
-Se você precisar de algum outro tipo de verificação, basta adicionar ali dentro desta função. Por exemplo, se você tem um campo chamado Idade, deve verificar se o usuário digitou mesmo um número. Ou ainda, se tiver um campo CPF em seu formulário, pode usar [expressões regulares](http://aurelio.net/regex/) para verificar se o formato do número está correto. E caso encontre qualquer problema, use a `wp_die()` para mandar uma mensagem ao usuário.
+Se você precisar de algum outro tipo de verificação, basta adicionar ali dentro desta função. Por exemplo, se você tem um campo chamado Idade, deve verificar se o usuário digitou mesmo um número. Ou ainda, se tiver um campo CPF em seu formulário, pode usar [expressões regulares](/regex/) para verificar se o formato do número está correto. E caso encontre qualquer problema, use a `wp_die()` para mandar uma mensagem ao usuário.
 
 Agora que o formulário está validado, estamos prontos para o próximo passo.
 
@@ -279,7 +279,7 @@ if (is_admin()) {
 ?>
 ```
 
-**Atualização:** Veja neste outro artigo [como mostrar os campos adicionais no app do WordPress para iPhone/iPad](http://aurelio.net/wordpress/ios-comentarios-meta/).
+**Atualização:** Veja neste outro artigo [como mostrar os campos adicionais no app do WordPress para iPhone/iPad](/wordpress/ios-comentarios-meta/).
 
 ## Detalhe
 

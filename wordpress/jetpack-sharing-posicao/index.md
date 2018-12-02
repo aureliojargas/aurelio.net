@@ -18,7 +18,7 @@ Vou te mostrar como faz.
 
 Primeiro, você precisa saber que para inserir automaticamente os botões no final do post, o Jetpack adiciona um filtro à ação [the_content](http://codex.wordpress.org/Function_Reference/the_content). Então, para mudar a localização destes botões em seu blog, o primeiro passo é desligar este filtro com o [remove_filter](http://codex.wordpress.org/Function_Reference/remove_filter).
 
-Edite o arquivo de template do seu tema, por exemplo o **loop-single.php** caso você use o tema padrão [Twenty Ten](http://aurelio.net/wordpress/twentyten/), e localize a chamada ao `the_content()`. Coloque imediatamente antes as duas linhas que removem o filtro do Jetpack:
+Edite o arquivo de template do seu tema, por exemplo o **loop-single.php** caso você use o tema padrão [Twenty Ten](/wordpress/twentyten/), e localize a chamada ao `the_content()`. Coloque imediatamente antes as duas linhas que removem o filtro do Jetpack:
 
 ```php
 <?php remove_filter('the_content', 'sharing_display', 19); ?>

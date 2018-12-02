@@ -148,4 +148,4 @@ Artigo resumido que explica todos os passos que o Nginx faz ao receber uma requi
 Mesma proposta do artigo anterior, porém este é um guia completo, muito bem escrito, que explica em detalhes o funcionamento do Nginx ao processar uma requisição. Bom para entender como funciona o algoritmo, e assim poder escrever os blocos `server` e `location` com confiança.
 
 * [Converting rewrite rules](http://nginx.org/en/docs/http/converting_rewrite_rules.html)
-Guia rápido com algumas dicas de como converter para o Nginx as regras do `mod_rewrite` do [Apache](http://aurelio.net/regex/apache/).
+Guia rápido com algumas dicas de como converter para o Nginx as regras do `mod_rewrite` do [Apache](/regex/apache/).

@@ -78,7 +78,7 @@ Moçada, VALEU a presença e até a próxima!
 
 * [Material de apoio](sucesu-desenvolvedor-apoio.html)
 
-* [Slides da palestra](http://aurelio.net/curso/material/desenvolvedor/)
+* [Slides da palestra](/curso/material/desenvolvedor/)
 
 Segunda palestra, no mesmo prédio, mas dessa vez numa sala maior, mais
 ampla. Como foram poucas pessoas (12), ela ficou parecendo maior

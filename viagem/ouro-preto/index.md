@@ -25,7 +25,7 @@ Enfim, Ouro Preto é uma cidade que vale a pena conhecer!
 
 ## Ida
 
-De [Caxambu](http://aurelio.net/viagem/caxambu/) viemos de ônibus até Belo Horizonte. Na rodoviária compramos a passagem para Ouro Preto (empresa Pássaro Verde, guichê 7, **R$ 17,85**) e o ônibus saiu logo em seguida, nem tivemos que esperar muito.
+De [Caxambu](/viagem/caxambu/) viemos de ônibus até Belo Horizonte. Na rodoviária compramos a passagem para Ouro Preto (empresa Pássaro Verde, guichê 7, **R$ 17,85**) e o ônibus saiu logo em seguida, nem tivemos que esperar muito.
 
 A paisagem no trajeto é bonita, passando por uma serra. Após **duas horas** de viagem chegamos na rodoviária de Ouro Preto. Ali tem um balcão de informações turísticas onde pegamos um (imprescindível) mapa da cidade.
 
@@ -101,7 +101,7 @@ Estudantes são abençoados com a lei da meia-entrada!
 
 > Curiosidade: O **furto** em igrejas era muito comum, todas as que visitamos em algum ponto o guia fala "aqui tinha um XXX que foi roubado". Uma pena. As igrejas contavam apenas com a proteção divina... Hoje há câmeras e alarmes para evitar os roubos.
 
-É impressionante ver as obras pintadas no teto e entalhadas nas paredes, feitas por gênios como **Aleijadinho** e **Mestre Athayde**, entre outros. Cada igreja levou vários anos para ser construída e outros tantos para ser decorada. Algumas esculturas em madeira foram feitas diretamente no local e são cobertas por lâminas (ou pó) de ouro, dando-lhes um aspecto ainda mais imponente. Algumas pinturas do teto foram feitas no chão e depois suspensas e outras foram pintadas diretamente na "nave" da igreja. [LER](http://aurelio.net/doc/dort.html)? [DORT](http://aurelio.net/doc/dort.html)? Não, que isso, imagina...
+É impressionante ver as obras pintadas no teto e entalhadas nas paredes, feitas por gênios como **Aleijadinho** e **Mestre Athayde**, entre outros. Cada igreja levou vários anos para ser construída e outros tantos para ser decorada. Algumas esculturas em madeira foram feitas diretamente no local e são cobertas por lâminas (ou pó) de ouro, dando-lhes um aspecto ainda mais imponente. Algumas pinturas do teto foram feitas no chão e depois suspensas e outras foram pintadas diretamente na "nave" da igreja. [LER](/doc/dort.html)? [DORT](/doc/dort.html)? Não, que isso, imagina...
 
 ![](/img/viagem/ouro-preto/igreja.jpg)
 
@@ -249,6 +249,6 @@ Outra curiosidade que o Aurelio percebeu num dia que estava sentado na Praça Ti
 
 ## Volta
 
-Antes de partir, pegamos a Maria Fumaça e fizemos um passeio de um dia em [Mariana](http://aurelio.net/viagem/mariana/), cidade próxima com mais igrejas e casarões antigos. Muito bacana! [Leia mais...](http://aurelio.net/viagem/mariana/)
+Antes de partir, pegamos a Maria Fumaça e fizemos um passeio de um dia em [Mariana](/viagem/mariana/), cidade próxima com mais igrejas e casarões antigos. Muito bacana! [Leia mais...](/viagem/mariana/)
 
 Hora de ir embora. Fizemos nossa última caminhada pelas ruelas, em direção à rodoviária. Lá pegamos o ônibus para Belo Horizonte (R$ 16,95) e acabou a brincadeira em Ouro Preto.

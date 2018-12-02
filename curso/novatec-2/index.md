@@ -4,7 +4,7 @@ subtitle: 20 de fevereiro de 2016, São Paulo - SP
 date: 2016-02-20
 ---
 
-Fui à São Paulo dar um curso de 8 horas de [Expressões Regulares](http://aurelio.net/regex/) no dia 20/02/2016, no [Centro de Treinamento da Novatec Editora](http://ctnovatec.com.br).
+Fui à São Paulo dar um curso de 8 horas de [Expressões Regulares](/regex/) no dia 20/02/2016, no [Centro de Treinamento da Novatec Editora](http://ctnovatec.com.br).
 
 Esse curso é o que eu mais gosto de fazer. É um intensivão, o dia todo viajando pelo mundo das regex, ensinando desde o básico até chegar em tópicos avançados. Sempre tem um engajamento muito bom da turma, mesmo quem nunca viu regex consegue terminar o dia criando suas próprias expressões, e isso me dá uma satisfação muito grande.
 

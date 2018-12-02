@@ -17,7 +17,7 @@ Essa foi uma palestra nova, que fiz especialmente para o evento.
 
 O evento aconteceu em dois dias, sendo o primeiro com palestras temáticas de back-end e segundo para front-end. Eu me identifico mais com o back-end, mas como eu só tinha disponibilidade no sábado, que era o dia do front-end, então aceitei o desafio de fazer uma palestra para um público diferente.
 
-Pensei comigo, esses caras hoje precisam ir para a linha de comando de vez em quando pra instalar e rodar as ferramentas que manipulam os arquivos CSS e HTML: pré-processadores, minificadores, e tudo mais. Já “molharam o pé” na tela preta, então eu poderia fazer uma demonstração do poder das ferramentas do Unix, estilo os vídeos que faço na série [Tela Preta](http://aurelio.net/tela-preta/), para despertar a curiosidade de eles explorarem e ficarem mais tempo no prompt.
+Pensei comigo, esses caras hoje precisam ir para a linha de comando de vez em quando pra instalar e rodar as ferramentas que manipulam os arquivos CSS e HTML: pré-processadores, minificadores, e tudo mais. Já “molharam o pé” na tela preta, então eu poderia fazer uma demonstração do poder das ferramentas do Unix, estilo os vídeos que faço na série [Tela Preta](/tela-preta/), para despertar a curiosidade de eles explorarem e ficarem mais tempo no prompt.
 
 Esta foi a chamada da palestra:
 
@@ -88,11 +88,11 @@ Fora a apresentação estranha, dali pra frente tudo fluiu bem. Consegui trazer 
 
 ![](/curso/sc-dev-summit/demo.jpg)
 
-Terminados os slides, era a hora de demonstrar ali ao vivo como é usar a linha de comando para resolver problemas, exatamente como faço nos vídeos do [Tela Preta](http://aurelio.net/tela-preta/).
+Terminados os slides, era a hora de demonstrar ali ao vivo como é usar a linha de comando para resolver problemas, exatamente como faço nos vídeos do [Tela Preta](/tela-preta/).
 
 Abri um terminal em tela cheia, aumentei bem a fonte, coloquei um prompt (`$PS1`) bem amigável e comecei a digitar comandos e fazer a locução esportiva, descrevendo o que eu estava fazendo :)
 
-[Aqui está o histórico completo dos comandos executados](http://aurelio.net/curso/sc-dev-summit/historico.txt). Vou destacar a seguir algumas partes dele.
+[Aqui está o histórico completo dos comandos executados](/curso/sc-dev-summit/historico.txt). Vou destacar a seguir algumas partes dele.
 
 Ajustando prompt:
 
@@ -112,7 +112,7 @@ cat hino.txt | head -n 3 | tail -n 1 | cut -d , -f 1
 cat hino.txt | head -n 3 | tail -n 1 | cut -d , -f 1 | tr a-z A-z
 ```
 
-Trocar a extensão de todos os arquivo de `.css` para `.sass` ([veja um vídeo similar](http://aurelio.net/blog/2015/06/06/tela-preta-8/)):
+Trocar a extensão de todos os arquivo de `.css` para `.sass` ([veja um vídeo similar](/blog/2015/06/06/tela-preta-8/)):
 
 ```bash
 find . -name "*.css"
@@ -153,7 +153,7 @@ Pra quem usa Mac, o `pbcopy` copia a saída do comando anterior para a Área de 
 
 No final da palestra, sorteei dois livros meus, o [Shell Script Profissional](https://www.shellscript.com.br) que eu levei um exemplar que eu tinha aqui em casa, e o [Expressões Regulares](https://www.piazinho.com.br), que a Novatec Editora enviou de cortesia para os organizadores do evento.
 
-Reaproveitei uma ideia que tive lá em 2004, numa [palestra de 3h](http://aurelio.net/curso/linuxchix/) 😱 que dei no II Encontro Nacional LinuxChix-BR: usar a shell para gerar um número aleatório e ganha o sorteio quem tiver aquele número **impresso** em algum documento, cartão, papel, o que for. Foi bem divertido!
+Reaproveitei uma ideia que tive lá em 2004, numa [palestra de 3h](/curso/linuxchix/) 😱 que dei no II Encontro Nacional LinuxChix-BR: usar a shell para gerar um número aleatório e ganha o sorteio quem tiver aquele número **impresso** em algum documento, cartão, papel, o que for. Foi bem divertido!
 
 ```bash
 echo $((RANDOM % 99999))   # 5 dígitos
@@ -161,7 +161,7 @@ echo $((RANDOM % 9999))    # 4 dígitos
 echo $((RANDOM % 999))     # 3 dígitos
 ```
 
-Essa é uma foto [lá de 2004](http://aurelio.net/curso/linuxchix/):
+Essa é uma foto [lá de 2004](/curso/linuxchix/):
 
 ![](/curso/linuxchix/papeis.jpg)
 

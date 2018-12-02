@@ -251,7 +251,7 @@ syntax on
 
 <h3 id="toc13">Links</h3>
 
-- [Artigo completo (9 páginas) publicado na Revista do Linux](http://aurelio.net/cygwin/rdl/)
+- [Artigo completo (9 páginas) publicado na Revista do Linux](/cygwin/rdl/)
 - [Lista de discussão de usuários, em português](https://br.groups.yahoo.com/neo/groups/cygwin-br/info)
 - [KDE no Cygwin](http://kde-cygwin.sourceforge.net)
 - [Gnome 1.x no Cygwin](http://cygnome.sourceforge.net)

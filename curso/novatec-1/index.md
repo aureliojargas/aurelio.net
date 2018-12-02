@@ -14,7 +14,7 @@ Após 7 anos de hiato, voltei a dar cursos nerds. Aproveitei as férias no traba
 * 22/08/2015 (Sáb) 9h às 13h — [Expressões Regulares em Python](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/)
 * 22/08/2015 (Sáb) 14h às 18h — [Expressões Regulares em JavaScript](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-javascript/)
 
-Veja também: o [anúncio original](http://aurelio.net/blog/2015/07/29/cursos-novatec/) destes cursos, que fiz lá no meu blog.
+Veja também: o [anúncio original](/blog/2015/07/29/cursos-novatec/) destes cursos, que fiz lá no meu blog.
 
 ## Deu trabalho, mas valeu
 
@@ -104,7 +104,7 @@ Para fechar o dia, terminamos o curso fazendo juntos a já tradicional expressã
 
 Sala cheia para aprender shell script, num curso de 8 horas. Resolvi fazer um curso diferente, e em vez de ficar mostrando comandos, opções e estruturas de programação, decidi focar mais na base Unix, na filosofia e nos conceitos que tornam o Unix o que ele é, pois isso influi diretamente na maneira que você cria e usa os comandos.
 
-É o tal “jeito shell” de resolver problemas, que demonstro na minha série de vídeos [Tela Preta](http://aurelio.net/tela-preta/). Você tem que enxergar seu problema de maneira diferente, para que a solução usando shell fique simples. Sem esta visão, tudo fica muito complicado e esquisito.
+É o tal “jeito shell” de resolver problemas, que demonstro na minha série de vídeos [Tela Preta](/tela-preta/). Você tem que enxergar seu problema de maneira diferente, para que a solução usando shell fique simples. Sem esta visão, tudo fica muito complicado e esquisito.
 
 Uma boa ideia que apareceu minutos antes de começar o curso, foi escrever no quadro branco os termos principais que definem a filosofia do Unix, e quais as características principais do ambiente shell.
 

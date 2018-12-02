@@ -5,7 +5,7 @@ title: Bondindinho - Balneário Camboriú - SC
 title_prefix: 'EU FUI: '
 ---
 
-O Bondindinho é um ônibus para turistas, que circula pela praia de [Balneário Camboriú](http://aurelio.net/viagem/balneario-camboriu/). Andei nele em abril de 2012, e vou contar os detalhes.
+O Bondindinho é um ônibus para turistas, que circula pela praia de [Balneário Camboriú](/viagem/balneario-camboriu/). Andei nele em abril de 2012, e vou contar os detalhes.
 
 [![](/wp/wp-content/uploads/2012/04/bondindinho.jpg)](http://shw.onibusecia.fotopages.com/20870238/Bondindinho-05.html)
 

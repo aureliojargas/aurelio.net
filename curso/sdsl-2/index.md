@@ -23,7 +23,7 @@ Esta página é meu relato de como foi essa experiência.
 
 Links para os materiais:
 
-* [Apostila de Expressões Regulares](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
+* [Apostila de Expressões Regulares](/curso/material/apostila-expressoes-intro.pdf)
 
 * [Avaliação dos Alunos para o Curso de Expressões Regulares](avaliacao-expressoes.html)
 
@@ -125,7 +125,7 @@ quarto com o iBook, finalizando os detalhes desse lançamento.
 
 ![](img/codando.jpg)
 
-O tal programa é o [RAC](http://aurelio.net/rac), feito em parceria com
+O tal programa é o [RAC](/rac), feito em parceria com
 meu amigo gaúcho [Thobias](http://thobias.org). O software já estava
 pronto, mas ainda precisava fazer a sua página na Internet, preparar o
 pacotão tar com a versão 1.0 e escrever o texto de anúncio do
@@ -196,13 +196,13 @@ detalhes.
 
 O Rubens Queiroz fez a gentileza de me "apresentar" para a turma,
 falando um pouco sobre meu trabalho e sobre o
-[Guia de ERs](http://aurelio.net/regex/guia/) que escrevi. Valeu amigo!
+[Guia de ERs](/regex/guia/) que escrevi. Valeu amigo!
 
 Como a maioria da turma era "virgem" ou iniciante em Expressões
 Regulares (ERs), o curso foi introdutório, ensinando a base do
 assunto e como tudo funciona.
 
-[A apostila](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf) foi mais ou menos seguida, pois eu prefiro
+[A apostila](/curso/material/apostila-expressoes-intro.pdf) foi mais ou menos seguida, pois eu prefiro
 sanar as dúvidas no momento em que elas ocorrem, e isso às vezes
 adianta assuntos que só iam ser vistos mais tarde.
 
@@ -265,7 +265,7 @@ variando entre "Bom" e "Excelente".
 dominar o mundo!
 
 Ah! No final do curso aproveitei para fazer "Verde Busine$$" e vendi
-nove [Apostilas de Shell](http://aurelio.net/shell/apostila/). Um estrondo de vendas! A cada
+nove [Apostilas de Shell](/shell/apostila/). Um estrondo de vendas! A cada
 apostila vendida, duas alegrias: o dinheiro que chega, e o peso da
 mala que diminui :D
 
@@ -360,7 +360,7 @@ acontecendo :)
 
 ### Eles, sempre eles...
 
-No IV FISL em Porto Alegre, foi a grande placa do “[Rio Veadinho](http://aurelio.net/viagem/fisl-2003/rio_veadinho.jpg)”
+No IV FISL em Porto Alegre, foi a grande placa do “[Rio Veadinho](/viagem/fisl-2003/rio_veadinho.jpg)”
 que dá as boas-vindas aos visitantes que entram no Rio Gande do Sul
 pela BR-101. Em Campinas, no mural da Engenharia Elétrica, dentro da
 Unicamp...

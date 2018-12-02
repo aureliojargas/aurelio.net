@@ -30,7 +30,7 @@ Ao colocar o código do AdSense no site, estou na verdade apenas reservando um e
 
 O Google lê automaticamente o meu site e escolhe os anúncios que **têem a ver com o conteúdo** do site. É tudo automático, eu não preciso fazer nada.
 
-Por exemplo, na página da [viagem ao deserto do Atacama](http://aurelio.net/viagem/atacama/), aparecem anúncios de pacotes de viagem para o Chile e para o deserto. É um anúncio que o visitante do site pode se interessar e clicar para saber mais. Todos ganham nessa história:
+Por exemplo, na página da [viagem ao deserto do Atacama](/viagem/atacama/), aparecem anúncios de pacotes de viagem para o Chile e para o deserto. É um anúncio que o visitante do site pode se interessar e clicar para saber mais. Todos ganham nessa história:
 
 - O visitante clicou no anúncio porque se interessou pelo produto (pacote de viagem) e vai no site do anunciante para obter mais informações.
 - Eu ganharei meus centavinhos por este clique.

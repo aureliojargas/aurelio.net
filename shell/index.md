@@ -87,10 +87,10 @@ para ver como o shell já faz parte de sua vida.
 
 ## Documentação
 
-* [Canivete Suíço do Shell](http://aurelio.net/shell/canivete/) *por Aurelio Marinho Jargas*
+* [Canivete Suíço do Shell](/shell/canivete/) *por Aurelio Marinho Jargas*
 Referência rápida do shell do Unix/Linux/Mac, com várias tabelas que resumem comandos, operadores, opções, conceitos, exemplos, dicas e listagens. Nada de texto, só tabelas. Bom para guardar, imprimir, ter sempre à mão para tirar dúvidas.
 
-* [miniman](http://aurelio.net/shell/miniman/) *por Aurelio Marinho Jargas*
+* [miniman](/shell/miniman/) *por Aurelio Marinho Jargas*
 Você não gosta de man pages? Então experimente o miniman! É uma versão rápida e resumida das páginas de manual, com tabelas que listam somente as opções mais utilizadas dos comandos mais utilizados.
 
 * [Papo de Botequim](http://www.julioneves.com) *por Julio Cezar Neves*
@@ -120,19 +120,19 @@ Tutorial de Bash, de leitura rápida e direto ao ponto. Indicado para iniciantes
 * [Programando em shell-script](http://www.devin.com.br/eitch/shell_script/) *por Hugo Cisneiros*
 Tutorial de Bash, de leitura rápida, passando pelas estruturas, funções e finalizando com um script completo.
 
-* [Prompt-doc: "Tira Dúvidas" sobre Shell](http://aurelio.net/curso/conectiva/conectiva-shell-prompt.html) *por Aurelio Marinho Jargas*
+* [Prompt-doc: "Tira Dúvidas" sobre Shell](/curso/conectiva/conectiva-shell-prompt.html) *por Aurelio Marinho Jargas*
 Histórico da linha de comando de uma palestra ministrada pelo Aurelio para os funcionários da Conectiva sobre shell script em Dezembro de 2003. Não ensina shell, mas sim dá dicas valiosas e sana dúvidas.
 
 * [Shell Script para Iniciantes](http://www.openslack.org/~piterpk/artigos/aposhell.ps) *por Roberto Freires Batista (Piter Punk)*
 Apostila completa, com mais de 60 páginas que começa explicando os conceitos da linha de comando e depois entra no shell script. O interessante é que seu conteúdo está dividido por temas, facilitando a consulta posterior. A linguagem é descontraída e leve. Leitura altamente recomendada!
 
-* [Mpage — Impressão ágil em PostScript](http://aurelio.net/doc/coluna/coluna-10.html) *por Aurelio Marinho Jargas*
+* [Mpage — Impressão ágil em PostScript](/doc/coluna/coluna-10.html) *por Aurelio Marinho Jargas*
 Conheça o comando mpage, que é uma ferramenta versátil para paginar seu texto e mandá-lo para a impressora, tudo direto pela linha de comando.
 
-* [Zgv/ImageMagick — Manipulação de imagens](http://aurelio.net/doc/coluna/coluna-03.html) *por Aurelio Marinho Jargas*
+* [Zgv/ImageMagick — Manipulação de imagens](/doc/coluna/coluna-03.html) *por Aurelio Marinho Jargas*
 Aprenda a mostrar e editar imagens pelo modo texto, com o comando zgv e as ferramentas poderosas do ImageMagick.
 
-* [Caracteres de Controle — Não fuja, domine-os](http://aurelio.net/doc/coluna/coluna-11.html) *por Aurelio Marinho Jargas*
+* [Caracteres de Controle — Não fuja, domine-os](/doc/coluna/coluna-11.html) *por Aurelio Marinho Jargas*
 Uma viagem ao mundo estranho e avançado dos caracteres de controle, cheio de exemplos para você perder o medo e conseguir movimentar o cursor, usar texto colorido, entre outros.
 
 ## Ferramentas e conceitos
@@ -144,20 +144,20 @@ Artigos traduzidos do inglês sobre utilitários UNIX, bash, awk e sed.
 Tutorial completo sobre como programar em CGI (Internet) usando
 shell script. Esqueça Perl, esqueça PHP, shell é o que há :)
 
-* [Cygwin - O Linux no Windows](http://aurelio.net/cygwin/) *por Aurelio Marinho Jargas*
+* [Cygwin - O Linux no Windows](/cygwin/) *por Aurelio Marinho Jargas*
 Central de informações sobre o Cygwin, o programa que traz os poderes do
 shell script para máquinas Windows.
 
-* [Dialog --tudo](http://aurelio.net/shell/dialog/) *por Aurelio Marinho Jargas*
+* [Dialog --tudo](/shell/dialog/) *por Aurelio Marinho Jargas*
 Tutorial sobre o Dialog, o programa que faz interfaces "gráficas" no modo
 texto, com botões, menus e caixas de texto. (Lembre-se da instalação modo
 texto das distribuições de Linux)
 
-* [Expressões Regulares](http://aurelio.net/regex/) *por Aurelio Marinho Jargas*
+* [Expressões Regulares](/regex/) *por Aurelio Marinho Jargas*
 Ponto de partida para vários documentos, artigos e inclusive um livro
 completo sobre Expressões Regulares, todos em português.
 
-* [Sed](http://aurelio.net/sed/) *por Aurelio Marinho Jargas*
+* [Sed](/sed/) *por Aurelio Marinho Jargas*
 Vários links para documentos em português sobre o editor sed.
 São vários: sed-HOWTO, Só Sed, sed 1liners, ...
 
@@ -258,7 +258,7 @@ para carregá-las no seu ~/.bashrc e usar no dia-a-dia. O script é
 constantemente atualizado para manter as mais de 60 funções
 funcionando. Código todo em português!
 
-* [txt2regex](http://aurelio.net/projects/txt2regex/) *por Aurelio Marinho Jargas*
+* [txt2regex](/projects/txt2regex/) *por Aurelio Marinho Jargas*
 Quer ver na prática as funcionalidades avançadas do Bash2? Veja o
 código desse programa. Eu o fiz basicamente para aprender as
 novidades do Bash2 e o resultado foi um programa completo,

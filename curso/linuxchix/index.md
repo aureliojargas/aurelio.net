@@ -18,7 +18,7 @@ pelas caronas, e aos amigos pela camaradagem e apoio.
 
 * [Página do LinuxChix-BR](http://www.linuxchix.org.br)
 
-* [Slides da minha palestra](http://aurelio.net/curso/material/desenvolvedor/)
+* [Slides da minha palestra](/curso/material/desenvolvedor/)
 
 * [Relato da Sulamita sobre o evento](http://brlinux.linuxsecurity.com.br/noticias/002360.html)
 

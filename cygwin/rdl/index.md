@@ -556,7 +556,7 @@ Crie estes arquivos dentro do seu diretório (`/home/usuário`) para que o Cygwi
 
 Se for criar estes arquivos em algum editor de textos do Windows, lembre-se de depois remover a extensão .txt com o comando `mv .arquivo.txt .arquivo` e usar o comando `dos2unix` para convertê-los para o formato UNIX.
 
-Nota: Há uma cópia destes arquivos em [http://aurelio.net/cygwin](http://aurelio.net/cygwin).
+Nota: Há uma cópia destes arquivos em [http://aurelio.net/cygwin](/cygwin).
 
 
 <h3 id="toc20">.inputrc</h3>
@@ -633,7 +633,7 @@ Vai dizer que você leu até aqui e ainda não se convenceu a usar o Cygwin? Que
 
 - Lista de discussão de usuários, em português: [https://br.groups.yahoo.com/neo/groups/cygwin-br/info](https://br.groups.yahoo.com/neo/groups/cygwin-br/info)
 
-- Página com links e informações, em português: [http://aurelio.net/cygwin](http://aurelio.net/cygwin)
+- Página com links e informações, em português: [http://aurelio.net/cygwin](/cygwin)
 
 - Página do Cygwin: [http://cygwin.com](http://cygwin.com)
 

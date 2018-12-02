@@ -19,7 +19,7 @@ oportunidade.
 
 * [Divulgação Oficial](http://www.inf.ufpr.br/ssl/)
 
-* [Slides da palestra](http://aurelio.net/curso/material/desenvolvedor/)
+* [Slides da palestra](/curso/material/desenvolvedor/)
 
 Há cinco meses atrás, participei da [I Semana do Sofware Livre](/curso/ufpr-1/)
 na UFPR. Agora estou novamente nessa II Semana, com a mesma palestra
@@ -57,7 +57,7 @@ primeira vez. Então para mim, essa palestra teve um sabor especial.
 O Groo estava lá, amigão meu dos bons tempos de CEFET, outro que
 acabou se enveredando pelo caminho nerdz também. Para completar a
 festa, o Nissin, guitarrista da banda
-([CORRERIA](http://aurelio.net/correria/)!) também acompanhou da metade para o
+([CORRERIA](/correria/)!) também acompanhou da metade para o
 final.
 
 Muito legal esse negócio de dar palestra na própria cidade: é chegar,

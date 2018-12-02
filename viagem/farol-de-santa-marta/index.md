@@ -11,7 +11,7 @@ Com quatro dias livres, alguns amigos combinaram uma viagem para o sul de Santa 
 
 ![](/wp/wp-content/uploads/2006/09/farol-1.jpg)
 
-[Já conhecia o lugar](http://aurelio.net/viagem/farol-imbituba/), mas dessa vez foi especial, fomos em 27 pessoas! Tinha de tudo: pessoal que era da Conectiva, pessoal que ainda é da Conectiva (Mandriva), amigos do surfe, da banda e mais uma galera que eu nunca tinha visto. Alugamos cinco casas, sendo quatro no mesmo terreno. Nem tente entender, lá isso é normal :)
+[Já conhecia o lugar](/viagem/farol-imbituba/), mas dessa vez foi especial, fomos em 27 pessoas! Tinha de tudo: pessoal que era da Conectiva, pessoal que ainda é da Conectiva (Mandriva), amigos do surfe, da banda e mais uma galera que eu nunca tinha visto. Alugamos cinco casas, sendo quatro no mesmo terreno. Nem tente entender, lá isso é normal :)
 
 Saímos de Curitiba às quatro da manhã do dia sete. É, quatro. Chegamos em Laguna lá pelas oito, pegamos a balsa e logo estávamos no Farol. O vento castigou e não deu um segundo sequer de trégua nos dois primeiros dias. Depois veio o frio e finalmente no domingo, o dia de ir embora, abriu aquele solzão quente... Normal.
 

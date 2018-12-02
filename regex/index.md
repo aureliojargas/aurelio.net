@@ -44,7 +44,7 @@ article_footer_after: false
 > [Apostila de introdução](/regex/apostila-conhecendo-regex.pdf),
 > [Livro em português](https://www.piazinho.com.br),
 > [Testador online](http://regex101.com),
-> [10 anos de regex](http://aurelio.net/blog/2009/07/17/10anos-expressoes-regulares/).
+> [10 anos de regex](/blog/2009/07/17/10anos-expressoes-regulares/).
 
 > Veja também:
 > [Sed](/sed/),
@@ -100,17 +100,17 @@ Apostila introdutória sobre Expressões Regulares, que apresenta o conceito e e
 *(cheat sheet, PDF) ★*
 Várias tabelas resumindo os metacaracteres, escapes, classes POSIX, precedência e outros detalhes das Expressões Regulares. Tudo numa única página A4, pronta para imprimir.
 
-* [Expressões regulares em bancos de dados SQL](http://aurelio.net/blog/2014/12/21/regex-sql/)
+* [Expressões regulares em bancos de dados SQL](/blog/2014/12/21/regex-sql/)
 Artigo que explica como usar as expressões nos principais bancos de dados: Oracle, PostgreSQL, MySQL, MariaDB e SQLite.
 
-* [Em regex, nem sempre menos é mais](http://aurelio.net/blog/2011/02/10/em-regex-nem-sempre-menos-e-mais/)
+* [Em regex, nem sempre menos é mais](/blog/2011/02/10/em-regex-nem-sempre-menos-e-mais/)
 Artigo que demonstra porque é importante fazer uma expressão legível, mesmo que não seja a versão mais eficiente.
 
-* [Escreva corretamente: CaracterE cUringa](http://aurelio.net/blog/2006/09/17/caractere-curinga/)
+* [Escreva corretamente: CaracterE cUringa](/blog/2006/09/17/caractere-curinga/)
 Não diga "coringa" quando o certo é curinga.<br>
 Não diga "caracter", "carácter" ou "caráter" quando o certo é caractere.
 
-* [Meus 10 anos de Expressões Regulares](http://aurelio.net/blog/2009/07/17/10anos-expressoes-regulares/)
+* [Meus 10 anos de Expressões Regulares](/blog/2009/07/17/10anos-expressoes-regulares/)
 Texto recheado de nostalgia e reflexões, que conta os meus 10 anos de Expressões Regulares. Como fui conhecê-las, como foi o aprendizado, o programa txt2regex e como acabei escrevendo um livro (mais de um!) sobre o assunto.
 
 * [Prompt-doc: Expressões Regulares - Introdução](/curso/conectiva/conectiva-er-prompt.html)
@@ -127,11 +127,11 @@ Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular
 
 ## Vídeo-aulas que fiz
 
-* Como extrair e formatar texto usando Expressões Regulares (14 minutos, [blog](http://aurelio.net/blog/2011/05/05/como-extrair-e-formatar-texto-usando-expressoes-regulares/), [YouTube](https://www.youtube.com/watch?v=LZcTSKIwZqI))
+* Como extrair e formatar texto usando Expressões Regulares (14 minutos, [blog](/blog/2011/05/05/como-extrair-e-formatar-texto-usando-expressoes-regulares/), [YouTube](https://www.youtube.com/watch?v=LZcTSKIwZqI))
 
 <iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/LZcTSKIwZqI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
 
-* Expressões Regulares - Quantificadores Gulosos (8 minutos, [blog](http://aurelio.net/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/), [YouTube](https://www.youtube.com/watch?v=0O2yQgRXnLU))
+* Expressões Regulares - Quantificadores Gulosos (8 minutos, [blog](/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/), [YouTube](https://www.youtube.com/watch?v=0O2yQgRXnLU))
 
 <iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
 
@@ -141,7 +141,7 @@ Quer trocar uma ideia em português sobre regex? Junte-se a nós no https://tele
 
 ## Lista de discussão
 
-Para conversar com outros amiguinhos que também gostam das expressões, assine a lista [sed-br](http://br.groups.yahoo.com/group/sed-br/). Lá o papo é em português, sobre [Sed](http://aurelio.net/sed/) e Expressões Regulares.
+Para conversar com outros amiguinhos que também gostam das expressões, assine a lista [sed-br](http://br.groups.yahoo.com/group/sed-br/). Lá o papo é em português, sobre [Sed](/sed/) e Expressões Regulares.
 
 ## Links em português
 
@@ -227,7 +227,7 @@ Emacs.
 
 ### Banco de dados
 
-* [Expressões regulares em bancos de dados SQL](http://aurelio.net/blog/2014/12/21/regex-sql/)
+* [Expressões regulares em bancos de dados SQL](/blog/2014/12/21/regex-sql/)
 Artigo que explica como usar as expressões nos principais bancos de dados: Oracle, PostgreSQL, MySQL, MariaDB e SQLite.
 
 * [Sintaxe de Expressões Regulares do MySQL](http://dev.mysql.com/doc/mysql/pt/Regexp.html)

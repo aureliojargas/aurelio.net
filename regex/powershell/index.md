@@ -4,7 +4,7 @@ title: Expressões Regulares + PowerShell
 
 ## Dicas
 
-* O PowerShell usa o motor de regex do [.NET](http://aurelio.net/regex/dotnet/), o `System.Text.RegularExpressions`.
+* O PowerShell usa o motor de regex do [.NET](/regex/dotnet/), o `System.Text.RegularExpressions`.
 * Operadores principais: `-Match`, `-Replace`, `-Split`.
 * O comando `switch` também aceita casamento com regex.
 * Resultado do match fica no HashTable `$matches`.

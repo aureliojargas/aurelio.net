@@ -6,7 +6,7 @@ title: Mariana - MG
 title_prefix: 'EU FUI: '
 ---
 
-Continuando o passeio por Minas Gerais, visitamos Mariana, que fica bem pertinho de [Ouro Preto](http://aurelio.net/viagem/ouro-preto/). "Logo ali". Em um dia visitamos as principais atrações. É uma cidade pequena onde tudo é perto, dá para ir à pé. E o melhor de tudo: **não tem ladeira!** :)
+Continuando o passeio por Minas Gerais, visitamos Mariana, que fica bem pertinho de [Ouro Preto](/viagem/ouro-preto/). "Logo ali". Em um dia visitamos as principais atrações. É uma cidade pequena onde tudo é perto, dá para ir à pé. E o melhor de tudo: **não tem ladeira!** :)
 
 <div class="mog">
 Um guia nos disse que antigamente Mariana e Ouro Preto tinham uma rixa: o pessoal de Ouro Preto quando perguntado pelos turistas se Mariana era longe, respondiam que sim. Daí os turistas não iam até lá, só os teimosos mesmo. E Mariana ficou meio esquecida por um tempo. Uma rixa desnecessária, que não trouxe benefício pra ninguém. Ainda bem que hoje isso não acontece mais.
@@ -41,7 +41,7 @@ Chegando em Mariana, ficamos impressionados com a **Estação Ferroviária** del
 
 ## Passeio
 
-Saindo da estação fomos à direita e atravessamos a **ponte**. Interessante que ainda tem gente procurando ouro no rio, represando alguns trechos para peneirar. Será que acham alguma coisa? ([Sim! Leia os comentários](http://aurelio.net/viagem/mariana/#comments))
+Saindo da estação fomos à direita e atravessamos a **ponte**. Interessante que ainda tem gente procurando ouro no rio, represando alguns trechos para peneirar. Será que acham alguma coisa? ([Sim! Leia os comentários](/viagem/mariana/#comments))
 
 Logo após a ponte tem uma casa grande que é o **Terminal Turístico**. Lá pegamos o mapa da cidade, com as atrações turísticas em destaque: igrejas e casarões antigos. Tipo Ouro Preto, mas sem as ladeiras. Essa vantagem geográfica facilita o passeio, assim pudemos ver bastante coisa em pouco tempo.
 

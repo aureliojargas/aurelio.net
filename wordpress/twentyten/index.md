@@ -9,7 +9,7 @@ hide_tags: true
 hide_ads: true
 ---
 
-Em meus sites com [WordPress](http://aurelio.net/wordpress/), geralmente uso versões modificadas do tema padrão [Twenty Ten](http://wordpress.org/extend/themes/twentyten).
+Em meus sites com [WordPress](/wordpress/), geralmente uso versões modificadas do tema padrão [Twenty Ten](http://wordpress.org/extend/themes/twentyten).
 
 Eu o considero um excelente tema por ser simples, sem muitas complicações e frecurites, mas ao mesmo tempo poderoso, fazendo uso das tecnologias mais recentes adicionadas ao WordPress.
 

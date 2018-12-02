@@ -30,7 +30,7 @@ O trem chega à velocidade de **300km/h** e faz o percurso Londres-Paris em 2h20
 
 ## Saiba mais sobre o Eurostar
 
-  * [Tabela de horários](http://aurelio.net/trem-eurostar/tabela-de-horarios/)
-  * [Tabela de preços (tarifas)](http://aurelio.net/trem-eurostar/tabela-de-precos-tarifas/)
-  * [Guia ilustrado para pesquisar preços de passagens](http://aurelio.net/trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/)
+  * [Tabela de horários](/trem-eurostar/tabela-de-horarios/)
+  * [Tabela de preços (tarifas)](/trem-eurostar/tabela-de-precos-tarifas/)
+  * [Guia ilustrado para pesquisar preços de passagens](/trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/)
 

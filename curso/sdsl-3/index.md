@@ -21,11 +21,11 @@ liberado para o evento.
 
 Links para os materiais:
 
-* [Apostila de Expressões Regulares](http://aurelio.net/curso/material/apostila-expressoes-intro.pdf)
+* [Apostila de Expressões Regulares](/curso/material/apostila-expressoes-intro.pdf)
 
 * [Histórico da Linha de Comando](sdsl3-er-prompt.html)
 
-* [Mais informações sobre o assunto](http://aurelio.net/regex/)
+* [Mais informações sobre o assunto](/regex/)
 
 ## Cheguei, Falei, Voltei
 

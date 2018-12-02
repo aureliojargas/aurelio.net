@@ -4,7 +4,7 @@ layout: 2013-page
 title: 'Trem Eurostar: Tabela de horários'
 ---
 
-> O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](http://aurelio.net/trem-eurostar/)
+> O Eurostar é um trem de alta velocidade que liga Londres com Paris ou Bruxelas em cerca de duas horas de viagem, atravessando o túnel submarino do Canal da Mancha. [Saiba mais…](/trem-eurostar/)
 
 Antes da tabela completa de horários, vou te dar um resumão aproximado, pra você já ter uma ideia da frequência dos trens:
 

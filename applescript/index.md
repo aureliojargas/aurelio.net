@@ -6,8 +6,8 @@ hide_comments: true
 
 ## say "Hello World"
 
-- Vídeo-tutorial: [Brincando com AppleScript - say e iTunes](http://aurelio.net/blog/2009/11/26/quer-brincar-de-applescript/)
+- Vídeo-tutorial: [Brincando com AppleScript - say e iTunes](/blog/2009/11/26/quer-brincar-de-applescript/)
 
 - [Dicas rápidas de AppleScript no CODARE](https://codare.aurelio.net/category/applescript/)
 
-- [Aplicativos e ferramentas que fiz em AppleScript](http://aurelio.net/projects/)
+- [Aplicativos e ferramentas que fiz em AppleScript](/projects/)

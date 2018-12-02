@@ -22,6 +22,6 @@ Aí é contigo.
 A audiência está esperando.
 Use a criatividade.
 
-<!-- Se quiser acompanhar novidades nessa página, [assine esse Feed](http://aurelio.net/texto-do-leitor/feed/). -->
+<!-- Se quiser acompanhar novidades nessa página, [assine esse Feed](/texto-do-leitor/feed/). -->
 
 > \* Ok, há limites. SPAM, propagandas, xingamentos e qualquer coisa que eu julgar vulgar ou ofensiva, será sumariamente apagada.

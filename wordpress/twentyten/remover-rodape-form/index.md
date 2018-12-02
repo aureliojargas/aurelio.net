@@ -3,7 +3,7 @@ date: 2012-04-12
 title: 'WordPress: Remover a mensagem "Você pode usar estas tags e atributos de HTML"'
 ---
 
-Sabe aquela mensagem que aparece no rodapé da caixa de comentários do tema padrão [Twenty Ten](http://aurelio.net/wordpress/twentyten/), mostrando todas as tags HTML permitidas para uso?
+Sabe aquela mensagem que aparece no rodapé da caixa de comentários do tema padrão [Twenty Ten](/wordpress/twentyten/), mostrando todas as tags HTML permitidas para uso?
 
 ![O rodapé da discórdia](/wp/wp-content/uploads/2012/04/comment-footer.png)
 

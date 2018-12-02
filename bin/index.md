@@ -78,7 +78,7 @@ Alguns desses programas já deram passos importantes, entre eles:
 
 ![](img/moneylog.jpg)
 
-Acompanhe suas finanças de maneira simples e prática. Em um único arquivo ficam os seus lançamentos (quanto ganhou e gastou) e o gerador de extratos. É uma página de Internet e um programa ao mesmo tempo. Baixe a página, adicione dados novos utilizando um editor de textos comum e veja o resultado no navegador. Tudo localmente, sem precisar estar conectado na Internet. Simples, rápido, leve, personalizável, tudo-em-um. Possui suporte a tags, filtro ativo (funciona enquanto digita, usa [expressões regulares](/regex/)), colunas ordenáveis com um clique, saldo mensal, saldo acumulado, lançamentos futuros, visão dos meses recentes, visão geral (resumo). Veja mais detalhes no [site do Moneylog](http://aurelio.net/moneylog/).
+Acompanhe suas finanças de maneira simples e prática. Em um único arquivo ficam os seus lançamentos (quanto ganhou e gastou) e o gerador de extratos. É uma página de Internet e um programa ao mesmo tempo. Baixe a página, adicione dados novos utilizando um editor de textos comum e veja o resultado no navegador. Tudo localmente, sem precisar estar conectado na Internet. Simples, rápido, leve, personalizável, tudo-em-um. Possui suporte a tags, filtro ativo (funciona enquanto digita, usa [expressões regulares](/regex/)), colunas ordenáveis com um clique, saldo mensal, saldo acumulado, lançamentos futuros, visão dos meses recentes, visão geral (resumo). Veja mais detalhes no [site do Moneylog](/moneylog/).
 
 ### EmoMemory
 
@@ -93,7 +93,7 @@ Acompanhe suas finanças de maneira simples e prática. Em um único arquivo fic
 
 ![](img/emomemory-shot.jpg)
 
-O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de ficar memorizando símbolos, desenhos ou cartas, você se concentra nas pessoas que ama. Sua família, seus amigos, colegas e parceiros. Além da memória visual, esse jogo exercita a sua [Memória Emocional](http://www.memory-key.com/NatureofMemory/emotion.htm), levando em conta resultados de estudos que comprovam que memórias boas (eventos prazerosos e pessoas próximas) possuem mais detalhes contextuais e são lembradas mais facilmente. Você sabia que [emoções afetam sua memória](http://en.wikipedia.org/wiki/Emotion_and_memory)? Foi lançado como shareware, mas [ficou gratuito (e livre)](http://aurelio.net/blog/2011/12/17/jogo-emomemory-agora-e-gratuito-codigo-fonte-liberado/) em 2011.
+O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de ficar memorizando símbolos, desenhos ou cartas, você se concentra nas pessoas que ama. Sua família, seus amigos, colegas e parceiros. Além da memória visual, esse jogo exercita a sua [Memória Emocional](http://www.memory-key.com/NatureofMemory/emotion.htm), levando em conta resultados de estudos que comprovam que memórias boas (eventos prazerosos e pessoas próximas) possuem mais detalhes contextuais e são lembradas mais facilmente. Você sabia que [emoções afetam sua memória](http://en.wikipedia.org/wiki/Emotion_and_memory)? Foi lançado como shareware, mas [ficou gratuito (e livre)](/blog/2011/12/17/jogo-emomemory-agora-e-gratuito-codigo-fonte-liberado/) em 2011.
 
 ### txt2tags
 
@@ -110,7 +110,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ![](/img/t2tpowered.png)
 
-É um conversor de arquivos texto para vários formatos: HTML, XHTML, Sgml, LaTeX, Lout, Man Page, Wikipedia, Google Code Wiki, DokuWiki, MoinMoin, MagicPoint (mgp) e Adobe PageMaker, entre outros. Você escreve seu texto normalmente e coloca marcações mínimas, como ****negrito**** e **//itálico//**, e o programa o converte para o formato desejado. Este programa eu utilizo para tudo: gerar as páginas do meu site (como esta que você está lendo), gerar os artigos e documentos que escrevo, slides de palestras, site da banda, site dos outros programas... É também utilizado por diversos sites nacionais e gringos (já são mais de 100, veja a [lista completa](http://txt2tags.org/children.html)) e é o formato original do meu [Guia de Expressões Regulares](http://aurelio.net/regex/guia/). Também tem listas de discussão em português e inglês, uma grande comunidade de usuários, tradução para várias línguas e vasta documentação. Ufa! Esse já virou um monstro.
+É um conversor de arquivos texto para vários formatos: HTML, XHTML, Sgml, LaTeX, Lout, Man Page, Wikipedia, Google Code Wiki, DokuWiki, MoinMoin, MagicPoint (mgp) e Adobe PageMaker, entre outros. Você escreve seu texto normalmente e coloca marcações mínimas, como ****negrito**** e **//itálico//**, e o programa o converte para o formato desejado. Este programa eu utilizo para tudo: gerar as páginas do meu site (como esta que você está lendo), gerar os artigos e documentos que escrevo, slides de palestras, site da banda, site dos outros programas... É também utilizado por diversos sites nacionais e gringos (já são mais de 100, veja a [lista completa](http://txt2tags.org/children.html)) e é o formato original do meu [Guia de Expressões Regulares](/regex/guia/). Também tem listas de discussão em português e inglês, uma grande comunidade de usuários, tradução para várias línguas e vasta documentação. Ufa! Esse já virou um monstro.
 
 ### RAC
 
@@ -151,7 +151,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ![](img/adiumbook.png)
 
-É um programa para Mac OS X que serve para manter sincronizados os contatos da Agenda e do Adium (cliente ICQ/MSN/*). O programa foi feito no Xcode (IDE do Mac), a interface Cocoa foi feita no Interface Builder e o código é AppleScript puro. É meu primeiro programa gráfico, com botões, menus, pesquisa, apelo visual e tratamento de eventos. Já tem uma boa base de usuários e foi [destaque no site do próprio Adium](http://aurelio.net/blog/2006/09/26/adium-book-nos-holofotes/).
+É um programa para Mac OS X que serve para manter sincronizados os contatos da Agenda e do Adium (cliente ICQ/MSN/*). O programa foi feito no Xcode (IDE do Mac), a interface Cocoa foi feita no Interface Builder e o código é AppleScript puro. É meu primeiro programa gráfico, com botões, menus, pesquisa, apelo visual e tratamento de eventos. Já tem uma boa base de usuários e foi [destaque no site do próprio Adium](/blog/2006/09/26/adium-book-nos-holofotes/).
 
 ### txt2regex
 
@@ -229,11 +229,11 @@ Eu costumava usar um contador de acesso nas minhas páginas, que é esse script 
 
 - [Gerador de RSS (segundo)](sed/rss.sed) (**SED**):
 Um script SED que extrai as notícias da página principal do meu site e as converte para o formato RSS (validado). Além do título e conteúdo, cada notícia vem com a data de publicação e um link para o site principal. Este script pode ser usado em outros sites, porém adaptações terão que ser feitas nos padrões de pesquisa. casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br>**APOSENTADO: Estou usando o [WordPress](http://aurelio.net/blog) agora.**
+<br>**APOSENTADO: Estou usando o [WordPress](/blog) agora.**
 
 - [Gerador de RSS (primeiro)](php/rss-old.phps) (**PHP**):
 O primeiro script gerador de RSS que usei, uma contribuição do amigo *Deivison Alves Elias*, que me "deu de presente". Fiz pequenas modificações. Uma única expressão regular casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br>**APOSENTADO: Estou usando o [WordPress](http://aurelio.net/blog) agora.**
+<br>**APOSENTADO: Estou usando o [WordPress](/blog) agora.**
 
 - [Página com cores aleatórias](php/randbody.phps) (**PHP**):
 Numa versão antiga de meu site, cada vez que você entrava na página, o fundo e o texto apareciam em cores diferentes, escolhidas ao acaso (aleatórias). Este é o script tosco de 18 linhas que faz isso. Você pode inclusive colocar suas próprias opções de cores, pois o código está bem facinho de entender.

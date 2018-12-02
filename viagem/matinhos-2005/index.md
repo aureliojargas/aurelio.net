@@ -73,7 +73,7 @@ Aproveitei cinco dos sete dias de ondulação. No quinto dia (1º de Fevereiro) 
 
 Antes dessas férias, eu já estava a uns quatro anos sem surfar sério. Apenas algumas raras exceções. E teve a incrível façanha de ter morado um ano e meio em Floripa e lá ter surfado apenas DOIS dias. Uma vergonha.
 
-Levei cerca de uma semana para voltar a ter intimidade com a prancha e as ondas, além de conseguir algum fôlego. Na segunda semana o surfe voltou ao ponto onde eu tinha parado. Nada de extraordinário: dropar, pegar gás, umas rasgadinhas, batidinhas e floaters. Senti que o [carve](http://aurelio.net/carve/) ajudou no processo, eu já estava meio "preparado" para as cavadas.
+Levei cerca de uma semana para voltar a ter intimidade com a prancha e as ondas, além de conseguir algum fôlego. Na segunda semana o surfe voltou ao ponto onde eu tinha parado. Nada de extraordinário: dropar, pegar gás, umas rasgadinhas, batidinhas e floaters. Senti que o [carve](/carve/) ajudou no processo, eu já estava meio "preparado" para as cavadas.
 
 Da terceira semana em diante comecei a progredir lentamente, aprendendo dicas novas e tentando outras manobras. Se consolidou uma preferência pelo backside em ondas grandes e o frontside nas menores.
 
@@ -123,9 +123,9 @@ Outro que matou a pau foi o _Yoshi’s Island_, a continuação do _Super Mario 
 
 Fora os joguinhos, também escrevi muito nessas férias. O aurelio.net sofreu um faxina geral, daquelas do tipo "quando eu tiver tempo eu faço". Foram criadas áreas novas, reorganizadas outras que estavam bagunçadas e um CSS padronizado e limpo para ser usado na maioria das páginas.
 
-  * Na parte musical foi criada uma área específica, contando com várias histórias e [um artigo novinho em folha que descreve o pogo, a "dança" punk](http://aurelio.net/pogo/).
+  * Na parte musical foi criada uma área específica, contando com várias histórias e [um artigo novinho em folha que descreve o pogo, a "dança" punk](/pogo/).
   
-  * Na parte de documentação foi criado [um índice centralizado para todos os textos técnicos que já escrevi](http://aurelio.net/doc/nerd.html). Também fiz o FAQ VERDE. Dois itens que estavam há tempos na minha lista de pendências.
+  * Na parte de documentação foi criado [um índice centralizado para todos os textos técnicos que já escrevi](/doc/nerd.html). Também fiz o FAQ VERDE. Dois itens que estavam há tempos na minha lista de pendências.
   
   * E para minha surpresa, surgiu a idéia de um livro novo e escrevi um pedação. O detalhe é que é uma história, com personagens e roteiro. Roteiro nerd, é claro. Mas esse projeto ainda é uma criança, vamos ver se vai para frente.
 
@@ -142,7 +142,7 @@ A visão do inferno: aquele barulho forte e grave de estouro e aquela espuma bra
 
 > **Contexto para quem não surfa:** o momento de maior poder e força da onda é 1 segundo após a sua quebra (quando ela bate na água e aparece a espuma). Mais 3 ou 4 segundos após ela ainda é bem forte e é difícil de dar um peixinho (furar a onda por baixo com a prancha) sem ser chacoalhado de maneira brusca. A sensação é a de estar dentro de uma máquina de lavar roupa de porta frontal, não largar a prancha é tudo o que importa.
 
-Como a onda quebrou na minha frente, ela ia me atingir com força total. Não havia muito o que fazer, já era tarde para tentar um peixinho (que leva cerca de 1 segundo para se posicionar e afundar a prancha o suficiente), então joguei a prancha para o lado e mergulhei, no melhor estilo socorro-mamãe. Mas a onda já estava em cima, no auge do seu poder. No mergulho os pés são os últimos que afundam e a onda jogou a prancha de volta contra mim. Podia ter batido qualquer parte, mas foram justo as quilhas que fizeram o serviço no meu pé direito. Ainda bem que não foi no [meu pé tatuado](http://aurelio.net/foto/pe/) &:)
+Como a onda quebrou na minha frente, ela ia me atingir com força total. Não havia muito o que fazer, já era tarde para tentar um peixinho (que leva cerca de 1 segundo para se posicionar e afundar a prancha o suficiente), então joguei a prancha para o lado e mergulhei, no melhor estilo socorro-mamãe. Mas a onda já estava em cima, no auge do seu poder. No mergulho os pés são os últimos que afundam e a onda jogou a prancha de volta contra mim. Podia ter batido qualquer parte, mas foram justo as quilhas que fizeram o serviço no meu pé direito. Ainda bem que não foi no [meu pé tatuado](/foto/pe/) &:)
 
 ![Ganhei um olho (para não dizer outra coisa) no meu pé](/img/viagem/matinhos-2005/olho.jpg)
 
@@ -158,4 +158,4 @@ Fazer o quê... Fui até em casa (tirei a foto), peguei a bicicleta e fui para o
 
 Foram três pontos mesmo. Quatro, se contar que o primeiro soltou e o médico teve que furar de novo. Fiz sem anestesia, para sentir a dor e lembrar dela na próxima vez que estiver remando distraído em dia de mar grande &;)
 
-Dias depois eu mesmo retirei os pontos em casa. Aí já aproveitei e tirei fotos e escrevi um artigo novo para o site. Veja lá: [Como retirar os pontos de uma sutura](http://aurelio.net/fvm/retirar-pontos-de-sutura.html).
+Dias depois eu mesmo retirei os pontos em casa. Aí já aproveitei e tirei fotos e escrevi um artigo novo para o site. Veja lá: [Como retirar os pontos de uma sutura](/fvm/retirar-pontos-de-sutura.html).

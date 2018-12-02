@@ -23,7 +23,7 @@ Esta é minha lista dos plugins indispensáveis para o WordPress. Todos eles est
 
 ## [Google XML Sitemaps](http://wordpress.org/extend/plugins/google-sitemap-generator/)
 
-**Mapa do site para ferramentas de busca.** Esse é o tipo do plugin que você nem precisa saber como funciona, basta instalar e esquecer dele. Ele gera o arquivo [sitemap.xml](http://aurelio.net/sitemap.xml) no raiz de seu site, que é atualizado automaticamente cada vez que você modifica algum post ou página. As ferramentas de busca, como o Google, usam este arquivo para saber o que tem no seu site e poder indexá-lo. O plugin tem diversas opções, você pode escolher exatamente o que vai e o que não vai no sitemap.
+**Mapa do site para ferramentas de busca.** Esse é o tipo do plugin que você nem precisa saber como funciona, basta instalar e esquecer dele. Ele gera o arquivo [sitemap.xml](/sitemap.xml) no raiz de seu site, que é atualizado automaticamente cada vez que você modifica algum post ou página. As ferramentas de busca, como o Google, usam este arquivo para saber o que tem no seu site e poder indexá-lo. O plugin tem diversas opções, você pode escolher exatamente o que vai e o que não vai no sitemap.
 
 
 ## [Jetpack por WordPress.com](http://wordpress.org/extend/plugins/jetpack/)
@@ -49,7 +49,7 @@ Esta é minha lista dos plugins indispensáveis para o WordPress. Todos eles est
 
 ## [Simple Yearly Archive](http://wordpress.org/extend/plugins/simple-yearly-archive/)
 
-**Lista de todos os posts do blog, agrupados por ano.** Plugin bem simples, basta usar o código `[SimpleYearlyArchive]` em uma página qualquer e pronto, a lista completa de seus posts aparece. Nas opções você pode mandar ele mostrar o número de comentários, categorias e autor para cada post e o número total de posts por ano. Você também pode mostrar a data de cada post, escolhendo o formato. Eu só usei os números mesmo, eliminando o resto, [veja como ficou](http://aurelio.net/blog/sumario/).
+**Lista de todos os posts do blog, agrupados por ano.** Plugin bem simples, basta usar o código `[SimpleYearlyArchive]` em uma página qualquer e pronto, a lista completa de seus posts aparece. Nas opções você pode mandar ele mostrar o número de comentários, categorias e autor para cada post e o número total de posts por ano. Você também pode mostrar a data de cada post, escolhendo o formato. Eu só usei os números mesmo, eliminando o resto, [veja como ficou](/blog/sumario/).
 
 
 ## [Smart 404](http://wordpress.org/extend/plugins/smart-404/)
@@ -76,7 +76,7 @@ Esta é minha lista dos plugins indispensáveis para o WordPress. Todos eles est
 
 Além destes, também uso outros plugins, que por um motivo ou outro, não me deixam completamente satisfeito. Aqui também listo os novatos, que uso há pouco tempo e ainda não me sinto à vontade para recomendar. São eles:
 
-  * <del>[Contact Form 7](http://wordpress.org/extend/plugins/contact-form-7/) — Formulário de contato, [usado aqui](http://aurelio.net/contato/).</del> **REMOVIDO:** Era muito pesadão, adicionava HTML, CSS e JS em todas as páginas. Em vez de instalar uma alternativa, parei de usar formulário para contato: agora apenas menciono meu email. É o suficiente para quem realmente precisa entrar em contato.
+  * <del>[Contact Form 7](http://wordpress.org/extend/plugins/contact-form-7/) — Formulário de contato, [usado aqui](/contato/).</del> **REMOVIDO:** Era muito pesadão, adicionava HTML, CSS e JS em todas as páginas. Em vez de instalar uma alternativa, parei de usar formulário para contato: agora apenas menciono meu email. É o suficiente para quem realmente precisa entrar em contato.
 
   * [FD Feedburner Plugin](http://wordpress.org/extend/plugins/feedburner-plugin/) — Redireciona os feeds RSS para o FeedBurner.
 

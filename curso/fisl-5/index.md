@@ -256,7 +256,7 @@ conheci o **Diego Linke**, o FreeBSD-man.
 
 Já no evento, mais papo com os amigos. Ah! Escapei de uma bomba. Tinha
 sido marcada para as 10 horas, uma "**sessão de autógrafos**", onde eu ia
-ficar numa mesa, autografando [o livrinho verde](http://aurelio.net/regex/guia/) de
+ficar numa mesa, autografando [o livrinho verde](/regex/guia/) de
 Expressões Regulares. Acho mega palha e estrelinha esse negócio de
 ficar lá, no "vinde a mim". Mas, como tinha sido marcado, fui lá.
 
