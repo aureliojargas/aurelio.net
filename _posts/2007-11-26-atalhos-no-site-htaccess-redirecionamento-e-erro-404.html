@@ -12,8 +12,8 @@ tags: [site]
 
 
 <p>Hoje uma dica nerd, só para variar ;)</p>
-<p>Se você visitou o <a href="http://aurelio.net">AURELIO.NET</a> recentemente, deve ter notado que a <a href="http://aurelio.net">página principal</a> ganhou vários links novos no final, chamados “Atalhos”.</p>
-<p><a href="http://aurelio.net"><img src="/wp/wp-content/uploads/2007/11/atalhos-site.jpg" alt="Atalhos no site" /></a></p>
+<p>Se você visitou o <a href="/">AURELIO.NET</a> recentemente, deve ter notado que a <a href="/">página principal</a> ganhou vários links novos no final, chamados “Atalhos”.</p>
+<p><a href="/"><img src="/wp/wp-content/uploads/2007/11/atalhos-site.jpg" alt="Atalhos no site" /></a></p>
 <p>Cada palavra daquelas é um link para o endereço:</p>
 <p><code>http://aurelio.net/PALAVRA</code></p>
 <p>Por exemplo, se você quer usar o MiGuXeiToR, não precisa mais daquele endereço enorme</p>
@@ -42,18 +42,18 @@ tags: [site]
 <li>O atalho deve estar inteiro em uma única linha, não a quebre.</li>
 <li>
 <p>Há outros códigos para usar além do 302. <a href="http://en.wikipedia.org/wiki/URL_redirection#HTTP_status_codes_3xx">Interessou-se</a>?</p>
-<blockquote><p><strong>Atualização:</strong> Usar o redirecionamento temporário (302) não garante cache. Já o redirecionamento permanente (301), sim. (Obrigado <a href="http://aurelio.net/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/#comment-3858">Denilson</a>)</p></blockquote>
+<blockquote><p><strong>Atualização:</strong> Usar o redirecionamento temporário (302) não garante cache. Já o redirecionamento permanente (301), sim. (Obrigado <a href="/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/#comment-3858">Denilson</a>)</p></blockquote>
 </li>
 <li>Não esqueça da barra / no início do atalho.</li>
 <li>O atalho pode ser para um subdiretório também:<code>Redirect 302 <strong>/viagem/farol-imbituba-2001</strong> http://aurelio.net/viagem/farol-imbituba</code></li>
 <li>
 <p>O endereço para onde o atalho aponta sempre deve ser completo, com http:// e tudo mais. Sim, mesmo que o atalho seja para o próprio site.</p>
-<blockquote><p><strong>Atualização:</strong> No Apache 2 é possível especificar somente o path no destino do redirecionamento, sem precisar do http://seuservidor.com.br. Mas para garantir é melhor usar a notação completa mesmo. (Obrigado <a href="http://aurelio.net/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/#comment-3858">Denilson</a>)</p></blockquote>
+<blockquote><p><strong>Atualização:</strong> No Apache 2 é possível especificar somente o path no destino do redirecionamento, sem precisar do http://seuservidor.com.br. Mas para garantir é melhor usar a notação completa mesmo. (Obrigado <a href="/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/#comment-3858">Denilson</a>)</p></blockquote>
 </li>
 <li>Este endereço completo pode ser para outro site também. Veja:<code>Redirect 302 /txt2tags <strong>http://txt2tags.sourceforge.net/pt</strong></code></li>
 <li>Ah, claro. Só vai funcionar no Apache. Se teu provedor usa outro servidor Web, lamento.</li>
 <li>Mesmo que seu provedor use Apache, é possível que eles tenham desativado o suporte ao htaccess. Na dúvida, pergunte a eles.</li>
-<li><strong>Atualização:</strong> Conforme lembrado pelos participantes do blog, nos comentários, alternativas similares são o <a href="http://httpd.apache.org/docs/2.0/mod/mod_alias.html#redirectmatch">RedirectMatch</a> e o <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html">mod_rewrite</a>. Ambos usam <a href="http://aurelio.net/regex/">Expressões Regulares</a>.</li>
+<li><strong>Atualização:</strong> Conforme lembrado pelos participantes do blog, nos comentários, alternativas similares são o <a href="http://httpd.apache.org/docs/2.0/mod/mod_alias.html#redirectmatch">RedirectMatch</a> e o <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html">mod_rewrite</a>. Ambos usam <a href="/regex/">Expressões Regulares</a>.</li>
 </ul>
 <p>Ah, tem mais. Usando o htaccess, de brinde você ainda ganha o direito de poder redirecionar todas as visitas a endereço inválidos (Erro 404) para uma página padrão. Em meu caso, usei a página principal como destino:</p>
 <p><code>ErrorDocument 404 /index.html</code></p>

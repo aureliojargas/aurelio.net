@@ -42,14 +42,14 @@ $</pre>
 <h3>Passo 3</h3>
 <p>Use o comando “vifs” para entrar na configuração do sistema (/etc/fstab).</p>
 <pre>$ sudo vifs</pre>
-<p><a href="http://aurelio.net/wp/wp-content/uploads/2010/07/fstab-vazio.png"><img class="aligncenter size-medium wp-image-1241" title="fstab-vazio" src="/wp/wp-content/uploads/2010/07/fstab-vazio.png" alt="" width="450" height="329" /></a></p>
+<p><a href="/wp/wp-content/uploads/2010/07/fstab-vazio.png"><img class="aligncenter size-medium wp-image-1241" title="fstab-vazio" src="/wp/wp-content/uploads/2010/07/fstab-vazio.png" alt="" width="450" height="329" /></a></p>
 <blockquote><p>Você também pode editar diretamente o arquivo /etc/fstab <strong>se REALMENTE souber o que está fazendo</strong>. Não aconselho.</p></blockquote>
 <h3>Passo 4</h3>
 <p>Adicione uma linha nova no final, no seguinte formato, usando o seu próprio UUID:</p>
 <pre>UUID=61B7A219-6CC4-33C0-B521-CE04ADE6F780       none    hfs     rw,noauto</pre>
 <blockquote><p>Nota: Se sua partição estiver no formato do Windows (FAT32), troque <code>hfs</code> por <code>msdos</code>.</p></blockquote>
 <p>Certifique-se que você usou TABs e não espaços em branco para separar os campos. As cores das palavras devem ficar exatamente iguais às da foto seguinte. Se aparecer algo em vermelho, há algum erro e você deve arrumá-lo antes de salvar.</p>
-<p><a href="http://aurelio.net/wp/wp-content/uploads/2010/07/fstab-ok.png"><img class="aligncenter size-medium wp-image-1240" title="fstab-ok" src="/wp/wp-content/uploads/2010/07/fstab-ok.png" alt="" width="450" /></a></p>
+<p><a href="/wp/wp-content/uploads/2010/07/fstab-ok.png"><img class="aligncenter size-medium wp-image-1240" title="fstab-ok" src="/wp/wp-content/uploads/2010/07/fstab-ok.png" alt="" width="450" /></a></p>
 <h3>Passo 5</h3>
 <p>Conferiu? Tá tudo certo? Então, salve o arquivo e saia do editor. Você sabe, <code>:wq</code>.</p>
 <h3>Passo 6</h3>

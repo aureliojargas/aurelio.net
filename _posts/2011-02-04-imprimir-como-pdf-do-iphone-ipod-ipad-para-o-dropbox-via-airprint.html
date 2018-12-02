@@ -19,17 +19,17 @@ tags: []
 <p>Mas antes, deixa eu te explicar o porquê.</p>
 <p>Eu tive essa necessidade quando precisei pagar um boleto no banco e tentei fazer isso pelo iPad. Acessei o site do banco, preenchi os dados e fiz o pagamento, deu tudo certo. Aí apareceu a opção para emitir o comprovante, que eu sempre salvo como PDF e guardo. Mas dessa vez, por estar no iPad, travei.</p>
 <p>Como vou fazer isso? Não posso baixar arquivos nem tem a opção mágica de imprimir como PDF, que eu sempre uso no Mac. E depois, mesmo que eu conseguisse, ainda teria que plugar o iPad no computador para enfim poder copiar o comprovante para junto de meus arquivos. Que saco.</p>
-<p>Na busca de uma solução, aprendi <a href="http://aurelio.net/blog/2011/01/28/salvar-site-como-pdf-no-iphone-ipod-ipad/">como converter um site pra PDF e guardá-lo na biblioteca do iBooks</a>. Mas isso não funcionaria no site do banco, que é inacessível para os sites externos que poderiam convertê-lo para PDF. Pesquisando mais, caí <a href="http://www.tuaw.com/2010/11/16/how-to-create-pdfs-with-your-ios-device">neste artigo</a> que mostrou a solução para o meu problema:</p>
+<p>Na busca de uma solução, aprendi <a href="/blog/2011/01/28/salvar-site-como-pdf-no-iphone-ipod-ipad/">como converter um site pra PDF e guardá-lo na biblioteca do iBooks</a>. Mas isso não funcionaria no site do banco, que é inacessível para os sites externos que poderiam convertê-lo para PDF. Pesquisando mais, caí <a href="http://www.tuaw.com/2010/11/16/how-to-create-pdfs-with-your-ios-device">neste artigo</a> que mostrou a solução para o meu problema:</p>
 <ul>
 <li><strong>A partir do iOS, imprimir via AirPrint para uma impressora PDF em meu Mac, que salva direto dentro do meu Dropbox.</strong></li>
 </ul>
 <p>Sei que isso parece complicado (e na verdade é!), mas já expliquei aqui no blog como fazer a parte mais difícil. Vamos lá para o passo a passo.</p>
 <ol>
-<li><a href="http://aurelio.net/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/">Configure seu Mac para ser uma impressora PDF</a>.</li>
-<li><a href="http://aurelio.net/blog/2011/02/02/ativar-airprint-no-mac-os-x-com-uma-unica-linha/">Ative o AirPrint em seu Mac</a>.</li>
+<li><a href="/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/">Configure seu Mac para ser uma impressora PDF</a>.</li>
+<li><a href="/blog/2011/02/02/ativar-airprint-no-mac-os-x-com-uma-unica-linha/">Ative o AirPrint em seu Mac</a>.</li>
 <li><strong>Mande imprimir algo</strong> direto do iPhone para testar tudo e para que seja criada a pasta especial que guarda os PDFs.</li>
 <li><strong>Confira se o PDF foi mesmo criado.</strong> Para isso, abra a seguinte pasta:
-<div id="attachment_1402" class="wp-caption aligncenter" style="width: 410px"><a href="http://aurelio.net/wp/wp-content/uploads/2011/01/pdf-printer-folder.png"><img class="size-full wp-image-1402  " title="pdf-printer-folder" src="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png" alt="" width="400" height="129" /></a><p class="wp-caption-text">Seu HD &gt; Usuários &gt; Compartilhado &gt; CUPS-PDF</p></div>
+<div id="attachment_1402" class="wp-caption aligncenter" style="width: 410px"><a href="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png"><img class="size-full wp-image-1402  " title="pdf-printer-folder" src="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png" alt="" width="400" height="129" /></a><p class="wp-caption-text">Seu HD &gt; Usuários &gt; Compartilhado &gt; CUPS-PDF</p></div>
 <p>Se tudo deu certo, ali haverá uma pasta chamada <strong>guest</strong> e seu PDF estará dentro dela.</p>
 <blockquote><p><strong>Aqui vem a pegadinha:</strong> a pasta guest é protegida e você não tem permissão para ver seu conteúdo. É preciso fazer mágicas no Terminal para resolver este problema:</p>
 <pre>  cd /var/spool/cups-pdf

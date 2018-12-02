@@ -34,11 +34,11 @@ tags: [programador]
 <blockquote><p><strong>Atualização:</strong> <del 2013-12-12T12:00:00+00:00>O chato do WordPress estragou minha brincadeira. Ele removeu do código os Tabs inúteis na hora de salvar o post. Tentei colocar de novo, mas ele sempre tira. Viu como não sou só eu que não gosta deles?</del> — WordPress removido, problema resolvido :)</p></blockquote>
 <p>Tá, eu sei. Estes espaços excedentes não influem em nada no funcionamento do programa e removê-los não vai fazer diferença. Até a economia de bytes, que poderia ser um argumento para a limpeza, é irrisória.</p>
 <blockquote><p>Irrisória! Faz anos que eu não digito essa palavra. Irrisória. Irrisória. Irrisória. Pronto, matei a saudade :)</p></blockquote>
-<p>Mas eu detesto ter qualquer coisa “sobrando” em meus códigos, então estes espaços em branco são inadmissíveis. Geralmente uso uma <a href="http://aurelio.net/regex/">expressão regular</a> para vasculhar o código e remover todos estes espaços:</p>
+<p>Mas eu detesto ter qualquer coisa “sobrando” em meus códigos, então estes espaços em branco são inadmissíveis. Geralmente uso uma <a href="/regex/">expressão regular</a> para vasculhar o código e remover todos estes espaços:</p>
 <pre>^(\t+ | +\t)|[\t ]+$</pre>
 <blockquote><p>Traduzindo: Procure espaços e Tabs misturados no início da linha, ou por qualquer combinação de Tabs e espaços no final das linhas.</p></blockquote>
 <p>Mas é claro que eu esqueço de fazer esta pesquisa e os famigerados espaços parasitas acabam ficando no código.</p>
-<p>Eu poderia configurar o SVN para disparar um <a href="http://aurelio.net/shell/">shell script</a> que remove estes espaços a cada commit, mas tenho preguiça de procurar como se faz isso. De qualquer forma, isso eliminaria o prazer de fazer a limpeza eu mesmo.</p>
+<p>Eu poderia configurar o SVN para disparar um <a href="/shell/">shell script</a> que remove estes espaços a cada commit, mas tenho preguiça de procurar como se faz isso. De qualquer forma, isso eliminaria o prazer de fazer a limpeza eu mesmo.</p>
 <blockquote><p>Tipo se orgulhar de ver a casa limpa depois da faxina que você mesmo fez. Quando a faxineira limpa não tem essa emoção.</p></blockquote>
 <p>Perdoem-me pelo imperdoável deslize anti-automação, mas essa tarefa eu gosto de fazer “na mão”. Assim sendo, nada melhor do que configurar o editor de textos para destacar em uma cor diferente estes espaços, para que eu possa apagá-los um por um, sem piedade.</p>
 <blockquote><p>Aleluia! Finalmente consegui chegar no assunto do post :)</p></blockquote>
@@ -51,7 +51,7 @@ tags: [programador]
 <p><img class="aligncenter" title="TextMate Bundle Editor - Show blanks" src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" width="500" height="384"/></p>
 <p>Aperte o botão Test para salvar, os vermelhinhos já vão aparecer em seus códigos. Você pode fazer isso para outras linguagens, basta repetir o procedimento, trocando js pelo identificador da outra linguagem.</p>
 <h2>Vim</h2>
-<p>Já faz alguns anos que parei de usar o Vim, mas ainda tenho aqui no <a href="http://aurelio.net/doc/dotfiles/vimrc.txt">meu vimrc</a> a linha mágica que eu usava para mostrar os espaços inúteis:</p>
+<p>Já faz alguns anos que parei de usar o Vim, mas ainda tenho aqui no <a href="/doc/dotfiles/vimrc.txt">meu vimrc</a> a linha mágica que eu usava para mostrar os espaços inúteis:</p>
 <pre>" Mostra os espaços em branco inúteis no final da linha
 au BufNewFile,BufRead * syn match brancomala '\s\+$' | hi brancomala ctermbg=red</pre>
 <p><img class="aligncenter" title="Vim highlight blank spaces" src="/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="" width="500" height="379" /></p>

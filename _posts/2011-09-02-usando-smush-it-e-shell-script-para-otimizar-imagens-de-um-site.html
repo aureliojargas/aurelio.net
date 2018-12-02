@@ -29,12 +29,12 @@ tags: [regex, screencast, tela-preta, shell]
 <li>o seu provedor de hospedagem terá menos banda consumida</li>
 <li>e você ganhará mais pontinhos com todos eles :)</li>
 </ul>
-<p>Tá, mas e onde entra o <a href="http://aurelio.net/shell/">shell script</a> na história?</p>
+<p>Tá, mas e onde entra o <a href="/shell/">shell script</a> na história?</p>
 <p>A ferramenta espera receber uma lista de URLs de suas imagens, uma por linha. Usando mágicas na linha de comando é fácil obter a lista completa de todas as imagens do seu site, não importa em qual pasta elas estejam. Você ainda pode escolher otimizar somente um tipo de imagem (PNG, por exemplo) e deixar os outros para outro momento.</p>
-<p>No vídeo eu uso o find para listar os arquivos, depois o <a href="http://aurelio.net/sed/">sed</a> para formatar o resultado. E claro, as <a href="http://aurelio.net/regex/">expressões regulares</a> não poderiam ficar de fora!</p>
+<p>No vídeo eu uso o find para listar os arquivos, depois o <a href="/sed/">sed</a> para formatar o resultado. E claro, as <a href="/regex/">expressões regulares</a> não poderiam ficar de fora!</p>
 <p>Passada a lista para o site ele te devolve um <a href="http://pt.wikipedia.org/wiki/ZIP">arquivo ZIP</a> com todas as imagens que foram otimizadas, mantendo a estrutura original de pastas. Aí é só você expandir este ZIP no lugar certo e pronto.</p>
 <p>Como bônus, no final eu mostro <strong>como usar o sed para compor um comando do shell</strong>, que depois é executado via <a href="http://en.wikipedia.org/wiki/Standard_streams">STDIN</a>. Já perdi a conta de quantas vezes usei esta técnica para me salvar de trabalho braçal. Recomendo++.</p>
-<p>Então, vamos ver o vídeo? Como <a href="http://aurelio.net/tags/#screencast">os vídeos anteriores</a>, este também foi gravado direto: sem cortes, sem edição, sem frescura. Então coloca em tela cheia e aproveite a viagem!</p>
+<p>Então, vamos ver o vídeo? Como <a href="/tags/#screencast">os vídeos anteriores</a>, este também foi gravado direto: sem cortes, sem edição, sem frescura. Então coloca em tela cheia e aproveite a viagem!</p>
 <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/GqV3psNyzy8?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0"></iframe></span></p>
 <p>Gostou do vídeo? Então eu agradeço se você <a href="https://www.youtube.com/watch?v=GqV3psNyzy8&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">me der um joinha lá no YouTube</a> :)</p>
 <p>Vou colar aqui os dois comandos mágicos demonstrados no vídeo:</p>
@@ -47,7 +47,7 @@ find img -name \*.png | sed 's@^@http://aurelio.net/@' | grep -v /icon/ | pbcopy
 find img -type f | sed 's@.*@ mv -v &amp; /a/www/&amp; @' | sh</pre>
 <p>Aprenda mais sobre os comandos do vídeo:</p>
 <ul>
-<li><a href="http://aurelio.net/shell/">http://aurelio.net/shell/</a></li>
-<li><a href="http://aurelio.net/sed/">http://aurelio.net/sed/</a></li>
-<li><a href="http://aurelio.net/regex/">http://aurelio.net/regex/</a></li>
+<li><a href="/shell/">http://aurelio.net/shell/</a></li>
+<li><a href="/sed/">http://aurelio.net/sed/</a></li>
+<li><a href="/regex/">http://aurelio.net/regex/</a></li>
 </ul>
