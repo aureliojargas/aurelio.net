@@ -168,7 +168,7 @@
 		<h4>Textos Recentes</h4>
 		<ul>
 {% for post in site.data.recent %}
-			<li><a href="{{ site.url}}{{ post.url }}">{{ post.title }}</a></li>
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
 		</ul>

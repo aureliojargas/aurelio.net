@@ -2,6 +2,6 @@
 	<ul>
 {% assign sorted_pages = site.pages | sort:"title" %}
 {% for x in sorted_pages %}{% if x.url contains page.url and x.url != page.url %}
-		<li><a href="{{ site.url }}{{ x.url }}">{{ x.title | escape }}</a></li>{% endif %}{% endfor %}
+		<li><a href="{{ x.url }}">{{ x.title | escape }}</a></li>{% endif %}{% endfor %}
 	</ul>
 </div>

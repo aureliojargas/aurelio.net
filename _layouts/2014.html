@@ -15,8 +15,8 @@
 	<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 {% unless page.hide_prev_next %}
-{% if page.previous.url %}	<link rel="prev" title="{{ page.previous.title | escape }}" href="{{ site.url }}{{ page.previous.url }}" />{% endif %}
-{% if page.next.url     %}	<link rel="next" title="{{ page.next.title     | escape }}" href="{{ site.url }}{{ page.next.url }}" />{% endif %}
+{% if page.previous.url %}	<link rel="prev" title="{{ page.previous.title | escape }}" href="{{ page.previous.url }}" />{% endif %}
+{% if page.next.url     %}	<link rel="next" title="{{ page.next.title     | escape }}" href="{{ page.next.url }}" />{% endif %}
 {% endunless%}
 
 {% include head-open-graph.html %}
@@ -84,7 +84,7 @@
 	<div class="wrapper">
 
 		<div id="article-header">
-			<h1><a href="{{ site.url }}{{ page.url }}" title="Permalink" rel="bookmark">{{ page.title | escape }}</a></h1>
+			<h1><a href="{{ page.url }}" title="Permalink" rel="bookmark">{{ page.title | escape }}</a></h1>
 {% if page.subtitle %}
 			<h2>{{ page.subtitle | escape }}</h2>
 {% endif %}
@@ -114,7 +114,7 @@
 
 {% unless page.hide_read_more %}
 	{% if page.more_url                 %}{% assign more_url = page.more_url %}
-	{% elsif page.url contains '/blog/' %}{% assign more_url = 'http://aurelio.net/blog/sumario/' %}
+	{% elsif page.url contains '/blog/' %}{% assign more_url = '/blog/sumario/' %}
 	{% else                             %}{% assign more_url = '..' %}{% endif %}
 		<p class="read-more">
 			<span class="unicode-char heart">♥</span>
@@ -155,8 +155,8 @@
 {% unless page.hide_prev_next %}{% if page.previous.url or page.next.url %}
 <div id="prev-next" class="bar">
 	<div class="wrapper">
-		{% if page.previous.url %}<div class="nav-previous"><a href="{{ site.url }}{{ page.previous.url }}" rel="prev">← {{ page.previous.title | escape }}</a></div>{% endif %}
-		{% if page.next.url     %}<div class="nav-next"><a href="{{ site.url }}{{ page.next.url }}" rel="next">{{ page.next.title | escape }} →</a></div>{% endif %}
+		{% if page.previous.url %}<div class="nav-previous"><a href="{{ page.previous.url }}" rel="prev">← {{ page.previous.title | escape }}</a></div>{% endif %}
+		{% if page.next.url     %}<div class="nav-next"><a href="{{ page.next.url }}" rel="next">{{ page.next.title | escape }} →</a></div>{% endif %}
 		<div style="clear:both;"></div>
 	</div>
 </div>
@@ -194,7 +194,7 @@
 
 <div id="footer" class="bar">
 	<div class="wrapper">
-		<a href="http://aurelio.net">Aurelio.net</a> é o site pessoal de
+		<a href="/">Aurelio.net</a> é o site pessoal de
 		<a href="/aurelio/">Aurelio Jargas</a>.
 		<br>
 		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
