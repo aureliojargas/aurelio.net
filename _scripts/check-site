@@ -97,6 +97,12 @@ check_relative_urls() {
     # ../
     cgrep -i -E '(src|href)="\.\./' $files
     cgrep -i -E '(src|href)="[^"]*/\.\./' $files
+
+    # Not http://, root-relative, #anchor, . or ..
+    #FIXME Relative URLs that start with 'h' won't appearin the output
+    #FIXME Relative URLs such as .foo won't appear in the output
+    cgrep -i -E '(src|href)="[^h/#.]' $files |
+    grep -v -F 'href="mailto:'
 }
 
 # No http:// for resources (mixed content) - #18
