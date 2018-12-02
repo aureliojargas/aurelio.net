@@ -12,7 +12,7 @@ Após 7 anos de hiato, voltarei a dar cursos nerds por um breve período: 4 dias
 
 ## Versão normal
 
-A última vez que dei um [curso nerd](http://aurelio.net/curso/) foi em 2008. Foram oito horas intensivas de expressões regulares avançadas, num curso encomendado por uma empresa. Coisa de louco, como diria vovó…
+A última vez que dei um [curso nerd](/curso/) foi em 2008. Foram oito horas intensivas de expressões regulares avançadas, num curso encomendado por uma empresa. Coisa de louco, como diria vovó…
 
 Desde então “me aposentei” dos cursos, pois as viagens afetam bastante minha produtividade nerd local. Preciso de concentração para trabalhar, então geralmente perdia um ou dois dias de trabalho antes e depois de cada viagem. Antes com os preparativos e ansiedade, depois com a reorganização de tudo até voltar à rotina.
 
@@ -22,9 +22,9 @@ Desde então “me aposentei” dos cursos, pois as viagens afetam bastante minh
 
 O Rubens Prates (meu amigo e editor/dono da Novatec Editora) é um cara incansável e muito paciente. Ele está sempre me incentivando (empurrando) e se não fosse pela sua insistência, não haveria [piazinho](https://www.piazinho.com.br) nem [concha galáctica](https://www.shellscript.com.br). Pois bem, há cerca de um ano ele está insistindo para eu dar cursos lá no [Centro de Treinamento](http://ctnovatec.com.br/) que eles montaram. Conversa vai, conversa vem, mais uma vez ele venceu :)
 
-Agora em agosto vou tirar férias [do trabalho](http://aurelio.net/blog/2014/11/08/funcionario-publico/), e vou aproveitar o tempo livre para… trabalhar mais!
+Agora em agosto vou tirar férias [do trabalho](/blog/2014/11/08/funcionario-publico/), e vou aproveitar o tempo livre para… trabalhar mais!
 
-> Pois é, não está nada fácil pagar as prestações do [VERDEJANTE III](http://aurelio.net/1000000000000.html) ;)
+> Pois é, não está nada fácil pagar as prestações do [VERDEJANTE III](/1000000000000.html) ;)
 
 Combinamos de fazer um “intensivão”, uma maratona de 5 cursos diferentes em 4 dias:
 
@@ -36,7 +36,7 @@ Combinamos de fazer um “intensivão”, uma maratona de 5 cursos diferentes em
 
 Na quarta, quinta e sexta, serão cursos de um dia inteiro (8 horas). É aquele dia mágico, intenso, em que você começa sabendo zero e termina conhecedor do assunto. Um bom exemplo é o [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/), indicado até para quem nem sabe que bicho é esse. É pra aprender de verdade. No fim do dia, meu objetivo é que todos os alunos, sem exceção, saibam ler e entender uma expressão longa e intimidadora como esta: `((0?[1-9]|1[0-9]|2[0-8])/(0?[1-9]|1[012])|(29|30)/(0?[13-9]|1[012])|31/(0?[13578]|1[02]))/[012][0-9]{3}`. E aí, vamos lá?
 
-Já os cursos de shell, tem o [Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/) que não assume nenhum conhecimento prévio e começa lá do início, ensinando os conceitos básicos do Unix e da linha de comando, e vai progredindo gradativamente, até todos conseguirem fazer seus próprios scripts. Já o outro curso [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/) será mais avançado, um papo de programador para programador, ensinando as peculiaridades do ambiente Unix para programação e o “[jeito shell script](http://aurelio.net/tela-preta/)” de resolver problemas. Indico esse se você já é programador em uma ou mais linguagens, mas ainda não é ninja em Unix.
+Já os cursos de shell, tem o [Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/) que não assume nenhum conhecimento prévio e começa lá do início, ensinando os conceitos básicos do Unix e da linha de comando, e vai progredindo gradativamente, até todos conseguirem fazer seus próprios scripts. Já o outro curso [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/) será mais avançado, um papo de programador para programador, ensinando as peculiaridades do ambiente Unix para programação e o “[jeito shell script](/tela-preta/)” de resolver problemas. Indico esse se você já é programador em uma ou mais linguagens, mas ainda não é ninja em Unix.
 
 No sábado serão dois cursos de 4 horas direcionados a programadores ([Python de manhã](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/), [JavaScript à tarde](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-javascript/)) e ensinam expressões regulares. Veremos os metacaracateres e como aplicá-los usando as ferramentas da linguagem, para casar e formatar textos, extrair e validar dados, lidar com acentuação, textos multilinha, e por aí vai… Se você não conseguir se liberar durante a semana, nesse dia não tem desculpa, hein? :)
 

@@ -7,7 +7,7 @@ worked: 12:00
 
 > Aos 38 anos, aceitei o desafio de trabalhar na ContaAzul, uma startup com tecnologias de nuvem, que até então eram desconhecidas pra mim. Fiquei lá por 11 meses, de nov/2015 a out/2016. Fiz novas amizades, conheci o método de trabalho da nova geração (fail fast), comi bastante (comida livre!) e aprendi muito sobre AWS, Docker, CI/CD e práticas DevOps. Foi uma experiência incrível, e um grande upgrade na carreira. Vou contar um pouco dessa história.
 
-Outubro de 2015. Estava eu lá, já há dois anos trabalhando como [programador concursado na Prefeitura de Joinville](http://aurelio.net/blog/2014/11/08/funcionario-publico/). O turno de 6 horas me deixava com tempo livre, então eu pretendia iniciar um mestrado ([lembra que fiz o POSCOMP?](http://aurelio.net/blog/2015/10/03/poscomp/)) para tentar saciar o insaciável desejo de aprender coisas novas, diferentes.
+Outubro de 2015. Estava eu lá, já há dois anos trabalhando como [programador concursado na Prefeitura de Joinville](/blog/2014/11/08/funcionario-publico/). O turno de 6 horas me deixava com tempo livre, então eu pretendia iniciar um mestrado ([lembra que fiz o POSCOMP?](/blog/2015/10/03/poscomp/)) para tentar saciar o insaciável desejo de aprender coisas novas, diferentes.
 
 Eis que chega em meu email um convite para trabalhar na loucura agitada de uma startup local, a [ContaAzul](https://contaazul.com). A vaga envolvia o tipo de trabalho que hoje chamam de [DevOps](https://en.wikipedia.org/wiki/DevOps), que é uma mistura de administrador de sistemas e programador.
 
@@ -80,9 +80,9 @@ O primeiro login na [AWS](https://aws.amazon.com/pt/) foi um choque. Uma tela qu
 
 Outra coisa nova pra mim era a prática de [CI](https://en.wikipedia.org/wiki/Continuous_integration) e [CD](https://en.wikipedia.org/wiki/Continuous_delivery) (integração e entrega contínuos), que fazia com que um commit no [GitHub](https://github.com/) fosse empacotado, testado e publicado automaticamente. Nunca tinha lidado com isso e demorei para entender todas as pecinhas que faziam a mágica funcionar. Algumas delas: [Jenkins](https://jenkins.io/), [Travis](https://travis-ci.org/), [Puppet](https://puppet.com/), [Docker](https://www.docker.com/), APIs da AWS e diversos shell scripts pelo caminho.
 
-Aliás, a única coisa que já me era familiar nesse novo ambiente era o Linux e o bom e velho [shell script](http://aurelio.net/shell/), que ainda estava lá, firme e forte servindo mais uma geração. Ele continua indispensável e agora gruda todas as peças dessa engenhoca cloud. Além dos vários scripts internos, também tinha uns shell scripts camuflados dentro de determinadas ferramentas, como no [Dockerfile](https://docs.docker.com/engine/reference/builder/) ou no [arquivo YAML do Travis CI](https://docs.travis-ci.com/user/customizing-the-build).
+Aliás, a única coisa que já me era familiar nesse novo ambiente era o Linux e o bom e velho [shell script](/shell/), que ainda estava lá, firme e forte servindo mais uma geração. Ele continua indispensável e agora gruda todas as peças dessa engenhoca cloud. Além dos vários scripts internos, também tinha uns shell scripts camuflados dentro de determinadas ferramentas, como no [Dockerfile](https://docs.docker.com/engine/reference/builder/) ou no [arquivo YAML do Travis CI](https://docs.travis-ci.com/user/customizing-the-build).
 
-> Inspirado por essa nova realidade do shell, e com a experiência de trabalho na ContaAzul, fiz a palestra [Shell Script Moderno](http://aurelio.net/curso/fisl-17/).
+> Inspirado por essa nova realidade do shell, e com a experiência de trabalho na ContaAzul, fiz a palestra [Shell Script Moderno](/curso/fisl-17/).
 
 
 
@@ -127,9 +127,9 @@ O mais louco era diariamente transitar entre dois mundos opostos: de manhã func
 
 Na minha experiência vivenciando isso, **os dois métodos de trabalho funcionam**, não tem melhor ou pior. Cada um encaixa melhor num tipo de empresa e de funcionário. A prefeitura é um órgão público com funcionários já mais velhos e precavidos, a ContaAzul é uma startup com uma molecada cheia de gás e sem freio.
 
-Eu notei que o que mais me cansava nessa dupla jornada não eram as 10 horas diárias de trabalho (afinal, isso sempre foi rotina [quando eu trabalhava em casa](http://aurelio.net/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/)), mas sim o chaveamento intelectual de ter que entrar no “modo prefeitura” de manhã e depois do almoço mudar para o “modo startup”. Além da diferenças tecnológicas e de metodologia de trabalho, também tinha a diferença de sistemas operacionais (Windows e Linux) e de teclados (ABNT e US Internacional). Fim do dia eu já estava zuretão, confundindo tudo. A cabeça doía.
+Eu notei que o que mais me cansava nessa dupla jornada não eram as 10 horas diárias de trabalho (afinal, isso sempre foi rotina [quando eu trabalhava em casa](/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/)), mas sim o chaveamento intelectual de ter que entrar no “modo prefeitura” de manhã e depois do almoço mudar para o “modo startup”. Além da diferenças tecnológicas e de metodologia de trabalho, também tinha a diferença de sistemas operacionais (Windows e Linux) e de teclados (ABNT e US Internacional). Fim do dia eu já estava zuretão, confundindo tudo. A cabeça doía.
 
-> Alguns dias ainda tinha a terceira jornada onde eu precisava [chavear para o “modo escritor”](http://aurelio.net/blog/2016/04/02/tres-empregos/). Pensa num cara que já nem sabia mais o que estava fazendo :)
+> Alguns dias ainda tinha a terceira jornada onde eu precisava [chavear para o “modo escritor”](/blog/2016/04/02/tres-empregos/). Pensa num cara que já nem sabia mais o que estava fazendo :)
 
 
 
@@ -137,7 +137,7 @@ Eu notei que o que mais me cansava nessa dupla jornada não eram as 10 horas di�
 
 Por mais que eu estivesse feliz na ContaAzul, pelo trabalho e pelas amizades que lá fiz, depois de 11 meses de uma rotina de dois empregos, trabalhando 10 horas por dia, eu estava bem cansado.
 
-Com [a gravidez da Mog](http://aurelio.net/blog/2016/11/09/serei-papai/), minhas prioridades mudaram. A barriga ali crescendo, e eu senti que devia desacelerar, trabalhar menos e ir me preparando para iniciar o “modo pai” e curtir o filho que estava a caminho.
+Com [a gravidez da Mog](/blog/2016/11/09/serei-papai/), minhas prioridades mudaram. A barriga ali crescendo, e eu senti que devia desacelerar, trabalhar menos e ir me preparando para iniciar o “modo pai” e curtir o filho que estava a caminho.
 
 Pedi demissão na ContaAzul e voltei ao meu horário normal na prefeitura, de 6 horas. Fim de um ciclo.
 
@@ -165,4 +165,4 @@ Ao meu chefe na ContaAzul ([Matheus Rossato](https://www.linkedin.com/in/matheus
 
 Aos meus colegas de trabalho ninjas da equipe BlackOps da ContaAzul ([Luiz Müller](https://www.linkedin.com/in/luiz-antonio-mulller-24165a14), [Carlos Becker](https://www.linkedin.com/in/caarlos0), [Jonathan Beber](https://www.linkedin.com/in/jonathanbeber)) que tanto me ensinaram o tempo todo, com paciência, cordialidade e bom humor. Três caras muito fodas, nível técnico mundial, além de bons amigos.
 
-E claro, um agradecimento super especial à minha amada [Mog](http://aurelio.net/tags/#mog) ❤️, que como sempre, dá seu apoio incondicional às minhas empreitadas.
+E claro, um agradecimento super especial à minha amada [Mog](/tags/#mog) ❤️, que como sempre, dá seu apoio incondicional às minhas empreitadas.

@@ -76,17 +76,17 @@ Escrevemos em alguns post-it os nomes que mais gostávamos (todos dos anos 80) e
 A gravidez atualmente está no seu sexto mês, com a mamãe bem disposta e com a saúde 100%, carregando um bebezão saudável, grande e muito saltitante, que deve nascer no fim de fevereiro. ❤️
 
 Nessa mesma época, **eu e a Mog completaremos 10 anos juntos**! O Marcelo será o nosso presente, que virá para celebrar nosso amor e nossa parceria de vida, aumentando a família e abrindo um novo capítulo nessa história que compartilhei alguns fragmentos com vocês:
-[namoro](http://aurelio.net/blog/2007/08/18/1200-piscando-no-microondas/),
-[noivado](http://aurelio.net/blog/2008/07/18/a-lua-a-pedra-e-o-amor/),
-[formatura](http://aurelio.net/blog/2009/04/17/garota-nota-10-2/),
-[morando junto](http://aurelio.net/blog/2009/05/15/dois-corpos-um-espaco/),
-[casamento](http://aurelio.net/blog/2011/05/13/casamento/),
-entre [outros](http://aurelio.net/tags/#mog).
+[namoro](/blog/2007/08/18/1200-piscando-no-microondas/),
+[noivado](/blog/2008/07/18/a-lua-a-pedra-e-o-amor/),
+[formatura](/blog/2009/04/17/garota-nota-10-2/),
+[morando junto](/blog/2009/05/15/dois-corpos-um-espaco/),
+[casamento](/blog/2011/05/13/casamento/),
+entre [outros](/tags/#mog).
 
 ![](/img/blog/marcelo-ultrassom.jpg)
 
-- Sei que deve ser coisa de papai babão, mas eu JURO que ele se mexe quando eu coloco [hardcore](http://aurelio.net/musica/) pra tocar. Já tá lá pogando, cara! 🤘
+- Sei que deve ser coisa de papai babão, mas eu JURO que ele se mexe quando eu coloco [hardcore](/musica/) pra tocar. Já tá lá pogando, cara! 🤘
 
-- Por falar nisso, olha a coincidência: outros dois amigos [da banda](http://aurelio.net/blog/2016/06/18/ensaio-banda/) também terão seus primeiros filhos na mesma época, e também serão meninos. A próxima geração da banda de malacos já está garantida  🎤
+- Por falar nisso, olha a coincidência: outros dois amigos [da banda](/blog/2016/06/18/ensaio-banda/) também terão seus primeiros filhos na mesma época, e também serão meninos. A próxima geração da banda de malacos já está garantida  🎤
 
-- Sei que vou me arrepender, mas estou pensando em tentar ([pela segunda vez](http://aurelio.net/blog/2012/07/13/entrei-no-facebook/)) começar a usar o Facebook, pra compartilhar fotos e fatos de como meu filho é o mais `bonito|forte|esperto|.*` do mundo 🏅
+- Sei que vou me arrepender, mas estou pensando em tentar ([pela segunda vez](/blog/2012/07/13/entrei-no-facebook/)) começar a usar o Facebook, pra compartilhar fotos e fatos de como meu filho é o mais `bonito|forte|esperto|.*` do mundo 🏅

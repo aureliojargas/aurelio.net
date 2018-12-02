@@ -69,7 +69,7 @@ Como se toda essa agilidade não fosse suficiente, ele já [implementou a funcio
 > Remove duplicate CHANGELOG items for v7.8.0  
 > <https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/447>
 
-Começamos a usar o [GitLab](https://about.gitlab.com/) lá no trabalho (obrigado a [todos que indicaram](http://aurelio.net/blog/2014/11/08/funcionario-publico/)) e eu acabei como o responsável por ele (“quem inventa, aguenta”). Saiu uma versão nova, então fui me informar para atualizá-lo. Ao ler o arquivo com as novidades ([Changelog](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG)), percebi que havia uma frase repetida. Coisa boba, mas que caras chatos como eu percebem e se incomodam. [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+Começamos a usar o [GitLab](https://about.gitlab.com/) lá no trabalho (obrigado a [todos que indicaram](/blog/2014/11/08/funcionario-publico/)) e eu acabei como o responsável por ele (“quem inventa, aguenta”). Saiu uma versão nova, então fui me informar para atualizá-lo. Ao ler o arquivo com as novidades ([Changelog](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG)), percebi que havia uma frase repetida. Coisa boba, mas que caras chatos como eu percebem e se incomodam. [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
 Como a correção era bem simples, decidi fazê-la eu mesmo e enviar para os caras. Assim, criei o [Merge Request #447](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/447).
 

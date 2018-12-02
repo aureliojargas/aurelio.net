@@ -18,7 +18,7 @@ Minha mãe era uma chefe “durona”, que botava todos pra trabalhar sério e l
 
 Porém, eu sou a ovelha negra da família, sou o desajustado.
 
-Além de ter aversão ao funcionalismo, eu também [me ejetei da iniciativa privada](http://aurelio.net/blog/2005/09/23/free-as-in-bird/) e decidi seguir um estilo de vida hippongo-alternativo: [fui desempregado por opção durante 8 anos](http://aurelio.net/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/).
+Além de ter aversão ao funcionalismo, eu também [me ejetei da iniciativa privada](/blog/2005/09/23/free-as-in-bird/) e decidi seguir um estilo de vida hippongo-alternativo: [fui desempregado por opção durante 8 anos](/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/).
 
 Até que…
 

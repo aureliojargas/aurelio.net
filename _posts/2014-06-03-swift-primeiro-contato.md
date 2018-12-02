@@ -54,7 +54,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - Há poucas funções/métodos nativos para lidar com **strings**. E o que eu mais gosto é lidar com strings. Que pena. Alguns deles: `hasPrefix`, `hasSuffix`, `uppercaseString`, `lowercaseString`, `countElements`, `isEmpty`.
 
-- Pasmem: não tem [Expressões Regulares](http://aurelio.net/regex/) :(
+- Pasmem: não tem [Expressões Regulares](/regex/) :(
 
 - Há o conceito de **variáveis opcionais**. Somente elas podem ser definidas como `nil`, as variáveis normais não. Então uma variável normal não pode ser zerada. É mais um efeito colateral da tipagem forte, tem que acostumar.
 

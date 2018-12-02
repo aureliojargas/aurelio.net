@@ -6,7 +6,7 @@ tags: [app, programador]
 worked: 2:15
 ---
 
-O [sedsed](http://aurelio.net/projects/sedsed/) é um software que criei em 2001 (faz tempo…). É um debugger para scripts [sed](http://aurelio.net/sed/). Ele também alinha/formata os scripts e os converte para HTML ([veja um exemplo](http://sed.sourceforge.net/local/games/sokoban.sed.html)).
+O [sedsed](/projects/sedsed/) é um software que criei em 2001 (faz tempo…). É um debugger para scripts [sed](/sed/). Ele também alinha/formata os scripts e os converte para HTML ([veja um exemplo](http://sed.sourceforge.net/local/games/sokoban.sed.html)).
 
 Tenho bastante orgulho deste programa, pois além de ser muito útil para quem cria scripts sed mais complexos, a maneira como ele faz o debug é bem nerd: ele rescreve o script adicionando comandos sed que irão mostrar na tela o conteúdo dos registradores internos a cada passo, com o cuidado de não alterar em nada a lógica original do script. Então é chamado o próprio sed do sistema para executar este novo script, que agora mostra mensagens adicionais na tela.
 

@@ -16,7 +16,7 @@ Dentro do editor de textos para fazer edições mais avançadas, dentro dos cód
 
 É muito bom saber usar regex e ter tantas possibilidades diferentes de lugares onde posso aplicar este conhecimento. E melhor, diferente da maioria dos assuntos em informática, este é um que não fica obsoleto. Você aprende uma vez e usa por anos a fio, não há o que se atualizar ou aprender a versão nova. Regex é regex e pronto.
 
-Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vida, que acho lastimável que esse conhecimento não seja universal na área nerd. Todos deveriam saber pelo menos o básico, e aplicar no seu dia a dia para economizar tempo. Tento fazer minha parte para ajudar a difundí-las: criei [um site](http://aurelio.net/regex/), escrevi [um livro](https://www.piazinho.com.br), fiz [vídeos](https://www.youtube.com/user/aureliojargas), e dou [palestras e cursos](http://aurelio.net/curso/).
+Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vida, que acho lastimável que esse conhecimento não seja universal na área nerd. Todos deveriam saber pelo menos o básico, e aplicar no seu dia a dia para economizar tempo. Tento fazer minha parte para ajudar a difundí-las: criei [um site](/regex/), escrevi [um livro](https://www.piazinho.com.br), fiz [vídeos](https://www.youtube.com/user/aureliojargas), e dou [palestras e cursos](/curso/).
 
 
 ## Não é tão difícil quanto parece
@@ -30,7 +30,7 @@ Como posso afirmar isso? Porque vi acontecendo na minha frente, várias vezes, n
 
 ## Curso de expressões regulares
 
-[O primeiro curso de regex que dei](http://aurelio.net/curso/sdsl-2/#toc6) foi em 2003 (faz tempo!), e o mais recente foi agora, [semana passada](http://aurelio.net/curso/novatec-2/). Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.
+[O primeiro curso de regex que dei](/curso/sdsl-2/#toc6) foi em 2003 (faz tempo!), e o mais recente foi agora, [semana passada](/curso/novatec-2/). Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.
 
 Para ter algum tipo de métrica, no início do curso eu peço para cada aluno dar uma nota de zero a dez para o que ele/ela julga ser o seu conhecimento atual em expressões regulares. No fim do curso, mesma pergunta. Meu objetivo é que todos saiam melhores do que entraram, e felizmente isso sempre aconteceu.
 
@@ -44,21 +44,21 @@ Em geral, no final do curso, todos já estão tão imersos no assunto, que surge
 
 Pra mim, é muito gratificante perceber essa enorme evolução em tão pouco tempo. Ter essa confirmação de que consegui passar esse conhecimento adiante, e que agora mais pessoas poderão usufruir dos benefícios das expressões, e quem sabe no futuro também passar isso adiante.
 
-[![](/curso/sdsl-2/img/turma-er.jpg)](http://aurelio.net/curso/sdsl-2/)
+[![](/curso/sdsl-2/img/turma-er.jpg)](/curso/sdsl-2/)
 
-[![](/curso/sucesu/sucesu-seder-turma.jpg)](http://aurelio.net/curso/sucesu/)
+[![](/curso/sucesu/sucesu-seder-turma.jpg)](/curso/sucesu/)
 
-[![](/curso/scsl/turma-er1.jpg)](http://aurelio.net/curso/scsl/)
+[![](/curso/scsl/turma-er1.jpg)](/curso/scsl/)
 
-[![](/curso/sdsl-3/turma-quadro.jpg)](http://aurelio.net/curso/sdsl-3/)
+[![](/curso/sdsl-3/turma-quadro.jpg)](/curso/sdsl-3/)
 
-[![](/curso/novatec-1/turma-regex.jpg)](http://aurelio.net/curso/novatec-1/)
+[![](/curso/novatec-1/turma-regex.jpg)](/curso/novatec-1/)
 
-[![](/curso/novatec-2/turma-800.jpg)](http://aurelio.net/curso/novatec-2/)
+[![](/curso/novatec-2/turma-800.jpg)](/curso/novatec-2/)
 
-[![](/curso/novatec-3/turma-800.jpg)](http://aurelio.net/curso/novatec-3/turma.jpg)
+[![](/curso/novatec-3/turma-800.jpg)](/curso/novatec-3/turma.jpg)
 
-Quer aprender também? [Veja as datas dos próximos cursos](http://aurelio.net/curso/).
+Quer aprender também? [Veja as datas dos próximos cursos](/curso/).
 
 Convido a quem já foi aluno deixar aqui seu comentário. Gostou do curso? Aprendeu de verdade? Está usando regex no seu dia a dia? Tem alguma dica pra quem quer aprender também?
 

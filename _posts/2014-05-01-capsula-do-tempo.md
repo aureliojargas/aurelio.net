@@ -6,7 +6,7 @@ tags: [meu-querido-diario, programador]
 worked: 3:00
 ---
 
-[No texto anterior](http://aurelio.net/blog/2014/04/29/ressuscitei-o-sedsed/) contei que fiquei 10 anos sem tocar no código do meu programa sedsed. Quando voltei a mexer nele, foi como abrir uma [cápsula do tempo](http://pt.wikipedia.org/wiki/C%C3%A1psula_do_tempo).
+[No texto anterior](/blog/2014/04/29/ressuscitei-o-sedsed/) contei que fiquei 10 anos sem tocar no código do meu programa sedsed. Quando voltei a mexer nele, foi como abrir uma [cápsula do tempo](http://pt.wikipedia.org/wiki/C%C3%A1psula_do_tempo).
 
 Ali ficaram “congelados” por uma década o código Python e os comentários em inglês. É um retrato do Aurelio de 2004, um registro do nível dos meus conhecimentos na época.
 

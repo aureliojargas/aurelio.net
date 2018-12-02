@@ -5,7 +5,7 @@ hide_ads: true
 worked: 5:00
 ---
 
-Sábado retrasado teve ensaio da banda, [Correria HC](http://aurelio.net/correria/). Esse é um evento raro, que acontece uma vez a cada N anos, quando um alinhamento cósmico faz com que todos os integrandes estejam na mesma cidade durante algumas horas. **Nos últimos 10 anos, só tivemos três ensaios**: um em 2010, outro em 2014 e esse agora em 2016.
+Sábado retrasado teve ensaio da banda, [Correria HC](/correria/). Esse é um evento raro, que acontece uma vez a cada N anos, quando um alinhamento cósmico faz com que todos os integrandes estejam na mesma cidade durante algumas horas. **Nos últimos 10 anos, só tivemos três ensaios**: um em 2010, outro em 2014 e esse agora em 2016.
 
 > Curiosidade: Na primeira versão desse texto, o parágrafo anterior começava com “sábado passado”, pois eu comecei a escrevê-lo poucos dias após o ensaio. Mas não consegui terminar o texto e os dias foram passando, passando… É a vida.
 

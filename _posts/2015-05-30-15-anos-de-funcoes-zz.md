@@ -13,12 +13,12 @@ Quando penso em softwares antigos, como as ferramentas originais do Unix, sempre
 
 > \* Se é que alguém com 37 anos ainda pode ser considerado jovem…
 
-No [post comemorando os 13 anos](http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/), já ponderei sobre o tempo que passou e o que me faz continuar trabalhando neste software, após tantos anos. Então dessa vez vamos direto ao que interessa.
+No [post comemorando os 13 anos](/blog/2013/02/28/13-anos-de-funcoes-zz/), já ponderei sobre o tempo que passou e o que me faz continuar trabalhando neste software, após tantos anos. Então dessa vez vamos direto ao que interessa.
 
 
 ## A versão nova
 
-Para comemorar este aniversário, eu e o [Itamar](https://github.com/itamarnet) (meu amigo e co-autor das funções) decidimos preparar uma versão nova das funções. A última foi em 2013, na [comemoração de 13 anos](http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/).
+Para comemorar este aniversário, eu e o [Itamar](https://github.com/itamarnet) (meu amigo e co-autor das funções) decidimos preparar uma versão nova das funções. A última foi em 2013, na [comemoração de 13 anos](/blog/2013/02/28/13-anos-de-funcoes-zz/).
 
 Trabalhamos pesado nos últimos meses, usando nossas raras horas vagas de emprego/família/obrigações para discutir problemas, arrumar bugs, criar funções novas e melhorar as já existentes. O GitHub atesta a loucura que é esse desenvolvimento:
 

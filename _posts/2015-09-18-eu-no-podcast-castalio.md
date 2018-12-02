@@ -33,17 +33,17 @@ Quer saber mais sobre a Conectiva? Outros ex-funcionários já participaram dess
 - [Castálio Podcast com Rudá Moura](http://castalio.info/ruda-moura-conectiva-linux.html)
 - [Castálio Podcast com Rodrigo Novo](http://castalio.info/rodrigo-novo-conectiva-linux.html)
 
-Depois papeamos sobre minha [saída da Conectiva](http://aurelio.net/blog/2005/09/23/free-as-in-bird/), minha [tentativa frustrada de desnerdização](http://aurelio.net/blog/2005/11/30/processo-de-desnerdizacao/), e da minha [fracassada tentativa de virar fotógrafo de surfe](http://aurelio.net/blog/2006/02/08/de-nerd-a-fotografo/) na praia de Matinhos. Quem já lê o blog há tempos, acompanhou essa novela em tempo real :)
+Depois papeamos sobre minha [saída da Conectiva](/blog/2005/09/23/free-as-in-bird/), minha [tentativa frustrada de desnerdização](/blog/2005/11/30/processo-de-desnerdizacao/), e da minha [fracassada tentativa de virar fotógrafo de surfe](/blog/2006/02/08/de-nerd-a-fotografo/) na praia de Matinhos. Quem já lê o blog há tempos, acompanhou essa novela em tempo real :)
 
-Enfim, falamos sobre meus [oito anos desempregado](http://aurelio.net/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/), trabalhando em casa, onde aproveitei a mente livre para criar sites, softwares e livros. Também contei como é processo de escrever um livro, com dicas pra quem também quer escrever o seu.
+Enfim, falamos sobre meus [oito anos desempregado](/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/), trabalhando em casa, onde aproveitei a mente livre para criar sites, softwares e livros. Também contei como é processo de escrever um livro, com dicas pra quem também quer escrever o seu.
 
 Hora do spam: [![Livro Regex](/img/icon/128/livroregex4.png)](https://www.piazinho.com.br)
 [![Livro Shell](/img/icon/128/livroshell.png)](https://www.shellscript.com.br)
 
-Finalizamos falando de alguns dos meus softwares: as ferramentas de linha de comando [Funções ZZ](https://funcoeszz.net), o testador de linha de comando [clitest](https://github.com/aureliojargas/clitest), o minigereciador financeiro [Moneylog](http://aurelio.net/moneylog/) e o infame [Miguxeitor](http://aurelio.net/coisinha/miguxeitor/).
+Finalizamos falando de alguns dos meus softwares: as ferramentas de linha de comando [Funções ZZ](https://funcoeszz.net), o testador de linha de comando [clitest](https://github.com/aureliojargas/clitest), o minigereciador financeiro [Moneylog](/moneylog/) e o infame [Miguxeitor](/coisinha/miguxeitor/).
 
-No final dei uma minha [lista de bandas que gosto](http://aurelio.net/musica/), alguns sites que leio e [podcasts que escuto](http://aurelio.net/blog/2015/03/17/top-podcasts-2015/). Lá no [post original](http://castalio.info/episodio-68-aurelio-jargas-projetos.html) do podcast tem a lista completa de tudo o que citei (e alguns adicionais que passei por email pós-gravação).
+No final dei uma minha [lista de bandas que gosto](/musica/), alguns sites que leio e [podcasts que escuto](/blog/2015/03/17/top-podcasts-2015/). Lá no [post original](http://castalio.info/episodio-68-aurelio-jargas-projetos.html) do podcast tem a lista completa de tudo o que citei (e alguns adicionais que passei por email pós-gravação).
 
 Se você gostou dos podcasts, não esqueça de ir lá e deixar um comentário para eles ([parte 1](http://castalio.info/episodio-67-aurelio-jargas-conectiva-e-livros.html), [parte 2](http://castalio.info/episodio-68-aurelio-jargas-projetos.html)), pois agora você sabe a importância que isso tem para quem cria conteúdo. É o combustível para continuar produzindo e a prova de que tem gente que se importa.
 
-E se você ainda não está satisfeit[oa] e quer ouvir ainda mais da minha voz de taquara rachada, eu já participei de outros podcasts [em 2008](http://aurelio.net/blog/2008/08/18/podcastei/) e [em 2012](http://aurelio.net/blog/2012/09/28/eu-no-podcast-do-ruda/).
+E se você ainda não está satisfeit[oa] e quer ouvir ainda mais da minha voz de taquara rachada, eu já participei de outros podcasts [em 2008](/blog/2008/08/18/podcastei/) e [em 2012](/blog/2012/09/28/eu-no-podcast-do-ruda/).

@@ -31,7 +31,7 @@ A migração de apps e dados foi tranquila, pois mesmo no iOS eu já usava os ap
 
 Meus arquivos estão todos no Dropbox: documentos, fotos, vídeos, livros, sites, arquivos de trabalho, etc. Instalei o app oficial e pronto, acesso total aos meus arquivos. Ativei a sincronização automática para as fotos tiradas com a câmera do celular e também instalei o [DropSync](https://play.google.com/store/apps/details?id=com.ttxapps.dropsync), que mantém sincronizada uma cópia local dos arquivos.
 
-Os aplicativos de terceiros que eu usava mais frequentemente no iOS também possuem versão para Android, como Twitter, Waze, Duolingo, Feedly e [Plant Nanny](http://aurelio.net/blog/2014/09/20/plant-nanny/). Mais uma vez, bastou instalar, pois os dados estão na nuvem.
+Os aplicativos de terceiros que eu usava mais frequentemente no iOS também possuem versão para Android, como Twitter, Waze, Duolingo, Feedly e [Plant Nanny](/blog/2014/09/20/plant-nanny/). Mais uma vez, bastou instalar, pois os dados estão na nuvem.
 
 Precisei achar um substituto para o app Notas, nativo do iOS, que eu usava intensivamente para tarefas e lembretes. No Android conheci o [Google Keep](https://keep.google.com/) e estou satisfeito. E de bônus ele tem um widget que mostra minhas anotações mais recentes na tela inicial.
 
