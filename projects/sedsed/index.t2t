@@ -5,7 +5,7 @@ by Aurelio Jargas
 %!options: --toc --toc-level 2 --css-sugar
 %!style: site.css
 
-%!postproc: '(<H2>by )(Aurelio.*)(</H2>)'	'\1<a href="http://aurelio.net/about.html">\2</a>\3'
+%!postproc: '(<H2>by )(Aurelio.*)(</H2>)'	'\1<a href="/about.html">\2</a>\3'
 
 %!postproc: '<DIV CLASS="body" ID="body">'	'<DIV ID="main">'
 %!postproc: '(prompt\$ )' '<b>\1</b>'

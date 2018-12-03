@@ -34,7 +34,7 @@ tags: [Dropbox]
 
 <p>When you uncheck a folder in Selective Sync, that folder is removed from your computer. But if you recreate that folder locally, in the same location with the same name, Dropbox will ignore it. You can add files to that folder and modify them, but Dropbox won't sync those changes to the server.</p>
 
-<p>This behavior is handy to <a href="http://aurelio.net/articles/dropbox-ignore-folder.html">ignore folders with temporary files</a> (caches, builds) that reside inside your Dropbox. But note that if you check again that same folder in the Selective Sync settings, you will get a <a href="https://www.dropbox.com/help/36/en">conflicted copy</a>.</p>
+<p>This behavior is handy to <a href="/articles/dropbox-ignore-folder.html">ignore folders with temporary files</a> (caches, builds) that reside inside your Dropbox. But note that if you check again that same folder in the Selective Sync settings, you will get a <a href="https://www.dropbox.com/help/36/en">conflicted copy</a>.</p>
 
 
 <h2 id="symlink">Unchecked symlink remove original folder contents</h2>
@@ -52,4 +52,4 @@ $ ln -s a b
 
 <!--In the server, now "a" is also empty and "b" is a plain folder with foo.txt-->
 
-<p>Since <a href="http://aurelio.net/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, "b" is handled as a folder. So the Selective Sync unchecking first remove the folder contents before removing the folder itself. This is a dangerous combination for symlinked folders :(</p>
+<p>Since <a href="/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, "b" is handled as a folder. So the Selective Sync unchecking first remove the folder contents before removing the folder itself. This is a dangerous combination for symlinked folders :(</p>

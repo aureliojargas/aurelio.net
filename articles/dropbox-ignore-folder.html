@@ -16,7 +16,7 @@ tags: [Dropbox]
 
 <p>First we must empty those folders in the Dropbox server to regain the precious quota space they're spending. Then we instruct Dropbox to stop syncing those folders, ignoring any local changes made to them. Now the local folders will grow, but their server version will always be empty.</p>
 
-<p>You can't use the <a href="https://www.dropbox.com/help/175/en">Selective Sync</a> feature alone to achieve this, because when you uncheck a folder, <a href="http://aurelio.net/articles/dropbox-selective-sync.html">it is removed from your drive</a> and is left untouched in the server. We want the opposite, so let's trick Dropbox to do it.</p>
+<p>You can't use the <a href="https://www.dropbox.com/help/175/en">Selective Sync</a> feature alone to achieve this, because when you uncheck a folder, <a href="/articles/dropbox-selective-sync.html">it is removed from your drive</a> and is left untouched in the server. We want the opposite, so let's trick Dropbox to do it.</p>
 
 <h2 id="empty">1. Empty the remote folder</h2>
 
@@ -40,7 +40,7 @@ $ mkdir ~/Dropbox/MyProject/build
 
 <p>Go to the Dropbox's preferences and open Selective Sync settings. Now uncheck the folder we're playing with. You may have to switch to the Advanced view if it's your first time here. Confirm your changes and wait until Dropbox has finished applying them.</p>
 
-<p>Our dear empty local folder was removed, because <a href="http://aurelio.net/articles/dropbox-selective-sync.html">that's how Selective Sync works</a>. But if you create that folder again in your computer, now Dropbox will completely ignore it. That's what we want!</p>
+<p>Our dear empty local folder was removed, because <a href="/articles/dropbox-selective-sync.html">that's how Selective Sync works</a>. But if you create that folder again in your computer, now Dropbox will completely ignore it. That's what we want!</p>
 
 <h2 id="restore">3. Restore the original folder</h2>
 

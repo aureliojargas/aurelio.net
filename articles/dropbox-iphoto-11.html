@@ -24,7 +24,7 @@ tags: [Dropbox, iPhoto]
 
 <p>In the previous version of iPhoto, all your pictures and movies were stored in a folder named <strong>Originals</strong>, inside your library. In iPhoto '11 that folder was renamed to <strong>Masters</strong> and when you first launch it, your library is upgraded to the new structure.</p>
 
-<p>Dropbox knows how to handle folder renames, that's not the problem. The problem is that iPhoto also creates a symlink named Originals, pointing to the new folder Masters. As <a href="http://aurelio.net/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, you end up with <strong>two</strong> identical folders in the server, duplicating all your photos and videos.</p>
+<p>Dropbox knows how to handle folder renames, that's not the problem. The problem is that iPhoto also creates a symlink named Originals, pointing to the new folder Masters. As <a href="/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, you end up with <strong>two</strong> identical folders in the server, duplicating all your photos and videos.</p>
 
 <p>But unfortunately, there's more. The photos you have edited are saved to a different folder inside your library, named <strong>Modified</strong>. Guess what? This folder was also renamed and symlinked in iPhoto '11, now it's called <strong>Previews</strong>. And there goes another duplicates to the Dropbox server…</p>
 
@@ -61,7 +61,7 @@ tags: [Dropbox, iPhoto]
   Removing the symlinks does not work. You can open your iPhoto library, but work with it for a while and you'll find new directories (yes, directories, not symlink) replacing the old symlinks. This, of course, leads to problems as you can imagine…
 </blockquote>
 
-<p>Do not use Selective Sync to uncheck those symlinks. It's not even a solution and due the <a href="http://aurelio.net/articles/dropbox-selective-sync.html#symlink">Dropbox inner workings</a>, all your pictures will be removed from the original folder!</p>
+<p>Do not use Selective Sync to uncheck those symlinks. It's not even a solution and due the <a href="/articles/dropbox-selective-sync.html#symlink">Dropbox inner workings</a>, all your pictures will be removed from the original folder!</p>
 
 <blockquote>
   Well, I used Selective Sync and 'removed' Originals/Modified, now all my pics are gone. — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;page=3&amp;replies=85#post-167338">Johan S.</a>
@@ -82,7 +82,7 @@ tags: [Dropbox, iPhoto]
 
 <h2 id="solution">The real solution</h2>
 
-<p>You must setup Dropbox to ignore the symlinks: <a href="http://aurelio.net/articles/dropbox-ignore-folder.html">no syncing, no removing</a>. This is not a default feature, but it's feasible with some smart use of temporary empty folders and <a href="https://www.dropbox.com/help/175/en">Selective Sync</a>.</p>
+<p>You must setup Dropbox to ignore the symlinks: <a href="/articles/dropbox-ignore-folder.html">no syncing, no removing</a>. This is not a default feature, but it's feasible with some smart use of temporary empty folders and <a href="https://www.dropbox.com/help/175/en">Selective Sync</a>.</p>
 
 <p>Are you ready?</p>
 

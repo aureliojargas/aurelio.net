@@ -79,8 +79,8 @@ article_footer_after: false
         <td><a href="https://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br><br> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
-        <td><a href="http://aurelio.net/regex/guia/"><img src="/img/icon/128/guiaregex.png"></a></td>
-        <td><a href="http://aurelio.net/regex/guia/">Expressões Regulares - Guia de Consulta Rápida</a> — <a href="http://aurelio.net/regex/guia/">LEIA ONLINE</a><br><br>Livro de 96 páginas lançado em 2001, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Tem o formato "de bolso", fácil de carregar. Também pode ser <a href="http://aurelio.net/regex/guia/">consultado integral e gratuitamente na Internet</a>. ISBN: 85-7522-011-X <b>[ESGOTADO]</b></td>
+        <td><a href="/regex/guia/"><img src="/img/icon/128/guiaregex.png"></a></td>
+        <td><a href="/regex/guia/">Expressões Regulares - Guia de Consulta Rápida</a> — <a href="/regex/guia/">LEIA ONLINE</a><br><br>Livro de 96 páginas lançado em 2001, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Tem o formato "de bolso", fácil de carregar. Também pode ser <a href="/regex/guia/">consultado integral e gratuitamente na Internet</a>. ISBN: 85-7522-011-X <b>[ESGOTADO]</b></td>
     </tr>
 </table>
 
