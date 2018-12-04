@@ -57,16 +57,16 @@ var tagTitles = {
 // Format: [ Importance (0-3), 'Link name', 'URL', 'tags' ]
 var allLinks = [
 // bin
-[0, 'txt2regex',	'http://aurelio.net/projects/txt2regex/', 'software shell regex'],
+[0, 'txt2regex',	'projects/txt2regex/', 'software shell regex'],
 [1, 'Funções ZZ',	'https://funcoeszz.net', 'software shell'],
 [2, 'txt2tags',		'http://txt2tags.sf.net/pt', 'software python web site'],
-[0, 'Sedsed',		'http://aurelio.net/projects/sedsed/', 'software sed python'],
+[0, 'Sedsed',		'projects/sedsed/', 'software sed python'],
 [1, 'Sed Sokoban',	'sed/sokoban/', 'software sed game'],
 [0, 'Sed Arkanoid',	'bin/sed/arkanoid/', 'software sed game'],
 [0, 'RAC',		'rac', 'software'],
 [0, 'LELOLAB',		'bin/lelolab/', 'software game'],
 [0, 'Simulador das Eleições 2002',	'bin/python/urna.py', 'software python'],
-[0, 'Importa agenda (CSV) no tocador de MP3 xingue-lingue',	'http://aurelio.net/blog/2005/11/09/contatos-do-csv-para-o-tocador-de-mp3/', 'software python musica'],
+[0, 'Importa agenda (CSV) no tocador de MP3 xingue-lingue',	'blog/2005/11/09/contatos-do-csv-para-o-tocador-de-mp3/', 'software python musica'],
 [0, 'Site com cores aleatórias',	'bin/php/randbody.phps', 'software php'],
 [0, 'Projeto Final da Faculdade - Lojinha Virtual',	'bin/php/ESEEI-proj_final/', 'software php'],
 [0, 'OpenOffice Console Search',	'bin/bash/oofind', 'software shell'],
@@ -137,9 +137,9 @@ var allLinks = [
 
 [2, 'Livro Expressões Regulares',	'er/livro', 'doc livro regex python php javascript sed vim'],
 [0, 'Livro Dominando o SED',		'sed/livro/', 'doc livro sed'],
-[1, 'Cartilha do Webdesigner Antenado',	'http://aurelio.net/blog/2006/06/01/cartilha-do-webdesigner-antenado/', 'doc web'],
-[0, 'CSS: Menu fixo porém líquido',	'http://aurelio.net/blog/2006/06/30/css-menu-fixo-porem-liquido/', 'doc web'],
-[0, 'E-book ou livro impresso, como publicar sua obra?',	'http://aurelio.net/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/', 'doc livro'],
+[1, 'Cartilha do Webdesigner Antenado',	'blog/2006/06/01/cartilha-do-webdesigner-antenado/', 'doc web'],
+[0, 'CSS: Menu fixo porém líquido',	'blog/2006/06/30/css-menu-fixo-porem-liquido/', 'doc web'],
+[0, 'E-book ou livro impresso, como publicar sua obra?',	'blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/', 'doc livro'],
 
 // listas
 [0, 'Lista Linux2osx',	'http://br.groups.yahoo.com/group/linux2macosx', 'forum linux mac'],
@@ -152,12 +152,12 @@ var allLinks = [
 
 // musica
 [0, 'Valeta',		'valeta/', 'banda musica'],
-[1, 'Correria HC',	'http://aurelio.net/correria/', 'banda musica'],
+[1, 'Correria HC',	'correria/', 'banda musica'],
 [0, 'Dumbs',		'dumbs/', 'banda musica'],
 [0, 'DDD',		'musica/ddd/', 'musica'],
 [0, 'Baterna',		'baterna/', 'musica'],
 [0, 'Bateria',		'musica/', 'musica'], 
-[0, 'Carbona',		'http://aurelio.net/blog/2006/04/30/dica-de-banda-carbona/', 'banda musica'], 
+[0, 'Carbona',		'blog/2006/04/30/dica-de-banda-carbona/', 'banda musica'], 
 [1, 'Roda de Pogo - A Dança Punk',	'pogo/', 'musica'],
 
 // site
@@ -172,15 +172,15 @@ var allLinks = [
 
 // eu
 [1, 'Orkut',			'http://www.orkut.com/Profile.aspx?uid=2039382754798085041', 'eu foto'],
-[0, 'Blog Feed (RSS)',		'http://aurelio.net/blog/feed/', 'eu site'],
-[2, 'Blog',			'http://aurelio.net/blog/', 'eu foto site'],
+[0, 'Blog Feed (RSS)',		'blog/feed/', 'eu site'],
+[2, 'Blog',			'blog/', 'eu foto site'],
 [0, 'Sobre mim',		'mim.html', 'eu'],
 [0, '$$$ Campanha Aurélio Trilhardário $$$',	'1000000000000.html', 'eu'],
 [0, 'Blog antigo',		'blog-arquivo.html', 'eu'],
-[0, 'Processo de desnerdização',	'http://aurelio.net/blog/2005/11/30/processo-de-desnerdizacao/', 'eu'],
-[0, 'Aurélio v2.8',		'http://aurelio.net/blog/2005/10/07/aurelio-v28/', 'eu'],
-[0, 'Um ano sem Linux',		'http://aurelio.net/blog/2005/10/02/um-ano-sem-linux/', 'eu linux mac'],
-[0, 'Free as in BIRD',		'http://aurelio.net/blog/2005/09/23/free-as-in-bird/', 'eu linux mac'],
+[0, 'Processo de desnerdização',	'blog/2005/11/30/processo-de-desnerdizacao/', 'eu'],
+[0, 'Aurélio v2.8',		'blog/2005/10/07/aurelio-v28/', 'eu'],
+[0, 'Um ano sem Linux',		'blog/2005/10/02/um-ano-sem-linux/', 'eu linux mac'],
+[0, 'Free as in BIRD',		'blog/2005/09/23/free-as-in-bird/', 'eu linux mac'],
 [0, 'Currículo',		'doc/cv-aurelio.html', 'eu'],
 [0, 'Flickr',			'http://www.flickr.com/photos/aureliojargas', 'eu foto'],
 [1, 'Doação Paypal',		'https://sourceforge.net/donate/index.php?user_id=1345338', 'software doc site'],
@@ -207,7 +207,7 @@ var allLinks = [
 [0, 'Shows com a banda',	'foto/banda/', 'foto banda musica'],
 [0, 'Meu pé tatuado',		'foto/pe/', 'foto eu'],
 [0, 'Fotos bizarras',		'http://geocities.yahoo.com.br/aureliojargas/biz/', 'foto'],
-[0, 'Jacaré do Parque Barigüi',	'http://aurelio.net/blog/2004/09/05/jacare-do-parque-barigui/', 'foto'],
+[0, 'Jacaré do Parque Barigüi',	'blog/2004/09/05/jacare-do-parque-barigui/', 'foto'],
 
 // viagem
 [1, 'Portal das Viagens',		'viagem/', 'foto viagem'],
@@ -221,12 +221,12 @@ var allLinks = [
 // misc
 [0, 'Changelog Nerd',	'doc/changelog-nerd.html', 'software doc'],
 [0, 'Sed Sokoban Slashdotted',	'http://developers.slashdot.org/article.pl?sid=02/03/21/0217219', 'sed'],
-[0, 'Não fazem mais jogos como antigamente',	'http://aurelio.net/blog/2005/12/04/nao-fazem-mais-jogos-como-antigamente/', 'game'],
+[0, 'Não fazem mais jogos como antigamente',	'blog/2005/12/04/nao-fazem-mais-jogos-como-antigamente/', 'game'],
 [0, 'Blog AppleScripts',	'http://aureliosoft.wordpress.com', 'applescript mac'],
 [0, 'Blog AppleScripts Feed (RSS)',	'http://aureliosoft.wordpress.com/feed/', 'applescript mac'],
 [0, 'Sintaxe txt2tags',	'http://txt2tags.sourceforge.net/tools/txt2tags.vim', 'vim'],
 [1, 'Portal Carveboard',		'carve/', 'foto video esporte'],
-[0, 'Campeonato de Carveboard', 'http://aurelio.net/blog/2006/08/03/relato-fotos-e-videos-do-campeonato-de-carveboard/', 'foto video esporte']
+[0, 'Campeonato de Carveboard', 'blog/2006/08/03/relato-fotos-e-videos-do-campeonato-de-carveboard/', 'foto video esporte']
 ];
 
 function sortLinkArray(a,b) {  // sort by name (2nd column)
