@@ -90,13 +90,8 @@ check_link_to_index_html() {
 
 # Do not use relative URLs in links and images - #20
 check_relative_urls() {
-    # ./
-    cgrep -i -E '(src|href)="\./' $files
-    cgrep -i -E '(src|href)="[^"]*/\./' $files
-
-    # ../
-    cgrep -i -E '(src|href)="\.\./' $files
-    cgrep -i -E '(src|href)="[^"]*/\.\./' $files
+    # ./ and ../ at URL start or middle
+    cgrep -i -E '(src|href)="([^"]*/)?\.\.?/' $files
 }
 
 # No http:// for resources (mixed content) - #18
