@@ -21,6 +21,7 @@ cd ..
 repo_root="$PWD"
 site_root="$repo_root/_site"
 files=$(_scripts/list-site-text-files)
+css_files=$(echo "$files" | grep '\.css$')
 
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
@@ -88,10 +89,14 @@ check_link_to_index_html() {
     cgrep 'href="[^"]*/index\.html"' $files
 }
 
-# Do not use relative URLs in links and images - #20
+# Do not use relative URLs in links, images, CSS - #20
 check_relative_urls() {
     # ./ and ../ at URL start or middle
     cgrep -i -E '(src|href)="([^"]*/)?\.\.?/' $files
+
+    # Non absolute, ./ and ../ at middle
+    cgrep -i -E 'url\([^/]' $css_files
+    cgrep -i -E 'url\(/([^)]*/)?\.\.?/' $css_files
 }
 
 # No http:// for resources (mixed content) - #18
