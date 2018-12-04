@@ -34,7 +34,7 @@ div.section-nav a:hover {
 /* Falas da Mog */
 .mog {
 	color 		:maroon;
-	background 	:#fee url(../img/mog-48.jpg) right top no-repeat;
+	background 	:#fee url(/img/mog-48.jpg) right top no-repeat;
 	padding 	:0 58px 0 0em;
 	min-height	:48px;
 }

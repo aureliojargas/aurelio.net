@@ -16,43 +16,43 @@ a:hover img {
 /* -------------------------------------- CUSTOM HEADERS */
 
 #project-donate #header {
-	background: #fff url(img/aurelio-mountain.jpg) no-repeat left center;
+	background: #fff url(/projects/img/aurelio-mountain.jpg) no-repeat left center;
 }
 body.applescript #header {
-	background: #fff url(img/icon/128/applescript.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/applescript.png) no-repeat left center;
 }
 body.applescriptab #header {
-	background: #fff url(img/icon/128/applescript-abook.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/applescript-abook.png) no-repeat left center;
 }
 body.applescriptiphoto #header {
-	background: #fff url(img/icon/128/applescript-iphoto.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/applescript-iphoto.png) no-repeat left center;
 }
 body.applescriptitunes #header {
-	background: #fff url(img/icon/128/applescript-itunes.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/applescript-itunes.png) no-repeat left center;
 }
 #project-adiumbook #header {
-	background: #fff url(img/icon/128/adiumbook.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/adiumbook.png) no-repeat left center;
 }
 #project-moneylog #header {
-	background: #fff url(img/icon/128/moneylog.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/moneylog.png) no-repeat left center;
 }
 /*
 #project-sedsed #header {
-	background: #fff url(img/icon/128/sedsed.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/sedsed.png) no-repeat left center;
 }
 */
 #project-sedarkanoid #header {
-	background: #fff url(img/icon/128/sedarkanoid.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/sedarkanoid.png) no-repeat left center;
 }
 #project-sedsokoban #header {
-	background: #fff url(img/icon/128/sedsokoban.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/sedsokoban.png) no-repeat left center;
 }
 /*
 #project-txt2tags #header {
-	background: #fff url(img/icon/128/txt2tags.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/txt2tags.png) no-repeat left center;
 }
 #project-txt2regex #header {
-	background: #fff url(img/icon/128/txt2regex.png) no-repeat left center;
+	background: #fff url(/projects/img/icon/128/txt2regex.png) no-repeat left center;
 }
 */
 

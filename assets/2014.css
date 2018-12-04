@@ -17,7 +17,7 @@ pre {
 
 .mog {
   color: #800000;
-  background: #FEE url(http://aurelio.net/img/mog-48.jpg) right top no-repeat;
+  background: #FEE url(/img/mog-48.jpg) right top no-repeat;
   padding: 0 58px 0 0;
   min-height: 48px;
 }

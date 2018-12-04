@@ -78,7 +78,7 @@ table#tradutor th.traduzido { width:50%; }
 	position:absolute;
 	display:block;
 	text-align:center;
-	background:yellow url(../img/atencao.gif) no-repeat left top;
+	background:yellow url(/coisinha/img/atencao.gif) no-repeat left top;
 	background-position:25px 20px;
 	color:black;
 	padding:1em 2em 2em 2em;

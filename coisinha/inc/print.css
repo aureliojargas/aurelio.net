@@ -36,7 +36,7 @@ body#subwaytor #header, body#subwaytor .numero { background-color:white; color:b
 
 /*
 How to include this file in another CSS file:
-@import url(../print.css) print;
+@import url(/coisinha/inc/print.css) print;
 
 How to include rules inside the document <SCRIPT> tag:
 @media print {

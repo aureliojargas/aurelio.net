@@ -40,7 +40,7 @@ blockquote u {
 	color		: #777;
 	font-size	: 85%;
 	height		: 100px;
-	background	: url(../img/guia.png) no-repeat left;
+	background	: url(/regex/guia/img/guia.png) no-repeat left;
 }
 #header h1, #header h2 {
 	font-weight	: normal

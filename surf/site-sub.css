@@ -5,7 +5,7 @@ body
 	background-color: #fff;
 	color		: #555;
 	margin: 0;
-	background-image: url(img/sol.gif);
+	background-image: url(/surf/img/sol.gif);
 	background-repeat: no-repeat;
 	background-position: left top;
 	}
@@ -29,7 +29,7 @@ h2
 	text-align	: center;
 	color		: #555;
 	font-size	: 90%;
-	background-image: url(img/onda.gif);
+	background-image: url(/surf/img/onda.gif);
 	background-repeat: repeat-x;
 	background-position: bottom;
 	}

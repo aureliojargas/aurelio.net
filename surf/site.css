@@ -5,14 +5,14 @@ body
 	background-color: #fff;
 	color		: #555;
 	margin		: 0px;
-	background-image	: url(img/onda.gif);
+	background-image	: url(/surf/img/onda.gif);
 	background-repeat	: repeat-x;
 	background-position	: bottom;
 	background-attachment	: fixed;
 	}
 .body2
 	{
-	background-image	: url(img/sol.gif);
+	background-image	: url(/surf/img/sol.gif);
 	background-repeat	: no-repeat;
 	background-position	: left top;
 	}
