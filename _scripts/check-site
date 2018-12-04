@@ -54,7 +54,7 @@ check_accidental_liquid_markup() {
 check_missing_article_date() {
     # This check runs at the repo root
     # This is the default date inserted by the txt2tags2html script
-    git grep '^date: 1999-12-31'
+    git grep -I '^date: 1999-12-31'
 }
 
 # Do not link URLs that are gone (410)
