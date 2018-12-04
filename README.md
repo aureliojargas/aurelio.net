@@ -188,6 +188,12 @@ The site template ([_layouts/2014.html](https://github.com/aureliojargas/aurelio
 
 - `title_suffix: " | Foo"` — To add a suffix to the page `<title>` tag. (See [_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
 
+## How to make batch changes
+
+Since most of the site is made of plain HTML files, it's common to have to apply the same edits in multiple files.
+
+Fear not, use the [replace script](https://github.com/aureliojargas/replace) and be happy. Better yet, also use the [git\_replace function](https://github.com/aureliojargas/dotfiles/blob/master/.gitbash).
+
 ## License
 
 Jekyll-related and Liquid codes are Public Domain.
