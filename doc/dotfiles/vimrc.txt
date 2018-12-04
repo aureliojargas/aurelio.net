@@ -3,7 +3,7 @@
 "                       ------------------------- 
 "                   Copie, altere, arrume, use, venda
 "                 -------------------------------------
-"               http://aurelio.net/doc/dotfiles/vimrc.txt
+"               https://aurelio.net/doc/dotfiles/vimrc.txt
 "             ---------------------------------------------
 
 
@@ -15,7 +15,7 @@
 " O caractere '¤' é apenas um prefixo original para não confundir com texto.
 " Para ler variaveis de ambiente faca: imap ¤E <esc>:r! echo $VAR<cr>kJA
 imap ¤E verde (a) aurelio net
-imap ¤U http://aurelio.net
+imap ¤U https://aurelio.net
 imap ¤D <esc>:r!date '+\%Y-\%m-\%d'<cr>kJA
 
 

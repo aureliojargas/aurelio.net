@@ -1411,7 +1411,7 @@ cab cores call AjudaCores()
 " Com relação aos livros temos O Guia de Expresses Regulares e  Apostila
 " do Curso de Shell.
 "
-"SITE:http://aurelio.net/
+"SITE:https://aurelio.net/
 "
 "
 " ,----------------[ http://www.del.ufrj/~ivanczar/ ]------------------------.

@@ -2,7 +2,7 @@
 " Filename: txt.vim
 " Language: plain text :)
 " Maintainer: Aurelio Marinho Jargas
-" URL: http://aurelio.net/vim/txt.vim
+" URL: https://aurelio.net/vim/txt.vim
 " Instalacao: Colocar no final do seu ~/.vimrc:
 "   au BufNewFile,BufRead *.txt source ~/rota/para/txt.vim
 "

@@ -1,8 +1,8 @@
-" http://aurelio.net/doc/coluna
+" https://aurelio.net/doc/coluna
 " coluna do aurelio 09 [2001-06-28]
 " vim (um vimrc diferente)
 "
-" original em http://aurelio.net/doc/coluna/coluna-09.html
+" original em https://aurelio.net/doc/coluna/coluna-09.html
 "
 " olás. creio que o  vim  não precisa de  apresentação não é mesmo? pois
 " bem,  então que tal explorarmos aquele mundo  misterioso que o arquivo
@@ -208,4 +208,4 @@ au FileType python hi pythonString ctermfg=darkgreen
 "
 " --
 " este texto pode ser copiado livremente na íntegra ou em parte, desde que
-" indicado o endereço do original: http://aurelio.net/doc/coluna
+" indicado o endereço do original: https://aurelio.net/doc/coluna

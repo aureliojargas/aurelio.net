@@ -2,7 +2,7 @@
 # vim: ft=sh
 #
 # explicações sobre as configurações e utilização geral do screen
-# estão em http://aurelio.net/doc/coluna
+# estão em https://aurelio.net/doc/coluna
 #
 # 20010403 <verde (a) aurelio net>
 

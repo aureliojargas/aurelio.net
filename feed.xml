@@ -8,9 +8,9 @@ layout: null
 		<description>{{ site.description | xml_escape }}</description>
 		<link>{{ site.url }}</link>
 		<image>
-			<url>http://aurelio.net/img/icon/128/aurelio.png</url>
+			<url>https://aurelio.net/img/icon/128/aurelio.png</url>
 			<title>Aurelio</title>
-			<link>http://aurelio.net</link>
+			<link>https://aurelio.net</link>
 		</image>
 		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 {% for recent in site.data.recent %}{% assign myposts = site.posts | where:"url",recent.url %}{% assign is_page = 0 %}{% if myposts.size == 0 %}{% assign myposts = site.pages | where:"url",recent.url %}{% assign is_page = 1 %}{% endif %}

@@ -121,7 +121,7 @@ Detalhes:
 
  * Clique nos links "Relato" para ver as fotos, histórias e informações de cada evento.
 
- * As apostilas e slides das palestras e cursos que ministro estão aqui: [http://aurelio.net/curso/material](/curso/material/). Veja o arquivo LEIAME.txt caso queira utilizar o material em outros trabalhos.
+ * As apostilas e slides das palestras e cursos que ministro estão aqui: [https://aurelio.net/curso/material](/curso/material/). Veja o arquivo LEIAME.txt caso queira utilizar o material em outros trabalhos.
  -->
 
 <!-- Removido em ?

@@ -1,4 +1,4 @@
-http://aurelio.net/curso/material/
+https://aurelio.net/curso/material/
 
 Aqui estão os materiais que utilizo nos cursos e palestras
 que faço. São livres para consulta, divulgação e uso.
@@ -12,7 +12,7 @@ Condições de uso:
 - Se você aproveitar alguns textos ou figuras desses
   materiais em outros trabalhos, favor citar o meu
   nome (Aurelio Marinho Jargas) e o link para o
-  material original (http://aurelio.net/curso/material).
+  material original (https://aurelio.net/curso/material).
 
 - Se você preferir usar o conteúdo integral de quaisquer
   destes materiais para ministrar cursos ou palestras

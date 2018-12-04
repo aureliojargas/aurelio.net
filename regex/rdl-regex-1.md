@@ -103,7 +103,7 @@ Como se pode constatar por essa introdução às Expressões Regulares, depois d
 
 Aquela definição do início do texto está mais clara agora? "...uma ER é uma construção, que utiliza pequenas ferramentas, feita para obter uma determinada seqüência de caracteres de um texto."
 
-As respostas para os exercícios estão em http://aurelio.net/regex/rdl-regex-1-respostas.html
+As respostas para os exercícios estão em https://aurelio.net/regex/rdl-regex-1-respostas.html
 
 Há uma lista de discussão em português sobre Sed (ferramenta manipuladora de texto, com uso intensivo de ERs), em que podem ser tiradas dúvidas sobre ERs. Para se inscrever, mande um e-mail para sed-br-subscribe@yahoogrupos.com.br.
 

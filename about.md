@@ -57,7 +57,7 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 
 ## My talks
 
-- http://aurelio.net/curso/
+- https://aurelio.net/curso/
 
 ## My articles
 

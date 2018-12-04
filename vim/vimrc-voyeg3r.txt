@@ -1,7 +1,7 @@
 " Arquivo: .vimrc
 " Autor: Sérgio Luiz Araújo Silva - <voyeg3r@gmail.com>
 " ultima modificação: Qui 01 Set 2005 13:02:46 BRT
-" Download: http://aurelio.net/vim/vimrc-voyeg3r.txt
+" Download: https://aurelio.net/vim/vimrc-voyeg3r.txt
 " Licence: Licença: Este arquivo é de domínio público
 " Garantia: O autor não se responsabiliza por eventuais danos
 "           causados pelo uso deste arquivo.

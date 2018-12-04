@@ -8,9 +8,9 @@ Estou num esforço contínuo para integrar meu site (estático) e meu blog (Word
 
 ## As diferenças
 
-Um site estático é construído da maneira tradicional: são várias pastas com arquivos HTML dentro. Você sobe os arquivos para o servidor e lá eles ficam, esperando que alguém os visite. Por exemplo, ao acessar <http://aurelio.net/vim/pulando.html>, o servidor vai te mostrar o arquivo _pulando.html_ que está dentro da pasta _vim_. Simples assim.
+Um site estático é construído da maneira tradicional: são várias pastas com arquivos HTML dentro. Você sobe os arquivos para o servidor e lá eles ficam, esperando que alguém os visite. Por exemplo, ao acessar <https://aurelio.net/vim/pulando.html>, o servidor vai te mostrar o arquivo _pulando.html_ que está dentro da pasta _vim_. Simples assim.
 
-O WordPress não é estático, mas dinâmico: cada página é construída imediatamente na hora que você a visita. Não existem pastas e arquivos no servidor, mas sim um único banco de dados, com as informações de todas as páginas, posts, comentários, tudo. Por exemplo, esta página que você está lendo agora <http://aurelio.net/wordpress/site-estatico/>, está no WordPress. Para mostrá-la, ele primeiro consultou o banco de dados, pedindo o conteúdo da tal página _site-estatico_. Então ele montou na hora essa página toda que você está vendo, com o conteúdo, menus, comentários, imagens e tudo mais.
+O WordPress não é estático, mas dinâmico: cada página é construída imediatamente na hora que você a visita. Não existem pastas e arquivos no servidor, mas sim um único banco de dados, com as informações de todas as páginas, posts, comentários, tudo. Por exemplo, esta página que você está lendo agora <https://aurelio.net/wordpress/site-estatico/>, está no WordPress. Para mostrá-la, ele primeiro consultou o banco de dados, pedindo o conteúdo da tal página _site-estatico_. Então ele montou na hora essa página toda que você está vendo, com o conteúdo, menus, comentários, imagens e tudo mais.
 
 > Repetindo: não existe no servidor uma pasta chamada _wordpress_ com outra pasta _site-estatico_ dentro dela. É tudo virtual, dentro do banco de dados.
 

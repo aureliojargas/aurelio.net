@@ -308,7 +308,7 @@ durante a palestra? Antes de chegar no primeiro slide dele o Rubens me
 sinalizou que o tempo da minha palestra já tinha acabado...
 
 Com isso só pude falar que o nome era RAC, que era um extrator de
-textos e que o endereço da página dele era http://aurelio.net/rac. E
+textos e que o endereço da página dele era https://aurelio.net/rac. E
 não é que isso gerou ansiedade e curiosidade e também serviu como um
 marketing pesado para o programa? Vivendo e aprendendo... :)
 

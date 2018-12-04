@@ -21,7 +21,7 @@ As configurações servem para funcionar:
 
 
 O original deste documento está em:
-  http://aurelio.net/doc/cygwin-config.txt
+  https://aurelio.net/doc/cygwin-config.txt
 
 ------------------------------------------------------------
 

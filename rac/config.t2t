@@ -37,7 +37,7 @@
 %!preproc: U_SLACK	http://www.brunorusso.eti.br/rac/
 
 % external links
-%!preproc: U_RAC	http://aurelio.net/rac/
+%!preproc: U_RAC	https://aurelio.net/rac/
 %!preproc: U_TXT2TAGS	http://txt2tags.sf.net/pt/
 %!preproc: U_MAILING	http://br.groups.yahoo.com/group/rac-br
 %!preproc: U_RACDEVEL	http://www.thobias.org/rac/

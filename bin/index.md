@@ -69,7 +69,7 @@ Alguns desses programas já deram passos importantes, entre eles:
 
 ### MoneyLog
 
-- Site: http://aurelio.net/moneylog/
+- Site: https://aurelio.net/moneylog/
 - Linguagem: Javascript
 - Interface: Web
 - Idioma: Português e [Inglês](/projects/moneylog/)
@@ -82,7 +82,7 @@ Acompanhe suas finanças de maneira simples e prática. Em um único arquivo fic
 
 ### EmoMemory
 
-- Site: http://aurelio.net/projects/emomemory/
+- Site: https://aurelio.net/projects/emomemory/
 - Linguagem: AppleScript
 - Interface: Gráfica Interativa
 - Idioma: Inglês
@@ -114,7 +114,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ### RAC
 
-- Site: http://aurelio.net/rac/
+- Site: https://aurelio.net/rac/
 - Linguagem: C
 - Interface: Linha de comando
 - Idioma: Português
@@ -140,7 +140,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### AdiumBook
 
-- Site: http://aurelio.net/projects/adiumbook/
+- Site: https://aurelio.net/projects/adiumbook/
 - Linguagem: AppleScript
 - Interface: Gráfica Interativa
 - Idioma: Inglês
@@ -155,7 +155,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### txt2regex
 
-- Site: http://aurelio.net/projects/txt2regex/
+- Site: https://aurelio.net/projects/txt2regex/
 - Linguagem: Bash
 - Interface: Interativa para console
 - Idioma: Inglês (interface do programa em Português também)
@@ -168,7 +168,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### sedsed
 
-- Site: http://aurelio.net/projects/sedsed/
+- Site: https://aurelio.net/projects/sedsed/
 - Linguagem: Python
 - Interface: Linha de comando
 - Idioma: Inglês
@@ -181,7 +181,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### SedSokoban
 
-- Site: http://aurelio.net/projects/sedsokoban/
+- Site: https://aurelio.net/projects/sedsokoban/
 - Linguagem: SED
 - Interface: Interativa para console
 - Idioma: Inglês
