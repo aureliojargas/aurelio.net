@@ -1,0 +1,42 @@
+#!/bin/bash
+# List _site URLs, use $1 for the kind of files.
+# For now, only listing the root-relative URLs.
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+html_files=$(_scripts/list-site-files html)
+css_files=$(_scripts/list-site-files css)
+
+html_urls() {
+    grep -E -i -h -o '(src|href)="/[^/"][^"]*"' $html_files |
+    sed 's/.*="\(.\)/\1/; s/"$//'
+}
+
+css_urls() {
+    grep -E -i -h -o 'url\(/[^/][^)]*\)' $css_files |
+    sed 's/.*url(//; s/)$//'
+}
+
+all_urls() {
+    html_urls
+    css_urls
+}
+
+cleanup() {
+    # Remove anchors and parameters
+    sed 's/#.*//; s/?.*//'
+}
+
+no_trailing_slashes() {
+    sed 's,//*$,,'
+}
+
+
+case "$1" in
+    dir ) all_urls | cleanup | grep '/$' | sort | uniq;;
+    file) all_urls | cleanup | grep -v '/$' | sort | uniq;;
+    uniq) all_urls | cleanup | no_trailing_slashes | sort | uniq;;
+    *   ) all_urls | sort | uniq -c | sort -nr;;
+esac
