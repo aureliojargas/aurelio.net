@@ -20,8 +20,9 @@ cd ..
 
 repo_root="$PWD"
 site_root="$repo_root/_site"
-files=$(_scripts/list-site-text-files)
-css_files=$(echo "$files" | grep '\.css$')
+all_files=$(_scripts/list-site-files all)
+text_files=$(_scripts/list-site-files text)
+css_files=$(echo "$text_files" | grep '\.css$')
 
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
@@ -86,13 +87,13 @@ check_link_to_redirected() {
 
 # Do not link foo/index.html, but foo/
 check_link_to_index_html() {
-    cgrep 'href="[^"]*/index\.html"' $files
+    cgrep 'href="[^"]*/index\.html"' $text_files
 }
 
 # Do not use relative URLs in links, images, CSS - #20
 check_relative_urls() {
     # ./ and ../ at URL start or middle
-    cgrep -i -E '(src|href)="([^"]*/)?\.\.?/' $files
+    cgrep -i -E '(src|href)="([^"]*/)?\.\.?/' $text_files
 
     # Non absolute, ./ and ../ at middle
     cgrep -i -E 'url\([^/]' $css_files
@@ -101,13 +102,13 @@ check_relative_urls() {
 
 # No http:// for resources (mixed content) - #18
 check_mixed_content() {
-    cgrep -i -F 'src="http://' $files
-    cgrep -i '<link [^>]*href="http://' $files
+    cgrep -i -F 'src="http://' $text_files
+    cgrep -i '<link [^>]*href="http://' $text_files
 }
 
 # Grep for <tag foo=bar> instead of <tag foo="bar">
 check_unquoted_attributes() {
-    echo "$files" |
+    echo "$text_files" |
 
         # Remove false positives
         grep -F -x -v '_site/bin/python/txt2tags-r900.py' |
@@ -124,7 +125,7 @@ check_unquoted_attributes() {
 }
 
 check_windows_linebreak() {
-    echo "$files" |
+    echo "$text_files" |
 
         # Remove false positives
         grep -v '^_site/projects/moneylog/' |

@@ -15,7 +15,7 @@ cd $(dirname "$0")
 cd ..
 
 domain='https?://aurelio\.net'
-files=$(_scripts/list-site-text-files)
+files=$(_scripts/list-site-files text)
 
 check() {
     local user_url=$1

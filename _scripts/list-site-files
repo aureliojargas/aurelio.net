@@ -1,0 +1,22 @@
+#!/bin/bash
+# List _site files, use $1 for the kind of files
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+dirs_() { find _site -type d; }
+files() { find _site -type f; }
+
+binaries='png jpg gif bmp ico mp3 wav ogg zip tgz gz dmg rpm EXE pdf scpt'
+
+case "$1" in
+    file) files;;
+    dir ) dirs_;;
+    all ) files; dirs_;;
+    text) files | grep -E -v "\.(${binaries// /|})$";;
+    ext ) files | grep -o '\.[^.]*$' | sort | uniq;;
+    *   ) files | grep "\.$1$";;  # file extension
+esac | sort
+#      ^output is always sorted
+
