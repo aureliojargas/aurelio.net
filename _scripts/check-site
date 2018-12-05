@@ -100,6 +100,13 @@ check_relative_urls() {
     cgrep -i -E 'url\(/([^)]*/)?\.\.?/' $css_files
 }
 
+# The root-relative URL point to an existent file or folder?
+check_root_relative_target() {
+    local urls=$(_scripts/list-site-urls uniq)
+    local files=$(echo "$all_files" | sed 's/^_site//')
+    comm -23 <(echo "$urls") <(echo "$files")
+}
+
 # No http:// for resources (mixed content) - #18
 check_mixed_content() {
     cgrep -i -F 'src="http://' $text_files
@@ -144,6 +151,7 @@ active_checks="
     check_unquoted_attributes
     check_mixed_content
     check_relative_urls
+    check_root_relative_target
     check_link_to_index_html
     check_link_to_gone
     check_link_to_redirected
