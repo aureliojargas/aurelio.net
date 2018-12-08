@@ -26,9 +26,7 @@ css_files=$(echo "$text_files" | grep '\.css$')
 
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
-
-    # This check runs at the repo root
-    cd "$repo_root" && git grep -I '{{.*}}' |
+    git grep -I '{{.*}}' |
 
         # Remove false positives
         grep -v '^_includes/' |
@@ -50,7 +48,6 @@ check_accidental_liquid_markup() {
         grep -v '^shell/dialog/index' |
         grep -v '^[^:]*\.t2t:.*{{br}}' |
         cat -
-    cd "$site_root"
 }
 
 check_missing_article_date() {
@@ -61,7 +58,6 @@ check_missing_article_date() {
 
 # Do not link URLs that are gone (410)
 check_link_to_gone() {
-
     _scripts/list-urls-gone |
         grep -Fxv '/recados.php' | # historical
         # Exception: top dir is gone, but not its children
