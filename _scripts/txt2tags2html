@@ -10,7 +10,7 @@ outfile="${infile%.t2t}.html"     # foo.html
 site_root=$(pwd | sed 's@\(/aurelio.net/\).*@\1@')
 txt2tags="$site_root/_scripts/txt2tags-2.6.1102"
 tidy="$site_root/_scripts/html-tidy"
-replace="$site_root/_scripts/replace"
+replace="replace"
 replace_templates="$site_root/_scripts/replace-templates"
 
 info() {
