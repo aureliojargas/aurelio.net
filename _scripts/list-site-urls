@@ -15,7 +15,7 @@ html_urls() {
 }
 
 css_urls() {
-    grep -E -i -h -o 'url\(/[^/][^)]*\)' $css_files |
+    grep -E -i -h -o 'url\(/[^/][^)]*\)' $css_files $html_files |
     sed 's/.*url(//; s/)$//'
 }
 
