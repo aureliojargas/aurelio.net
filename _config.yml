@@ -96,6 +96,11 @@ defaults:
       hide_read_more: true
   -
     scope:
+      path: "projects"
+    values:
+      layout: projects
+  -
+    scope:
       path: "regex"
     values:
       css_extra: /regex/regex.css
