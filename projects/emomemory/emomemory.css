@@ -1,58 +1,47 @@
 #header {
-	background: #fff url(/projects/img/emomemory-big.png) no-repeat left center;
+    background: #fff url(/projects/img/emomemory-big.png) no-repeat left center;
 }
 #body a {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 #content h2 {
-	color: #f88;
-/*	background-color: #f8f8f8;*/
-/*	border: 1px solid #ccc;*/	
+    color: #f88;
 }
 #content pre {
-	font-size: 150%;
+    font-size: 150%;
 }
 #sidebar {
-	width: 18em;
-/*	background-color: #fff8f8;*/
-	border: 1px solid #fcc;
-	margin-top: 40px;
-}
-#sidebar .box {
-/*	border: 1px solid #ccc;*/
-/*	background-color: #f8f8f8;*/
+    width: 18em;
+    border: 1px solid #fcc;
+    margin-top: 40px;
 }
 #sidebar .box h3 {
-/*	border: 1px solid #faa;*/
-	background-color: #fcc;
-	color: #a44;
+    background-color: #fcc;
+    color: #a44;
 }
 #sidebar a {
-	display: inline;
-	font-size: 100%;
+    display: inline;
+    font-size: 100%;
 }
 body.nosidebar #content {
-	padding-right: 0;
-	margin: 0 auto;
-	width: 40em;
+    padding-right: 0;
+    margin: 0 auto;
+    width: 40em;
 }
 #footer {
-	margin: 3em 0;
+    margin: 3em 0;
 }
-
-/* -------------------------------------- NAVIGATION */
 
 .nav {
-	background: #eee;
-	padding: 5px 10px;
-	text-align: center;
-	font-size: 85%;
-/*	word-spacing: .5em;*/
+    background: #eee;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 85%;
 }
 .nav a {
-	margin: 0 .5em;
+    margin: 0 .5em;
 }
 .nav p {
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 }

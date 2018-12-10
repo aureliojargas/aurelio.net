@@ -9,6 +9,9 @@
     <meta name="generator" content="Jekyll">
 
     <link rel="stylesheet" type="text/css" href="/projects/soft4.css">
+    {% if page.url contains '/emomemory/' %}
+    <link rel="stylesheet" href="/projects/emomemory/emomemory.css">
+    {% endif %}
 
 {% if page.github %}
     <link rel="stylesheet" href="/assets/gh-fork-ribbon.css">
@@ -30,7 +33,17 @@
 
     <div id="body" class="body">
 
-      {% include sidebar-projects.html %}
+      {% if page.url contains '/emomemory/' %}
+        {% include nav-emomemory.html %}
+      {% endif %}
+
+      {% unless page.hide_sidebar %}
+        {% if page.url contains '/emomemory/' %}
+          {% include sidebar-emomemory.html %}
+        {% else %}
+          {% include sidebar-projects.html %}
+        {% endif %}
+      {% endunless %}
 
       <div id="content">
         {{ content }}
