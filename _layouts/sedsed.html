@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  {% include head-base.html %}
+  {% include analytics.html %}
+
+  <style>
+    body {
+      color:lime;
+      background: black;
+      font-size: 100%;
+      font-family: sans-serif;
+      padding: 5px;
+    }
+    p, ul, li, dl, pre, table {
+      margin: 1em 0em;
+    }
+    pre {
+      overflow: auto;
+    }
+    a {
+      color: yellow;
+    }
+    a:hover {
+      background: yellow;
+      color: black;
+    }
+    h2, h3 {
+      margin-top: 1em;
+      padding-top: 1em;
+    }
+    h2 {
+      border-top: 1px solid lime;
+    }
+    img {
+      border: 1px solid silver;
+      max-width: 100%;
+    }
+    dd {
+      margin-left: 0;
+    }
+    table {
+      border: 1px solid lime;
+    }
+    th {
+      background: lime;
+      color: black;
+    }
+    #footer {
+      margin: 3em 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  {{ content }}
+</body>
+</html>

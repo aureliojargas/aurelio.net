@@ -1,163 +1,96 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<LINK REL="stylesheet" TYPE="text/css" HREF="site.css">
-<TITLE>sedsed</TITLE>
-</HEAD>
-<BODY>
+---
+title: sedsed
+layout: sedsed
+---
 
-<DIV CLASS="header" ID="header">
-<H1>sedsed</H1>
-<H2>by <a href="/about.html">Aurelio Jargas</a></H2>
-</DIV>
+<h1>sedsed</h1>
 
-<DIV CLASS="toc">
+<p>by <a href="/about.html">Aurelio Jargas</a></p>
 
-    <UL>
-    <LI><A HREF="#description">DESCRIPTION</A>
-    <LI><A HREF="#screenshots">SCREENSHOTS</A>
-    <LI><A HREF="#download">DOWNLOAD</A>
-    <LI><A HREF="#usage">USAGE</A>
-    <LI><A HREF="#reference">REFERENCE</A>
-    <LI><A HREF="#tests">QA</A>
-    <LI><A HREF="#changelog">CHANGELOG</A>
-    <LI><A HREF="#seealso">SEE ALSO</A>
-    </UL>
+<h2 id="description">DESCRIPTION</h2>
 
-</DIV>
-<DIV ID="main">
+<p>sedsed can debug, indent, tokenize and HTMLize your <a href="http://sed.sourceforge.net/">sed</a> scripts.</p>
 
-<H2 ID="description">DESCRIPTION</H2>
+<p>In <a href="#debug">debug</a> mode it reads your script and add extra commands to it. When executed you can see the data flow between the commands, revealing all the magic sed does on its internal buffers.</p>
 
-<P>
-sedsed can debug, indent, tokenize and HTMLize your <A HREF="http://sed.sourceforge.net/">sed</A> scripts.
-</P>
-<P>
-In <A HREF="#debug">debug</A> mode it reads your script and add extra commands to it. When executed you can see the data flow between the commands, revealing all the magic sed does on its internal buffers.
-</P>
-<P>
-In <A HREF="#indent">indent</A> mode your script is reformatted with standard spacing.
-</P>
-<P>
-In <B>tokenize</B> mode you can see the elements of every command you use.
-</P>
-<P>
-In <A HREF="#htmlize">HTMLize</A> mode your script is converted to a beautiful colored HTML file, with all the commands and parameters identified for your viewing pleasure.
-</P>
-<P>
-With sedsed you can master ANY sed script. No more secrets, no more hidden buffers.
-</P>
+<p>In <a href="#indent">indent</a> mode your script is reformatted with standard spacing.</p>
 
-<H2 ID="screenshots">SCREENSHOTS</H2>
+<p>In <strong>tokenize</strong> mode you can see the elements of every command you use.</p>
 
-<H3>Quick sample</H3>
+<p>In <a href="#htmlize">HTMLize</a> mode your script is converted to a beautiful colored HTML file, with all the commands and parameters identified for your viewing pleasure.</p>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><IMG ALIGN="middle" SRC="quicksample.png" BORDER="0" ALT=""></TD>
-</TR>
-<TR>
-<TD>The <CODE>-d</CODE> option turns debug ON.</TD>
-</TR>
-<TR>
-<TD>The <CODE>--hide=hold</CODE> options hides the HOLD SPACE buffer contents, because it is always empty on this example.</TD>
-</TR>
-<TR>
-<TD>The <CODE>PATT:</CODE> lines on sedsed's output shows the PATTERN SPACE buffer contents.</TD>
-</TR>
-<TR>
-<TD>The <CODE>COMM:</CODE> yellow lines show the command which is being executed.</TD>
-</TR>
-<TR>
-<TD>The <CODE>user</CODE> and <CODE>otheruser</CODE> lines are the sed's normal output.</TD>
-</TR>
-<TR>
-<TD>The <CODE>$</CODE> sign at the end of <CODE>PATT:</CODE> lines represent the end of the buffer.</TD>
-</TR>
-</TABLE>
+<p>With sedsed you can master ANY sed script. No more secrets, no more hidden buffers.</p>
 
-<H3 ID="indent">Indent</H3>
+<h2 id="screenshots">SCREENSHOTS</h2>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><IMG ALIGN="middle" SRC="indent.png" BORDER="0" ALT=""></TD>
-</TR>
-<TR>
-<TD>The <CODE>-f</CODE> option reads the sed script from a file (just like in sed).</TD>
-</TR>
-<TR>
-<TD>The <CODE>--indent</CODE> option reformats complicated sed scripts into beautiful human-friendly scripts.</TD>
-</TR>
-</TABLE>
+<h3>Quick sample</h3>
 
-<H3 ID="debug">Debug</H3>
+<p><img class="center" src="quicksample.png" alt=""></p>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><IMG ALIGN="middle" SRC="debug.png" BORDER="0" ALT=""></TD>
-</TR>
-<TR>
-<TD>The <CODE>-d</CODE> option turns debug ON.</TD>
-</TR>
-<TR>
-<TD>The <CODE>HOLD:</CODE> lines shows the HOLD SPACE buffer contents.</TD>
-</TR>
-<TR>
-<TD>See how the PATTERN and HOLD SPACE buffers change between the sed commands.</TD>
-</TR>
-<TR>
-<TD>See the buffers swap with the <CODE>x</CODE> command.</TD>
-</TR>
-<TR>
-<TD>See the <CODE>\n</CODE> that is inserted in PATTERN SPACE between the two lines joined by the <CODE>G</CODE> command.</TD>
-</TR>
-<TR>
-<TD><B>See sed under the curtains!</B></TD>
-</TR>
-</TABLE>
+<ul>
+  <li>The <code>-d</code> option turns debug ON.</li>
+  <li>The <code>--hide=hold</code> options hides the HOLD SPACE buffer contents, because it is always empty on this example.</li>
+  <li>The <code>PATT:</code> lines on sedsed's output shows the PATTERN SPACE buffer contents.</li>
+  <li>The <code>COMM:</code> yellow lines show the command which is being executed.</li>
+  <li>The <code>user</code> and <code>otheruser</code> lines are the sed's normal output.</li>
+  <li>The <code>$</code> sign at the end of <code>PATT:</code> lines represent the end of the buffer.</li>
+</ul>
 
-<H3 ID="htmlize">HTMLize</H3>
+<h3 id="indent">Indent</h3>
 
-<P>
-Besides indent and debug, sedsed also has the ability to convert your sed scripts to nice HTML pages, with the syntax highlighted just as in <A HREF="http://www.vim.org">Vim Editor</A>, with nice colors!
-</P>
+<p><img class="center" src="indent.png" alt=""></p>
 
-<PRE>
+<ul>
+  <li>The <code>-f</code> option reads the sed script from a file (just like in sed).</li>
+  <li>The <code>--indent</code> option reformats complicated sed scripts into beautiful human-friendly scripts.</li>
+</ul>
+
+<h3 id="debug">Debug</h3>
+
+<p><img class="center" src="debug.png" alt=""></p>
+
+<ul>
+  <li>The <code>-d</code> option turns debug ON.</li>
+  <li>The <code>HOLD:</code> lines shows the HOLD SPACE buffer contents.</li>
+  <li>See how the PATTERN and HOLD SPACE buffers change between the sed commands.</li>
+  <li>See the buffers swap with the <code>x</code> command.</li>
+  <li>See the <code>\n</code> that is inserted in PATTERN SPACE between the two lines joined by the <code>G</code> command.</li>
+  <li><strong>See sed under the curtains!</strong></li>
+</ul>
+
+<h3 id="htmlize">HTMLize</h3>
+
+<p>Besides indent and debug, sedsed also has the ability to convert your sed scripts to nice HTML pages, with the syntax highlighted just as in <a href="http://www.vim.org">Vim Editor</a>, with nice colors!</p>
+
+<pre>
 <b>prompt$ </b>cat email-linker.sed
 h;s|.*|&lt;link&gt;&amp;&lt;/link&gt;|;x;/@/{s/@.*/'s email:/;G;}
 
 <b>prompt$ </b>sedsed --htmlize -f email-linker.sed &gt; email-linker.sed.html
-</PRE>
+</pre>
 
-<P>
-Here is the resulting HTML file:
-</P>
-<P>
-<A HREF="email-linker.sed.html"><IMG ALIGN="middle" SRC="htmlize.png" BORDER="0" ALT=""></A>
-</P>
-<P>
-Visit the <A HREF="http://sed.sourceforge.net/local/scripts">sed Website</A> for examples of more than 60 sed scripts HTMLized.
-</P>
+<p>Here is the resulting HTML file:</p>
 
-<H2 ID="download">DOWNLOAD</H2>
+<p><a href="email-linker.sed.html"><img class="center" src="htmlize.png" alt=""></a></p>
 
-<UL>
-<LI>File: <A HREF="sedsed-1.0">sedsed-1.0</A>
-<LI>Language: Python
-<LI>License: MIT
-</UL>
+<p>Visit the <a href="http://sed.sourceforge.net/local/scripts">sed Website</a> for examples of more than 60 sed scripts HTMLized.</p>
 
-<P>
-Feeling wild? You can also try the fresh <A HREF="https://github.com/aureliojargas/sedsed">GitHub version</A>.
-</P>
-<P>
-Found a bug? Please <A HREF="https://github.com/aureliojargas/sedsed/issues">submit an issue</A>.
-</P>
+<h2 id="download">DOWNLOAD</h2>
 
-<H2 ID="usage">USAGE</H2>
+<ul>
+  <li>File: <a href="sedsed-1.0">sedsed-1.0</a>
+  </li>
+  <li>Language: Python</li>
+  <li>License: MIT</li>
+</ul>
 
-<PRE>
+<p>Feeling wild? You can also try the fresh <a href="https://github.com/aureliojargas/sedsed">GitHub version</a>.</p>
+
+<p>Found a bug? Please <a href="https://github.com/aureliojargas/sedsed/issues">submit an issue</a>.</p>
+
+<h2 id="usage">USAGE</h2>
+
+<pre>
 <b>prompt$ </b>sedsed --help
 
 usage: sedsed OPTION [-e sedscript] [-f sedscriptfile] [inputfile]
@@ -185,77 +118,74 @@ OPTIONS:
      -t, --tokenize      script tokenizer, prints extensive
                          command by command information
      -H, --htmlize       converts sed script to a colorful HTML page
-</PRE>
+</pre>
 
-<H2 ID="reference">REFERENCE</H2>
+<h2 id="reference">REFERENCE</h2>
 
-<TABLE ALIGN="center" BORDER="1">
-<TR>
-<TH COLSPAN="2">sedsed Output</TH>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>PATT:</CODE></TD>
-<TD>Contents of the PATTERN SPACE buffer</TD>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>HOLD:</CODE></TD>
-<TD>Contents of the HOLD SPACE buffer</TD>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>COMM:</CODE></TD>
-<TD>The sed command being executed</TD>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>$</CODE></TD>
-<TD>Terminates the PATT and HOLD contents</TD>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>...</CODE></TD>
-<TD>Lines that don't begin with any identifiers are STDOUT</TD>
-</TR>
-<TR>
-<TH COLSPAN="2">Action Options</TH>
-</TR>
-<TR>
-<TD><CODE>--debug</CODE></TD>
-<TD>DEBUG the sed script</TD>
-</TR>
-<TR>
-<TD><CODE>--indent</CODE></TD>
-<TD>Script beautifier, show indented source</TD>
-</TR>
-<TR>
-<TD><CODE>--tokenize</CODE></TD>
-<TD>Script tokenizer, show info about each command</TD>
-</TR>
-<TR>
-<TD><CODE>--htmlize</CODE></TD>
-<TD>Converts sed script to a colorful HTML page</TD>
-</TR>
-<TR>
-<TH COLSPAN="2">Tips</TH>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>!</CODE></TD>
-<TD>less -r is your friend to page the colorful output of -d</TD>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>!</CODE></TD>
-<TD>Use the <CODE>--hide</CODE> option to a cleaner debug output</TD>
-</TR>
-<TR>
-<TD ALIGN="center"><CODE>!</CODE></TD>
-<TD><CODE>--htmlize</CODE> send results to STDOUT, so redirect it</TD>
-</TR>
-</TABLE>
+<table>
+  <tr>
+    <th colspan="2">sedsed Output</th>
+  </tr>
+  <tr>
+    <td class="center"><code>PATT:</code></td>
+    <td>Contents of the PATTERN SPACE buffer</td>
+  </tr>
+  <tr>
+    <td class="center"><code>HOLD:</code></td>
+    <td>Contents of the HOLD SPACE buffer</td>
+  </tr>
+  <tr>
+    <td class="center"><code>COMM:</code></td>
+    <td>The sed command being executed</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$</code></td>
+    <td>Terminates the PATT and HOLD contents</td>
+  </tr>
+  <tr>
+    <td class="center"><code>...</code></td>
+    <td>Lines that don't begin with any identifiers are STDOUT</td>
+  </tr>
+  <tr>
+    <th colspan="2">Action Options</th>
+  </tr>
+  <tr>
+    <td><code>--debug</code></td>
+    <td>DEBUG the sed script</td>
+  </tr>
+  <tr>
+    <td><code>--indent</code></td>
+    <td>Script beautifier, show indented source</td>
+  </tr>
+  <tr>
+    <td><code>--tokenize</code></td>
+    <td>Script tokenizer, show info about each command</td>
+  </tr>
+  <tr>
+    <td><code>--htmlize</code></td>
+    <td>Converts sed script to a colorful HTML page</td>
+  </tr>
+  <tr>
+    <th colspan="2">Tips</th>
+  </tr>
+  <tr>
+    <td colspan="2">less -r is your friend to page the colorful output of -d</td>
+  </tr>
+  <tr>
+    <td colspan="2">Use the <code>--hide</code> option to a cleaner debug output</td>
+  </tr>
+  <tr>
+    <td colspan="2"><code>--htmlize</code> send results to STDOUT, so redirect it</td>
+  </tr>
+</table>
 
-<H2 ID="tests">QA</H2>
+<h2 id="tests">QA</h2>
 
-<P>
-sedsed was tested successfully against all the 5 stars (<CODE>*****</CODE>) extreme sed scripts from the <A HREF="http://sed.sf.net/grabbag/scripts">Bonzini's excellent grab-bag site</A>. So all the sed commands and structures wrote on these scripts, which are <B>EXTREME</B>, are correctly parsed. If you want to try at home, download and execute them this way:
-</P>
+<p>sedsed was tested successfully against all the 5 stars (<code>*****</code>) extreme sed scripts from the <a href="http://sed.sf.net/grabbag/scripts">Bonzini's excellent grab-bag site</a>. So all the sed commands and structures wrote on these scripts, which are <strong>EXTREME</strong>, are correctly parsed.</p>
 
-<PRE>
+<p>If you want to try at home, download and execute them this way:</p>
+
+<pre>
 echo -e "one\ntwo\nthree\nfour" | sedsed -d -f sodelnum.sed
 
 echo -e "one\ntwo\nthree\nfour" | sedsed -d -f sort.sed
@@ -267,97 +197,117 @@ echo "aa='abc" | sedsed -d -f config.sed
 (date +'%w %d' ; date +'%-m %Y') | sedsed -d -f cal.sed
 
 echo 4 4 + p | sedsed -d -f dc.sed
-</PRE>
+</pre>
 
-<TABLE ALIGN="center">
-<TR>
-<TD><A HREF="dc.png"><IMG ALIGN="middle" SRC="dc-mini.png" BORDER="0" ALT=""></A></TD>
-<TD>YES! Now you can (try to) understand what happens inside the unbelievable <A HREF="http://sed.sourceforge.net/local/scripts/dc.sed.html">dc.sed</A> calculator. Check this <A HREF="dc.png">great shot</A> of a simple "4+4" becoming "8" :)</TD>
-</TR>
-</TABLE>
+<p><img src="dc.png" alt=""></p>
 
-<H2 ID="changelog">CHANGELOG</H2>
+<p>YES! Now you can (try to) understand what happens inside the unbelievable <a href="http://sed.sourceforge.net/local/scripts/dc.sed.html">dc.sed</a> calculator. Check this great shot of a simple "4+4" becoming "8" :)</p>
 
-<DL>
-<DT>v<B>1.0</B> 2004-12-09</DT><DD>
-  <UL>
-  <LI><B>Portable:</B> Huge changes to make the debug file portable, so now it works even in old UNIX versions of sed (thanks Gudermez for requesting and Laurent Voguel for his sedcheck tool).
-  <LI><B>Debug diet and faster:</B> The debug command to show the current sed command was simplified from "s///;P;s///" to a single "i" command, reducing the debug file size and increasing execution speed (thanks Thobias Salazar Trevisan for the idea).
-  <LI>Now the sed program location on the system is configurable inside the script (if needed).
-  <LI>The default indent prefix for --indent has changed from two to four spaces.
-  <LI>Added --dump-debug option to inspect the generated debug file (implies --nocolor and --debug).
-  <LI>Generated debug file more readable, with indented debug commands.
-  <LI>Bugfix: Now parses a, c, i commands with ";" on the text (thanks Leo Mulders for reporting).
-  </UL>
-<DT>v<B>0.8</B> 2003-11-15</DT><DD>
-  <UL>
-  <LI>Huge code cleanup and rearrange, now it is readable
-  <LI>Added -n option and its aliases --quiet and --silent (thanks Eric Pement)
-  <LI>Added -H option as an alias to --htmlize
-  <LI>Now accepts sed script on STDIN (like sed): <CODE>echo p | sed -f - file</CODE>
-  <LI>Changed internal line separator string to ASCII chars (thanks
-    Thobias Salazar)
-  <LI>Bugfix: Script previous checking was broken (thanks Eric Pement)
-  </UL>
-<DT>v<B>0.7</B> 2003-01-21</DT><DD>
-  <UL>
-  <LI>Added --color option (for Windows users)
-  <LI>Bugfix: Debug file line break on Windows (thanks Eric Pement)
-  </UL>
-<DT>v<B>0.6</B> 2002-11-19</DT><DD>
-  <UL>
-  <LI>Now sedsed works on Windows/DOS
-  <LI>New stand-alone .EXE version for Windows users (by py2exe)
-  <LI>Option -v REALLY changed to -V (lamer...)
-  </UL>
-<DT>v<B>0.5</B> 2002-05-08</DT><DD>
-  <UL>
-  <LI>The sedsed program is now compatible with old Python v1.5
-  <LI>The sed debug file is now temporary (is removed)
-  <LI>Option -v changed to -V
-  <LI>Added "i" flag for "s///" command
-  <LI>Now input text is read from pipeline (STDIN) and/or file(s), as in sed
-  <LI>Now the sed script is read from -f &lt;file&gt; and/or -e &lt;script&gt;, as in sed
-  </UL>
-<DT>v<B>0.4</B> 2002-03-27</DT><DD>
-  <UL>
-  <LI>Added --htmlize option
-  </UL>
-<DT>v<B>0.3</B> 2002-02-22</DT><DD>
-  <UL>
-  <LI>Added --version option
-  <LI>Added documentation
-  <LI>Added i386 binary version
-  </UL>
-<DT>v<B>0.2</B> 2001-12-22</DT><DD>
-  <UL>
-  <LI>Status of "t" command preserved correctly (thanks Paolo Bonzini)
-  </UL>
-<DT>v<B>0.1</B> 2001-12-21</DT><DD>
-  <UL>
-  <LI>First release on sed-users list
-  </UL>
-</DL>
+<h2 id="changelog">CHANGELOG</h2>
 
-<H2 ID="seealso">SEE ALSO</H2>
+<dl>
+  <dt>v<strong>1.0</strong> 2004-12-09</dt>
+  <dd>
+  <ul>
+    <li><strong>Portable:</strong> Huge changes to make the debug file portable, so now it works even in old UNIX versions of sed (thanks Gudermez for requesting and Laurent Voguel for his sedcheck tool).</li>
+    <li><strong>Debug diet and faster:</strong> The debug command to show the current sed command was simplified from "s///;P;s///" to a single "i" command, reducing the debug file size and increasing execution speed (thanks Thobias Salazar Trevisan for the idea).</li>
+    <li>Now the sed program location on the system is configurable inside the script (if needed).</li>
+    <li>The default indent prefix for --indent has changed from two to four spaces.</li>
+    <li>Added --dump-debug option to inspect the generated debug file (implies --nocolor and --debug).</li>
+    <li>Generated debug file more readable, with indented debug commands.</li>
+    <li>Bugfix: Now parses a, c, i commands with ";" on the text (thanks Leo Mulders for reporting).</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.8</strong> 2003-11-15</dt>
+  <dd>
 
-<UL>
-<LI>When debugging a sed script, sedsed shows the buffers contents between all commands, having no support for user-defined spypoints. If you want this feature, you should try <A HREF="http://sed.sourceforge.net/grabbag/scripts/sd.sh.txt">sd</A>, the spypoint-aware sed debugger written in shell script by Brian Hiles.
-<P></P>
-<LI>Want to write portable scripts that will work on a wide range of sed flavors out there? Use the Laurent Voguel's <A HREF="http://lvogel.free.fr/sed/sedcheck.sed">sedcheck</A> tool (it is a sed script!)
-<P></P>
-<LI>Want to learn more about sed? Visit the <A HREF="http://sed.sourceforge.net">sed Website</A>, that has lots of documents and sample scripts.
-<P></P>
-<LI>You will find more useful softwares at <A HREF="http://aurelio.net/projects/">Aurelio's website</A>.
-</UL>
+  <ul>
+    <li>Huge code cleanup and rearrange, now it is readable</li>
+    <li>Added -n option and its aliases --quiet and --silent (thanks Eric Pement)</li>
+    <li>Added -H option as an alias to --htmlize</li>
+    <li>Now accepts sed script on STDIN (like sed): <code>echo p | sed -f - file</code></li>
+    <li>Changed internal line separator string to ASCII chars (thanks Thobias Salazar)</li>
+    <li>Bugfix: Script previous checking was broken (thanks Eric Pement)</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.7</strong> 2003-01-21</dt>
+  <dd>
+
+  <ul>
+    <li>Added --color option (for Windows users)</li>
+    <li>Bugfix: Debug file line break on Windows (thanks Eric Pement)</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.6</strong> 2002-11-19</dt>
+  <dd>
+
+  <ul>
+    <li>Now sedsed works on Windows/DOS</li>
+    <li>New stand-alone .EXE version for Windows users (by py2exe)</li>
+    <li>Option -v REALLY changed to -V (lamer...)</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.5</strong> 2002-05-08</dt>
+  <dd>
+
+  <ul>
+    <li>The sedsed program is now compatible with old Python v1.5</li>
+    <li>The sed debug file is now temporary (is removed)</li>
+    <li>Option -v changed to -V</li>
+    <li>Added "i" flag for "s///" command</li>
+    <li>Now input text is read from pipeline (STDIN) and/or file(s), as in sed</li>
+    <li>Now the sed script is read from -f &lt;file&gt; and/or -e &lt;script&gt;, as in sed</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.4</strong> 2002-03-27</dt>
+  <dd>
+
+  <ul>
+    <li>Added --htmlize option</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.3</strong> 2002-02-22</dt>
+  <dd>
+
+  <ul>
+    <li>Added --version option</li>
+    <li>Added documentation</li>
+    <li>Added i386 binary version</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.2</strong> 2001-12-22</dt>
+  <dd>
+
+  <ul>
+    <li>Status of "t" command preserved correctly (thanks Paolo Bonzini)</li>
+  </ul>
+  </dd>
+  <dt>v<strong>0.1</strong> 2001-12-21</dt>
+  <dd>
+
+  <ul>
+    <li>First release on sed-users list</li>
+  </ul>
+  </dd>
+</dl>
+
+<h2 id="seealso">SEE ALSO</h2>
+
+<ul>
+  <li>
+    When debugging a sed script, sedsed shows the buffers contents between all commands, having no support for user-defined spypoints. If you want this feature, you should try <a href="http://sed.sourceforge.net/grabbag/scripts/sd.sh.txt">sd</a>, the spypoint-aware sed debugger written in shell script by Brian Hiles.
+  </li>
+  <li>
+    Want to write portable scripts that will work on a wide range of sed flavors out there? Use the Laurent Voguel's <a href="http://lvogel.free.fr/sed/sedcheck.sed">sedcheck</a> tool (it is a sed script!)
+  </li>
+  <li>
+    Want to learn more about sed? Visit the <a href="http://sed.sourceforge.net">sed Website</a>, that has lots of documents and sample scripts.
+  </li>
+  <li>
+    You will find more useful softwares at <a href="https://aurelio.net/projects/">Aurelio's website</a>.
+  </li>
+</ul>
 
 <div id="footer">
-    <img src="/img/madeinbr.png" alt="Made in Brazil">
-  <a href="http://txt2tags.org">
-    <img src="t2tpowered.png" alt="Powered by txt2tags"></a>
+  <img src="/img/madeinbr.png" alt="Made in Brazil">
 </div>
-</DIV>
-
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags -t html projects/sedsed/index.t2t -->
-</BODY></HTML>
