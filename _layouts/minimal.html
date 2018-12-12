@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head-base.html %}
+  {% if page.css %}
+    <link rel="stylesheet" type="text/css" href="{{ page.css }}">
+  {% endif %}
+  {% include analytics.html %}
+</head>
+
+<body>
+  {{ content }}
+</body>
+</html>
