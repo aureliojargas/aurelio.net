@@ -1,0 +1,33 @@
+body {
+  margin: 10px;
+  background-color: #889;
+  font-family: sans-serif;
+}
+#header {
+  text-align: center;
+}
+#header h2 {
+  margin: 0 1em;
+}
+#footer {
+  margin: 2em 0;
+  border-top: 1px solid black;
+  padding-top: 1em;
+  text-align: center;
+}
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+}
+dd {
+  margin: 1em 0;
+}
+th {
+  background: #aab;
+}
