@@ -22,7 +22,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-img {
+img, table {
   max-width: 100%;
 }
 dd {
@@ -30,4 +30,7 @@ dd {
 }
 th {
   background: #aab;
+}
+table.reviews {
+  font-size: 80%;
 }
