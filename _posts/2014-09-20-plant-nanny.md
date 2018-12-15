@@ -47,6 +47,6 @@ Parece bobo (e é), e há dezenas de aplicativos similares, mas o Plant Nanny se
 
 
 [Plant Nanny]:  http://fourdesire.com/works/plantnanny
-[Tamagotchi]:   https://aurelio.net/tamagotchi/
+[Tamagotchi]:   /tamagotchi/
 [gamification]: http://en.wikipedia.org/wiki/Gamification
 [achievements]: http://en.wikipedia.org/wiki/Achievement_(video_gaming)
