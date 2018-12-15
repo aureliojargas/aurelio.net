@@ -96,6 +96,50 @@ check_relative_urls() {
     cgrep -i -E 'url\(/([^)]*/)?\.\.?/' $css_files
 }
 
+# Do not use http://aurelio.net (non-https) anymore
+check_http_aurelionet() {
+    git grep -I -i -F 'http://aurelio.net' |
+        # ignore this script
+        grep -v '^_scripts/check-site:' |
+        # ignore old stuff I don't want to touch
+        grep -v -E '^bin/[^/]*/[^.]*\.(py|phps|txt):' |
+        grep -v '^bin/bash/oofind:' |
+        grep -v '^curso/sdsl-2/desenvolvedor/desenvolvedor' |
+        grep -v '^doc/direto/anuncio.txt:' |
+        grep -v '^doc/irc-mar2005.html:' |
+        grep -v '^misc/adventure-mapa.txt:' |
+        grep -v '^misc/entrevista-brlinux.txt:' |
+        grep -v '^moneylog/browser/app/index.html:' |
+        grep -v '^moneylog/moneylog4-txt.html:' |
+        grep -v '^moneylog/moneylog.\.html:' |
+        grep -v '^moneylog/portable/demo/index.html:' |
+        grep -v '^moneylog/portable/moneylog5.html:' |
+        grep -v '^projects/adiumbook/appcast.xml:' |
+        grep -v '^projects/adiumbook/appcast-beta.xml:' |
+        grep -v '^projects/moneylog/moneylog.\.html:' |
+        grep -v '^projects/moneylog/online/index.html:' |
+        grep -v '^projects/padfiles/' |
+        grep -v '^projects/sedarkanoid/arkanoid.sed.html:' |
+        grep -v '^projects/sedsokoban/sokoban.sed.html:' |
+        grep -v '^sed/programas/arkanoid/arkanoid-1\..\.sed:' |
+        grep -v '^sed/programas/arkanoid/arkanoid.sed:' |
+        grep -v '^sed/programas/arkanoid/arkanoid.sed.html:' |
+        grep -v '^sed/programas/rss.sed:' |
+        grep -v '^sed/programas/txt2sgml-sed/' |
+        grep -v '^sed/sokoban/sokoban.sed:' |
+        grep -v '^sed/sokoban/sokoban.sed.html:' |
+        grep -v '^shell/apostila/[^.:]*\.txt:' |
+        grep -v '^shell/dialog/index-v.\.t2t:' |
+        grep -v '^shell/dialog/[^.]*\.sh:' |
+        grep -v '^shell/dialog/index.html.*# Este script faz parte do' |
+        grep -v '^shell/dialog/index.html.*Novo endereço oficial' |
+        grep -v '^surf/misc/add_watermark_text:' |
+        grep -v '^surf/misc/marca-dagua.svg:' |
+        grep -v '^shell/apostila/index.html.*https://web.archive.org/web/20040402110103/' |
+        grep -v '^_posts/2014-10-02-mobile-first.md.*http://web.archive.org/web/20140625095047/' |
+        cgrep -i 'http://aurelio.net'  # highlight
+}
+
 # The root-relative URL point to an existent file or folder?
 check_root_relative_target() {
     local urls=$(_scripts/list-site-urls uniq)
@@ -147,6 +191,7 @@ active_checks="
     check_unquoted_attributes
     check_mixed_content
     check_relative_urls
+    check_http_aurelionet
     check_root_relative_target
     check_link_to_index_html
     check_link_to_gone
