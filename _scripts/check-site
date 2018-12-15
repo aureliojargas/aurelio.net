@@ -140,6 +140,23 @@ check_http_aurelionet() {
         cgrep -i 'http://aurelio.net'  # highlight
 }
 
+# Avoid the use of full https:// URLs, prefer root-relative - #46
+check_link_to_full_url() {
+    # CSS:  url(https://...)
+    # HTML: src="https://..."
+    # HTML: href="https://..."
+    grep -i -E '(url\(|src="|href=")https://aurelio\.net' $text_files |
+        grep -v '<link rel="canonical"' |
+        grep -v '^_site/feed\.xml:' |
+        grep -v '^_site/moneylog/browser/app/index.html:' |
+        grep -v '^_site/moneylog/portable/demo/index.html:' |
+        grep -v '^_site/moneylog/portable/moneylog5.html:' |
+        grep -v '^_site/web/tagmenu.html:' |
+        # Link text and URL are the same, keep it
+        grep -v -i -E '<a href="([^"]+)">\1</a>' |
+        cgrep -i -E '(src|href)="https://aurelio.net'
+}
+
 # The root-relative URL point to an existent file or folder?
 check_root_relative_target() {
     local urls=$(_scripts/list-site-urls uniq)
@@ -192,6 +209,7 @@ active_checks="
     check_mixed_content
     check_relative_urls
     check_http_aurelionet
+    check_link_to_full_url
     check_root_relative_target
     check_link_to_index_html
     check_link_to_gone
