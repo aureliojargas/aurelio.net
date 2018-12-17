@@ -95,7 +95,7 @@
 /projects/txt2tags/                               http://txt2tags.org    302
 #
 # And finally, the catchall rule
-/soft/                                            /projects/
+/soft/*                                           /projects/:splat
 
 
 # Obsoleted /bin/as content
