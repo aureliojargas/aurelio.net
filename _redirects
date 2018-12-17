@@ -72,15 +72,15 @@
 # scripts moved to Google Code (links in PAD files) [moved from /soft/.htaccess]
 /soft/adiumbook/AdiumBook-sources.zip                                 http://code.google.com/p/adiumbook/source/checkout
 /soft/adiumbook/AdiumBook-1.3.dmg                                     http://adiumbook.googlecode.com/files/AdiumBook-1.3.dmg
-/soft/export-contacts-to-mp3-player/Export_Contacts_To_MP3_Player.zip http://aurelio.googlecode.com/files/Export_Contacts_To_MP3_Player-1.1.zip
-/soft/export-contacts-to-yahoo-csv/Export_Contacts_To_Yahoo_CSV.zip   http://aurelio.googlecode.com/files/Export_Contacts_To_Yahoo_CSV-1.2.zip
-/soft/gmail-to-jabber/Gmail_to_Jabber.zip                             http://aurelio.googlecode.com/files/Gmail_to_Jabber-2.zip
-/soft/iphoto-sed/iPhoto_SED.zip                                       http://aurelio.googlecode.com/files/iPhoto_SED-1.zip
-/soft/iphoto-set-sequential-title/iPhoto_Set_Sequential_Title.zip     http://aurelio.googlecode.com/files/iPhoto_Set_Sequential_Title-1.0.zip
-/soft/itunes-find-artwork-less/iTunes_Find_Artwork-less.zip           http://aurelio.googlecode.com/files/iTunes_Find_Artwork-less-1.0.zip
-/soft/itunes-rename-disk-file/iTunes_Rename_Disk_File_2.zip           http://aurelio.googlecode.com/files/iTunes_Rename_Disk_File-2.zip
-/soft/itunes-search-in-lyrics/iTunes_Search_in_Lyrics.zip             http://aurelio.googlecode.com/files/iTunes_Search_in_Lyrics-1.zip
-/soft/itunes-sed/iTunes_SED_1.1.zip                                   http://aurelio.googlecode.com/files/iTunes_SED-1.1.zip
+/soft/export-contacts-to-mp3-player/Export_Contacts_To_MP3_Player.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_MP3_Player-1.1.zip
+/soft/export-contacts-to-yahoo-csv/Export_Contacts_To_Yahoo_CSV.zip   https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_Yahoo_CSV-1.2.zip
+/soft/gmail-to-jabber/Gmail_to_Jabber.zip                             https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Gmail_to_Jabber-2.zip
+/soft/iphoto-sed/iPhoto_SED.zip                                       https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_SED-1.zip
+/soft/iphoto-set-sequential-title/iPhoto_Set_Sequential_Title.zip     https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_Set_Sequential_Title-1.0.zip
+/soft/itunes-find-artwork-less/iTunes_Find_Artwork-less.zip           https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Find_Artwork-less-1.0.zip
+/soft/itunes-rename-disk-file/iTunes_Rename_Disk_File_2.zip           https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Rename_Disk_File-2.zip
+/soft/itunes-search-in-lyrics/iTunes_Search_in_Lyrics.zip             https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Search_in_Lyrics-1.zip
+/soft/itunes-sed/iTunes_SED_1.1.zip                                   https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_SED-1.1.zip
 #
 # padfiles used old URLs, don't remove this rules [moved from /soft/.htaccess]
 /soft/img/icon128/                                /soft/img/icon/128/
