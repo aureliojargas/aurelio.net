@@ -24,7 +24,7 @@
 # http://dicas-l.com.br/artigos/linux-modotexto/
 /doc/doc/vim/txt.vim                              /vim/txt.vim
 # various
-/doc/dialog/                                      /shell/dialog/
+/doc/dialog/*                                     /shell/dialog/:splat
 
 # icon128/ -> icon/128/ (padfiles and other sites use the old URL)
 /img/icon16/*                                     /img/icon/16/:splat
@@ -44,9 +44,9 @@
 /pyobjc/                                          /mac/dev/tutorial-pyobjc/
 
 # Coisinha
-/engripeitor/                                     /coisinha/engripeitor/
-/miguxeitor/                                      /coisinha/miguxeitor/
-/embriagueitor/                                   /coisinha/embriagueitor/
+/engripeitor/*                                    /coisinha/engripeitor/:splat
+/miguxeitor/*                                     /coisinha/miguxeitor/:splat
+/embriagueitor/*                                  /coisinha/embriagueitor/:splat
 
 
 ### BIG ENGLISH MOVE: obsolete /en (2012-12-20)
@@ -62,9 +62,9 @@
 /shell/canivete/en/canivete-en.html               /articles/shell-reference.html
 /shell/canivete/en/                               /articles/shell-reference.html
 /soft/applescript-install.html                    /articles/applescript-install.html
-/en/doc/                                          /articles/
+/en/doc/*                                         /articles/:splat
 /en/donate.html                                   /projects/donate.html
-/en/img/                                          /img/en/
+/en/img/*                                         /img/en/:splat
 /en/                                              /about.html
 
 
@@ -83,13 +83,13 @@
 /soft/itunes-sed/iTunes_SED_1.1.zip                                   https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_SED-1.1.zip
 #
 # padfiles used old URLs, don't remove this rules [moved from /soft/.htaccess]
-/soft/img/icon128/                                /soft/img/icon/128/
-/soft/img/icon32/                                 /soft/img/icon/32/
+/soft/img/icon128/*                               /soft/img/icon/128/:splat
+/soft/img/icon32/*                                /soft/img/icon/32/:splat
 #
 # app sites now moved to /projects
-/css-sandbox/                                     /projects/css-sandbox/
-/sedsed/                                          /projects/sedsed/
-/txt2regex/                                       /projects/txt2regex/
+/css-sandbox/*                                    /projects/css-sandbox/:splat
+/sedsed/*                                         /projects/sedsed/:splat
+/txt2regex/*                                      /projects/txt2regex/:splat
 #
 # txt2tags temp redir
 /projects/txt2tags/                               http://txt2tags.org    302
@@ -99,37 +99,31 @@
 
 
 # Obsoleted /bin/as content
-/bin/as/adium-book/                               /projects/adiumbook/
-/bin/as/adiumbook/                                /projects/adiumbook/
+/bin/as/adium-book/*                              /projects/adiumbook/:splat
 /bin/as/AdiumBook-sources.zip                     http://code.google.com/p/adiumbook/source
-/bin/as/export-contacts-to-mp3-player/            /projects/export-contacts-to-mp3-player/
-/bin/as/export-contacts-to-yahoo-csv/             /projects/export-contacts-to-yahoo-csv/
-/bin/as/iphoto-set-sequential-title/              /projects/iphoto-set-sequential-title/
-/bin/as/itunes-rename-disk-file/                  /projects/itunes-rename-disk-file/
-/bin/as/itunes-search-in-lyrics/                  /projects/itunes-search-in-lyrics/
-/bin/as/itunes-sed/                               /projects/itunes-sed/
 /bin/as/py2as.html                                /articles/applescript-vs-python.html
+/bin/as/*                                         /projects/:splat
 
 # moved :(
-/articles/img/                                    /img/articles/
-/canivete/                                        /shell/canivete/
+/articles/img/*                                   /img/articles/:splat
+/canivete/*                                       /shell/canivete/:splat
 /curso/4linux.html                                /curso/4linux/
-/curso/apostila-shell/                            /shell/apostila/
-/curso/IIsdsl/                                    /curso/sdsl-2/
-/curso/fisl/                                      /curso/fisl-5/
-/curso/novatec/iii/                               /curso/novatec-3/
-/curso/novatec/ii/                                /curso/novatec-2/
-/curso/novatec/i/                                 /curso/novatec-1/
-/curso/sdsl/ii/                                   /curso/sdsl-2/
-/curso/sdsl/i/                                    /curso/sdsl-1/
-/curso/ufpr/ii/                                   /curso/ufpr-2/
-/curso/ufpr/i/                                    /curso/ufpr-1/
+/curso/apostila-shell/*                           /shell/apostila/:splat
+/curso/IIsdsl/*                                   /curso/sdsl-2/:splat
+/curso/fisl/*                                     /curso/fisl-5/:splat
+/curso/novatec/iii/*                              /curso/novatec-3/:splat
+/curso/novatec/ii/*                               /curso/novatec-2/:splat
+/curso/novatec/i/*                                /curso/novatec-1/:splat
+/curso/sdsl/ii/*                                  /curso/sdsl-2/:splat
+/curso/sdsl/i/*                                   /curso/sdsl-1/:splat
+/curso/ufpr/ii/*                                  /curso/ufpr-2/:splat
+/curso/ufpr/i/*                                   /curso/ufpr-1/:splat
 /cygwin/rdl.html                                  /cygwin/rdl/
-/doc/besteiras/                                   /misc/besteiras/
+/doc/besteiras/*                                  /misc/besteiras/:splat
 /doc/er-rdl/index.html                            /er/rdl-regex-1-respostas.html
 /doc/er-rdl/ip.html                               /er/casar-ip.html
 /doc/er-rdl/                                      /er/rdl-regex-1-respostas.html
-/doc/fvm/                                         /fvm/
+/doc/fvm/*                                        /fvm/:splat
 /doc/misc/dort.html                               /doc/dort.html
 /doc/misc/irc-mar2005.html                        /doc/irc-mar2005.html
 /doc/misc/videogame.html                          /doc/videogame.html
@@ -137,7 +131,7 @@
 /doc/rdl/regex-1.html                             /er/rdl-regex-1.html
 /doc/rdl/regex-2.html                             /er/rdl-regex-2.html
 /doc/rdl/vi-vim-venci.html                        /vim/vi-vim-venci.html
-/doc/vim/                                         /vim/
+/doc/vim/*                                        /vim/:splat
 /er/guia/galeria/                                 https://www.piazinho.com.br/galeria.html
 /er/livro/galeria/                                https://www.piazinho.com.br/galeria.html
 /er/livro/cadastro/                               /livro/cadastro/
@@ -154,7 +148,7 @@
 /moneylog/svn/v5-migracao.html                    /moneylog/beta/update-2012.html
 /moneylog/svn/NEWS.html                           /moneylog/v5/NEWS.html
 /moneylog/svn/                                    https://github.com/aureliojargas/moneylog/tree/master
-/musica/baterna/                                  /baterna/
+/musica/baterna/*                                 /baterna/:splat
 /musica/pogo.php                                  /pogo/
 /musica/pogo/                                     /pogo/
 /musica/shows.txt                                 /musica/shows.html
@@ -170,10 +164,10 @@
 /shell/ascii.gif                                  /shell/canivete/ascii.gif
 /shell/zzcores.gif                                /shell/canivete/zzcores.gif
 /shell/miniman.html                               /shell/miniman/
-/vi/                                              /vim/
-/viagem/farol-imbituba-2001/                      /viagem/farol-imbituba/
-/viagem/marumbi-2001/                             /viagem/marumbi/
-/viagem/trilha-pinhao-2001/                       /viagem/trilha-do-pinhao/
+/vi/*                                             /vim/:splat
+/viagem/farol-imbituba-2001/*                     /viagem/farol-imbituba/:splat
+/viagem/marumbi-2001/*                            /viagem/marumbi/:splat
+/viagem/trilha-pinhao-2001/*                      /viagem/trilha-do-pinhao/:splat
 /vim/vimrc.txt                                    /doc/dotfiles/vimrc.txt
 /web/engripeitor.html                             /coisinha/engripeitor/
 /web/miguxeitor.html                              /coisinha/miguxeitor/
@@ -183,9 +177,9 @@
 /curso/pycon/iii/                                 /blog/2007/08/21/minha-palestra-na-pyconbrasil/
 
 # old symlinks
-/bin/sed/                                         /sed/programas/    302
+/bin/sed/*                                        /sed/programas/:splat    302
 /doc/misc/ramones.txt                             /doc/ramones.txt
-/curso/material/tutorial-pyobjc/                  /mac/dev/tutorial-pyobjc/
+/curso/material/tutorial-pyobjc/*                 /mac/dev/tutorial-pyobjc/:splat
 
 # 2013-09-22
 /projects/txt2regex/README.html                   https://github.com/aureliojargas/txt2regex/blob/master/README.md
@@ -193,7 +187,7 @@
 /projects/txt2regex/old/                          https://github.com/aureliojargas/txt2regex/tree/master/releases
 
 # Moved folder (2017-05-29)
-/doc/misc/                                        /misc/
+/doc/misc/*                                       /misc/:splat
 
 # PHP code moved to a subdomain (2017-05-26)
 /livro/cadastro/                                  https://cadastro.aurelio.net
