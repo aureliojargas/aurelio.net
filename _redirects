@@ -134,7 +134,7 @@
 /doc/vim/*                                        /vim/:splat
 /er/guia/galeria/                                 https://www.piazinho.com.br/galeria.html
 /er/livro/galeria/                                https://www.piazinho.com.br/galeria.html
-/er/livro/cadastro/                               /livro/cadastro/
+/er/livro/cadastro/                               https://cadastro.aurelio.net
 /er/livro/                                        https://www.piazinho.com.br/ed1/
 /er/                                              /regex/
 /moneylog/importar.html                           /moneylog/conversor.html
@@ -156,7 +156,7 @@
 /projects/emomemory/scores.php                    /projects/emomemory/scores.html
 /rac/ADDRESSING                                   /rac/info/ADDRESSING
 /sed/sed-HOWTO/sed-HOWTO.html                     /sed/sed-HOWTO/
-/shell/cadastro/                                  /livro/cadastro/
+/shell/cadastro/                                  https://cadastro.aurelio.net/livro/cadastro/
 /shell/canivete-pdf.html                          /shell/canivete/pdf/
 /shell/canivete-shell.pdf                         /shell/canivete/pdf/canivete-shell.pdf
 /shell/canivete-es.html                           /shell/canivete/es/
