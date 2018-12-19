@@ -211,33 +211,13 @@
 #---------------------------------------------------------------
 # Gone
 
-/ooo/controle.html                                /410.html  410
-/ooo/                                             /410.html  410
-/shell/apostila/amostra/01-revisao.html           /410.html  410
-/shell/apostila/amostra/02-programa.html          /410.html  410
-/shell/apostila/amostra/03-explorando.html        /410.html  410
-/shell/apostila/amostra/04-controle.html          /410.html  410
-/shell/apostila/amostra/04-ferramentas.html       /410.html  410
-/shell/apostila/amostra/05-regex.html             /410.html  410
-/shell/apostila/amostra/06-config.html            /410.html  410
-/shell/apostila/amostra/07-banco.html             /410.html  410
-/shell/apostila/amostra/08-dialog.html            /410.html  410
-/shell/apostila/amostra/09-cgi.html               /410.html  410
-/shell/apostila/amostra/index.html                /410.html  410
-/shell/apostila/amostra/                          /410.html  410
+/ooo/*                                            /410.html  410
+/shell/apostila/amostra/*                         /410.html  410
 /projects/emomemory/cancelled.html                /410.html  410
 /projects/emomemory/registered.html               /410.html  410
 
 # 2012-08-31 old scrap book
-/doc/recados-antigos/2002.html                    /410.html  410
-/doc/recados-antigos/2003.html                    /410.html  410
-/doc/recados-antigos/2004.html                    /410.html  410
-/doc/recados-antigos/2005.html                    /410.html  410
-/doc/recados-antigos/2006.html                    /410.html  410
-/doc/recados-antigos/2007.html                    /410.html  410
-/doc/recados-antigos/2008.html                    /410.html  410
-/doc/recados-antigos/2009.html                    /410.html  410
-/doc/recados-antigos/                             /410.html  410
+/doc/recados-antigos/*                            /410.html  410
 /recados.php                                      /410.html  410
 /recados.html                                     /410.html  410
 
@@ -245,12 +225,12 @@
 /adiumdup                                         /410.html  410
 
 # 2014-02-26 old WordPress pages (old tag rules in /a/www/.admin/htaccess*)
-/blog/tag/                                        /410.html  410
-/blog/category/                                   /410.html  410
-/tag/                                             /410.html  410
-/category/                                        /410.html  410
-/blog/author/                                     /410.html  410
-/blog/page/                                       /410.html  410
+/blog/tag/*                                       /410.html  410
+/blog/category/*                                  /410.html  410
+/tag/*                                            /410.html  410
+/category/*                                       /410.html  410
+/blog/author/*                                    /410.html  410
+/blog/page/*                                      /410.html  410
 
 # 2014-02-23 Disable old WordPress archive pages by date
 # /blog/2014/12/31/
