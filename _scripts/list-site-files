@@ -8,13 +8,15 @@ cd ..
 dirs_() { find _site -type d; }
 files() { find _site -type f; }
 
-binaries='png jpg gif bmp ico mp3 wav ogg zip tgz gz dmg rpm EXE pdf scpt'
+images='png jpg gif bmp ico'
+binaries="$images mp3 wav ogg zip tgz gz dmg rpm EXE pdf scpt"
 
 case "$1" in
     file) files;;
     dir ) dirs_;;
     all ) files; dirs_;;
-    text) files | grep -E -v "\.(${binaries// /|})$";;
+    text) files | grep -E -i -v "\.(${binaries// /|})$";;
+    img ) files | grep -E -i "\.(${images// /|})$";;
     ext ) files | grep -o '\.[^.]*$' | sort | uniq;;
     *   ) files | grep "\.$1$";;  # file extension
 esac | sort
