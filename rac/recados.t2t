@@ -3,7 +3,7 @@ RAC - Recados
 
 %!target: html
 %!encoding: UTF-8
-%!style: /include/scraps.css
+%!style: /rac/recados.css
 %!options: --css-sugar
 %!postproc: {(.*?)}	<\1>
 %!postproc: (.*t2tpowered.*)	<a href="http://txt2tags.org">\1</a>

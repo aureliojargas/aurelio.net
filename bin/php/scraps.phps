@@ -8,7 +8,7 @@
 # na pagina PHP do seu site ou artigo.
 #
 # Use CSS para formatar os recados.
-# Exemplo em http://aurelio.net/include/scraps.css
+# Exemplo em http://aurelio.net/rac/recados.css
 #
 # 2001-08-09 nascimento
 # 2002-06-21 adicionado stripslashes() para evitar os \' e \"
