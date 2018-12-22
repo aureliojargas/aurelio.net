@@ -106,6 +106,7 @@
 
 # moved :(
 /articles/img/*                                   /img/articles/:splat
+/bin/php/opine.phps                               /bin/php/scraps.phps
 /canivete/*                                       /shell/canivete/:splat
 /curso/4linux.html                                /curso/4linux/
 /curso/apostila-shell/*                           /shell/apostila/:splat
@@ -158,6 +159,7 @@
 /regex/guia/galeria/                              https://www.piazinho.com.br/galeria.html
 /regex/guia/recados.php                           /regex/guia/opiniao.html
 /sed/sed-HOWTO/sed-HOWTO.html                     /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-*.html                   /sed/sed-HOWTO/
 /shell/cadastro/                                  https://cadastro.aurelio.net/livro/cadastro/
 /shell/canivete-pdf.html                          /shell/canivete/pdf/
 /shell/canivete-shell.pdf                         /shell/canivete/pdf/canivete-shell.pdf
@@ -166,6 +168,7 @@
 /shell/ascii.gif                                  /shell/canivete/ascii.gif
 /shell/zzcores.gif                                /shell/canivete/zzcores.gif
 /shell/miniman.html                               /shell/miniman/
+/sobre.html                                       /sobre/
 /vi/*                                             /vim/:splat
 /viagem/farol-imbituba-2001/*                     /viagem/farol-imbituba/:splat
 /viagem/marumbi-2001/*                            /viagem/marumbi/:splat
@@ -191,6 +194,9 @@
 # Moved folder (2017-05-29)
 /doc/misc/*                                       /misc/:splat
 
+# PHP code replaced by static files (2017-05-25)
+/surf/search.php                                  /surf/surfistas/
+
 # PHP code moved to a subdomain (2017-05-26)
 /livro/cadastro/                                  https://cadastro.aurelio.net
 
@@ -211,6 +217,7 @@
 /shell/apostila/amostra/*                         /410.html  410
 /projects/emomemory/cancelled.html                /410.html  410
 /projects/emomemory/registered.html               /410.html  410
+/sitemap.xml                                      /410.html  410
 
 # 2012-08-31 old scrap book
 /doc/recados-antigos/*                            /410.html  410
@@ -247,6 +254,9 @@
 /blog/2012/                                       /410.html  410
 /blog/2013/                                       /410.html  410
 /blog/2014/                                       /410.html  410
+
+# 2017-05-23
+/vim/pulando-antigo.html                          /410.html  410
 
 # 2017-11-02
 /comments/feed/                                   /410.html  410

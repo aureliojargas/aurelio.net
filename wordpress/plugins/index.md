@@ -23,7 +23,7 @@ Esta é minha lista dos plugins indispensáveis para o WordPress. Todos eles est
 
 ## [Google XML Sitemaps](http://wordpress.org/extend/plugins/google-sitemap-generator/)
 
-**Mapa do site para ferramentas de busca.** Esse é o tipo do plugin que você nem precisa saber como funciona, basta instalar e esquecer dele. Ele gera o arquivo [sitemap.xml](/sitemap.xml) no raiz de seu site, que é atualizado automaticamente cada vez que você modifica algum post ou página. As ferramentas de busca, como o Google, usam este arquivo para saber o que tem no seu site e poder indexá-lo. O plugin tem diversas opções, você pode escolher exatamente o que vai e o que não vai no sitemap.
+**Mapa do site para ferramentas de busca.** Esse é o tipo do plugin que você nem precisa saber como funciona, basta instalar e esquecer dele. Ele gera o arquivo `sitemap.xml` no raiz de seu site, que é atualizado automaticamente cada vez que você modifica algum post ou página. As ferramentas de busca, como o Google, usam este arquivo para saber o que tem no seu site e poder indexá-lo. O plugin tem diversas opções, você pode escolher exatamente o que vai e o que não vai no sitemap.
 
 
 ## [Jetpack por WordPress.com](http://wordpress.org/extend/plugins/jetpack/)
