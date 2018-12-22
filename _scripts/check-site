@@ -161,7 +161,19 @@ check_link_to_full_url() {
 check_root_relative_target() {
     local urls=$(_scripts/list-site-urls uniq)
     local files=$(echo "$all_files" | sed 's/^_site//')
-    comm -23 <(echo "$urls") <(echo "$files")
+    comm -23 <(echo "$urls") <(echo "$files") |
+
+        # remove false positives
+        grep -v '^/coisinha/caraoucoroa/. + moeda' |  # js
+        grep -v '^/coisinha/subwaytor/carregando\.gif$' |  # comment
+        grep -v '^/bin/sed/arkanoid$' |  # redirect
+        grep -v '^/bin/sed/rss\.sed$' |  # redirect
+        grep -v '^/dumbs/imagens/shows/2001' |  # comment
+        grep -v '^/dumbs/tranqueiras\.html$' |  # comment
+        grep -v '^/feed$' |  # redirect
+        grep -v '^/foto/bizarro\.html$' |  # comment
+        grep -v '^/recados\.php$' |  # historic
+        cat -
 }
 
 # No http:// for resources (mixed content) - #18
