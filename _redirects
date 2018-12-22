@@ -159,7 +159,15 @@
 /regex/guia/galeria/                              https://www.piazinho.com.br/galeria.html
 /regex/guia/recados.php                           /regex/guia/opiniao.html
 /sed/sed-HOWTO/sed-HOWTO.html                     /sed/sed-HOWTO/
-/sed/sed-HOWTO/sed-HOWTO-*.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-1.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-2.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-3.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-4.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-5.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-6.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-7.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-8.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-9.html                   /sed/sed-HOWTO/
 /shell/cadastro/                                  https://cadastro.aurelio.net/livro/cadastro/
 /shell/canivete-pdf.html                          /shell/canivete/pdf/
 /shell/canivete-shell.pdf                         /shell/canivete/pdf/canivete-shell.pdf
