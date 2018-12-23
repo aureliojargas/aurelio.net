@@ -1,0 +1,62 @@
+#!/bin/bash
+# Generate all missing index.html to list folder contents
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+# Note that paths have no leading nor trailing slashes
+ignore='
+^blog/
+^surf/2006-..-../(foto|html|mini)$
+'
+
+template() {
+    (cat | sed 's/^        //') <<EOF
+        ---
+        layout: ls
+        title: Listing of aurelio.net/$dir
+        title_suffix: ""
+        cwd: /$dir
+        folders:
+        $folders
+        files:
+        $files
+        ---
+EOF
+}
+
+to_yaml() {
+    sed 's/.*/"&"/' |  # quote contents to avoid 04 turning to 4
+    sed 's/^/  - /'    # make a proper YAML list
+}
+
+echo "First remove all the previously generated files..."
+git grep -l '^layout: ls$' | xargs rm
+
+_scripts/list-site-files dir |
+    sed 's|^_site/||' |
+    grep -E -v -f <(echo "$ignore" | grep .) |
+    while read dir
+    do
+        test -f $dir/index.html && continue
+        test -f $dir/index.md && continue
+        test -f $dir/index.t2t && continue
+
+        folders=$(
+            find _site/$dir -type d -mindepth 1 -maxdepth 1 |
+                sed 's|.*/||' |  # basename
+                sort |
+                to_yaml
+        )
+        files=$(
+            find _site/$dir -type f -maxdepth 1 |
+                sed 's|.*/||' |  # basename
+                grep -v -F -x 'index.html' |  # skip generated
+                sort |
+                to_yaml
+        )
+
+        template > $dir/index.html
+        echo "Generated $dir/index.html"
+    done

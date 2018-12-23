@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><!-- A nice layout to list folders and files -->
+  <head>
+    {% include head-base.html %}
+    <style>
+      /* Long path: /viagem/atacama/mapas/fotos/ */
+      /* Long file: /baterna/mp3/ */
+      /* Folders and files: /img/viagem/ */
+      p {
+        font-family: monospace;
+        font-size: 125%;
+        font-weight: bold;
+        margin-bottom: 1.5em;
+      }
+      p a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Listing of <a href="/">aurelio.net</a>{{ page.cwd | replace: "/", " / "}} /</h1>
+
+    <p>📁 <a href="..">..</a></p>
+
+    {%- for folder in page.folders %}
+    <p>📁 <a href="{{ page.cwd }}/{{ folder }}/">{{ folder }}/</a></p>
+    {%- endfor %}
+
+    {%- for file in page.files %}
+    <p><a href="{{ page.cwd }}/{{ file }}">{{ file }}</a></p>
+    {%- endfor %}
+  </body>
+</html>
