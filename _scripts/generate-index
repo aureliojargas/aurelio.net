@@ -1,5 +1,12 @@
 #!/bin/bash
 # Generate all missing index.html to list folder contents
+#
+# Necessary since Netlify doesn't list files like Apache's mod_autoindex.
+# You get a 404 when accessing a folder with no index.html file.
+#
+# This script finds all folders with no index.html file and then create one.
+# The created files have no contents, only metadata in the Front Matter.
+# It's the layout file that composes the full HTML.
 
 # Make sure we are at the repository root
 cd $(dirname "$0")
