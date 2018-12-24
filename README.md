@@ -100,6 +100,8 @@ sudo apt install ruby ruby-dev python tidy file
 # Building the site
 bundle exec jekyll build
 
+# or use the _scripts/build script
+
 # Viewing at local Linux or macOS
 bundle exec jekyll serve --watch --limit_posts 10 --incremental
 

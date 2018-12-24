@@ -1,0 +1,9 @@
+#!/bin/bash
+# Generate all HTML files for the site in _site
+
+# Make sure we are at the repository root
+cd $(dirname "$0")
+cd ..
+
+rm -rf _site  # avoid cache gotchas
+bundle exec jekyll build
