@@ -157,6 +157,26 @@ check_link_to_full_url() {
         cgrep -i -E '(src|href)="https://aurelio.net'
 }
 
+# Avoid the use of full https:// URLs, prefer root relative - #46
+check_full_urls() {
+    grep -i -F 'https://aurelio.net' $text_files |
+        # ignore me
+        grep -v '<meta property="og:url"' |
+        grep -v '<link rel="canonical"' |
+        grep -v '<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php' |
+        grep -v '<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=' |
+        grep -v '<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle' |
+        grep -v '<a target="_blank" rel="nofollow" href="https://plus.google.com/share' |
+        grep -v '^_site/feed\.xml:' |
+        grep -v '^_site/assets/[^.]*\.css:.*theme ' |
+        grep -v '^_site/aurelio/index.html:' |
+        grep -v '^_site/bin/index.html:<li>Site:' |
+        grep -v '^_site/blog-arquivo.html:.*https://aurelio.net/valeta/$' |
+        grep -v '^_site/blog/2005/09/15/noticias-de-2005-e-mais-antigas/index.html:' |
+        grep -v '^_site/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/index.html:' |
+        cgrep -i 'https://aurelio.net'  # highlight
+}
+
 # The root-relative URL point to an existent file or folder?
 check_root_relative_target() {
     local urls=$(_scripts/list-site-urls uniq)
@@ -222,6 +242,7 @@ active_checks="
     check_relative_urls
     check_http_aurelionet
     check_link_to_full_url
+    OFF_check_full_urls
     check_root_relative_target
     check_link_to_index_html
     check_link_to_gone
