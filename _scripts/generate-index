@@ -32,16 +32,17 @@ to_yaml() {
 }
 
 echo "First remove all the previously generated files..."
-git grep -l '^layout: ls$' | xargs rm
+git grep -l '^layout: ls$' | xargs -r rm
+
+echo "Now rebuild the full site..."
+_scripts/build > /dev/null
 
 _scripts/list-site-files dir |
     sed 's|^_site/||' |
     grep -E -v -f <(echo "$ignore" | grep .) |
     while read dir
     do
-        test -f $dir/index.html && continue
-        test -f $dir/index.md && continue
-        test -f $dir/index.t2t && continue
+        test -f _site/$dir/index.html && continue
 
         folders=$(
             find _site/$dir -type d -mindepth 1 -maxdepth 1 |
