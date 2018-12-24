@@ -5,7 +5,7 @@
 cd $(dirname "$0")
 cd ..
 
-dirs_() { find _site -type d; }
+dirs_() { find _site -type d -mindepth 1; }
 files() { find _site -type f; }
 
 images='png jpg gif bmp ico'
