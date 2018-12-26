@@ -21,6 +21,7 @@ ignore='
 template() {
     (cat | sed 's/^        //') <<EOF
         ---
+        # DO NOT EDIT, file created by _scripts/generate-index
         layout: ls
         title: Listing of aurelio.net/$dir
         title_suffix: ""
