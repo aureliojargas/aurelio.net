@@ -1,129 +1,82 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<STYLE TYPE="text/css">
-body { margin:3em               ;} 
-a    { text-decoration:none     ;} 
-pre  { background-color:#ffffcc ;} 
-</STYLE>
-<META NAME="generator" CONTENT="http://txt2tags.sf.net">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>RAC</TITLE>
-</HEAD><BODY BGCOLOR="white" TEXT="black">
-<P ALIGN="center"><CENTER><H1>RAC</H1>
-<FONT SIZE="4">
-Abril, 2005
-</FONT></CENTER>
+---
+title: Página de manual (manpage)
+---
 
-<H1>NOME</H1>
-<P>
-rac - Rows And Columns, ferramenta para extração de textos
-</P>
-<H1>SINOPSE</H1>
-<P>
-<B>rac</B> [<I>OPÇÕES</I>] <I>ENDEREÇO</I> [<I>ARQUIVO</I>]
-</P>
-<H1>DESCRIÇÃO</H1>
-<P>
-O <B>rac</B> é uma ferramenta GPL para a extração de textos. Ele lê um
-arquivo (ou STDIN) e retorna o texto que casa com o endereço
-especificado. Este endereço é composto por linhas, colunas ou uma
-combinação de ambos. Diferente de outras ferramentas UNIX, o <B>rac</B> é
-orientado por <I>caracteres</I>, e não <I>linhas</I>.
-</P>
-<P>
-Intervalos, contador reverso, saltos (step) e repetição são permitidos.
-O endereço '1; 3; 5:7; 1; 6:4; -1' aplicado em um arquivo de 10 linhas
-retorna as seguintes linhas: 1 3 5 6 7 1 6 5 4 10 (a ordem é preservada).
-</P>
-<P>
-Além de especificação direta pelo número da linha, também é possível
-endereçar linhas por seu conteúdo, procurando por textos (strings) ou
-por expressões regulares (regex). Para mostrar as linhas que contenham
-a palavra "root" basta fazer "=root=". Para mostras as linhas que se
-iniciam por números basta fazer "/^[0-9]/".
-</P>
-<P>
-É útil para extrair quaisquer linhas e/ou colunas de um texto, ou
-intervalos complicados como: da linha 10 coluna 13 até a linha 15
-coluna 4. Visite a página do programa em:
-<I>https://aurelio.net/rac</I>.
-</P>
-<H1>OPÇÕES</H1>
-<DL>
-<DT> <B>-b</B>, <B>--bre</B></DT><DD>
-Usa a notação antiga para expressões regulares (BRE). Por padrão o RAC
-usa a notação moderna (ERE) onde nenhum metacaractere precisa ser
-escapado para ser especial. A notação antiga é a mesma do grep, AWK e
-SED, onde alguns metacaracteres são escapados: <CODE>\+ \? \{\} \(\) \|</CODE>.
-<P></P>
-<DT> <B>-h</B>, <B>--help</B></DT><DD>
-Mostra a tela de ajuda do programa.
-<P></P>
-<DT> <B>-i</B>, <B>--ignore-case</B></DT><DD>
-Trata maiúsculas e minúsculas como iguais. Com esta opção não importa
-se o texto pesquisado está escrito com letras maiúsculas ou
-minúsculas, é indiferente. Assim, os endereços =Rock= e /rock/
-mostrarão uma linha que possua o texto ROCK.
-<P></P>
-<DT> <B>-V</B>, <B>--version</B></DT><DD>
-Mostra a versão do programa.
-</DL>
+<center>
+  <h2>RAC</h2><font size="4">Abril, 2005</font>
+</center>
 
-<P>
-Se omitido o nome do arquivo ou usado '-', o texto será lido da
-entrada padrão (STDIN).
-</P>
-<H1>EXEMPLOS</H1>
-<DL>
-<DT><B>Mostra a terceira linha</B></DT><DD>
-  $ rac '3' arquivo.txt
-<P></P>
-<DT><B>Mostra da terceira linha até a quinta linha, incluindo</B></DT><DD>
-  $ rac '3:5' arquivo.txt
-<P></P>
-<DT><B>Mostra a última linha (tail -1)</B></DT><DD>
-  $ rac '-1' arquivo.txt
-<P></P>
-<DT><B>Mostra as últimas 10 linhas (tail)</B></DT><DD>
-  $ rac '-10:-1' arquivo.txt
-<P></P>
-<DT><B>Mostra as primeiras 10 colunas de cada linha (cut -c1-10)</B></DT><DD>
-  $ rac '[1:10]' arquivo.txt
-<P></P>
-<DT><B>Mostra o último caractere de cada linha</B></DT><DD>
-  $ rac '[-1]' arquivo.txt
-<P></P>
-<DT><B>Inverte as linhas do arquivo (tac)</B></DT><DD>
-  $ rac '-1:1' arquivo.txt
-<P></P>
-<DT><B>Inverte as colunas das linhas (rev)</B></DT><DD>
-  $ rac '[-1:1]' arquivo.txt
-<P></P>
-<DT><B>Linhas que contêm a palavra root (grep)</B></DT><DD>
-  $ rac '=root=' arquivo.txt
-<P></P>
-<DT><B>A segunda linha após a que contém root</B></DT><DD>
-  $ rac '=root=+2' arquivo.txt
-<P></P>
-<DT><B>A segunda linha anterior a que contém root</B></DT><DD>
-  $ rac '=root=-2' arquivo.txt
-<P></P>
-<DT><B>A terceira linha que contém root</B></DT><DD>
-  $ rac '=root=*3' arquivo.txt
-<P></P>
-<DT><B>A penúltima linha que contém root</B></DT><DD>
-  $ rac '=root=*-2' arquivo.txt
-<P></P>
-<DT><B>Partindo da 1a linha com root, volte de 2 em 2</B></DT><DD>
-  $ rac '=root=*1~-2' arquivo.txt
-<P></P>
-<DT><B>Partindo da 1a linha que se inicia com root, volte de 2 em 2</B></DT><DD>
-  $ rac '/^root/*1~-2' arquivo.txt
-</DL>
+<h2>NOME</h2>
 
-<H1>SINTAXE</H1>
-<PRE>
+<p>rac - Rows And Columns, ferramenta para extração de textos</p>
+
+<h2>SINOPSE</h2>
+
+<p><b>rac</b> [<i>OPÇÕES</i>] <i>ENDEREÇO</i> [<i>ARQUIVO</i>]</p>
+
+<h2>DESCRIÇÃO</h2>
+
+<p>O <b>rac</b> é uma ferramenta GPL para a extração de textos. Ele lê um arquivo (ou STDIN) e retorna o texto que casa com o endereço especificado. Este endereço é composto por linhas, colunas ou uma combinação de ambos. Diferente de outras ferramentas UNIX, o <b>rac</b> é orientado por <i>caracteres</i>, e não <i>linhas</i>.</p>
+
+<p>Intervalos, contador reverso, saltos (step) e repetição são permitidos. O endereço '1; 3; 5:7; 1; 6:4; -1' aplicado em um arquivo de 10 linhas retorna as seguintes linhas: 1 3 5 6 7 1 6 5 4 10 (a ordem é preservada).</p>
+
+<p>Além de especificação direta pelo número da linha, também é possível endereçar linhas por seu conteúdo, procurando por textos (strings) ou por expressões regulares (regex). Para mostrar as linhas que contenham a palavra "root" basta fazer "=root=". Para mostras as linhas que se iniciam por números basta fazer "/^[0-9]/".</p>
+
+<p>É útil para extrair quaisquer linhas e/ou colunas de um texto, ou intervalos complicados como: da linha 10 coluna 13 até a linha 15 coluna 4. Visite a página do programa em: <i>https://aurelio.net/rac</i>.</p>
+
+<h2>OPÇÕES</h2>
+
+<dl>
+  <dt><b>-b</b>, <b>--bre</b></dt>
+  <dd>Usa a notação antiga para expressões regulares (BRE). Por padrão o RAC usa a notação moderna (ERE) onde nenhum metacaractere precisa ser escapado para ser especial. A notação antiga é a mesma do grep, AWK e SED, onde alguns metacaracteres são escapados: <code>\+ \? \{\} \(\) \|</code>.</dd>
+  <dt><b>-h</b>, <b>--help</b></dt>
+  <dd>Mostra a tela de ajuda do programa.</dd>
+  <dt><b>-i</b>, <b>--ignore-case</b></dt>
+  <dd>Trata maiúsculas e minúsculas como iguais. Com esta opção não importa se o texto pesquisado está escrito com letras maiúsculas ou minúsculas, é indiferente. Assim, os endereços =Rock= e /rock/ mostrarão uma linha que possua o texto ROCK.</dd>
+  <dt><b>-V</b>, <b>--version</b></dt>
+  <dd>Mostra a versão do programa.</dd>
+</dl>
+
+<p>Se omitido o nome do arquivo ou usado '-', o texto será lido da entrada padrão (STDIN).</p>
+
+<h2>EXEMPLOS</h2>
+
+<dl>
+  <dt><b>Mostra a terceira linha</b></dt>
+  <dd>$ rac '3' arquivo.txt</dd>
+  <dt><b>Mostra da terceira linha até a quinta linha, incluindo</b></dt>
+  <dd>$ rac '3:5' arquivo.txt</dd>
+  <dt><b>Mostra a última linha (tail -1)</b></dt>
+  <dd>$ rac '-1' arquivo.txt</dd>
+  <dt><b>Mostra as últimas 10 linhas (tail)</b></dt>
+  <dd>$ rac '-10:-1' arquivo.txt</dd>
+  <dt><b>Mostra as primeiras 10 colunas de cada linha (cut -c1-10)</b></dt>
+  <dd>$ rac '[1:10]' arquivo.txt</dd>
+  <dt><b>Mostra o último caractere de cada linha</b></dt>
+  <dd>$ rac '[-1]' arquivo.txt</dd>
+  <dt><b>Inverte as linhas do arquivo (tac)</b></dt>
+  <dd>$ rac '-1:1' arquivo.txt</dd>
+  <dt><b>Inverte as colunas das linhas (rev)</b></dt>
+  <dd>$ rac '[-1:1]' arquivo.txt</dd>
+  <dt><b>Linhas que contêm a palavra root (grep)</b></dt>
+  <dd>$ rac '=root=' arquivo.txt</dd>
+  <dt><b>A segunda linha após a que contém root</b></dt>
+  <dd>$ rac '=root=+2' arquivo.txt</dd>
+  <dt><b>A segunda linha anterior a que contém root</b></dt>
+  <dd>$ rac '=root=-2' arquivo.txt</dd>
+  <dt><b>A terceira linha que contém root</b></dt>
+  <dd>$ rac '=root=*3' arquivo.txt</dd>
+  <dt><b>A penúltima linha que contém root</b></dt>
+  <dd>$ rac '=root=*-2' arquivo.txt</dd>
+  <dt><b>Partindo da 1a linha com root, volte de 2 em 2</b></dt>
+  <dd>$ rac '=root=*1~-2' arquivo.txt</dd>
+  <dt><b>Partindo da 1a linha que se inicia com root, volte de 2 em 2</b></dt>
+  <dd>$ rac '/^root/*1~-2' arquivo.txt</dd>
+</dl>
+
+<h2>SINTAXE</h2>
+
+<pre>
       N          A linha número N
      [N]         A coluna número N
   
@@ -151,26 +104,16 @@ entrada padrão (STDIN).
   
       ;          Separador de endereços
   
-</PRE>
-<P></P>
-<P>
-Se o número for negativo, começa contando da última linha/coluna.
-</P>
-<H1>AUTORES</H1>
-<P>
-Aurélio Marinho Jargas &lt;&lt;verde (a) aurelio net&gt;&gt; e
-Thobias Salazar Trevisan &lt;&lt;thobias (a) thobias org&gt;&gt;
-</P>
-<H1>COPYRIGHT</H1>
-<P>
-Copyright © 2003, 2004, 2005 Aurélio Marinho Jargas, Thobias Salazar Trevisan
-</P>
-<P>
-Este é um software livre. Veja o fonte para as condições de cópia. NÃO
-há garantia nem mesmo de COMERCIALIZAÇÃO ou de APLICABILIDADE PARA UM
-USO ESPECÍFICO.
-</P>
+</pre>
 
-<!-- html code generated by txt2tags 2.2 (http://txt2tags.sf.net) -->
-<!-- cmdline: txt2tags -t html ../../doc/manpage-pt_BR.t2t -->
-</BODY></HTML>
+<p>Se o número for negativo, começa contando da última linha/coluna.</p>
+
+<h2>AUTORES</h2>
+
+<p>Aurélio Marinho Jargas &lt;verde (a) aurelio net&gt; e Thobias Salazar Trevisan &lt;thobias (a) thobias org&gt;</p>
+
+<h2>COPYRIGHT</h2>
+
+<p>Copyright © 2003, 2004, 2005 Aurélio Marinho Jargas, Thobias Salazar Trevisan</p>
+
+<p>Este é um software livre. Veja o fonte para as condições de cópia. NÃO há garantia nem mesmo de COMERCIALIZAÇÃO ou de APLICABILIDADE PARA UM USO ESPECÍFICO.</p>

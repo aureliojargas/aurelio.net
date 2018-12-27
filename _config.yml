@@ -101,6 +101,12 @@ defaults:
       layout: projects
   -
     scope:
+      path: "rac"
+    values:
+      layout: rac
+      title_prefix: "RAC - "
+  -
+    scope:
       path: "regex"
     values:
       css_extra: /regex/regex.css

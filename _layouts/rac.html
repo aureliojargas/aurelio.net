@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head-base.html %}
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    {% if page.css %}
+    <link rel="stylesheet" type="text/css" href="{{ page.css }}">
+    {% endif %}
+    {% include analytics.html %}
+  </head>
+
+  <body>
+    <h1>RAC - {{ page.title }}</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  {% if page.url contains '/info/' %}
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  {% endif %}
+
+  {% if page.url contains '/download/' %}
+    <p class="submenu">
+      <a href="/rac/download/">Versão atual</a> |
+      <a href="/rac/download/anteriores.html">Versões anteriores</a> |
+      <a href="/rac/download/changelog.html">Changelog</a> |
+      <a href="/rac/download/futuro.html">Futuro</a>
+    </p>
+  {% endif %}
+
+    {{ content }}
+  </body>
+</html>

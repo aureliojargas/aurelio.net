@@ -1,117 +1,41 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.org">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="site.css">
-<LINK REL="stylesheet" TYPE="text/css" HREF="/rac/site.css">
-<TITLE>RAC - Informações e Documentação</TITLE>
-</HEAD>
-<BODY>
+---
+title: Informações
+---
 
-<DIV CLASS="header" ID="header">
-<H1>RAC - Informações e Documentação</H1>
-</DIV>
+<h3>Sobre o RAC</h3>
 
-<DIV CLASS="body" ID="body">
+<p>O RAC é um programa escrito em C, criado pelos brasileiros Aurélio Marinho Jargas e Thobias Salazar Trevisan que teve sua primeira versão lançada em dezembro de 2003.</p>
 
-<HR NOSHADE SIZE="1">
+<p>O nome RAC (lê-se "<em>rák</em>") é uma sigla para o texto em inglês "Rows And Columns", que significa "Linhas e Colunas". O nome é um descritivo da função do programa: extrair linhas e colunas de um texto.</p>
 
-<P>
-<A HREF="/rac/">Início</A> | <I>Info</I> | <A HREF="/rac/download/">Download</A> | <A HREF="/rac/comunidade.html">Comunidade</A> | <A HREF="/rac/recados.html">Recados</A>
-</P>
+<h3>A Motivação</h3>
 
-<HR NOSHADE SIZE="1">
+<p>O RAC foi criado para suprir uma necessidade. Não existe no mundo Unix/Linux uma ferramenta dedicada à extração de texto de maneira fácil e flexível.</p>
 
-	<BLOCKQUOTE>
-	<I>Sobre</I> | <A HREF="/rac/info/screenshots.html">Screenshots</A> | <A HREF="/rac/info/iniciante.html">Iniciantes</A> | <A HREF="/rac/info/docs.html">Documentação</A> | <A HREF="/rac/info/ficha.html">Ficha Técnica</A>
-	</BLOCKQUOTE>
+<p>O que existem são quatro ferramentas diferentes (sed, grep, awk, cut), cada uma específica para um determinado tipo de extração. Além de precisar dominar a funcionalidade e sintaxe de cada uma dessas ferramentas, é comum o usuário precisar combinar duas ou mais delas para conseguir realizar uma tarefa simples.</p>
 
-<HR NOSHADE SIZE="1">
+<p>O RAC nasceu para acabar com o caos e a dificuldade na extração de textos. Tendo uma <strong>sintaxe simples e poderosa</strong>, ele torna a tarefa fácil.</p>
 
-<H3>Sobre o RAC</H3>
+<p>Por exemplo, como extrair o trecho "desde a coluna 15 da quinta linha até a penúltima coluna da antepenúltima linha". Usando as ferrramentas existentes é um desafio e tanto, mesmo para gurus. Usando o RAC é trivial: <code>rac '5[15]:-3[-2]' arquivo.txt</code>.</p>
 
-<P>
-O RAC é um programa escrito em C, criado pelos brasileiros Aurélio
-Marinho Jargas e Thobias Salazar Trevisan que teve sua primeira versão
-lançada em dezembro de 2003.
-</P>
-<P>
-O nome RAC (lê-se "<I>rák</I>") é uma sigla para o texto em inglês "Rows
-And Columns", que significa "Linhas e Colunas". O nome é um descritivo
-da função do programa: extrair linhas e colunas de um texto.
-</P>
+<p>Seguindo a filosofia Unix do "<em>faça apenas uma coisa, e faça bem</em>", o RAC se limita a uma única tarefa: extrair textos. Ele não edita, não acrescenta, simplesmente extrai.</p>
 
-<H3>A Motivação</H3>
+<h3>As Metas</h3>
 
-<P>
-O RAC foi criado para suprir uma necessidade. Não existe no mundo
-Unix/Linux uma ferramenta dedicada à extração de texto de maneira
-fácil e flexível.
-</P>
-<P>
-O que existem são quatro ferramentas diferentes (sed, grep, awk, cut),
-cada uma específica para um determinado tipo de extração. Além de
-precisar dominar a funcionalidade e sintaxe de cada uma dessas
-ferramentas, é comum o usuário precisar combinar duas ou mais delas
-para conseguir realizar uma tarefa simples.
-</P>
-<P>
-O RAC nasceu para acabar com o caos e a dificuldade na extração de
-textos. Tendo uma <B>sintaxe simples e poderosa</B>, ele torna a tarefa
-fácil.
-</P>
-<P>
-Por exemplo, como extrair o trecho "desde a coluna 15 da quinta linha
-até a penúltima coluna da antepenúltima linha". Usando as ferrramentas
-existentes é um desafio e tanto, mesmo para gurus. Usando o RAC é
-trivial: <CODE>rac '5[15]:-3[-2]' arquivo.txt</CODE>.
-</P>
-<P>
-Seguindo a filosofia Unix do "<I>faça apenas uma coisa, e faça bem</I>",
-o RAC se limita a uma única tarefa: extrair textos. Ele não edita, não
-acrescenta, simplesmente extrai.
-</P>
+<p>Meta única: Dominar o mundo! :)</p>
 
-<H3>As Metas</H3>
+<ul>
+  <li>O <strong>objetivo</strong> principal é que o RAC se consolide como uma ferramenta básica de sistemas Unix/Linux, assim como são o cut, sed e grep.</li>
+  <li>O <strong>meio</strong> de obter essa consolidação é incluir o RAC em distribuições de Unix/Linux.</li>
+</ul>
 
-<P>
-Meta única: Dominar o mundo! :)
-</P>
+<p>Os cinco passos planejados para atingir o objetivo são:</p>
 
-<UL>
-<LI>O <B>objetivo</B> principal é que o RAC se consolide como uma
-  ferramenta básica de sistemas Unix/Linux, assim como são o cut, sed
-  e grep.
-<P></P>
-<LI>O <B>meio</B> de obter essa consolidação é incluir o RAC em
-  distribuições de Unix/Linux.
-</UL>
-
-<P>
-Os cinco passos planejados para atingir o objetivo são:
-</P>
-
-<OL>
-<LI>Lançar o programa com toda a sua documentação em português, no
-  Brasil.
-<P></P>
-<LI>Colher opiniões e contribuições de usuários, melhorando o programa
-  até ficar completo e maduro, com suporte a maioria das
-  funcionalidades previstas na
-  <A HREF="spec.html">especificação formal do programa</A> (<I>em inglês</I>).
-<P></P>
-<LI>Traduzir a documentação para o inglês e lançar o programa para o
-  mundo.
-<P></P>
-<LI>Aos poucos as distribuições começarão a incluí-lo e com o tempo a
-  consolidação acontecerá naturalmente, pois acreditamos que a idéia é
-  boa e que a necessidade existe.
-<P></P>
-<LI>Dominação mundial completa!
-</OL>
-
-</DIV>
-<!-- html code generated by txt2tags 2.6.1102 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags rac/info/index.t2t -->
-</BODY></HTML>
+<ol>
+  <li>Lançar o programa com toda a sua documentação em português, no Brasil.</li>
+  <li>Colher opiniões e contribuições de usuários, melhorando o programa até ficar completo e maduro, com suporte a maioria das funcionalidades previstas na <a href="spec.html">especificação formal do programa</a> (<em>em inglês</em>).
+  </li>
+  <li>Traduzir a documentação para o inglês e lançar o programa para o mundo.</li>
+  <li>Aos poucos as distribuições começarão a incluí-lo e com o tempo a consolidação acontecerá naturalmente, pois acreditamos que a idéia é boa e que a necessidade existe.</li>
+  <li>Dominação mundial completa!</li>
+</ol>
