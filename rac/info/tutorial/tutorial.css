@@ -1,24 +1,36 @@
 body {
-  margin-top:2em;
-  margin-left:15%;
-  margin-right:15%;
-  background:#894;
-  font-family: Verdana,Arial,Helvetica,sans-serif;
-  font-size: 130%;
+  margin: 10px;
+  background: #894;
+  font-family: sans-serif;
   text-align: justify;
 }
 h1 {
   color: white;
-}
-i {
-  font-size: 120%;
+  font-size: 100%;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 120%;
   color: yellow;
 }
-table {
-  width: 100%;
+.footer {
+  margin-top: 1em;
+  border-top: 1px solid white;
+  padding-top: 1em;
+}
+.prev {
+  float: left;
+}
+.next {
+  float: right;
+  text-align: right;
+}
+.home {
+  display: block;
+  clear: both;
+  text-align: center;
+  padding: 2em 0;
 }

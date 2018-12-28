@@ -107,6 +107,15 @@ defaults:
       title_prefix: "RAC - "
   -
     scope:
+      path: "rac/info/tutorial"
+    values:
+      layout: minimal
+      css: /rac/info/tutorial/tutorial.css
+      title_prefix: ""
+      title_as_h1: true
+      after_content: rac-tutorial-nav.html
+  -
+    scope:
       path: "regex"
     values:
       css_extra: /regex/regex.css
