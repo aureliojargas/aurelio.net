@@ -43,17 +43,8 @@ check_accidental_liquid_markup() {
         grep -v '^vim/vimrc-ivan\.txt' |
 
         # txt2tags files
-        grep -v '^projects/config.t2t' |
-        grep -v '^projects/emomemory/index.t2t' |
         grep -v '^shell/dialog/index' |
-        grep -v '^[^:]*\.t2t:.*{{br}}' |
         cat -
-}
-
-check_missing_article_date() {
-    # This check runs at the repo root
-    # This is the default date inserted by the txt2tags2html script
-    git grep -I '^date: 1999-12-31'
 }
 
 # Do not link URLs that are gone (410)
@@ -195,9 +186,7 @@ check_unquoted_attributes() {
         xargs grep -i -E '<[a-z]+ ([^>]* )?[a-z]+=[^\"]' |
 
         # Remove false positives
-        grep -F -i -v 'content="text/html; charset=utf-8"' |
-        # txt2tags postproc filter to fix unquoted
-        grep -F -v '.t2t:%!postproc'
+        grep -F -i -v 'content="text/html; charset=utf-8"'
 }
 
 check_windows_linebreak() {
@@ -215,7 +204,6 @@ check_windows_linebreak() {
 
 active_checks="
     check_accidental_liquid_markup
-    check_missing_article_date
     check_windows_linebreak
     check_unquoted_attributes
     check_mixed_content

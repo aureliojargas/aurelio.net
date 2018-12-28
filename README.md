@@ -2,9 +2,9 @@
 
 The full sources for my personal website https://aurelio.net, online since 1999, now with 4500+ files.
 
-At the beginning it was only HTML files, then I started to use my own software [txt2tags](http://txt2tags.org) to generate the pages, then I moved the blog part to WordPress and now it is back as a static site, powered by [Jekyll](http://jekyllrb.com/).
+At the beginning it was only HTML files, then I started to use my own software [txt2tags](http://txt2tags.org) to generate the pages, then I moved the blog part to WordPress and now it is back as a static site, powered by [Jekyll](http://jekyllrb.com/) and Markdown.
 
-All these changes were slow and partial, I never moved the full site to the new tool. So now the tree is a complete mess with Markdown, HTML and txt2tags files living together. My goal ([issue #1](https://github.com/aureliojargas/aurelio.net/issues/1)) is to make it simpler.
+All these changes were slow and partial, I never moved the full site to the new tool. So at the end the tree became a complete mess with Markdown, HTML and txt2tags files living together. My goal ([issue #1](https://github.com/aureliojargas/aurelio.net/issues/1)) is to make it simpler.
 
 It took me more than a decade to finally put my local `/a/www` folder into version control. This repo initial commit is aa6ea5939daac0c46b90986314e5278388e0c778 from Nov 2013.
 
@@ -35,8 +35,6 @@ source ~/.bashrc
 gem install bundler
 bundle install
 
-# Make sure you have Python 2 (for txt2tags)
-
 # Install http://www.html-tidy.org
 
 # Setup easier access to the repo scripts
@@ -49,9 +47,6 @@ Extra setup for **Codeanywhere**:
 # Fix locale
 export LANG="C.UTF-8"
 
-# Python2 for txt2tags
-sudo apt-get install python
-
 # Install rbenv and a recent ruby 2.x
 # https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-8
 ```
@@ -61,10 +56,6 @@ Extra setup for **Android Termux**:
 ```bash
 # Install the required packages
 pkg install ruby ruby-dev clang make libffi-dev file
-
-# Python2 for txt2tags
-pkg install python2
-sed '1 s/python/python2/' -i _scripts/txt2tags-2.6.1102
 
 # Fix scripts' shebang
 termux-fix-shebang _scripts/*
@@ -115,22 +106,9 @@ bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0
 bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0 --port 8080
 ```
 
-## Building txt2tags files
-
-All the `.t2t` files on this repository are not processed by Jekyll. They have no front matter and must be converted by hand using the txt2tags script (Python 2) stored in the `_scripts` folder. The resultant HTML files must also be added to the repository.
-
-My long term goal is to convert all those files to Markdown or HTML and remove the txt2tags dependency. See [issue #11]( https://github.com/aureliojargas/aurelio.net/issues/11).
-
 ## Images with captions
 
 The only special markup I use in my articles is the centered image with caption at bottom.
-
-In txt2tags files, use borderless centered tables:
-
-```
-  | [image.jpg]
-  | Image caption
-```
 
 In Markdown files, use the image tag solo in a paragraph of its own, and provide the caption. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/master/_plugins/imgcaption.rb) will generate the HTML markup at build:
 
