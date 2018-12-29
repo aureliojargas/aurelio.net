@@ -125,7 +125,7 @@ quarto com o iBook, finalizando os detalhes desse lançamento.
 
 ![](img/codando.jpg)
 
-O tal programa é o [RAC](/rac), feito em parceria com
+O tal programa é o [RAC](/rac/), feito em parceria com
 meu amigo gaúcho [Thobias](http://thobias.org). O software já estava
 pronto, mas ainda precisava fazer a sua página na Internet, preparar o
 pacotão tar com a versão 1.0 e escrever o texto de anúncio do
