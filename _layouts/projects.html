@@ -34,14 +34,14 @@
     <div id="body" class="body">
 
       {% if page.url contains '/emomemory/' %}
-        {% include nav-emomemory.html %}
+        {% include emomemory-nav.html %}
       {% endif %}
 
       {% unless page.hide_sidebar %}
         {% if page.url contains '/emomemory/' %}
-          {% include sidebar-emomemory.html %}
+          {% include emomemory-sidebar.html %}
         {% else %}
-          {% include sidebar-projects.html %}
+          {% include projects-sidebar.html %}
         {% endif %}
       {% endunless %}
 

@@ -81,7 +81,7 @@ defaults:
       path: "fvm"
     values:
       layout: 2013-page
-      article_footer_after: nav-fvm.html
+      article_footer_after: fvm-nav.html
       title_suffix: ""
       hide_byline: true
       hide_read_more: true
@@ -91,7 +91,7 @@ defaults:
     scope:
       path: "moneylog"
     values:
-      article_footer_after: nav-moneylog.html
+      article_footer_after: moneylog-nav.html
       hide_ads: true
       hide_read_more: true
   -
@@ -134,7 +134,7 @@ defaults:
     scope:
       path: "shell/apostila"
     values:
-      article_footer_after: nav-shell-apostila.html
+      article_footer_after: shell-apostila-nav.html
   -
     scope:
       path: "sed"
