@@ -47,6 +47,12 @@ check_accidental_liquid_markup() {
         cat -
 }
 
+# URLs that point to folders should have the trailing slash #44
+check_link_no_trailing_slash() {
+    # Match all URLs with no trailing slash with the folder list
+    comm -12 <(list-site-urls file) <(list-site-files dir | sed 's/^_site//')
+}
+
 # Do not link URLs that are gone (410)
 check_link_to_gone() {
     _scripts/list-urls-gone |
@@ -206,6 +212,7 @@ active_checks="
     check_accidental_liquid_markup
     check_windows_linebreak
     check_unquoted_attributes
+    check_link_no_trailing_slash
     check_mixed_content
     check_relative_urls
     check_http_aurelionet
