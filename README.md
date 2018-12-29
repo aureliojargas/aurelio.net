@@ -168,6 +168,17 @@ The site template ([\_layouts/2014.html](https://github.com/aureliojargas/aureli
 
 - `title_suffix: " | Foo"` — To add a suffix to the page `<title>` tag. (See [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
 
+## The minimal theme
+
+If the main theme is not suitable, there's the minimal theme. No layout, no CSS. Only the bare minimal skeleton with mobile support (sets `viewport`) and some Jekyll include magic:
+
+- `page.after_content` - Include file to insert before the page contents.
+- `page.before_content` - Include file to insert after the page contents.
+- `page.css` - CSS file to use (use root-relative path).
+- `page.title_as_h1` - Insert an H1 tag at the top of the page, showing `page.title`.
+
+Since this theme uses [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html), you can also use `page.title_prefix` and `page.title_suffix`.
+
 ## How to make batch changes
 
 Since most of the site is made of plain HTML files, it's common to have to apply the same edits in multiple files.
