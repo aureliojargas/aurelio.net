@@ -144,7 +144,7 @@ check_link_to_full_url() {
         grep -v '^_site/moneylog/portable/moneylog5.html:' |
         grep -v '^_site/web/tagmenu.html:' |
         # Link text and URL are the same, keep it
-        grep -v -i -E '<a href="([^"]+)">\1</a>' |
+        grep -v -i -E ' href="([^"]+)">\1</a>' |
         cgrep -i -E '(src|href)="https://aurelio.net'
 }
 
