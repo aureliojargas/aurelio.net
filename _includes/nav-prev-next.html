@@ -1,0 +1,22 @@
+{% if page.prev or page.next %}
+  <div class="prev-next">
+
+    {% if page.prev %}
+      ← <a href="{{ page.prev }}">anterior</a>
+    {% else %}
+      ◆
+    {% endif %}
+    |
+
+    {% if page.index %}
+      <a href="{{ page.index }}">início</a> |
+    {% endif %}
+
+    {% if page.next %}
+      <a href="{{ page.next }}">próxima</a> →
+    {% else %}
+      ◆
+    {% endif %}
+
+  </div>
+{% endif %}
