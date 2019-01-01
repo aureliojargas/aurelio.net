@@ -179,6 +179,17 @@ If the main theme is not suitable, there's the minimal theme. No layout, no CSS.
 
 Since this theme uses [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html), you can also use `page.title_prefix` and `page.title_suffix`.
 
+## Pagination
+
+Avoid using paginated content. That sucks.
+
+But when needed, set `page.prev` and `page.next` with the desired URLs and use the `*-prev-next.html` includes.
+
+For now those are the only paginated areas on the site:
+
+- /regex/guia
+- /rac/info/tutorial/
+
 ## How to make batch changes
 
 Since most of the site is made of plain HTML files, it's common to have to apply the same edits in multiple files.
