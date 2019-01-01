@@ -113,7 +113,7 @@ defaults:
       css: /rac/info/tutorial/tutorial.css
       title_prefix: ""
       title_as_h1: true
-      after_content: rac-tutorial-nav.html
+      after_content: rac-tutorial-footer.html
   -
     scope:
       path: "regex"
