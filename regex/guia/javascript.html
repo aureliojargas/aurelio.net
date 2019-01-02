@@ -23,24 +23,24 @@ global          modificador g
 
 <pre>
 var er = /^[a-z]+$/i;
-if (er.test(&quot;JAVA&quot;))
-  alert(&quot;casou!&quot;);
+if (er.test("JAVA"))
+  alert("casou!");
 </pre>
 
 <p>Fácil, não? Então para complicar, se você quiser fazer uma substituição, o método <code>replace</code> deve ser usado. Detalhe: ele é um método de uma <i>string</i> e não de uma /ER/, mas recebe ERs. Não entendeu? Veja:</p>
 
 <pre>
-var eu = &quot;estou com fome&quot;;
-document.write(eu.replace(/....$/, &quot;sono&quot;));
+var eu = "estou com fome";
+document.write(eu.replace(/....$/, "sono"));
 </pre>
 
-<p>Em Javascript, temos uma simetria entre os objetos <code>regexp</code> e <code>string</code>, com métodos de mesma função, mas nomes diferentes. Os &quot;gêmeos siameses&quot; são <code>test</code> e <code>search</code> para busca simples e <code>exec</code> e <code>match</code> para busca com pescagem de dados. E lembre-se de que um método <code>regexp</code> recebe como parâmetro uma <code>string</code> e vice-versa, veja:</p>
+<p>Em Javascript, temos uma simetria entre os objetos <code>regexp</code> e <code>string</code>, com métodos de mesma função, mas nomes diferentes. Os "gêmeos siameses" são <code>test</code> e <code>search</code> para busca simples e <code>exec</code> e <code>match</code> para busca com pescagem de dados. E lembre-se de que um método <code>regexp</code> recebe como parâmetro uma <code>string</code> e vice-versa, veja:</p>
 
 <pre>
-regexp.test(&quot;string&quot;)
+regexp.test("string")
 string.search(/regexp/)
 
-regexp.exec(&quot;string&quot;)
+regexp.exec("string")
 string.match(/regexp/)
 </pre>
 
@@ -48,11 +48,11 @@ string.match(/regexp/)
 
 <pre>
 var er = /^(\w+) (\w+)/;
-var matriz = er.exec(&quot;um dois três&quot;);
-document.write(matriz.index, &quot;&lt;BR&gt;&quot;,
-               matriz.input, &quot;&lt;BR&gt;&quot;,
-               matriz[0],    &quot;&lt;BR&gt;&quot;,
-               matriz[1],    &quot;&lt;BR&gt;&quot;,
+var matriz = er.exec("um dois três");
+document.write(matriz.index, "&lt;BR&gt;",
+               matriz.input, "&lt;BR&gt;",
+               matriz[0],    "&lt;BR&gt;",
+               matriz[1],    "&lt;BR&gt;",
                matriz[2]);
 
 //Resultado:

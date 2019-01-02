@@ -7,10 +7,10 @@ next: acentuacao.html
 <p>Algumas linguagens possuem modificadores para que sua ER consiga lidar com um texto de várias linhas. Geralmente são dois os modificadores, um para tratar estas várias linhas como apenas uma, em que o metacaractere ponto também casa o <code>\n</code> (quebra de linha), e outra complementar para tratar como várias linhas, onde o circunflexo e o cifrão podem casar começo e final de qualquer uma dessas linhas contidas no texto, chamado multilinha. Vejamos:</p>
 
 <pre>
-$a = $b = $c = &quot;linha 1\nlinha 2\nlinha 3&quot;;
-$a =~ s/^.*/!!/g ; print &quot;$a\n-------\n&quot;;
-$b =~ s/^.*/!!/gs; print &quot;$b\n-------\n&quot;;
-$c =~ s/^.*/!!/gm; print &quot;$c\n-------\n&quot;;
+$a = $b = $c = "linha 1\nlinha 2\nlinha 3";
+$a =~ s/^.*/!!/g ; print "$a\n-------\n";
+$b =~ s/^.*/!!/gs; print "$b\n-------\n";
+$c =~ s/^.*/!!/gm; print "$c\n-------\n";
 
 # RESULTADO (normal, uma linha, multilinha)
 

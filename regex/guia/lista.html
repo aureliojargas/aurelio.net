@@ -16,7 +16,7 @@ next: lista-negada.html
 n[ãa]o
 </pre>
 
-<p>E assim como o <b><code>n.o</code></b>, todos os outros exemplos anteriores do ponto casam muito mais que o desejado, justo pela sua natureza &quot;promíscua&quot;.</p>
+<p>E assim como o <b><code>n.o</code></b>, todos os outros exemplos anteriores do ponto casam muito mais que o desejado, justo pela sua natureza "promíscua".</p>
 
 <blockquote>
   <i>Por isso que nos exemplos tinha os três pontinhos ... no final?</i>
@@ -68,7 +68,7 @@ e[sx]tendido    estendido, extendido
 [0123456789] é igual a [0-9]
 </pre>
 
-<p>É simples assim. Aquele tracinho indica um intervalo, então <code>0-9</code> se lê: &quot;de zero a nove&quot;.</p>
+<p>É simples assim. Aquele tracinho indica um intervalo, então <code>0-9</code> se lê: "de zero a nove".</p>
 
 <p>Voltando a nossa ER da hora, poderíamos fazer <b><code>[0-9][0-9]:[0-9][0-9]</code></b>, mas veja que não é específico o bastante, pois permite uma hora como 99:99, que não existe. Como poderíamos fazer uma ER que case no máximo 23 horas e 59 minutos?</p>
 
@@ -114,7 +114,7 @@ e[sx]tendido    estendido, extendido
 
 <p>Tudo bem, você venceu. Nesse intervalo tem <code>: ; &lt; = &gt; ? @</code> . Como saber isso? Os intervalos respeitam a ordem numérica da tabela ASCII, então basta tê-la em mãos para ver que um intervalo como <b><code>A-z</code></b> não pega somente as maiúsculas e minúsculas como era de se esperar.</p>
 
-<p>Para sua comodidade, a tabela está no fim do guia, e nela podemos ver que A-z pega também &quot;[\]^_`&quot; e não pega os caracteres acentuados como &quot;áéóõç&quot;. Infelizmente, não há um intervalo válido para pegarmos todos os caracteres acentuados de uma vez. Mas já já veremos a solução...</p>
+<p>Para sua comodidade, a tabela está no fim do guia, e nela podemos ver que A-z pega também "[\]^_`" e não pega os caracteres acentuados como "áéóõç". Infelizmente, não há um intervalo válido para pegarmos todos os caracteres acentuados de uma vez. Mas já já veremos a solução...</p>
 
 <blockquote>
   <u>Não use o intervalo <b><code>A-z</code></b>, prefira <b><code>A-Za-z</code></b></u>

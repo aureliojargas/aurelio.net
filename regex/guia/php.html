@@ -19,22 +19,22 @@ global          é o padrão
 
 <p>As funções quentes são <code>ereg</code> para busca, <code>ereg_replace</code> para substituição e o <code>split</code> para divisão. Sua sintaxe é bem tranqüila, sem esquisitices e bem coberta pela própria documentação que acompanha a linguagem.</p>
 
-<p>Um detalhe muito interessante é que ao casar um padrão, você pode opcionalmente colocar os conteúdos dos grupos em posições de uma matriz (&quot;array&quot;), numerada de acordo com o número dos grupos abertos. É uma maneira fácil de declarar diversas variáveis de uma vez.</p>
+<p>Um detalhe muito interessante é que ao casar um padrão, você pode opcionalmente colocar os conteúdos dos grupos em posições de uma matriz ("array"), numerada de acordo com o número dos grupos abertos. É uma maneira fácil de declarar diversas variáveis de uma vez.</p>
 
 <pre>
-$hora = &quot;12:34&quot;;
-$er = &quot;([0-9]{2}):([0-9]{2})&quot;;
+$hora = "12:34";
+$er = "([0-9]{2}):([0-9]{2})";
 
 if (ereg($er, $hora, $matriz)){
-  echo &quot;em brasília $matriz[1] horas, &quot;;
-  echo &quot;$matriz[2] minutos.\n&quot;;
+  echo "em brasília $matriz[1] horas, ";
+  echo "$matriz[2] minutos.\n";
 }
 </pre>
 
 <p>O jeito PHP de ignorar a diferença entre maiúsculas e minúsculas é, no mínimo, diferente. É feito no próprio nome da função, adicionando um <code>i</code>, ficando <code>eregi</code>, <code>eregi_replace</code> e <code>spliti</code>(php4). A maneira de utilizá-las é a mesma. No exemplo seguinte, todas as letras do padrão <i>HeyHo</i> são trocadas por <code>.</code></p>
 
 <pre>
-print eregi_replace(&quot;[A-Z]&quot;, &quot;.&quot;, &quot;HeyHo&quot;);
+print eregi_replace("[A-Z]", ".", "HeyHo");
 </pre>
 
 <p>Para se especificar uma ER crua, basta colocá-la entre 'aspas simples'.</p>

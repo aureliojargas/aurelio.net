@@ -24,19 +24,19 @@ global          propriedade Global
 <pre>
 Dim er, texto
 Set er = new regexp
-texto = &quot;visual&quot;
+texto = "visual"
 
-er.Pattern = &quot;^[A-Z]+$&quot;
+er.Pattern = "^[A-Z]+$"
 er.IgnoreCase = true
 
 if er.Test(texto) then
-  msgbox (&quot;casou!&quot;)
+  msgbox ("casou!")
 end if
 </pre>
 
-<p>Então instanciamos o objeto <code>er</code> e definimos um texto qualquer a ser casado. Depois definimos a ER, uma linha toda de maiúsculas, na propriedade <code>Pattern</code> e ligamos a opção de &quot;ignorância&quot;. Por fim, fazemos o <code>Test</code> da ER no texto. O <code>Replace</code> funciona de maneira similar, sem surpresas.</p>
+<p>Então instanciamos o objeto <code>er</code> e definimos um texto qualquer a ser casado. Depois definimos a ER, uma linha toda de maiúsculas, na propriedade <code>Pattern</code> e ligamos a opção de "ignorância". Por fim, fazemos o <code>Test</code> da ER no texto. O <code>Replace</code> funciona de maneira similar, sem surpresas.</p>
 
-<p>O método <code>Execute</code> funciona como um <code>split</code> ao contrário, em que você informa o padrão e não o separador. Ele casa a ER no texto e retorna todos os pedaços de texto em que a ER casou de maneira organizada, seguindo uma hierarquia. Ele retorna um objeto &quot;collection&quot; chamado <code>Matches</code> que, por sua vez, contém zero ou mais objetos <code>Match</code>. Cada um desses <code>Match</code> contém um pedaço casado, que além do texto propriamente dito, também tem a posição de início do casamento no texto original e o tamanho desse trecho. Vamos ver um exemplo que separa os trechos por espaços em branco, com um diagrama de brinde no cabeçalho:</p>
+<p>O método <code>Execute</code> funciona como um <code>split</code> ao contrário, em que você informa o padrão e não o separador. Ele casa a ER no texto e retorna todos os pedaços de texto em que a ER casou de maneira organizada, seguindo uma hierarquia. Ele retorna um objeto "collection" chamado <code>Matches</code> que, por sua vez, contém zero ou mais objetos <code>Match</code>. Cada um desses <code>Match</code> contém um pedaço casado, que além do texto propriamente dito, também tem a posição de início do casamento no texto original e o tamanho desse trecho. Vamos ver um exemplo que separa os trechos por espaços em branco, com um diagrama de brinde no cabeçalho:</p>
 
 <pre>
 ' --- hierarquia do Execute e seus objetos
@@ -51,8 +51,8 @@ end if
 '
 Dim er, texto
 er = new regexp
-texto = &quot;um dois três&quot;
-er.Pattern = &quot;[^ ]+&quot;
+texto = "um dois três"
+er.Pattern = "[^ ]+"
 
 z = er.Execute(texto)      'retorna 3 objetos Match
 for i = 0 to (z.Count - 1) 'para cada Match,

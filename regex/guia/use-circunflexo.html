@@ -10,7 +10,7 @@ next: evite-lista-negada.html
 
 <p>Se você coloca o circunflexo na sua ER, forçando o casamento do começo de linha, se o primeiro componente da ER após o <b><code>^</code></b> já não casar com o primeiro caractere da linha, dali mesmo já retorna falha de pesquisa, sem precisar varrer o resto da linha.</p>
 
-<p>Por exemplo, se você procura valores em reais &quot;R$&quot;, pode simplesmente dizer <b><code>R\$</code></b>. Mas se você sabe que os reais que lhe interessam estão sempre no começo da linha, digam isso com sua ER: <b><code>^R\$</code></b>. Assim, em um exemplo como:</p>
+<p>Por exemplo, se você procura valores em reais "R$", pode simplesmente dizer <b><code>R\$</code></b>. Mas se você sabe que os reais que lhe interessam estão sempre no começo da linha, digam isso com sua ER: <b><code>^R\$</code></b>. Assim, em um exemplo como:</p>
 
 <pre>
 R$ 200,00 : fósforos e velas
@@ -21,4 +21,4 @@ R$ 100,00 : caixas de ovos vazias
 
 <p>Ambas as ERs casam as linhas 1 e 4 imediatamente, pois têm o <u>R$</u> já no começo. Mas nas linhas 2 e 3, onde não há nossos reais desejados, a primeira ER seria tentada em ambas, em todas as posições, até o final, para ver que falhou. Já a segunda, ao encontrar um espaço em branco no começo da linha, já retorna falha, pois ele não é um <code>R</code>.</p>
 
-<p>Em um exemplo mais palpável, suponha que seu chefe tenha uma mesa enorme, com oito gavetas. E se ele lhe falar: &quot;Me traga a pasta verde, está na minha gaveta&quot;, ou então &quot;Me traga a pasta verde, que está na última gaveta. Na última hein? Não fuce no resto de minhas coisas!&quot;. Tem uma diferença, não? &amp;:)</p>
+<p>Em um exemplo mais palpável, suponha que seu chefe tenha uma mesa enorme, com oito gavetas. E se ele lhe falar: "Me traga a pasta verde, está na minha gaveta", ou então "Me traga a pasta verde, que está na última gaveta. Na última hein? Não fuce no resto de minhas coisas!". Tem uma diferença, não? &amp;:)</p>

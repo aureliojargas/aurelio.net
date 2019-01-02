@@ -6,9 +6,9 @@ next: mandamentos.html
 
 <p>Falamos falamos, mas para fechar o estudo dos metacaracteres, faltou conhecer os relacionamentos entre eles, quem é mais forte, mais fraco, quem arrasta os outros...</p>
 
-<p>É bem simples, sabe na matemática, onde temos as ordens de precedência entre a adição e a multiplicação, onde esta é mais &quot;forte&quot; que aquela?</p>
+<p>É bem simples, sabe na matemática, onde temos as ordens de precedência entre a adição e a multiplicação, onde esta é mais "forte" que aquela?</p>
 
-<p>Por exemplo &quot;2+4*6&quot;, é &quot;quatro vezes seis, e depois soma com o dois&quot;. Mesmo vindo depois, a multiplicação tem preferência. Com as ERs acontece o mesmo, seguindo estas regras:</p>
+<p>Por exemplo "2+4*6", é "quatro vezes seis, e depois soma com o dois". Mesmo vindo depois, a multiplicação tem preferência. Com as ERs acontece o mesmo, seguindo estas regras:</p>
 
 <pre>
 tipo de meta    exemplo precedência
@@ -17,9 +17,9 @@ concatenação    ab      média
 ou              ab|c    menor
 </pre>
 
-<p>Ou seja, na situação <b><code>ab*</code></b> não é &quot;a com b, em qualquer quantidade&quot;, e sim &quot;a, seguido de b em qualquer quantidade&quot;, ou seja, a concatenação <i>a seguido de b</i> não é mais forte que a quantificação, que rouba o <code>b</code> para ela.</p>
+<p>Ou seja, na situação <b><code>ab*</code></b> não é "a com b, em qualquer quantidade", e sim "a, seguido de b em qualquer quantidade", ou seja, a concatenação <i>a seguido de b</i> não é mais forte que a quantificação, que rouba o <code>b</code> para ela.</p>
 
-<p>Na última <b><code>ab|c</code></b> em vez de &quot;a, seguido de b ou c&quot; é na verdade &quot;ab ou c&quot;, pois o ou é o mais fraquinho de todos, não puxa nada para o cesto dele.</p>
+<p>Na última <b><code>ab|c</code></b> em vez de "a, seguido de b ou c" é na verdade "ab ou c", pois o ou é o mais fraquinho de todos, não puxa nada para o cesto dele.</p>
 
 <p>Por isso que <b><code>boa-tarde|boa-noite</code></b> funciona, pois os caracteres se juntam e se grudam uns com os outros, e o ou não tem força para quebrar isso.</p>
 
@@ -27,7 +27,7 @@ ou              ab|c    menor
 
 <p>Só com a dobradinha grupo+ou é possível algo como <b><code>boa-tard(e|b)oa-noite</code></b>, o que não faz sentido, mas mostra que juntos eles conseguem quebrar a união da concatenação.</p>
 
-<p>Com isso em mente, como fica a relação de forças em <b><code>ab|cd*</code></b>? Vamos colocar os &quot;amigos&quot; entre chaves para ilustrar essa quebra de braço:</p>
+<p>Com isso em mente, como fica a relação de forças em <b><code>ab|cd*</code></b>? Vamos colocar os "amigos" entre chaves para ilustrar essa quebra de braço:</p>
 
 <p><b>ab|c{d*}</b></p>
 

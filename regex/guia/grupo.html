@@ -8,7 +8,7 @@ next: retrovisor.html
 
 <p>Todos os metacaracteres quantificadores que vimos anteriormente, podem ter seu poder ampliado pelo grupo, pois ele lhes dá mais abrangência. E o ou, pelo contrário, tem sua abrangência limitada pelo grupo, e pode parecer estranho, mas é essa limitação que lhe dá mais poder.</p>
 
-<p>Em um exemplo simples, <b><code>(ai)+</code></b> agrupa a palavra &quot;ai&quot; e esse grupo está quantificado pelo mais. Isso quer dizer que casamos várias repetições da palavra, como <u>ai</u>, <u>aiai</u>, <u>aiaiai</u>, ... E assim podemos agrupar tudo o que quisermos, literais e metacaracteres, e quantificá-los:</p>
+<p>Em um exemplo simples, <b><code>(ai)+</code></b> agrupa a palavra "ai" e esse grupo está quantificado pelo mais. Isso quer dizer que casamos várias repetições da palavra, como <u>ai</u>, <u>aiai</u>, <u>aiaiai</u>, ... E assim podemos agrupar tudo o que quisermos, literais e metacaracteres, e quantificá-los:</p>
 
 <pre>
 (ha!)+                  ha!, ha!ha!, ha!ha!ha!, ...
@@ -30,7 +30,7 @@ boa-(tarde|noite)       boa-tarde, boa-noite
 (super|hiper)mercado
 </pre>
 
-<p>Consegue casar as duas últimas possibilidades, mas note que nas alternativas <i>super</i> e <i>hiper</i> temos um trecho <u>per</u> comum aos dois, então podíamos &quot;alternativizar&quot; apenas as diferenças <i>su</i> e <i>hi</i>:</p>
+<p>Consegue casar as duas últimas possibilidades, mas note que nas alternativas <i>super</i> e <i>hiper</i> temos um trecho <u>per</u> comum aos dois, então podíamos "alternativizar" apenas as diferenças <i>su</i> e <i>hi</i>:</p>
 
 <pre>
 (su|hi)permercado

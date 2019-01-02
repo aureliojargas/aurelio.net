@@ -12,7 +12,7 @@ substituição    funções sub, gensub
 divisão         função split
 ER crua         /entre barras/
 ignore M/m      variável IGNORECASE
-global          função gsub, opção &quot;g&quot;
+global          função gsub, opção "g"
 </pre>
 
 <p>AWK é uma linguagem antiga (1977) que combina processamento de texto com estruturas de uma linguagem genérica, possuindo condicionais, operações aritméticas e afins.</p>
@@ -22,8 +22,8 @@ global          função gsub, opção &quot;g&quot;
 <p>As funções <code>sub</code> e <code>gsub</code> não retornam o texto alterado, e sim o número de substituições efetuadas. E ainda, o texto alterado é gravado diretamente na própria variável que continha o texto original. Uma grande limitação de ambas as funções é que elas não têm suporte a retrovisores.</p>
 
 <pre>
-texto = &quot;a1b2c3&quot;
-n = gsub(&quot;[0-9]&quot;, &quot;.&quot;, texto)
+texto = "a1b2c3"
+n = gsub("[0-9]", ".", texto)
 print n,texto
 </pre>
 
@@ -32,7 +32,7 @@ print n,texto
 <p>Mas como essas funções são muito chatas de usar, no AWK da GNU tem uma melhor, a <code>gensub</code>. Esta é normal, retorna o texto modificado, não regrava a variável com o texto original, a globalidade do comando é definida com um argumento (<code>g</code> ou um número), e tem suporte a retrovisores. Veja um exemplo completo:</p>
 
 <pre>
-print gensub(/(\w)/, &quot;\\1.&quot;, &quot;g&quot;, &quot;abc&quot;)
+print gensub(/(\w)/, "\\1.", "g", "abc")
 </pre>
 
 <p>Vamos à nossa dissecação. A ER <b><code>\w</code></b>, que casa um caractere componente de uma palavra, está no formato cru, além de agrupada. A substituição do trecho casado é feita pelo conteúdo do grupo 1, seguido de um ponto literal.</p>

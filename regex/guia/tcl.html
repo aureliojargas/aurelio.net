@@ -22,8 +22,8 @@ global          opção -all
 <p>As funções que nos interessam são <code>regexp</code> para busca e <code>regsub</code> para substituição. O grande problema da Tcl é que ela não tem suporte às classes POSIX, nem às bordas nem às chaves! Fora isso, a busca de padrões é tranqüila:</p>
 
 <pre>
-if [regexp -nocase {^[a-z][a-z]$} &quot;OI&quot;] {
-  puts &quot;casou!&quot;
+if [regexp -nocase {^[a-z][a-z]$} "OI"] {
+  puts "casou!"
 }
 </pre>
 
@@ -33,7 +33,7 @@ if [regexp -nocase {^[a-z][a-z]$} &quot;OI&quot;] {
 
 <pre>
 prompt$ tclsh
-% regsub -all {[A-Z]} &quot;eScaMOSO&quot; &quot;.&quot; sobra
+% regsub -all {[A-Z]} "eScaMOSO" "." sobra
 5
 % puts $sobra
 e.ca....

@@ -15,7 +15,7 @@ ignore M/m      modificadores re.I, (?i)
 global          é o padrão
 </pre>
 
-<p>Usando basicamente a mesma definição de metacaracteres que aprendemos, sua sintaxe é tranqüila, mas por manipular as ER como objetos, acessando métodos, o veremos em detalhes. Como primeira dica, para evitar o pré-processamento da ER pela linguagem, basta colocar o modificador <code>r</code> (do inglês &quot;raw&quot;, cru) imediatamente antes das aspas, assim: <b><code>r'^\.[0-9]'</code></b>.</p>
+<p>Usando basicamente a mesma definição de metacaracteres que aprendemos, sua sintaxe é tranqüila, mas por manipular as ER como objetos, acessando métodos, o veremos em detalhes. Como primeira dica, para evitar o pré-processamento da ER pela linguagem, basta colocar o modificador <code>r</code> (do inglês "raw", cru) imediatamente antes das aspas, assim: <b><code>r'^\.[0-9]'</code></b>.</p>
 
 <p>O módulo que trata das ERs é o <code>re</code>, então antes de mais nada: <code>import re</code>. As funções principais são: <code>match</code>, que casa a ER no começo da linha, <code>search</code> que casa em qualquer parte da linha e <code>sub</code> que faz a substituição de padrões. Em Python podemos compilar uma ER e guardá-la em uma variável, podendo reutilizá-la quantas vezes se precisar:</p>
 
@@ -37,7 +37,7 @@ global          é o padrão
 
 <p>Depois compilamos um segundo objeto, com a ER <b><code>\w</code></b> que está no formato cru (modificador <code>r</code>). Logo após, temos o modificador <code>re.L</code>, que força o uso da localização. Você se lembra das classes POSIX? O Python não tem <b><code>[:alpha:]</code></b>, tem <b><code>\w, re.L</code></b>, que não é completamente similar, mas também inclui acentuação, como visto na saída <code>....</code>, casando também os caracteres <u>çã</u>. E para fechar, vemos que o Python suporta tranqüilamente mais de 9 retrovisores.</p>
 
-<p>Temos também outros modificadores de compilação, como o <code>DOTALL</code>, para o metacaractere ponto também casar a quebra de linha, o <code>MULTILINE</code> que faz as âncoras <b><code>^</code></b> e <b><code>$</code></b> casar começo e fim de linha dentro do texto, separados pelo <code>\n</code> e o <code>VERBOSE</code>, que permite colocar comentários no meio da expressão regular. Esses modificadores, com o <code>I</code> e <code>L</code>, podem ser especificados direto na ER, sem compilação, pelo grupo vazio <b><code>(?Z)</code></b> em que <code>Z</code> é uma das letras &quot;iLmsx&quot; que identificam estes modificadores.</p>
+<p>Temos também outros modificadores de compilação, como o <code>DOTALL</code>, para o metacaractere ponto também casar a quebra de linha, o <code>MULTILINE</code> que faz as âncoras <b><code>^</code></b> e <b><code>$</code></b> casar começo e fim de linha dentro do texto, separados pelo <code>\n</code> e o <code>VERBOSE</code>, que permite colocar comentários no meio da expressão regular. Esses modificadores, com o <code>I</code> e <code>L</code>, podem ser especificados direto na ER, sem compilação, pelo grupo vazio <b><code>(?Z)</code></b> em que <code>Z</code> é uma das letras "iLmsx" que identificam estes modificadores.</p>
 
 <p>E para fechar, extrapolando um conceito, no Python você pode nomear partes da ER, e recuperar o texto casado por este nome, ou seja, você já define pseudovariáveis na própria ER. Podemos chamá-los de retrovisores nomeáveis. Veja um exemplo para extrair dados de uma data:</p>
 

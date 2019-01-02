@@ -21,22 +21,22 @@ global          modificador g
 
 <ul>
   <li><b>/duh!/</b>: ER normal, interpretada pelo robozinho;</li>
-  <li><b>&quot;duh!&quot;</b>: string, interpretada pela linguagem;</li>
+  <li><b>"duh!"</b>: string, interpretada pela linguagem;</li>
   <li><b>'duh!'</b>: ER crua, não interpretada;</li>
 </ul>
 
-<p>Outros modificadores possíveis são o <code>x</code> para poder colocar <code>#comentários</code> no meio da ER e o <code>m</code> do modo multilinha. Esses modificadores também podem ser aplicados apenas em partes da ER com o grupo vazio <b><code>(?Z)</code></b>, em que <code>Z</code> pode ser uma das seguintes opções: &quot;imsx&quot;. Vamos ver um exemplo simples:</p>
+<p>Outros modificadores possíveis são o <code>x</code> para poder colocar <code>#comentários</code> no meio da ER e o <code>m</code> do modo multilinha. Esses modificadores também podem ser aplicados apenas em partes da ER com o grupo vazio <b><code>(?Z)</code></b>, em que <code>Z</code> pode ser uma das seguintes opções: "imsx". Vamos ver um exemplo simples:</p>
 
 <pre>
-$_ = &quot;homer, diga duh&quot;;
+$_ = "homer, diga duh";
 $curinga = '.*';
 if ( m/$curinga ($curinga)/ ) {
-  print &quot;$1!\n&quot;;
+  print "$1!\n";
 }
 
 s{ $curinga}' $curinga é massa!';
-print &quot;$_\n&quot;;
-print &quot;e o \$1? &lt;$1&gt;\n&quot;;
+print "$_\n";
+print "e o \$1? &lt;$1&gt;\n";
 
 # resultado:
 #duh!
@@ -50,7 +50,7 @@ print &quot;e o \$1? &lt;$1&gt;\n&quot;;
 
 <p>Em seguida pode não parecer, mas fizemos uma substituição. O comando <code>s///</code> ficou um pouco desfigurado, pois na primeira parte, onde vai a ER. Precisávamos que a variável <code>$curinga</code> fosse interpretada, então usamos as chaves como delimitador. Na segunda parte, usamos as aspas simples como delimitador, pois não queríamos a interpretação.</p>
 
-<p>Mas só dissemos &quot;troque {isso} por 'aquilo'&quot;, onde ele trocou, e para onde foi o resultado? Você se lembra da variável padrão <code>$_</code>? Como não especificamos onde trocar, ela é assumida, e como a substituição regrava o resultado na própria variável do texto original, lá se foi o resultado para o <code>$_</code>.</p>
+<p>Mas só dissemos "troque {isso} por 'aquilo'", onde ele trocou, e para onde foi o resultado? Você se lembra da variável padrão <code>$_</code>? Como não especificamos onde trocar, ela é assumida, e como a substituição regrava o resultado na própria variável do texto original, lá se foi o resultado para o <code>$_</code>.</p>
 
 <p>E o nosso <code>$1</code>? No último <code>print</code> vimos que ele sumiu! Mesmo a substituição não tendo usado grupo algum, a variável foi regravada. Que isso nos sirva de lição: se quiser usar os <code>$1</code> da vida em outras partes do programa, copie-o para outra variável.</p>
 

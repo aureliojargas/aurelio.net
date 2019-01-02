@@ -39,9 +39,9 @@ b[ip]*          b, bi, bip, biipp, bpipipi, biiiiip, bppp, ...
 
 <p>Vimos até agora que temos dois metacaracteres extremamente abrangentes, como o ponto (qualquer caractere) e o asterisco (em qualquer quantidade). E se juntarmos os dois? Teremos <i>qualquer caractere, em qualquer quantidade</i>. Pára um instante para pensar nisso. O que isso significa, tudo? Nada? A resposta é: ambos.</p>
 
-<p>O nada, pois &quot;qualquer quantidade&quot; também é igual a &quot;nenhuma quantidade&quot;. Então é opcional termos qualquer caractere, não importa. Assim, uma ER que seja simplesmente <b><code>.*</code></b> sempre será válida e casará mesmo uma linha vazia.</p>
+<p>O nada, pois "qualquer quantidade" também é igual a "nenhuma quantidade". Então é opcional termos qualquer caractere, não importa. Assim, uma ER que seja simplesmente <b><code>.*</code></b> sempre será válida e casará mesmo uma linha vazia.</p>
 
-<p>O tudo, pois &quot;qualquer quantidade&quot; também é igual a &quot;tudo o que tiver&quot;. E é exatamente isso o que o asterisco faz, ele é guloso, ganancioso, e sempre tentará casar o <b>máximo</b> que conseguir. Repita comigo: o MÁXIMO que conseguir.</p>
+<p>O tudo, pois "qualquer quantidade" também é igual a "tudo o que tiver". E é exatamente isso o que o asterisco faz, ele é guloso, ganancioso, e sempre tentará casar o <b>máximo</b> que conseguir. Repita comigo: o MÁXIMO que conseguir.</p>
 
 <blockquote>
   <u>O curinga .* é qualquer coisa!</u>
@@ -49,7 +49,7 @@ b[ip]*          b, bi, bip, biipp, bpipipi, biiiiip, bppp, ...
 
 <p>Assim, temos aqui o curinga das ERs, uma carta para se usar em qualquer situação. É muito comum ao escrever uma expressão regular, você definir alguns padrões que procura, e lá no meio, em uma parte que não importa, pode ser <i>qualquer coisa</i>, você coloca um <b><code>.*</code></b> e depois continua a expressão normalmente.</p>
 
-<p>Por exemplo, para procurar ocorrência de duas palavras na mesma linha, <b><code>relatório.*amanhã</code></b> serve para achar aquela linha maldita em que lhe pediram um trabalho &quot;pra ontem&quot;. Ou, ainda, procurar acessos de usuários em uma data qualquer: <b><code>22/11/2001.*login</code></b>.</p>
+<p>Por exemplo, para procurar ocorrência de duas palavras na mesma linha, <b><code>relatório.*amanhã</code></b> serve para achar aquela linha maldita em que lhe pediram um trabalho "pra ontem". Ou, ainda, procurar acessos de usuários em uma data qualquer: <b><code>22/11/2001.*login</code></b>.</p>
 
 <p><b>Resumão</b></p>
 

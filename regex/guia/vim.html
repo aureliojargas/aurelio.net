@@ -6,7 +6,7 @@ next: emacs.html
 
 <p>O vim herdou a base das expressões do vi e estendeu muito seu poder, criando metacaracteres novos e permitindo o uso de ERs na maioria de seus comandos, como endereçamento. Tudo o que você precisa saber sobre ERs no vim está documentado no próprio programa, bastando digitar <code>:help regexp</code> para ter acesso a essas informações.</p>
 
-<p>A primeira dica é ligar duas opções imbatíveis que são a <code>hlsearch</code> e <code>incsearch</code>. A primeira deixa iluminado (&quot;highlight&quot;) o texto casado, para termos uma visualização do que nossa ER casou, e a segunda faz o vim ir iluminando e mostrando o texto casado dinamicamente, enquanto você digita a ER! Experimente, é muito bom: <code>:set hls is</code>.</p>
+<p>A primeira dica é ligar duas opções imbatíveis que são a <code>hlsearch</code> e <code>incsearch</code>. A primeira deixa iluminado ("highlight") o texto casado, para termos uma visualização do que nossa ER casou, e a segunda faz o vim ir iluminando e mostrando o texto casado dinamicamente, enquanto você digita a ER! Experimente, é muito bom: <code>:set hls is</code>.</p>
 
 <p>Além destas, temos opções que modificam a sintaxe dos metacaracteres, são elas: <code>magic</code> e <code>nomagic</code>. A primeira é a opção-padrão, e é a que se aconselha usar, não mude. Ao usar a segunda, suas ERs serão tão cheias de escapes que serão imprestáveis em outros programas.</p>
 
@@ -22,7 +22,7 @@ next: emacs.html
 :%s/^./\u&amp;/c        torna maiúsculo o 1° caractere
 </pre>
 
-<p>Esse último é utilíssimo. Colocando um <code>c</code> no final de qualquer substituição, o vim mostrará um &quot;prompt&quot; na tela e lhe pedirá uma confirmação antes de fazer qualquer uma das substituições. Você vai respondendo sim ou não e vai vendo o texto ser alterado. Evita substituições cegas e vicia, cuidado! Veja <code>:help :s_flags</code> para conhecer outros modificadores.</p>
+<p>Esse último é utilíssimo. Colocando um <code>c</code> no final de qualquer substituição, o vim mostrará um "prompt" na tela e lhe pedirá uma confirmação antes de fazer qualquer uma das substituições. Você vai respondendo sim ou não e vai vendo o texto ser alterado. Evita substituições cegas e vicia, cuidado! Veja <code>:help :s_flags</code> para conhecer outros modificadores.</p>
 
 <p>No vim apenas as chaves têm similares não-gulosos. Mas como já vimos que com elas conseguimos emular todos os outros quantificadores, isso não é problema. A sintaxe é simplesmente adicionar um traço como primeiro caractere dentro delas.</p>
 
@@ -35,7 +35,7 @@ meta            mnemônico
 \{-n,m}         chaves não-gulosas
 </pre>
 
-<p>Ele possui também diversos arquivos de sintaxe para vários tipos de arquivo, que é onde são guardadas as regras complicadas que dizem &quot;o quê é válido onde&quot;, e fazem os arquivos ficarem coloridos, respeitando a sintaxe da linguagem de programação ou arquivo de registros ou configuração sendo editados.</p>
+<p>Ele possui também diversos arquivos de sintaxe para vários tipos de arquivo, que é onde são guardadas as regras complicadas que dizem "o quê é válido onde", e fazem os arquivos ficarem coloridos, respeitando a sintaxe da linguagem de programação ou arquivo de registros ou configuração sendo editados.</p>
 
 <p>Adivinha como são feitas essas regras complicadas? Com ERs, é claro! Este é um tópico muito interessante e exige conhecimentos sólidos do assunto. Caso queira dar uma olhada, todos os arquivos de sintaxe estão no subdiretório <code>syntax</code> e têm a extensão <code>.vim</code>.</p>
 

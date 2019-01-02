@@ -16,17 +16,17 @@ next: quantificadores.html
 
 <p>Observe que a diferença em sua notação é que o primeiro caractere da lista é um circunflexo, ele indica que esta é uma lista negada. Então se <b><code>[0-9]</code></b> são números, <b><code>[^0-9]</code></b> é qualquer coisa fora números. Pode ser letras, símbolos, espaço em branco, qualquer coisa, menos números.</p>
 
-<p>Mas tem de ser alguma coisa. Só porque ela é uma lista negada isso não significa que ela pode casar &quot;nada&quot;.</p>
+<p>Mas tem de ser alguma coisa. Só porque ela é uma lista negada isso não significa que ela pode casar "nada".</p>
 
-<p>Explicando em outras palavras, se você diz &quot;qualquer coisa fora números&quot;, deve haver <i>outra coisa</i> no lugar dos números e não simplesmente &quot;se não houver números&quot;. Então essa ER não casaria uma linha vazia por exemplo.</p>
+<p>Explicando em outras palavras, se você diz "qualquer coisa fora números", deve haver <i>outra coisa</i> no lugar dos números e não simplesmente "se não houver números". Então essa ER não casaria uma linha vazia por exemplo.</p>
 
 <blockquote>
-  <u>&quot;Qualquer coisa fora alguns caracteres&quot; não inclui &quot;nenhum caractere&quot;.</u>
+  <u>"Qualquer coisa fora alguns caracteres" não inclui "nenhum caractere".</u>
 </blockquote>
 
 <p>Como o traço e o colchete que fecha, o circunflexo é especial, então para colocarmos um <b><code>^</code></b> literal em uma lista, precisamos pô-lo em qualquer posição que não seja a primeira. Assim <b><code>[A-Z^]</code></b> casa maiúsculas e o circunflexo e <b><code>[^A-Z^]</code></b> casa tudo fora isso.</p>
 
-<p>Ah! As <b>classes POSIX</b> também podem ser negadas, então <b><code>[^[:digit:]]</code></b> casa &quot;qualquer coisa fora números&quot;.</p>
+<p>Ah! As <b>classes POSIX</b> também podem ser negadas, então <b><code>[^[:digit:]]</code></b> casa "qualquer coisa fora números".</p>
 
 <p>A lista negada é muito útil quando você sabe exatamente o que não pode ter em uma posição, como um erro ortográfico ou de escrita. Por exemplo, como mandam as regras da boa escrita, sempre após caracteres de pontuação como a vírgula ou o ponto, devemos ter um espaço em branco os separando do resto do texto. Então vamos procurar por qualquer coisa que não o espaço após a pontuação:</p>
 

@@ -44,26 +44,26 @@ um &lt;b&gt;negrito&lt;/b&gt; aqui.
 
 <pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
-...x^                       &quot;&lt;&quot;.*&gt;
+...x^                       "&lt;".*&gt;
 </pre>
 
-<p>Os trechos já casados são representados pelos <code>x</code> marcando a frase e as aspas marcam a ER. Os pontinhos representam apenas os &quot;rastros&quot; do foco, as partes já visitadas e não casadas.</p>
+<p>Os trechos já casados são representados pelos <code>x</code> marcando a frase e as aspas marcam a ER. Os pontinhos representam apenas os "rastros" do foco, as partes já visitadas e não casadas.</p>
 
 <p>A próxima parte da ER a ser casada é o curinga, que casa <i>qualquer caractere em qualquer quantidade</i>. Então, procurando qualquer caractere, nosso curinga segue casando:</p>
 
 <pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
-...x^                       &quot;&lt;.*&quot;&gt;
-...xx^                      &quot;&lt;.*&quot;&gt;
-...xxx^                     &quot;&lt;.*&quot;&gt;
-...xxxx^                    &quot;&lt;.*&quot;&gt;
+...x^                       "&lt;.*"&gt;
+...xx^                      "&lt;.*"&gt;
+...xxx^                     "&lt;.*"&gt;
+...xxxx^                    "&lt;.*"&gt;
 </pre>
 
 <p>Ei! Mas ele passou batido pelo <code>&gt;</code> que a gente queria! Por quê? Lembre-se de que o ponto casa <i>qualquer caractere</i>? E por acaso o <code>&gt;</code> também não é qualquer caractere? É, então o ponto casa ele também, seguindo guloso até o fim da linha:</p>
 
 <pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
-...xxxxxxxxxxxxxxxxxxxx^    &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxxxxxxxx^    "&lt;.*"&gt;
 </pre>
 
 <p>Pronto. Como bateu lá no final e não tem mais caracteres para casar, o asterisco sossega. Mas ainda temos um componente da ER para casar, o <b><code>&gt;</code></b>. E agora?</p>
@@ -72,20 +72,20 @@ um &lt;b&gt;negrito&lt;/b&gt; aqui.
 
 <pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
-...xxxxxxxxxxxxxxxxxxx^     &quot;&lt;.*&quot;&gt;
-...xxxxxxxxxxxxxxxxxx^      &quot;&lt;.*&quot;&gt;
-...xxxxxxxxxxxxxxxxx^       &quot;&lt;.*&quot;&gt;
-...xxxxxxxxxxxxxxxx^        &quot;&lt;.*&quot;&gt;
-...xxxxxxxxxxxxxxx^         &quot;&lt;.*&quot;&gt;
-...xxxxxxxxxxxxxx^          &quot;&lt;.*&quot;&gt;
-...xxxxxxxxxxxxx^           &quot;&lt;.*&quot;&gt;
+...xxxxxxxxxxxxxxxxxxx^     "&lt;.*"&gt;
+...xxxxxxxxxxxxxxxxxx^      "&lt;.*"&gt;
+...xxxxxxxxxxxxxxxxx^       "&lt;.*"&gt;
+...xxxxxxxxxxxxxxxx^        "&lt;.*"&gt;
+...xxxxxxxxxxxxxxx^         "&lt;.*"&gt;
+...xxxxxxxxxxxxxx^          "&lt;.*"&gt;
+...xxxxxxxxxxxxx^           "&lt;.*"&gt;
 </pre>
 
 <p>Opa, agora o asterisco devolveu um <code>&gt;</code> que servirá para casar o último átomo de nossa ER:</p>
 
 <pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
-...xxxxxxxxxxxxxx^          &quot;&lt;.*&gt;&quot;
+...xxxxxxxxxxxxxx^          "&lt;.*&gt;"
 </pre>
 
 <p>Pronto! Nossa ER agora está casada por inteiro, então não temos mais o que fazer, fim do processo. Agora ficou fácil entender essa gulodice? É sempre assim, casa o máximo possível, e se precisar, devolve alguns caracteres para satisfazer o resto da expressão.</p>

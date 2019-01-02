@@ -28,7 +28,7 @@ next: multilinha.html
 ^([^a]|a[^q]|aq[^u]|aqu[^i]|[^c]|c[^h]|ch[^a]|...)
 </pre>
 
-<p>E assim vai, podendo ficar quilométrica. Mas funciona. Se for no meio da linha, esqueça, pois <b>qualquer</b> linha casará, mesmo as que contenham a palavra proibida. Tome como exemplo a frase &quot;o aqui é proibido.&quot;. Aplicando a ER quilométrica apresentada, mesmo sem a âncora ela casa no começo da linha na maior cara-de-pau:</p>
+<p>E assim vai, podendo ficar quilométrica. Mas funciona. Se for no meio da linha, esqueça, pois <b>qualquer</b> linha casará, mesmo as que contenham a palavra proibida. Tome como exemplo a frase "o aqui é proibido.". Aplicando a ER quilométrica apresentada, mesmo sem a âncora ela casa no começo da linha na maior cara-de-pau:</p>
 
 <pre>
 o aqui é proibido.
@@ -43,7 +43,7 @@ xxxx
 
 <p>Mas como não poderia deixar de ser, esta regra também tem uma exceção. Legal né? Você se lembra do tópico dos metacaracteres modernosos? Mais especificamente o <b><code>(?!...)</code></b>. No nosso exemplo em questão, a ER ficaria <b><code>(?!aqui)</code></b>, pois esse metacaractere fará a ER falhar caso encontre um <code>aqui</code> na linha.</p>
 
-<p>Para ficar mais simples, você pode considerar essa construção uma &quot;lista negada de ERs&quot;, que casa <i>qualquer coisa fora o que casar a ER contida</i>. Em nosso caso as ER eram apenas caracteres literais, mas poderia ser uma ER tão complicada quanto se precise. Levando-se isso em conta, fica aqui nossa conclusão:</p>
+<p>Para ficar mais simples, você pode considerar essa construção uma "lista negada de ERs", que casa <i>qualquer coisa fora o que casar a ER contida</i>. Em nosso caso as ER eram apenas caracteres literais, mas poderia ser uma ER tão complicada quanto se precise. Levando-se isso em conta, fica aqui nossa conclusão:</p>
 
 <blockquote>
   <u>Há como negar uma ou mais palavras, em apenas alguns aplicativos.</u>
