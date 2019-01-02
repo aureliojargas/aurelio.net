@@ -3,56 +3,48 @@ title: "Lista negada: a experiente [^...]"
 prev: lista.html
 next: quantificadores.html
 ---
-<P> Nem tão exigente quanto a lista nem tão necessitada quanto o
- ponto, temos a lista negada, que pelas suas más experiências
- passadas,<I> sabe o que não serve para ela casar</I>.</P>
-<BLOCKQUOTE><I> Ei ei ei, você disse que não ia mais falar sobre
- lista!!!</I></BLOCKQUOTE>
-<P> É rapidinho. A lista negada é exatamente igual à lista, podendo
- ter caracteres literais, intervalos e classes POSIX. Tudo o que se
- aplica a lista normal, se aplica à negada também.</P>
-<P> A única diferença é que ela possui lógica inversa, ou seja, ela
- casará com qualquer coisa,<B> fora</B> os componentes listados.</P>
-<P> Observe que a diferença em sua notação é que o primeiro
- caractere da lista é um circunflexo, ele indica que esta é uma lista
- negada. Então se<B> <CODE>[0-9]</CODE></B> são números,<B> <CODE>
-[^0-9]</CODE></B> é qualquer coisa fora números. Pode ser letras,
- símbolos, espaço em branco, qualquer coisa, menos números.</P>
-<P> Mas tem de ser alguma coisa. Só porque ela é uma lista negada isso
- não significa que ela pode casar &quot;nada&quot;.</P>
-<P> Explicando em outras palavras, se você diz &quot;qualquer coisa fora
- números&quot;, deve haver<I> outra coisa</I> no lugar dos números e não
- simplesmente &quot;se não houver números&quot;. Então essa ER não casaria uma
- linha vazia por exemplo.</P>
-<BLOCKQUOTE> <U>&quot;Qualquer coisa fora alguns caracteres&quot; não inclui
- &quot;nenhum caractere&quot;.</U></BLOCKQUOTE>
-<P> Como o traço e o colchete que fecha, o circunflexo é especial,
- então para colocarmos um<B> <CODE>^</CODE></B> literal em uma lista,
- precisamos pô-lo em qualquer posição que não seja a primeira. Assim<B>
- <CODE>[A-Z^]</CODE></B> casa maiúsculas e o circunflexo e<B> <CODE>
-[^A-Z^]</CODE></B> casa tudo fora isso.</P>
-<P> Ah! As<B> classes POSIX</B> também podem ser negadas, então<B> <CODE>
-[^[:digit:]]</CODE></B> casa &quot;qualquer coisa fora números&quot;.</P>
-<P> A lista negada é muito útil quando você sabe exatamente o que
- não pode ter em uma posição, como um erro ortográfico ou de
- escrita. Por exemplo, como mandam as regras da boa escrita, sempre
- após caracteres de pontuação como a vírgula ou o ponto, devemos ter
- um espaço em branco os separando do resto do texto. Então vamos
- procurar por qualquer coisa que não o espaço após a pontuação:</P>
-<PRE>
+
+<p>Nem tão exigente quanto a lista nem tão necessitada quanto o ponto, temos a lista negada, que pelas suas más experiências passadas, <i>sabe o que não serve para ela casar</i>.</p>
+
+<blockquote>
+  <i>Ei ei ei, você disse que não ia mais falar sobre lista!!!</i>
+</blockquote>
+
+<p>É rapidinho. A lista negada é exatamente igual à lista, podendo ter caracteres literais, intervalos e classes POSIX. Tudo o que se aplica a lista normal, se aplica à negada também.</p>
+
+<p>A única diferença é que ela possui lógica inversa, ou seja, ela casará com qualquer coisa, <b>fora</b> os componentes listados.</p>
+
+<p>Observe que a diferença em sua notação é que o primeiro caractere da lista é um circunflexo, ele indica que esta é uma lista negada. Então se <b><code>[0-9]</code></b> são números, <b><code>[^0-9]</code></b> é qualquer coisa fora números. Pode ser letras, símbolos, espaço em branco, qualquer coisa, menos números.</p>
+
+<p>Mas tem de ser alguma coisa. Só porque ela é uma lista negada isso não significa que ela pode casar &quot;nada&quot;.</p>
+
+<p>Explicando em outras palavras, se você diz &quot;qualquer coisa fora números&quot;, deve haver <i>outra coisa</i> no lugar dos números e não simplesmente &quot;se não houver números&quot;. Então essa ER não casaria uma linha vazia por exemplo.</p>
+
+<blockquote>
+  <u>&quot;Qualquer coisa fora alguns caracteres&quot; não inclui &quot;nenhum caractere&quot;.</u>
+</blockquote>
+
+<p>Como o traço e o colchete que fecha, o circunflexo é especial, então para colocarmos um <b><code>^</code></b> literal em uma lista, precisamos pô-lo em qualquer posição que não seja a primeira. Assim <b><code>[A-Z^]</code></b> casa maiúsculas e o circunflexo e <b><code>[^A-Z^]</code></b> casa tudo fora isso.</p>
+
+<p>Ah! As <b>classes POSIX</b> também podem ser negadas, então <b><code>[^[:digit:]]</code></b> casa &quot;qualquer coisa fora números&quot;.</p>
+
+<p>A lista negada é muito útil quando você sabe exatamente o que não pode ter em uma posição, como um erro ortográfico ou de escrita. Por exemplo, como mandam as regras da boa escrita, sempre após caracteres de pontuação como a vírgula ou o ponto, devemos ter um espaço em branco os separando do resto do texto. Então vamos procurar por qualquer coisa que não o espaço após a pontuação:</p>
+
+<pre>
 [:;,.!?][^ ]
-</PRE>
-<P> Ou, ainda, explicitando melhor nosso objetivo:</P>
-<PRE>
+</pre>
+
+<p>Ou, ainda, explicitando melhor nosso objetivo:</p>
+
+<pre>
 [[:punct:]][^ ]
-</PRE>
-<P><B> Resumão</B></P>
-<UL>
-<LI>Uma lista negada segue todas as regras de uma lista normal.</LI>
-<LI>Um<B> <CODE>^</CODE></B> literal não deve ser o primeiro item da
- lista.</LI>
-<LI>[:classes POSIX:] podem ser negadas.</LI>
-<LI>A lista negada sempre deve casar algo.</LI>
-</UL>
+</pre>
 
+<p><b>Resumão</b></p>
 
+<ul>
+  <li>Uma lista negada segue todas as regras de uma lista normal.</li>
+  <li>Um <b><code>^</code></b> literal não deve ser o primeiro item da lista.</li>
+  <li>[:classes POSIX:] podem ser negadas.</li>
+  <li>A lista negada sempre deve casar algo.</li>
+</ul>

@@ -3,53 +3,46 @@ title: "Para que servem?"
 prev: terminologia.html
 next: metacaracteres.html
 ---
-<P> Basicamente servem para você dizer algo abrangente de forma
- específica. Definido seu padrão de busca, você tem uma lista (finita
- ou não) de possibilidades de casamento. Em um exemplo rápido,<B> <CODE>
-[rgp]ato</CODE></B> pode casar <U>rato</U>, <U>gato</U> e <U>pato</U>.
- Ou seja, sua lista &quot;abrange especificamente&quot; essas três palavras, nada
- mais.</P>
-<BLOCKQUOTE><I> Mmmmmmmmmmmmmmmm...</I></BLOCKQUOTE>
-<P> Na prática as expressões regulares servem para uma infinidade de
- tarefas, é difícil fazer uma lista, pois elas são úteis sempre que
- você precisar buscar ou validar um padrão de texto que pode ser
- variável, como:</P>
-<UL>
-<LI>data</LI>
-<LI>horário</LI>
-<LI>número IP</LI>
-<LI>nome de pessoa</LI>
-<LI>endereço de e-mail</LI>
-<LI>endereço de Internet</LI>
-<LI>nome de usuário e senha</LI>
-<LI>declaração de uma função()</LI>
-<LI>dados na coluna N de um texto</LI>
-<LI>dados que estão entre &lt;tags&gt;&lt;/tags&gt;</LI>
-<LI>campos específicos de um texto tabulado</LI>
-<LI>número de telefone, RG, CPF, cartão de crédito</LI>
-<LI>dados que estão apenas no começo ou no fim da linha</LI>
-</UL>
-<P> E mais uma infinidade de outros padrões que não podem ser
- especificados com caracteres literais. Um exemplo prático: você tem
- uma lista diária de acesso de usuários que entraram em seu sistema,
- onde consta em cada linha, o horário do acesso e o &quot;login&quot; do
- usuário, algo como:</P>
-<PRE>
-	05:15  ernesto
-	08:39  ricardo
-	10:32  patricia
-	14:59  gabriel
-	16:27  carla
-	22:23  marcelo
-</PRE>
-<P> Como fazer para buscar automaticamente apenas os usuários que
- acessaram o sistema no período da tarde (meio-dia às seis)? Você tem
- várias opções, desde procurar uma a uma manualmente até fazer um
- programa que compare os primeiros caracteres de cada linha, mas falando
- de algo prático e rápido, que não exija conhecimentos de
- programação, a ER é simplesmente<B> <CODE>^1[2-8]</CODE></B>.</P>
-<BLOCKQUOTE><I> O que significa essa sopa de letrinhas?</I></BLOCKQUOTE>
-<P> Caaaaaaalma. Acompanhe o próximo tópico e vamos conhecer todos os
- metacaracteres, essas coisinhas úteis que facilitam nossa vida.</P>
 
+<p>Basicamente servem para você dizer algo abrangente de forma específica. Definido seu padrão de busca, você tem uma lista (finita ou não) de possibilidades de casamento. Em um exemplo rápido, <b><code>[rgp]ato</code></b> pode casar <u>rato</u>, <u>gato</u> e <u>pato</u>. Ou seja, sua lista &quot;abrange especificamente&quot; essas três palavras, nada mais.</p>
 
+<blockquote>
+  <i>Mmmmmmmmmmmmmmmm...</i>
+</blockquote>
+
+<p>Na prática as expressões regulares servem para uma infinidade de tarefas, é difícil fazer uma lista, pois elas são úteis sempre que você precisar buscar ou validar um padrão de texto que pode ser variável, como:</p>
+
+<ul>
+  <li>data</li>
+  <li>horário</li>
+  <li>número IP</li>
+  <li>nome de pessoa</li>
+  <li>endereço de e-mail</li>
+  <li>endereço de Internet</li>
+  <li>nome de usuário e senha</li>
+  <li>declaração de uma função()</li>
+  <li>dados na coluna N de um texto</li>
+  <li>dados que estão entre &lt;tags&gt;&lt;/tags&gt;</li>
+  <li>campos específicos de um texto tabulado</li>
+  <li>número de telefone, RG, CPF, cartão de crédito</li>
+  <li>dados que estão apenas no começo ou no fim da linha</li>
+</ul>
+
+<p>E mais uma infinidade de outros padrões que não podem ser especificados com caracteres literais. Um exemplo prático: você tem uma lista diária de acesso de usuários que entraram em seu sistema, onde consta em cada linha, o horário do acesso e o &quot;login&quot; do usuário, algo como:</p>
+
+<pre>
+        05:15  ernesto
+        08:39  ricardo
+        10:32  patricia
+        14:59  gabriel
+        16:27  carla
+        22:23  marcelo
+</pre>
+
+<p>Como fazer para buscar automaticamente apenas os usuários que acessaram o sistema no período da tarde (meio-dia às seis)? Você tem várias opções, desde procurar uma a uma manualmente até fazer um programa que compare os primeiros caracteres de cada linha, mas falando de algo prático e rápido, que não exija conhecimentos de programação, a ER é simplesmente <b><code>^1[2-8]</code></b>.</p>
+
+<blockquote>
+  <i>O que significa essa sopa de letrinhas?</i>
+</blockquote>
+
+<p>Caaaaaaalma. Acompanhe o próximo tópico e vamos conhecer todos os metacaracteres, essas coisinhas úteis que facilitam nossa vida.</p>

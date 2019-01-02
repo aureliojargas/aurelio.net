@@ -3,77 +3,58 @@ title: "Asterisco: o tanto-faz"
 prev: opcional.html
 next: mais.html
 ---
-<P> Se o opcional já não esquenta a cabeça, podendo ter ou não a
- entidade anterior, o asterisco é mais tranqüilo ainda, pois para ele
- pode ter, não ter, ou ter vários, infinitos. Em outras palavras, a
- entidade anterior pode aparecer<I> em qualquer quantidade</I>.</P>
-<PRE>
-6*0     	0, 60, 660, 6660, ..., 666666666660, ...
-bi*p    	bp, bip, biip, biiip, biiiip...
-b[ip]*  	b, bi, bip, biipp, bpipipi, biiiiip, bppp, ...
-</PRE>
-<P> Como HTML é sempre um ótimo exemplo, voltamos ao nosso exemplo das
- marcações, que podem ter vários espaços em branco após o
- identificador, então <CODE>&lt;b &gt;</CODE> e <CODE>&lt;/b &gt;</CODE> são
- válidos. Vamos colocar essa condição na ER:</P>
-<PRE>
-    &lt;/?[BIPbip] *&gt;	&lt;/B&gt;, &lt;/B &gt;, &lt;/B  &gt;, ..., &lt;p         &gt;, ...
-</PRE>
-<P> Note que agora com o asterisco, nossa ER já não tem mais um
- número finito de possibilidades. Vejamos como fica a leitura dessa ER:
- um <CODE>&lt;</CODE>, seguido ou não de uma <CODE>/</CODE>, seguido de:
- ou <CODE>B</CODE>, ou <CODE>I</CODE>, ou <CODE>P</CODE>, ou <CODE>b</CODE>
-, ou <CODE>i</CODE>, ou <CODE>p</CODE>, seguido ou não de vários
- espaços, seguido de <CODE>&gt;</CODE>.</P>
-<H4 ID="gulodice">Apresentando a gulodice</H4>
-<P> Pergunta: o que casará<B> <CODE>[ar]*a</CODE></B> na palavra<I>
- arara</I>? Alternativas:</P>
-<PRE>
-1) a    	[ar] zero vezes, seguido de a
-2) ara  	[ar] duas vezes (a,r), seguido de a
-3) arara	[ar] quatro vezes (a,r,a,r), seguido de a
+
+<p>Se o opcional já não esquenta a cabeça, podendo ter ou não a entidade anterior, o asterisco é mais tranqüilo ainda, pois para ele pode ter, não ter, ou ter vários, infinitos. Em outras palavras, a entidade anterior pode aparecer <i>em qualquer quantidade</i>.</p>
+
+<pre>
+6*0             0, 60, 660, 6660, ..., 666666666660, ...
+bi*p            bp, bip, biip, biiip, biiiip...
+b[ip]*          b, bi, bip, biipp, bpipipi, biiiiip, bppp, ...
+</pre>
+
+<p>Como HTML é sempre um ótimo exemplo, voltamos ao nosso exemplo das marcações, que podem ter vários espaços em branco após o identificador, então <code>&lt;b &gt;</code> e <code>&lt;/b &gt;</code> são válidos. Vamos colocar essa condição na ER:</p>
+
+<pre>
+    &lt;/?[BIPbip] *&gt;        &lt;/B&gt;, &lt;/B &gt;, &lt;/B  &gt;, ..., &lt;p         &gt;, ...
+</pre>
+
+<p>Note que agora com o asterisco, nossa ER já não tem mais um número finito de possibilidades. Vejamos como fica a leitura dessa ER: um <code>&lt;</code>, seguido ou não de uma <code>/</code>, seguido de: ou <code>B</code>, ou <code>I</code>, ou <code>P</code>, ou <code>b</code> , ou <code>i</code>, ou <code>p</code>, seguido ou não de vários espaços, seguido de <code>&gt;</code>.</p>
+
+<h4 id="gulodice">Apresentando a gulodice</h4>
+
+<p>Pergunta: o que casará <b><code>[ar]*a</code></b> na palavra <i>arara</i>? Alternativas:</p>
+
+<pre>
+1) a            [ar] zero vezes, seguido de a
+2) ara          [ar] duas vezes (a,r), seguido de a
+3) arara        [ar] quatro vezes (a,r,a,r), seguido de a
 4) n.d.a.
-</PRE>
-<P> Acertou se você escolheu a número 3. O asterisco repete em
- qualquer quantidade, mas ele sempre tentará repetir o<B> máximo</B>
- que conseguir. As três alternativas são válidas, mas entre casar a
- lista<B> <CODE>[ar]</CODE></B> zero, duas ou quatro vezes, ele
- escolherá o maior número possível. Por isso se diz que o asterisco
- é guloso.</P>
-<P> Essa gulodice às vezes é boa, às vezes é ruim. Os próximos
- quantificadores, mais e chaves, bem como o opcional já visto, são
- igualmente gulosos. Mais detalhes sobre o assunto, confira mais
- adiante.</P>
-<H4 ID="curinga">Apresentando o curinga .*</H4>
-<P> Vimos até agora que temos dois metacaracteres extremamente
- abrangentes, como o ponto (qualquer caractere) e o asterisco (em
- qualquer quantidade). E se juntarmos os dois? Teremos<I> qualquer
- caractere, em qualquer quantidade</I>. Pára um instante para pensar
- nisso. O que isso significa, tudo? Nada? A resposta é: ambos.</P>
-<P> O nada, pois &quot;qualquer quantidade&quot; também é igual a &quot;nenhuma
- quantidade&quot;. Então é opcional termos qualquer caractere, não
- importa. Assim, uma ER que seja simplesmente<B> <CODE>.*</CODE></B>
- sempre será válida e casará mesmo uma linha vazia.</P>
-<P> O tudo, pois &quot;qualquer quantidade&quot; também é igual a &quot;tudo o que
- tiver&quot;. E é exatamente isso o que o asterisco faz, ele é guloso,
- ganancioso, e sempre tentará casar o<B> máximo</B> que conseguir.
- Repita comigo: o MÁXIMO que conseguir.</P>
-<BLOCKQUOTE> <U>O curinga .* é qualquer coisa!</U></BLOCKQUOTE>
-<P> Assim, temos aqui o curinga das ERs, uma carta para se usar em
- qualquer situação. É muito comum ao escrever uma expressão regular,
- você definir alguns padrões que procura, e lá no meio, em uma parte
- que não importa, pode ser<I> qualquer coisa</I>, você coloca um<B> <CODE>
-.*</CODE></B> e depois continua a expressão normalmente.</P>
-<P> Por exemplo, para procurar ocorrência de duas palavras na mesma
- linha,<B> <CODE>relatório.*amanhã</CODE></B> serve para achar aquela
- linha maldita em que lhe pediram um trabalho &quot;pra ontem&quot;. Ou, ainda,
- procurar acessos de usuários em uma data qualquer:<B> <CODE>
-22/11/2001.*login</CODE></B>.</P>
-<P><B> Resumão</B></P>
-<UL>
-<LI>O asterisco repete em qualquer quantidade.</LI>
-<LI>Quantificadores são gulosos.</LI>
-<LI>O curinga .* é o tudo e o nada, qualquer coisa.</LI>
-</UL>
+</pre>
 
+<p>Acertou se você escolheu a número 3. O asterisco repete em qualquer quantidade, mas ele sempre tentará repetir o <b>máximo</b> que conseguir. As três alternativas são válidas, mas entre casar a lista <b><code>[ar]</code></b> zero, duas ou quatro vezes, ele escolherá o maior número possível. Por isso se diz que o asterisco é guloso.</p>
 
+<p>Essa gulodice às vezes é boa, às vezes é ruim. Os próximos quantificadores, mais e chaves, bem como o opcional já visto, são igualmente gulosos. Mais detalhes sobre o assunto, confira mais adiante.</p>
+
+<h4 id="curinga">Apresentando o curinga .*</h4>
+
+<p>Vimos até agora que temos dois metacaracteres extremamente abrangentes, como o ponto (qualquer caractere) e o asterisco (em qualquer quantidade). E se juntarmos os dois? Teremos <i>qualquer caractere, em qualquer quantidade</i>. Pára um instante para pensar nisso. O que isso significa, tudo? Nada? A resposta é: ambos.</p>
+
+<p>O nada, pois &quot;qualquer quantidade&quot; também é igual a &quot;nenhuma quantidade&quot;. Então é opcional termos qualquer caractere, não importa. Assim, uma ER que seja simplesmente <b><code>.*</code></b> sempre será válida e casará mesmo uma linha vazia.</p>
+
+<p>O tudo, pois &quot;qualquer quantidade&quot; também é igual a &quot;tudo o que tiver&quot;. E é exatamente isso o que o asterisco faz, ele é guloso, ganancioso, e sempre tentará casar o <b>máximo</b> que conseguir. Repita comigo: o MÁXIMO que conseguir.</p>
+
+<blockquote>
+  <u>O curinga .* é qualquer coisa!</u>
+</blockquote>
+
+<p>Assim, temos aqui o curinga das ERs, uma carta para se usar em qualquer situação. É muito comum ao escrever uma expressão regular, você definir alguns padrões que procura, e lá no meio, em uma parte que não importa, pode ser <i>qualquer coisa</i>, você coloca um <b><code>.*</code></b> e depois continua a expressão normalmente.</p>
+
+<p>Por exemplo, para procurar ocorrência de duas palavras na mesma linha, <b><code>relatório.*amanhã</code></b> serve para achar aquela linha maldita em que lhe pediram um trabalho &quot;pra ontem&quot;. Ou, ainda, procurar acessos de usuários em uma data qualquer: <b><code>22/11/2001.*login</code></b>.</p>
+
+<p><b>Resumão</b></p>
+
+<ul>
+  <li>O asterisco repete em qualquer quantidade.</li>
+  <li>Quantificadores são gulosos.</li>
+  <li>O curinga .* é o tudo e o nada, qualquer coisa.</li>
+</ul>

@@ -3,60 +3,50 @@ title: "JavaScript"
 prev: java.html
 next: lua.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 -------------------------------------------------------
-busca   	métodos test, search, exec, match
-substituição	método replace
-divisão 	método split
-ER crua 	/entre barras/
-ignore M/m	modificador i
-global  	modificador g
-</PRE>
-<P> O suporte a ERs no Javascript foi incluído nos dois navegadores
- mais famosos desde as seguintes versões:<I> Netscape 4.0x</I> e<I>
- Internet Explorer 4.0</I>, e o nosso personagem principal agora vai ser
- o objeto global <CODE>RegExp</CODE>.</P>
-<P> Para definir uma ER no formato cru, basta colocá-la entre /barras/,
- e logo após a segunda barra, podemos colocar os modificadores de
- maiúsculas e minúsculas e substituição global, assim:<B> <CODE>
-/[a-z]/ig</CODE></B>.</P>
-<P> Para criar um objeto do tipo <CODE>RegExp</CODE>, basta definir uma
- variável com uma /ER/. O método <CODE>test</CODE> é um dos que fazem
- a busca de padrões:</P>
-<PRE>
+busca           métodos test, search, exec, match
+substituição    método replace
+divisão         método split
+ER crua         /entre barras/
+ignore M/m      modificador i
+global          modificador g
+</pre>
+
+<p>O suporte a ERs no Javascript foi incluído nos dois navegadores mais famosos desde as seguintes versões: <i>Netscape 4.0x</i> e <i>Internet Explorer 4.0</i>, e o nosso personagem principal agora vai ser o objeto global <code>RegExp</code>.</p>
+
+<p>Para definir uma ER no formato cru, basta colocá-la entre /barras/, e logo após a segunda barra, podemos colocar os modificadores de maiúsculas e minúsculas e substituição global, assim: <b><code>/[a-z]/ig</code></b>.</p>
+
+<p>Para criar um objeto do tipo <code>RegExp</code>, basta definir uma variável com uma /ER/. O método <code>test</code> é um dos que fazem a busca de padrões:</p>
+
+<pre>
 var er = /^[a-z]+$/i;
 if (er.test(&quot;JAVA&quot;))
   alert(&quot;casou!&quot;);
-</PRE>
-<P> Fácil, não? Então para complicar, se você quiser fazer uma
- substituição, o método <CODE>replace</CODE> deve ser usado. Detalhe:
- ele é um método de uma<I> string</I> e não de uma /ER/, mas recebe
- ERs. Não entendeu? Veja:</P>
-<PRE>
+</pre>
+
+<p>Fácil, não? Então para complicar, se você quiser fazer uma substituição, o método <code>replace</code> deve ser usado. Detalhe: ele é um método de uma <i>string</i> e não de uma /ER/, mas recebe ERs. Não entendeu? Veja:</p>
+
+<pre>
 var eu = &quot;estou com fome&quot;;
 document.write(eu.replace(/....$/, &quot;sono&quot;));
-</PRE>
-<P> Em Javascript, temos uma simetria entre os objetos <CODE>regexp</CODE>
- e <CODE>string</CODE>, com métodos de mesma função, mas nomes
- diferentes. Os &quot;gêmeos siameses&quot; são <CODE>test</CODE> e <CODE>search</CODE>
- para busca simples e <CODE>exec</CODE> e <CODE>match</CODE> para busca
- com pescagem de dados. E lembre-se de que um método <CODE>regexp</CODE>
- recebe como parâmetro uma <CODE>string</CODE> e vice-versa, veja:</P>
-<PRE>
+</pre>
+
+<p>Em Javascript, temos uma simetria entre os objetos <code>regexp</code> e <code>string</code>, com métodos de mesma função, mas nomes diferentes. Os &quot;gêmeos siameses&quot; são <code>test</code> e <code>search</code> para busca simples e <code>exec</code> e <code>match</code> para busca com pescagem de dados. E lembre-se de que um método <code>regexp</code> recebe como parâmetro uma <code>string</code> e vice-versa, veja:</p>
+
+<pre>
 regexp.test(&quot;string&quot;)
 string.search(/regexp/)
 
 regexp.exec(&quot;string&quot;)
 string.match(/regexp/)
-</PRE>
-<P> Cuidado para não confundir! Falando em confundir, vamos ver o mais
- complicado de todos: o <CODE>exec</CODE>, que, além de fazer o
- casamento, povoa uma matriz com vários dados que podem ser recuperados
- posteriormente. Acompanhe o exemplo a seguir e note que o <CODE>
-matriz[1]</CODE> é o similar Javascript para o retrovisor<B> <CODE>\1</CODE>
-</B>:</P>
-<PRE>
+</pre>
+
+<p>Cuidado para não confundir! Falando em confundir, vamos ver o mais complicado de todos: o <code>exec</code>, que, além de fazer o casamento, povoa uma matriz com vários dados que podem ser recuperados posteriormente. Acompanhe o exemplo a seguir e note que o <code>matriz[1]</code> é o similar Javascript para o retrovisor <b><code>\1</code></b> :</p>
+
+<pre>
 var er = /^(\w+) (\w+)/;
 var matriz = er.exec(&quot;um dois três&quot;);
 document.write(matriz.index, &quot;&lt;BR&gt;&quot;,
@@ -72,13 +62,15 @@ document.write(matriz.index, &quot;&lt;BR&gt;&quot;,
 // um             // conteúdo do grupo 1
 // dois           // conteúdo do grupo 2
 
-</PRE>
-<P> Mais informações podem ser encontradas em:</P>
-<UL>
-<LI><A HREF="http://www.webreference.com/js/column5">
-http://www.webreference.com/js/column5</A></LI>
-<LI><A HREF="http://www.zdnet.com/devhead/stories/articles/0,4413,2354285,00.html">
-http://www.zdnet.com/devhead/stories/articles/0,4413,2354285,00.html</A></LI>
-</UL>
+</pre>
 
+<p>Mais informações podem ser encontradas em:</p>
 
+<ul>
+  <li>
+    <a href="http://www.webreference.com/js/column5">http://www.webreference.com/js/column5</a>
+  </li>
+  <li>
+    <a href="http://www.zdnet.com/devhead/stories/articles/0,4413,2354285,00.html">http://www.zdnet.com/devhead/stories/articles/0,4413,2354285,00.html</a>
+  </li>
+</ul>

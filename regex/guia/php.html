@@ -3,29 +3,25 @@ title: "PHP"
 prev: perl.html
 next: php-pcre.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 ------------------------------------------------
-busca   	função ereg
-substituição	função ereg_replace
-divisão 	função split
-ER crua 	'entre aspas simples'
-ignore M/m	funções eregi, eregi_replace
-global  	é o padrão
-</PRE>
-<P> Safo em Internet e banco de dados, o PHP é a escolha de uma legião
- de programadores ao redor do mundo para comércio eletrônico e
- transações de dados. E claro, como não poderia deixar de ser,
- também tem suporte às ERs.</P>
-<P> As funções quentes são <CODE>ereg</CODE> para busca, <CODE>
-ereg_replace</CODE> para substituição e o <CODE>split</CODE> para
- divisão. Sua sintaxe é bem tranqüila, sem esquisitices e bem coberta
- pela própria documentação que acompanha a linguagem.</P>
-<P> Um detalhe muito interessante é que ao casar um padrão, você pode
- opcionalmente colocar os conteúdos dos grupos em posições de uma
- matriz (&quot;array&quot;), numerada de acordo com o número dos grupos abertos.
- É uma maneira fácil de declarar diversas variáveis de uma vez.</P>
-<PRE>
+busca           função ereg
+substituição    função ereg_replace
+divisão         função split
+ER crua         'entre aspas simples'
+ignore M/m      funções eregi, eregi_replace
+global          é o padrão
+</pre>
+
+<p>Safo em Internet e banco de dados, o PHP é a escolha de uma legião de programadores ao redor do mundo para comércio eletrônico e transações de dados. E claro, como não poderia deixar de ser, também tem suporte às ERs.</p>
+
+<p>As funções quentes são <code>ereg</code> para busca, <code>ereg_replace</code> para substituição e o <code>split</code> para divisão. Sua sintaxe é bem tranqüila, sem esquisitices e bem coberta pela própria documentação que acompanha a linguagem.</p>
+
+<p>Um detalhe muito interessante é que ao casar um padrão, você pode opcionalmente colocar os conteúdos dos grupos em posições de uma matriz (&quot;array&quot;), numerada de acordo com o número dos grupos abertos. É uma maneira fácil de declarar diversas variáveis de uma vez.</p>
+
+<pre>
 $hora = &quot;12:34&quot;;
 $er = &quot;([0-9]{2}):([0-9]{2})&quot;;
 
@@ -33,26 +29,22 @@ if (ereg($er, $hora, $matriz)){
   echo &quot;em brasília $matriz[1] horas, &quot;;
   echo &quot;$matriz[2] minutos.\n&quot;;
 }
-</PRE>
-<P> O jeito PHP de ignorar a diferença entre maiúsculas e minúsculas
- é, no mínimo, diferente. É feito no próprio nome da função,
- adicionando um <CODE>i</CODE>, ficando <CODE>eregi</CODE>, <CODE>
-eregi_replace</CODE> e <CODE>spliti</CODE>(php4). A maneira de
- utilizá-las é a mesma. No exemplo seguinte, todas as letras do
- padrão<I> HeyHo</I> são trocadas por <CODE>.</CODE></P>
-<PRE>
+</pre>
+
+<p>O jeito PHP de ignorar a diferença entre maiúsculas e minúsculas é, no mínimo, diferente. É feito no próprio nome da função, adicionando um <code>i</code>, ficando <code>eregi</code>, <code>eregi_replace</code> e <code>spliti</code>(php4). A maneira de utilizá-las é a mesma. No exemplo seguinte, todas as letras do padrão <i>HeyHo</i> são trocadas por <code>.</code></p>
+
+<pre>
 print eregi_replace(&quot;[A-Z]&quot;, &quot;.&quot;, &quot;HeyHo&quot;);
-</PRE>
-<P> Para se especificar uma ER crua, basta colocá-la entre 'aspas
- simples'.</P>
-<P> E olha só que interessante, o PHP tem funções específicas para
- usuários de Perl, que aceitam uma sintaxe bem próxima à utilizada
- nessa linguagem. Para quem tiver curiosidade sobre esse frankenstein,
- confira as funções <CODE>preg_match</CODE>, <CODE>preg_match_all</CODE>
-, <CODE>preg_replace</CODE> e <CODE>preg_split</CODE>.</P>
-<P> A página oficial e fonte inicial de pesquisa sobre a linguagem é:</P>
-<UL>
-<LI><A HREF="http://www.php.net">http://www.php.net</A></LI>
-</UL>
+</pre>
 
+<p>Para se especificar uma ER crua, basta colocá-la entre 'aspas simples'.</p>
 
+<p>E olha só que interessante, o PHP tem funções específicas para usuários de Perl, que aceitam uma sintaxe bem próxima à utilizada nessa linguagem. Para quem tiver curiosidade sobre esse frankenstein, confira as funções <code>preg_match</code>, <code>preg_match_all</code> , <code>preg_replace</code> e <code>preg_split</code>.</p>
+
+<p>A página oficial e fonte inicial de pesquisa sobre a linguagem é:</p>
+
+<ul>
+  <li>
+    <a href="http://www.php.net">http://www.php.net</a>
+  </li>
+</ul>

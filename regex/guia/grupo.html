@@ -3,81 +3,78 @@ title: "Grupo: o pop (...)"
 prev: ou.html
 next: retrovisor.html
 ---
-<P> Assim como artistas famosos e personalidades que conseguem arrastar
- multidões, o grupo tem o dom de juntar vários tipos de sujeitos em um
- mesmo local. Dentro de um grupo podemos ter um ou mais caracteres,
- metacaracteres e inclusive outros grupos! Como em uma expressão
- matemática, os parênteses definem um grupo, e seu conteúdo pode ser
- visto como um bloco na expressão.</P>
-<P> Todos os metacaracteres quantificadores que vimos anteriormente,
- podem ter seu poder ampliado pelo grupo, pois ele lhes dá mais
- abrangência. E o ou, pelo contrário, tem sua abrangência limitada
- pelo grupo, e pode parecer estranho, mas é essa limitação que lhe
- dá mais poder.</P>
-<P> Em um exemplo simples,<B> <CODE>(ai)+</CODE></B> agrupa a palavra
- &quot;ai&quot; e esse grupo está quantificado pelo mais. Isso quer dizer que
- casamos várias repetições da palavra, como <U>ai</U>, <U>aiai</U>, <U>
-aiaiai</U>, ... E assim podemos agrupar tudo o que quisermos, literais e
- metacaracteres, e quantificá-los:</P>
-<PRE>
-(ha!)+          	ha!, ha!ha!, ha!ha!ha!, ...
-(\.[0-9]){3}    	.0.6.2, .2.8.9, .6.6.6, ...
-(www\.)?zz\.com 	www.zz.com, zz.com
-</PRE>
-<P> E em especial nosso amigo ou ganha limites e seu poder cresce:</P>
-<PRE>
-boa-(tarde|noite)	boa-tarde, boa-noite
-(#|n\.|núm) 6    	# 6, n. 6, núm 6
-(in|con)?certo  	incerto, concerto, certo
-</PRE>
-<P> Note que o grupo não altera o sentido da ER, apenas serve como
- marcador. Podemos criar subgrupos também, então imagine que você
- esteja procurando o nome de um supermercado em uma listagem e não sabe
- se este é um mercado, supermercado ou um hipermercado.</P>
-<PRE>
+
+<p>Assim como artistas famosos e personalidades que conseguem arrastar multidões, o grupo tem o dom de juntar vários tipos de sujeitos em um mesmo local. Dentro de um grupo podemos ter um ou mais caracteres, metacaracteres e inclusive outros grupos! Como em uma expressão matemática, os parênteses definem um grupo, e seu conteúdo pode ser visto como um bloco na expressão.</p>
+
+<p>Todos os metacaracteres quantificadores que vimos anteriormente, podem ter seu poder ampliado pelo grupo, pois ele lhes dá mais abrangência. E o ou, pelo contrário, tem sua abrangência limitada pelo grupo, e pode parecer estranho, mas é essa limitação que lhe dá mais poder.</p>
+
+<p>Em um exemplo simples, <b><code>(ai)+</code></b> agrupa a palavra &quot;ai&quot; e esse grupo está quantificado pelo mais. Isso quer dizer que casamos várias repetições da palavra, como <u>ai</u>, <u>aiai</u>, <u>aiaiai</u>, ... E assim podemos agrupar tudo o que quisermos, literais e metacaracteres, e quantificá-los:</p>
+
+<pre>
+(ha!)+                  ha!, ha!ha!, ha!ha!ha!, ...
+(\.[0-9]){3}            .0.6.2, .2.8.9, .6.6.6, ...
+(www\.)?zz\.com         www.zz.com, zz.com
+</pre>
+
+<p>E em especial nosso amigo ou ganha limites e seu poder cresce:</p>
+
+<pre>
+boa-(tarde|noite)       boa-tarde, boa-noite
+(#|n\.|núm) 6           # 6, n. 6, núm 6
+(in|con)?certo          incerto, concerto, certo
+</pre>
+
+<p>Note que o grupo não altera o sentido da ER, apenas serve como marcador. Podemos criar subgrupos também, então imagine que você esteja procurando o nome de um supermercado em uma listagem e não sabe se este é um mercado, supermercado ou um hipermercado.</p>
+
+<pre>
 (super|hiper)mercado
-</PRE>
-<P> Consegue casar as duas últimas possibilidades, mas note que nas
- alternativas<I> super</I> e<I> hiper</I> temos um trecho <U>per</U>
- comum aos dois, então podíamos &quot;alternativizar&quot; apenas as diferenças<I>
- su</I> e<I> hi</I>:</P>
-<PRE>
+</pre>
+
+<p>Consegue casar as duas últimas possibilidades, mas note que nas alternativas <i>super</i> e <i>hiper</i> temos um trecho <u>per</u> comum aos dois, então podíamos &quot;alternativizar&quot; apenas as diferenças <i>su</i> e <i>hi</i>:</p>
+
+<pre>
 (su|hi)permercado
-</PRE>
-<P> Precisamos também casar apenas o<I> mercado</I> sem os
- aumentativos, então temos de agrupá-los e torná-los opcionais:</P>
-<PRE>
+</pre>
+
+<p>Precisamos também casar apenas o <i>mercado</i> sem os aumentativos, então temos de agrupá-los e torná-los opcionais:</p>
+
+<pre>
 ((su|hi)per)?mercado
-</PRE>
-<P> Pronto! Temos a ER que buscávamos e ainda esbanjamos habilidade
- utilizando um grupo dentro do outro.</P>
-<BLOCKQUOTE><I> Ei! E se tivesse minimercado também?</I></BLOCKQUOTE>
-<PRE>
+</pre>
+
+<p>Pronto! Temos a ER que buscávamos e ainda esbanjamos habilidade utilizando um grupo dentro do outro.</p>
+
+<blockquote>
+  <i>Ei! E se tivesse minimercado também?</i>
+</blockquote>
+
+<pre>
 (mini|(su|hi)per)?mercado
-</PRE>
-<P> E assim vai... Acho que já deu para notar quão poderosas e
- complexas podem ficar nossas ERs ao utilizarmos grupos, não? Mas não
- acaba por aqui! Acompanhe o retrovisor na seqüência.</P>
-<BLOCKQUOTE><I> Espera! E se eu quiser casar um par de parênteses
- literais?</I></BLOCKQUOTE>
-<P> Ah! Lembra-se do escape criptonita? Basta tirar o poder dos
- parênteses, escapando-os. Veja um exemplo na ER para procurar
- declarações de função em códigos de programas como<I>
- Minha_Funcao()</I></P>
-<PRE>
+</pre>
+
+<p>E assim vai... Acho que já deu para notar quão poderosas e complexas podem ficar nossas ERs ao utilizarmos grupos, não? Mas não acaba por aqui! Acompanhe o retrovisor na seqüência.</p>
+
+<blockquote>
+  <i>Espera! E se eu quiser casar um par de parênteses literais?</i>
+</blockquote>
+
+<p>Ah! Lembra-se do escape criptonita? Basta tirar o poder dos parênteses, escapando-os. Veja um exemplo na ER para procurar declarações de função em códigos de programas como <i>Minha_Funcao()</i></p>
+
+<pre>
 [A-Za-z0-9_]+\(\)
-</PRE>
-<P> Ou ainda, caso acentuação seja permitida em nomes de função
- (lembre-se das classes POSIX!):</P>
-<PRE>
+</pre>
+
+<p>Ou ainda, caso acentuação seja permitida em nomes de função (lembre-se das classes POSIX!):</p>
+
+<pre>
 [[:alnum:]_]+\(\)
-</PRE>
-<P><B> Resumão</B></P>
-<UL>
-<LI>Grupos servem para agrupar.</LI>
-<LI>Grupos são muito poderosos.</LI>
-<LI>Grupos podem conter grupos.</LI>
-<LI>Grupos são quantificáveis.</LI>
-</UL>
+</pre>
 
+<p><b>Resumão</b></p>
 
+<ul>
+  <li>Grupos servem para agrupar.</li>
+  <li>Grupos são muito poderosos.</li>
+  <li>Grupos podem conter grupos.</li>
+  <li>Grupos são quantificáveis.</li>
+</ul>

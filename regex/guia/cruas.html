@@ -3,38 +3,13 @@ title: "ERs pré-processadas e cruas"
 prev: maiusculas-minusculas.html
 next: negar-palavra.html
 ---
-<P> Algumas linguagens recebem a ER como um dado do tipo &quot;string&quot;, e
- não simplesmente como uma ER pronta. Essa<I> string</I> é
- primeiramente interpretada pela linguagem, e só depois é passada ao
- robozinho. Mas o que exatamente isso quer dizer? Muitas coisas.</P>
-<P> Primeiro, esse tratamento prévio não é algo específico das ERs,
- pois também acontece com qualquer<I> string</I> na linguagem, seja
- para ecoar uma mensagem na tela, seja para fazer indexação. Trechos
- da ER podem ser confundidos com variáveis e outras estruturas
- especiais, como, por exemplo, a ER<B> <CODE>$nome</CODE></B> poderia
- ser expandida para o conteúdo da variável <CODE>$nome</CODE>. Mas o
- que geralmente pega mesmo é a interpretação de escapes, incluindo os
- barra-letras.</P>
-<P> Isso nos afeta diretamente ao escrever uma ER, pois imagine que
- queremos casar um <CODE>\t</CODE> literal, então escapamos o escape:<B>
- <CODE>\\t</CODE></B>. Mas ao receber essa<I> string</I>, a linguagem
- primeiro a interpreta, e quando vê dois escapes seguidos, o que faz? O
- troca por apenas um, pois<B> <CODE>\\</CODE></B> representa um escape
- literal. Com isso nosso robozinho recebe a ER<B> <CODE>\t</CODE></B>,
- que por sua vez será interpretado como um TAB literal e nossa busca
- falhará. Nesse caso, temos de prever o pré-processamento e escapar
- duplamente<B> <CODE>\\\\t</CODE></B>, para que o robozinho receba o<B> <CODE>
-\\t</CODE></B> que queríamos.</P>
-<P> Felizmente, para que não precisemos ficar escapando tudo duplicado,
- a maioria dessas linguagens tem maneiras de se especificar uma &quot;string
- crua&quot; (&quot;raw string&quot;), que não é interpretada e é passada diretamente
- ao robozinho. Detalhes de como fazer isso estão no capítulo
- específico da cada linguagem, mais adiante. Mas essa característica
- também tem seu lado bom. Como alguns robozinhos não suportam os
- barra-letras, esse pré-processamento os reconhece e os converte,
- passando-os literais para o robô.</P>
-<P> Concluindo, se a linguagem que você usa recebe as ERs como<I>
- strings</I>, descubra como deixá-las cruas, ou fique com dor de
- cabeça de tanto escapar os escapes...</P>
 
+<p>Algumas linguagens recebem a ER como um dado do tipo &quot;string&quot;, e não simplesmente como uma ER pronta. Essa <i>string</i> é primeiramente interpretada pela linguagem, e só depois é passada ao robozinho. Mas o que exatamente isso quer dizer? Muitas coisas.</p>
 
+<p>Primeiro, esse tratamento prévio não é algo específico das ERs, pois também acontece com qualquer <i>string</i> na linguagem, seja para ecoar uma mensagem na tela, seja para fazer indexação. Trechos da ER podem ser confundidos com variáveis e outras estruturas especiais, como, por exemplo, a ER <b><code>$nome</code></b> poderia ser expandida para o conteúdo da variável <code>$nome</code>. Mas o que geralmente pega mesmo é a interpretação de escapes, incluindo os barra-letras.</p>
+
+<p>Isso nos afeta diretamente ao escrever uma ER, pois imagine que queremos casar um <code>\t</code> literal, então escapamos o escape: <b><code>\\t</code></b>. Mas ao receber essa <i>string</i>, a linguagem primeiro a interpreta, e quando vê dois escapes seguidos, o que faz? O troca por apenas um, pois <b><code>\\</code></b> representa um escape literal. Com isso nosso robozinho recebe a ER <b><code>\t</code></b>, que por sua vez será interpretado como um TAB literal e nossa busca falhará. Nesse caso, temos de prever o pré-processamento e escapar duplamente <b><code>\\\\t</code></b>, para que o robozinho receba o <b><code>\\t</code></b> que queríamos.</p>
+
+<p>Felizmente, para que não precisemos ficar escapando tudo duplicado, a maioria dessas linguagens tem maneiras de se especificar uma &quot;string crua&quot; (&quot;raw string&quot;), que não é interpretada e é passada diretamente ao robozinho. Detalhes de como fazer isso estão no capítulo específico da cada linguagem, mais adiante. Mas essa característica também tem seu lado bom. Como alguns robozinhos não suportam os barra-letras, esse pré-processamento os reconhece e os converte, passando-os literais para o robô.</p>
+
+<p>Concluindo, se a linguagem que você usa recebe as ERs como <i>strings</i>, descubra como deixá-las cruas, ou fique com dor de cabeça de tanto escapar os escapes...</p>

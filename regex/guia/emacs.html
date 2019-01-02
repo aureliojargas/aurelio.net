@@ -3,68 +3,50 @@ title: "Emacs"
 prev: vim.html
 next: googledocs.html
 ---
-<P> Chamar o emacs de editor de texto é ser superficial, pois editar
- texto parece ser a coisa menos interessante para fazer neste programa
- que também lê e-mails, acessa a Internet, faz ftp, entre outros. Mas
- como nosso interesse aqui é ERs, é isso o que veremos.
- Contrastando-as com a abundância de funcionalidades, as ERs no emacs
- são diferentes em alguns aspectos e não têm as chaves!</P>
-<P> As ERs são tratadas como<I> strings</I>, então valem as dicas já
- vistas para lidar com isso. Para complicar, ele usa a notação antiga,
- em que a maioria dos metacaracteres deve ser escapada para serem
- especiais.</P>
-<P> Então juntando esses dois fatos, precisamos fazer<B> <CODE>
-\\[\\(.*\\)\\]</CODE></B> para agrupar o conteúdo de um par de
- colchetes, o que normalmente seria<B> <CODE>\[(.*)\]</CODE></B>.</P>
-<P> Há vários comandos que trabalham com ERs, sendo <CODE>
-re-search-forward</CODE> e <CODE>re-search-backward</CODE> os comandos
- de busca nas linhas adiante e anteriores, respectivamente. Mas melhores
- do que estes são os comandos similares que procuram enquanto você
- digita, já sabendo se sua ER está funcionando ou não antes de
- finalizá-la: <CODE>isearch-forward-regexp</CODE> e <CODE>
-isearch-backward-regexp</CODE>.</P>
-<P> Como um editor de texto serve para alterar texto, temos o comando <CODE>
-replace-regexp</CODE> que se encarrega de fazer a substituição de
- padrões:</P>
-<PRE>
+
+<p>Chamar o emacs de editor de texto é ser superficial, pois editar texto parece ser a coisa menos interessante para fazer neste programa que também lê e-mails, acessa a Internet, faz ftp, entre outros. Mas como nosso interesse aqui é ERs, é isso o que veremos. Contrastando-as com a abundância de funcionalidades, as ERs no emacs são diferentes em alguns aspectos e não têm as chaves!</p>
+
+<p>As ERs são tratadas como <i>strings</i>, então valem as dicas já vistas para lidar com isso. Para complicar, ele usa a notação antiga, em que a maioria dos metacaracteres deve ser escapada para serem especiais.</p>
+
+<p>Então juntando esses dois fatos, precisamos fazer <b><code>\\[\\(.*\\)\\]</code></b> para agrupar o conteúdo de um par de colchetes, o que normalmente seria <b><code>\[(.*)\]</code></b>.</p>
+
+<p>Há vários comandos que trabalham com ERs, sendo <code>re-search-forward</code> e <code>re-search-backward</code> os comandos de busca nas linhas adiante e anteriores, respectivamente. Mas melhores do que estes são os comandos similares que procuram enquanto você digita, já sabendo se sua ER está funcionando ou não antes de finalizá-la: <code>isearch-forward-regexp</code> e <code>isearch-backward-regexp</code>.</p>
+
+<p>Como um editor de texto serve para alterar texto, temos o comando <code>replace-regexp</code> que se encarrega de fazer a substituição de padrões:</p>
+
+<pre>
 M-x replace-regexp &lt;enter&gt; \(Gentalha!\) &lt;enter&gt; \&amp; \1 Prrrr! &lt;enter&gt;
-</PRE>
-<P> Com essa seqüência agrupamos a palavra <U>gentalha!</U> e com o
- especial<B> <CODE>\&amp;</CODE></B> que referencia todo o trecho casado e o
- retrovisor um, que neste caso têm mesmo conteúdo, obtemos a frase
- clássica que o<I> Seu Madruga</I> ouve após apanhar: &quot;Gentalha!
- Gentalha! Prrrr!&quot;.</P>
-<P> O que é realmente diferente de tudo no emacs são suas &quot;classes de
- sintaxe&quot;, que são seus similares para as classes POSIX e um algo mais.
- A sintaxe para acessar essas classes é<B> <CODE>\s&lt;identificador&gt;</CODE>
-</B>, em que o identificador pode ser:</P>
-<PRE>
-ident.	nome    	casa um caractere que...
+</pre>
+
+<p>Com essa seqüência agrupamos a palavra <u>gentalha!</u> e com o especial <b><code>\&amp;</code></b> que referencia todo o trecho casado e o retrovisor um, que neste caso têm mesmo conteúdo, obtemos a frase clássica que o <i>Seu Madruga</i> ouve após apanhar: &quot;Gentalha! Gentalha! Prrrr!&quot;.</p>
+
+<p>O que é realmente diferente de tudo no emacs são suas &quot;classes de sintaxe&quot;, que são seus similares para as classes POSIX e um algo mais. A sintaxe para acessar essas classes é <b><code>\s&lt;identificador&gt;</code></b> , em que o identificador pode ser:</p>
+
+<pre>
+ident.  nome            casa um caractere que...
 --------------------------------------------------
-/	charquote	escapa o próximo caractere
-\	escape  	inicia um escape tipo C
-(	open    	abre um bloco
-)	close   	fecha de um bloco
-&lt;	comment 	inicia um comentário
-&gt;	endcomment	termina um comentário
-,	quote   	marca um texto normal
-&quot;	string  	delimita uma string
--	whitespace	é branco
-.	punct   	é pontuação
-w	word    	é parte de uma palavra
-_	symbol  	não é parte de palavra
-</PRE>
-<P> O detalhe é que você mesmo pode alterar o conteúdo dessas classes
- antes de utilizá-las, dependendo de suas necessidades. O comando <CODE>
-describe-syntax</CODE> mostra os valores atuais dessas classes, para
- conferência.</P>
-<P> E como era de se esperar<B> <CODE>\S</CODE></B> (com S maiúsculo)
- casa exatamente o oposto, sendo<B> <CODE>\S-</CODE></B> qualquer coisa
- fora brancos, e assim vai...</P>
-<P> Ops, quase me esqueci do mais importante: é<B> GNU</B> emacs...</P>
-<UL>
-<LI><A HREF="http://www.gnu.org/software/emacs/emacs.html">
-http://www.gnu.org/software/emacs/emacs.html</A></LI>
-</UL>
+/       charquote       escapa o próximo caractere
+\       escape          inicia um escape tipo C
+(       open            abre um bloco
+)       close           fecha de um bloco
+&lt;    comment         inicia um comentário
+&gt;    endcomment      termina um comentário
+,       quote           marca um texto normal
+&quot;  string          delimita uma string
+-       whitespace      é branco
+.       punct           é pontuação
+w       word            é parte de uma palavra
+_       symbol          não é parte de palavra
+</pre>
 
+<p>O detalhe é que você mesmo pode alterar o conteúdo dessas classes antes de utilizá-las, dependendo de suas necessidades. O comando <code>describe-syntax</code> mostra os valores atuais dessas classes, para conferência.</p>
 
+<p>E como era de se esperar <b><code>\S</code></b> (com S maiúsculo) casa exatamente o oposto, sendo <b><code>\S-</code></b> qualquer coisa fora brancos, e assim vai...</p>
+
+<p>Ops, quase me esqueci do mais importante: é <b>GNU</b> emacs...</p>
+
+<ul>
+  <li>
+    <a href="http://www.gnu.org/software/emacs/emacs.html">http://www.gnu.org/software/emacs/emacs.html</a>
+  </li>
+</ul>

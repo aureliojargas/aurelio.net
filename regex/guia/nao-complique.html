@@ -3,41 +3,33 @@ title: "Não complique"
 prev: mandamentos.html
 next: use-circunflexo.html
 ---
-<P> Ao construir uma ER, lembre-se que um dia alguém, provavelmente
- você mesmo, terá de dar manutenção a ela, para arrumar algum
- problema ou incrementá-la. Tendo isso em mente, evite fazer
- construções complicadas desnecessariamente. Nem sempre a menor ER é
- a melhor, tudo vai depender do quão comentada ela está ou das
- habilidades de quem for mantê-la. Vamos ver um exemplo bem simples.
- Lembra na explicação do escape, quando vimos uma ER que casava um
- número de RG?</P>
-<PRE>
+
+<p>Ao construir uma ER, lembre-se que um dia alguém, provavelmente você mesmo, terá de dar manutenção a ela, para arrumar algum problema ou incrementá-la. Tendo isso em mente, evite fazer construções complicadas desnecessariamente. Nem sempre a menor ER é a melhor, tudo vai depender do quão comentada ela está ou das habilidades de quem for mantê-la. Vamos ver um exemplo bem simples. Lembra na explicação do escape, quando vimos uma ER que casava um número de RG?</p>
+
+<pre>
 [0-9]\.[0-9]{3}\.[0-9]{3}-[0-9]
-</PRE>
-<P> Note que o trecho para casar um ponto e três números seguidos<B> <CODE>
-\.[0-9]{3}</CODE></B> se repete duas vezes, então podemos agrupá-lo e
- aplicar as chaves, diminuindo o tamanho da ER:</P>
-<PRE>
+</pre>
+
+<p>Note que o trecho para casar um ponto e três números seguidos <b><code>\.[0-9]{3}</code></b> se repete duas vezes, então podemos agrupá-lo e aplicar as chaves, diminuindo o tamanho da ER:</p>
+
+<pre>
 [0-9](\.[0-9]{3}){2}-[0-9]
-</PRE>
-<P> Note, porém, que nesse caso, essa &quot;simplificação&quot; da expressão
- acabou ficando não tão simples assim, e exige um pouco de reflexão
- até você pescar exatamente o que ela faz. Foi vantagem ter diminuído
- seu tamanho? Isso é questionável, mas geralmente não. E aquela do
- mercado?</P>
-<PRE>
+</pre>
+
+<p>Note, porém, que nesse caso, essa &quot;simplificação&quot; da expressão acabou ficando não tão simples assim, e exige um pouco de reflexão até você pescar exatamente o que ela faz. Foi vantagem ter diminuído seu tamanho? Isso é questionável, mas geralmente não. E aquela do mercado?</p>
+
+<pre>
 (mini|(su|hi)per)?mercado
-</PRE>
-<P> Será que se a deixássemos mais simples, não ficaria mais fácil
- entendê-la? A mudança é pequena, mas veja como visualmente fica mais
- agradável e fácil:</P>
-<PRE>
+</pre>
+
+<p>Será que se a deixássemos mais simples, não ficaria mais fácil entendê-la? A mudança é pequena, mas veja como visualmente fica mais agradável e fácil:</p>
+
+<pre>
 (mini|super|hiper)?mercado
-</PRE>
-<BLOCKQUOTE> <U>Nem sempre a ER menor é a melhor.</U></BLOCKQUOTE>
-<P> Então muito cuidado ao colocar grupos dentro de grupos, quantificar
- grupos, usar chaves quando se pode usar o asterisco, entre outros.
- Procure manter sua ER simples. Como dizem os gringos: KISS (&quot;Keep It
- Simple, Stupid&quot;), traduzindo: &quot;deixe simples, estúpido&quot;.</P>
+</pre>
 
+<blockquote>
+  <u>Nem sempre a ER menor é a melhor.</u>
+</blockquote>
 
+<p>Então muito cuidado ao colocar grupos dentro de grupos, quantificar grupos, usar chaves quando se pode usar o asterisco, entre outros. Procure manter sua ER simples. Como dizem os gringos: KISS (&quot;Keep It Simple, Stupid&quot;), traduzindo: &quot;deixe simples, estúpido&quot;.</p>

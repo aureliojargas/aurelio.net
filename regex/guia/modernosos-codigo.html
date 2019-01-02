@@ -3,16 +3,14 @@ title: "(?{código})"
 prev: modernosos-condicional.html
 next: precedencia.html
 ---
-<P> E agora, a prova de que isso já foi longe demais, e o marco da
- perda definitiva de compatibilidade de ERs entre aplicativos: a
- possibilidade de colocar códigos Perl para serem executados<B> no meio</B>
- da ER. Por enquanto é só o Perl que ousou fazer isso.</P>
-<P> Dá até coceira de estar escrevendo sobre isso, mas você pode
- colocar trechos de um mesmo código, como um contador incremental, em
- várias partes de uma mesma ER.</P>
-<P> Vou colocar aqui um exemplo tirado do manual do Perl, estruturado e
- comentado, veja com seus próprios olhos:</P>
-<PRE>
+
+<p>E agora, a prova de que isso já foi longe demais, e o marco da perda definitiva de compatibilidade de ERs entre aplicativos: a possibilidade de colocar códigos Perl para serem executados <b>no meio</b> da ER. Por enquanto é só o Perl que ousou fazer isso.</p>
+
+<p>Dá até coceira de estar escrevendo sobre isso, mas você pode colocar trechos de um mesmo código, como um contador incremental, em várias partes de uma mesma ER.</p>
+
+<p>Vou colocar aqui um exemplo tirado do manual do Perl, estruturado e comentado, veja com seus próprios olhos:</p>
+
+<pre>
 $_ = 'a' x 8;
 m&lt;
   (?{ $cnt = 0 })             #inicializa
@@ -26,6 +24,4 @@ m&lt;
   (?{ $res = $cnt })  # se ok, copia para
                       # uma var não-local
  &gt;x;
-</PRE>
-
-
+</pre>

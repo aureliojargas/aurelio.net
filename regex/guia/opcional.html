@@ -3,67 +3,47 @@ title: "Opcional: o opcional ?"
 prev: quantificadores.html
 next: asterisco.html
 ---
-<P> O opcional é um quantificador que não esquenta a cabeça, para ele
- pode ter ou não a ocorrência da entidade anterior, pois ele a repete
- 0 ou 1 vez. Por exemplo, a ER<B> <CODE>6?</CODE></B> significa zero ou
- uma ocorrência do número 6. Se tiver um 6, beleza, casamento
- efetuado. Se não tiver, beleza também. Isso torna o 6 opcional (daí
- o nome), que tendo ou não, a ER casa. Veja mais um exemplo, o plural.
- A ER<B> <CODE>ondas?</CODE></B> tem a letra <CODE>s</CODE> marcada como
- opcional, então ela casa <U>onda</U> e <U>ondas</U>.</P>
-<BLOCKQUOTE> <U>Cada letra normal é um átomo da ER, então o opcional
- é aplicado somente ao s e não à palavra toda.</U></BLOCKQUOTE><BLOCKQUOTE>
-<I> E essa tal de entidade pode ser um metacaractere então?</I></BLOCKQUOTE>
-<P> Claro! Agora vamos começar a ver o poder de uma expressão regular.
- Já vimos o metacaractere lista e agora vimos o opcional, que tal
- fazermos uma lista opcional? Voltando um pouco àquele exemplo da
- palavra<I> fala</I>, vamos fazer a ER<B> <CODE>fala[r!]?</CODE></B>.
- Mmmmmm, as ERs estão começando a ficar interessantes não? Mas antes
- de analisar essa ER, uma dica que vale ouro, memorize já:<I> leia a ER
- átomo por átomo, da esquerda para a direita</I>. Repetindo:<I> leia a
- ER átomo por átomo, da esquerda para a direita</I>.</P>
-<H4 ID="lendo">Como ler uma ER</H4>
-<P> É bem simples, uma ER se lê exatamente como o robozinho (lembra
- quem ele é?) leria. Primeiro lê-se átomo por átomo, depois
- entende-se o todo e depois se analisa as possibilidades. Na nossa ER<B>
- <CODE>fala[r!]?</CODE></B> em questão, sua leitura fica: um <CODE>f</CODE>
- seguido de um <CODE>a</CODE>, seguido de um <CODE>l</CODE>, seguido de
- um <CODE>a</CODE>, seguido de: ou <CODE>r</CODE>, ou <CODE>!</CODE>,
- ambos opcionais.</P>
-<P> Essa leitura é<B> essencial</B> para o entendimento da ER. Ela pode
- em um primeiro momento ser feita em voz alta, de maneira repetitiva,
- até esse processo se tornar natural. Depois ela pode ser feita
- mentalmente mesmo, e de maneira automática. É como você está
- fazendo agora repetindo mentalmente estas palavras escritas aqui
- enquanto as lê. Você não percebe, faz normalmente.</P>
-<P> Feita a leitura, agora temos de entender o todo, ou seja, temos um
- trecho literal<I> fala</I>, seguido de uma lista opcional de
- caracteres. Para descobrirmos as possibilidades, é o<I> fala</I>
- seguido de cada um dos itens da lista e por fim seguido por nenhum
- deles, pois a lista é opcional. Então fica:</P>
-<PRE>
-fala[r!]?	falar, fala!, fala
-</PRE>
-<P> Pronto! Desvendamos os segredos da ER. É claro, esta é pequena e
- fácil, mas o que são ER grandes senão várias partes pequenas
- agrupadas? O principal é dominar essa leitura por átomos. O resto é
- ler devagar até chegar ao final. Não há segredo.</P>
-<P> Então voltemos ao nosso exemplo de marcações HTML, podemos
- facilmente incluir agora as marcações que fecham o trecho, em que a
- única diferença é que vem uma barra / antes da letra:</P>
-<PRE>
-&lt;/?[BIPbip]&gt;	&lt;/B&gt;, &lt;/I&gt;, &lt;/P&gt;, &lt;/b&gt;, &lt;/i&gt;, &lt;/p&gt;, &lt;B&gt;, &lt;I&gt;, &lt;P&gt;, &lt;b&gt;, &lt;i&gt;, &lt;p&gt;
-</PRE>
-<P> Por alguns segundos, contemple a ER anterior. Estamos começando a
- dizer<B> muito</B> com<B> poucos</B> caracteres, sendo específicos.
- Vamos continuar que vai ficar cada vez mais interessante.</P>
-<P><B> Resumão</B></P>
-<UL>
-<LI>O opcional é opcional.</LI>
-<LI>O opcional é útil para procurar palavras no singular e plural.</LI>
-<LI>Podemos tornar opcionais caracteres e metacaracteres.</LI>
-<LI>Leia a ER átomo por átomo, da esquerda para a direita.</LI>
-<LI>Leia a ER, entenda o todo e analise as possibilidades.</LI>
-</UL>
 
+<p>O opcional é um quantificador que não esquenta a cabeça, para ele pode ter ou não a ocorrência da entidade anterior, pois ele a repete 0 ou 1 vez. Por exemplo, a ER <b><code>6?</code></b> significa zero ou uma ocorrência do número 6. Se tiver um 6, beleza, casamento efetuado. Se não tiver, beleza também. Isso torna o 6 opcional (daí o nome), que tendo ou não, a ER casa. Veja mais um exemplo, o plural. A ER <b><code>ondas?</code></b> tem a letra <code>s</code> marcada como opcional, então ela casa <u>onda</u> e <u>ondas</u>.</p>
 
+<blockquote>
+  <u>Cada letra normal é um átomo da ER, então o opcional é aplicado somente ao s e não à palavra toda.</u>
+</blockquote>
+
+<blockquote>
+  <i>E essa tal de entidade pode ser um metacaractere então?</i>
+</blockquote>
+
+<p>Claro! Agora vamos começar a ver o poder de uma expressão regular. Já vimos o metacaractere lista e agora vimos o opcional, que tal fazermos uma lista opcional? Voltando um pouco àquele exemplo da palavra <i>fala</i>, vamos fazer a ER <b><code>fala[r!]?</code></b>. Mmmmmm, as ERs estão começando a ficar interessantes não? Mas antes de analisar essa ER, uma dica que vale ouro, memorize já: <i>leia a ER átomo por átomo, da esquerda para a direita</i>. Repetindo: <i>leia a ER átomo por átomo, da esquerda para a direita</i>.</p>
+
+<h4 id="lendo">Como ler uma ER</h4>
+
+<p>É bem simples, uma ER se lê exatamente como o robozinho (lembra quem ele é?) leria. Primeiro lê-se átomo por átomo, depois entende-se o todo e depois se analisa as possibilidades. Na nossa ER <b><code>fala[r!]?</code></b> em questão, sua leitura fica: um <code>f</code> seguido de um <code>a</code>, seguido de um <code>l</code>, seguido de um <code>a</code>, seguido de: ou <code>r</code>, ou <code>!</code>, ambos opcionais.</p>
+
+<p>Essa leitura é <b>essencial</b> para o entendimento da ER. Ela pode em um primeiro momento ser feita em voz alta, de maneira repetitiva, até esse processo se tornar natural. Depois ela pode ser feita mentalmente mesmo, e de maneira automática. É como você está fazendo agora repetindo mentalmente estas palavras escritas aqui enquanto as lê. Você não percebe, faz normalmente.</p>
+
+<p>Feita a leitura, agora temos de entender o todo, ou seja, temos um trecho literal <i>fala</i>, seguido de uma lista opcional de caracteres. Para descobrirmos as possibilidades, é o <i>fala</i> seguido de cada um dos itens da lista e por fim seguido por nenhum deles, pois a lista é opcional. Então fica:</p>
+
+<pre>
+fala[r!]?       falar, fala!, fala
+</pre>
+
+<p>Pronto! Desvendamos os segredos da ER. É claro, esta é pequena e fácil, mas o que são ER grandes senão várias partes pequenas agrupadas? O principal é dominar essa leitura por átomos. O resto é ler devagar até chegar ao final. Não há segredo.</p>
+
+<p>Então voltemos ao nosso exemplo de marcações HTML, podemos facilmente incluir agora as marcações que fecham o trecho, em que a única diferença é que vem uma barra / antes da letra:</p>
+
+<pre>
+&lt;/?[BIPbip]&gt;      &lt;/B&gt;, &lt;/I&gt;, &lt;/P&gt;, &lt;/b&gt;, &lt;/i&gt;, &lt;/p&gt;, &lt;B&gt;, &lt;I&gt;, &lt;P&gt;, &lt;b&gt;, &lt;i&gt;, &lt;p&gt;
+</pre>
+
+<p>Por alguns segundos, contemple a ER anterior. Estamos começando a dizer <b>muito</b> com <b>poucos</b> caracteres, sendo específicos. Vamos continuar que vai ficar cada vez mais interessante.</p>
+
+<p><b>Resumão</b></p>
+
+<ul>
+  <li>O opcional é opcional.</li>
+  <li>O opcional é útil para procurar palavras no singular e plural.</li>
+  <li>Podemos tornar opcionais caracteres e metacaracteres.</li>
+  <li>Leia a ER átomo por átomo, da esquerda para a direita.</li>
+  <li>Leia a ER, entenda o todo e analise as possibilidades.</li>
+</ul>

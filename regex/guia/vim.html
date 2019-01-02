@@ -3,69 +3,40 @@ title: "Vim"
 prev: editores.html
 next: emacs.html
 ---
-<P> O vim herdou a base das expressões do vi e estendeu muito seu
- poder, criando metacaracteres novos e permitindo o uso de ERs na
- maioria de seus comandos, como endereçamento. Tudo o que você precisa
- saber sobre ERs no vim está documentado no próprio programa, bastando
- digitar <CODE>:help regexp</CODE> para ter acesso a essas
- informações.</P>
-<P> A primeira dica é ligar duas opções imbatíveis que são a <CODE>
-hlsearch</CODE> e <CODE>incsearch</CODE>. A primeira deixa iluminado
- (&quot;highlight&quot;) o texto casado, para termos uma visualização do que
- nossa ER casou, e a segunda faz o vim ir iluminando e mostrando o texto
- casado dinamicamente, enquanto você digita a ER! Experimente, é muito
- bom: <CODE>:set hls is</CODE>.</P>
-<P> Além destas, temos opções que modificam a sintaxe dos
- metacaracteres, são elas: <CODE>magic</CODE> e <CODE>nomagic</CODE>. A
- primeira é a opção-padrão, e é a que se aconselha usar, não mude.
- Ao usar a segunda, suas ERs serão tão cheias de escapes que serão
- imprestáveis em outros programas.</P>
-<P> A função de pesquisa é feita pelo comando <CODE>/</CODE> e o <CODE>
-?</CODE> e a de substituição pelo <CODE>:s///</CODE>. O detalhe é que
- a substituição vale apenas para a linha atual onde está o cursor, a
- não ser que você selecione o texto desejado, ou aplique um
- endereçamento que dirá ao comando <CODE>s</CODE> em quais linhas
- fazer a substituição.</P>
-<P> Esse endereçamento vem imediatamente após o <CODE>:</CODE> e pode
- ser números de linha, padrões de texto entre barras, e alguns
- caracteres representantes de: linha atual (.), última linha ($) e
- arquivo todo (%).Veja alguns exemplos:</P>
-<PRE>
-:s/a/b/g	troca todos os a por b na linha atual
-:1,5s/^/#/	comenta as 5 primeiras linhas
-:.,$s/^/#/	comenta até o final do arquivo
-:%s/^.//	apaga a primeira letra de cada linha
-:%s/^./\u&amp;/c	torna maiúsculo o 1° caractere
-</PRE>
-<P> Esse último é utilíssimo. Colocando um <CODE>c</CODE> no final de
- qualquer substituição, o vim mostrará um &quot;prompt&quot; na tela e lhe
- pedirá uma confirmação antes de fazer qualquer uma das
- substituições. Você vai respondendo sim ou não e vai vendo o texto
- ser alterado. Evita substituições cegas e vicia, cuidado! Veja <CODE>
-:help :s_flags</CODE> para conhecer outros modificadores.</P>
-<P> No vim apenas as chaves têm similares não-gulosos. Mas como já
- vimos que com elas conseguimos emular todos os outros quantificadores,
- isso não é problema. A sintaxe é simplesmente adicionar um traço
- como primeiro caractere dentro delas.</P>
-<PRE>
-meta    	mnemônico
+
+<p>O vim herdou a base das expressões do vi e estendeu muito seu poder, criando metacaracteres novos e permitindo o uso de ERs na maioria de seus comandos, como endereçamento. Tudo o que você precisa saber sobre ERs no vim está documentado no próprio programa, bastando digitar <code>:help regexp</code> para ter acesso a essas informações.</p>
+
+<p>A primeira dica é ligar duas opções imbatíveis que são a <code>hlsearch</code> e <code>incsearch</code>. A primeira deixa iluminado (&quot;highlight&quot;) o texto casado, para termos uma visualização do que nossa ER casou, e a segunda faz o vim ir iluminando e mostrando o texto casado dinamicamente, enquanto você digita a ER! Experimente, é muito bom: <code>:set hls is</code>.</p>
+
+<p>Além destas, temos opções que modificam a sintaxe dos metacaracteres, são elas: <code>magic</code> e <code>nomagic</code>. A primeira é a opção-padrão, e é a que se aconselha usar, não mude. Ao usar a segunda, suas ERs serão tão cheias de escapes que serão imprestáveis em outros programas.</p>
+
+<p>A função de pesquisa é feita pelo comando <code>/</code> e o <code>?</code> e a de substituição pelo <code>:s///</code>. O detalhe é que a substituição vale apenas para a linha atual onde está o cursor, a não ser que você selecione o texto desejado, ou aplique um endereçamento que dirá ao comando <code>s</code> em quais linhas fazer a substituição.</p>
+
+<p>Esse endereçamento vem imediatamente após o <code>:</code> e pode ser números de linha, padrões de texto entre barras, e alguns caracteres representantes de: linha atual (.), última linha ($) e arquivo todo (%).Veja alguns exemplos:</p>
+
+<pre>
+:s/a/b/g        troca todos os a por b na linha atual
+:1,5s/^/#/      comenta as 5 primeiras linhas
+:.,$s/^/#/      comenta até o final do arquivo
+:%s/^.//        apaga a primeira letra de cada linha
+:%s/^./\u&amp;/c        torna maiúsculo o 1° caractere
+</pre>
+
+<p>Esse último é utilíssimo. Colocando um <code>c</code> no final de qualquer substituição, o vim mostrará um &quot;prompt&quot; na tela e lhe pedirá uma confirmação antes de fazer qualquer uma das substituições. Você vai respondendo sim ou não e vai vendo o texto ser alterado. Evita substituições cegas e vicia, cuidado! Veja <code>:help :s_flags</code> para conhecer outros modificadores.</p>
+
+<p>No vim apenas as chaves têm similares não-gulosos. Mas como já vimos que com elas conseguimos emular todos os outros quantificadores, isso não é problema. A sintaxe é simplesmente adicionar um traço como primeiro caractere dentro delas.</p>
+
+<pre>
+meta            mnemônico
 ------------------------------------------
-\{-,1}  	opcional não-guloso
-\{-}    	asterisco não-guloso
-\{-1,}  	mais não-guloso
-\{-n,m} 	chaves não-gulosas
-</PRE>
-<P> Ele possui também diversos arquivos de sintaxe para vários tipos
- de arquivo, que é onde são guardadas as regras complicadas que dizem
- &quot;o quê é válido onde&quot;, e fazem os arquivos ficarem coloridos,
- respeitando a sintaxe da linguagem de programação ou arquivo de
- registros ou configuração sendo editados.</P>
-<P> Adivinha como são feitas essas regras complicadas? Com ERs, é
- claro! Este é um tópico muito interessante e exige conhecimentos
- sólidos do assunto. Caso queira dar uma olhada, todos os arquivos de
- sintaxe estão no subdiretório <CODE>syntax</CODE> e têm a extensão <CODE>
-.vim</CODE>.</P>
-<P> A central vim encontra-se em <A HREF="http://www.vim.org">
-http://www.vim.org</A>.</P>
+\{-,1}          opcional não-guloso
+\{-}            asterisco não-guloso
+\{-1,}          mais não-guloso
+\{-n,m}         chaves não-gulosas
+</pre>
 
+<p>Ele possui também diversos arquivos de sintaxe para vários tipos de arquivo, que é onde são guardadas as regras complicadas que dizem &quot;o quê é válido onde&quot;, e fazem os arquivos ficarem coloridos, respeitando a sintaxe da linguagem de programação ou arquivo de registros ou configuração sendo editados.</p>
 
+<p>Adivinha como são feitas essas regras complicadas? Com ERs, é claro! Este é um tópico muito interessante e exige conhecimentos sólidos do assunto. Caso queira dar uma olhada, todos os arquivos de sintaxe estão no subdiretório <code>syntax</code> e têm a extensão <code>.vim</code>.</p>
+
+<p>A central vim encontra-se em <a href="http://www.vim.org">http://www.vim.org</a>.</p>

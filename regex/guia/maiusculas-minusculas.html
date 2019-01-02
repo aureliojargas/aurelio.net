@@ -3,35 +3,17 @@ title: "Problemas com maiúsculas e minúsculas"
 prev: problemas.html
 next: cruas.html
 ---
-<P> Verdade absoluta: as ERs são sensíveis a letras maiúsculas e
- minúsculas, levando em conta sua diferença. Esse detalhe pode ajudar
- ou atrapalhar, dependendo da atenção do criador da ER, ou da
- estabilidade dos dados pesquisados.</P>
-<P> É muito comum às vezes, após meses de funcionamento sem
- problemas, uma ER falhar. Depois de quebrar a cabeça nas partes mais
- complicadas dela, você percebeu foi uma falha simples de maiúsculas e
- minúsculas, pois uma parte de sua ER era o trecho<B> <CODE>jipe 4x4</CODE>
-</B> e no texto agora estava<I> jipe 4X4</I>.</P>
-<P> Este é um erro muito difícil de perceber, por ser tão trivial e
- visualmente difícil de detectar, sobretudo se você estiver sob
- pressão para &quot;arrumar isso logo&quot;. Encontrado o problema, usamos a
- lista para saná-lo:<B> <CODE>jipe 4[xX]4</CODE></B>. Mas um mês
- depois o texto muda novamente para<I> Jipe 4X4</I>, e assim vai... Como
- descobrir isso rapidamente?</P>
-<P> Vários aplicativos e linguagens, como veremos adiante, têm
- modificadores para ignorar essa diferença entre maiúsculas e
- minúsculas (&quot;ignore case&quot;), e essa é nossa chave de ouro para
- descobrir se o problema é esse.</P>
-<P> É simples. Se há algo errado e você não sabe o que é, dê este
- chute, colocando a opção de ignorar essa diferença e veja se o
- problema some. Se sim, bingo! Basta revisar cada parte de sua ER que
- contenha letras ou listas e confira o texto pesquisado para ver o que
- mudou.</P>
-<P> Encontrado o problema, arrume-o e<B> desligue</B> a opção
- &quot;ignorante&quot;. São várias letras? Não tem<B> <CODE>
-[Pr][Rr][Oo][Bb][Ll][Ee][Mm][Aa]</CODE></B>. Fica feio? Fica, mas é
- seguro, portanto desligue a opção.</P>
-<P> Conclusão: ignore apenas se for algo temporário, para testes, ou
- se você tem muita certeza do que está fazendo.</P>
 
+<p>Verdade absoluta: as ERs são sensíveis a letras maiúsculas e minúsculas, levando em conta sua diferença. Esse detalhe pode ajudar ou atrapalhar, dependendo da atenção do criador da ER, ou da estabilidade dos dados pesquisados.</p>
 
+<p>É muito comum às vezes, após meses de funcionamento sem problemas, uma ER falhar. Depois de quebrar a cabeça nas partes mais complicadas dela, você percebeu foi uma falha simples de maiúsculas e minúsculas, pois uma parte de sua ER era o trecho <b><code>jipe 4x4</code></b> e no texto agora estava <i>jipe 4X4</i>.</p>
+
+<p>Este é um erro muito difícil de perceber, por ser tão trivial e visualmente difícil de detectar, sobretudo se você estiver sob pressão para &quot;arrumar isso logo&quot;. Encontrado o problema, usamos a lista para saná-lo: <b><code>jipe 4[xX]4</code></b>. Mas um mês depois o texto muda novamente para <i>Jipe 4X4</i>, e assim vai... Como descobrir isso rapidamente?</p>
+
+<p>Vários aplicativos e linguagens, como veremos adiante, têm modificadores para ignorar essa diferença entre maiúsculas e minúsculas (&quot;ignore case&quot;), e essa é nossa chave de ouro para descobrir se o problema é esse.</p>
+
+<p>É simples. Se há algo errado e você não sabe o que é, dê este chute, colocando a opção de ignorar essa diferença e veja se o problema some. Se sim, bingo! Basta revisar cada parte de sua ER que contenha letras ou listas e confira o texto pesquisado para ver o que mudou.</p>
+
+<p>Encontrado o problema, arrume-o e <b>desligue</b> a opção &quot;ignorante&quot;. São várias letras? Não tem <b><code>[Pr][Rr][Oo][Bb][Ll][Ee][Mm][Aa]</code></b>. Fica feio? Fica, mas é seguro, portanto desligue a opção.</p>
+
+<p>Conclusão: ignore apenas se for algo temporário, para testes, ou se você tem muita certeza do que está fazendo.</p>

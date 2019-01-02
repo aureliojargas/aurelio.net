@@ -3,37 +3,17 @@ title: "Evite o curinga"
 prev: evite-lista-negada.html
 next: seja-especifico.html
 ---
-<P> Quando pegamos o jeito com expressões regulares e as usamos
- regularmente, é comum usar o<B> <CODE>.*</CODE></B> para qualquer
- situação, pois como todo curinga que se preze, é uma mão na roda.
- Mas à medida que você vai usando ERs para coisas mais complicadas e
- mais intensivamente, você começa a perceber que grande parte de seus
- problemas foi ter usado o curinga guloso e genérico, onde você
- poderia ter sido mais específico, e ele casou o que não devia.</P>
-<P> Nem sempre é fácil trocar um curinga por outra coisa. Supõe-se
- que se você já o usou, é porque precisava de &quot;qualquer coisa&quot;. Mas
- pare para pensar, esse qualquer coisa é realmente QUALQUER coisa?
- Lembre que isso é muito abrangente, o tudo e o nada. Não seria apenas
- &quot;qualquer letra em qualquer quantidade&quot; ou &quot;quaisquer caracteres fora
- espaços em branco&quot;?</P>
-<P> Percebeu? As listas são nossa opção para tirar o curinga,
- trocando-o por algo não tão abrangente. Então, se em um texto
- normal, você procura parte de uma frase, o restante dela até o ponto
- final não diga que é<B> <CODE>.*\.</CODE></B>, mas<B> <CODE>[^.]*\.</CODE>
-</B>, ou melhor:<B> <CODE>[A-Za-z ,]*\.</CODE></B>. Isso evita de o
- curinga casar além do ponto final da frase e ir até o ponto final do
- parágrafo.</P>
-<P> Lembra a nossa demonstração da gulodice em que o asterisco casou
- demais? Podemos evitar isso sendo mais específicos em nossa ER. Em vez
- de dizer<B> <CODE>&lt;.*&gt;</CODE></B>, ou seja, uma marcação pode ter
- &quot;qualquer coisa&quot; antes do <CODE>&gt;</CODE>, dizemos que pode ter
- &quot;qualquer coisa fora o fechamento da marcação&quot;. Invocaremos a lista
- negada para nos ajudar nessa supertarefa, assim:<B> <CODE>&lt;[^&gt;]*&gt;</CODE>
-</B>, ou mais visual:</P>
-<PRE>
+
+<p>Quando pegamos o jeito com expressões regulares e as usamos regularmente, é comum usar o <b><code>.*</code></b> para qualquer situação, pois como todo curinga que se preze, é uma mão na roda. Mas à medida que você vai usando ERs para coisas mais complicadas e mais intensivamente, você começa a perceber que grande parte de seus problemas foi ter usado o curinga guloso e genérico, onde você poderia ter sido mais específico, e ele casou o que não devia.</p>
+
+<p>Nem sempre é fácil trocar um curinga por outra coisa. Supõe-se que se você já o usou, é porque precisava de &quot;qualquer coisa&quot;. Mas pare para pensar, esse qualquer coisa é realmente QUALQUER coisa? Lembre que isso é muito abrangente, o tudo e o nada. Não seria apenas &quot;qualquer letra em qualquer quantidade&quot; ou &quot;quaisquer caracteres fora espaços em branco&quot;?</p>
+
+<p>Percebeu? As listas são nossa opção para tirar o curinga, trocando-o por algo não tão abrangente. Então, se em um texto normal, você procura parte de uma frase, o restante dela até o ponto final não diga que é <b><code>.*\.</code></b>, mas <b><code>[^.]*\.</code></b> , ou melhor: <b><code>[A-Za-z ,]*\.</code></b>. Isso evita de o curinga casar além do ponto final da frase e ir até o ponto final do parágrafo.</p>
+
+<p>Lembra a nossa demonstração da gulodice em que o asterisco casou demais? Podemos evitar isso sendo mais específicos em nossa ER. Em vez de dizer <b><code>&lt;.*&gt;</code></b>, ou seja, uma marcação pode ter &quot;qualquer coisa&quot; antes do <code>&gt;</code>, dizemos que pode ter &quot;qualquer coisa fora o fechamento da marcação&quot;. Invocaremos a lista negada para nos ajudar nessa supertarefa, assim: <b><code>&lt;[^&gt;]*&gt;</code></b> , ou mais visual:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...xxxxxxxxxxxxxx           &lt;.*&gt;
 ...xxx.......xxxx           &lt;[^&gt;]*&gt;
-</PRE>
-
-
+</pre>

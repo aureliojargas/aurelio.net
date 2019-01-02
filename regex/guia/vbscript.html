@@ -3,34 +3,25 @@ title: "VBscript"
 prev: tcl.html
 next: banco-de-dados.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 -------------------------------------------
-busca   	método Test
-substituição	método Replace
-divisão 	método Execute
-ER crua 	-
-ignore M/m	propriedade IgnoreCase
-global  	propriedade Global
-</PRE>
-<P> Demorou, mas em 1999 finalmente os usuários do<I> Visual Basic®
- Scripting Edition</I> puderam experimentar o tão desejado recurso de
- expressões regulares, implementado na versão 5.0 do<I> Microsoft®
- Scripting Engines</I>. O nome do objeto que trata das expressões é <CODE>
-RegExp</CODE>, e para o alívio dos programadores, a sintaxe e a
- funcionalidade das ERs no VBScript são similares ao Perl, então não
- precisa aprender uma linguagem nova.</P>
-<P> Assim, se na sintaxe da ER não há novidade, podemos nos concentrar
- em como utilizar esse objeto. Dentro dele os métodos que temos são <CODE>
-Test</CODE> e <CODE>Execute</CODE> para busca e <CODE>Replace</CODE>
- para substituições. Para ignorar maiúsculas e minúsculas e fazer
- substituições globais, temos as duas propriedades booleanas <CODE>
-IgnoreCase</CODE> e <CODE>Global</CODE>, que devem ser definidas como <CODE>
-true</CODE> para entrarem em ação.</P>
-<P> Como peculiaridade, a ER não pode ser passada diretamente ao
- método, ela precisa primeiro ser definida na propriedade <CODE>Pattern</CODE>
-. Vamos a um exemplo:</P>
-<PRE>
+busca           método Test
+substituição    método Replace
+divisão         método Execute
+ER crua         -
+ignore M/m      propriedade IgnoreCase
+global          propriedade Global
+</pre>
+
+<p>Demorou, mas em 1999 finalmente os usuários do <i>Visual Basic® Scripting Edition</i> puderam experimentar o tão desejado recurso de expressões regulares, implementado na versão 5.0 do <i>Microsoft® Scripting Engines</i>. O nome do objeto que trata das expressões é <code>RegExp</code>, e para o alívio dos programadores, a sintaxe e a funcionalidade das ERs no VBScript são similares ao Perl, então não precisa aprender uma linguagem nova.</p>
+
+<p>Assim, se na sintaxe da ER não há novidade, podemos nos concentrar em como utilizar esse objeto. Dentro dele os métodos que temos são <code>Test</code> e <code>Execute</code> para busca e <code>Replace</code> para substituições. Para ignorar maiúsculas e minúsculas e fazer substituições globais, temos as duas propriedades booleanas <code>IgnoreCase</code> e <code>Global</code>, que devem ser definidas como <code>true</code> para entrarem em ação.</p>
+
+<p>Como peculiaridade, a ER não pode ser passada diretamente ao método, ela precisa primeiro ser definida na propriedade <code>Pattern</code> . Vamos a um exemplo:</p>
+
+<pre>
 Dim er, texto
 Set er = new regexp
 texto = &quot;visual&quot;
@@ -41,23 +32,13 @@ er.IgnoreCase = true
 if er.Test(texto) then
   msgbox (&quot;casou!&quot;)
 end if
-</PRE>
-<P> Então instanciamos o objeto <CODE>er</CODE> e definimos um texto
- qualquer a ser casado. Depois definimos a ER, uma linha toda de
- maiúsculas, na propriedade <CODE>Pattern</CODE> e ligamos a opção de
- &quot;ignorância&quot;. Por fim, fazemos o <CODE>Test</CODE> da ER no texto. O <CODE>
-Replace</CODE> funciona de maneira similar, sem surpresas.</P>
-<P> O método <CODE>Execute</CODE> funciona como um <CODE>split</CODE>
- ao contrário, em que você informa o padrão e não o separador. Ele
- casa a ER no texto e retorna todos os pedaços de texto em que a ER
- casou de maneira organizada, seguindo uma hierarquia. Ele retorna um
- objeto &quot;collection&quot; chamado <CODE>Matches</CODE> que, por sua vez,
- contém zero ou mais objetos <CODE>Match</CODE>. Cada um desses <CODE>
-Match</CODE> contém um pedaço casado, que além do texto propriamente
- dito, também tem a posição de início do casamento no texto original
- e o tamanho desse trecho. Vamos ver um exemplo que separa os trechos
- por espaços em branco, com um diagrama de brinde no cabeçalho:</P>
-<PRE>
+</pre>
+
+<p>Então instanciamos o objeto <code>er</code> e definimos um texto qualquer a ser casado. Depois definimos a ER, uma linha toda de maiúsculas, na propriedade <code>Pattern</code> e ligamos a opção de &quot;ignorância&quot;. Por fim, fazemos o <code>Test</code> da ER no texto. O <code>Replace</code> funciona de maneira similar, sem surpresas.</p>
+
+<p>O método <code>Execute</code> funciona como um <code>split</code> ao contrário, em que você informa o padrão e não o separador. Ele casa a ER no texto e retorna todos os pedaços de texto em que a ER casou de maneira organizada, seguindo uma hierarquia. Ele retorna um objeto &quot;collection&quot; chamado <code>Matches</code> que, por sua vez, contém zero ou mais objetos <code>Match</code>. Cada um desses <code>Match</code> contém um pedaço casado, que além do texto propriamente dito, também tem a posição de início do casamento no texto original e o tamanho desse trecho. Vamos ver um exemplo que separa os trechos por espaços em branco, com um diagrama de brinde no cabeçalho:</p>
+
+<pre>
 ' --- hierarquia do Execute e seus objetos
 '
 ' Execute
@@ -77,15 +58,18 @@ z = er.Execute(texto)      'retorna 3 objetos Match
 for i = 0 to (z.Count - 1) 'para cada Match,
   msgbox z.Item(i)         'mostre o trecho casado
 next
-</PRE>
-<P> Você pode ter mais informações e exemplos em:</P>
-<UL>
-<LI><A HREF="http://msdn.microsoft.com/scripting/vbScript/doc/vsobjRegExp.asp">
-http://msdn.microsoft.com/scripting/vbScript/doc/vsobjRegExp.asp</A></LI>
-<LI><A HREF="http://msdn.microsoft.com/scripting/vbScript/doc/vscolMatches.asp">
-http://msdn.microsoft.com/scripting/vbScript/doc/vscolMatches.asp</A></LI>
-<LI><A HREF="http://msdn.microsoft.com/scripting/vbScript/doc/vsobjMatch.asp">
-http://msdn.microsoft.com/scripting/vbScript/doc/vsobjMatch.asp</A></LI>
-</UL>
+</pre>
 
+<p>Você pode ter mais informações e exemplos em:</p>
 
+<ul>
+  <li>
+    <a href="http://msdn.microsoft.com/scripting/vbScript/doc/vsobjRegExp.asp">http://msdn.microsoft.com/scripting/vbScript/doc/vsobjRegExp.asp</a>
+  </li>
+  <li>
+    <a href="http://msdn.microsoft.com/scripting/vbScript/doc/vscolMatches.asp">http://msdn.microsoft.com/scripting/vbScript/doc/vscolMatches.asp</a>
+  </li>
+  <li>
+    <a href="http://msdn.microsoft.com/scripting/vbScript/doc/vsobjMatch.asp">http://msdn.microsoft.com/scripting/vbScript/doc/vsobjMatch.asp</a>
+  </li>
+</ul>

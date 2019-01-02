@@ -3,60 +3,48 @@ title: "Chaves: o controle {n,m}"
 prev: mais.html
 next: ancoras.html
 ---
-<P> Aqui Chaves não é o au?tor mexicano preferido de 10 entre 10
- brasileiros. As chaves são a solução para uma quantificação mais
- controlada, onde se pode especificar exatamente quantas repetições se
- quer da entidade anterior.</P>
-<P> Basicamente,<B> <CODE>{n,m}</CODE></B> significa<I> de n até m
- vezes</I>, assim algo como<B> <CODE>6{1,4}</CODE></B> casa <U>6</U>, <U>
-66</U>, <U>666</U> e <U>6666</U>. Só, nada mais que isso.</P>
-<P> Temos também a sintaxe relaxada das chaves, em que podemos omitir a
- quantidade final, ou ainda, especificar exatamente um número:</P>
-<PRE>
-{1,3}	de 1 a 3
-{3,}	pelo menos 3 (3 ou mais)
-{0,3}	até 3
-{3}	exatamente 3
-{1}	exatamente 1
-{0,1}	zero ou 1    (igual ao opcional)
-{0,}	zero ou mais (igual ao asterisco)
-{1,}	um ou mais   (igual ao mais)
-</PRE>
-<P> Note que o<B> <CODE>{1}</CODE></B> tem efeito nulo, pois<B> <CODE>
-6{1}</CODE></B> é igual a<B> <CODE>6</CODE></B>. Pode ser útil caso
- você queira impressionar alguém com sua ER, pode encher de<B> <CODE>
-{1}</CODE></B> que não mudará sua lógica. Mas observe os três
- últimos exemplos.</P>
-<P> Com as chaves, conseguimos simular o funcionamento de outros três
- metacaracteres, o opcional, o asterisco e o mais.</P>
-<P> Se temos as chaves que já fazem o serviço, então pra quê ter ou
- outros três? Você pode escolher a resposta que achar melhor. Eu tenho
- algumas:</P>
-<UL>
-<LI><B><CODE>*</CODE></B> é menor e mais fácil que<B> <CODE>{0,}</CODE>
-</B></LI>
-<LI>As chaves foram criadas só depois dos outros</LI>
-<LI>Precisavam de mais metacaracteres para complicar o assunto</LI>
-<LI><B><CODE>*</CODE></B>,<B> <CODE>+</CODE></B> e<B> <CODE>?</CODE></B>
- são links para as chaves</LI>
-<LI>Alguns teclados antigos vinham sem a tecla {</LI>
-<LI>O asterisco é tão bonitinho...</LI>
-</UL>
-<P> Como você pode perceber não há uma resposta certa. Então todas
- as especulações acima podem ser corretas. Invente uma e me mande,
- vamos fazer uma coleção!</P>
-<P> Ah, e sendo<B> <CODE>{0,}</CODE></B> algo mais feio que um simples<B>
- <CODE>*</CODE></B>, isso também pode ser usado para tornar sua ER
- grande e intimidadora. Só cuidado para não atirar no próprio pé e
- depois não conseguir entender sua própria criação...</P>
-<P><B> Resumão</B></P>
-<UL>
-<LI>Chaves são precisas.</LI>
-<LI>Você pode especificar um número exato, um mínimo, um máximo, ou
- uma faixa numérica.</LI>
-<LI>As chaves simulam o<B> <CODE>*</CODE></B>, o<B> <CODE>+</CODE></B> e
- a<B> <CODE>?</CODE></B>.</LI>
-<LI>As chaves não são o Chaves.</LI>
-</UL>
 
+<p>Aqui Chaves não é o au?tor mexicano preferido de 10 entre 10 brasileiros. As chaves são a solução para uma quantificação mais controlada, onde se pode especificar exatamente quantas repetições se quer da entidade anterior.</p>
 
+<p>Basicamente, <b><code>{n,m}</code></b> significa <i>de n até m vezes</i>, assim algo como <b><code>6{1,4}</code></b> casa <u>6</u>, <u>66</u>, <u>666</u> e <u>6666</u>. Só, nada mais que isso.</p>
+
+<p>Temos também a sintaxe relaxada das chaves, em que podemos omitir a quantidade final, ou ainda, especificar exatamente um número:</p>
+
+<pre>
+{1,3}   de 1 a 3
+{3,}    pelo menos 3 (3 ou mais)
+{0,3}   até 3
+{3}     exatamente 3
+{1}     exatamente 1
+{0,1}   zero ou 1    (igual ao opcional)
+{0,}    zero ou mais (igual ao asterisco)
+{1,}    um ou mais   (igual ao mais)
+</pre>
+
+<p>Note que o <b><code>{1}</code></b> tem efeito nulo, pois <b><code>6{1}</code></b> é igual a <b><code>6</code></b>. Pode ser útil caso você queira impressionar alguém com sua ER, pode encher de <b><code>{1}</code></b> que não mudará sua lógica. Mas observe os três últimos exemplos.</p>
+
+<p>Com as chaves, conseguimos simular o funcionamento de outros três metacaracteres, o opcional, o asterisco e o mais.</p>
+
+<p>Se temos as chaves que já fazem o serviço, então pra quê ter ou outros três? Você pode escolher a resposta que achar melhor. Eu tenho algumas:</p>
+
+<ul>
+  <li><b><code>*</code></b> é menor e mais fácil que <b><code>{0,}</code></b></li>
+  <li>As chaves foram criadas só depois dos outros</li>
+  <li>Precisavam de mais metacaracteres para complicar o assunto</li>
+  <li><b><code>*</code></b>, <b><code>+</code></b> e <b><code>?</code></b> são links para as chaves</li>
+  <li>Alguns teclados antigos vinham sem a tecla {</li>
+  <li>O asterisco é tão bonitinho...</li>
+</ul>
+
+<p>Como você pode perceber não há uma resposta certa. Então todas as especulações acima podem ser corretas. Invente uma e me mande, vamos fazer uma coleção!</p>
+
+<p>Ah, e sendo <b><code>{0,}</code></b> algo mais feio que um simples <b><code>*</code></b>, isso também pode ser usado para tornar sua ER grande e intimidadora. Só cuidado para não atirar no próprio pé e depois não conseguir entender sua própria criação...</p>
+
+<p><b>Resumão</b></p>
+
+<ul>
+  <li>Chaves são precisas.</li>
+  <li>Você pode especificar um número exato, um mínimo, um máximo, ou uma faixa numérica.</li>
+  <li>As chaves simulam o <b><code>*</code></b>, o <b><code>+</code></b> e a <b><code>?</code></b>.</li>
+  <li>As chaves não são o Chaves.</li>
+</ul>

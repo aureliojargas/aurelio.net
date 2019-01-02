@@ -3,38 +3,31 @@ title: "Perl"
 prev: dotnet.html
 next: php.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 -------------------------------------------------------
-busca   	comando m//
-substituição	comando s///
-divisão 	comando split
-ER crua 	'entre aspas simples'
-ignore M/m	modificadores i, (?i)
-global  	modificador g
-</PRE>
-<P> (<CODE>m-i:3</CODE>) Como resumir o básico sobre ERs do Perl em
- algumas linhas? Vou tentar. Vamos ver o básico do básico, sem entrar
- em exceções e sem mostrar as duzentas e sessenta e sete outras
- maneiras de se fazer a mesma coisa.</P>
-<P> Para ignorar a diferença entre maiúsculas e minúsculas, temos o
- modificador <CODE>i</CODE>, ou o metacaractere<B> <CODE>(?i)</CODE></B>
-, e para especificarmos uma ER no formato cru, devemos colocá-la entre
- 'aspas simples'. Atenção especial aqui, pois o Perl tem a
- interpretação de<I> strings</I> e a interpretação de /ERs/ também
- e ambas fazem expansão de variáveis:</P>
-<UL>
-<LI><B>/duh!/</B>: ER normal, interpretada pelo robozinho;</LI>
-<LI><B>&quot;duh!&quot;</B>: string, interpretada pela linguagem;</LI>
-<LI><B>'duh!'</B>: ER crua, não interpretada;</LI>
-</UL>
-<P> Outros modificadores possíveis são o <CODE>x</CODE> para poder
- colocar <CODE>#comentários</CODE> no meio da ER e o <CODE>m</CODE> do
- modo multilinha. Esses modificadores também podem ser aplicados apenas
- em partes da ER com o grupo vazio<B> <CODE>(?Z)</CODE></B>, em que <CODE>
-Z</CODE> pode ser uma das seguintes opções: &quot;imsx&quot;. Vamos ver um
- exemplo simples:</P>
-<PRE>
+busca           comando m//
+substituição    comando s///
+divisão         comando split
+ER crua         'entre aspas simples'
+ignore M/m      modificadores i, (?i)
+global          modificador g
+</pre>
+
+<p>(<code>m-i:3</code>) Como resumir o básico sobre ERs do Perl em algumas linhas? Vou tentar. Vamos ver o básico do básico, sem entrar em exceções e sem mostrar as duzentas e sessenta e sete outras maneiras de se fazer a mesma coisa.</p>
+
+<p>Para ignorar a diferença entre maiúsculas e minúsculas, temos o modificador <code>i</code>, ou o metacaractere <b><code>(?i)</code></b> , e para especificarmos uma ER no formato cru, devemos colocá-la entre 'aspas simples'. Atenção especial aqui, pois o Perl tem a interpretação de <i>strings</i> e a interpretação de /ERs/ também e ambas fazem expansão de variáveis:</p>
+
+<ul>
+  <li><b>/duh!/</b>: ER normal, interpretada pelo robozinho;</li>
+  <li><b>&quot;duh!&quot;</b>: string, interpretada pela linguagem;</li>
+  <li><b>'duh!'</b>: ER crua, não interpretada;</li>
+</ul>
+
+<p>Outros modificadores possíveis são o <code>x</code> para poder colocar <code>#comentários</code> no meio da ER e o <code>m</code> do modo multilinha. Esses modificadores também podem ser aplicados apenas em partes da ER com o grupo vazio <b><code>(?Z)</code></b>, em que <code>Z</code> pode ser uma das seguintes opções: &quot;imsx&quot;. Vamos ver um exemplo simples:</p>
+
+<pre>
 $_ = &quot;homer, diga duh&quot;;
 $curinga = '.*';
 if ( m/$curinga ($curinga)/ ) {
@@ -49,44 +42,25 @@ print &quot;e o \$1? &lt;$1&gt;\n&quot;;
 #duh!
 #homer, $curinga é massa!
 #e o $1? &lt;&gt;
-</PRE>
-<P> Primeiro gravamos a variável mágica <CODE>$_</CODE> com nosso
- texto. Depois jogamos nosso super curinga das ERs em outra variável.
- Na linha seguinte, usamos o comando <CODE>m//</CODE>, para casar a ER<B>
- <CODE>.* (.*)</CODE></B> na variável <CODE>$_</CODE>. Opa! Há muita
- coisa nessa frase. Primeiro, a ER ficou assim, pois como usamos as
- barras como delimitadoras, então o robozinho fez a interpretação da
- variável <CODE>$curinga</CODE>. Com essa ER, estamos nos aproveitando
- da gulodice do curinga para guardar no grupo a última palavra da
- frase.</P>
-<P> Mas onde dissemos que era para casar com o texto da variável <CODE>
-$_</CODE>? Não dissemos. Ela é a variável-padrão de comparação.
- Como a busca deu certo, foi impressa a última palavra. Note que ao
- usarmos grupos, são gravadas as variáveis <CODE>$1</CODE>, <CODE>$2</CODE>
-, etc. para podermos utilizar o conteúdo desses grupos em outras partes
- do programa.</P>
-<P> Em seguida pode não parecer, mas fizemos uma substituição. O
- comando <CODE>s///</CODE> ficou um pouco desfigurado, pois na primeira
- parte, onde vai a ER. Precisávamos que a variável <CODE>$curinga</CODE>
- fosse interpretada, então usamos as chaves como delimitador. Na
- segunda parte, usamos as aspas simples como delimitador, pois não
- queríamos a interpretação.</P>
-<P> Mas só dissemos &quot;troque {isso} por 'aquilo'&quot;, onde ele trocou, e
- para onde foi o resultado? Você se lembra da variável padrão <CODE>
-$_</CODE>? Como não especificamos onde trocar, ela é assumida, e como
- a substituição regrava o resultado na própria variável do texto
- original, lá se foi o resultado para o <CODE>$_</CODE>.</P>
-<P> E o nosso <CODE>$1</CODE>? No último <CODE>print</CODE> vimos que
- ele sumiu! Mesmo a substituição não tendo usado grupo algum, a
- variável foi regravada. Que isso nos sirva de lição: se quiser usar
- os <CODE>$1</CODE> da vida em outras partes do programa, copie-o para
- outra variável.</P>
-<P> Além de mais de uma dezena de livros sobre Perl que há na
- O'Reilly, aqui vão algumas páginas:</P>
-<UL>
-<LI><A HREF="http://www.perl.com">http://www.perl.com</A></LI>
-<LI><A HREF="http://virtual.park.uga.edu/humcomp/perl/regex2a.html">
-http://virtual.park.uga.edu/humcomp/perl/regex2a.html</A></LI>
-</UL>
+</pre>
 
+<p>Primeiro gravamos a variável mágica <code>$_</code> com nosso texto. Depois jogamos nosso super curinga das ERs em outra variável. Na linha seguinte, usamos o comando <code>m//</code>, para casar a ER <b><code>.* (.*)</code></b> na variável <code>$_</code>. Opa! Há muita coisa nessa frase. Primeiro, a ER ficou assim, pois como usamos as barras como delimitadoras, então o robozinho fez a interpretação da variável <code>$curinga</code>. Com essa ER, estamos nos aproveitando da gulodice do curinga para guardar no grupo a última palavra da frase.</p>
 
+<p>Mas onde dissemos que era para casar com o texto da variável <code>$_</code>? Não dissemos. Ela é a variável-padrão de comparação. Como a busca deu certo, foi impressa a última palavra. Note que ao usarmos grupos, são gravadas as variáveis <code>$1</code>, <code>$2</code> , etc. para podermos utilizar o conteúdo desses grupos em outras partes do programa.</p>
+
+<p>Em seguida pode não parecer, mas fizemos uma substituição. O comando <code>s///</code> ficou um pouco desfigurado, pois na primeira parte, onde vai a ER. Precisávamos que a variável <code>$curinga</code> fosse interpretada, então usamos as chaves como delimitador. Na segunda parte, usamos as aspas simples como delimitador, pois não queríamos a interpretação.</p>
+
+<p>Mas só dissemos &quot;troque {isso} por 'aquilo'&quot;, onde ele trocou, e para onde foi o resultado? Você se lembra da variável padrão <code>$_</code>? Como não especificamos onde trocar, ela é assumida, e como a substituição regrava o resultado na própria variável do texto original, lá se foi o resultado para o <code>$_</code>.</p>
+
+<p>E o nosso <code>$1</code>? No último <code>print</code> vimos que ele sumiu! Mesmo a substituição não tendo usado grupo algum, a variável foi regravada. Que isso nos sirva de lição: se quiser usar os <code>$1</code> da vida em outras partes do programa, copie-o para outra variável.</p>
+
+<p>Além de mais de uma dezena de livros sobre Perl que há na O'Reilly, aqui vão algumas páginas:</p>
+
+<ul>
+  <li>
+    <a href="http://www.perl.com">http://www.perl.com</a>
+  </li>
+  <li>
+    <a href="http://virtual.park.uga.edu/humcomp/perl/regex2a.html">http://virtual.park.uga.edu/humcomp/perl/regex2a.html</a>
+  </li>
+</ul>

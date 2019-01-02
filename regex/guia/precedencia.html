@@ -3,56 +3,42 @@ title: "Precedência entre metacaracteres"
 prev: modernosos-codigo.html
 next: mandamentos.html
 ---
-<P> Falamos falamos, mas para fechar o estudo dos metacaracteres, faltou
- conhecer os relacionamentos entre eles, quem é mais forte, mais fraco,
- quem arrasta os outros...</P>
-<P> É bem simples, sabe na matemática, onde temos as ordens de
- precedência entre a adição e a multiplicação, onde esta é mais
- &quot;forte&quot; que aquela?</P>
-<P> Por exemplo &quot;2+4*6&quot;, é &quot;quatro vezes seis, e depois soma com o
- dois&quot;. Mesmo vindo depois, a multiplicação tem preferência. Com as
- ERs acontece o mesmo, seguindo estas regras:</P>
-<PRE>
-tipo de meta	exemplo	precedência
-quantificador	ab+	maior
-concatenação	ab	média
-ou      	ab|c	menor
-</PRE>
-<P> Ou seja, na situação<B> <CODE>ab*</CODE></B> não é &quot;a com b, em
- qualquer quantidade&quot;, e sim &quot;a, seguido de b em qualquer quantidade&quot;,
- ou seja, a concatenação<I> a seguido de b</I> não é mais forte que
- a quantificação, que rouba o <CODE>b</CODE> para ela.</P>
-<P> Na última<B> <CODE>ab|c</CODE></B> em vez de &quot;a, seguido de b ou c&quot;
- é na verdade &quot;ab ou c&quot;, pois o ou é o mais fraquinho de todos, não
- puxa nada para o cesto dele.</P>
-<P> Por isso que<B> <CODE>boa-tarde|boa-noite</CODE></B> funciona, pois
- os caracteres se juntam e se grudam uns com os outros, e o ou não tem
- força para quebrar isso.</P>
-<P> E como na matemática também, os parênteses servem para juntar na
- marra e dar força aos fracos. Por isso se diz que o grupo aumenta o
- poder do ou.</P>
-<P> Só com a dobradinha grupo+ou é possível algo como<B> <CODE>
-boa-tard(e|b)oa-noite</CODE></B>, o que não faz sentido, mas mostra que
- juntos eles conseguem quebrar a união da concatenação.</P>
-<P> Com isso em mente, como fica a relação de forças em<B> <CODE>
-ab|cd*</CODE></B>? Vamos colocar os &quot;amigos&quot; entre chaves para ilustrar
- essa quebra de braço:</P>
-<P><B> ab|c{d*}</B></P>
-<P> O<B> d</B> é do <CODE>*</CODE> pela quantificação ser mais forte
- que a concatenação, então o<B> c</B> coitado não tem força para
- puxar o seu amigo<B> d</B> para o seu lado.</P>
-<P><B> ab|{c{d*}}</B></P>
-<P> Agora o<B> c</B> fica na dúvida, mas se juntar com o<B> |</B> não
- dá, pois ele é o mais fraquinho de todos, então ele se junta com o<B>
- d</B> quantificado. Como o<B> |</B> já perdeu a briga à direita, ele
- olha para o outro lado e...</P>
-<P><B> {ab}|{c{d*}}</B></P>
-<P> O<B> b</B> rapidinho se junta com o<B> a</B> (concatenação) para
- fugir do fracote. É como no primário onde sempre tem aquele cara
- desengonçado que fica por último na escolha dos jogadores para o
- futebol com bola de meia, o<B> |</B> fica com o que sobrou, de um lado<B>
- ab</B> e do outro<B> cd*</B>.</P>
-<P> Esse mundo é mesmo muito cruel com os mais fracos, até os
- metacaracteres sofrem com essa discriminação &amp;:)</P>
 
+<p>Falamos falamos, mas para fechar o estudo dos metacaracteres, faltou conhecer os relacionamentos entre eles, quem é mais forte, mais fraco, quem arrasta os outros...</p>
 
+<p>É bem simples, sabe na matemática, onde temos as ordens de precedência entre a adição e a multiplicação, onde esta é mais &quot;forte&quot; que aquela?</p>
+
+<p>Por exemplo &quot;2+4*6&quot;, é &quot;quatro vezes seis, e depois soma com o dois&quot;. Mesmo vindo depois, a multiplicação tem preferência. Com as ERs acontece o mesmo, seguindo estas regras:</p>
+
+<pre>
+tipo de meta    exemplo precedência
+quantificador   ab+     maior
+concatenação    ab      média
+ou              ab|c    menor
+</pre>
+
+<p>Ou seja, na situação <b><code>ab*</code></b> não é &quot;a com b, em qualquer quantidade&quot;, e sim &quot;a, seguido de b em qualquer quantidade&quot;, ou seja, a concatenação <i>a seguido de b</i> não é mais forte que a quantificação, que rouba o <code>b</code> para ela.</p>
+
+<p>Na última <b><code>ab|c</code></b> em vez de &quot;a, seguido de b ou c&quot; é na verdade &quot;ab ou c&quot;, pois o ou é o mais fraquinho de todos, não puxa nada para o cesto dele.</p>
+
+<p>Por isso que <b><code>boa-tarde|boa-noite</code></b> funciona, pois os caracteres se juntam e se grudam uns com os outros, e o ou não tem força para quebrar isso.</p>
+
+<p>E como na matemática também, os parênteses servem para juntar na marra e dar força aos fracos. Por isso se diz que o grupo aumenta o poder do ou.</p>
+
+<p>Só com a dobradinha grupo+ou é possível algo como <b><code>boa-tard(e|b)oa-noite</code></b>, o que não faz sentido, mas mostra que juntos eles conseguem quebrar a união da concatenação.</p>
+
+<p>Com isso em mente, como fica a relação de forças em <b><code>ab|cd*</code></b>? Vamos colocar os &quot;amigos&quot; entre chaves para ilustrar essa quebra de braço:</p>
+
+<p><b>ab|c{d*}</b></p>
+
+<p>O <b>d</b> é do <code>*</code> pela quantificação ser mais forte que a concatenação, então o <b>c</b> coitado não tem força para puxar o seu amigo <b>d</b> para o seu lado.</p>
+
+<p><b>ab|{c{d*}}</b></p>
+
+<p>Agora o <b>c</b> fica na dúvida, mas se juntar com o <b>|</b> não dá, pois ele é o mais fraquinho de todos, então ele se junta com o <b>d</b> quantificado. Como o <b>|</b> já perdeu a briga à direita, ele olha para o outro lado e...</p>
+
+<p><b>{ab}|{c{d*}}</b></p>
+
+<p>O <b>b</b> rapidinho se junta com o <b>a</b> (concatenação) para fugir do fracote. É como no primário onde sempre tem aquele cara desengonçado que fica por último na escolha dos jogadores para o futebol com bola de meia, o <b>|</b> fica com o que sobrou, de um lado <b>ab</b> e do outro <b>cd*</b>.</p>
+
+<p>Esse mundo é mesmo muito cruel com os mais fracos, até os metacaracteres sofrem com essa discriminação &amp;:)</p>

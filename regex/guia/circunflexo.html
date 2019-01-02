@@ -3,47 +3,43 @@ title: "Circunflexo: o início ^"
 prev: ancoras.html
 next: cifrao.html
 ---
-<P> O nosso amigo circunflexo (êta nome comprido e chato) marca o
- começo de uma linha. Nada mais.</P>
-<BLOCKQUOTE><I> Ei, mas o circunflexo não é o marcador de lista
- negada?</I></BLOCKQUOTE>
-<P> Também, mas apenas dentro da lista (e no começo), fora dela ele é
- a âncora que marca o começo de uma linha, veja:</P>
-<PRE>
+
+<p>O nosso amigo circunflexo (êta nome comprido e chato) marca o começo de uma linha. Nada mais.</p>
+
+<blockquote>
+  <i>Ei, mas o circunflexo não é o marcador de lista negada?</i>
+</blockquote>
+
+<p>Também, mas apenas dentro da lista (e no começo), fora dela ele é a âncora que marca o começo de uma linha, veja:</p>
+
+<pre>
 ^[0-9]
-</PRE>
-<P> Isso quer dizer:<I> a partir do começo da linha, case um número</I>
-, ou seja, procuramos linhas que começam com números. O contrário
- seria:</P>
-<PRE>
+</pre>
+
+<p>Isso quer dizer: <i>a partir do começo da linha, case um número</i> , ou seja, procuramos linhas que começam com números. O contrário seria:</p>
+
+<pre>
 ^[^0-9]
-</PRE>
-<P> Ou seja, procuramos linhas que não começam com números. O
- primeiro circunflexo é a âncora e o segundo é o &quot;negador&quot; da lista.
- E como não poderia deixar de ser, é claro que o circunflexo como
- marcador de começo de linha só é especial se estiver no começo da
- ER. Não faz sentido procurarmos uma palavra seguida de um começo de
- linha, pois se tiver uma palavra antes do começo de uma linha, ali
- não é o começo da linha! Desse modo, a ER:</P>
-<PRE>
+</pre>
+
+<p>Ou seja, procuramos linhas que não começam com números. O primeiro circunflexo é a âncora e o segundo é o &quot;negador&quot; da lista. E como não poderia deixar de ser, é claro que o circunflexo como marcador de começo de linha só é especial se estiver no começo da ER. Não faz sentido procurarmos uma palavra seguida de um começo de linha, pois se tiver uma palavra antes do começo de uma linha, ali não é o começo da linha! Desse modo, a ER:</p>
+
+<pre>
 [0-9]^
-</PRE>
-<P> Casa um número seguido de um circunflexo literal, em qualquer
- posição da linha. Com isso em mente, você pode me dizer o que casa a
- ER:</P>
-<PRE>
+</pre>
+
+<p>Casa um número seguido de um circunflexo literal, em qualquer posição da linha. Com isso em mente, você pode me dizer o que casa a ER:</p>
+
+<pre>
 ^^
-</PRE>
-<P> Pois é, uma ER tão singela e harmônica como essa procura por
- linhas que começam com um circunflexo. Legal né? E para fechar, uma
- ER que em um e-mail, casa as conversas anteriores, aquelas linhas que
- começam com aqueles sinais de maior &gt;, abominados por muitos. Ei! Essa
- você mesmo pode fazer, não?</P>
-<P><B> Resumão</B></P>
-<UL>
-<LI>Circunflexo é um nome chato, porém chapeuzinho é legal.</LI>
-<LI>Serve para procurar palavras no começo da linha.</LI>
-<LI>Só é especial no começo da ER.</LI>
-</UL>
+</pre>
 
+<p>Pois é, uma ER tão singela e harmônica como essa procura por linhas que começam com um circunflexo. Legal né? E para fechar, uma ER que em um e-mail, casa as conversas anteriores, aquelas linhas que começam com aqueles sinais de maior &gt;, abominados por muitos. Ei! Essa você mesmo pode fazer, não?</p>
 
+<p><b>Resumão</b></p>
+
+<ul>
+  <li>Circunflexo é um nome chato, porém chapeuzinho é legal.</li>
+  <li>Serve para procurar palavras no começo da linha.</li>
+  <li>Só é especial no começo da ER.</li>
+</ul>

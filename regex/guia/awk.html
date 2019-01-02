@@ -3,63 +3,51 @@ title: "Awk"
 prev: actionscript.html
 next: c.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 --------------------------------------
-busca   	função match
-substituição	funções sub, gensub
-divisão 	função split
-ER crua 	/entre barras/
-ignore M/m	variável IGNORECASE
-global  	função gsub, opção &quot;g&quot;
-</PRE>
-<P> AWK é uma linguagem antiga (1977) que combina processamento de
- texto com estruturas de uma linguagem genérica, possuindo
- condicionais, operações aritméticas e afins.</P>
-<P> Temos cinco funções que utilizam ERs no AWK: <CODE>match</CODE>, <CODE>
-sub</CODE>, <CODE>gsub</CODE>, <CODE>gensub</CODE> e <CODE>split</CODE>.
- Em todas elas, para ignorar a diferença entre maiúsculas e
- minúsculas, basta definir algum valor para a variável <CODE>
-IGNORECASE</CODE>, que é vazia por padrão e, para colocar a ER no
- formato cru basta colocá-la entre /barras/.</P>
-<P> As funções <CODE>sub</CODE> e <CODE>gsub</CODE> não retornam o
- texto alterado, e sim o número de substituições efetuadas. E ainda,
- o texto alterado é gravado diretamente na própria variável que
- continha o texto original. Uma grande limitação de ambas as funções
- é que elas não têm suporte a retrovisores.</P>
-<PRE>
+busca           função match
+substituição    funções sub, gensub
+divisão         função split
+ER crua         /entre barras/
+ignore M/m      variável IGNORECASE
+global          função gsub, opção &quot;g&quot;
+</pre>
+
+<p>AWK é uma linguagem antiga (1977) que combina processamento de texto com estruturas de uma linguagem genérica, possuindo condicionais, operações aritméticas e afins.</p>
+
+<p>Temos cinco funções que utilizam ERs no AWK: <code>match</code>, <code>sub</code>, <code>gsub</code>, <code>gensub</code> e <code>split</code>. Em todas elas, para ignorar a diferença entre maiúsculas e minúsculas, basta definir algum valor para a variável <code>IGNORECASE</code>, que é vazia por padrão e, para colocar a ER no formato cru basta colocá-la entre /barras/.</p>
+
+<p>As funções <code>sub</code> e <code>gsub</code> não retornam o texto alterado, e sim o número de substituições efetuadas. E ainda, o texto alterado é gravado diretamente na própria variável que continha o texto original. Uma grande limitação de ambas as funções é que elas não têm suporte a retrovisores.</p>
+
+<pre>
 texto = &quot;a1b2c3&quot;
 n = gsub(&quot;[0-9]&quot;, &quot;.&quot;, texto)
 print n,texto
-</PRE>
-<P> Esse trecho de código imprime <CODE>3 a.b.c.</CODE>, ou seja, o
- número de substituições efetuadas, seguido do texto modificado. A
- diferença entre as duas é que <CODE>sub</CODE> troca só a primeira
- ocorrência e <CODE>gsub</CODE> é global, troca todas.</P>
-<P> Mas como essas funções são muito chatas de usar, no AWK da GNU
- tem uma melhor, a <CODE>gensub</CODE>. Esta é normal, retorna o texto
- modificado, não regrava a variável com o texto original, a
- globalidade do comando é definida com um argumento (<CODE>g</CODE> ou
- um número), e tem suporte a retrovisores. Veja um exemplo completo:</P>
-<PRE>
+</pre>
+
+<p>Esse trecho de código imprime <code>3 a.b.c.</code>, ou seja, o número de substituições efetuadas, seguido do texto modificado. A diferença entre as duas é que <code>sub</code> troca só a primeira ocorrência e <code>gsub</code> é global, troca todas.</p>
+
+<p>Mas como essas funções são muito chatas de usar, no AWK da GNU tem uma melhor, a <code>gensub</code>. Esta é normal, retorna o texto modificado, não regrava a variável com o texto original, a globalidade do comando é definida com um argumento (<code>g</code> ou um número), e tem suporte a retrovisores. Veja um exemplo completo:</p>
+
+<pre>
 print gensub(/(\w)/, &quot;\\1.&quot;, &quot;g&quot;, &quot;abc&quot;)
-</PRE>
-<P> Vamos à nossa dissecação. A ER<B> <CODE>\w</CODE></B>, que casa
- um caractere componente de uma palavra, está no formato cru, além de
- agrupada. A substituição do trecho casado é feita pelo conteúdo do
- grupo 1, seguido de um ponto literal.</P>
-<P> Note que o escape do número um está duplicado, pois como<B> apenas
- a ER</B> pode ser colocada no formato cru, esse texto primeiro será
- interpretado pela linguagem, para depois ser mandado à função <CODE>
-gensub</CODE>.</P>
-<P> Segue o <CODE>g</CODE> que indica que é uma substituição global e
- por fim, o texto original a ser alterado. Ah! O resultado da
- substituição é <CODE>a.b.c.</CODE>, antes que eu me esqueça...</P>
-<P> O AWK da GNU é encontrada no repositório da GNU:</P>
-<UL>
-<LI><A HREF="http://www.gnu.org/software/gawk/gawk.html">
-http://www.gnu.org/software/gawk/gawk.html</A></LI>
-<LI><A HREF="news://comp.lang.awk">news://comp.lang.awk</A></LI>
-</UL>
+</pre>
 
+<p>Vamos à nossa dissecação. A ER <b><code>\w</code></b>, que casa um caractere componente de uma palavra, está no formato cru, além de agrupada. A substituição do trecho casado é feita pelo conteúdo do grupo 1, seguido de um ponto literal.</p>
 
+<p>Note que o escape do número um está duplicado, pois como <b>apenas a ER</b> pode ser colocada no formato cru, esse texto primeiro será interpretado pela linguagem, para depois ser mandado à função <code>gensub</code>.</p>
+
+<p>Segue o <code>g</code> que indica que é uma substituição global e por fim, o texto original a ser alterado. Ah! O resultado da substituição é <code>a.b.c.</code>, antes que eu me esqueça...</p>
+
+<p>O AWK da GNU é encontrada no repositório da GNU:</p>
+
+<ul>
+  <li>
+    <a href="http://www.gnu.org/software/gawk/gawk.html">http://www.gnu.org/software/gawk/gawk.html</a>
+  </li>
+  <li>
+    <a href="news://comp.lang.awk">news://comp.lang.awk</a>
+  </li>
+</ul>

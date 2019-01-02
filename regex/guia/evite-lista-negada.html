@@ -3,21 +3,17 @@ title: "Evite a lista negada"
 prev: use-circunflexo.html
 next: evite-curinga.html
 ---
-<P> A lista negada é um grande aliado quando não se sabe exatamente
- que tipo de dados estão em uma determinada posição.</P>
-<P> Mas lembre-se: a tabela ASCII tem 255 caracteres. Dizer algo como<B>
- <CODE>[^:]</CODE></B> significa negar um caractere e permitir outros
- 254, o que muitas vezes é um exagero.</P>
-<P> Essa abrangência toda pode trazer resultados negativos, casando
- partes incorretas. Sempre que possível, tente descobrir quais as
- possibilidades válidas de dados em uma determinada posição e
- cadastre todas elas dentro de uma lista normal.</P>
-<P> Nesse exemplo, se o tipo de dados que não pode ser os dois pontos
- forem letras, números e alguns símbolos, liste-os:<B> <CODE>
-[A-Za-z0-9,.()%!]</CODE></B>.</P>
-<P> Assim, mais descritivo e preciso, se tiver algum caractere que não
- os listados, a ER vai falhar e você saberá que alguém fez caca onde
- não devia. Do contrário, o erro passaria despercebido.</P>
-<BLOCKQUOTE> <U>Não tenha preguiça de descobrir todas as
- possibilidades de uma posição.</U></BLOCKQUOTE>
 
+<p>A lista negada é um grande aliado quando não se sabe exatamente que tipo de dados estão em uma determinada posição.</p>
+
+<p>Mas lembre-se: a tabela ASCII tem 255 caracteres. Dizer algo como <b><code>[^:]</code></b> significa negar um caractere e permitir outros 254, o que muitas vezes é um exagero.</p>
+
+<p>Essa abrangência toda pode trazer resultados negativos, casando partes incorretas. Sempre que possível, tente descobrir quais as possibilidades válidas de dados em uma determinada posição e cadastre todas elas dentro de uma lista normal.</p>
+
+<p>Nesse exemplo, se o tipo de dados que não pode ser os dois pontos forem letras, números e alguns símbolos, liste-os: <b><code>[A-Za-z0-9,.()%!]</code></b>.</p>
+
+<p>Assim, mais descritivo e preciso, se tiver algum caractere que não os listados, a ER vai falhar e você saberá que alguém fez caca onde não devia. Do contrário, o erro passaria despercebido.</p>
+
+<blockquote>
+  <u>Não tenha preguiça de descobrir todas as possibilidades de uma posição.</u>
+</blockquote>

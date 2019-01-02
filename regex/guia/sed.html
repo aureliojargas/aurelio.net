@@ -3,62 +3,56 @@ title: "Sed"
 prev: ruby.html
 next: shell-script.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 --------------------------------------
-busca   	/endereçamento/
-substituição	comando s///
-divisão 	-
-ER crua 	já é crua
-ignore M/m	modificador I
-global  	modificador g
-</PRE>
-<P> Bem, eu sou meio suspeito para falar do sed, pois é meu programa
- preferido, então vou tentar ser breve.</P>
-<P> O sed é um editor de texto não-interativo, orientado a linha, que
- usa uma linguagem de programação em que se definem as regras de
- edição. Pode-se usar ERs delimitadas por barras para endereçar as
- linhas nas quais o comando será aplicado.</P>
-<PRE>
+busca           /endereçamento/
+substituição    comando s///
+divisão         -
+ER crua         já é crua
+ignore M/m      modificador I
+global          modificador g
+</pre>
+
+<p>Bem, eu sou meio suspeito para falar do sed, pois é meu programa preferido, então vou tentar ser breve.</p>
+
+<p>O sed é um editor de texto não-interativo, orientado a linha, que usa uma linguagem de programação em que se definem as regras de edição. Pode-se usar ERs delimitadas por barras para endereçar as linhas nas quais o comando será aplicado.</p>
+
+<pre>
 sed '1,/[0-9]\{3\}/d' arquivo.txt
-</PRE>
-<P> Este sed lê dados do <CODE>arquivo.txt</CODE> e apaga (comando d)
- desde a primeira linha, até a linha que contenha 3 números seguidos,
- jogando o resultado na tela. Se quiser gravar o resultado,
- redirecione-o para outro arquivo, não o próprio <CODE>arquivo.txt</CODE>
-.</P>
-<P> A substituição de padrões é feita com o comando <CODE>s///</CODE>
-, em que as barras separam a ER do trecho substituto. Como exemplo,
- vamos trocar duas letras de lugar:</P>
-<PRE>
+</pre>
+
+<p>Este sed lê dados do <code>arquivo.txt</code> e apaga (comando d) desde a primeira linha, até a linha que contenha 3 números seguidos, jogando o resultado na tela. Se quiser gravar o resultado, redirecione-o para outro arquivo, não o próprio <code>arquivo.txt</code> .</p>
+
+<p>A substituição de padrões é feita com o comando <code>s///</code> , em que as barras separam a ER do trecho substituto. Como exemplo, vamos trocar duas letras de lugar:</p>
+
+<pre>
 prompt$ echo ZZzz | sed 's/\([a-z]\)\1/./Ig'
 ..
-</PRE>
-<P> Note lá no final os modificadores <CODE>I</CODE> para ignorar a
- diferença de maiúsculas e minúsculas e o <CODE>g</CODE> para
- substituir todas as ocorrências encontradas.</P>
-<P> O sed também é útil para testes dinâmicos de ERs, em que você
- digita o texto e ele aplica a ER na hora. Basta omitir o nome do
- arquivo, então ele esperará os dados do teclado. Assim:</P>
-<PRE>
+</pre>
+
+<p>Note lá no final os modificadores <code>I</code> para ignorar a diferença de maiúsculas e minúsculas e o <code>g</code> para substituir todas as ocorrências encontradas.</p>
+
+<p>O sed também é útil para testes dinâmicos de ERs, em que você digita o texto e ele aplica a ER na hora. Basta omitir o nome do arquivo, então ele esperará os dados do teclado. Assim:</p>
+
+<pre>
 prompt$ sed 's/$/!!!/; s/[0-9]\+//g'
 exclamação no fim
 exclamação no fim!!!
 e números 1, 23 e 4567 são apagados
 e números ,  e  são apagados!!!
 ^c
-</PRE>
-<P> Então após cada linha que você digita, o sed já a edita e coloca
- o resultado embaixo. Note que temos dois comandos de substituição que
- são aplicados seqüencialmente, então testes de várias ERs em um
- mesmo texto são triviais.</P>
-<P> Bom para testes rápidos de ERs recém-construídas, ou até para
- tentar adivinhar o que faz uma ER pronta que você não conseguiu
- entender direito.</P>
-<P> Mais informações sobre obtenção e uso do sed você encontra no
- sed-HOWTO (em português):</P>
-<UL>
-<LI><A HREF="https://aurelio.net/sed/sed-HOWTO/">https://aurelio.net/sed/sed-HOWTO/</A></LI>
-</UL>
+</pre>
 
+<p>Então após cada linha que você digita, o sed já a edita e coloca o resultado embaixo. Note que temos dois comandos de substituição que são aplicados seqüencialmente, então testes de várias ERs em um mesmo texto são triviais.</p>
 
+<p>Bom para testes rápidos de ERs recém-construídas, ou até para tentar adivinhar o que faz uma ER pronta que você não conseguiu entender direito.</p>
+
+<p>Mais informações sobre obtenção e uso do sed você encontra no sed-HOWTO (em português):</p>
+
+<ul>
+  <li>
+    <a href="https://aurelio.net/sed/sed-HOWTO/">https://aurelio.net/sed/sed-HOWTO/</a>
+  </li>
+</ul>

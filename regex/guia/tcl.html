@@ -3,55 +3,50 @@ title: "Tcl"
 prev: shell-script.html
 next: vbscript.html
 ---
-<PRE>
-característica	como fazer
+
+<pre>
+característica  como fazer
 --------------------------------------
-busca   	função regexp
-substituição	função regsub
-divisão 	-
-ER crua 	{entre chaves}
-ignore M/m	opção -nocase
-global  	opção -all
-</PRE>
-<P> A linguagem Tcl não podia ficar de fora da festa.</P>
-<P> Bem, de cara aquela dica que é sempre importante: para deixar a ER
- no formato cru, evitando pré-processamento, basta colocá-la entre
- {chaves}.</P>
-<P> As funções que nos interessam são <CODE>regexp</CODE> para busca
- e <CODE>regsub</CODE> para substituição. O grande problema da Tcl é
- que ela não tem suporte às classes POSIX, nem às bordas nem às
- chaves! Fora isso, a busca de padrões é tranqüila:</P>
-<PRE>
+busca           função regexp
+substituição    função regsub
+divisão         -
+ER crua         {entre chaves}
+ignore M/m      opção -nocase
+global          opção -all
+</pre>
+
+<p>A linguagem Tcl não podia ficar de fora da festa.</p>
+
+<p>Bem, de cara aquela dica que é sempre importante: para deixar a ER no formato cru, evitando pré-processamento, basta colocá-la entre {chaves}.</p>
+
+<p>As funções que nos interessam são <code>regexp</code> para busca e <code>regsub</code> para substituição. O grande problema da Tcl é que ela não tem suporte às classes POSIX, nem às bordas nem às chaves! Fora isso, a busca de padrões é tranqüila:</p>
+
+<pre>
 if [regexp -nocase {^[a-z][a-z]$} &quot;OI&quot;] {
   puts &quot;casou!&quot;
 }
-</PRE>
-<P> Então, para ignorar maiúsculas e minúsculas, usamos a opção <CODE>
--nocase</CODE>, que deve ser colocada logo após o nome da função. Em
- seguida, colocamos nossa ER no formato cru para evitar problemas, e
- como não podemos usar as chaves, fazemos a repetição manual,
- duplicando a lista.</P>
-<P> Já uma substituição é muito mais chata de fazer, o formato
- genérico é <CODE>regsub -opção ER $texto textonovo variávelnova</CODE>
-, veja:</P>
-<PRE>
+</pre>
+
+<p>Então, para ignorar maiúsculas e minúsculas, usamos a opção <code>-nocase</code>, que deve ser colocada logo após o nome da função. Em seguida, colocamos nossa ER no formato cru para evitar problemas, e como não podemos usar as chaves, fazemos a repetição manual, duplicando a lista.</p>
+
+<p>Já uma substituição é muito mais chata de fazer, o formato genérico é <code>regsub -opção ER $texto textonovo variávelnova</code> , veja:</p>
+
+<pre>
 prompt$ tclsh
 % regsub -all {[A-Z]} &quot;eScaMOSO&quot; &quot;.&quot; sobra
 5
 % puts $sobra
 e.ca....
-</PRE>
-<P> A função <CODE>regsub</CODE> retornou o número de substituições
- efetuadas: cinco. Mas observe o trabalho para fazer isso, pois
- colocamos a opção <CODE>-all</CODE> para trocar todas as
- ocorrências, depois nossa ER crua, depois o texto original a ser
- trocado, depois o texto novo que será colocado na troca e, por
- último, o nome de uma variável para colocar o texto modificado.</P>
-<P> Aí usamos o <CODE>puts</CODE> para nos mostrar o conteúdo da
- variável <CODE>sobra</CODE> e finalmente conferir o que nossa ER fez.</P>
-<P> Mais informações são encontradas em:</P>
-<UL>
-<LI><A HREF="http://www.scriptics.com">http://www.scriptics.com</A>.</LI>
-</UL>
+</pre>
 
+<p>A função <code>regsub</code> retornou o número de substituições efetuadas: cinco. Mas observe o trabalho para fazer isso, pois colocamos a opção <code>-all</code> para trocar todas as ocorrências, depois nossa ER crua, depois o texto original a ser trocado, depois o texto novo que será colocado na troca e, por último, o nome de uma variável para colocar o texto modificado.</p>
 
+<p>Aí usamos o <code>puts</code> para nos mostrar o conteúdo da variável <code>sobra</code> e finalmente conferir o que nossa ER fez.</p>
+
+<p>Mais informações são encontradas em:</p>
+
+<ul>
+  <li>
+    <a href="http://www.scriptics.com">http://www.scriptics.com</a>.
+  </li>
+</ul>

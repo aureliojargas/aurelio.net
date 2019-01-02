@@ -3,78 +3,74 @@ title: "Quantificadores gulosos"
 prev: epocas.html
 next: quantificadores-nao-gulosos.html
 ---
-<P> Como já vimos, todos os quantificadores são gulosos, pois sempre
- casam o máximo possível. Mas por que isso? Como isso acontece?
- Acompanhe um passo-a-passo para esclarecer o assunto e nunca mais
- sofrer por não entender a gulodice.</P>
-<P> Para a demonstração, vamos pegar uma frase:</P>
-<BLOCKQUOTE> um &lt;b&gt;negrito&lt;/b&gt; aqui.</BLOCKQUOTE>
-<P> E supondo que nosso objetivo seja casar os marcadores <CODE>&lt;b&gt;</CODE>
- e <CODE>&lt;/b&gt;</CODE> para apagá-los. Mas ao aplicarmos a ER<B> <CODE>
-&lt;.*&gt;</CODE></B>, vemos que ela casou além, pegando de uma vez todo o
- trecho <U>&lt;b&gt;negrito&lt;/b&gt;</U>. O que aconteceu?</P>
-<P> Aconteceu que o asterisco, como todo quantificador, é guloso e
- casou o máximo que conseguiu. Vamos entrar na abstração da
- abstração e entender como isso aconteceu.</P>
-<P> Imaginemos que somos o próprio robozinho, então como aplicaremos a
- ER no texto?</P>
-<PRE>
+
+<p>Como já vimos, todos os quantificadores são gulosos, pois sempre casam o máximo possível. Mas por que isso? Como isso acontece? Acompanhe um passo-a-passo para esclarecer o assunto e nunca mais sofrer por não entender a gulodice.</p>
+
+<p>Para a demonstração, vamos pegar uma frase:</p>
+
+<blockquote>
+  um &lt;b&gt;negrito&lt;/b&gt; aqui.
+</blockquote>
+
+<p>E supondo que nosso objetivo seja casar os marcadores <code>&lt;b&gt;</code> e <code>&lt;/b&gt;</code> para apagá-los. Mas ao aplicarmos a ER <b><code>&lt;.*&gt;</code></b>, vemos que ela casou além, pegando de uma vez todo o trecho <u>&lt;b&gt;negrito&lt;/b&gt;</u>. O que aconteceu?</p>
+
+<p>Aconteceu que o asterisco, como todo quantificador, é guloso e casou o máximo que conseguiu. Vamos entrar na abstração da abstração e entender como isso aconteceu.</p>
+
+<p>Imaginemos que somos o próprio robozinho, então como aplicaremos a ER no texto?</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ^                           &lt;.*&gt;
-</PRE>
-<P> Temos a frase e o circunflexo logo abaixo indica onde está o foco
- da ER e mais à direita está nossa ER. Estamos no estado inicial,
- parados no começo da linha, e agora vamos tentar casar a expressão. A
- primeira coisa que temos para casar, é o<B> <CODE>&lt;</CODE></B>.</P>
-<P> Como a primeira letra da frase é um <CODE>u</CODE>, mudamos o foco
- para o próximo caractere, pois este não é o<B> <CODE>&lt;</CODE></B>
- que procuramos:</P>
-<PRE>
+</pre>
+
+<p>Temos a frase e o circunflexo logo abaixo indica onde está o foco da ER e mais à direita está nossa ER. Estamos no estado inicial, parados no começo da linha, e agora vamos tentar casar a expressão. A primeira coisa que temos para casar, é o <b><code>&lt;</code></b>.</p>
+
+<p>Como a primeira letra da frase é um <code>u</code>, mudamos o foco para o próximo caractere, pois este não é o <b><code>&lt;</code></b> que procuramos:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 .^                          &lt;.*&gt;
-</PRE>
-<P> Mmmmmmm, ainda não deu, então continuamos assim, um por um, até
- conseguirmos um casamento:</P>
-<PRE>
+</pre>
+
+<p>Mmmmmmm, ainda não deu, então continuamos assim, um por um, até conseguirmos um casamento:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ..^                         &lt;.*&gt;
 ...^                        &lt;.*&gt;
-</PRE>
-<P> Opa, agora achamos um <CODE>&lt;</CODE>! Conseguimos casar o primeiro
- átomo de nossa ER. Então marcamos como casado esses caracteres e
- seguimos adiante para o próximo:</P>
-<PRE>
+</pre>
+
+<p>Opa, agora achamos um <code>&lt;</code>! Conseguimos casar o primeiro átomo de nossa ER. Então marcamos como casado esses caracteres e seguimos adiante para o próximo:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...x^                       &quot;&lt;&quot;.*&gt;
-</PRE>
-<P> Os trechos já casados são representados pelos <CODE>x</CODE>
- marcando a frase e as aspas marcam a ER. Os pontinhos representam
- apenas os &quot;rastros&quot; do foco, as partes já visitadas e não casadas.</P>
-<P> A próxima parte da ER a ser casada é o curinga, que casa<I>
- qualquer caractere em qualquer quantidade</I>. Então, procurando
- qualquer caractere, nosso curinga segue casando:</P>
-<PRE>
+</pre>
+
+<p>Os trechos já casados são representados pelos <code>x</code> marcando a frase e as aspas marcam a ER. Os pontinhos representam apenas os &quot;rastros&quot; do foco, as partes já visitadas e não casadas.</p>
+
+<p>A próxima parte da ER a ser casada é o curinga, que casa <i>qualquer caractere em qualquer quantidade</i>. Então, procurando qualquer caractere, nosso curinga segue casando:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...x^                       &quot;&lt;.*&quot;&gt;
 ...xx^                      &quot;&lt;.*&quot;&gt;
 ...xxx^                     &quot;&lt;.*&quot;&gt;
 ...xxxx^                    &quot;&lt;.*&quot;&gt;
-</PRE>
-<P> Ei! Mas ele passou batido pelo <CODE>&gt;</CODE> que a gente queria!
- Por quê? Lembre-se de que o ponto casa<I> qualquer caractere</I>? E
- por acaso o <CODE>&gt;</CODE> também não é qualquer caractere? É,
- então o ponto casa ele também, seguindo guloso até o fim da linha:</P>
-<PRE>
+</pre>
+
+<p>Ei! Mas ele passou batido pelo <code>&gt;</code> que a gente queria! Por quê? Lembre-se de que o ponto casa <i>qualquer caractere</i>? E por acaso o <code>&gt;</code> também não é qualquer caractere? É, então o ponto casa ele também, seguindo guloso até o fim da linha:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...xxxxxxxxxxxxxxxxxxxx^    &quot;&lt;.*&quot;&gt;
-</PRE>
-<P> Pronto. Como bateu lá no final e não tem mais caracteres para
- casar, o asterisco sossega. Mas ainda temos um componente da ER para
- casar, o<B> <CODE>&gt;</CODE></B>. E agora?</P>
-<P> Bem, o asterisco é guloso, mas não é egoísta, então se ele
- precisar ceder alguma coisa, ele cede. E assim acontece, ele vai
- devolvendo até satisfazer o próximo componente da ER:</P>
-<PRE>
+</pre>
+
+<p>Pronto. Como bateu lá no final e não tem mais caracteres para casar, o asterisco sossega. Mas ainda temos um componente da ER para casar, o <b><code>&gt;</code></b>. E agora?</p>
+
+<p>Bem, o asterisco é guloso, mas não é egoísta, então se ele precisar ceder alguma coisa, ele cede. E assim acontece, ele vai devolvendo até satisfazer o próximo componente da ER:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...xxxxxxxxxxxxxxxxxxx^     &quot;&lt;.*&quot;&gt;
 ...xxxxxxxxxxxxxxxxxx^      &quot;&lt;.*&quot;&gt;
@@ -83,37 +79,33 @@ um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...xxxxxxxxxxxxxxx^         &quot;&lt;.*&quot;&gt;
 ...xxxxxxxxxxxxxx^          &quot;&lt;.*&quot;&gt;
 ...xxxxxxxxxxxxx^           &quot;&lt;.*&quot;&gt;
-</PRE>
-<P> Opa, agora o asterisco devolveu um <CODE>&gt;</CODE> que servirá para
- casar o último átomo de nossa ER:</P>
-<PRE>
+</pre>
+
+<p>Opa, agora o asterisco devolveu um <code>&gt;</code> que servirá para casar o último átomo de nossa ER:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...xxxxxxxxxxxxxx^          &quot;&lt;.*&gt;&quot;
-</PRE>
-<P> Pronto! Nossa ER agora está casada por inteiro, então não temos
- mais o que fazer, fim do processo. Agora ficou fácil entender essa
- gulodice? É sempre assim, casa o máximo possível, e se precisar,
- devolve alguns caracteres para satisfazer o resto da expressão.</P>
-<P> Por causa dessa gulodice e da subseqüente procura de trás para
- frente é que acaba se casando além do desejado. Exatamente assim
- também funcionam todos os outros quantificadores: mais, chaves e
- opcional. Sempre casam o máximo possível. Então, em uma visão
- diferente, vamos ver o que cada parte da ER casou na frase:</P>
-<PRE>
+</pre>
+
+<p>Pronto! Nossa ER agora está casada por inteiro, então não temos mais o que fazer, fim do processo. Agora ficou fácil entender essa gulodice? É sempre assim, casa o máximo possível, e se precisar, devolve alguns caracteres para satisfazer o resto da expressão.</p>
+
+<p>Por causa dessa gulodice e da subseqüente procura de trás para frente é que acaba se casando além do desejado. Exatamente assim também funcionam todos os outros quantificadores: mais, chaves e opcional. Sempre casam o máximo possível. Então, em uma visão diferente, vamos ver o que cada parte da ER casou na frase:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...x                        &lt;
 ....xxxxxxxxxxxx            .*
 ................x           &gt;
-</PRE>
-<P> Quando o que normalmente se esperava conseguir era:</P>
-<PRE>
+</pre>
+
+<p>Quando o que normalmente se esperava conseguir era:</p>
+
+<pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
 ...x.........x              &lt;
 ....x.........xx            .*
 .....x..........x           &gt;
-</PRE>
-<P> Para o asterisco ter esse comportamento, ou você faz uma ER mais
- específica, ou usa um quantificador não-guloso, se o aplicativo
- suportá-lo. Vamos conhecê-los!</P>
+</pre>
 
-
+<p>Para o asterisco ter esse comportamento, ou você faz uma ER mais específica, ou usa um quantificador não-guloso, se o aplicativo suportá-lo. Vamos conhecê-los!</p>

@@ -3,20 +3,11 @@ title: "(?(condição)ER-sim|ER-não)"
 prev: modernosos-modificador.html
 next: modernosos-codigo.html
 ---
-<P> E aqui está o transgênico mutante, o &quot;if-then-else&quot; dos
- metacaracteres.</P>
-<P> A <CODE>condição</CODE> geralmente é um número, que referencia a
- um grupo prévio. Se esse grupo casou, a condição é verdadeira e <CODE>
-ER-sim</CODE> é a ER &quot;da vez&quot;. Se a condição falhar, a <CODE>ER-não</CODE>
- é utilizada. Isso é basicamente usado para fazer amarrações e
- balanceamentos, utilizando condicionais.</P>
-<P> É algo como &quot;case um número entre possíveis parênteses, mas se
- tiver tem de ter o parênteses que abre E o que fecha&quot;, ou seja,<I> 669</I>
- e<I> (669)</I> são válidos, mas<I> (669</I> e<I> 669)</I> não. Veja
- como fica a ER:<B> <CODE>(\()?[0-9]+(?(1)\))</CODE></B>. Isso porque
- nem preenchemos a possibilidade <CODE>ER-não</CODE>...</P>
-<P> Se isso não é exagero eu quero ser jardineiro, pois as plantas
- não terão teclados no futuro (será?). Ih, eu tinha dito que não
- reclamaria mais né, foi mal.</P>
 
+<p>E aqui está o transgênico mutante, o &quot;if-then-else&quot; dos metacaracteres.</p>
 
+<p>A <code>condição</code> geralmente é um número, que referencia a um grupo prévio. Se esse grupo casou, a condição é verdadeira e <code>ER-sim</code> é a ER &quot;da vez&quot;. Se a condição falhar, a <code>ER-não</code> é utilizada. Isso é basicamente usado para fazer amarrações e balanceamentos, utilizando condicionais.</p>
+
+<p>É algo como &quot;case um número entre possíveis parênteses, mas se tiver tem de ter o parênteses que abre E o que fecha&quot;, ou seja, <i>669</i> e <i>(669)</i> são válidos, mas <i>(669</i> e <i>669)</i> não. Veja como fica a ER: <b><code>(\()?[0-9]+(?(1)\))</code></b>. Isso porque nem preenchemos a possibilidade <code>ER-não</code>...</p>
+
+<p>Se isso não é exagero eu quero ser jardineiro, pois as plantas não terão teclados no futuro (será?). Ih, eu tinha dito que não reclamaria mais né, foi mal.</p>

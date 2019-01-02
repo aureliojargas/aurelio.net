@@ -3,44 +3,35 @@ title: "Escape: a criptonita \\"
 prev: outros.html
 next: ou.html
 ---
-<P> E tudo estava indo bem na sua vida nova de criador de ERs, quando de
- repente...</P>
-<BLOCKQUOTE><I> Ó não, preciso colocar um * literal, o que fazer?</I></BLOCKQUOTE>
-<P> Se você está atento, lembrará que a lista tem suas próprias
- regras e que...</P>
-<BLOCKQUOTE><I> Dentro da lista, todo mundo é normal!</I></BLOCKQUOTE>
-<P> Isso! Cara esperto. Precisou de um caractere que é um meta, mas
- você quer seu significado literal, coloque-o dentro de uma lista,
- então<B> <CODE>lua[*]</CODE></B> casa <U>lua*</U>. O mesmo serve para
- qualquer outro metacaractere. Maaaaaas, para não precisar ficar toda
- hora criando listas de um único componente só para tirar seu valor
- especial, temos o metacaractere criptonita<B> <CODE>\</CODE></B>, que
- &quot;escapa&quot; um metacaractere, tirando todos os seus poderes.</P>
-<P> Escapando,<B> <CODE>\*</CODE></B> é igual a<B> <CODE>[*]</CODE></B>
- que é igual a um asterisco literal. Similarmente podemos escapar todos
- os metacaracteres já vistos:<B> <CODE>\.</CODE></B>,<B> <CODE>\[</CODE>
-</B>,<B> <CODE>\]</CODE></B>,<B> <CODE>\?</CODE></B>,<B> <CODE>\+</CODE></B>
-,<B> <CODE>\{</CODE></B>,<B> <CODE>\}</CODE></B>,<B> <CODE>\^</CODE></B>
- e<B> <CODE>\$</CODE></B>. E para você ver como são as coisas, o
- escape é tão poderoso que pode escapar a si próprio! O<B> <CODE>\\</CODE>
-</B> casa uma barra invertida <CODE>\</CODE> literal.</P>
-<P> Ah! É claro, escapar um circunflexo ou cifrão somente é
- necessário caso eles estejam em suas posições especiais, como casar
- o texto<I> ^destaque^</I>, em que ambos os circunflexos são literais,
- mas o primeiro será considerado uma âncora de começo de linha caso
- não esteja escapado.</P>
-<P> Então, agora que sabemos muito sobre ERs, que tal uma expressão
- para casar um número de RG no formato n.nnn.nnn-n? É fácil!</P>
-<PRE>
+
+<p>E tudo estava indo bem na sua vida nova de criador de ERs, quando de repente...</p>
+
+<blockquote>
+  <i>Ó não, preciso colocar um * literal, o que fazer?</i>
+</blockquote>
+
+<p>Se você está atento, lembrará que a lista tem suas próprias regras e que...</p>
+
+<blockquote>
+  <i>Dentro da lista, todo mundo é normal!</i>
+</blockquote>
+
+<p>Isso! Cara esperto. Precisou de um caractere que é um meta, mas você quer seu significado literal, coloque-o dentro de uma lista, então <b><code>lua[*]</code></b> casa <u>lua*</u>. O mesmo serve para qualquer outro metacaractere. Maaaaaas, para não precisar ficar toda hora criando listas de um único componente só para tirar seu valor especial, temos o metacaractere criptonita <b><code>\</code></b>, que &quot;escapa&quot; um metacaractere, tirando todos os seus poderes.</p>
+
+<p>Escapando, <b><code>\*</code></b> é igual a <b><code>[*]</code></b> que é igual a um asterisco literal. Similarmente podemos escapar todos os metacaracteres já vistos: <b><code>\.</code></b>, <b><code>\[</code></b> , <b><code>\]</code></b>, <b><code>\?</code></b>, <b><code>\+</code></b> , <b><code>\{</code></b>, <b><code>\}</code></b>, <b><code>\^</code></b> e <b><code>\$</code></b>. E para você ver como são as coisas, o escape é tão poderoso que pode escapar a si próprio! O <b><code>\\</code></b> casa uma barra invertida <code>\</code> literal.</p>
+
+<p>Ah! É claro, escapar um circunflexo ou cifrão somente é necessário caso eles estejam em suas posições especiais, como casar o texto <i>^destaque^</i>, em que ambos os circunflexos são literais, mas o primeiro será considerado uma âncora de começo de linha caso não esteja escapado.</p>
+
+<p>Então, agora que sabemos muito sobre ERs, que tal uma expressão para casar um número de RG no formato n.nnn.nnn-n? É fácil!</p>
+
+<pre>
 [0-9]\.[0-9]{3}\.[0-9]{3}-[0-9]
-</PRE>
-<P><B> Resumão</B></P>
-<UL>
-<LI>O escape escapa um metacaractere, tirando seu poder.</LI>
-<LI><B><CODE>\*</CODE></B> =<B> <CODE>[*]</CODE></B> = asterisco
- literal.</LI>
-<LI>O escape escapa o escape, escapando-se a si próprio
- simultaneamente.</LI>
-</UL>
+</pre>
 
+<p><b>Resumão</b></p>
 
+<ul>
+  <li>O escape escapa um metacaractere, tirando seu poder.</li>
+  <li><b><code>\*</code></b> = <b><code>[*]</code></b> = asterisco literal.</li>
+  <li>O escape escapa o escape, escapando-se a si próprio simultaneamente.</li>
+</ul>

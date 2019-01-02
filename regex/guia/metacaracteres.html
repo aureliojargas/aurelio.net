@@ -3,88 +3,78 @@ title: "Os Metacaracteres"
 prev: utilidade.html
 next: representantes.html
 ---
-<P> Então, para já matar sua curiosidade, aqui estão os tão falados
- metacaracteres-padrão que serão nossos personagens das próximas
- páginas:<B> <CODE>. ? * + ^ $ | [ ] { } ( ) \</CODE></B>. E aí,
- sentiu um frio na barriga? Cada simbolozinho desses tem sua função
- específica, que pode mudar dependendo do contexto no qual está
- inserido, e podemos agregá-los uns com os outros, combinando suas
- funções e fazendo construções mais complexas. Olha, ainda dá tempo
- de fechar o livro e voltar a assistir à novela....</P>
-<P> Então deixa eu te assustar mais um pouquinho. Além destes, temos
- outros metacaracteres estendidos que foram criados posteriormente, pois
- tarefas mais complexas requisitavam funções mais específicas ainda.
- E para terminar de complicar, sua sintaxe de utilização não é a
- mesma para todos os programas que suportam expressões regulares.</P>
-<P> Bem, já que você não desistiu (eu tentei), vamos logo ao que
- interessa, e para começar vamos dar nomes aos bois. Leia, releia e
- &quot;treleia&quot; esta lista, repetindo para si mesmo e associando o nome ao
- símbolo, pois estas palavras farão parte de sua vida, de sua rotina.
- Acostume-se com os nomes e não os mude.</P>
-<PRE>
-	meta	mnemônico
-	------------------------------
-	.	ponto
-	[]	lista
-	[^]	lista negada
-	?	opcional
-	*	asterisco
-	+	mais
-	{}	chaves
-	^	circunflexo
-	$	cifrão
-	\b	borda
-	\	escape
-	|	ou
-	()	grupo
-	\1	retrovisor
-</PRE>
-<P> Agora que sabemos como chamar nossos amigos novos, veremos uma
- prévia, um apanhado geral de todos os metacaracteres e suas funções.
- Eles estão divididos em quatro grupos distintos, de acordo com
- características comuns entre eles.</P>
-<P><B> Representantes</B></P>
-<PRE>
-meta	mnemônico	função
----------------------------------------------------------------
-.	ponto   	um caractere qualquer
-[...]	lista   	lista de caracteres permitidos
-[^...]	lista negada	lista de caracteres proibidos
-</PRE>
-<P><B> Quantificadores</B></P>
-<PRE>
-meta	mnemônico	função
----------------------------------------------------------------
-?	opcional	zero ou um
-*	asterisco	zero, um ou mais
-+	mais    	um ou mais
-{n,m}	chaves  	de n até m
-</PRE>
-<P><B> Âncoras</B></P>
-<PRE>
-meta	mnemônico	função
----------------------------------------------------------------
-^	circunflexo	início da linha
-$	cifrão  	fim da linha
-\b	borda   	início ou fim de palavra
-</PRE>
-<P><B> Outros</B></P>
-<PRE>
-meta	mnemônico	função
----------------------------------------------------------------
-\c	escape  	torna literal o caractere c
-|	ou      	ou um ou outro
-(...)	grupo   	delimita um grupo
-\1...\9	retrovisor	texto casado nos grupos 1...9
-</PRE>
-<BLOCKQUOTE><I> Aaaah, ? e * eu já uso na linha de comando!</I></BLOCKQUOTE>
-<P> Opa, não confunda! Os curingas usados na linha de comando para
- especificar nomes de arquivos, como <CODE>*.txt</CODE>, <CODE>
-relatorio.{txt,doc}</CODE> e <CODE>guia-??.html</CODE><B> não são</B>
- expressões regulares. São curingas específicos de nomes de arquivo,
- e apesar de parecidos, são outra coisa e os significados de seus
- símbolos são diferentes dos das expressões, então o melhor que
- você faz agora é<B> esquecer</B> esses curingas, senão eles podem
- confundi-lo e atrapalhar seu aprendizado.</P>
 
+<p>Então, para já matar sua curiosidade, aqui estão os tão falados metacaracteres-padrão que serão nossos personagens das próximas páginas: <b><code>. ? * + ^ $ | [ ] { } ( ) \</code></b>. E aí, sentiu um frio na barriga? Cada simbolozinho desses tem sua função específica, que pode mudar dependendo do contexto no qual está inserido, e podemos agregá-los uns com os outros, combinando suas funções e fazendo construções mais complexas. Olha, ainda dá tempo de fechar o livro e voltar a assistir à novela....</p>
 
+<p>Então deixa eu te assustar mais um pouquinho. Além destes, temos outros metacaracteres estendidos que foram criados posteriormente, pois tarefas mais complexas requisitavam funções mais específicas ainda. E para terminar de complicar, sua sintaxe de utilização não é a mesma para todos os programas que suportam expressões regulares.</p>
+
+<p>Bem, já que você não desistiu (eu tentei), vamos logo ao que interessa, e para começar vamos dar nomes aos bois. Leia, releia e &quot;treleia&quot; esta lista, repetindo para si mesmo e associando o nome ao símbolo, pois estas palavras farão parte de sua vida, de sua rotina. Acostume-se com os nomes e não os mude.</p>
+
+<pre>
+        meta    mnemônico
+        ------------------------------
+        .       ponto
+        []      lista
+        [^]     lista negada
+        ?       opcional
+        *       asterisco
+        +       mais
+        {}      chaves
+        ^       circunflexo
+        $       cifrão
+        \b      borda
+        \       escape
+        |       ou
+        ()      grupo
+        \1      retrovisor
+</pre>
+
+<p>Agora que sabemos como chamar nossos amigos novos, veremos uma prévia, um apanhado geral de todos os metacaracteres e suas funções. Eles estão divididos em quatro grupos distintos, de acordo com características comuns entre eles.</p>
+
+<p><b>Representantes</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+.       ponto           um caractere qualquer
+[...]   lista           lista de caracteres permitidos
+[^...]  lista negada    lista de caracteres proibidos
+</pre>
+
+<p><b>Quantificadores</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+?       opcional        zero ou um
+*       asterisco       zero, um ou mais
++       mais            um ou mais
+{n,m}   chaves          de n até m
+</pre>
+
+<p><b>Âncoras</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+^       circunflexo     início da linha
+$       cifrão          fim da linha
+\b      borda           início ou fim de palavra
+</pre>
+
+<p><b>Outros</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+\c      escape          torna literal o caractere c
+|       ou              ou um ou outro
+(...)   grupo           delimita um grupo
+\1...\9 retrovisor      texto casado nos grupos 1...9
+</pre>
+
+<blockquote>
+  <i>Aaaah, ? e * eu já uso na linha de comando!</i>
+</blockquote>
+
+<p>Opa, não confunda! Os curingas usados na linha de comando para especificar nomes de arquivos, como <code>*.txt</code>, <code>relatorio.{txt,doc}</code> e <code>guia-??.html</code> <b>não são</b> expressões regulares. São curingas específicos de nomes de arquivo, e apesar de parecidos, são outra coisa e os significados de seus símbolos são diferentes dos das expressões, então o melhor que você faz agora é <b>esquecer</b> esses curingas, senão eles podem confundi-lo e atrapalhar seu aprendizado.</p>

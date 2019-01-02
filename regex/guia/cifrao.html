@@ -3,37 +3,41 @@ title: "Cifrão: o fim $"
 prev: circunflexo.html
 next: borda.html
 ---
-<P> Similar e complementar ao circunflexo, o cifrão marca o fim de uma
- linha e só é válido no final de uma ER. Como o exemplo anterior,<B> <CODE>
-[0-9]$</CODE></B> casa linhas que terminam com um número. E o que você
- me diz da ER a seguir?</P>
-<PRE>
+
+<p>Similar e complementar ao circunflexo, o cifrão marca o fim de uma linha e só é válido no final de uma ER. Como o exemplo anterior, <b><code>[0-9]$</code></b> casa linhas que terminam com um número. E o que você me diz da ER a seguir?</p>
+
+<pre>
 ^$
-</PRE>
-<BLOCKQUOTE><I> Um começo de linha seguido de... mmmmmm... um fim de
- linha?</I></BLOCKQUOTE>
-<P> Sim, e o que isso significa?</P>
-<BLOCKQUOTE><I> Ah! Uma linha vazia!</I></BLOCKQUOTE>
-<P> Isso! Essa ER é sempre bom ter na manga, pois procurar por linhas
- vazias é uma tarefa comum nas mais diversas situações. Podemos
- também casar apenas os cinco últimos caracteres de uma linha.</P>
-<PRE>
+</pre>
+
+<blockquote>
+  <i>Um começo de linha seguido de... mmmmmm... um fim de linha?</i>
+</blockquote>
+
+<p>Sim, e o que isso significa?</p>
+
+<blockquote>
+  <i>Ah! Uma linha vazia!</i>
+</blockquote>
+
+<p>Isso! Essa ER é sempre bom ter na manga, pois procurar por linhas vazias é uma tarefa comum nas mais diversas situações. Podemos também casar apenas os cinco últimos caracteres de uma linha.</p>
+
+<pre>
 .....$
-</PRE>
-<P> Ou, ainda, que tal casarmos linhas que tenham entre 20 e 60
- caracteres?</P>
-<PRE>
+</pre>
+
+<p>Ou, ainda, que tal casarmos linhas que tenham entre 20 e 60 caracteres?</p>
+
+<pre>
 ^.{20,60}$
-</PRE>
-<P> É comum pessoas (inclusive eu) chamarem o cifrão de &quot;dólar&quot;.
- Vamos abolir essa prática. Chame até de &quot;ésse riscado&quot;, mas dólar
- é feio. É como diria meu amigo Julio Neves, lugar de dólar é no
- bolso.</P>
-<P><B> Resumão</B></P>
-<UL>
-<LI>Serve para procurar palavras no fim da linha.</LI>
-<LI>Só é especial no final da ER.</LI>
-<LI>É cifrão e não dólar.</LI>
-</UL>
+</pre>
 
+<p>É comum pessoas (inclusive eu) chamarem o cifrão de &quot;dólar&quot;. Vamos abolir essa prática. Chame até de &quot;ésse riscado&quot;, mas dólar é feio. É como diria meu amigo Julio Neves, lugar de dólar é no bolso.</p>
 
+<p><b>Resumão</b></p>
+
+<ul>
+  <li>Serve para procurar palavras no fim da linha.</li>
+  <li>Só é especial no final da ER.</li>
+  <li>É cifrão e não dólar.</li>
+</ul>

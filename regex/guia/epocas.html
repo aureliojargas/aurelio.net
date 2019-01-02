@@ -3,56 +3,25 @@ title: "Épocas e aplicativos diversos, Metacaracteres distorcidos"
 prev: mais-sobre-metacaracteres.html
 next: quantificadores-gulosos.html
 ---
-<P> Agora que já aprendemos todos aqueles metacaracteres, sua sintaxe,
- suas regras, seus detalhes, é hora de aplicar na prática esse
- conhecimento. E aí é que vem a surpresa, quando você percebe que
- alguns metacaracteres não funcionam direito... O que acontece?</P>
-<P> O que acontece é que existe uma diferença brutal de sintaxe entre
- aplicativos, em que cada um coloca sua personalidade, e temos várias
- maneiras de representar o mesmo metacaractere.</P>
-<P> Por exemplo: o opcional é<B> <CODE>?</CODE></B> no Python, Perl e
- linguagens de programação mais novas. Mas em aplicativos mais antigos
- como o grep e o sed, ele é escapado<B> <CODE>\?</CODE></B>, sendo<B> <CODE>
-?</CODE></B> uma mera interrogação literal. Já no editor de textos
- vim, o opcional é representado pelo esquisito<B> <CODE>\=</CODE></B>.
- Vai entender?</P>
-<P> O motivo mais comum para isso acontecer são as razões históricas.
- Voltando no tempo, na época em que os primeiros programas começavam a
- ter suporte a expressões regulares, basicamente o que era comum de se
- fazer em um editor de textos eram códigos de programas, e não textos
- normais da linguagem falada.</P>
-<P> Assim, como era (e ainda é) muito comum de se ter os caracteres<B> <CODE>
-?</CODE></B>,<B> <CODE>+</CODE></B>,<B> <CODE>{</CODE></B>,<B> <CODE>(</CODE>
-</B> e<B> <CODE>|</CODE></B> nos códigos de programas, era comum eles
- fazerem parte da ER por seu valor literal, ou seja, procurar por uma
- interrogação, por uma barra vertical, etc. Então, no começo de
- tudo, esses metacaracteres eram todos escapados para serem especiais:<B>
- <CODE>\?</CODE></B>,<B> <CODE>\+</CODE></B>,<B> <CODE>\{</CODE></B>,<B>
- <CODE>\(</CODE></B> e<B> <CODE>\|</CODE></B>.</P>
-<P> Já aplicativos e linguagens mais novos, criados em um mundo onde a
- editoração eletrônica avançou muito e um &quot;texto de computador&quot; não
- era apenas um código de programa, todos os escapes foram retirados e
- os metacaracteres ficaram mais simples.</P>
-<P> Aqueles aplicativos antigos, porém, continuam até hoje utilizando
- os escapes, pois têm de manter a compatibilidade com versões
- anteriores. Alguns são mais espertos e suportam ambas as sintaxes,
- escolhendo via configuração ou opção de linha de comando.</P>
-<P> Toda essa historinha, além de curiosidade, está aqui para que
- você saiba o porquê das coisas, e isso o ajuda na hora da dúvida,
- pois se você sabe que o aplicativo é antigo, provavelmente os
- metacaracteres devem ser escapados. Ou ainda, se você viu que o
- opcional<B> <CODE>?</CODE></B> precisou ser escapado, outros
- provavelmente precisarão também.</P>
-<P> Concluindo, ora razões históricas ora vaidade do autor, o fato é
- que a diversidade impera e você vai ter de se acostumar com isso e
- aprender as diferenças de cada aplicativo que for utilizar. Bem-vindo
- ao mundo caótico da implementação das expressões regulares.</P>
-<P> Mas para ajudar nesse reconhecimento da diferença, no final do guia
- há uma daquelas tabelinhas mágicas, que parece simples, mas demora
- dias para fazer, e pode e deve ser consultada em caso de dúvida.</P>
-<P> Estão registradas todas as diferenças encontradas em vários
- aplicativos e linguagens. Com ela em mãos, você não precisa mais se
- preocupar com isso. O nome é &quot;Diferenças de Metacaracteres Entre
- Aplicativos&quot;.</P>
 
+<p>Agora que já aprendemos todos aqueles metacaracteres, sua sintaxe, suas regras, seus detalhes, é hora de aplicar na prática esse conhecimento. E aí é que vem a surpresa, quando você percebe que alguns metacaracteres não funcionam direito... O que acontece?</p>
 
+<p>O que acontece é que existe uma diferença brutal de sintaxe entre aplicativos, em que cada um coloca sua personalidade, e temos várias maneiras de representar o mesmo metacaractere.</p>
+
+<p>Por exemplo: o opcional é <b><code>?</code></b> no Python, Perl e linguagens de programação mais novas. Mas em aplicativos mais antigos como o grep e o sed, ele é escapado <b><code>\?</code></b>, sendo <b><code>?</code></b> uma mera interrogação literal. Já no editor de textos vim, o opcional é representado pelo esquisito <b><code>\=</code></b>. Vai entender?</p>
+
+<p>O motivo mais comum para isso acontecer são as razões históricas. Voltando no tempo, na época em que os primeiros programas começavam a ter suporte a expressões regulares, basicamente o que era comum de se fazer em um editor de textos eram códigos de programas, e não textos normais da linguagem falada.</p>
+
+<p>Assim, como era (e ainda é) muito comum de se ter os caracteres <b><code>?</code></b>, <b><code>+</code></b>, <b><code>{</code></b>, <b><code>(</code></b> e <b><code>|</code></b> nos códigos de programas, era comum eles fazerem parte da ER por seu valor literal, ou seja, procurar por uma interrogação, por uma barra vertical, etc. Então, no começo de tudo, esses metacaracteres eram todos escapados para serem especiais: <b><code>\?</code></b>, <b><code>\+</code></b>, <b><code>\{</code></b>, <b><code>\(</code></b> e <b><code>\|</code></b>.</p>
+
+<p>Já aplicativos e linguagens mais novos, criados em um mundo onde a editoração eletrônica avançou muito e um &quot;texto de computador&quot; não era apenas um código de programa, todos os escapes foram retirados e os metacaracteres ficaram mais simples.</p>
+
+<p>Aqueles aplicativos antigos, porém, continuam até hoje utilizando os escapes, pois têm de manter a compatibilidade com versões anteriores. Alguns são mais espertos e suportam ambas as sintaxes, escolhendo via configuração ou opção de linha de comando.</p>
+
+<p>Toda essa historinha, além de curiosidade, está aqui para que você saiba o porquê das coisas, e isso o ajuda na hora da dúvida, pois se você sabe que o aplicativo é antigo, provavelmente os metacaracteres devem ser escapados. Ou ainda, se você viu que o opcional <b><code>?</code></b> precisou ser escapado, outros provavelmente precisarão também.</p>
+
+<p>Concluindo, ora razões históricas ora vaidade do autor, o fato é que a diversidade impera e você vai ter de se acostumar com isso e aprender as diferenças de cada aplicativo que for utilizar. Bem-vindo ao mundo caótico da implementação das expressões regulares.</p>
+
+<p>Mas para ajudar nesse reconhecimento da diferença, no final do guia há uma daquelas tabelinhas mágicas, que parece simples, mas demora dias para fazer, e pode e deve ser consultada em caso de dúvida.</p>
+
+<p>Estão registradas todas as diferenças encontradas em vários aplicativos e linguagens. Com ela em mãos, você não precisa mais se preocupar com isso. O nome é &quot;Diferenças de Metacaracteres Entre Aplicativos&quot;.</p>

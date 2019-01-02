@@ -3,41 +3,36 @@ title: "Quantificadores não-gulosos"
 prev: quantificadores-gulosos.html
 next: barra-letra.html
 ---
-<P> A gulodice dos quantificadores é algo geralmente benéfico, mas em
- certas situações, como a do negrito anterior, você quer o oposto: o
- menor casamento possível.</P>
-<P> Apenas presente em linguagens e aplicativos mais recentes, essa
- opção de metacaracteres tem uma sintaxe fácil de lembrar, basta
- acrescentar uma interrogação logo após os quantificadores normais:</P>
-<PRE>
-meta	mnemônico
+
+<p>A gulodice dos quantificadores é algo geralmente benéfico, mas em certas situações, como a do negrito anterior, você quer o oposto: o menor casamento possível.</p>
+
+<p>Apenas presente em linguagens e aplicativos mais recentes, essa opção de metacaracteres tem uma sintaxe fácil de lembrar, basta acrescentar uma interrogação logo após os quantificadores normais:</p>
+
+<pre>
+meta    mnemônico
 ----------------------------------
-??	opcional não-guloso
-*?	asterisco não-guloso
-+?	mais não-guloso
-{n,m}?	chaves não-gulosas
-</PRE>
-<P> Não há muito o que demonstrar, visto que já esmiuçamos a
- gulodice. A não-gulodice é o efeito contrário, um quantificador
- &quot;tímido&quot;, que só casa se o próximo átomo da ER não estiver
- precisando daquele caractere. Veja a comparação entre ambos os tipos
- de gulodice em todos os quantificadores, aplicados ao texto<I> aaaaa</I>
-:</P>
-<PRE>
+??      opcional não-guloso
+*?      asterisco não-guloso
++?      mais não-guloso
+{n,m}?  chaves não-gulosas
+</pre>
+
+<p>Não há muito o que demonstrar, visto que já esmiuçamos a gulodice. A não-gulodice é o efeito contrário, um quantificador &quot;tímido&quot;, que só casa se o próximo átomo da ER não estiver precisando daquele caractere. Veja a comparação entre ambos os tipos de gulodice em todos os quantificadores, aplicados ao texto <i>aaaaa</i> :</p>
+
+<pre>
 gulosos
 ---------------------
-a.*     	aaaaa
-a.+     	aaaaa
-a.?     	aa
-a.{1,3} 	aaaa
-</PRE>
-<PRE>
+a.*             aaaaa
+a.+             aaaaa
+a.?             aa
+a.{1,3}         aaaa
+</pre>
+
+<pre>
 não-gulosos
 ---------------------
-a.*?    	a
-a.+?    	aa
-a.??    	a
-a.{1,3}?	aa
-</PRE>
-
-
+a.*?            a
+a.+?            aa
+a.??            a
+a.{1,3}?        aa
+</pre>

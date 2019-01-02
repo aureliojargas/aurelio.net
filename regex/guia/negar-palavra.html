@@ -3,77 +3,48 @@ title: "Negação de uma palavra"
 prev: cruas.html
 next: multilinha.html
 ---
-<P> Vamos agora esclarecer um mito da mitologia ERística: como negar
- uma palavra. Resposta:<B> depende</B>. Depende da posição dela na
- linha ou se seu aplicativo suporta os metacaracteres modernosos. Por
- enquanto esquecendo estes, temos que o único metacaractere que proíbe
- alguma coisa é a lista negada, mas ela vale apenas para a posição de
- um caractere, não tendo como proibir uma palavra. Intuitivamente e de
- sopetão, as tentativas de negar a palavra <CODE>aqui</CODE> poderiam
- ser coisas como:</P>
-<PRE>
+
+<p>Vamos agora esclarecer um mito da mitologia ERística: como negar uma palavra. Resposta: <b>depende</b>. Depende da posição dela na linha ou se seu aplicativo suporta os metacaracteres modernosos. Por enquanto esquecendo estes, temos que o único metacaractere que proíbe alguma coisa é a lista negada, mas ela vale apenas para a posição de um caractere, não tendo como proibir uma palavra. Intuitivamente e de sopetão, as tentativas de negar a palavra <code>aqui</code> poderiam ser coisas como:</p>
+
+<pre>
 [^aqui], (^aqui) e [^(aqui)]
-</PRE>
-<P> O que, como sabemos, são inválidos pois o primeiro nega os quatro
- caracteres em qualquer ordem, para uma posição, o segundo é um grupo
- que casa a palavra no começo da linha e o último é uma viagem
- astral, simplesmente negando todos os caracteres da lista, em qualquer
- ordem. O que fazer então? Se, e somente se a palavra sempre estiver no
- começo ou fim da linha, a âncora nos dá a base e podemos fazer uma
- seqüência de listas negadas de um caractere, completando a palavra,
- assim:</P>
-<PRE>
+</pre>
+
+<p>O que, como sabemos, são inválidos pois o primeiro nega os quatro caracteres em qualquer ordem, para uma posição, o segundo é um grupo que casa a palavra no começo da linha e o último é uma viagem astral, simplesmente negando todos os caracteres da lista, em qualquer ordem. O que fazer então? Se, e somente se a palavra sempre estiver no começo ou fim da linha, a âncora nos dá a base e podemos fazer uma seqüência de listas negadas de um caractere, completando a palavra, assim:</p>
+
+<pre>
 ^[^a][^q][^u][^i]
-</PRE>
-<P> Mas como cada lista é independente uma da outra, qualquer uma que
- falhe é suficiente para falhar a ER toda. Isso significa que qualquer
- linha que comece com <CODE>a</CODE>, seja<I> aonde</I>,<I> agora</I> ou<I>
- assim</I>, falhará a primeira lista negada e com ela toda a ER. Para
- lidar com isso, precisamos amarrar a seqüência das letras, em uma ER
- gigante, feia e literal, mas que funciona:</P>
-<PRE>
+</pre>
+
+<p>Mas como cada lista é independente uma da outra, qualquer uma que falhe é suficiente para falhar a ER toda. Isso significa que qualquer linha que comece com <code>a</code>, seja <i>aonde</i>, <i>agora</i> ou <i>assim</i>, falhará a primeira lista negada e com ela toda a ER. Para lidar com isso, precisamos amarrar a seqüência das letras, em uma ER gigante, feia e literal, mas que funciona:</p>
+
+<pre>
 ^( [^a] | a[^q] | aq[^u] | aqu[^i] )
-</PRE>
-<P> Note que os espaços em branco foram colocados para facilitar a
- leitura apenas, eles não fazem parte da ER. Vamos fazer a leitura dela
- para clarificar. A primeira letra da linha não pode ser um <CODE>a</CODE>
-. Se for, este não pode ser seguido de um <CODE>q</CODE>. Se for, este <CODE>
-aq</CODE> não pode ser seguido por um <CODE>u</CODE>, mas caso seja, em
- hipótese alguma a próxima pode ser um <CODE>i</CODE>. Se for, falhou
- a ER e conseguimos ignorar a palavra <CODE>aqui</CODE> no começo da
- linha. Ufa! Se a palavra fosse no fim da linha, basta usar o cifrão,
- aliás, acho que nem precisava falar isso né? E se você não quisesse
- a palavra <CODE>chato</CODE> também?</P>
-<PRE>
+</pre>
+
+<p>Note que os espaços em branco foram colocados para facilitar a leitura apenas, eles não fazem parte da ER. Vamos fazer a leitura dela para clarificar. A primeira letra da linha não pode ser um <code>a</code> . Se for, este não pode ser seguido de um <code>q</code>. Se for, este <code>aq</code> não pode ser seguido por um <code>u</code>, mas caso seja, em hipótese alguma a próxima pode ser um <code>i</code>. Se for, falhou a ER e conseguimos ignorar a palavra <code>aqui</code> no começo da linha. Ufa! Se a palavra fosse no fim da linha, basta usar o cifrão, aliás, acho que nem precisava falar isso né? E se você não quisesse a palavra <code>chato</code> também?</p>
+
+<pre>
 ^([^a]|a[^q]|aq[^u]|aqu[^i]|[^c]|c[^h]|ch[^a]|...)
-</PRE>
-<P> E assim vai, podendo ficar quilométrica. Mas funciona. Se for no
- meio da linha, esqueça, pois<B> qualquer</B> linha casará, mesmo as
- que contenham a palavra proibida. Tome como exemplo a frase &quot;o aqui é
- proibido.&quot;. Aplicando a ER quilométrica apresentada, mesmo sem a
- âncora ela casa no começo da linha na maior cara-de-pau:</P>
-<PRE>
+</pre>
+
+<p>E assim vai, podendo ficar quilométrica. Mas funciona. Se for no meio da linha, esqueça, pois <b>qualquer</b> linha casará, mesmo as que contenham a palavra proibida. Tome como exemplo a frase &quot;o aqui é proibido.&quot;. Aplicando a ER quilométrica apresentada, mesmo sem a âncora ela casa no começo da linha na maior cara-de-pau:</p>
+
+<pre>
 o aqui é proibido.
 xxxx
-</PRE>
-<P> Então a ER casa <U>o aq</U>, considerando a frase válida e o que
- era para ser proibido, passou... O motivo é simples e esse problema
- nunca terá solução, pois as ERs são orientadas a caracteres e
- repetições para casar um texto. O que precisaríamos aqui é algo que<B>
- não</B> case caracteres em seqüência, sob qualquer contexto. As ERs
- não foram feitas para isso.</P>
-<BLOCKQUOTE> <U>Negar uma palavra, só no começo ou fim da linha.</U></BLOCKQUOTE>
-<P> Mas como não poderia deixar de ser, esta regra também tem uma
- exceção. Legal né? Você se lembra do tópico dos metacaracteres
- modernosos? Mais especificamente o<B> <CODE>(?!...)</CODE></B>. No
- nosso exemplo em questão, a ER ficaria<B> <CODE>(?!aqui)</CODE></B>,
- pois esse metacaractere fará a ER falhar caso encontre um <CODE>aqui</CODE>
- na linha.</P>
-<P> Para ficar mais simples, você pode considerar essa construção uma
- &quot;lista negada de ERs&quot;, que casa<I> qualquer coisa fora o que casar a ER
- contida</I>. Em nosso caso as ER eram apenas caracteres literais, mas
- poderia ser uma ER tão complicada quanto se precise. Levando-se isso
- em conta, fica aqui nossa conclusão:</P>
-<BLOCKQUOTE> <U>Há como negar uma ou mais palavras, em apenas alguns
- aplicativos.</U></BLOCKQUOTE>
+</pre>
 
+<p>Então a ER casa <u>o aq</u>, considerando a frase válida e o que era para ser proibido, passou... O motivo é simples e esse problema nunca terá solução, pois as ERs são orientadas a caracteres e repetições para casar um texto. O que precisaríamos aqui é algo que <b>não</b> case caracteres em seqüência, sob qualquer contexto. As ERs não foram feitas para isso.</p>
+
+<blockquote>
+  <u>Negar uma palavra, só no começo ou fim da linha.</u>
+</blockquote>
+
+<p>Mas como não poderia deixar de ser, esta regra também tem uma exceção. Legal né? Você se lembra do tópico dos metacaracteres modernosos? Mais especificamente o <b><code>(?!...)</code></b>. No nosso exemplo em questão, a ER ficaria <b><code>(?!aqui)</code></b>, pois esse metacaractere fará a ER falhar caso encontre um <code>aqui</code> na linha.</p>
+
+<p>Para ficar mais simples, você pode considerar essa construção uma &quot;lista negada de ERs&quot;, que casa <i>qualquer coisa fora o que casar a ER contida</i>. Em nosso caso as ER eram apenas caracteres literais, mas poderia ser uma ER tão complicada quanto se precise. Levando-se isso em conta, fica aqui nossa conclusão:</p>
+
+<blockquote>
+  <u>Há como negar uma ou mais palavras, em apenas alguns aplicativos.</u>
+</blockquote>

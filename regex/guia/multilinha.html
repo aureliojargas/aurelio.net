@@ -3,14 +3,10 @@ title: "Multilinha"
 prev: negar-palavra.html
 next: acentuacao.html
 ---
-<P> Algumas linguagens possuem modificadores para que sua ER consiga
- lidar com um texto de várias linhas. Geralmente são dois os
- modificadores, um para tratar estas várias linhas como apenas uma, em
- que o metacaractere ponto também casa o <CODE>\n</CODE> (quebra de
- linha), e outra complementar para tratar como várias linhas, onde o
- circunflexo e o cifrão podem casar começo e final de qualquer uma
- dessas linhas contidas no texto, chamado multilinha. Vejamos:</P>
-<PRE>
+
+<p>Algumas linguagens possuem modificadores para que sua ER consiga lidar com um texto de várias linhas. Geralmente são dois os modificadores, um para tratar estas várias linhas como apenas uma, em que o metacaractere ponto também casa o <code>\n</code> (quebra de linha), e outra complementar para tratar como várias linhas, onde o circunflexo e o cifrão podem casar começo e final de qualquer uma dessas linhas contidas no texto, chamado multilinha. Vejamos:</p>
+
+<pre>
 $a = $b = $c = &quot;linha 1\nlinha 2\nlinha 3&quot;;
 $a =~ s/^.*/!!/g ; print &quot;$a\n-------\n&quot;;
 $b =~ s/^.*/!!/gs; print &quot;$b\n-------\n&quot;;
@@ -28,17 +24,12 @@ linha 3
 !!
 !!
 -------
-</PRE>
-<P> Ah, nada como um exemplo para ilustrar conceitos... Esse trecho em
- Perl casa a ER<B> <CODE>^.*</CODE></B> no texto de três linhas,
- fazendo substituições globais (modificador <CODE>g</CODE>), primeiro
- normal, depois com o modificador uma linha, e depois o multilinha.</P>
-<P> Como era de se esperar, o primeiro, como não sabe o que é
- multilinha casou apenas a primeira e não tocou nas outras linhas.</P>
-<P> O segundo, como o ponto casa a quebra de linha, considerou o texto
- todo como apenas uma única linha e casou tudo, trocando todas por
- apenas um <CODE>!!</CODE>.</P>
-<P> Já o último, que é multilinha, considerou o <CODE>\n</CODE> o fim
- de uma linha e casou as três linhas separadamente.</P>
+</pre>
 
+<p>Ah, nada como um exemplo para ilustrar conceitos... Esse trecho em Perl casa a ER <b><code>^.*</code></b> no texto de três linhas, fazendo substituições globais (modificador <code>g</code>), primeiro normal, depois com o modificador uma linha, e depois o multilinha.</p>
 
+<p>Como era de se esperar, o primeiro, como não sabe o que é multilinha casou apenas a primeira e não tocou nas outras linhas.</p>
+
+<p>O segundo, como o ponto casa a quebra de linha, considerou o texto todo como apenas uma única linha e casou tudo, trocando todas por apenas um <code>!!</code>.</p>
+
+<p>Já o último, que é multilinha, considerou o <code>\n</code> o fim de uma linha e casou as três linhas separadamente.</p>

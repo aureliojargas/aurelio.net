@@ -3,38 +3,22 @@ title: "Use o circunflexo"
 prev: nao-complique.html
 next: evite-lista-negada.html
 ---
-<P> Sempre que possível,<I> comece sua ER com o circunflexo</I>. Como
- já vimos, o robozinho vai tentando casá-la, caractere por caractere,
- da esquerda para a direita, a partir do começo da linha. Então, o
- ponto inicial de pesquisa, é o começo de linha.</P>
-<P> Se você não coloca o circunflexo em sua ER, o robozinho tentará
- casá-la em qualquer parte da linha. Isso significa ir varrendo a
- linha, um por um, até chegar no final e caso não encontre o padrão,
- retorna falha na pesquisa.</P>
-<P> Se você coloca o circunflexo na sua ER, forçando o casamento do
- começo de linha, se o primeiro componente da ER após o<B> <CODE>^</CODE>
-</B> já não casar com o primeiro caractere da linha, dali mesmo já
- retorna falha de pesquisa, sem precisar varrer o resto da linha.</P>
-<P> Por exemplo, se você procura valores em reais &quot;R$&quot;, pode
- simplesmente dizer<B> <CODE>R\$</CODE></B>. Mas se você sabe que os
- reais que lhe interessam estão sempre no começo da linha, digam isso
- com sua ER:<B> <CODE>^R\$</CODE></B>. Assim, em um exemplo como:</P>
-<PRE>
+
+<p>Sempre que possível, <i>comece sua ER com o circunflexo</i>. Como já vimos, o robozinho vai tentando casá-la, caractere por caractere, da esquerda para a direita, a partir do começo da linha. Então, o ponto inicial de pesquisa, é o começo de linha.</p>
+
+<p>Se você não coloca o circunflexo em sua ER, o robozinho tentará casá-la em qualquer parte da linha. Isso significa ir varrendo a linha, um por um, até chegar no final e caso não encontre o padrão, retorna falha na pesquisa.</p>
+
+<p>Se você coloca o circunflexo na sua ER, forçando o casamento do começo de linha, se o primeiro componente da ER após o <b><code>^</code></b> já não casar com o primeiro caractere da linha, dali mesmo já retorna falha de pesquisa, sem precisar varrer o resto da linha.</p>
+
+<p>Por exemplo, se você procura valores em reais &quot;R$&quot;, pode simplesmente dizer <b><code>R\$</code></b>. Mas se você sabe que os reais que lhe interessam estão sempre no começo da linha, digam isso com sua ER: <b><code>^R\$</code></b>. Assim, em um exemplo como:</p>
+
+<pre>
 R$ 200,00 : fósforos e velas
   essenciais na crise de energia.
   comprados das marcas mais baratas.
 R$ 100,00 : caixas de ovos vazias
-</PRE>
-<P> Ambas as ERs casam as linhas 1 e 4 imediatamente, pois têm o <U>R$</U>
- já no começo. Mas nas linhas 2 e 3, onde não há nossos reais
- desejados, a primeira ER seria tentada em ambas, em todas as
- posições, até o final, para ver que falhou. Já a segunda, ao
- encontrar um espaço em branco no começo da linha, já retorna falha,
- pois ele não é um <CODE>R</CODE>.</P>
-<P> Em um exemplo mais palpável, suponha que seu chefe tenha uma mesa
- enorme, com oito gavetas. E se ele lhe falar: &quot;Me traga a pasta verde,
- está na minha gaveta&quot;, ou então &quot;Me traga a pasta verde, que está na
- última gaveta. Na última hein? Não fuce no resto de minhas coisas!&quot;.
- Tem uma diferença, não? &amp;:)</P>
+</pre>
 
+<p>Ambas as ERs casam as linhas 1 e 4 imediatamente, pois têm o <u>R$</u> já no começo. Mas nas linhas 2 e 3, onde não há nossos reais desejados, a primeira ER seria tentada em ambas, em todas as posições, até o final, para ver que falhou. Já a segunda, ao encontrar um espaço em branco no começo da linha, já retorna falha, pois ele não é um <code>R</code>.</p>
 
+<p>Em um exemplo mais palpável, suponha que seu chefe tenha uma mesa enorme, com oito gavetas. E se ele lhe falar: &quot;Me traga a pasta verde, está na minha gaveta&quot;, ou então &quot;Me traga a pasta verde, que está na última gaveta. Na última hein? Não fuce no resto de minhas coisas!&quot;. Tem uma diferença, não? &amp;:)</p>

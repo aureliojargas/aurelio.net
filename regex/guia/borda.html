@@ -3,31 +3,26 @@ title: "Borda: a limítrofe \b"
 prev: cifrao.html
 next: outros.html
 ---
-<P> A outra âncora que temos é a borda, que como o próprio nome já
- diz, marca uma borda, mais especificamente, uma borda de palavra.</P>
-<P> Ela marca os limites de uma palavra, ou seja, onde ela começa e/ou
- termina. Muito útil para casar palavras exatas, e não partes de
- palavras. Veja como se comportam as ERs nas palavras<I> dia</I>,<I>
- diafragma</I>,<I> radial</I>,<I> melodia</I> e<I> bom-dia!</I>:</P>
-<PRE>
-dia     	dia, diafragma, radial, melodia, bom-dia!
-\bdia   	dia, diafragma, bom-dia!
-dia\b   	dia, melodia, bom-dia!
-\bdia\b 	dia, bom-dia!
-</PRE>
-<P> Assim vimos que a borda força um começo ou terminação de
- palavra. Entenda que &quot;palavra&quot; aqui é um conceito que engloba<B> <CODE>
-[A-Za-z0-9_]</CODE></B> apenas, ou seja, letras, números e o
- sublinhado. Por isso<B> <CODE>\bdia\b</CODE></B> também casa <U>
-bom-dia!</U> pois o traço e a exclamação não são parte de uma
- palavra.</P>
-<P> Ah! Dependendo do aplicativo, o sublinhado não faz parte de uma
- palavra.</P>
-<P><B> Resumão</B></P>
-<UL>
-<LI>A borda marca os limites de uma palavra</LI>
-<LI>O conceito &quot;palavra&quot; engloba letras, números e o sublinhado</LI>
-<LI>A borda é útil para casar palavras exatas e não parciais</LI>
-</UL>
 
+<p>A outra âncora que temos é a borda, que como o próprio nome já diz, marca uma borda, mais especificamente, uma borda de palavra.</p>
 
+<p>Ela marca os limites de uma palavra, ou seja, onde ela começa e/ou termina. Muito útil para casar palavras exatas, e não partes de palavras. Veja como se comportam as ERs nas palavras <i>dia</i>, <i>diafragma</i>, <i>radial</i>, <i>melodia</i> e <i>bom-dia!</i>:</p>
+
+<pre>
+dia             dia, diafragma, radial, melodia, bom-dia!
+\bdia           dia, diafragma, bom-dia!
+dia\b           dia, melodia, bom-dia!
+\bdia\b         dia, bom-dia!
+</pre>
+
+<p>Assim vimos que a borda força um começo ou terminação de palavra. Entenda que &quot;palavra&quot; aqui é um conceito que engloba <b><code>[A-Za-z0-9_]</code></b> apenas, ou seja, letras, números e o sublinhado. Por isso <b><code>\bdia\b</code></b> também casa <u>bom-dia!</u> pois o traço e a exclamação não são parte de uma palavra.</p>
+
+<p>Ah! Dependendo do aplicativo, o sublinhado não faz parte de uma palavra.</p>
+
+<p><b>Resumão</b></p>
+
+<ul>
+  <li>A borda marca os limites de uma palavra</li>
+  <li>O conceito &quot;palavra&quot; engloba letras, números e o sublinhado</li>
+  <li>A borda é útil para casar palavras exatas e não parciais</li>
+</ul>

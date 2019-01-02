@@ -3,125 +3,61 @@ title: "MS Word 2000"
 prev: openoffice.html
 next: linguagens.html
 ---
-<P> Finalmente, após anos de atraso, usuários do Word versão 2000
- também podem usufruir dos poderes da ERs. Faltam algumas funções,
- uns metacaracteres são diferentes, outros são iguais, mas agem
- diferente, outros são mais limitados, enfim, há muitas diferenças.
- Normal.</P>
-<P> As ERs no Word são usadas nas funções<I> Localizar</I> e<I>
- Substituir</I>, ambas dentro do menu<I> Editar</I>. Basta selecionar a
- opção<I> usar caracteres curinga</I>. Aqui vai uma tabela comparativa
- dos metacaracteres normais e os do Word:</P>
-<PRE>
-meta	word	mnemônico
+
+<p>Finalmente, após anos de atraso, usuários do Word versão 2000 também podem usufruir dos poderes da ERs. Faltam algumas funções, uns metacaracteres são diferentes, outros são iguais, mas agem diferente, outros são mais limitados, enfim, há muitas diferenças. Normal.</p>
+
+<p>As ERs no Word são usadas nas funções <i>Localizar</i> e <i>Substituir</i>, ambas dentro do menu <i>Editar</i>. Basta selecionar a opção <i>usar caracteres curinga</i>. Aqui vai uma tabela comparativa dos metacaracteres normais e os do Word:</p>
+
+<pre>
+meta    word    mnemônico
 -----------------------------------
-.	?	ponto
-[]	[]	lista
-[^]	[!]	lista negada
-\	\	escape
-?	-	opcional
-*	-	asterisco
-+	@	mais
-{,}	{;}	chaves
-^	-	circunflexo
-$	-	cifrão
-\b	&lt;&gt;	borda
-|	-	ou
-()	()	grupo
-\N	\N	retrovisor
+.       ?       ponto
+[]      []      lista
+[^]     [!]     lista negada
+\       \       escape
+?       -       opcional
+*       -       asterisco
++       @       mais
+{,}     {;}     chaves
+^       -       circunflexo
+$       -       cifrão
+\b      &lt;&gt;        borda
+|       -       ou
+()      ()      grupo
+\N      \N      retrovisor
 
-.*	 *	curinga
-</PRE>
-<P> Então aqui vão 15 dicas valiosas se você pretende usar ERs no
- Word:</P>
-<UL>
-<LI>Alguns metacaracteres são diferentes, como<B> <CODE>.</CODE></B>,<B>
- <CODE>[^]</CODE></B>, e<B> <CODE>+</CODE></B>, que são<B> <CODE>?</CODE>
-</B>,<B> <CODE>[!]</CODE></B> e<B> <CODE>@</CODE></B>.
-<P></P>
-</LI>
-<LI>A sintaxe das chaves usa ponto-e-vírgula em vez de vírgula para
- separar os números.
-<P></P>
-</LI>
-<LI>Dentro da lista, o<B> <CODE>!</CODE></B>, se não for o primeiro
- caractere (lista negada) deve ser escapado. O traço pode ser colocado
- no final ou escapado também. Assim,<B> <CODE>[abc\!-]</CODE></B>,<B> <CODE>
-[!abc\-\!]</CODE></B> estão corretos.
-<P></P>
-</LI>
-<LI>O opcional e o asterisco não existem, e não se pode usar as chaves
- para simulá-los, pois elas não aceitam zero, então<B> <CODE>{0;1}</CODE>
-</B> e<B> <CODE>{0;}</CODE></B> são inválidos. Assim,<B> não há</B>
- como dizer que algo é opcional, ou pode não existir.
-<P></P>
-</LI>
-<LI>O ou também não existe, então não é possível colocar
- alternativas simples como<B> <CODE>sim|não</CODE></B>
-<P></P>
-</LI>
-<LI>Não há âncoras de linha! É impossível procurar uma palavra no
- começo ou fim da linha. Há um<B> <CODE>^|</CODE></B> para indicar
- quebra de linha, e um<B> <CODE>^n</CODE></B> que indica quebra de
- coluna, mas ambos não funcionaram como âncora de fim de linha.
-<P></P>
-</LI>
-<LI>É impossível colocar um grupo dentro do outro, então<B> <CODE>
-(sala ([0-9]))</CODE></B> é inválido.
-<P></P>
-</LI>
-<LI>Não temos o asterisco, mas temos<B> <CODE>.*</CODE></B>. O curinga
- no Word é somente<B> <CODE>*</CODE></B>, como para especificar
- arquivos: <CODE>*.txt</CODE>.
-<P></P>
-</LI>
-<LI>O<B> <CODE>*</CODE></B> e o<B> <CODE>@</CODE></B> só são gulosos
- quando necessário. Assim em uma palavra como<I> aaab</I>, tanto<B> <CODE>
-a*</CODE></B> quanto<B> <CODE>a@</CODE></B> casam somente <U>a</U>,
- enquanto<B> <CODE>a*b</CODE></B> e<B> <CODE>a@b</CODE></B> casam <U>
-aaab</U>.
-<P></P>
-</LI>
-<LI>E contrariando o<B> <CODE>*</CODE></B> e o<B> <CODE>@</CODE></B>, as
- chaves são sempre gulosas. Assim, na mesma palavra<I> aaab</I>, o<B> <CODE>
-a{1;3}</CODE></B> casará <U>aaa</U>.
-<P></P>
-</LI>
-<LI>A borda é feita com<B> <CODE>&lt;</CODE></B> e<B> <CODE>&gt;</CODE></B>,
- então<B> <CODE>&lt;tecla&gt;</CODE></B> casa somente a palavra <U>tecla</U>,
- e não <U>teclado</U>.
-<P></P>
-</LI>
-<LI>No botão<I> Especial</I> há vários metacaracteres diferentes que
- se pode incluir como travessão, elemento gráfico e espaço
- não-separável.
-<P></P>
-</LI>
-<LI>Na ajuda do Word (em português), diz-se que as bordas devem ser
- usadas com os grupos, assim:<B> <CODE>&lt;(tecla)&gt;</CODE></B>, mas apenas
- ignore, não é necessário.
-<P></P>
-</LI>
-<LI>Na ajuda do Word também se diz que é impossível procurar por um
- espaço em branco e que isso deve ser feito na forma<B> <CODE>{1;}</CODE>
-</B>. Ignore e inclua o espaço normalmente.
-<P></P>
-</LI>
-<LI>E, por fim, na ajuda também em todos os exemplos de uso das chaves,
- os números são separados por vírgulas. Ignore e use o<B> <CODE>;</CODE>
-</B> que é o correto.</LI>
-</UL>
-<P> Para obter mais informações no próprio Word sobre o assunto,
- procure na ajuda por &quot;caracteres curinga&quot;, ou siga o roteiro:</P>
-<UL>
-<LI>Aperte F1.</LI>
-<LI>Espere o clipe animado fazer os fru-frus.</LI>
-<LI>Pesquise por: caracteres curinga.</LI>
-<LI>Escolha<I> localizar e substituir texto ou formatação</I>.</LI>
-<LI>Escolha<I> ajustar uma pesquisa usando caracteres curinga</I>.</LI>
-<LI>Clique em<I> digite um caractere curinga</I>.</LI>
-</UL>
-<P> ou ainda, acesse <A HREF="http://www.microsoft.com.br">
-http://www.microsoft.com.br</A>.</P>
+.*       *      curinga
+</pre>
 
+<p>Então aqui vão 15 dicas valiosas se você pretende usar ERs no Word:</p>
 
+<ul>
+  <li>Alguns metacaracteres são diferentes, como <b><code>.</code></b>, <b><code>[^]</code></b>, e <b><code>+</code></b>, que são <b><code>?</code></b> , <b><code>[!]</code></b> e <b><code>@</code></b>.</li>
+  <li>A sintaxe das chaves usa ponto-e-vírgula em vez de vírgula para separar os números.</li>
+  <li>Dentro da lista, o <b><code>!</code></b>, se não for o primeiro caractere (lista negada) deve ser escapado. O traço pode ser colocado no final ou escapado também. Assim, <b><code>[abc\!-]</code></b>, <b><code>[!abc\-\!]</code></b> estão corretos.</li>
+  <li>O opcional e o asterisco não existem, e não se pode usar as chaves para simulá-los, pois elas não aceitam zero, então <b><code>{0;1}</code></b> e <b><code>{0;}</code></b> são inválidos. Assim, <b>não há</b> como dizer que algo é opcional, ou pode não existir.</li>
+  <li>O ou também não existe, então não é possível colocar alternativas simples como <b><code>sim|não</code></b></li>
+  <li>Não há âncoras de linha! É impossível procurar uma palavra no começo ou fim da linha. Há um <b><code>^|</code></b> para indicar quebra de linha, e um <b><code>^n</code></b> que indica quebra de coluna, mas ambos não funcionaram como âncora de fim de linha.</li>
+  <li>É impossível colocar um grupo dentro do outro, então <b><code>(sala ([0-9]))</code></b> é inválido.</li>
+  <li>Não temos o asterisco, mas temos <b><code>.*</code></b>. O curinga no Word é somente <b><code>*</code></b>, como para especificar arquivos: <code>*.txt</code>.</li>
+  <li>O <b><code>*</code></b> e o <b><code>@</code></b> só são gulosos quando necessário. Assim em uma palavra como <i>aaab</i>, tanto <b><code>a*</code></b> quanto <b><code>a@</code></b> casam somente <u>a</u>, enquanto <b><code>a*b</code></b> e <b><code>a@b</code></b> casam <u>aaab</u>.</li>
+  <li>E contrariando o <b><code>*</code></b> e o <b><code>@</code></b>, as chaves são sempre gulosas. Assim, na mesma palavra <i>aaab</i>, o <b><code>a{1;3}</code></b> casará <u>aaa</u>.</li>
+  <li>A borda é feita com <b><code>&lt;</code></b> e <b><code>&gt;</code></b>, então <b><code>&lt;tecla&gt;</code></b> casa somente a palavra <u>tecla</u>, e não <u>teclado</u>.</li>
+  <li>No botão <i>Especial</i> há vários metacaracteres diferentes que se pode incluir como travessão, elemento gráfico e espaço não-separável.</li>
+  <li>Na ajuda do Word (em português), diz-se que as bordas devem ser usadas com os grupos, assim: <b><code>&lt;(tecla)&gt;</code></b>, mas apenas ignore, não é necessário.</li>
+  <li>Na ajuda do Word também se diz que é impossível procurar por um espaço em branco e que isso deve ser feito na forma <b><code>{1;}</code></b> . Ignore e inclua o espaço normalmente.</li>
+  <li>E, por fim, na ajuda também em todos os exemplos de uso das chaves, os números são separados por vírgulas. Ignore e use o <b><code>;</code></b> que é o correto.</li>
+</ul>
+
+<p>Para obter mais informações no próprio Word sobre o assunto, procure na ajuda por &quot;caracteres curinga&quot;, ou siga o roteiro:</p>
+
+<ul>
+  <li>Aperte F1.</li>
+  <li>Espere o clipe animado fazer os fru-frus.</li>
+  <li>Pesquise por: caracteres curinga.</li>
+  <li>Escolha <i>localizar e substituir texto ou formatação</i>.</li>
+  <li>Escolha <i>ajustar uma pesquisa usando caracteres curinga</i>.</li>
+  <li>Clique em <i>digite um caractere curinga</i>.</li>
+</ul>
+
+<p>ou ainda, acesse <a href="http://www.microsoft.com.br">http://www.microsoft.com.br</a>.</p>

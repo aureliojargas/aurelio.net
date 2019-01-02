@@ -3,81 +3,42 @@ title: "Apresentando as Expressões Regulares"
 prev: sobre.html
 next: historia.html
 ---
-<P> Então, para podermos começar nossa viagem, nada como uma
- apresentação de nosso objetivo, pois afinal de contas, que raios são
- estas expressões?</P>
-<P> Bem resumido, uma expressão regular é um método formal de se
- especificar um padrão de texto.</P>
-<P> Mais detalhadamente, é uma composição de símbolos, caracteres
- com funções especiais, que, agrupados entre si e com caracteres
- literais, formam uma seqüência, uma expressão. Essa expressão é
- interpretada como uma regra, que indicará sucesso se uma entrada de
- dados qualquer casar com essa regra, ou seja, obedecer exatamente a
- todas as suas condições.</P>
-<P> Ou como variações aceitas também pode-se afirmar que é:</P>
-<UL>
-<LI>uma maneira de procurar um texto que você não lembra exatamente
- como é, mas tem idéia das variações possíveis;
-<P></P>
-</LI>
-<LI>uma maneira de procurar um trecho em posições específicas como no
- começo ou no fim de uma linha, ou palavra;
-<P></P>
-</LI>
-<LI>uma maneira de um programador especificar padrões complexos que
- podem ser procurados e casados em uma cadeia de caracteres;
-<P></P>
-</LI>
-<LI>uma construção que utiliza pequenas ferramentas, feita para obter
- determinada seqüência de caracteres de um texto.</LI>
-</UL>
-<P> Ou ainda, didaticamente falando, é:</P>
-<UL>
-<LI>Como o brinquedo LEGO, várias pecinhas diferentes, cada uma com sua
- característica, que juntas compõem estruturas completas e podem ser
- arranjadas com infinitas combinações diferentes.
-<P></P>
-</LI>
-<LI>Como um jogo de truco, com as cartas normais e as quentes: gato,
- copas, espadilha e mole, que são especiais e têm uma ordem de
- grandeza.
-<P></P>
-</LI>
-<LI>Como um quebra-cabeça, sempre tem solução, às vezes óbvia, às
- vezes difícil, mas decifrando as partes, junta-se tudo e chega-se ao
- todo.
-<P></P>
-</LI>
-<LI>Como um jogo, no começo é difícil, mas após conhecer todas as
- regras, basta jogar e curtir.
-<P></P>
-</LI>
-<LI>Como uma receita culinária, com seus ingredientes e uma ordem
- correta para adicioná-los à mistura.
-<P></P>
-</LI>
-<LI>Como consertar carros. Você tem várias peças e várias
- ferramentas. Dependendo do tipo da peça, há uma ferramenta certa para
- você lidar com ela. E dependendo da sua localização, você tem de
- incrementar a ferramenta com mais barras e cotovelos para alcançá-la.
-<P></P>
-</LI>
-<LI>Como o alfabeto. Você aprende primeiro as letras individualmente.
- Depois as sílabas, as palavras, frases e finalmente os textos. Mas no
- fundo, são apenas letras.</LI>
-</UL>
-<P> Acima de tudo, assim como um sorvete no domingo ensolarado, uma
- expressão regular é:</P>
-<P> Divertida!</P>
-<BLOCKQUOTE><I> Divertida? Tá louco? Todos aqueles símbolos
- estranhos...</I></BLOCKQUOTE>
-<P> Calma... É normal estranharmos ou até repudiarmos aquilo que ainda
- não conhecemos ou não dominamos bem. Como diria o vovô Simpson no
- meio da multidão: &quot;vamos destruir aquilo que não entendemos!&quot;</P>
-<P> Ao final da leitura, ficará claro que as expressões são apenas
- pequenos pedacinhos simples que agrupados formam algo maior. O
- importante é você compreender bem cada um individualmente, e depois
- apenas lê-los em seqüência. Lembre-se do alfabeto: são apenas
- letras...</P>
 
+<p>Então, para podermos começar nossa viagem, nada como uma apresentação de nosso objetivo, pois afinal de contas, que raios são estas expressões?</p>
 
+<p>Bem resumido, uma expressão regular é um método formal de se especificar um padrão de texto.</p>
+
+<p>Mais detalhadamente, é uma composição de símbolos, caracteres com funções especiais, que, agrupados entre si e com caracteres literais, formam uma seqüência, uma expressão. Essa expressão é interpretada como uma regra, que indicará sucesso se uma entrada de dados qualquer casar com essa regra, ou seja, obedecer exatamente a todas as suas condições.</p>
+
+<p>Ou como variações aceitas também pode-se afirmar que é:</p>
+
+<ul>
+  <li>uma maneira de procurar um texto que você não lembra exatamente como é, mas tem idéia das variações possíveis;</li>
+  <li>uma maneira de procurar um trecho em posições específicas como no começo ou no fim de uma linha, ou palavra;</li>
+  <li>uma maneira de um programador especificar padrões complexos que podem ser procurados e casados em uma cadeia de caracteres;</li>
+  <li>uma construção que utiliza pequenas ferramentas, feita para obter determinada seqüência de caracteres de um texto.</li>
+</ul>
+
+<p>Ou ainda, didaticamente falando, é:</p>
+
+<ul>
+  <li>Como o brinquedo LEGO, várias pecinhas diferentes, cada uma com sua característica, que juntas compõem estruturas completas e podem ser arranjadas com infinitas combinações diferentes.</li>
+  <li>Como um jogo de truco, com as cartas normais e as quentes: gato, copas, espadilha e mole, que são especiais e têm uma ordem de grandeza.</li>
+  <li>Como um quebra-cabeça, sempre tem solução, às vezes óbvia, às vezes difícil, mas decifrando as partes, junta-se tudo e chega-se ao todo.</li>
+  <li>Como um jogo, no começo é difícil, mas após conhecer todas as regras, basta jogar e curtir.</li>
+  <li>Como uma receita culinária, com seus ingredientes e uma ordem correta para adicioná-los à mistura.</li>
+  <li>Como consertar carros. Você tem várias peças e várias ferramentas. Dependendo do tipo da peça, há uma ferramenta certa para você lidar com ela. E dependendo da sua localização, você tem de incrementar a ferramenta com mais barras e cotovelos para alcançá-la.</li>
+  <li>Como o alfabeto. Você aprende primeiro as letras individualmente. Depois as sílabas, as palavras, frases e finalmente os textos. Mas no fundo, são apenas letras.</li>
+</ul>
+
+<p>Acima de tudo, assim como um sorvete no domingo ensolarado, uma expressão regular é:</p>
+
+<p>Divertida!</p>
+
+<blockquote>
+  <i>Divertida? Tá louco? Todos aqueles símbolos estranhos...</i>
+</blockquote>
+
+<p>Calma... É normal estranharmos ou até repudiarmos aquilo que ainda não conhecemos ou não dominamos bem. Como diria o vovô Simpson no meio da multidão: &quot;vamos destruir aquilo que não entendemos!&quot;</p>
+
+<p>Ao final da leitura, ficará claro que as expressões são apenas pequenos pedacinhos simples que agrupados formam algo maior. O importante é você compreender bem cada um individualmente, e depois apenas lê-los em seqüência. Lembre-se do alfabeto: são apenas letras...</p>
