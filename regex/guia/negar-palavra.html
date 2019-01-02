@@ -22,7 +22,7 @@ next: multilinha.html
 ^( [^a] | a[^q] | aq[^u] | aqu[^i] )
 </pre>
 
-<p>Note que os espaços em branco foram colocados para facilitar a leitura apenas, eles não fazem parte da ER. Vamos fazer a leitura dela para clarificar. A primeira letra da linha não pode ser um <code>a</code> . Se for, este não pode ser seguido de um <code>q</code>. Se for, este <code>aq</code> não pode ser seguido por um <code>u</code>, mas caso seja, em hipótese alguma a próxima pode ser um <code>i</code>. Se for, falhou a ER e conseguimos ignorar a palavra <code>aqui</code> no começo da linha. Ufa! Se a palavra fosse no fim da linha, basta usar o cifrão, aliás, acho que nem precisava falar isso né? E se você não quisesse a palavra <code>chato</code> também?</p>
+<p>Note que os espaços em branco foram colocados para facilitar a leitura apenas, eles não fazem parte da ER. Vamos fazer a leitura dela para clarificar. A primeira letra da linha não pode ser um <code>a</code>. Se for, este não pode ser seguido de um <code>q</code>. Se for, este <code>aq</code> não pode ser seguido por um <code>u</code>, mas caso seja, em hipótese alguma a próxima pode ser um <code>i</code>. Se for, falhou a ER e conseguimos ignorar a palavra <code>aqui</code> no começo da linha. Ufa! Se a palavra fosse no fim da linha, basta usar o cifrão, aliás, acho que nem precisava falar isso né? E se você não quisesse a palavra <code>chato</code> também?</p>
 
 <pre>
 ^([^a]|a[^q]|aq[^u]|aqu[^i]|[^c]|c[^h]|ch[^a]|...)

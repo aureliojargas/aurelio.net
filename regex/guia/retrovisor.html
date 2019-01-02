@@ -14,7 +14,7 @@ next: mais-sobre-metacaracteres.html
 
 <p>Então vamos tentar de novo. Como o nome diz, é retrovisor porque ele "olha pra trás", para buscar um trecho já casado. Isso é muito útil para casar trechos repetidos em uma mesma linha. Veja bem, é o trecho de texto, e não a ER.</p>
 
-<p>Como exemplo, em um texto sobre passarinhos, procuramos o quero-quero. Podemos procurar literalmente por <b><code>quero-quero</code></b> , mas assim não tem graça, pois somos mestres em ERs e vamos usar o grupo e o retrovisor para fazer isso:</p>
+<p>Como exemplo, em um texto sobre passarinhos, procuramos o quero-quero. Podemos procurar literalmente por <b><code>quero-quero</code></b>, mas assim não tem graça, pois somos mestres em ERs e vamos usar o grupo e o retrovisor para fazer isso:</p>
 
 <pre>
 (quero)-\1
@@ -40,7 +40,7 @@ next: mais-sobre-metacaracteres.html
 ([A-Za-z]+)-\1
 </pre>
 
-<p>Percebeu o poder dessa ER? Ela casa palavras repetidas, separadas por um traço, como o próprio <u>quero-quero</u>, e mais: <u>bate-bate</u> , <u>come-come</u>, etc. Mas, e se tornássemos o traço opcional?</p>
+<p>Percebeu o poder dessa ER? Ela casa palavras repetidas, separadas por um traço, como o próprio <u>quero-quero</u>, e mais: <u>bate-bate</u>, <u>come-come</u>, etc. Mas, e se tornássemos o traço opcional?</p>
 
 <pre>
 ([A-Za-z]+)-?\1

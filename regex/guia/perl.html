@@ -17,7 +17,7 @@ global          modificador g
 
 <p>(<code>m-i:3</code>) Como resumir o básico sobre ERs do Perl em algumas linhas? Vou tentar. Vamos ver o básico do básico, sem entrar em exceções e sem mostrar as duzentas e sessenta e sete outras maneiras de se fazer a mesma coisa.</p>
 
-<p>Para ignorar a diferença entre maiúsculas e minúsculas, temos o modificador <code>i</code>, ou o metacaractere <b><code>(?i)</code></b> , e para especificarmos uma ER no formato cru, devemos colocá-la entre 'aspas simples'. Atenção especial aqui, pois o Perl tem a interpretação de <i>strings</i> e a interpretação de /ERs/ também e ambas fazem expansão de variáveis:</p>
+<p>Para ignorar a diferença entre maiúsculas e minúsculas, temos o modificador <code>i</code>, ou o metacaractere <b><code>(?i)</code></b>, e para especificarmos uma ER no formato cru, devemos colocá-la entre 'aspas simples'. Atenção especial aqui, pois o Perl tem a interpretação de <i>strings</i> e a interpretação de /ERs/ também e ambas fazem expansão de variáveis:</p>
 
 <ul>
   <li><b>/duh!/</b>: ER normal, interpretada pelo robozinho;</li>
@@ -46,7 +46,7 @@ print "e o \$1? &lt;$1&gt;\n";
 
 <p>Primeiro gravamos a variável mágica <code>$_</code> com nosso texto. Depois jogamos nosso super curinga das ERs em outra variável. Na linha seguinte, usamos o comando <code>m//</code>, para casar a ER <b><code>.* (.*)</code></b> na variável <code>$_</code>. Opa! Há muita coisa nessa frase. Primeiro, a ER ficou assim, pois como usamos as barras como delimitadoras, então o robozinho fez a interpretação da variável <code>$curinga</code>. Com essa ER, estamos nos aproveitando da gulodice do curinga para guardar no grupo a última palavra da frase.</p>
 
-<p>Mas onde dissemos que era para casar com o texto da variável <code>$_</code>? Não dissemos. Ela é a variável-padrão de comparação. Como a busca deu certo, foi impressa a última palavra. Note que ao usarmos grupos, são gravadas as variáveis <code>$1</code>, <code>$2</code> , etc. para podermos utilizar o conteúdo desses grupos em outras partes do programa.</p>
+<p>Mas onde dissemos que era para casar com o texto da variável <code>$_</code>? Não dissemos. Ela é a variável-padrão de comparação. Como a busca deu certo, foi impressa a última palavra. Note que ao usarmos grupos, são gravadas as variáveis <code>$1</code>, <code>$2</code>, etc. para podermos utilizar o conteúdo desses grupos em outras partes do programa.</p>
 
 <p>Em seguida pode não parecer, mas fizemos uma substituição. O comando <code>s///</code> ficou um pouco desfigurado, pois na primeira parte, onde vai a ER. Precisávamos que a variável <code>$curinga</code> fosse interpretada, então usamos as chaves como delimitador. Na segunda parte, usamos as aspas simples como delimitador, pois não queríamos a interpretação.</p>
 

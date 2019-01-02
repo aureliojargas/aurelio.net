@@ -23,9 +23,9 @@ global          modificador g
 sed '1,/[0-9]\{3\}/d' arquivo.txt
 </pre>
 
-<p>Este sed lê dados do <code>arquivo.txt</code> e apaga (comando d) desde a primeira linha, até a linha que contenha 3 números seguidos, jogando o resultado na tela. Se quiser gravar o resultado, redirecione-o para outro arquivo, não o próprio <code>arquivo.txt</code> .</p>
+<p>Este sed lê dados do <code>arquivo.txt</code> e apaga (comando d) desde a primeira linha, até a linha que contenha 3 números seguidos, jogando o resultado na tela. Se quiser gravar o resultado, redirecione-o para outro arquivo, não o próprio <code>arquivo.txt</code>.</p>
 
-<p>A substituição de padrões é feita com o comando <code>s///</code> , em que as barras separam a ER do trecho substituto. Como exemplo, vamos trocar duas letras de lugar:</p>
+<p>A substituição de padrões é feita com o comando <code>s///</code>, em que as barras separam a ER do trecho substituto. Como exemplo, vamos trocar duas letras de lugar:</p>
 
 <pre>
 prompt$ echo ZZzz | sed 's/\([a-z]\)\1/./Ig'

@@ -8,9 +8,9 @@ next: seja-especifico.html
 
 <p>Nem sempre é fácil trocar um curinga por outra coisa. Supõe-se que se você já o usou, é porque precisava de "qualquer coisa". Mas pare para pensar, esse qualquer coisa é realmente QUALQUER coisa? Lembre que isso é muito abrangente, o tudo e o nada. Não seria apenas "qualquer letra em qualquer quantidade" ou "quaisquer caracteres fora espaços em branco"?</p>
 
-<p>Percebeu? As listas são nossa opção para tirar o curinga, trocando-o por algo não tão abrangente. Então, se em um texto normal, você procura parte de uma frase, o restante dela até o ponto final não diga que é <b><code>.*\.</code></b>, mas <b><code>[^.]*\.</code></b> , ou melhor: <b><code>[A-Za-z ,]*\.</code></b>. Isso evita de o curinga casar além do ponto final da frase e ir até o ponto final do parágrafo.</p>
+<p>Percebeu? As listas são nossa opção para tirar o curinga, trocando-o por algo não tão abrangente. Então, se em um texto normal, você procura parte de uma frase, o restante dela até o ponto final não diga que é <b><code>.*\.</code></b>, mas <b><code>[^.]*\.</code></b>, ou melhor: <b><code>[A-Za-z ,]*\.</code></b>. Isso evita de o curinga casar além do ponto final da frase e ir até o ponto final do parágrafo.</p>
 
-<p>Lembra a nossa demonstração da gulodice em que o asterisco casou demais? Podemos evitar isso sendo mais específicos em nossa ER. Em vez de dizer <b><code>&lt;.*&gt;</code></b>, ou seja, uma marcação pode ter "qualquer coisa" antes do <code>&gt;</code>, dizemos que pode ter "qualquer coisa fora o fechamento da marcação". Invocaremos a lista negada para nos ajudar nessa supertarefa, assim: <b><code>&lt;[^&gt;]*&gt;</code></b> , ou mais visual:</p>
+<p>Lembra a nossa demonstração da gulodice em que o asterisco casou demais? Podemos evitar isso sendo mais específicos em nossa ER. Em vez de dizer <b><code>&lt;.*&gt;</code></b>, ou seja, uma marcação pode ter "qualquer coisa" antes do <code>&gt;</code>, dizemos que pode ter "qualquer coisa fora o fechamento da marcação". Invocaremos a lista negada para nos ajudar nessa supertarefa, assim: <b><code>&lt;[^&gt;]*&gt;</code></b>, ou mais visual:</p>
 
 <pre>
 um &lt;b&gt;negrito&lt;/b&gt; aqui.
