@@ -124,6 +124,13 @@ defaults:
       hide_read_more: true
   -
     scope:
+      path: "regex/guia"
+    values:
+      layout: regex-guia
+      title_suffix: " - Livro EXPRESSÕES REGULARES, por Aurelio Jargas"
+      index: /regex/guia/
+  -
+    scope:
       path: "shell"
     values:
       css_extra: /regex/regex.css

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head-base.html %}
+    {% include head-prev-next.html %}
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    {% include analytics.html %}
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    {% include nav-prev-next.html %}
+
+    <div id="contents">
+      <h1>{{ page.title }}</h1>
+
+      {{ content }}
+
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+    </div><!--contents-->
+
+    {% include nav-prev-next.html %}
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>
