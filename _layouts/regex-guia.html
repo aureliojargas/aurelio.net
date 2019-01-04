@@ -29,6 +29,7 @@
 
       {{ content }}
 
+      {% if page.prev or page.next %}
       <div class="bookbox">
         <a href="https://www.piazinho.com.br">
           <img src="/regex/guia/img/livro.jpg">
@@ -40,6 +41,12 @@
           Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
         </a>
       </div>
+      {% elsif page.url != '/regex/guia/' %}
+      <p>
+        ←
+        <a href="/regex/guia/">Continue a leitura do Guia de Expressões Regulares</a>
+      </p>
+      {% endif %}
     </div><!--contents-->
 
     {% include nav-prev-next.html %}

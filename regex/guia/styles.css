@@ -123,14 +123,6 @@ blockquote u {
   color: #aaa;
 }
 
-/* Special pages with no search form or marketing */
-#copyright .bookbox,
-#recados .bookbox,
-#vendas .bookbox,
-#errata .bookbox {
-  display: none;
-}
-
 /* index.html specific */
 .book-splash {
   text-align: center;
