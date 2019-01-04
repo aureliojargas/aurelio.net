@@ -16,8 +16,14 @@ pre {
   clear: both;
 }
 table {
+  margin: 2em auto;
   font-family: sans-serif;
   line-height: 150%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0 0.5em;
 }
 th {
   background-color: #eee;
@@ -141,38 +147,4 @@ blockquote u {
 .search-bar {
   margin: 1em 0;
   text-align: center;
-}
-
-/* Vendas */
-#vendas table {
-  border-collapse: collapse;
-  margin: 2em auto;
-}
-#vendas td {
-  padding: 0.5em 1em;
-}
-
-
-/* Errata table */
-#errata table {
-  border-collapse: collapse;
-  border: 1px solid black;
-  margin: 4em 0;
-}
-#errata tr:hover {
-  background-color: yellow;
-}
-#errata th {
-  text-align: left;
-  padding: 1em 1em;
-  border-width: 0;
-}
-#errata td {
-  padding: 1em 1em;
-  border-width: 0;
-  border-bottom: 1px solid #ccc;
-}
-#errata td b {
-  color: blue;
-  padding: 0 .5em
 }
