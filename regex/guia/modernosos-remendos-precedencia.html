@@ -5,39 +5,32 @@ next: ascii.html
 ---
 
 <pre>
-
-
-    meta            significado
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    (?#texto)       texto é um comentário
-    (?:ER)          grupo fantasma, retrovisor não conta
-    (?=ER)          casa se ER casar adiante          ==
-    (?!ER)          casa se ER não casar adiante      !=
-    (?&lt;=ER)         casa se ER casar antes           &lt;--
-    (?&lt;!ER)         casa se ER não casar antes       &lt;--
-    (?letra)        letra é um modificador: imsxL
-    (?{código})     executa código Perl
-    (?(cond)s|n)    if-then-else
+meta            significado
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(?#texto)       texto é um comentário
+(?:ER)          grupo fantasma, retrovisor não conta
+(?=ER)          casa se ER casar adiante          ==
+(?!ER)          casa se ER não casar adiante      !=
+(?&lt;=ER)         casa se ER casar antes           &lt;--
+(?&lt;!ER)         casa se ER não casar antes       &lt;--
+(?letra)        letra é um modificador: imsxL
+(?{código})     executa código Perl
+(?(cond)s|n)    if-then-else
 </pre>
 
 <pre>
-
-
-    classe POSIX    remendo
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    [[:lower:]]     [a-zà-ú]
-    [[:upper:]]     [A-ZÀ-Ú]
-    [[:alpha:]]     [A-Za-zÀ-ú]
-    [[:alnum:]]     [A-Za-zÀ-ú0-9]
+classe POSIX    remendo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[[:lower:]]     [a-zà-ú]
+[[:upper:]]     [A-ZÀ-Ú]
+[[:alpha:]]     [A-Za-zÀ-ú]
+[[:alnum:]]     [A-Za-zÀ-ú0-9]
 </pre>
 
 <pre>
-
-
-    tipo de meta    exemplo    precedência
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    quantificador   ab+        maior
-    concatenação    ab         média
-    ou              ab|c       menor
-
+tipo de meta    exemplo    precedência
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+quantificador   ab+        maior
+concatenação    ab         média
+ou              ab|c       menor
 </pre>

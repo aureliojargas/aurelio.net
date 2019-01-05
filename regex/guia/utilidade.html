@@ -31,12 +31,12 @@ next: metacaracteres.html
 <p>E mais uma infinidade de outros padrões que não podem ser especificados com caracteres literais. Um exemplo prático: você tem uma lista diária de acesso de usuários que entraram em seu sistema, onde consta em cada linha, o horário do acesso e o "login" do usuário, algo como:</p>
 
 <pre>
-        05:15  ernesto
-        08:39  ricardo
-        10:32  patricia
-        14:59  gabriel
-        16:27  carla
-        22:23  marcelo
+05:15  ernesto
+08:39  ricardo
+10:32  patricia
+14:59  gabriel
+16:27  carla
+22:23  marcelo
 </pre>
 
 <p>Como fazer para buscar automaticamente apenas os usuários que acessaram o sistema no período da tarde (meio-dia às seis)? Você tem várias opções, desde procurar uma a uma manualmente até fazer um programa que compare os primeiros caracteres de cada linha, mas falando de algo prático e rápido, que não exija conhecimentos de programação, a ER é simplesmente <b><code>^1[2-8]</code></b>.</p>

@@ -5,73 +5,67 @@ next: modernosos-remendos-precedencia.html
 ---
 
 <pre>
-      POSIX        similar        significa
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      [:upper:]    [A-Z]          letras maiúsculas
-      [:lower:]    [a-z]          letras minúsculas
-      [:alpha:]    [A-Za-z]       maiúsculas e minúsculas
-      [:alnum:]    [A-Za-z0-9]    letras e números
-      [:digit:]    [0-9]          números
-      [:xdigit:]   [0-9A-Fa-f]    números hexadecimais
-      [:punct:]    [.,!?:...]     caracteres de pontuação
-      [:blank:]    [ \t]          espaço em branco e TAB
-      [:space:]    [ \t\n\r\f\v]  caracteres brancos
-      [:cntrl:]    -              caracteres de controle
-      [:graph:]    [^ \t\n\r\f\v] caracteres imprimíveis
-      [:print:]    [^\t\n\r\f\v]  imprimíveis e o espaço
+POSIX        similar        significa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[:upper:]    [A-Z]          letras maiúsculas
+[:lower:]    [a-z]          letras minúsculas
+[:alpha:]    [A-Za-z]       maiúsculas e minúsculas
+[:alnum:]    [A-Za-z0-9]    letras e números
+[:digit:]    [0-9]          números
+[:xdigit:]   [0-9A-Fa-f]    números hexadecimais
+[:punct:]    [.,!?:...]     caracteres de pontuação
+[:blank:]    [ \t]          espaço em branco e TAB
+[:space:]    [ \t\n\r\f\v]  caracteres brancos
+[:cntrl:]    -              caracteres de controle
+[:graph:]    [^ \t\n\r\f\v] caracteres imprimíveis
+[:print:]    [^\t\n\r\f\v]  imprimíveis e o espaço
 </pre>
 
 <pre>
-
-
-      b-l    nome                 tradução
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      \a     alert                alerta (bipe)
-      \b     backspace            caractere Backspace
-      \e     escape               caractere Esc
-      \f     form feed            alimentação
-      \n     newline              linha nova
-      \r     carriage ret         retorno de carro
-      \t     htab                 tabulação horizontal
-      \v     vtab                 tabulação vertical
+b-l    nome                 tradução
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\a     alert                alerta (bipe)
+\b     backspace            caractere Backspace
+\e     escape               caractere Esc
+\f     form feed            alimentação
+\n     newline              linha nova
+\r     carriage ret         retorno de carro
+\t     htab                 tabulação horizontal
+\v     vtab                 tabulação vertical
 </pre>
 
 <pre>
-
-
-      b-l    POSIX equiv.         mnemônico
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      \d      [[:digit:]]         dígito
-      \D     [^[:digit:]]         não-dígito
-      \w      [[:alnum:]_]        palavra
-      \W     [^[:alnum:]_]        não-palavra
-      \s      [[:space:]]         branco
-      \S     [^[:space:]]         não-branco
+b-l    POSIX equiv.         mnemônico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\d      [[:digit:]]         dígito
+\D     [^[:digit:]]         não-dígito
+\w      [[:alnum:]_]        palavra
+\W     [^[:alnum:]_]        não-palavra
+\s      [[:space:]]         branco
+\S     [^[:space:]]         não-branco
 </pre>
 
 <pre>
-
-
-      b-l    significado          similar
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      \a     alfabeto             [[:alpha:]]
-      \A     não alfabeto         [^[:alpha:]]
-      \h     cabeça de palavra    [[:alpha]_]
-      \H     não cab. de palavra  [^[:alpha:]_]
-      \l     minúsculas           [[:lower:]]
-      \L     não minúsculas       [^[:lower:]]
-      \u     maiúsculas           [[:upper:]]
-      \U     não maiúsculas       [^[:upper:]]
-      \o     número octal         [0-7]
-      \O     não número octal     [^0-7]
-      \B     não-borda
-      \A     início do texto
-      \Z     fim do texto
-      \l     torna minúscula
-      \L     torna minúscula até \E
-      \u     torna maiúscula
-      \U     torna maiúscula até \E
-      \Q     escapa até \E
-      \E     fim da modificação
-      \G     fim do casamento anterior
+b-l    significado          similar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\a     alfabeto             [[:alpha:]]
+\A     não alfabeto         [^[:alpha:]]
+\h     cabeça de palavra    [[:alpha]_]
+\H     não cab. de palavra  [^[:alpha:]_]
+\l     minúsculas           [[:lower:]]
+\L     não minúsculas       [^[:lower:]]
+\u     maiúsculas           [[:upper:]]
+\U     não maiúsculas       [^[:upper:]]
+\o     número octal         [0-7]
+\O     não número octal     [^0-7]
+\B     não-borda
+\A     início do texto
+\Z     fim do texto
+\l     torna minúscula
+\L     torna minúscula até \E
+\u     torna maiúscula
+\U     torna maiúscula até \E
+\Q     escapa até \E
+\E     fim da modificação
+\G     fim do casamento anterior
 </pre>

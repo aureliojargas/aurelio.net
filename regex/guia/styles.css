@@ -12,8 +12,9 @@ pre {
   border: 1px solid #666;
   background: #eee;
   margin: 2em 0;
-  padding: 1em 0 1em 2em;
+  padding: 1em;
   clear: both;
+  overflow: auto;
 }
 table {
   margin: 2em auto;

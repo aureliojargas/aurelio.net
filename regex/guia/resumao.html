@@ -5,61 +5,61 @@ next: aliens.html
 ---
 
 <pre>
-     meta  mnemônico      dicas
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+meta  mnemônico      dicas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-       .   ponto          curinga de um caractere
+  .   ponto          curinga de um caractere
 
-      []   lista          dentro todos são normais,
-                          traço é intervalo ASCII,
-                          [:POSIX:] tem acentuação
+ []   lista          dentro todos são normais,
+                     traço é intervalo ASCII,
+                     [:POSIX:] tem acentuação
 
-     [^]   lista negada   sempre casa algo, [^[:POSIX:]]
+[^]   lista negada   sempre casa algo, [^[:POSIX:]]
 
-       ?   opcional       guloso, 0 ou 1, pode ter ou não
+  ?   opcional       guloso, 0 ou 1, pode ter ou não
 
-       *   asterisco      guloso, 0 ou mais,
-                          repete em qualquer quantidade
+  *   asterisco      guloso, 0 ou mais,
+                     repete em qualquer quantidade
 
-       +   mais           guloso, 1 ou mais,
-                          repete em qualquer quantidade,
-                          pelo menos uma vez
+  +   mais           guloso, 1 ou mais,
+                     repete em qualquer quantidade,
+                     pelo menos uma vez
 
-     {,}   chaves         guloso, número exato, mínimo,
-                          máximo, ou uma faixa numérica
+{,}   chaves         guloso, número exato, mínimo,
+                     máximo, ou uma faixa numérica
 
-       ^   circunflexo    casa o começo da linha,
-                          especial no começo da ER
+  ^   circunflexo    casa o começo da linha,
+                     especial no começo da ER
 
-       $   cifrão         casa o fim da linha,
-                          especial no fim da ER
+  $   cifrão         casa o fim da linha,
+                     especial no fim da ER
 
-      \b   borda          limita uma palavra
-                          (letras, números e sublinhado)
+ \b   borda          limita uma palavra
+                     (letras, números e sublinhado)
 
-       \   escape         escapa um meta, tira seu poder
-                          escapa a si mesmo \\
+  \   escape         escapa um meta, tira seu poder
+                     escapa a si mesmo \\
 
-       |   ou             indica alternativas,
-                          poder multiplicado pelo grupo
+  |   ou             indica alternativas,
+                     poder multiplicado pelo grupo
 
-      ()   grupo          agrupa, é quantificável,
-                          pode conter outros grupos
+ ()   grupo          agrupa, é quantificável,
+                     pode conter outros grupos
 
-      \1   retrovisor     usado com o grupo, máximo 9,
-                          conta da esquerda para direita
+ \1   retrovisor     usado com o grupo, máximo 9,
+                     conta da esquerda para direita
 
-      .*   curinga        qualquer coisa, o tudo e o nada
+ .*   curinga        qualquer coisa, o tudo e o nada
 
-      ??   opcional       não-guloso, 0 ou 1,
-                          casa o mínimo possível
+ ??   opcional       não-guloso, 0 ou 1,
+                     casa o mínimo possível
 
-      *?   asterisco      não-guloso, 0 ou mais,
-                          casa o mínimo possível
+ *?   asterisco      não-guloso, 0 ou mais,
+                     casa o mínimo possível
 
-      +?   mais           não-guloso, 1 ou mais,
-                          casa o mínimo possível
+ +?   mais           não-guloso, 1 ou mais,
+                     casa o mínimo possível
 
-     {}?   chaves         não-guloso, numérico,
-                          casa o mínimo possível
+{}?   chaves         não-guloso, numérico,
+                     casa o mínimo possível
 </pre>
