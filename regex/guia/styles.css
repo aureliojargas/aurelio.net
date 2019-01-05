@@ -128,23 +128,3 @@ blockquote u {
   text-align: center;
   color: #aaa;
 }
-
-/* index.html specific */
-.book-splash {
-  text-align: center;
-  margin: 1em auto;
-  max-width: 190px;
-}
-
-.bookinfo {
-  font-size: 75%;
-  line-height: 150%;
-  background-color: #eee;
-  padding-left: 0.5em;
-  border: 1px solid #ccc;
-}
-
-.search-bar {
-  margin: 1em 0;
-  text-align: center;
-}
