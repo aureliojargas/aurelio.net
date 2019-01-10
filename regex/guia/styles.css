@@ -83,6 +83,13 @@ blockquote u {
   word-spacing: 1em;
 }
 
+#header,
+#contents {
+  max-width: 33em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 #contents {
   padding: 10px;
 }
