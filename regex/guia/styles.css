@@ -41,6 +41,11 @@ blockquote u {
   background-color: yellow;
   padding: .3em;
 }
+dt,
+dd {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
 #header {
   margin-bottom: 1em;
@@ -95,7 +100,7 @@ blockquote u {
 }
 
 .bookbox {
-  margin-top: 1em;
+  margin-top: 2em;
   padding: 10px;
   background-color: black;
   color: white;
@@ -115,7 +120,7 @@ blockquote u {
 .warning {
   clear: both;
   margin: 3em auto;
-  background-color: red;
+  background-color: #c00;
   color: white;
   padding: 1em;
   width: 60%;
