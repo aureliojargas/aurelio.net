@@ -19,7 +19,7 @@ next: emacs.html
 :1,5s/^/#/      comenta as 5 primeiras linhas
 :.,$s/^/#/      comenta até o final do arquivo
 :%s/^.//        apaga a primeira letra de cada linha
-:%s/^./\u&amp;/c        torna maiúsculo o 1° caractere
+:%s/^./\u&amp;/c    torna maiúsculo o 1° caractere
 </pre>
 
 <p>Esse último é utilíssimo. Colocando um <code>c</code> no final de qualquer substituição, o vim mostrará um "prompt" na tela e lhe pedirá uma confirmação antes de fazer qualquer uma das substituições. Você vai respondendo sim ou não e vai vendo o texto ser alterado. Evita substituições cegas e vicia, cuidado! Veja <code>:help :s_flags</code> para conhecer outros modificadores.</p>
