@@ -78,14 +78,23 @@ h;s|.*|&lt;link&gt;&amp;&lt;/link&gt;|;x;/@/{s/@.*/'s email:/;G;}
 
 <h2 id="download">DOWNLOAD</h2>
 
-<ul>
-  <li>File: <a href="sedsed-1.0">sedsed-1.0</a>
-  </li>
-  <li>Language: Python</li>
-  <li>License: MIT</li>
-</ul>
+<p>Sedsed is a single file application. Just download and run it.</p>
 
-<p>Feeling wild? You can also try the fresh <a href="https://github.com/aureliojargas/sedsed">GitHub version</a>.</p>
+<ul>
+  <li>
+    File:
+    <a href="https://raw.githubusercontent.com/aureliojargas/sedsed/v1.1/sedsed.py">sedsed.py</a>
+    (v1.1 released in 2019-05-25)
+  </li>
+  <li>Language: Python (compatible with versions 2 and 3)</li>
+  <li>License: MIT</li>
+  <li>
+    <a href="https://github.com/aureliojargas/sedsed/blob/master/CHANGELOG.md">Changelog</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/sedsed">GitHub repository</a>
+  </li>
+</ul>
 
 <p>Found a bug? Please <a href="https://github.com/aureliojargas/sedsed/issues">submit an issue</a>.</p>
 
@@ -203,94 +212,6 @@ echo 4 4 + p | sedsed -d -f dc.sed
 <p><img src="dc.png" alt=""></p>
 
 <p>YES! Now you can (try to) understand what happens inside the unbelievable <a href="http://sed.sourceforge.net/local/scripts/dc.sed.html">dc.sed</a> calculator. Check this great shot of a simple "4+4" becoming "8" :)</p>
-
-<h2 id="changelog">CHANGELOG</h2>
-
-<dl>
-  <dt>v<strong>1.0</strong> 2004-12-09</dt>
-  <dd>
-  <ul>
-    <li><strong>Portable:</strong> Huge changes to make the debug file portable, so now it works even in old UNIX versions of sed (thanks Gudermez for requesting and Laurent Voguel for his sedcheck tool).</li>
-    <li><strong>Debug diet and faster:</strong> The debug command to show the current sed command was simplified from "s///;P;s///" to a single "i" command, reducing the debug file size and increasing execution speed (thanks Thobias Salazar Trevisan for the idea).</li>
-    <li>Now the sed program location on the system is configurable inside the script (if needed).</li>
-    <li>The default indent prefix for --indent has changed from two to four spaces.</li>
-    <li>Added --dump-debug option to inspect the generated debug file (implies --nocolor and --debug).</li>
-    <li>Generated debug file more readable, with indented debug commands.</li>
-    <li>Bugfix: Now parses a, c, i commands with ";" on the text (thanks Leo Mulders for reporting).</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.8</strong> 2003-11-15</dt>
-  <dd>
-
-  <ul>
-    <li>Huge code cleanup and rearrange, now it is readable</li>
-    <li>Added -n option and its aliases --quiet and --silent (thanks Eric Pement)</li>
-    <li>Added -H option as an alias to --htmlize</li>
-    <li>Now accepts sed script on STDIN (like sed): <code>echo p | sed -f - file</code></li>
-    <li>Changed internal line separator string to ASCII chars (thanks Thobias Salazar)</li>
-    <li>Bugfix: Script previous checking was broken (thanks Eric Pement)</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.7</strong> 2003-01-21</dt>
-  <dd>
-
-  <ul>
-    <li>Added --color option (for Windows users)</li>
-    <li>Bugfix: Debug file line break on Windows (thanks Eric Pement)</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.6</strong> 2002-11-19</dt>
-  <dd>
-
-  <ul>
-    <li>Now sedsed works on Windows/DOS</li>
-    <li>New stand-alone .EXE version for Windows users (by py2exe)</li>
-    <li>Option -v REALLY changed to -V (lamer...)</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.5</strong> 2002-05-08</dt>
-  <dd>
-
-  <ul>
-    <li>The sedsed program is now compatible with old Python v1.5</li>
-    <li>The sed debug file is now temporary (is removed)</li>
-    <li>Option -v changed to -V</li>
-    <li>Added "i" flag for "s///" command</li>
-    <li>Now input text is read from pipeline (STDIN) and/or file(s), as in sed</li>
-    <li>Now the sed script is read from -f &lt;file&gt; and/or -e &lt;script&gt;, as in sed</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.4</strong> 2002-03-27</dt>
-  <dd>
-
-  <ul>
-    <li>Added --htmlize option</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.3</strong> 2002-02-22</dt>
-  <dd>
-
-  <ul>
-    <li>Added --version option</li>
-    <li>Added documentation</li>
-    <li>Added i386 binary version</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.2</strong> 2001-12-22</dt>
-  <dd>
-
-  <ul>
-    <li>Status of "t" command preserved correctly (thanks Paolo Bonzini)</li>
-  </ul>
-  </dd>
-  <dt>v<strong>0.1</strong> 2001-12-21</dt>
-  <dd>
-
-  <ul>
-    <li>First release on sed-users list</li>
-  </ul>
-  </dd>
-</dl>
 
 <h2 id="seealso">SEE ALSO</h2>
 
