@@ -22,60 +22,6 @@ css: index.css
 
 <p>With sedsed you can master ANY sed script. No more secrets, no more hidden buffers.</p>
 
-<h2 id="screenshots">SCREENSHOTS</h2>
-
-<h3>Quick sample</h3>
-
-<p><img class="center" src="quicksample.png" alt=""></p>
-
-<ul>
-  <li>The <code>-d</code> option turns debug ON.</li>
-  <li>The <code>--hide=hold</code> options hides the HOLD SPACE buffer contents, because it is always empty on this example.</li>
-  <li>The <code>PATT:</code> lines on sedsed's output shows the PATTERN SPACE buffer contents.</li>
-  <li>The <code>COMM:</code> yellow lines show the command which is being executed.</li>
-  <li>The <code>user</code> and <code>otheruser</code> lines are the sed's normal output.</li>
-  <li>The <code>$</code> sign at the end of <code>PATT:</code> lines represent the end of the buffer.</li>
-</ul>
-
-<h3 id="indent">Indent</h3>
-
-<p><img class="center" src="indent.png" alt=""></p>
-
-<ul>
-  <li>The <code>-f</code> option reads the sed script from a file (just like in sed).</li>
-  <li>The <code>--indent</code> option reformats complicated sed scripts into beautiful human-friendly scripts.</li>
-</ul>
-
-<h3 id="debug">Debug</h3>
-
-<p><img class="center" src="debug.png" alt=""></p>
-
-<ul>
-  <li>The <code>-d</code> option turns debug ON.</li>
-  <li>The <code>HOLD:</code> lines shows the HOLD SPACE buffer contents.</li>
-  <li>See how the PATTERN and HOLD SPACE buffers change between the sed commands.</li>
-  <li>See the buffers swap with the <code>x</code> command.</li>
-  <li>See the <code>\n</code> that is inserted in PATTERN SPACE between the two lines joined by the <code>G</code> command.</li>
-  <li><strong>See sed under the curtains!</strong></li>
-</ul>
-
-<h3 id="htmlize">HTMLize</h3>
-
-<p>Besides indent and debug, sedsed also has the ability to convert your sed scripts to nice HTML pages, with the syntax highlighted just as in <a href="http://www.vim.org">Vim Editor</a>, with nice colors!</p>
-
-<pre>
-<b>prompt$ </b>cat email-linker.sed
-h;s|.*|&lt;link&gt;&amp;&lt;/link&gt;|;x;/@/{s/@.*/'s email:/;G;}
-
-<b>prompt$ </b>sedsed --htmlize -f email-linker.sed &gt; email-linker.sed.html
-</pre>
-
-<p>Here is the resulting HTML file:</p>
-
-<p><a href="email-linker.sed.html"><img class="center" src="htmlize.png" alt=""></a></p>
-
-<p>Visit the <a href="http://sed.sourceforge.net/local/scripts">sed Website</a> for examples of more than 60 sed scripts HTMLized.</p>
-
 <h2 id="download">DOWNLOAD</h2>
 
 <p>Sedsed is a single file application. Just download and run it.</p>
@@ -129,6 +75,60 @@ OPTIONS:
                          command by command information
      -H, --htmlize       converts sed script to a colorful HTML page
 </pre>
+
+<h2 id="screenshots">SCREENSHOTS</h2>
+
+<h3>Quick sample</h3>
+
+<p><img class="center" src="quicksample.png" alt=""></p>
+
+<ul>
+  <li>The <code>-d</code> option turns debug ON.</li>
+  <li>The <code>--hide=hold</code> options hides the HOLD SPACE buffer contents, because it is always empty on this example.</li>
+  <li>The <code>PATT:</code> lines on sedsed's output shows the PATTERN SPACE buffer contents.</li>
+  <li>The <code>COMM:</code> yellow lines show the command which is being executed.</li>
+  <li>The <code>user</code> and <code>otheruser</code> lines are the sed's normal output.</li>
+  <li>The <code>$</code> sign at the end of <code>PATT:</code> lines represent the end of the buffer.</li>
+</ul>
+
+<h3 id="indent">Indent</h3>
+
+<p><img class="center" src="indent.png" alt=""></p>
+
+<ul>
+  <li>The <code>-f</code> option reads the sed script from a file (just like in sed).</li>
+  <li>The <code>--indent</code> option reformats complicated sed scripts into beautiful human-friendly scripts.</li>
+</ul>
+
+<h3 id="debug">Debug</h3>
+
+<p><img class="center" src="debug.png" alt=""></p>
+
+<ul>
+  <li>The <code>-d</code> option turns debug ON.</li>
+  <li>The <code>HOLD:</code> lines shows the HOLD SPACE buffer contents.</li>
+  <li>See how the PATTERN and HOLD SPACE buffers change between the sed commands.</li>
+  <li>See the buffers swap with the <code>x</code> command.</li>
+  <li>See the <code>\n</code> that is inserted in PATTERN SPACE between the two lines joined by the <code>G</code> command.</li>
+  <li><strong>See sed under the curtains!</strong></li>
+</ul>
+
+<h3 id="htmlize">HTMLize</h3>
+
+<p>Besides indent and debug, sedsed also has the ability to convert your sed scripts to nice HTML pages, with the syntax highlighted just as in <a href="http://www.vim.org">Vim Editor</a>, with nice colors!</p>
+
+<pre>
+<b>prompt$ </b>cat email-linker.sed
+h;s|.*|&lt;link&gt;&amp;&lt;/link&gt;|;x;/@/{s/@.*/'s email:/;G;}
+
+<b>prompt$ </b>sedsed --htmlize -f email-linker.sed &gt; email-linker.sed.html
+</pre>
+
+<p>Here is the resulting HTML file:</p>
+
+<p><a href="email-linker.sed.html"><img class="center" src="htmlize.png" alt=""></a></p>
+
+<p>Visit the <a href="http://sed.sourceforge.net/local/scripts">sed Website</a> for examples of more than 60 sed scripts HTMLized.</p>
 
 <h2 id="reference">REFERENCE</h2>
 
