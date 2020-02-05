@@ -90,7 +90,7 @@ Apps e sites:
 
 - Duolingo
 - Memrise
-- [DW - Nicos Weg](https://learngerman.dw.com/en/beginners/)
+- [DW - Nicos Weg](https://learngerman.dw.com/en/overview)
 
 Música:
 
