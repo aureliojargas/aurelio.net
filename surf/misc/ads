@@ -9,13 +9,13 @@ find . -type f -name index.html | grep ^..200 | while read file; do
 	fi
 	cp $file $file.tmp
 	sed -e "
-s|<title>$|&Fotos de Surf (de dentro d'\&aacute;gua) -|" -e '
+s|<title>$|&Fotos de Surf (de dentro d'água) -|" -e '
 s|<h2 align="center">$|&Praia de Matinhos,|
 
 /<div class="body">/a \
-<h1 align="center">Fotos de Surf (Aqu&aacute;ticas)</h1>
+<h1 align="center">Fotos de Surf (Aquáticas)</h1>
 
-/<\/h2>/a \ 
+/<\/h2>/a \
 \
 <!--Begin Google Ads - Leaderboard-->\
 <div class="googleadfaixa" style="text-align:center;margin:0em auto;">\

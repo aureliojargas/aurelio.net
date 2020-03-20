@@ -44,11 +44,11 @@
 <tr><td>
 
 <pre>
-&lt;form name=&quot;cadastro1&quot;&gt;
+&lt;form name="cadastro1"&gt;
    CPF:
-   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
-      <strong>pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;&gt;</strong>
-   &lt;input type=&quot;submit&quot;&gt;
+   &lt;input type="text" name="cpf"
+      <strong>pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"&gt;</strong>
+   &lt;input type="submit"&gt;
 &lt;/form&gt;
 </pre>
 
@@ -74,12 +74,12 @@
 <tr><td>
 
 <pre>
-&lt;form name=&quot;cadastro2&quot;&gt;
+&lt;form name="cadastro2"&gt;
    CPF:
-   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
-      pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;
-      <strong>title=&quot;Digite o CPF no formato nnn.nnn.nnn-nn&quot;&gt;</strong>
-   &lt;input type=&quot;submit&quot;&gt;
+   &lt;input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      <strong>title="Digite o CPF no formato nnn.nnn.nnn-nn"&gt;</strong>
+   &lt;input type="submit"&gt;
 &lt;/form&gt;
 </pre>
 
@@ -107,20 +107,20 @@
 <tr><td>
 
 <pre>
-&lt;form name=&quot;cadastro3&quot; <strong>onsubmit=&quot;return valida()&quot;</strong>&gt;
+&lt;form name="cadastro3" <strong>onsubmit="return valida()"</strong>&gt;
    CPF:
-   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
-      pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;
-      title=&quot;Digite o CPF no formato nnn.nnn.nnn-nn&quot;&gt;
-   &lt;input type=&quot;submit&quot;&gt;
+   &lt;input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn"&gt;
+   &lt;input type="submit"&gt;
 &lt;/form&gt;
 
 &lt;script&gt;
    function valida() {
       if (document.cadastro3.cpf.<strong>validity.patternMismatch</strong>) {
-         alert(&quot;O CPF est&aacute; incorreto&quot;);
+         alert("O CPF está incorreto");
       } else {
-         alert(&quot;O CPF est&aacute; correto&quot;);
+         alert("O CPF está correto");
       }
       return false;
    }
@@ -163,18 +163,18 @@
 <tr><td>
 
 <pre>
-&lt;form name=&quot;cadastro4&quot;&gt;
+&lt;form name="cadastro4"&gt;
    CPF:
-   &lt;input type=&quot;text&quot; name=&quot;cpf&quot;
-      pattern=&quot;\d{3}\.\d{3}\.\d{3}-\d{2}&quot;
-      title=&quot;Digite o CPF no formato nnn.nnn.nnn-nn&quot;
-      <strong>oninvalid=&quot;return cpf_incorreto(this);&quot;</strong>&gt;
-   &lt;input type=&quot;submit&quot;&gt;
+   &lt;input type="text" name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn"
+      <strong>oninvalid="return cpf_incorreto(this);"</strong>&gt;
+   &lt;input type="submit"&gt;
 &lt;/form&gt;
 
 &lt;script&gt;
    function cpf_incorreto(<strong>el</strong>) {
-      alert(&quot;O valor &quot; + <strong>el.value</strong> + &quot; n&atilde;o &eacute; um CPF&quot;);
+      alert("O valor " + <strong>el.value</strong> + " não é um CPF");
       return false;
    }
 &lt;/script&gt;

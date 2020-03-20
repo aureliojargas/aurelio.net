@@ -2,114 +2,114 @@
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 </head><body>
 
-<p><font color="#245A9A" size="+2"><B>Benef&iacute;cios que  voc&ecirc; nem conhece</B></font><br>
-<font color="#245A9A" size="+1">O conceito de &aacute;rea p&uacute;blica compartilhada &eacute; simples e conhecido. Os 
-benef&iacute;cios em utiliz&aacute;-lo, nem sempre, mas vale conferir </font></P>
+<p><font color="#245A9A" size="+2"><B>Benefícios que  você nem conhece</B></font><br>
+<font color="#245A9A" size="+1">O conceito de área pública compartilhada é simples e conhecido. Os 
+benefícios em utilizá-lo, nem sempre, mas vale conferir </font></P>
 
 
 <i>Aurelio M. Jargas</i><br>
 
-<P align="justify">Este artigo ensinar&aacute; a configurar e explicar&aacute; as vantagens em se 
-usar uma &aacute;rea p&uacute;blica compartilhada numa rede interna Linux, seja ela de uma escola 
+<P align="justify">Este artigo ensinará a configurar e explicará as vantagens em se 
+usar uma área pública compartilhada numa rede interna Linux, seja ela de uma escola 
 ou de uma empresa.</p>
 
-<P align="justify">Uma &aacute;rea p&uacute;blica compartilhada, como o pr&oacute;prio nome j&aacute; 
-diz, &eacute; um diret&oacute;rio vis&iacute;vel para todas as m&aacute;quinas da rede, montado de um 
-servidor via NFS, em que elas podem acessar e gravar arquivos sem restri&ccedil;&otilde;es. &Eacute; 
-como o diret&oacute;rio /tmp de sua m&aacute;quina, em que todos os usu&aacute;rios podem gravar 
-dados. O conceito de &aacute;rea p&uacute;blica compartilhada &eacute; como um /tmp da rede, por 
+<P align="justify">Uma área pública compartilhada, como o próprio nome já 
+diz, é um diretório visível para todas as máquinas da rede, montado de um 
+servidor via NFS, em que elas podem acessar e gravar arquivos sem restrições. É 
+como o diretório /tmp de sua máquina, em que todos os usuários podem gravar 
+dados. O conceito de área pública compartilhada é como um /tmp da rede, por 
 isso o nome /tmpr.</P>
 
-<P align="justify">Ent&atilde;o a id&eacute;ia &eacute; as m&aacute;quinas terem um diret&oacute;rio 
-/tmpr, comum a todas, o ponto central de interc&acirc;mbio da rede.</P>
+<P align="justify">Então a idéia é as máquinas terem um diretório 
+/tmpr, comum a todas, o ponto central de intercâmbio da rede.</P>
 
-<P align="justify">A grande vantagem em se ter essa &aacute;rea p&uacute;blica para todas as 
-m&aacute;quinas &eacute; a troca r&aacute;pida de arquivos entre m&aacute;quinas e entre 
-usu&aacute;rios. Com o /tmpr funcionando em sua rede interna, o utilit&aacute;rio ftp pode ser 
+<P align="justify">A grande vantagem em se ter essa área pública para todas as 
+máquinas é a troca rápida de arquivos entre máquinas e entre 
+usuários. Com o /tmpr funcionando em sua rede interna, o utilitário ftp pode ser 
 esquecido.</P>
 
-<P align="justify">Sendo o Linux um sistema operacional multiusu&aacute;rio e multitarefa, &eacute; 
-comum que, ao trabalhar numa rede, voc&ecirc; utilize v&aacute;rios terminais abertos com diversos 
-usu&aacute;rios, acessando diversas m&aacute;quinas. E quando &eacute; preciso trocar arquivos entre 
-as m&aacute;quinas, &eacute; ftp pra c&aacute;, ftp pra l&aacute;,  acessa a m&aacute;quina, digita 
-usu&aacute;rio, senha, entra no diret&oacute;rio remoto correto, copia os arquivos, fecha a 
-conex&atilde;o. Esqueceu algum arquivo? Tem que fazer tudo de novo...</P>
+<P align="justify">Sendo o Linux um sistema operacional multiusuário e multitarefa, é 
+comum que, ao trabalhar numa rede, você utilize vários terminais abertos com diversos 
+usuários, acessando diversas máquinas. E quando é preciso trocar arquivos entre 
+as máquinas, é ftp pra cá, ftp pra lá,  acessa a máquina, digita 
+usuário, senha, entra no diretório remoto correto, copia os arquivos, fecha a 
+conexão. Esqueceu algum arquivo? Tem que fazer tudo de novo...</P>
 
-<P align="justify">Com o /tmpr comum voc&ecirc; simplesmente copia os arquivos desejados para o 
-diret&oacute;rio /tmpr na m&aacute;quina remota, muda de terminal e na sua m&aacute;quina local 
-voc&ecirc; simplesmente copia os arquivos do /tmpr para o diret&oacute;rio desejado. R&aacute;pido e 
-f&aacute;cil, sem usu&aacute;rio e senha, sem conex&atilde;o, sem demora.</P>
+<P align="justify">Com o /tmpr comum você simplesmente copia os arquivos desejados para o 
+diretório /tmpr na máquina remota, muda de terminal e na sua máquina local 
+você simplesmente copia os arquivos do /tmpr para o diretório desejado. Rápido e 
+fácil, sem usuário e senha, sem conexão, sem demora.</P>
 
-<P align="justify">Outro uso &eacute; a disponibiliza&ccedil;&atilde;o de programas. Acabou de sair 
-a vers&atilde;o mais nova do programa XYZ, de 200Mb, que deve ser atualizado em todas as m&aacute;quinas 
-da rede. Sem o /tmpr ou o programa &eacute; enviado aos usu&aacute;rios das m&aacute;quinas via e-mail, 
-afogando o servidor de e-mail e toda a rede, ou voc&ecirc; deixa o arquivo dispon&iacute;vel numa 
-&aacute;rea de ftp, para que cada um baixe uma c&oacute;pia dele. Em ambas as situa&ccedil;&otilde;es, 
-200Mb de espa&ccedil;o em disco de cada m&aacute;quina ser&atilde;o ocupados desnecessariamente, 
-fora eventuais problemas que possam ocorrer nessa c&oacute;pia do arquivo para o disco local.</P>
+<P align="justify">Outro uso é a disponibilização de programas. Acabou de sair 
+a versão mais nova do programa XYZ, de 200Mb, que deve ser atualizado em todas as máquinas 
+da rede. Sem o /tmpr ou o programa é enviado aos usuários das máquinas via e-mail, 
+afogando o servidor de e-mail e toda a rede, ou você deixa o arquivo disponível numa 
+área de ftp, para que cada um baixe uma cópia dele. Em ambas as situações, 
+200Mb de espaço em disco de cada máquina serão ocupados desnecessariamente, 
+fora eventuais problemas que possam ocorrer nessa cópia do arquivo para o disco local.</P>
 
-<P align="justify">Baixando o programa e colocando no /tmpr, todas as m&aacute;quinas o atualizam de 
-l&aacute; mesmo, sem precisar copi&aacute;-lo para o disco r&iacute;gido, evitando desperd&iacute;cio 
-de tempo e espa&ccedil;o de disco. </P>
+<P align="justify">Baixando o programa e colocando no /tmpr, todas as máquinas o atualizam de 
+lá mesmo, sem precisar copiá-lo para o disco rígido, evitando desperdício 
+de tempo e espaço de disco. </P>
 
-<P align="justify">Ou ainda, voc&ecirc; acabou de acessar aquela p&aacute;gina na Internet, cheia de 
-dados, imensa e demorada de carregar, e gostaria de mand&aacute;-la para os outros verem tamb&eacute;m. 
-Ou voc&ecirc; manda a p&aacute;gina no e-mail ou manda apenas o endere&ccedil;o para que os outros a 
-acessem tamb&eacute;m. Como alternativa, voc&ecirc; simplesmente faria: &quot;veja arquivo em 
-/tmpr/pagina.html&quot;, novamente economizando a banda da rede e espa&ccedil;o em disco nas 
-m&aacute;quinas.</P>
+<P align="justify">Ou ainda, você acabou de acessar aquela página na Internet, cheia de 
+dados, imensa e demorada de carregar, e gostaria de mandá-la para os outros verem também. 
+Ou você manda a página no e-mail ou manda apenas o endereço para que os outros a 
+acessem também. Como alternativa, você simplesmente faria: "veja arquivo em 
+/tmpr/pagina.html", novamente economizando a banda da rede e espaço em disco nas 
+máquinas.</P>
 
-<P align="justify">O /tmpr ainda pode servir como &aacute;rea simples de desenvolvimento de uma equipe, 
-quando v&aacute;rias pessoas precisam editar os mesmos arquivos (e supondo que todos utilizem o mesmo 
-editor de textos), todos t&ecirc;m acesso aos arquivos. Se algu&eacute;m tentar abrir um arquivo que 
-j&aacute; est&aacute; sendo editado por outra pessoa, o editor de textos avisar&aacute;, impedindo a 
-sobrescrita. Isso &eacute; bem &uacute;til principalmente para adi&ccedil;&atilde;o de conte&uacute;do, 
-cr&iacute;ticas e coment&aacute;rios a documentos simples ainda em fase de elabora&ccedil;&atilde;o.</P>
+<P align="justify">O /tmpr ainda pode servir como área simples de desenvolvimento de uma equipe, 
+quando várias pessoas precisam editar os mesmos arquivos (e supondo que todos utilizem o mesmo 
+editor de textos), todos têm acesso aos arquivos. Se alguém tentar abrir um arquivo que 
+já está sendo editado por outra pessoa, o editor de textos avisará, impedindo a 
+sobrescrita. Isso é bem útil principalmente para adição de conteúdo, 
+críticas e comentários a documentos simples ainda em fase de elaboração.</P>
 
-<P align="justify">E como nem tudo s&atilde;o rosas, como conseq&uuml;&ecirc;ncia direta da falta de 
-restri&ccedil;&atilde;o no diret&oacute;rio, ele acaba virando um lix&atilde;o da rede tamb&eacute;m, 
-com arquivos antigos, fotos, m&uacute;sicas, e toda sorte de arquivos trocados entre os usu&aacute;rios. 
+<P align="justify">E como nem tudo são rosas, como conseqüência direta da falta de 
+restrição no diretório, ele acaba virando um lixão da rede também, 
+com arquivos antigos, fotos, músicas, e toda sorte de arquivos trocados entre os usuários. 
 Para evitar isso basta fazer um robozinho (roteiro em bash agendado no crontab), que apague os arquivos 
-que est&atilde;o l&aacute; h&aacute; dez dias por exemplo. Nada que um simples <tt>&quot;find /tmpr 
--type f -mtime 10 -exec rm -f {} \ ;&quot; </tt> n&atilde;o fa&ccedil;a &amp;:)</P>
+que estão lá há dez dias por exemplo. Nada que um simples <tt>"find /tmpr 
+-type f -mtime 10 -exec rm -f {} \ ;" </tt> não faça &amp;:)</P>
 
-<P><b>Configura&ccedil;&atilde;o</b></P>
+<P><b>Configuração</b></P>
 
-<p align="justify">A configuração não é dif&iacute;cil. Na m&aacute;quina servidora, que &eacute; 
-onde estar&aacute; o /tmpr original, em disco, basta criar o diret&oacute;rio /tmpr, definir e 
-ativ&aacute;-lo como export&aacute;vel. Em cada m&aacute;quina cliente da rede, basta criar o 
-diret&oacute;rio p&uacute;blico, e configur&aacute;-la para mont&aacute;-lo automaticamente. 
-Pronto! Seu diret&oacute;rio p&uacute;blico j&aacute; est&aacute; funcionando. Os comandos para 
-criar essa configura&ccedil;&atilde;o est&atilde;o no quadro 1. Apenas troque &quot;servidor&quot; 
-pelo nome ou IP da sua m&aacute;quina servidora.</P>
+<p align="justify">A configuração não é difícil. Na máquina servidora, que é 
+onde estará o /tmpr original, em disco, basta criar o diretório /tmpr, definir e 
+ativá-lo como exportável. Em cada máquina cliente da rede, basta criar o 
+diretório público, e configurá-la para montá-lo automaticamente. 
+Pronto! Seu diretório público já está funcionando. Os comandos para 
+criar essa configuração estão no quadro 1. Apenas troque "servidor" 
+pelo nome ou IP da sua máquina servidora.</P>
 
 <P><b>Utilidades</b></P>
-<P align="justify">Com seu diret&oacute;rio p&uacute;blico funcionando e sendo 
-leg&iacute;vel/grav&aacute;vel por todas as m&aacute;quinas de sua rede interna, al&eacute;m das 
-vantagens j&aacute; citadas de compartilhamento de arquivos entre m&aacute;quinas e usu&aacute;rios, 
-pode-se facilitar o acesso a informa&ccedil;&otilde;es de sua intranet.</P>
+<P align="justify">Com seu diretório público funcionando e sendo 
+legível/gravável por todas as máquinas de sua rede interna, além das 
+vantagens já citadas de compartilhamento de arquivos entre máquinas e usuários, 
+pode-se facilitar o acesso a informações de sua intranet.</P>
 
-<P align="justify">Por exemplo, o meio mais f&aacute;cil hoje de disponibilizar dados para todas as 
-m&aacute;quinas da rede interna lerem &eacute; via HTTP, disponibilizando p&aacute;ginas HTML que 
-qualquer navegador l&ecirc;. Vamos utilizar como exemplo uma empresa que tenha uma p&aacute;gina 
+<P align="justify">Por exemplo, o meio mais fácil hoje de disponibilizar dados para todas as 
+máquinas da rede interna lerem é via HTTP, disponibilizando páginas HTML que 
+qualquer navegador lê. Vamos utilizar como exemplo uma empresa que tenha uma página 
 com a lista de todos os funcionários e seu respectivos ramais internos, digamos em 
-http://servidor/ramais.html. Cada vez que voc&ecirc; precisa de um ramal, abre o navegador, digita 
-o endere&ccedil;o e procura na p&aacute;gina o nome da pessoa desejada. Dependendo do tr&aacute;fego 
-da rede, esse &eacute; um procedimento demorado e perde-se tempo apenas para saber um ramal.</P>
+http://servidor/ramais.html. Cada vez que você precisa de um ramal, abre o navegador, digita 
+o endereço e procura na página o nome da pessoa desejada. Dependendo do tráfego 
+da rede, esse é um procedimento demorado e perde-se tempo apenas para saber um ramal.</P>
 
 <P align="justify">Com a ajuda de outras ferramentas de sistema podemos automatizar isso. Basta 
-colocar uma vers&atilde;o texto desse arquivo no /tmpr (isso tamb&eacute;m pode ser automatizado 
-com o <tt>lynx -dump + crontab</tt>), e criar fun&ccedil;&otilde;es de procura.</P>
+colocar uma versão texto desse arquivo no /tmpr (isso também pode ser automatizado 
+com o <tt>lynx -dump + crontab</tt>), e criar funções de procura.</P>
 
-<P align="justify">Supondo que voc&ecirc; criou um /tmpr/ramais.txt, coloque no seu /etc/bashrc:
-<tt>ramal(){ [ &quot;$1&quot; ] &amp;&amp; grep -i &quot;$*&quot; /tmpr/ramais.txt ; } </tt>
-e na linha de comando basta digitar: ramal maria, e lhe ser&aacute; retornado o ramal da Maria, 
+<P align="justify">Supondo que você criou um /tmpr/ramais.txt, coloque no seu /etc/bashrc:
+<tt>ramal(){ [ "$1" ] &amp;&amp; grep -i "$*" /tmpr/ramais.txt ; } </tt>
+e na linha de comando basta digitar: ramal maria, e lhe será retornado o ramal da Maria, 
 instantaneamente, sem precisar de navegador, apache etc.</P>
 
-<P><b>Conclus&atilde;o</b></P>
-<P align="justify">E, &eacute; claro, v&aacute;rias outras utilidades podem ser encontradas no uso 
-dessa &aacute;rea compartilhada &#151; se achar mais uma, me avise!</P>
-<P align="justify">Como em outros exemplos do mundo real, &eacute; uma id&eacute;ia simples que 
+<P><b>Conclusão</b></P>
+<P align="justify">E, é claro, várias outras utilidades podem ser encontradas no uso 
+dessa área compartilhada &#151; se achar mais uma, me avise!</P>
+<P align="justify">Como em outros exemplos do mundo real, é uma idéia simples que 
 facilita sua vida.</P>
 
 <table border="0" width="100%" bgcolor="#EEEEEE">
@@ -117,7 +117,7 @@ facilita sua vida.</P>
   <td>
   <font size="3">
 
-<P>Refer&ecirc;ncias<br>
+<P>Referências<br>
 <P>man exportfs<br>
 <P>man exports<br>
 <P>man mount<br>
@@ -130,15 +130,15 @@ facilita sua vida.</P>
  </tr>
 </table>
 
-<P align="justify">Seq&uuml;&ecirc;ncias de comandos para configura&ccedil;&atilde;o do 
-diret&oacute;rio p&uacute;blico numa rede Linux:</P>
+<P align="justify">Seqüências de comandos para configuração do 
+diretório público numa rede Linux:</P>
 
 <table border="0" width="100%">
  <tr>
   <td>
   <font size="3">
-<P align="justify">Pacotes como o NFS &eacute; um servi&ccedil;o em que o pacote muda de nome como 
-voc&ecirc; troca de roupa, se n&atilde;o souber que pacote instalar, instale todos os relacionados, 
+<P align="justify">Pacotes como o NFS é um serviço em que o pacote muda de nome como 
+você troca de roupa, se não souber que pacote instalar, instale todos os relacionados, 
 no cliente e no servidor:</P>
 
 No Servidor:<br>

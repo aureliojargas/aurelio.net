@@ -11,7 +11,7 @@ echo "$folder" | grep -qs '2006[01][0-9][0123][0-9]' ||
 	die "Invalid folder '$folder'. Must be a date like 20061231"
 
 #TITLE_PREFIX='Foto Molhada - '
-#DISCLAIMER='&Eacute; proibida a reprodu&ccedil;&atilde;o das fotos deste site sem autoriza&ccedil;&atilde;o, por escrito, do fot&oacute;grafo.'
+#DISCLAIMER='É proibida a reprodução das fotos deste site sem autorização, por escrito, do fotógrafo.'
 
  year=${folder:0:4}
 month=${folder:4:2}
@@ -32,7 +32,7 @@ if [ $just_index -eq 1 ]; then
 	mv -v $folder.html ../$newfolder/index.html
 else
 	rm -f $newfolder/*.html
-	rm -rf foto mini 
+	rm -rf foto mini
 	mv -v $folder.html ../$newfolder/index.html &&
 	mv -v $folder-Images 		../$newfolder/foto &&
 	mv -v $folder-Thumbnails	../$newfolder/mini &&
@@ -57,7 +57,7 @@ s|$folder-Thumbnails|mini|g
 s|Image\\([0-9]*\\.html\\)|\\1|g
 
 # name + nick turns to nick
-/<br>/ s|>[^<]*&quot;\\(.*\\)&quot;|>\\1|
+/<br>/ s|>[^<]*"\\(.*\\)"|>\\1|
 
 # bottom align, so all the codes are in a row
 s|<td |<td valign=\"bottom\" |
@@ -67,10 +67,10 @@ s|^     <br>$|&\&nbsp;|
 s|^\\(     <br>\\)\\([^<]*\\)$|\\1<font size=\"-1\">\\2</font>|
 
 /<\\/table>/a\\
-<br><br><font size=\"3\"><b>Dica:</b> Clique na foto para v&ecirc;-la \\
-maior.<br><br><b>Dica:</b> Anote o c&oacute;digo das fotos \\
-que voc&ecirc; gostar! Exemplo de c&oacute;digo: S134</font><br><br>\\
-<p><a href=\"/surf/\">&lt; &lt; Voltar &agrave; principal</a></p>
+<br><br><font size=\"3\"><b>Dica:</b> Clique na foto para vê-la \\
+maior.<br><br><b>Dica:</b> Anote o código das fotos \\
+que você gostar! Exemplo de código: S134</font><br><br>\\
+<p><a href=\"/surf/\">&lt; &lt; Voltar à principal</a></p>
 
 /<body /a\\
 <div class=\"body\">
@@ -99,7 +99,7 @@ s|src=\"\.\./foto/|src=\"foto/|
 # build table and arrows
 /^  <br><br><A / {
 	s|\\(<A HREF[^>]*>\\)Up</A>\\(&nbsp;\\)*|\\
-		<td align=\"center\">\\1\\&Iacute;ndice</A></td>|
+		<td align=\"center\">\\1Índice</A></td>|
 	s|\\(<A HREF[^>]*>\\)Next--></A>|\\
 		<td class=\"noborder\" width=\"100\" align=\"right\">\\
 		\\1<img src=\"/surf/img/seta-direita.gif\"\\
@@ -108,14 +108,14 @@ s|src=\"\.\./foto/|src=\"foto/|
 		<td class=\"noborder\" width=\"100\">\\
 		\\1<img src=\"/surf/img/seta-esquerda.gif\"\\
 			alt=\"Anterior\" title=\"Anterior\"></A></td>|
-	
+
 	# 0.html and LAST.html needs it (no previous/next)
 	/seta-esquerda/ !s|<br><br>|&<td width=\"100\">\\&nbsp;</td>|
 	/seta-direita/  !s|<br><br>$|<td width=\"100\">\\&nbsp;</td>&|
-	
+
 	# second row for picture and comments
 	s|<br><br>$|</tr><tr><td colspan=\"3\">|
-	
+
 	# open table, finally
 	s|<br><br>|&<table align=\"center\"><tr>|
 }
@@ -125,8 +125,8 @@ s|src=\"\.\./foto/|src=\"foto/|
 
 # dirty fix
 #s|<--Previous|\\&lt;--Anterior|
-#s|Next-->|Pr\\&oacute;xima--\\&gt;|
-#s|>Up<|>\\&Iacute;ndice<|
+#s|Next-->|Próxima--\\&gt;|
+#s|>Up<|>Índice<|
 
 /<body /a\\
 <div class=\"body\">

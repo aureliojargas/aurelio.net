@@ -201,7 +201,7 @@ if (eregi('@aurelio.net', $_cidade) ||
 	if(!$has_error) {
 
 		# Nome padrao para comentarios anonimos
-		if(!$_nome) $_nome='-An&ocirc;nimo-';
+		if(!$_nome) $_nome='-Anônimo-';
 		
 		# Obtem a data atual (mude o formato se quiser)
 		$data = date("d/m/Y");
