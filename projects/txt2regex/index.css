@@ -33,9 +33,6 @@ a:hover {
 img, table {
   max-width: 100%;
 }
-dd {
-  margin: 1em 0;
-}
 th {
   background: #aab;
 }

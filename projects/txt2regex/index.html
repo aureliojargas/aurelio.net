@@ -1,63 +1,72 @@
 ---
-title: txt2regex - The console Regular Expression Wizard
+title: txt2regex - Regular expression wizard for the command line
 layout: minimal
 css: /projects/txt2regex/index.css
 ---
 
 <div id="header">
-  <h1>^txt2regex$</h1>
+  <h1>txt2regex</h1>
 
   <p class="figure"><img src="/projects/txt2regex/img/txt2regex.png"></p>
-
-  <h2>The console Regular Expression Wizard</h2>
 </div>
 
 <div id="content">
-<p>Txt2regex is a regular expression wizard that converts human sentences to regexes.</p>
 
-<p>In a simple <b>interactive</b> console interface, the user answer questions and the program build the regexes for more than 20 programs, like Vim, Emacs, Perl, PHP, Python, Procmail and OpenOffice.org.</p>
+<p><b>Txt2regex is a regular expression wizard for the command line.</b></p>
 
-<p>It is a <b>Shell Script</b> 100% written with Bash builtin commands. No compilation or extra commands are needed, just download and run.</p>
+<p>Users with little or no knowledge of regular expressions can quickly create hairy regexes by answering questions in a simple text-based  interactive interface.</p>
 
-<h3>Supported programs (23)</h3>
+<p>Txt2regex is aware of the particular notation and caveats of many different regular expression flavors, generating valid regexes for more than 20 targets, including grep, sed, Vim, Emacs, JavaScript, Python, PHP, PostgreSQL.</p>
 
+<p>Txt2regex is a one-file shell script made 100% with Bash builtin commands. The only requirement is Bash itself, since no grep, find, sed or any other system command is used.</p>
+
+<p><b>Download:</b> <a href="https://github.com/aureliojargas/txt2regex/releases/tag/v0.9">txt2regex 0.9</a> (released May 21, 2020) - <a href="https://github.com/aureliojargas/txt2regex/blob/master/CHANGELOG.md">Changelog</a></p>
+
+<p><b>License:</b> GPLv2</p>
+
+<p><b>Doc:</b> <a href="/projects/txt2regex/manpage.html">Manual Page</a></p>
+
+<p><b>GitHub:</b> <a href="https://github.com/aureliojargas/txt2regex">https://github.com/aureliojargas/txt2regex</a></p>
+
+<h3>Supported targets (22)</h3>
+
+<p>Text editors:</p>
+<ul>
+  <li>ed</li>
+  <li>Emacs</li>
+  <li>vi</li>
+  <li>Vim</li>
+</ul>
+
+<p>Tools:</p>
 <ul>
   <li>AWK</li>
-  <li>ed</li>
   <li>egrep</li>
-  <li>Emacs</li>
   <li>expect</li>
   <li>find</li>
   <li>gawk</li>
   <li>grep</li>
   <li>lex</li>
-  <li>lisp</li>
   <li>mawk</li>
-  <li>MySQL</li>
-  <li>OpenOffice.org</li>
-  <li>Perl</li>
-  <li>PHP</li>
-  <li>Postgres</li>
-  <li>Procmail</li>
-  <li>Python</li>
-  <li>SED</li>
-  <li>Tcl</li>
-  <li>VBscript</li>
-  <li>VI</li>
-  <li>Vim</li>
+  <li>procmail</li>
+  <li>sed</li>
 </ul>
 
-<h3>Current version</h3>
+<p>Databases:</p>
+<ul>
+  <li>MySQL</li>
+  <li>PostgreSQL</li>
+</ul>
 
-<p>0.8 (29 September 2004) <a href="https://github.com/aureliojargas/txt2regex/archive/v0.8.tar.gz">download</a></p>
-
-<h3>GitHub</h3>
-
-<p><a href="https://github.com/aureliojargas/txt2regex">https://github.com/aureliojargas/txt2regex</a></p>
-
-<h3>License</h3>
-
-<p>GPL v2</p>
+<p>Programming languages:</p>
+<ul>
+  <li>CHICKEN Scheme</li>
+  <li>JavaScript</li>
+  <li>Perl</li>
+  <li>PHP</li>
+  <li>Python</li>
+  <li>Tcl</li>
+</ul>
 
 <h3>Screenshots</h3>
 
@@ -76,60 +85,6 @@ css: /projects/txt2regex/index.css
 <p class="figure"><img src="/projects/txt2regex/img/readyregex.png"> <span>Use <code>--make</code> to generate ready-to-use regexes for all programs (<code>--all</code>) or for specific programs (<code>--prog</code>)</span></p>
 
 <p class="figure"><img src="/projects/txt2regex/img/japanese.png"> <span>Full support for localization, see the program in japanese</span></p>
-
-<h3>Program files</h3>
-
-<table>
-  <tr>
-    <td class="right">
-      <a href="https://github.com/aureliojargas/txt2regex/blob/master/NEWS">NEWS</a>
-    </td>
-    <td>Hot news from our favorite program on the net.</td>
-  </tr>
-  <tr>
-    <td class="right">
-      <a href="https://github.com/aureliojargas/txt2regex/blob/master/Changelog.txt">Changelog</a>
-    </td>
-    <td>The list of technical changes and enhancement between releases.</td>
-  </tr>
-  <tr>
-    <td class="right">
-      <a href="https://github.com/aureliojargas/txt2regex/blob/master/README.md">README</a>
-    </td>
-    <td>Installation procedure, current translators and mini-FAQ.</td>
-  </tr>
-  <tr>
-    <td class="right">
-      <a href="/projects/txt2regex/manpage.html">Manual Page</a>
-    </td>
-    <td>The program Man Page, with usage, options, examples and more. Read it now! There's also a <a href="/projects/txt2regex/manpage-pt.html">Portuguese translation</a>.</td>
-  </tr>
-  <tr>
-    <td class="right">
-      <a href="https://github.com/aureliojargas/txt2regex/releases">Museum</a>
-    </td>
-    <td>Previous releases of the program. Maybe not so useful, but for the records, here they are.</td>
-  </tr>
-</table>
-
-<h3>Languages it was translated</h3>
-
-<ul>
-  <li>Bahasa indonesian</li>
-  <li>Brazilian portuguese</li>
-  <li>German</li>
-  <li>Italian</li>
-  <li>Japanese</li>
-  <li>Polish</li>
-  <li>Romanian</li>
-  <li>Spanish</li>
-  <li>New: French (not in v0.8, <a href="https://github.com/aureliojargas/txt2regex/blob/master/po/fr_FR.po">get .po file here</a>)
-  </li>
-  <li>New: Catalan (not in v0.8, <a href="https://github.com/aureliojargas/txt2regex/blob/master/po/ca.po">get .po file here</a>)
-  </li>
-  <li>...<a href="https://github.com/aureliojargas/txt2regex/blob/master/po/txt2regex.pot">add yours</a>!
-  </li>
-</ul>
 
 <h3>Packages</h3>
 
