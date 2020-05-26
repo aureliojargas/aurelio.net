@@ -26,13 +26,16 @@ cd aurelio.net
 
 # Install Ruby and gem (use the following OR rbenv)
 sudo apt install ruby ruby-dev
-echo 'export GEM_HOME="$HOME/.gem/ruby/2.3.0"' >> ~/.bashrc  # check your ruby version
-echo 'export BUNDLE_PATH="$GEM_HOME"' >> ~/.bashrc
-echo 'export PATH="$GEM_HOME/bin:$PATH"' >> ~/.bashrc
+
+# Install bundler
+gem install bundler
+
+# Set up bundler (check the exact path for **/bin under .gem)
+echo 'export BUNDLE_PATH="$HOME/.gem"' >> ~/.bashrc
+echo 'export PATH="$BUNDLE_PATH/ruby/2.3.0/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
-# Install bundler and Jekyll required gems
-gem install bundler
+# Install the Jekyll required gems
 bundle install
 
 # Install http://www.html-tidy.org
