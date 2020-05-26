@@ -9,6 +9,10 @@ body {
 #header h2 {
   margin: 0 1em;
 }
+#content {
+  max-width: 30em;
+  margin: 0 auto;
+}
 #footer {
   margin: 2em 0;
   border-top: 1px solid black;
@@ -22,6 +26,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+#content h3 {
+  border-top: 1px dashed black;
+  padding-top: 1em;
+}
 img, table {
   max-width: 100%;
 }
@@ -33,4 +41,7 @@ th {
 }
 table.reviews {
   font-size: 80%;
+}
+.figure span {
+  display: block;
 }
