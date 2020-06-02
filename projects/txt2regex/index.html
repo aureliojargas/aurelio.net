@@ -7,7 +7,7 @@ css: /projects/txt2regex/index.css
 <div id="header">
   <h1>txt2regex</h1>
 
-  <p class="figure"><img src="/projects/txt2regex/img/txt2regex.png"></p>
+  <p class="figure"><img src="/projects/txt2regex/img/demo.gif" width="500"></p>
 </div>
 
 <div id="content">
@@ -68,27 +68,79 @@ css: /projects/txt2regex/index.css
   <li>Tcl</li>
 </ul>
 
-<h3>Screenshots</h3>
+<h3>Features</h3>
 
-<p class="figure"><img src="/projects/txt2regex/img/screenshot.png"> <span>Full screenshot with nice comments</span></p>
+<p>Support for POSIX classes, such as <code>[:alpha:]</code>, <code>[:lower:]</code> and friends:</p>
+<p class="figure"><img src="/projects/txt2regex/img/posix.png"></p>
 
-<p class="figure"><img src="/projects/txt2regex/img/posix.png"> <span>Support for POSIX classes, as [:alpha:], [:lower:] and friends</span></p>
+<p>Support for groups, including nested groups and a nice balance control on the number of opened/closed groups:</p>
+<p class="figure"><img src="/projects/txt2regex/img/group.png"></p>
 
-<p class="figure"><img src="/projects/txt2regex/img/group.png"> <span>Full support for groups, including a very nice opened/closed balance control</span></p>
+<p>Full support for localization, this is the Spanish translation:</p>
+<p class="figure"><img src="/projects/txt2regex/img/spanish.png"></p>
 
-<p class="figure"><img src="/projects/txt2regex/img/showmeta.png"> <span>Use <code>--showmeta</code> command line option to get information about programs metacharacters</span></p>
+<p>Option <code>--showmeta</code> shows a complete table for all the supported metacharacters used in all the supported flavors:</p>
 
-<p class="figure"><img src="/projects/txt2regex/img/showinfo.png"> <span>Use <code>--showinfo</code> command line option to get information about a specific program</span></p>
+<pre>
+$ ./txt2regex.sh --showmeta
 
-<p class="figure"><img src="/projects/txt2regex/img/whitebg.png"> <span>Use <code>--whitebg</code> to run txt2regex on a white background terminal</span></p>
+awk             +      ?             |      ()    awk version 20121220
+chicken         +      ?     {}      |      ()    CHICKEN 4.12.0
+ed             \+     \?   \{\}     \|    \(\)    GNU Ed 1.10
+egrep           +      ?     {}      |      ()    grep (GNU grep) 3.1
+emacs           +      ? \\{\\}    \\|  \\(\\)    GNU Emacs 25.2.2
+expect          +      ?     {}      |      ()    expect version 5.45.4
+find            +      ?     {}      |      ()    find (GNU findutils) 4.7.0-git
+gawk            +      ?     {}      |      ()    GNU Awk 4.1.4
+grep           \+     \?   \{\}     \|    \(\)    grep (GNU grep) 3.1
+javascript      +      ?     {}      |      ()    node v8.10.0
+lex             +      ?     {}      |      ()    flex 2.6.4
+mawk            +      ?             |      ()    mawk 1.3.3 Nov 1996
+mysql           +      ?     {}      |      ()    mysql  Ver 14.14 Distrib 5.7.29
+perl            +      ?     {}      |      ()    perl v5.26.1
+php             +      ?     {}      |      ()    PHP 7.2.24-0ubuntu0.18.04.4
+postgres        +      ?     {}      |      ()    psql (PostgreSQL) 10.12
+procmail        +      ?             |      ()    procmail v3.23pre 2001/09/13
+python          +      ?     {}      |      ()    Python 3.6.9
+sed            \+     \?   \{\}     \|    \(\)    sed (GNU sed) 4.4
+tcl             +      ?     {}      |      ()    tcl 8.6
+vi                         \{\}           \(\)    nvi 1.81.6-13
+vim            \+     \=    \{}     \|    \(\)    VIM - Vi IMproved 8.0 (2016 Sep 12)
 
-<p class="figure"><img src="/projects/txt2regex/img/readyregex.png"> <span>Use <code>--make</code> to generate ready-to-use regexes for all programs (<code>--all</code>) or for specific programs (<code>--prog</code>)</span></p>
+NOTE: . [] [^] and * are the same on all programs.
 
-<p class="figure"><img src="/projects/txt2regex/img/japanese.png"> <span>Full support for localization, see the program in japanese</span></p>
+$
+</pre>
+
+<p>Option <code>--make</code> shows handy ready-to-use regexes for common patterns, such as a regex to match a date:</p>
+
+<pre>
+$ ./txt2regex.sh --make date2
+
+### date LEVEL 2: mm/dd/yyyy: matches from 00/00/1000 to 19/39/2999
+
+ Regex python: [01][0-9]/[0123][0-9]/[12][0-9]{3}
+ Regex egrep : [01][0-9]/[0123][0-9]/[12][0-9]{3}
+ Regex grep  : [01][0-9]/[0123][0-9]/[12][0-9]\{3\}
+ Regex sed   : [01][0-9]/[0123][0-9]/[12][0-9]\{3\}
+ Regex vim   : [01][0-9]/[0123][0-9]/[12][0-9]\{3}
+ Regex emacs : [01][0-9]/[0123][0-9]/[12][0-9]\\{3\\}
+
+$
+</pre>
+
+<p>For a complete list of all the command line options and features, please see the following documents:</p>
+
+<ul class="spaced">
+  <li><a href="https://github.com/aureliojargas/txt2regex/blob/master/tests/cmdline.md">https://github.com/aureliojargas/txt2regex/blob/master/tests/cmdline.md</a></li>
+  <li><a href="https://github.com/aureliojargas/txt2regex/blob/master/tests/features.md">https://github.com/aureliojargas/txt2regex/blob/master/tests/features.md</a></li>
+</ul>
 
 <h3>Packages</h3>
 
-<ul>
+<p>Txt2regex is a stand-alone Bash script, it doesn't need to be installed. But if you want to try it effortlessly using your package manager, it's available for some systems:</p>
+
+<ul class="spaced">
   <li>
     <a href="http://rpmfind.net/linux/rpm2html/search.php?query=txt2regex">RPM package (Fedora, OpenMandriva, EPEL)</a>
   </li>
