@@ -1,127 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XML_DIZ_INFO>
-	<MASTER_PAD_VERSION_INFO>
-		<MASTER_PAD_VERSION>2.02</MASTER_PAD_VERSION>
-		<MASTER_PAD_EDITOR>Apimac PAD Editor v1.0.2</MASTER_PAD_EDITOR>
-		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to dissemminate information to anyone interested in their software products.  To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
-	</MASTER_PAD_VERSION_INFO>
-	<Company_Info>
-		<Company_Name>Aurelio Jargas</Company_Name>
-		<Address_1/>
-		<Address_2/>
-		<City_Town>Curitiba</City_Town>
-		<State_Province/>
-		<Zip_Postal_Code/>
-		<Country>Brazil</Country>
-		<Company_WebSite_URL>http://aurelio.net/projects/</Company_WebSite_URL>
-		<Contact_Info>
-			<Author_First_Name>Aurelio</Author_First_Name>
-			<Author_Last_Name>Jargas</Author_Last_Name>
-			<Author_Email>verde@aurelio.net</Author_Email>
-			<Contact_First_Name>Aurelio</Contact_First_Name>
-			<Contact_Last_Name>Jargas</Contact_Last_Name>
-			<Contact_Email>verde@aurelio.net</Contact_Email>
-		</Contact_Info>
-		<Support_Info>
-			<Sales_Email>verde@aurelio.net</Sales_Email>
-			<Support_Email>verde@aurelio.net</Support_Email>
-			<General_Email>verde@aurelio.net</General_Email>
-			<Sales_Phone/>
-			<Support_Phone/>
-			<General_Phone/>
-			<Fax_Phone/>
-		</Support_Info>
-	</Company_Info>
-	<Program_Info>
-		<Program_Name>EmoMemory</Program_Name>
-		<Program_Version>1.0</Program_Version>
-		<Program_Release_Month>04</Program_Release_Month>
-		<Program_Release_Day>17</Program_Release_Day>
-		<Program_Release_Year>2007</Program_Release_Year>
-		<Program_Cost_Dollars/>
-		<Program_Cost_Other_Code/>
-		<Program_Cost_Other/>
-		<Program_Type>Freeware</Program_Type>
-		<Program_Release_Status>New Release</Program_Release_Status>
-		<Program_Install_Support>No Install Support</Program_Install_Support>
-		<Program_OS_Support>Mac OS X,Mac OS X 10.2,Mac OS X 10.3,Mac OS X 10.4,Mac OS X 10.5,Mac OS X 10.6,Mac OS X 10.7,Mac OS X 10.8</Program_OS_Support>
-		<Program_Language>English</Program_Language>
-		<File_Info>
-			<File_Size_Bytes>1433634</File_Size_Bytes>
-			<File_Size_K>1404</File_Size_K>
-			<File_Size_MB>1.4</File_Size_MB>
-		</File_Info>
-		<Expire_Info>
-			<Has_Expire_Info>N</Has_Expire_Info>
-			<Expire_Count/>
-			<Expire_Based_On/>
-			<Expire_Other_Info/>
-			<Expire_Month/>
-			<Expire_Day/>
-			<Expire_Year/>
-		</Expire_Info>
-		<Program_Change_Info/>
-		<Program_Category_Class>Games &amp; Entertainment::Board</Program_Category_Class>
-		<Program_Specific_Category>Games</Program_Specific_Category>
-		<Program_System_Requirements/>
-	</Program_Info>
-	<Program_Descriptions>
-		<English>
-			<Keywords>game, memory, brain, mind, memorization, concentration, emo, emotion, emotional, emotive, affective, feelings, heart, love, family, friends, icon, picture, photo, avatar, contact, addressbook, Address Book, iChat, Widgets
-</Keywords>
-			<Char_Desc_45>Emotional Memory game for the Mac</Char_Desc_45>
-			<Char_Desc_80>EmoMemory trains your Emotional Memory, focusing on the people you love.</Char_Desc_80>
-			<Char_Desc_250>EmoMemory is a memory game that will shake your heart. Instead of cards, numbers, symbols or figures, you'll concentrate on the people you love: family, best friends, colleagues, partners. Prepare your brain for an emotional memory experience.</Char_Desc_250>
-			<Char_Desc_450>EmoMemory is a memory game that will shake your heart and train your Emotional Memory. Instead of memorizing cards, numbers, symbols or figures, you will concentrate on the people you love. Your family, your best friends, your colleagues, your partners. Free your heart's feelings and prepare your brain for an emotional memory experience.</Char_Desc_450>
-			<Char_Desc_2000>EmoMemory is a memory game that will shake your heart.
+    <MASTER_PAD_VERSION_INFO>
+        <MASTER_PAD_VERSION>2.02</MASTER_PAD_VERSION>
+        <MASTER_PAD_EDITOR>Apimac PAD Editor v1.0.2</MASTER_PAD_EDITOR>
+        <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to dissemminate information to anyone interested in their software products.  To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+    </MASTER_PAD_VERSION_INFO>
+    <Company_Info>
+        <Company_Name>Aurelio Jargas</Company_Name>
+        <Address_1/>
+        <Address_2/>
+        <City_Town>Curitiba</City_Town>
+        <State_Province/>
+        <Zip_Postal_Code/>
+        <Country>Brazil</Country>
+        <Company_WebSite_URL>http://aurelio.net/projects/</Company_WebSite_URL>
+        <Contact_Info>
+            <Author_First_Name>Aurelio</Author_First_Name>
+            <Author_Last_Name>Jargas</Author_Last_Name>
+            <Author_Email>verde@aurelio.net</Author_Email>
+            <Contact_First_Name>Aurelio</Contact_First_Name>
+            <Contact_Last_Name>Jargas</Contact_Last_Name>
+            <Contact_Email>verde@aurelio.net</Contact_Email>
+        </Contact_Info>
+        <Support_Info>
+            <Sales_Email>verde@aurelio.net</Sales_Email>
+            <Support_Email>verde@aurelio.net</Support_Email>
+            <General_Email>verde@aurelio.net</General_Email>
+            <Sales_Phone/>
+            <Support_Phone/>
+            <General_Phone/>
+            <Fax_Phone/>
+        </Support_Info>
+    </Company_Info>
+    <Program_Info>
+        <Program_Name>EmoMemory</Program_Name>
+        <Program_Version>1.0</Program_Version>
+        <Program_Release_Month>04</Program_Release_Month>
+        <Program_Release_Day>17</Program_Release_Day>
+        <Program_Release_Year>2007</Program_Release_Year>
+        <Program_Cost_Dollars/>
+        <Program_Cost_Other_Code/>
+        <Program_Cost_Other/>
+        <Program_Type>Freeware</Program_Type>
+        <Program_Release_Status>New Release</Program_Release_Status>
+        <Program_Install_Support>No Install Support</Program_Install_Support>
+        <Program_OS_Support>Mac OS X,Mac OS X 10.2,Mac OS X 10.3,Mac OS X 10.4,Mac OS X 10.5,Mac OS X 10.6,Mac OS X 10.7,Mac OS X 10.8</Program_OS_Support>
+        <Program_Language>English</Program_Language>
+        <File_Info>
+            <File_Size_Bytes>1433634</File_Size_Bytes>
+            <File_Size_K>1404</File_Size_K>
+            <File_Size_MB>1.4</File_Size_MB>
+        </File_Info>
+        <Expire_Info>
+            <Has_Expire_Info>N</Has_Expire_Info>
+            <Expire_Count/>
+            <Expire_Based_On/>
+            <Expire_Other_Info/>
+            <Expire_Month/>
+            <Expire_Day/>
+            <Expire_Year/>
+        </Expire_Info>
+        <Program_Change_Info/>
+        <Program_Category_Class>Games &amp; Entertainment::Board</Program_Category_Class>
+        <Program_Specific_Category>Games</Program_Specific_Category>
+        <Program_System_Requirements/>
+    </Program_Info>
+    <Program_Descriptions>
+        <English>
+            <Keywords>game, memory, brain, mind, memorization, concentration, emo, emotion, emotional, emotive, affective, feelings, heart, love, family, friends, icon, picture, photo, avatar, contact, addressbook, Address Book, iChat, Widgets</Keywords>
+            <Char_Desc_45>Emotional Memory game for the Mac</Char_Desc_45>
+            <Char_Desc_80>EmoMemory trains your Emotional Memory, focusing on the people you love.</Char_Desc_80>
+            <Char_Desc_250>EmoMemory is a memory game that will shake your heart. Instead of cards, numbers, symbols or figures, you'll concentrate on the people you love: family, best friends, colleagues, partners. Prepare your brain for an emotional memory experience.</Char_Desc_250>
+            <Char_Desc_450>EmoMemory is a memory game that will shake your heart and train your Emotional Memory. Instead of memorizing cards, numbers, symbols or figures, you will concentrate on the people you love. Your family, your best friends, your colleagues, your partners. Free your heart's feelings and prepare your brain for an emotional memory experience.</Char_Desc_450>
+            <Char_Desc_2000>EmoMemory is a memory game that will shake your heart.
 
 Instead of memorizing cards, numbers, symbols or figures, you will concentrate on the people you love. Your family, your best friends, your colleagues, your partners.
 
 Free your heart's feelings and prepare your brain for an emotional memory experience.
 
-** Use the registration code FREEGAME:D535DA to unlock the game.
-</Char_Desc_2000>
-		</English>
-	</Program_Descriptions>
-	<Web_Info>
-		<Application_URLs>
-			<Application_Info_URL>http://aurelio.net/projects/emomemory</Application_Info_URL>
-			<Application_Order_URL/>
-			<Application_Screenshot_URL>http://aurelio.net/projects/emomemory/shot.jpg</Application_Screenshot_URL>
-			<Application_Icon_URL>http://aurelio.net/projects/img/icon/32/emomemory.png</Application_Icon_URL>
-			<Application_XML_File_URL>http://aurelio.net/projects/padfiles/emomemory-pad.xml</Application_XML_File_URL>
-		</Application_URLs>
-		<Download_URLs>
-			<Primary_Download_URL>http://aurelio.net/projects/emomemory/EmoMemory.dmg</Primary_Download_URL>
-			<Secondary_Download_URL>http://files.macscripter.net/ScriptBuilders/Gaming/emomemory.dmg</Secondary_Download_URL>
-			<Additional_Download_URL_1/>
-			<Additional_Download_URL_2/>
-		</Download_URLs>
-	</Web_Info>
-	<Permissions>
-		<Distribution_Permissions>See End User License Agreement.</Distribution_Permissions>
-		<EULA>License agreement for EmoMemory game. 
+** Use the registration code FREEGAME:D535DA to unlock the game.</Char_Desc_2000>
+        </English>
+    </Program_Descriptions>
+    <Web_Info>
+        <Application_URLs>
+            <Application_Info_URL>http://aurelio.net/projects/emomemory</Application_Info_URL>
+            <Application_Order_URL/>
+            <Application_Screenshot_URL>http://aurelio.net/projects/emomemory/shot.jpg</Application_Screenshot_URL>
+            <Application_Icon_URL>http://aurelio.net/projects/img/icon/32/emomemory.png</Application_Icon_URL>
+            <Application_XML_File_URL>http://aurelio.net/projects/padfiles/emomemory-pad.xml</Application_XML_File_URL>
+        </Application_URLs>
+        <Download_URLs>
+            <Primary_Download_URL>http://aurelio.net/projects/emomemory/EmoMemory.dmg</Primary_Download_URL>
+            <Secondary_Download_URL>http://files.macscripter.net/ScriptBuilders/Gaming/emomemory.dmg</Secondary_Download_URL>
+            <Additional_Download_URL_1/>
+            <Additional_Download_URL_2/>
+        </Download_URLs>
+    </Web_Info>
+    <Permissions>
+        <Distribution_Permissions>See End User License Agreement.</Distribution_Permissions>
+        <EULA>License agreement for EmoMemory game.
 
 You must read this License agreement before continuing with the installation of this software. Continue with the installation only when you have read and accepted the terms of this license agreement.
 
 This License agreement is made between Aurelio Jargas and the user of the EmoMemory Game.
- 
+
 
 You must agree to the following:
 
-1) No portion of this Game may be disassembled, reverse engineered, decompiled, modified or altered. 
+1) No portion of this Game may be disassembled, reverse engineered, decompiled, modified or altered.
 
 2) This Game is supplied 'as is' and no liability will be accepted by Aurelio Jargas or any legal vendors of this software for any damage incurred by the use of this software.
 
 3) Neither directly nor indirectly can you rent, sell, lease, lend, reproduce, copy or distribute this Game by any means.
 
-Copyright: 
+Copyright:
 EmoMemory is copyright © 2007 by Aurelio Jargas, All rights reserved. This computer program is protected by copyright law and international treaties.
 
 Disclaimer:
-This Game is distributed 'as is' and no claims are made as to it's suitability for any purpose, if any. Aurelio Jargas does not assume any responsibility for lost or damaged files, memory, or registry entries. 
+This Game is distributed 'as is' and no claims are made as to it's suitability for any purpose, if any. Aurelio Jargas does not assume any responsibility for lost or damaged files, memory, or registry entries.
 
 Contact Information:
 Questions or concerns should be sent via e-mail to verde@aurelio.net, or visit www.aurelio.net/projects/ for more information.</EULA>
-	</Permissions>
+    </Permissions>
 </XML_DIZ_INFO>
