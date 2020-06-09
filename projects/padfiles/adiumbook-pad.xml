@@ -102,7 +102,7 @@ Simple intuitive interface, download and run, no configuration required. Open So
             <Application_XML_File_URL>http://aurelio.net/projects/padfiles/adiumbook-pad.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>http://adiumbook.googlecode.com/files/AdiumBook-1.5.zip</Primary_Download_URL>
+            <Primary_Download_URL>https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/adiumbook/AdiumBook-1.5.zip</Primary_Download_URL>
             <Secondary_Download_URL></Secondary_Download_URL>
             <Additional_Download_URL_1></Additional_Download_URL_1>
             <Additional_Download_URL_2></Additional_Download_URL_2>
