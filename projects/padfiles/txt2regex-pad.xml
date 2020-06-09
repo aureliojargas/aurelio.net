@@ -34,10 +34,10 @@
     </Company_Info>
     <Program_Info>
         <Program_Name>txt2regex</Program_Name>
-        <Program_Version>0.8</Program_Version>
-        <Program_Release_Month>09</Program_Release_Month>
-        <Program_Release_Day>28</Program_Release_Day>
-        <Program_Release_Year>2004</Program_Release_Year>
+        <Program_Version>0.9</Program_Version>
+        <Program_Release_Month>05</Program_Release_Month>
+        <Program_Release_Day>21</Program_Release_Day>
+        <Program_Release_Year>2020</Program_Release_Year>
         <Program_Cost_Dollars></Program_Cost_Dollars>
         <Program_Cost_Other_Code></Program_Cost_Other_Code>
         <Program_Cost_Other></Program_Cost_Other>
@@ -45,11 +45,11 @@
         <Program_Release_Status>Major Update</Program_Release_Status>
         <Program_Install_Support>No Install Support</Program_Install_Support>
         <Program_OS_Support>Linux,Linux Console,Linux GPL,Linux Open Source,Mac OS X,Unix,Win95,Win98,Windows Vista Business,Windows Vista Enterprise,Windows Vista Home Basic,Windows Vista Home Premium,Windows Vista Starter,Windows Vista Ultimate,Windows2000,Windows2003,WinME,WinNT 3.x,WinNT 4.x,WinXP</Program_OS_Support>
-        <Program_Language>Catalan,English,French,German,Indonesian,Italian,Japanese,Polish,Portuguese,Romanian,Spanish</Program_Language>
+        <Program_Language>Catalan,English,French,German,Indonesian,Italian,Japanese,Polish,Portuguese,Romanian,Spanish,Turkish</Program_Language>
         <File_Info>
-            <File_Size_Bytes>40514</File_Size_Bytes>
-            <File_Size_K>40</File_Size_K>
-            <File_Size_MB>0.04</File_Size_MB>
+            <File_Size_Bytes>67184</File_Size_Bytes>
+            <File_Size_K>67</File_Size_K>
+            <File_Size_MB>0.06</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -60,28 +60,31 @@
             <Expire_Day></Expire_Day>
             <Expire_Year></Expire_Year>
         </Expire_Info>
-        <Program_Change_Info>- Added OpenOffice.org support
-- Added translations for Romanian, Spanish and Italian
-- Improved Manual Page (manpage)
-- Now works on Bash v3 and newer</Program_Change_Info>
+        <Program_Change_Info>- Added CHICKEN Scheme regexes.
+- New regex tester that runs the supported programs in a Docker container.
+- New automatic testing in all Bash versions from 3.0 to 5.0.
+- Bumped minimal required Bash version from 2.04 to 3.0.
+- Bumped the versions for all the supported programs.
+- Fixed to work properly in bash5.
+- Added Turkish, Catalan, French translations.</Program_Change_Info>
         <Program_Category_Class>Development::Other</Program_Category_Class>
         <Program_Specific_Category>Development Tools</Program_Specific_Category>
-        <Program_System_Requirements>Bash version 2 or newer</Program_System_Requirements>
+        <Program_System_Requirements>Bash version 3 or newer</Program_System_Requirements>
     </Program_Info>
     <Program_Descriptions>
         <English>
             <Keywords>regex, regexp, regular expression, wizard, interactive, console, terminal, free, tool, convert, text, simple, Linux, Mac, Windows, CLI, GPL</Keywords>
             <Char_Desc_45>Regular Expression (regex) Wizard</Char_Desc_45>
-            <Char_Desc_80>Regular Expression wizard that converts human sentences to regexes.</Char_Desc_80>
-            <Char_Desc_250>Txt2regex is a Regular Expression wizard that converts human sentences to regexes. In a simple interface, just answer to questions and build your own regex for Emacs, Javascript, MySQL, OpenOffice.org, Perl, PHP, Python, SED, VBscript, Vim and more.</Char_Desc_250>
-            <Char_Desc_450>Txt2regex is a Regular Expression wizard that converts human sentences to regexes. In a simple interactive interface, you just answer to questions and build your own regex for a large variety of softwares and programming languages: AWK, ed, egrep, Emacs, expect, find, gawk, grep, lex, lisp, mawk, MySQL, OpenOffice.org, Perl, PHP, Postgres, Procmail, Python, SED, Tcl, VBscript, VI, Vim. Translated to 10 languages, it also supports POSIX classes.</Char_Desc_450>
-            <Char_Desc_2000>Txt2regex is a Regular Expression wizard that converts human sentences to regexes.
+            <Char_Desc_80>Regular expression (regex) wizard for the terminal, written in Bash.</Char_Desc_80>
+            <Char_Desc_250>Txt2regex is a regular expression wizard for the command line. Users with little or no knowledge of regular expressions can quickly create hairy regexes by answering questions in a simple text-based interactive interface.</Char_Desc_250>
+            <Char_Desc_450>Txt2regex is a regular expression wizard for the command line. Users with little or no knowledge of regular expressions can quickly create hairy regexes by answering questions in a simple text-based interactive interface. Txt2regex is aware of the particular notation and caveats of many different regular expression flavors, generating valid regexes for more than 20 targets, including grep, sed, Vim, Emacs, JavaScript, Python, PHP, PostgreSQL.</Char_Desc_450>
+            <Char_Desc_2000>Txt2regex is a regular expression wizard for the command line.
 
-In a simple interactive interface, you just answer to questions and build your own regex for a large variety of softwares and programming languages: AWK, ed, egrep, Emacs, expect, find, gawk, grep, lex, lisp, mawk, MySQL, OpenOffice.org, Perl, PHP, Postgres, Procmail, Python, SED, Tcl, VBscript, VI, Vim.
+Users with little or no knowledge of regular expressions can quickly create hairy regexes by answering questions in a simple text-based interactive interface.
 
-Already translated to 10 languages, it features support for POSIX classes, smart group balance control, metacharacters information table and regex automatic generation for frequently used patterns.
+Txt2regex is aware of the particular notation and caveats of many different regular expression flavors, generating valid regexes for more than 20 targets, including grep, sed, Vim, Emacs, JavaScript, Python, PHP, PostgreSQL.
 
-Geek note: txt2regex is a shell script 100% written with Bash builtin commands. No external command is used.</Char_Desc_2000>
+Txt2regex is a one-file shell script made 100% with Bash builtin commands. The only requirement is Bash itself, since no grep, find, sed or any other system command is used.</Char_Desc_2000>
         </English>
     </Program_Descriptions>
     <Web_Info>
@@ -93,7 +96,7 @@ Geek note: txt2regex is a shell script 100% written with Bash builtin commands. 
             <Application_XML_File_URL>http://aurelio.net/projects/padfiles/txt2regex-pad.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>https://github.com/aureliojargas/txt2regex/archive/v0.8.tar.gz</Primary_Download_URL>
+            <Primary_Download_URL>https://github.com/aureliojargas/txt2regex/archive/v0.9.tar.gz</Primary_Download_URL>
             <Secondary_Download_URL></Secondary_Download_URL>
             <Additional_Download_URL_1></Additional_Download_URL_1>
             <Additional_Download_URL_2></Additional_Download_URL_2>
