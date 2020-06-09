@@ -34,10 +34,10 @@
     </Company_Info>
     <Program_Info>
         <Program_Name>sedsed</Program_Name>
-        <Program_Version>1.0</Program_Version>
+        <Program_Version>2.0.0</Program_Version>
         <Program_Release_Month>12</Program_Release_Month>
-        <Program_Release_Day>09</Program_Release_Day>
-        <Program_Release_Year>2004</Program_Release_Year>
+        <Program_Release_Day>07</Program_Release_Day>
+        <Program_Release_Year>2019</Program_Release_Year>
         <Program_Cost_Dollars></Program_Cost_Dollars>
         <Program_Cost_Other_Code></Program_Cost_Other_Code>
         <Program_Cost_Other></Program_Cost_Other>
@@ -47,9 +47,9 @@
         <Program_OS_Support>Linux,Linux Console,Linux GPL,Linux Open Source,Mac OS X,Unix,Win95,Win98,Windows Vista Business,Windows Vista Enterprise,Windows Vista Home Basic,Windows Vista Home Premium,Windows Vista Starter,Windows Vista Ultimate,Windows2000,Windows2003,WinME,WinNT 3.x,WinNT 4.x,WinXP</Program_OS_Support>
         <Program_Language>English</Program_Language>
         <File_Info>
-            <File_Size_Bytes>16044</File_Size_Bytes>
-            <File_Size_K>16</File_Size_K>
-            <File_Size_MB>0.02</File_Size_MB>
+            <File_Size_Bytes>476385</File_Size_Bytes>
+            <File_Size_K>466</File_Size_K>
+            <File_Size_MB>0.47</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -60,24 +60,28 @@
             <Expire_Day></Expire_Day>
             <Expire_Year></Expire_Year>
         </Expire_Info>
-        <Program_Change_Info>- The default indent prefix for --indent is now four spaces.
-- New --dump-debug option to inspect the generated debug file.
-- The debugger is faster and the debug file is now readable (commented) and portable, working in old UNIX sed.
-- Bugfix: Now parses a, c, i commands with ";" on the text.</Program_Change_Info>
+        <Program_Change_Info>- The old "home made" buggy parser for sed scripts was replaced by sedparse, a Python clone of the battle-tested GNU sed parser.
+- Now supporting the GNU sed extra commands: e, F, L, Q, R, T, v, W, z.
+- GNU sed extension: Now supporting the optional numeric argument for the following commands: l, q.
+- GNU sed extension: Now supporting ~ and + in addresses.
+- GNU sed extension: Now supporting the M flag for addresses.
+- Sedsed can now be imported and used as a Python module.
+- Added many new tests to ensure it works as expected.
+- Sedsed is now distributed as a PyPI package.</Program_Change_Info>
         <Program_Category_Class>Development::Debugging</Program_Category_Class>
         <Program_Specific_Category>Development Tools</Program_Specific_Category>
-        <Program_System_Requirements>Python language version 1.5 or later.</Program_System_Requirements>
+        <Program_System_Requirements>Python language version 2.7 or later.</Program_System_Requirements>
     </Program_Info>
     <Program_Descriptions>
         <English>
             <Keywords>sed, free, tool, debug, htmlize, indent, tokenize, convert, debugger, indenter, html, script, console, Linux, Mac, Windows, CLI, Python, GPL</Keywords>
-            <Char_Desc_45>Debug, indent, tokenize, HTMLize SED scripts</Char_Desc_45>
-            <Char_Desc_80>Sedsed can debug, indent, tokenize and HTMLize your SED scripts.</Char_Desc_80>
-            <Char_Desc_250>Sedsed masters SED scripts. The debug mode reveals the internal buffers contents. The indent mode reformats your script and the tokenize mode shows the elements of every command. Sedsed also converts your script to a beautiful colored HTML file. GPL.</Char_Desc_250>
-            <Char_Desc_450>Sedsed can debug, indent, tokenize and HTMLize your SED scripts. In debug mode it adds extra commands to you script, revealing all the magic SED does on its internal buffers. In indent mode your script is reformatted and in tokenize mode you can see the elements of every command you use. In HTMLize mode your script is converted to a beautiful colored HTML file. With sedsed you can master ANY sed script. No more secrets, no more hidden buffers.</Char_Desc_450>
-            <Char_Desc_2000>Sedsed can debug, indent, tokenize and HTMLize your SED scripts.
+            <Char_Desc_45>Debug, indent and HTMLize sed scripts</Char_Desc_45>
+            <Char_Desc_80>Sedsed can debug, indent and HTMLize your sed scripts.</Char_Desc_80>
+            <Char_Desc_250>Sedsed masters sed scripts. The debug mode reveals the internal buffers contents. The indent mode reformats your script and the tokenize mode shows the elements of every command. Sedsed also converts your script to a beautiful colored HTML file. GPL.</Char_Desc_250>
+            <Char_Desc_450>Sedsed can debug, indent, tokenize and HTMLize your sed scripts. In debug mode it adds extra commands to you script, revealing all the magic sed does on its internal buffers. In indent mode your script is reformatted and in tokenize mode you can see the elements of every command you use. In HTMLize mode your script is converted to a beautiful colored HTML file. With sedsed you can master ANY sed script. No more secrets, no more hidden buffers.</Char_Desc_450>
+            <Char_Desc_2000>Sedsed can debug, indent and HTMLize your sed scripts.
 
-In debug mode it reads your script and add extra commands to it. When executed you can see the data flow between the commands, revealing all the magic SED does on its internal buffers.
+In debug mode it reads your script and add extra commands to it. When executed you can see the data flow between the commands, revealing all the magic sed does on its internal buffers.
 
 In indent mode your script is reformatted with standard spacing and in tokenize mode you can see the elements of every command you use.
 
@@ -95,7 +99,7 @@ With sedsed you can master ANY sed script. No more secrets, no more hidden buffe
             <Application_XML_File_URL>http://aurelio.net/projects/padfiles/sedsed-pad.xml</Application_XML_File_URL>
         </Application_URLs>
         <Download_URLs>
-            <Primary_Download_URL>http://aurelio.net/projects/sedsed/sedsed.zip</Primary_Download_URL>
+            <Primary_Download_URL>https://github.com/aureliojargas/sedsed/archive/v2.0.0.zip</Primary_Download_URL>
             <Secondary_Download_URL></Secondary_Download_URL>
             <Additional_Download_URL_1></Additional_Download_URL_1>
             <Additional_Download_URL_2></Additional_Download_URL_2>
@@ -104,7 +108,7 @@ With sedsed you can master ANY sed script. No more secrets, no more hidden buffe
     <Permissions>
         <Distribution_Permissions>GPL License</Distribution_Permissions>
         <EULA>GNU GENERAL PUBLIC LICENSE
-Version 2, June 1991
+Version 3, June 2007
 
 Full license text at http://www.gnu.org/licenses/gpl.txt</EULA>
     </Permissions>
