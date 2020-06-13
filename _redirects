@@ -70,7 +70,7 @@
 
 #### /soft -> /projects (2012-12-20)
 # scripts moved to Google Code (links in PAD files) [moved from /soft/.htaccess]
-/soft/adiumbook/AdiumBook-sources.zip                                 http://code.google.com/p/adiumbook/source/checkout
+/soft/adiumbook/AdiumBook-sources.zip                                 https://github.com/aureliojargas/adiumbook
 /soft/adiumbook/AdiumBook-1.3.dmg                                     http://adiumbook.googlecode.com/files/AdiumBook-1.3.dmg
 /soft/export-contacts-to-mp3-player/Export_Contacts_To_MP3_Player.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_MP3_Player-1.1.zip
 /soft/export-contacts-to-yahoo-csv/Export_Contacts_To_Yahoo_CSV.zip   https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_Yahoo_CSV-1.2.zip
@@ -100,7 +100,7 @@
 
 # Obsoleted /bin/as content
 /bin/as/adium-book/*                              /projects/adiumbook/:splat
-/bin/as/AdiumBook-sources.zip                     http://code.google.com/p/adiumbook/source
+/bin/as/AdiumBook-sources.zip                     https://github.com/aureliojargas/adiumbook
 /bin/as/py2as.html                                /articles/applescript-vs-python.html
 /bin/as/*                                         /projects/:splat
 
