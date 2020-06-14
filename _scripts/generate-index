@@ -40,7 +40,7 @@ to_yaml() {
 }
 
 echo "First remove all the previously generated files..."
-git grep -l '^layout: ls$' | xargs -r rm
+git grep -l '^layout: ls$' | xargs rm
 
 echo "Now rebuild the full site..."
 _scripts/build > /dev/null
