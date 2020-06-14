@@ -34,22 +34,22 @@
     </Company_Info>
     <Program_Info>
         <Program_Name>AdiumBook</Program_Name>
-        <Program_Version>1.5</Program_Version>
-        <Program_Release_Month>03</Program_Release_Month>
-        <Program_Release_Day>11</Program_Release_Day>
+        <Program_Version>1.5.1</Program_Version>
+        <Program_Release_Month>11</Program_Release_Month>
+        <Program_Release_Day>25</Program_Release_Day>
         <Program_Release_Year>2009</Program_Release_Year>
         <Program_Cost_Dollars></Program_Cost_Dollars>
         <Program_Cost_Other_Code></Program_Cost_Other_Code>
         <Program_Cost_Other></Program_Cost_Other>
         <Program_Type>Freeware</Program_Type>
-        <Program_Release_Status>Major Update</Program_Release_Status>
+        <Program_Release_Status>Minor Update</Program_Release_Status>
         <Program_Install_Support>No Install Support</Program_Install_Support>
-        <Program_OS_Support>Mac OS X,Mac OS X 10.4,Mac OS X 10.5</Program_OS_Support>
+        <Program_OS_Support>Mac OS X,Mac OS X 10.4,Mac OS X 10.5,Mac OS X 10.6</Program_OS_Support>
         <Program_Language>English</Program_Language>
         <File_Info>
-            <File_Size_Bytes>1549885</File_Size_Bytes>
-            <File_Size_K>1513</File_Size_K>
-            <File_Size_MB>1.5</File_Size_MB>
+            <File_Size_Bytes>745954</File_Size_Bytes>
+            <File_Size_K>729</File_Size_K>
+            <File_Size_MB>0.7</File_Size_MB>
         </File_Info>
         <Expire_Info>
             <Has_Expire_Info>N</Has_Expire_Info>
@@ -60,15 +60,10 @@
             <Expire_Day></Expire_Day>
             <Expire_Year></Expire_Year>
         </Expire_Info>
-        <Program_Change_Info>- Now works with Adium 1.3 and newer.
-- Fixed the display of Adium pictures.
-- Added automatic software update (Sparkle)
-- New reports for Adium contacts: list by IM service, with/without picture
-- About box with SVN revision number and link to the app sources
-- Updated service icons</Program_Change_Info>
+        <Program_Change_Info>This is a bugfix release to make AdiumBook 1.5 work on the new Snow Leopard</Program_Change_Info>
         <Program_Category_Class>System Utilities::Automation Tools</Program_Category_Class>
         <Program_Specific_Category>Utilities</Program_Specific_Category>
-        <Program_System_Requirements>Adium 1.2 or later.</Program_System_Requirements>
+        <Program_System_Requirements>Adium 1.3 or later.</Program_System_Requirements>
     </Program_Info>
     <Program_Descriptions>
         <English>
