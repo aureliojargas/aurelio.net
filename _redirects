@@ -102,6 +102,23 @@
 /bin/as/adium-book/*                              /projects/adiumbook/:splat
 /bin/as/AdiumBook-sources.zip                     https://github.com/aureliojargas/adiumbook
 /bin/as/py2as.html                                /articles/applescript-vs-python.html
+
+# Obsolete binary files in /bin/as (2020-06-15)
+# Remove .scpt files
+/bin/as/ExportContactsToMp3Player-1.1.scpt        /410.html  410
+/bin/as/iTunesRenameDiskFile-1.0.scpt             /410.html  410
+/bin/as/iTunesSearchInLyrics-1.0.scpt             /410.html  410
+# Redirect zip files to Google Code
+/bin/as/ExportContactsToMp3Player-1.1.zip         https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_MP3_Player-1.1.zip
+/bin/as/ExportContactsToYahooCSV-1.2.zip          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_Yahoo_CSV-1.2.zip
+/bin/as/iphoto_sed.zip                            https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_SED-1.zip
+/bin/as/iPhotoSetSequentialTitle-1.0.zip          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_Set_Sequential_Title-1.0.zip
+/bin/as/itunes_find_artwork_less-1.0.zip          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Find_Artwork-less-1.0.zip
+/bin/as/iTunesRenameDiskFile-1.0.zip              https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Rename_Disk_File-1.zip
+/bin/as/iTunesSearchInLyrics-1.0.zip              https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Search_in_Lyrics-1.zip
+/bin/as/iTunesSED-1.0.zip                         https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_SED-1.0.zip
+
+# Catchall points to /project
 /bin/as/*                                         /projects/:splat
 
 # moved :(
