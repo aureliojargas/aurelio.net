@@ -10,13 +10,10 @@ url: https://aurelio.net
 description: 'Relaxe, leia com calma, aproveite a viagem.'
 
 ### Syntax Highlight
-highlighter: rouge  # Default since Jekyll 3.0
+highlighter: rouge  # Default since Jekyll 3.0.0
 
 ### Markdown
-markdown: redcarpet
-redcarpet:
-  extensions: ["fenced_code_blocks", "autolink"]
-# extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+markdown: kramdown  # Default since Jekyll 2.0.0
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
