@@ -8,7 +8,7 @@ hide_ads: true
 >
 > **Programar é um desafio** — Para concretizar idéias, vários problemas e obstáculos aparecem e é preciso fazer algoritmos para resolvê-los.
 >
-> **Programar é se dedicar** — Mesmo depois de "pronto" o programa, sempre há algo a melhorar, bugs para corrigir, > versões para lançar.
+> **Programar é se dedicar** — Mesmo depois de "pronto" o programa, sempre há algo a melhorar, bugs para corrigir, versões para lançar.
 >
 > **Programar é um prazer** — É um brinquedo que não enjoa. É sempre diferente, é sempre uma aventura.
 
