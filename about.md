@@ -19,7 +19,6 @@ hide_comments: true
 Hi, I'm Aurelio Jargas, 41, from [Curitiba city](https://www.google.com/search?q=curitiba&tbm=isch), Brazil. Find me in
 [email](mailto:aurelio@aurelio.net),
 [Twitter](http://twitter.com/aureliojargas),
-<a rel="me" href="https://plus.google.com/109816595539181258628">Google+</a>,
 [LinkedIn](http://www.linkedin.com/in/aureliojargas) and
 [GitHub](https://github.com/aureliojargas).
 
