@@ -16,6 +16,9 @@ pre {
   clear: both;
   overflow: auto;
 }
+code {
+  background: #eee;
+}
 table {
   margin: 2em auto;
   font-family: sans-serif;
