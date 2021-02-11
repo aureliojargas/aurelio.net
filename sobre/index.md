@@ -12,7 +12,7 @@ hide_comments: true
 
 ## Sobre o Aurelio
 
-Oi, meu nome é Aur[e](/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/)lio Marinho Jargas, tenho 43 anos. Nasci e cresci em Curitiba, já morei em Floripa e Matinhos, e desde 2009 moro em Joinville com minha amada esposa Mog.
+Oi, meu nome é Aur[e](/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/)lio Marinho Jargas, tenho 43 anos. Nasci e cresci em Curitiba, já morei em Floripa, Matinhos e Joinville, e desde 2018 moro em Ulm (Alemanha) com minha amada esposa Mog.
 
 Já fui operário-padrão da indústria de informática, quando era programador e redator técnico na Conectiva (hoje Mandriva), empresa de Linux que vi crescer e se tornar referência nacional.
 
@@ -27,7 +27,7 @@ Se quiser consultar uma segunda opinião, leia o que meu amigo Matheus Eduardo [
 
 ## Sobre a Mog
 
-Morgana Laemmle, apelido Mog. Ela é minha 
+Morgana Laemmle, apelido Mog. Ela é minha
 [vida](/blog/2009/05/15/dois-corpos-um-espaco/),
 <del>[noiva](/blog/2008/07/18/a-lua-a-pedra-e-o-amor/)</del>
 [esposa](/blog/2011/05/13/casamento/),
