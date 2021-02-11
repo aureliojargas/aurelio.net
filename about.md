@@ -16,7 +16,7 @@ hide_comments: true
 
 ![](/img/aurelio.jpg)
 
-Hi, I'm Aurelio Jargas, 41, from [Curitiba city](https://www.google.com/search?q=curitiba&tbm=isch), Brazil. Find me in
+Hi, I'm Aurelio Jargas, 43, from [Curitiba city](https://www.google.com/search?q=curitiba&tbm=isch), Brazil. Find me in
 [email](mailto:aurelio@aurelio.net),
 [Twitter](http://twitter.com/aureliojargas),
 [LinkedIn](http://www.linkedin.com/in/aureliojargas) and
