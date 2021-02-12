@@ -26,7 +26,7 @@ My personal interests include nature, waves, mountains, dogs, bike, carveboard, 
 
 My nerd interests include regex, Unix, Bash, sed, Python, JavaScript, HTML, text files and AppleScript. I enjoy text handling: parse, extract, filter, translate, format. I do follow the [KISS principle](http://en.wikipedia.org/wiki/KISS_principle).
 
-I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.org/wiki/Mandriva) and since 2005 I work for myself at home.
+I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.org/wiki/Mandriva).
 
 ## My softwares
 
