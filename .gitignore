@@ -2,3 +2,6 @@
 /_drafts/
 /_site/
 /.jekyll-metadata
+
+# Not Jekyll related, just my personal local-only stuff
+/_local/
