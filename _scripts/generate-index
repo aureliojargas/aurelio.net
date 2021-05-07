@@ -43,7 +43,7 @@ echo "First remove all the previously generated files..."
 git grep -l '^layout: ls$' | xargs rm
 
 echo "Now rebuild the full site..."
-_scripts/build > /dev/null
+make build > /dev/null
 
 _scripts/list-site-files dir |
     sed 's|^_site/||' |
