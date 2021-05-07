@@ -52,17 +52,18 @@ _scripts/list-site-files dir |
     do
         test -f _site/$dir/index.html && continue
 
+        # Note: Using LANG=C to list UPPER files first
         folders=$(
             find _site/$dir -mindepth 1 -maxdepth 1 -type d |
                 sed 's|.*/||' |  # basename
-                sort |
+                LANG=C sort |
                 to_yaml
         )
         files=$(
             find _site/$dir -maxdepth 1 -type f |
                 sed 's|.*/||' |  # basename
                 grep -v -F -x 'index.html' |  # skip generated
-                sort |
+                LANG=C sort |
                 to_yaml
         )
 
