@@ -73,6 +73,12 @@ check_link_to_redirected() {
         # Just remove trailing *, dirs are already matched partially
         sed 's|/\*$|/|g' |
         xargs _scripts/grep-url-in-site |
+        # /bin/as/* is redirected, but there are 3 real files still there
+        grep -vF '_site/bin/as/ImportContactsFromYahooCSV.py' |
+        grep -vF '_site/bin/as/index.html' |
+        grep -vE '_site/blog-arquivo.html.*/bin/as/ImportContactsFromYahooCSV.py' |
+        grep -vE '_site/projects/export-contacts-to-yahoo-csv/index.html.*/bin/as/ImportContactsFromYahooCSV.py' |
+        grep -vE '_site/projects/itunes-sed/index.html.*/bin/as/iTunesRunScript-1.1.zip' |
         # Remove false positives
         grep -vF '_site/sed/programas/rss.sed' |
         grep -vF '_site/articles/hungry-sumo-high-scores.html' |
