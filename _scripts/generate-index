@@ -53,13 +53,13 @@ _scripts/list-site-files dir |
         test -f _site/$dir/index.html && continue
 
         folders=$(
-            find _site/$dir -type d -mindepth 1 -maxdepth 1 |
+            find _site/$dir -mindepth 1 -maxdepth 1 -type d |
                 sed 's|.*/||' |  # basename
                 sort |
                 to_yaml
         )
         files=$(
-            find _site/$dir -type f -maxdepth 1 |
+            find _site/$dir -maxdepth 1 -type f |
                 sed 's|.*/||' |  # basename
                 grep -v -F -x 'index.html' |  # skip generated
                 sort |

@@ -5,7 +5,7 @@
 cd $(dirname "$0")
 cd ..
 
-dirs_() { find _site -type d -mindepth 1; }
+dirs_() { find _site -mindepth 1 -type d; }
 files() { find _site -type f; }
 
 images='png jpg gif bmp ico'
@@ -21,4 +21,3 @@ case "$1" in
     *   ) files | grep "\.$1$";;  # file extension
 esac | sort
 #      ^output is always sorted
-
