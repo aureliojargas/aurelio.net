@@ -37,7 +37,8 @@
 #      download it.
 #
 #    - Mac OS X users can import the Address Book contacts with this
-#      AppleScript: http://aurelio.net/bin/as/
+#      AppleScript:
+#      https://aurelio.net/projects/export-contacts-to-mp3-player/
 #
 #    - The files this program generates are correctly read by the
 #      MP3 player. Sometimes TELBOOK.EXE can not load them, but it's
@@ -73,18 +74,18 @@ VERSION is the TELBOOK.EXE program version. Use 1.0, 1.1 or 2.0.
 OFFSET is the CSV fields offset. Use a program name or make your own.
 
    yahoo      : The CSV is on the Yahoo! format
-   outlook    : The CSV is on the MS Outlook format  
+   outlook    : The CSV is on the MS Outlook format
    kontact    : The CSV is on the Kontact (Kaddressbook) format
    1,2,3,4,5,6: Sample of customized CSV offset (must be six numbers)
 
 Examples:
 
    python %s -v 2.0 -o outlook contacts.csv
-   
+
    python %s -v 1.1 -o '1,10,22,5,6,9' contacts.csv
 ''' % (sys.argv[0], sys.argv[0], sys.argv[0])
 
-# Spec: Six CSV fields specified by positional number, starting by 1 
+# Spec: Six CSV fields specified by positional number, starting by 1
 # Tip : To join two or more fields in one, put them inside (parenthesis)
 # Data: Full name, mobile phone, home phone, email, birthday date, work phone
 default_offsets = {
@@ -183,7 +184,7 @@ while 1:
 
 # Note 1: The header's last 4 bytes vary when contacts are added on
 # the TELBOOK.EXE program. But they aren't necessary for the import.
-# 
+#
 # Note 2: Version 1.1 has some special bytes at the end (footer),
 # but they aren't necessary for the import.
 #
