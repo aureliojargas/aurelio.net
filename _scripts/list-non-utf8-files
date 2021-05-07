@@ -8,5 +8,13 @@
 cd $(dirname "$0")
 cd ..
 
-_scripts/list-repo-text-files |
-  xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
+non_utf8=$(
+    _scripts/list-repo-text-files |
+        xargs -I {} bash -c "iconv -f utf-8 -t utf-16 {} &>/dev/null || echo {}"
+)
+
+if test -n "$non_utf8"
+then
+    echo "$non_utf8"
+    exit 1
+fi
