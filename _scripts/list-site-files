@@ -5,6 +5,8 @@
 cd $(dirname "$0")
 cd ..
 
+test -d _site || { echo "_site not found"; exit 1; }
+
 dirs_() { find _site -mindepth 1 -type d; }
 files() { find _site -type f; }
 

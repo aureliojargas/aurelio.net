@@ -18,8 +18,8 @@ cgrep() {
 cd $(dirname "$0")
 cd ..
 
-repo_root="$PWD"
-site_root="$repo_root/_site"
+test -d _site || { echo "_site not found"; exit 1; }
+
 all_files=$(_scripts/list-site-files all)
 text_files=$(_scripts/list-site-files text)
 css_files=$(echo "$text_files" | grep '\.css$')

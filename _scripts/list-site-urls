@@ -6,6 +6,8 @@
 cd $(dirname "$0")
 cd ..
 
+test -d _site || { echo "_site not found"; exit 1; }
+
 html_files=$(_scripts/list-site-files html)
 css_files=$(_scripts/list-site-files css)
 
