@@ -237,3 +237,7 @@ do
     wrong=$($check)
     test -n "$wrong" && error "$wrong"
 done
+
+# Make sure the very last command is successful. If there was an error
+# the script was already aborted before this point.
+true
