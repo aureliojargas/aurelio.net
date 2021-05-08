@@ -13,17 +13,18 @@ doc/rdl/areas-compartilhadas.html
 doc/rdl/poder-modo-texto.html
 
 # Skip files that have comments (tidy removes them)
-doc/cv-aurelio.html
-doc/faq.html
 articles/applescript-install.html
 articles/applescript-vs-python.html
 articles/dropbox-iphoto-11.html
+articles/dropbox-iphoto-import.html
 articles/dropbox-selective-sync.html
 articles/dropbox-symlinks.html
 articles/hungry-sumo-high-scores.html
 articles/index.html
 articles/iphoto-symlinks.html
 articles/shell-reference.html
+doc/cv-aurelio.html
+doc/faq.html
 
 # Figures markup needs fix
 doc/dort.html

@@ -8,20 +8,22 @@
 
 file="$1"
 
-# http://api.html-tidy.org/tidy/quickref_5.4.0.html
+# http://api.html-tidy.org/tidy/quickref_5.6.0.html
 config='
 anchor-as-name: no
 bare: no
 break-before-br: yes
 char-encoding: utf8
 clean: no
+coerce-endtags: yes
 css-prefix: tidy
 decorate-inferred-ul: no
 drop-empty-elements: yes
 drop-empty-paras: yes
 enclose-block-text: no
 enclose-text: yes
-fix-bad-comments: yes
+fix-bad-comments: no
+fix-style-tags: no
 fix-uri: yes
 hide-comments: no
 indent-spaces: 2
