@@ -478,14 +478,15 @@ Aproveite para [visitar o site do Nerdson](http://hacktoon.com/grandware/courses
 
 ### Regex-cruzadas
 
-Até onde sei, essa ideia de fazer palavras cruzadas com regex apareceu primeiro no [MIT Mystery Hunt de 2013](https://web.mit.edu/puzzle/www/2013/coinheist.com/rubik/a_regular_crossword/). Essa foi minha solução pra ele:
+Até onde sei, essa ideia de fazer palavras cruzadas com regex apareceu primeiro no [MIT Mystery Hunt de 2013](https://web.mit.edu/puzzle/www/2013/coinheist.com/rubik/a_regular_crossword/). Era [um arquivo PDF](https://web.mit.edu/puzzle/www/2013/coinheist.com/rubik/a_regular_crossword/grid.pdf), bom pra imprimir e rabiscar, mas bem chato de preencher no computador. Na época, essa foi minha solução pra ele:
 
-[![](/regex/img/regex-crosswords.png)](http://regexcrossword.com)
+![](/regex/img/regex-crosswords.png)
 
-O pessoal gostou da ideia, e então apareceram sites dedicados a gerar palavras cruzadas com regex. Alguns dos melhores são:
+Melhor mesmo é usar [a versão JavaScript](http://jimbly.github.io/regex-crossword/), que é bem mais prática de preencher e sinaliza com cores quando você acerta uma fileira. Resolvi me divertir com ela em maio de 2021 e dessa vez foi mais rápido, levei 1h30:
 
- * http://regexcrossword.com
- * http://jimbly.github.io/regex-crossword/
+[![](/regex/img/regex-crosswords-2021.png)](http://jimbly.github.io/regex-crossword/)
+
+Mas não precisa comecar por esse, que é muito grande e complicado. Tem um site inteiramente dedicado a gerar palavras cruzadas com regex, e você pode escolher a dificuldade: http://regexcrossword.com
 
 E já que estamos aqui, que tal uma explicação de como fazer [um programa que resolve estes quebras-cabeças](http://herman.asia/solving-regex-crosswords-using-go)?
 
