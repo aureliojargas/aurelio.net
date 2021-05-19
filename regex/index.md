@@ -26,12 +26,6 @@ article_footer_after: false
 
 <img style="float:right" src="/img/icon/128/er.png">
 
-<div style="background:#F6E568; padding:1em 1em 2em 2em;" class="banner">
-    <h3 style="margin: 1em 0">Avisos importantes</h3>
-    <p>Saiu a <a href="https://www.piazinho.com.br/">5ª edição do livro de Expressões Regulares</a>, em papel e <a href="https://www.piazinho.com.br/#comprar">e-book</a>!</p>
-    <p>Que tal fazer um <a href="http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/">curso presencial de imersão em Expressões Regulares</a> comigo lá em São Paulo?</p>
-</div>
-
 **Expressão Regular:** Um método formal de se especificar um padrão de texto.
 
 **Expressão Regular:** Como o brinquedo LEGO, várias pecinhas diferentes, cada uma com sua característica, que juntas compõem estruturas completas e podem ser arranjadas com infinitas combinações diferentes.
@@ -90,6 +84,17 @@ article_footer_after: false
 {% include regex-nav-book-references.html %}
 
 
+## Vídeo-aulas que fiz
+
+* Como extrair e formatar texto usando Expressões Regulares (14 minutos, [blog](/blog/2011/05/05/como-extrair-e-formatar-texto-usando-expressoes-regulares/), [YouTube](https://www.youtube.com/watch?v=LZcTSKIwZqI))
+
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/LZcTSKIwZqI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
+
+* Expressões Regulares - Quantificadores Gulosos (8 minutos, [blog](/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/), [YouTube](https://www.youtube.com/watch?v=0O2yQgRXnLU))
+
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
+
+
 ## Artigos que escrevi
 
 * [Conhecendo as Expressões Regulares](/regex/apostila-conhecendo-regex.pdf)
@@ -124,16 +129,6 @@ Meu segundo artigo sobre Expressões Regulares, escrito em 2000. É uma continua
 
 * [Como casar um número IP (regex)](/regex/casar-ip.html)
 Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular para casar um número IP válido.
-
-## Vídeo-aulas que fiz
-
-* Como extrair e formatar texto usando Expressões Regulares (14 minutos, [blog](/blog/2011/05/05/como-extrair-e-formatar-texto-usando-expressoes-regulares/), [YouTube](https://www.youtube.com/watch?v=LZcTSKIwZqI))
-
-<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/LZcTSKIwZqI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
-
-* Expressões Regulares - Quantificadores Gulosos (8 minutos, [blog](/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/), [YouTube](https://www.youtube.com/watch?v=0O2yQgRXnLU))
-
-<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
 
 ## Grupo no Telegram
 
@@ -273,12 +268,6 @@ Estes links um dia existiram, mas agora sumiram da Internet. Se você é o autor
 
 ## Testadores online
 
-* [RegexPal](http://regexpal.com) ★
-Atualiza enquanto digita,
-destaca texto casado,
-referência rápida,
-sintaxe JavaScript.
-
 * [Regex101](https://regex101.com) ★
 Atualiza enquanto digita,
 destaca texto casado,
@@ -286,6 +275,12 @@ mostra o conteúdo dos grupos,
 faz substituição de textos,
 referência rápida,
 sintaxes JavaScript, Python e Perl.
+
+* [RegexPal](http://regexpal.com) ★
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+sintaxe JavaScript.
 
 * [Debuggex](https://www.debuggex.com) ★
 Cria um gráfico de sua expressão regular.
@@ -483,12 +478,14 @@ Aproveite para [visitar o site do Nerdson](http://hacktoon.com/grandware/courses
 
 ### Regex-cruzadas
 
+Até onde sei, essa ideia de fazer palavras cruzadas com regex apareceu primeiro no [MIT Mystery Hunt de 2013](https://web.mit.edu/puzzle/www/2013/coinheist.com/rubik/a_regular_crossword/). Essa foi minha solução pra ele:
+
 [![](/regex/img/regex-crosswords.png)](http://regexcrossword.com)
 
-E não é que tem dois sites só pra gerar palavras-cruzadas com regex?
+O pessoal gostou da ideia, e então apareceram sites dedicados a gerar palavras cruzadas com regex. Alguns dos melhores são:
 
  * http://regexcrossword.com
- * http://www.regexcrosswords.com
+ * http://jimbly.github.io/regex-crossword/
 
 E já que estamos aqui, que tal uma explicação de como fazer [um programa que resolve estes quebras-cabeças](http://herman.asia/solving-regex-crosswords-using-go)?
 
