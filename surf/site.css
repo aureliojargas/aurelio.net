@@ -30,16 +30,7 @@ body
 	{
 	color		: #555;
 	margin		: 1em;
-	padding-left	: 15px;
-	padding-right	: 15px;
-	text-align	: justify;
-	font-size	: 90%;
-	}
-table.about td
-	{
-	vertical-align	: super;
-	padding-left	: 15px;
-	padding-right	: 15px;
+	text-align	: center;
 	}
 
 .names
