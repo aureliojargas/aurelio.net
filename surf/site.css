@@ -28,47 +28,27 @@ body
 
 .about
 	{
-	color		: #555;
-	margin		: 1em;
 	text-align	: center;
 	}
 
-.names
-	{
-	text-align	: justify;
-	line-height	: 125%;
-	}
 .names a
 	{
-	font-size	: 85%;
-	color		: #555;
-	margin-left	: 0.5em;
-	margin-right	: 0.5em;
-	font-weight	: normal;
-	white-space	: nowrap;
-	}
-.names a b
-	{
-	color		: #000;
-	font-size	: 120%;
+	font-weight: normal;
+	display: block;
 	}
 .names a:hover
 	{
 	background-color: #ff0;
-	color		: #555;
 	}
 .footer
 	{
 	padding-bottom	: 80px;
 	text-align	: center;
-	color		: #555;
-	font-size	: 90%;
 	}
 a
 	{
 	font-weight	: bold;
 	text-decoration	: none;
-	font-size	: 130%;
 	}
 a:hover
 	{
