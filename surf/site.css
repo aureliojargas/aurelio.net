@@ -37,6 +37,7 @@ body
 	{
 	font-weight: normal;
 	display: block;
+	margin-bottom: 0.5em;
 	}
 .names a:hover
 	{
@@ -82,6 +83,10 @@ dt img
 	{
 	/* for each day's thumbnails */
 	float		: right;
+	}
+dd
+	{
+	margin: 1em 0;
 	}
 img
 	{
