@@ -38,6 +38,7 @@ a:hover {
 img {
   border: 1px solid gray;
   max-width: 100%;
+  height: auto;
 }
 td.noborder img {
   border: none;

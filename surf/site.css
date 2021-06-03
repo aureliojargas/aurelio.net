@@ -3,7 +3,7 @@
 body {
   background-color: #fff;
   color: #555;
-  margin: 0px;
+  margin: 0;
   background-image: url(/surf/img/onda.gif);
   background-repeat: repeat-x;
   background-position: bottom;
@@ -78,4 +78,5 @@ img {
   padding: 2px;
   margin: 5px;
   max-width: 100%;
+  height: auto;
 }
