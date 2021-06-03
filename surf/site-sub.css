@@ -21,14 +21,13 @@ h2
 	}
 .body
 	{
-	padding		: 3em 7em 3em 7em;
+	max-width: 36em;
+	margin: 2em auto 3em auto;
 	}
 .footer
 	{
 	padding-bottom	: 80px;
 	text-align	: center;
-	color		: #555;
-	font-size	: 90%;
 	background-image: url(/surf/img/onda.gif);
 	background-repeat: repeat-x;
 	background-position: bottom;
@@ -46,6 +45,7 @@ a:hover
 img
 	{
 	border		: 1px solid gray;
+	max-width: 100%;
 	}
 td.noborder img
 	{
