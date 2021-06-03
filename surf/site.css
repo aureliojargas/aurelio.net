@@ -1,102 +1,85 @@
 /* by Aurelio Marinho Jargas on Jan2006, public domain */
 
-body
-	{
-	background-color: #fff;
-	color		: #555;
-	margin		: 0px;
-	background-image	: url(/surf/img/onda.gif);
-	background-repeat	: repeat-x;
-	background-position	: bottom;
-	background-attachment	: fixed;
-	}
-.body2
-	{
-	background-image	: url(/surf/img/sol.gif);
-	background-repeat	: no-repeat;
-	background-position	: left top;
-	padding: 10px;
-	}
-.header
-	{
-	text-align	: center;
-	}
+body {
+  background-color: #fff;
+  color: #555;
+  margin: 0px;
+  background-image: url(/surf/img/onda.gif);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+.body2 {
+  background-image: url(/surf/img/sol.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 10px;
+}
+.header {
+  text-align: center;
+}
 
-.body
-	{
-	max-width: 36em;
-	margin: 2em auto 3em auto;
-	}
+.body {
+  max-width: 36em;
+  margin: 2em auto 3em auto;
+}
 
-.about
-	{
-	text-align	: center;
-	}
+.about {
+  text-align: center;
+}
 
-.names a
-	{
-	font-weight: normal;
-	display: block;
-	margin-bottom: 0.5em;
-	}
-.names a:hover
-	{
-	background-color: #ff0;
-	}
-.footer
-	{
-	padding-bottom	: 80px;
-	text-align	: center;
-	}
-a
-	{
-	font-weight	: bold;
-	text-decoration	: none;
-	}
-a:hover
-	{
-	color		: red;
-	}
-dl
-	{
-	clear		: both;
-	margin-top	: 2em;
-	/* the last bar before footer */
-	border-width	: 0 0 1px 0;
-	border-style	: solid;
-	border-color	: gray;
-	padding-bottom	: 1em;
-	}
-dt
-	{
-	line-height	: 150%;
-	border-width	: 1px 0 0 0;
-	border-style	: solid;
-	border-color	: gray;
-	padding-top	: 1em;
-	}
-dt.sonzeira
-	{
-	text-align	: center;
-	}
-dt img
-	{
-	/* for each day's thumbnails */
-	float		: right;
-	}
-dd
-	{
-	margin: 1em 0;
-	}
-img
-	{
-	border		: 1px solid gray;
-	padding		: 2px;
-	margin		: 5px;
-	max-width: 100%;
-	}
-.googleadfaixa
-	{
-	text-align	:center;
-	margin 		:2em auto;
-	}
+.names a {
+  font-weight: normal;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.names a:hover {
+  background-color: #ff0;
+}
+.footer {
+  padding-bottom: 80px;
+  text-align: center;
+}
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+dl {
+  clear: both;
+  margin-top: 2em;
+  /* the last bar before footer */
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: gray;
+  padding-bottom: 1em;
+}
+dt {
+  line-height: 150%;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: gray;
+  padding-top: 1em;
+}
+dt.sonzeira {
+  text-align: center;
+}
+dt img {
+  /* for each day's thumbnails */
+  float: right;
+}
+dd {
+  margin: 1em 0;
+}
+img {
+  border: 1px solid gray;
+  padding: 2px;
+  margin: 5px;
+  max-width: 100%;
+}
+.googleadfaixa {
+  text-align: center;
+  margin: 2em auto;
+}

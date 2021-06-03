@@ -1,58 +1,48 @@
 /* by Aurelio Marinho Jargas on Jan2006, public domain */
 
-body
-	{
-	background-color: #fff;
-	color		: #555;
-	margin: 0;
-	background-image: url(/surf/img/sol.gif);
-	background-repeat: no-repeat;
-	background-position: left top;
-	}
-h1
-	{
-	text-align	: center;
-	}
-h2
-	{
-	text-align	: center;
-	margin-bottom	: 1em;
-	font-weight	: normal;
-	}
-.body
-	{
-	max-width: 36em;
-	margin: 2em auto 3em auto;
-	}
-.footer
-	{
-	padding-bottom	: 80px;
-	text-align	: center;
-	background-image: url(/surf/img/onda.gif);
-	background-repeat: repeat-x;
-	background-position: bottom;
-	}
-a
-	{
-	font-weight	: bold;
-	text-decoration	: none;
-	font-size	: 130%;
-	}
-a:hover
-	{
-	color		: red;
-	}
-img
-	{
-	border		: 1px solid gray;
-	max-width: 100%;
-	}
-td.noborder img
-	{
-	border		: none
-	}
-.googleadfaixa
-	{
-	text-align	:center;
-	margin 		:2em auto;
-	}
+body {
+  background-color: #fff;
+  color: #555;
+  margin: 0;
+  background-image: url(/surf/img/sol.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+.body {
+  max-width: 36em;
+  margin: 2em auto 3em auto;
+}
+.footer {
+  padding-bottom: 80px;
+  text-align: center;
+  background-image: url(/surf/img/onda.gif);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 130%;
+}
+a:hover {
+  color: red;
+}
+img {
+  border: 1px solid gray;
+  max-width: 100%;
+}
+td.noborder img {
+  border: none;
+}
+.googleadfaixa {
+  text-align: center;
+  margin: 2em auto;
+}
