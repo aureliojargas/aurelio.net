@@ -1,0 +1,14 @@
+# https://docs.github.com/en/actions/reference
+# https://docs.github.com/en/actions/guides/building-and-testing-ruby
+
+name: Check
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1  # considers the .ruby-version file
+      - run: bundle install
+      - run: make build
+      - run: make check
