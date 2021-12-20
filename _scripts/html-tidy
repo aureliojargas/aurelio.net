@@ -2,11 +2,23 @@
 # Tidy the informed HTML file.
 # Will preserve Jekyll's Front Matter, if any.
 # Get tidy: http://www.html-tidy.org
-# Install:
+# Local .deb install (if needed):
 #     sudo dpkg -i tidy-*.deb
 #     sudo apt-get install -f
+#
+# Usage: html-tidy [-n] foo.html
+#
+# Option -n does not update the input file, it
+# dumps the tidied code to stdout.
 
-file="$1"
+if test "$1" = -n
+then
+    dry_run=true
+    file="$2"
+else
+    dry_run=false
+    file="$1"
+fi
 
 # http://api.html-tidy.org/tidy/quickref_5.4.0.html
 config='
@@ -75,7 +87,12 @@ then
   del_front_matter "$file" | tidy_stdin
 else
   cat "$file" | tidy_stdin
-fi > "$file.temp"
-mv "$file.temp" "$file"
-
-echo "Saved $file"
+fi |
+    if $dry_run
+    then
+        cat -
+    else
+        cat - > "$file.temp"
+        mv "$file.temp" "$file"
+        echo "Saved $file"
+    fi

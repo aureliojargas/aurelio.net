@@ -22,6 +22,7 @@ test -d _site || { echo "_site not found"; exit 1; }
 
 all_files=$(_scripts/list-site-files all)
 text_files=$(_scripts/list-site-files text)
+html_files=$(_scripts/list-site-files html)
 css_files=$(_scripts/list-site-files css)
 
 # Search for the {{...}} pattern in repo files
@@ -216,6 +217,36 @@ check_windows_linebreak() {
         grep -F CRLF
 }
 
+# Since I edit some HTML files "by hand" (judge me), try to catch some
+# markup errors - #77
+check_broken_html() {
+    # Is tidy available?
+    tidy -version >/dev/null
+
+    echo "$html_files" |
+        while read file
+        do
+            # Grep tidy stderr for critical warnings/errors (stdout is discarded)
+            _scripts/html-tidy -n "$file" 2>&1 >/dev/null |
+
+                # Insert filename in the line beginning
+                # Gotcha: s/// using space as delimiter to avoid filename chars clashes
+                sed "s ^ $file: " |
+
+                # Any warning related to link tags should be a critical problem
+                grep 'Warning: <a>' |
+
+                # Remove false positives: lots of accented URLs in blog posts
+                grep -v '^_site/blog/20.* Warning: <a> escaping malformed URI reference' |
+
+                # Remove false positives: empty hrefs will be filled by JavaScript
+                grep -E -v '^_site/coisinha/(embriagueitor|engripeitor|miguxeitor)/index.html:.*Warning: <a> attribute "href" lacks value' |
+
+                # tidy tends to repeat some output lines, remove them
+                uniq
+        done
+}
+
 active_checks="
     check_accidental_liquid_markup
     check_windows_linebreak
@@ -229,6 +260,7 @@ active_checks="
     check_link_to_index_html
     check_link_to_gone
     check_link_to_redirected
+    check_broken_html
 "
 
 for check in $active_checks
