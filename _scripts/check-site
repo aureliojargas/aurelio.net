@@ -236,6 +236,12 @@ check_broken_html() {
                 # Any warning related to link tags should be a critical problem
                 grep 'Warning: <a>' |
 
+                # Remove false positives: lots of accented URLs in blog posts
+                grep -v '^_site/blog/20.* Warning: <a> escaping malformed URI reference' |
+
+                # Remove false positives: empty hrefs will be filled by JavaScript
+                grep -E -v '^_site/coisinha/(embriagueitor|engripeitor|miguxeitor)/index.html:.*Warning: <a> attribute "href" lacks value' |
+
                 # tidy tends to repeat some output lines, remove them
                 uniq
         done
