@@ -108,10 +108,10 @@ Apostila introdutória sobre Shell Script, com 22 páginas de uma abordagem ráp
 * [Guia de programação Shell Script](http://www.inf.ufpr.br/afms03/shell.html) *por Alexandre Felipe Muller De Souza*
 Um guia completo sobre shell, que ensina tanto os conceitos básicos como sintaxe e comandos, quanto tópicos avançados como [expressões regulares](/regex/) e criação segura de arquivos temporários. Leitura recomendada!
 
-* [O que o #! realmente faz](http://geocities.yahoo.com.br/cesarakg/tips-shell-programming.html) *por Mo Budlong*
-Artigo traduzido que explica a função do #! no início dos scripts shell.
+* [O que o #! realmente faz](https://meleu.sh/shebang/) *por meleu*
+Artigo que explica a função do #! no início dos scripts shell.
 
-* [Programação em Bourne-Again Shell](https://meleu.gitbooks.io/bashscripting/content/) *por Meleu*
+* [Programação em Bourne-Again Shell](https://meleu.gitbooks.io/bashscripting/content/) *por meleu*
 Tutorial de Bash, ensinando devagarzinho, com carinho e vai avançando. Também fala sobre o `getopts`, o `select` e o Dialog.
 
 * [Programação Shell](http://linuxfocus.berlios.de/Portugues/September2001/article216.shtml) *por Guido Socher*
