@@ -2,7 +2,9 @@
 # https://docs.github.com/en/actions/guides/building-and-testing-ruby
 
 name: Check
-on: push
+on:
+  push:
+  pull_request:
 jobs:
   check:
     runs-on: ubuntu-latest
