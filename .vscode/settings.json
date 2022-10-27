@@ -1,0 +1,10 @@
+{
+    "cSpell.enableFiletypes": [
+        "!html",
+        "!python",
+        "dockerfile",
+        "makefile",
+        "shellscript",
+        "txt2tags"
+    ]
+}
