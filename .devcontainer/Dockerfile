@@ -21,5 +21,8 @@ RUN apt update && export DEBIAN_FRONTEND=noninteractive \
     && rm -rf /var/lib/apt/lists/*
 
 # Setup bundler
-ENV BUNDLE_PATH=/home/vscode/.local/share/gem \
-    PATH=/home/vscode/.local/share/gem/ruby/3.0.0/bin:$PATH
+ENV BUNDLE_PATH=/home/vscode/.local/share/gem
+ENV PATH=$BUNDLE_PATH/ruby/3.0.0/bin:$PATH
+
+# Setup easier access to the repo scripts
+ENV PATH=/workspaces/aurelio.net/_scripts:$PATH
