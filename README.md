@@ -16,6 +16,14 @@ The deploy logs are in https://app.netlify.com/sites/aurelio/deploys.
 
 If you want to test locally the Netlify build, use their [Docker image](https://github.com/netlify/build-image).
 
+## Cloud development
+
+GitHub Codespaces is fully configured for this project.
+
+The Docker container contains everything needed to build the site.
+
+See [.devcontainer/](.devcontainer/).
+
 ## Setup local development
 
 Those are the initial steps for all the platforms:
