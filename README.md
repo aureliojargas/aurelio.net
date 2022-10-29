@@ -10,7 +10,7 @@ It took me more than a decade to finally put my local `/a/www` folder into versi
 
 ## Build & Deploy
 
-Every commit to the `master` branch triggers a complete site build and deploy in Netlify.
+Every commit to the `main` branch triggers a complete site build and deploy in Netlify.
 
 The deploy logs are in https://app.netlify.com/sites/aurelio/deploys.
 
@@ -119,7 +119,7 @@ bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0 -
 
 The only special markup I use in my articles is the centered image with caption at bottom.
 
-In Markdown files, use the image tag solo in a paragraph of its own, and provide the caption. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/master/_plugins/imgcaption.rb) will generate the HTML markup at build:
+In Markdown files, use the image tag solo in a paragraph of its own, and provide the caption. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/main/_plugins/imgcaption.rb) will generate the HTML markup at build:
 
 ```md
 ![Image caption](image.jpg)
@@ -167,15 +167,15 @@ You can hide page elements, such as the ads or the comments section, using speci
 
 ## Custom page configuration
 
-The site template ([\_layouts/2014.html](https://github.com/aureliojargas/aurelio.net/blob/master/_layouts/2014.html)) supports some special configuration, to the used in page front matter:
+The site template ([\_layouts/2014.html](https://github.com/aureliojargas/aurelio.net/blob/main/_layouts/2014.html)) supports some special configuration, to the used in page front matter:
 
 - `article_footer_after: include-file.html` — To insert a special footer at the end of the article.
 
 - `css_extra: foo.css` — To load an extra CSS file for this page.
 
-- `title_prefix: "Foo: "` — To add a prefix to the page `<title>` tag. (See [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
+- `title_prefix: "Foo: "` — To add a prefix to the page `<title>` tag. (See [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/main/_includes/head-base.html))
 
-- `title_suffix: " | Foo"` — To add a suffix to the page `<title>` tag. (See [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html))
+- `title_suffix: " | Foo"` — To add a suffix to the page `<title>` tag. (See [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/main/_includes/head-base.html))
 
 ## The minimal theme
 
@@ -186,7 +186,7 @@ If the main theme is not suitable, there's the minimal theme. No layout, no CSS.
 - `page.css` - CSS file to use (use root-relative path).
 - `page.title_as_h1` - Insert an H1 tag at the top of the page, showing `page.title`.
 
-Since this theme uses [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/master/_includes/head-base.html), you can also use `page.title_prefix` and `page.title_suffix`.
+Since this theme uses [\_includes/head-base.html](https://github.com/aureliojargas/aurelio.net/blob/main/_includes/head-base.html), you can also use `page.title_prefix` and `page.title_suffix`.
 
 ## Pagination
 
@@ -203,7 +203,7 @@ For now those are the only paginated areas on the site:
 
 Since most of the site is made of plain HTML files, it's common to have to apply the same edits in multiple files.
 
-Fear not, use the [replace script](https://github.com/aureliojargas/replace) and be happy. Better yet, also use the [git\_replace function](https://github.com/aureliojargas/dotfiles/blob/master/.gitbash).
+Fear not, use the [replace script](https://github.com/aureliojargas/replace) and be happy. Better yet, also use the [git\_replace function](https://github.com/aureliojargas/dotfiles/blob/main/.gitbash).
 
 ## License
 
