@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>Como casar um número IP (regex)</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</head>
+<body bgcolor="silver">
+
+<!-- Título original: ER para casar um número IP -->
+
+<h2>Como casar um número IP (regex)</h2>
+<i>12/dez/1999, por <a href="/aurelio/">Aurelio Marinho Jargas</a></i>
+
+<hr>
+
+<p>O objetivo desta página é demonstrar como elaborar uma expressão
+que case um número IP válido.</p>
+
+<p>Um número IP válido são <b>4</b> séries de números inteiros, compreendidos
+no intervalo de <b>0</b> a <b>255</b> (inclusive), separados por pontos.
+Exemplos:</p>
+
+<pre>
+0.0.0.0
+4.23.156.78
+120.0.0.45
+127.233.255.0
+255.255.255.255
+</pre>
+
+<p>Primeiro precisamos de uma ER para casar o intervalo de números
+inteiros entre 0 a 255. Como o intervalo <b>[0-255]</b> não é valido
+em ERs, visto que só podemos representar intervalos entre dois
+caracteres, fica complicado (mas não impossível) representar este
+intervalo com construções regulares.</p>
+
+<p>Uma primeira expressão que poderia ser alcançada poderia ser uma
+comprida, porém fácil de entender:</p>
+
+<pre>
+ER  : ([0-9]|[1-9][0-9]|1[0-9][0-9]|2([0-4][0-9]|5[0-5]))
+casa:   0-9 |   10-99  |  100-199  |   200-249  |250-255
+</pre>
+
+<p>Funciona, mas é pouco eficiente. E lembre-se a melhor parte de ERs
+é passar horas para diminuí-la um caractere que seja :) Como nos
+dois primeiros intervalos, de 0-9 e 10-99, temos o <b>[0-9]</b> comum
+a ambos, tendo num o <b>[1-9]</b> e no outro não, podemos torná-lo
+opcional:
+
+<pre>
+ER  : (<b>[1-9]?[0-9]</b>|1[0-9][0-9]|2([0-4][0-9]|5[0-5]))
+casa:   0-9,10-99 |  100-199  |   200-249  |250-255
+</pre>
+
+<p>Novamente, percebemos um <b>[0-9]</b> repetido no final dos intervalos
+0-9,10-99 e 100-199. Vamos isolá-lo. SIM! É igual a matemática lá no
+primário! <b>xa+xb = x(a+b)</b>
+
+<pre>
+ER  : (<b>(1[0-9]|[1-9]?)[0-9]</b>|2([0-4][0-9]|5[0-5]))
+casa:   0-9,10-99,100-199  |   200-249  |250-255
+
+</pre>
+
+
+<p>Colorida e espaçada, para melhor entendimento:</p>
+
+<p><b>
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+</b></p>
+
+<p>Sendo:<pre>
+<font color="white">Branco :</font> 1º nível de agrupamento
+<font color="yellow">Amarelo:</font> 2º nível de agrupamento (agrupamento dentro de agrupamento)
+<font color="blue">Azul   :</font> expressão dentro do 1º nível de agrupamento
+<font color="green">Verde  :</font> expressão dentro do 2º nível de agrupamento
+</pre></p>
+
+<hr>
+
+<p>E aqui um roteirozinho esperto em Bash com o <b>egrep</b> para testá-la:</p>
+
+<pre>
+#!/bin/bash
+
+a=0                                      # zerando a contagem
+while [ $a -lt 300 ]                     # limitando a amostragem até 300
+do echo $a |
+   egrep -x '((1[0-9]|[1-9]?)[0-9]|2([0-4][0-9]|5[0-5]))'
+   a=$((a+1))                            # incrementan a contagem
+done
+</pre>
+<hr>
+
+<p>Como um ip seria quatro vezes este intervalo, separado por
+pontos, algo como <b>"0-255.0-255.0-255.0-255"</b>, teríamos, no final
+da brincadeira o monstro que casa um IP válido:
+
+<p><b>
+((1[0-9]|[1-9]?)[0-9]|2([0-4][0-9]|5[0-5]))\.((1[0-9]|[1-9]?)[0-9]|2([0-4][0-9]|5[0-5]))\.((1[0-9]|[1-9]?)[0-9]|2([0-4][0-9]|5[0-5]))\.((1[0-9]|[1-9]?)[0-9]|2([0-4][0-9]|5[0-5]))
+</b></p>
+
+
+<p>Colorida e espaçada, para melhor entendimento:</p>
+
+<p><b>
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+\.
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+\.
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+\.
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+</b></p>
+
+<p>é claro, ao programar e precisar validar um número IP com
+expressões regulares, estruturas e funções da linguagem de programação
+ajudarão nessa tarefa, como o <b>laço</b> e o "<b>split</b>".</p>
+
+<hr>
+
+<p><b>Ou</b>, basta chegar uma mente aberta e sugerir outra abordagem:
+<b>"(0-255.){3}0-255"</b> (valeu Wanderlei!)
+
+<p><b>
+(
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+\.
+)
+{3}
+<font color="white">(</font>
+<font color="yellow">(</font>
+<font color="green">1[0-9]</font>
+<font color="yellow">|</font>
+<font color="green">[1-9]?</font>
+<font color="yellow">)</font>
+<font color="blue">[0-9]</font>
+<font color="white">|</font>
+<font color="blue">2</font>
+<font color="yellow">(</font>
+<font color="green">[0-4][0-9]</font>
+<font color="yellow">|</font>
+<font color="green">5[0-5]</font>
+<font color="yellow">)</font>
+<font color="white">)</font>
+</b></p>
+
+<hr>
+
+<p><a href="/regex/">Saiba mais sobre Expressões Regulares</a></p>
+
+</body>
+</html>

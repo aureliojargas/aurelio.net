@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Evento: Prompt-doc: “Tira Dúvidas” sobre Shell | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/curso/conectiva/conectiva-shell-prompt.html" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Prompt-doc: “Tira Dúvidas” sobre Shell" />
+	<meta property="og:url" content="https://aurelio.net/curso/conectiva/conectiva-shell-prompt.html" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/curso/conectiva/conectiva-shell-prompt.html" title="Permalink" rel="bookmark">Prompt-doc: “Tira Dúvidas” sobre Shell</a></h1>
+
+			<h2>Conectiva - Curitiba, 4 de Dezembro de 2003</h2>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<p>Este é o histórico da linha de comando de <a href="/curso/conectiva/">uma palestra</a> que fiz para funcionários da Conectiva, sobre Shell Script. O objetivo não era ensinar Shell, mas sim passar dicas e sanar as dúvidas dos participantes, que já conheciam a linguagem e já faziam scripts.</p>
+
+<ul class="compact">
+  <li><strong>Data:</strong> 04-Dez-2003</li>
+  <li><strong>Local:</strong> Auditório da Conectiva, Curitiba</li>
+  <li><strong>Duração:</strong> 2 horas</li>
+  <li><strong>Requisitos:</strong> Conhecer o shell, já ter feito scripts</li>
+</ul>
+
+<nav>
+  <ul>
+    <li><a href="#toc1">Shell scripts no sistema (exemplos!)</a></li>
+    <li><a href="#toc2">Como executar um script (chmod)</a></li>
+    <li><a href="#toc3">Expansão de variáveis com ${VAR:-} e amigos</a></li>
+    <li><a href="#toc4">Expansão avançada do bash2 (tipo sed)</a></li>
+    <li><a href="#toc5">Eval</a></li>
+    <li><a href="#toc6">Diferença do echo com aspas (mantém espaços) e sem</a></li>
+    <li><a href="#toc7">Subshell com crase ou $(), prefira o $()</a></li>
+    <li><a href="#toc8">As aspas simples protegem, não expandem vars nem comandos</a></li>
+    <li><a href="#toc9">Ao definir uma variável não pode ter espaços!</a></li>
+    <li><a href="#toc10">O pesadelo dos escapes...</a></li>
+    <li><a href="#toc11">O sed e os escapes (use o echo para ajudar!)</a></li>
+    <li><a href="#toc12">O sed pode usar qualquer delimitador fora o s///</a></li>
+    <li><a href="#toc13">Como "ver" se é um TAB ou espaços</a></li>
+    <li><a href="#toc14">Como depurar (debug) scripts: sh -x, set -x, ...</a></li>
+    <li><a href="#toc15">Como pegar a saída de erro (STDERR, 2)</a></li>
+    <li><a href="#toc16">O comando test, seu sósia [ e o código de retorno $?</a></li>
+    <li><a href="#toc17">O [[ para fazer testes</a></li>
+    <li><a href="#toc18">Os operadores lógicos AND &amp;&amp; e OR ||</a></li>
+    <li><a href="#toc19">Checagem de parâmetros da linha de comando ($1)</a></li>
+    <li><a href="#toc20">Como passar parâmetros vazios</a></li>
+    <li><a href="#toc21">As ferramentas: cut</a></li>
+    <li><a href="#toc22">As ferramentas: awk</a></li>
+    <li><a href="#toc23">As ferramentas: tr</a></li>
+    <li><a href="#toc24">As ferramentas: sort</a></li>
+    <li><a href="#toc25">As ferramentas: rev, tac</a></li>
+    <li><a href="#toc26">As ferramentas: sort, uniq</a></li>
+    <li><a href="#toc27">As ferramentas: wc</a></li>
+    <li><a href="#toc28">As ferramentas: cat, paste</a></li>
+    <li><a href="#toc29">As ferramentas: tee</a></li>
+    <li><a href="#toc30">As ferramentas: head, tail</a></li>
+    <li><a href="#toc31">As ferramentas: seq</a></li>
+    <li><a href="#toc32">As ferramentas: printf</a></li>
+    <li><a href="#toc33">As ferramentas: grep</a></li>
+    <li><a href="#toc34">As ferramentas: find</a></li>
+    <li><a href="#toc35">As ferramentas: date</a></li>
+    <li><a href="#toc36">As ferramentas: diff, vi -d</a></li>
+    <li><a href="#toc37">Funções separadas em uma biblioteca</a></li>
+  </ul>
+</nav>
+
+<h2 id="toc1">Shell scripts no sistema (exemplos!)</h2>
+
+<pre>
+$ cd /usr/bin
+$ file * | grep -i shell
+$ vi xtrace
+</pre>
+
+<h2 id="toc2">Como executar um script (chmod)</h2>
+
+<pre>
+$ cd /tmp
+$ vi teste.sh
+$ ./teste.sh
+$ ls -l teste.sh
+$ chmod +x teste.sh
+$ ls -l teste.sh
+$ ./teste.sh
+$ vi teste.sh
+$ which sh
+$ l /bin/sh
+$ vi teste.sh
+$ ./teste.sh
+$ vi teste.sh
+</pre>
+
+<h2 id="toc3">Expansão de variáveis com ${VAR:-} e amigos</h2>
+
+<pre>
+$ a="abcde"
+$ echo $a
+$ echo ${a}
+$ echo ${#a}
+$ echo ${a:-FOO}
+$ unset a
+$ echo $a
+$ echo ${a:-FOO}
+$ if [ -z "$a" ]; then a=FOO ; fi
+$ unset a
+$ echo $a
+$ echo ${a:-FOO}
+$ echo ${a:=FOO}
+$ echo $a
+$ echo ${a:+FOOoooooooo}
+</pre>
+
+<h2 id="toc4">Expansão avançada do bash2 (tipo sed)</h2>
+
+<pre>
+$ echo $a
+$ echo ${a/O/.}      # sed s///
+$ echo ${a//O/.}     # sed s///g
+$ echo $a | sed 's/O/./g'
+$ echo ${a//O/.tyturtu}
+$ rpm -q bash
+$ b=O
+$ echo ${a//$b/.}
+</pre>
+
+<h2 id="toc5">Eval</h2>
+
+<pre>
+$ a="ls"
+$ echo $a
+$ eval $a
+$ ${!a}
+$ : ${!a}
+$ echo ${!a}
+</pre>
+
+<h2 id="toc6">Diferença do echo com aspas (mantém espaços) e sem</h2>
+
+<pre>
+$ echo ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf
+$ echo "ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf"
+$ a="ahyi dfy dfui yidfs dfis ui       fd yifsdy idfsy isdf"
+$ echo $a
+$ echo "$a"
+$ cat /etc/fstab
+$ cat /etc/fstab | grep swap
+$ cat /etc/fstab | grep swap | sed -n l
+$ var=$(cat /etc/fstab | grep swap)
+$ echo $var
+$ echo "$var"
+</pre>
+
+<h2 id="toc7">Subshell com crase ou $(), prefira o $()</h2>
+
+<pre>
+$ var=`date`
+$ echo $var
+$ var=$(date)
+$ echo $var
+$ var=$(echo `cat /etc`)
+</pre>
+
+<h2 id="toc8">As aspas simples protegem, não expandem vars nem comandos</h2>
+
+<pre>
+$ a="abc"
+$ echo $a
+$ echo "$a"
+$ echo '$a'
+$ echo '$a $(date)'
+$ echo "$a $(date)"
+</pre>
+
+<h2 id="toc9">Ao definir uma variável não pode ter espaços!</h2>
+
+<pre>
+$ a = ''
+</pre>
+
+<h2 id="toc10">O pesadelo dos escapes...</h2>
+
+<pre>
+$ a='\'
+$ echo $a
+$ a="\"
+$ echo $a
+$ echo \$a
+$ a="\"
+$ "
+$ a=' \'    '
+$ a="\\"
+$ echo $a
+</pre>
+
+<h2 id="toc11">O sed e os escapes (use o echo para ajudar!)</h2>
+
+<pre>
+$ echo "//bla//"   # mudar para \\bla\\
+$ echo "//bla//" | sed "s///\/"
+$ echo "//bla//" | sed "s/\//\\/"
+$ echo "s/\//\\/"
+$ echo 's/\//\\/'
+$ echo "//bla//" | sed 's/\//\\/'
+$ echo "//bla//" | sed 's/\//\\/g'
+$ a='/'
+$ echo "//bla//" | sed "s/$a/\\/g"
+$ echo "s/$a/\\/g"
+$ a="\\/"
+$ echo $a
+$ echo "//bla//" | sed "s/$a/\\/g"
+$ echo "s/$a/\\/g"
+$ echo "//bla//" | sed "s/$a/\\\/g"
+$ $(echo "//bla//" | sed "s/$a/\\\/g")
+$ echo $(echo "//bla//" | sed "s/$a/\\\/g")
+</pre>
+
+<h2 id="toc12">O sed pode usar qualquer delimitador fora o s///</h2>
+
+<pre>
+$ echo isso | sed s/isso/aquilo/g
+$ echo isso | sed s,isso,aquilo,g
+$ echo isso | sed s isso aquilo g
+$ echo isso | sed 's isso aquilo g'
+$ echo isso | sed 's9isso9aquilo9g'
+$ echo isso | sed 's
+&gt; isso
+&gt; aquilo
+&gt; g'
+$ echo isso | sed 's|isso|aquilo|g'
+$ echo isso | sed 'sáissoáaquiloág'
+$ echo isso | sed 's§isso§aquilo§g'
+$ echo isso | sed 's"isso"aquilo"'
+$ echo isso | sed 's  isso    aquilo'
+$ echo isso | sed 's  isso    aquilo  '
+</pre>
+
+<h2 id="toc13">Como "ver" se é um TAB ou espaços</h2>
+
+<pre>
+$ echo -e "\ta\ta"
+$ echo -e "\ta\ta" | sed -n l
+$ echo -e "\ta\ta" | od -c
+$ echo -ne "\ta\ta" | od -c
+$ echo -n "bla"
+$ echo -ne "bla\n"
+$ echo "bla"
+</pre>
+
+<h2 id="toc14">Como depurar (debug) scripts: sh -x, set -x, ...</h2>
+
+<pre>
+$ sh -x teste.sh
+$ sh teste.sh
+$ vi teste.sh
+$ ./teste.sh
+$ set -x
+$ ./teste.sh
+$ echo
+$ vi teste.sh
+$ ./teste.sh
+$ vi teste.sh
+$ set +x
+$ vi teste.sh
+</pre>
+
+<h2 id="toc15">Como pegar a saída de erro (STDERR, 2)</h2>
+
+<pre>
+$ cp
+$ cp | grep arqu
+$ ls &gt; foo
+$ cat foo
+$ cp &gt; foo
+$ cat foo
+$ cp 1&gt; foo
+$ cp 1&gt; foo 2&gt; foo
+$ cat foo
+$ cp 2&gt; foo
+$ ./teste.sh
+$ ./teste.sh 2&gt; foo
+$ ./teste.sh &gt; foo
+$ ./teste.sh &gt; foo 2&gt; foo
+$ cat foo
+$ ./teste.sh &gt; foo 2&gt;&amp;1
+$ cat foo
+$ ./teste.sh &gt; foo 2&gt;&amp;1
+$ ./teste.sh 2&gt;&amp;1
+$ cp
+$ cp 2&gt;&amp;1
+$ cp 2&gt;&amp;1 | grep arqui
+</pre>
+
+<h2 id="toc16">O comando test, seu sósia [ e o código de retorno $?</h2>
+
+<pre>
+$ if [ $var = 'abc' ] ; then echo OK ; fi
+$ which [
+$ l /usr/bin/[
+$ if test $var = 'abc' ; then echo OK ; fi
+$ if grep -qs root /etc/passwd ; then echo tem ; fi
+$ grep -qs root /etc/passwd
+$ echo $?
+$ grep -qs roiiiiiiot /etc/passwd
+$ echo $?
+$ cp
+$ echo $?
+$ exit abnc
+$ cp 2&gt;/dev/null
+$ echo $?
+$ ls /dev/null
+</pre>
+
+<h2 id="toc17">O [[ para fazer testes</h2>
+
+<pre>
+$ if [ 1 -gt 5 ]; then echo é menor ; fi
+$ if [ 8 -gt 5 ]; then echo é maior ; fi
+$ if [[ 8 -gt 5 ]]; then echo é maior ; fi
+$ if [[ 8  5 ]]; then echo é maior ; fi
+</pre>
+
+<h2 id="toc18">Os operadores lógicos AND &amp;&amp; e OR ||</h2>
+
+<pre>
+$ cp 2&gt;/dev/null ; echo $?
+$ cp 2&gt;/dev/null &amp;&amp; echo OK
+$ ls 2&gt;/dev/null &amp;&amp; echo OK
+$ ls &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo OK
+$ ls &gt;/dev/null 2&gt;&amp;1 || echo OK
+$ cp 2&gt;/dev/null || echo OK
+$ cp 2&gt;/dev/null || echo OK &amp;&amp; echo NOK
+$ echo &amp;&amp; echo OK || echo NOK
+$ echo &amp;&amp; cp 2&gt;/dev/null || echo NOK
+$ false &amp;&amp; cp 2&gt;/dev/null || echo NOK
+$ false &amp;&amp; cp || echo NOK
+$ true &amp;&amp; cp || echo NOK
+$ false &amp;&amp; cp || echo NOK
+$ false &amp;&amp; cp || echo NOK &amp;&amp; echo OKDENOVO
+$ false &amp;&amp; { cp || echo NOK &amp;&amp; echo OKDENOVO ; }
+$ true &amp;&amp; { cp || echo NOK &amp;&amp; echo OKDENOVO ; }
+</pre>
+
+<h2 id="toc19">Checagem de parâmetros da linha de comando ($1)</h2>
+
+<pre>
+$ test -z "$1" || { echo uso: blabla ; exit 1  ; }
+$ [ "$1" ] || { echo uso: blabla ; exit 1  ; }
+$ [ "$1" ] || { echo uso: blabla ; echo exit 1  ; }
+$ [ $1 ] || { echo uso: blabla ; echo exit 1  ; }
+$ [ $1 = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
+$ [ "$1" = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
+$ [  = '--help' ] || { echo uso: blabla ; echo exit 1  ; }
+</pre>
+
+<h2 id="toc20">Como passar parâmetros vazios</h2>
+
+<pre>
+$ vi teste.sh
+$ ./teste.sh
+$ ./teste.sh ""
+$ ./teste.sh "" dois
+$ ./teste.sh "" "" dois
+</pre>
+
+<h2 id="toc21">As ferramentas: cut</h2>
+
+<pre>
+$ cat /etc/passwd | cut -d: -f5
+$ cat /etc/passwd | cut -d: -f5,2
+$ cat /etc/passwd | cut -d: -f5,2,1
+$ cat /etc/passwd | cut -d: -f5-
+$ cat /etc/passwd | cut -d: -f5-6
+$ cat /etc/passwd | cut -d: -f5-7
+$ cat /etc/passwd | cut -c 1-10
+$ cat /etc/passwd | cut -c 10-
+</pre>
+
+<h2 id="toc22">As ferramentas: awk</h2>
+
+<pre>
+$ cat /etc/passwd | awk '{print $3}'
+$ cat /etc/passwd | awk '{print $3}'
+$ cat /etc/passwd | awk '{print $2}'
+$ cat /etc/passwd | awk '{print $1}'
+$ cat /etc/passwd | awk '{print $2}'
+$ cat /etc/passwd | awk -F: '{print $2}'
+$ cat /etc/fstab
+$ cat /etc/fstab | cut -d" " -f4
+$ cat /etc/fstab | awk '{print $4}'
+</pre>
+
+<h2 id="toc23">As ferramentas: tr</h2>
+
+<pre>
+$ a="asd asd       k          ioioio"
+$ echo $a
+$ echo "$a"
+$ echo "$a" | tr -s ' '
+$ echo aaaaabbbb | tr -s a
+$ echo aaaaabbbb | tr -s ab
+$ echo aaaaabbbb | tr a-z A-Z
+$ echo aaaaabbbb | tr abcdef ABCDEF
+$ echo aaaaabbbb | tr abcdef XVDGFFG
+</pre>
+
+<h2 id="toc24">As ferramentas: sort</h2>
+
+<pre>
+$ cat /etc/passwd
+$ cat /etc/passwd | sort
+$ cat /etc/passwd | sort -r
+</pre>
+
+<h2 id="toc25">As ferramentas: rev, tac</h2>
+
+<pre>
+$ cat /etc/passwd | rev
+$ echo abcde | rev
+$ echo cat | rev
+$ tac /etc/passwd
+$ tac /etc/passwd| rev
+</pre>
+
+<h2 id="toc26">As ferramentas: sort, uniq</h2>
+
+<pre>
+$ vi txt
+$ cat txt | sort
+$ cat txt | sort | uniq
+$ cat txt | uniq
+$ cat txt | sort -u
+$ cat txt | sort | uniq
+</pre>
+
+<h2 id="toc27">As ferramentas: wc</h2>
+
+<pre>
+$ cat /etc/passwd | wc
+$ cat /etc/passwd | wc -w
+$ cat /etc/passwd | wc -l
+$ cat /etc/passwd | wc -c
+</pre>
+
+<h2 id="toc28">As ferramentas: cat, paste</h2>
+
+<pre>
+$ vi txt2
+$ cat txt txt2
+$ paste txt txt2
+$ paste -s txt txt2
+</pre>
+
+<h2 id="toc29">As ferramentas: tee</h2>
+
+<pre>
+$ echo abc
+$ echo abc | sed 's/a/./'
+$ echo abc | tee a | sed 's/a/./'
+$ cat a
+</pre>
+
+<h2 id="toc30">As ferramentas: head, tail</h2>
+
+<pre>
+$ head /etc/passwd
+$ head -2 /etc/passwd
+$ tail -2 /etc/passwd
+$ tail  /etc/passwd
+</pre>
+
+<h2 id="toc31">As ferramentas: seq</h2>
+
+<pre>
+$ for i in 1 2 3 4 5 5 6 7 8 9 10; do echo $i-- ; done
+$ for i in 1 2 3 4 5 5 6 abd hjerer jrtj 8 9 10; do echo $i-- ; done
+$ for i in $(seq 10); do echo $i-- ; done
+$ seq 10
+$ seq 2
+$ seq 2 5
+$ seq 5 2
+$ seq 4 8 50
+</pre>
+
+<h2 id="toc32">As ferramentas: printf</h2>
+
+<pre>
+$ printf "%s" bla
+$ printf "%s\n" bla
+$ printf "%10s\n" bla
+$ printf "%-10s\n" bla
+$ printf "%10s----\n" bla
+$ printf "%-10s----\n" bla
+$ printf "%10s----\n" blaasdasdasdasd
+$ printf "%d" 5
+$ printf "%d\n" 5
+$ printf "%4d\n" 5
+$ printf "%4d\n" 5 | sed 's/ /0/g'
+$ printf "%.4d\n" 5
+$ printf "%4.2f\n" 5
+</pre>
+
+<h2 id="toc33">As ferramentas: grep</h2>
+
+<pre>
+$ cat /etc/passwd
+$ cat /etc/passwd | grep root
+$ cat /etc/passwd | grep -i root
+$ cat /etc/passwd | grep -i ROOT
+$ cp
+$ echo $LANG
+$ cat /etc/passwd | grep -w root
+$ cat /etc/passwd | grep -w roo
+$ cat /etc/passwd | grep -x roo
+$ cat /etc/passwd | grep -l roo
+$ grep -l roo /etc/passwd
+$ grep -v roo /etc/passwd
+$ grep -v root /etc/passwd
+$ VAR=root
+$ grep -i $VAR /etc/passwd
+$ grep g /etc/passwd
+$ grep g\$ /etc/passwd
+$ fgrep g\$ /etc/passwd
+$ fgrep g /etc/passwd
+$ cd /bin
+$ l grep egrep fgrep
+</pre>
+
+<h2 id="toc34">As ferramentas: find</h2>
+
+<pre>
+$ find . -type f
+$ find . -type d
+$ find . -type l
+$ ln -s a z
+$ find . -type l
+$ find . -type f
+$ find . -type f -exec echo rm -f {} \;
+$ find . -type f -ok echo rm -f {} \;
+$ find . -type f | while read BOZO; do echo $BOZO; done
+$ cat /etc/passwd | while read BOZO; do echo $BOZO; done
+$ cat /etc/passwd | while read BOZO; do echo {$BOZO}; done
+$ cat /etc/passwd | while read BOZO; do echo $BOZO | grep -qs root &amp;&amp; echo $BOZO; done
+$ find . -type f -exec echo rm -f {}\;
+</pre>
+
+<h2 id="toc35">As ferramentas: date</h2>
+
+<pre>
+$ date
+$ date +'%y %m %d'
+$ date +'%Y %m %d'
+$ date --help
+$ date +'%Y-%m-%d'
+$ date +'%Y-%m-%d %H:%M'
+$ date +'hoje é %Y-%m-%d %H:%M ... '
+$ date +'%s'
+$ date +'%s'
+$ date +'%s'
+</pre>
+
+<h2 id="toc36">As ferramentas: diff, vi -d</h2>
+
+<pre>
+$ cat txt txt2
+$ diff txt txt2
+$ vi txt2
+$ cp txt txt3
+$ vi txt3
+$ diff txt txt3
+$ diff -u txt txt3
+$ diff -u txt txt3 | vi -
+$ vi txt3
+$ diff -u txt txt3 | vi -
+$ vi txt3
+$ diff -u txt txt3 | vi -
+$ vi txt3
+$ diff -u txt txt3 | vi -
+$ vi -d txt txt3
+</pre>
+
+<h2 id="toc37">Funções separadas em uma biblioteca</h2>
+
+<pre>
+$ cds
+$ vi functions
+$ ./functions
+$ source functions
+$ . functions
+$ vi inet
+</pre>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="..">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

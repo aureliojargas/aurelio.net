@@ -1,0 +1,72 @@
+v i m    a v a n ç a d o       por Aurélio Marinho Jargas
+- - -    - - - - - - - - 
+
+
+REGISTRADORES:
+-------------
+"[a-z]        use o registrador [a-z] para o próximo delete, cópia ou cola
+:reg          mostra o conteúdo de todos os registradores
+:reg [a-z]    mostra o conteúdo do registradores [a-z]
+obs.: aqui este [a-z] na verdade pode ser: 0-9a-z%#:.-="
+
+
+
+MARCAS:
+------
+m[a-z]        marca em [a-z] a posição corrente do cursor
+`[a-z]        vai até a marca [a-z]
+``            vai até a posição anterior ao último pulo (alterna)
+:marks        mostras as marcas ativas
+
+
+
+GRAVAÇÃO DE SEQÜÊNCIAS DE COMANDOS:
+----------------------------------
+
+q[a-z]        inicia a gravação de uma seqüência no registrador [a-z]
+q[A-Z]        inicia a gravação, adicionando no registrador [a-z]
+q             pára a gravação
+@[a-z]        executa a seqüência do registrador [a-z]  (5 vezes? 5@a)
+
+dica: pode-se colocar o @[a-z] dentro da própria gravação do q[a-z]!
+      assim ele é executado recursivamente. muito útil quando há uma
+	  procura de padrões na gravação. faz para todas as ocorrências.
+
+
+
+MAPEAMENTOS:
+-----------
+
+:map  <F9> <ESC>:r!date           mapeamento em modo de comando
+:imap <F9> <ESC>:r!date           mapeamento em modo de inserção
+:cmap <F9> r!date                 mapeamento em modo linha de comando
+:vmap <F9> :r!date                mapeamento em modo visual
+
+ex.:
+"html: negrito no trecho selecionado
+:vmap <F9> d`<i<b><esc>pa</b>      # html: negrito no trecho selecionado
+
+"liga/desliga autoIndent
+:map ,si :set ai!<cr>:echo "autoIndent="&ai<cr>
+
+"mostrar os espaços em branco no fim das linhas
+:map <F9> /  *$^M
+
+
+
+S I N T A X E:
+-------------
+
+Comment    = ciano
+Constant   = roxo
+Identifier = ciano
+PreProc    = azul escuro
+Special    = vermelho
+Statement  = amarelo
+String     = roxo
+Type       = verde
+
+Todo   = preto, fundo marrom
+Error  = branco, fundo vermelho
+Ignore = preto, fundo preto! - esconde
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>Tcl - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="sed.html">
+<link rel="next" href="vbscript.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="sed.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="vbscript.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>Tcl</h1>
+
+      <pre>
+característica  como fazer
+--------------------------------------
+busca           função regexp
+substituição    função regsub
+divisão         -
+ER crua         {entre chaves}
+ignore M/m      opção -nocase
+global          opção -all
+</pre>
+
+<p>A linguagem Tcl não podia ficar de fora da festa.</p>
+
+<p>Bem, de cara aquela dica que é sempre importante: para deixar a ER no formato cru, evitando pré-processamento, basta colocá-la entre {chaves}.</p>
+
+<p>As funções que nos interessam são <code>regexp</code> para busca e <code>regsub</code> para substituição. O grande problema da Tcl é que ela não tem suporte às classes POSIX, nem às bordas nem às chaves! Fora isso, a busca de padrões é tranqüila:</p>
+
+<pre>
+if [regexp -nocase {^[a-z][a-z]$} "OI"] {
+  puts "casou!"
+}
+</pre>
+
+<p>Então, para ignorar maiúsculas e minúsculas, usamos a opção <code>-nocase</code>, que deve ser colocada logo após o nome da função. Em seguida, colocamos nossa ER no formato cru para evitar problemas, e como não podemos usar as chaves, fazemos a repetição manual, duplicando a lista.</p>
+
+<p>Já uma substituição é muito mais chata de fazer, o formato genérico é <code>regsub -opção ER $texto textonovo variávelnova</code>, veja:</p>
+
+<pre>
+prompt$ tclsh
+% regsub -all {[A-Z]} "eScaMOSO" "." sobra
+5
+% puts $sobra
+e.ca....
+</pre>
+
+<p>A função <code>regsub</code> retornou o número de substituições efetuadas: cinco. Mas observe o trabalho para fazer isso, pois colocamos a opção <code>-all</code> para trocar todas as ocorrências, depois nossa ER crua, depois o texto original a ser trocado, depois o texto novo que será colocado na troca e, por último, o nome de uma variável para colocar o texto modificado.</p>
+
+<p>Aí usamos o <code>puts</code> para nos mostrar o conteúdo da variável <code>sobra</code> e finalmente conferir o que nossa ER fez.</p>
+
+<p>Mais informações são encontradas em:</p>
+
+<ul>
+  <li>
+    <a href="http://www.scriptics.com">http://www.scriptics.com</a>.
+  </li>
+</ul>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="sed.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="vbscript.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

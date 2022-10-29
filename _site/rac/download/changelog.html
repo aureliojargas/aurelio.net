@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Download - Changelog | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Download - Changelog</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+
+  
+    <p class="submenu">
+      <a href="/rac/download/">Versão atual</a> |
+      <a href="/rac/download/anteriores.html">Versões anteriores</a> |
+      <a href="/rac/download/changelog.html">Changelog</a> |
+      <a href="/rac/download/futuro.html">Futuro</a>
+    </p>
+  
+
+    <h3>Mudanças Feitas</h3>
+
+<dl>
+  <dt><strong>??-???-2005, v1.4</strong></dt>
+  <dd>
+    <ul>
+      <li>Portabilidade: Diretórios do tarball com permissão 777 (<em>obrigado Marcelo Toledo pela dica</em>)</li>
+      <li>LEIAME: Colocada referência ao subdiretório "src" na compilação (<em>obrigado Daniel Duclós pela dica</em>)</li>
+    </ul>
+  </dd>
+  <dt><strong>11-Abr-2005, v1.3</strong></dt>
+  <dd>
+    <ul>
+      <li>Adicionado suporte a endereçamento por expressões regulares (<em>regex</em>), nos formatos BRE e ERE (<em>default é ERE</em>) (<em>obrigado Silvano B. Dias pelo patch</em>)</li>
+      <li>Opções novas -b e --bre para usar expressões regulares no formato antigo, chamado BRE (<em>\+, \{\}, etc</em>)</li>
+      <li>Opções novas -i e --ignore-case para tratar maiúsculas e minúsculas como iguais</li>
+      <li>Makefile: Adicionado target noopt para compilar sem otimização (<em>obrigado Alan Kelon pela dica</em>)</li>
+      <li>Bugfix: Agora remove o arquivo temporário quando finalizado com Ctrl+C</li>
+      <li>Bugfix: Agora endereços com 0 (<em>zero</em>) funcionam corretamente</li>
+      <li>Bugfix: Agora mostra a última letra no "echo -n" (<em>obrigado lnas_90 pelo aviso</em>)</li>
+      <li>Bugfix: Não estava escapando corretamente a \ (<em>obrigado Silvano B. Dias pelo patch</em>)</li>
+    </ul>
+  </dd>
+  <dt><strong>23-Dez-2004, v1.2</strong></dt>
+  <dd>
+    <ul>
+      <li>Adicionado suporte a endereçamento por texto (<em>string</em>) (<em>obrigado Silvano B. Dias pelo patch</em>)</li>
+      <li>Makefile: entradas para compilar no FreeBSD e similares (<em>obrigado Rudá Moura pelo patch</em>)</li>
+      <li>Makefile: agora depende de objetos, não sources (<em>obrigado Felipe Kellermann pelo patch</em>)</li>
+      <li>Makefile: arrumada instalação da man page (<em>obrigado Bruno Tadeu Russo pela dica</em>)</li>
+      <li>LEIAME: retirada referência à versão 1.0 (<em>obrigado Bruno Tadeu Russo pela dica</em>)</li>
+    </ul>
+  </dd>
+  <dt><strong>20-Abr-2004, v1.1</strong></dt>
+  <dd>
+    <ul>
+      <li>Várias partes do código reescritas e remodeladas, está mais rápido e consome menos memória, não quebrando em arquivos gigantes (<em>obrigado Alfredo Kojima e Elvis Pfützenreuter pelas dicas</em>)</li>
+      <li>Código limpo e melhor documentado, para incentivar contribuições externas</li>
+      <li>Para melhorar a portabilidade, o programa não usa mais o getopt</li>
+      <li>Makefile: pequenos ajustes visando a portabilidade</li>
+      <li>Makefile: novos targets install, uninstall e debug (<em>obrigado Cesar Grossman "crg3k" pela dica</em>)</li>
+      <li>Adicionada uma estrutura com as variáveis globais (<em>obrigado Cesar Grossman "crg3k" pela dica</em>)</li>
+      <li>Arrumado erro de ortografia no --help (<em>obrigado Paulo Saldanha pela dica</em>)</li>
+    </ul>
+  </dd>
+  <dt><strong>12-Dez-2003, v1.0</strong></dt>
+  <dd>
+    <ul>
+      <li>Versão inicial</li>
+      <li>Obrigado ao Guilherme Wünsch Manika pela sugestão do nome RAC</li>
+      <li>Obrigado aos amigos do #d00dz pela ajuda com o nome e dicas de código</li>
+    </ul>
+  </dd>
+</dl>
+
+  </body>
+</html>

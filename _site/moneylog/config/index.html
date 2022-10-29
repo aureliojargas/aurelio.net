@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Configuração do MoneyLog | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/moneylog/config/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Configuração do MoneyLog" />
+	<meta property="og:url" content="https://aurelio.net/moneylog/config/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/moneylog/config/" title="Permalink" rel="bookmark">Configuração do MoneyLog</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<nav>
+  <ul>
+    <li>
+      <a href="#instrucoes">Instruções</a>
+      <ul>
+        <li><a href="#onde">Onde configurar?</a></li>
+        <li><a href="#ligar-desligar">Ligar/desligar</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#senha">Senha de acesso</a>
+      <ul>
+        <li><a href="#myPassword">myPassword</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#idioma">Idioma</a>
+      <ul>
+        <li><a href="#lang">lang</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#extrato-padrao">Extrato padrão ao iniciar</a>
+      <ul>
+        <li><a href="#reportType">reportType</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#tela-cheia">Tela cheia</a>
+      <ul>
+        <li><a href="#initFullScreen">initFullScreen</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#busca">Busca</a>
+      <ul>
+        <li><a href="#defaultSearch">defaultSearch</a></li>
+        <li><a href="#checkNegate">checkNegate</a></li>
+        <li><a href="#checkRegex">checkRegex</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#periodo">Período - data inicial e final</a>
+      <ul>
+        <li><a href="#checkDateFrom">checkDateFrom</a></li>
+        <li><a href="#checkDateUntil">checkDateUntil</a></li>
+        <li><a href="#initMonthOffsetFrom">initMonthOffsetFrom</a></li>
+        <li><a href="#initMonthOffsetUntil">initMonthOffsetUntil</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#parciais-mensais">Parciais mensais</a>
+      <ul>
+        <li><a href="#checkMonthPartials">checkMonthPartials</a></li>
+      </ul>
+    </li>
+    <li><a href="#somente-valores">Somente valores</a></li>
+    <li>
+      <a href="#widgets">Widgets</a>
+      <ul>
+        <li><a href="#initViewWidgetOpen">initViewWidgetOpen</a></li>
+        <li><a href="#initTagCloudOpen">initTagCloudOpen</a></li>
+        <li><a href="#showViewWidget">showViewWidget</a></li>
+        <li><a href="#showTagCloud">showTagCloud</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#widget-somatorio-de-tags">Widget: Somatório de tags</a>
+      <ul>
+        <li><a href="#TagSummary-config-active">TagSummary.config.active</a></li>
+        <li><a href="#TagSummary-config-opened">TagSummary.config.opened</a></li>
+        <li><a href="#TagSummary-config-showTagless">TagSummary.config.showTagless</a></li>
+        <li><a href="#TagSummary-config-checkSort">TagSummary.config.checkSort</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#extrato">Tabela do extrato</a>
+      <ul>
+        <li><a href="#showBalance">showBalance</a></li>
+        <li><a href="#showRowCount">showRowCount</a></li>
+        <li><a href="#monthlyRowCount">monthlyRowCount</a></li>
+        <li><a href="#highlightWords">highlightWords</a></li>
+        <li><a href="#highlightTags">highlightTags</a></li>
+        <li><a href="#sortData-d-index">sortData.d.index</a></li>
+        <li><a href="#sortData-m-index">sortData.m.index</a></li>
+        <li><a href="#sortData-y-index">sortData.y.index</a></li>
+        <li><a href="#sortData-d-rev">sortData.d.rev</a></li>
+        <li><a href="#sortData-m-rev">sortData.m.rev</a></li>
+        <li><a href="#sortData-y-rev">sortData.y.rev</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#grafico-de-barras">Gráfico de barras</a>
+      <ul>
+        <li><a href="#showCharts">showCharts</a></li>
+        <li><a href="#showChartBarLabel">showChartBarLabel</a></li>
+        <li><a href="#initChartDaily">initChartDaily</a></li>
+        <li><a href="#initChartMonthly">initChartMonthly</a></li>
+        <li><a href="#initChartYearly">initChartYearly</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#grafico-de-porcentagem">Barra de porcentagem</a>
+      <ul>
+        <li><a href="#showMiniBars">showMiniBars</a></li>
+        <li><a href="#showMiniBarsLabels">showMiniBarsLabels</a></li>
+        <li><a href="#miniBarWidth">miniBarWidth</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#tags">Tags</a>
+      <ul>
+        <li><a href="#showTagReport">showTagReport</a></li>
+        <li><a href="#ignoreTags">ignoreTags</a></li>
+        <li><a href="#initSelectedTags">initSelectedTags</a></li>
+        <li><a href="#initExcludedTags">initExcludedTags</a></li>
+        <li><a href="#checkHideRelatedTags">checkHideRelatedTags</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#formato-da-data">Formato da data</a>
+      <ul>
+        <li><a href="#showLocaleDate">showLocaleDate</a></li>
+        <li><a href="#i18nDatabase-pt-dateFormat">i18nDatabase.pt.dateFormat</a></li>
+        <li><a href="#i18nDatabase-pt-dateFormatMonth">i18nDatabase.pt.dateFormatMonth</a></li>
+        <li><a href="#i18nDatabase-pt-dateFormatYear">i18nDatabase.pt.dateFormatYear</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#ignorar-lancamentos">Ignorar lançamentos antigos e futuros</a>
+      <ul>
+        <li><a href="#ignoreDataOlderThan">ignoreDataOlderThan</a></li>
+        <li><a href="#ignoreDataNewerThan">ignoreDataNewerThan</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#arquivos-txt">Arquivos TXT</a>
+      <ul>
+        <li><a href="#dataFiles">dataFiles</a></li>
+        <li><a href="#dataFilesDefault">dataFilesDefault</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#avancado">AVANÇADO</a>
+      <ul>
+        <li><a href="#adicionar-css">Adicionar códigos CSS</a></li>
+        <li><a href="#mudar-nome-coluna">Mudar o nome da coluna</a></li>
+        <li><a href="#mudar-sem-tag">Mudar o texto "(sem tag)"</a></li>
+        <li><a href="#highlightRegex">Configuração highlightRegex</a></li>
+        <li><a href="#useLegacyDateFilter">Voltar opções: futuros, somente recentes</a></li>
+        <li><a href="#funcao-redefinir">Redefinir uma função</a></li>
+        <li><a href="#funcao-anexar">Anexar comandos numa função</a></li>
+        <li><a href="#widget-criar">Criar um widget</a></li>
+        <li><a href="#manipular-dados">Manipular dados do extrato</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<h2 id="instrucoes">Instruções</h2>
+
+<h3 id="onde">Onde configurar?</h3>
+
+<dl>
+  <dt>
+    <a href="/moneylog/cloud/">MoneyLog Cloud</a>:
+  </dt>
+  <dd>Todas as configurações devem ser colocadas no arquivo <code>/Apps/MoneyLog Cloud/config.js</code>, que é criado automaticamente.</dd>
+  <dt>
+    <a href="/moneylog/beta/">MoneyLog Beta</a>:
+  </dt>
+  <dd>
+    Todas as configurações devem ser colocadas no arquivo <code>config.js</code>. Você deve <a href="/moneylog/beta/#config">criá-lo manualmente</a>.
+  </dd>
+  <dt>
+    <a href="/moneylog/portable/">MoneyLog Portable</a>:
+  </dt>
+  <dd>Todas as configurações devem ser alteradas direto no arquivo HTML. Abra-o num editor de textos simples e procure por "<em>User Config</em>".</dd>
+  <dt>
+    <a href="/moneylog/browser/">MoneyLog Browser</a>:
+  </dt>
+  <dd>Não há como fazer configurações.</dd>
+</dl>
+
+<h3 id="ligar-desligar">Ligar/desligar</h3>
+
+<p>As configurações do tipo liga/desliga aceitam <code>S</code> ou <code>N</code>, para dizer sim ou não. Por exemplo:</p>
+
+<pre>
+initFullScreen = N;     // Iniciar em Tela Cheia?
+</pre>
+
+<p>Basta trocar o N por S para ligar esta configuração.</p>
+
+<blockquote>
+  Nerds: 0/1 e true/false também funcionam.
+</blockquote>
+
+<h2 id="senha">Senha de acesso</h2>
+
+<h3 id="myPassword">myPassword</h3>
+
+<blockquote>
+  <strong>IMPORTANTE:</strong> Esta é uma proteção bem simples, que pode ser facilmente quebrada por quem entende de tecnologias web. Use apenas para impedir o acesso casual de familiares ou colegas não-nerds.
+</blockquote>
+
+<p>Você pode definir uma senha de acesso, para impedir que outras pessoas vejam seus dados.</p>
+
+<pre>
+myPassword = 'abc123';
+</pre>
+
+<p>Esta pode ser uma configuração interessante para se usar somente quando estiver acessando o MoneyLog a partir de um celular:</p>
+
+<pre>
+if (isMobile) {
+    myPassword = 'abc123';
+}
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/password-iphone.png">
+</p>
+
+<h2 id="idioma">Idioma</h2>
+
+<h3 id="lang">lang</h3>
+
+<p>Quer mudar o idioma do MoneyLog? É fácil, basta usar esta configuração. Estas são as línguas para as quais ele já foi traduzido:</p>
+
+<ul>
+  <li>Português (<code>pt</code>)</li>
+  <li>Inglês (<code>en</code>)</li>
+  <li>Espanhol (<code>es</code>)</li>
+  <li>Catalão (<code>ca</code>)</li>
+</ul>
+
+<pre>
+lang = 'pt';
+</pre>
+
+<h2 id="extrato-padrao">Extrato padrão ao iniciar</h2>
+
+<h3 id="reportType">reportType</h3>
+
+<p>Ao iniciar o MoneyLog, sempre é mostrado o extrato diário. Mas se preferir, você pode configurá-lo para iniciar mostrando outro extrato, como o mensal ou o anual. Use as letras <code>d</code>, <code>m</code> ou <code>y</code> para informar qual extrato será o padrão.</p>
+
+<pre>
+reportType = 'm';        // d, m, y (diário, mensal, anual)
+</pre>
+
+<h2 id="tela-cheia">Tela cheia</h2>
+
+<h3 id="initFullScreen">initFullScreen</h3>
+
+<p>Que tal iniciar já no modo Tela Cheia? É aquele em que a barra de ferramentas fica escondida, deixando o extrato sozinho na tela.</p>
+
+<pre>
+initFullScreen = S;      // Iniciar em Tela Cheia?
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/initFullScreen-on.png">
+</p>
+
+<pre>
+initFullScreen = N;      // Iniciar em Tela Cheia?
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/initFullScreen-off.png">
+</p>
+
+<p>Esta pode ser uma configuração interessante para se usar somente quando estiver acessando o MoneyLog a partir de um celular:</p>
+
+<pre>
+if (isMobile) {
+    initFullScreen = S;
+}
+</pre>
+
+<h2 id="busca">Busca</h2>
+
+<h3 id="defaultSearch">defaultSearch</h3>
+
+<p>Sabe a caixa de pesquisa? Você pode definir uma pesquisa padrão, que será feita toda vez que você carregar o MoneyLog.</p>
+
+<pre>
+defaultSearch = 'alimentação';
+</pre>
+
+<p>Além de palavras, tem uma pesquisa especial que os mais aventureiros podem experimentar. Se você usar o prefixo "<code>v:</code>", a pesquisa será feita somente nos valores. Veja alguns exemplos:</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Pesquisa</th>
+    <th>Procura por valores…</th>
+  </tr>
+  <tr>
+    <td><code>v:+</code></td>
+    <td>positivos</td>
+  </tr>
+  <tr>
+    <td><code>v:-</code></td>
+    <td>negativos</td>
+  </tr>
+  <tr>
+    <td><code>v:&gt;50</code></td>
+    <td>maiores que 50</td>
+  </tr>
+  <tr>
+    <td><code>v:&lt;-100</code></td>
+    <td>menores que -100</td>
+  </tr>
+  <tr>
+    <td><code>v:=100</code></td>
+    <td>iguais a 100</td>
+  </tr>
+  <tr>
+    <td><code>v:&gt;=100</code></td>
+    <td>maiores ou iguais a 100</td>
+  </tr>
+</table>
+
+<pre>
+defaultSearch = 'v:&gt;50';
+</pre>
+
+<h3 id="checkNegate">checkNegate</h3>
+
+<p>Liga/desliga a opção <strong>[X] excluir</strong>, da caixa de busca.</p>
+
+<p>Se você costuma usar a caixa de pesquisa mais para excluir lançamentos do que selecioná-los, pode ser uma boa ideia ativar esta configuração.</p>
+
+<pre>
+checkNegate = S;        // Marcar a opção [X] excluir?
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/negate.png">
+</p>
+
+<p>Ou ainda, pode ser útil se usada em conjunto com a configuração anterior. Digamos que ultimamente você não quer saber dos gastos com supermercado. Para que eles não apareçam no extrato ao iniciar o MoneyLog, faça:</p>
+
+<pre>
+// Excluir os lançamentos de supermercado
+defaultSearch = 'mercado';
+checkNegate = S;
+</pre>
+
+<p>Se você usa tags (deveria!), veja também as configurações <a href="#initExcludedTags">initExcludedTags</a> e <a href="#ignoreTags">ignoreTags</a>.</p>
+
+<h3 id="checkRegex">checkRegex</h3>
+
+<p>Liga/desliga a opção <strong>[X] regex</strong>, da caixa de busca.</p>
+
+<p><a href="/regex/">Expressões regulares</a> é algo que quem conhece, não vive sem. Se você se encaixa nesta descrição, tem a obrigação moral de ativar esta configuração :)</p>
+
+<pre>
+checkRegex = S;        // Marcar a opção [X] regex?
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/regex.png">
+</p>
+
+<h2 id="periodo">Período - data inicial e final</h2>
+
+<h3 id="checkDateFrom">checkDateFrom</h3>
+
+<h3 id="checkDateUntil">checkDateUntil</h3>
+
+<p>Liga/desliga as opções <strong>[X] De:</strong> e <strong>[X] Até:</strong>.</p>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-view.png">
+</p>
+
+<p>Você pode optar por ativar ou não cada um dos dois seletores de data <strong>De:</strong> e <strong>Até:</strong>, quando o MoneyLog se inicia.</p>
+
+<p>Se você gosta de sempre ter todos os seus dados carregados, desde o início dos tempos, basta desativar o primeiro seletor:</p>
+
+<pre>
+checkDateFrom = N;        // Marcar a opção [X] De:?
+</pre>
+
+<p>E os lançamentos futuros? Também quer que eles sempre apareçam ao iniciar o MoneyLog, não importando se é mês que vem ou ano que vem? Basta desligar o segundo seletor:</p>
+
+<pre>
+checkDateUntil = N;       // Marcar a opção [X] Até:?
+</pre>
+
+<p>Agora, se você quiser carregar somente os últimos seis meses, ou quem sabe no máximo até uns três meses no futuro, veja as duas próximas configurações.</p>
+
+<h3 id="initMonthOffsetFrom">initMonthOffsetFrom</h3>
+
+<h3 id="initMonthOffsetUntil">initMonthOffsetUntil</h3>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-view.png">
+</p>
+
+<p>Estas configurações servem para escolher qual será o valor padrão que virá escolhido nos seletores de data <strong>De:</strong> e <strong>Até:</strong>.</p>
+
+<p>Coloque um número, positivo ou negativo, que indicará o número de meses à partir da data atual. Use números positivos para meses futuros e negativos para os passados.</p>
+
+<p>Por exemplo, para dizer "três meses atrás", use -3. Para dizer mês seguinte, use 1. Zero significa o mês corrente. Veja alguns exemplos.</p>
+
+<p>Ao iniciar, quero ver somente os três meses mais recentes (os dois que já passaram e o atual):</p>
+
+<pre>
+initMonthOffsetFrom = -2;
+initMonthOffsetUntil = 0;
+</pre>
+
+<p>Ao iniciar, quero ver somente o mês atual e os três meses futuros:</p>
+
+<pre>
+initMonthOffsetFrom = 0;
+initMonthOffsetUntil = 3;
+</pre>
+
+<p>Você também pode combinar estas configurações com as duas anteriores, criando intervalos sem limite definido no início ou no final.</p>
+
+<p>Ao iniciar, quero ver tudo, desde o início dos tempos, até o mês atual:</p>
+
+<pre>
+checkDateFrom = N;
+initMonthOffsetUntil = 0;
+</pre>
+
+<p>Ao iniciar, quero ver só o mês atual e tudo o que estiver pela frente:</p>
+
+<pre>
+initMonthOffsetFrom = 0;
+checkDateUntil = N;
+</pre>
+
+<h2 id="parciais-mensais">Parciais mensais</h2>
+
+<h3 id="checkMonthPartials">checkMonthPartials</h3>
+
+<p>Liga/desliga a opção <strong>[X] Parciais Mensais</strong>, no extrato diário.</p>
+
+<pre>
+checkMonthPartials = S;   // Marcar a opção [X] Parciais Mensais?
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-view.png">
+</p>
+
+<h2 id="somente-valores">Somente valores</h2>
+
+<p>Ainda não há uma configuração específica para estes filtros. Mas dê uma olhada na <a href="#defaultSearch">defaultSearch</a>, pois usando o prefixo "<code>v:</code>", você pode emular todos eles.</p>
+
+<h2 id="widgets">Widgets</h2>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-view.png">
+</p>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-tag-cloud.png">
+</p>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-tag-summary.png">
+</p>
+
+<p>Widgets são aquelas caixinhas abre/fecha ali da barra de ferramentas: visualizar, tags e somatório de tags. Há configurações para dizer se cada um deles vai iniciar aberto ou fechado, ou até removê-los da barra de ferramentas.</p>
+
+<p>O widget "Somatório de Tags" tem sua configuração num formato diferente, que será mostrada no próximo tópico.</p>
+
+<h3 id="initViewWidgetOpen">initViewWidgetOpen</h3>
+
+<h3 id="initTagCloudOpen">initTagCloudOpen</h3>
+
+<p>Estas configurações definem se as caixas (widgets) da barra de ferramentas vão iniciar abertas ou fechadas.</p>
+
+<pre>
+initViewWidgetOpen = S;    // Iniciar com a caixa Visualizar aberta?
+initTagCloudOpen = S;      // Iniciar com a Nuvem de Tags aberta?
+</pre>
+
+<p>Esta pode ser uma configuração interessante para se usar somente quando estiver acessando o MoneyLog a partir de um celular:</p>
+
+<pre>
+// Fechar todas as caixas quando estiver no celular
+if (isMobile) {
+    initViewWidgetOpen = N;         // visualizar
+    initTagCloudOpen = N;           // tags
+    TagSummary.config.opened = N;   // somatório de tags
+}
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-closed.png">
+</p>
+
+<p>A configuração da caixa "Somatório de Tags" tem um formato diferente, mas o funcionamento é o mesmo. Saiba mais detalhes em <a href="#TagSummary-config-opened">TagSummary.config.opened</a>.</p>
+
+<h3 id="showViewWidget">showViewWidget</h3>
+
+<h3 id="showTagCloud">showTagCloud</h3>
+
+<p>Se você por algum motivo quiser remover uma caixa da barra de ferramentas, pode usar estas configurações.</p>
+
+<pre>
+showViewWidget = N;        // Usar a caixa Visualizar?
+showTagCloud = N;          // Usar a caixa Tags?
+</pre>
+
+<p>Porém, lembre-se que apesar de não estar sendo mostrado, se alguma opção destas caixas estiver ligada, ela será usada. Por exemplo, se você remover a caixa Visualizar, mas os seletores de data <strong>De:</strong> e <strong>Até:</strong> estiverem ligados, eles continuarão funcionando.</p>
+
+<p>Consigo imaginar alguns usos para isso. Por exemplo, digamos que você queira liberar somente uma parte de suas finanças para que sua esposa ou seu filho tenham acesso. Você pode definir quais serão as tags que eles poderão ver e usá-las na configuração <a href="#initSelectedTags">initSelectedTags</a>. Aí você pode remover a caixa Tags da interface e pronto, eles não poderão mais alterá-las.</p>
+
+<p>De maneira similar, você fazer isso não para restringir, mas para facilitar o uso do MoneyLog. Se sua esposa só quer acompanhar os gastos com roupas e alimentação, e não se importa com os gastos com o carro ou com a manutenção da casa, você pode usar a mesma tática do parágrafo anterior para que no extrato dela só apareçam as tags desejadas:</p>
+
+<pre>
+initSelectedTags = 'roupas alimentação';
+showTagCloud = N;
+</pre>
+
+<blockquote>
+  Nota: Mulheres, por favor, não se ofendam com a narrativa centrada no homem. Fiz assim pois são exemplos fáceis de entender pela maioria absolutamente masculina que compõe os usuários do programa. Só isso.
+</blockquote>
+
+<h2 id="widget-somatorio-de-tags">Widget: Somatório de tags</h2>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-tag-summary.png">
+</p>
+
+<p>Este widget tem as configurações em um formato diferente, mas elas funcionam de maneira similar às configurações anteriores.</p>
+
+<h3 id="TagSummary-config-active">TagSummary.config.active</h3>
+
+<h3 id="TagSummary-config-opened">TagSummary.config.opened</h3>
+
+<p>A configuração <code>active</code> vai definir se a caixa vai aparecer ou não na interface, e a configuração <code>opened</code> define se a caixa iniciará aberta ou fechada.</p>
+
+<pre>
+TagSummary.config.active = S;   // Usar o Somatório de tags?
+TagSummary.config.opened = S;   // Iniciar com ele já aberto?
+</pre>
+
+<p>Se você não usa nunca o somatório de tags, pode removê-lo da barra de ferramentas:</p>
+
+<pre>
+TagSummary.config.active = N;
+</pre>
+
+<p>Ou quem sabe removê-lo apenas quando estiver no celular, pois o espaço vertical é precioso:</p>
+
+<pre>
+if (isMobile) {
+    TagSummary.config.active = N;
+}
+</pre>
+
+<h3 id="TagSummary-config-showTagless">TagSummary.config.showTagless</h3>
+
+<p>Além de mostrar o somatório de todas as suas tags, há também um item chamado <strong>(sem tag)</strong>, que representa todos os lançamento que não possuem tags. Caso você queira que este item adicional não apareça no somatório, use:</p>
+
+<pre>
+TagSummary.config.showTagless = N;
+</pre>
+
+<h3 id="TagSummary-config-checkSort">TagSummary.config.checkSort</h3>
+
+<p>Liga/desliga a opção <strong>[X] Ordenar por valor</strong>, no somatório de tags.</p>
+
+<pre>
+TagSummary.config.checkSort = S;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/widget-tag-summary-by-value.png">
+</p>
+
+<h2 id="extrato">Tabela do extrato</h2>
+
+<h3 id="showBalance">showBalance</h3>
+
+<p>Liga/desliga a coluna <strong>Acumulado</strong> em seus extratos.</p>
+
+<p>Se desligar, esta coluna desaparecerá de todos os extratos: diário, mensal e anual.</p>
+
+<pre>
+showBalance = S;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showBalance-d-on.png">
+</p>
+
+<pre>
+showBalance = N;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showBalance-d-off.png">
+</p>
+
+<h3 id="showRowCount">showRowCount</h3>
+
+<p>Liga/desliga a numeração das linhas do extrato.</p>
+
+<pre>
+showRowCount = S;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showRowCount-on.png">
+</p>
+
+<pre>
+showRowCount = N;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showRowCount-off.png">
+</p>
+
+<h3 id="monthlyRowCount">monthlyRowCount</h3>
+
+<p>Se ligada, faz a numeração das linhas do extrato ser reiniciada a cada mês.</p>
+
+<p>Note que esta configuração somente será utilizada caso a opção <strong>[X] Parciais Mensais</strong> esteja ativada.</p>
+
+<pre>
+monthlyRowCount = S;       // O número da linha recomeça a cada mês?
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/monthlyRowCount-on.png">
+</p>
+
+<h3 id="highlightWords">highlightWords</h3>
+
+<h3 id="highlightTags">highlightTags</h3>
+
+<p>Lista de palavras ou tags que você quer que apareçam em destaque, no extrato diário.</p>
+
+<pre>
+highlightWords = 'XXX parcelado';  // Destacar estas palavras
+highlightTags = 'luz água';        // Destacar estas tags
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/highlightWords-Tags.png">
+</p>
+
+<p>Se você tiver tags com espaços em branco em seu nome, pode usar um array em vez de uma string:</p>
+
+<pre>
+highlightTags = ['luz', 'água', 'tag com espaços'];
+</pre>
+
+<h3 id="sortData-d-index">sortData.d.index</h3>
+
+<h3 id="sortData-m-index">sortData.m.index</h3>
+
+<h3 id="sortData-y-index">sortData.y.index</h3>
+
+<p>Ordem padrão das linhas dos extratos, ao iniciar o MoneyLog.</p>
+
+<p>O comportamento padrão do MoneyLog é sempre ordenar as linhas pela data. Mas você pode mudar isso, escolhendo qual coluna de cada extrato será usada para definir a ordem das linhas. Basta indicar o número da coluna.</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Extrato</th>
+    <th>Coluna 1</th>
+    <th>Coluna 2</th>
+    <th>Coluna 3</th>
+    <th>Coluna 4</th>
+    <th>Coluna 5</th>
+  </tr>
+  <tr>
+    <td><strong>Diário</strong></td>
+    <td>Data</td>
+    <td>Valor</td>
+    <td>Tags</td>
+    <td>Descrição</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><strong>Mensal</strong></td>
+    <td>Período</td>
+    <td>Ganhos</td>
+    <td>Gastos</td>
+    <td>Saldo</td>
+    <td>Acumulado</td>
+  </tr>
+  <tr>
+    <td><strong>Anual</strong></td>
+    <td>Período</td>
+    <td>Ganhos</td>
+    <td>Gastos</td>
+    <td>Saldo</td>
+    <td>Acumulado</td>
+  </tr>
+</table>
+
+<pre>
+sortData.d.index = 1;     // Diário: Ordenar pela coluna (1-4)
+sortData.m.index = 1;     // Mensal: Ordenar pela coluna (1-5)
+sortData.y.index = 1;     // Anual : Ordenar pela coluna (1-5)
+</pre>
+
+<h3 id="sortData-d-rev">sortData.d.rev</h3>
+
+<h3 id="sortData-m-rev">sortData.m.rev</h3>
+
+<h3 id="sortData-y-rev">sortData.y.rev</h3>
+
+<p>Liga/desliga a ordem inversa (descendente) nos extratos.</p>
+
+<p>Com as configurações anteriores você escolhe qual coluna definirá a ordem das linhas de cada extrato. A ordenação é sempre feita de maneira ascendente, ou seja, do menor para o maior.</p>
+
+<p>Com estas configurações você pode definir que o padrão é a ordenação inversa: do maior para o menor.</p>
+
+<pre>
+sortData.d.rev = S;       // Diário: Usar a ordem inversa?
+sortData.m.rev = S;       // Mensal: Usar a ordem inversa?
+sortData.y.rev = S;       // Anual : Usar a ordem inversa?
+</pre>
+
+<h2 id="grafico-de-barras">Gráfico de barras</h2>
+
+<p>O gráfico de barras aparece sempre depois da tabela dos extratos, sendo uma maneira prática de ter uma visão geral sobre os valores.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-grafico-barras.png">
+</p>
+
+<h3 id="showCharts">showCharts</h3>
+
+<p>Liga/desliga o gráfico de barras, em todos os extratos.</p>
+
+<p>Se você não gosta dos gráficos, ou por algum outro motivo não quiser que eles apareçam, use:</p>
+
+<pre>
+showCharts = N;
+</pre>
+
+<p>Esta pode ser uma configuração interessante para se usar somente quando estiver acessando o MoneyLog a partir de um celular:</p>
+
+<pre>
+if (isMobile) {
+    showCharts = N;
+}
+</pre>
+
+<h3 id="showChartBarLabel">showChartBarLabel</h3>
+
+<p>Liga/desliga os números no topo das barras.</p>
+
+<p>Se você desligar esta configuração, terá um gráfico mais limpo, porém menos informativo:</p>
+
+<pre>
+showChartBarLabel = N;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showChartBarLabel-off.png">
+</p>
+
+<pre>
+showChartBarLabel = S;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showChartBarLabel-on.png">
+</p>
+
+<h3 id="initChartDaily">initChartDaily</h3>
+
+<h3 id="initChartMonthly">initChartMonthly</h3>
+
+<h3 id="initChartYearly">initChartYearly</h3>
+
+<p>Item padrão para usar no gráfico de barras, ao iniciar o MoneyLog.</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Item nº</th>
+    <th>Coluna do extrato</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Ganhos</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Gastos</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Saldo</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Acumulado</td>
+  </tr>
+</table>
+
+<pre>
+initChartDaily = 3;      // Mostrar este item no gráfico diário [1-4]
+initChartMonthly = 1;    // Mostrar este item no gráfico mensal [1-4]
+initChartYearly = 1;     // Mostrar este item no gráfico anual [1-4]
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/img/v4-menu-colunas-grafico.png">
+</p>
+
+<h2 id="grafico-de-porcentagem">Barra de porcentagem</h2>
+
+<p>As barras de porcentagem aparecem nos extratos mensal e anual, na última coluna da direita, nomeada "<strong>%</strong>".</p>
+
+<h3 id="showMiniBars">showMiniBars</h3>
+
+<p>Liga/desliga a coluna com as barras de porcentagem nos extratos mensal e anual.</p>
+
+<p>O padrão é ligado, mas se você quiser escondê-la:</p>
+
+<pre>
+showMiniBars = N;     // Mostrar a coluna % no mensal/anual?
+</pre>
+
+<h3 id="showMiniBarsLabels">showMiniBarsLabels</h3>
+
+<p>Liga/desliga os números dentro das barras de porcentagem. Se você desligar esta configuração, terá um gráfico mais limpo, porém menos informativo:</p>
+
+<pre>
+showMiniBarsLabels = N;
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/img/grafico-vazio.png">
+</p>
+
+<h3 id="miniBarWidth">miniBarWidth</h3>
+
+<p>Muda a largura das barras de porcentagem. Se você quiser barras maiores ou menores, basta mudar o valor desta configuração. O padrão é 70 (pixels).</p>
+
+<pre>
+miniBarWidth = 150;     // Largura da barra de porcentagem
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/img/grafico-largura.png">
+</p>
+
+<h2 id="tags">Tags</h2>
+
+<h3 id="showTagReport">showTagReport</h3>
+
+<p>Liga/desliga o relatório de tags.</p>
+
+<p>O relatório de tags aparece nos extratos mensal e anual, logo após o gráfico de barras.</p>
+
+<p>Se você não usa tags, ele não aparecerá, não precisa se preocupar. Mas se por algum motivo você quiser desligá-lo, faça:</p>
+
+<pre>
+showTagReport = N;     // Mostrar o relatório de tags?
+</pre>
+
+<p>Esta pode ser uma configuração interessante para se usar somente quando estiver acessando o MoneyLog a partir de um celular:</p>
+
+<pre>
+if (isMobile) {
+    showTagReport = N;
+}
+</pre>
+
+<h3 id="ignoreTags">ignoreTags</h3>
+
+<p>Ignora todos os lançamentos que possuem pelo menos uma das tags listadas.</p>
+
+<p>Cada pessoa encontra um uso diferente para as tags e monta seus próprios esquemas. Alguns cadastram lançamentos que devem ficar registrados, mas que não devem entrar na contabilidade nem aparecer nos extratos.</p>
+
+<p>Para este tipo de lançamento, você pode usar esta configuração. Basta listar uma ou mais tags, que todo lançamento que possuir ao menos uma destas tags, será completamente ignorado pelo MoneyLog. A tag ignorada nem aparecerá na nuvem de tags. É como se você não tivesse digitado aqueles lançamentos.</p>
+
+<pre>
+ignoreTags = 'poupança';     // Ignorar lançamentos com estas tags
+</pre>
+
+<p>Ou talvez você queira um extrato limitado quando estiver acessando o MoneyLog de seu celular. Você pode remover várias tags que você não precisa consultar quando estiver na rua, assim seu extrato no telefone fica mais enxuto.</p>
+
+<pre>
+// Não quero saber de custos fixos no celular
+if (isMobile) {
+    ignoreTags = 'aluguel luz água telefone condomínio';
+}
+</pre>
+
+<p>Se você tiver tags com espaços em branco em seu nome, pode usar um array em vez de uma string:</p>
+
+<pre>
+ignoreTags = ['poupança', 'tag com espaços'];
+</pre>
+
+<p>Se você precisa ignorar alguma tag ao iniciar, mas quer ter a possibilidade de clicar nela na nuvem de tags para que ela volte a aparecer no extrato, use a configuração <a href="#initExcludedTags">initExcludedTags</a>.</p>
+
+<h3 id="initSelectedTags">initSelectedTags</h3>
+
+<h3 id="initExcludedTags">initExcludedTags</h3>
+
+<p>Seleciona ou risca tags automaticamente, ao inicar o MoneyLog.</p>
+
+<pre>
+initSelectedTags = 'água aluguel';   // Iniciar já com estas tags marcadas
+initExcludedTags = 'livro mercado';  // Iniciar já com estas tags riscadas
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/tag-cloud-selected-excluded.png">
+</p>
+
+<p>É útil quando você precisa focar em tipos específicos de gastos, durante um certo tempo. Por exemplo, se você vai demorar alguns dias para fazer a contabilidade de uma longa viagem, coloque a tag "viagem" na configuração <code>initSelectedTags</code>. Assim, ao iniciar o MoneyLog, já vão aparecer os gastos da viagem.</p>
+
+<p>De maneira similar, você pode riscar automaticamente as tags que no momento não te interessam. Mas se mudar de ideia, é só clicar na tag ali na nuvem de tags que ela volta a aparecer. Essa é a grande diferença da <code>initExcludedTags</code> para a <a href="#ignoreTags">ignoreTags</a>.</p>
+
+<p>Se você tiver tags com espaços em branco em seu nome, pode usar um array em vez de uma string:</p>
+
+<pre>
+initSelectedTags = ['água', 'aluguel', 'tag com espaços'];
+initExcludedTags = ['livro', 'mercado', 'outra tag com espaços'];
+</pre>
+
+<h3 id="checkHideRelatedTags">checkHideRelatedTags</h3>
+
+<p>Liga/desliga a opção <strong>[X] Esconder as tags relacionadas</strong>, que às vezes aparece logo após a tabela do relatório de tags.</p>
+
+<pre>
+checkHideRelatedTags = N    ;// Marcar a opção [X] Esconder relacionadas?
+</pre>
+
+<h2 id="formato-da-data">Formato da data</h2>
+
+<h3 id="showLocaleDate">showLocaleDate</h3>
+
+<pre>
+showLocaleDate = S;    // Usar datas regionais
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showLocaleDate-on.png">
+</p>
+
+<pre>
+showLocaleDate = N;   // Não formatar a data
+</pre>
+
+<p class="figure">
+  <img src="/moneylog/config/img/showLocaleDate-off.png">
+</p>
+
+<h3 id="i18nDatabase-pt-dateFormat">i18nDatabase.pt.dateFormat</h3>
+
+<h3 id="i18nDatabase-pt-dateFormatMonth">i18nDatabase.pt.dateFormatMonth</h3>
+
+<h3 id="i18nDatabase-pt-dateFormatYear">i18nDatabase.pt.dateFormatYear</h3>
+
+<p>Você também pode personalizar o formato regional: usar outros separadores, mudar a ordem ou até escolher exatamente quais componentes mostrar. Além de símbolos, você pode usar as seguintes letras:</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Letra</th>
+    <th>Significado</th>
+    <th>Exemplo: 01/09/1999</th>
+  </tr>
+  <tr>
+    <td class="center">Y</td>
+    <td>ano com 4 dígitos</td>
+    <td>1999</td>
+  </tr>
+  <tr>
+    <td class="center">y</td>
+    <td>ano com 2 dígitos</td>
+    <td>99</td>
+  </tr>
+  <tr>
+    <td class="center">m</td>
+    <td>mês</td>
+    <td>09</td>
+  </tr>
+  <tr>
+    <td class="center">d</td>
+    <td>dia</td>
+    <td>01</td>
+  </tr>
+  <tr>
+    <td class="center">B</td>
+    <td>nome completo do mês</td>
+    <td>Setembro</td>
+  </tr>
+  <tr>
+    <td class="center">b</td>
+    <td>nome do mês com 3 letras</td>
+    <td>Set</td>
+  </tr>
+</table>
+
+<p>A data padrão no formato brasileiro é: <code>d/m/Y</code>. O MoneyLog, porém, está usando uma versão mais fácil de ler o mês: <code>d b Y</code>.</p>
+
+<p>Mas fique à vontade para mudar este formato para o que você achar melhor.</p>
+
+<pre>
+i18nDatabase.pt.dateFormat = 'd.m.Y';     // Personalizar formato dia-mês-ano
+i18nDatabase.pt.dateFormatMonth = 'B Y';  // Personalizar formato mês-ano
+i18nDatabase.pt.dateFormatYear = 'Y';     // Personalizar formato ano
+</pre>
+
+<blockquote>
+  <strong>Atenção:</strong> Seus lançamentos continuam sendo informados no formato padrão ANO-MÊS-DIA. Esta configuração afeta apenas como a data será mostrada na tela.
+</blockquote>
+
+<blockquote>
+  <strong>Nerds:</strong> Você pode colocar o texto que quiser nestas configurações. Somente as letras especiais serão expandidas, as outras permanecerão inalteradas. Se precisar escapar alguma das letras especiais, já sabe: <code>\Y</code>, <code>\d</code>, …
+</blockquote>
+
+<h2 id="ignorar-lancamentos">Ignorar lançamentos antigos e futuros</h2>
+
+<h3 id="ignoreDataOlderThan">ignoreDataOlderThan</h3>
+
+<h3 id="ignoreDataNewerThan">ignoreDataNewerThan</h3>
+
+<p>Se você já usa o MoneyLog há bastante tempo, pode querer simplesmente ignorar os lançamentos antigos, dos anos anteriores. Ou ainda, limitar a visão de anos futuros para poucos anos, sumindo de sua vista com aquelas dezenas de parcelas do financiamento que vai demorar para acabar.</p>
+
+<p>Basta colocar nestas configurações as datas limite, no passado e/ou no futuro, e o MoneyLog vai fingir que não viu nada :)</p>
+
+<pre>
+ignoreDataOlderThan = '2010-01-01';   // Ignorar lançamentos de 2009, 2008...
+ignoreDataNewerThan = '2020-12-31';   // Ignorar lançamentos após 2020
+</pre>
+
+<p>Note que lançamentos recorrentes também levam em conta esta configuração, então não estranhe se "faltar" algumas parcelas em seu extrato, é porque elas estão fora das datas limite.</p>
+
+<h2 id="arquivos-txt">Arquivos TXT</h2>
+
+<p>No MoneyLog Beta e no MoneyLog Cloud, seus lançamentos são guardados em arquivos de texto simples (TXT), separando bem o programa de seus dados pessoais. Você pode usar somente um arquivo, ou vários, o que achar melhor.</p>
+
+<ul>
+  <li>No MoneyLog Cloud, basta colocar os arquivos TXT dentro da pasta <code>/Apps/MoneyLog Cloud/txt/</code> de seu Dropbox, que eles serão carregados automaticamente.</li>
+  <li>No MoneyLog Beta, você deve informar a localização dos arquivos TXT na configuração <a href="#dataFiles">dataFiles</a>.
+  </li>
+</ul>
+
+<h3 id="dataFiles">dataFiles</h3>
+
+<blockquote>
+  <strong>Nota:</strong> Esta configuração só é usada pelo MoneyLog Beta. Nas outras versões ela é ignorada.
+</blockquote>
+
+<p>Indique nesta configuração a localização dos arquivos TXT que você quer usar com o MoneyLog Beta. Se eles estiverem em outra pasta, indique o caminho até lá. Veja alguns exemplos:</p>
+
+<p>Separado por ano:</p>
+
+<pre>
+dataFiles = ['2012.txt', '2011.txt', '2010.txt'];
+</pre>
+
+<p>Separado por tipo de conta:</p>
+
+<pre>
+dataFiles = ['dinheiro.txt', 'bb.txt', 'caixa.txt', 'itau.txt'];
+</pre>
+
+<p>Separado por tipo de gasto:</p>
+
+<pre>
+dataFiles = ['geral.txt', 'salario.txt', 'carro.txt', 'escola.txt'];
+</pre>
+
+<p>Por padrão, sempre é carregado o primeiro arquivo da lista (exceto se <a href="#dataFilesDefault">dataFilesDefault</a> estiver ativa), então coloque por primeiro aquele que você for utilizar mais frequentemente.</p>
+
+<p>Se você colocar um asterisco (*), ele significa TODOS os arquivos ao mesmo tempo. Útil para unificar todos os arquivos em um extrato só.</p>
+
+<p>Se você colocar o asterisco como primeiro item da lista, então o padrão será sempre carregar todos os arquivos. Veja um exemplo:</p>
+
+<pre>
+dataFiles = ['*', 'geral.txt', 'salario.txt', 'carro.txt', 'escola.txt'];
+</pre>
+
+<p>Dicas:</p>
+
+<ul>
+  <li>Aconselho criar uma pasta chamada <code>txt</code> dentro da sua cópia do repositório e colocar seus arquivos ali. A vantagem é poder atualizar o Git sem preocupação e ainda <a href="/moneylog/beta/#cloud">garantir compatibilidade com o MoneyLog Cloud</a>, que também usa esta pasta.
+  </li>
+  <li>O arquivo TXT deve ter a codificação UTF-8.</li>
+  <li>As quebras de linha podem ser no formato Unix (LF) ou Windows (CR+LF), tanto faz.</li>
+</ul>
+
+<h3 id="dataFilesDefault">dataFilesDefault</h3>
+
+<dl>
+  <dt>MoneyLog Cloud</dt>
+  <dd>
+    Se você usa mais de um arquivo TXT, o MoneyLog automaticamente carrega todos os arquivos que encontrar em sua pasta. Com essa configuração você pode mudar isso e carregar somente um arquivo específico no início.
+    <pre>
+dataFilesDefault = 'carro.txt';
+</pre>
+  </dd>
+  <dt>MoneyLog Beta</dt>
+  <dd>
+    Ao iniciar, o MoneyLog sempre carregará o primeiro arquivo da lista <a href="#dataFiles">dataFiles</a>. Para mudar este comportamento e carregar outro item da lista, basta usar esta configuração:
+    <pre>
+dataFilesDefault = 'carro.txt';
+</pre>
+  </dd>
+</dl>
+
+<h2 id="avancado">AVANÇADO</h2>
+
+<p>O arquivo de configuração <code>config.js</code>, é, acima de tudo, um arquivo JavaScript que é executado junto com o MoneyLog. Ele é uma ferramenta poderosa para modificar ou melhorar o comportamento padrão do MoneyLog.</p>
+
+<p>Veja como é o processo de inicialização:</p>
+
+<ul>
+  <li>Primeiro o script principal <code>moneylog.js</code> é lido e carregado. Ele define as funções e as variáveis globais com seus valores padrão.</li>
+  <li>Depois é executado o <code>config.js</code>, que além de redefinir variáveis globais (as configurações que vimos até aqui), <strong>também pode redefinir funções, criar funções novas e adicionar novos event handlers</strong>.</li>
+  <li>Por fim, a função <code>init()</code> do script principal é executada (no <code>window.onload</code>), e o MoneyLog é inicializado.</li>
+</ul>
+
+<p>O <code>config.js</code> é executado numa posição privilegiada, após a carga mas antes da inicialização. Assim temos o poder de modificar virtualmente qualquer parte do MoneyLog antes de sua inicialização.</p>
+
+<p>Veja alguns exemplos a seguir.</p>
+
+<h3 id="adicionar-css">Adicionar códigos CSS</h3>
+
+<p>Se você entende de CSS e quer mudar algo na aparência do MoneyLog, tá fácil:</p>
+
+<pre>
+addStyleSheet('mystyle', 'body { color:blue; }');
+</pre>
+
+<p>Esta função adiciona códigos CSS no MoneyLog. Ela cria uma nova tag <code>&lt;style&gt;</code> e dentro dela coloca o texto que você quiser. O primeiro argumento é um nome qualquer, que será o ID da tag e o segundo argumento é uma string com as regras CSS.</p>
+
+<h3 id="mudar-nome-coluna">Mudar o nome da coluna</h3>
+
+<pre>
+// Colunas do extrato diário
+//
+i18nDatabase.pt.labelsDetailed = [
+    'Data', 'Valor', 'Tags', 'Descrição', 'Acumulado'
+];
+
+// Colunas do extrato mensal/anual
+//
+i18nDatabase.pt.labelsOverview = [
+    'Período', 'Entradas', 'Saídas', 'Saldo', 'Acumulado'
+];
+</pre>
+
+<h3 id="mudar-sem-tag">Mudar o texto "(sem tag)"</h3>
+
+<pre>
+// Mudar o texto "(sem tag)" por outra palavra
+//
+i18nDatabase.pt.labelTagCloudEmpty = '(VAZIO)';
+</pre>
+
+<h3 id="highlightRegex">Configuração highlightRegex</h3>
+
+<p>Se você entende de <a href="/regex/">expressões regulares</a>, pode usar esta configuração no lugar da <a href="#highlightWords">highlightWords</a>, para destacar trechos na coluna Descrição do extrato diário.</p>
+
+<pre>
+// Destacar XXX, números, e @palavra.
+//
+highlightRegex = /XXX|\d+|@\w+/gi;
+</pre>
+
+<blockquote>
+  Nota: Se você usar a <a href="#highlightWords">highlightWords</a>, esta configuração será ignorada. Então certifique-se de usar uma OU outra.
+</blockquote>
+
+<h3 id="useLegacyDateFilter">Voltar opções: futuros, somente recentes</h3>
+
+<pre>
+// Voltar a usar as opções antigas, da v4:
+// [X] Somente Recentes: [N meses]
+// [X] Mostrar Lançamentos Futuros
+//
+useLegacyDateFilter = S;
+</pre>
+
+<p>Note que isso fará sumir os seletores de data novos, <strong>De:</strong> e <strong>Até:</strong>.</p>
+
+<h3 id="funcao-redefinir">Redefinir uma função</h3>
+
+<p>Basta reescrever a função, usando o mesmo nome e o mesmo número de argumentos.</p>
+
+<pre>
+function invalidData(lineno, message) {
+        alert('Deu pau na linha ' + lineno + ' ' + message);
+}
+</pre>
+
+<h3 id="funcao-anexar">Anexar comandos numa função</h3>
+
+<pre>
+showReportOrig = showReport;
+showReport = function () {
+
+        // Primeiro executa a função original
+        showReportOrig();
+        
+        // Agora coloco aqui meu código mágico
+        foo = 1;
+}
+</pre>
+
+<h3 id="widget-criar">Criar um widget</h3>
+
+<p>Sabe as caixinhas ali do lado esquerdo? Você pode criar uma também, olha só:</p>
+
+<pre>
+// Cria a caixinha (id, nome, nome da instância)
+//
+var HelloWorld = new Widget('hello-world', 'Hello World', 'HelloWorld');
+
+// Preenche o conteúdo da caixinha
+//
+HelloWorld.populate = function () {
+        this.content.innerHTML = 'Hellooo!';
+};
+</pre>
+
+<p>Veja mais exemplos <a href="https://github.com/aureliojargas/moneylog/tree/master/sample">na pasta sample do GitHub</a>.</p>
+
+<p>Criou um widget? <a href="https://github.com/aureliojargas/moneylog-plugins">Mande pro repositório</a>!</p>
+
+<h3 id="manipular-dados">Manipular dados do extrato</h3>
+
+<p>O array global <code>reportData</code> guarda os dados do extrato atual, puros, sem formatação:</p>
+
+<ul>
+  <li>data no formato YYYY-MM-DD</li>
+  <li>valor como float e não string</li>
+  <li>tags como um array de strings</li>
+</ul>
+
+<p>Se você quiser brincar com os dados do extrato, esse é o cara.</p>
+
+<p>Uma ideia simples de fazer é um widget que exporta o extrato pra CSV. Com as informações deste tópico e do anterior, você já consegue algo.</p>
+
+<p>Veja também o código da <code>TagSummary.update</code> no script principal. Ela usa o <code>reportData</code> para encontrar as tags e fazer os cálculos do widget Somatório de tags.</p>
+
+<p>Ah, se quiser brincar com os dados completos, e não somente os do extrato atual, use o array <code>parsedData</code>.</p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+<style>
+  nav.note {
+   margin-top: 1.5em;
+   margin-bottom: 1.5em;
+  }
+  nav.note ul {
+    list-style: none;
+    margin-left: 0;
+  }
+  .nav-col {
+    float: left;
+    margin-right: 60px;
+  }
+  .nav-col.last {
+    margin-right: 0;
+  }
+</style>
+
+<nav class="note">
+  <div class="nav-col">
+    <h4>Sabores</h4>
+    <ul>
+      <li><a href="/moneylog/cloud/">MoneyLog Cloud</a></li>
+      <li><a href="/moneylog/portable/">MoneyLog Portable</a></li>
+      <li><a href="/moneylog/browser/">MoneyLog Browser</a></li>
+      <li><a href="/moneylog/beta/">MoneyLog Beta</a></li>
+    </ul>
+  </div>
+  <div class="nav-col">
+    <h4>Docs</h4>
+    <ul>
+      <li><a href="/moneylog/about/">sobre</a></li>
+      <li><a href="/moneylog/v5/">novidades v5</a> ★</li>
+      <li><a href="/moneylog/faq/">FAQ</a></li>
+      <li><a href="/moneylog/input/">lançamentos</a></li>
+      <li><a href="/moneylog/config/">configuração</a></li>
+    </ul>
+  </div>
+  <div class="nav-col last">
+    <h4>Misc</h4>
+    <ul>
+      <li><a href="/moneylog/import/">conversor</a></li>
+      <li><a href="/moneylog/donate/">doação</a> ♥</li>
+      <li><a href="/moneylog/history/">versões antigas</a></li>
+      <li><a href="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</a> ★</li>
+    </ul>
+  </div>
+  <div style="clear: both;"></div>
+</nav>
+
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Configura%C3%A7%C3%A3o%20do%20MoneyLog%20https://aurelio.net/moneylog/config/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/moneylog/config/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/moneylog/config/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

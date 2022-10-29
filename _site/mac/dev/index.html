@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Desenvolvimento no Mac OS X | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/mac/dev/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Desenvolvimento no Mac OS X" />
+	<meta property="og:url" content="https://aurelio.net/mac/dev/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/mac/dev/" title="Permalink" rel="bookmark">Desenvolvimento no Mac OS X</a></h1>
+
+			<h2>Linguagens, ferramentas e técnicas</h2>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<nav>
+  <ul>
+    <li>
+      <a href="#toc1">Desenvolvimento no Mac OS X</a>
+      <ul>
+        <li>
+          <a href="#forum">Fórums</a>
+          <ul>
+            <li>
+              <a href="#toc3">macdev-br — Desenvolvedores brasileiros p/ Mac OS X, iPhone e iPod</a>
+            </li>
+            <li>
+              <a href="#toc4">Canais de IRC</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#docpt">Documentação em Português</a>
+        </li>
+        <li>
+          <a href="#livros">Livros</a>
+        </li>
+        <li>
+          <a href="#apps">Aplicativos Indispensáveis</a>
+          <ul>
+            <li>
+              <a href="#xcode">Xcode</a>
+            </li>
+            <li>
+              <a href="#interface-builder">Interface Builder</a>
+            </li>
+            <li>
+              <a href="#script-editor">Script Editor (Editor de Roteiros)</a>
+            </li>
+            <li>
+              <a href="#realbasic">Realbasic</a>
+            </li>
+            <li>
+              <a href="#revolution">Revolution</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#apps-br">Aplicativos Feitos por Brasileiros</a>
+          <ul>
+            <li>
+              <a href="#adiumbook">AdiumBook &amp; EmoMemory</a>
+            </li>
+            <li>
+              <a href="#widgets">Dashboard Widgets</a>
+            </li>
+            <li>
+              <a href="#fetchyourlyrics">FetchYourLyrics</a>
+            </li>
+            <li>
+              <a href="#myproject-personalfinance">MyProject &amp; Personal Finance</a>
+            </li>
+            <li>
+              <a href="#mysql-gui-tools">MySQL GUI Tools</a>
+            </li>
+            <li>
+              <a href="#quicksinergy">QuickSinergy</a>
+            </li>
+            <li>
+              <a href="#rudix">Rudix</a>
+            </li>
+            <li>
+              <a href="#thetranslator">TheTranslator</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#linguagens">Linguagens</a>
+          <ul>
+            <li>
+              <a href="#cocoa">Cocoa</a>
+            </li>
+            <li>
+              <a href="#objc">Objective-C</a>
+            </li>
+            <li>
+              <a href="#java">Java</a>
+            </li>
+            <li>
+              <a href="#javascript">Javascript (Dashboard)</a>
+            </li>
+            <li>
+              <a href="#applescript">AppleScript</a>
+            </li>
+            <li>
+              <a href="#python">Python</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#iphone">iPhone</a>
+        </li>
+        <li>
+          <a href="#dicas">Dicas</a>
+          <ul>
+            <li>
+              <a href="#screenshot">Como tirar screenshots</a>
+            </li>
+            <li>
+              <a href="#make">Cadê o comando make (e o gcc)?</a>
+            </li>
+            <li>
+              <a href="#pacote">O formato do "pacote"</a>
+            </li>
+            <li>
+              <a href="#mount-dmg-terminal">Como montar e desmontar uma imagem (DMG ou ISO) pelo terminal?</a>
+            </li>
+            <li>
+              <a href="#i18n">Como internacionalizar/traduzir um aplicativo? (i18n)</a>
+            </li>
+            <li>
+              <a href="#xcode-dicas">Xcode</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#info">Mais Informações</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<h1 id="toc1">Desenvolvimento no Mac OS X</h1>
+
+<p>Me ajude a tornar esta página mais completa! Mande sugestões e textos para <a href="http://twitter.com/oreio">@oreio</a></p>
+
+<h2 id="forum">Fórums</h2>
+
+<p>São poucas as pessoas que usam Mac no Brasil. Mais raro ainda, são programadores que desenvolvem para Mac.</p>
+
+<p>E quanto menor a comunidade, mais importante a união, para que os poucos se ajudem.</p>
+
+<p>Pensando nisso, foi criado o grupo macdev-br. Se você é programador/designer e desenvolve softwares para Mac, ou está querendo ingressar nesse mundo selvagem e não sabe como começar, participe do nosso grupo.</p>
+
+<h3 id="toc3">macdev-br — Desenvolvedores brasileiros p/ Mac OS X, iPhone e iPod</h3>
+
+<p>Ponto de encontro para os programadores brasileiros que desenvolvem softwares para o Mac.</p>
+
+<p>Para discussão de tópicos sobre linguagens (Objective-C, AppleScript, Java, Python, ...), conceitos (Cocoa, Carbon, Dashboard) e ferramentas (Xcode, Interface Builder).</p>
+
+<p>Além da programação, também há troca de idéias sobre todo o processo de produção, lançamento e divulgação de freewares e sharewares, envolvendo técnicas como chave de registro, senha, expiração, preço, forma de pagamento e relato de experiências.</p>
+
+<ul>
+  <li>Para entrar: <a href="mailto:macdev-br-subscribe@yahoogrupos.com.br">macdev-br-subscribe@yahoogrupos.com.br</a>
+  </li>
+  <li>Página do grupo: <a href="http://br.groups.yahoo.com/group/macdev-br">http://br.groups.yahoo.com/group/macdev-br</a>
+  </li>
+</ul>
+
+<p>Se você programa no Mac, junte-se a nós!</p>
+
+<h3 id="toc4">Canais de IRC</h3>
+
+<p>Outro ponto de comunicação é são os canais de IRC no servidor irc.freenode.net:</p>
+
+<ul>
+  <li>#macdev-br</li>
+  <li>#iphonedev-br</li>
+  <li>#mac-br</li>
+</ul>
+
+<p>Apareça!</p>
+
+<h2 id="docpt">Documentação em Português</h2>
+
+<ul>
+  <li>
+    <a href="http://blog.pierrefreire.com.br/search/label/Curso%20Objective-c">Tutorial brasileiro de Objective-C</a>, de Pierre Freire
+  </li>
+  <li>
+    <a href="tutorial-pyobjc/">Tutorial em português sobre o PyObjC</a>, de Aurelio Marinho Jargas
+  </li>
+  <li>
+    <a href="http://www.mindbike.com.br/blog/">Blog sobre desenvolvimento no Mac</a>, de Ademar Varela
+  </li>
+</ul>
+
+<h2 id="livros">Livros</h2>
+
+<ul>
+  <li>
+    <a href="http://www.bignerdranch.com/products.shtml">Cocoa Programming for Mac OS X</a>, de Aaron Hillegass
+  </li>
+  <li>
+    <a href="http://www.amazon.com/iPhone-Developers-Cookbook-Building-Applications/dp/0321555457">The iPhone Developer's Cookbook: Building Applications with the iPhone SDK (Developer's Library)</a>, de Erica Sadun
+  </li>
+</ul>
+
+<h2 id="apps">Aplicativos Indispensáveis</h2>
+
+<h3 id="xcode">Xcode</h3>
+
+<p><code>/Developer/Applications/Xcode</code></p>
+
+<p>Comandos mais utilizados:</p>
+
+<ul>
+  <li><b>⌘R</b> — Compila e executa o programa</li>
+</ul>
+
+<p>Mais informações:</p>
+
+<ul>
+  <li>
+    <a href="http://developer.apple.com/tools/xcode/">Xcode no site da Apple</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Xcode">Artigo da Wikipedia sobre o Xcode</a>
+  </li>
+  <li>
+    <a href="http://developer.apple.com/tools/subversionxcode.html">Xcode usando Subversion</a>
+  </li>
+</ul>
+
+<h3 id="interface-builder">Interface Builder</h3>
+
+<p><code>/Developer/Applications/Interface Builder</code></p>
+
+<p>Comandos mais utilizados:</p>
+
+<ul>
+  <li><b>⌘R</b> — Testa a interface</li>
+  <li><b>⌘L</b> — Destaca todos os elementos com bordas vermelhas</li>
+  <li><b>⌘D</b> — Duplica um elemento</li>
+  <li><b>⇧⌘I</b> — Abre o Inspector, que mostra as propriedades do elemento selecionado</li>
+</ul>
+
+<p>Mais informações:</p>
+
+<ul>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Interface_Builder">Artigo da Wikipedia sobre o Interface Builder</a>
+  </li>
+</ul>
+
+<h3 id="script-editor">Script Editor (Editor de Roteiros)</h3>
+
+<p><code>/Applications/AppleScript/Script Editor</code></p>
+
+<p>Editor para a linguagem AppleScript, é a maneira mais rápida de escrever e rodar scripts. Já vem instalado com o sistema. <a href="applescript://com.apple.scripteditor?action=new&script=--%20Abriu!">Clique aqui para abri-lo agora</a>.</p>
+
+<p>Comandos mais utilizados:</p>
+
+<ul>
+  <li><b>⌘K</b> — Compila o script (checa sintaxe e arruma o alinhamento)</li>
+  <li><b>⌘R</b> — Executa o script (compila e executa)</li>
+  <li><b>⇧⌘O</b> — Abre o dicionário de palavras-chave de um aplicativo do sistema</li>
+</ul>
+
+<h3 id="realbasic">Realbasic</h3>
+
+<blockquote>
+  O Real Basic "funciona". Isso não quer dizer que ele é bom. Na época que eu testei (inicio de 2006) um programa "Hello World" ficou com 20MB. Não poderia ser diferente com alguma coisa que roda compilado em três plataformas diferentes (Linux, Mac e Windows - obviamente são três binários). No entanto até dá para quebrar um galho.
+  <br>
+  -- Guilherme Chapiewski
+</blockquote>
+
+<h3 id="revolution">Revolution</h3>
+
+<p>TODO</p>
+
+<h2 id="apps-br">Aplicativos Feitos por Brasileiros</h2>
+
+<h3 id="adiumbook">AdiumBook &amp; EmoMemory</h3>
+
+<blockquote>
+  por Aurelio Marinho Jargas
+  <br>
+  <a href="/projects/adiumbook/">https://aurelio.net/projects/adiumbook/</a>
+  <br>
+  <a href="/projects/emomemory/">https://aurelio.net/projects/emomemory/</a>
+</blockquote>
+
+<p>O AdiumBook serve para fazer pesquisas e cruzar dados de contatos do Adium e do Address Book, mantendo-os em sincronia. O EmoMemory é um jogo de memória que usa fotos da Agenda (Address Book) ou de uma pasta qualquer, escolhida pelo usuário. Ambos escritos em AppleScript + Cocoa (AppleScript Studio).</p>
+
+<h3 id="widgets">Dashboard Widgets</h3>
+
+<blockquote>
+  por Guilherme Chapiewski
+  <br>
+  <a href="http://gc.vialink.com.br">http://gc.vialink.com.br</a>
+</blockquote>
+
+<p>O Guilherme fez vários widgets bacanas para o Dashboard, são eles: Busca de CEP dos Correios do Brasil, Rastreamento de Encomendas dos Correios do Brasil, MacPress News Reader, Macmania News Reader, Mercado Livre Brasil.</p>
+
+<h3 id="fetchyourlyrics">FetchYourLyrics</h3>
+
+<blockquote>
+  por Julio Cesar Silva dos Santos
+  <br>
+  <a href="http://www.jcs.santos.nom.br/fyl/fyl.html">http://www.jcs.santos.nom.br/fyl/fyl.html</a>
+</blockquote>
+
+<p>O FetchYourLyrics é um programa que mostra as letras da música que está tocando atualmente no iTunes. Se o campo de letras estiver vazio, o programa procura por elas na Internet.</p>
+
+<h3 id="myproject-personalfinance">MyProject &amp; Personal Finance</h3>
+
+<blockquote>
+  por Francisco Pires <a href="http://www.cafeinasoft.com/port/">http://www.cafeinasoft.com/port/</a>
+</blockquote>
+
+<p>O MyProject é um software para o acompanhamento de projetos e tarefas, com cadastro de clientes, agenda e envio de mailing. O Personal Finance é um gerenciador financeiro com suporte a múltiplas contas, categorias, contatos e gráficos.</p>
+
+<h3 id="mysql-gui-tools">MySQL GUI Tools</h3>
+
+<blockquote>
+  por Alfredo Kojima
+  <br>
+  <a href="http://www.mysql.com/products/tools/query-browser/">http://www.mysql.com/products/tools/query-browser/</a>
+  <br>
+  <a href="http://www.mysql.com/products/tools/administrator/">http://www.mysql.com/products/tools/administrator/</a>
+</blockquote>
+
+<p>O Kojima trabalha na MySQL e fez as versões para Mac de três componentes do MySQL GUI Tools: Workbench, Query Browser e Administrator.</p>
+
+<h3 id="quicksinergy">QuickSinergy</h3>
+
+<blockquote>
+  por Otávio Corrêa Cordeiro
+  <br>
+  <a href="http://quicksynergy.sourceforge.net">http://quicksynergy.sourceforge.net</a>
+</blockquote>
+
+<p>O QuickSynergy é uma interface amigável de configuração para o Synergy2 (aplicativo que compartilha o mesmo mouse e teclado para dois ou mais computadores). Escrito em AppleScript + Cocoa.</p>
+
+<h3 id="rudix">Rudix</h3>
+
+<blockquote>
+  por Rudá Moura
+  <br>
+  <a href="http://rudix.org">http://rudix.org</a>
+</blockquote>
+
+<p>O Rudix disponibiliza pacotes prontos para instalar de programas úteis do Linux que faltam no OS X, como wget, ncftp e lynx. Diferente do Fink ou do MacPorts, cada pacote é auto contido e pré-compilado. Não há dependências ou requisitos, basta baixar e usar.</p>
+
+<h3 id="thetranslator">TheTranslator</h3>
+
+<blockquote>
+  por Pierre Freire
+  <br>
+  <a href="http://www.pierrefreire.com.br/thetranslator/">http://www.pierrefreire.com.br/thetranslator/</a>
+</blockquote>
+
+<p>Aplicativo em Objective-C feito para traduzir e pronunciar frases em inglês. Digite a frase e aperte o botão, simples e rápido.</p>
+
+<h2 id="linguagens">Linguagens</h2>
+
+<h3 id="cocoa">Cocoa</h3>
+
+<p>Tá, Cocoa não é linguagem, mas fica aqui mesmo.</p>
+
+<p>Sites para aprender Cocoa:</p>
+
+<ul>
+  <li>
+    <a href="http://cocoadevcentral.com/d/learn_cocoa/tiger/">Tutorial de Cocoa - Tiger</a>
+  </li>
+  <li>
+    <a href="http://cocoadevcentral.com/d/learn_cocoa/">Tutorial de Cocoa - Leopard</a>
+  </li>
+  <li>
+    <a href="http://www.cocoadevcentral.com">CocoaDevCentral</a> - Tem uma série de artigos básicos
+  </li>
+  <li>
+    <a href="http://cocoablogs.com">CocoaBlogs</a> - Vários blogs de desenvolvedores
+  </li>
+</ul>
+
+<h3 id="objc">Objective-C</h3>
+
+<p>Objective-C é a linguagem padrão de desenvolvimento para Mac OSX.</p>
+
+<p>Objective-C tem suporte nativo a SQLite usando CoreData. Existem alguns frameworks para acessar MySQL e PostGreSQL.</p>
+
+<p>Para aprender:</p>
+
+<ul>
+  <li>
+    <a href="http://blog.pierrefreire.com.br/search/label/Curso%20Objective-c">Tutorial brasileiro de Objective-C</a> (em português)
+  </li>
+  <li>
+    <a href="http://cocoadevcentral.com/d/learn_objectivec/">Tutorial de Objective-C</a> (em inglês)
+  </li>
+</ul>
+
+<h3 id="java">Java</h3>
+
+<p>Java é totalmente multiplataforma mas a interface gráfica não. Geralmente os programas feitos para Linux e Windows ficam um pouco estranhos na interface Aqua (botões com legendas truncadas, etc.).</p>
+
+<p>No Mac, Java usa JDBC normalmente.</p>
+
+<h3 id="javascript">Javascript (Dashboard)</h3>
+
+<p>Os aplicativos do Dashboard são escritos em HTML + CSS + Javascript.</p>
+
+<h3 id="applescript">AppleScript</h3>
+
+<p>Você pode escrever seus AppleScripts em qualquer editor, mas o desenvolvimento é muito mais rápido se você usar o <a href="#script-editor">Script Editor</a>, que já está instalado no seu Mac.</p>
+
+<p>Aprender a linguagem é rápido se você entende inglês. Há poucos símbolos, os códigos-fonte parecem mais com texto corrido, um exemplo:</p>
+
+<pre>
+tell application "iTunes"
+
+        -- Pega quais músicas estão selecionadas
+        set userTracks to the selection of front window
+
+        -- Quantas são?
+        set totalTracks to count of userTracks
+
+        -- Para cada música...
+        repeat with i from 1 to totalTracks
+
+                -- Mostre seu nome
+                set theTrack to item i of userTracks
+                display dialog (name of theTrack as string)
+
+        end repeat
+end tell
+</pre>
+
+<p>A melhor maneira de aprender a programar em AppleScript é estudando os scripts de outros programadores. Baixe da Internet, abra no Script Editor e faça alterações para ir entendendo como tudo funciona. Há vários scripts funcionais para baixar em <a href="/projects/">https://aurelio.net/projects/</a>.</p>
+
+<p>Se você fez um script que interage com algum programa, como o iTunes ou a Agenda, instale-o no sistema para que ele apareça no Script Menu. Há um tutorial mostrando como fazer isso, passo-a-passo e com imagens: <a href="/articles/applescript-install.html">Installing AppleScripts</a>.</p>
+
+<p>Se você entende de <a href="/shell/">Shell Script</a>, saiba que é possível executar comandos de dentro do AppleScript, facilmente:</p>
+
+<pre>
+set resultado to do shell script "cat /etc/passwd | grep ^root" -- UUOC!
+</pre>
+
+<p>Não há o conceito de entrada e saída padrão (STDIN e STDOUT). Ou você usa dialogs ou você usa a área de transferência (clipboard):</p>
+
+<pre>
+-- Pega texto do clipboard
+set theText to the clipboard
+
+-- Copia o texto no clipboard, entre hífens
+set the clipboard to "------ " &amp; theText &amp; " ------"
+</pre>
+
+<p>Também é possível fazer aplicativos complexos em AppleScript, com interface Cocoa. Basta usar o AppleScript Studio e programar diretamente no Xcode e montar as janelas no Interface Builder. É um pouco trabalhoso e demora um tempo até acostumar-se com a maneira que a comunicação entre os elementos e o código é feita. Exemplos de programas completos feitos no Studio são <a href="/projects/adiumbook/">AdiumBook</a> (código aberto) e <a href="/projects/emomemory/">EmoMemory</a> (shareware).</p>
+
+<h3 id="python">Python</h3>
+
+<p>O Python já vem instalado no Mac, está pronto para ser usado. Digite "python" no Terminal e divirta-se.</p>
+
+<p>Para descobrir em quais pastas o Python está "escondido" no Mac, faça:</p>
+
+<pre>
+&gt;&gt;&gt; import sys
+&gt;&gt;&gt; for p in sys.path: print p
+...
+
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python23.zip
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/plat-darwin
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/plat-mac
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/plat-mac/lib-scriptpackages
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/lib-tk
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/lib-dynload
+/System/Library/Frameworks/Python.framework/Versions/2.3/lib/python2.3/site-packages
+/System/Library/Frameworks/Python.framework/Versions/2.3/Extras/lib/python
+&gt;&gt;&gt;
+</pre>
+
+<p>Se o seu aplicativo for de linha de comando, sem precisar de interface gráfica, programe normalmente, não há diferenças ou pegadinhas. Ele também vai funcionar no Linux e no Windows.</p>
+
+<h4 id="pyobjc">PyObjC</h4>
+
+<p>Mas se você quiser fazer aplicativos realmente sexys e no "estilo Mac", instale o <a href="http://pyobjc.sourceforge.net">PyObjC</a>. Ele faz a ponte entre o Python e o Objective-C, permitindo que você acesse todas as classes e métodos do Cocoa diretamente em Python. Você também poderá usar o Xcode e o Interface Builder, como se estivesse programando em ObjC. É incrível.</p>
+
+<p>Mesmo que seu aplicativo não seja gráfico, outra vantagem do PyObjC é permitir que você acesse os frameworks de outros aplicativos, permitindo por exemplo acessar a base de dados da Agenda (Address Book).</p>
+
+<p>Há bastante documentação online no próprio site do PyObjC. Faça os tutoriais com atenção e mão à obra!</p>
+
+<ul>
+  <li>
+    <a href="tutorial-pyobjc/">Tutorial em português sobre o PyObjC</a>
+  </li>
+</ul>
+
+<h2 id="iphone">iPhone</h2>
+
+<p><a href="http://developer.apple.com/iphone/">http://developer.apple.com/iphone/</a></p>
+
+<h2 id="dicas">Dicas</h2>
+
+<h3 id="screenshot">Como tirar screenshots</h3>
+
+<p><b>⌘⇧3</b> tira uma foto da tela toda e grava o resultado em um arquivo na sua Mesa (Desktop). Se você usar dois monitores, será tirada uma foto para cada um.</p>
+
+<p><b>⌘⇧4</b> deixa que você selecione qual parte da tela quer fotografar. Clique e arraste o mouse para formar o retângulo. Ao soltar o botão, o arquivo será gravado na sua Mesa. Aperte Esc a qualquer momento para cancelar.</p>
+
+<p>Para selecionar uma janela inteira, aperte <b>⌘⇧4</b> e em seguida a barra de espaço. O cursor virará uma máquina fotográfica e a janela que o mouse estiver sobre, será selecionada. Ao clicar com o mouse, o arquivo será gravado na sua Mesa. Aperte Esc a qualquer momento para cancelar.</p>
+
+<p>Para tirar uma foto de um Screen Saver, pressione ⌘⇧ e fique segurando. Enquanto isso vá nas Preferências do Sistema → Screen Saver, escolha um e mande testar. Espera um pouquinho e aperta 3. Pronto.</p>
+
+<p>Ao segurar também a tecla Control em qualquer um destes procedimentos, a foto será copiada para a Área de Transferência ao invés de ser criado um arquivo na Mesa.</p>
+
+<h3 id="make">Cadê o comando make (e o gcc)?</h3>
+
+<p>Para ter o make, gcc e amigos, é preciso instalar o <a href="http://en.wikipedia.org/wiki/Xcode">Xcode</a>. Ele está no CD/DVD de instalação do Mac OS X. Mais especificamente, o gcc está no pacote Xcode Tools.</p>
+
+<h3 id="pacote">O formato do "pacote"</h3>
+
+<p>A principal diferença conceitual do Mac enquanto Unix é a forma de criação e instalação de pacotes. A grande maioria dos softwares é compilada semi-estaticamente, ou inclui as bibliotecas de que necessita, o que evita árvores de dependências, tão comuns (e chatas) no Linux.</p>
+
+<p>Cada aplicativo é na verdade uma pasta com estrutura bem-definida; o executável "real" está muito bem escondido dentro dessa estrutura, e você quase nunca precisa chamá-lo diretamente. Se quiser ver exatamente como é a estrutura de um aplicativo, clique com o botão direito em seu ícone e escolha "Mostrar Conteúdo do Pacote".</p>
+
+<h3 id="mount-dmg-terminal">Como montar e desmontar uma imagem (DMG ou ISO) pelo terminal?</h3>
+
+<p>Use o comando hdiutil para montar a imagem e desmontar (note que é uNmount) o volume montado.</p>
+
+<pre>
+$ hdiutil mount ~/Desktop/Arquivo.dmg
+</pre>
+
+<pre>
+$ hdiutil mount ~/Desktop/Arquivo.iso
+</pre>
+
+<pre>
+$ hdiutil unmount /Volumes/Arquivo
+</pre>
+
+<h3 id="i18n">Como internacionalizar/traduzir um aplicativo? (i18n)</h3>
+
+<p>Não tem potfiles, não tem gettext. Seus pesadelos acabaram!</p>
+
+<p>Basta traduzir as frases em um arquivo texto e traduzir itens da interface direto no Interface Builder. Ok, isso não é tão simples quanto parece.</p>
+
+<p>Nada tema, o Julio Cesar Silva dos Santos escreveu um <a href="http://www.jcs.santos.nom.br/localiza">excelente artigo</a> ensinando passo a passo como funciona a localização e tradução de aplicativos no Mac.</p>
+
+<h3 id="xcode-dicas">Xcode</h3>
+
+<ul>
+  <li>Se estiver usando Tiger, baixe o Xcode 2.x e use o leiaute de janelas tudo em 1</li>
+  <li>Perfis de compilação: tu podes definir 1 ou mais perfis com parâmetros de compilação diferentes, os que vêm por padrão são:
+    <ul>
+      <li>Development: vem com opções de debug, 0 de otimização e uns truques pra linkar mais rápido</li>
+      <li>Deployment: com otimização, sem debug symbols, linkagem definitiva</li>
+    </ul>
+  </li>
+  <li>Para adicionar bibliotecas à lista de dependências, vai pra /usr/lib (ou /System/Library/Frameworks) no Finder e faz drag&amp;drop</li>
+  <li>Cuide para que os arquivos no teu projeto estejam com paths relativos (selecione o arquivo e tecle <b>⌘I</b>). Se não, quando fores distribuir os fontes (se for o caso), ninguém vai conseguir compilar.</li>
+  <li>Para adicionar classes tuas no Interface Builder (IB), arraste o header com a declaração e largue-o na janela de projeto do IB. Assim, tu podes instanciar as classes usadas pela interface direto no IB e conectar todas as mensagens/conexões graficamente.</li>
+</ul>
+
+<h2 id="info">Mais Informações</h2>
+
+<ul>
+  <li>
+    <a href="http://developer.apple.com/">Site da Apple para desenvolvedores</a> - Ponto de partida para desenvolvimento no Mac
+  </li>
+  <li>
+    <a href="http://discussions.info.apple.com/">Fórums da Apple</a>
+  </li>
+  <li>
+    <a href="http://www.versiontracker.com/macosx/">Version Tracker</a> - Avisos de lançamentos de aplicativos
+  </li>
+  <li>
+    <a href="http://scriptbuilders.net/">AppleScript - Exemplos</a>
+  </li>
+  <li>
+    <a href="http://www.cocoalab.com/BecomeAnXcoder.pdf">Become an Xcoder</a> - PDF que ensina Cocoa, Objective-C e Xcode de maneira rápida e indolor
+  </li>
+</ul>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="..">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Desenvolvimento%20no%20Mac%20OS%20X%20https://aurelio.net/mac/dev/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/mac/dev/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/mac/dev/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Site estático e WordPress juntos na raiz do domínio | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/wordpress/site-estatico/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Site estático e WordPress juntos na raiz do domínio" />
+	<meta property="og:url" content="https://aurelio.net/wordpress/site-estatico/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/wordpress/site-estatico/" title="Permalink" rel="bookmark">Site estático e WordPress juntos na raiz do domínio</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">07/04/2011</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+	<div class="ad-blog-box-top">
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Blog 336x280 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:336px;height:280px"
+		     data-ad-client="ca-pub-0009608813278754"
+		     data-ad-slot="1899275611"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+	</div>
+
+
+			<p>Estou num esforço contínuo para integrar meu site (estático) e meu blog (WordPress) em uma coisa só. <strong>A ideia é que ambos funcionem ao mesmo tempo, na raiz do domínio</strong>. Este texto detalha minhas experiências nessa brincadeira.</p>
+
+<h2>As diferenças</h2>
+
+<p>Um site estático é construído da maneira tradicional: são várias pastas com arquivos HTML dentro. Você sobe os arquivos para o servidor e lá eles ficam, esperando que alguém os visite. Por exemplo, ao acessar <a href="https://aurelio.net/vim/pulando.html">https://aurelio.net/vim/pulando.html</a>, o servidor vai te mostrar o arquivo <em>pulando.html</em> que está dentro da pasta <em>vim</em>. Simples assim.</p>
+
+<p>O WordPress não é estático, mas dinâmico: cada página é construída imediatamente na hora que você a visita. Não existem pastas e arquivos no servidor, mas sim um único banco de dados, com as informações de todas as páginas, posts, comentários, tudo. Por exemplo, esta página que você está lendo agora <a href="https://aurelio.net/wordpress/site-estatico/">https://aurelio.net/wordpress/site-estatico/</a>, está no WordPress. Para mostrá-la, ele primeiro consultou o banco de dados, pedindo o conteúdo da tal página <em>site-estatico</em>. Então ele montou na hora essa página toda que você está vendo, com o conteúdo, menus, comentários, imagens e tudo mais.</p>
+
+<blockquote>
+<p>Repetindo: não existe no servidor uma pasta chamada <em>wordpress</em> com outra pasta <em>site-estatico</em> dentro dela. É tudo virtual, dentro do banco de dados.</p>
+</blockquote>
+
+<p>Cada método tem suas vantagens.</p>
+
+<ul>
+<li>O site estático é <strong>morto</strong> e <strong>leve</strong>: seu conteúdo só muda se o seu dono alterar os arquivos e subir novamente para o servidor. Porém, ele é muito rápido e não consome recursos do servidor.</li>
+<li>O WordPress é <strong>vivo</strong> e <strong>pesado</strong>: o conteúdo pode mudar cada vez que você acessa uma página, mas o custo disso é um servidor que está sempre trabalhando bastante para montar todas as páginas.</li>
+</ul>
+
+<h2>O desafio</h2>
+
+<p>Com filosofias tão diferentes, na verdade opostas, é possível mesclar WordPress e site estático em um lugar só? Bem, é o que estou tentando fazer :)</p>
+
+<p>Meu site estático, Aurelio.net, foi criado em 1999. Durante esses anos todos, ele cresceu, cresceu e se tornou um monstro com 3.746 arquivos e 369 pastas.</p>
+
+<p>Meu blog também nasceu em 1999, como <a href="/blog-arquivo.html">uma página</a> dentro de meu site estático. Somente em 2006 que finalmente <a href="/blog/2006/04/23/blog-novo-de-novo-dessa-vez-definitivo-e-bombado/">migrei para o WordPress</a> e o blog separou-se do site. Hoje, fevereiro de 2011, o blog conta com 245 posts e 7590 comentários.</p>
+
+<p>Agora quero desfazer esta separação: quero que o blog volte para dentro do meu site. Mais do que isso, <strong>quero que o WordPress e o site estático fundam-se, mesclem-se, compartilhem o mesmo espaço</strong>. Quero que ao acessar um endereço qualquer como <em>aurelio.net/foobar/</em>, seja indiferente se ali está uma pasta estática ou uma página do WordPress. Quero poder alternar entre um e outro conforme precisar. O que hoje é estático, amanhã pode estar no WordPress, ou então voltar a ser estático, e o endereço sempre permanece o mesmo. Quero ter essa flexibilidade.</p>
+
+<h2>A tática</h2>
+
+<p>O mais fácil para embutir o blog dentro do site seria instalar o WordPress em um subdomínio (blog.aurelio.net) ou em uma pasta (aurelio.net/blog/) e pronto. O site estático inteiro continuaria lá na raiz do domínio e o WordPress viveria em um mundinho isolado. Mas isso não é uma integração, isso é como alugar o quarto dos fundos para aquele estudante esquisito. O que eu quero é que todos dividam a mesma casa, sem restrições.</p>
+
+<p>Então a tática resume-se a um único objetivo: para haver integração real, tanto o site quanto o WordPress devem ocupar o ponto mais privilegiado da casa: a raiz do domínio.</p>
+
+<blockquote>
+<p>Sem subdomínios, sem subpastas, sem separação.</p>
+</blockquote>
+
+<h2>O funcionamento</h2>
+
+<p>Meu site estático já está na raiz. Então, agora só falta instalar o WordPress na raiz também, certo? Fácil. Porém, aqui surgiram a minhas primeiras dúvidas de como ambos se comportarão quando estiverem juntos na raiz:</p>
+
+<ul>
+<li>Quem vai responder primeiro, o site ou o WordPress?</li>
+<li>Se for o WordPress, ele irá entregar também os arquivos do site estático ou dirá que não encontrou aquele post/página, já que eles não estão em sua base de dados?</li>
+<li>Se tiver uma página do WordPress com o mesmo endereço de uma pasta já existente do site estático, quem ganha?</li>
+</ul>
+
+<p>Encontrei as respostas no místico e indecifrável arquivo <a href="/blog/2007/11/26/atalhos-no-site-htaccess-redirecionamento-e-erro-404/">.htaccess</a> do Apache. O WordPress cria algumas regras especiais para lidar com este dilema. Não quero estragar a sua diversão, então vou deixar que você analise as regras antes de contar o que elas fazem ;)</p>
+<div class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="c"># BEGIN WordPress</span>
+<span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_rewrite.c</span><span class="p">&gt;
+</span><span class="nc">RewriteEngine</span> <span class="ss">On</span>
+<span class="nc">RewriteBase</span> /
+<span class="nc">RewriteRule</span> ^index\.php$ - [L]
+<span class="nc">RewriteCond</span> %{REQUEST_FILENAME} !-f   &lt;------------ Olha eu!
+<span class="nc">RewriteCond</span> %{REQUEST_FILENAME} !-d   &lt;------------ Olha eu!
+<span class="nc">RewriteRule</span> . /index.php [L]
+<span class="p">&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
+</span><span class="c"># END WordPress</span>
+</code></pre></div>
+<p>Traduzindo: o WordPress só vai entrar em ação caso não seja encontrado nem um arquivo nem uma pasta com o endereço requisitado. Sendo mais direto, isso significa que <strong>o site estático tem preferência</strong>. Veja como ficam estas regras aplicadas na prática:</p>
+
+<ul>
+<li>Se o visitante digitar o endereço de uma página estática, o Apache a entrega na hora e o WordPress nem fica sabendo.</li>
+<li>Se não houver arquivo ou pasta naquele endereço, então o WordPress entra na brincadeira e tentará encontrar um post/página em sua base de dados.</li>
+<li>Se o WordPress não encontrar nada, então será gerado um erro 404 (not found).</li>
+</ul>
+
+<p>Perfeito! Sim, é possível ter o site estático e o WordPress rodando ao mesmo tempo, no mesmo lugar.</p>
+
+<h2>A instalação</h2>
+
+<p>Uma instalação típica do WordPress traz muitos arquivos e pastas em seu primeiro nível (contei 27). Fica bagunçado demais instalar tudo isso direto na raiz do site, ainda mais que minha raiz já está bem poluída pelo site estático, com 62 arquivos e pastas. Seria tão bom se eu pudesse colocar os arquivos do WordPress numa pastinha sem estragar meu esquema...</p>
+<div class="highlight"><pre><code class="language-" data-lang="">### INTERVALO NERD ###
+
+# Para saber o número de pastas
+$ ls -1F | grep /$ | wc -l
+38
+
+# Para saber o número de arquivos
+$ ls -1F | grep -v /$ | wc -l
+24
+</code></pre></div>
+<p>Eu levei um tempo para descobrir, mas achei um artigo que explica como fazer exatamente o que eu queria: <a href="http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory">instalar o WordPress em uma pasta, mas fazer ele responder pela raiz do site</a>. E não é que funciona mesmo?</p>
+
+<blockquote>
+<p>Ah, o espertalhão aqui pulou os passos 3 e 4 do procedimento e no final, claro, não funcionou. Para arrumar a caca, tive que entrar no banco de dados e mudar na mão as opções <code>siteurl</code> (passo 3) e <code>home</code> (passo 4) na tabela <code>wp_options</code>.</p>
+</blockquote>
+
+<p>Resumindo o procedimento, você instala o WordPress numa pasta qualquer e faz a configuração necessária. Depois copia os arquivos <em>.htaccess</em> e <em>index.php</em> para a raiz. No index, arruma o PATH em <code>require(&#39;./wp-blog-header.php&#39;);</code> e pronto.</p>
+
+<h2>Os endereços</h2>
+
+<p>Agora que o WordPress está na raiz junto com o site estático, é preciso pensar em como vão ficar os seus endereços. Os posts do blog ficarão na raiz ou dentro de uma pasta virtual /blog? E a página principal do blog, ficará onde?</p>
+
+<p>Para os posts do blog eu já uso o esquema de URLs no formato /ano/mes/dia/nome-post, então até que não seria problema deixar direto na raiz um /2011, /2010 e assim por diante. Mas achei melhor colocar tudo dentro de um /blog mesmo, para ficar mais caracterizado que ali estarão os posts do blog. Minha configuração em Links Permanentes ficou assim:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/blog/%year%/%monthnum%/%day%/%postname%/
+</code></pre></div>
+<p>E para que as categorias e tags também fiquem debaixo do /blog, é preciso alterar também as duas opções logo abaixo:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Base da categoria: blog/category
+Base das tags    : blog/tag
+</code></pre></div>
+<p>Também criei uma página <a href="/blog/">/blog</a> no WordPress e a configurei para ser a página principal do blog, aquela onde são listados os posts mais recentes. A página inicial (Home) ficou vazia por enquanto. Veja como fazer esta configuração no menu Configurações → Leitura:</p>
+
+<p class="image"><img src="/img/wp/wp-site-estatico-config.png" alt=""></p>
+
+<h2>A página principal</h2>
+
+<p>O site já tinha um <em>index.html</em> na raiz, e agora também tem o <em>index.php</em> do WordPress lá. É preciso escolher um ou outro como o oficial para ser a página principal de seu site.</p>
+
+<p>Escolhi o WordPress como responsável pela principal, para ganhar de brinde os menus e a integração com o blog. Incrementei essa página com os links e alguns elementos da <a href="/misc/aurelionet-2011.pdf">antiga página principal estática</a>, e o resultado ficou uma mistura de ambos: <a href="/">confira</a>.</p>
+
+<h2>O menu</h2>
+
+<p>O esquema de menus do WordPress (Aparência → Menus) é muito bacana, permite montar um menu com links para posts, páginas, categorias e endereços arbitrários. Este último é o que me permite colocar links para áreas do site estático direto dentro do menu do WordPress, aumentando ainda mais a integração entre ambos. Quem chega para ler um post no blog, com um clique pode ir parar num longo artigo do site.</p>
+
+<p>O caminho inverso é mais complicado. O site estático não tem como acompanhar o ritmo de atualizações do blog. Qualquer tentativa de manter manualmente no site um menu atualizado com as novidades do blog tende a falhar. Então hoje sigo o caminho mais fácil e simplesmente coloco um link genérico para a <a href="/blog/">página principal do blog</a>.</p>
+
+<h2>O que mais?</h2>
+
+<p>Meu objetivo de ter ambos funcionando simultaneamente foi atingido, mas ainda estou longe de poder dizer que blog e site são uma coisa só de fato. O leiaute é diferente, o menu é diferente, a maneira de navegar é diferente. Vou tentar amenizar alguns destes pontos, e qualquer novidade, atualizarei este texto. Mas já sei de antemão que a integração de verdade mesmo só vai acontecer se um dia eu converter 100% do site estático para o WordPress :)</p>
+
+<h2>O resultado</h2>
+
+<p>Agora que tudo está funcionando bem, tenho a liberdade de poder converter uma pasta estática para uma página do WordPress, ou vice-versa, sem precisar mudar o endereço. Se quiser a pasta, basta criá-la e colocar arquivos dentro. Se não quiser mais, basta remover a pasta e o WordPress toma conta.</p>
+
+<p>Essa liberdade para mim é crucial, pois o plano de longo (longuíssimo) prazo é converter as páginas mais simples do site estático para o WordPress, facilitando minha manutenção. E se por acaso eu perceber que ficou pior depois da conversão, basta voltar a versão anterior (estática) e pronto. O endereço não muda, todo mundo fica feliz.</p>
+
+<p>Seria legal ter um site 100% WordPress para ficar tudo num lugar só, com o mesmo leiaute, plugins e tudo mais. Mas a maioria das páginas estáticas de meu site são geradas pelo meu programa <a href="http://txt2tags.org">txt2tags</a>, e ele me traz inúmeras facilidades que não tenho hoje no WordPress, principalmente para documentos técnicos mais complexos.</p>
+
+<p>Mas é isso, tá bom do jeito que tá :)</p>
+
+<p><strong>Leia também:</strong> <a href="/wordpress/plugins/">Plugins do WordPress que uso e recomendo</a></p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="..">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Site%20est%C3%A1tico%20e%20WordPress%20juntos%20na%20raiz%20do%20dom%C3%ADnio%20https://aurelio.net/wordpress/site-estatico/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/wordpress/site-estatico/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/wordpress/site-estatico/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+<div id="ad-bottom" class="bar">
+	<div class="wrapper">
+		
+	<div class="ad-blog-box-bottom">
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Blog 336x280 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:336px;height:280px"
+		     data-ad-client="ca-pub-0009608813278754"
+		     data-ad-slot="1899275611"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+	</div>
+
+
+	</div>
+</div>
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

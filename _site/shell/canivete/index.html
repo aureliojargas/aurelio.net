@@ -1,0 +1,3109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Canivete Suíço do Shell (Bash) | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/regex/regex.css">
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/shell/canivete/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Canivete Suíço do Shell (Bash)" />
+	<meta property="og:url" content="https://aurelio.net/shell/canivete/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/shell/canivete/" title="Permalink" rel="bookmark">Canivete Suíço do Shell (Bash)</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">09/07/2003</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<!--
+       AGRADECIMENTOS e CHANGELOG
+       --------------------------
+
+09jul2003 created
+11jul2003 Andreyev Dia de Melo (man 7 signal)
+16jul2003 Moysés Placin (pediu comandos prontos p/copiar&colar)
+17jul2003 Luciano Espírito Santo (glob de lista negada [^...])
+18jul2003 Mateus Caruccio (3<>arq)
+05ago2003 Julio Cezar Neves (sinais do linux, não cygwin)
+09out2003 Fagner Goncalves (atalhos set -o emacs)
+28out2003 Rodolfo Villanova (letras do 'ls')
+04nov2003 Rodolfo Villanova (comando test: -b, -c, -g, -k, -u)
+21out2004 adicionadas âncoras com nome para cada seção
+04nov2004 Diego Búrigo Zacarão (sinais cygwin), gwm (sinais freebsd)
+04nov2004 sinais++, --css-sugar, Rodrigo Carvalhaes (elif)
+11nov2004 escapes do PS1 (tirado da Dicas-L 2004-11-09)
+18nov2005 Rodrigo Monteiro (while ... < <(comando), faltava um <
+18nov2005 tópicos numerados, títulos sem borda inferior
+01nov2006 Usando formato padrão do aurelio.net (tema Genius)
+06dez2006 PDF por 5ão
+01jan2007 Caractere 183 arrumado na tabela ASCII
+21mar2008 exitcode: removido * do 255*
+21mar2008 date: %y dois dígitos, %Y quatro dígitos
+21mar2008 Blocos: `...` retornando o resultado, $ do $'abc\n'
+21mar2008 s/Mnemônico/Lembrete/, ASCII (ISO-8859-1), iniciais em maiúsculas
+27mar2008 Tabela if/for/while/case arrumada, elif/then arrumado
+25abr2008 UTF-8, tema kiwi, todas tabelas com borda, setas Unicode no emacs
+04abr2009 Tema livro, tabelas simplificadas
+05jan2010 PDF com vendas suspensas
+07mai2010 PDF ficou gratuito
+07mai2010 Tradução para o espanhol
+24mai2010 s/à partir/a partir/ (valeu Denilson Sá)
+05abr2011 Link para o fonte .t2t
+06jul2011 Tradução pro inglês por Luiz Miguel Axcar
+25set2018 Mais expansões de variáveis: ^ ^^ , ,, ~ ~~
+
+-----------------------------------------------------------------------
+
+TODO exemplos de sed e find (Raimundo Fernando de Carvalho Bahia)
+TODO zzascii (botar os octais/hexa tb)
+TODO getopts
+TODO char 183 ASCII (imagem) está errada
+TODO atualizar tabela metacaracteres (Danilo Marques)
+TODO Classes POSIX regex (Renan Wagner)
+-->
+
+<style>
+  #article-body table {
+    width: 100%;
+  }
+  #article-body code {
+    background: transparent;
+  }
+</style>
+
+<div class="note">
+  <table>
+    <tr>
+      <td>
+        <a href="https://www.shellscript.com.br"><img class="center" src="/img/icon/128/livroshell.png" alt=""></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Este Canivete Suíço do Shell é um apêndice do meu livro <a href="https://www.shellscript.com.br">Shell Script Profissional</a>. O livro é enorme, são quase 500 páginas de puro shell, explicado de maneira clara e didática. Você vai dominar o assunto, além de aprender a escrever programas de verdade em vez de meros scripts toscos. Sou escritor e ganho a vida com meus livros, então comprando o livro você também me ajuda a manter esse site no ar e assim eu continuo escrevendo para você ler. Combinado? :)
+      </td>
+    </tr>
+  </table>
+</div>
+
+<nav>
+  <ol>
+    <li><a href="#operadores">Operadores</a></li>
+    <li><a href="#redir">Redirecionamento</a></li>
+    <li><a href="#variaveis">Variáveis especiais</a></li>
+    <li><a href="#expansao">Expansão de variáveis</a></li>
+    <li><a href="#blocos">Blocos e agrupamentos</a></li>
+    <li><a href="#ifwhilefor">if, for, select, while, until, case</a></li>
+    <li><a href="#test">Opções do comando test ou [</a></li>
+    <li><a href="#prompt">Escapes especiais para usar no prompt (PS1)</a></li>
+    <li><a href="#echo">Escapes reconhecidos pelo comando echo</a></li>
+    <li><a href="#date">Formatadores do comando date</a></li>
+    <li><a href="#printf">Formatadores do comando printf</a></li>
+    <li><a href="#ls">Letras identificadoras de arquivos no comando ls -l</a></li>
+    <li><a href="#glob">Curingas para nomes de arquivo (glob)</a></li>
+    <li><a href="#case">Curingas para os itens do comando case</a></li>
+    <li><a href="#sinais">Sinais para usar com trap/kill/killall</a></li>
+    <li><a href="#exitcode">Códigos de retorno de comandos</a></li>
+    <li><a href="#cores">Códigos de cores (ANSI)</a></li>
+    <li><a href="#metacaracteres">Os metacaracteres das expressões regulares</a></li>
+    <li><a href="#metadif">Metacaracteres que são diferentes nos aplicativos</a></li>
+    <li><a href="#ascii">Caracteres ASCII imprimíveis (ISO-8859-1) - texto</a></li>
+    <li><a href="#asciiimg">Caracteres ASCII imprimíveis (ISO-8859-1) - imagem</a></li>
+    <li><a href="#codigos">Códigos prontos para copiar e colar</a></li>
+    <li><a href="#emacs">Atalhos da linha de comando (set -o emacs)</a></li>
+    <li><a href="#ferramentas">A caixa de ferramentas do shelleiro</a></li>
+  </ol>
+</nav>
+
+<div class="note">
+  <ul class="compact">
+    <li><a href="/shell/canivete/pdf/">Versão PDF</a></li>
+    <li>Traduções: <a href="/shell/canivete/es/">Español</a>, <a href="/articles/shell-reference.html">English</a></li>
+    <li>Veja também: <a href="/shell/miniman/">miniman</a>, o irmãozinho do canivete</li>
+  </ul>
+</div>
+
+
+<h2 id="operadores">1. Operadores</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th colspan="2">Operadores Aritméticos</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>+</code></td>
+    <td>Adição</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-</code></td>
+    <td>Subtração</td>
+  </tr>
+  <tr>
+    <td class="center"><code>*</code></td>
+    <td>Multiplicação</td>
+  </tr>
+  <tr>
+    <td class="center"><code>/</code></td>
+    <td>Divisão</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%</code></td>
+    <td>Módulo</td>
+  </tr>
+  <tr>
+    <td class="center"><code>**</code></td>
+    <td>Exponenciação</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Operadores de Atribuição</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>=</code></td>
+    <td>Atribui valor a uma variável</td>
+  </tr>
+  <tr>
+    <td class="center"><code>+=</code></td>
+    <td>Incrementa a variável por uma constante</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-=</code></td>
+    <td>Decrementa a variável por uma constante</td>
+  </tr>
+  <tr>
+    <td class="center"><code>*=</code></td>
+    <td>Multiplica a variável por uma constante</td>
+  </tr>
+  <tr>
+    <td class="center"><code>/=</code></td>
+    <td>Divide a variável por uma constante</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%=</code></td>
+    <td>Resto da divisão por uma constante</td>
+  </tr>
+  <tr>
+    <td class="center"><code>++</code></td>
+    <td>Incrementa em 1 o valor da variável</td>
+  </tr>
+  <tr>
+    <td class="center"><code>--</code></td>
+    <td>Decrementa em 1 o valor da variável</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Operadores Relacionais</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>==</code></td>
+    <td>Igual</td>
+  </tr>
+  <tr>
+    <td class="center"><code>!=</code></td>
+    <td>Diferente</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;</code></td>
+    <td>Maior</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;=</code></td>
+    <td>Maior ou Igual</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;</code></td>
+    <td>Menor</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;=</code></td>
+    <td>Menor ou Igual</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Operadores Lógicos</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>&amp;&amp;</code></td>
+    <td>E lógico (AND)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>||</code></td>
+    <td>OU lógico (OR)</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Operadores de BIT</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>&lt;&lt;</code></td>
+    <td>Deslocamento à esquerda</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&gt;</code></td>
+    <td>Deslocamento à direita</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&amp;</code></td>
+    <td>E de bit (AND)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>|</code></td>
+    <td>OU de bit (OR)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>^</code></td>
+    <td>OU exclusivo de bit (XOR)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>~</code></td>
+    <td>Negação de bit</td>
+  </tr>
+  <tr>
+    <td class="center"><code>!</code></td>
+    <td>NÃO de bit (NOT)</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Operadores de BIT (atribuição)</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>&lt;&lt;=</code></td>
+    <td>Deslocamento à esquerda</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&gt;=</code></td>
+    <td>Deslocamento à direita</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&amp;=</code></td>
+    <td>E de bit</td>
+  </tr>
+  <tr>
+    <td class="center"><code>|=</code></td>
+    <td>OU de bit</td>
+  </tr>
+  <tr>
+    <td class="center"><code>^=</code></td>
+    <td>OU exclusivo de bit</td>
+  </tr>
+</table>
+
+
+<h2 id="redir">2. Redirecionamento</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Operador</th>
+    <th>Ação</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>&lt;</code></td>
+    <td>Redireciona a entrada padrão (STDIN)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;</code></td>
+    <td>Redireciona a saída padrão (STDOUT)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;</code></td>
+    <td>Redireciona a saída de erro (STDERR)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&gt;</code></td>
+    <td>Redireciona a saída padrão, anexando</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;&gt;</code></td>
+    <td>Redireciona a saída de erro, anexando</td>
+  </tr>
+  <tr>
+    <td class="center"><code>|</code></td>
+    <td>Conecta a saída padrão com a entrada padrão de outro comando</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;&amp;1</code></td>
+    <td>Conecta a saída de erro na saída padrão</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&amp;2</code></td>
+    <td>Conecta a saída padrão na saída de erro</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;&amp;-</code></td>
+    <td>Fecha a saída padrão</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2&gt;&amp;-</code></td>
+    <td>Fecha a saída de erro</td>
+  </tr>
+  <tr>
+    <td class="center"><code>3&lt;&gt;arq</code></td>
+    <td>Conecta o descritor de arquivos 3 ao arquivo 'arq'</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;&lt;FIM</code></td>
+    <td>Alimenta a entrada padrão (Here Document)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;&lt;-FIM</code></td>
+    <td>Alimenta a entrada padrão, cortando TABs</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&lt;(cmd)</code></td>
+    <td>A saída do comando 'cmd' é um arquivo: diff &lt;(cmd1) &lt;(cmd2)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>&gt;(cmd)</code></td>
+    <td>A entrada do comando 'cmd' é um arquivo: tar cf &gt;(bzip2 -c &gt;file.tbz) $dir</td>
+  </tr>
+</table>
+
+
+<h2 id="variaveis">3. Variáveis especiais</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Variável</th>
+    <th>Parâmetros Posicionais</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>$0</code></td>
+    <td>Parâmetro número 0 (nome do comando ou função)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$1</code></td>
+    <td>Parâmetro número 1 (da linha de comando ou função)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>...</code></td>
+    <td>Parâmetro número N ...</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$9</code></td>
+    <td>Parâmetro número 9 (da linha de comando ou função)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>${10}</code></td>
+    <td>Parâmetro número 10 (da linha de comando ou função)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>...</code></td>
+    <td>Parâmetro número NN ...</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$#</code></td>
+    <td>Número total de parâmetros da linha de comando ou função</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$*</code></td>
+    <td>Todos os parâmetros, como uma string única</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$@</code></td>
+    <td>Todos os parâmetros, como várias strings protegidas</td>
+  </tr>
+
+  <tr>
+    <th>Variável</th>
+    <th>Miscelânia</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>$$</code></td>
+    <td>Número PID do processo atual (do próprio script)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$!</code></td>
+    <td>Número PID do último job em segundo plano</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$_</code></td>
+    <td>Último argumento do último comando executado</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$?</code></td>
+    <td>Código de retorno do último comando executado</td>
+  </tr>
+</table>
+
+
+<h2 id="expansao">4. Expansão de variáveis</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Sintaxe</th>
+    <th>Expansão Condicional</th>
+  </tr>
+
+  <tr>
+    <td><code>${var:-texto}</code></td>
+    <td>Se var não está definida, retorna 'texto'</td>
+  </tr>
+  <tr>
+    <td><code>${var:=texto}</code></td>
+    <td>Se var não está definida, defina-a com 'texto'</td>
+  </tr>
+  <tr>
+    <td><code>${var:?texto}</code></td>
+    <td>Se var não está definida, retorna o erro 'texto'</td>
+  </tr>
+  <tr>
+    <td><code>${var:+texto}</code></td>
+    <td>Se var está definida, retorna 'texto', senão retorna o vazio</td>
+  </tr>
+
+  <tr>
+    <th>Sintaxe</th>
+    <th>Expansão de Strings</th>
+  </tr>
+
+  <tr>
+    <td><code>${var}</code></td>
+    <td>É o mesmo que $var, porém não ambíguo</td>
+  </tr>
+  <tr>
+    <td><code>${#var}</code></td>
+    <td>Retorna o tamanho da string</td>
+  </tr>
+  <tr>
+    <td><code>${!var}</code></td>
+    <td>Executa o conteúdo de $var (igual 'eval \$$var')</td>
+  </tr>
+  <tr>
+    <td><code>${!texto*}</code></td>
+    <td>Retorna os nomes de variáveis começadas por 'texto'</td>
+  </tr>
+  <tr>
+    <td><code>${var:N}</code></td>
+    <td>Retorna o texto a partir da posição 'N'</td>
+  </tr>
+  <tr>
+    <td><code>${var:N:tam}</code></td>
+    <td>Retorna 'tam' caracteres a partir da posição 'N'</td>
+  </tr>
+  <tr>
+    <td><code>${var#texto}</code></td>
+    <td>Corta 'texto' do início da string</td>
+  </tr>
+  <tr>
+    <td><code>${var##texto}</code></td>
+    <td>Corta 'texto' do início da string (* guloso)</td>
+  </tr>
+  <tr>
+    <td><code>${var%texto}</code></td>
+    <td>Corta 'texto' do final da string</td>
+  </tr>
+  <tr>
+    <td><code>${var%%texto}</code></td>
+    <td>Corta 'texto' do final da string (* guloso)</td>
+  </tr>
+  <tr>
+    <td><code>${var/texto/novo}</code></td>
+    <td>Substitui 'texto' por 'novo', uma vez</td>
+  </tr>
+  <tr>
+    <td><code>${var//texto/novo}</code></td>
+    <td>Substitui 'texto' por 'novo', sempre</td>
+  </tr>
+  <tr>
+    <td><code>${var/#texto/novo}</code></td>
+    <td>Se a string começar com 'texto', substitui 'texto' por 'novo'</td>
+  </tr>
+  <tr>
+    <td><code>${var/%texto/novo}</code></td>
+    <td>Se a string terminar com 'texto', substitui 'texto' por 'novo'</td>
+  </tr>
+  <tr>
+    <td><code>${var^}</code></td>
+    <td>Converte para maiúscula o primeiro caractere</td>
+  </tr>
+  <tr>
+    <td><code>${var^^}</code></td>
+    <td>Converte para maiúscula todos os caracteres</td>
+  </tr>
+  <tr>
+    <td><code>${var,}</code></td>
+    <td>Converte para minúscula o primeiro caractere</td>
+  </tr>
+  <tr>
+    <td><code>${var,,}</code></td>
+    <td>Converte para minúscula todos os caracteres</td>
+  </tr>
+  <tr>
+    <td><code>${var~}</code></td>
+    <td>Inverte maiúscula/minúscula do primeiro caractere</td>
+  </tr>
+  <tr>
+    <td><code>${var~~}</code></td>
+    <td>Inverte maiúscula/minúscula de todos os caracteres</td>
+  </tr>
+</table>
+
+
+<h2 id="blocos">5. Blocos e agrupamentos</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Sintaxe</th>
+    <th>Descrição</th>
+    <th>Exemplo</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>"..."</code></td>
+    <td>Protege uma string, mas reconhece $, \ e ` como especiais</td>
+    <td class="center">"abc"</td>
+  </tr>
+  <tr>
+    <td class="center"><code>'...'</code></td>
+    <td>Protege uma string completamente (nenhum caractere é especial)</td>
+    <td class="center">'abc'</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$'...'</code></td>
+    <td>Protege uma string completamente, mas interpreta \n, \t, \a, etc</td>
+    <td class="center">$'abc\n'</td>
+  </tr>
+  <tr>
+    <td class="center"><code>`...`</code></td>
+    <td>Executa comandos numa subshell, retornando o resultado</td>
+    <td class="center">`ls`</td>
+  </tr>
+  <tr>
+    <td class="center"><code>{...}</code></td>
+    <td>Agrupa comandos em um bloco</td>
+    <td class="center">{ ls ; }</td>
+  </tr>
+  <tr>
+    <td class="center"><code>(...)</code></td>
+    <td>Executa comandos numa subshell</td>
+    <td class="center">( ls )</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$(...)</code></td>
+    <td>Executa comandos numa subshell, retornando o resultado</td>
+    <td class="center">$( ls )</td>
+  </tr>
+  <tr>
+    <td class="center"><code>((...))</code></td>
+    <td>Testa uma operação aritmética, retornando 0 ou 1</td>
+    <td class="center">((5 &gt; 3))</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$((...))</code></td>
+    <td>Retorna o resultado de uma operação aritmética</td>
+    <td class="center">$((5+3))</td>
+  </tr>
+  <tr>
+    <td class="center"><code>[...]</code></td>
+    <td>Testa uma expressão, retornando 0 ou 1 (alias do comando 'test')</td>
+    <td class="center">[ 5 -gt 3 ]</td>
+  </tr>
+  <tr>
+    <td class="center"><code>[[...]]</code></td>
+    <td>Testa uma expressão, retornando 0 ou 1 (podendo usar &amp;&amp; e ||)</td>
+    <td class="center">[[ 5 &gt; 3 ]]</td>
+  </tr>
+</table>
+
+
+<h2 id="ifwhilefor">6. if, for, select, while, until, case</h2>
+
+
+<table>
+
+  <tr>
+    <th>if</th>
+    <th>for / select</th>
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+if COMANDO
+then
+   ...
+elif COMANDO
+then
+   ...
+else
+   ...
+fi
+</pre>
+    </td>
+    <td>
+      <pre>
+for VAR in LISTA
+do
+    ...
+done
+
+ou:
+
+for ((exp1;exp2;exp3))
+</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <th>while / until</th>
+    <th>case</th>
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+while COMANDO
+do
+    ...
+done
+</pre>
+    </td>
+    <td>
+      <pre>
+case $VAR in
+    txt1) ... ;;
+    txt2) ... ;;
+    txtN) ... ;;
+    *)    ... ;;
+esac
+</pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2 id="test">7. Opções do comando test ou [</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th colspan="2">Comparação Numérica</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>-lt</code></td>
+    <td>É menor que (LessThan)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-gt</code></td>
+    <td>É maior que (GreaterThan)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-le</code></td>
+    <td>É menor igual (LessEqual)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ge</code></td>
+    <td>É maior igual (GreaterEqual)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-eq</code></td>
+    <td>É igual (EQual)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ne</code></td>
+    <td>É diferente (NotEqual)</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Comparação de Strings</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>=</code></td>
+    <td>É igual</td>
+  </tr>
+  <tr>
+    <td class="center"><code>!=</code></td>
+    <td>É diferente</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-n</code></td>
+    <td>É não nula</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-z</code></td>
+    <td>É nula</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Operadores Lógicos</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>!</code></td>
+    <td>NÃO lógico (NOT)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-a</code></td>
+    <td>E lógico (AND)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-o</code></td>
+    <td>OU lógico (OR)</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Testes em arquivos</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>-b</code></td>
+    <td>É um dispositivo de bloco</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-c</code></td>
+    <td>É um dispositivo de caractere</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-d</code></td>
+    <td>É um diretório</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-e</code></td>
+    <td>O arquivo existe</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-f</code></td>
+    <td>É um arquivo normal</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-g</code></td>
+    <td>O bit SGID está ativado</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-G</code></td>
+    <td>O grupo do arquivo é o do usuário atual</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-k</code></td>
+    <td>O sticky-bit está ativado</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-L</code></td>
+    <td>O arquivo é um link simbólico</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-O</code></td>
+    <td>O dono do arquivo é o usuário atual</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-p</code></td>
+    <td>O arquivo é um named pipe</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-r</code></td>
+    <td>O arquivo tem permissão de leitura</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-s</code></td>
+    <td>O tamanho do arquivo é maior que zero</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-S</code></td>
+    <td>O arquivo é um socket</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-t</code></td>
+    <td>O descritor de arquivos N é um terminal</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-u</code></td>
+    <td>O bit SUID está ativado</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-w</code></td>
+    <td>O arquivo tem permissão de escrita</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-x</code></td>
+    <td>O arquivo tem permissão de execução</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-nt</code></td>
+    <td>O arquivo é mais recente (NewerThan)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ot</code></td>
+    <td>O arquivo é mais antigo (OlderThan)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-ef</code></td>
+    <td>O arquivo é o mesmo (EqualFile)</td>
+  </tr>
+</table>
+
+
+<h2 id="prompt">8. Escapes especiais para usar no prompt (PS1)</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Escape</th>
+    <th>Lembrete</th>
+    <th>Expande para...</th>
+  </tr>
+
+  <tr>
+    <td class="center">\a</td>
+    <td><em>Alerta</em></td>
+    <td>Alerta (bipe)</td>
+  </tr>
+  <tr>
+    <td class="center">\d</td>
+    <td><em>Data</em></td>
+    <td>Data no formato "Dia-da-semana Mês Dia" (Sat Jan 15)</td>
+  </tr>
+  <tr>
+    <td class="center">\e</td>
+    <td><em>Escape</em></td>
+    <td>Caractere Esc</td>
+  </tr>
+  <tr>
+    <td class="center">\h</td>
+    <td><em>Hostname</em></td>
+    <td>Nome da máquina sem o domínio (dhcp11)</td>
+  </tr>
+  <tr>
+    <td class="center">\H</td>
+    <td><em>Hostname</em></td>
+    <td>Nome completo da máquina (dhcp11.empresa)</td>
+  </tr>
+  <tr>
+    <td class="center">\j</td>
+    <td><em>Jobs</em></td>
+    <td>Número de jobs ativos</td>
+  </tr>
+  <tr>
+    <td class="center">\l</td>
+    <td><em>Tty</em></td>
+    <td>Nome do terminal corrente (ttyp1)</td>
+  </tr>
+  <tr>
+    <td class="center">\n</td>
+    <td><em>Newline</em></td>
+    <td>Linha nova</td>
+  </tr>
+  <tr>
+    <td class="center">\r</td>
+    <td><em>Return</em></td>
+    <td>Retorno de carro</td>
+  </tr>
+  <tr>
+    <td class="center">\s</td>
+    <td><em>Shell</em></td>
+    <td>Nome do shell (basename $0)</td>
+  </tr>
+  <tr>
+    <td class="center">\t</td>
+    <td><em>Time</em></td>
+    <td>Horário no formato 24 horas HH:MM:SS</td>
+  </tr>
+  <tr>
+    <td class="center">\T</td>
+    <td><em>Time</em></td>
+    <td>Horário no formato 12 horas HH:MM:SS</td>
+  </tr>
+  <tr>
+    <td class="center">\@</td>
+    <td><em>At</em></td>
+    <td>Horário no formato 12 horas HH:MM am/pm</td>
+  </tr>
+  <tr>
+    <td class="center">\A</td>
+    <td><em>At</em></td>
+    <td>Horário no formato 24 horas HH:MM</td>
+  </tr>
+  <tr>
+    <td class="center">\u</td>
+    <td><em>Usuário</em></td>
+    <td>Login do usuário corrente</td>
+  </tr>
+  <tr>
+    <td class="center">\v</td>
+    <td><em>Versão</em></td>
+    <td>Versão do Bash (2.00)</td>
+  </tr>
+  <tr>
+    <td class="center">\V</td>
+    <td><em>Versão</em></td>
+    <td>Versão+subversão do Bash (2.00.0)</td>
+  </tr>
+  <tr>
+    <td class="center">\w</td>
+    <td><em>Working Dir</em></td>
+    <td>Diretório corrente, caminho completo ($PWD)</td>
+  </tr>
+  <tr>
+    <td class="center">\W</td>
+    <td><em>Working Dir</em></td>
+    <td>Diretório corrente, somente o último (basename $PWD)</td>
+  </tr>
+  <tr>
+    <td class="center">\!</td>
+    <td><em>Histórico</em></td>
+    <td>Número do comando corrente no histórico</td>
+  </tr>
+  <tr>
+    <td class="center">\#</td>
+    <td><em>Número</em></td>
+    <td>Número do comando corrente</td>
+  </tr>
+  <tr>
+    <td class="center">\$</td>
+    <td><em>ID</em></td>
+    <td>Mostra "#" se for root, "$" se for usuário normal</td>
+  </tr>
+  <tr>
+    <td class="center">\nnn</td>
+    <td><em>Octal</em></td>
+    <td>Caractere cujo octal é nnn</td>
+  </tr>
+  <tr>
+    <td class="center">\\</td>
+    <td><em>Backslash</em></td>
+    <td>Barra invertida \ literal</td>
+  </tr>
+  <tr>
+    <td class="center">\[</td>
+    <td><em>Escapes</em></td>
+    <td>Inicia uma seqüência de escapes (tipo códigos de cores)</td>
+  </tr>
+  <tr>
+    <td class="center">\]</td>
+    <td><em>Escapes</em></td>
+    <td>Termina uma seqüência de escapes</td>
+  </tr>
+</table>
+
+
+<h2 id="echo">9. Escapes reconhecidos pelo comando echo</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Escape</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+
+  <tr>
+    <td class="center">\a</td>
+    <td><em>Alerta</em></td>
+    <td>Alerta (bipe)</td>
+  </tr>
+  <tr>
+    <td class="center">\b</td>
+    <td><em>Backspace</em></td>
+    <td>Caractere Backspace</td>
+  </tr>
+  <tr>
+    <td class="center">\c</td>
+    <td><em>EOS</em></td>
+    <td>Termina a string</td>
+  </tr>
+  <tr>
+    <td class="center">\e</td>
+    <td><em>Escape</em></td>
+    <td>Caractere Esc</td>
+  </tr>
+  <tr>
+    <td class="center">\f</td>
+    <td><em>Form feed</em></td>
+    <td>Alimentação</td>
+  </tr>
+  <tr>
+    <td class="center">\n</td>
+    <td><em>Newline</em></td>
+    <td>Linha nova</td>
+  </tr>
+  <tr>
+    <td class="center">\r</td>
+    <td><em>Return</em></td>
+    <td>Retorno de carro</td>
+  </tr>
+  <tr>
+    <td class="center">\t</td>
+    <td><em>Tab</em></td>
+    <td>Tabulação horizontal</td>
+  </tr>
+  <tr>
+    <td class="center">\v</td>
+    <td><em>Vtab</em></td>
+    <td>Tabulação vertical</td>
+  </tr>
+  <tr>
+    <td class="center">\\</td>
+    <td><em>Backslash</em></td>
+    <td>Barra invertida \ literal</td>
+  </tr>
+  <tr>
+    <td class="center">\nnn</td>
+    <td><em>Octal</em></td>
+    <td>Caractere cujo octal é nnn</td>
+  </tr>
+  <tr>
+    <td class="center">\xnn</td>
+    <td><em>Hexa</em></td>
+    <td>Caractere cujo hexadecimal é nn</td>
+  </tr>
+</table>
+
+
+<h2 id="date">10. Formatadores do comando date</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Formato</th>
+    <th>Descrição</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>%a</code></td>
+    <td>Nome do dia da semana abreviado (Dom..Sáb)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%A</code></td>
+    <td>Nome do dia da semana (Domingo..Sábado)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%b</code></td>
+    <td>Nome do mês abreviado (Jan..Dez)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%B</code></td>
+    <td>Nome do mês (Janeiro..Dezembro)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%c</code></td>
+    <td>Data completa (Sat Nov 04 12:02:33 EST 1989)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%y</code></td>
+    <td>Ano (dois dígitos)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%Y</code></td>
+    <td>Ano (quatro dígitos)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%m</code></td>
+    <td>Mês (01..12)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%d</code></td>
+    <td>Dia (01..31)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%j</code></td>
+    <td>Dia do ano (001..366)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%H</code></td>
+    <td>Horas (00..23)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%M</code></td>
+    <td>Minutos (00..59)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%S</code></td>
+    <td>Segundos (00..60)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%s</code></td>
+    <td>Segundos desde 1º de Janeiro de 1970</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%%</code></td>
+    <td>Um % literal</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%t</code></td>
+    <td>Um TAB</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%n</code></td>
+    <td>Uma quebra de linha</td>
+  </tr>
+</table>
+
+
+<h2 id="printf">11. Formatadores do comando printf</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Formato</th>
+    <th>Descrição</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>%d</code></td>
+    <td>Número decimal</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%o</code></td>
+    <td>Número octal</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%x</code></td>
+    <td>Número hexadecimal (a-f)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%X</code></td>
+    <td>Número hexadecimal (A-F)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%f</code></td>
+    <td>Número com ponto flutuante</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%e</code></td>
+    <td>Número em notação científica (e+1)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%E</code></td>
+    <td>Número em notação científica (E+1)</td>
+  </tr>
+  <tr>
+    <td class="center"><code>%s</code></td>
+    <td>String</td>
+  </tr>
+</table>
+
+
+<h2 id="ls">12. Letras identificadoras de arquivos no comando ls -l</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Letra</th>
+    <th>Lembrete</th>
+    <th>Tipos de Arquivo (primeiro caractere)</th>
+  </tr>
+
+  <tr>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td>Arquivo normal</td>
+  </tr>
+  <tr>
+    <td class="center">d</td>
+    <td class="center">Directory</td>
+    <td>Diretório</td>
+  </tr>
+  <tr>
+    <td class="center">l</td>
+    <td class="center">Link</td>
+    <td>Link simbólico</td>
+  </tr>
+  <tr>
+    <td class="center">b</td>
+    <td class="center">Block</td>
+    <td>Dispositivo de blocos (HD)</td>
+  </tr>
+  <tr>
+    <td class="center">c</td>
+    <td class="center">Char</td>
+    <td>Dispositivo de caracteres (modem serial)</td>
+  </tr>
+  <tr>
+    <td class="center">s</td>
+    <td class="center">Socket</td>
+    <td>Socket mapeado em arquivo (comunicação de processos)</td>
+  </tr>
+  <tr>
+    <td class="center">p</td>
+    <td class="center">Pipe</td>
+    <td>FIFO ou Named Pipe (comunicação de processos)</td>
+  </tr>
+
+  <tr>
+    <th>Letra</th>
+    <th>Lembrete</th>
+    <th>Permissões do Arquivo (próximos nove caracteres)</th>
+  </tr>
+
+  <tr>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td>Permissão desativada</td>
+  </tr>
+  <tr>
+    <td class="center">r</td>
+    <td class="center">Read</td>
+    <td>Acesso de leitura</td>
+  </tr>
+  <tr>
+    <td class="center">w</td>
+    <td class="center">Write</td>
+    <td>Acesso de escrita</td>
+  </tr>
+  <tr>
+    <td class="center">x</td>
+    <td class="center">eXecute</td>
+    <td>Acesso de execução (ou acesso ao diretório)</td>
+  </tr>
+  <tr>
+    <td class="center">X</td>
+    <td class="center">eXecute</td>
+    <td>Acesso ao diretório somente</td>
+  </tr>
+  <tr>
+    <td class="center">s</td>
+    <td class="center">Set ID</td>
+    <td>Usuário/grupo para execução (SUID, SGID) - permissão 'x' ativada</td>
+  </tr>
+  <tr>
+    <td class="center">S</td>
+    <td class="center">Set ID</td>
+    <td>Usuário/grupo para execução (SUID, SGID) - permissão 'x' desativada</td>
+  </tr>
+  <tr>
+    <td class="center">t</td>
+    <td class="center">sTicky</td>
+    <td>Usuários só apagam seus próprios arquivos - permissão 'x' ativada</td>
+  </tr>
+  <tr>
+    <td class="center">T</td>
+    <td class="center">sTicky</td>
+    <td>Usuários só apagam seus próprios arquivos - permissão 'x' desativada</td>
+  </tr>
+</table>
+
+
+<h2 id="glob">13. Curingas para nomes de arquivo (glob)</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Curinga</th>
+    <th>Casa com...</th>
+    <th>Exemplo</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>*</code></td>
+    <td>Qualquer coisa</td>
+    <td><code>*.txt</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>?</code></td>
+    <td>Um caractere qualquer</td>
+    <td><code>arquivo-??.zip</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[...]</code></td>
+    <td>Qualquer um dos caracteres listados</td>
+    <td><code>[Aa]rquivo.txt</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[^...]</code></td>
+    <td>Qualquer um caractere, exceto os listados</td>
+    <td><code>[^A-Z]*.txt</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>{...}</code></td>
+    <td>Qualquer um dos textos separados por vírgula</td>
+    <td><code>arquivo.{txt,html}</code></td>
+  </tr>
+</table>
+
+
+<h2 id="case">14. Curingas para os itens do comando case</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Curinga</th>
+    <th>Casa com...</th>
+    <th>Exemplo</th>
+  </tr>
+
+  <tr>
+    <td class="center"><code>*</code></td>
+    <td>Qualquer coisa</td>
+    <td class="right"><code>*.txt) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>?</code></td>
+    <td>Um caractere qualquer</td>
+    <td class="right"><code>arquivo-??.zip) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[...]</code></td>
+    <td>Qualquer um dos caracteres listados</td>
+    <td class="right"><code>[0-9]) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>[^...]</code></td>
+    <td>Qualquer um caractere, exceto os listados</td>
+    <td class="right"><code>[^0-9]) echo ;;</code></td>
+  </tr>
+  <tr>
+    <td class="center"><code>...|...</code></td>
+    <td>Qualquer um dos textos separados por |</td>
+    <td class="right"><code>txt|html) echo ;;</code></td>
+  </tr>
+</table>
+
+
+<h2 id="sinais">15. Sinais para usar com trap/kill/killall</h2>
+
+
+<!-- kill -l | tr '\t' '\n' | sed 's/)/ |/;s/^/ | /' -->
+
+<table class="tableborder">
+
+  <tr>
+    <th>#</th>
+    <th>Linux</th>
+    <th>Cygwin</th>
+    <th>SystemV</th>
+    <th>AIX</th>
+    <th>HP-UX</th>
+    <th>Solaris</th>
+    <th>BSD/Mac</th>
+  </tr>
+
+  <tr>
+    <td class="right">1</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+    <td>HUP</td>
+  </tr>
+  <tr>
+    <td class="right">2</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+    <td>INT</td>
+  </tr>
+  <tr>
+    <td class="right">3</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+    <td>QUIT</td>
+  </tr>
+  <tr>
+    <td class="right">4</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+    <td>ILL</td>
+  </tr>
+  <tr>
+    <td class="right">5</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+    <td>TRAP</td>
+  </tr>
+  <tr>
+    <td class="right">6</td>
+    <td>ABRT</td>
+    <td>ABRT</td>
+    <td>IOT</td>
+    <td>LOST</td>
+    <td>ABRT</td>
+    <td>ABRT</td>
+    <td>ABRT</td>
+  </tr>
+  <tr>
+    <td class="right">7</td>
+    <td>BUS</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+    <td>EMT</td>
+  </tr>
+  <tr>
+    <td class="right">8</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+    <td>FPE</td>
+  </tr>
+  <tr>
+    <td class="right">9</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+    <td>KILL</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>USR1</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+    <td>BUS</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+    <td>SEGV</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>USR2</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+    <td>SYS</td>
+  </tr>
+
+  <tr>
+    <th>#</th>
+    <th>Linux</th>
+    <th>Cygwin</th>
+    <th>SystemV</th>
+    <th>AIX</th>
+    <th>HP-UX</th>
+    <th>Solaris</th>
+    <th>BSD/Mac</th>
+  </tr>
+
+  <tr>
+    <td>13</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+    <td>PIPE</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+    <td>ALRM</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+    <td>TERM</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>-</td>
+    <td>URG</td>
+    <td>USR1</td>
+    <td>URG</td>
+    <td>USR1</td>
+    <td>USR1</td>
+    <td>URG</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>CHLD</td>
+    <td>STOP</td>
+    <td>USR2</td>
+    <td>STOP</td>
+    <td>USR2</td>
+    <td>USR2</td>
+    <td>STOP</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>CONT</td>
+    <td>TSTP</td>
+    <td>CHLD</td>
+    <td>TSTP</td>
+    <td>CHLD</td>
+    <td>CHLD</td>
+    <td>TSTP</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>STOP</td>
+    <td>CONT</td>
+    <td>PWR</td>
+    <td>CONT</td>
+    <td>PWR</td>
+    <td>PWR</td>
+    <td>CONT</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>TSTP</td>
+    <td>CHLD</td>
+    <td>WINCH</td>
+    <td>CHLD</td>
+    <td>VTALRM</td>
+    <td>WINCH</td>
+    <td>CHLD</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>TTIN</td>
+    <td>TTIN</td>
+    <td>URG</td>
+    <td>TTIN</td>
+    <td>PROF</td>
+    <td>URG</td>
+    <td>TTIN</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>TTOU</td>
+    <td>TTOU</td>
+    <td>IO</td>
+    <td>TTOU</td>
+    <td>IO</td>
+    <td>IO</td>
+    <td>TTOU</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>URG</td>
+    <td>IO</td>
+    <td>STOP</td>
+    <td>IO</td>
+    <td>WINCH</td>
+    <td>STOP</td>
+    <td>IO</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>XCPU</td>
+    <td>XCPU</td>
+    <td>TSTP</td>
+    <td>XCPU</td>
+    <td>STOP</td>
+    <td>TSTP</td>
+    <td>XCPU</td>
+  </tr>
+
+  <tr>
+    <th>#</th>
+    <th>Linux</th>
+    <th>Cygwin</th>
+    <th>SystemV</th>
+    <th>AIX</th>
+    <th>HP-UX</th>
+    <th>Solaris</th>
+    <th>BSD/Mac</th>
+  </tr>
+
+  <tr>
+    <td>25</td>
+    <td>XFSZ</td>
+    <td>XFSZ</td>
+    <td>CONT</td>
+    <td>XFSZ</td>
+    <td>TSTP</td>
+    <td>CONT</td>
+    <td>XFSZ</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>VTALRM</td>
+    <td>VTALRM</td>
+    <td>TTIN</td>
+    <td>-</td>
+    <td>CONT</td>
+    <td>TTIN</td>
+    <td>VTALRM</td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>PROF</td>
+    <td>PROF</td>
+    <td>TTOU</td>
+    <td>MSG</td>
+    <td>TTIN</td>
+    <td>TTOU</td>
+    <td>PROF</td>
+  </tr>
+  <tr>
+    <td>28</td>
+    <td>WINCH</td>
+    <td>WINCH</td>
+    <td>VTALRM</td>
+    <td>WINCH</td>
+    <td>TTOU</td>
+    <td>VTALRM</td>
+    <td>WINCH</td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>IO</td>
+    <td>LOST</td>
+    <td>PROF</td>
+    <td>PWR</td>
+    <td>URG</td>
+    <td>PROF</td>
+    <td>INFO</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>PWR</td>
+    <td>USR1</td>
+    <td>XCPU</td>
+    <td>USR1</td>
+    <td>LOST</td>
+    <td>XCPU</td>
+    <td>USR1</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>SYS</td>
+    <td>USR2</td>
+    <td>XFSZ</td>
+    <td>USR2</td>
+    <td>-</td>
+    <td>XFSZ</td>
+    <td>USR2</td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>PROF</td>
+    <td>-</td>
+    <td>WAITING</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>DANGER</td>
+    <td>-</td>
+    <td>LWP</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>VTALRM</td>
+    <td>-</td>
+    <td>FREEZE</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>MIGRATE</td>
+    <td>-</td>
+    <td>THAW</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>PRE</td>
+    <td>-</td>
+    <td>CANCEL</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>37</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>LOST</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<p>Como obter a listagem: trap -l, kill -l ou killall -l
+<br>
+Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</a></p>
+
+
+<h2 id="exitcode">16. Códigos de retorno de comandos</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Código</th>
+    <th>Significado</th>
+    <th>Exemplo</th>
+  </tr>
+
+  <tr>
+    <td class="center">0</td>
+    <td>Nenhum erro, execução terminou OK</td>
+    <td>echo</td>
+  </tr>
+  <tr>
+    <td class="center">1</td>
+    <td>A maioria dos erros comuns na execução</td>
+    <td>echo $((1/0))</td>
+  </tr>
+  <tr>
+    <td class="center">2</td>
+    <td>Erro de uso em algum 'builtin' do Shell</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td class="center">126</td>
+    <td>Comando não executável (sem permissão)</td>
+    <td>touch a ; ./a</td>
+  </tr>
+  <tr>
+    <td class="center">127</td>
+    <td>Comando não encontrado ("command not found")</td>
+    <td>echooo</td>
+  </tr>
+  <tr>
+    <td class="center">128</td>
+    <td>O parâmetro para o 'exit' não é um decimal</td>
+    <td>exit 1.0</td>
+  </tr>
+  <tr>
+    <td class="center">128+n</td>
+    <td>128 + código do sinal que o matou</td>
+    <td>kill -9 $PPID #exit 137</td>
+  </tr>
+  <tr>
+    <td class="center">130</td>
+    <td>O programa interrompido com o Ctrl+C (128 + 2)</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td class="center">255</td>
+    <td>Parâmetro para o 'exit' não está entre 0 e 255</td>
+    <td>exit -1</td>
+  </tr>
+</table>
+
+
+<h2 id="cores">17. Códigos de cores (ANSI)</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Cor</th>
+    <th>Letra</th>
+    <th>Fundo</th>
+  </tr>
+
+  <tr>
+    <td>Preto</td>
+    <td class="center">30</td>
+    <td class="center">40</td>
+  </tr>
+  <tr>
+    <td>Vermelho</td>
+    <td class="center">31</td>
+    <td class="center">41</td>
+  </tr>
+  <tr>
+    <td>Verde</td>
+    <td class="center">32</td>
+    <td class="center">42</td>
+  </tr>
+  <tr>
+    <td>Amarelo</td>
+    <td class="center">33</td>
+    <td class="center">43</td>
+  </tr>
+  <tr>
+    <td>Azul</td>
+    <td class="center">34</td>
+    <td class="center">44</td>
+  </tr>
+  <tr>
+    <td>Rosa</td>
+    <td class="center">35</td>
+    <td class="center">45</td>
+  </tr>
+  <tr>
+    <td>Ciano</td>
+    <td class="center">36</td>
+    <td class="center">46</td>
+  </tr>
+  <tr>
+    <td>Branco</td>
+    <td class="center">37</td>
+    <td class="center">47</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Atributo</th>
+    <th>Valor</th>
+  </tr>
+
+  <tr>
+    <td colspan="2">Reset</td>
+    <td class="center">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Negrito</td>
+    <td class="center">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Sublinhado</td>
+    <td class="center">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Piscando</td>
+    <td class="center">5</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reverso</td>
+    <td class="center">7</td>
+  </tr>
+
+  <tr>
+    <th colspan="3">Exemplos: ESC [ &lt;N&gt;;&lt;N&gt; m</th>
+  </tr>
+
+  <tr>
+    <td colspan="2">Texto normal (desliga cores)</td>
+    <td class="center"><code>ESC[m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Negrito</td>
+    <td class="center"><code>ESC[1m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Amarelo</td>
+    <td class="center"><code>ESC[33;1m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Fundo azul, letra cinza</td>
+    <td class="center"><code>ESC[44;37m</code></td>
+  </tr>
+  <tr>
+    <td colspan="2">Vermelho piscando</td>
+    <td class="center"><code>ESC[31;5m</code></td>
+  </tr>
+
+  <tr>
+    <th colspan="3">Na linha de comando</th>
+  </tr>
+
+  <tr>
+    <td colspan="3"><code>echo -e '\e[33;1m amarelo \e[m'</code></td>
+  </tr>
+  <tr>
+    <td colspan="3"><code>echo -e '\033[33;1m amarelo \033[m'</code></td>
+  </tr>
+</table>
+
+<p class="figure"><img src="/shell/canivete/zzcores.gif"></p>
+
+
+<h2 id="metacaracteres">18. Os metacaracteres das expressões regulares</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Meta</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+  </tr>
+
+  <tr>
+    <td class="center">.</td>
+    <td>Ponto</td>
+    <td>Curinga de um caractere</td>
+  </tr>
+  <tr>
+    <td class="center">[]</td>
+    <td>Lista</td>
+    <td>Casa qualquer um dos caracteres listados</td>
+  </tr>
+  <tr>
+    <td class="center">[^]</td>
+    <td>Lista negada</td>
+    <td>Casa qualquer caractere, exceto os listados</td>
+  </tr>
+  <tr>
+    <td class="center">?</td>
+    <td>Opcional</td>
+    <td>O item anterior pode aparecer ou não (opcional)</td>
+  </tr>
+  <tr>
+    <td class="center">*</td>
+    <td>Asterisco</td>
+    <td>O item anterior pode aparecer em qualquer quantidade</td>
+  </tr>
+  <tr>
+    <td class="center">+</td>
+    <td>Mais</td>
+    <td>O item anterior deve aparecer no mínimo uma vez</td>
+  </tr>
+  <tr>
+    <td class="center">{,}</td>
+    <td>Chaves</td>
+    <td>O item anterior deve aparecer na quantidade indicada {mín,máx}</td>
+  </tr>
+  <tr>
+    <td class="center">^</td>
+    <td>Circunflexo</td>
+    <td>Casa o começo da linha</td>
+  </tr>
+  <tr>
+    <td class="center">$</td>
+    <td>Cifrão</td>
+    <td>Casa o fim da linha</td>
+  </tr>
+  <tr>
+    <td class="center">\b</td>
+    <td>Borda</td>
+    <td>Limita uma palavra (letras, números e sublinhado)</td>
+  </tr>
+  <tr>
+    <td class="center">\</td>
+    <td>Escape</td>
+    <td>Escapa um meta, tirando seu poder</td>
+  </tr>
+  <tr>
+    <td class="center">|</td>
+    <td>Ou</td>
+    <td>Indica alternativas (usar com o grupo)</td>
+  </tr>
+  <tr>
+    <td class="center">()</td>
+    <td>Grupo</td>
+    <td>Agrupa partes da expressão, é quantificável e multinível</td>
+  </tr>
+  <tr>
+    <td class="center">\1</td>
+    <td>Retrovisor</td>
+    <td>Recupera o conteúdo do grupo 1</td>
+  </tr>
+  <tr>
+    <td class="center">\2</td>
+    <td>Retrovisor</td>
+    <td>Recupera o conteúdo do grupo 2 (segue até o \9)</td>
+  </tr>
+  <tr>
+    <td class="center">.*</td>
+    <td>Curinga</td>
+    <td>Casa qualquer coisa, é o tudo e o nada</td>
+  </tr>
+  <tr>
+    <td class="center">??</td>
+    <td>Opcional NG</td>
+    <td>Idem ao opcional comum, mas casa o mínimo possível</td>
+  </tr>
+  <tr>
+    <td class="center">*?</td>
+    <td>Asterisco NG</td>
+    <td>Idem ao asterisco comum, mas casa o mínimo possível</td>
+  </tr>
+  <tr>
+    <td class="center">+?</td>
+    <td>Mais NG</td>
+    <td>Idem ao mais comum, mas casa o mínimo possível</td>
+  </tr>
+  <tr>
+    <td class="center">{}?</td>
+    <td>Chaves NG</td>
+    <td>Idem às chaves comuns, mas casa o mínimo possível</td>
+  </tr>
+</table>
+
+
+<h2 id="metadif">19. Metacaracteres que são diferentes nos aplicativos</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Programa</th>
+    <th>Opc</th>
+    <th>Mais</th>
+    <th>Chaves</th>
+    <th>Borda</th>
+    <th>Ou</th>
+    <th>Grupo</th>
+  </tr>
+
+  <tr>
+    <td>awk</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>ed</td>
+    <td class="center">\?</td>
+    <td class="center">\+</td>
+    <td class="center">\{,\}</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>egrep</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>emacs</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>expect</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>find</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>gawk</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\&lt;\&gt;</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>grep</td>
+    <td class="center">\?</td>
+    <td class="center">\+</td>
+    <td class="center">\{,\}</td>
+    <td class="center">\b</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>mawk</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">-</td>
+    <td class="center">-</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>perl</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>php</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>python</td>
+    <td class="center">?</td>
+    <td class="center">+</td>
+    <td class="center">{,}</td>
+    <td class="center">\b</td>
+    <td class="center">|</td>
+    <td class="center">()</td>
+  </tr>
+  <tr>
+    <td>sed</td>
+    <td class="center">\?</td>
+    <td class="center">\+</td>
+    <td class="center">\{,\}</td>
+    <td class="center">\&lt;\&gt;</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+  <tr>
+    <td>vim</td>
+    <td class="center">\=</td>
+    <td class="center">\+</td>
+    <td class="center">\{,}</td>
+    <td class="center">\&lt;\&gt;</td>
+    <td class="center">\|</td>
+    <td class="center">\(\)</td>
+  </tr>
+</table>
+
+
+<h2 id="ascii">20. Caracteres ASCII imprimíveis (ISO-8859-1) - texto</h2>
+
+
+<pre>
+$ <a href="https://funcoeszz.net/todas.html">zzascii</a>
+32        64  @     96  `    162  ¢    194  Â    226  â
+33  !     65  A     97  a    163  £    195  Ã    227  ã
+34  "     66  B     98  b    164  ¤    196  Ä    228  ä
+35  #     67  C     99  c    165  ¥    197  Å    229  å
+36  $     68  D    100  d    166  ¦    198  Æ    230  æ
+37  %     69  E    101  e    167  §    199  Ç    231  ç
+38  &amp;     70  F    102  f    168  ¨    200  È    232  è
+39  '     71  G    103  g    169  ©    201  É    233  é
+40  (     72  H    104  h    170  ª    202  Ê    234  ê
+41  )     73  I    105  i    171  «    203  Ë    235  ë
+42  *     74  J    106  j    172  ¬    204  Ì    236  ì
+43  +     75  K    107  k    173       205  Í    237  í
+44  ,     76  L    108  l    174  ®    206  Î    238  î
+45  -     77  M    109  m    175  ¯    207  Ï    239  ï
+46  .     78  N    110  n    176  °    208  Ð    240  ð
+47  /     79  O    111  o    177  ±    209  Ñ    241  ñ
+48  0     80  P    112  p    178  ²    210  Ò    242  ò
+49  1     81  Q    113  q    179  ³    211  Ó    243  ó
+50  2     82  R    114  r    180  ´    212  Ô    244  ô
+51  3     83  S    115  s    181  µ    213  Õ    245  õ
+52  4     84  T    116  t    182  ¶    214  Ö    246  ö
+53  5     85  U    117  u    183  ·    215  ×    247  ÷
+54  6     86  V    118  v    184  ¸    216  Ø    248  ø
+55  7     87  W    119  w    185  ¹    217  Ù    249  ù
+56  8     88  X    120  x    186  º    218  Ú    250  ú
+57  9     89  Y    121  y    187  »    219  Û    251  û
+58  :     90  Z    122  z    188  ¼    220  Ü    252  ü
+59  ;     91  [    123  {    189  ½    221  Ý    253  ý
+60  &lt;     92  \    124  |    190  ¾    222  Þ    254  þ
+61  =     93  ]    125  }    191  ¿    223  ß    255  ÿ
+62  &gt;     94  ^    126  ~    192  À    224  à
+63  ?     95  _    161  ¡    193  Á    225  á
+</pre>
+
+
+<h2 id="asciiimg">21. Caracteres ASCII imprimíveis (ISO-8859-1) - imagem</h2>
+
+
+<p class="figure"><img src="/shell/canivete/ascii.gif"></p>
+
+
+<h2 id="codigos">22. Códigos prontos para copiar e colar</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Condicionais com o IF</th>
+  </tr>
+
+  <tr>
+    <td><code>if [ -f "$arquivo" ]; then echo 'Arquivo encontrado'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ ! -d "$dir" ]; then echo 'Diretório não encontrado'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ $i -gt 5 ]; then echo 'Maior que 5'; else echo 'Menor que 5'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ $i -ge 5 -a $i -le 10 ]; then echo 'Entre 5 e 10, incluindo'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ $i -eq 5 ]; then echo '=5'; elif [ $i -gt 5 ]; then echo '&gt;5'; else echo '&lt;5'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if [ "$USER" = 'root' ]; then echo 'Oi root'; fi</code></td>
+  </tr>
+  <tr>
+    <td><code>if grep -qs 'root' /etc/passwd; then echo 'Usuário encontrado'; fi</code></td>
+  </tr>
+
+  <tr>
+    <th>Condicionais com o E (&amp;&amp;) e OU (||)</th>
+  </tr>
+
+  <tr>
+    <td><code>[ -f "$arquivo" ] &amp;&amp; echo 'Arquivo encontrado'</code></td>
+  </tr>
+  <tr>
+    <td><code>[ -d "$dir" ] || echo 'Diretório não encontrado'</code></td>
+  </tr>
+  <tr>
+    <td><code>grep -qs 'root' /etc/passwd &amp;&amp; echo 'Usuário encontrado'</code></td>
+  </tr>
+  <tr>
+    <td><code>cd "$dir" &amp;&amp; rm "$arquivo" &amp;&amp; touch "$arquivo" &amp;&amp; echo 'feito!'</code></td>
+  </tr>
+  <tr>
+    <td><code>[ "$1" ] &amp;&amp; param=$1 || param='valor padrão'</code></td>
+  </tr>
+  <tr>
+    <td><code>[ "$1" ] &amp;&amp; param=${1:-valor padrão}</code></td>
+  </tr>
+  <tr>
+    <td><code>[ "$1" ] || { echo "Uso: $0 parâmetro" ; exit 1 ; }</code></td>
+  </tr>
+
+  <tr>
+    <th>Adicionar 1 à variável $i</th>
+  </tr>
+
+  <tr>
+    <td><code>i=$(expr $i + 1)</code></td>
+  </tr>
+  <tr>
+    <td><code>i=$((i+1))</code></td>
+  </tr>
+  <tr>
+    <td><code>let i=i+1</code></td>
+  </tr>
+  <tr>
+    <td><code>let i+=1</code></td>
+  </tr>
+  <tr>
+    <td><code>let i++</code></td>
+  </tr>
+
+  <tr>
+    <th>Loop de 1 à 10</th>
+  </tr>
+
+  <tr>
+    <td><code>for i in 1 2 3 4 5 6 7 8 9 10; do echo $i; done</code></td>
+  </tr>
+  <tr>
+    <td><code>for i in $(seq 10); do echo $i; done</code></td>
+  </tr>
+  <tr>
+    <td><code>for ((i=1;i&lt;=10;i++)); do echo $i; done</code></td>
+  </tr>
+  <tr>
+    <td><code>i=1 ; while [ $i -le 10 ]; do echo $i ; i=$((i+1)) ; done</code></td>
+  </tr>
+  <tr>
+    <td><code>i=1 ; until [ $i -gt 10 ]; do echo $i ; i=$((i+1)) ; done</code></td>
+  </tr>
+
+  <tr>
+    <th>Loop nas linhas de um arquivo ou saída de comando</th>
+  </tr>
+
+  <tr>
+    <td><code>cat /etc/passwd | while read LINHA; do echo "$LINHA"; done</code></td>
+  </tr>
+  <tr>
+    <td><code>grep 'root' /etc/passwd | while read LINHA; do echo "$LINHA"; done</code></td>
+  </tr>
+  <tr>
+    <td><code>while read LINHA; do echo "$LINHA"; done &lt; /etc/passwd</code></td>
+  </tr>
+  <tr>
+    <td><code>while read LINHA; do echo "$LINHA"; done &lt; &lt;(grep 'root' /etc/passwd)</code></td>
+  </tr>
+
+  <tr>
+    <th>Curingas nos itens do comando case</th>
+  </tr>
+
+  <tr>
+    <td><code>case "$dir" in /home/*) echo 'dir dentro do /home';; esac</code></td>
+  </tr>
+  <tr>
+    <td><code>case "$user" in root|joao|maria) echo "Oi $user";; *) echo "Não te conheço";; esac</code></td>
+  </tr>
+  <tr>
+    <td><code>case "$var" in ?) echo '1 letra';; ??) echo '2 letras';; ??*) echo 'mais de 2';; esac</code></td>
+  </tr>
+  <tr>
+    <td><code>case "$i" in [0-9]) echo '1 dígito';; [0-9][0-9]) echo '2 dígitos';; esac</code></td>
+  </tr>
+
+  <tr>
+    <th>Caixas do Dialog</th>
+  </tr>
+
+  <tr>
+    <td><code>dialog --calendar 'abc' 0 0 31 12 1999</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --checklist 'abc' 0 0 0 item1 'desc1' on item2 'desc2' off</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --fselect /tmp 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>(echo 50; sleep 2; echo 100) | dialog --gauge 'abc' 8 40 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --infobox 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --inputbox 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --passwordbox 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --menu 'abc' 0 0 0 item1 'desc1' item2 'desc2'</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --msgbox 'abc' 8 40</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --radiolist 'abc' 0 0 0 item1 'desc1' on item2 'desc2' off</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --tailbox /tmp/arquivo.txt 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --textbox /tmp/arquivo.txt 0 0</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --timebox 'abc' 0 0 23 59 00</code></td>
+  </tr>
+  <tr>
+    <td><code>dialog --yesno 'abc' 0 0</code></td>
+  </tr>
+  <tr>
+    <td><strong>Dica1:</strong> <code>dialog ... &amp;&amp; echo 'Apertou OK/Yes' || echo 'Apertou Cancel/No'</code></td>
+  </tr>
+  <tr>
+    <td><strong>Dica2:</strong> <code>resposta=$(dialog --stdout --TIPODACAIXA 'abc' ...)</code></td>
+  </tr>
+</table>
+
+
+<h2 id="emacs">23. Atalhos da linha de comando (set -o emacs)</h2>
+
+
+<!-- os atalhos com a tecla Alt não funcionam no Mac, por isso não coloquei no canivete. -->
+
+<table class="tableborder">
+
+  <tr>
+    <th>Atalho</th>
+    <th>Descrição</th>
+    <th>Tecla Similar</th>
+  </tr>
+
+  <tr>
+    <td>Ctrl+A</td>
+    <td>Move o cursor para o início da linha</td>
+    <td class="center">Home</td>
+  </tr>
+  <tr>
+    <td>Ctrl+B</td>
+    <td>Move o cursor uma posição à esquerda</td>
+    <td class="center">←</td>
+  </tr>
+  <tr>
+    <td>Ctrl+C</td>
+    <td>Envia sinal EOF() para o sistema</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+D</td>
+    <td>Apaga um caractere à direita</td>
+    <td class="center">Delete</td>
+  </tr>
+  <tr>
+    <td>Ctrl+E</td>
+    <td>Move o cursor para o fim da linha</td>
+    <td class="center">End</td>
+  </tr>
+  <tr>
+    <td>Ctrl+F</td>
+    <td>Move o cursor uma posição à direita</td>
+    <td class="center">→</td>
+  </tr>
+  <tr>
+    <td>Ctrl+H</td>
+    <td>Apaga um caractere à esquerda</td>
+    <td class="center">Backspace</td>
+  </tr>
+  <tr>
+    <td>Ctrl+I</td>
+    <td>Completa arquivos e comandos</td>
+    <td class="center">Tab</td>
+  </tr>
+  <tr>
+    <td>Ctrl+J</td>
+    <td>Quebra a linha</td>
+    <td class="center">Enter</td>
+  </tr>
+  <tr>
+    <td>Ctrl+K</td>
+    <td>Recorta do cursor até o fim da linha</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+L</td>
+    <td>Limpa a tela (igual ao comando clear)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+N</td>
+    <td>Próximo comando</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+P</td>
+    <td>Comando anterior</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+Q</td>
+    <td>Destrava a shell (veja Ctrl+S)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+R</td>
+    <td>Procura no histórico de comandos</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+S</td>
+    <td>Trava a shell (veja Ctrl+Q)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+T</td>
+    <td>Troca dois caracteres de lugar</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+U</td>
+    <td>Recorta a linha inteira</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+V</td>
+    <td>Insere caractere literal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+W</td>
+    <td>Recorta a palavra à esquerda</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ctrl+X</td>
+    <td>Move o cursor para o início/fim da linha (2x)</td>
+    <td class="center">Home/End</td>
+  </tr>
+  <tr>
+    <td>Ctrl+Y</td>
+    <td>Cola o trecho recortado</td>
+    <td></td>
+  </tr>
+</table>
+
+
+<h2 id="ferramentas">24. A caixa de ferramentas do shelleiro</h2>
+
+
+<table class="tableborder">
+
+  <tr>
+    <th>Comando</th>
+    <th>Função</th>
+    <th>Opções úteis</th>
+  </tr>
+
+  <tr>
+    <td class="center"><strong>cat</strong></td>
+    <td><em>Mostra arquivo</em></td>
+    <td>-n, -s</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>cut</strong></td>
+    <td><em>Extrai campo</em></td>
+    <td>-d -f, -c</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>date</strong></td>
+    <td><em>Mostra data</em></td>
+    <td>-d, +'...'</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>diff</strong></td>
+    <td><em>Compara arquivos</em></td>
+    <td>-u, -Nr, -i, -w</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>echo</strong></td>
+    <td><em>Mostra texto</em></td>
+    <td>-e, -n</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>find</strong></td>
+    <td><em>Encontra arquivos</em></td>
+    <td>-name, -iname, -type f, -exec, -or</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>fmt</strong></td>
+    <td><em>Formata parágrafo</em></td>
+    <td>-w, -u</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>grep</strong></td>
+    <td><em>Encontra texto</em></td>
+    <td>-i, -v, -r, -qs, -n, -l, -w -x, -A -B -C</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>head</strong></td>
+    <td><em>Mostra início</em></td>
+    <td>-n, -c</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>od</strong></td>
+    <td><em>Mostra caracteres</em></td>
+    <td>-a, -c, -o, -x</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>paste</strong></td>
+    <td><em>Paraleliza arquivos</em></td>
+    <td>-d, -s</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>printf</strong></td>
+    <td><em>Mostra texto</em></td>
+    <td><em>nenhuma</em></td>
+  </tr>
+  <tr>
+    <td class="center"><strong>rev</strong></td>
+    <td><em>Inverte texto</em></td>
+    <td><em>nenhuma</em></td>
+  </tr>
+  <tr>
+    <td class="center"><strong>sed</strong></td>
+    <td><em>Edita texto</em></td>
+    <td>-n, -f, s/isso/aquilo/, p, d, q, N</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>seq</strong></td>
+    <td><em>Conta números</em></td>
+    <td>-s, -f</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>sort</strong></td>
+    <td><em>Ordena texto</em></td>
+    <td>-n, -f, -r, -k -t, -o</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tac</strong></td>
+    <td><em>Inverte arquivo</em></td>
+    <td><em>nenhuma</em></td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tail</strong></td>
+    <td><em>Mostra final</em></td>
+    <td>-n, -c, -f</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tee</strong></td>
+    <td><em>Arquiva fluxo</em></td>
+    <td>-a</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>tr</strong></td>
+    <td><em>Transforma texto</em></td>
+    <td>-d, -s, A-Z a-z</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>uniq</strong></td>
+    <td><em>Remove duplicatas</em></td>
+    <td>-i, -d, -u</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>wc</strong></td>
+    <td><em>Conta letras</em></td>
+    <td>-c, -w, -l, -L</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>xargs</strong></td>
+    <td><em>Gerencia argumentos</em></td>
+    <td>-n, -i</td>
+  </tr>
+</table>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+<p>
+  <a href="/shell/" class="linkblock">
+    <img align="middle" src="/img/icon/128/shell.png">
+    Aprenda mais sobre Shell Script
+  </a>
+</p>
+
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Canivete%20Su%C3%AD%C3%A7o%20do%20Shell%20(Bash)%20https://aurelio.net/shell/canivete/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/shell/canivete/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/shell/canivete/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

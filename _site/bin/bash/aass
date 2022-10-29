@@ -1,0 +1,147 @@
+#!/bin/bash
+# aass - the Ascii Art Screen Saver       by Aurelio Marinho Jargas
+#
+#  a very simple bash Ascii Art Screen Saver (saver?!?) to run on console.
+#  features: 3 speed, color, sound, fullscreen mode and 1line themes.
+#  themes: alien, crab, eye, fish, mosaic, mountain, msdos, plane, space.
+#  it's a one day wonder, so this is probably the 1st and final version.
+#
+#  the words you're searching:
+#  GPL, 4linux, text mode, NO make or compilation (download and run).
+#
+# 20010507 ** birthday
+#
+# DOCUMENTATION:
+#   ctrl+c exits the program
+# EXAMPLES:
+#   aass
+#   aass -s3 -fg \\
+#   aass -s1 -beep -clear 15 "YES, i'm NOT here"
+#   aass -theme msdos
+# HELP:
+#   read above or give -wrong_option option
+#
+# TODO more themes
+# TODO go back to work NOW!
+
+# TODO ==*-,,--,,--  --/--\-<@
+
+
+Usage() {
+  echo "usage: `basename $0` [OPTIONS] [pattern]
+
+OPTIONS:
+
+     -bg          color in background                     [default]
+     -fg          color in foreground
+
+     -s1          speed 1: slow (1 second pause)
+     -s2          speed 2: cool (1 microsecond pause)     [default]
+     -s3          speed 3: fast (no pause - burn cpu, burn!)
+
+     -lines n     use 'n' lines on the screen
+     -cols n      use 'n' columns on the screen
+     -full        full screen mode                        [default]
+
+     -clear n     clears the screen after 'n' outputs     [default n=0]
+     -bw          black and white (no colors)
+
+     -seed n      extra number to feed the random seed    [default n=1]
+
+     -beep        noise! noise! noise!
+     -quiet       no noise...                             [default]
+
+     -theme name  themes available:
+                  alien, crab, eye, fish, mosaic, mountain, msdos, plane, space
+
+
+'pattern' can be anything you want from '@' to \"i hate cats\".
+the default value is '|'. some cool patterns are /, . and o.
+"
+  exit 1
+}
+
+
+doOpts(){
+  while [ $# -gt 0 ]
+  do case "$1" in
+         # only fg can be lightenned
+    -bg) c1='30;4'; unset f_light ;;
+    -fg) c1='40;3'; f_light=1 ;;
+    -bw) f_bw=1 ;;
+
+ -theme) [ "$2" ] || Usage;
+         # to generate the --help themes list:
+         # sed -n 's/^ *\([a-z]\+\)).*/\1/p' aass|sort|sed ':a;$!N;s/\n/, /;ta'
+         case "$2" in
+           space) doOpts -fg -s2 -bw   '.'              ;;
+            fish) doOpts -fg -s1       '>-)))-D'        ;;
+        mountain) doOpts -fg -s1       "_.=\"'\`\"=._"  ;;
+             eye) doOpts -fg -s1 -bw   '00'             ;; # remember xeyes?
+            crab) doOpts -fg -s1       "(_).-=\`'=-.(_)";;
+           plane) doOpts -fg -s1       ' --o-0-o--'     ;;
+           alien) doOpts -fg -s1 -beep '/-=-\\'         ;;
+           msdos) doOpts -fg -s3       'Bad command or filename\nC:\> ';; # &:I
+          mosaic) doOpts -bg -s3       ' '              ;;
+               *) Usage;;
+         esac
+         shift
+ ;;
+    -s1) pause='sleep 1' ;;
+    -s2) pause='usleep 1' ;;
+    -s3) unset pause ;;
+
+  -full) ssize=`stty size`; lines=${ssize% *}; cols=${ssize#* };;
+ -lines) [ "$2" ] || Usage; lines=$2; shift;;
+  -cols) [ "$2" ] || Usage;  cols=$2; shift;;
+
+ -clear) [ "$2" ] || Usage; clear=$2; shift;;
+  -seed) [ "$2" ] || Usage;  seed=$2; shift;;
+
+  -beep) beep='\a';;
+ -quiet) unset beep;;
+
+     -*) Usage;;
+      *) z="$1";;
+     esac
+     shift
+  done
+}
+
+# 1st the defaults, then user options. cool no?
+doOpts -bg -s2 -full -clear 0 -seed 1 '|' "$@"
+zn=${#z}
+
+setterm -cursor off
+clear
+
+trap "setterm -cursor on;clear;exit" SIGINT
+
+i=0
+while :
+do
+    i=$((i+1))                  # i as the counter, as always...
+    j=$((i+seed))
+    RANDOM=$j                   # feeding random
+
+    # our (not so) random position and colors
+    x=$((((RANDOM+c*j)%lines)+1))
+    y=$((((RANDOM*c+j)%(cols-zn+1))+1))
+    c=$(((x+y+j+RANDOM)%7+1))
+
+    b=$((y%2))                  # should i bold?
+    unset light; [ "$f_light" -a $b -eq 1 ] && light='1;'
+
+    echo -ne "\033[$x;${y}H"    # going to screen position
+
+    if [ "$f_bw" ]              # b&w or colored output
+    then echo -ne "$z$beep"
+    else echo -ne "\033[${light}$c1${c}m$z"
+         echo -ne "$beep\033[m"
+    fi
+
+    $pause
+
+    [ "$clear" -ne 0 ] && [ $((i%clear)) -eq 0 ] && clear && $pause
+done
+

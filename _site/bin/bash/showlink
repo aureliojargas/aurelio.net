@@ -1,0 +1,100 @@
+#!/bin/sh
+# showlink
+# 19991012 <verde (a) aurelio net> ** 1st version
+#
+# a bash+find+egrep+sed utility to webdesigners.
+# showlink shows all kind of links on a web site.
+# it gets all *html pages above the current dir.
+# you can parse its output to find lost links, do
+# statistics, find errors, or just for curiosity &:)
+#
+# a quick example:
+# cp showlink /bin ; cd /home/httpd/html ; showlink -a
+
+Usage(){ echo "$0 OPTION   (just one option)
+
+    -a,--all      all links found
+    -c,--chk      check for incorrect links
+    -d,--dir      links that point to directories
+    -e,--email    links that point do emails (mailto:)
+    -f,--ftp      links that point do external pages (ftp://)
+    -h,--http     links that point do external pages (http://)
+    -i,--image    links that point do images
+    -m,--music    links that point do music files
+    -p,--page     links on the same page
+    -z,--zzz      links marked with ??? (todo link)
+       --help     this help
+
+UPPERCASE single option (-[ACDEFHIMPZ]) give the output without the
+filename. i.e. \"`basename $0` -A\"
+" ; exit 1
+}
+
+[ "$1" ] || Usage
+OPT=$1
+
+
+### the defaults for full output - do NOT edit!
+
+# the delimiter beetween the filename and the link found
+D=':'
+
+# options passed to the egrep command. this is related to 
+# case of the option passed on the command line. lowercase
+# is the default: show filename (H option). uppercase
+# supresses it.
+EGREP_OPTS='-His'
+
+# the egrep pattern is only 'href=' and not '<a[^I ]\+href='
+# or something to support multiline like <a
+# href="link.html", and also, the "" are not included to you
+# see when you missed them on the html source (all the line
+# will appear on the output).
+EGREP_PATT='href='
+
+# this filter parses the egrep output to only extract the
+# link itself: the string beetween the "".
+EGREP_FILTER="s§\(^[^:]*\):.*href=\"[    ]*\([^ \"]*\)[  ]*\".*§\1$D\2§"
+
+# this filter is the action related to the option passed on
+# the command line. here is the "sedmagic". 'p' is the default,
+# and show all links. the true magics are on the 'case' below.
+SEDMAGIC='p'
+
+
+
+# let's see if we have a UPPER option and set the filters to it
+OPT2=`echo ${OPT#-} | sed 'y/ACDEFHIMPZ/acdefhimpz/'`
+if [ "${OPT#-}" != "$OPT2" ]
+then OPT=-$OPT2
+     D='^' 
+     EGREP_OPTS='-is' 
+     EGREP_FILTER="s§^.*href=\"[     ]*\([^ \"]*\)[  ]*\".*§\1§"
+fi
+
+
+# sedmagics here!
+case $OPT in
+  -a|--all  ) :                                       ;; # it uses the defaults
+  -c|--chk  ) SEDMAGIC="\§${D}/[^/]§p"                ;; # TODO: more checks
+  -d|--dir  ) SEDMAGIC="\§${D}[^.#]\+$§p"             ;;
+  -e|--email) SEDMAGIC="\§${D}mailto:§p"              ;;
+  -f|--ftp  ) SEDMAGIC="\§${D}ftp://§p"               ;;
+  -h|--http ) SEDMAGIC="\§${D}http://§p"              ;;
+  -i|--image) SEDMAGIC='\§\.\(jpg\|gif\|png\|bmp\)$§p';;
+  -m|--music) SEDMAGIC='\§\.\(ra\|rm\|mp3\|wav\)$§p'  ;;
+  -p|--page ) SEDMAGIC='\§#§p'                        ;;
+  -z|--zero ) SEDMAGIC='\§???§p'                      ;;
+           *) Usage                                   ;;
+esac
+
+FILES=`find . -type f -name "*html"`
+
+
+# and after all this preparations, the brain is here
+# ah! no support for spaced filenames, but who cares?
+for F in $FILES
+do egrep $EGREP_OPTS $EGREP_PATT $F |
+   sed "$EGREP_FILTER" |
+   sed -n "$SEDMAGIC"
+done

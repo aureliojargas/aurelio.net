@@ -1,0 +1,56 @@
+/* CSS style for RAC Homepage - https://aurelio.net/rac */
+
+body  {
+  margin: 20px;
+  font-family: sans-serif;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+h3 {
+  margin-top: 1.5em;
+  font-size: 150%;
+  color: #000;
+  font-weight: normal;
+}
+pre {
+  padding: 10px;
+  background-color: #ddd;
+}
+pre i {
+  color: blue;
+}
+td {
+  padding: 10px;
+  border: 1px solid gray;
+}
+th {
+  background-color: silver;
+  padding: 5px;
+  border: 2px solid black;
+}
+blockquote {
+  font-style: italic;
+  margin-right: 0;
+}
+dd ul {
+  padding-left: 0;
+}
+nav ul {
+  padding-left: 1em;
+}
+li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.menu {
+  border: 1px solid #ddd;
+  border-width: 1px 0;
+  padding: 1em 0;
+}
+.submenu {
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 1em 1em;
+}

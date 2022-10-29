@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Aurelio.net</title>
+		<description>Relaxe, leia com calma, aproveite a viagem.</description>
+		<link>https://aurelio.net</link>
+		<image>
+			<url>https://aurelio.net/img/icon/128/aurelio.png</url>
+			<title>Aurelio</title>
+			<link>https://aurelio.net</link>
+		</image>
+		<atom:link href="https://aurelio.net/feed.xml" rel="self" type="application/rss+xml" />
+
+
+		<item>
+			<title>Minha experiência na ContaAzul</title>
+			<pubDate>Mon, 06 Feb 2017 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2017/02/06/contaazul/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2017/02/06/contaazul/</guid>
+
+			<description>&lt;blockquote&gt;
+&lt;p&gt;Aos 38 anos, aceitei o desafio de trabalhar na ContaAzul, uma startup com tecnologias de nuvem, que até então eram desconhecidas pra mim. Fiquei lá por 11 meses, de nov/2015 a out/2016. Fiz novas amizades, conheci o método de trabalho da nova geração (fail fast), comi bastante (comida livre!) e aprendi muito sobre AWS, Docker, CI/CD e práticas DevOps. Foi uma experiência incrível, e um grande upgrade na carreira. Vou contar um pouco dessa história.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Outubro de 2015. Estava eu lá, já há dois anos trabalhando como &lt;a href=&quot;/blog/2014/11/08/funcionario-publico/&quot;&gt;programador concursado na Prefeitura de Joinville&lt;/a&gt;. O turno de 6 horas me deixava com tempo livre, então eu pretendia iniciar um mestrado (&lt;a href=&quot;/blog/2015/10/03/poscomp/&quot;&gt;lembra que fiz o POSCOMP?&lt;/a&gt;) para tentar saciar o insaciável desejo de aprender coisas novas, diferentes.&lt;/p&gt;
+
+&lt;p&gt;Eis que chega em meu email um convite para trabalhar na loucura agitada de uma startup local, a &lt;a href=&quot;https://contaazul.com&quot;&gt;ContaAzul&lt;/a&gt;. A vaga envolvia o tipo de trabalho que hoje chamam de &lt;a href=&quot;https://en.wikipedia.org/wiki/DevOps&quot;&gt;DevOps&lt;/a&gt;, que é uma mistura de administrador de sistemas e programador.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Beleza, eu sou ambos!&lt;/li&gt;
+&lt;li&gt;Sim.&lt;/li&gt;
+&lt;li&gt;Então tá tudo certo, certo?&lt;/li&gt;
+&lt;li&gt;Errado.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A parte de programação tudo bem, nunca parei de estudar e praticar. Mas na parte de administração de servidores, eu era um &lt;a href=&quot;https://cache.readovka.ru/bb5bf31334d41a10c2cd184868e47635_XL.jpg&quot;&gt;dinossauro dos anos 90&lt;/a&gt; com seus servidores físicos, locais (“my precious”) que você instalava o CD do Linux e editava artesanalmente uma série de arquivos &lt;code&gt;.conf&lt;/code&gt; até tudo ficar lindo. Parei no tempo e perdi a migração do mercado para as VMs e depois para a nuvem: &lt;a href=&quot;https://medium.com/build-acl/pets-and-cattle-infrastructure-for-software-as-a-service-saas-7d386ec56c0c&quot;&gt;Pet → Cattle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Conectiva_Linux_3.0.jpg/440px-Conectiva_Linux_3.0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;A ContaAzul, como empresa moderna, era 100% na nuvem, sem servidores locais. E agora, José? 😱&lt;/p&gt;
+
+&lt;p&gt;Na entrevista deixei claro que &lt;strong&gt;eu não manjava absolutamente nada&lt;/strong&gt; desse novo mundo, mas que tinha vontade de aprender. Concordamos em começar com um contrato temporário de 3 meses, onde eu aprenderia na prática, estudando e resolvendo os pepinos do dia a dia. Perfeito! Será o meu “mestrado”, além de uma atualização de carreira.&lt;/p&gt;
+
+&lt;p&gt;Mas e a prefeitura?&lt;/p&gt;
+
+&lt;p&gt;Não deixei a prefeitura, então &lt;strong&gt;fiquei com dois empregos&lt;/strong&gt;. Reduzi minha carga horária (e meu salário) na prefeitura para 4h (das 7 às 11) e na ContaAzul trabalhava mais 6h (das 13 às 19). Foi cansativo bagaraio, mas valeu a pena. 👍&lt;/p&gt;
+
+&lt;h2&gt;Trabalhar em “startup”&lt;/h2&gt;
+
+&lt;p&gt;Eu estava com umas ideias de ir pro exterior e trabalhar numa dessas empresas modernosas, para conhecer o clima de startup e aprender tecnologias de ponta. Nem precisou. No fim, a ContaAzul era uma empresa aqui da minha cidade, que tinha exatamente essa experiência para oferecer.&lt;/p&gt;
+
+&lt;p&gt;E não decepcionou.&lt;/p&gt;
+
+&lt;p&gt;Os itens esperados da checklist de “empresa cool” estavam lá: ambiente bem informal (puffs, paredes rabiscadas, post-its coloridos por toda parte, roupas bizarras, pantufas, decoração temática, música alta, festas), brinquedos (video game, ping pong, skate, bateria, nerf gun), comida e bebida à vontade, horário de trabalho flexível (sem ponto), e muita gente jovem.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Por falar em idade, eu era um dos “top 5” funcionários mais velhos da empresa. Isso numa empresa de 200+, pensa! 😱&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A &lt;strong&gt;máquina de trabalho&lt;/strong&gt; era um notebook (plugado a monitor e teclado externos quando na mesa), o que garantia mobilidade total para ir até a mesa do colega e juntos resolver os problemas, codando ao mesmo tempo. Ou ainda, passar a tarde no refeitório (chamado de “lounge” por quem é mais cool do que eu), programando enquanto come até enjoar as guloseimas da cozinha. Ou programar no puff, no sofá, no chão... Eu sou mais conservador e saía pouco de minha mesa. Mas percebia que o pessoal mais novo adorava mudar o local de trabalho com frequência.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;comida à vontade&lt;/strong&gt; é uma coisa muito boa. Foi a primeira vez que trabalhei em um lugar assim e gostei bastante. A qualquer momento que bate aquela fome, ou aquela vontade de dar uma espairecida, era só ir até o refeitório e se servir, sem limites. Tinha água, refrigerante, suco, café, cerveja, iogurte, Yakult, granola, bolachas (várias), salgadinhos (Cheetos), doces (paçoca era meu preferido), pão, queijo, presunto, geleias, e vários tipos de frutas. Cozinha bem equipada, que o pessoal usava pra preparar sanduíches, vitaminas, e lanches mais elaborados. Era frequente rolar algum lanche especial, feito pelas moças responsáveis pela limpeza, como: cachorro quente, bolo, pipoca e torta. Desnecessário dizer que é fácil engordar lá se a pessoa não for controlada 😋&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Havia uma equipe de limpeza, mas a regra era que cada um limpasse tudo aquilo que sujou na cozinha e refeitório. No geral, funcionava.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Houve várias &lt;strong&gt;festas temáticas&lt;/strong&gt; na minha estadia por lá. A maioria já vinha fantasiado desde casa, e passava o dia trabalhando daquele jeito. Bem divertido ver vários personagens transitando pela empresa, fazendo seu trabalho normalmente. A festa mesmo começava à tarde, perto do fim do expediente e seguiam noite adentro até... Não sei que horas, pois nunca fiquei até o final 😬  O pessoal era bem animado e o clima das festas era legal, divertido, sem chinelagem.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-version=&quot;7&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:39.130434782608695% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/p/BELq8jKBaLX/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_blank&quot;&gt;Uma foto publicada por ContaAzul (@contaazul)&lt;/a&gt; em &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-04-14T13:28:44+00:00&quot;&gt;Abr 14, 2016 às 6:28 PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt; &lt;script async defer src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;horário era flexível&lt;/strong&gt;, sem ponto de entrada/saída. Durante o expediente, cada um era livre para trabalhar como e quando quiser, sem cobrança. Está estressado? Vai lá e fica meia hora jogando ping pong. Ou vai no refeitório e fica comendo e batendo papo com os amigos. Ou vai tirar uma soneca no puff. Ou chama os colegas pra jogar um &lt;a href=&quot;https://en.wikipedia.org/wiki/Counter-Strike_(video_game)&quot;&gt;Counter Strike&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Age_of_Empires_II&quot;&gt;Age of Empires&lt;/a&gt;... Era bem comum o pessoal ficar trabalhando depois do horário. Tem dia que trabalha a mais, no outro a menos, e assim vai, cada um cuidando do seu próprio tempo.&lt;/p&gt;
+
+&lt;p&gt;Uma coisa que eu gostava era que toda a sexta-feira tinha uma &lt;strong&gt;reunião geral&lt;/strong&gt; com todos os funcionários, que durava cerca de uma hora. Nela, o CEO (e outros líderes) expunham de maneira transparente os números da empresa, se estava indo bem ou mal, quais eram os próximos desafios, essas coisas. Também havia espaço para perguntas, onde o funcionário podia expor suas dúvidas, preocupações e ideias, ali na frente de todos. Gostei bastante desse formato e de poder ter essa dose semanal de notícias mais globais da empresa, saindo um pouco da “bolha” nerd ali do dia a dia.&lt;/p&gt;
+
+&lt;p&gt;Claro que nem tudo são flores. Infelizmente, tem gente que não sabe lidar com toda essa liberdade e abusa. Tinha os porcalhões que não limpavam sua sujeira no refeitório ou que deixavam o banheiro sujo. Tinha os que deixavam as salas de reunião bagunçadas. Tinha os fumantes que jogavam suas bitucas no jardim. Tinha os babacas que estacionavam de maneira não civilizada. Enfim, humanos. &lt;a href=&quot;https://www.youtube.com/watch?v=IM1-DQ2Wo_w&quot;&gt;Sempre estragando o que é bonito&lt;/a&gt;. Mas isso era uma pequena parcela, no geral o saldo era bem positivo e o clima interno era muito empolgante!&lt;/p&gt;
+
+&lt;p&gt;Se quiser saber mais sobre o ambiente de trabalho, dá uma olhada lá nas fotos &lt;a href=&quot;http://facebook.com/ContaAzul&quot;&gt;do Facebook&lt;/a&gt; e &lt;a href=&quot;https://www.instagram.com/contaazul/&quot;&gt;do Instagram&lt;/a&gt; da empresa.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Todo esse ambiente informal e divertido me lembrou muito de minha época na &lt;a href=&quot;https://pt.wikipedia.org/wiki/Conectiva&quot;&gt;Conectiva&lt;/a&gt;, pois lá também era assim. Só não tinha a comida livre, mas de resto era similar. Detalhe que isso foi há 20 anos atrás, em 1997!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Aprendiz aos 38 anos&lt;/h2&gt;
+
+&lt;p&gt;Como já comentei, eu cheguei lá sem saber &lt;strong&gt;nada&lt;/strong&gt; das tecnologias que eles utilizavam.&lt;/p&gt;
+
+&lt;p&gt;Imagina um cara “das antigas” numa empresa moderninha 100% na nuvem.&lt;/p&gt;
+
+&lt;p&gt;Foi bem interessante essa experiência de chegar “virjão” e ser um total iniciante. Todos da equipe já eram experientes em nuvem, e eu era o perdido, o aprendiz, o estagiário. Tudo eu tinha que perguntar, descobrir o que é, pra que serve, que problema resolve, como funciona, e aos poucos ia construindo uma base de conhecimento nova. Levei meses para começar a ficar à vontade.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Mesmo ainda sendo um girino na nuvem, ganhei acesso de administrador em produção já no primeiro dia de trabalho!  Ah, que diferença das mil regras de acesso da prefeitura... 🤠&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O primeiro login na &lt;a href=&quot;https://aws.amazon.com/pt/&quot;&gt;AWS&lt;/a&gt; foi um choque. Uma tela que listava um milhão de serviços, com seus nomes e siglas estranhos, que não me diziam absolutamente nada. Tipo ir visitar a cabine do avião e ver aquele mundo de botões e instrumentos. Nada se destaca, tudo é parecido e desconhecido.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/scaleyourcode/images/blog/aws/ec2_getting_started/main_panel.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Outra coisa nova pra mim era a prática de &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_integration&quot;&gt;CI&lt;/a&gt; e &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_delivery&quot;&gt;CD&lt;/a&gt; (integração e entrega contínuos), que fazia com que um commit no &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; fosse empacotado, testado e publicado automaticamente. Nunca tinha lidado com isso e demorei para entender todas as pecinhas que faziam a mágica funcionar. Algumas delas: &lt;a href=&quot;https://jenkins.io/&quot;&gt;Jenkins&lt;/a&gt;, &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;, &lt;a href=&quot;https://puppet.com/&quot;&gt;Puppet&lt;/a&gt;, &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;, APIs da AWS e diversos shell scripts pelo caminho.&lt;/p&gt;
+
+&lt;p&gt;Aliás, a única coisa que já me era familiar nesse novo ambiente era o Linux e o bom e velho &lt;a href=&quot;/shell/&quot;&gt;shell script&lt;/a&gt;, que ainda estava lá, firme e forte servindo mais uma geração. Ele continua indispensável e agora gruda todas as peças dessa engenhoca cloud. Além dos vários scripts internos, também tinha uns shell scripts camuflados dentro de determinadas ferramentas, como no &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/&quot;&gt;Dockerfile&lt;/a&gt; ou no &lt;a href=&quot;https://docs.travis-ci.com/user/customizing-the-build&quot;&gt;arquivo YAML do Travis CI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Inspirado por essa nova realidade do shell, e com a experiência de trabalho na ContaAzul, fiz a palestra &lt;a href=&quot;/curso/fisl-17/&quot;&gt;Shell Script Moderno&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Conflito de gerações?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;E aí, como é ser um quase quarentão trabalhando no meio da molecada de 20 e poucos anos?&lt;/li&gt;
+&lt;li&gt;Foi supimpa! 👴&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Antes de começar lá, tive receio de ser o “&lt;a href=&quot;http://desciclopedia.org/wiki/Tio_da_Sukita&quot;&gt;tio da Sukita&lt;/a&gt;”, deslocado no meio da gurizada. Mas não foi nada disso. Me receberam muito bem desde o início, me incluindo nas atividades, nas histórias e claro, nas zoações. Afinal, zoar e ser zoado é a parte mais importante do convívio social sadio no trabalho 😂&lt;/p&gt;
+
+&lt;p&gt;Que eu me lembro, foram dois pontos que percebi uma diferença significativa entre gerações.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Jeito. Falar. Blz. Flw.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Eles falavam rápido e com frases bem curtas, sem contexto e sem muitos detalhes, num ping pong frenético. Igual às conversas de Whatsapp: vários pequenos balõezinhos seguidos, com frases e palavras soltas, em vez de um parágrafo completo.&lt;/p&gt;
+
+&lt;p&gt;No começo tive dificuldade de entender e acompanhar o ritmo. Eu tinha que interromper o fluxo para perguntar sobre o que estavam falando, pedir mais detalhes. Depois de um tempo acostumei...&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Testar antes ou arrumar depois?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Aqui foi mais evidente a diferença. Eu sou super cauteloso, penso bastante antes de fazer, testo tudo e só faço commit quando tenho certeza que está tudo OK. Demora para sair, mas em geral funciona e não precisa corrigir depois.&lt;/p&gt;
+
+&lt;p&gt;A cultura local era o oposto: faz vários commits rápidos em sequência e publica logo, depois arruma os problemas conforme eles vão aparecendo. Era comum usarem a própria interface web do GitHub pra editar os arquivos mais rapidamente.&lt;/p&gt;
+
+&lt;p&gt;Apesar da diferença, não teve estresse, pelo contrário, nos zoávamos.&lt;/p&gt;
+
+&lt;p&gt;Com o tempo, achamos uma combinação que funcionou bem: eles continuavam em velocidade máxima fazendo as alterações e eu atuava forte no &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_review&quot;&gt;code review&lt;/a&gt; para encontrar os erros no código antes que eles fossem pra produção. Assim conseguíamos velocidade e qualidade ao mesmo tempo.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Sim, eu era o chato do CR! Além de achar bugs, também enchia o saco deles com coisas que considero importantes como: erros de português e inglês, alinhamento e beleza de código, nomes de variáveis e métodos, falta de comentários e até quando não respeitavam a ordem alfabética 🤓&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Após viveciar esse ritmo agitado durante quase um ano, consegui me desprender um pouco e fazer as coisas mais rápido, sem tanta lambeção. Eles também passaram a prestar mais atenção aos detalhes, produzindo um código melhor. Foi um ganha-ganha.&lt;/p&gt;
+
+&lt;h2&gt;Vivendo em dois mundos&lt;/h2&gt;
+
+&lt;p&gt;O mais louco era diariamente transitar entre dois mundos opostos: de manhã funcionário público estável na prefeitura e de tarde DevOps iniciante na ContaAzul.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;De manhã era o mundo da burocracia, separação rígida entre equipes, softwares estáveis e legados, com alterações previamente testadas em homologação e aprovadas pelo requisitante. Faz-se de tudo para evitar que a falha chegue em produção.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;De tarde era o mundo novo, instável, onde tudo acontece muito rápido, equipes são formadas dinamicamente pra atacar um problema, há diversos deploys por dia e tecnologias são adotadas e descartadas sem muita cerimônia. Tem sempre algo quebrando em produção, mas é rapidamente consertado ou feito rollback.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Na minha experiência vivenciando isso, &lt;strong&gt;os dois métodos de trabalho funcionam&lt;/strong&gt;, não tem melhor ou pior. Cada um encaixa melhor num tipo de empresa e de funcionário. A prefeitura é um órgão público com funcionários já mais velhos e precavidos, a ContaAzul é uma startup com uma molecada cheia de gás e sem freio.&lt;/p&gt;
+
+&lt;p&gt;Eu notei que o que mais me cansava nessa dupla jornada não eram as 10 horas diárias de trabalho (afinal, isso sempre foi rotina &lt;a href=&quot;/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/&quot;&gt;quando eu trabalhava em casa&lt;/a&gt;), mas sim o chaveamento intelectual de ter que entrar no “modo prefeitura” de manhã e depois do almoço mudar para o “modo startup”. Além da diferenças tecnológicas e de metodologia de trabalho, também tinha a diferença de sistemas operacionais (Windows e Linux) e de teclados (ABNT e US Internacional). Fim do dia eu já estava zuretão, confundindo tudo. A cabeça doía.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Alguns dias ainda tinha a terceira jornada onde eu precisava &lt;a href=&quot;/blog/2016/04/02/tres-empregos/&quot;&gt;chavear para o “modo escritor”&lt;/a&gt;. Pensa num cara que já nem sabia mais o que estava fazendo :)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;A saída&lt;/h2&gt;
+
+&lt;p&gt;Por mais que eu estivesse feliz na ContaAzul, pelo trabalho e pelas amizades que lá fiz, depois de 11 meses de uma rotina de dois empregos, trabalhando 10 horas por dia, eu estava bem cansado.&lt;/p&gt;
+
+&lt;p&gt;Com &lt;a href=&quot;/blog/2016/11/09/serei-papai/&quot;&gt;a gravidez da Mog&lt;/a&gt;, minhas prioridades mudaram. A barriga ali crescendo, e eu senti que devia desacelerar, trabalhar menos e ir me preparando para iniciar o “modo pai” e curtir o filho que estava a caminho.&lt;/p&gt;
+
+&lt;p&gt;Pedi demissão na ContaAzul e voltei ao meu horário normal na prefeitura, de 6 horas. Fim de um ciclo.&lt;/p&gt;
+
+&lt;h2&gt;Legado para a prefeitura&lt;/h2&gt;
+
+&lt;p&gt;O órgão público em geral é visto como algo defasado tecnologicamente. Há vários motivos que tornam as mudanças mais difíceis e demoradas de acontecer nesses ambientes. Felizmente, na TI da Prefeitura de Joinville temos liberdade para estudar, propor e implementar novidades que melhorem o ambiente e os procedimentos. Essa é a minha atividade preferida!&lt;/p&gt;
+
+&lt;p&gt;Já usávamos o &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; internamente como repositório de todos os softwares que desenvolvemos e damos manutenção, e praticávamos code review por meio de &lt;a href=&quot;https://docs.gitlab.com/ce/user/project/merge_requests.html&quot;&gt;Merge Requests&lt;/a&gt;. Essa parte estava legal, mas o deploy ainda era feito manualmente pelo desenvolvedor com um &lt;code&gt;git push prod&lt;/code&gt; e o rollback era... corram para as colinas! 😱&lt;/p&gt;
+
+&lt;p&gt;Com a experiência de trabalho na ContaAzul e o que aprendi lá, pude trazer para a prefeitura algumas novidades que mudaram nossa maneira de trabalhar. Uma foi o uso do &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; para comunicação interna e notificações, praticamente acabando com o envio de emails entre a equipe. Mas o mais legal foi implementar o uso de contêineres Docker e criar o processo de CI/CD para padronizar e automatizar o build, testes e deploy/rollback em todos os ambientes (homologação, treinamento, produção).&lt;/p&gt;
+
+&lt;p&gt;E a nuvem? Tá lá no céu, oras. Não sabe que em Joinville chove bastante? 🤡&lt;/p&gt;
+
+&lt;h2&gt;Agradecimentos&lt;/h2&gt;
+
+&lt;p&gt;Tenho muito a agradecer aos meus chefes e colegas de trabalho, que tornaram possível essa minha aventura nerd.&lt;/p&gt;
+
+&lt;p&gt;Aos meus chefes na prefeitura (coordenador &lt;a href=&quot;https://www.linkedin.com/in/cfurghessti&quot;&gt;Charles Furghestti&lt;/a&gt;, gerente &lt;a href=&quot;https://www.linkedin.com/in/edson-lopes-65246498&quot;&gt;Edson Lopes&lt;/a&gt; e diretor &lt;a href=&quot;https://www.linkedin.com/in/filipeschuur&quot;&gt;Filipe Schüür&lt;/a&gt;) pela compreensão, apoio e permissão de diminuir minha carga horária para que eu pudesse ter um segundo emprego. E olha que eu ainda estava em estágio probatório!&lt;/p&gt;
+
+&lt;p&gt;Ao meu chefe na ContaAzul (&lt;a href=&quot;https://www.linkedin.com/in/matheusrossato&quot;&gt;Matheus Rossato&lt;/a&gt;) que topou contratar um leigo em nuvem e me deu essa incrível oportunidade de aprender na prática tantas coisas legais.&lt;/p&gt;
+
+&lt;p&gt;Aos meus colegas de trabalho ninjas da equipe BlackOps da ContaAzul (&lt;a href=&quot;https://www.linkedin.com/in/luiz-antonio-mulller-24165a14&quot;&gt;Luiz Müller&lt;/a&gt;, &lt;a href=&quot;https://www.linkedin.com/in/caarlos0&quot;&gt;Carlos Becker&lt;/a&gt;, &lt;a href=&quot;https://www.linkedin.com/in/jonathanbeber&quot;&gt;Jonathan Beber&lt;/a&gt;) que tanto me ensinaram o tempo todo, com paciência, cordialidade e bom humor. Três caras muito fodas, nível técnico mundial, além de bons amigos.&lt;/p&gt;
+
+&lt;p&gt;E claro, um agradecimento super especial à minha amada &lt;a href=&quot;/tags/#mog&quot;&gt;Mog&lt;/a&gt; ❤️, que como sempre, dá seu apoio incondicional às minhas empreitadas.&lt;/p&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Serei papai \o/</title>
+			<pubDate>Wed, 09 Nov 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2016/11/09/serei-papai/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2016/11/09/serei-papai/</guid>
+
+			<description>&lt;p&gt;No verão passado estava com minha sobrinha de 4 anos na piscina do clube, quando começou a chover. Começamos então a tomar pingos de chuva. Cada pingo tinha um sabor. Enquanto os dela eram morango, chocolate e outras comidas gostosas, os meus eram de sabores bizarros como: sola de sapato, tapete, rabo de elefante, volante de carro... Ela ria muito. ❤️&lt;/p&gt;
+
+&lt;p&gt;Eu adoro crianças. Gosto de brincar com elas, correr, agitar, provocar, instigar, fazer palhaçadas, ser o “tio maluco”. Também gosto de conversar com elas e perguntar coisas esdrúxulas, só pra ver a resposta criativa que só uma criança pode dar.&lt;/p&gt;
+
+&lt;p&gt;Já sou tio de três sobrinhos, de idades entre 3 e 5 anos. Fico muito feliz toda vez que os vejo e brinco com eles. É tão bom perceber eles crescendo, se desenvolvendo…&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;letter-spacing:2em;&quot;&gt;👶👶👶👶👶&lt;/p&gt;
+
+&lt;p&gt;No início de 2016 eu e a Mog tomamos aquela decisão que há tanto tempo eu fantasiava (já estou com 39 anos), e que tenho certeza que vai virar nossa vida de cabeça pra baixo: &lt;strong&gt;ter nosso próprio bebê&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Será?&lt;/li&gt;
+&lt;li&gt;Agora é a hora certa?&lt;/li&gt;
+&lt;li&gt;Estamos prontos?&lt;/li&gt;
+&lt;li&gt;Vamos dar conta?&lt;/li&gt;
+&lt;li&gt;Teremos dinheiro?&lt;/li&gt;
+&lt;li&gt;E o tal do vírus Zika?&lt;/li&gt;
+&lt;li&gt;Estamos saudáveis?&lt;/li&gt;
+&lt;li&gt;Como será?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Muitas perguntas, muitas dúvidas. Não adianta perguntar pro Google, não tem no Stack Overflow.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sim, é agora.&lt;/strong&gt; A decisão veio do ❤️&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;letter-spacing:2em;&quot;&gt;👶👶👶👶👶&lt;/p&gt;
+
+&lt;p&gt;Sou muito muito muito feliz por ter uma história bem normal pra contar, sem drama: a futura mamãe se preparou (médico, alimentação, vitaminas), planejamos a data do nascimento (fim do verão), e tivemos a sorte de conceber já no primeiro mês! \o/&lt;/p&gt;
+
+&lt;p&gt;Foi tão rápido que logo que a Mog começou a passar mal (enjoo e enxaqueca), cerca de duas semanas depois, demoramos para perceber que já era o bebê fazendo arte dentro da barriga da mamãe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;“Estou grávida.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Que alegria ao ouvir isso. Era real. Deu certo. Foi. Já era. Done. Merged. Sem Control-Z. Grávidos! \o/&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;letter-spacing:2em;&quot;&gt;👶👶👶👶👶&lt;/p&gt;
+
+&lt;!-- ![](https://cdn.meme.am/instances/64572860.jpg) --&gt;
+
+&lt;p&gt;Os primeiros quatro meses foram bem agitados para a mamãe Mog, que vomitou muito. Não era por causa de cheiro, nem de comida. Ela simplesmente vomitava. Todos os dias. Várias vezes por dia. Virou rotina.&lt;/p&gt;
+
+&lt;p&gt;Hoje ela comenta que o lado bom foi não ter engordado nesse período :)&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;letter-spacing:2em;&quot;&gt;👶👶👶👶👶&lt;/p&gt;
+
+&lt;p&gt;Estávamos bem tranquilos quanto ao sexo: menino ou menina, o que viesse seria muito bem-vind&lt;code&gt;[ao]&lt;/code&gt;. Chamávamos o feto de “das Baby”, usando o &lt;a href=&quot;http://www.aprender-alemao.com/genero-substantivos-alemao.html&quot;&gt;gênero neutro&lt;/a&gt; do alemão para não sermos tendenciosos a nenhum lado.&lt;/p&gt;
+
+&lt;p&gt;Secretamente, porém, ambos desejávamos um menino. Confessamos depois.&lt;/p&gt;
+
+&lt;p&gt;No dia do exame para descobrir o sexo, lá estava “o baita” aparecendo na tela.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;É um piazinho!&lt;/strong&gt; \o/&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;letter-spacing:2em;&quot;&gt;👶👶👶👶👶&lt;/p&gt;
+
+&lt;p&gt;Mesmo depois de descoberto o sexo, ainda levamos mais dois meses pra escolher o nome. Somos assim, sem pressa, sem afobação. As coisas vêm no seu tempo. Também somos detalhistas, então tínhamos alguns requisitos para o nome:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ser simples (pois os sobrenomes da mãe e do pai já são complicados)&lt;/li&gt;
+&lt;li&gt;sem acento (&lt;a href=&quot;https://en.wikipedia.org/wiki/ASCII&quot;&gt;ASCII&lt;/a&gt;-compliant)&lt;/li&gt;
+&lt;li&gt;sem grafia alternativa (S ou Z, V ou W, com ou sem H)&lt;/li&gt;
+&lt;li&gt;sem letras repetidas desnecessárias (LL, MM, NN)&lt;/li&gt;
+&lt;li&gt;bônus points se começar com M (tradição na família da Mog)&lt;/li&gt;
+&lt;li&gt;bônus points se tiver 7 letras (igual Aurelio e Morgana)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Escrevemos em alguns post-it os nomes que mais gostávamos (todos dos anos 80) e deixamos ali, na cozinha, para ver todos os dias e ir se acostumando. Aos poucos fomos retirando os nomes que não gostávamos mais tanto assim, e no final o escolhido foi: &lt;strong&gt;Marcelo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/marcelo-piazinho.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center;letter-spacing:2em;&quot;&gt;👶👶👶👶👶&lt;/p&gt;
+
+&lt;p&gt;A gravidez atualmente está no seu sexto mês, com a mamãe bem disposta e com a saúde 100%, carregando um bebezão saudável, grande e muito saltitante, que deve nascer no fim de fevereiro. ❤️&lt;/p&gt;
+
+&lt;p&gt;Nessa mesma época, &lt;strong&gt;eu e a Mog completaremos 10 anos juntos&lt;/strong&gt;! O Marcelo será o nosso presente, que virá para celebrar nosso amor e nossa parceria de vida, aumentando a família e abrindo um novo capítulo nessa história que compartilhei alguns fragmentos com vocês:
+&lt;a href=&quot;/blog/2007/08/18/1200-piscando-no-microondas/&quot;&gt;namoro&lt;/a&gt;,
+&lt;a href=&quot;/blog/2008/07/18/a-lua-a-pedra-e-o-amor/&quot;&gt;noivado&lt;/a&gt;,
+&lt;a href=&quot;/blog/2009/04/17/garota-nota-10-2/&quot;&gt;formatura&lt;/a&gt;,
+&lt;a href=&quot;/blog/2009/05/15/dois-corpos-um-espaco/&quot;&gt;morando junto&lt;/a&gt;,
+&lt;a href=&quot;/blog/2011/05/13/casamento/&quot;&gt;casamento&lt;/a&gt;,
+entre &lt;a href=&quot;/tags/#mog&quot;&gt;outros&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/marcelo-ultrassom.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Sei que deve ser coisa de papai babão, mas eu JURO que ele se mexe quando eu coloco &lt;a href=&quot;/musica/&quot;&gt;hardcore&lt;/a&gt; pra tocar. Já tá lá pogando, cara! 🤘&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Por falar nisso, olha a coincidência: outros dois amigos &lt;a href=&quot;/blog/2016/06/18/ensaio-banda/&quot;&gt;da banda&lt;/a&gt; também terão seus primeiros filhos na mesma época, e também serão meninos. A próxima geração da banda de malacos já está garantida  🎤&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sei que vou me arrepender, mas estou pensando em tentar (&lt;a href=&quot;/blog/2012/07/13/entrei-no-facebook/&quot;&gt;pela segunda vez&lt;/a&gt;) começar a usar o Facebook, pra compartilhar fotos e fatos de como meu filho é o mais &lt;code&gt;bonito|forte|esperto|.*&lt;/code&gt; do mundo 🏅&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</title>
+			<pubDate>Tue, 09 Aug 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2016/08/09/tela-preta-9/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2016/08/09/tela-preta-9/</guid>
+
+			<description>&lt;p class=&quot;warning&quot;&gt;★ Lista de episódios da série Tela Preta:
+    
+        &lt;a title=&quot;Datar JPG com data da foto (EXIF) em shell script (exiftool touch grep cut tr sed)&quot; href=&quot;/blog/2010/05/15/datas-fotos-e-shell/&quot;&gt;1&lt;/a&gt;
+    
+        &lt;a title=&quot;Extrair tag de arquivo XML com shell script (grep sed sort uniq expand)&quot; href=&quot;/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/&quot;&gt;2&lt;/a&gt;
+    
+        &lt;a title=&quot;Otimizar imagens com shell script e Smush.it (find sed grep sh pbcopy)&quot; href=&quot;/blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/&quot;&gt;3&lt;/a&gt;
+    
+        &lt;a title=&quot;Extrair dados de arquivo texto com shell script (grep cut sed tr)&quot; href=&quot;/blog/2012/04/11/o-jeito-shell-script-de-resolver-problemas-parte-2/&quot;&gt;4&lt;/a&gt;
+    
+        &lt;a title=&quot;Dividir arquivo a cada N linhas com shell script (split paste sed)&quot; href=&quot;/blog/2012/05/10/o-jeito-shell-script-de-resolver-problemas-parte-3/&quot;&gt;5&lt;/a&gt;
+    
+        &lt;a title=&quot;Sorteio no Facebook com shell script (grep cut sed $RANDOM)&quot; href=&quot;/blog/2013/05/10/video-aula-sorteio-no-facebook-usando-shell-script/&quot;&gt;6&lt;/a&gt;
+    
+        &lt;a title=&quot;Editar database do WordPress com shell script, CSV→SQL (tr cut paste sed expand)&quot; href=&quot;/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/&quot;&gt;7&lt;/a&gt;
+    
+        &lt;a title=&quot;Trocar a extensão de arquivos com shell script (find sed sh)&quot; href=&quot;/blog/2015/06/06/tela-preta-8/&quot;&gt;8&lt;/a&gt;
+    
+        &lt;a title=&quot;Contar palavras com shell script (egrep sort uniq)&quot; href=&quot;/blog/2016/08/09/tela-preta-9/&quot;&gt;9&lt;/a&gt;
+    
+&lt;/p&gt;
+
+&lt;p&gt;Para comemorar a marca de &lt;strong&gt;1.000 assinantes&lt;/strong&gt; no &lt;a href=&quot;https://www.youtube.com/user/aureliojargas&quot;&gt;meu canal do YouTube&lt;/a&gt; 🎉, fiz mais um episódio da &lt;a href=&quot;/tela-preta/&quot;&gt;série Tela Preta&lt;/a&gt; 🎉&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tela Preta&lt;/strong&gt; é a minha série de vídeos nerds gravados na linha de comando do Unix, demonstrando o “jeito shell script” de resolver problemas. Todos os vídeos contam com narração e legendas em português, estão em alta resolução (HD) e são reais: sem ensaio, sem cortes, sem edição posterior. &lt;a href=&quot;https://www.youtube.com/user/aureliojargas&quot;&gt;Assine meu canal lá no YouTube&lt;/a&gt; para ser notificado(a) quando sair um vídeo novo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Desta vez a tarefa é bem legal: contar quantas vezes cada palavra aparece em um texto, e no final, mostrar as 10 palavras mais frequentes. Assim:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino-nacional.txt | comando-mágico
+&lt;span class=&quot;go&quot;&gt;   7 Pátria
+   7 Brasil
+   6 amada
+   5 teu
+   4 mais
+   4 Terra
+   4 Salve
+   3 que
+   3 própria
+   3 forte
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Parece complicado, não? Mas você vai ver que a solução é simples e usa poucos comandos em uma única linha. E viva o Unix e suas ferramentas poderosas! 💪&lt;/p&gt;
+
+&lt;p&gt;Curta &lt;a href=&quot;https://www.youtube.com/watch?v=BYYyt6Ag3Kc&amp;amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1&quot;&gt;o vídeo&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;embed-youtube&quot; style=&quot;text-align:center; display: block;&quot;&gt;&lt;iframe class=&quot;youtube-player&quot; type=&quot;text/html&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;https://www.youtube.com/embed/BYYyt6Ag3Kc?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;A manha é usar o &lt;code&gt;uniq -c&lt;/code&gt; que conta quantas vezes cada &lt;strong&gt;linha consecutiva&lt;/strong&gt; aparece em um texto. Então o que eu preciso fazer, é modificar o meu texto original para que ele fique nesse formato de linhas consecutivas, ou seja:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cada palavra deve aparecer sozinha na linha (uma palavra por linha)&lt;/li&gt;
+&lt;li&gt;Palavras iguais devem estar agrupadas (uma após a outra)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Há várias maneiras de deixar uma palavra por linha: &lt;code&gt;xargs -n 1&lt;/code&gt;, &lt;code&gt;sed&lt;/code&gt;, &lt;code&gt;awk&lt;/code&gt;, loop... Mas nesse vídeo fiz de um jeito diferente. Aproveitei a opção &lt;code&gt;-o&lt;/code&gt; do egrep, que em vez de mostrar a linha toda no resultado, mostra somente o texto casado, &lt;strong&gt;um por linha&lt;/strong&gt; em caso de múltiplos matches na mesma linha. Bingo! Aí foi só fazer uma &lt;a href=&quot;/regex/&quot;&gt;expressão regular&lt;/a&gt; para casar todas as palavras do texto: &lt;code&gt;\w+&lt;/code&gt;. O bom é que isso também pega as nossas palavras acentuadas do português.&lt;/p&gt;
+
+&lt;p&gt;Para agrupar as palavras iguais, basta um &lt;code&gt;sort&lt;/code&gt;. Com o detalhe que usei a opção &lt;code&gt;-f&lt;/code&gt; para que ele ignore a diferença entre letras maiúsculas e minúsculas. Isso faz com que “Pátria” e “pátria” sejam agrupadas, assim serão identificadas como a mesma palavra no &lt;code&gt;uniq -c&lt;/code&gt;. Ah sim, também precisei passar a opção &lt;code&gt;-i&lt;/code&gt; no &lt;code&gt;uniq&lt;/code&gt;, para que ele também trate as maiúsculas e minúsculas da mesma forma.&lt;/p&gt;
+
+&lt;p&gt;Ali no meio, fiz um filtro para eliminar as palavras de uma e duas letras. Eu só queria contar palavras de três ou mais letras. Usei um &lt;code&gt;grep ...&lt;/code&gt;, que exige que a linha tenha pelo menos três caracteres quaisquer, descartando as demais linhas. Lembra que &lt;a href=&quot;/regex/guia/ponto.html&quot;&gt;o ponto é um metacaractere&lt;/a&gt; também? Viva as &lt;a href=&quot;/regex/&quot;&gt;regexes&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;No final do comando, basta formatar o resultado, ordenando numericamente e mostrando somente as 10 primeiras linhas. Essa parte é facinha, né? Um &lt;code&gt;sort&lt;/code&gt;, um &lt;code&gt;head&lt;/code&gt; e pronto.&lt;/p&gt;
+
+&lt;p&gt;Resumo dos comandos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;grep, egrep — pesquisa linhas em um texto&lt;/li&gt;
+&lt;li&gt;sort — ordena linhas&lt;/li&gt;
+&lt;li&gt;uniq — remove/extrai/conta linhas repetidas&lt;/li&gt;
+&lt;li&gt;head — mostra somente as primeiras N linhas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Saiba mais sobre os tópicos do vídeo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://aurelio.net/shell/&quot;&gt;https://aurelio.net/shell/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aurelio.net/regex/&quot;&gt;https://aurelio.net/regex/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Histórico da linha de comando:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; /etc/passwd
+
+man &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;count
+man &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; 1 count
+vi numeros
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numeros | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numeros | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numeros | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;#| uniq -c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;numeros | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+
+pbpaste
+pbpaste &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; hino.txt
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; hino.txt
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | xargs &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | xargs &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 5
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | xargs &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 2
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | xargs &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1
+
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;um, dois, tres.
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;um, dois, tres. | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head
+cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 15
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; ..........   &lt;span class=&quot;c&quot;&gt;#| sort | uniq -c | sort -n -r | head -n 15&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; .......   &lt;span class=&quot;c&quot;&gt;#| sort | uniq -c | sort -n -r | head -n 15&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; ... | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 15
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; ... | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;tria
+&lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--help&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;
+man &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; ... &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;tria
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; ... &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;head
+
+&lt;/span&gt;conta_palavras&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; ... | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | conta_palavras
+&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/passwd | conta_palavras
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ah, usuários das &lt;a href=&quot;https://funcoeszz.net&quot;&gt;Funções ZZ&lt;/a&gt; não precisam lembrar de todos esses comandos e podem usar diretamente a &lt;a href=&quot;https://github.com/funcoeszz/funcoeszz/blob/master/zz/zzcontapalavras.sh&quot;&gt;zzcontapalavras&lt;/a&gt; ;)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cat hino.txt | zzcontapalavras -i -n 10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+
+		</item>
+
+
+		<item>
+			<title>Palestra “Shell Script Moderno” no FISL17</title>
+			<pubDate>Fri, 15 Jul 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/curso/fisl-17/</link>
+			<guid isPermaLink="true">https://aurelio.net/curso/fisl-17/</guid>
+
+			<description>&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/28248266711/&quot;&gt;&lt;img src=&quot;https://c8.staticflickr.com/8/7665/28248266711_258064cd0b.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Palestra: Shell Script Moderno&lt;/li&gt;
+&lt;li&gt;Evento: &lt;a href=&quot;http://softwarelivre.org/fisl17&quot;&gt;FISL17&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Local: Centro de Eventos PUCRS, Porto Alegre - RS&lt;/li&gt;
+&lt;li&gt;Data: 15/07/2016&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17&quot;&gt;Fotos oficiais do evento (Flickr)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;A palestra&lt;/h2&gt;
+
+&lt;p&gt;Essa foi uma palestra nova, que fiz especialmente para o FISL. A idea foi refletir sobre o lugar do shell script hoje, em 2016, com a tal da &lt;a href=&quot;https://en.wikipedia.org/wiki/Cloud_computing&quot;&gt;nuvem&lt;/a&gt; pairando sobre nós.&lt;/p&gt;
+
+&lt;p&gt;Programar em shell deixou de ser algo exclusivo do servidor e passou também para dentro das ferramentas moderninhas como &lt;a href=&quot;https://www.docker.com&quot;&gt;Docker&lt;/a&gt;, &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt;, &lt;a href=&quot;https://puppet.com&quot;&gt;Puppet&lt;/a&gt;, &lt;a href=&quot;https://jenkins.io/&quot;&gt;Jenkins&lt;/a&gt; e &lt;a href=&quot;https://git-scm.com&quot;&gt;Git&lt;/a&gt;. Às vezes, sem saber, lá está você programando em shell dentro de um &lt;a href=&quot;https://en.wikipedia.org/wiki/YAML&quot;&gt;arquivo YAML&lt;/a&gt; ou dentro de um &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/&quot;&gt;Dockerfile&lt;/a&gt;. Tem também as ferramentas novas como o &lt;a href=&quot;https://aws.amazon.com/pt/cli/&quot;&gt;awscli&lt;/a&gt;, para gerenciar servidores pela linha de comando.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Como se portar nesse cenário?&lt;/li&gt;
+&lt;li&gt;Quais as pegadinhas?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/28326618735/&quot;&gt;&lt;img src=&quot;https://c8.staticflickr.com/9/8691/28326618735_a1abc056da.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Eu tinha pouco tempo para falar, somente 50 minutos, incluídas aí as perguntas no final. Muito pouco! Quando estou palestrando, disparo a falar e nem vejo o tempo passar. Pra piorar, deu trabalho pra conseguir colocar meus slides no computador do evento e perdi minutos preciosos com isso.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Eita treco complicado esse tal de computador, não?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como sempre, foi tudo no improviso. Eu não curto ensaiar antes nem fazer roteiros. Gosto de deixar a palestra rolar solta, sem script. Eu só tinha feito os slides. O que ia falar? Sei lá! 😁&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/28326620355/&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7753/28326620355_1e8b5fd716.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pelo que me lembro...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tinha bastante gente pra assistir, cerca de 200 pessoas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Achei meio estranho ficar em pé atrás de uma mesa, mas o começo foi tão conturbado por causa do atraso que nem pensei direito. Foi do jeito que foi.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pena que não tinha aquele negocinho de apertar para passar slides, aí tive que incomodar a moça lá no computador…&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Faltou tempo, tive que acelerar. No fim deu 40 minutos de palestra, e eu precisava de uma hora. Uma pena.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Quer assistir também? Felizmente essa palestra foi gravada (boa FISL!), então você pode assisti-la e ver os slides ao mesmo tempo:&lt;/p&gt;
+
+&lt;iframe class=&quot;youtube-player&quot; width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XBkBnKmu94U&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;db472cc58dd44834a2061e52c21cd989&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Se não estiver aparecendo corretamente, tente os links diretos: &lt;a href=&quot;https://speakerdeck.com/aureliojargas/shell-script-moderno&quot;&gt;slides&lt;/a&gt;,
+&lt;a href=&quot;https://www.youtube.com/watch?v=XBkBnKmu94U&quot;&gt;vídeo&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Os autógrafos&lt;/h2&gt;
+
+&lt;p&gt;Logo após a palestra, rolou uma sessão de autógrafos no meio da feira. A lojinha do FISL, além das camisetas, canecas, mochilas e outros apetrechos, estava vendendo &lt;a href=&quot;/livro/&quot;&gt;meus livros&lt;/a&gt; também.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/fisl-17/autografo-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/fisl-17/autografo-2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;O evento&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/blog/2008/04/22/a-mog-foi-no-fisl/&quot;&gt;A última vez que eu tinha ido ao FISL&lt;/a&gt; foi em 2008, para o lançamento do &lt;a href=&quot;https://www.shellscript.com.br/&quot;&gt;meu livro de Shell Script&lt;/a&gt;. Faz tempo…&lt;/p&gt;
+
+&lt;p&gt;Como este foi um ano de crise no país, os organizadores estavam com menos verba e fizeram um &lt;strong&gt;evento reduzido&lt;/strong&gt;, numa área menor do pavilhão. Eu prefiro assim, menor, mais aconchegante.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Só não estava mais aconchegante porque o frio não deu trégua. Deu mínima de 5°C… ☃️&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Também senti o evento &lt;strong&gt;menos político&lt;/strong&gt;. Dessa vez foi um evento dos nerds mesmo. As palestras e workshops eram em sua maioria técnicos e os estandes na feira eram de empresas e comunidades do software livre. Meio que uma volta às origens do FISL, dizia-se pelos corredores.&lt;/p&gt;
+
+&lt;p&gt;Gostei que havia &lt;strong&gt;áreas abertas&lt;/strong&gt; para workshops, ali no meio da feira, que o público em geral podia assistir, mesmo quem não tinha pago a inscrição no evento.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/28324587355/&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7785/28324587355_76cf9223e5.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Além de software livre em si, também tinha áreas diferentes, como robótica, impressão 3D, e um espaço para crianças, com aqueles &lt;a href=&quot;http://one.laptop.org&quot;&gt;notebooks verdes OLPC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/28272053831/&quot;&gt;&lt;img src=&quot;https://c8.staticflickr.com/9/8810/28272053831_822f7bd5b3.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/28316730496/&quot;&gt;&lt;img src=&quot;https://c1.staticflickr.com/9/8889/28316730496_6520a06ed6.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/fisl17/27735642353/&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/9/8722/27735642353_1010a3e03f.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Encontrei por lá vários &lt;strong&gt;amigos&lt;/strong&gt; que há anos não via. É muito bom rever o pessoal. Fora a feira e palestras, pra mim esse reencontro da “turminha” das antigas é um grande atrativo do evento.&lt;/p&gt;
+
+&lt;p&gt;Gostei bastante do FISL17. Um ambiente agradável, com pessoas legais, boa estrutura e muita informação nova pra quem quer aprender. 👍&lt;/p&gt;
+
+&lt;h2&gt;Ida e volta de avião&lt;/h2&gt;
+
+&lt;p&gt;Eu serei repetitivo se eu disser mais uma vez que não gosto de viajar de avião. Pois bem, eu não gosto de viajar de avião. É tanta demora e tanto tempo de vida perdido em esperas, filas, deslocamento de/para o aeroporto e tudo mais, que a magia do “você está voando a &lt;a href=&quot;http://www.aviationforall.com/qual-a-velocidade-de-um-aviao/&quot;&gt;900 km/h&lt;/a&gt;” é como uma gota d&amp;#39;água no deserto.&lt;/p&gt;
+
+&lt;p&gt;Pior ainda quando o avião vai pro lado errado.&lt;/p&gt;
+
+&lt;p&gt;Joinville não é capital (apesar de ser a maior cidade do estado de Santa Catarina), e não tem voo direto pra Porto Alegre. Tem que dar um pulinho lá em São Paulo antes de descer novamente pro sul.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/fisl-17/trajeto-joi-poa.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;Agradecimentos&lt;/h2&gt;
+
+&lt;p&gt;Obrigado à organização do FISL e à &lt;a href=&quot;https://novatec.com.br&quot;&gt;Novatec Editora&lt;/a&gt; pela oportunidade e pelo patrocínio de minha viagem e estadia em Porto Alegre.&lt;/p&gt;
+
+&lt;p&gt;Obrigado à &lt;a href=&quot;https://www.joinville.sc.gov.br&quot;&gt;Prefeitura de Joinville&lt;/a&gt; e à &lt;a href=&quot;https://contaazul.com&quot;&gt;ContaAzul&lt;/a&gt; por permitirem a minha falta a um dia de trabalho.&lt;/p&gt;
+
+&lt;p&gt;Obrigado à minha querida esposa Mog pelo apoio de sempre e pelo alvará de soltura 😄&lt;/p&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Raridade: teve ensaio da banda</title>
+			<pubDate>Sat, 18 Jun 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2016/06/18/ensaio-banda/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2016/06/18/ensaio-banda/</guid>
+
+			<description>&lt;p&gt;Sábado retrasado teve ensaio da banda, &lt;a href=&quot;/correria/&quot;&gt;Correria HC&lt;/a&gt;. Esse é um evento raro, que acontece uma vez a cada N anos, quando um alinhamento cósmico faz com que todos os integrandes estejam na mesma cidade durante algumas horas. &lt;strong&gt;Nos últimos 10 anos, só tivemos três ensaios&lt;/strong&gt;: um em 2010, outro em 2014 e esse agora em 2016.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Curiosidade: Na primeira versão desse texto, o parágrafo anterior começava com “sábado passado”, pois eu comecei a escrevê-lo poucos dias após o ensaio. Mas não consegui terminar o texto e os dias foram passando, passando… É a vida.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Eu e a Mog fomos pra Curitiba curtir a festa de aniversário dos nossos sobrinhos (não são gêmeos, nasceram em dias próximos em anos diferentes, aí é festa compartilhada). Como os outros três integrantes da banda também estavam na cidade naquele dia, marcamos 2 horas de ensaio no estúdio do &lt;a href=&quot;https://sekoaudioworks.com&quot;&gt;SEKO&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nunca tinha ido lá, mas gostei e recomendo. A estrutura é muito boa, com várias salas, estacionamento e equipamentos top. E mais, tudo estava limpo, arrumado e sem cheiro de jaula. Milagre! 😄&lt;/p&gt;
+
+&lt;h2&gt;Reencontrando os amigos&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/correria-2016.jpg&quot; alt=&quot;Fejão, Aurelio, Nissin, Daniel&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Eu não via os caras desde nosso último ensaio em 2014. Como é bom rever os amigos, dar aquele abraço apertado e ter aquela sensação que nem passou tanto tempo assim. Continuamos com uma ligação forte independentemente da distância. Somos amigos há mais de 20 anos. O Nissin (guitarra) conheço desde a adolescência e o Fejão (baixo, vocal) e o Daniel (guitarra) desde o CEFET-PR (hoje UTFPR).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Por falar em Nissin, ele chegou 30 minutos atrasado no ensaio, mantendo sua tradição milenar. Certas coisas nunca mudam, né? 🙄&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Fazendo barulho&lt;/h2&gt;
+
+&lt;p&gt;Acho incrível como ainda conseguimos lembrar das músicas. Algumas partes precisa um refresco rápido na memória, mas em geral é só começar a música que ela vai direto até o final. E pensar que algumas de nossas músicas foram feitas em 1995!&lt;/p&gt;
+
+&lt;p&gt;Lembrar é uma coisa, mas e &lt;strong&gt;conseguir tocar&lt;/strong&gt;? Afinal, já não somos mais aqueles jovens de 18 anos que criaram aquelas músicas e conseguiam tocá-las na velocidade acelerada do hardcore.&lt;/p&gt;
+
+&lt;p&gt;Antes do ensaio, duvidosos, até combinamos de tocar mais devagar e tal. Mas que nada! A primeira música já saiu “no gás” e dali pra frente foi aquela correria de sempre, pisando fundo ladeira abaixo. Os quase-quarentões ainda rockam! 🤘&lt;/p&gt;
+
+&lt;iframe class=&quot;youtube-player&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MXUxBgz4CU8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Dica: Ligue a legenda (CC) para ver a letra da música.&lt;/p&gt;
+
+&lt;h2&gt;Bolhas, calos e pratos voadores&lt;/h2&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/oreio&quot;&gt;@oreio&lt;/a&gt; teve ensaio da banda, depois de 2 anos parados. Muita energia, muita porrada na batera (e bolhas na mão) 😁 &lt;a href=&quot;https://t.co/Fj67P8b0ZZ&quot;&gt;pic.twitter.com/Fj67P8b0ZZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aurelio Jargas (@oreio) &lt;a href=&quot;https://twitter.com/oreio/status/739576693950676994&quot;&gt;June 5, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;iframe class=&quot;youtube-player&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mOR6sBvOhWU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Palestra “O poder da linha de comando” no SC Dev Summit 2016</title>
+			<pubDate>Sat, 21 May 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/curso/sc-dev-summit/</link>
+			<guid isPermaLink="true">https://aurelio.net/curso/sc-dev-summit/</guid>
+
+			<description>&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/cartaz.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Palestra: O poder da linha de comando&lt;/li&gt;
+&lt;li&gt;Evento: &lt;a href=&quot;http://scdevsummit.com.br/&quot;&gt;SC Dev Summit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Local: Univille Universidade, Joinville - SC&lt;/li&gt;
+&lt;li&gt;Data: 21/05/2016&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/media/set/?set=a.234931120219968.1073741832.155677364812011&amp;amp;type=3&quot;&gt;Fotos do evento (Facebook)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Essa foi uma palestra nova, que fiz especialmente para o evento.&lt;/p&gt;
+
+&lt;p&gt;O evento aconteceu em dois dias, sendo o primeiro com palestras temáticas de back-end e segundo para front-end. Eu me identifico mais com o back-end, mas como eu só tinha disponibilidade no sábado, que era o dia do front-end, então aceitei o desafio de fazer uma palestra para um público diferente.&lt;/p&gt;
+
+&lt;p&gt;Pensei comigo, esses caras hoje precisam ir para a linha de comando de vez em quando pra instalar e rodar as ferramentas que manipulam os arquivos CSS e HTML: pré-processadores, minificadores, e tudo mais. Já “molharam o pé” na tela preta, então eu poderia fazer uma demonstração do poder das ferramentas do Unix, estilo os vídeos que faço na série &lt;a href=&quot;/tela-preta/&quot;&gt;Tela Preta&lt;/a&gt;, para despertar a curiosidade de eles explorarem e ficarem mais tempo no prompt.&lt;/p&gt;
+
+&lt;p&gt;Esta foi a chamada da palestra:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Linha de comando é lugar para dev frontend? Com certeza! Vamos desvendar juntos os mistérios da tela preta. São ideias simples, numa interface textual, que trazem um enorme poder ao seu arsenal de ferramentas.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Estudando as ferramentas de front-end&lt;/h2&gt;
+
+&lt;p&gt;Apesar de eu já ter criado vários sites “na mão”, e saber bem HTML e CSS, não estou por dentro das ferramentas de front que foram criadas nos últimos anos, que agilizam o processo.&lt;/p&gt;
+
+&lt;p&gt;Meu primeiro passo, antes mesmo de definir o escopo e roteiro da palestra, foi saber mais sobre o público: estudar sobre o que é ser front-end hoje, e quais ferramentas de linha de comando eles costumam utilizar.&lt;/p&gt;
+
+&lt;p&gt;Dos vários artigos que li, estes foram os mais úteis:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://alistapart.com/event/front-end-dev&quot;&gt;The State of Front-End Dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers&quot;&gt;A Baseline for Front-End Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://seesparkbox.com/foundry/command_line_tools_for_frontend_developers&quot;&gt;Command Line Tools for Frontend Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://webdesign.tutsplus.com/tutorials/the-command-line-for-web-design-powering-up-front-end-code--cms-23453&quot;&gt;The Command Line for Web Design: Powering Up Front End Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Foi bom ter feito isso, assim eu pude entender melhor a rotina deles, conheci as ferramentas principais e pude fazer exemplos mais próximos de sua realidade em vez de exemplos genéricos.&lt;/p&gt;
+
+&lt;h2&gt;Os slides&lt;/h2&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;68bcded4481a4da9bbcf2749b70410e0&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando&quot;&gt;https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sei que a galera do front é mais ligada no visual do que os back-ends, e imaginei que os slides dos demais palestrantes seriam bem chamativos, com muitas imagens e vídeos (acertei 😁). Porém, segui o outro caminho e fiz slides espartanos, somente texto e fundo preto, pro pessoal já entrar no clima da linha de comando.&lt;/p&gt;
+
+&lt;p&gt;O assunto linha de comando é vasto e eu poderia &lt;a href=&quot;http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/&quot;&gt;ficar um dia todo falando só sobre o básico&lt;/a&gt;. Então decidi focar em pontos-chave que julguei serem importantes de saber, acima de tudo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unix é de 1970 e permanece praticamente igual até hoje (total oposto da web atual com seus frameworks da moda que mudam semanalmente).&lt;/li&gt;
+&lt;li&gt;Filosofia do Unix de poder e simplicidade.&lt;/li&gt;
+&lt;li&gt;Sintaxe de um comando: comando, subcomandos, opções, argumentos.&lt;/li&gt;
+&lt;li&gt;Redirecionamento de entrada e saída.&lt;/li&gt;
+&lt;li&gt;Aliases para criar comandos.&lt;/li&gt;
+&lt;li&gt;Pipe para combinar comandos.&lt;/li&gt;
+&lt;li&gt;Comandos de manipulação de texto: extrair, apagar, editar, ordenar, combinar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Apesar da simplicidade dos slides e do escopo reduzido, ainda assim fazê-los me tomou mais de 10 horas de trabalho. É um processo constante de lapidação e melhoria até chegar no resultado final. Uso o Google Slides, acho excelente.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;A palestra&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/aurelio.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Felizmente, o evento foi aqui na minha cidade, Joinville. Não precisei me estressar com aeroportos, voos, hotéis e toda a burocracia normalmente envolvida. Que alívio.&lt;/p&gt;
+
+&lt;p&gt;Eu e a Mog almoçamos e fomos pro evento, simples assim :)&lt;/p&gt;
+
+&lt;p&gt;O evento foi na Univille, universidade particular que tem uma estrutura excelente. Salão grande, equipamento de som de alta qualidade, dois telões, show de bola.&lt;/p&gt;
+
+&lt;p&gt;Tinha cerca de 150 pessoas durante minha palestra.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/publico.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;O início, pra mim, é sempre a pior parte. Fora aquele nervosismozinho besta que sempre dá nos primeiros momentos, eu já quero ir logo pro assunto, que é o que interessa. Assim, a parte de me apresentar, falar um pouco sobre o que faço, sempre sai ruim e esquisita.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A Mog vive me falando que eu devia praticar antes, pensar sobre o que vou dizer na hora de me apresentar. Que eu devia falar um pouco do site, dos livros, do meu trabalho, da minha história. Fazer alguma piadinha pra quebrar o gelo. Eu concordo com ela. Eu tento. Mas na hora não sai. Não fico confortável falando de mim, parece autopromoção, sei lá. Bobeira minha.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fora a apresentação estranha, dali pra frente tudo fluiu bem. Consegui trazer bastante informações e dicas enquanto passava os slides. O pessoal estava prestando atenção, então fiquei tranquilo. Só não teve muita piadinha, acho que estou perdendo a veia humorística (ou só ficando véio chato mesmo).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Eu nunca faço scripts ou ensaios para as palestras, é sempre de improviso. Tenho uma ideia geral, uma lista de tópicos que quero abordar e é isso. Os slides servem de guia e falo o que vem na cabeça.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;A demonstração ao vivo&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/demo.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Terminados os slides, era a hora de demonstrar ali ao vivo como é usar a linha de comando para resolver problemas, exatamente como faço nos vídeos do &lt;a href=&quot;/tela-preta/&quot;&gt;Tela Preta&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Abri um terminal em tela cheia, aumentei bem a fonte, coloquei um prompt (&lt;code&gt;$PS1&lt;/code&gt;) bem amigável e comecei a digitar comandos e fazer a locução esportiva, descrevendo o que eu estava fazendo :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/sc-dev-summit/historico.txt&quot;&gt;Aqui está o histórico completo dos comandos executados&lt;/a&gt;. Vou destacar a seguir algumas partes dele.&lt;/p&gt;
+
+&lt;p&gt;Ajustando prompt:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PS1&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;$ &apos;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;--------------------------------------------------------------------------\n$ &apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Mostrando como combinar comandos para ir filtrando um texto:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 3
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 3 | &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 3 | &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 | &lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; , &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; 1
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hino.txt | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 3 | &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 | &lt;span class=&quot;nb&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; , &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; 1 | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;a-z A-z
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Trocar a extensão de todos os arquivo de &lt;code&gt;.css&lt;/code&gt; para &lt;code&gt;.sass&lt;/code&gt; (&lt;a href=&quot;/blog/2015/06/06/tela-preta-8/&quot;&gt;veja um vídeo similar&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt;
+find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/.*/&amp;amp; &amp;amp;/&apos;&lt;/span&gt;
+find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/.*/mv &amp;amp; &amp;amp;/&apos;&lt;/span&gt;
+find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/.*/mv &amp;amp; &amp;amp;/&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/css$/sass/&apos;&lt;/span&gt;
+find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/.*/git mv &amp;amp; &amp;amp;/&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/css$/sass/&apos;&lt;/span&gt;
+find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.css&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/.*/git mv &amp;amp; &amp;amp;/&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/css$/sass/&apos;&lt;/span&gt; | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Contar o número de vezes que cada palavra aparece em um texto:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;A-Z a-z
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;A-Z a-z | &lt;span class=&quot;nb&quot;&gt;sort
+cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;A-Z a-z | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;A-Z a-z | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort
+cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;A-Z a-z | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | egrep &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\w+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr &lt;/span&gt;A-Z a-z | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;uniq&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sort&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Usar aliases para criar comandos, e utilizá-los:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;numeros&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;egrep -o &apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+&apos;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;conta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;egrep -o &apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+&apos; | tr A-Z a-z | sort | uniq -c | sort -n -r | head -n 5&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | conta
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | conta | numeros
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;LICENSE | conta | numeros | pbcopy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pra quem usa Mac, o &lt;code&gt;pbcopy&lt;/code&gt; copia a saída do comando anterior para a Área de Transferência. Aí é só colar (&lt;code&gt;Command-V&lt;/code&gt;) em outra janela, ou usar o &lt;code&gt;pbpaste&lt;/code&gt; em outro terminal.&lt;/p&gt;
+
+&lt;h2&gt;O sorteio dos livros, usando shell&lt;/h2&gt;
+
+&lt;p&gt;No final da palestra, sorteei dois livros meus, o &lt;a href=&quot;https://www.shellscript.com.br&quot;&gt;Shell Script Profissional&lt;/a&gt; que eu levei um exemplar que eu tinha aqui em casa, e o &lt;a href=&quot;https://www.piazinho.com.br&quot;&gt;Expressões Regulares&lt;/a&gt;, que a Novatec Editora enviou de cortesia para os organizadores do evento.&lt;/p&gt;
+
+&lt;p&gt;Reaproveitei uma ideia que tive lá em 2004, numa &lt;a href=&quot;/curso/linuxchix/&quot;&gt;palestra de 3h&lt;/a&gt; 😱 que dei no II Encontro Nacional LinuxChix-BR: usar a shell para gerar um número aleatório e ganha o sorteio quem tiver aquele número &lt;strong&gt;impresso&lt;/strong&gt; em algum documento, cartão, papel, o que for. Foi bem divertido!&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;RANDOM &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;99999&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# 5 dígitos&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;RANDOM &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9999&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# 4 dígitos&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;RANDOM &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# 3 dígitos&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Essa é uma foto &lt;a href=&quot;/curso/linuxchix/&quot;&gt;lá de 2004&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/linuxchix/papeis.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;E agora repetido doze anos depois, fazendo o pessoal vasculhar suas carteiras:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/sorteio-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/sorteio-2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sc-dev-summit/sorteio-3.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Doze. Anos. 😮&lt;/p&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Tenho três empregos</title>
+			<pubDate>Sat, 02 Apr 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2016/04/02/tres-empregos/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2016/04/02/tres-empregos/</guid>
+
+			<description>&lt;p&gt;Estou numa rotina de trabalho tão insana que tenho que registrar.&lt;/p&gt;
+
+&lt;p&gt;Acordo às 05:45 e vou dormir à meia-noite. De manhã trabalho 4h na &lt;a href=&quot;https://www.joinville.sc.gov.br/&quot;&gt;Prefeitura de Joinville&lt;/a&gt;, à tarde trabalho 6h na startup &lt;a href=&quot;https://contaazul.com/sobre&quot;&gt;ContaAzul&lt;/a&gt; e à noite e intervalos, estou escrevendo um livro novo. Isso dá 13 horas de trabalho por dia.&lt;/p&gt;
+
+&lt;p&gt;O dia começa cedo às 05:45. Estou acordando sozinho já, antes do despertador. Coisa de véio, tá ligado?&lt;/p&gt;
+
+&lt;p&gt;Ali pelas 6 da manhã vou pra minha &amp;quot;máquina de escrever&amp;quot; (um iPad com teclado Bluetooth) e consigo trabalhar cerca de meia hora no livro novo. Não é muito, nem dá tempo de se concentrar de verdade, mas serve para reler e melhorar o texto do dia anterior, com a mente limpa. Reescrevo os trechos que não ficaram muito claros, e dou uma lapidada geral, fazendo melhorias pontuais aqui e ali.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;pt&quot; dir=&quot;ltr&quot;&gt;5 da manhã, estou aqui escrevendo um livro novo, num tablet. É muita modernidade 😊 &lt;a href=&quot;https://t.co/SH8XzXltXV&quot;&gt;pic.twitter.com/SH8XzXltXV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aurelio Jargas (@oreio) &lt;a href=&quot;https://twitter.com/oreio/status/712918596670906368&quot;&gt;March 24, 2016&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Às 06:45 pego minha bicicleta e vou para a Prefeitura de Joinville. &lt;a href=&quot;/blog/2014/11/08/funcionario-publico/&quot;&gt;Sou funcionário Público há quase 3 anos&lt;/a&gt;, e lá trabalho como programador das 07:00 às 11:00. Atualmente desenvolvo em WordPress (PHP), construindo o site novo da prefeitura, que será fortemente inspirado no sensacional &lt;a href=&quot;https://www.gov.uk/&quot;&gt;GOV.UK&lt;/a&gt;. Está sendo bem empolgante construir algo novo e moderno por lá.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A jornada normal na prefeitura é de 6 horas, mas eu fiz o requerimento para diminuir para 4 horas (com redução de salário, é claro) para poder ter o segundo emprego à tarde.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Volto de bicicleta, paro para almoçar no restaurante e chego em casa perto do meio-dia. Os deslocamentos e almoço são sempre &lt;a href=&quot;/blog/2015/03/17/top-podcasts-2015/&quot;&gt;ao som de podcasts&lt;/a&gt;, preenchendo a mente com novos conhecimentos nesses momentos solitários e ociosos.&lt;/p&gt;
+
+&lt;p&gt;Já em casa, dedico mais meia hora ao livro novo. Consigo fazer uns três ou quatro parágrafos novos, quem sabe um exemplo de código também. De noite acabo reescrevendo quase tudo, pois em meia hora é difícil sair algo de qualidade. Mas vale a pena, pois parte do processo de criação é fazer várias versões ruins até que se chega na boa.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Você, estimado leitor, só vê o resultado final, tanto &lt;a href=&quot;/livro/&quot;&gt;nos livros&lt;/a&gt; quanto aqui no blog. Mas &lt;strong&gt;a maior parte do texto que escrevi foi jogada fora&lt;/strong&gt;. Cada parágrafo teve várias versões até chegar no ponto certo. As ideias vão amadurecendo conforme se escreve e reescreve. Cada texto aqui do blog leva no mínimo 3 horas para ficar pronto.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Às 12:45 saio de casa e vou de carro para a &lt;a href=&quot;https://contaazul.com/sobre&quot;&gt;ContaAzul&lt;/a&gt;, uma startup moderninha aqui de Joinville que &lt;a href=&quot;https://twitter.com/oreio/status/669159255509987328&quot;&gt;comecei a trabalhar há 5 meses&lt;/a&gt;. Minha jornada lá é das 13:00 às 19:00 e estou no time de &lt;a href=&quot;https://en.wikipedia.org/wiki/DevOps&quot;&gt;DevOps&lt;/a&gt;. Enquanto na prefeitura eu trabalho com tecnologias que domino, na ContaAzul é um admirável mundo novo “na nuvem”, com Amazon, &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_integration&quot;&gt;CI&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_delivery&quot;&gt;CD&lt;/a&gt;, Docker, Puppet, Jenkins, Travis, e tantas outras ferramentas e conceitos que eu nunca tinha usado. Bem desafiador e empolgante!&lt;/p&gt;
+
+&lt;p&gt;Volto pra casa e em meio a outros compromissos noturnos inadiáveis, como fazer minhas &lt;a href=&quot;https://twitter.com/oreio/status/705533067197337606&quot;&gt;aulas de alemão no Duolingo&lt;/a&gt; e curtir um Netflix com a Mog, consigo encaixar cerca de duas horas de trabalho no livro. É neste momento que consigo me concentrar de verdade e escrever bastante. A escrita flui bem e aos poucos o livro vai ganhando corpo.&lt;/p&gt;
+
+&lt;p&gt;Na hora de ir dormir, estou bem cansado, física e mentalmente. Percebo que o deslocamento (seja de bicicleta, ônibus ou carro) cansa meu corpo, e o chaveamento de contextos (WordPress, livro, nuvem) e sistemas operacionais (Windows, Linux, iOS) cansa minha mente. Sei que isso não é nada saudável, porém essa rotina maluca é um esforço temporário, só até terminar o livro novo.&lt;/p&gt;
+
+&lt;p&gt;Minha esposa Mog é uma super parceira e está, &lt;a href=&quot;/tags/#mog&quot;&gt;como sempre&lt;/a&gt;, me apoiando, incentivando e cuidando bem de mim. Ela também tem seu emprego e nos intervalos resolve todos os pepinos da vida, que eu não consigo me envolver. O &lt;a href=&quot;https://www.shellscript.com.br&quot;&gt;livro de shell&lt;/a&gt; não teria saído sem o apoio dela, e dessa vez será igual. Muito obrigado meu amor! ❤️&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;O tema do livro? Prefiro ainda não falar por enquanto. No passado eu já &lt;a href=&quot;/blog/2011/06/24/vi-livro-sed-txt/&quot;&gt;fiz promessas&lt;/a&gt;, &lt;a href=&quot;/blog/2005/11/17/livro-novo-dominando-o-sed/&quot;&gt;parei um livro na metade&lt;/a&gt;, então dessa vez só vou divulgar quando tiver certeza que conseguirei chegar até o fim. Mas é claro que é um livro nerd, né? :)&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Aprenda expressões regulares em um dia</title>
+			<pubDate>Wed, 02 Mar 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2016/03/02/aprender-regex/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2016/03/02/aprender-regex/</guid>
+
+			<description>&lt;p&gt;Expressões regulares é um assunto que dá medo em muita gente. O cara olha aquela mistura aleatória de símbolos, não entende nada e sai xingando quem inventou aquela porcaria :)&lt;/p&gt;
+
+&lt;p&gt;Mas depois que você “vê a luz” e aprende a ler e criar suas próprias expressões, um novo mundo de possibilidades se abre e você passa a querer usar expressões regulares em tudo! Do ódio ao vício, o que era trevas vira ferramenta indispensável.&lt;/p&gt;
+
+&lt;h2&gt;Eu uso expressões regulares todos os dias&lt;/h2&gt;
+
+&lt;p&gt;Dentro do editor de textos para fazer edições mais avançadas, dentro dos códigos do programa que estou desenvolvendo para casar/substituir textos, na linha de comando do Unix nos grep e sed da vida, no banco de dados para aquela query mais poderosa, na configuração do Apache/Nginx para criar as regras de redirecionamento, e por aí vai...&lt;/p&gt;
+
+&lt;p&gt;É muito bom saber usar regex e ter tantas possibilidades diferentes de lugares onde posso aplicar este conhecimento. E melhor, diferente da maioria dos assuntos em informática, este é um que não fica obsoleto. Você aprende uma vez e usa por anos a fio, não há o que se atualizar ou aprender a versão nova. Regex é regex e pronto.&lt;/p&gt;
+
+&lt;p&gt;Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vida, que acho lastimável que esse conhecimento não seja universal na área nerd. Todos deveriam saber pelo menos o básico, e aplicar no seu dia a dia para economizar tempo. Tento fazer minha parte para ajudar a difundí-las: criei &lt;a href=&quot;/regex/&quot;&gt;um site&lt;/a&gt;, escrevi &lt;a href=&quot;https://www.piazinho.com.br&quot;&gt;um livro&lt;/a&gt;, fiz &lt;a href=&quot;https://www.youtube.com/user/aureliojargas&quot;&gt;vídeos&lt;/a&gt;, e dou &lt;a href=&quot;/curso/&quot;&gt;palestras e cursos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Não é tão difícil quanto parece&lt;/h2&gt;
+
+&lt;p&gt;Apesar de parecer ser muito complexo, o assunto em si não é extenso e pode ser explicado e demonstrado em algumas horas. Os conceitos são abstratos, mas junto com exemplos você vai entendendo pra que serve cada um daqueles símbolos (os metacaracteres) e como “montá-los” numa expressão para resolver o seu problema.&lt;/p&gt;
+
+&lt;p&gt;Não é decorar, numa questão de horas você realmente entende e aprende como funciona, e sai criando suas próprias expressões do zero. Olha só que massa, num mesmo dia você acorda sem saber nada de regex e &lt;strong&gt;no fim do dia estará criando expressões&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Como posso afirmar isso? Porque vi acontecendo na minha frente, várias vezes, nos cursos que ministrei.&lt;/p&gt;
+
+&lt;h2&gt;Curso de expressões regulares&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/sdsl-2/#toc6&quot;&gt;O primeiro curso de regex que dei&lt;/a&gt; foi em 2003 (faz tempo!), e o mais recente foi agora, &lt;a href=&quot;/curso/novatec-2/&quot;&gt;semana passada&lt;/a&gt;. Em todos os cursos, sem exceção, a turma conseguiu aprender os conceitos, o significado dos símbolos e fazer os exercícios sozinhos, criando suas expressões, testando melhorias, discutindo maneiras de resolver os problemas propostos.&lt;/p&gt;
+
+&lt;p&gt;Para ter algum tipo de métrica, no início do curso eu peço para cada aluno dar uma nota de zero a dez para o que ele/ela julga ser o seu conhecimento atual em expressões regulares. No fim do curso, mesma pergunta. Meu objetivo é que todos saiam melhores do que entraram, e felizmente isso sempre aconteceu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/novatec-2/notas.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Em geral, no final do curso, todos já estão tão imersos no assunto, que surgem discussões abstratas sobre eficiência ou qual a melhor maneira de fazer uma expressão complexa, como a do IP ou a da data.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Qualquer um que entre na sala nesse momento, ficará chocado com o “papo de louco” :)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/curso/sdsl-3/quadro.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Pra mim, é muito gratificante perceber essa enorme evolução em tão pouco tempo. Ter essa confirmação de que consegui passar esse conhecimento adiante, e que agora mais pessoas poderão usufruir dos benefícios das expressões, e quem sabe no futuro também passar isso adiante.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/sdsl-2/&quot;&gt;&lt;img src=&quot;/curso/sdsl-2/img/turma-er.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/sucesu/&quot;&gt;&lt;img src=&quot;/curso/sucesu/sucesu-seder-turma.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/scsl/&quot;&gt;&lt;img src=&quot;/curso/scsl/turma-er1.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/sdsl-3/&quot;&gt;&lt;img src=&quot;/curso/sdsl-3/turma-quadro.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/novatec-1/&quot;&gt;&lt;img src=&quot;/curso/novatec-1/turma-regex.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/novatec-2/&quot;&gt;&lt;img src=&quot;/curso/novatec-2/turma-800.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/curso/novatec-3/turma.jpg&quot;&gt;&lt;img src=&quot;/curso/novatec-3/turma-800.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quer aprender também? &lt;a href=&quot;/curso/&quot;&gt;Veja as datas dos próximos cursos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Convido a quem já foi aluno deixar aqui seu comentário. Gostou do curso? Aprendeu de verdade? Está usando regex no seu dia a dia? Tem alguma dica pra quem quer aprender também?&lt;/p&gt;
+
+&lt;p&gt;Quem não fez o curso, mas também já viu a luz dos metacaracteres, é muito bem-vind[oa] para deixar seu testemunho sobre como sua vida mudou :)&lt;/p&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Sed salva o dia novamente</title>
+			<pubDate>Tue, 09 Feb 2016 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2016/02/09/sed-salva/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2016/02/09/sed-salva/</guid>
+
+			<description>&lt;p&gt;Já perdi a conta de quantas vezes o &lt;a href=&quot;/sed/&quot;&gt;sed&lt;/a&gt; me salvou.&lt;/p&gt;
+
+&lt;p&gt;Ele é &lt;a href=&quot;/blog/2009/07/03/10anos-sed/&quot;&gt;meu comando preferido do Unix&lt;/a&gt;. É simples, direto, minimalista, poderoso, enigmático. E claro, faz uso intensivo de &lt;a href=&quot;/regex/&quot;&gt;expressões regulares&lt;/a&gt;, que é minha outra paixão.&lt;/p&gt;
+
+&lt;p&gt;Pórem, esta aparente simplicidade esconde um programa muito poderoso, que pode fazer as mais complicadas edições em textos, de maneira automatizada. Precisou substituir, apagar, inserir, juntar, quebrar, inverter, duplicar um texto? Sed nele!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Também dá pra fazer &lt;a href=&quot;/projects/sedsokoban/&quot;&gt;jogos com o sed&lt;/a&gt;, se você for desocupado o suficiente ;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Neste sábado, precisei do sed mais uma vez.&lt;/p&gt;
+
+&lt;p&gt;A 5ª edição do &lt;a href=&quot;http://piazinho.com.br&quot;&gt;livro Expressões Regulares&lt;/a&gt; será lançada daqui alguns dias, e a grande novidade desta vez é que além da versão impressa, também terá a versão digital (ebook). &lt;strong&gt;Finalmente!&lt;/strong&gt; 🎉&lt;/p&gt;
+
+&lt;p&gt;Porém, quando fui testar o ebook que a editora gerou, todos os códigos-fonte listados no livro apareceram sem alinhamento (indent), com todas as linhas começando no canto esquerdo :(&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/ebook-align.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Os fontes originais do livro estão no InDesign, que é o programa que a editora usa para a diagramação, e foram exportados para o &lt;a href=&quot;https://en.wikipedia.org/wiki/EPUB&quot;&gt;formato EPUB&lt;/a&gt; para gerar o ebook. Felizmente, o formato EPUB é editável, pois nada mais é do que um arquivo ZIP com arquivos XHTML e CSS dentro, então o descompactei e fui fuçá-lo.&lt;/p&gt;
+
+&lt;p&gt;Aqui está o trecho XHTML que gera o código da foto anterior:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFontePrimLin1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;# Cada domínio está numa subpasta em /sites&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;server {&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;    server_name ~ &quot;^(www\.)?(?&lt;span class=&quot;ni&quot;&gt;&amp;amp;lt;&lt;/span&gt;dominio&lt;span class=&quot;ni&quot;&gt;&amp;amp;gt;&lt;/span&gt;.+)$&quot;;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;    location / {&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;        root /sites/$dominio;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;    }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como deveria ser:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;
+# Cada domínio está numa subpasta em /sites
+server {
+    server_name ~ &quot;^(www\.)?(?&lt;span class=&quot;ni&quot;&gt;&amp;amp;lt;&lt;/span&gt;dominio&lt;span class=&quot;ni&quot;&gt;&amp;amp;gt;&lt;/span&gt;.+)$&quot;;
+    location / {
+        root /sites/$dominio;
+    }
+}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Por algum motivo sobrenatural, cada linha do código-fonte virou um parágrafo diferente (tag &lt;code&gt;&amp;lt;p&amp;gt;…&amp;lt;/p&amp;gt;&lt;/code&gt;), em vez de tudo ser um único bloco com a tag &lt;code&gt;&amp;lt;pre&amp;gt;…&amp;lt;/pre&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se fosse poucos casos eu até arrumaria na mão mesmo, mas contei aqui (na verdade, o &lt;code&gt;grep | wc -l&lt;/code&gt; contou) e são 340 blocos de código a serem arrumados no total. É, vai ter que rolar um sed macho...&lt;/p&gt;
+
+&lt;p&gt;Vamos analisar o formato geral dos blocos de código:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;qualquer coisa antes
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFontePrimLin1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;primeira linha do bloco&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;segunda linha do bloco&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;terceira linha do bloco&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_CodigoFonte1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;última linha do bloco&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+qualquer coisa depois
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O maior problema aqui é identificar o início e o fim dos blocos. O início tudo bem, está identificado pela classe &lt;code&gt;_CodigoFontePrimLin1&lt;/code&gt;. Já o final, não possui uma marcação especial. Eu só sei que terminou o bloco de código quando aparece uma linha que &lt;strong&gt;não tem&lt;/strong&gt; a classe &lt;code&gt;_CodigoFonte1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se tivesse uma marcação clara de início e fim, seria bem fácil. O sed já suporta nativamente esta notação, basta colocar os padrões entre barras, antes dos comandos, assim:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;/início/,/fim/ { comandos; }&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como não posso usar isso, pois não tenho um padrão claro de término do bloco, terei que usar outra tática: identificar o início do bloco, entrar num loop que vai lendo as próximas linhas e só sair do loop quando encontrar uma linha que não faça parte do bloco. Esse é o esqueleto do comando:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;
+  /início/ {
+
+    # insere a tag &amp;lt;pre&amp;gt; no início
+
+    # inicia o loop
+      # remove as tags &amp;lt;p&amp;gt; e &amp;lt;/p&amp;gt;
+      # lê a próxima linha
+      # continua no loop se for uma linha do bloco
+
+    # insere a tag &amp;lt;/pre&amp;gt; no final
+  }
+&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O primeiro passo é fazer o padrão que identifica o ínicio dos blocos. Já vimos que a classe &lt;code&gt;_CodigoFontePrimLin1&lt;/code&gt; foi usada no início deles. Porém, vai que algum bloco está marcado errado e não usou essa classe? Bem, eu sei com certeza que todas as linhas de código possuem uma classe cujo nome começa com &lt;code&gt;_CodigoFonte&lt;/code&gt;, então vou preferir usar esse padrão mais abrangente para não deixar de fora nenhum bloco.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;/_CodigoFonte/ {
+
+  # insere a tag &amp;lt;pre&amp;gt; no início
+
+  # inicia o loop
+    # remove as tags &amp;lt;p&amp;gt; e &amp;lt;/p&amp;gt;
+    # lê a próxima linha
+    # continua no loop se for uma linha do bloco
+
+  # insere a tag &amp;lt;/pre&amp;gt; no final
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora vamos para o loop. Além de montar a estrutura do loop, o que eu tenho que fazer em todas as linhas do bloco, é apagar as tags &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; e &lt;code&gt;&amp;lt;/p&amp;gt;&lt;/code&gt; feiosas. Farei isso em dois passos, com dois &lt;code&gt;s///&lt;/code&gt; para ficar mais simples a expressão regular.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;/_CodigoFonte/ {
+
+  # insere a tag &amp;lt;pre&amp;gt; no início
+
+  # inicia o loop
+  :meuloop
+
+    # remove as tags &amp;lt;p&amp;gt; e &amp;lt;/p&amp;gt;
+    s/^[[:blank:]]*&amp;lt;p [^&amp;gt;]*&amp;gt;//
+    s/[[:blank:]]*&amp;lt;\/p&amp;gt;$//
+
+    # lê a próxima linha
+    n
+
+    # continua no loop se for uma linha do bloco
+    /_CodigoFonte/ b meuloop
+
+  # insere a tag &amp;lt;/pre&amp;gt; no final
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O loop em sed é feito marcando um ponto qualquer no script com o comando &lt;code&gt;:&lt;/code&gt; seguido de um nome (no exemplo usei &lt;code&gt;:meuloop&lt;/code&gt;) e depois você usa o comando &lt;code&gt;b&lt;/code&gt; (de Branch), para pular para o ponto marcado (sim, é um &lt;a href=&quot;https://en.wikipedia.org/wiki/Goto&quot;&gt;GOTO&lt;/a&gt;). Só perceba que meu comando &lt;code&gt;b&lt;/code&gt; não é incondicional, ele só é aplicado se a linha atual tiver o padrão &lt;code&gt;_CodigoFonte&lt;/code&gt;. Esse é o jeitão do sed de fazer um &lt;code&gt;if&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Então beleza, nesse ponto meu script já identifica os blocos de código-fonte e apaga todas as tags &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; dentro deles. As outras linhas do livro permanecem intactas. O que está faltando agora é inserir a tag &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; no início e a &lt;code&gt;&amp;lt;/pre&amp;gt;&lt;/code&gt; no fim do bloco. Isso é fácil com o comando &lt;code&gt;i&lt;/code&gt; (de Insert). A sintaxe dele é estranha, exigindo uma quebra de linha escapada, mas funciona.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;/_CodigoFonte/ {
+
+  # insere a tag &amp;lt;pre&amp;gt; no início
+  i \
+&amp;lt;pre&amp;gt;
+
+  # inicia o loop
+  :meuloop
+
+    # remove as tags &amp;lt;p&amp;gt; e &amp;lt;/p&amp;gt;
+    s/^[[:blank:]]*&amp;lt;p [^&amp;gt;]*&amp;gt;//
+    s/[[:blank:]]*&amp;lt;\/p&amp;gt;$//
+
+    # lê a próxima linha
+    n
+
+    # continua no loop se for uma linha do bloco
+    /_CodigoFonte/ b meuloop
+
+  # insere a tag &amp;lt;/pre&amp;gt; no final
+  i \
+&amp;lt;/pre&amp;gt;
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E pronto!&lt;/p&gt;
+
+&lt;p&gt;O sed é extremamente rápido. Num piscar de olhos ele vai editar o livro todo, arrumando todos os blocos. Aí é só compactar tudo de volta e o arquivo EPUB estará do jeito que Jesus gosta: com todos os códigos-fonte bem alinhados :)&lt;/p&gt;
+
+&lt;p&gt;Claro que a “vida real” é mais dura do que isso, e tive que fazer mais alguns sed para lidar com falsos-positivos, trocar tabs por espaços, remover tags vazias de índice remissivo e fazer ajustes no arquivo CSS.&lt;/p&gt;
+
+&lt;p&gt;Veja como ficou o script completo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/aureliojargas/ebook-fix/blob/master/ebook-fix.sh&quot;&gt;https://github.com/aureliojargas/ebook-fix/blob/master/ebook-fix.sh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Fiz a prova POSCOMP</title>
+			<pubDate>Sat, 03 Oct 2015 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2015/10/03/poscomp/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2015/10/03/poscomp/</guid>
+
+			<description>&lt;p&gt;Ando pensando em fazer um mestrado em computação, para aprender sobre assuntos mais densos e quem sabe no futuro dar aulas em alguma faculdade/universidade. Só tem um pequenino problema: minha formação acadêmica é risível.&lt;/p&gt;
+
+&lt;p&gt;Fiz uns 8 meses de Bacharelado em Informática na UFPR, lá por 1997. As aulas eram difíceis. Reprovei em Cálculo I, e ao fazer de novo essa matéria, achando que dessa vez iria conseguir, olha o que acontece: &lt;strong&gt;tirei 0,5 na primeira prova&lt;/strong&gt;. O quê? Meio?!?? Acertei somente o meu nome completo, decerto… Sempre tirei notas boas no 1º grau e no curso de Eletrônica no CEFET-PR (que hoje é UTF-PR), então aquele 0,5 foi um atestado definitivo de que aquele curso não era pra mim.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mudei para uma faculdade mais fácil&lt;/strong&gt;, curta (somente 3 anos) e focada no mercado de trabalho, a ESEEI (que hoje não existe mais) no curso de Tecnólogo em Processamento de Dados. Ali era o outro extremo: tudo era muito superficial e fácil, com uma turma noturna desinteressada e cansada de já ter trabalhado o dia todo. Vi um pouco de Java, programação orientada a objetos, SQL e só. Currículo básico para conseguir emprego de programador-peão. Nada de teoria, matemática e fundamentos da computacão.&lt;/p&gt;
+
+&lt;p&gt;Resultado: me formei sem nunca ter estudado temas como algoritmos, grafos, compiladores, cálculos com vetores e tantos outros assuntos interessantes que eu teria visto se tivesse continuado na UFPR. &lt;strong&gt;Hoje eu me arrependo dessa escolha&lt;/strong&gt;, mas na época fazia sentido, pois eu já trabalhava com Linux na Conectiva e via a faculdade como um empecilho, uma perda de tempo.&lt;/p&gt;
+
+&lt;p&gt;Pula para 2015, aqui estou eu com quase 20 anos de experiência de trabalho nas áreas de programação, administração de sistemas e documentação técnica, tudo aprendido na prática, porém com &lt;strong&gt;lacunas de conhecimento&lt;/strong&gt; e sem a base formal. Sinto falta de saber a teoria por trás daquilo que aplico diariamente, conhecer os algoritmos clássicos e entender bem o funcionamento dos bits e bytes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Olhando assim, em retrospectiva, fica fácil entender porque eu sempre me interessei por linguagens de alto nível, como sed, Bash, PHP, Python, JavaScript, Ruby, que não exigem o conhecimento de bits e bytes como as linguagens de baixo nível.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hoje tenho algumas alternativas para completar as lacunas, há diversos livros e cursos online, em inglês e português. Com a experiência já acumulada, hoje posso aprender com mais facilidade do que 20 anos atrás. Não me vejo fazendo outra graduação, pois demora demais e exige muito tempo livre. &lt;strong&gt;Um mestrado poderia ser o guia&lt;/strong&gt; (e a grande pressão) para eu finalmente resolver este bug na minha formação.&lt;/p&gt;
+
+&lt;p&gt;Aí entra o POSCOMP na história.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;POSCOMP é um exame organizado anualmente pela Sociedade Brasileira de Computação com o objetivo de testar os conhecimentos em computação dos candidatos a vagas em programas de pós-graduação na área. As instituições que oferecem as vagas utilizam o resultado do exame nas mais diversas maneiras em seus processos seletivos. — &lt;a href=&quot;https://pt.wikipedia.org/wiki/Poscomp&quot;&gt;Wikipédia&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O POSCOMP é uma forma de mostrar que o martírio da Ciência da Computação não foi nada perto da frustração de ter que chutar 80% das questões em uma única prova. — &lt;a href=&quot;http://desciclopedia.org/wiki/Poscomp&quot;&gt;Desciclopédia&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Legal, posso fazer essa prova pra atestar o quão ruim é minha formação acadêmica, e na remota possibilidade de eu ir bem, talvez conseguir alguma vaga de mestrado aqui perto, em Joinville mesmo ou Curitiba. Vale a pena tentar :)&lt;/p&gt;
+
+&lt;p&gt;Seguindo a tradição brasileira, &lt;strong&gt;deixei tudo para a última hora&lt;/strong&gt;. Somente no dia da prova (27/09/2015) é que fui me preparar: instalei &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.ufms_cppp.poscomp&quot;&gt;um aplicativo para Android&lt;/a&gt; que trazia algumas questões de provas passadas e dei uma olhada geral.&lt;/p&gt;
+
+&lt;p&gt;A prova foi aqui em Joinville mesmo, na UDESC, tinha cerca de 30 pessoas (somente 2 mulheres). Todos eram bem jovens, eu era o tiozão da turma :) Foram 4 horas de prova para responder 70 questões de computação nas áreas de matemática, fundamentos e tecnologia. Fui o último a terminar, usei todo o tempo disponível.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fiz a prova de trás para frente&lt;/strong&gt;, pois as últimas perguntas eram as que eu sabia, que envolviam conhecimentos práticos em programação, SQL e tecnologia em geral. Foi um começo animador! Mas conforme fui voltando as folhas, foi só ladeira abaixo… O desespero mesmo foram as primeiras perguntas, que eram de matemática.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Últimas 15 perguntas: acertei 13 👍&lt;/li&gt;
+&lt;li&gt;Primeiras 15 perguntas: acertei 6 (sendo 3 no chute cego) 💩&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gostei de fazer as perguntas de programação, onde foi necessário “executar” o código na cabeça para chegar ao resultado. A de SQL foi tranquila para quem usa no dia a dia. Algumas consegui resolver de maneira intuitiva, com base nos dados e respostas. Mas olha que sacanagem, não caiu nenhuma pergunta sobre &lt;a href=&quot;/regex/&quot;&gt;expressões regulares&lt;/a&gt;! :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tive dificuldade com o jargão acadêmico&lt;/strong&gt;. Às vezes eu sabia como resolver o problema, mas a dificuldade era interpretar os termos e notações. Nas questões de lógica por exemplo, usaram &lt;code&gt;∧ ∨ ¬&lt;/code&gt; para representar AND, OR e NOT. Nas questões de conjuntos, eu nem lembrava mais o que era cada símbolo. Alguns termos eu conhecia somente em inglês e o similar em português me confundiu.&lt;/p&gt;
+
+&lt;p&gt;Pelo gabarito preliminar, acertei 40 das 70 questões (57%). Não foi um bom aproveitamento, mas fiquei feliz por ter acertado mais da metade, pois saí da prova achando que tinha ido muito mal. O resultado oficial sai em novembro, mostrando como fiquei em relação à média geral. Me disseram que é isso o que importa, então aguardemos…&lt;/p&gt;
+
+&lt;p&gt;Gostei da experiência de fazer a prova. Foi bom testar os conhecimentos, relembrar conceitos e comprovar como sou fraco em matemática e teoria da computação :)&lt;/p&gt;
+
+&lt;p&gt;Pra quem ficou curios[oa], a prova e o gabarito estão no site &lt;a href=&quot;http://vestibular.ufg.br/2015/poscomp/&quot;&gt;http://vestibular.ufg.br/2015/poscomp/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Atualização: Saiu o resultado.&lt;/strong&gt; Acertei 41 questões. A média geral foi 29,1 e o desvio padrão 7,3. Então consegui, fiquei acima da média+desvio! \o/&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/poscomp-resultado.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+
+		</item>
+
+
+		<item>
+			<title>Eu no podcast Castálio</title>
+			<pubDate>Fri, 18 Sep 2015 12:00:00 +0000</pubDate>
+			<link>https://aurelio.net/blog/2015/09/18/eu-no-podcast-castalio/</link>
+			<guid isPermaLink="true">https://aurelio.net/blog/2015/09/18/eu-no-podcast-castalio/</guid>
+
+			<description>&lt;p&gt;Participei do &lt;a href=&quot;http://castalio.info&quot;&gt;podcast Castálio&lt;/a&gt;, que faz um bate-papo com nerds brasileiros de diversas áreas. Foi divertido! Os entrevistadores &lt;a href=&quot;https://twitter.com/OgMaciel&quot;&gt;Og Maciel&lt;/a&gt; e &lt;a href=&quot;https://twitter.com/elyezer&quot;&gt;Elyézer Rezende&lt;/a&gt; fizeram perguntas e eu respondi com o &lt;code&gt;--verbose&lt;/code&gt; ligado, resultando numa conversa tão extensa que teve que ser dividida em dois episódios :)&lt;/p&gt;
+
+&lt;h3&gt;Escute agora&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://castalio.info/episodio-67-aurelio-jargas-conectiva-e-livros.html&quot;&gt;Castálio Podcast #67: Aurelio Jargas - Conectiva e Livros&lt;/a&gt; (44min)&lt;/p&gt;
+
+&lt;iframe src=&quot;https://archive.org/embed/castalio-podcast-67&quot; width=&quot;80%&quot; height=&quot;30&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://castalio.info/episodio-68-aurelio-jargas-projetos.html&quot;&gt;Castálio Podcast #68: Aurelio Jargas - Projetos&lt;/a&gt; (54min)&lt;/p&gt;
+
+&lt;iframe src=&quot;https://archive.org/embed/castalio-podcast-68&quot; width=&quot;80%&quot; height=&quot;30&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Ou se preferir, &lt;a href=&quot;http://feeds.feedburner.com/CastalioPodcastMP3&quot;&gt;assine o podcast&lt;/a&gt; e escute no seu tocador favorito.&lt;/p&gt;
+
+&lt;h3&gt;O que tem de bom?&lt;/h3&gt;
+
+&lt;p&gt;A primeira parte, como não poderia deixar de ser, foi sobre a (&lt;a href=&quot;http://br-linux.org/2015/01/conectiva-sa-esta-fechando-e-busca-interessados-em-comprar-direitos-de-apostilas-e-outros-materiais.html&quot;&gt;hoje extinta&lt;/a&gt;) Conectiva. Relembrei a época em que trabalhei lá (1997 a 2002, depois 2003 a 2005). Como eu fui um dos primeiros funcionários, vi a empresa crescer de uma dúzia que trabalhava amontoado numa casa até o ápice, quando éramos mais de 100 funcionários e ocupávamos um prédio.&lt;/p&gt;
+
+&lt;p&gt;Há muitas histórias, mas o que mais me marcou foi o ambiente de trabalho informal e desregrado, “estilo startup”, com música alta (rock), fliperama no refeitório, horário flexível e partidas de Quake nas sextas-feiras.&lt;/p&gt;
+
+&lt;p&gt;E claro, ter a oportunidade de estar perto de caras geniais e aprender com eles, mega programadores que admiro (os que citei no podcast foram &lt;a href=&quot;https://www.linkedin.com/in/acmelo&quot;&gt;Arnaldo Carvalho de Melo&lt;/a&gt;, &lt;a href=&quot;https://labix.org&quot;&gt;Gustavo Niemeyer&lt;/a&gt; e &lt;a href=&quot;https://www.linkedin.com/in/alfredokojima&quot;&gt;Alfredo Kojima&lt;/a&gt;). O nível era alto, todo dia se aprendia algo novo, inclusive durante as conversas no almoço. Muito empolgante!&lt;/p&gt;
+
+&lt;p&gt;Quer saber mais sobre a Conectiva? Outros ex-funcionários já participaram desse mesmo podcast, contando muitas outras histórias:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://castalio.info/elvis-pfutzenreuter-conectiva-linux.html&quot;&gt;Castálio Podcast com Elvis Pfützenreuter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://castalio.info/ruda-moura-conectiva-linux.html&quot;&gt;Castálio Podcast com Rudá Moura&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://castalio.info/rodrigo-novo-conectiva-linux.html&quot;&gt;Castálio Podcast com Rodrigo Novo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Depois papeamos sobre minha &lt;a href=&quot;/blog/2005/09/23/free-as-in-bird/&quot;&gt;saída da Conectiva&lt;/a&gt;, minha &lt;a href=&quot;/blog/2005/11/30/processo-de-desnerdizacao/&quot;&gt;tentativa frustrada de desnerdização&lt;/a&gt;, e da minha &lt;a href=&quot;/blog/2006/02/08/de-nerd-a-fotografo/&quot;&gt;fracassada tentativa de virar fotógrafo de surfe&lt;/a&gt; na praia de Matinhos. Quem já lê o blog há tempos, acompanhou essa novela em tempo real :)&lt;/p&gt;
+
+&lt;p&gt;Enfim, falamos sobre meus &lt;a href=&quot;/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/&quot;&gt;oito anos desempregado&lt;/a&gt;, trabalhando em casa, onde aproveitei a mente livre para criar sites, softwares e livros. Também contei como é processo de escrever um livro, com dicas pra quem também quer escrever o seu.&lt;/p&gt;
+
+&lt;p&gt;Hora do spam: &lt;a href=&quot;https://www.piazinho.com.br&quot;&gt;&lt;img src=&quot;/img/icon/128/livroregex4.png&quot; alt=&quot;Livro Regex&quot;&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.shellscript.com.br&quot;&gt;&lt;img src=&quot;/img/icon/128/livroshell.png&quot; alt=&quot;Livro Shell&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finalizamos falando de alguns dos meus softwares: as ferramentas de linha de comando &lt;a href=&quot;https://funcoeszz.net&quot;&gt;Funções ZZ&lt;/a&gt;, o testador de linha de comando &lt;a href=&quot;https://github.com/aureliojargas/clitest&quot;&gt;clitest&lt;/a&gt;, o minigereciador financeiro &lt;a href=&quot;/moneylog/&quot;&gt;Moneylog&lt;/a&gt; e o infame &lt;a href=&quot;/coisinha/miguxeitor/&quot;&gt;Miguxeitor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;No final dei uma minha &lt;a href=&quot;/musica/&quot;&gt;lista de bandas que gosto&lt;/a&gt;, alguns sites que leio e &lt;a href=&quot;/blog/2015/03/17/top-podcasts-2015/&quot;&gt;podcasts que escuto&lt;/a&gt;. Lá no &lt;a href=&quot;http://castalio.info/episodio-68-aurelio-jargas-projetos.html&quot;&gt;post original&lt;/a&gt; do podcast tem a lista completa de tudo o que citei (e alguns adicionais que passei por email pós-gravação).&lt;/p&gt;
+
+&lt;p&gt;Se você gostou dos podcasts, não esqueça de ir lá e deixar um comentário para eles (&lt;a href=&quot;http://castalio.info/episodio-67-aurelio-jargas-conectiva-e-livros.html&quot;&gt;parte 1&lt;/a&gt;, &lt;a href=&quot;http://castalio.info/episodio-68-aurelio-jargas-projetos.html&quot;&gt;parte 2&lt;/a&gt;), pois agora você sabe a importância que isso tem para quem cria conteúdo. É o combustível para continuar produzindo e a prova de que tem gente que se importa.&lt;/p&gt;
+
+&lt;p&gt;E se você ainda não está satisfeit[oa] e quer ouvir ainda mais da minha voz de taquara rachada, eu já participei de outros podcasts &lt;a href=&quot;/blog/2008/08/18/podcastei/&quot;&gt;em 2008&lt;/a&gt; e &lt;a href=&quot;/blog/2012/09/28/eu-no-podcast-do-ruda/&quot;&gt;em 2012&lt;/a&gt;.&lt;/p&gt;
+</description>
+
+		</item>
+
+	</channel>
+</rss>

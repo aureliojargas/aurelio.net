@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Symlinks inside the iPhoto library, by Aurelio Jargas</title>
+	<meta name="author" content="Aurelio Jargas">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="/assets/reset.css">
+	<link rel="stylesheet" href="/assets/articles.css">
+	<link rel="stylesheet" href="/assets/bars.css">
+	<link rel="stylesheet" href="/assets/monokai.css">
+
+	<!-- Fork me -->
+	<link rel="stylesheet" href="/assets/gh-fork-ribbon.css">
+	<!--[if lt IE 9]>
+		<style>.github-fork-ribbon-wrapper { display: none; }</style>
+	<![endif]-->
+
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+</head>
+
+<body id="iphoto-symlinks">
+
+	<div class="bar">
+		<div id="article-header">
+
+			<h1><a href="/articles/iphoto-symlinks.html" title="Permalink" rel="bookmark">Symlinks inside the iPhoto library</a></h1>
+
+			
+			<p class="byline">
+				Written by
+				<a class="name" rel="author" href="/about.html">Aurelio Jargas</a>
+				
+					on <span class="date">December 11, 2012</span>
+				
+			</p>
+
+		</div>
+	</div>
+
+
+	<div class="bar bar-transparent">
+		<div id="article-body">
+
+<p>When viewed in the Finder, your iPhoto Library appears as a special package. But in reality it's just a plain folder, with files, folders and symlinks inside it, as shown by the Terminal:</p>
+
+<p><img class="center" src="/img/articles/iphoto11-library-ls.png" alt=""></p>
+
+<p>This listing is from my iPhoto '11 library, upgraded from the previous iPhoto '09. Note the use of symlinks to map the old folders Originals and Modified to their new names: Masters and Previews.</p>
+
+<p>The library folder structure is complex and change between versions (<a href="http://www.fatcatsoftware.com/iplm/Documentation/iPLM/pgs/libraryfolder.html">learn more</a>), but in this article my only focus will be the symlinks.</p>
+
+
+<h2 id="list">List of symlinks</h2>
+
+<table>
+
+  <tr>
+    <th colspan="3">iPhoto '09 — New library</th>
+  </tr>
+
+  <tr>
+    <td>Data</td>
+    <td>→</td>
+    <td>Data.noindex</td>
+  </tr>
+
+  <tr>
+    <th colspan="3">iPhoto '11 — New library</th>
+  </tr>
+
+  <tr>
+    <td>Database/BigBlobs.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/BigBlobs.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/Faces.db</td>
+    <td>→</td>
+    <td>Database/apdb/Faces.db</td>
+  </tr>
+  <tr>
+    <td>Database/History.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/History.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/ImageProxies.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/ImageProxies.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/Library.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/Library.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/Properties.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/Properties.apdb</td>
+  </tr>
+
+  <tr>
+    <th colspan="3">iPhoto '11 — Library upgraded from iPhoto '09</th>
+
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>→</td>
+    <td>Data.noindex</td>
+  </tr>
+  <tr>
+    <td>Data.noindex</td>
+    <td>→</td>
+    <td>Thumbnails</td>
+  </tr>
+  <tr>
+    <td>Database/BigBlobs.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/BigBlobs.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/Faces.db</td>
+    <td>→</td>
+    <td>Database/apdb/Faces.db</td>
+  </tr>
+  <tr>
+    <td>Database/History.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/History.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/ImageProxies.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/ImageProxies.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/Library.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/Library.apdb</td>
+  </tr>
+  <tr>
+    <td>Database/Properties.apdb</td>
+    <td>→</td>
+    <td>Database/apdb/Properties.apdb</td>
+  </tr>
+  <tr>
+    <td>Modified</td>
+    <td>→</td>
+    <td>Previews</td>
+  </tr>
+  <tr>
+    <td>Originals</td>
+    <td>→</td>
+    <td>Masters</td>
+  </tr>
+</table>
+
+<blockquote>
+  Note: I don't have access to previous versions of iPhoto. I you do, please help me to complete this table.
+</blockquote>
+
+
+<h2 id="new-or-upgrade">New or upgraded library?</h2>
+
+<p>The use of symlinks in the library depends on the iPhoto version, and if your library is new or upgraded from a previous version.</p>
+
+<p>For brand new libraries the structure is cleaner and just a few symlinks are created. As you can see in the previous table:</p>
+
+<ul>
+  <li>In iPhoto '09 there was only a single symlink pointing to the Data.noindex folder.</li>
+  <li>In iPhoto '11 that symlink was gone, but six new symlinks appeared under the Database folder.</li>
+</ul>
+
+<p>Aditional symlinks are created when you upgrade your library from a previous iPhoto version. The symlinks are used to map the old files and folders to their new locations, avoiding the compatibility break with other softwares or services.</p>
+
+<p>For example, iPhoto '11 renamed important folders used in previous versions such as Originals, Modified and Data. If you create a new library, only the new folder names will be used. But if you're upgrading from iPhoto '09 the old folder names will be symlinks that point to the new names.</p>
+
+<!--Right (or Ctrl) Click your iPhoto Library (should be in your Pictures folder in your Home folder), select "View Package Contents".-->
+
+<h2 id="remove">Do not remove the symlinks</h2>
+
+<p>If the symlinks were not necessary, they would not be created by iPhoto in the first place. Do not mess up your library by removing them. In fact, you shouldn't do anything manually inside the library folder, to avoid data corruption.</p>
+
+<p>For iPhoto '11, there are reports that new folders will be created if you remove the legacy symlinks:</p>
+
+<blockquote>
+  Removing the symlinks does not work. You can open your iPhoto library, but work with it for a while and you'll find new directories (yes, directories, not symlink) replacing the old symlinks. This, of course, leads to problems as you can imagine… — <a href="https://forums.dropbox.com/topic.php?id=26377&amp;replies=85#post-164505">Thomas A.</a>
+</blockquote>
+
+<p>A simple solution to get rid of the legacy symlinks in iPhoto '11 is to create a new library and reimport all your pictures. But all your metadata will be lost: albums, keywords, ratings, descriptions… Not a good deal in most cases.</p>
+
+
+<h2 id="dropbox">Symlinks + Dropbox = Problems</h2>
+
+<p>Symlinks are a basic Unix feature, but they were not supported in Windows before Vista. So be careful if you're backing up your iPhoto library to a Windows machine or a multi platform service such as Dropbox.</p>
+
+<p><a href="/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, since it needs to support older Windows versions. When a symlink to a folder is found, Dropbox treats it as if it was a plain folder, and uploads all its contents to the server, resulting in duplicated contents.</p>
+
+<p>This is specially problematic with upgraded libraries in iPhoto '11. The Originals symlink will turn into a plain folder in your Dropbox account, and all your photos and videos (currently in the Masters folder), will be duplicated. Say goodbye to your quota :(</p>
+
+<p>Learn how to fix this problem: <a href="/articles/dropbox-iphoto-11.html">Fix: iPhoto '11 library doubled size in Dropbox</a>.</p>
+
+
+			<div id="eof">— EOF —</div>
+
+		</div><!--article-body-->
+	</div><!--bar-->
+
+
+	<div class="bar">
+<div id="nav">
+	<ul>
+	<li>
+		Dropbox
+		<ul>
+		<li><a href="/articles/dropbox-iphoto-import.html" >Dropbox iPhoto Import – The Missing FAQ</a></li>
+		<li><a href="/articles/dropbox-selective-sync.html">Dropbox: Selective Sync Pitfalls</a></li>
+		<li><a href="/articles/dropbox-symlinks.html"      >Dropbox and symlinks</a></li>
+		<li><a href="/articles/dropbox-ignore-folder.html" >Ignore a local folder inside Dropbox</a></li>
+		</ul>
+	</li>
+	<li>
+		iPhoto
+		<ul>
+		<li><a href="/articles/dropbox-iphoto-11.html">Fix: iPhoto '11 library doubled size in Dropbox</a></li>
+		<li><a href="/articles/iphoto-symlinks.html"  >Symlinks inside the iPhoto library</a></li>
+		</ul>
+	</li>
+	<li>
+		Reference
+		<ul>
+		<li><a href="/articles/sed-abc.html"              >The sed alphabet</a></li>
+		<li><a href="/articles/applescript-vs-python.html">AppleScript for Python Programmers (Comparison Chart)</a></li>
+		<li><a href="/articles/shell-reference.html"      >Bash Shell Quick Reference</a></li>
+		</ul>
+	</li>
+	<li>
+		Other
+		<ul>
+		<li><a href="/articles/nexus-5x-bootloop-fix.html">Nexus 5X bootloop fix - Install Android monthly security updates</a></li>
+		<li><a href="/articles/hungry-sumo-high-scores.html">Tips for high scores in Hungry Sumo for iOS (iPhone, iPad)</a></li>
+		<!-- <li><a href="/articles/applescript-install.html">How to install AppleScripts on your Mac</a></li> -->
+		</ul>
+	</li>
+	<li>
+		<a style="text-decoration:none;" href="/about.html">←</a>
+	</li>
+	</ul>
+</div>
+
+	</div>
+
+	<div class="bar bar-transparent">
+
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+
+	<!-- Fork me -->
+	<div class="github-fork-ribbon-wrapper right">
+		<div class="github-fork-ribbon">
+			<a href="https://github.com/aureliojargas/aurelio.net/tree/master/articles/iphoto-symlinks.html">GitHub</a>
+		</div>
+	</div>
+
+<!-- My head -->
+<a class="aureliohead"
+	style="position:fixed; right:5px; bottom:0px;"
+	href="/about.html"
+	title="Aurelio Jargas"><img
+	style="width: 64px; height: 64px;"
+	src="/img/articles/aurelio.png"></a>
+
+
+</body>
+</html>

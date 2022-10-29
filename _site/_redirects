@@ -1,0 +1,322 @@
+# Site redirects (Netlify syntax)
+
+# Blog feeds
+# Official /feed redir to FeedBurner, who reads /feed.xml
+/blog.html                                        /blog-arquivo.html
+/blog.rss                                         http://feeds.feedburner.com/AurelioJargas
+/aurelio.rss                                      http://feeds.feedburner.com/AurelioJargas
+/blog/feed/                                       http://feeds.feedburner.com/AurelioJargas
+/feed/                                            http://feeds.feedburner.com/AurelioJargas
+
+# Page -> Post
+/wordpress/css-sprites/                           /blog/2011/12/05/css-sprites-na-pratica/
+
+### Incorrect links in other sites
+# http://www.dicas-l.com.br/arquivo/semana_do_aurelio_vi.php
+/coluna/coluna09.vim                              /doc/coluna/coluna-09.html
+/coluna/coluna11.txt                              /doc/coluna/coluna-11.html
+# http://br.dir.groups.yahoo.com/group/cygwin-br/message/268
+/coluna/coluna11.html                             /doc/coluna/coluna-11.html
+# http://br.dir.groups.yahoo.com/group/shell-script/message/4886
+/coluna/coluna07.html                             /doc/coluna/coluna-07.html
+# http://www.dicas-l.com.br/artigos/linux-modotexto/coluna08.html
+/doc/doc/dotfiles/screenrc.txt                    /doc/dotfiles/screenrc.txt
+# http://dicas-l.com.br/artigos/linux-modotexto/
+/doc/doc/vim/txt.vim                              /vim/txt.vim
+# various
+/doc/dialog/*                                     /shell/dialog/:splat
+
+# icon128/ -> icon/128/ (padfiles and other sites use the old URL)
+/img/icon16/*                                     /img/icon/16/:splat
+/img/icon32/*                                     /img/icon/32/:splat
+/img/icon64/*                                     /img/icon/64/:splat
+/img/icon80/*                                     /img/icon/80/:splat
+/img/icon96/*                                     /img/icon/96/:splat
+/img/icon128/*                                    /img/icon/128/:splat
+/img/icon256/*                                    /img/icon/256/:splat
+
+### Shortcuts (temporary)
+/atacama/                                         /viagem/atacama/                 302
+/cv                                               /doc/cv-aurelio.html             302
+/faq                                              /doc/faq.html                    302
+/soft/moneylog/moneylog.html                      /soft/moneylog/moneylog4.html    302
+# Old shortcut indexed by Google :(
+/pyobjc/                                          /mac/dev/tutorial-pyobjc/
+
+# Coisinha
+/engripeitor/*                                    /coisinha/engripeitor/:splat
+/miguxeitor/*                                     /coisinha/miguxeitor/:splat
+/embriagueitor/*                                  /coisinha/embriagueitor/:splat
+
+
+### BIG ENGLISH MOVE: obsolete /en (2012-12-20)
+#
+# moved to /articles
+/doc/as4pp-pdf.html                               /410.html   410
+/shell/canivete/en/canivete-en.t2t                /410.html   410
+/doc/cv-aurelio-en.html                           /410.html   410
+/doc/curriculum-mini.txt                          /410.html   410
+/doc/as4pp.html                                   /articles/applescript-vs-python.html
+/img/wp/hungry-sumo-ranking.jpg                   /articles/img/hungry-sumo-ranking.jpg
+/articles/hungry-sumo-high-scores/                /articles/hungry-sumo-high-scores.html
+/shell/canivete/en/canivete-en.html               /articles/shell-reference.html
+/shell/canivete/en/                               /articles/shell-reference.html
+/soft/applescript-install.html                    /articles/applescript-install.html
+/en/doc/*                                         /articles/:splat
+/en/donate.html                                   /projects/donate.html
+/en/img/*                                         /img/en/:splat
+/en/                                              /about.html
+
+
+#### /soft -> /projects (2012-12-20)
+# scripts moved to Google Code (links in PAD files) [moved from /soft/.htaccess]
+/soft/adiumbook/AdiumBook-sources.zip                                 https://github.com/aureliojargas/adiumbook
+/soft/adiumbook/AdiumBook-1.3.dmg                                     http://adiumbook.googlecode.com/files/AdiumBook-1.3.dmg
+/soft/export-contacts-to-mp3-player/Export_Contacts_To_MP3_Player.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_MP3_Player-1.1.zip
+/soft/export-contacts-to-yahoo-csv/Export_Contacts_To_Yahoo_CSV.zip   https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_Yahoo_CSV-1.2.zip
+/soft/gmail-to-jabber/Gmail_to_Jabber.zip                             https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Gmail_to_Jabber-2.zip
+/soft/iphoto-sed/iPhoto_SED.zip                                       https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_SED-1.zip
+/soft/iphoto-set-sequential-title/iPhoto_Set_Sequential_Title.zip     https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_Set_Sequential_Title-1.0.zip
+/soft/itunes-find-artwork-less/iTunes_Find_Artwork-less.zip           https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Find_Artwork-less-1.0.zip
+/soft/itunes-rename-disk-file/iTunes_Rename_Disk_File_2.zip           https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Rename_Disk_File-2.zip
+/soft/itunes-search-in-lyrics/iTunes_Search_in_Lyrics.zip             https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Search_in_Lyrics-1.zip
+/soft/itunes-sed/iTunes_SED_1.1.zip                                   https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_SED-1.1.zip
+#
+# padfiles used old URLs, don't remove this rules [moved from /soft/.htaccess]
+/soft/img/icon128/*                               /soft/img/icon/128/:splat
+/soft/img/icon32/*                                /soft/img/icon/32/:splat
+#
+# app sites now moved to /projects
+/css-sandbox/*                                    /projects/css-sandbox/:splat
+/sedsed/*                                         /projects/sedsed/:splat
+/txt2regex/*                                      /projects/txt2regex/:splat
+#
+# txt2tags temp redir
+/projects/txt2tags/                               http://txt2tags.org    302
+#
+# And finally, the catchall rule
+/soft/*                                           /projects/:splat
+
+
+# Obsoleted /bin/as content
+/bin/as/adium-book/*                              /projects/adiumbook/:splat
+/bin/as/AdiumBook-sources.zip                     https://github.com/aureliojargas/adiumbook
+/bin/as/py2as.html                                /articles/applescript-vs-python.html
+
+# Obsolete binary files in /bin/as (2020-06-15)
+# Remove .scpt files
+/bin/as/ExportContactsToMp3Player-1.1.scpt        /410.html  410
+/bin/as/iTunesRenameDiskFile-1.0.scpt             /410.html  410
+/bin/as/iTunesSearchInLyrics-1.0.scpt             /410.html  410
+# Redirect zip files to Google Code
+/bin/as/ExportContactsToMp3Player-1.1.zip         https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_MP3_Player-1.1.zip
+/bin/as/ExportContactsToYahooCSV-1.2.zip          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/Export_Contacts_To_Yahoo_CSV-1.2.zip
+/bin/as/iphoto_sed.zip                            https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_SED-1.zip
+/bin/as/iPhotoSetSequentialTitle-1.0.zip          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_Set_Sequential_Title-1.0.zip
+/bin/as/itunes_find_artwork_less-1.0.zip          https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Find_Artwork-less-1.0.zip
+/bin/as/iTunesRenameDiskFile-1.0.zip              https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Rename_Disk_File-1.zip
+/bin/as/iTunesSearchInLyrics-1.0.zip              https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_Search_in_Lyrics-1.zip
+/bin/as/iTunesSED-1.0.zip                         https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iTunes_SED-1.0.zip
+
+# Catchall points to /project
+/bin/as/*                                         /projects/:splat
+
+# moved :(
+/articles/img/*                                   /img/articles/:splat
+/bin/php/opine.phps                               /bin/php/scraps.phps
+/canivete/*                                       /shell/canivete/:splat
+/curso/4linux.html                                /curso/4linux/
+/curso/apostila-shell/*                           /shell/apostila/:splat
+/curso/IIsdsl/*                                   /curso/sdsl-2/:splat
+/curso/fisl/*                                     /curso/fisl-5/:splat
+/curso/novatec/iii/*                              /curso/novatec-3/:splat
+/curso/novatec/ii/*                               /curso/novatec-2/:splat
+/curso/novatec/i/*                                /curso/novatec-1/:splat
+/curso/sdsl/ii/*                                  /curso/sdsl-2/:splat
+/curso/sdsl/i/*                                   /curso/sdsl-1/:splat
+/curso/ufpr/ii/*                                  /curso/ufpr-2/:splat
+/curso/ufpr/i/*                                   /curso/ufpr-1/:splat
+/cygwin/rdl.html                                  /cygwin/rdl/
+/doc/besteiras/*                                  /misc/besteiras/:splat
+/doc/er-rdl/index.html                            /er/rdl-regex-1-respostas.html
+/doc/er-rdl/ip.html                               /er/casar-ip.html
+/doc/er-rdl/                                      /er/rdl-regex-1-respostas.html
+/doc/fvm/*                                        /fvm/:splat
+/doc/misc/dort.html                               /doc/dort.html
+/doc/misc/irc-mar2005.html                        /doc/irc-mar2005.html
+/doc/misc/videogame.html                          /doc/videogame.html
+/doc/ooo-vi.html                                  /vim/ooo-vi.html
+/doc/rdl/regex-1.html                             /er/rdl-regex-1.html
+/doc/rdl/regex-2.html                             /er/rdl-regex-2.html
+/doc/rdl/vi-vim-venci.html                        /vim/vi-vim-venci.html
+/doc/vim/*                                        /vim/:splat
+/er/guia/galeria/                                 https://www.piazinho.com.br/galeria.html
+/er/livro/galeria/                                https://www.piazinho.com.br/galeria.html
+/er/livro/cadastro/                               https://cadastro.aurelio.net
+/er/livro/                                        https://www.piazinho.com.br/ed1/
+/er/                                              /regex/
+/moneylog/importar.html                           /moneylog/conversor.html
+/moneylog/conversor.html                          /moneylog/import/
+/moneylog/v4/conversor.html                       /moneylog/import/
+/moneylog/doacao.html                             /moneylog/donate/
+/moneylog/moneylog.html                           /moneylog/moneylog1.html
+/moneylog/v4.html                                 /moneylog/v4/
+/moneylog/beta.html                               /moneylog/beta/
+/moneylog/online/                                 /moneylog/browser/app/
+/moneylog/svn/v5-migracao.html                    /moneylog/beta/update-2012.html
+/moneylog/svn/NEWS.html                           /moneylog/v5/NEWS.html
+/moneylog/svn/                                    https://github.com/aureliojargas/moneylog/tree/master
+/musica/baterna/*                                 /baterna/:splat
+/musica/pogo.php                                  /pogo/
+/musica/pogo/                                     /pogo/
+/musica/shows.txt                                 /musica/shows.html
+/projects/emomemory/buy.php                       /projects/emomemory/code.html
+/projects/emomemory/scores.php                    /projects/emomemory/scores.html
+/rac/ADDRESSING                                   /rac/info/ADDRESSING
+/regex/guia/galeria/                              https://www.piazinho.com.br/galeria.html
+/regex/guia/recados.php                           /regex/guia/opiniao.html
+/sed/sed-HOWTO/sed-HOWTO.html                     /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-1.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-2.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-3.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-4.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-5.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-6.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-7.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-8.html                   /sed/sed-HOWTO/
+/sed/sed-HOWTO/sed-HOWTO-9.html                   /sed/sed-HOWTO/
+/shell/cadastro/                                  https://cadastro.aurelio.net/livro/cadastro/
+/shell/canivete-pdf.html                          /shell/canivete/pdf/
+/shell/canivete-shell.pdf                         /shell/canivete/pdf/canivete-shell.pdf
+/shell/canivete-es.html                           /shell/canivete/es/
+/shell/canivete.html                              /shell/canivete/
+/shell/ascii.gif                                  /shell/canivete/ascii.gif
+/shell/zzcores.gif                                /shell/canivete/zzcores.gif
+/shell/miniman.html                               /shell/miniman/
+/sobre.html                                       /sobre/
+/vi/*                                             /vim/:splat
+/viagem/farol-imbituba-2001/*                     /viagem/farol-imbituba/:splat
+/viagem/marumbi-2001/*                            /viagem/marumbi/:splat
+/viagem/trilha-pinhao-2001/*                      /viagem/trilha-do-pinhao/:splat
+/vim/vimrc.txt                                    /doc/dotfiles/vimrc.txt
+/web/engripeitor.html                             /coisinha/engripeitor/
+/web/miguxeitor.html                              /coisinha/miguxeitor/
+/web/moneylog.html                                /moneylog/moneylog1.html
+/web/moneylog2.html                               /moneylog/moneylog2.html
+
+/curso/pycon/iii/                                 /blog/2007/08/21/minha-palestra-na-pyconbrasil/
+
+# old symlinks
+/bin/sed/*                                        /sed/programas/:splat    302
+/doc/misc/ramones.txt                             /doc/ramones.txt
+/curso/material/tutorial-pyobjc/*                 /mac/dev/tutorial-pyobjc/:splat
+
+# 2013-09-22
+/projects/txt2regex/README.html                   https://github.com/aureliojargas/txt2regex/blob/master/README.md
+/projects/txt2regex/txt2regex-0.8.tgz             https://github.com/aureliojargas/txt2regex/archive/v0.8.tar.gz
+/projects/txt2regex/old/                          https://github.com/aureliojargas/txt2regex/releases
+
+# Moved folder (2017-05-29)
+/doc/misc/*                                       /misc/:splat
+
+# PHP code replaced by static files (2017-05-25)
+/surf/search.php                                  /surf/surfistas/
+
+# PHP code moved to a subdomain (2017-05-26)
+/livro/cadastro/                                  https://cadastro.aurelio.net
+
+# Removed duplicated images (2018-11-29)
+/rac/img/madeinbr.png                             /img/madeinbr.png
+/projects/sedsed/madeinbr.png                     /img/madeinbr.png
+
+# Mog
+/monografia-morgana-laemmle.pdf                   /misc/monografia-morgana-laemmle.pdf
+/mog/monografia-morgana-laemmle.pdf               /misc/monografia-morgana-laemmle.pdf
+/mog/                                             http://www.mulherzice.com.br
+
+# Topic merged into another (2019-01-13)
+/regex/guia/modernosos-nao-atras.html             /regex/guia/modernosos-atras.html
+
+
+#---------------------------------------------------------------
+# Gone
+
+/ooo/*                                            /410.html  410
+/shell/apostila/amostra/*                         /410.html  410
+/projects/emomemory/cancelled.html                /410.html  410
+/projects/emomemory/registered.html               /410.html  410
+/sitemap.xml                                      /410.html  410
+
+# 2012-08-31 old scrap book
+/doc/recados-antigos/*                            /410.html  410
+/recados.php                                      /410.html  410
+/recados.html                                     /410.html  410
+
+# 2014-02-23 linked from http://www.cocoaforge.com/viewtopic.php?p=74845
+/adiumdup                                         /410.html  410
+
+# 2014-02-26 old WordPress pages (old tag rules in /a/www/.admin/htaccess*)
+/blog/tag/*                                       /410.html  410
+/blog/category/*                                  /410.html  410
+/tag/*                                            /410.html  410
+/category/*                                       /410.html  410
+/blog/author/*                                    /410.html  410
+/blog/page/*                                      /410.html  410
+
+# 2014-02-23 Disable old WordPress archive pages by date
+# /blog/2014/12/31/
+# /blog/2014/12/
+# /blog/2014/
+# /blog/2014/page/
+# /blog/2014/page/3
+#RedirectMatch gone "^/blog/20\d\d/(../)?(../)?$"
+#RedirectMatch gone "^/blog/20\d\d/page/"
+/blog/2004/                                       /410.html  410
+/blog/2005/                                       /410.html  410
+/blog/2006/                                       /410.html  410
+/blog/2007/                                       /410.html  410
+/blog/2008/                                       /410.html  410
+/blog/2009/                                       /410.html  410
+/blog/2010/                                       /410.html  410
+/blog/2011/                                       /410.html  410
+/blog/2012/                                       /410.html  410
+/blog/2013/                                       /410.html  410
+/blog/2014/                                       /410.html  410
+
+# 2017-05-23
+/vim/pulando-antigo.html                          /410.html  410
+
+# 2017-11-02
+/comments/feed/                                   /410.html  410
+
+# 2018-11-11
+/shell/canivete/canivete.conf                     /410.html  410
+/shell/canivete/index.t2t                         /410.html  410
+/shell/canivete/es/index.t2t                      /410.html  410
+
+# 2018-11-23
+/mapa.html                                        /410.html  410
+
+# 2018-12-12
+/projects/txt2regex/index-pt.html                 /410.html  410
+/projects/txt2regex/screenshots-pt.html           /410.html  410
+/projects/txt2regex/screenshots.html              /410.html  410
+
+# 2019-01-05
+/regex/guia/actionscript.html                     /410.html  410
+/regex/guia/banco-de-dados.html                   /410.html  410
+/regex/guia/c.html                                /410.html  410
+/regex/guia/dotnet.html                           /410.html  410
+/regex/guia/googledocs.html                       /410.html  410
+/regex/guia/grep.html                             /410.html  410
+/regex/guia/html5.html                            /410.html  410
+/regex/guia/java.html                             /410.html  410
+/regex/guia/lua.html                              /410.html  410
+/regex/guia/mysql.html                            /410.html  410
+/regex/guia/openoffice.html                       /410.html  410
+/regex/guia/oracle.html                           /410.html  410
+/regex/guia/php-pcre.html                         /410.html  410
+/regex/guia/postgresql.html                       /410.html  410
+/regex/guia/ruby.html                             /410.html  410
+/regex/guia/shell-script.html                     /410.html  410
+/regex/guia/sqlite.html                           /410.html  410

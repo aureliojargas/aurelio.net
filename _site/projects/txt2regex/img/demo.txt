@@ -1,0 +1,38 @@
+The demo.mp4 video was recoded at June 2020 on macOS with a "retina"
+screen. This means the actual recorded size will be doubled in
+non-retina screens.
+
+
+1. Prepare the terminal window
+
+Set terminal window size to 73x24 (columns, lines).
+
+Set the font size until the window is ~300 pixels wide. The goal is
+having the resulting video ~600 pixels wide.
+
+Run KeyCastr and position the keys flyovers in the bottom left of the
+terminal window. Use a text size similar to the terminal font size.
+
+
+2. Do the recording
+
+Use Kap to do a screen recording (Quicktime Player is another option).
+
+Select the desired area: only the terminal window contents, no toolbars.
+
+Save the results as MP4.
+
+
+3. Convert the video to GIF
+
+Use ffmpeg to convert the video to GIF. Do not scale the dimensions!
+
+Use gifsicle to optimize the GIF.
+
+docker run \
+    -v $PWD:/tmp \
+    jrottenberg/ffmpeg:4.1-alpine \
+        -i /tmp/file.mp4
+        -r 30 \
+        -f gif \
+        - | gifsicle --optimize=3 --delay=3 > file.gif

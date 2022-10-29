@@ -1,0 +1,30 @@
+/*
+//   Arquivo: https://aurelio.net/curso/prompt-doc.css
+//   Autor  : Aurélio Marinho Jargas, GPL
+*/   
+
+body {
+	font-family:Helvetica,Arial,sans-serif;
+	text-align:justify;
+	margin-left:4em;
+	margin-right:4em;
+}
+h1 {
+	background-color:#55ff55;
+	padding:15px;
+	margin-top:2em;
+	margin-bottom:1.5em;
+}
+h2 {
+	text-align:center;
+	padding:.3em;
+/*
+	background-color:black;
+	color:white;
+*/
+}
+pre {
+	background-color:#DDD;
+	padding-top:.5em;
+	padding-bottom:.5em;
+}

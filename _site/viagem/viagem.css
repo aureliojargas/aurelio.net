@@ -1,0 +1,48 @@
+.section-nav {
+	clear		: both;
+	border		: 3px solid #555;
+	padding		: 2em;
+/*	margin-top	: 4em;*/
+}
+.section-nav h3 {
+	font-size:200%;
+	padding-bottom:0.5em;
+	margin-top: 0 !important;
+}
+
+/* Deixa os links locais parecidos com o AdSense */
+#main div.section-nav ul {
+	list-style-type	:none;
+}
+#main div.section-nav li {
+	list-style-type	:none;
+	padding		:0 0 0 5px;
+	margin 		:0;
+}
+div.section-nav a {
+	text-decoration	:underline;
+}
+div.section-nav a:hover {
+	background 	:#fff;
+	color 		:#07f;
+}
+#main .adpicsfaixa {
+	padding		:2em -25%;
+	margin		:0 -25%;
+}
+
+/* Falas da Mog */
+.mog {
+	color 		:maroon;
+	background 	:#fee url(/img/mog-48.jpg) right top no-repeat;
+	padding 	:0 58px 0 0em;
+	min-height	:48px;
+}
+.mog b {
+	color 		:maroon;
+}
+
+/* Atacama */
+.atacama-saiba-mais {
+	margin: 70px;
+}

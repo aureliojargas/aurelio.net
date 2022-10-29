@@ -1,0 +1,16 @@
+#!/bin/sh
+# faz - genérico
+# 20001127 <verde (a) aurelio net> ** 1a versão
+
+[ ! "$1" ] && echo prog arq.txt && exit 1
+
+A=${1%.txt}
+
+echo gerando o sgml...
+txt2sgml.sed $A.txt > $A.sgml
+
+echo gerando o html...
+sgml2html --language=portuguese $A.sgml
+
+echo -e "aperte \033[1;5mENTER\033[m para ver $A.html no lynx" ; read
+lynx $A.html

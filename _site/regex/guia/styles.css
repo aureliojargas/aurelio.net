@@ -1,0 +1,146 @@
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 150%;
+  font-family: sans-serif;
+}
+h1 {
+  margin-top: 0;
+  line-height: 1em;
+}
+pre {
+  border: 1px solid #666;
+  background: #eee;
+  margin: 2em 0;
+  padding: 1em;
+  clear: both;
+  overflow: auto;
+}
+code {
+  background: #eee;
+}
+table {
+  margin: 2em auto;
+  font-family: sans-serif;
+  line-height: 150%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0 0.5em;
+}
+th {
+  background-color: #eee;
+}
+blockquote {
+  margin: 2em 0 2em 2em;
+}
+blockquote i {
+  color: red;
+  font-size: 120%;
+}
+blockquote u {
+  text-decoration: none;
+  background-color: yellow;
+  padding: .3em;
+}
+dt,
+dd {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#header {
+  margin-bottom: 1em;
+  padding: 1em 0;
+  padding-left: 85px; /* space for book icon */
+  color: #777;
+  font-size: 85%;
+  font-size: 18px;
+  line-height: 25px;
+  background: url(/regex/guia/img/guia.png) no-repeat 20px;
+  background-color: #dfd;
+}
+#header a {
+  color: #777;
+}
+#header a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.book-name {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+}
+.book-name a {
+  text-decoration: none;
+}
+
+.by-line {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.book-nav,
+.prev-next {
+  text-align: center;
+  margin: 2em 0;
+  word-spacing: 1em;
+}
+
+#header,
+#contents {
+  max-width: 33em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#contents {
+  padding: 10px;
+}
+
+.bookbox {
+  margin-top: 2em;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 128px;
+}
+.bookbox a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+.bookbox img {
+  float: left;
+  margin-right: 1em;
+}
+
+.warning {
+  clear: both;
+  margin: 3em auto;
+  background-color: #c00;
+  color: white;
+  padding: 1em;
+  width: 60%;
+}
+.warning b {
+  display: block;
+  font-size: 120%;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.warning a {
+  color: yellow;
+}
+
+#footer {
+  background: #ddd;
+  padding: 2em 0;
+  text-align: center;
+  color: #aaa;
+}

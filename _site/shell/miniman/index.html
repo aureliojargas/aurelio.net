@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>miniman | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/regex/regex.css">
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/shell/miniman/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="miniman" />
+	<meta property="og:url" content="https://aurelio.net/shell/miniman/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/shell/miniman/" title="Permalink" rel="bookmark">miniman</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">26/08/2009</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<!--
+Sugestão inicial: Ricardo Monjardim Duarte
+Anúncio: https://aurelio.net/blog/2009/08/26/miniman/
+
+TODO
+----
+Fabiano Pires em 27 Agosto 2009
+grep: –color (destaca em vermelho o que bate com o padrão passado)
+uniq: -c (conta quantas ocorrencias de cada linha foram encontradas)
+date: %e (dia do mês sem zeros à esquerda. já me ajudou em scripts por causa da interpretação do bash, pois numeros iniciados com 0 são interpretados em octal – que vai de 00 a 07)
+
+Guilherme Gall em 27 Agosto 2009
+opção -r ou –regexp-extended do sed, que habilita o uso de expressões regulares estendidas.
+
+- simplificar tabelas echo -e e date %Y, só com os mais usados.
+
+cat -vet: Ajuda a encontrar a problemática e a criar uma solucionática!
+seq -w: quando se precisa de zeros a esquerda!
+
+
+PDF
+===
+Modificações em relação ao livro:
+removido ponto final de cada coluna
+
+Modificações do PDF em relação ao HTML:
+geral: s/Lembrete/Dica/
+date: -d resumido
+date: +%?: quebra em Ex.
+date: coluna Fmt
+diff: -u resumido
+find: -ok resumido
+fmt: -w resumido
+grep: -q resumido
+grep: -s resumido
+grep -i condensado 0.1
+grep -C resumido
+tr: coluna Arg.
+
+v2:
+diff -r    Recursive (faltava o segundo r) tks Lucas
+-->
+
+<style>
+  #article-body table {
+    width: 100%;
+  }
+  #article-body th {
+    text-align: left;
+  }
+</style>
+
+<p>Você também boceja quando lê aquelas chatíssimas man pages? Milhares de opções, explicações confusas, textos em inglês, formatação arcaica, chato, chato, chato.</p>
+
+<p>Que tal uma versão rápida, resumida, com tabelas que listam somente as opções mais utilizadas dos comandos mais utilizados?</p>
+
+<p>Esta é a <strong>miniman</strong>, a sua "mini man page", para aqueles momentos de pressa em que você precisa lembrar daquela opção mágica daquele comandinho safado.</p>
+
+<ul>
+  <li>Quer imprimir o miniman? <a href="/shell/miniman/pdf/">Baixe o PDF</a>
+  </li>
+  <li>Veja também: <a href="/shell/canivete/">Canivete Suíço do Shell</a>
+  </li>
+</ul>
+
+<div class="note">
+  <table>
+    <tr>
+      <td>
+        <a href="https://www.shellscript.com.br"><img class="center" src="/img/icon/128/livroshell.png" alt=""></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Estas tabelas fazem parte do meu livro <a href="https://www.shellscript.com.br">Shell Script Profissional</a>, estão no Apêndice D — Caixa de ferramentas (páginas 425 a 456). O livro é um estudo aprofundado do Shell e suas ferramentas. Fiz questão de escrevê-lo numa linguagem direta, clara e didática, para ser BEM DIFERENTE dos textos chatos das man pages! :)
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<nav>
+  <ul>
+    <li><a href="#cat">cat</a></li>
+    <li><a href="#cut">cut</a></li>
+    <li><a href="#date">date</a></li>
+    <li><a href="#diff">diff</a></li>
+    <li><a href="#echo">echo</a></li>
+    <li><a href="#find">find</a></li>
+    <li><a href="#fmt">fmt</a></li>
+    <li><a href="#grep">grep</a></li>
+    <li><a href="#head">head</a></li>
+    <li><a href="#od">od</a></li>
+    <li><a href="#paste">paste</a></li>
+    <li><a href="#printf">printf</a></li>
+    <li><a href="#sed">sed</a></li>
+    <li><a href="#seq">seq</a></li>
+    <li><a href="#sort">sort</a></li>
+    <li><a href="#tail">tail</a></li>
+    <li><a href="#tee">tee</a></li>
+    <li><a href="#tr">tr</a></li>
+    <li><a href="#uniq">uniq</a></li>
+    <li><a href="#wc">wc</a></li>
+    <li><a href="#xargs">xargs</a></li>
+  </ul>
+</nav>
+
+
+<h2 id="cat">cat</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Number</td>
+    <td>Numera as linhas (Formato: Espaços, Número, TAB, Linha)</td>
+  </tr>
+  <tr>
+    <td>-s</td>
+    <td>Squeeze</td>
+    <td>Remove as linhas em branco excedentes</td>
+  </tr>
+</table>
+
+
+<h2 id="cut">cut</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-d</td>
+    <td>Delimiter</td>
+    <td>Escolhe o delimitador (o padrão é o TAB)</td>
+  </tr>
+  <tr>
+    <td>-f</td>
+    <td>Field</td>
+    <td>Mostra estes campos (veja tabela seguinte)</td>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>Chars</td>
+    <td>Mostra estes caracteres (veja tabela seguinte)</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>-f e -c</th>
+    <th>Abrange</th>
+    <th>Significa</th>
+  </tr>
+  <tr>
+    <td>2,5</td>
+    <td>2 5</td>
+    <td>O segundo e o quinto</td>
+  </tr>
+  <tr>
+    <td>2-5</td>
+    <td>2 3 4 5</td>
+    <td>Do segundo ao quinto</td>
+  </tr>
+  <tr>
+    <td>2-</td>
+    <td>2 3 4 5 …</td>
+    <td>Do segundo em diante</td>
+  </tr>
+  <tr>
+    <td>-5</td>
+    <td>1 2 3 4 5</td>
+    <td>Até o quinto</td>
+  </tr>
+  <tr>
+    <td>2,5-</td>
+    <td>2 5 6 7 …</td>
+    <td>O segundo e do quinto em diante</td>
+  </tr>
+  <tr>
+    <td>2,3,5-8</td>
+    <td>2 3 5 6 7 8</td>
+    <td>O segundo, o terceiro e do quinto ao oitavo</td>
+  </tr>
+</table>
+
+
+<h2 id="date">date</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-d</td>
+    <td>Date</td>
+    <td>Especifica a data (Ex.: tomorrow, 2 days ago, 5 weeks)</td>
+  </tr>
+  <tr>
+    <td>+%?</td>
+    <td></td>
+    <td>Formato da data – veja tabela seguinte (Ex.: %Y-%m-%d)</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>Formato</th>
+    <th>Descrição do caractere de formatação</th>
+  </tr>
+  <tr>
+    <td>%a</td>
+    <td>Nome do dia da semana abreviado (Dom..Sáb)</td>
+  </tr>
+  <tr>
+    <td>%A</td>
+    <td>Nome do dia da semana (Domingo..Sábado)</td>
+  </tr>
+  <tr>
+    <td>%b</td>
+    <td>Nome do mês abreviado (Jan..Dez)</td>
+  </tr>
+  <tr>
+    <td>%B</td>
+    <td>Nome do mês (Janeiro..Dezembro)</td>
+  </tr>
+  <tr>
+    <td>%c</td>
+    <td>Data completa (Sat Nov 04 12:02:33 EST 1989)</td>
+  </tr>
+  <tr>
+    <td>%y</td>
+    <td>Ano (dois dígitos)</td>
+  </tr>
+  <tr>
+    <td>%Y</td>
+    <td>Ano (quatro dígitos)</td>
+  </tr>
+  <tr>
+    <td>%m</td>
+    <td>Mês (01..12)</td>
+  </tr>
+  <tr>
+    <td>%d</td>
+    <td>Dia (01..31)</td>
+  </tr>
+  <tr>
+    <td>%j</td>
+    <td>Dia do ano (001..366)</td>
+  </tr>
+  <tr>
+    <td>%H</td>
+    <td>Horas (00..23)</td>
+  </tr>
+  <tr>
+    <td>%M</td>
+    <td>Minutos (00..59)</td>
+  </tr>
+  <tr>
+    <td>%S</td>
+    <td>Segundos (00..60)</td>
+  </tr>
+  <tr>
+    <td>%s</td>
+    <td>Segundos desde 1º de Janeiro de 1970</td>
+  </tr>
+  <tr>
+    <td>%%</td>
+    <td>Um % literal</td>
+  </tr>
+  <tr>
+    <td>%t</td>
+    <td>Um TAB</td>
+  </tr>
+  <tr>
+    <td>%n</td>
+    <td>Uma quebra de linha</td>
+  </tr>
+</table>
+
+
+<h2 id="diff">diff</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-u</td>
+    <td>Unified</td>
+    <td>Formato unificado (com contexto e os sinais de + e -)</td>
+  </tr>
+  <tr>
+    <td>-C</td>
+    <td>Context</td>
+    <td>Indica a quantidade de linhas usadas para o contexto</td>
+  </tr>
+  <tr>
+    <td>-r</td>
+    <td>Recursive</td>
+    <td>Varre todo o diretório</td>
+  </tr>
+  <tr>
+    <td>-N</td>
+    <td>New file</td>
+    <td>Considera arquivos não-encontrados como vazios</td>
+  </tr>
+  <tr>
+    <td>-i</td>
+    <td>Ignore case</td>
+    <td>Ignora a diferença entre maiúsculas e minúsculas</td>
+  </tr>
+  <tr>
+    <td>-w</td>
+    <td>White space</td>
+    <td>Ignora a diferença de linhas e espaços em branco</td>
+  </tr>
+</table>
+
+
+<h2 id="echo">echo</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Newline</td>
+    <td>Não quebra a linha no final</td>
+  </tr>
+  <tr>
+    <td>-e</td>
+    <td>Escape</td>
+    <td>Interpreta os escapes especiais (ver tabela seguinte)</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>Escape</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>\a</td>
+    <td>Alert</td>
+    <td>Alerta (bipe)</td>
+  </tr>
+  <tr>
+    <td>\b</td>
+    <td>Backspace</td>
+    <td>Caractere Backspace</td>
+  </tr>
+  <tr>
+    <td>\c</td>
+    <td>EOS</td>
+    <td>Termina a string</td>
+  </tr>
+  <tr>
+    <td>\e</td>
+    <td>Escape</td>
+    <td>Caractere Esc</td>
+  </tr>
+  <tr>
+    <td>\f</td>
+    <td>Form feed</td>
+    <td>Alimentação</td>
+  </tr>
+  <tr>
+    <td>\n</td>
+    <td>Newline</td>
+    <td>Linha nova</td>
+  </tr>
+  <tr>
+    <td>\r</td>
+    <td>Return</td>
+    <td>Retorno de carro</td>
+  </tr>
+  <tr>
+    <td>\t</td>
+    <td>Tab</td>
+    <td>Tabulação horizontal</td>
+  </tr>
+  <tr>
+    <td>\v</td>
+    <td>Vtab</td>
+    <td>Tabulação vertical</td>
+  </tr>
+  <tr>
+    <td>\\</td>
+    <td>Backslash</td>
+    <td>Barra invertida \ literal</td>
+  </tr>
+  <tr>
+    <td>\nnn</td>
+    <td>Octal</td>
+    <td>Caractere cujo octal é nnn</td>
+  </tr>
+  <tr>
+    <td>\xnn</td>
+    <td>Hexa</td>
+    <td>Caractere cujo hexadecimal é nn</td>
+  </tr>
+</table>
+
+
+<h2 id="find">find</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-name</td>
+    <td>Especifica o nome do arquivo (ou *parte* dele)</td>
+  </tr>
+  <tr>
+    <td>-iname</td>
+    <td>Ignora a diferença entre maiúsculas e minúsculas no nome</td>
+  </tr>
+  <tr>
+    <td>-type</td>
+    <td>Especifica o tipo do arquivo (f=arquivo, d=diretório, l=link)</td>
+  </tr>
+  <tr>
+    <td>-mtime</td>
+    <td>Mostra os arquivos modificados há N dias</td>
+  </tr>
+  <tr>
+    <td>-size</td>
+    <td>Mostra os arquivos que possuem o tamanho especificado</td>
+  </tr>
+  <tr>
+    <td>-user</td>
+    <td>Mostra os arquivos de um usuário específico</td>
+  </tr>
+  <tr>
+    <td>-ls</td>
+    <td>Mostra os arquivos no mesmo formato do comando ls</td>
+  </tr>
+  <tr>
+    <td>-printf</td>
+    <td>Formatação avançada para mostrar os nomes dos arquivos</td>
+  </tr>
+  <tr>
+    <td>-exec</td>
+    <td>Executa um comando com os arquivos encontrados</td>
+  </tr>
+  <tr>
+    <td>-ok</td>
+    <td>Executa um comando com os arquivos encontrados, com confirmação</td>
+  </tr>
+  <tr>
+    <td>-and, -or</td>
+    <td>E, OU lógico para as condições</td>
+  </tr>
+  <tr>
+    <td>-not</td>
+    <td>Inverte a lógica da expressão</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>Detalhes das opções -exec e -ok</th>
+  </tr>
+  <tr>
+    <td>A string {} representa o nome do arquivo encontrado</td>
+  </tr>
+  <tr>
+    <td>O comando deve ser passado sem aspas</td>
+  </tr>
+  <tr>
+    <td>O comando deve ser terminado por um ponto-e-vírgula escapado \;</td>
+  </tr>
+  <tr>
+    <td>Tem que ter um espaço antes do ponto-e-vírgula escapado</td>
+  </tr>
+  <tr>
+    <td>Mover os arquivos .txt para .txt.old: find . -name '*.txt' -exec mv {} {}.old \;</td>
+  </tr>
+</table>
+
+
+<h2 id="fmt">fmt</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-w</td>
+    <td>Width</td>
+    <td>Define o número máximo de colunas (o padrão é 75)</td>
+  </tr>
+  <tr>
+    <td>-u</td>
+    <td>Uniform</td>
+    <td>Remove espaços excedentes</td>
+  </tr>
+</table>
+
+
+<h2 id="grep">grep</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-i</td>
+    <td>Ignore case</td>
+    <td>Ignora a diferença entre maiúsculas e minúsculas</td>
+  </tr>
+  <tr>
+    <td>-v</td>
+    <td>Invert</td>
+    <td>Mostra as linhas que não casam com o padrão</td>
+  </tr>
+  <tr>
+    <td>-r</td>
+    <td>Recursive</td>
+    <td>Varre subdiretórios também</td>
+  </tr>
+  <tr>
+    <td>-q</td>
+    <td>Quiet</td>
+    <td>Não mostra as linhas que encontrar (usar com o test)</td>
+  </tr>
+  <tr>
+    <td>-s</td>
+    <td>Silent</td>
+    <td>Não mostra os erros (usar com o test)</td>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Number</td>
+    <td>Mostra também o número da linha</td>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>Count</td>
+    <td>Conta o número de linhas encontradas</td>
+  </tr>
+  <tr>
+    <td>-l</td>
+    <td>Filename</td>
+    <td>Mostra apenas o nome o arquivo que casou</td>
+  </tr>
+  <tr>
+    <td>-w</td>
+    <td>Word</td>
+    <td>O padrão é uma palavra inteira, e não parte dela</td>
+  </tr>
+  <tr>
+    <td>-x</td>
+    <td>Full line</td>
+    <td>O padrão é uma linha inteira, e não parte dela</td>
+  </tr>
+  <tr>
+    <td>-A</td>
+    <td>After</td>
+    <td>Mostre N linhas de contexto depois do padrão</td>
+  </tr>
+  <tr>
+    <td>-B</td>
+    <td>Before</td>
+    <td>Mostre N linhas de contexto antes do padrão</td>
+  </tr>
+  <tr>
+    <td>-C</td>
+    <td>Context</td>
+    <td>Mostre N linhas de contexto antes e depois do padrão</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th colspan="2">As identidades do grep</th>
+  </tr>
+  <tr>
+    <td>grep</td>
+    <td>Procura por uma expressão regular básica</td>
+  </tr>
+  <tr>
+    <td>egrep ou grep -E</td>
+    <td>Procura por uma expressão regular estendida</td>
+  </tr>
+  <tr>
+    <td>fgrep ou grep -F</td>
+    <td>Procura por uma string</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th colspan="2">Metacaracteres</th>
+  </tr>
+  <tr>
+    <td>Expressão regular básica</td>
+    <td>^ $ . * [ \? \+ \| \( \) \{ \}</td>
+  </tr>
+  <tr>
+    <td>Expressão regular estendida</td>
+    <td>^ $ . * [ ? + | ( ) { }</td>
+  </tr>
+</table>
+
+
+<h2 id="head">head</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Lines</td>
+    <td>Mostra as N primeiras linhas (o padrão é 10)</td>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>Char</td>
+    <td>Mostra os N primeiros caracteres (incluindo \n)</td>
+  </tr>
+</table>
+
+
+<h2 id="od">od</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-a</td>
+    <td>Name</td>
+    <td>Mostra os nomes dos caracteres</td>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>ASCII</td>
+    <td>Mostra os caracteres ASCII</td>
+  </tr>
+  <tr>
+    <td>-o</td>
+    <td>Octal</td>
+    <td>Mostra os códigos em octal</td>
+  </tr>
+  <tr>
+    <td>-x</td>
+    <td>Hexa</td>
+    <td>Mostra os códigos em hexadecimal</td>
+  </tr>
+</table>
+
+
+<h2 id="paste">paste</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-d</td>
+    <td>Delimiter</td>
+    <td>Escolhe o delimitador (o padrão é o TAB)</td>
+  </tr>
+  <tr>
+    <td>-s</td>
+    <td>Serial</td>
+    <td>Transforma todas as linhas em apenas uma</td>
+  </tr>
+</table>
+
+
+<h2 id="printf">printf</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Formato</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>%d</td>
+    <td>Decimal</td>
+    <td>Número decimal</td>
+  </tr>
+  <tr>
+    <td>%o</td>
+    <td>Octal</td>
+    <td>Número octal</td>
+  </tr>
+  <tr>
+    <td>%x</td>
+    <td>Hexa</td>
+    <td>Número hexadecimal (a-f)</td>
+  </tr>
+  <tr>
+    <td>%X</td>
+    <td>Hexa</td>
+    <td>Número hexadecimal (A-F)</td>
+  </tr>
+  <tr>
+    <td>%f</td>
+    <td>Float</td>
+    <td>Número com ponto flutuante</td>
+  </tr>
+  <tr>
+    <td>%e</td>
+    <td></td>
+    <td>Número em notação científica (e+1)</td>
+  </tr>
+  <tr>
+    <td>%E</td>
+    <td></td>
+    <td>Número em notação científica (E+1)</td>
+  </tr>
+  <tr>
+    <td>%s</td>
+    <td>String</td>
+    <td>String</td>
+  </tr>
+</table>
+
+
+<h2 id="sed">sed</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Not print</td>
+    <td>Só mostra a linha caso usado o comando p</td>
+  </tr>
+  <tr>
+    <td>-e</td>
+    <td>Expression</td>
+    <td>Especifica os comandos de edição</td>
+  </tr>
+  <tr>
+    <td>-f</td>
+    <td>File</td>
+    <td>Lê os comandos de edição de um arquivo</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>Comando</th>
+    <th>Lembrete</th>
+    <th>Ação</th>
+  </tr>
+  <tr>
+    <td>s///</td>
+    <td>Substitute</td>
+    <td>Troca um texto por outro</td>
+  </tr>
+  <tr>
+    <td>p</td>
+    <td>Print</td>
+    <td>Mostra a linha na saída</td>
+  </tr>
+  <tr>
+    <td>l</td>
+    <td>List</td>
+    <td>Mostra a linha na saída, com \t, \a, …</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>Delete</td>
+    <td>Apaga a linha</td>
+  </tr>
+  <tr>
+    <td>q</td>
+    <td>Quit</td>
+    <td>Sai do sed</td>
+  </tr>
+  <tr>
+    <td>r</td>
+    <td>Read</td>
+    <td>Lê o conteúdo de um arquivo</td>
+  </tr>
+  <tr>
+    <td>N</td>
+    <td>Next line</td>
+    <td>Junta a próxima linha com a atual</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>Endereço</th>
+    <th>Abrange…</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>A primeira linha</td>
+  </tr>
+  <tr>
+    <td>1,5</td>
+    <td>Da primeira linha até a quinta</td>
+  </tr>
+  <tr>
+    <td>5,$</td>
+    <td>Da quinta linha até a última</td>
+  </tr>
+  <tr>
+    <td>/sed/</td>
+    <td>A(s) linha(s) que contém a palavra “sed”</td>
+  </tr>
+  <tr>
+    <td>5,/sed/</td>
+    <td>Da quinta linha até a linha que contém “sed”</td>
+  </tr>
+  <tr>
+    <td>/sed/,/grep/</td>
+    <td>Da linha que contém “sed” até a que contém “grep”</td>
+  </tr>
+  <tr>
+    <td>1,5!</td>
+    <td>Todas as linhas, exceto da primeira a quinta</td>
+  </tr>
+  <tr>
+    <td>/sed/!</td>
+    <td>A(s) linha(s) que não contém a palavra “sed”</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>s///</th>
+    <th>Exemplo</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>g</td>
+    <td>s/a/b/g</td>
+    <td>Modificador Global, para trocar todas as ocorrências</td>
+  </tr>
+  <tr>
+    <td>p</td>
+    <td>s/a/b/gp</td>
+    <td>Modificador Print, para mostrar o texto substituído</td>
+  </tr>
+  <tr>
+    <td>&amp;</td>
+    <td>s/./&amp; /</td>
+    <td>Expande para todo o trecho casado na primeira parte</td>
+  </tr>
+  <tr>
+    <td>\1</td>
+    <td>s/\(.\)/\1 /</td>
+    <td>Expande para o conteúdo do primeiro grupo marcado com \(…\)</td>
+  </tr>
+</table>
+
+
+<h2 id="seq">seq</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-s</td>
+    <td>Separator</td>
+    <td>Define o separador (o padrão é \n)</td>
+  </tr>
+  <tr>
+    <td>-f</td>
+    <td>Format</td>
+    <td>Define o formato do número (o padrão é %g)</td>
+  </tr>
+</table>
+
+
+<h2 id="sort">sort</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Numeric</td>
+    <td>Ordena numericamente (o padrão é alfabeticamente)</td>
+  </tr>
+  <tr>
+    <td>-r</td>
+    <td>Reverse</td>
+    <td>Reverte a ordenação (de Z para A, de 9 para 0)</td>
+  </tr>
+  <tr>
+    <td>-f</td>
+    <td>Ignore case</td>
+    <td>Ignora a diferença entre maiúsculas e minúsculas</td>
+  </tr>
+  <tr>
+    <td>-k</td>
+    <td>Key</td>
+    <td>Ordena pela coluna N (a primeira é 1)</td>
+  </tr>
+  <tr>
+    <td>-t</td>
+    <td>Separator</td>
+    <td>Escolhe o separador para o -k (o padrão é o TAB)</td>
+  </tr>
+  <tr>
+    <td>-o</td>
+    <td>Output</td>
+    <td>Grava a saída no arquivo especificado</td>
+  </tr>
+</table>
+
+
+<h2 id="tail">tail</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Lines</td>
+    <td>Mostra as N últimas linhas (o padrão é 10)</td>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>Char</td>
+    <td>Mostra os N últimos caracteres (incluindo \n)</td>
+  </tr>
+  <tr>
+    <td>-f</td>
+    <td>Follow</td>
+    <td>Monitora o arquivo ad infinitum</td>
+  </tr>
+</table>
+
+
+<h2 id="tee">tee</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-a</td>
+    <td>Append</td>
+    <td>Anexa ao final do arquivo (o padrão é sobrescrever)</td>
+  </tr>
+</table>
+
+
+<h2 id="tr">tr</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-s</td>
+    <td>Squeeze</td>
+    <td>Espreme caracteres iguais consecutivos para apenas um</td>
+  </tr>
+  <tr>
+    <td>-d</td>
+    <td>Delete</td>
+    <td>Apaga todos os caracteres listados</td>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>Complement</td>
+    <td>Inverte a lista de caracteres (-c 0-9 é similar a [^0-9])</td>
+  </tr>
+</table>
+
+<table class="tableborder">
+  <tr>
+    <th>Argumento</th>
+    <th>Engloba</th>
+  </tr>
+  <tr>
+    <td>abc</td>
+    <td>“a” e “b” e “c”</td>
+  </tr>
+  <tr>
+    <td>a7z</td>
+    <td>“a” e “7” e “z”</td>
+  </tr>
+  <tr>
+    <td>a-z</td>
+    <td>de “a” até “z”</td>
+  </tr>
+  <tr>
+    <td>0-7</td>
+    <td>de zero a sete</td>
+  </tr>
+</table>
+
+
+<h2 id="uniq">uniq</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-i</td>
+    <td>Ignore case</td>
+    <td>Ignora a diferença entre maiúsculas e minúsculas</td>
+  </tr>
+  <tr>
+    <td>-d</td>
+    <td>Duplicate</td>
+    <td>Mostra apenas as linhas que são repetidas</td>
+  </tr>
+  <tr>
+    <td>-u</td>
+    <td>Unique</td>
+    <td>Mostra apenas as linhas que não são repetidas</td>
+  </tr>
+</table>
+
+
+<h2 id="wc">wc</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-c</td>
+    <td>Char</td>
+    <td>Conta o número de caracteres (bytes)</td>
+  </tr>
+  <tr>
+    <td>-w</td>
+    <td>Word</td>
+    <td>Conta o número de palavras</td>
+  </tr>
+  <tr>
+    <td>-l</td>
+    <td>Line</td>
+    <td>Conta o número de linhas</td>
+  </tr>
+  <tr>
+    <td>-L</td>
+    <td>Longest</td>
+    <td>Mostra o tamanho da linha mais comprida</td>
+  </tr>
+</table>
+
+
+<h2 id="xargs">xargs</h2>
+
+
+<table class="tableborder">
+  <tr>
+    <th>Opção</th>
+    <th>Lembrete</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>-n</td>
+    <td>Number</td>
+    <td>Use N argumentos por linha de comando</td>
+  </tr>
+  <tr>
+    <td>-i</td>
+    <td>Replace</td>
+    <td>Troca a string {} pelo argumento da vez</td>
+  </tr>
+</table>
+
+<!--
+Gostou do miniman?
+Que tal imprimi-lo para ter sempre à mão nos momentos de dúvida?
+
+Versão PDF:
+- São quatro colunas dentro de **uma única página** (A4).
+- Você pode deixar sobre a mesa ou colar na parede.
+- Você pode dobrar fazendo um **folheto** pequeno e prático de carregar.
+- Você pode consultar o arquivo no seu smartphone, PDA, netbook…
+- **Consulta rápida**: comandos em destaque (tarjas pretas) e em ordem alfabética.
+- **Personalizado:** eu coloco seu nome no rodapé, gero o PDF e envio para o seu email.
+-
+
+Como comprar:
+
+- Em 01/11/2013 as vendas foram encerradas. Muito obrigado a todos que contribuíram adquirindo o PDF ♥
+
+% %- No dia 1º de setembro vou iniciar a venda do arquivo PDF (nos mesmos moldes do [canivete PDF canivete-pdf.html]), mas por enquanto ele está [disponível apenas para clientes VIP das Organizações Verde Inc. LINKBLOG] :)
+% %-
+%
+% - O arquivo PDF custa apenas **R$ 5,00**.
+% - Ele é enviado para o seu email logo após o pagamento.
+% ''<br>''
+% (exceto finais de semana, pois o envio é manual)
+%
+% - [Clique aqui para comprar LINKPAGSEGURO] (PagSeguro)
+% - É rápido e fácil, aceita pagamento online, cartões de crédito e boleto.
+% % ''<br>''
+% [[SITEROOT/img/pagseguro-pagamento.png] LINKPAGSEGURO]
+% ''<br>''
+% - Se preferir, você também pode pagar pelo PayPal: [em reais LINKPAYPALBR], ou [em dólares LINKPAYPAL].
+% -
+% %- Entenda "logo" como o tempo que eu levar para ver o email com a confirmação do teu pagamento, gerar o PDF e te enviar. Geralmente isso leva cerca de uma hora, durante o horário comercial.
+% % - O PDF é personalizado: eu coloco seu nome no rodapé, gero o PDF e envio para o seu email.
+%
+% % 	**ATENÇÃO:** Estarei viajando entre os dias 18/12/2009 e 05/01/2010. Se você comprar o PDF neste período, só poderei enviá-lo no dia 06/01/2010.
+% % 	**ATENÇÃO:** Estarei viajando entre os dias 11/09/2011 e 05/10/2011. As vendas estão interrompidas neste período. Quando eu voltar, colocarei aqui novamente os links de compra.
+% % 	Se você comprar o PDF neste período, só poderei enviá-lo no dia 11/10/2011.
+%
+% Muito obrigado ♥
+% - Comprando este PDF você também me ajuda a manter este site no ar.''<br>''
+% % - Além É uma forma de apoio e agradecimento.
+% -
+% % 	♥ Comprando este PDF você me ajuda a manter este site no ar.''<br>''
+% % 	♥ É uma forma de apoio e agradecimento.
+
+
+
+% === Promoções de lançamento ===[promocao]
+%
+% - [Ganha o PDF quem comentar no blog (os 5 primeiros) LINKBLOG] — **PROMOÇÃO ENCERRADA**
+% - [Ganha o PDF quem responder no twitter http://twitter.com/oreio/status/3687688632] ([os 5 primeiros http://twitter.com/oreio/status/3687881259]) — **PROMOÇÃO ENCERRADA**
+% % http://twitter.com/oreio/status/3687749735 anúncio fim da promoção
+% % @dsaraujo @badnetmask @pogao @flamarion @julianosene
+% - [Ganha o PDF quem já comprou 2 livros meus LINKBLOG] — **PROMOÇÃO ENCERRADA**
+% - Quem já comprou um livro meu, compra o miniman e ganha o PDF do [_CANIVETE_NAME _CANIVETE_URL]. As instruções estão [lá no cadastro /livro/cadastro/].  — **PROMOÇÃO ENCERRADA**
+% -
+
+
+=== Depoimentos ===[depoimentos]
+
+''' <div class="testimonial">
+: Ótima iniciativa Aurelio! O Shell não é exatamente complicado, mas é muito comando mesmo. **Uma miniman assim faz MUITA falta**. É muito comum eu ficar escrevendo os parâmetros num papel enquanto leio a man com um pequeno resumo deles. Chega num ponto que tu não lembra mais o que o -a faz quando tá no -x.
+— Bruno Merino-Bailón
+
+: O miniman é muito bom mesmo. **Economiza** o que temos de mais precioso que é o nosso **tempo**. Valeu Aurelio!
+— Marcelo Nomoto
+
+: **Deixo no meu smartphone**, surgiu dúvida rapidinho busco o PDF sem estresse. Recomendo.
+— Almir Freitas de Carvalho Neto
+%
+% : Show cara (como o restante das coisas com a marca da OV Inc. – Morra de inveja Seu Craysson ;-) ) !!!
+% — Fabiano Pires
+%
+% : Legal demais, só o Aurelio mesmo para ter estas idéias super legais :-)
+% — Ataliba
+
+: Recebi o miniman enviado pelo Aurelio, quero compartilhar com todos a felicidade de ter disponível uma ferramenta como esta! É conciso porém **claro e explicativo**, as principais opções das principais ferramentas shell apresentadas juntas, poupando-nos o trabalho (muitas vezes cansativo) de ficar por aí caçando um exemplo de aplicação. **Já está impresso**, dentro de uma pasta que levo pra cima e pra baixo, e outra cópia vai ficar do ladinho do pc!
+— Claudinei
+
+% COMPREM, seu bando de pirangueiros! Pô, 5 pilas tá de graça!!!
+: Pô, 5 pilas tá de graça!!!
+— LES
+
+: Fonte de consulta e referência rápida e objetiva. Vou imprimir, plastificar e ter sempre em minha mesa.
+— José Allan
+
+: Recebi o miniman e é **simplesmente maravilhoso**, ótimo para consultas principalmente quando precisa rápido da informação e não quer perder tempo procurando no man ou na internet. Vale a pena ótimo material para consultas.
+— Sandro M. Silva
+
+% Recebi o miniman hoje de tarde, mas as atividades na masmorra só me deixaram abri-lo agora. Já deu para ver que vai me economizar um tempão de alternância entre o editor de textos e as manpages quando estiver fazendo um script ou trabalhando no shell. Ao pessoal não VIP que usa o shell diariamente, digo que vale mais que os cinco mangos. O negócio sem um resumão desses é que nem um camarada já comentou: você abre a manpage, vai lendo para ver que opções podem te ser úteis, mas esquece o que faz -a quando já está lendo a descrição do -x
+: Recebi o miniman hoje de tarde, ele vai me economizar um tempão de alternância entre o editor de textos e as manpages quando estiver fazendo um script ou trabalhando no shell. Para quem usa o shell diariamente, digo que **vale mais que os cinco mangos**.
+— Guilherme Gall
+
+: Já tá aqui impresso num lugar bem acessível. Obrigado pela iniciativa, vai me ajudar muito. **Recomendo fortemente**.
+— Fabricio B. Ferreira
+
+: **É simples, prático e direto**. Resume bem os comandos utilizados pelo sysadmin no nosso shell de cada dia.
+— Flamarion Jorge
+
+: O miniman foi muito bem preparado para nos auxiliar no dia a dia, colocando os 21 comandos e suas opções mais utilizados **de forma clara e objetiva**.
+— Marco Antonio Pereira
+
+: **Esse miniman era tudo o que faltava** para o shell se tornar 100% prático. Ficar usando --help e lendo man pages o tempo todo, por mais que seja um aprendizado, é muito frustrante quando você só quer fazer um script rápido pra processar alguns arquivos ou ajeitar alguns textos.
+— Piteco
+
+: Transformei o miniman no **wallpaper do meu pc**, agora tenho agilidade pra achar as coisas os detalhes mais comuns dos principais comandos. Valeu mesmo.
+— Jeferson A. dos Santos
+
+: Muito bom esse miniman, já está **colado em minha mesa** de trabalho.
+— Rodrigo Felix
+
+% : Aee Aurelio, de novo entendendo as necessidades humanas :-) Nada como a simplicidade :-)
+% — Tiago Oliveira de Jesus
+: [Dê sua opinião _MYBLOG/2009/08/26/miniman/]
+:
+-->
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+<p>
+  <a href="/shell/" class="linkblock">
+    <img align="middle" src="/img/icon/128/shell.png">
+    Aprenda mais sobre Shell Script
+  </a>
+</p>
+
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=miniman%20https://aurelio.net/shell/miniman/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/shell/miniman/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/shell/miniman/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    	<meta charset="utf-8">
+	<title>coluna do aurelio 04: pine (e-mails na tela preta) | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <style>
+      body {
+        margin: 2em;
+        background-color: black;
+        color: silver;
+        text-align: justify;
+      }
+
+      h1 {
+        color: lightgreen;
+      }
+
+      h3 {
+        color: green;
+      }
+
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      code {
+        color: white;
+        font-weight: bold;
+      }
+
+      pre {
+        color: orange;
+        margin-left: 2em;
+      }
+
+      .footer {
+        padding-top: 1em;
+        border-top: 1px solid silver;
+      }
+    </style>
+
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>coluna do aurelio 04: pine (e-mails na tela preta)</h1>
+    <h3>https://aurelio.net/doc/coluna</h3>
+    <h4>Escrito por Aurelio Jargas em 2000-12-02</h4>
+
+    <p>olás. a coluna deste mês traz uma assunto muito pedido pelos leitores: como ler e-mail no modo texto. longe do mundo dos <code>kmail</code> e <code>netscape</code> da vida, no console temos leitores como o <code>pine</code> e o <code>mutt</code>. a escolha, como para um editor de texto, é quase que religiosa. quem usa o <code>pine</code> não gosta do <code>mutt</code> e vice-versa. como eu uso o <code>pine</code>, ele será o convidado deste mês.</p>
+
+<p>ambos os programas têm o mesmo "jeitão", mas o <code>pine</code> é mais fácil e intuitivo para usuários inexperientes, e sua configuração é feita no próprio programa, com tela de ajuda individual para cada opção. se preferir, também é possível configurá-lo editando seu arquivo de configuração <code>~/.pinerc</code>. então se ler e enviar e-mail no modo texto ainda lhe é um mistério, instale o <code>pine</code>.</p>
+
+<p>ele possui todas as facilidades de clientes de e-mail modernos, como filtros de entrada e saída, "pastas" para guardar mensagens específicas, agenda de endereços, anexos, cores, correção ortográfica, justificação de texto, procura e seleção de mensagens.</p>
+
+<p>para escrever as mensagens é usado o editor padrão <code>pico</code>, que é bem simples e fácil de usar e vem de "brinde" com o <code>pine</code>. mas qualquer outro editor de textos do sistema, como <code>vi</code> ou <code>joe</code> podem ser utilizados em seu lugar.</p>
+
+<p>o <code>pine</code> suporta os seguintes protocolos e especificações: <code>SMTP</code>, <code>MIME</code>, <code>IMAP</code> e <code>NNTP</code>, então além de e-mail, você pode ler notícias (<code>news</code>) nele. note que para <code>POP3</code> ele possui apenas um pseudo-suporte à partir da versão 4.00, então para baixar e-mails via <code>POP</code>, você deve usar um programa como o fetchmail: <a href="http://www.tuxedo.org/~esr/fetchmail">http://www.tuxedo.org/~esr/fetchmail</a>.</p>
+
+<p>então você acabou de instalar e abrir o <code>pine</code> pela primeira vez, o que fazer? saia da tela de boas-vindas (aperte <code>E</code>) e veja a cara dele. aperte as setas do teclado para cima e para baixo para identificar o cursor. achou? beleza.</p>
+
+<p>agora olhe no rodapé da tela, se acostume a sempre olhar aquelas duas últimas linhas, que são os comandos contextuais. para acessá-los basta apertar a tecla de dentro do quadradinho (retângulo?) branco. aperte <code>O</code> para ver "Outros" comandos.</p>
+
+<p>entre outros, apareceu o <code>Setup</code>. entrando nele, temos mais opções novas no rodapé. a que nos interessa agora é o <code>Config</code>. esta é a tela de configuração genérica do <code>pine</code>. veja todas as opções disponíveis, habilite o que quiser e na dúvida veja a ajuda (<code>?</code>). o básico do básico aqui é colocar o <code>smtp-server</code> (seu servidor de envio) e o <code>inbox-path</code>, que é o arquivo do sistema com os seus e-mails, geralmente <code>~/Mailbox</code> ou <code>/var/spool/mail/usuário</code>. para funcionar a acentuação, procure por <code>character-set</code> e coloque: <code>iso-8859-1</code>. aperte <code>E</code> para sair, e <code>Y</code> para confirmar as mudanças feitas.</p>
+
+<p>novamente na tela principal, aperte <code>I</code> para ir ao <code>inbox</code>, sua caixa de entrada. se você informou o arquivo certo no <code>inbox-path</code>, você agora estará vendo a lista das mensagens. pronto. seu <code>pine</code> está pronto para ler e enviar e-mails. use o cursor, as teclas <code>&gt;</code> e <code>&lt;</code> para "navegar" entre as telas, <code>R</code> para responder uma mensagem, <code>C</code> para compor uma nova e <code>Ctrl+X</code> para enviar.</p>
+
+<p>é claro, tem MUITA coisa a ser configurada para personalizar e agilizar o uso, mas o básico é isso.</p>
+
+<p>e pra não dizer que esta coluna não teve linha de comando, vai a dica de uso do <code>fetchmail</code> para baixar os e-mails do usuário <code>joao</code> via <code>POP3</code> no servidor <code>zol.com.br</code> (o <code>sendmail</code> deve estar rodando):</p>
+
+<pre>
+$ fetchmail -u joao -p pop3 zol.com.br
+</pre>
+
+<p>em tempo! o nome <code>pine</code> vem do inglês "Programa para Notícias e Email de Internet", e ele pode ser baixado de <a href="ftp://ftp.cac.washington.edu/pine">ftp://ftp.cac.washington.edu/pine</a></p>
+
+
+    <p class="footer">
+      <a href="/doc/coluna/">&lt;--- Voltar para o índice</a>
+    </p>
+  </body>
+</html>

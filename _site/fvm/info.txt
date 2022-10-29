@@ -1,0 +1,2 @@
+img : -quality 80
+mini: -quality 80 -geometry 200x800

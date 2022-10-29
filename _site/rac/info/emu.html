@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Emulando Comandos UNIX | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Emulando Comandos UNIX</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  
+
+  
+
+    <p>Uma boa maneira de começar a "experimentar" o RAC é fazê-lo executar tarefas de outros comandos conhecidos, onde o usuário já sabe qual é o resultado desejado. Experimente!</p>
+
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Equivalente RAC</th>
+    <th>Extrai o seguinte texto:</th>
+  </tr>
+  <tr>
+    <td>head</td>
+    <td class="center"><code>1:10</code></td>
+    <td>Primeiras 10 linhas</td>
+  </tr>
+  <tr>
+    <td>head -5</td>
+    <td class="center"><code>1:5</code></td>
+    <td>Primeiras 5 linhas</td>
+  </tr>
+  <tr>
+    <td>head -1</td>
+    <td class="center"><code>1</code></td>
+    <td>Primeira linha</td>
+  </tr>
+  <tr>
+    <td>tail</td>
+    <td class="center"><code>-10:-1</code></td>
+    <td>Últimas 10 linhas</td>
+  </tr>
+  <tr>
+    <td>tail -5</td>
+    <td class="center"><code>-5:-1</code></td>
+    <td>Últimas 5 linhas</td>
+  </tr>
+  <tr>
+    <td>tail -1</td>
+    <td class="center"><code>-1</code></td>
+    <td>Última linha</td>
+  </tr>
+  <tr>
+    <td>tac</td>
+    <td class="center"><code>-1:1</code></td>
+    <td>Da última para a primeira linha</td>
+  </tr>
+  <tr>
+    <td>rev</td>
+    <td class="center"><code>[-1:1]</code></td>
+    <td>Colunas da linha de trás para frente</td>
+  </tr>
+  <tr>
+    <td>sed -n 5p</td>
+    <td class="center"><code>5</code></td>
+    <td>A linha 5</td>
+  </tr>
+  <tr>
+    <td>sed -n 3,5p</td>
+    <td class="center"><code>3:5</code></td>
+    <td>Da linha 3 até a linha 5</td>
+  </tr>
+  <tr>
+    <td>sed 25q</td>
+    <td class="center"><code>1:25</code></td>
+    <td>As 25 primeiras linhas</td>
+  </tr>
+  <tr>
+    <td>cut -c1,3,5</td>
+    <td class="center"><code>[1,3,5]</code></td>
+    <td>As colunas 1, 3 e 5</td>
+  </tr>
+  <tr>
+    <td>cut -c5-</td>
+    <td class="center"><code>[5:-1]</code></td>
+    <td>Da coluna 5 em diante</td>
+  </tr>
+  <tr>
+    <td>cut -c1,3,5-</td>
+    <td class="center"><code>[1,3,5:-1]</code></td>
+    <td>As colunas 1 e 3 e da 5 em diante</td>
+  </tr>
+  <tr>
+    <td>rev | cut -c1</td>
+    <td class="center"><code>[-1]</code></td>
+    <td>A última coluna</td>
+  </tr>
+  <tr>
+    <td>cut -c1-5 | rev</td>
+    <td class="center"><code>[5:1]</code></td>
+    <td>As cinco primeiras colunas invertidas</td>
+  </tr>
+  <tr>
+    <td>tail -5 | tac</td>
+    <td class="center"><code>-1:-5</code></td>
+    <td>As cindo últimas linhas invertidas</td>
+  </tr>
+  <tr>
+    <td>tail -1 | rev | cut -c1</td>
+    <td class="center"><code>-1[-1]</code></td>
+    <td>A última coluna da última linha</td>
+  </tr>
+  <tr>
+    <td>fgrep root</td>
+    <td class="center"><code>=root=</code></td>
+    <td>As linhas que contêm a palavra root</td>
+  </tr>
+  <tr>
+    <td>grep ^[0-9]</td>
+    <td class="center"><code>/^[0-9]/</code></td>
+    <td>As linhas que iniciam com números</td>
+  </tr>
+  <tr>
+    <td>fgrep root | sed -n 5p</td>
+    <td class="center"><code>=root=*5</code></td>
+    <td>A quinta linha que contêm "root"</td>
+  </tr>
+  <tr>
+    <td>sed 1,/root/</td>
+    <td class="center"><code>1:=root=*1</code></td>
+    <td>As linhas do início até a palavra root</td>
+  </tr>
+  <tr>
+    <td>sed /root/,$</td>
+    <td class="center"><code>=root=*1:-1</code></td>
+    <td>As linhas da palavra root até o final</td>
+  </tr>
+  <tr>
+    <td>fgrep root | cut -c-10</td>
+    <td class="right"><code>=root=[1:10]</code></td>
+    <td>10 primeiras colunas das linhas que contêm "root"</td>
+  </tr>
+</table>
+
+  </body>
+</html>

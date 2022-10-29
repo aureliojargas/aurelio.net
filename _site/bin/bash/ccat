@@ -1,0 +1,11 @@
+#!/bin/sh
+# ccat, the Color cat 19990922 <verde (a) aurelio net>
+# just a son of the cgrep...
+
+[ "$2" ] || { echo 'usage: cgrep pattern file[s]' ; exit 1 ; }
+
+C_PATT=`echo -e '\033[33;01m'`         # yellow
+C_NORM=`echo -e '\033[m'`              # normal
+
+PATT=$1 ; shift
+cat "$@" | sed "s§$PATT§$C_PATT&$C_NORM§gi"

@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.sf.net">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>SED e Expressões Regulares</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<P ALIGN="center"><CENTER><H1>SED e Expressões Regulares</H1>
+
+<h2>Aurelio Marinho Jargas</h2>
+<h3>Sucesu - 18 Fev 2004</h3>
+
+
+<P>
+<center><table border="1" align="center" cellpadding="5"><tr><td>
+</P>
+<TABLE ALIGN="center" CELLPADDING="4">
+<TR>
+<TH>Comando SED</TH>
+<TH>O que faz</TH>
+</TR>
+<TR>
+<TD ALIGN="center">=</TD>
+<TD>Imprime o número da linha atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">;</TD>
+<TD>Separador de comandos</TD>
+</TR>
+<TR>
+<TD ALIGN="center">{</TD>
+<TD>Início de bloco de comandos</TD>
+</TR>
+<TR>
+<TD ALIGN="center">}</TD>
+<TD>Fim de bloco de comandos</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">s</TD>
+<TD>Substitui um trecho de texto por outro</TD>
+</TR>
+<TR>
+<TD ALIGN="center">y</TD>
+<TD>Traduz um caractere por outro</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">i</TD>
+<TD>Insere um texto antes da linha atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">c</TD>
+<TD>Troca a linha atual por um texto</TD>
+</TR>
+<TR>
+<TD ALIGN="center">a</TD>
+<TD>Anexa um texto após a linha atual</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">w</TD>
+<TD>Salva a linha num arquivo</TD>
+</TR>
+<TR>
+<TD ALIGN="center">r</TD>
+<TD>Lê conteúdo de um arquivo</TD>
+</TR>
+<TR>
+<TD ALIGN="center">h</TD>
+<TD>Salva a linha num buffer</TD>
+</TR>
+<TR>
+<TD ALIGN="center">g</TD>
+<TD>Lê o conteúdo do buffer</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">p</TD>
+<TD>Imprime a linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">l</TD>
+<TD>Imprime a linha mostrando os invisíveis</TD>
+</TR>
+<TR>
+<TD ALIGN="center">d</TD>
+<TD>Apaga a linha</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">n</TD>
+<TD>Vai para a próxima linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">N</TD>
+<TD>Anexa a próxima linha na atual</TD>
+</TR>
+<TR>
+<TD ALIGN="center">q</TD>
+<TD>Finaliza o sed imediatamente</TD>
+</TR>
+</TABLE>
+
+<P></P>
+<P>
+</td><td>
+</P>
+<TABLE ALIGN="center" CELLPADDING="4">
+<TR>
+<TH>Metacaractere</TH>
+<TH>Casa com</TH>
+</TR>
+<TR>
+<TD ALIGN="center">^</TD>
+<TD>O começo da linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">$</TD>
+<TD>O fim da linha</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">[aeiou]</TD>
+<TD>Vogais minúsculas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">[^aeiou]</TD>
+<TD>Qualquer caractere, exceto vogais minúsculas</TD>
+</TR>
+<TR>
+<TD ALIGN="center">[a-d]</TD>
+<TD>As letras 'a' ou 'b' ou 'c' ou 'd'</TD>
+</TR>
+<TR>
+<TD ALIGN="center">(esse|aquele)</TD>
+<TD>As palavras 'esse' ou 'aquele'</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">a{2}</TD>
+<TD>A letra 'a' duas vezes</TD>
+</TR>
+<TR>
+<TD ALIGN="center">a{2,4}</TD>
+<TD>A letra 'a' de duas a quatro vezes</TD>
+</TR>
+<TR>
+<TD ALIGN="center">a{2,}</TD>
+<TD>A letra 'a' no mínimo duas vezes</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">a*</TD>
+<TD>O mesmo que a{0,}</TD>
+</TR>
+<TR>
+<TD ALIGN="center">a+</TD>
+<TD>O mesmo que a{1,}</TD>
+</TR>
+<TR>
+<TD ALIGN="center">a?</TD>
+<TD>O mesmo que a{0,1}</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">.</TD>
+<TD>Um caractere qualquer</TD>
+</TR>
+<TR>
+<TD ALIGN="center">.*</TD>
+<TD>Qualquer coisa, é o tudo e o nada</TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD ALIGN="center">^$</TD>
+<TD>Uma linha vazia</TD>
+</TR>
+<TR>
+<TD ALIGN="center">^ *$</TD>
+<TD>Uma linha vazia com possíveis espaços</TD>
+</TR>
+<TR>
+<TD ALIGN="center">^.{20}$</TD>
+<TD>Uma linha com exatamente 20 caracteres</TD>
+</TR>
+<TR>
+<TD ALIGN="center">^[A-Z]</TD>
+<TD>Maiúsculas no início da linha</TD>
+</TR>
+<TR>
+<TD ALIGN="center">[0-9]{3}$</TD>
+<TD>Três números consecutivos no final da linha</TD>
+</TR>
+</TABLE>
+
+<P></P>
+<P>
+</td></tr></table></center>
+</P>
+<PRE>
+
+</PRE>
+<P></P>
+<H3>Comandos UNIX emulados pelo SED</H3>
+<PRE>
+  basename    cat      tac    head    cut     cp    uniq
+   dirname     paste    rev    tail    grep    tr    wc
+</PRE>
+<P></P>
+<H3>Para saber mais</H3>
+<P>
+<center><table border="0" align="center" cellpadding="5"><tr><td>
+</P>
+<DL>
+<DT><A HREF="https://aurelio.net">https://aurelio.net</A></DT><DD>
+  Página do Aurelio
+<P></P>
+<DT><A HREF="https://aurelio.net/sed">https://aurelio.net/sed</A></DT><DD>
+  Página sobre SED
+<P></P>
+<DT><A HREF="https://aurelio.net/regex">https://aurelio.net/regex</A></DT><DD>
+  Livro Online de Expressões Regulares
+<P></P>
+<DT><A HREF="http://br.groups.yahoo.com/group/sed-br">http://br.groups.yahoo.com/group/sed-br</A></DT><DD>
+  Lista de discussão sobre SED e Expressões Regulares
+</DL>
+
+<P>
+</td><td>
+</P>
+<DL>
+<DT><A HREF="https://aurelio.net/projects/txt2regex/">https://aurelio.net/projects/txt2regex/</A></DT><DD>
+  Programa que ajuda a criar Expressões Regulares
+<P></P>
+<DT><A HREF="http://sed.sf.net">http://sed.sf.net</A></DT><DD>
+  Portal mundial do SED (em inglês)
+<P></P>
+<DT><A HREF="http://sed.sf.net/local/docs/emulating_unix.txt">http://sed.sf.net/local/docs/emulating_unix.txt</A></DT><DD>
+  Comandos em SED que emulam comandos UNIX
+</DL>
+
+<P>
+</td></tr></table></center>
+</P>
+<HR NOSHADE SIZE="1">
+<P>
+ <IMG ALIGN="right" SRC="/img/t2tpowered.png" BORDER="0" ALT="">
+<A HREF=".">Voltar para a página dos cursos</A>
+</P>
+
+<!-- html code generated by txt2tags 2.2 (http://txt2tags.sf.net) -->
+<!-- cmdline: txt2tags sucesu/sucesu-seder-apoio.t2t -->
+</BODY></HTML>

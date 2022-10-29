@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The sed alphabet, by Aurelio Jargas</title>
+	<meta name="author" content="Aurelio Jargas">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="/assets/reset.css">
+	<link rel="stylesheet" href="/assets/articles.css">
+	<link rel="stylesheet" href="/assets/bars.css">
+	<link rel="stylesheet" href="/assets/monokai.css">
+
+	<!-- Fork me -->
+	<link rel="stylesheet" href="/assets/gh-fork-ribbon.css">
+	<!--[if lt IE 9]>
+		<style>.github-fork-ribbon-wrapper { display: none; }</style>
+	<![endif]-->
+
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+</head>
+
+<body id="sed-abc">
+
+	<div class="bar">
+		<div id="article-header">
+
+			<h1><a href="/articles/sed-abc.html" title="Permalink" rel="bookmark">The sed alphabet</a></h1>
+
+			
+			<p class="byline">
+				Written by
+				<a class="name" rel="author" href="/about.html">Aurelio Jargas</a>
+				
+					on <span class="date">December 12, 2012</span>
+				
+			</p>
+
+		</div>
+	</div>
+
+
+	<div class="bar bar-transparent">
+		<div id="article-body">
+
+<pre>
+a    append        append some text after the <span class="p">[PATT]</span>
+b    branch        branch to label (GOTO)
+c    change        replace the <span class="p">[PATT]</span> by some text
+d    delete        delete the <span class="p">[PATT]</span>
+D    delete        delete the first line of <span class="p">[PATT]</span>
+e    execute       execute a system command #GNU-sed
+F    filename      print the current input's filename #GNU-sed
+g    get           copy <span class="h">[HOLD]</span> contents to <span class="p">[PATT]</span> (overwriting)
+G    get           copy <span class="h">[HOLD]</span> contents to <span class="p">[PATT]</span> (appending)
+h    hold          copy <span class="p">[PATT]</span> contents to <span class="h">[HOLD]</span> (overwriting)
+H    hold          copy <span class="p">[PATT]</span> contents to <span class="h">[HOLD]</span> (appending)
+i    insert        insert some text before the <span class="p">[PATT]</span>
+l    list          print <span class="p">[PATT]</span> showing invisible characters
+n    next          read the next line to <span class="p">[PATT]</span>
+N    next          append the next line to <span class="p">[PATT]</span>
+p    print         print <span class="p">[PATT]</span> contents
+P    print         print first line of <span class="p">[PATT]</span>
+q    quit          print <span class="p">[PATT]</span> and quit sed
+Q    quit          discard <span class="p">[PATT]</span> and quit sed #GNU-sed
+r    read          show file contents after <span class="p">[PATT]</span>
+R    read          show one line of file after <span class="p">[PATT]</span> #GNU-sed
+s    substitute    search and replace
+t    tee           branch to label if one s/// matched
+T    tee           branch to label if no s/// matched #GNU-sed
+v    version       abort if sed version is incompatible #GNU-sed
+w    write         write <span class="p">[PATT]</span> to a file
+W    write         write first line of <span class="p">[PATT]</span> to a file #GNU-sed
+x    exchange      swap <span class="p">[PATT]</span> and <span class="h">[HOLD]</span> contents
+y    ?             translate characters
+z    zap           empty <span class="p">[PATT]</span> contents #GNU-sed
+
+Note:
+   <span class="p">[PATT]</span> - Pattern space
+   <span class="h">[HOLD]</span> - Hold space
+</pre>
+
+
+			<div id="eof">— EOF —</div>
+
+		</div><!--article-body-->
+	</div><!--bar-->
+
+
+	<div class="bar">
+<div id="nav">
+	<ul>
+	<li>
+		Dropbox
+		<ul>
+		<li><a href="/articles/dropbox-iphoto-import.html" >Dropbox iPhoto Import – The Missing FAQ</a></li>
+		<li><a href="/articles/dropbox-selective-sync.html">Dropbox: Selective Sync Pitfalls</a></li>
+		<li><a href="/articles/dropbox-symlinks.html"      >Dropbox and symlinks</a></li>
+		<li><a href="/articles/dropbox-ignore-folder.html" >Ignore a local folder inside Dropbox</a></li>
+		</ul>
+	</li>
+	<li>
+		iPhoto
+		<ul>
+		<li><a href="/articles/dropbox-iphoto-11.html">Fix: iPhoto '11 library doubled size in Dropbox</a></li>
+		<li><a href="/articles/iphoto-symlinks.html"  >Symlinks inside the iPhoto library</a></li>
+		</ul>
+	</li>
+	<li>
+		Reference
+		<ul>
+		<li><a href="/articles/sed-abc.html"              >The sed alphabet</a></li>
+		<li><a href="/articles/applescript-vs-python.html">AppleScript for Python Programmers (Comparison Chart)</a></li>
+		<li><a href="/articles/shell-reference.html"      >Bash Shell Quick Reference</a></li>
+		</ul>
+	</li>
+	<li>
+		Other
+		<ul>
+		<li><a href="/articles/nexus-5x-bootloop-fix.html">Nexus 5X bootloop fix - Install Android monthly security updates</a></li>
+		<li><a href="/articles/hungry-sumo-high-scores.html">Tips for high scores in Hungry Sumo for iOS (iPhone, iPad)</a></li>
+		<!-- <li><a href="/articles/applescript-install.html">How to install AppleScripts on your Mac</a></li> -->
+		</ul>
+	</li>
+	<li>
+		<a style="text-decoration:none;" href="/about.html">←</a>
+	</li>
+	</ul>
+</div>
+
+	</div>
+
+	<div class="bar bar-transparent">
+
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+
+	<!-- Fork me -->
+	<div class="github-fork-ribbon-wrapper right">
+		<div class="github-fork-ribbon">
+			<a href="https://github.com/aureliojargas/aurelio.net/tree/master/articles/sed-abc.html">GitHub</a>
+		</div>
+	</div>
+
+<!-- My head -->
+<a class="aureliohead"
+	style="position:fixed; right:5px; bottom:0px;"
+	href="/about.html"
+	title="Aurelio Jargas"><img
+	style="width: 64px; height: 64px;"
+	src="/img/articles/aurelio.png"></a>
+
+
+</body>
+</html>

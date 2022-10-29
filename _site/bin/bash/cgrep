@@ -1,0 +1,21 @@
+#!/bin/sh
+# cgrep, the Color grep 19990910 <verde (a) aurelio net>
+# ... as modified by ken@halcyon.com 19990910
+# thanks ken for all the bash tips
+
+[ "$1" ] || { echo 'usage: cgrep pattern file[s]' ; exit 1 ; }
+
+C_FILE=`echo -e '\033[37;01m'`         # white
+C_PATT=`echo -e '\033[33;01m'`         # yellow
+C_NORM=`echo -e '\033[m'`              # normal
+
+PATT=$1; shift
+
+grep -His -e "$PATT" "$@" |
+  sed "h
+       s§^[^:]*:§§                             
+       s§$PATT§$C_PATT&$C_NORM§gi
+       x
+       s§^\\([^:]*\\):.*§$C_FILE\\1$C_NORM:§
+       G
+       s§\\n§§"

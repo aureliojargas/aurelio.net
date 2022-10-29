@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>Negação de uma palavra - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="cruas.html">
+<link rel="next" href="multilinha.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="cruas.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="multilinha.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>Negação de uma palavra</h1>
+
+      <p>Vamos agora esclarecer um mito da mitologia ERística: como negar uma palavra. Resposta: <b>depende</b>. Depende da posição dela na linha ou se seu aplicativo suporta os metacaracteres modernosos. Por enquanto esquecendo estes, temos que o único metacaractere que proíbe alguma coisa é a lista negada, mas ela vale apenas para a posição de um caractere, não tendo como proibir uma palavra. Intuitivamente e de sopetão, as tentativas de negar a palavra <code>aqui</code> poderiam ser coisas como:</p>
+
+<pre>
+[^aqui], (^aqui) e [^(aqui)]
+</pre>
+
+<p>O que, como sabemos, são inválidos pois o primeiro nega os quatro caracteres em qualquer ordem, para uma posição, o segundo é um grupo que casa a palavra no começo da linha e o último é uma viagem astral, simplesmente negando todos os caracteres da lista, em qualquer ordem. O que fazer então? Se, e somente se a palavra sempre estiver no começo ou fim da linha, a âncora nos dá a base e podemos fazer uma seqüência de listas negadas de um caractere, completando a palavra, assim:</p>
+
+<pre>
+^[^a][^q][^u][^i]
+</pre>
+
+<p>Mas como cada lista é independente uma da outra, qualquer uma que falhe é suficiente para falhar a ER toda. Isso significa que qualquer linha que comece com <code>a</code>, seja <i>aonde</i>, <i>agora</i> ou <i>assim</i>, falhará a primeira lista negada e com ela toda a ER. Para lidar com isso, precisamos amarrar a seqüência das letras, em uma ER gigante, feia e literal, mas que funciona:</p>
+
+<pre>
+^( [^a] | a[^q] | aq[^u] | aqu[^i] )
+</pre>
+
+<p>Note que os espaços em branco foram colocados para facilitar a leitura apenas, eles não fazem parte da ER. Vamos fazer a leitura dela para clarificar. A primeira letra da linha não pode ser um <code>a</code>. Se for, este não pode ser seguido de um <code>q</code>. Se for, este <code>aq</code> não pode ser seguido por um <code>u</code>, mas caso seja, em hipótese alguma a próxima pode ser um <code>i</code>. Se for, falhou a ER e conseguimos ignorar a palavra <code>aqui</code> no começo da linha. Ufa! Se a palavra fosse no fim da linha, basta usar o cifrão, aliás, acho que nem precisava falar isso né? E se você não quisesse a palavra <code>chato</code> também?</p>
+
+<pre>
+^([^a]|a[^q]|aq[^u]|aqu[^i]|[^c]|c[^h]|ch[^a]|...)
+</pre>
+
+<p>E assim vai, podendo ficar quilométrica. Mas funciona. Se for no meio da linha, esqueça, pois <b>qualquer</b> linha casará, mesmo as que contenham a palavra proibida. Tome como exemplo a frase "o aqui é proibido.". Aplicando a ER quilométrica apresentada, mesmo sem a âncora ela casa no começo da linha na maior cara-de-pau:</p>
+
+<pre>
+o aqui é proibido.
+xxxx
+</pre>
+
+<p>Então a ER casa <u>o aq</u>, considerando a frase válida e o que era para ser proibido, passou... O motivo é simples e esse problema nunca terá solução, pois as ERs são orientadas a caracteres e repetições para casar um texto. O que precisaríamos aqui é algo que <b>não</b> case caracteres em seqüência, sob qualquer contexto. As ERs não foram feitas para isso.</p>
+
+<blockquote>
+  <u>Negar uma palavra, só no começo ou fim da linha.</u>
+</blockquote>
+
+<p>Mas como não poderia deixar de ser, esta regra também tem uma exceção. Legal né? Você se lembra do tópico dos metacaracteres modernosos? Mais especificamente o <b><code>(?!...)</code></b>. No nosso exemplo em questão, a ER ficaria <b><code>(?!aqui)</code></b>, pois esse metacaractere fará a ER falhar caso encontre um <code>aqui</code> na linha.</p>
+
+<p>Para ficar mais simples, você pode considerar essa construção uma "lista negada de ERs", que casa <i>qualquer coisa fora o que casar a ER contida</i>. Em nosso caso as ER eram apenas caracteres literais, mas poderia ser uma ER tão complicada quanto se precise. Levando-se isso em conta, fica aqui nossa conclusão:</p>
+
+<blockquote>
+  <u>Há como negar uma ou mais palavras, em apenas alguns aplicativos.</u>
+</blockquote>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="cruas.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="multilinha.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

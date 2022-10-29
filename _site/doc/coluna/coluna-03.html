@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    	<meta charset="utf-8">
+	<title>coluna do aurelio 03: zgv/ImageMagick (manipulando imagens no modo texto) | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <style>
+      body {
+        margin: 2em;
+        background-color: black;
+        color: silver;
+        text-align: justify;
+      }
+
+      h1 {
+        color: lightgreen;
+      }
+
+      h3 {
+        color: green;
+      }
+
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      code {
+        color: white;
+        font-weight: bold;
+      }
+
+      pre {
+        color: orange;
+        margin-left: 2em;
+      }
+
+      .footer {
+        padding-top: 1em;
+        border-top: 1px solid silver;
+      }
+    </style>
+
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>coluna do aurelio 03: zgv/ImageMagick (manipulando imagens no modo texto)</h1>
+    <h3>https://aurelio.net/doc/coluna</h3>
+    <h4>Escrito por Aurelio Jargas em 2000-11-03</h4>
+
+    <p>olás. continuando a saga da ambientalização no modo texto, mais uma tarefa importante: lidar com imagens. sim, pode parecer paradoxal mexer com "imagens" no modo "texto", mas se podemos, por que não fazê-lo?</p>
+
+<p>dois programas que estão presentes na maioria das distribuições de linux são o <code>zgv</code> (<a href="http://www.svgalib.org/rus/zgv">http://www.svgalib.org/rus/zgv</a>) para visualizar imagens e o <code>ImageMagick</code> (<a href="http://www.wizards.dupont.com/cristy/ImageMagick.html">http://www.wizards.dupont.com/cristy/ImageMagick.html</a>) para manipulá-las. eles serão nossos convidado do mês.</p>
+
+<p>o <code>zgv</code> utiliza a <code>SVGAlib</code>, biblioteca genérica para programas de modo texto que precisam de recursos gráficos, suportanto a grande maioria das placas de vídeo e monitores existentes. ele mostra em tela cheia arquivos dos tipos JPG, GIF (inclusive animado), PNG, BMP, entre outros.</p>
+
+<p>entre num diretório que contenha algumas imagens e chame o <code>zgv</code>. será apresentado um "navegador" para você escolher qual imagem quer ver. para que o navegador gere miniaturas dessas imagens, aperte <code>u</code>. ah! em tempo, se apertar <code>?</code> aparecerá uma tela de ajuda e o <code>Esc</code> é a tecla de saída.</p>
+
+<p>para ver um arquivo apenas, ou uma seleção, chame o <code>zgv</code> passando os nomes destes arquivos como parâmetro:</p>
+
+<pre>
+$ zgv imagem.jpg
+</pre>
+
+<pre>
+$ zgv *.jpg *.gif
+</pre>
+
+<p>note que na linha de comando, o asterisco significa "tudo", então com <code>*.jpg</code> você passa ao <code>zgv</code> todos os arquivos JPG do diretório atual.</p>
+
+<p>chamado assim, o programa entra no modo de exibir "slides", alternando as imagens a cada 4 segundos. visualizando uma imagem, temos vários comandos aplicáveis (<code>?</code> para ajuda), destacando-se controle de brilho e contraste (<code>&lt;&gt;,.</code>) e zoom (<code>z</code>).</p>
+
+<p>o <code>zgv</code> tem centenas de comandos e opções e uma leitura na sua página de manual on line pode consumir horas, então os comandos acima são o supra-sumo, os mais utilizados. outra dica é que pode-se criar um <code>~/.zgvrc</code> com configurações diversas como por exemplo <code>tagtimeout 30</code> para aumentar o tempo entre cada slide.</p>
+
+<p>agora que sabemos como ver imagens, falta saber como manipulá-las. o pacote <code>ImageMagick</code> conta com vários programas, e apesar de sua página de manual dizer que ele é para <code>X11</code>, vários aplicativos de linha de comando o acompanham, como <code>combine</code>, <code>identify</code>, <code>convert</code> e <code>montage</code>, cada um com sua própria página de manual. a seguir, exemplos práticos de obtenção de informação, conversão de imagem e criação de um GIF animado:</p>
+
+<pre>
+$ identify imagem.jpg
+</pre>
+
+<pre>
+$ convert -rotate 90 -antialias original.bmp convertida.jpg
+</pre>
+
+<pre>
+$ convert -delay 50 -loop 0 foto1.jpg foto2.jpg animacao.gif
+</pre>
+
+<p>basta chamar qualquer um dos programas citados com o <code>--help</code> e ver a quantidade grande de opções que eles suportam. tem de tudo, controle de cores, transparência, montagens, redimensionamento, alinhamento, animação, efeitos, compressão, gamma, entrelaçamento etc. e tudo isso disparado pela linha de comando sem precisar ir para a interface gráfica, abrir o programa, carregar a imagem, procurar os efeitos desejados em menus, dezenas de cliques no mouse, salvar a imagem, fecha, abre a próxima, e assim vai... atenção "webmasters", tratar fotos digitalizadas pode ser uma questão de segundos utilizando o <code>convert</code>!</p>
+
+<p>manipulando-se imagens no modo texto se consegue aplicar tratamentos padronizados para várias imagens, automatizando-se a edição e poupando bastante o tempo do operador. e tudo isso sem nem precisar ver a imagem. experimente!</p>
+
+
+    <p class="footer">
+      <a href="/doc/coluna/">&lt;--- Voltar para o índice</a>
+    </p>
+  </body>
+</html>

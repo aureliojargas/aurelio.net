@@ -1,0 +1,184 @@
+# 20000524 <verde (a) aurelio net> 
+
+# aceita várias substituições, separadas por ponto-e-vírgula ou ENTER
+sed 's/uqe/que/; s/qeu/que/; s/euq/que/'
+
+# ou
+sed 's/uqe/que/
+     s/qeu/que/
+     s/euq/que/'
+
+# ou
+sed 's/\(uqe\|qeu\|euq\)/que/'
+
+------------------------------------------------------------------
+
+# usando registradores:
+# \1 para o que está nos parenteses
+# &  para referenciar TODO o conteúdo casado
+
+sed 's@^\(abc\)@#\1@'           # comenta a linha que comeca com abc
+sed 's/^abc/#&/'                # comenta a linha que comeca com abc
+sed 's/^/#/'                    # comenta todas as linhas
+sed 's/$/$/'                    # coloca um $ no final de cada linha
+echo 'hojeestoubem' | sed 's@\(hoje\)\(estou\)\(bem\)@__\2__\3__\1!!@'
+
+------------------------------------------------------------------
+
+# pegando apenas cadeias que estão dentro de parênteses
+
+echo 'windows (linux)(Linux), mac (unix) os/2' |
+sed -n 's/[^(]*\(([^)]*)\)[^(]*/\1/gp'
+
+resultado:
+(linux)(Linux)(unix)
+
+------------------------------------------------------------------
+
+# pegando apenas cadeias que estão dentro de aspas duplas
+# ele considera também \" como caractere válido dentro das ""
+
+echo 'acho "windows \"linux\", mac unix os/2" tudo igual' |
+sed 's/"\([^"]\|\\"\)*"/ELES/g'
+
+resultado:
+acho ELES tudo igual
+
+------------------------------------------------------------------
+
+# diversos
+sed 's/.//'                     # apaga o 1o caracter da frase
+sed 's/.//4'                    # apaga o 4o caractere da frase
+sed 's/.\{4\}//'                # apaga os 4 primeiros caracteres
+sed 's/.\{4,\}//'               # apaga no mínimo 4 caracteres
+sed 's/.\{2,4\}//'              # apaga de 2 a 4 caracteres (o máx. que tiver)
+
+sed '/padrão/q'                 # para a leitura do arquivo ao achar o padrão
+sed '/padrão/d'                 # apaga as linhas que contém o padrão
+sed '/padrão1/,/padrão2/d"      # apaga um bloco de linhas 
+
+
+# muito útil!!!!
+sed -n 5p arquivo               # mostra a linha 5 do arquivo arquivo
+
+------------------------------------------------------------------
+
+# exemplos de intervalo
+echo "aáeéiíoóuú" | sed "s/[a-u]//g"
+áéíóú
+echo "aáeéiíoóuú" | sed "s/[á-ú]//g"
+aeiou
+
+------------------------------------------------------------------
+
+o que fazer quando se precisa pesquisar/trocar aspas simples
+E duplas? usar o quê como delimitador do comando? ambos.
+
+[mala@aurelio mala]$ echo '"a"' | sed 's/"/'"''/2"
+"a''
+
+ué, mas o sed começa com ' e acaba com "?
+não entendeu? é fácil:
+
+'s/"/'"''/2"
+|  | ||||  |
+|  | ||||  +- (delimitador) fechando a 2ª parte do comando
+|  | |||+---- (padrão)      troque por '
+|  | ||+----- (padrão)      troque por '
+|  | |+------ (delimitador) abrindo  a 2ª parte do comando
+|  | +------- (delimitador) fechando a 1ª parte do comando
+|  +--------- (padrão)      procure por "
++------------ (delimitador) abrindo  a 1ª parte do comando
+
+ou ainda:
+'s/"/'"''/2"
+|____||____|
+
+  1ª    2ª
+
+e sem os delimitadores:
+s/"/''/2
+
+
+é claro que um simples sed "s/\"/''/2" resolveria, mas o exemplo
+acima ilustra a possibilidade de dois ou mais conjuntos de
+caracteres, delimitados por delimitadores diferentes, sendo
+passados como uma coisa única para um comando, no caso o sed.
+
+atenção: isso é bash e não sed! (então por quê não está nas dicas
+de bash? boa pergunta.  &:)  )
+
+-------------------------------------------------------------------  
+
+APRENDENDO SOBRE O SED:
+----------------------
+
+
+# txt -> HTML:
+# -----------
+# 
+# tranforma texto (URL) em tags HTML de links.
+# era : http://www.com
+# fica: <a href="http://www.com">http://www.com</a>
+
+sed 's_\<\(ht\|f\)tp://[^ ]*_<a href="&">&</a>_'
+
+# ache um começo de palavra
+    \<
+# depois ache um "ht" OU um "f"   # (ht|f) escapados
+    \(ht\|f\)
+# depois ache um tp://
+    tp://
+# depois ache qqr ocorrência de qqr caracter NAO ' '
+    [^ ]*
+# esse ultimo é para pegar apenas uma palavra (NAO ' ')
+
+# o * pode ser substituído por um núm de vezes definido
+    [^ ]\{3\}
+# ou um intervalo
+    [^ ]\{3,5\}
+# o & pega o padrão selecionado que está no buffer
+
+
+-------------------------------------------------------------------  
+
+alinhamento:
+-----------
+[mala@aurelio mala]$ echo "direita" | sed -e :a -e 's/^.\{2,79\}$/ &/;ta'
+                                                                         direita
+
+faça uma marcação no início da linha e lhe dê o nome "a"
+    :a
+case apenas uma linha inteira (^...$) que tenha entre 1 e 79 caracteres
+    ^.\{1,79\}$
+coloque um espaço em branco no começo dessa linha
+(a aumentando um caractere e a jogando para a direita)
+    <ESPAÇO>&
+caso uma substituição tenha sido feita na última s///, vá até (t) a marca "a"
+    ta
+	
+e assim volta-se para o início da linha, fazendo um laço que só acaba quando
+a linha toda tiver mais que 79 caracteres, aí a substituição não será feita,
+e comando t nada fará, continuando o processamento normalmente para a próxima
+linha, ou neste caso, acabará, e sua palavra estará lá na extrema direita,
+completada com espaços em branco no início.
+
+outros:
+------
+direita : sed ':a;s/^.\{1,79\}$/ &/;ta'
+esquerda: sed ':a;s/^.\{1,79\}$/& /;ta'
+centro  : sed ':a;s/^.\{1,78\}$/ & /;ta'
+vertical: sed 's/./&\
+/g'
+
+-------------------------------------------------------------------  
+
+5 maneiras de se emular o head
+------------------------------
+
+sed -n 1,10p
+sed 1,10!d
+sed 10q
+sed 11,$d
+sed -n 11,$!p
+

@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>coluna do aurelio 09: vim (um vimrc diferente) | Aurelio.net</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="vim">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+* { font-size: 1em; }
+.Comment { color: #00ffff; font-weight: bold; }
+.Constant { color: #ff40ff; font-weight: bold; }
+.Special { color: #ff6060; font-weight: bold; }
+.Identifier { color: #00ffff; font-weight: bold; }
+.Statement { color: #ffff00; font-weight: bold; }
+.PreProc { color: #8080ff; font-weight: bold; }
+.Type { color: #00ff00; font-weight: bold; }
+-->
+</style>
+
+</head>
+<body>
+<pre id="vimCodeElement">
+<span class="Comment">" <a href="/doc/coluna/">https://aurelio.net/doc/coluna/</a></span>
+<span class="Comment">" coluna do aurelio 09 [2001-06-28]</span>
+<span class="Comment">" vim (um vimrc diferente)</span>
+<span class="Comment">"</span>
+<span class="Comment">" original em <a href="/doc/coluna/coluna-09.html">https://aurelio.net/doc/coluna/coluna-09.html</a></span>
+<span class="Comment">"</span>
+<span class="Comment">" olás. creio que o  vim  não precisa de  apresentação não é mesmo? pois</span>
+<span class="Comment">" bem,  então que tal explorarmos aquele mundo  misterioso que o arquivo</span>
+<span class="Comment">" de configração  ~/.vimrc  nos apresenta? o que é um vimrc?  oras, este</span>
+<span class="Comment">" texto todo é um vimrc!  copie-o para seu  $HOME  e incremente seu vim.</span>
+<span class="Comment">" ah! aproveite e leia este texto direto no vim, para ficar colorido.</span>
+<span class="Comment">"</span>
+<span class="Comment">" como já pudemos perceber, linhas que começam com aspas são comentários</span>
+<span class="Comment">" e nelas podemos soltar o verbo e colocar todo tipo de  informação útil</span>
+<span class="Comment">" para a manutenção deste arquivo. então vamos lá.</span>
+<span class="Comment">"</span>
+<span class="Comment">" para aumentar a esperteza e memorização do vim, podemos ter um arquivo</span>
+<span class="Comment">" ~/.viminfo que guardará dados úteis como seu histórico de pesquisas /,</span>
+<span class="Comment">" linha de comando :, marcas `, registradores, entre outros. então com o</span>
+<span class="Comment">" viminfo é  possível copiar uma  linha qualquer (yy),  sair do arquivo,</span>
+<span class="Comment">" abrir um OUTRO arquivo e colar (p) aquela linha copiada anteriormente.</span>
+<span class="Comment">" você pode inclusive nesse intervalo  desligar a máquina e ficar um mês</span>
+<span class="Comment">" de férias, que ao voltar o vim  ainda saberá qual foi a linha copiada.</span>
+<span class="Comment">" não tem contra-indicações. USE!</span>
+<span class="Comment">"</span>
+<span class="Comment">" a segunda linha é uma gambiarra para que ao abrir um arquivo, o cursor</span>
+<span class="Comment">" já fique na  posição que estava na  última vez que ele foi  editado. o</span>
+<span class="Comment">" viminfo guarda a posição de TODOS os arquivos que você editou.</span>
+<span class="Comment">"</span>
+<span class="Statement">set</span> <span class="PreProc">viminfo</span>='10<span class="Statement">,</span>\"30<span class="Statement">,:</span>20<span class="Statement">,</span>%<span class="Statement">,</span>n~/.viminfo
+<span class="Statement">au</span> <span class="Type">BufReadPost</span> * <span class="Statement">if</span> <span class="Identifier">line</span><span class="Special">(</span><span class="Constant">"'\""</span><span class="Special">)</span>|execute<span class="Special">(</span><span class="Constant">"normal `\""</span><span class="Special">)</span>|<span class="Statement">endif</span>
+
+<span class="Comment">" o vim possui uma linguagem de programação própria,  onde podemos fazer</span>
+<span class="Comment">" funções, e até aplicativos inteiros, como o  vine (leitor de e-mail) e</span>
+<span class="Comment">" o jogo sokoban.vim. mais info sobre o assunto consulte www.vim.org.</span>
+<span class="Comment">"</span>
+<span class="Comment">" mas, como já  temos que fazer  nossos próprios programas, temos opções</span>
+<span class="Comment">" mais acessíveis para automatizar tarefas,  como o mapeamento. aqui vai</span>
+<span class="Comment">" um mapeamento  exclusivo do  modo de inserção (note o i no começo) que</span>
+<span class="Comment">" faz a  função de completação automática  de palavras, procurando-as no</span>
+<span class="Comment">" próprio arquivo. é fácil de usar e nos poupa tempo, além da certeza de</span>
+<span class="Comment">" que a palavra completada está grafada corretamente. então temos:</span>
+<span class="Comment">"</span>
+<span class="Comment">"</span> <span class="PreProc">F7:</span><span class="Comment"> completa uma palavra</span>
+<span class="Comment">"</span> <span class="PreProc">F8:</span><span class="Comment"> dá seqüência a essa palavra</span>
+<span class="Comment">"</span>
+<span class="Comment">" os mapeamentos foram  gravados nas teclas F7 e F8,  mas poderia ser em</span>
+<span class="Comment">" qualquer outra. suponha que você se chame Zózimo Gwinch Wurstalinewski</span>
+<span class="Comment">" e digitou seu nome numa parte do texto. depois em outra parte do mesmo</span>
+<span class="Comment">" texto, você precisa colocar seu nome novamente. ê trabalheira.</span>
+<span class="Comment">"</span>
+<span class="Comment">" mas como você  tem esse supermapeamento,  simplesmente digita Zó&lt;F7&gt; e</span>
+<span class="Comment">" surpresa! seu primeiro nome foi completado. e para fazer o resto, você</span>
+<span class="Comment">" continua completando as palavras seguintes com a tecla &lt;F8&gt;, então com</span>
+<span class="Comment">" Zó&lt;F7&gt;&lt;F8&gt;&lt;F8&gt;, lá está seu nome completo. imbatível.</span>
+<span class="Comment">"</span>
+<span class="Comment">" isso é muito muito útil ao programar, completando nomes de variáveis e</span>
+<span class="Comment">" funções,  geralmente longos e  difíceis,  e que você repete  em várias</span>
+<span class="Comment">" partes do programa.</span>
+<span class="Comment">"</span>
+<span class="Statement">imap</span> <span class="Special">&lt;</span><span class="Special">F7</span><span class="Special">&gt;</span> <span class="Special">&lt;</span><span class="Special">c-n</span><span class="Special">&gt;</span>
+<span class="Statement">imap</span> <span class="Special">&lt;</span><span class="Special">F8</span><span class="Special">&gt;</span> <span class="Special">&lt;</span><span class="Special">c-x</span><span class="Special">&gt;&lt;</span><span class="Special">c-n</span><span class="Special">&gt;</span>
+
+<span class="Comment">" e se você tem certos textos  que sempre tem que ficar  digitando, como</span>
+<span class="Comment">" seu nome completo, seu email, seu endereço,  faça abreviações, que são</span>
+<span class="Comment">" completadas automaticamente enquanto você as digita.</span>
+<span class="Comment">"</span>
+<span class="Comment">" use abreviações para textos normais, para comandos use mapeamentos.</span>
+<span class="Comment">"</span>
+<span class="Statement">iab</span> zgw Zózimo Gwinch Wurstalinewski
+<span class="Statement">iab</span> @@  zozimo@wurstalinewski.com.br
+
+<span class="Comment">" e como o capitalismo nos obriga a produzir em velocidade insalubre, ao</span>
+<span class="Comment">" salvar e/ou sair de um arquivo, é comum na pressa digitar o `w` ou `q`</span>
+<span class="Comment">" em maiúsculas, pois você ainda não soltou o dedo do  shift que apertou</span>
+<span class="Comment">" para fazer os dois pontos :.</span>
+<span class="Comment">"</span>
+<span class="Comment">" mas não se desespere!  até para os problemas econômicos mundiais o vim</span>
+<span class="Comment">" tem a solução! basta usarmos abreviações para a linha de comando (Cab)</span>
+<span class="Comment">"</span>
+<span class="Statement">cab</span> W  w
+<span class="Statement">cab</span> Wq wq
+<span class="Statement">cab</span> wQ wq
+<span class="Statement">cab</span> WQ wq
+<span class="Statement">cab</span> Q  q
+
+<span class="Comment">" um mapeamento é na verdade uma  seqüência de teclas que você apertaria</span>
+<span class="Comment">" normalmente no vim,  para fazer a tarefa.  o ENTER é representado  por</span>
+<span class="Comment">" &lt;cr&gt;, um  crtl+y vira &lt;c-y&gt; e se o  mapeamento exceder uma linha, você</span>
+<span class="Comment">" pode quebrá-la e começar a próxima com um escape \.</span>
+<span class="Comment">"</span>
+<span class="Comment">" um cuidado especial  deve ser tomado ao nomear um mapeamento, para não</span>
+<span class="Comment">" usar  letras ou nomes  que já são  comandos do vim.  para evitar isso,</span>
+<span class="Comment">" sempre inicie o nome de um  mapeamento com uma vírgula. no exemplo, ao</span>
+<span class="Comment">" digitar ,d no modo de comando (não é inserção) aparecerá a data atual.</span>
+<span class="Comment">"</span>
+<span class="Statement">map</span> ,d :r!date<span class="Special">&lt;</span><span class="Special">cr</span><span class="Special">&gt;</span>
+<span class="Special">      \</span>:s/ \(...\) \(..\).*\(....\)$/, \2 de \1 de \3/<span class="Special">&lt;</span><span class="Special">cr</span><span class="Special">&gt;</span>
+<span class="Special">      \</span>:nohl<span class="Special">&lt;</span><span class="Special">cr</span><span class="Special">&gt;</span>
+
+<span class="Comment">" e tem uma dica boa para os  programadores  de plantão. comentários num</span>
+<span class="Comment">" programa são  excelentes, mas  na hora da  sua manutenção,  eles podem</span>
+<span class="Comment">" atrapalhar, pois você queria ver só o código.</span>
+<span class="Comment">"</span>
+<span class="Comment">" para resolver este problema, vamos fazer um  truque no vim. que tal se</span>
+<span class="Comment">" pintarmos os comentários de preto para que fiquem invisíveis?  podemos</span>
+<span class="Comment">" fazer isso redefinindo o componente da cor da sintaxe.  ah! e quem usa</span>
+<span class="Comment">" fundo branco (argh) vai ter que trocar `black` por `white`.</span>
+<span class="Comment">"</span>
+<span class="Comment">" e como somos chiques ainda criamos uma função vim pra fazer o serviço.</span>
+<span class="Comment">" a CommOnOff()  oculta/mostra os comentários, alternando.  o resumão do</span>
+<span class="Comment">" que ela faz é: se a variável global  'hiddcomm'  não existir, a cria e</span>
+<span class="Comment">" oculta os comentários. se já existir, restaura os comentários. por fim</span>
+<span class="Comment">" definimos um mapeamento esperto no F11 para chamar nossa função.</span>
+<span class="Comment">"</span>
+<span class="Comment">" dica: se você está lendo este arquivo no vim, experimente agora mesmo!</span>
+<span class="Comment">"   :so %</span>
+<span class="Comment">"   F11</span>
+<span class="Comment">"   F11</span>
+<span class="Comment">"</span>
+<span class="Statement">fu</span>! CommOnOff<span class="Special">()</span>
+  <span class="Statement">if</span> !<span class="Identifier">exists</span><span class="Special">(</span><span class="Constant">'g:hiddcomm'</span><span class="Special">)</span>
+    <span class="Statement">let</span> <span class="Identifier">g:hiddcomm</span><span class="Statement">=</span><span class="Constant">1</span> | <span class="Statement">hi</span> <span class="Type">Comment</span> <span class="Type">ctermfg</span>=black <span class="Type">guifg</span>=<span class="Type">black</span>
+  <span class="Statement">else</span>
+    <span class="Statement">unlet</span> <span class="Identifier">g:hiddcomm</span> | <span class="Statement">hi</span> <span class="Type">Comment</span> <span class="Type">ctermfg</span>=cyan  <span class="Type">guifg</span>=<span class="Type">cyan</span> <span class="Type">term</span>=<span class="PreProc">bold</span>
+  <span class="Statement">endif</span>
+<span class="Statement">endfu</span>
+<span class="Statement">map</span> <span class="Special">&lt;</span><span class="Special">F11</span><span class="Special">&gt;</span> :call CommOnOff()<span class="Special">&lt;</span><span class="Special">cr</span><span class="Special">&gt;</span>
+
+<span class="Comment">" e já que estamos mexendo com a sintaxe,  que tal trocar a cor do texto</span>
+<span class="Comment">" daquela seleção que aparece quando você procura algo com o comando / ?</span>
+<span class="Comment">" é fácil, basta definir a cor do componente da sintaxe. ah sim, a opção</span>
+<span class="Comment">" hls (veja abaixo) deve estar ativa.</span>
+<span class="Comment">" </span>
+<span class="Comment">" você pode colocar as cores que quiser, em inglês. note que é ctermBG e</span>
+<span class="Comment">" FG, de  background e foreground  (fundo e letra). e veja  também que o </span>
+<span class="Comment">" IncSearch (busca enquanto você digita) é invertido!</span>
+<span class="Comment">"</span>
+<span class="Statement">hi</span>    <span class="Type">Search</span> <span class="Type">ctermbg</span>=green <span class="Type">ctermfg</span>=black
+<span class="Statement">hi</span> <span class="Type">IncSearch</span> <span class="Type">ctermbg</span>=black <span class="Type">ctermfg</span>=cyan
+
+<span class="Comment">" no vim temos diversas opções para  modificar seu comportamento através</span>
+<span class="Comment">" do comando set. para ver  todas as opções  disponíveis, faça :set all.</span>
+<span class="Comment">" diversas  opções já vêem  ligadas por  padrão, então vamos  ver apenas</span>
+<span class="Comment">" algumas mais diferentes.</span>
+<span class="Comment">"</span>
+<span class="Comment">" é sempre bom associar a abreviação da  opção com o nome em inglês para</span>
+<span class="Comment">" ficar mais fácil a  memorização.  no caso das opções de busca  abaixo,</span>
+<span class="Comment">" seus nomes completos são:</span>
+<span class="Comment">"   IncrementedSearch, HighLightedSearch, IgnoreCase e SmartCaSe</span>
+<span class="Comment">"</span>
+<span class="Statement">set</span> <span class="PreProc">is</span> <span class="PreProc">hls</span> <span class="PreProc">ic</span> <span class="PreProc">scs</span>  <span class="Comment">"opções espertas de busca</span>
+<span class="Statement">set</span> <span class="PreProc">sm</span>             <span class="Comment">"ShowMatch: mostra o início do bloco recém fechado</span>
+<span class="Statement">set</span> <span class="PreProc">sw</span>=1           <span class="Comment">"ShiftWidth: número de colunas para o comando &gt;</span>
+<span class="Statement">set</span> <span class="PreProc">ruler</span>          <span class="Comment">"régua: mostra a posição do cursor</span>
+<span class="Statement">set</span> <span class="PreProc">shm</span>=filmnrwxt  <span class="Comment">"SHortMessages: encurta as mensagem da régua</span>
+<span class="Statement">set</span> <span class="PreProc">wildmode</span>=longest<span class="Statement">,</span>list  <span class="Comment">"para completação do TAB igual ao bash</span>
+
+<span class="Comment">" a configuração  necessária para que as  cores funcionem no  modo texto</span>
+<span class="Comment">" geralmente já é feita no  vimrc do sistema, mas caso ela não esteja lá</span>
+<span class="Comment">" aqui estão as linhas mágicas que trarão a alegria das cores de volta a</span>
+<span class="Comment">" sua vida:</span>
+<span class="Comment">"</span>
+<span class="Statement">set</span> <span class="PreProc">background</span>=dark
+<span class="Statement">if</span> <span class="Identifier">has</span><span class="Special">(</span><span class="Constant">"terminfo"</span><span class="Special">)</span>
+  <span class="Statement">set</span> <span class="PreProc">t_Co</span>=8
+  <span class="Statement">set</span> <span class="PreProc">t_Sf</span>=<span class="Special">^[</span>[3%p1%dm
+  <span class="Statement">set</span> <span class="PreProc">t_Sb</span>=<span class="Special">^[</span>[4%p1%dm
+<span class="Statement">else</span>
+  <span class="Statement">set</span> <span class="PreProc">t_Co</span>=8
+  <span class="Statement">set</span> <span class="PreProc">t_Sf</span>=<span class="Special">^[</span>[3%dm
+  <span class="Statement">set</span> <span class="PreProc">t_Sb</span>=<span class="Special">^[</span>[4%dm
+<span class="Statement">endif</span>
+
+<span class="Comment">" mas como acima só  dissemos ao vim 'você pode usar cores', agora falta</span>
+<span class="Comment">" dizermos: 'use cores'. este comando liga a  sintaxe, que é responsável</span>
+<span class="Comment">" por,  dependendo do tipo  de arquivo,  reconhecer e colorir  as várias</span>
+<span class="Comment">" estruturas do texto, como por exemplo &lt;b&gt;tags&lt;/b&gt; num HTML.</span>
+<span class="Comment">"</span>
+<span class="Statement">syn</span> <span class="Type">on</span>
+
+<span class="Comment">" outra funcionalidade extremamente  interessante é o autocomando, que é</span>
+<span class="Comment">" executado  automaticamente  dependendo do  nome ou tipo do arquivo, no</span>
+<span class="Comment">" seu carregamento ou saída do editor.</span>
+<span class="Comment">"</span>
+<span class="Comment">" se você tem um arquivo com uma extensão qualquer, como .xyz e quer que</span>
+<span class="Comment">" o vim o interprete como um arquivo HTML,  diga para o vim configurar o</span>
+<span class="Comment">" ft (FileType)  ao abrir um arquivo novo  (BufNewFile)  ou já existente</span>
+<span class="Comment">" (BufRead) com essa extensão.</span>
+<span class="Comment">"</span>
+<span class="Statement">au</span> <span class="Type">BufNewFile</span>,<span class="Type">BufRead</span> *.xyz <span class="Statement">set</span> <span class="PreProc">ft</span>=html
+<span class="Comment">" </span>
+<span class="Comment">" ou ainda,  se for um arquivo  de um tipo  já reconhecido pelo vim, use</span>
+<span class="Comment">" diretamente a opção FileType. vamos usar de exemplo a linguagem python</span>
+<span class="Comment">" onde os TABs indicam os blocos de comandos, então é legal `vê-los`.</span>
+<span class="Comment">"</span>
+<span class="Comment">" para isso definimos uma  regra rápida de sintaxe chamada `pythonTAB` e</span>
+<span class="Comment">" a ela associamos a cor azul. além disso definimos algumas opções com o</span>
+<span class="Comment">" comando set e  para fechar,  trocamos a cor  das </span><span class="Constant">"strings"</span><span class="Comment"> para verde,</span>
+<span class="Comment">" porque aquele rosinha é muito palha. </span>
+<span class="Comment">"</span>
+<span class="Statement">au</span> <span class="Type">FileType</span> python <span class="Statement">syn</span> <span class="Type">match</span> <span class="Type">pythonTAB</span> <span class="Constant">'\t\+'</span>
+<span class="Statement">au</span> <span class="Type">FileType</span> python <span class="Statement">hi</span> <span class="Type">pythonTAB</span> <span class="Type">ctermbg</span>=blue
+<span class="Statement">au</span> <span class="Type">FileType</span> python <span class="Statement">set</span> <span class="PreProc">ts</span>=4 <span class="PreProc">tw</span>=80 <span class="PreProc">noet</span>
+<span class="Statement">au</span> <span class="Type">FileType</span> python <span class="Statement">hi</span> <span class="Type">pythonString</span> <span class="Type">ctermfg</span>=darkgreen
+
+<span class="Comment">" e p-p-por hoje é só p-pessoal.</span>
+<span class="Comment">"</span>
+<span class="Comment">" --</span>
+<span class="Comment">" este texto pode ser copiado livremente na íntegra ou em parte, desde que</span>
+<span class="Comment">" indicado o endereço do original: <a href="/doc/coluna/">https://aurelio.net/doc/coluna/</a></span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

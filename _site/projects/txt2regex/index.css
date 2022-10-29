@@ -1,0 +1,55 @@
+body {
+  margin: 10px;
+  background-color: silver;
+  font-family: sans-serif;
+}
+#header {
+  text-align: center;
+}
+#header h2 {
+  margin: 0 1em;
+}
+#content {
+  max-width: 33em;
+  margin: 0 auto;
+}
+#footer {
+  margin: 2em 0;
+  border-top: 1px solid black;
+  padding-top: 1em;
+  text-align: center;
+}
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+#content h3 {
+  border-top: 1px dashed black;
+  padding-top: 1em;
+}
+img, table {
+  max-width: 100%;
+}
+pre {
+  padding: 3px 0 3px 5px;
+  color: white;
+  background-color: black;
+  overflow: auto;
+  font-size: 85%;
+}
+ul.spaced li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+th {
+  background: #aab;
+}
+table.reviews {
+  font-size: 80%;
+}
+.figure span {
+  display: block;
+}

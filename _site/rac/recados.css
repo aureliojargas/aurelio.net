@@ -1,0 +1,16 @@
+dl#scraps dt {
+  margin: 2em 0 0 0;
+  padding: 1.5em 0;
+  border-top: 1px solid #ddd;
+  color: #999;
+}
+dl#scraps dt b {
+  padding: 0 .2em;
+  font-size: 130%;
+  font-style: normal;
+  color: black;
+}
+dl#scraps dd {
+  margin: 0;
+  padding: 0;
+}

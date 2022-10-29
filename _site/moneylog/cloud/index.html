@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>MoneyLog Cloud | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/moneylog/cloud/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="MoneyLog Cloud" />
+	<meta property="og:url" content="https://aurelio.net/moneylog/cloud/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/moneylog/cloud/" title="Permalink" rel="bookmark">MoneyLog Cloud</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<p>O seu MoneyLog, acessível de qualquer lugar, puxando dados direto do seu Dropbox ou Google Drive. Que tal?</p>
+
+<p>Acesse agora:</p>
+
+<ul>
+  <li><a href="http://ml.aurelio.net">Versão para Dropbox</a> - não funciona no momento :(</li>
+  <li><a href="https://moneylog.aurelio.net">Versão para Google Drive</a> - funcionando</li>
+</ul>
+
+<hr>
+
+<nav>
+  <ul>
+    <li><a href="#conectar">Passo 1: Conectar</a></li>
+    <li><a href="#inserir">Passo 2: Inserir seus lançamentos</a></li>
+    <li><a href="#arquivos">Os arquivos</a></li>
+    <li><a href="#mobile">Mobile / smartphone</a></li>
+    <li><a href="#seguranca">O MoneyLog Cloud é seguro?</a></li>
+    <li><a href="#termos-de-uso">Termos de Uso</a></li>
+    <li><a href="#autor">Autoria</a></li>
+    <li><a href="#erro-500">500 Internal Server Error</a></li>
+  </ul>
+</nav>
+
+<h2 id="conectar">Passo 1: Conectar</h2>
+
+<p>Ao acessar pela primeira vez o <a href="http://moneylog-cloud.aurelio.net">MoneyLog Cloud</a>, você precisará conectá-lo à sua conta do Dropbox, para que ele possa acessá-la. Este procedimento só precisa ser feito uma vez. Você pode revogar este acesso a qualquer momento no futuro, se julgar necessário.</p>
+
+<p>Clique no botão <em>Conectar</em>, você será direcionado ao site do Dropbox e precisará fazer o login, como de costume. Após logar-se, o Dropbox perguntará se você quer se conectar com o MoneyLog Cloud.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/dropbox-connect-400.png">
+</p>
+
+<p>Basta apertar o botão azul (<em>Allow</em>) e pronto. Você será direcionado de volta ao site do MoneyLog Cloud, porém dessa já entrará direto no app.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/cloud-1st-shot-400.png">
+</p>
+
+<p>O MoneyLog Cloud já vem com alguns lançamentos de exemplo, então aproveite para brincar um pouco e se ambientar. Clique e descubra :)</p>
+
+<h2 id="inserir">Passo 2: Inserir seus lançamentos</h2>
+
+<p class="figure">
+  <img src="/moneylog/img/cloud-edit-button.png">
+</p>
+
+<p>Para inserir seus próprios lançamentos, clique no botão <em>Editar</em>. Vai abrir uma janela com um editor de textos simples. Você pode usar os lançamentos de exemplo como base e ir inserindo os seus aos poucos.</p>
+
+<p>O formato de cada lançamento é simples, usa apenas três campos: data, valor, descrição. Dúvidas? Consulte o <a href="/moneylog/input/">Guia de Lançamentos</a>.</p>
+
+<p class="figure">
+  <img src="/moneylog/img/cloud-edit-screen-400.png">
+</p>
+
+<p>Sempre que quiser conferir como está ficando, aperte o botão <em>Salvar</em>. Suas edições serão salvas no Dropbox e o MoneyLog Cloud mostrará o extrato atualizado já com seus dados novos.</p>
+
+<p>Você também pode importar dados de outros programas ou direto de seu Internet Banking. Utilize o <a href="/moneylog/import/">conversor do MoneyLog</a>, que entende os seguintes formatos: OFX, OFC, QIF (MS Money, Quicken).</p>
+
+<h2 id="arquivos">Os arquivos</h2>
+
+<p class="figure">
+  <img src="/moneylog/img/dropbox-tree.png">
+</p>
+
+<p>Estes são os arquivos e pastas que o MoneyLog Cloud cria em seu Dropbox.</p>
+
+<h3 id="moneylog-txt">txt/moneylog.txt</h3>
+
+<p>É aqui que ficam os seus lançamentos. Você pode editá-los pelo MoneyLog, conforme ensinado no <a href="#inserir">passo 2</a>, ou abrir diretamente este arquivo TXT em seu editor de textos preferido. O Dropbox se encarrega de manter tudo atualizado.</p>
+
+<blockquote>
+  Dica: Sabia que você pode criar outros arquivos .txt ali naquela pasta? O MoneyLog Cloud vai carregá-los automaticamente. Assim você pode organizar melhor seus lançamentos. Veja também: <a href="/moneylog/config/#dataFilesDefault">dataFilesDefault</a>.
+</blockquote>
+
+<blockquote>
+  Importante: Todos os arquivos TXT devem usar a codificação UTF-8.
+</blockquote>
+
+<h3 id="config-js">config.js</h3>
+
+<p>Este é o arquivo de configuração do MoneyLog Cloud. Ele já vem preenchido e explicado, porém com todas as configurações desativadas. Você pode ativar aquelas que quiser usar. Use um editor de textos simples. Leia as instruções dentro do próprio arquivo e veja mais detalhes no <a href="/moneylog/config/">guia de configuração</a>.</p>
+
+<h3 id="plugins">plugins/</h3>
+
+<p>Nesta pasta você coloca <a href="https://github.com/aureliojargas/moneylog-plugins">os plugins</a> que quiser usar no MoneyLog Cloud. Basta colocar os arquivos <code>.js</code> aqui que eles serão carregados automaticamente.</p>
+
+<h2 id="mobile">Mobile / smartphone</h2>
+
+<p>O MoneyLog Cloud está preparado para se adaptar à tela pequena de seu iPhone ou Android. Assim, você pode consultar seus extratos e fazer alterações mesmo quando estiver na rua. Experimente!</p>
+
+<p class="figure">
+  <img src="/moneylog/img/cloud-iphone-top-200.png">
+</p>
+
+<p class="figure">
+  <img src="/moneylog/img/cloud-iphone-report-200.png">
+</p>
+
+<h2 id="seguranca">O MoneyLog Cloud é seguro?</h2>
+
+<p>Sim.</p>
+
+<ul>
+  <li>O MoneyLog Cloud <strong>não tem acesso a sua senha</strong> do Dropbox. Ele usa a <a href="http://www.dropbox.com/developers/start/authentication#python">API</a> do Dropbox para ter acesso à sua conta sem precisar de sua senha.
+  </li>
+  <li>O MoneyLog Cloud tem <strong>acesso restrito a uma única pasta</strong>, e não a todo o seu Dropbox. Essa pasta é a <code>/Apps/MoneyLog Cloud</code>.</li>
+  <li>O MoneyLog Cloud <strong>não guarda seus dados</strong>, ele sempre lê e grava direto em seu Dropbox. Não há base de dados nem armazenamento temporário (cache) no servidor do MoneyLog.</li>
+  <li>O MoneyLog Cloud <strong>é um software open source</strong>. Qualquer dúvida você pode consultar seu código-fonte, que está inteiramente <a href="https://github.com/xupisco/MoneyLog-Cloud">disponível no GitHub</a>. Na tela de login e na caixa <em>Sobre</em> do MoneyLog Cloud há um link para o commit no qual o serviço está rodando.
+  </li>
+</ul>
+
+<h2 id="termos-de-uso">Termos de Uso</h2>
+
+<p>O MoneyLog Cloud é um serviço que eu, Aurelio, hospedo em meu site e de boa vontade disponibilizo gratuitamente à todos que queiram usar.</p>
+
+<p>Não dou garantia alguma, <strong>use sob seu próprio risco</strong>.</p>
+
+<p>Se der algum problema e o MoneyLog Cloud sumir com os seus dados, eu não posso fazer nada.</p>
+
+<p>Se você não concorda com estes termos, NÃO USE o MoneyLog Cloud.</p>
+
+<h2 id="autor">Autoria</h2>
+
+<p>O MoneyLog Cloud é uma criação do <strong>Leandro Voltolino</strong> (<a href="http://twitter.com/xupisco">@xupisco</a>), que <a href="https://twitter.com/#!/xupisco/status/159600503486029824">teve a ideia original</a>, programou e continua atualizando, voluntariamente, todo o código necessário para fazer a ponte entre o MoneyLog e o Dropbox.</p>
+
+<p>Eu apenas hospedo o serviço em meu site, mas <a href="https://github.com/xupisco/MoneyLog-Cloud">o código</a> é 100% dele. Então se você gostou do MoneyLog Cloud, não esqueça de agradecer ao Leandro!</p>
+
+<h2 id="erro-500">500 Internal Server Error</h2>
+
+<p>Este erro aparece quando você desconecta o MoneyLog Cloud de seu Dropbox e tenta acessá-lo novamente. É algum cookie que ficou pelo meio do caminho.</p>
+
+<p>Basta acessar diretamente a tela de login para voltar a funcionar: <a href="http://moneylog-cloud.aurelio.net/login">http://moneylog-cloud.aurelio.net/login</a></p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+<style>
+  nav.note {
+   margin-top: 1.5em;
+   margin-bottom: 1.5em;
+  }
+  nav.note ul {
+    list-style: none;
+    margin-left: 0;
+  }
+  .nav-col {
+    float: left;
+    margin-right: 60px;
+  }
+  .nav-col.last {
+    margin-right: 0;
+  }
+</style>
+
+<nav class="note">
+  <div class="nav-col">
+    <h4>Sabores</h4>
+    <ul>
+      <li><a href="/moneylog/cloud/">MoneyLog Cloud</a></li>
+      <li><a href="/moneylog/portable/">MoneyLog Portable</a></li>
+      <li><a href="/moneylog/browser/">MoneyLog Browser</a></li>
+      <li><a href="/moneylog/beta/">MoneyLog Beta</a></li>
+    </ul>
+  </div>
+  <div class="nav-col">
+    <h4>Docs</h4>
+    <ul>
+      <li><a href="/moneylog/about/">sobre</a></li>
+      <li><a href="/moneylog/v5/">novidades v5</a> ★</li>
+      <li><a href="/moneylog/faq/">FAQ</a></li>
+      <li><a href="/moneylog/input/">lançamentos</a></li>
+      <li><a href="/moneylog/config/">configuração</a></li>
+    </ul>
+  </div>
+  <div class="nav-col last">
+    <h4>Misc</h4>
+    <ul>
+      <li><a href="/moneylog/import/">conversor</a></li>
+      <li><a href="/moneylog/donate/">doação</a> ♥</li>
+      <li><a href="/moneylog/history/">versões antigas</a></li>
+      <li><a href="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</a> ★</li>
+    </ul>
+  </div>
+  <div style="clear: both;"></div>
+</nav>
+
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=MoneyLog%20Cloud%20https://aurelio.net/moneylog/cloud/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/moneylog/cloud/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/moneylog/cloud/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

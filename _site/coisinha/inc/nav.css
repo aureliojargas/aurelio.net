@@ -1,0 +1,58 @@
+/*
+	Coisinha navigation bar
+*/
+
+
+/* Grid */
+table#nav {
+	z-index:999; /* always on top */
+	padding:0;
+}
+table#nav td {
+	vertical-align:middle;
+}
+table#nav td.spacer {
+	width:15%;
+}
+body#miguxeitor table#nav td {
+	padding:5px 0;
+}
+
+/* Icon */
+table#nav img {
+	width:24px;
+	height:24px;
+	border-width:0;
+	vertical-align:middle;
+	padding-right:5px;
+}
+
+/* Link */
+table#nav a {
+	display:block;
+	font-size:20px; /* see icon height */
+	line-height:20px;
+	margin:0;
+	padding:5px 0;
+}
+table#nav a:hover {
+	background-color:#658AB1;
+	color:white;
+}
+
+/* Site logo image */
+table#nav td.coisinha {
+/*	width:161px;*/
+	padding:0;
+}
+table#nav td.coisinha img {
+	width:150px;
+	height:150px;
+	padding:5px;
+}
+table#nav td.coisinha a {
+	padding:0;
+}
+table#nav td.coisinha a:hover {
+	background-color:black;
+}

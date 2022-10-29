@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>iPhoto SED - Smart batch changes on title &amp; comments using Unix SED and Regex</title>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="author" content="Aurelio Jargas">
+    <meta name="generator" content="Jekyll">
+
+    <link rel="stylesheet" type="text/css" href="/projects/soft4.css">
+    
+
+
+
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body id="" class="applescriptiphoto">
+
+    <div id="header" class="header">
+      <h1>iPhoto SED</h1>
+      <h2>Smart batch changes on title &amp; comments using Unix SED and Regex</h2>
+
+      <p><a rel="author" href="/about.html">by Aurelio Jargas</a></p>
+
+    </div>
+
+    <div id="body" class="body">
+
+      
+
+      
+        
+          <div id="sidebar">
+
+  <p>
+    <a href="/projects/">
+      <center>
+        <img align="middle" src="/projects/img/lemon.png" border="0" alt="">
+      </center>
+    </a>
+  </p>
+
+  <div class="box">
+    <h3>Free Softwares</h3>
+    <ul>
+      <li><a href="https://github.com/aureliojargas/clitest">clitest</a>    Unix command line tester</li></li>
+      <li><a href="/projects/emomemory/">EmoMemory</a>  Emotional Memory game</li></li>
+      <li><a href="/projects/adiumbook/">AdiumBook</a>  Sync Adium and Address Book</li></li>
+      <li><a href="/projects/css-sandbox/">CSS Sandbox</a> Explore CSS in real-time</li></li>
+      <li><a href="/projects/moneylog/">MoneyLog Experience</a>   Personal finances made real simple</li></li>
+      <li><a href="http://txt2tags.org">txt2tags</a>   Text to HTML, LaTeX, Man page, ...</li></li>
+      <li><a href="/projects/txt2regex/">txt2regex</a>  Regular expression (regex) wizard</li></li>
+      <li><a href="/projects/sedsed/">sedsed</a>     Debugger &amp; HTMLizer for SED scripts</li></li>
+      <li><a href="/projects/sedsokoban/">SedSokoban</a>    Sokoban game written in SED!</li></li>
+      <li><a href="/projects/sedarkanoid/">SedArkanoid</a>   Arkanoid game written in SED</li></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Free AppleScripts</h3>
+    <ul>
+      <li><a href="/projects/export-contacts-to-mp3-player/">Export Contacts to MP3 Player</a></li></li>
+      <li><a href="/projects/export-contacts-to-yahoo-csv/">Export Contacts to Yahoo CSV</a></li></li>
+      <li><a href="/projects/gmail-to-jabber/">Gmail to Jabber</a></li></li>
+      <li><a href="/projects/iphoto-sed/">iPhoto SED</a></li></li>
+      <li><a href="/projects/iphoto-set-sequential-title/">iPhoto Set Sequential Title</a></li></li>
+      <li><a href="/projects/itunes-find-artwork-less/">iTunes Find Artwork-less</a></li></li>
+      <li><a href="/projects/itunes-rename-disk-file/">iTunes Rename Disk File</a></li></li>
+      <li><a href="/projects/itunes-search-in-lyrics/">iTunes Search in Lyrics</a></li></li>
+      <li><a href="/projects/itunes-sed/">iTunes SED</a></li></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Other</h3>
+    <ul>
+      <li><a href="/projects/">Main Page</a></li></li>
+      <li><a href="/projects/padfiles/">PAD Files</a></li></li>
+      <li><a href="/projects/donate.html">Donate</a></li></li>
+    </ul>
+  </div>
+
+</div><!--sidebar-->
+
+        
+      
+
+      <div id="content">
+        <p>iPhoto SED brings the power of <a href="http://sed.sourceforge.net/">SED</a>'s substitute command s/// to iPhoto, so you can make smart batch changes on the pictures Title and Comments. Abuse from regular expressions, back references, modifiers, multiple commands. It's SED babe!</p>
+
+<ul>
+  <li>Free / Open Source AppleScript (Mac only)</li>
+  <li>
+    <a href="/articles/applescript-install.html">See installation instructions</a>
+  </li>
+  <li>
+    <a href="http://aureliosoft.wordpress.com/iphoto-sed/">User reviews</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/applescripts">See source code (GitHub)</a>
+  </li>
+</ul>
+
+<div class="downloadbox">
+  <table>
+    <tr>
+      <td><img class="center" src="/projects/img/icon/32/download.png" alt=""></td>
+      <td>
+        <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_SED-1.zip">Download</a>
+      </td>
+      <td><img class="center" src="/projects/img/icon/32/finder.png" title="Made for the Mac" alt=""></td>
+    </tr>
+  </table>
+</div>
+
+<h2>Road Map</h2>
+
+<h3>Step 1</h3>
+
+<p>Select the desired pictures in iPhoto and run this script.</p>
+
+<h3>Step 2</h3>
+
+<p>Now just type your nice SED command. Imagine you are on the Terminal, all the SED commands and features are available. Then press the button to apply this command to the Title or Comments fields. Done.</p>
+
+<p class="figure">
+  <img src="step-2.png">
+</p>
+
+<p>Note: The fields are already changed, but you need to click on a picture or empty area to iPhoto update the screen.</p>
+
+      </div>
+
+      
+
+      <div id="footer">
+        <p>© <a href="/about.html">Aurelio Jargas</a></p>
+      </div>
+
+    </div><!--body-->
+  </body>
+</html>

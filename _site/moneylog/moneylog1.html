@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head><title>$$$</title>
+
+<!--
+
+ENGLISH readers:
+
+- MoneyLog Experience is a one-file finances reporter.
+- Just put your own data at the end of this file.
+- Open it on the browser and have fun.
+
+- To change the interface to english change this
+  variables on the Javascript code:
+  labelNoData, labelMonthTotal, labelsTableHead
+
+-->
+
+<!--
+		      MoneyLog Experience v1
+
+
+*** ATENÇÃO - NÃO EDITE ESTE ARQUIVO NO WORD, use o Bloco de Notas ***
+
+*** Vá direto para o final do arquivo, onde estão os lançamentos ***
+
+*** Mais informações em:
+    http://aurelio.wordpress.com/2006/07/08/moneylog-experience
+
+
+Características:
+- Simples, rápido, pequeno, leve, descomplicado, tudo-em-um
+- Design simples e aparência 100% com CSS, fácil de mudar
+- Lógica 100% em Javascript conservador (compatível)
+- Chave para ligar/desligar o Saldo Mensal
+- Clique nos nomes das colunas para mudar a ordenação ou inverter
+- Filtro ativo (canto superior/direito), funciona a cada tecla digitada
+- Filtro faz a pesquisa em todas as colunas
+- Filtro e ordenação funcionam simultaneamente
+- Filtro e Saldo Mensal funcionam simultaneamente
+- Total geral na última linha (se estiver vermelho, lamento :)
+- Lançamentos com data futura ficam em destaque
+- Os dados estão sempre no final do arquivo, bem separados do restante
+- Desative (comente) linhas de dados com um # no início
+- O ordenamento é automático, não precisa adicionar em ordem cronológica
+
+
+TODO
+- button to show advanced features
+- [x] hide future
+- (x) show pos/neg/both
+- [x] negate search
+- [x] regex, icase
+- set initial/final date
+- group partials by desc when sorting by desc?
+- friendly date (31 Mar 2006, i18n, js method)?
+- show pos/neg totals in partials?
+
+
+Autor:
+  Aurelio Marinho Jargas (www.aurelio.net)
+  Jun-Jul 2006
+-->
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Vim">
+<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+<meta name="keywords" content="Personal Finance, KISS, Simple, HTML, CSS, Javascript">
+<meta name="description" content="MoneyLog Experience - Personal finances management made real simple. In one single editable text file you have all your transactions and the engine to query it. Alter with any text editor and view the reports on the browser. Made with HTML, CSS and Javascript.">
+
+<!-- 
+All the page formatting is here.
+You may change the styles if you know what you're doing.
+-->
+<style type="text/css">
+
+body { color:#555; background-color:#fff; margin:0; padding:0; border:0;
+  overflow:scroll; font-size:85%; font-family:sans-serif }
+a { text-decoration:none; font-weight:bold }
+#toolbar { color:#ddd; background-color:#444; text-align:center; z-index:1;
+  position:fixed; top:0; left:0; width:100%; height:2.5em; padding-top:.3em }
+#toolbar a { float:left; color:yellow; font-variant:small-caps; font-size:125% }
+#toolbar #filterbox { float:right; padding:0 .3em }
+#content { z-index:0; margin-top:2.5em }
+#report { text-align:center; padding:1.5em 0 }
+#footer { border-top:1px solid #ccc; padding:0 2em; color:#888; font-size:85% }
+#data { display:none }
+table { margin:0 auto; border-spacing:0; border-collapse:collapse }
+td { border:1px solid #ccc; padding:.1em 10px; font-size:85% }
+th { text-align:center; font-size:85%; cursor:pointer }
+tr.future { background-color:#eee; font-style:italic }
+tr.monthtotal { background-color:#ffc; line-height:200%; text-align:right }
+tr.monthtotal td { border-width:0; font-size:100% }
+.trigger { cursor:pointer }
+.number { text-align:right }
+.neg { color:#f33 }
+
+/* Emulating position:fixed in IE/Win 5+ */
+#toolbar { _position:absolute; _top:expression(eval(document.body.scrollTop)) }
+
+/* Remove the XX if you want to hide the verbose footer */
+#footerXX { display:none }
+
+</style>
+
+<script type="text/javascript">
+
+/*********************************************************************
+* User Config
+* -----------
+*
+* There is no need to change *anything*, but if you have special
+* needs, here is the place to customize this script.
+*
+*********************************************************************/
+// Data format
+var dataFieldSeparator = '\t';
+var dataRecordSeparator = /[\n\r]+/;
+var commentChar = '#';   // Must be at line start (column 1)
+// Screen Labels
+var labelNoData = 'Nenhum lançamento.';
+var labelMonthTotal = 'Saldo mensal: ';
+var labelsTableHead = ['Data','Valor','Descrição'];
+// Screen separators (Inside data both , and . are handled automatically)
+var centsSeparator = ',';
+var thousandSeparator = '.';
+// End of user Config
+
+var sortColIndex = 0;
+var sortColRev = false;
+var currentDate;
+
+if (!Array.prototype.push) { // IE5...
+	Array.prototype.push = function(item) {
+		this[this.length] = item; return this.length; }
+}
+if (!Number.prototype.toFixed) { // IE5...
+	Number.prototype.toFixed = function(n) { // precision hardcoded to 2
+		var k = (Math.round(this * 100) / 100).toString();
+		k += (k.indexOf('.') == -1)? '.00' : '00';
+		return k.substring(0, k.indexOf('.') + 3); }
+}
+String.prototype.strip = function() {
+	return this.replace(/^\s+/, '').replace(/\s+$/, '');
+}
+function sortCol(index) { // if the same, flip reverse state
+	sortColRev = (sortColIndex == index) ? sortColRev ^= true : false;
+	sortColIndex = index;
+	showReport();
+}
+function sortArray(a,b)  {
+	a = a[sortColIndex]; b = b[sortColIndex];
+	if (sortColIndex == 2) { a = a.toLowerCase(); b = b.toLowerCase(); }
+	try { // IE6...
+		if (a < b) { return -1; } else if (a > b) { return 1; }
+	} catch(e) { }
+	return 0;
+}
+function setCurrentDate() {
+	var z = new Date();
+	var m = z.getMonth()+1, d = z.getDate();
+	m = (m < 10) ? '0'+m : m; d = (d < 10) ? '0'+d : d;
+	currentDate = z.getFullYear() +'-'+ m +'-'+ d;
+}
+function prettyFloat(num) {
+	var myClass = (num < 0) ? 'neg' : 'pos';
+	num = num.toFixed(2).replace('.', centsSeparator);
+	while (thousandSeparator && num.search(/[0-9]{4}/) > -1) {
+		num = num.replace(/([0-9])([0-9]{3})([^0-9])/,
+			'$1'+thousandSeparator+'$2$3');
+	}
+	return '<span class="' + myClass + '">' + num + '<\/span>';
+	// Note: all html *end* tags have the / escaped to pass on validator
+}
+function getTotalsRow(total, monthTotal) {
+	var myText = (monthTotal) ? labelMonthTotal+prettyFloat(monthTotal):'';
+	var theRow = '<tr class="monthtotal"><td><\/td>';
+	theRow += '<td class="number">'+prettyFloat(total)+'<\/td>';
+	theRow += '<td>'+myText+'<\/td><\/tr>';
+	return theRow;
+}
+function toggleMonthly(elem) {
+	if (elem.tagName.toLowerCase() == 'span') { // Label clicked
+		document.getElementById('optmonthly').checked ^= true; //toggle
+	}
+	if (document.getElementById('optmonthly').checked == true) {
+		sortColIndex = 0;
+		sortColRev = false;
+	}
+	showReport();
+}
+function readData(filter) {
+	var temp, theData = new Array();
+	var rawData = document.getElementById('data'
+		).innerHTML.split(dataRecordSeparator);
+	for (var i = 0; i < rawData.length; i++) {
+		if (rawData[i].indexOf(commentChar) == 0) continue;
+		if (rawData[i].indexOf(dataFieldSeparator) == -1) continue;
+		if (filter && rawData[i].toLowerCase().indexOf(filter.toLowerCase()) == -1) continue;
+		// Normalize
+		temp = rawData[i].split(dataFieldSeparator);
+		temp[0] = temp[0] || '-';
+		temp[1] = temp[1] || '0';
+		temp[2] = temp[2] || '';
+		temp[0] = temp[0].replace(/[^0-9-]/, '');
+		temp[1] = parseFloat(temp[1].replace(
+				/[.,]([0-9][0-9])$/, '@$1').replace(
+				/[^0-9@+-]/g, '').replace('@', '.'));
+		temp[2] = temp[2].strip() || "&nbsp;";
+		theData.push(temp);
+	}
+	return theData;
+}
+function showReport() {
+	var thead, theTotal = 0, monthTotal = 0, results = [];
+	var filter = document.getElementById('filter').value;
+	var monthlyReport = document.getElementById('optmonthly');
+	var theData = readData(filter);
+	if (theData.length > 0) {
+		if (sortColIndex != 0 || sortColRev) {
+			monthlyReport.checked = false; }
+		theData.sort(sortArray);
+		if (sortColRev) { theData.reverse(); }
+		thead = '<th onClick="sortCol(0)">'+labelsTableHead[0]+'<\/th>';
+		thead+= '<th onClick="sortCol(1)">'+labelsTableHead[1]+'<\/th>';
+		thead+= '<th onClick="sortCol(2)">'+labelsTableHead[2]+'<\/th>';
+		results.push('<table>');
+		results.push('<tr>' + thead + '<\/tr>');
+
+		for (var i = 0; i < theData.length; i++) {
+			if (monthlyReport.checked && i > 0 &&
+				theData[i][0].slice(0,8) !=
+				theData[i-1][0].slice(0,8)) { //new month
+				results.push(getTotalsRow(theTotal,monthTotal));
+				monthTotal = 0;
+			}
+			if (theData[i][0] <= currentDate) {
+				results.push('<tr>');
+			} else {
+				results.push('<tr class="future">');
+			}
+			results.push('<td>'
+				+ theData[i][0] + '<\/td><td class="number">'
+				+ prettyFloat(theData[i][1]) + '<\/td><td>'
+				+ theData[i][2] + '<\/td><\/tr>');
+			theTotal += theData[i][1];
+			monthTotal += theData[i][1];
+		}
+		if (monthlyReport.checked) {
+			results.push(getTotalsRow(theTotal, monthTotal));
+		} else {
+			results.push(getTotalsRow(theTotal));
+		}
+		results.push('<\/table>');
+		results = results.join('\n');
+	}
+	else {
+		results = labelNoData;
+	}
+	document.getElementById('report').innerHTML = results;
+	}
+function init() {
+	setCurrentDate();
+//	document.getElementById('filter').focus();
+	showReport();
+}
+window.onload = init;
+</script>
+</head>
+
+<body>
+
+<div id="toolbar">
+<a href="http://aurelio.net/moneylog"
+   title="A webpage. A software.">MoneyLog Experience</a>
+
+   	<!-- Not using <form> to avoid action on Enter pressing -->
+	<div id="filterbox">
+	<input id="filter" size="15" type="text" onKeyUp="showReport(this)">
+<!-- TODO
+	<div class="plus">
+	<input id="optcase" class="trigger" type="checkbox"
+		onClick="toggleCase(this)"> 
+	<span class="trigger"
+		onClick="toggleCase(this)">Match Case</span>
+	<input id="optregex" class="trigger" type="checkbox"
+		onClick="toggleRegex(this)"> 
+	<span class="trigger"
+		onClick="toggleRegex(this)">Regex</span>
+	</div>
+-->
+	</div>
+	<input class="trigger" type="checkbox" id="optmonthly"
+		onClick="toggleMonthly(this)"> 
+	<span class="trigger"
+		onClick="toggleMonthly(this)">Mostrar Saldo Mensal</span>
+</div>
+
+<div id="content">
+
+<div id="report">
+</div>
+
+<noscript>
+<p>Sorry. No Javascript detected, it won't work.</p>
+<p>Ops! Seu navegador está sem Javascript, sem ele não vai funcionar.</p>
+</noscript>
+
+<div id="footer">
+<p><strong>MoneyLog Experience</strong> v1:
+Acompanhe suas finanças de maneira simples e prática. Descomplique!
+<a href="http://aurelio.wordpress.com/2006/07/08/moneylog-experience">Ler
+mais...</a>
+<br><strong>Instruções:</strong>
+Salve esta página, use um editor de textos para colocar seus lançamentos
+e abra no navegador.
+<br><strong>Dicas:</strong>
+Clique no título da coluna para mudar ou inverter a ordenação.
+Pesquisa "enquanto digita" no canto superior/direito.
+</p>
+</div>
+
+</div>
+
+<pre id="data">
+<!--
+*******************************************************************
+*                                                                 *
+*    (( ATENTION))  Put all your data above this box              *
+*                                                                 *
+*    Format:  YYYY-MM-DD  <tab>  Number  <tab>  Description       *
+*                                                                 *
+*    It's HTML, so remember to escape special symbols:            *
+*        < is &lt;    > is &gt;     & is &amp;                    *
+*                                                                 *
+******************************************************************* -->
+
+# Troque estes dados pelos seus, separados por TAB
+# Repito: separados por TAB, e não espaços em branco
+# A data é no formato ANO-MES-DIA
+
+2006-04-01	-100,00	Saldo inicial da conta :(
+2006-04-05	300,00	Salário
+2006-04-07	-25,00	Luz
+2006-04-07	-20,00	Água
+2006-04-15	-74,23	Mercado
+2006-04-15	- 1,99	Prestação do mouse 10/12
+2006-04-23	-39,90	Livro "Horóscopo dos Duendes"
+
+2006-05-03	-142,59	Um chuberry
+2006-05-05	300,00	Salário
+2006-05-07	-20,00	Luz
+2006-05-07	-17,80	Água
+2006-05-12	-40,00	Poster colorido 3D do Tux em Ascii Art
+2006-05-15	- 1,99	Prestação do mouse 11/12
+2006-05-29	-95,67	Mercado
+
+# Note o código &amp; para fazer o E-comercial
+2006-06-05	300,00	Salário
+2006-06-07	-29,00	Luz
+2006-06-07	-32,37	Água
+2006-06-12	-199,90	Segway usado no Mercado Livre
+2006-06-15	- 1,99	Prestação do mouse 12/12 (acabou!)
+
+# Pode usar linhas em branco e espaços indiscriminadamente
+2006-06-20	   -    10,00	    Carnê do Baú     
+
+# A ordem não importa, posso colocar aqui uma transação do mês passado
+# Ah, o sinal de mais é opcional
+2006-05-11	+ 5,00	Ganhei a aposta com o Zé

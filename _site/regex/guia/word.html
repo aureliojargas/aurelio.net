@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>MS Word 2000 - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="emacs.html">
+<link rel="next" href="linguagens.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="emacs.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="linguagens.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>MS Word 2000</h1>
+
+      <p>Finalmente, após anos de atraso, usuários do Word versão 2000 também podem usufruir dos poderes da ERs. Faltam algumas funções, uns metacaracteres são diferentes, outros são iguais, mas agem diferente, outros são mais limitados, enfim, há muitas diferenças. Normal.</p>
+
+<p>As ERs no Word são usadas nas funções <i>Localizar</i> e <i>Substituir</i>, ambas dentro do menu <i>Editar</i>. Basta selecionar a opção <i>usar caracteres curinga</i>. Aqui vai uma tabela comparativa dos metacaracteres normais e os do Word:</p>
+
+<pre>
+meta    word    mnemônico
+-----------------------------------
+.       ?       ponto
+[]      []      lista
+[^]     [!]     lista negada
+\       \       escape
+?       -       opcional
+*       -       asterisco
++       @       mais
+{,}     {;}     chaves
+^       -       circunflexo
+$       -       cifrão
+\b      &lt;&gt;        borda
+|       -       ou
+()      ()      grupo
+\N      \N      retrovisor
+
+.*       *      curinga
+</pre>
+
+<p>Então aqui vão 15 dicas valiosas se você pretende usar ERs no Word:</p>
+
+<ul>
+  <li>Alguns metacaracteres são diferentes, como <b><code>.</code></b>, <b><code>[^]</code></b>, e <b><code>+</code></b>, que são <b><code>?</code></b>, <b><code>[!]</code></b> e <b><code>@</code></b>.</li>
+  <li>A sintaxe das chaves usa ponto-e-vírgula em vez de vírgula para separar os números.</li>
+  <li>Dentro da lista, o <b><code>!</code></b>, se não for o primeiro caractere (lista negada) deve ser escapado. O traço pode ser colocado no final ou escapado também. Assim, <b><code>[abc\!-]</code></b>, <b><code>[!abc\-\!]</code></b> estão corretos.</li>
+  <li>O opcional e o asterisco não existem, e não se pode usar as chaves para simulá-los, pois elas não aceitam zero, então <b><code>{0;1}</code></b> e <b><code>{0;}</code></b> são inválidos. Assim, <b>não há</b> como dizer que algo é opcional, ou pode não existir.</li>
+  <li>O ou também não existe, então não é possível colocar alternativas simples como <b><code>sim|não</code></b></li>
+  <li>Não há âncoras de linha! É impossível procurar uma palavra no começo ou fim da linha. Há um <b><code>^|</code></b> para indicar quebra de linha, e um <b><code>^n</code></b> que indica quebra de coluna, mas ambos não funcionaram como âncora de fim de linha.</li>
+  <li>É impossível colocar um grupo dentro do outro, então <b><code>(sala ([0-9]))</code></b> é inválido.</li>
+  <li>Não temos o asterisco, mas temos <b><code>.*</code></b>. O curinga no Word é somente <b><code>*</code></b>, como para especificar arquivos: <code>*.txt</code>.</li>
+  <li>O <b><code>*</code></b> e o <b><code>@</code></b> só são gulosos quando necessário. Assim em uma palavra como <i>aaab</i>, tanto <b><code>a*</code></b> quanto <b><code>a@</code></b> casam somente <u>a</u>, enquanto <b><code>a*b</code></b> e <b><code>a@b</code></b> casam <u>aaab</u>.</li>
+  <li>E contrariando o <b><code>*</code></b> e o <b><code>@</code></b>, as chaves são sempre gulosas. Assim, na mesma palavra <i>aaab</i>, o <b><code>a{1;3}</code></b> casará <u>aaa</u>.</li>
+  <li>A borda é feita com <b><code>&lt;</code></b> e <b><code>&gt;</code></b>, então <b><code>&lt;tecla&gt;</code></b> casa somente a palavra <u>tecla</u>, e não <u>teclado</u>.</li>
+  <li>No botão <i>Especial</i> há vários metacaracteres diferentes que se pode incluir como travessão, elemento gráfico e espaço não-separável.</li>
+  <li>Na ajuda do Word (em português), diz-se que as bordas devem ser usadas com os grupos, assim: <b><code>&lt;(tecla)&gt;</code></b>, mas apenas ignore, não é necessário.</li>
+  <li>Na ajuda do Word também se diz que é impossível procurar por um espaço em branco e que isso deve ser feito na forma <b><code>{1;}</code></b>. Ignore e inclua o espaço normalmente.</li>
+  <li>E, por fim, na ajuda também em todos os exemplos de uso das chaves, os números são separados por vírgulas. Ignore e use o <b><code>;</code></b> que é o correto.</li>
+</ul>
+
+<p>Para obter mais informações no próprio Word sobre o assunto, procure na ajuda por "caracteres curinga", ou siga o roteiro:</p>
+
+<ul>
+  <li>Aperte F1.</li>
+  <li>Espere o clipe animado fazer os fru-frus.</li>
+  <li>Pesquise por: caracteres curinga.</li>
+  <li>Escolha <i>localizar e substituir texto ou formatação</i>.</li>
+  <li>Escolha <i>ajustar uma pesquisa usando caracteres curinga</i>.</li>
+  <li>Clique em <i>digite um caractere curinga</i>.</li>
+</ul>
+
+<p>ou ainda, acesse <a href="http://www.microsoft.com.br">http://www.microsoft.com.br</a>.</p>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="emacs.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="linguagens.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

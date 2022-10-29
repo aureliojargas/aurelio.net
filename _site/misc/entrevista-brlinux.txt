@@ -1,0 +1,181 @@
+
+      N E W S      -      www.br-linux.org      -      L E T T E R
+      Edição 05                                          5/03/2004
+________________________________________________________________________
+
+Nesta edição
+
+      - Apresentação
+      - Destaques
+      - Criptografia e sites seguros SSL no Apache: aprenda como ativar
+      - As 10 notícias mais lidas da semana
+      - As 10 notícias mais comentadas da semana
+      - Campanha: Doando material de software livre para as escolas
+      - Software livre e os direitos dos autores
+      - Entrevista: Aurélio Marinho Jargas
+      - Dica do Leitor - Java no Mozilla
+      - Revistas da Semana - Certificação em Linux
+      - Anuncie no br-linux.org!
+      - Expediente: Cadastramento, descadastramento, contato, copyrights...
+
+
+Apresentação
+
+       Na minha opinião esta quinta edição da newsletter é a melhor
+       até agora: a semana esteve lotada de boa notícias, dicas
+       interessantes e debates ricos e variados.
+
+[...]
+
+       E para completar tivemos uma bem-humorada e substanciosa
+       entrevista com Aurélio Jargas, autor de dois livros sobre
+       desenvolvimento em Linux e de algumas ferramentas bastante
+       populares, como o txt2tags (http://txt2tags.sourceforge.net/)
+
+       Boa leitura!
+
+       Augusto Campos, 5/3/2004
+
+[...]
+
+Entrevista: Aurélio Marinho Jargas
+
+       O Aurélio é um destes membros da comunidade Linux brasileira
+       que parece viver em um dia de 36 horas: autor de livro
+       sobre expressões regulares (publicado pela Novatec), do guia
+       SED-HOWTO, da popular ferramenta de formatação txt2tags, e até
+       de uma implementação do jogo sokoban na forma de um script 100%
+       em SED - e os programadores acostumados ao ambiente Unix do
+       departamento ao lado poderão explicar para você como deve ser
+       complicado fazer um jogo em SED. O último "empreendimento" dele
+       é uma apostila de programação em shell que já está disponível
+       mas está prestes a se transformar em um livro - mas não digam
+       pra ele que fui eu quem contou! Todos estes projetos você pode
+       encontrar no website dele, em www.aurelio.net.
+
+       E agora vamos saber o que ele pensa sobre os sites e publicações
+       de Linux no Brasil, e o que tem a dizer para quem deseja
+       publicar ou desenvolver algo na nossa comunidade. Com vocês,
+       Aurélio Jargas!
+
+       1 - Que websites, revistas e newsletters você costuma ler para
+       garantir o aprendizado contínuo e para se manter informado
+       sobre Linux?
+
+       Gosto do conhecimento "por demanda", de só aprender algo se eu
+       estiver precisando daquilo naquele momento. Assim, o ponto de
+       partida é sempre o Google e o destino é sempre uma surpresa :)
+
+       Quanto a se manter informado, sou meio alienado nessa área. Não
+       leio notícias nem acesso nenhum site regularmente. Eu realmente
+       não gosto de "navegar" na Internet. As notícias que leio são
+       links que recebo de amigos no e-mail, irc e listas de discusão.
+
+       Newsletters assino duas: a Dicas-L
+       (http://www.dicas-l.unicamp.br) e esta (http://br-linux.org).
+
+       2 - Quais as características que diferenciam um bom site ou
+       publicação sobre software livre?
+
+       Conteúdo e simplicidade. A aparência é totalmente
+       irrelevante. Quanto mais frufrus, mais difícil encontrar
+       o que se procura. No caso dos sites, Javascript, Flash,
+       GIF animado e outras distrações só atrapalham, pois sempre o
+       que estou procurando é TEXTO, informação. O site deve ter uma
+       ferramenta de busca categorizada e já ter na página principal
+       todos os links mais importantes. URLs curtas também ajudam na
+       hora de copiar e colar e passar aos amigos, de preferência que
+       cada notícia tenha um número, decorável. A possibilidade do
+       visitante colocar comentários nas notícias e artigos também
+       enriquece muito o conteúdo.
+
+       3 - Sob o seu ponto de vista, quais os diferenciais que atraem
+       o público ao teu site e aos documentos e softwares que você
+       mantém?
+
+       Boa pergunta, não sei o que estes desocupados fazem lá :) Ok,
+       sério. Quanto ao site, a "rede de amigos" é a força motriz
+       dele. Muitos colocam links pro aurelio.net em seus sites
+       pessoais e bookmarks. Também vejo ele ser citado em listas
+       de discussão e fórums online. Isso faz com que mesmo que a
+       pessoa não clique no link naquele momento, memorize o endereço
+       e depois de ver duas, três vezes, resolve acessar. O fato da
+       URL ser curta também ajuda. Cerca de 50% dos acessos são de
+       URL direta (digitada no navegador ou bookmark), outros 30% de
+       link de outros sites e o resto é Google. Quanto aos programas
+       e documentos, novamente o mérito é todo do marketing dos
+       amigos. Um descobre, usa, conta pra outro e assim vai. E tenho a
+       grande sorte de ter dois amigos de peso, que são você e o Rubens
+       Queiroz, sempre me apoiando e divulgando meus programinhas
+       no br-linux.org e na Dicas-L. Cada vez que sai algo sobre
+       eles num desses dois veículos, *chove* acessos na página. É o
+       "efeito slashdot" brazuca :) Ah! Uma ferramenta de marketing
+       bem simples e muito eficiente que uso quando lanço algo novo,
+       é colocar o link na assinatura do meu e-mail. Como recebo
+       muitos e-mails e procuro ser ativo nas listas de discussão
+       que estou inscrito, o link na assinatura é visto por muitos
+       e de quebra ainda fica guardado no histórico da lista.
+
+
+       4 - Quais os principais softwares envolvidos na publicação do
+       seu conteúdo, e por que você os escolheu?
+
+       Uso o VI para escrever textos e o txt2tags
+       (http://txt2tags.sf.net/pt/) para converter estes textos para
+       HTML. O VI é meu editor preferido que uso para tudo, então
+       a razão da escolha é porque ele é o melhor. O txt2tags foi
+       uma ferramenta que eu fiz para minha própria necessidade de
+       não querer mais editar código HTML "na mão", que se torna
+       chato depois de um tempo. No fim outras pessoas conheçaram a
+       usar, ele cresceu bastante e hoje é meu "filho preferido",
+       com usuários em toda parte. A grande vantagem de se usar o
+       conversor, é que você esquece da aparência e focaliza no que
+       importa: o conteúdo. Quando preciso de uma formatação um
+       pouco diferente, faço isso em separado usando CSS. Deixo
+       sempre no fim das páginas um link para o "fonte .t2t"
+       dela, que é o documento texto à partir do qual ela foi
+       gerada. O formato é muito simples e para começar basta
+       pegar um pronto e adaptar. Aqui está um exemplo do arquivo
+       texto: http://aurelio.net/shell/apostila/index.t2t
+       - e o convertido para HTML:
+       http://aurelio.net/shell/apostila/index.html. Atualmente meu
+       site conta com 63 páginas convertidas pelo txt2tags.
+
+       5 - O que sugere a quem pensa em montar seu próprio site ou
+       publicação sobre Linux? E a quem pensa em iniciar um projeto
+       de software livre?
+
+       Site: conteúdo é tudo. Não adianta perder dias colocando no ar
+       um PHP-nuke da vida, deixá-lo joiado e modernoso e no fim ter
+       zero de conteúdo. Primeiro escreva documentos, colete links,
+       junte todo o material e só depois de ter conteúdo o suficiente
+       para que seu site seja relevante, coloque no ar. Um escritor
+       não diagrama um livro antes de ter o conteúdo pronto, por que
+       um site deve ser diferente?
+
+       Projeto: Essa é minha área preferida e tenho muito a falar
+       sobre isso. Mas em resumo, criar um projeto em software livre
+       é como decidir ter um filho. Não é só fazer e esquecer, você
+       vai ter que cuidar dele durante muito tempo, fazê-lo crescer,
+       se desenvolver, se socializar... Lembre-se que não existe
+       software "versão final", a manutenção deve ser constante e as
+       atualizações freqüentes. Não adianta, tem que gostar mesmo. O
+       que diferenciará o seu projeto dos outros 7.426 similares que
+       existem, será a vida dele. Quanto mais ativo o desenvolvimento,
+       mais ele evoluirá e mais chances ele terá de se sobressair. Dá
+       para escrever um livro com dicas sobre o assunto. Para
+       quem quer começar, vale uma olhada nos slides da palestra
+       "Como ser um Desenvolvedor de Software Livre", disponíveis
+       em http://aurelio.net/curso/sdsl-2/desenvolvedor/
+
+       Eu respondo sempre os e-mails que recebo (às vezes isso demora
+       meses), então podem me escrever com dúvidas que ajudarei com
+       prazer. O endereço é verde (a) aurelio net.
+
+[...]
+
+(c) 2004 Augusto C. Campos (brain@br-linux.org). É dada
+permissão para usar, copiar, distribuir e/ou modificar este
+documento sob os termos da Licença de Documentação Livre GNU,
+Versão 1.2 ou qualquer versão posterior publicada pela Free
+Software Foundation, sem seções invariantes.

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Sed salva o dia novamente | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/blog/2016/02/09/sed-salva/" />
+
+
+	<link rel="prev" title="Fiz a prova POSCOMP" href="/blog/2015/10/03/poscomp/" />
+	<link rel="next" title="Aprenda expressões regulares em um dia" href="/blog/2016/03/02/aprender-regex/" />
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Sed salva o dia novamente" />
+	<meta property="og:url" content="https://aurelio.net/blog/2016/02/09/sed-salva/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/blog/2016/02/09/sed-salva/" title="Permalink" rel="bookmark">Sed salva o dia novamente</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">09/02/2016</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<p>Já perdi a conta de quantas vezes o <a href="/sed/">sed</a> me salvou.</p>
+
+<p>Ele é <a href="/blog/2009/07/03/10anos-sed/">meu comando preferido do Unix</a>. É simples, direto, minimalista, poderoso, enigmático. E claro, faz uso intensivo de <a href="/regex/">expressões regulares</a>, que é minha outra paixão.</p>
+
+<p>Pórem, esta aparente simplicidade esconde um programa muito poderoso, que pode fazer as mais complicadas edições em textos, de maneira automatizada. Precisou substituir, apagar, inserir, juntar, quebrar, inverter, duplicar um texto? Sed nele!</p>
+
+<blockquote>
+<p>Também dá pra fazer <a href="/projects/sedsokoban/">jogos com o sed</a>, se você for desocupado o suficiente ;)</p>
+</blockquote>
+
+<p>Neste sábado, precisei do sed mais uma vez.</p>
+
+<p>A 5ª edição do <a href="http://piazinho.com.br">livro Expressões Regulares</a> será lançada daqui alguns dias, e a grande novidade desta vez é que além da versão impressa, também terá a versão digital (ebook). <strong>Finalmente!</strong> 🎉</p>
+
+<p>Porém, quando fui testar o ebook que a editora gerou, todos os códigos-fonte listados no livro apareceram sem alinhamento (indent), com todas as linhas começando no canto esquerdo :(</p>
+
+<p class="image"><img src="/img/blog/ebook-align.png" alt=""></p>
+
+<p>Os fontes originais do livro estão no InDesign, que é o programa que a editora usa para a diagramação, e foram exportados para o <a href="https://en.wikipedia.org/wiki/EPUB">formato EPUB</a> para gerar o ebook. Felizmente, o formato EPUB é editável, pois nada mais é do que um arquivo ZIP com arquivos XHTML e CSS dentro, então o descompactei e fui fuçá-lo.</p>
+
+<p>Aqui está o trecho XHTML que gera o código da foto anterior:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFontePrimLin1"</span><span class="nt">&gt;</span># Cada domínio está numa subpasta em /sites<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>server {<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>    server_name ~ "^(www\.)?(?<span class="ni">&amp;lt;</span>dominio<span class="ni">&amp;gt;</span>.+)$";
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>    location / {<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>        root /sites/$dominio;<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>    }<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+<p>Como deveria ser:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;pre&gt;</span>
+# Cada domínio está numa subpasta em /sites
+server {
+    server_name ~ "^(www\.)?(?<span class="ni">&amp;lt;</span>dominio<span class="ni">&amp;gt;</span>.+)$";
+    location / {
+        root /sites/$dominio;
+    }
+}
+<span class="nt">&lt;/pre&gt;</span>
+</code></pre></div>
+<p>Por algum motivo sobrenatural, cada linha do código-fonte virou um parágrafo diferente (tag <code>&lt;p&gt;…&lt;/p&gt;</code>), em vez de tudo ser um único bloco com a tag <code>&lt;pre&gt;…&lt;/pre&gt;</code>.</p>
+
+<p>Se fosse poucos casos eu até arrumaria na mão mesmo, mas contei aqui (na verdade, o <code>grep | wc -l</code> contou) e são 340 blocos de código a serem arrumados no total. É, vai ter que rolar um sed macho...</p>
+
+<p>Vamos analisar o formato geral dos blocos de código:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">qualquer coisa antes
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFontePrimLin1"</span><span class="nt">&gt;</span>primeira linha do bloco<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>segunda linha do bloco<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>terceira linha do bloco<span class="nt">&lt;/p&gt;</span>
+...
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"_CodigoFonte1"</span><span class="nt">&gt;</span>última linha do bloco<span class="nt">&lt;/p&gt;</span>
+qualquer coisa depois
+</code></pre></div>
+<p>O maior problema aqui é identificar o início e o fim dos blocos. O início tudo bem, está identificado pela classe <code>_CodigoFontePrimLin1</code>. Já o final, não possui uma marcação especial. Eu só sei que terminou o bloco de código quando aparece uma linha que <strong>não tem</strong> a classe <code>_CodigoFonte1</code>.</p>
+
+<p>Se tivesse uma marcação clara de início e fim, seria bem fácil. O sed já suporta nativamente esta notação, basta colocar os padrões entre barras, antes dos comandos, assim:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sed</span> <span class="s1">'/início/,/fim/ { comandos; }'</span>
+</code></pre></div>
+<p>Como não posso usar isso, pois não tenho um padrão claro de término do bloco, terei que usar outra tática: identificar o início do bloco, entrar num loop que vai lendo as próximas linhas e só sair do loop quando encontrar uma linha que não faça parte do bloco. Esse é o esqueleto do comando:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sed</span> <span class="s1">'
+  /início/ {
+
+    # insere a tag &lt;pre&gt; no início
+
+    # inicia o loop
+      # remove as tags &lt;p&gt; e &lt;/p&gt;
+      # lê a próxima linha
+      # continua no loop se for uma linha do bloco
+
+    # insere a tag &lt;/pre&gt; no final
+  }
+'</span>
+</code></pre></div>
+<p>O primeiro passo é fazer o padrão que identifica o ínicio dos blocos. Já vimos que a classe <code>_CodigoFontePrimLin1</code> foi usada no início deles. Porém, vai que algum bloco está marcado errado e não usou essa classe? Bem, eu sei com certeza que todas as linhas de código possuem uma classe cujo nome começa com <code>_CodigoFonte</code>, então vou preferir usar esse padrão mais abrangente para não deixar de fora nenhum bloco.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/_CodigoFonte/ {
+
+  # insere a tag &lt;pre&gt; no início
+
+  # inicia o loop
+    # remove as tags &lt;p&gt; e &lt;/p&gt;
+    # lê a próxima linha
+    # continua no loop se for uma linha do bloco
+
+  # insere a tag &lt;/pre&gt; no final
+}
+</code></pre></div>
+<p>Agora vamos para o loop. Além de montar a estrutura do loop, o que eu tenho que fazer em todas as linhas do bloco, é apagar as tags <code>&lt;p&gt;</code> e <code>&lt;/p&gt;</code> feiosas. Farei isso em dois passos, com dois <code>s///</code> para ficar mais simples a expressão regular.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/_CodigoFonte/ {
+
+  # insere a tag &lt;pre&gt; no início
+
+  # inicia o loop
+  :meuloop
+
+    # remove as tags &lt;p&gt; e &lt;/p&gt;
+    s/^[[:blank:]]*&lt;p [^&gt;]*&gt;//
+    s/[[:blank:]]*&lt;\/p&gt;$//
+
+    # lê a próxima linha
+    n
+
+    # continua no loop se for uma linha do bloco
+    /_CodigoFonte/ b meuloop
+
+  # insere a tag &lt;/pre&gt; no final
+}
+</code></pre></div>
+<p>O loop em sed é feito marcando um ponto qualquer no script com o comando <code>:</code> seguido de um nome (no exemplo usei <code>:meuloop</code>) e depois você usa o comando <code>b</code> (de Branch), para pular para o ponto marcado (sim, é um <a href="https://en.wikipedia.org/wiki/Goto">GOTO</a>). Só perceba que meu comando <code>b</code> não é incondicional, ele só é aplicado se a linha atual tiver o padrão <code>_CodigoFonte</code>. Esse é o jeitão do sed de fazer um <code>if</code>.</p>
+
+<p>Então beleza, nesse ponto meu script já identifica os blocos de código-fonte e apaga todas as tags <code>&lt;p&gt;</code> dentro deles. As outras linhas do livro permanecem intactas. O que está faltando agora é inserir a tag <code>&lt;pre&gt;</code> no início e a <code>&lt;/pre&gt;</code> no fim do bloco. Isso é fácil com o comando <code>i</code> (de Insert). A sintaxe dele é estranha, exigindo uma quebra de linha escapada, mas funciona.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/_CodigoFonte/ {
+
+  # insere a tag &lt;pre&gt; no início
+  i \
+&lt;pre&gt;
+
+  # inicia o loop
+  :meuloop
+
+    # remove as tags &lt;p&gt; e &lt;/p&gt;
+    s/^[[:blank:]]*&lt;p [^&gt;]*&gt;//
+    s/[[:blank:]]*&lt;\/p&gt;$//
+
+    # lê a próxima linha
+    n
+
+    # continua no loop se for uma linha do bloco
+    /_CodigoFonte/ b meuloop
+
+  # insere a tag &lt;/pre&gt; no final
+  i \
+&lt;/pre&gt;
+
+}
+</code></pre></div>
+<p>E pronto!</p>
+
+<p>O sed é extremamente rápido. Num piscar de olhos ele vai editar o livro todo, arrumando todos os blocos. Aí é só compactar tudo de volta e o arquivo EPUB estará do jeito que Jesus gosta: com todos os códigos-fonte bem alinhados :)</p>
+
+<p>Claro que a “vida real” é mais dura do que isso, e tive que fazer mais alguns sed para lidar com falsos-positivos, trocar tabs por espaços, remover tags vazias de índice remissivo e fazer ajustes no arquivo CSS.</p>
+
+<p>Veja como ficou o script completo:</p>
+
+<ul>
+<li><a href="https://github.com/aureliojargas/ebook-fix/blob/master/ebook-fix.sh">https://github.com/aureliojargas/ebook-fix/blob/master/ebook-fix.sh</a></li>
+</ul>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="/blog/sumario/">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Sed%20salva%20o%20dia%20novamente%20https://aurelio.net/blog/2016/02/09/sed-salva/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/blog/2016/02/09/sed-salva/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/blog/2016/02/09/sed-salva/">LinkedIn</a>
+		</p>
+
+
+
+		<p class="article-tags">
+			Tags: 
+	<a rel="tag" href="/tags/#livro">livro</a>,
+	<a rel="tag" href="/tags/#programador">programador</a>,
+	<a rel="tag" href="/tags/#regex">regex</a>,
+	<a rel="tag" href="/tags/#shell">shell</a>
+		</p>
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+<div id="prev-next" class="bar">
+	<div class="wrapper">
+		<div class="nav-previous"><a href="/blog/2015/10/03/poscomp/" rel="prev">← Fiz a prova POSCOMP</a></div>
+		<div class="nav-next"><a href="/blog/2016/03/02/aprender-regex/" rel="next">Aprenda expressões regulares em um dia →</a></div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

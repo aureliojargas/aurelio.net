@@ -1,0 +1,8 @@
+#sedsokoban level 1 by Wispers_in_the_dark
+1
+khhhkkkhkhhjhhjjjlllllllllllkljhjllkhhhhhhhhkkkhkh
+hjjjkkhhjjjllllllllllljlkhklljhhhhhhhhkkkhhkhjjjkk
+hhjjjlllllllllllllhhhhhhhhkkkhhkkhkhjjjjjkkhhjjjll
+lllllllllkljhjlkhhhhhhhkkkhhkkkljjhhjhhjjhhjllllll
+llllllljlkhkljhhhhhhhkkkhhkhjjjkkhhjjjllllllllllll
+#200 moves

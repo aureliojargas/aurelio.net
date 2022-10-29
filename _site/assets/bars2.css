@@ -1,0 +1,25 @@
+/* Generic horizontal bars layout */
+/* by Aurelio Jargas, 2014-09-21, MIT licensed */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.bar {
+  margin: 0;
+  padding: 2em 0;
+}
+.bar > * {
+  max-width: 40em;  /* content width */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.bar-compact {
+  padding: 0;
+}
+.bar-spaced {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

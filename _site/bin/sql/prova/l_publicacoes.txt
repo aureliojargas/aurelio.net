@@ -1,0 +1,11 @@
+0|fernao capelo gaivota|fernando simao|editora ativa
+0|aprendendo C|prof. manoel|FTD
+0|aprendendo java|porf. manoel|FTD
+0|dominando o linux|fulano doente|o reily
+0|barsa|varios|barsa
+0|chapeuzinho vermelho|adriano de tal|contos encantados
+0|fisica aplicada|prof. manoel|physics
+0|mundo da musica|maestro mozart|classicos
+0|aprendendo HTML|ferdinando luiz|amazon
+0|aprendendo C++|prof.manoel|FTD
+0|matematica facil|prof. orlando|FTD

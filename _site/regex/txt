@@ -1,0 +1,355 @@
+Em 2012, o Aeroporto de Joinville registrou um
+movimento de 484742 passageiros e cerca de 10000
+pousos e decolagens. Para 2014, a tendência é de
+crescimento de 40% em pousos e decolagens, através
+da implantação do sistema de aproximação ILS. No
+dia 08/03/2004, em meio às comemorações de 153 anos
+de Joinville, a cidade ganhou um novo aeroporto.
+
+--------------------------------------------------
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+carlos:x:500:500:carlos:/home/carlos:/bin/bash
+ana:x:501:501:Ana Paula Mora:/home/ana:/bin/bash
+acs:x:502:502:Antonio Carlos:/home/acs:/bin/bash
+
+--------------------------------------------------
+
+root     0   0   root           /bin/bash
+daemon   2   2   daemon         /sbin/nologin
+mail     8   12  mail           /sbin/nologin
+operator 11  0   operator       /sbin/nologin
+ftp      14  50  FTP User       /sbin/nologin
+nobody   99  99  Nobody         /sbin/nologin
+carlos   500 500 carlos silva   /bin/bash
+ana      501 501 Ana Paula Mora /bin/bash
+acs      502 502 Antonio Carlos /bin/bash
+
+--------------------------------------------------
+
+O nome daquele pesquisador alemão é Fritz Miller.
+Ou será que o sobrenome era Mueller? Péra, acho
+que tinha um trema: Müller. Era um ou dois éles?
+Talvez era só Müler mesmo. Nem sei... Também pode
+ser Miler, Muler, Mueler... Mas nunca Mulher! :)
+
+--------------------------------------------------
+
+acao
+ACAO
+ação
+AÇÃO
+AçAo
+Açao
+AcÃo
+Acão
+aÇãO
+AçÃo
+
+--------------------------------------------------
+
+São eles: "Huguinho", "Zezinho" e "Luizinho".
+
+--------------------------------------------------
+
+____________Sim_
+mercado
+minimercado
+supermercado
+hipermercado
+
+____________Não_
+mercador
+mini
+miniminimercado
+valtermercado
+
+--------------------------------------------------
+
+____________Sim_
+mercado
+minimercado
+supermercado
+hipermercado
+mercados
+minimercados
+supermercados
+hipermercados
+
+____________Não_
+mercador
+mercadoss
+mini
+minis
+miniminimercado
+valtermercado
+
+--------------------------------------------------
+
+____________Sim_
+2ª
+3ª
+4ª
+5ª
+6ª
+2ª-feira
+3ª-feira
+4ª-feira
+5ª-feira
+6ª-feira
+segunda
+terça
+quarta
+quinta
+sexta
+segunda-feira
+terça-feira
+quarta-feira
+quinta-feira
+sexta-feira
+
+____________Não_
+oitava-feira
+sexta-
+sextafeira
+sexta--feira
+sexta-feira-feira
+sexta-sexta-feira
+-feira
+feira
+22ª
+1ª
+7ª
+2
+ª
+2-feira
+ª-feira
+2feira
+ªfeira
+aquartado
+sextavado
+
+--------------------------------------------------
+
+____________Sim_
+#000
+#123
+#90a
+#abc
+#def
+#fff
+#000000
+#890ABC
+#ABCDEF
+#ffffff
+
+____________Não_
+#1
+#12
+#1234
+#12345
+#1234567
+#ggg
+#XYZ
+
+--------------------------------------------------
+
+Prefeitura Municipal de São Paulo
+Prefeitura Municipal de Sao Paulo
+Prefeitura de São Paulo
+Prefeitura de Sao Paulo
+Prefeitura Mun. de São Paulo
+Pref. Mun. de São Paulo
+Pref. Mun. de S. P.
+Pref. de São Paulo
+Pref. de S. Paulo
+Pref. M. de São Paulo
+P. M. de Sao Paulo
+Prefeitura São Paulo
+Pref. Mun. São Paulo
+Pref. Mun. S. Paulo
+Prefeitura de S.P.
+Prefeitura de SP
+
+--------------------------------------------------
+
+9876-5432
+98765-4321
+11 9876-5432
+011 9876-5432
+0xx11 9876-5432
+0xx 11 9876-5432
++55 11 9876-5432
++55 11 98765-4321
++551198765432
++5511987654321
+
+Desafio:
+(11)9876-5432
+(11) 9876-5432
+(0xx11) 9876-5432
++55 (11) 98765-4321
+
+--------------------------------------------------
+
+____________Sim_
+00:00
+00:01
+01:00
+03:33
+09:09
+10:10
+19:45
+23:59
+
+____________Não_
+23:60
+23:99
+24:00
+29:00
+99:00
+99:99
+
+--------------------------------------------------
+
+____________Sim_
+17/02/2015 - Carnaval
+08/03/2015 - Dia Internacional da Mulher
+05/04/2015 - Páscoa
+01/05/2015 - Dia do Trabalho
+07/09/2015 - Independência do Brasil
+15/10/2015 - Dia dos Professores
+15/11/2015 - Proclamação da República
+25/12/2015 - Natal
+01/01/1900
+31/12/1999
+01/01/2000
+31/12/2099
+28/02/2016
+29/02/2016
+
+____________Não_
+00/00/0000
+30/02/2016
+32/03/2000
+31/04/2000
+01/13/2000
+01/99/2000
+99/99/9999
+
+--------------------------------------------------
+
+____________Sim_
+0
+1
+5
+9
+10
+55
+99
+100
+101
+150
+199
+200
+201
+255
+
+____________Não_
+256
+999
+1000
+2550
+1.5
+-1
+
+--------------------------------------------------
+
+____________Sim_
+0.0.0.0
+8.8.8.8
+10.0.0.1
+127.0.0.1
+192.168.255.10
+208.113.154.67
+254.199.99.9
+255.255.255.255
+
+____________Não_
+0
+0.0
+0.0.0
+0-0-0-0
+0.0.0.0.
+0.0.0.0.0
+.0.0.0.0
+0..0.0
+0...0
+...
+256.0.0.0
+999.999.999.999
+
+--------------------------------------------------
+
+____________Sim_
+fulano@example.com
+fulano@example.org
+fulano@example.com.br
+fulano42@example.com.br
+fulano.ciclano@example.com.br
+fulano_ciclano@example.com.br
+fulano-ciclano@example.com.br
+fulano+beltrano@example.com.br
+fulano@example-foo.com.br
+
+____________Não_
+fulano@example.com.foobarbaz
+fulano@example_foo.com
+fulano..ciclano@example.com
+.fulano@example.com
+fulano.@example.com
+fulano@.example.com
+fulano@example..com
+fulano@example.com.
+
+--------------------------------------------------
+
+https://aurelio.net/regex/
+
+http://regex101.com
+
+https://en.wikipedia.org/wiki/ASCII
+https://en.wikipedia.org/wiki/ISO/IEC_8859-1
+
+https://speakerdeck.com/aureliojargas/expressoes-regulares
+https://aurelio.net/curso/material/apostila-expressoes-intro.pdf
+https://www.piazinho.com.br/download/expressoes-regulares-3-tabelas.pdf
+
+--------------------------------------------------
+
+^          início da linha
+$          fim da linha
+.          qualquer caractere
+.*         qualquer coisa
+foo|bar    foo ou bar
+[abc]      a ou b ou c
+[a-z]      de a até z
+{1,42}     de 1 a 42
+{42}       exatamente 42
+{42,}      de 42 em diante
+?          {0,1} -- opcional, zero ou um
+*          {0,} -- zero ou mais vezes
++          {1,} -- uma ou mais vezes
+(…)        agrupa
+\          escapa
+??         ? versão não-gulosa
+*?         * versão não-gulosa
++?         + versão não-gulosa
+{}?        {} versão não-gulosa
+
+--------------------------------------------------

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+tmp=plot.dat
+papel=0
+
+test $papel -eq 1 && {
+	/a/grana/apostila/report.py plot papel > $tmp
+	gnuplot apostila-sh-papel.gpi
+	echo saved vendas-papel.png
+}
+
+/a/grana/apostila/report.py plot | sed -e '
+/^2004-12/a \
+2005-01 0
+/^2005-12/a \
+2006-01 0
+' | grep -v "^$(date +'%Y-%m')" | tail -n 7
+echo "Paste the recent months to 'vendas' and run it."
+
+#> $tmp
+#gnuplot apostila-sh.gpi
+#rm -f $tmp
+
+#echo saved vendas.png

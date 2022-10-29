@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Tela Preta episódio 9: Contar palavras com egrep|sort|uniq | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/blog/2016/08/09/tela-preta-9/" />
+
+
+	<link rel="prev" title="Raridade: teve ensaio da banda" href="/blog/2016/06/18/ensaio-banda/" />
+	<link rel="next" title="Serei papai \o/" href="/blog/2016/11/09/serei-papai/" />
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tela Preta episódio 9: Contar palavras com egrep|sort|uniq" />
+	<meta property="og:url" content="https://aurelio.net/blog/2016/08/09/tela-preta-9/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/blog/2016/08/09/tela-preta-9/" title="Permalink" rel="bookmark">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">09/08/2016</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<p class="warning">★ Lista de episódios da série Tela Preta:
+    
+        <a title="Datar JPG com data da foto (EXIF) em shell script (exiftool touch grep cut tr sed)" href="/blog/2010/05/15/datas-fotos-e-shell/">1</a>
+    
+        <a title="Extrair tag de arquivo XML com shell script (grep sed sort uniq expand)" href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">2</a>
+    
+        <a title="Otimizar imagens com shell script e Smush.it (find sed grep sh pbcopy)" href="/blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/">3</a>
+    
+        <a title="Extrair dados de arquivo texto com shell script (grep cut sed tr)" href="/blog/2012/04/11/o-jeito-shell-script-de-resolver-problemas-parte-2/">4</a>
+    
+        <a title="Dividir arquivo a cada N linhas com shell script (split paste sed)" href="/blog/2012/05/10/o-jeito-shell-script-de-resolver-problemas-parte-3/">5</a>
+    
+        <a title="Sorteio no Facebook com shell script (grep cut sed $RANDOM)" href="/blog/2013/05/10/video-aula-sorteio-no-facebook-usando-shell-script/">6</a>
+    
+        <a title="Editar database do WordPress com shell script, CSV→SQL (tr cut paste sed expand)" href="/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/">7</a>
+    
+        <a title="Trocar a extensão de arquivos com shell script (find sed sh)" href="/blog/2015/06/06/tela-preta-8/">8</a>
+    
+        <a title="Contar palavras com shell script (egrep sort uniq)" href="/blog/2016/08/09/tela-preta-9/">9</a>
+    
+</p>
+
+<p>Para comemorar a marca de <strong>1.000 assinantes</strong> no <a href="https://www.youtube.com/user/aureliojargas">meu canal do YouTube</a> 🎉, fiz mais um episódio da <a href="/tela-preta/">série Tela Preta</a> 🎉</p>
+
+<blockquote>
+<p><strong>Tela Preta</strong> é a minha série de vídeos nerds gravados na linha de comando do Unix, demonstrando o “jeito shell script” de resolver problemas. Todos os vídeos contam com narração e legendas em português, estão em alta resolução (HD) e são reais: sem ensaio, sem cortes, sem edição posterior. <a href="https://www.youtube.com/user/aureliojargas">Assine meu canal lá no YouTube</a> para ser notificado(a) quando sair um vídeo novo.</p>
+</blockquote>
+
+<p>Desta vez a tarefa é bem legal: contar quantas vezes cada palavra aparece em um texto, e no final, mostrar as 10 palavras mais frequentes. Assim:</p>
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">cat </span>hino-nacional.txt | comando-mágico
+<span class="go">   7 Pátria
+   7 Brasil
+   6 amada
+   5 teu
+   4 mais
+   4 Terra
+   4 Salve
+   3 que
+   3 própria
+   3 forte
+</span><span class="gp">$</span><span class="w">
+</span></code></pre></div>
+<p>Parece complicado, não? Mas você vai ver que a solução é simples e usa poucos comandos em uma única linha. E viva o Unix e suas ferramentas poderosas! 💪</p>
+
+<p>Curta <a href="https://www.youtube.com/watch?v=BYYyt6Ag3Kc&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">o vídeo</a>:</p>
+
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/BYYyt6Ag3Kc?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen></iframe></span></p>
+
+<p>A manha é usar o <code>uniq -c</code> que conta quantas vezes cada <strong>linha consecutiva</strong> aparece em um texto. Então o que eu preciso fazer, é modificar o meu texto original para que ele fique nesse formato de linhas consecutivas, ou seja:</p>
+
+<ul>
+<li>Cada palavra deve aparecer sozinha na linha (uma palavra por linha)</li>
+<li>Palavras iguais devem estar agrupadas (uma após a outra)</li>
+</ul>
+
+<p>Há várias maneiras de deixar uma palavra por linha: <code>xargs -n 1</code>, <code>sed</code>, <code>awk</code>, loop... Mas nesse vídeo fiz de um jeito diferente. Aproveitei a opção <code>-o</code> do egrep, que em vez de mostrar a linha toda no resultado, mostra somente o texto casado, <strong>um por linha</strong> em caso de múltiplos matches na mesma linha. Bingo! Aí foi só fazer uma <a href="/regex/">expressão regular</a> para casar todas as palavras do texto: <code>\w+</code>. O bom é que isso também pega as nossas palavras acentuadas do português.</p>
+
+<p>Para agrupar as palavras iguais, basta um <code>sort</code>. Com o detalhe que usei a opção <code>-f</code> para que ele ignore a diferença entre letras maiúsculas e minúsculas. Isso faz com que “Pátria” e “pátria” sejam agrupadas, assim serão identificadas como a mesma palavra no <code>uniq -c</code>. Ah sim, também precisei passar a opção <code>-i</code> no <code>uniq</code>, para que ele também trate as maiúsculas e minúsculas da mesma forma.</p>
+
+<p>Ali no meio, fiz um filtro para eliminar as palavras de uma e duas letras. Eu só queria contar palavras de três ou mais letras. Usei um <code>grep ...</code>, que exige que a linha tenha pelo menos três caracteres quaisquer, descartando as demais linhas. Lembra que <a href="/regex/guia/ponto.html">o ponto é um metacaractere</a> também? Viva as <a href="/regex/">regexes</a>!</p>
+
+<p>No final do comando, basta formatar o resultado, ordenando numericamente e mostrando somente as 10 primeiras linhas. Essa parte é facinha, né? Um <code>sort</code>, um <code>head</code> e pronto.</p>
+
+<p>Resumo dos comandos:</p>
+
+<ul>
+<li>grep, egrep — pesquisa linhas em um texto</li>
+<li>sort — ordena linhas</li>
+<li>uniq — remove/extrai/conta linhas repetidas</li>
+<li>head — mostra somente as primeiras N linhas</li>
+</ul>
+
+<p>Saiba mais sobre os tópicos do vídeo:</p>
+
+<ul>
+<li><a href="https://aurelio.net/shell/">https://aurelio.net/shell/</a></li>
+<li><a href="https://aurelio.net/regex/">https://aurelio.net/regex/</a></li>
+</ul>
+
+<p>Histórico da linha de comando:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">wc</span> <span class="nt">-w</span> /etc/passwd
+
+man <span class="nb">uniq</span> | <span class="nb">grep </span>count
+man <span class="nb">uniq</span> | <span class="nb">grep</span> <span class="nt">-A</span> 1 count
+vi numeros
+<span class="nb">cat </span>numeros | <span class="nb">uniq</span> <span class="nt">-c</span>
+<span class="nb">cat </span>numeros | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span>
+<span class="nb">cat </span>numeros | <span class="nb">sort</span>   <span class="c">#| uniq -c</span>
+<span class="nb">cat </span>numeros | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span>
+
+pbpaste
+pbpaste <span class="o">&gt;</span> hino.txt
+<span class="nb">cat </span>hino.txt
+<span class="nb">echo</span> <span class="o">&gt;&gt;</span> hino.txt
+<span class="nb">cat </span>hino.txt
+
+<span class="nb">cat </span>hino.txt | <span class="nb">uniq</span> <span class="nt">-c</span>
+<span class="nb">cat </span>hino.txt | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span>
+<span class="nb">cat </span>hino.txt | xargs <span class="nt">-n</span> 1
+<span class="nb">cat </span>hino.txt | xargs <span class="nt">-n</span> 5
+<span class="nb">cat </span>hino.txt | xargs <span class="nt">-n</span> 2
+<span class="nb">cat </span>hino.txt | xargs <span class="nt">-n</span> 1
+
+<span class="nb">echo </span>um, dois, tres.
+<span class="nb">echo </span>um, dois, tres. | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span>
+
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span>
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span>
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-n</span>
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span>
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> | <span class="nb">head
+cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> | <span class="nb">head</span> <span class="nt">-n</span> 15
+
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">grep</span> ..........   <span class="c">#| sort | uniq -c | sort -n -r | head -n 15</span>
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">grep</span> .......   <span class="c">#| sort | uniq -c | sort -n -r | head -n 15</span>
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">grep</span> ... | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> | <span class="nb">head</span> <span class="nt">-n</span> 15
+
+<span class="nb">cat </span>hino.txt | egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">grep</span> ... | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> | <span class="nb">grep </span>tria
+<span class="nb">sort</span> <span class="nt">--help</span> | <span class="nb">grep </span><span class="k">case</span>
+man <span class="nb">uniq</span> <span class="p">|</span> <span class="nb">grep</span> <span class="nt">--</span> <span class="nt">-i</span>
+<span class="nb">cat </span>hino.txt <span class="p">|</span> egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> <span class="p">|</span> <span class="nb">grep</span> ... <span class="p">|</span> <span class="nb">sort</span> <span class="nt">-f</span> <span class="p">|</span> <span class="nb">uniq</span> <span class="nt">-c</span> <span class="nt">-i</span> <span class="p">|</span> <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> <span class="p">|</span> <span class="nb">grep </span>tria
+<span class="nb">cat </span>hino.txt <span class="p">|</span> egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> <span class="p">|</span> <span class="nb">grep</span> ... <span class="p">|</span> <span class="nb">sort</span> <span class="nt">-f</span> <span class="p">|</span> <span class="nb">uniq</span> <span class="nt">-c</span> <span class="nt">-i</span> <span class="p">|</span> <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> <span class="p">|</span> <span class="nb">head
+
+</span>conta_palavras<span class="o">(</span><span class="p">)</span><span class="o">{</span> egrep <span class="nt">-o</span> <span class="s1">'\w+'</span> | <span class="nb">grep</span> ... | <span class="nb">sort</span> <span class="nt">-f</span> | <span class="nb">uniq</span> <span class="nt">-c</span> <span class="nt">-i</span> | <span class="nb">sort</span> <span class="nt">-n</span> <span class="nt">-r</span> | <span class="nb">head</span><span class="p">;</span> <span class="o">}</span>
+
+<span class="nb">cat </span>hino.txt | conta_palavras
+<span class="nb">cat</span> /etc/passwd | conta_palavras
+</code></pre></div>
+<p>Ah, usuários das <a href="https://funcoeszz.net">Funções ZZ</a> não precisam lembrar de todos esses comandos e podem usar diretamente a <a href="https://github.com/funcoeszz/funcoeszz/blob/master/zz/zzcontapalavras.sh">zzcontapalavras</a> ;)</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cat hino.txt | zzcontapalavras -i -n 10
+</code></pre></div>
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="/blog/sumario/">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Tela%20Preta%20epis%C3%B3dio%209:%20Contar%20palavras%20com%20egrep%7Csort%7Cuniq%20https://aurelio.net/blog/2016/08/09/tela-preta-9/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/blog/2016/08/09/tela-preta-9/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/blog/2016/08/09/tela-preta-9/">LinkedIn</a>
+		</p>
+
+
+
+		<p class="article-tags">
+			Tags: 
+	<a rel="tag" href="/tags/#screencast">screencast</a>,
+	<a rel="tag" href="/tags/#shell">shell</a>,
+	<a rel="tag" href="/tags/#tela-preta">tela-preta</a>
+		</p>
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+<div id="prev-next" class="bar">
+	<div class="wrapper">
+		<div class="nav-previous"><a href="/blog/2016/06/18/ensaio-banda/" rel="prev">← Raridade: teve ensaio da banda</a></div>
+		<div class="nav-next"><a href="/blog/2016/11/09/serei-papai/" rel="next">Serei papai \o/ →</a></div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

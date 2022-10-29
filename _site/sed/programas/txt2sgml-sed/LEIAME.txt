@@ -1,0 +1,73 @@
+    ATENÇÃO - ATENÇÃO - ATENÇÃO - ATENÇÃO - ATENÇÃO
+
+este conversor é antigo e foi completamente superado pelo
+txt2tags <http://txt2tags.sf.net>. prefira-o ao invés desse.
+
+-----------------------------------------------------------------
+
+INSTALAÇÃO
+
+- os arquivos essenciais são: txt2sgml.sed e txt2sgml.txt
+
+- a imagem 'no-mouse.png' é apenas ilustrativa, para mostrar como
+  inserir imagens no documento, não é essencial ao funcionamento
+
+- o arquivo de _cabecalho.sgml é um exemplo de cabeçalho externo,
+  e só é usado se o programa for modificado
+
+- o arquivo SGML é gerado pelo programa
+
+- os arquivos HTML são gerados pelo conversor sgml2html, que pode
+  ser encontrado em http://www.sgmltools.org
+
+
+detalhe: o gnu sed 3.02.80 ou superior é necessário para que o
+conversor funcione corretamente. você pode baixá-lo em:
+
+  ftp://alpha.gnu.org/gnu/sed/sed-3.02.80.tar.gz
+  http://aurelio.net/sed/sed-3.02.80.tar.gz
+
+-----------------------------------------------------------------
+
+ANÚNCIO
+
+é.   mais   um  txt2sgml  no  mundo.  filhote  das  horas  vagas.
+mas   esse   é   macho   e   rápido   porque   é   em   sed   &:)
+
+toda  a explicação da filosofia dele e instruções de uso estão no
+txt2sgml.txt  e  no  txt2sgml.html  (convertido  pelo sed macho e
+pelo sgml2html)
+
+acho  importante  o peão escrever todo o texto e só depois o cara
+se  preocupar  com a formatação, neste caso, a formatação é quase
+que  inexistente  para  o  escritor,  pois o conversor precisa de
+marcações  mínimas  e  ou  naturais/normais  para  se  encontrar.
+
+como  o  conversor  é  em  sed  e  sed  não  é  uma  linguagem de
+programação  com  firulas,  ele  não  pode  fazer mágicas, mas tá
+funcionando direitinho (acho).
+
+pelo menos serve para as minhas necessidades.
+
+-----------------------------------------------------------------
+
+HISTÓRIA MELANCÓLICA
+
+tudo  começou  porque  eu ia dar uma palestra técnica de sed, daí
+precisava  de um documento de apoio aos ouvintes, daí o TXT ficou
+grande  e  eu  quiz  escrever  um HOWTO, daí não sabia como fazer
+HOWTO,  daí  baixei  um modelo, e vi que tinha que ser escrito em
+SGML, pra depois converter pra HTML. achei o SGML muito chato pra
+ficar  marcando  todo o meu TXT, daí surgiu a idéia do conversor,
+pra  mim  não precisar marcar na mão e nem ter que lembrar o nome
+das  tags  malditas.  daí  procurei na internet pra ver se já não
+existia  alguns conversores, baixei uns 4 e todos eram palhas (um
+era  em  java,  eca!), daí como estava formatando um sed-HOWTO, e
+sed  é  massa,  decidi  fazer  o  conversor  em  sed,  e este é o
+resultado e essa é a história &:)
+
+-----------------------------------------------------------------
+
+REGISTROS
+
+20000825 verde@aurelio.net ** 1ª versão

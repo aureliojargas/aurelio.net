@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+	<title>AdiumBook Releases</title>
+	<link>http://aurelio.net/projects/adiumbook/appcast.xml</link>
+	<description>New releases of AdiumBook.</description>
+	<language>en</language>
+	<item>
+		<title>Version 1.6</title>
+		<description><![CDATA[
+		Release falso especial para o blog! :)
+		    ]]></description>
+		<pubDate>Wed, 11 Mar 2009 23:58:02 -0300</pubDate>
+		<enclosure
+			url="http://aurelio.net/projects/adiumbook/AdiumBook-1.6.zip"
+			sparkle:version="51"
+			sparkle:shortVersionString="1.6"
+			length="1549885"
+			sparkle:dsaSignature="MCwCFBKbax6VnMLdJexYz7gKcTmQBfFQAhQI5FxGCo7Stnvo9krnFjQSg8q5Bw=="
+			type="application/octet-stream"
+		/>
+	</item>
+</channel>
+</rss>

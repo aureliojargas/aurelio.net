@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Portal brasileiro de Expressões Regulares | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/regex/regex.css">
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/regex/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Expressões Regulares" />
+	<meta property="og:url" content="https://aurelio.net/regex/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/regex/" title="Permalink" rel="bookmark">Expressões Regulares</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<style>
+    .livros td {
+        vertical-align: middle;
+    }
+    .livros img {
+        height: 128px;
+        width: 128px;
+        max-width: 128px;
+    }
+    .livros td > a:first-child {
+        font-weight: bold;
+    }
+</style>
+
+<p><img style="float:right" src="/img/icon/128/er.png"></p>
+
+<p><strong>Expressão Regular:</strong> Um método formal de se especificar um padrão de texto.</p>
+
+<p><strong>Expressão Regular:</strong> Como o brinquedo LEGO, várias pecinhas diferentes, cada uma com sua característica, que juntas compõem estruturas completas e podem ser arranjadas com infinitas combinações diferentes.</p>
+
+<p><strong>Expressão Regular:</strong> Uma composição de símbolos, caracteres com funções especiais, que, agrupados entre si e com caracteres literais, formam uma seqüência, uma expressão. Essa expressão é interpretada como uma regra, que indicará sucesso se uma entrada de dados qualquer casar com essa regra, ou seja, obedecer exatamente a todas as suas condições.</p>
+
+<blockquote>
+<p>Está com tempo? <a href="guia/">Leia agora a versão online do meu livro de Expressões Regulares!</a></p>
+
+<p>Destaques:
+<a href="/regex/apostila-conhecendo-regex.pdf">Apostila de introdução</a>,
+<a href="https://www.piazinho.com.br">Livro em português</a>,
+<a href="http://regex101.com">Testador online</a>,
+<a href="/blog/2009/07/17/10anos-expressoes-regulares/">10 anos de regex</a>.</p>
+
+<p>Veja também:
+<a href="/sed/">Sed</a>,
+<a href="/vim/">Vim</a>,
+<a href="/shell/">Shell Script</a>,
+<a href="/cygwin/">Cygwin</a>,
+<a href="https://codare.aurelio.net">CODARE</a>,
+<a href="/doc/nerd.html">docz nerdz</a>.</p>
+</blockquote>
+
+<h2>Livros que escrevi</h2>
+
+<table class="livros">
+    <tr>
+        <td><a href="https://www.piazinho.com.br"><img src="/img/icon/128/livroregex5.png"></a></td>
+        <td><a href="https://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a><br><br>Livro de 248 páginas lançado em fevereiro de 2016, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Está à venda na maioria das livrarias do país, na versão impressa <b>e também em e-book</b> (livro digital). ISBN: 978-85-7522-474-8</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.piazinho.com.br/ed4/"><img src="/img/icon/128/livroregex4.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed4/">Expressões Regulares - Uma abordagem divertida (4ª edição)</a><br><br>Livro de 224 páginas lançado em novembro de 2012, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-337-6 <b>[ESGOTADO]</b></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.piazinho.com.br/ed3/"><img src="/img/icon/128/livroregex3.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed3/">Expressões Regulares - Uma abordagem divertida (3ª edição)</a><br><br>Livro de 208 páginas lançado em outubro de 2009, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-212-6 <b>[ESGOTADO]</b></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.piazinho.com.br/ed2/"><img src="/img/icon/128/livroregex2.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed2/">Expressões Regulares - Uma abordagem divertida (2ª edição)</a><br><br>Livro de 168 páginas lançado em 2008, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-173-0 <b>[ESGOTADO]</b></td>
+    </tr>
+    <tr>
+        <td><a href="https://www.piazinho.com.br/ed1/"><img src="/img/icon/128/livroregex1.png"></a></td>
+        <td><a href="https://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br><br> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
+    </tr>
+    <tr>
+        <td><a href="/regex/guia/"><img src="/img/icon/128/guiaregex.png"></a></td>
+        <td><a href="/regex/guia/">Expressões Regulares - Guia de Consulta Rápida</a> — <a href="/regex/guia/">LEIA ONLINE</a><br><br>Livro de 96 páginas lançado em 2001, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Tem o formato "de bolso", fácil de carregar. Também pode ser <a href="/regex/guia/">consultado integral e gratuitamente na Internet</a>. ISBN: 85-7522-011-X <b>[ESGOTADO]</b></td>
+    </tr>
+</table>
+
+<h2>Referências do livro</h2>
+
+<div class="nav" style="margin:3em 0; background:#fee; padding:15px 0; border:1px solid #faa;">
+  <a href="https://www.piazinho.com.br">
+    <img src="/img/icon/128/livroregex5.png" style="float:left">
+  </a>
+  <p>
+    Consulte todas as referências <a href="https://www.piazinho.com.br">do livro</a>:
+    <a href="/regex/actionscript/">ActionScript</a>,
+    <a href="/regex/apache/">Apache</a>,
+    <a href="/regex/awk/">Awk</a>,
+    <a href="/regex/bash/">Bash</a>,
+    <a href="/regex/c/">C</a>,
+    <a href="/regex/emacs/">Emacs</a>,
+    <a href="/regex/find/">find</a>,
+    <a href="/regex/googledocs/">Google Docs</a>,
+    <a href="/regex/grep/">grep</a>,
+    <a href="/regex/html5/">HTML5</a>,
+    <a href="/regex/java/">Java</a>,
+    <a href="/regex/javascript/">JavaScript</a>,
+    <a href="/regex/lua/">Lua</a>,
+    <a href="/regex/mysql/">MySQL</a>,
+    <a href="/regex/dotnet/">.NET</a>,
+    <a href="/regex/nginx/">Nginx</a>,
+    <a href="/regex/word/">Microsoft Word</a>,
+    <a href="/regex/npp/">Notepad++</a>,
+    <a href="/regex/ooo/">LibreOffice</a>,
+    <a href="/regex/oracle/">Oracle</a>,
+    <a href="/regex/perl/">Perl</a>,
+    <a href="/regex/php/">PHP</a>,
+    <a href="/regex/postgresql/">PostgreSQL</a>,
+    <a href="/regex/powershell/">PowerShell</a>,
+    <a href="/regex/python/">Python</a>,
+    <a href="/regex/ruby/">Ruby</a>,
+    <a href="/regex/sed/">sed</a>,
+    <a href="/regex/sqlite/">SQLite</a>,
+    <a href="/regex/tcl/">Tcl</a>,
+    <a href="/regex/vbscript/">VBscript</a>,
+    <a href="/regex/vim/">Vim</a>.
+  </p>
+</div>
+
+<h2>Vídeo-aulas que fiz</h2>
+
+<ul>
+<li>Como extrair e formatar texto usando Expressões Regulares (14 minutos, <a href="/blog/2011/05/05/como-extrair-e-formatar-texto-usando-expressoes-regulares/">blog</a>, <a href="https://www.youtube.com/watch?v=LZcTSKIwZqI">YouTube</a>)</li>
+</ul>
+
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/LZcTSKIwZqI?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
+
+<ul>
+<li>Expressões Regulares - Quantificadores Gulosos (8 minutos, <a href="/blog/2011/11/29/video-aula-expressoes-regulares-quantificadores-gulosos/">blog</a>, <a href="https://www.youtube.com/watch?v=0O2yQgRXnLU">YouTube</a>)</li>
+</ul>
+
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/0O2yQgRXnLU?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0"></iframe>
+
+<h2>Artigos que escrevi</h2>
+
+<ul>
+<li><p><a href="/regex/apostila-conhecendo-regex.pdf">Conhecendo as Expressões Regulares</a>
+<em>(Apostila em PDF) ★</em>
+Apostila introdutória sobre Expressões Regulares, que apresenta o conceito e explora todos os metacaracteres básicos, um a um e de maneira sequencial. A explicação se dá por exemplos que podem (devem) ser executados pelo leitor na linha de comando. Boa para quem nem faz idéia do que sejam as expressões e quer aprender a usá-las.</p></li>
+<li><p><a href="https://www.piazinho.com.br/download/expressoes-regulares-3-tabelas.pdf">Resumo das Expressões Regulares</a>
+<em>(cheat sheet, PDF) ★</em>
+Várias tabelas resumindo os metacaracteres, escapes, classes POSIX, precedência e outros detalhes das Expressões Regulares. Tudo numa única página A4, pronta para imprimir.</p></li>
+<li><p><a href="/blog/2014/12/21/regex-sql/">Expressões regulares em bancos de dados SQL</a>
+Artigo que explica como usar as expressões nos principais bancos de dados: Oracle, PostgreSQL, MySQL, MariaDB e SQLite.</p></li>
+<li><p><a href="/blog/2011/02/10/em-regex-nem-sempre-menos-e-mais/">Em regex, nem sempre menos é mais</a>
+Artigo que demonstra porque é importante fazer uma expressão legível, mesmo que não seja a versão mais eficiente.</p></li>
+<li><p><a href="/blog/2006/09/17/caractere-curinga/">Escreva corretamente: CaracterE cUringa</a>
+Não diga &quot;coringa&quot; quando o certo é curinga.<br>
+Não diga &quot;caracter&quot;, &quot;carácter&quot; ou &quot;caráter&quot; quando o certo é caractere.</p></li>
+<li><p><a href="/blog/2009/07/17/10anos-expressoes-regulares/">Meus 10 anos de Expressões Regulares</a>
+Texto recheado de nostalgia e reflexões, que conta os meus 10 anos de Expressões Regulares. Como fui conhecê-las, como foi o aprendizado, o programa txt2regex e como acabei escrevendo um livro (mais de um!) sobre o assunto.</p></li>
+<li><p><a href="/curso/conectiva/conectiva-er-prompt.html">Prompt-doc: Expressões Regulares - Introdução</a>
+Documento que registra o histórico da linha de comando de uma palestra sobre Expressões Regulares ministrada pelo Aurelio para os funcionários da Conectiva sobre em dezembro de 2003. Mostra um por um todos os metacaracteres e suas funções.</p></li>
+<li><p><a href="/regex/rdl-regex-1.html">Expressões Regulares - Como &quot;farejar&quot; um texto e aumentar a produtividade</a> <em>Artigo publicado na Revista do Linux #3</em>
+Meu primeiro artigo sobre Expressões Regulares, escrito em 2000. É uma introdução ao assunto, explicando o básico e demonstrando com exemplos o uso de quatro metacaracteres: . + * []</p></li>
+<li><p><a href="/regex/rdl-regex-2.html">Expressões Regulares II - Conhecendo as ferramentas complementares</a> <em>Artigo publicado na Revista do Linux #7</em>
+Meu segundo artigo sobre Expressões Regulares, escrito em 2000. É uma continuação do artigo introdutório, agora apresentando conceitos mais avançados como as chaves, o opcional, os grupos e retrovisores. Também conta com uma tabela de exemplos.</p></li>
+<li><p><a href="/regex/casar-ip.html">Como casar um número IP (regex)</a>
+Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular para casar um número IP válido.</p></li>
+</ul>
+
+<h2>Grupo no Telegram</h2>
+
+<p>Quer trocar uma ideia em português sobre regex? Junte-se a nós no <a href="https://telegram.me/ExpressoesRegulares">https://telegram.me/ExpressoesRegulares</a></p>
+
+<h2>Lista de discussão</h2>
+
+<p>Para conversar com outros amiguinhos que também gostam das expressões, assine a lista <a href="http://br.groups.yahoo.com/group/sed-br/">sed-br</a>. Lá o papo é em português, sobre <a href="/sed/">Sed</a> e Expressões Regulares.</p>
+
+<h2>Links em português</h2>
+
+<h3>Conceitual</h3>
+
+<ul>
+<li><p><a href="http://pt.wikipedia.org/wiki/Express%C3%A3o_regular">Wikipédia - Expressões Regulares</a>
+Artigo da Wikipédia sobre as Expressões Regulares, bem completo e cheio de links para estudo.</p></li>
+<li><p><a href="http://linuxfocus.berlios.de/Portugues/July1998/article53.html">Expressões Regulares</a> <em>por Guido Socher</em>
+Artigo de leitura rápida, aconselhável a quem é totalmente leigo no
+assunto e quer ter uma visão geral.</p></li>
+<li><p><a href="https://giovannireisnunes.wordpress.com/2017/07/07/expressoes-regulares-o-basico-parte-1/">Expressões regulares, o básico</a> <em>por Giovanni Nunes</em>
+Excelente tutorial, lotado de exemplos, que ensina passo a passo o básico das expressões, usando o egrep na linha de comando.</p></li>
+<li><p><a href="http://66.102.11.104/search?q=cache:bNk224By3ycJ:ia.ucpel.tche.br/%7Elpalazzo/Aulas/LFA/LFA-T02.doc+express%C3%B5es+regulares&amp;hl=en">Expressões Regulares e Gramáticas Regulares</a> <em>por Prof. Luiz A M Palazzo</em>
+Abordagem teórico-acadêmica sobre Expressões Regulares e autômatos.</p></li>
+<li><p><a href="http://www.mat.ua.pt/rosalia/cadeiras/TC/TC3.pdf">Expressões Regulares e Linguagens Regulares</a> <em>por Profa. Rosália Rodrigues</em>
+Abordagem teórico-acadêmica sobre Expressões Regulares e autômatos.
+Documento bem completo e explicativo, de 31 páginas.</p></li>
+<li><p><a href="http://paginas.fe.up.pt/%7Ejvv/RE/html/RE_ficheiros/v3_document.html">Expressões Regulares - Apresentação de Slides</a> <em>por Isidro Vila Verde</em>
+Uma apresentação com 10 slides sobre Expressões Regulares, com muita ênfase em
+exemplos, sendo bem didático.</p></li>
+<li><p><a href="http://blog.ricbit.com/2010/07/aritmetica-com-regexp.html">Aritmética com Regexp</a> <em>por Ricardo Bittencourt</em>
+Que tal brincar de fazer contas de + - / * com regex? Pior que dá :)</p></li>
+<li><p><a href="http://juanlopes.net/devday2013/">O que há de errado com expressões regulares?</a> <em>por Juan Lopes</em>
+Palestra que demonstra falhas de segurança nas implementações modernas de expressões regulares. Acompanhe <a href="http://juanlopes.net/devday2013/">os slides</a> e <a href="https://www.youtube.com/watch?v=GAq-6NAtVVQ">o vídeo</a>.</p></li>
+</ul>
+
+<h3>Programação</h3>
+
+<ul>
+<li><p><a href="http://www.thobias.org/doc/er_c.html">Usando Expressões Regulares na Linguagem C</a> <em>por Thobias Salazar Trevisan</em>
+Um excelente tutorial do Thobias, explicando em detalhes com usar as
+Expressões Regulares em C, com vários exemplos de código coloridos.</p></li>
+<li><p><a href="http://www.gazetadolinux.com/pr/lg/issue55/tindale.html">Expressões Regulares em C - Linux Gazette</a> <em>traduzido por Fabio Utzig</em>
+Artigo traduzido do Linux Gazette que explora a biblioteca de Expressões Regulares
+fornecida com a GNU libc.</p></li>
+<li><p><a href="http://www.lobo.eti.br/?g_id=10&amp;article=1">Perl - Expressões Regulares</a> <em>por Ednardo Lobo</em>
+Artigo que ensina e demonstra através de exemplos como utilizar as
+expressões em Perl.</p></li>
+<li><p><a href="http://lucasdecastro.freezope.org/blog/expressoes_regulares_com_java.html">Expressões Regulares com Java</a> <em>por Lucas de Castro</em>
+Tutorial com introdução às expressões e bastante exemplos da classe
+String e do pacote java.util.regex.</p></li>
+<li><p><a href="http://www.lazydog.hpg.ig.com.br/regexp.html">APIs de Expressões Regulares para Java</a> <em>por LazyDog</em>
+Um comparativo explicando as características das sete (7!!!) APIs de
+Expressões Regulares disponíveis para programadores Java.</p></li>
+<li><p><a href="http://forum.wmonline.com.br/index.php?showtopic=115803">PHP - Validação E Exibição De Ceps</a> <em>por Klaus Roberto de Paiva</em>
+Um tutorial de como usar as funções de Expressões Regulares no PHP,
+focado na validação de CEP.</p></li>
+<li><p><a href="http://php-portuguese.promagna.com/ref.regex.html">Expressões Regulares no PHP</a>
+Portal para as funções que lidam com Expressões Regulares na linguagem PHP.</p></li>
+<li><p><a href="http://www.mhavila.com.br/topicos/web/valform.html">Validação de formulários HTML com JavaScript</a> <em>por Márcio d&#39;Ávila</em>
+Documento com exemplos de validação de formulários na linguagem
+JavaScript, utilizando Expressões Regulares. Muito bem escrito, explicando em
+detalhes as expressões utilizadas.</p></li>
+<li><p><a href="http://rufspace.com/artigo/regex-javascript/">Expressões Regulares em JavaScript</a> <em>por Fellipe</em>
+Partindo um caso específico de validação de código alfanumérico,
+apresenta as Expressões Regulares e mostra como implementar o código em JavaScript. O
+artigo está bem fácil de entender, recomendado para novatos no
+assunto.</p></li>
+</ul>
+
+<h3>Editores de Texto</h3>
+
+<ul>
+<li><p><a href="http://docs.kde.org/development/pt_BR/kdesdk/kate/regular-expressions.html">Expressões Regulares - Apêndice do editor Kate</a> <em>traduzido por Lisiane Sztoltz</em>
+Documentação detalhada sobre Expressões Regulares, apresentando o conceito e os
+metacaracteres. É o apêndice B da documentação do editor Kate, do
+KDE.</p></li>
+<li><p><a href="http://www.pcs.usp.br/%7Ejkinoshi/bs/b001114.html">Uso de expressões regulares no emacs</a> <em>por Jorge Kinoshita</em>
+Documento bem rápido, que ensina como usar Expressões Regulares no editor de textos
+Emacs.</p></li>
+</ul>
+
+<h3>Banco de dados</h3>
+
+<ul>
+<li><p><a href="/blog/2014/12/21/regex-sql/">Expressões regulares em bancos de dados SQL</a>
+Artigo que explica como usar as expressões nos principais bancos de dados: Oracle, PostgreSQL, MySQL, MariaDB e SQLite.</p></li>
+<li><p><a href="http://dev.mysql.com/doc/mysql/pt/Regexp.html">Sintaxe de Expressões Regulares do MySQL</a>
+O banco de dados MySQL tem suporte a Expressões Regulares em suas consultas trazendo
+o poder dos metacaracteres ao armazenamento massivo. Esta página
+descreve como usá-las.</p></li>
+<li><p><a href="http://pgdocptbr.sourceforge.net/pg80/functions-matching.html#FUNCTIONS-POSIX-REGEXP">Expressões Regulares no PostgreSQL</a>
+O banco de dados PostgreSQL também possui suporte a Expressões Regulares. Essa página
+detalha como utilizá-las.</p></li>
+</ul>
+
+<h3>Outros</h3>
+
+<ul>
+<li><p><a href="http://tools.lymas.com.br/regexp_br.php">Testador de Expressão Regular</a> <em>por João Lyma</em>
+Testador online de expressões regulares. Digite os textos de exemplo,
+digite a ER e o site dirá se casou ou não. É um grep :)</p></li>
+<li><p><a href="http://olinux.uol.com.br/artigos/304/1.html">Curso de Shell - Grep e Expressões Regulares</a> <em>por Alex Borro</em>
+Aula V do curso de Shell, que mostra como usar Expressões Regulares com o aplicativo
+UNIX grep.</p></li>
+</ul>
+
+<h3>Desaparecidos</h3>
+
+<p>Estes links um dia existiram, mas agora sumiram da Internet. Se você é o autor de um deles, ou sabe onde está a sua nova localização, me avise! Meus contatos estão lá no rodapé desta página. Obrigado.</p>
+
+<ul>
+<li><p><a href="http://latt.if.usp.br/fma215/galeria/scarano/aula.html">Trabalho de FMA 215 - Expressões Regulares</a> <em>por Sergio Scarano Jr</em></p></li>
+<li><p><a href="http://www.lcc.ufrn.br/%7Eiuri/re/re.html">Documentação sobre Expressões Regulares em Perl</a> <em>por Iúri Gomes Diniz</em></p></li>
+<li><p><a href="http://www.numaboa.com.br/informatica/tutor/linguagens/perlExprReg.php">Tutorial de Expressões Regulares em Perl</a> <em>por Aldeia NumaBoa</em></p></li>
+<li><p><a href="http://acdc.linguateca.pt/acesso/expr_regulares.html">Exemplos de expressões regulares em Perl</a> <em>por Linguateca</em></p></li>
+<li><p><a href="http://www.guj.com.br/user.article.get.chain?page=1&amp;article.id=1">Expressões Regulares em Java - java.util.regex</a> <em>por Paulo Silveira</em></p></li>
+<li><p><a href="http://www.javafree.com.br/forum/viewtopic.php?t=5090">Introdução a Expressões Regulares com Java</a> <em>por Tadeu R. A. Santos</em></p></li>
+<li><p><a href="http://blog.erikafocke.com.br/2007/06/06/verificacao-de-formularios-em-php-regex/">PHP - Utilizando Regex para verificação de campos de formulário</a> <em>por Erika Focke</em></p></li>
+<li><p><a href="http://www.htmlstaff.org/php/php22.php">Expressões regulares em PHP</a> <em>por Roberto Bertó</em></p></li>
+<li><p><a href="http://www.linhadecodigo.com.br/artigos.asp?id_ac=328&amp;pag=1">JavaScript - Expressões Regulares</a> <em>por Manoel M. Alves S. Jr</em></p></li>
+</ul>
+
+<h2>Testadores online</h2>
+
+<ul>
+<li><p><a href="https://regex101.com">Regex101</a> ★
+Atualiza enquanto digita,
+destaca texto casado,
+mostra o conteúdo dos grupos,
+faz substituição de textos,
+referência rápida,
+sintaxes JavaScript, Python e Perl.</p></li>
+<li><p><a href="http://regexpal.com">RegexPal</a> ★
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+sintaxe JavaScript.</p></li>
+<li><p><a href="https://www.debuggex.com">Debuggex</a> ★
+Cria um gráfico de sua expressão regular.
+Bom para entender como sua expressão é interpretada pelo computador.
+Sintaxe JavaScript, Python e PCRE.</p></li>
+<li><p><a href="http://alessandrosantos.com.br/lab/er/">Testador de Expressões Regulares</a> ★
+Interface em português,
+atualiza enquanto digita,
+mostra se casou ou não usando cores,
+sintaxe JavaScript.</p></li>
+<li><p><a href="http://www.rubular.com">Rubular</a> ★
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+sintaxe Ruby.</p></li>
+<li><p><a href="http://gskinner.com/RegExr/">RegExr</a>
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+precisa do Flash Player 9,
+sintaxe ActionScript.</p></li>
+<li><p><a href="http://regex.powertoy.org/">Regex Powertoy</a> ★
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+sintaxe Perl e Java.</p></li>
+<li><p><a href="http://regex.larsolavtorvik.com/">regex</a> ★
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+mostra código pronto da linguagem,
+sintaxe JavaScript, Perl, Python e PHP.</p></li>
+<li><p><a href="http://gethifi.com/regexp/">HiFi RegExp Tool</a> ★
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+exemplo de código em JavaScript,
+sintaxe JavaScript.</p></li>
+<li><p><a href="http://cuneytyilmaz.com/prog/jrx/">JRX</a>
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+sintaxe JavaScript.</p></li>
+<li><p><a href="http://www.nregex.com/nregex/default.aspx">Nregex</a>
+Atualiza enquanto digita,
+destaca texto casado,
+referência rápida,
+sintaxe C#.NET.</p></li>
+<li><p><a href="http://zanstra.com/my/RegexMate/v0-1/RegexMate.html">Regex Mate</a>
+Atualiza com botão (estilo <strong>console</strong>),
+sintaxe JavaScript.</p></li>
+<li><p><a href="http://www.myregextester.com/index.php">My Regex Tester</a>
+Destaca texto casado,
+<strong>explica</strong> a expressão,
+<strong>otimiza</strong> a expressão,
+mostra código pronto da linguagem,
+sintaxe JavaScript, Java, VB.NET, C#.NET, PHP e ASP.</p></li>
+<li><p><a href="http://regexper.com">Regexper</a> ★
+Cria diagramas que descrevem o funcionamento de uma expressão regular.</p></li>
+<li><p><a href="http://www.txt2re.com">Regular Expression Generator</a> ★
+Gerador de Expressões Regulares. Você digita o texto que quer casar e ele <strong>gera um programa</strong> pronto para extrair este texto, em várias linguagens, entre elas Python, Perl, PHP, Ruby, Java e javaScript.</p></li>
+<li><p><a href="http://www.myezapp.com/apps/dev/regexp/show.ws">Regular Expression Analyzer</a> ★
+Analisador de expressões, que gera uma <strong>árvore</strong> de sua estrutura, ficando fácil entendê-la. Sintaxe Java, JavaScript e Perl.</p></li>
+<li><p><a href="http://osteele.com/tools/reanimator/">reAnimator</a>
+Cria um gráfico (autômatos finitos) de sua expressão regular. Bom para entender como sua expressão é interpretada pelo computador.</p></li>
+<li><p><a href="https://leaverou.github.io/regexplained/">Regexplained</a>
+Fontes gigantescas, design estiloso. Bom para testes rápidos com strings pequenas.</p></li>
+<li><p><a href="http://regexone.com/">RegexOne</a> ★
+Tutorial com exemplos interativos que a cada lição vai te ensinando um pouco sobre as expressões.</p></li>
+</ul>
+
+<h2>Documentação oficial</h2>
+
+<ul>
+<li><a href="http://msdn2.microsoft.com/en-us/library/hs600312.aspx">.NET Framework</a></li>
+<li><a href="http://www.adobe.com/go/AS3_regex_overview">ActionScript</a></li>
+<li><a href="http://pcre.org/pcre.txt">Apache HTTP Server</a></li>
+<li><a href="http://www.gnu.org/manual/gawk/html_node/Regexp.html">AWK</a></li>
+<li><a href="http://www.gnu.org/software/bash/manual/bashref.html">Bash Shell</a></li>
+<li><a href="http://livedocs.adobe.com/coldfusion/8/regexp_01.html">ColdFusion</a></li>
+<li><a href="http://www.google.com/support/analytics/bin/answer.py?hl=en&amp;answer=55582">Google Analytics</a></li>
+<li><a href="http://www.google.com/help/faq_codesearch.html#regexp">Google Code Search</a></li>
+<li><a href="http://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html">Grep</a></li>
+<li><a href="http://java.sun.com/docs/books/tutorial/essential/regex/">Java</a></li>
+<li><a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Regular_Expressions">JavaScript</a></li>
+<li><a href="http://technet.microsoft.com/en-us/library/aa997187(EXCHG.80).aspx">Microsoft Exchange Server</a></li>
+<li><a href="http://dev.mysql.com/doc/refman/5.0/en/regexp.html">MySQL</a></li>
+<li><a href="http://wiki.services.openoffice.org/wiki/Documentation/How_Tos/Regular_Expressions_in_Writer">OpenOffice.org</a></li>
+<li><a href="http://download.oracle.com/docs/cd/B28359_01/appdev.111/b28424/adfns_regexp.htm">Oracle Database</a></li>
+<li><a href="http://perldoc.perl.org/perlre.html">Perl</a></li>
+<li><a href="http://php.net/pcre">PHP (PCRE)</a></li>
+<li><a href="http://php.net/regex">PHP (POSIX)</a></li>
+<li><a href="http://www.postgresql.org/docs/8.1/static/functions-matching.html">PostgreSQL</a></li>
+<li><a href="http://docs.python.org/lib/module-re.html">Python</a></li>
+<li><a href="http://www.ruby-doc.org/core/classes/Regexp.html">Ruby</a></li>
+<li><a href="http://wiki.tcl.tk/396">Tcl</a></li>
+<li><a href="http://www.microsoft.com/technet/technetmag/issues/2007/11/PowerShell/">Windows PowerShell</a></li>
+<li><a href="http://pipes.yahoo.com/pipes/docs?doc=operators#Regex">Yahoo! Pipes</a></li>
+</ul>
+
+<h2>Mais informações (inglês)</h2>
+
+<ul>
+<li><p><a href="http://en.wikipedia.org/wiki/Regular_expression">Wikipedia: Regular Expression</a>
+A página sobre as expressões na Wikipedia está bem completa, com história, detalhes técnicos e vários links para mais informações. É um ótimo ponto inicial de pesquisa sobre o assunto.</p></li>
+<li><p><a href="http://regexone.com">RegexOne Interactive Tutorial</a>
+Um tutorial interativo que ensina deixa que o aluno pratique ao final de cada lição.</p></li>
+<li><p><a href="http://qntm.org/files/re/re.html">Learn regular expressions in about 55 minutes</a>
+Excelente tutorial que segue progressivamente, explicando de maneira bem concisa os conceitos. Bom para quem já usa regex, mas de maneira bem superficial, sem entender direito como funciona.</p></li>
+<li><p><a href="http://www.regular-expressions.info">Regular-Expressions.info</a>
+Site dedicado exclusivamente a regrex. É feio, esquisito, lotado de anúncios. Mas o conteúdo vale a pena. Saia clicando nos links dele e se perca em dezenas de tutoriais e artigos que explicam vários conceitos das expressões, e como usá-las em diferentes linguagens e ferramentas.</p></li>
+<li><p><a href="http://www.rexegg.com">RexEgg</a>
+Outro site dedicado a regex. Este é mais moderninho e tenta ser engraçadão. Acho ele meio bagunçado demais, mas tem muitas dicas preciosas se garimpar.</p></li>
+<li><p><a href="http://regex.info/">Mastering Regular Expressions</a>
+&quot;A Bíblia&quot; de Expressões Regulares, o livro definitivo. Conteúdo abrangente e detalhado, info bem fundo no conceito e implementação. Leitura altamente recomendada para aqueles que querem se tornar gurus nas expressões.</p></li>
+<li><p><a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0764574892.html">Beginning Regular Expressions</a>
+Livro novo lançado em 2005 que pretende ser menos focado em UNIX/Perl do que &quot;A Bíblia&quot;. O interessante é que ele usa o OpenOffice para testar as expressões, sendo mais amigável ao leitor.</p></li>
+<li><p><a href="http://rosettacode.org/wiki/Regular_expressions">Rosetta Code — Regular expressions</a>
+Para programadores, esta página é uma coletânea de códigos em várias linguagens, mostrando como casar e substituir um texto.</p></li>
+<li><p><a href="http://www.regexlib.com">Regular Expression Library</a>
+Centenas de Expressões Regulares prontas para usar, enviadas por colaboradores. Tem explicação das ER, porcentagem de acerto e testes. Tudo uma ferramenta de busca para encontrar as expressões. Vale a visita!</p></li>
+<li><p><a href="http://www.weitz.de/regex-coach/">The Regex Coach</a>
+Programa que auxilia na criação e testes de Expressões Regulares. Para Linux, BSD e Windows.</p></li>
+<li><p><a href="http://regulator.sourceforge.net/">The Regulator</a>
+Programa que auxilia na criação e testes de Expressões Regulares. Somente para Windows.</p></li>
+<li><p><a href="http://www.blackie.dk/KDE/KRegExpEditor/">kregexpeditor</a>
+Programa que auxilia na criação de Expressões Regulares. Faz parte do KDE, no Linux.</p></li>
+<li><p><a href="http://kodos.sourceforge.net/">Kodos</a>
+Programa gráfico em Python. Rápido e leve, mesmo para buscas e substituições em textos extensos, além de ter um dicionário para consultas rápidas.</p></li>
+</ul>
+
+<h2>Avançado</h2>
+
+<ul>
+<li><p><a href="http://stackoverflow.com/questions/22937618/reference-what-does-this-regex-mean/22944075#22944075">The Stack Overflow Regular Expressions FAQ</a>
+FAQ com trocentos links para artigos explicativos (e às vezes densos) sobre o assunto. Se você começar no sábado, ainda vai estar lendo no domingo à noite… Então prepare-se para uma grande viagem. Não estou dizeno que vai ser fácil ;)</p></li>
+<li><p><a href="http://perl.plover.com/Regex/article.html">How Regexes Work</a>
+Texto denso e técnico que ensina a implementar um parser de Expressões Regulares. Leia sob sua conta e risco ;)</p></li>
+<li><p><a href="https://swtch.com/%7Ersc/regexp/">Implementing Regular Expressions</a>
+Série de quatro artigos explode-cabeça, altamente acadêmicos, para aqueles meganerds que querem realmente mergulhar no assunto e aprender detalhes de como implementar um motor de regex, diferenças entre tipos de motores, implementações históricas e tudo mais. Reserve HORAS de sua vida, você será dragado, sem chance de escapar. Escritos por Russ Cox.</p></li>
+<li><p><a href="http://nikic.github.io/2012/06/15/The-true-power-of-regular-expressions.html">The true power of regular expressions</a>
+Para os acadêmicos de plantão: hierarquia de Chomsky para os tipos de linguagens, e a tentativa de usar regex nelas. Artigo denso, porém muito bem escrito e explicado.</p></li>
+<li><p><a href="http://www.regular-expressions.info/email.html">Como casar um endereço de email</a>
+Parece fácil, mas fazer uma regex para casar endereços de email não é uma tarefa trivial. O que é considerado um email &quot;válido&quot;, varia, pois o padrão (RFC 5322) aceita vários formatos não utilizados normalmente, então você é quem tem que decidir quais formatos tua regex suportará. Este artigo explica sobre este dilema e dá a dica mais acertada: faça uma regex simples e mande um email de confirmação para validá-lo.</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/ReDoS">Regular expression denial of service (ReDoS)</a>
+Você sabia que há algumas expressões que são meticulosamente preparadas para ter seu processamento bem complexo e demorado, e podem ser usadas para fazer Denial Of Service em servidores?</p></li>
+<li><p><a href="http://www.regular-expressions.info/catastrophic.html">Catastrophic Backtracking</a>
+Relacionado com o item anterior, aqui está uma explicação de como determinadas expressões podem ser muito complexas para processar devido ao funcionamento dos motores modernos, com backtracking.</p></li>
+</ul>
+
+<h2>Divirta-se!</h2>
+
+<h3>Nerdson/Hacktoon</h3>
+
+<p class="image"><a href="http://hacktoon.com/grandware/courses/regex/"><img src="/regex/img/nerdson93.png" alt=""></a></p>
+
+<p>Aproveite para <a href="http://hacktoon.com/grandware/courses/regex/">visitar o site do Nerdson</a> e ler o artigo introdutório que acompanha a tirinha original. É de fácil entendimento e mostra vários exemplos de uso das Expressões Regulares.</p>
+
+<h3>xkcd</h3>
+
+<p class="image"><a href="http://xkcd.com/208/"><img src="/regex/img/xkcd.png" alt=""></a></p>
+
+<p class="image"><a href="https://xkcd.com/1313/"><img src="/regex/img/xkcd-regex-golf.png" alt=""></a></p>
+
+<h3>Autor desconhecido</h3>
+
+<p class="image"><img src="/regex/img/mastering.jpg" alt=""></p>
+
+<h3>Regex-cruzadas</h3>
+
+<p>Até onde sei, essa ideia de fazer palavras cruzadas com regex apareceu primeiro no <a href="https://web.mit.edu/puzzle/www/2013/coinheist.com/rubik/a_regular_crossword/">MIT Mystery Hunt de 2013</a>. Era <a href="https://web.mit.edu/puzzle/www/2013/coinheist.com/rubik/a_regular_crossword/grid.pdf">um arquivo PDF</a>, bom pra imprimir e rabiscar, mas bem chato de preencher no computador. Na época, essa foi minha solução pra ele:</p>
+
+<p class="image"><img src="/regex/img/regex-crosswords.png" alt=""></p>
+
+<p>Melhor mesmo é usar <a href="http://jimbly.github.io/regex-crossword/">a versão JavaScript</a>, que é bem mais prática de preencher e sinaliza com cores quando você acerta uma fileira. Resolvi me divertir com ela em maio de 2021 e dessa vez foi mais rápido, levei 1h30:</p>
+
+<p class="image"><a href="http://jimbly.github.io/regex-crossword/"><img src="/regex/img/regex-crosswords-2021.png" alt=""></a></p>
+
+<p>Mas não precisa comecar por esse, que é muito grande e complicado. Tem um site inteiramente dedicado a gerar palavras cruzadas com regex, e você pode escolher a dificuldade: <a href="http://regexcrossword.com">http://regexcrossword.com</a></p>
+
+<p>E já que estamos aqui, que tal uma explicação de como fazer <a href="http://herman.asia/solving-regex-crosswords-using-go">um programa que resolve estes quebras-cabeças</a>?</p>
+
+<h3>Outros</h3>
+
+<ul>
+<li><p><a href="http://stackoverflow.com/a/1732454/1623438">You can&#39;t parse (X)HTML with regex</a>
+Resposta muito criativa (e trabalhosa!) sobre a velha pergunta de fazer parsing de HTML com regex.</p></li>
+<li><p><a href="http://regex.info/blog/2006-09-15/247">Origem da frase “Now you have two problems”</a>
+Você já deve ter visto essa frase por aí, que diz: <em>Algumas pessoas, quando encontram um problema, pensam “já sei, vou usar expressões regulares”. Agora elas têm dois problemas.</em> O Jeffrey Friedl rastreou a origem dessa citação e fez um post a respeito. Nos comentários, aparecem alguns famosos, inclusive o <a href="http://www.jwz.org">Jamie Zawinski (jwz)</a>, responsável pela citação original.</p></li>
+</ul>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Express%C3%B5es%20Regulares%20https://aurelio.net/regex/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/regex/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/regex/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

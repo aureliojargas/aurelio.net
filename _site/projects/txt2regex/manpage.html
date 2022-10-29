@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TXT2REGEX</title>
+<meta name="generator" content="http://txt2tags.org">
+<style>
+body{background-color:#fff;color:#000;}
+hr{background-color:#000;border:0;color:#000;}
+hr.heavy{height:5px;}
+hr.light{height:1px;}
+img{border:0;display:block;}
+img.right{margin:0 0 0 auto;}
+img.center{border:0;margin:0 auto;}
+table th,table td{padding:4px;}
+.center,header{text-align:center;}
+table.center {margin-left:auto; margin-right:auto;}
+.right{text-align:right;}
+.left{text-align:left;}
+.tableborder,.tableborder td,.tableborder th{border:1px solid #000;}
+.underline{text-decoration:underline;}
+</style>
+</head>
+<body>
+<header>
+<hgroup>
+<h1>TXT2REGEX</h1>
+<h3>May 21, 2020</h3>
+</hgroup>
+</header>
+<article>
+
+<div class="body" id="body">
+
+<section>
+<h1>NAME</h1>
+
+<p>
+<strong>txt2regex</strong> -- console regular expression wizard
+</p>
+
+</section>
+<section>
+<h1>SYNOPSIS</h1>
+
+<p>
+<strong>txt2regex</strong> [<strong>--nocolor</strong>|<strong>--whitebg</strong>] [<strong>--all</strong>|<strong>--prog</strong> <em>programs</em>]
+</p>
+<p>
+<strong>txt2regex</strong> <strong>--showmeta</strong>
+</p>
+<p>
+<strong>txt2regex</strong> <strong>--showinfo</strong> <em>program</em> [<strong>--nocolor</strong>]
+</p>
+<p>
+<strong>txt2regex</strong> <strong>--history</strong> <em>value</em> [<strong>--all</strong>|<strong>--prog</strong> <em>programs</em>]
+</p>
+<p>
+<strong>txt2regex</strong> <strong>--make</strong> <em>label</em> [<strong>--all</strong>|<strong>--prog</strong> <em>programs</em>]
+</p>
+
+</section>
+<section>
+<h1>DESCRIPTION</h1>
+
+<p>
+<strong>txt2regex</strong> is a regular expression wizard that converts human
+sentences to regexes.
+</p>
+<p>
+In a simple interactive console interface, the user answer questions and
+<strong>txt2regex</strong> builds the regexes for more than 20 programs.
+</p>
+<p>
+<em>https://aurelio.net/projects/txt2regex/</em>
+</p>
+
+</section>
+<section>
+<h1>OPTIONS</h1>
+
+<dl>
+<dt><strong>--all</strong></dt><dd>
+Select all the available programs. Be aware that the list of available
+programs is long. You will need a terminal window with more than 40
+lines for the user interface to fit. Also make sure that the <strong>$LINES</strong>
+shell variable is exported, so <strong>txt2regex</strong> can detect the current
+number of available lines.
+<p></p>
+</dd>
+<dt><strong>-h</strong>, <strong>--help</strong></dt><dd>
+Print the help message and quit.
+<p></p>
+</dd>
+<dt><strong>--history &lt;value&gt;</strong></dt><dd>
+Print a regex from the given history data. The history value is shown in
+the last screen of the wizard, when you quit.
+<p></p>
+</dd>
+<dt><strong>--make &lt;label&gt;</strong></dt><dd>
+Print a ready regex for the specified label. Inform an empty label to
+see the list of available labels.
+<p></p>
+</dd>
+<dt><strong>--nocolor</strong></dt><dd>
+Do not use colors.
+<p></p>
+</dd>
+<dt><strong>--prog &lt;program1,program2,...&gt;</strong></dt><dd>
+Specify which programs to use, separated by commas. Use <strong>--showmeta</strong>
+to see the complete list of available programs.
+<p></p>
+</dd>
+<dt><strong>--showinfo &lt;program&gt;</strong></dt><dd>
+Print regex-related info about the specified program. Use <strong>--nocolor</strong>
+to have a text-only output (no control characters).
+<p></p>
+</dd>
+<dt><strong>--showmeta</strong></dt><dd>
+Print a metacharacters table featuring all the programs.
+<p></p>
+</dd>
+<dt><strong>-V</strong>, <strong>--version</strong></dt><dd>
+Print the program version and quit.
+<p></p>
+</dd>
+<dt><strong>--whitebg</strong></dt><dd>
+Adjust colors for white background terminals.
+</dd>
+</dl>
+
+</section>
+<section>
+<h1>EXAMPLES</h1>
+
+<dl>
+<dt>Using it as a wizard (interactive interface):</dt><dd>
+<p></p>
+<pre>
+txt2regex
+</pre>
+
+<p></p>
+</dd>
+<dt>Specify a custom selection of programs for the wizard:</dt><dd>
+<p></p>
+<pre>
+txt2regex --prog perl,python,php,javascript
+</pre>
+
+<p></p>
+</dd>
+<dt>Getting an extensive metacharacters table:</dt><dd>
+<p></p>
+<pre>
+txt2regex --showmeta
+</pre>
+
+<p></p>
+</dd>
+<dt>Getting regex-related information about sed:</dt><dd>
+<p></p>
+<pre>
+txt2regex --showinfo sed
+</pre>
+
+<p></p>
+</dd>
+<dt>Replay a regex by using history data:</dt><dd>
+<p></p>
+<pre>
+txt2regex --history '16421¤:01¤:'
+</pre>
+
+<p></p>
+</dd>
+<dt>Getting handy ready-to-use regexes for common patterns:</dt><dd>
+<p></p>
+<pre>
+txt2regex --make hour
+txt2regex --make number3 --prog perl
+txt2regex --make date2 --all
+</pre>
+
+</dd>
+</dl>
+
+</section>
+<section>
+<h1>WIZARD INTERFACE</h1>
+
+<pre>
++---------------------------------------+
+| Top menu                              |
+| Group menu                            |
+|                                       |
+| Regexes of the selected programs      |
+| ...                                   |
+| ...                                   |
+|                                       |
+| History                               |
+| Prompt                                |
+|                                       |
+| The question                          |
+| The answers                           |
+| ...                                   |
+| ...                                   |
++---------------------------------------+
+</pre>
+
+</section>
+<section>
+<h1>WIZARD COMMANDS</h1>
+
+<table>
+<tr>
+<td class="center"><strong>.</strong></td>
+<td>Quit the program (with confirmation)</td>
+</tr>
+<tr>
+<td class="center"><strong>0</strong></td>
+<td>Reset the regular expression</td>
+</tr>
+<tr>
+<td class="center"><strong>1-9</strong></td>
+<td>Answers the questions</td>
+</tr>
+<tr>
+<td class="center"><strong>*</strong></td>
+<td>Toggles color ON/OFF</td>
+</tr>
+<tr>
+<td class="center"><strong>/</strong></td>
+<td>Add/remove programs</td>
+</tr>
+<tr>
+<td class="center"><strong>|</strong></td>
+<td>Insert an alternation (where allowed)</td>
+</tr>
+<tr>
+<td class="center"><strong>(</strong></td>
+<td>Open a new group (where allowed)</td>
+</tr>
+<tr>
+<td class="center"><strong>)</strong></td>
+<td>Close the opened group (if any)</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h1>BUGS</h1>
+
+<p>
+<a href="https://github.com/aureliojargas/txt2regex/issues">https://github.com/aureliojargas/txt2regex/issues</a>
+</p>
+
+</section>
+<section>
+<h1>AUTHOR</h1>
+
+<p>
+Aurelio Jargas &lt;&lt;verde (a) aurelio net&gt;&gt;
+</p>
+
+</section>
+<section>
+<h1>COPYRIGHT</h1>
+
+<p>
+Copyright © 2001-2020 Aurelio Jargas, GNU GPL v2
+</p>
+</section>
+</div>
+
+<!-- html code generated by txt2tags 3.4 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -t html man/txt2regex.t2t -->
+</article></body></html>

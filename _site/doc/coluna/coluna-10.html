@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    	<meta charset="utf-8">
+	<title>coluna do aurelio 10: mpage (impressão ágil em postscript) | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <style>
+      body {
+        margin: 2em;
+        background-color: black;
+        color: silver;
+        text-align: justify;
+      }
+
+      h1 {
+        color: lightgreen;
+      }
+
+      h3 {
+        color: green;
+      }
+
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      code {
+        color: white;
+        font-weight: bold;
+      }
+
+      pre {
+        color: orange;
+        margin-left: 2em;
+      }
+
+      .footer {
+        padding-top: 1em;
+        border-top: 1px solid silver;
+      }
+    </style>
+
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>coluna do aurelio 10: mpage (impressão ágil em postscript)</h1>
+    <h3>https://aurelio.net/doc/coluna</h3>
+    <h4>Escrito por Aurelio Jargas em 2001-08-13</h4>
+
+    <p>olás. já se deparou com o dilema de ter que imprimir algumas páginas de texto e acabar recorrendo ao X para fazer isso? ou mandar seu texto direto para o <code>lpr</code> e perceber que ele saiu todo cortado? ou ainda, você tem poucas folhas disponíveis e quer espremer o texto pra caber nelas? seus problemas acabaram!</p>
+
+<p>o <code>mpage</code> (<a href="http://www.mesa.nl/pub/mpage/mpage-2.5.tgz">http://www.mesa.nl/pub/mpage/mpage-2.5.tgz</a>) é um utilitário de linha de comando presente na maioria das distribuições de linux que converte texto para páginas em <code>postscript</code>, a linguagem que as impressoras entendem, e tem diversas opções úteis que veremos agora.</p>
+
+<p>a sintaxe é simples, sendo o texto convertido jogado na saída padrão e esta pode ser direcionada para o servidor de impressão:</p>
+
+<pre>
+$ mpage [OPÇõES] arquivo.txt | lpr
+</pre>
+
+<p>chamado sem opções, imprime no tamanho A4, com 4 páginas por folha. isso mesmo! quatro páginas colocadas numa só folha. daí o nome do programa "M(ultiple)Page". as opções -1, -2 -4 e -8 definem quantas páginas por folha serão impressas.</p>
+
+<p>para definir o tamanho da folha, caso diferente de A4, a opção -b aceita os parâmetros A3, Letter ou Legal. também podemos mudar a orientação do papel com a opção -l, imprimindo como "paisagem", ou seja, com a folha deitada.</p>
+
+<p>então para imprimir o arquivo de serviços da máquina (que tem mais de 300 linhas) numa só folha tamanho Letter, contendo oito mini-páginas:</p>
+
+<pre>
+$ mpage -8 -b Letter /etc/services | lpr
+</pre>
+
+<p>note que para oito páginas (bem como para duas), a orientação "paisagem" é escolhida automaticamente. adicionando a opção -a, vemos que as páginas são colocadas primeiro preenchendo a largura e depois a altura. e ainda, o -R começa o preenchimento a partir do pé da folha.</p>
+
+<p>todas estas orientações automáticas e preenchimento confundem, então aqui vai uma tabela esperta que resume como ficarão dispostas as páginas. note que "ori." é a orientação, sendo | e - a representação da página: em pé ou deitada.</p>
+
+<pre>
+  n°  ori.  normal      -a          -R          -a e -R
+---------------------------------------------------------
+
+  1    |    1           1           1           1
+
+  2    -    1 2         1 2         1 2         1 2
+
+  4    |    1 3         1 2         3 4         2 4
+            2 4         3 4         1 2         1 3
+
+  8    -    1 3 5 7     1 2 3 4     5 6 7 8     2 4 6 8
+            2 4 6 8     5 6 7 8     1 2 3 4     1 3 5 7
+</pre>
+
+<p>sabe esta linha separadora que está desenhada em volta das páginas? você pode tirá-la com a opção -o (de "outline"). e caso você não goste da fonte monoespaçada <code>Courier</code> que é a padrão, pode utilizar outra com a opção -F. eu não aconselho, mas como tem gente que gosta...</p>
+
+<pre>
+$ mpage -8 -o -F Times /etc/services | lpr
+</pre>
+
+<p>outras opçõezinhas que podem ser úteis são o -H ("header") para incluir cabeçalho em todas as páginas (data, nome do arquivo e número da página) e o -s que define o número de espaços em branco que o TAB vai ocupar, o padrão é 8. outra que pode ajudar é o -c que concatena vários arquivos num só. então, num exemplo com cabeçalho, TAB de 4 espaços e juntando dois arquivos, temos:</p>
+
+<pre>
+$ mpage -8 -H -s 4 -c /etc/passwd /etc/services | lpr
+</pre>
+
+<p>calma que se ainda sobrou folhas na sua impressora temos as margens pra brincar. temos o -m para definir as margens da folha e o -M para as margens de cada página. a sintaxe é a mesma para ambas as opções e pode assustar numa primeira olhada.</p>
+
+<p>o tamanho padrão de cada margem é de 20 pontos, ou seja, <code>-m20</code>. note que NÃO podem haver espaços entre a opção e os seus argumentos! para especificar individualmente cada margem, temos as letras identificadoras <code>rltb</code>, sendo:</p>
+
+<pre>
+r (right)    direita
+l (left)     esquerda
+t (top)      superior
+b (bottom)   inferior
+</pre>
+
+<p>então <code>-m60rl40t10b</code> define tamanhos de: 60 pontos para margens direita e esquerda, 40 para o topo e 10 para o pé. variando os números das margens pode-se fazer coisas legais como centralizar o texto num quadrado no meio da página. cuidado para não confundir, pois o -m é a margem da folha, então independente se orientação está normal ou em paisagem, o topo é o topo.</p>
+
+<p>mas como papel não é barato e ficar imprimindo cada teste desse também vai gastar tempo e tinta, vamos usar a cabeça, ou melhor, o linux. lembra que o mpage gera um arquivo em postscript para a impressora? então basta pegar um dos bilhares de visualizadores de postscript existentes e ver como ficará a impressão:</p>
+
+<pre>
+$ mpage -8 -H -m60rl40t10b -F Times /etc/services &gt; arquivo.ps
+</pre>
+
+<pre>
+$ meu-visualizador arquivo.ps
+</pre>
+
+<pre>
+$ lpr arquivo.ps
+</pre>
+
+<p>infelizmente, os visualizadores bons são todos para X... o único que conheço pro console é o <code>gs -sDEVICE=vgalib</code>, que vem no pacote do <code>ghostscript</code> (<a href="http://www.cs.wisc.edu/~ghost">http://www.cs.wisc.edu/~ghost</a>), mas ele apenas lhe dá "uma idéia" de como o arquivo ficará &amp;:) nesse mesmo pacote tem o <code>gv</code> (para eca-X) que quebra o galho.</p>
+
+
+    <p class="footer">
+      <a href="/doc/coluna/">&lt;--- Voltar para o índice</a>
+    </p>
+  </body>
+</html>

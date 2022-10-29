@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Exemplos de Endereçamento | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Exemplos de Endereçamento</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  
+
+  
+
+    <p>Esta é a "Central RAC de Atendimento ao Cliente" :), sua fonte definitiva de consulta em caso de dúvida. Aqui estão registrados exemplos de todas as funcionalidades do programa, antecipando problemas que o usuário possa vir a resolver com o RAC.</p>
+
+<nav>
+  <ul>
+    <li>
+      <a href="#toc1">Resumão</a>
+    </li>
+    <li>
+      <a href="#toc2">O Arquivo de Exemplo</a>
+    </li>
+    <li>
+      <a href="#toc3">Linhas</a>
+      <ul>
+        <li>
+          <a href="#toc4">Posição</a>
+          <ul>
+            <li>
+              <a href="#toc5">A primeira linha</a>
+            </li>
+            <li>
+              <a href="#toc6">A última linha</a>
+            </li>
+            <li>
+              <a href="#toc7">A terceira linha</a>
+            </li>
+            <li>
+              <a href="#toc8">A antepenúltima linha</a>
+            </li>
+            <li>
+              <a href="#toc9">A primeira, terceira e última linhas</a>
+            </li>
+            <li>
+              <a href="#toc10">A última, terceira e primeira linhas</a>
+            </li>
+            <li>
+              <a href="#toc11">A terceira linha, três vezes</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc12">Trechos</a>
+          <ul>
+            <li>
+              <a href="#toc13">Da primeira linha até a terceira</a>
+            </li>
+            <li>
+              <a href="#toc14">Da terceira linha até a primeira (reverso)</a>
+            </li>
+            <li>
+              <a href="#toc15">Da primeira linha até a última (todas)</a>
+            </li>
+            <li>
+              <a href="#toc16">Da terceira linha até a antepenúltima</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc17">Salto</a>
+          <ul>
+            <li>
+              <a href="#toc18">Iniciando na primeira linha, ande de duas em duas (ímpares)</a>
+            </li>
+            <li>
+              <a href="#toc19">Iniciando na segunda linha, ande de duas em duas (pares)</a>
+            </li>
+            <li>
+              <a href="#toc20">Iniciando na última linha, volte de duas em duas (ímpares, reverso)</a>
+            </li>
+            <li>
+              <a href="#toc21">Iniciando na segunda linha, ande de três em três</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#toc22">Expressões Regulares</a>
+      <ul>
+        <li>
+          <a href="#toc23">Ocorrência</a>
+          <ul>
+            <li>
+              <a href="#toc24">Todas as linhas que casam com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc25">A primeira linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc26">A última linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc27">A terceira linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc28">A antepenúltima linha que casa com uma regex</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc29">Contexto</a>
+          <ul>
+            <li>
+              <a href="#toc30">A linha seguinte às linhas que casam com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc31">A linha anterior às linhas que casam com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc32">A terceira linha após as linhas que casam com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc33">A terceira linha anterior às linhas que casam com uma regex</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc34">Contexto e Ocorrência</a>
+          <ul>
+            <li>
+              <a href="#toc35">A linha seguinte à primeira linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc36">A linha anterior à primeria linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc37">A terceira linha após a primeira linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc38">A terceira linha anterior à primeira linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc39">A linha seguinte à última linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc40">A linha anterior à última linha que casa com uma regex</a>
+            </li>
+            <li>
+              <a href="#toc41">A terceira linha anterior à penúltima linha que casa com uma regex</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc42">Ocorrência e Salto</a>
+          <ul>
+            <li>
+              <a href="#toc43">Partindo da terceira linha que casa com uma regex, ande de 2 em 2 linhas</a>
+            </li>
+            <li>
+              <a href="#toc44">Partindo da terceira linha que casa com uma regex, volte de 2 em 2 linhas</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc45">Ocorrência, Contexto e Salto</a>
+          <ul>
+            <li>
+              <a href="#toc46">Partindo da linha seguinte à terceira linha que casa com uma regex, ande de 2 em 2 linhas</a>
+            </li>
+            <li>
+              <a href="#toc47">Partindo da linha anterior à antepenúltima linha que casa com uma regex, volte de 2 em 2 linhas</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#toc48">Trechos</a>
+          <ul>
+            <li>
+              <a href="#toc49">Todas as linhas entre duas regexes, inclusive, todas as ocorrências</a>
+            </li>
+            <li>
+              <a href="#toc50">Todas as linhas entre duas regexes, "exclusive", todas as ocorrências</a>
+            </li>
+            <li>
+              <a href="#toc51">Linhas do início do arquivo até encontrar a primeira ocorrência de uma regex</a>
+            </li>
+            <li>
+              <a href="#toc52">Linhas do início do arquivo até encontrar a última ocorrência de uma regex</a>
+            </li>
+            <li>
+              <a href="#toc53">Linhas da primeira ocorrência de uma regex até o fim do arquivo</a>
+            </li>
+            <li>
+              <a href="#toc54">Linhas da última ocorrência de uma regex até o fim do arquivo</a>
+            </li>
+            <li>
+              <a href="#toc55">Todas as linhas entre duas regexes, inclusive, apenas a primeira ocorrência</a>
+            </li>
+            <li>
+              <a href="#toc56">Todas as linhas entre duas regexes, inclusive, apenas a última ocorrência</a>
+            </li>
+            <li>
+              <a href="#toc57">Todas as linhas entre duas regexes, "exclusive", apenas a primeira ocorrência</a>
+            </li>
+            <li>
+              <a href="#toc58">Todas as linhas entre duas regexes, "exclusive", apenas a última ocorrência</a>
+            </li>
+            <li>
+              <a href="#toc59">Todas as linhas entre a primeira ocorrência de uma regex e a última de outra, inclusive</a>
+            </li>
+            <li>
+              <a href="#toc60">Todas as linhas entre a última ocorrência de uma regex e a primeira de outra, inclusive (e invertido!)</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<h1 id="toc1">Resumão</h1>
+
+<table class="tableborder">
+  <tr>
+    <th colspan="3">Numérico</th>
+  </tr>
+  <tr>
+    <td class="center"><strong>3</strong></td>
+    <td class="center"><em>Linha</em></td>
+    <td>A terceira linha</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>-3</strong></td>
+    <td class="center"><em>Contagem Reversa</em></td>
+    <td>A antepenúltima linha</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>[3]</strong></td>
+    <td class="center"><em>Coluna</em></td>
+    <td>A terceira coluna</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>1:3</strong></td>
+    <td class="center"><em>Trecho</em></td>
+    <td>Da primeira a terceira linha</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>1~3</strong></td>
+    <td class="center"><em>Salto</em></td>
+    <td>Partindo da primeira linha, ande de 3 em 3</td>
+  </tr>
+  <tr>
+    <th colspan="3">Texto</th>
+  </tr>
+  <tr>
+    <td class="center"><strong>=abc=</strong></td>
+    <td class="center"><em>Texto</em></td>
+    <td>Todas as linhas que contêm o texto abc</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>=abc=*3</strong></td>
+    <td class="center"><em>Ocorrência</em></td>
+    <td>Terceira linha que contém o texto abc</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>=abc=+3</strong></td>
+    <td class="center"><em>Contexto</em></td>
+    <td>Terceira linha após a que contém o texto abc</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>=abc=-3</strong></td>
+    <td class="center"><em>Contexto</em></td>
+    <td>Terceira linha anterior a que contém o texto abc</td>
+  </tr>
+  <tr>
+    <th colspan="3">Expressões Regulares</th>
+  </tr>
+  <tr>
+    <td class="center"><strong>/^abc/</strong></td>
+    <td class="center"><em>Exp. Regular</em></td>
+    <td>Todas as linhas que iniciam com abc</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>/^abc/*3</strong></td>
+    <td class="center"><em>Ocorrência</em></td>
+    <td>Terceira linha que inicia com abc</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>/^abc/+3</strong></td>
+    <td class="center"><em>Contexto</em></td>
+    <td>Terceira linha após a que inicia com abc</td>
+  </tr>
+  <tr>
+    <td class="center"><strong>/^abc/-3</strong></td>
+    <td class="center"><em>Contexto</em></td>
+    <td>Terceira linha anterior a que inicia com abc</td>
+  </tr>
+</table>
+
+<!--
+% | 5:=abc=*1         | Trecho da quinta linha até a primeira que conter abc
+% | =abc=[1:10]       | As dez primeiras colunas das linhas com abc
+% | =abc=*-1:-1       | Trecho da última linha com abc até o final do texto
+% | =abc=*5[-9:]      | As últimas nove colunas da quinta linha com abc
+%   | =abc=:=xyz=       | Trecho entre as linhas com abc e xyz, inclusive
+%   | =abc=+1:=xyz=-1   | Trecho entre as linhas com abc e xyz, excluindo-as
+% | =abc=*-1:=xyz=*-1 | Trecho da última linha com abc até a última linha com xyz
+% | =abc=*1~3         | A partir da primeira linha com abc, ande de 3 em 3
+% | =abc=*5-2:=abc=*5+2 | Quinta ocorrência da linha com abc, com contexto de 2 linhas antes e após
+-->
+
+<h1 id="toc2">O Arquivo de Exemplo</h1>
+
+<pre>
+$ cat n.txt
+1:I
+2:II
+3:III
+4:IV
+5:V
+6:VI
+7:VI
+8:VII
+9:IX
+$
+</pre>
+
+<h1 id="toc3">Linhas</h1>
+
+<h2 id="toc4">Posição</h2>
+
+<h3 id="toc5">A primeira linha</h3>
+
+<blockquote>
+  1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1'
+1:I
+</pre>
+
+<h3 id="toc6">A última linha</h3>
+
+<blockquote>
+  -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '-1'
+9:IX
+</pre>
+
+<h3 id="toc7">A terceira linha</h3>
+
+<blockquote>
+  3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '3'
+3:III
+</pre>
+
+<h3 id="toc8">A antepenúltima linha</h3>
+
+<blockquote>
+  -3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '-3'
+7:VII
+</pre>
+
+<h3 id="toc9">A primeira, terceira e última linhas</h3>
+
+<blockquote>
+  1 ; 3 ; -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1;3;-1'
+1:I
+3:III
+9:IX
+</pre>
+
+<h3 id="toc10">A última, terceira e primeira linhas</h3>
+
+<blockquote>
+  -1 ; 3 ; 1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '-1;3;1'
+9:IX
+3:III
+1:I
+</pre>
+
+<h3 id="toc11">A terceira linha, três vezes</h3>
+
+<blockquote>
+  3 ; 3 ; 3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '3;3;3'
+3:III
+3:III
+3:III
+</pre>
+
+<h2 id="toc12">Trechos</h2>
+
+<h3 id="toc13">Da primeira linha até a terceira</h3>
+
+<blockquote>
+  1 : 3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1:3'
+1:I
+2:II
+3:III
+</pre>
+
+<h3 id="toc14">Da terceira linha até a primeira (reverso)</h3>
+
+<blockquote>
+  3 : 1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '3:1'
+3:III
+2:II
+1:I
+</pre>
+
+<h3 id="toc15">Da primeira linha até a última (todas)</h3>
+
+<blockquote>
+  1 : -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1:-1'
+1:I
+2:II
+3:III
+4:IV
+5:V
+6:VI
+7:VI
+8:VII
+9:IX
+</pre>
+
+<h3 id="toc16">Da terceira linha até a antepenúltima</h3>
+
+<blockquote>
+  3 : -3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '3:-3'
+3:III
+4:IV
+5:V
+6:VI
+7:VI
+</pre>
+
+<h2 id="toc17">Salto</h2>
+
+<h3 id="toc18">Iniciando na primeira linha, ande de duas em duas (ímpares)</h3>
+
+<blockquote>
+  1 ~ 2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1~2'
+1:I
+3:III
+5:V
+7:VI
+9:IX
+</pre>
+
+<h3 id="toc19">Iniciando na segunda linha, ande de duas em duas (pares)</h3>
+
+<blockquote>
+  2 ~ 2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '2~2'
+2:II
+4:IV
+6:VI
+8:VII
+</pre>
+
+<h3 id="toc20">Iniciando na última linha, volte de duas em duas (ímpares, reverso)</h3>
+
+<blockquote>
+  -1 ~ -2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '-1~-2'
+9:IX
+7:VI
+5:V
+3:III
+1:I
+</pre>
+
+<h3 id="toc21">Iniciando na segunda linha, ande de três em três</h3>
+
+<blockquote>
+  2 ~ 3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '2~3'
+2:II
+5:V
+8:VIII
+</pre>
+
+<h1 id="toc22">Expressões Regulares</h1>
+
+<h2 id="toc23">Ocorrência</h2>
+
+<h3 id="toc24">Todas as linhas que casam com uma regex</h3>
+
+<blockquote>
+  /regex/
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/'
+1:I
+2:II
+3:III
+4:IV
+5:V
+6:VI
+7:VII
+8:VIII
+9:IX
+</pre>
+
+<h3 id="toc25">A primeira linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*1'
+1:I
+</pre>
+
+<h3 id="toc26">A última linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *-1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*-1'
+9:IX
+</pre>
+
+<h3 id="toc27">A terceira linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*3'
+3:III
+</pre>
+
+<h3 id="toc28">A antepenúltima linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *-3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*-3'
+7:VII
+</pre>
+
+<h2 id="toc29">Contexto</h2>
+
+<h3 id="toc30">A linha seguinte às linhas que casam com uma regex</h3>
+
+<blockquote>
+  /regex/ +1
+</blockquote>
+
+<h3 id="toc31">A linha anterior às linhas que casam com uma regex</h3>
+
+<blockquote>
+  /regex/ -1
+</blockquote>
+
+<h3 id="toc32">A terceira linha após as linhas que casam com uma regex</h3>
+
+<blockquote>
+  /regex/ +3
+</blockquote>
+
+<h3 id="toc33">A terceira linha anterior às linhas que casam com uma regex</h3>
+
+<blockquote>
+  /regex/ +3
+</blockquote>
+
+<h2 id="toc34">Contexto e Ocorrência</h2>
+
+<h3 id="toc35">A linha seguinte à primeira linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *1 +1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*1+1' 
+2:II
+</pre>
+
+<h3 id="toc36">A linha anterior à primeria linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *1 -1
+</blockquote>
+
+<h3 id="toc37">A terceira linha após a primeira linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *1 +3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*1+3'
+4:IV
+</pre>
+
+<h3 id="toc38">A terceira linha anterior à primeira linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *1 -3
+</blockquote>
+
+<h3 id="toc39">A linha seguinte à última linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *-1 +1
+</blockquote>
+
+<h3 id="toc40">A linha anterior à última linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *-1 -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*-1-1'
+8:VIII
+</pre>
+
+<h3 id="toc41">A terceira linha anterior à penúltima linha que casa com uma regex</h3>
+
+<blockquote>
+  /regex/ *-2 -3
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*-2-3'
+5:V
+</pre>
+
+<h2 id="toc42">Ocorrência e Salto</h2>
+
+<h3 id="toc43">Partindo da terceira linha que casa com uma regex, ande de 2 em 2 linhas</h3>
+
+<blockquote>
+  /regex/ *3 ~2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*3~2'
+3:III
+5:V
+7:VII
+9:IX
+</pre>
+
+<h3 id="toc44">Partindo da terceira linha que casa com uma regex, volte de 2 em 2 linhas</h3>
+
+<blockquote>
+  /regex/ *3 ~-2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*3~-2'
+3:III
+1:I
+</pre>
+
+<h2 id="toc45">Ocorrência, Contexto e Salto</h2>
+
+<h3 id="toc46">Partindo da linha seguinte à terceira linha que casa com uma regex, ande de 2 em 2 linhas</h3>
+
+<blockquote>
+  /regex/ *3 +1 ~2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*3+1~2'
+4:IV
+6:VI
+8:VIII
+</pre>
+
+<h3 id="toc47">Partindo da linha anterior à antepenúltima linha que casa com uma regex, volte de 2 em 2 linhas</h3>
+
+<blockquote>
+  /regex/ *3 -1 ~-2
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[0-9]/*-3-1~-2'
+6:VI
+4:IV
+2:II
+</pre>
+
+<h2 id="toc48">Trechos</h2>
+
+<h3 id="toc49">Todas as linhas entre duas regexes, inclusive, todas as ocorrências</h3>
+
+<blockquote>
+  /regex1/ : /regex2/
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/:/[37]/'
+1:I
+2:II
+3:III
+5:V
+6:VI
+7:VII
+</pre>
+
+<h3 id="toc50">Todas as linhas entre duas regexes, "exclusive", todas as ocorrências</h3>
+
+<blockquote>
+  /regex1/ +1 : /regex2/ -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/+1:/[37]/-1'
+2:II
+6:VI
+</pre>
+
+<h3 id="toc51">Linhas do início do arquivo até encontrar a primeira ocorrência de uma regex</h3>
+
+<blockquote>
+  1 : /regex/ *1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1:/[357]/*1'
+1:I
+2:II
+3:III
+</pre>
+
+<h3 id="toc52">Linhas do início do arquivo até encontrar a última ocorrência de uma regex</h3>
+
+<blockquote>
+  1 : /regex/ *-1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '1:/[357]/*-1'
+1:I
+2:II
+3:III
+4:IV
+5:V
+6:VI
+7:VII
+</pre>
+
+<h3 id="toc53">Linhas da primeira ocorrência de uma regex até o fim do arquivo</h3>
+
+<blockquote>
+  /regex/ *1 : -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[357]/*1:-1'
+3:III
+4:IV
+5:V
+6:VI
+7:VII
+8:VIII
+9:IX
+</pre>
+
+<h3 id="toc54">Linhas da última ocorrência de uma regex até o fim do arquivo</h3>
+
+<blockquote>
+  /regex/ *-1 : -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[357]/*-1:-1'
+7:VII
+8:VIII
+9:IX
+</pre>
+
+<h3 id="toc55">Todas as linhas entre duas regexes, inclusive, apenas a primeira ocorrência</h3>
+
+<blockquote>
+  /regex1/ *1 : /regex2/ *1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/*1:/[37]/*1'
+1:I
+2:II
+3:III
+</pre>
+
+<h3 id="toc56">Todas as linhas entre duas regexes, inclusive, apenas a última ocorrência</h3>
+
+<blockquote>
+  /regex1/ *-1 : /regex2/ *-1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/*-1:/[37]/*-1'
+5:V
+6:VI
+7:VII
+</pre>
+
+<h3 id="toc57">Todas as linhas entre duas regexes, "exclusive", apenas a primeira ocorrência</h3>
+
+<blockquote>
+  /regex1/ *1 +1 : /regex2/ *1 -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/*1+1:/[37]/*1-1'
+2:II
+</pre>
+
+<h3 id="toc58">Todas as linhas entre duas regexes, "exclusive", apenas a última ocorrência</h3>
+
+<blockquote>
+  /regex1/ *-1 +1 : /regex2/ *-1 -1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/*-1+1:/[37]/*-1-1'
+6:VI
+</pre>
+
+<h3 id="toc59">Todas as linhas entre a primeira ocorrência de uma regex e a última de outra, inclusive</h3>
+
+<blockquote>
+  /regex1/ *1 : /regex2/ *-1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/*1:/[37]/*-1'
+1:I
+2:II
+3:III
+4:IV
+5:V
+6:VI
+7:VII
+</pre>
+
+<h3 id="toc60">Todas as linhas entre a última ocorrência de uma regex e a primeira de outra, inclusive (e invertido!)</h3>
+
+<blockquote>
+  /regex1/ *-1 : /regex2/ *1
+</blockquote>
+
+<p>Exemplo:</p>
+
+<pre>
+$ cat n.txt | rac '/[15]/*-1:/[37]/*1'
+5:V
+4:IV
+3:III
+</pre>
+
+  </body>
+</html>

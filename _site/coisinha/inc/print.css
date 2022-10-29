@@ -1,0 +1,44 @@
+/*
+	Coisinha main print styles
+*/
+
+* {
+	background-image:none;
+	background-color:white;
+	color:black;
+	font-family:"Times New Roman", Times, serif;
+}
+body {
+	font-size:12pt;
+	margin:0;
+	padding:1cm 2cm;
+}
+a {
+	color:blue;
+	background:white;
+	text-decoration:underline;
+	font-weight: bold;
+}
+
+.noprint,
+#nav,
+#footer {
+	display:none;
+}
+
+/* Custom */
+body#subwaytor h3, body#subwaytor img { display:none; }
+body#subwaytor table.ingredientes td.categoria { color:black; }
+body#subwaytor #header h1 { display:block; }
+body#subwaytor #header, body#subwaytor .numero { background-color:white; color:black; }
+
+
+/*
+How to include this file in another CSS file:
+@import url(/coisinha/inc/print.css) print;
+
+How to include rules inside the document <SCRIPT> tag:
+@media print {
+	#header { display:none; }
+}
+*/

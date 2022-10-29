@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Endereços usando expressões regulares (regex) | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Endereços usando expressões regulares (regex)</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  
+
+  
+
+    <p>Além do endereçamento numérico (<em>5[3:9]</em>) e por texto (<em>=abc=</em>), a partir da versão 1.3 o RAC também entende expressões regulares. Com isso é possível especificar endereçamentos tão complexos quanto necessário.</p>
+
+<ul>
+  <li>Se você já sabe o que são as expressões, aqui encontrará os detalhes de como utilizá-las no RAC.</li>
+  <li>Se você não sabe o que são expressões regulares, pode pular a leitura desse documento. <strong>Dica:</strong> Vale o investimento de aprender sobre o assunto, consulte <a href="https://aurelio.net/regex">https://aurelio.net/regex</a>.
+  </li>
+</ul>
+
+<h3>Sintaxe</h3>
+
+<p>O endereçamento usando expressões regulares é bem similar ao <a href="string.html">endereçamento por textos</a>, porém utilizando um delimitador diferente: a barra /. Basta colocar a expressão entre /barras/ (como no SED). Por exemplo, <strong>/^[0-9]/</strong> é usado para procurar por linhas que se iniciam por números.</p>
+
+<p>Os operadores de ocorrência e contexto também funcionam para expressões regulares, então <strong>/^[0-9]/*3</strong> obtém a terceira linha iniciada por números e <strong>/^[0-9]/+1</strong> obtém a linha seguinte de cada linha que se inicia por números. Ou ainda, uma mistura de ambos: <strong>/^[0-9]/*3+1</strong> obtém a linha seguinte da terceira linha iniciada por números.</p>
+
+<table class="tableborder">
+  <tr>
+    <th colspan="3">Endereçamento com Expressões Regulares</th>
+  </tr>
+  <tr>
+    <td><strong>/^abc/</strong></td>
+    <td class="center">Exp. Regular</td>
+    <td>Todas as linhas que iniciam com abc</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/*3</strong></td>
+    <td class="center">Ocorrência</td>
+    <td>Terceira linha que inicia com abc</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/+3</strong></td>
+    <td class="center">Contexto</td>
+    <td>Terceira linha após a que inicia com abc</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/-3</strong></td>
+    <td class="center">Contexto</td>
+    <td>Terceira linha anterior a que inicia com abc</td>
+  </tr>
+</table>
+
+<h3>Flexibilidade e Poder</h3>
+
+<p>Todos os conceitos dos endereços numéricos e de expressões regulares são intercambiáveis, combináveis, misturáveis. Lembre-se do brinquedo LEGO onde combinando formas básicas se obtém estruturas mais complexas.</p>
+
+<p>No RAC é possível misturar endereços numéricos com expressões regulares num mesmo comando, produzindo endereços tão complicados e precisos quanto necessário.</p>
+
+<table class="tableborder">
+  <tr>
+    <th colspan="2">ENDEREÇOS MAIS ELABORADOS</th>
+  </tr>
+  <tr>
+    <td><strong>5:/^abc/*1</strong></td>
+    <td>Trecho da quinta linha até a primeira que iniciar com abc</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/[1:10]</strong></td>
+    <td>As dez primeiras colunas das linhas que iniciam com abc</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/*-1:-1</strong></td>
+    <td>Trecho da última linha iniciada por abc até o final do texto</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/*5[-9:]</strong></td>
+    <td>As últimas nove colunas da quinta linha iniciada por abc</td>
+  </tr>
+<!--
+  <tr>
+    <td><strong>/^abc/:=xyz=</strong></td>
+    <td>Trecho entre as linhas com abc e xyz, inclusive</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/+1:=xyz=-1</strong></td>
+    <td>Trecho entre as linhas com abc e xyz, excluindo-as</td>
+  </tr>
+-->
+  <tr>
+    <td><strong>/^abc/*-1:/^xyz/*-1</strong></td>
+    <td>Trecho da última linha iniciada por abc até a última linha iniciada por xyz</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/*1~3</strong></td>
+    <td>A partir da primeira linha iniciada por abc, ande de 3 em 3</td>
+  </tr>
+  <tr>
+    <td><strong>/^abc/*5-2:/^abc/*5+2</strong></td>
+    <td>Quinta ocorrência de linha iniciada por abc, com contexto de 2 linhas antes e após</td>
+  </tr>
+</table>
+
+<h3>Os Detalhes</h3>
+
+<h4>Maiúsculas/Minúsculas:</h4>
+
+<p>Letras maiúsculas e minúsculas são diferentes. Se você pesquisar por <strong>[A-Z]</strong>, apenas as letras maiúsculas serão casadas. Se quiser incluir as minúsculas também, ou faça <strong>[A-Za-z]</strong> ou use a opção de linha de comando <strong>-i</strong>, que faz o RAC tratar as letras maiúsculas e minúsculas como iguais (<em>A == a</em>).</p>
+
+<h4>Metacaracteres:</h4>
+
+<p>A sintaxe de expressões regulares utilizada é a moderna <strong>ERE</strong> (Extended Regular Expressions), a mesma do egrep, Perl, Python, Java, PHP e todos os aplicativos mais recentes. Segue a lista dos metacaracteres:</p>
+
+<p><strong><code>^ $ . [] * + ? {} | ()</code></strong></p>
+
+<p>Se você é acostumado com as expressões na notação antiga <strong>BRE</strong> (Basic Regular Expressions), como a utilizada pelo grep, AWK e SED, use a opção de linha de comando <strong>--bre</strong>. Nessa notação, alguns metacaracteres precisam ser escapados para se tornarem especiais, segue a lista completa:</p>
+
+<p><strong><code>^ $ . [] * \+ \? \{\} \| \(\)</code></strong></p>
+
+<p><strong>Nota:</strong> O RAC utiliza a biblioteca de expressões regulares presente em seu sistema. A lista dos metacaracteres disponíveis pode sofrer pequenas variações. Com --bre no FreeBSD por exemplo, <strong>\+</strong> e <strong>\?</strong> não funcionam. Esta não é uma limitação do RAC, mas da biblioteca.</p>
+
+<h4>Escapes:</h4>
+
+<p>Para inserir uma barra <strong>/</strong> literal na expressão regular, é preciso "escapá-la", precedendo-a com uma barra <strong>\</strong>. Exemplo: <strong>/^ARQ=\/etc\/passwd/</strong>.</p>
+
+<p>Os "escapes" do endereçamento por texto também são reconhecidos nas expressões regulares, segue a lista completa:</p>
+
+<table>
+  <tr>
+    <td><strong><code>\t</code></strong></td>
+    <td>Tabulação (TAB)</td>
+  </tr>
+  <tr>
+    <td><strong><code>\/</code></strong></td>
+    <td>Uma barra / literal</td>
+  </tr>
+  <tr>
+    <td><strong><code>\\</code></strong></td>
+    <td>Uma barra \ literal</td>
+  </tr>
+</table>
+
+  </body>
+</html>

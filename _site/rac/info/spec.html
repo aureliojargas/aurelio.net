@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Specification | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Specification</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  
+
+  
+
+    <center>
+  <h2>rac</h2><font size="4"><i>RAC Specification, Version 1, Copyright © 2003-2004</i></font>
+  <br>
+  <font size="4">Aurélio Marinho Jargas, Thobias Salazar Trevisan</font>
+</center>
+
+<h4>NAME</h4>
+
+<blockquote>
+  rac - Rows And Columns, the text extraction tool
+</blockquote>
+
+<h4>SYNOPSIS</h4>
+
+<blockquote>
+  <code>rac address [file]...</code>
+</blockquote>
+
+<h4>DESCRIPTION</h4>
+
+<blockquote>
+  The <i>rac</i> utility is a text extractor that reads one input file and grab pieces of it, writing them to standard output. The pieces are defined by addresses, obtained from the <i>address</i> operand string.
+</blockquote>
+
+<h4>OPTIONS</h4>
+
+<blockquote>
+  The <i>rac</i> utility supports the <b>XBD</b> specification, <a href="http://www.opengroup.org/onlinepubs/007908799/xbd/utilconv.html#usg">Utility Syntax Guidelines</a>.
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt><b>-h</b>, <b>--help</b></dt>
+    <dd>Prints help information and exit</dd>
+    <dt><b>-V</b>, <b>--version</b></dt>
+    <dd>Prints program version and exit</dd>
+  </dl>
+</blockquote>
+
+<h4>OPERANDS</h4>
+
+<blockquote>
+  The following operands are supported:
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt><i>file</i></dt>
+    <dd>A pathname of a file whose contents will be read and extracted. If no <i>file</i> operands are specified, the standard input will be used.</dd>
+    <dt><i>address</i></dt>
+    <dd>A string to be used as the address of the desired text to be extracted. The application must not present an <i>address</i> that violates the restrictions of a text file except that the final character need not be a newline character.</dd>
+  </dl>
+</blockquote>
+
+<h4>STDIN</h4>
+
+<blockquote>
+  The standard input will be used only if no <i>file</i> operands are specified. See the INPUT FILES section.
+</blockquote>
+
+<h4>INPUT FILES</h4>
+
+<blockquote>
+  The input files must be text files.
+</blockquote>
+
+<h4>ENVIRONMENT VARIABLES</h4>
+
+<blockquote>
+  None.
+</blockquote>
+
+<h4>ASYNCHRONOUS EVENTS</h4>
+
+<blockquote>
+  Default.
+</blockquote>
+
+<h4>STDOUT</h4>
+
+<blockquote>
+  The pieces of input file that matches the specified addresses are written to standard output.
+</blockquote>
+
+<h4>STDERR</h4>
+
+<blockquote>
+  Used only for diagnostic messages.
+</blockquote>
+
+<h4>OUTPUT FILES</h4>
+
+<blockquote>
+  None.
+</blockquote>
+
+<h4>EXTENDED DESCRIPTION</h4>
+
+<blockquote>
+  <i>Rac</i> is a GPL text extraction tool. It reads a file (or STDIN) and return the text that matches the specified address. This address is composed by lines, columns, or a combination of them. Different from other UNIX tools, <i>rac</i> is <b>char</b> based, not <b>line</b>.
+</blockquote>
+
+<blockquote>
+  Ranges, reverse count, step and repetition are allowed. The address '1; 3; 5:7; 1; 6:4; -1' applied on a 10 lines text returns these lines: 1 3 5 6 7 1 6 5 4 10 (the specified order is preserved).
+</blockquote>
+
+<blockquote>
+  It is useful to extract arbitrary text lines and/or columns, or complicated ranges as: from line 10 column 13 to line 15 column 4. Please read the <a href="ADDRESSING">complete addressing specification</a>.
+</blockquote>
+
+<blockquote>
+  Please visit the program homepage at <a href="https://aurelio.net/rac">https://aurelio.net/rac</a>.
+</blockquote>
+
+<h4>EXIT STATUS</h4>
+
+<blockquote>
+  The following exit values are returned:
+</blockquote>
+
+<blockquote>
+  <dl>
+    <dt>0</dt>
+    <dd>Successful completion.</dd>
+    <dt>&gt;0</dt>
+    <dd>An error occurred.</dd>
+  </dl>
+</blockquote>
+
+<h4>CONSEQUENCES OF ERRORS</h4>
+
+<blockquote>
+  Default.
+</blockquote>
+
+<h4>APPLICATION USAGE</h4>
+
+<blockquote>
+  Addresses are not line based as other UNIX tools. The specified order matters, repetition and interpolation are allowed.
+</blockquote>
+
+<h4>EXAMPLES</h4>
+
+<blockquote>
+  <dl>
+    <dt>Get the 3rd line</dt>
+    <dd><code>$ rac '3' file.txt</code></dd>
+    <dt>Get from the 3rd to the 5th line, including</dt>
+    <dd><code>$ rac '3:5' file.txt</code></dd>
+    <dt>Get the last line (tail -1)</dt>
+    <dd><code>$ rac '-1' file.txt</code></dd>
+    <dt>Get the last 10 lines (tail)</dt>
+    <dd><code>$ rac '-10:-1' file.txt</code></dd>
+    <dt>Get the first 10 columns of each line (cut -c1-10)</dt>
+    <dd><code>$ rac '[1:10]' file.txt</code></dd>
+    <dt>Get the last char of each line</dt>
+    <dd><code>$ rac '[-1]' file.txt</code></dd>
+    <dt>Invert lines of file (tac)</dt>
+    <dd><code>$ rac '-1:1' file.txt</code></dd>
+    <dt>Invert columns of lines (rev)</dt>
+    <dd><code>$ rac '[-1:1]' file.txt</code></dd>
+  </dl>
+</blockquote>
+
+<h4>FUTURE DIRECTIONS</h4>
+
+<blockquote>
+  None.
+</blockquote>
+
+<h4>SEE ALSO</h4>
+
+<blockquote>
+  <a href="http://www.opengroup.org/onlinepubs/007908799/xcu/head.html">head</a>, <a href="http://www.opengroup.org/onlinepubs/007908799/xcu/tail.html">tail</a>, rev, tac, <a href="http://www.opengroup.org/onlinepubs/007908799/xcu/cut.html">cut</a>, <a href="http://www.opengroup.org/onlinepubs/007908799/xcu/sed.html">sed</a>.
+</blockquote>
+
+  </body>
+</html>

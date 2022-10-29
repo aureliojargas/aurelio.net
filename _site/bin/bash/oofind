@@ -1,0 +1,38 @@
+#!/bin/bash
+# oofind - Procura um texto em arquivos do OpenOffice Writer (.sxw)
+# Requisitos: bash, sed, grep, unzip
+# Autor: Aurelio Marinho Jargas, Set2004 (http://aurelio.net)
+#
+# Uso: oofind PALAVRA [ARQUIVOS]
+# Se nenhum arquivo for especificado, procura nos arquivos .sxw do
+# diretorio corrente.
+#
+# Exemplo:
+#
+#    $ ls
+#    adm-sistemas-I-instrutor.sxw  adm-sistemas-I.sxw
+#
+#    $ oofind Linux
+#    Procurando por 'Linux' nos arquivos informados...
+#    Achei em adm-sistemas-I-instrutor.sxw
+#    Achei em adm-sistemas-I.sxw
+#
+#
+# TODO -x pesquisa nas tags XML tambem
+# TODO -i case insensitive
+
+tmpdir=/tmp/lixo.$$                     # paranoicos: usem mktemp
+trap "rm -rf $tmpdir" 2 15              # faxina se apertar Ctrl+C
+
+[ "$1" ] || { echo "uso: oofind PALAVRA arquivos.sxw"; exit; }
+texto="$1" ; shift                      # obtem palavra do usuario
+
+echo "Procurando por '$texto' nos arquivos informados..."
+mkdir "$tmpdir"                         # cria dir temporario
+for arquivo in ${@:-*.sxw}; do          # arqs informados ou *.sxw
+   unzip -q -d "$tmpdir" $arquivo       # unzipa no dir temporario
+   sed 's/<[^>]*>//g' "$tmpdir/content.xml" | grep -qs "$texto" &&
+     echo "Achei em $arquivo"           # apaga tags XML e procura
+   rm -rf "$tmpdir"/*                   # limpa a bagunca
+done
+rmdir "$tmpdir"                         # remove dir temporario

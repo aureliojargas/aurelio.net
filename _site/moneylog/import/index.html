@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Importar dados para o MoneyLog | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/moneylog/import/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Importar dados para o MoneyLog" />
+	<meta property="og:url" content="https://aurelio.net/moneylog/import/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/moneylog/import/" title="Permalink" rel="bookmark">Importar dados para o MoneyLog</a></h1>
+
+			
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<!--
+  2009-08-19
+  BB: OFX, OFC, TXT, PALM, CSV, PDF (@botobr)
+  Caixa: TXT, OFC, OFX (@oreio)
+  Citibank: QIF, OFX, CSV e XLS (@badnetmask)
+  Itau: XLS, OFC 1.0, OFC 1.6, OFX e TXT (@badnetmask)
+  Real: OFX, QIF (Quicken, Money 97, Money 98, Money 99), XLS, DOC (@oreio)
+  2009-08-21
+  HSBC: OFC (MS Money 2002, Quicken 6.0), TXT, XLS, DOC (@dsracoon @polvaceo @daniel_pm @xexa_sl)
+-->
+
+<style type="text/css">
+  textarea {
+    font-family: monospace;
+    width: 100%;
+  }
+</style>
+
+<script type="text/javascript">
+
+var dataFieldSeparator = '\t';
+var dataRecordSeparator = /\r?\n/;  // \r\n Windows, \n Linux/Mac
+var dataTagTerminator = '|';
+var dataTagSeparator = ',';
+var commentChar = '#';   // Must be at line start (column 1)
+
+String.prototype.strip = function () {
+    return this.replace(/^\s+/, '').replace(/\s+$/, '');
+};
+
+function formatValue(n) {
+    return (document.getElementById('usecommas').checked) ? n.replace('.', ',') : n;
+}
+function formatDocNumber(n) {
+    return '(Doc. ' + n + ') ';
+}
+function formatDescription(s, doc_nr) {
+    s = s.strip();
+    // Prepend Doc number
+    if (doc_nr && !document.getElementById('hidedocnumber').checked) {
+        s = formatDocNumber(doc_nr) + s;
+    }
+    // lowercased
+    if (document.getElementById('lowerdesc').checked) {
+        s = s.toLowerCase();
+    }
+    // truncated
+    if (document.getElementById('truncatedesc').checked) {
+        s = s.substring(0, document.getElementById('truncatedescvalue').value);
+        s = s.strip();
+    }
+    return s;
+}
+function convertOFX(rawData) {
+
+    // Handles OFX and OFC.
+    // There are little differences, noted on the comments.
+    // As a XML file, it can be indented by spaces or TABs (or both)
+    // and tags could be closed or left open (<foo>bar or <foo>bar</foo>)
+
+    var i, newline, parsedData, rowDate, rowAmount, rowDescription, rowDocNumber, matches, m;
+
+    newline = /\r?\n[\t ]*/g;  // \r\n Windows, \n Linux/Mac (plus leading TABS/spaces)
+    parsedData = [];
+
+    rawData = rawData.replace(newline, ''); // one big line
+
+    matches = rawData.match(/<STMTTRN>.*?<\/STMTTRN>/g);
+    if (!matches) {
+        return [];
+    }
+
+    for (i = 0; i < matches.length; i++) {
+
+        rowDate = rowAmount = rowDocNumber = rowDescription = '';
+
+        // <DTPOSTED>20090801080000 (OFX - Real)
+        // <DTPOSTED>20090211120000[-3:BRT]</DTPOSTED> (OFX - Caixa)
+        // <DTPOSTED>20090801 (OFC - Caixa)
+        m = matches[i].match(/<DTPOSTED>(\d\d\d\d)(\d\d)(\d\d)/);
+        if (m) {
+            rowDate = m[1] + '-' + m[2] + '-' + m[3];
+        } else {
+            rowDate = 'DATA_INVÁLIDA';
+        }
+
+        // <TRNAMT>1234.00
+        // <TRNAMT>-1234.00
+        // <TRNAMT>-1234.00</TRNAMT>
+        m = matches[i].match(/<TRNAMT>(-?[\d.]+)/);
+        if (m) {
+            rowAmount = m[1];
+        } else {
+            rowAmount = 'VALOR_INVÁLIDO';
+        }
+
+        // <CHECKNUM>0223456 (OFX - Real)
+        // <CHECKNUM>0223456</CHECKNUM> (OFX - Caixa)
+        // <CHKNUM>0223456 (OFC - Caixa)
+        m = matches[i].match(/<(CHK|CHECK)NUM>(\d+)/);
+        if (m) {
+            rowDocNumber = m[2];
+        } else {
+            rowDocNumber = 'NUMDOC_INVÁLIDO';
+        }
+
+        // <MEMO>CORRECAO POUPANCA
+        // <MEMO>CORRECAO POUPANCA</MEMO>
+        m = matches[i].match(/<MEMO>(.*?)[<]/);
+        if (m) {
+            rowDescription = m[1];
+        }
+
+        parsedData.push([
+            rowDate,
+            formatValue(rowAmount),
+            formatDescription(rowDescription, rowDocNumber)
+        ].join(dataFieldSeparator));
+    }
+    return parsedData;
+}
+function convertQIF(rawData, version) {
+    // Thanks Leslie Harlley Watter
+
+    // The only difference between QIF versions are in the date format:
+    // Quicken    : @@@D12/31'09
+    // MS Money 97: @@@D31/12'09
+    // MS Money 98: @@@D31/12'09
+    // MS Money 99: @@@D31/12/09
+
+    var i, m, newline, sep, parsedData, rows, rowDate, rowDateCentury, rowAmount, rowDescription, rowDocNumber;
+
+    newline = /\r?\n/g;  // \r\n Windows, \n Linux/Mac
+    sep = '@@@';
+    parsedData = [];
+
+    rawData = rawData.replace(newline, sep);
+    rawData = rawData.replace(new RegExp(sep + '\\^', 'g'), '\n^');
+
+    // Split lines
+    rows = rawData.split('\n');
+
+    for (i = 0; i < rows.length; i++) {
+
+        rowDate = rowAmount = rowDocNumber = rowDescription = rowDateCentury = '';
+
+        // ^@@@D04/07'09@@@T4.59@@@N0002313@@@MJUROS POUPANCA
+
+        // Invalid Line
+        if (rows[i].substring(0, 1) != '^') {
+            continue;
+        }
+        if (rows[i].length < 10) {
+            continue;
+        }
+
+        // @@@D31/12'09 or @@@D31/12/09 or @@@D12/31'09 --> 09-12-31		
+        m = rows[i].match(/@@@D(\d\d)\/(\d\d)['\/](\d\d)/);
+        if (m) {
+            if (version == 'quicken') {
+                rowDate = m[3] + '-' + m[1] + '-' + m[2]; // m/d/y > y-m-d
+            } else {
+                rowDate = m[3] + '-' + m[2] + '-' + m[1]; // d/m/y > y-m-d
+            }
+
+            // YY-MM-DD --> YYYY-MM-DD (where YYYY == 19* || 20*)
+            // Our range: 1960 - 2059
+            rowDateCentury = (m[3].substring(0, 1) >= 6) ? '19' : '20';
+            rowDate = rowDateCentury + rowDate;
+        } else {
+            rowDate = 'DATA_INVÁLIDA';
+        }
+
+        // @@@T4.59
+        // @@@T-4.59
+        m = rows[i].match(/@@@T(-?[\d.]+)/);
+        if (m) {
+            rowAmount = m[1];
+        } else {
+            rowAmount = 'VALOR_INVÁLIDO';
+        }
+
+        // @@@N0002313
+        m = rows[i].match(/@@@N(\d+)/);
+        if (m) {
+            rowDocNumber = m[1];
+        } else {
+            rowDocNumber = 'NUMDOC_INVÁLIDO';
+        }
+
+        // @@@MJUROS POUPANCA
+        m = rows[i].match(/@@@M(.*?)(@@@|$)/);
+        rowDescription = m[1];
+
+        parsedData.push([
+            rowDate,
+            formatValue(rowAmount),
+            formatDescription(rowDescription, rowDocNumber)
+        ].join(dataFieldSeparator));
+    }
+    return parsedData;
+}
+
+function convertMyMoneyLog(rawData) {
+    var i, parsedData, rows, rowDate, rowAmount, rowTags, fields, rowDescription, rowCategories, rowAccount;
+
+    // Reset the data holder
+    parsedData = [];
+    // Split lines
+    rows = rawData.split(dataRecordSeparator);
+    // Scan data rows
+    for (i = 0; i < rows.length; i++) {
+        rowDate = rowAmount = rowDescription = rowAccount = '';
+        rowTags = [];
+        rowCategories = [];
+
+        // Preserve commented rows
+        if (rows[i].indexOf(commentChar) === 0) {
+            parsedData.push(rows[i]);
+            continue;
+        }
+        // Preserve blank lines
+        if (!rows[i].strip()) {
+            parsedData.push('');
+            continue;
+        }
+
+        // Separate fields
+        fields = rows[i].split(dataFieldSeparator);
+
+        rowDate = fields[0];
+        rowAmount = fields[1];
+        rowDescription = fields[2];
+        rowCategories = fields[3];
+        rowAccount = fields[4];
+
+        // Account turns to Tag
+        if (rowAccount) {
+            rowTags.push(rowAccount);
+        }
+        // Categories turns to Tags
+        if (rowCategories) {
+            rowTags = rowTags.concat(rowCategories.split(/ *; */));
+        }
+        // Compose tags
+        if (rowTags.length > 0) {
+            rowTags = rowTags.join(dataTagSeparator) + dataTagTerminator;
+        } else {
+            rowTags = '';
+        }
+
+        parsedData.push([
+            rowDate,
+            formatValue(rowAmount),
+            rowTags + formatDescription(rowDescription)
+        ].join(dataFieldSeparator));
+    }
+    return parsedData;
+}
+
+function convertMoneyLog4(rawData) {
+    // Removes the extra spaces that are now invalid:
+    // Spaces after the signal :  - 1.23  or  + 10
+    // Spaces before reccurring: 1.23 *2  or  10 /2
+
+    // From MoneyLog v4:
+    //
+    // var dataPatterns = {
+    // 	date:
+    // 		// YYYY-MM-DD
+    // 		/^ *(\d{4}-\d\d-\d\d) *$/,
+    // 	amountNumber:
+    // 		// 7  +7  -7  7.00  7,00  1234567,89  1.234.567,89  1,234,567.89 1234567,89
+    // 		/^ *([+\-]? *(\d+|\d{1,3}([.,]\d{3})*)([.,]\d\d)?) *$/,
+    // 	amountCents:
+    // 		// .12  ,12
+    // 		/[.,](\d\d) *$/,
+    // 	amountRecurrent:
+    // 		// *N or /N where N>0
+    // 		/([*\/])([1-9][0-9]*) *$/
+    // };
+
+    // So let's just join all these regexes together in an ugly monster
+    // and fix the formatting
+    return [rawData.replace(
+        /^ *(\d{4}-\d\d-\d\d *\t *)([+\-]?)( *)(\d+|\d{1,3}([.,]\d{3})*)([.,]\d\d)?( *)([*\/][1-9][0-9]*)?( *\t)/gm,
+        '$1$3$2$4$6$8$7$9'
+        // Note: I'm not deleting the extra spaces, just swapping positions.
+        //       Making this way, I keep the original align intact.
+    )];
+}
+
+function convert() {
+    var mode, rawData, parsedData;
+
+    // Read input data
+    rawData = document.getElementById('input_data').value;
+    // Reset output
+    document.getElementById('output_data').value = '';
+
+    mode = document.getElementById('mode').value;
+    if (mode == 'myml') {
+        parsedData = convertMyMoneyLog(rawData);
+    } else if (mode == 'moneylog4') {
+        parsedData = convertMoneyLog4(rawData);
+    } else if (mode == 'money97' || mode == 'money98' || mode == 'money99' || mode == 'quicken') {
+        parsedData = convertQIF(rawData, mode);
+    } else if (mode == 'ofx' || mode == 'ofc') {
+        parsedData = convertOFX(rawData);
+    }
+
+    // Maybe sort it?
+    if (document.getElementById('sortoutput').checked) {
+        parsedData.sort();
+    }
+
+    // Save output
+    document.getElementById('output_data').value = parsedData.join('\n');
+
+    // Show options?
+    if (mode == 'moneylog4') {
+        document.getElementById('options').style.display = 'none';
+    } else {
+        document.getElementById('options').style.display = 'block';
+    }
+
+}
+</script>
+
+<p>Converta lançamentos para o formato do MoneyLog.</p>
+
+<p>Dúvidas? <a href="/moneylog/faq/#banco">Aprenda como salvar o extrato de seu banco e usar este conversor.</a></p>
+
+<noscript>
+  <p style="color:red;background:yellow;padding:10px;">
+    Ops! Seu navegador está sem JavaScript, sem ele não vai funcionar.
+  </p>
+</noscript>
+
+<p>De:
+  <select id="mode" onchange="convert();">
+    <option value="moneylog4">MoneyLog v4, v3, v2, v1</option>
+    <option value="ofx" selected>OFX</option>
+    <option value="ofc">OFC</option>
+    <option value="quicken">QIF — Quicken</option>
+    <option value="money97">QIF — MS Money 97</option>
+    <option value="money98">QIF — MS Money 98</option>
+    <option value="money99">QIF — MS Money 99</option>
+    <option value="myml">myMoneyLog</option>
+  </select>
+</p>
+
+<textarea id="input_data" rows="12" onkeyup="convert();"></textarea>
+
+<p>Para: <a href="/moneylog/">MoneyLog</a></p>
+
+<textarea id="output_data" rows="12"></textarea>
+<div id="options">
+  <input id="usecommas" type="checkbox" onclick="convert();"> Forçar o uso de vírgulas nos valores
+  <br><input id="lowerdesc" type="checkbox" onclick="convert();"> Forçar a descrição em minúsculas
+  <br><input id="hidedocnumber" type="checkbox" onclick="convert();"> Descartar o Número do Documento
+  <br><input id="sortoutput" type="checkbox" onclick="convert();"> Ordenar o resultado por data
+  <br><input id="truncatedesc" type="checkbox" onclick="convert();"> Limitar descrição em
+      <input id="truncatedescvalue" type="text" value="22" size="3"> caracteres
+</div>
+
+<p><strong>CONFIRA O RESULTADO.</strong> Este é um processo automático, pode haver falhas.</p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+<style>
+  nav.note {
+   margin-top: 1.5em;
+   margin-bottom: 1.5em;
+  }
+  nav.note ul {
+    list-style: none;
+    margin-left: 0;
+  }
+  .nav-col {
+    float: left;
+    margin-right: 60px;
+  }
+  .nav-col.last {
+    margin-right: 0;
+  }
+</style>
+
+<nav class="note">
+  <div class="nav-col">
+    <h4>Sabores</h4>
+    <ul>
+      <li><a href="/moneylog/cloud/">MoneyLog Cloud</a></li>
+      <li><a href="/moneylog/portable/">MoneyLog Portable</a></li>
+      <li><a href="/moneylog/browser/">MoneyLog Browser</a></li>
+      <li><a href="/moneylog/beta/">MoneyLog Beta</a></li>
+    </ul>
+  </div>
+  <div class="nav-col">
+    <h4>Docs</h4>
+    <ul>
+      <li><a href="/moneylog/about/">sobre</a></li>
+      <li><a href="/moneylog/v5/">novidades v5</a> ★</li>
+      <li><a href="/moneylog/faq/">FAQ</a></li>
+      <li><a href="/moneylog/input/">lançamentos</a></li>
+      <li><a href="/moneylog/config/">configuração</a></li>
+    </ul>
+  </div>
+  <div class="nav-col last">
+    <h4>Misc</h4>
+    <ul>
+      <li><a href="/moneylog/import/">conversor</a></li>
+      <li><a href="/moneylog/donate/">doação</a> ♥</li>
+      <li><a href="/moneylog/history/">versões antigas</a></li>
+      <li><a href="https://github.com/aureliojargas/moneylog/issues">mande sua ideia</a> ★</li>
+    </ul>
+  </div>
+  <div style="clear: both;"></div>
+</nav>
+
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Importar%20dados%20para%20o%20MoneyLog%20https://aurelio.net/moneylog/import/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/moneylog/import/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/moneylog/import/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

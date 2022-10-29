@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Evento: Prompt-doc: SED e Expressões Regulares | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/curso/sucesu/sucesu-seder-prompt.html" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Prompt-doc: SED e Expressões Regulares" />
+	<meta property="og:url" content="https://aurelio.net/curso/sucesu/sucesu-seder-prompt.html" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/curso/sucesu/sucesu-seder-prompt.html" title="Permalink" rel="bookmark">Prompt-doc: SED e Expressões Regulares</a></h1>
+
+			<h2>Sucesu - Curitiba, 18 de Fevereiro de 2003</h2>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<p>Este é o histórico da linha de comando de <a href="/curso/sucesu/">uma palestra</a> que fiz na Sucesu-PR para uma turma de 20 alunos, sobre SED e Expressões Regulares.</p>
+
+<ul class="compact">
+  <li><strong>Data:</strong> 18-Fev-2004</li>
+  <li><strong>Horário:</strong> 18:30</li>
+  <li><strong>Duração:</strong> 4 horas</li>
+  <li><strong>Local:</strong> Auditório da Sucesu-PR</li>
+  <li><strong>Participantes:</strong> 20 pessoas</li>
+  <li><strong>Requisitos:</strong> Nenhum</li>
+</ul>
+
+<nav>
+  <ul>
+    <li>
+      <a href="#toc1">SED</a>
+      <ul>
+        <li><a href="#toc2">O Arquivo de dados</a></li>
+        <li><a href="#toc3">As origens do SED</a></li>
+        <li><a href="#toc4">O comando que todos conhecem: s///</a></li>
+        <li><a href="#toc5">O comando d (delete)</a></li>
+        <li><a href="#toc6">O comando y (transliterate)</a></li>
+        <li><a href="#toc7">O comando p (print)</a></li>
+        <li><a href="#toc8">Brincando com a opção -n</a></li>
+        <li><a href="#toc9">Começando a endereçar</a></li>
+        <li><a href="#toc10">Múltiplos comandos!</a></li>
+        <li><a href="#toc11">Os comandos são seqüenciais</a></li>
+        <li><a href="#toc12">Para "debug", mostre a linha com o 'p'</a></li>
+        <li><a href="#toc13">Dois comandos diferentes, mesmo resultado</a></li>
+        <li><a href="#toc14">A ordem dos fatores NÃO altera o resultado</a></li>
+        <li><a href="#toc15">Endereçando pelo texto da linha</a></li>
+        <li><a href="#toc16">Negando um endereço</a></li>
+        <li><a href="#toc17">Misturando os tipos de endereço</a></li>
+        <li><a href="#toc18">Endereço especial: ~ (step)</a></li>
+        <li><a href="#toc19">\n, \t e amigos</a></li>
+        <li><a href="#toc20">O comando q (quit)</a></li>
+        <li><a href="#toc21">Aplicando o s/// num intervalo de linhas</a></li>
+        <li><a href="#toc22">Use qualquer caractere como delimitador do s///</a></li>
+        <li><a href="#toc23">Use qualquer caractere como delimitador do endereço</a></li>
+        <li><a href="#toc24">Agrupando vários comandos em bloco num mesmo endereço</a></li>
+        <li><a href="#toc25">Os modificadores do comando s///</a></li>
+        <li><a href="#toc26">O comando l - list</a></li>
+        <li><a href="#toc27">O comando n - next</a></li>
+        <li><a href="#toc28">O comando N - next</a></li>
+        <li><a href="#toc29">Os comandos de pulo : b t - label &amp; branch</a></li>
+        <li><a href="#toc30">Os comandos de buffer h g x - hold, get e eXchange</a></li>
+        <li><a href="#toc31">Um arquivo só de comandos SED</a></li>
+        <li><a href="#toc32">O comando =</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#toc33">Expressões Regulares</a>
+      <ul>
+        <li><a href="#toc34">As âncoras ^ e $ para começo e fim de linha</a></li>
+        <li><a href="#toc35">O ou de caracteres [] (lista)</a></li>
+        <li><a href="#toc36">O repetidor {} (chaves)</a></li>
+        <li><a href="#toc37">O curinga . (ponto)</a></li>
+        <li><a href="#toc38">Os atalhos ? * +</a></li>
+        <li><a href="#toc39">O agrupador ()</a></li>
+        <li><a href="#toc40">ER para casar endereço IP (N.N.N.N)</a></li>
+        <li><a href="#toc41">ER de zero a 255</a></li>
+        <li><a href="#toc42">ER do IP mais precisa (N.N.N.N onde N de 0 a 255)</a></li>
+        <li><a href="#toc43">O ou de palavras |</a></li>
+        <li><a href="#toc44">O curinga .*, o tudo e o nada</a></li>
+        <li><a href="#toc45">Os retrovisores \1, \2 ... \9</a></li>
+        <li><a href="#toc46">ER para casar números repetidos 11, 22, 33, ...</a></li>
+        <li><a href="#toc47">ER para casar palavras repetidas</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<h2 id="toc1">SED</h2>
+
+<p>O SED é o Stream EDitor, um editor de textos não interativo, automático, um filtro.</p>
+
+<h3 id="toc2">O Arquivo de dados</h3>
+
+<pre>
+$ seq 12 &gt; numeros.txt
+$ vi numeros.txt
+$ cat numeros.txt
+1:um:one
+2:dois:two
+3:tres:three
+4:quatro:four
+5:cinco:five
+6:seis:six
+7:sete:seven
+8:oito:eight
+9:nove:nine
+10:dez:ten
+11:onze:eleven
+12:doze:twelve
+</pre>
+
+<h3 id="toc3">As origens do SED</h3>
+
+<pre>
+$ ed
+$ ed numeros.txt
+</pre>
+
+<h3 id="toc4">O comando que todos conhecem: s///</h3>
+
+<pre>
+$ echo aula
+$ echo aula | sed s/a/A/
+$ cat numeros.txt
+$ sed s/e/E/ numeros.txt
+$ sed s/e/E/g numeros.txt   # modificador 'g' de Global (troca todas)
+</pre>
+
+<h3 id="toc5">O comando d (delete)</h3>
+
+<pre>
+$ cat numeros.txt | sed 5d
+$ cat numeros.txt | sed 1d
+$ cat numeros.txt | sed 10d
+$ cat numeros.txt | sed $d                     # ERRO! variável $d
+$ cat numeros.txt | sed '$d'                   # _sempre_ usar aspas no shell
+</pre>
+
+<h3 id="toc6">O comando y (transliterate)</h3>
+
+<pre>
+$ cat numeros.txt | sed 'y/aeiou/AEIOUL/'
+$ cat numeros.txt | sed 'y/aeiou/AEIOU/'
+$ cat numeros.txt | tr a-z A-Z
+$ cat numeros.txt | sed 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'
+$ cat numeros.txt | sed 'y/abcdefghi/iejsyfnch/'    # mini encriptador
+$ cat numeros.txt | sed 'y/abcdefghi/iejsyfnch/' | sed 'y/iejsyfnch/abcdefghi/'
+$ cat numeros.txt | tr abcdefghi iejsyfnch
+</pre>
+
+<h3 id="toc7">O comando p (print)</h3>
+
+<pre>
+$ cat numeros.txt | sed 5p                     # duplica
+$ cat numeros.txt | sed -n 5p                  # só mostra a 5a linha
+</pre>
+
+<h3 id="toc8">Brincando com a opção -n</h3>
+
+<pre>
+$ cat numeros.txt | sed -n s/nove/nnn/
+$ cat numeros.txt | sed -n s/nove/nnn/p
+$ cat numeros.txt | sed -n p
+$ cat numeros.txt | sed -n 5p
+</pre>
+
+<h3 id="toc9">Começando a endereçar</h3>
+
+<pre>
+$ cat numeros.txt | sed s/nove/nnn/
+$ cat numeros.txt | sed 5s/nove/nnn/
+$ cat numeros.txt | sed '5 s/nove/nnn/'        # endereço junto ou separado
+$ cat numeros.txt | sed '5      s/nove/nnn/'   # vários espaços e/ou TAB
+$ cat numeros.txt | sed '999s/nove/nnn/'
+$ cat numeros.txt | sed '5d'
+$ cat numeros.txt | sed '5,8 d'                # um intervalo de 4 linhas
+</pre>
+
+<h3 id="toc10">Múltiplos comandos!</h3>
+
+<pre>
+$ cat numeros.txt | sed '5d 7d 9d'             # errado
+$ cat numeros.txt | sed '5d ; 7d ; 9d'         # certo
+</pre>
+
+<h3 id="toc11">Os comandos são seqüenciais</h3>
+
+<pre>
+$ cat numeros.txt | sed -n 's/nove/nnn/p'
+$ cat numeros.txt | sed -n 's/nove/nnn/p ; s/nove/NNN/p'
+$ cat numeros.txt | sed -n 's/XXXX/nnn/p ; s/nove/NNN/p'
+$ cat numeros.txt | sed -n 's/nove/nnn/p ; s/nnn/NNN/p'
+$ cat numeros.txt | sed -n 's/nove/nnn/ ; s/nnn/NNN/p'
+</pre>
+
+<h3 id="toc12">Para "debug", mostre a linha com o 'p'</h3>
+
+<pre>
+$ cat numeros.txt | sed -n 's/nove/nnn/ ; s/nnn/NNN/; 9p'
+$ cat numeros.txt | sed -n 's/nove/nnn/ ; 9p; s/nnn/NNN/; 9p'
+$ cat numeros.txt | sed -n '9p; s/nove/nnn/ ; 9p; s/nnn/NNN/; 9p'
+</pre>
+
+<h3 id="toc13">Dois comandos diferentes, mesmo resultado</h3>
+
+<pre>
+$ cat numeros.txt | sed '5,$ d'                # da 5a linha ao final
+$ cat numeros.txt | sed -n '1,4 p'             # idem anterior
+</pre>
+
+<h3 id="toc14">A ordem dos fatores NÃO altera o resultado</h3>
+
+<pre>
+$ cat numeros.txt | sed -n '5p;5p;5p;5p'
+$ cat numeros.txt | sed '9d ; 7d ; 5d'
+$ cat numeros.txt | sed -n '9p ; 7p ; 5p'
+</pre>
+
+<h3 id="toc15">Endereçando pelo texto da linha</h3>
+
+<pre>
+$ cat numeros.txt | sed -n '/quatro/ p'
+$ cat numeros.txt | sed -n '/o/ p'             # emulando o grep!
+$ cat numeros.txt | grep o
+$ l -l /bin/sed /bin/grep                      # quem é menor?
+$ l -l /bin/sed /bin/gawk                      # e agora? :)
+$ cat numeros.txt | sed -n '/o/ p'
+$ cat numeros.txt | sed -n '/quatro/ p'
+$ cat numeros.txt | sed -n '/quatro/ d'
+$ cat numeros.txt | sed '/quatro/ d'
+$ cat numeros.txt | sed '/:/ d'
+</pre>
+
+<h3 id="toc16">Negando um endereço</h3>
+
+<pre>
+$ cat numeros.txt | sed '/o/ d'                # apaga as linhas 'o'
+$ cat numeros.txt | sed '/o/! d'               # não apaga as linhas 'o'
+</pre>
+
+<h3 id="toc17">Misturando os tipos de endereço</h3>
+
+<pre>
+$ cat numeros.txt | sed '/dois/,/cinco/ d'
+$ cat numeros.txt | sed '/dois/,6 d'
+$ cat numeros.txt | sed '8,6 d'
+$ cat numeros.txt | sed 'd'                    # sem endereço == todas
+$ cat numeros.txt | sed '1,/dois/ d'
+$ cat numeros.txt | sed '/dois/,$ d'
+$ cat numeros.txt | sed '/4/,$ d'              # o $ é a última linha
+</pre>
+
+<h3 id="toc18">Endereço especial: ~ (step)</h3>
+
+<pre>
+$ cat numeros.txt | sed '4~2 d'                # não funciona no UNIX!
+$ cat numeros.txt | sed '1~2 d'                # linhas ímpares
+$ cat numeros.txt | sed '2~2 d'                # linhas pares
+$ cat numeros.txt | sed '1~5 d'                # pule de 5 em 5
+</pre>
+
+<h3 id="toc19">\n, \t e amigos</h3>
+
+<pre>
+$ sed -V                                       # dependendo da versão
+$ echo aaa | sed 's/a/a\n/g'                   # aceita \n, \t, ...
+$ echo aaa | sed 's/a/a\t/g'
+$ echo aaa | sed 's/a/a       /g'              # quando não, Ctrl+V TAB
+$ cat /etc/passwd
+$ cat /etc/passwd | sed -n '/edival/ p'
+$ cat /etc/passwd | sed -n '/edival/ p' | sed 's/:/\n/g'
+</pre>
+
+<h3 id="toc20">O comando q (quit)</h3>
+
+<pre>
+$ cat numeros.txt | sed q
+$ cat numeros.txt | head -n 4                  # as 4 primeiras
+$ cat numeros.txt | sed 4q                     # idem anterior
+</pre>
+
+<h3 id="toc21">Aplicando o s/// num intervalo de linhas</h3>
+
+<pre>
+$ cat numeros.txt | sed 's/e/___/g'
+$ cat numeros.txt | sed '4,6 s/e/___/g'
+$ cat numeros.txt | sed '/dois/,/cinco/ s/e/___/g'
+$ cat numeros.txt | sed '/dois/,/cinco/s/e/___/g'
+</pre>
+
+<h3 id="toc22">Use qualquer caractere como delimitador do s///</h3>
+
+<pre>
+$ echo a/a/a | sed 's/a/A/g'
+$ echo a/a/a | sed 's///@/g'                   # erro
+$ echo a/a/a | sed 's/\//@/g'                  # ok
+$ echo a/a/a | sed 's^/^@^g'                   # ^
+$ echo a/a/a | sed 's4/4@4g'                   # 4
+$ echo a/a/a | sed 's / @ g'                   # espaço
+$ echo a/a/a | sed 'ss/s@sg'                   # s
+$ echo a/a/a | sed 's /       @       g'       # TAB
+$ echo a/a/a | sed 's§/§@§g'                   # §
+$ echo a/a/a | sed 's¢/¢@¢g'                   # ¢
+$ echo a/a/a | sed 's
+&gt; /
+&gt; @
+&gt; g                                            # Enter
+</pre>
+
+<h3 id="toc23">Use qualquer caractere como delimitador do endereço</h3>
+
+<pre>
+$ echo a/a/a | sed '/\// s^/^@^g'
+$ echo a/a/a | sed '\@/@ s^/^@^g'              # \@end@
+$ echo a/a/a | sed '\ /  s / @ g'              # espaço
+</pre>
+
+<h3 id="toc24">Agrupando vários comandos em bloco num mesmo endereço</h3>
+
+<pre>
+$ cat numeros.txt | sed '5s/:/_/g ; 5s/i/X/g'
+$ cat numeros.txt | sed '5 { s/:/_/g ; s/i/X/g ; }'
+</pre>
+
+<h3 id="toc25">Os modificadores do comando s///</h3>
+
+<pre>
+$ echo aaaaa | sed 's/a/X/'                    # nenhum
+$ echo aaaaa | sed 's/a/X/g'                   # g - global
+$ echo aaaaa | sed -n 's/a/X/gp'               # p - print
+$ echo aaaaa | sed 's/a/X/3'                   # número
+$ echo aaaaa | sed 's/a/X/9'
+$ echo aaaaa | sed 's/a/X/w foo'               # w - write
+$ cat foo
+</pre>
+
+<h3 id="toc26">O comando l - list</h3>
+
+<pre>
+$ echo -e "\aXX\tXX"
+$ echo -e "\aXX\tXX" | sed -n l                # mostra invisíveis
+$ echo -e "\aXX\tXX " | sed -n l               # $ indica fim da linha
+$ echo -e "\aXX\tXX " | od -c                  # comando similar
+</pre>
+
+<h3 id="toc27">O comando n - next</h3>
+
+<pre>
+$ cat numeros.txt | sed 'n'                    # faz nada
+$ cat numeros.txt | sed 'n;d'                  # apaga linhas pares
+$ cat numeros.txt | sed '1d;n;d'               # apaga linhas ímpares
+$ cat numeros.txt | grep -A1 oito
+$ cat numeros.txt | sed -n '/oito/{p;n;p;}'    # similar do grep -A1
+</pre>
+
+<h3 id="toc28">O comando N - next</h3>
+
+<pre>
+$ cat numeros.txt | sed -n '/um/{N;l;}'        # junta e separa com \n
+$ cat numeros.txt | sed -n '/um/{N; s/\n/@/p ;}'
+$ cat numeros.txt | sed -n '/um/{N;N;N;s/\n/@/gp ;}'
+$ cat numeros.txt | sed -n 'N;N;s/\n/@@@/gp'   # junta de 3 em 3
+</pre>
+
+<h3 id="toc29">Os comandos de pulo : b t - label &amp; branch</h3>
+
+<pre>
+$ cat numeros.txt | sed ':a'                   # marca a posição 'a'
+$ cat numeros.txt | sed :                      # comando nulo == cat
+$ cat numeros.txt | sed ':a ; N ; b a'         # loop, erro no UNIX
+$ cat numeros.txt | sed ':a ; N ; s/\n/@@@/; b a'
+$ cat numeros.txt | sed ':a ; $!N ; s/\n/@@@/; t a' # tudo numa linha
+$ cat numeros.txt | sed ':a ; $!N ; s/\n/@@@/; t a ; s/@@@/###/g'
+$ cat numeros.txt | tr -d '\n'
+$ cat numeros.txt | tr '\n' @
+</pre>
+
+<h3 id="toc30">Os comandos de buffer h g x - hold, get e eXchange</h3>
+
+<pre>
+$ cat numeros.txt | sed '1h;$g'                # troque a última pela 1a
+$ cat numeros.txt | sed '1h;$G'                # repete a 1a no final
+$ cat numeros.txt | sed '1s/:/@/;1h;$G'
+$ cat numeros.txt | sed '1{h;s/:/@/g;x;} ; $G'
+</pre>
+
+<h3 id="toc31">Um arquivo só de comandos SED</h3>
+
+<pre>
+$ echo '1{h;s/:/@/g;x;} ; $G' &gt; script.sed
+$ vi script.sed                                # pode alinhar, comentar
+$ cat numeros.txt | sed -f script.sed          # usar o -f
+$ sed -f script.sed numeros.txt                # com ou sem o cat
+$ chmod +x script.sed                          # pode ser executável
+$ ./script.sed numeros.txt                     # coloque #!/bin/sed -f
+$ mv script.sed meuprog                        # extensão é opcional
+$ ./meuprog numeros.txt
+</pre>
+
+<h3 id="toc32">O comando =</h3>
+
+<pre>
+$ cat numeros.txt | sed =                      # mostra número da linha
+$ cat numeros.txt | sed 5=
+$ cat numeros.txt | wc  -l
+$ cat numeros.txt | sed -n '$='                # idem anterior
+</pre>
+<hr class="light">
+
+<h2 id="toc33">Expressões Regulares</h2>
+
+<p>As Expressões Regulares são uma simbologia, um método de se descrever padrões de texto complicados ou posicionais, como "números no final da linha" ou "palavras repetidas na mesma linha".</p>
+
+<h3 id="toc34">As âncoras ^ e $ para começo e fim de linha</h3>
+
+<pre>
+$ cat numeros.txt | grep e                     # procure e
+$ cat numeros.txt | grep 'e$'                  # procure e no fim
+$ cat numeros.txt | grep '^1'                  # procure 1 no início
+$ cat numeros.txt | grep '^$'                  # linhas em branco
+</pre>
+
+<h3 id="toc35">O ou de caracteres [] (lista)</h3>
+
+<pre>
+$ cat numeros.txt | grep '[eo]$'               # e ou o no fim
+$ cat numeros.txt | grep '[aeiou]$'            # vogais no fim
+$ cat numeros.txt | grep '^[aeiou]'            # vogais no início
+$ cat numeros.txt | cut -d: -f2-               # só as palavras
+$ cat numeros.txt | cut -d: -f2- | grep '^[aeiou]'
+$ cat numeros.txt | cut -d: -f2- | grep '^[aeiouuifduieuifg]'
+$ cat numeros.txt | cut -d: -f2- | grep '^[aaaa]'
+$ cat numeros.txt | cut -d: -f2- | grep '^[a-z]' # intervalo
+$ cat numeros.txt | cut -d: -f2- | grep '^[#-@]'
+$ cat numeros.txt | grep '^[a-z]'              # letras no início
+$ cat numeros.txt | grep '^[0-9]'              # números no início
+$ cat numeros.txt | grep '^[0-9][0-9]'         # dois números no início
+$ cat numeros.txt | grep '^[0-9]:[aeiou]'      # número:vogal
+$ cat numeros.txt | grep '^[0-9]:[^aeiou]'     # número:não vogal
+$ cat numeros.txt | grep '^[0-9]:[aeiou^-]'    # número:vogal ou ^ ou -
+</pre>
+
+<h3 id="toc36">O repetidor {} (chaves)</h3>
+
+<pre>
+$ cat numeros.txt | egrep '^[0-9]{1,}:'        # um ou mais números
+$ cat numeros.txt | egrep '^[0-9]{1,5}:'       # de 1 a 5 números
+$ cat numeros.txt | egrep '^[0-9]{2}:'         # exatamente 2 números
+$ cat numeros.txt | grep '^[0-9]\{2\}:'        # _e_grep não escapa
+</pre>
+
+<h3 id="toc37">O curinga . (ponto)</h3>
+
+<pre>
+$ cat numeros.txt | grep '^[0-9]:.[aeiou]'     # núm : qqr vogal
+$ cat numeros.txt | grep '^[0-9]:..[aeiou]'    # núm : qqr qqr vogal
+$ cat numeros.txt | grep '^[0-9]:...[aeiou]'   # núm : qqr qqr qqr vogal
+$ cat numeros.txt | grep '\.'                  # ponto literal
+$ cat numeros.txt | grep '^.........[aeiou]'   # vários pontos
+$ cat numeros.txt | egrep '^.{9}[aeiou]'       # 10a é vogal
+$ cat numeros.txt | egrep '^.{7,9}[aeiou]'     # 8a, 9a ou 10a é vogal
+$ cat numeros.txt | egrep '^.{9,}[aeiou]'      # 10a em diante é vogal
+$ cat numeros.txt | egrep '^.{10}$'            # linha com 10 letras
+$ cat numeros.txt | egrep '^.{1,10}$'          # linha com até 10 letras
+$ cat numeros.txt | egrep '^.{10,}$''          # linha com mín 10 letras
+$ cat numeros.txt | egrep '[aeiou]..$'         # antepenúltima é vogal
+</pre>
+
+<h3 id="toc38">Os atalhos ? * +</h3>
+
+<pre>
+$       ? == {0,1}       * == {0,}       + == {1,}
+$ cat numeros.txt | egrep 'X'                  # X uma vez
+$ cat numeros.txt | egrep 'X*'                 # X zero ou mais vezes
+$ cat numeros.txt | egrep 'X+'                 # X uma ou mais vezes
+$ cat numeros.txt | egrep 'X?'                 # X opcional (0 ou 1)
+$ echo aulas | egrep 'aulas?$'                 # aula ou aulas no fim
+$ echo aula | egrep 'aulas?$'
+</pre>
+
+<h3 id="toc39">O agrupador ()</h3>
+
+<pre>
+$ echo aulas | egrep '(aulas)?$'               # aulas no fim ou não
+</pre>
+
+<h3 id="toc40">ER para casar endereço IP (N.N.N.N)</h3>
+
+<pre>
+$ cat ip                                       # ER pra casar IP
+10.0.0.1
+192.168.255.255
+$ cat ip | egrep '^([0-9]{1,3}\.){4}$'         # não funciona
+$ cat ip | egrep '^([0-9]{1,3}\.){3}[0-9]{3}$' # quase
+$ cat ip | egrep '^([0-9]{1,3}\.){3}[0-9]{1,3}$' # ok!
+</pre>
+
+<h3 id="toc41">ER de zero a 255</h3>
+
+<pre>
+$ seq 260                                      # olhe a evolução
+$ seq 260 | egrep -v '^[0-9]$'
+$ seq 260 | egrep -v '^[0-9]{2}$'
+$ seq 260 | egrep -v '^[0-9]{1,2}$'
+$ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9])$'
+$ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9]|2[0-5][0-5])$'
+$ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9])$'
+$ seq 260 | egrep -v '^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$'
+</pre>
+
+<h3 id="toc42">ER do IP mais precisa (N.N.N.N onde N de 0 a 255)</h3>
+
+<pre>
+$ cat ip | egrep '^(([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$'
+$ ##### usando variáveis fica mais claro
+$ de0a255='([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])'
+$ cat ip | egrep "^($de0a255\.){3}$de0a255$'
+</pre>
+
+<h3 id="toc43">O ou de palavras |</h3>
+
+<pre>
+$ echo isso | sed 's/isso|aquilo/XXX/'         # isso ou aquilo
+$ echo aquilo| sed 's/isso|aquilo/XXX/'
+$ echo aquilo| sed 's/\(iss\|aquil\)o/XXX/'    # isso ou aquilo
+$ echo aquilo| sed -r 's/(iss|aquil)o/XXX/'    # com -r, não escapa
+</pre>
+
+<h3 id="toc44">O curinga .*, o tudo e o nada</h3>
+
+<pre>
+$ echo a:a:a:a:a:a | sed 's/a:.*:/X/'
+$ echo "&lt;b&gt;abc&lt;/b&gt; foo bar &lt;b&gt;xyz&lt;/b&gt; XXX" | sed 's,&lt;b&gt;.*&lt;/b&gt;,,'
+</pre>
+
+<h3 id="toc45">Os retrovisores \1, \2 ... \9</h3>
+
+<pre>
+$ echo abcdefg | sed -r 's/(a)(b)(c)/\3:\2:\1/'
+$ echo abcdefg | sed -r 's/(a)(b)(c).*/\1:\2:\3/'
+$ echo abcdefg | sed -r 's/(a)(b)(c).*/\3:\2:\1/'
+$ cat numeros.txt | sed -r 's/^(.*):(.*):(.*)/\3 \2 \1/'
+</pre>
+
+<h3 id="toc46">ER para casar números repetidos 11, 22, 33, ...</h3>
+
+<pre>
+$ seq 99 | egrep '[0-9]{2}'                    # não é isso
+$ seq 99 | egrep '([0-9])\1'                   # ok!
+</pre>
+
+<h3 id="toc47">ER para casar palavras repetidas</h3>
+
+<pre>
+$ echo quero quero | egrep '([a-z]+) \1'       # casou
+$ echo quero aula | egrep '([a-z]+) \1'        # não casa
+$ echo quero aula agora, eu quero | egrep '([a-z]{3,}) .*\1'
+</pre>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="..">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

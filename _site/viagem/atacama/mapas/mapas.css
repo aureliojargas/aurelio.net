@@ -1,0 +1,9 @@
+.prev-next {
+  text-align: center;
+  border: 1px solid silver;
+  background: #eee;
+  padding: 5px 0;
+}
+.prev-next a {
+  text-decoration: none;
+}

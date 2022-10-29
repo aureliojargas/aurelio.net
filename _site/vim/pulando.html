@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Pulando com o Vim | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/regex/regex.css">
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/vim/pulando.html" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Pulando com o Vim" />
+	<meta property="og:url" content="https://aurelio.net/vim/pulando.html" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/vim/pulando.html" title="Permalink" rel="bookmark">Pulando com o Vim</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">10/10/2003</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<!--
+  2003-10-09 18:30 1h
+  2003-10-09 21:00 2h
+  2003-10-10 08:15 2h
+-->
+
+<blockquote>Ganhe tempo usando comandos precisos para movimentar o cursor e editar textos, dispensando o uso das setas do teclado, Delete e Backspace.</blockquote>
+
+<p>Editar textos é a tarefa mais comum de qualquer usuário de computador. Seja para responder um e-mail, criar um documento ou codificar um programa, lá estará o usuário digitando texto para a máquina. Embora faça isso diariamente, a grande maioria não faz um uso otimizado do seu editor de textos. Muito tempo é perdido em tarefas repetitivas e vícios de uso.</p>
+
+<p>Este artigo é um guia para acabar com o sofrimento de pessoas viciadas em segurar teclas. Seja para movimentar o cursor ou para apagar grandes quantidades de texto, lá está o usuário estático segurando uma setinha ou a tecla Del por alguns preciosos segundos. Ao longo do dia esses segundos podem se tornar minutos, e ao longo dos meses, horas.</p>
+
+<p>Evitando este desperdício de tempo, entra em cena o melhor editor de textos de todos os tempos: o Vim. Concebido numa época quando conexões remotas eram muito lentas, editar um texto tinha que envolver apertar o menor número de teclas possível. Hoje as conexões são rápidas, mas o conceito de "menos teclas, melhor" ajuda a poupar tempo na rotina diária de editar textos.</p>
+
+<h2>As setinhas são para perdedores</h2>
+
+<p>Quanto mais você usa as setas, mais tempo perde. Basicamente se usam as setas para movimentar o cursor no arquivo. Para ir ao meio da frase, o usuário fica segurando a seta até chegar no ponto desejado. Para ir ao início do parágrafo anterior, seta pra cima, depois seta para a esquerda. O Vim provê vários comandos que servem para dar "pulos" a outros pontos do arquivo, evitando gastar a ponta do seu dedo segurando a seta.</p>
+
+<p>Seja na alteração de um texto já existente ou na composição de um novo, a edição nunca é linear. Editar um texto consiste em visitar diversas partes do documento, alterando e inserindo letras e palavras. Saber como chegar rapidamente a qualquer ponto do documento, apertando o menor número de teclas possível, é ser ágil e economiza tempo.</p>
+
+<p>Os pulos mais conhecidos e que já possuem tecla especial no teclado são <code>Home</code> e <code>End</code>, que vão ao início e fim da linha e <code>PgUp</code>/<code>PgDn</code> que pulam páginas. O Vim possui comandos para pular a outras partes do arquivo, são eles:</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Comando</th>
+    <th>Ação</th>
+  </tr>
+  <tr>
+    <td class="center">gg</td>
+    <td>Pula para a primeira linha</td>
+  </tr>
+  <tr>
+    <td class="center">G</td>
+    <td>Pula para a última linha</td>
+  </tr>
+  <tr>
+    <td class="center">:44</td>
+    <td>Pula para a linha número 44</td>
+  </tr>
+  <tr>
+    <td class="center">{</td>
+    <td>Pula para o parágrafo anterior</td>
+  </tr>
+  <tr>
+    <td class="center">}</td>
+    <td>Pula para o próximo parágrafo</td>
+  </tr>
+  <tr>
+    <td class="center">(</td>
+    <td>Pula para a frase anterior</td>
+  </tr>
+  <tr>
+    <td class="center">)</td>
+    <td>Pula para a próxima frase</td>
+  </tr>
+  <tr>
+    <td class="center">0</td>
+    <td>Pula para o início da linha atual</td>
+  </tr>
+  <tr>
+    <td class="center">$</td>
+    <td>Pula para o fim da linha atual</td>
+  </tr>
+  <tr>
+    <td class="center">``</td>
+    <td>Desfaz o pulo, volta</td>
+  </tr>
+</table>
+
+<p>Estes são os pulos básicos que todo usuário do Vim deve saber. Com eles é possível "navegar" no documento de maneira rápida, independente de qual o seu conteúdo. Lembre-se que eles são válidos fora do modo de inserção (é preciso apertar <code>&lt;Esc&gt;</code> antes).</p>
+
+<p>Se, por exemplo, lá no meio do texto você precisar voltar à primeira linha para checar uma frase, faz <code>&lt;Esc&gt;gg</code> e depois `` para voltar a editar o texto na posição original.</p>
+
+<p>Assim como outros comandos do Vim, os pulos também podem ser quantificados. Basta adicionar um número na sua frente. Assim, o comando <code>5{</code> volta cinco parágrafos.</p>
+
+<p>Além destes pulos para posições fixas, também é possível pular para uma posição qualquer onde esteja o texto desejado. Basta utilizar o o comando <code>/</code>, que procura adiante por um texto. Para ir até a próxima palavra "Linux", digite <code>/Linux&lt;ENTER&gt;</code>. Com o comando <code>n</code> (de Next), pula-se para as próximas ocorrências da mesma palavra. O <code>N</code> (maiúsculo) volta para a anterior.</p>
+
+<p>Um atalho útil é o comando <code>*</code>, que procura a próxima ocorrência da palavra atual do cursor. Similar ao exemplo de pesquisa anterior, bastaria posicionar o cursor sob a palavra "Linux" e apertar o asterisco. Para uma busca mais confortável, basta colocar no <code>~/.vimrc</code> a seguinte linha mágica <code>set ic is hls scs</code>.</p>
+
+<p>Um outro pulo rápido e muito útil é o comando <code>w</code> (de Word), que pula para o início da próxima palavra. Apertar a tecla "w" três vezes faz o cursor avançar três palavras, e o comando <code>7w</code> avançará sete palavras. O comando similar é o <code>b</code> (de Back), que pula para palavras anteriores.</p>
+
+<p>E por último, o pulo mais avançado é o de procurar um caractere na mesma linha, com o comando <code>f</code> (de Find). Por exemplo, para ir para a próxima vírgula, o comando é <code>f,</code> e para a vírgula anterior (à esquerda) é <code>F,</code>. A diferença é o comando em maiúscula ou minúscula. O comando <code>3fa</code> pulará para a terceira letra "a" após o cursor, na mesma linha.</p>
+
+<p>Para ilustrar estes pulos, uma figurinha. Com o cursor sempre sob a letra <code>N</code>, são citados alguns comandos e as setas indicam para onde o cursor pulará.</p>
+
+<p class="figure">
+  <img src="pulando.png">
+</p>
+
+<p>Pulando rapidamente para a posição certa, o próximo passo é fazer a alteração necessária no texto. Nessa hora o Vim também é imbatível.</p>
+
+<h2>A tecla Del é para perdedores</h2>
+
+<p>Ficar segurando a tecla Del até apagar o trecho desejado é demorado e impreciso, freqüentemente apagando mais do que o desejado. O Vim provê meios de apagar grandes quantidades de texto apertando somente duas ou três teclas.</p>
+
+<p>O comando <code>x</code> apaga caracteres à direita do cursor. Se for preciso apagar 20 caracteres, em vez de ficar segurando a tecla "Del" alguns segundos, basta digitar o comando <code>20x</code>.</p>
+
+<p>O comando <code>d</code> (de Delete) apaga caracteres ou linhas, dependendo de como é utilizado. Apertando <code>dd</code> apaga-se a linha toda. Já <code>5dd</code> apaga as próximas cinco linhas. O comando <code>D</code> maiúsculo, apaga do cursor até o final da linha.</p>
+
+<p>Mas a brincadeira de apagar começa a ficar divertida ao combinar o comando delete com os pulos já vistos. Basta usar a forma <code>d&lt;pulo&gt;</code>.</p>
+
+<table class="tableborder">
+  <tr>
+    <th>Comando</th>
+    <th>Ação</th>
+  </tr>
+  <tr>
+    <td class="center">dgg</td>
+    <td>Apaga até o início do arquivo</td>
+  </tr>
+  <tr>
+    <td class="center">d0</td>
+    <td>Apaga até o início da linha atual</td>
+  </tr>
+  <tr>
+    <td class="center">dw</td>
+    <td>Apaga a palavra</td>
+  </tr>
+  <tr>
+    <td class="center">d4b</td>
+    <td>Apaga as quatro palavras anteriores</td>
+  </tr>
+  <tr>
+    <td class="center">df.</td>
+    <td>Apaga até o próximo ponto</td>
+  </tr>
+  <tr>
+    <td class="center">d)</td>
+    <td>Apaga até o fim da frase</td>
+  </tr>
+</table>
+
+<p>O comando apagará todo o texto desde a posição do cursor até o destino do pulo. Acostume a sempre "falar" o comando, para ficar mais fácil memorizá-lo. Por exemplo, o <code>df.</code> é "Delete Find Ponto", ou seja "Apague até Encontrar um Ponto".</p>
+
+<p>O comando <code>d</code> permanece no modo de comandos após apagar o texto. Caso o usuário queira acrescentar algum texto no lugar do antigo, primeiro será necessário entrar no modo de inserção (comando <code>i</code>). Para economizar esse passo, existe o comando <code>c</code> (de Change), que é idêntico do <code>d</code>, com a diferença de retornar automaticamente ao modo de inserção.</p>
+
+<p>Uma maneira rápida de trocar a palavra "UNIX" por "Linux" é posicionar o cursor na letra "U" e digitar <code>cwLinux</code>. Este comando se lê "Change Word Linux".</p>
+
+<p>Às vezes, não são grandes quantidades, mas alterações de um caractere que precisam ser feitas. Até nessa hora o Vim ajuda. Use o comando <code>r</code> (de Replace) para trocar um caractere por outro, sem precisar entrar no modo de inserção. Por exemplo, na palavra "Lenux", posicione o cursor na letra "e" e aperte <code>ri</code>.</p>
+
+<p>Cada texto removido com os comandos <code>x</code>, <code>d</code>, <code>c</code> e <code>r</code>, é automaticamente copiado, e pode ser colado em outra parte do arquivo com o comando <code>p</code> (de Paste). Então a operação de mover texto no arquivo envolve apagá-lo, pular para a posição nova e colar.</p>
+
+<p>Outro comando muito frequente de utilizar é o <code>xp</code>, que apaga um caractere e o cola uma posição à direita. Para corrigir a palavra "Liunx", basta posicionar o cursor na letra "u" e apertar <code>xp</code>. Parece bobo, mas é muito comum encontrar erros desse tipo em textos, onde duas letras estão com a posição trocada.</p>
+
+<p>Para finalizar, uma tarefa corriqueira que é apagar trechos grandes de um arquivo, como "todas as linhas daqui até o início do arquivo" ou "todas daqui até o fim". Um verdadeiro pesadelo para os seguradores de teclas; já imaginou ficar segurando o Del ou o BackSpace durante minutos num arquivo grande?</p>
+
+<p>Em alguns editores, pode-se usar o mouse para selecionar texto. Com um pouco de paciência e persistência, em alguns segundos consegue-se selecionar todo o texto e apertar Del. Outros mais espertos podem usar o teclado segurando o Shift para selecionar e apertar Ctrl+End para espichar a seleção até o fim do arquivo, e finalmente apertar a tecla Del. No Vim, basta um simples <code>dG</code> para apagar até o fim e um <code>dgg</code> para apagar até o começo. Mais prático impossível.</p>
+
+<p>Todos estes comandos poupam tempo e têm precisão, mas seu uso deve ser forçado, pois é muito difícil abandonar o vício de segurar teclas. Depois de memorizar estes comandos e se disciplinar a usá-los, você não terá mais paciência de usar "outros editores" que lhe fazem perder segundos preciosos.</p>
+
+<blockquote>Artigo originalmente publicado na Revista do Linux edição 49 (a última), de janeiro de 2004.</blockquote>
+
+<blockquote><b>Atualização em 2018-11-17:</b> Depois que você dominar todos estes pulos, passe para o próximo nível e aprenda a pular usando <a href="https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/">Text Objects</a>.</blockquote>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+<p>
+  <a href="/vim/" class="linkblock">
+    <img align="middle" src="/img/icon/128/vim.png">
+    Aprenda mais sobre Vim
+  </a>
+</p>
+
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Pulando%20com%20o%20Vim%20https://aurelio.net/vim/pulando.html">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/vim/pulando.html">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/vim/pulando.html">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

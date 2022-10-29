@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Informações - Screenshots | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Informações - Screenshots</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  
+
+  
+
+    <h3>Screenshots do Programa em Ação</h3>
+
+<p>Exemplos valem mais do que mil páginas de manual. Este é o arquivo de texto que todos os exemplos seguintes usarão:</p>
+
+<pre>
+<b>$ cat num.txt</b>
+1:um    :one  :uno   :ein
+2:dois  :two  :dos   :zwei
+3:três  :three:tres  :drei
+4:quatro:four :cuatro:vier
+5:cinco :five :cinco :fünf
+6:seis  :six  :seis  :sechs
+7:sete  :seven:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+</pre>
+
+<p>Agora alguns exemplos de endereçamento de linhas:</p>
+
+<pre>
+<i># Somente a linha 4</i>
+<b>$ cat num.txt | rac '4'</b>
+4:quatro:four :cuatro:vier
+
+<i># As linhas 4, 7 e 2, nesta ordem</i>
+<b>$ cat num.txt | rac '4;7;2'</b>
+4:quatro:four :cuatro:vier
+7:sete  :seven:siete :sieben
+2:dois  :two  :dos   :zwei
+
+<i># A linha 4, três vezes</i>
+<b>$ cat num.txt | rac '4;4;4'</b>
+4:quatro:four :cuatro:vier
+4:quatro:four :cuatro:vier
+4:quatro:four :cuatro:vier
+
+<i># Da linha 4 até a linha 6</i>
+<b>$ cat num.txt | rac '4:6'</b>
+4:quatro:four :cuatro:vier
+5:cinco :five :cinco :fünf
+6:seis  :six  :seis  :sechs
+
+<i># Da linha 6 até a linha 4 (inverso!)</i>
+<b>$ cat num.txt | rac '6:4'</b>
+6:seis  :six  :seis  :sechs
+5:cinco :five :cinco :fünf
+4:quatro:four :cuatro:vier
+
+<i># Da linha 8 até a última linha</i>
+<b>$ cat num.txt | rac '8:-1'</b>
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+
+<i># Da última à antepenúltima linha (inverso!)</i>
+<b>$ cat num.txt | rac '-1:-3'</b>
+9:nove  :nine :nueve :neun
+8:oito  :eight:ocho  :acht
+7:sete  :seven:siete :sieben
+
+<i># Do início até a terceira linha</i>
+<b>$ cat num.txt | rac ':3'</b>
+1:um    :one  :uno   :ein
+2:dois  :two  :dos   :zwei
+3:três  :three:tres  :drei
+</pre>
+
+<p>Para colunas é bem parecido, basta colocar entre colchetes:</p>
+
+<pre>
+<i># Da coluna 2 até a coluna 9</i>
+<b>$ cat num.txt | rac '[2:9]'</b>
+:um    :
+:dois  :
+:três  :
+:quatro:
+:cinco :
+:seis  :
+:sete  :
+:oito  :
+:nove  :
+
+<i># Da coluna 23 até o final da linha</i>
+<b>$ cat num.txt | rac '[23:]'</b>
+ein
+zwei
+drei
+vier
+fünf
+sechs
+sieben
+acht
+neun
+
+<i># A linha 7, da coluna 3 até a coluna 6</i>
+<b>$ cat num.txt | rac '7[3:6]'</b>
+sete
+
+<i># A linha 7 de trás para frente</i>
+<b>$ cat num.txt | rac '7[-1:1]'</b>
+nebeis: eteis:neves:  etes:7
+
+<i># Da col. 15 da linha 7 à col. 15 da linha 9</i>
+<b>$ cat num.txt | rac '7[15]:9[15]'</b>
+:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :
+
+<i># A linha 7, vários cortes</i>
+<b>$ cat num.txt | rac '7[16:21,3:7,23:,2,1]'</b>
+siete sete sieben:7
+</pre>
+
+<p>Textos! Tudo fica mais interessante endereçando por textos (strings):</p>
+
+<pre>
+<i># Linhas que contêm a palavra sete</i>
+<b>$ cat num.txt | rac '=sete='</b>
+7:sete  :seven:siete :sieben
+
+<i># A segunda linha após a que contém sete</i>
+<b>$ cat num.txt | rac '=sete=+2'</b>
+9:nove  :nine :nueve :neun
+
+<i># A segunda linha anterior a que contém sete</i>
+<b>$ cat num.txt | rac '=sete=-2'</b>
+5:cinco :five :cinco :fünf
+
+<i># A terceira linha que contém dois-pontos</i>
+<b>$ cat num.txt | rac '=:=*3'</b>
+3:três  :three:tres  :drei
+
+<i># A penúltima linha que contém dois-pontos</i>
+<b>$ cat num.txt | rac '=:=*-2'</b>
+8:oito  :eight:ocho  :acht
+
+<i># Partindo da 1a linha com sete, ande de 1 em 1</i>
+<b>$ cat num.txt | rac '=sete=*1~1'</b>
+7:sete  :seven:siete :sieben
+8:oito  :eight:ocho  :acht
+9:nove  :nine :nueve :neun
+
+<i># Partindo da 1a linha com sete, volte de 2 em 2</i>
+<b>$ cat num.txt | rac '=sete=*1~-2'</b>
+7:sete  :seven:siete :sieben
+5:cinco :five :cinco :fünf
+3:três  :three:tres  :drei
+1:um    :one  :uno   :ein
+</pre>
+
+<h3>Screenshot "Gráfico"</h3>
+
+<p>Além dos exemplos, aqui vai uma representação colorida das áreas que os comandos listados abaixo representam num suposto arquivo de 9x9 (9 linhas com 9 colunas cada).</p>
+
+<table class="tableborder">
+  <tr>
+    <td></td>
+    <td><strong>1</strong></td>
+    <td><strong>2</strong></td>
+    <td><strong>3</strong></td>
+    <td><strong>4</strong></td>
+    <td><strong>5</strong></td>
+    <td><strong>6</strong></td>
+    <td><strong>7</strong></td>
+    <td><strong>8</strong></td>
+    <td><strong>9</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>1</strong></td>
+    <td style="background-color:magenta">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td><strong>1</strong></td>
+  </tr>
+  <tr>
+    <td><strong>2</strong></td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td><strong>2</strong></td>
+  </tr>
+  <tr>
+    <td><strong>3</strong></td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td><strong>3</strong></td>
+  </tr>
+  <tr>
+    <td><strong>4</strong></td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td><strong>4</strong></td>
+  </tr>
+  <tr>
+    <td><strong>5</strong></td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td><strong>5</strong></td>
+  </tr>
+  <tr>
+    <td><strong>6</strong></td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td><strong>6</strong></td>
+  </tr>
+  <tr>
+    <td><strong>7</strong></td>
+    <td style="background-color:lightgreen">&nbsp;</td>
+    <td>.</td>
+    <td style="background-color:lightgreen">&nbsp;</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td style="background-color:lightgreen">&nbsp;</td>
+    <td>.</td>
+    <td style="background-color:lightgreen">&nbsp;</td>
+    <td>.</td>
+    <td><strong>7</strong></td>
+  </tr>
+  <tr>
+    <td><strong>8</strong></td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td><strong>8</strong></td>
+  </tr>
+  <tr>
+    <td><strong>9</strong></td>
+    <td>.</td>
+    <td style="background-color:silver">&nbsp;</td>
+    <td style="background-color:silver">&nbsp;</td>
+    <td style="background-color:silver">&nbsp;</td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>.</td>
+    <td>.</td>
+    <td>.</td>
+    <td style="background-color:red">&nbsp;</td>
+    <td><strong>9</strong></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><strong>1</strong></td>
+    <td><strong>2</strong></td>
+    <td><strong>3</strong></td>
+    <td><strong>4</strong></td>
+    <td><strong>5</strong></td>
+    <td><strong>6</strong></td>
+    <td><strong>7</strong></td>
+    <td><strong>8</strong></td>
+    <td><strong>9</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Endereço</th>
+    <th>ID</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td class="center"><code>5</code></td>
+    <td style="background-color:cyan">&nbsp;</td>
+    <td>Quinta linha</td>
+  </tr>
+  <tr>
+    <td class="center"><code>[5]</code></td>
+    <td style="background-color:blue">&nbsp;</td>
+    <td>Quinta coluna</td>
+  </tr>
+  <tr>
+    <td class="center"><code>1[1]</code></td>
+    <td style="background-color:magenta">&nbsp;</td>
+    <td>Primeira coluna da primeira linha</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-1[-1]</code></td>
+    <td style="background-color:red">&nbsp;</td>
+    <td>Última coluna da última linha</td>
+  </tr>
+  <tr>
+    <td class="center"><code>2[7]:3[3]</code></td>
+    <td style="background-color:orange">&nbsp;</td>
+    <td>Da linha 2 coluna 7 até a linha 3 coluna 3</td>
+  </tr>
+  <tr>
+    <td class="center"><code>7[1,3,6,8]</code></td>
+    <td style="background-color:lightgreen">&nbsp;</td>
+    <td>Colunas 1, 3, 6 e 8 da sétima linha</td>
+  </tr>
+  <tr>
+    <td class="center"><code>-1[2:4]</code></td>
+    <td style="background-color:silver">&nbsp;</td>
+    <td>Colunas 2, 3 e 4 da última linha</td>
+  </tr>
+</table>
+
+  </body>
+</html>

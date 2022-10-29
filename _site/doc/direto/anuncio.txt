@@ -1,0 +1,54 @@
+From aurelio@conectiva.com.br Mon Mar 22 15:53:32 2004
+From: aurelio@conectiva.com.br
+To: diretolivre@listas.softwarelivre.org
+Date: Fri, 19 Mar 2004 15:47:22 -0300 (BRT)
+Subject: [DiretoLivre] instalador para o Conectiva Linux
+
+Oi pessoal,
+
+Meu nome é Aurélio Marinho Jargas e sou funcionário da
+Conectiva.
+
+Uma de minhas tarefas aqui em novembro/dezembro do ano
+passado foi fazer o Direto funcionar no Conectiva Linux 9
++ updates.
+
+Depois de muita luta, configurações e testes, funcionou.
+E o melhor, usando os pacotes similares do CL, e não os que
+vêm junto com o tarball do Direto, que já são antigos.
+
+Também adaptei o instalador dele e fiz umas melhorias, mas
+antes que eu terminasse ele, aconteceu o BOOM do Direto na
+Procergs e o projeto foi abortado por aqui.
+
+Agora a Conectiva está LIBERANDO para a comunidade os
+resultados do trabalho, para quem quiser continuar com ele.
+
+   http://aurelio.net/doc/direto
+
+Que conta com o relatório completo de homologação das
+funcionalidades do Direto no CL, o instalador adaptado (que
+ainda falta finalizar) e arquivos auxiliares.
+
+Esta URL, a princípio, será permanente e não vou modificar
+os arquivos que estão lá. Qualquer um que queira terminar o
+instalador e empacotar o Direto para o Conectiva, fique à
+vontade para baixar e trabalhar em cima dos arquivos.
+
+Como opinião pessoal sobre o assunto, considero o Direto uma
+idéia boa, mas a complexidade de sua infra estrutura e a
+falta de documentação tanto para usuários quanto para
+instaladores e desenvolvedores encobrem o brilho dela.
+
+Aos que continuarem o projeto, pensem em priorizar a
+documentação. A falta dela é um ponto muito negativo.
+
+Boa sorte!
+
+-- 
+Aurelio Marinho Jargas - Conectiva
+http://aurelio.net
+_______________________________________________
+DiretoLivre mailing list
+DiretoLivre@listas.softwarelivre.org
+http://listas.softwarelivre.org/cgi-bin/mailman/listinfo/diretolivre

@@ -1,0 +1,681 @@
+#!/usr/X11R6/bin/mgp -t 90
+%deffont "normal"    xfont  "utopia-medium-r", charset "iso8859-1"
+%deffont "normal-i"  xfont  "utopia-medium-i", charset "iso8859-1"
+%deffont "normal-b"  xfont  "utopia-bold-r"  , charset "iso8859-1"
+%deffont "normal-bi" xfont  "utopia-bold-i"  , charset "iso8859-1"
+%deffont "mono"      xfont "courier-medium-r", charset "iso8859-1"
+%default 1 size 5
+%default 2 size 8, fore "yellow", font "normal-b", center
+%default 3 size 5, fore "white",  font "normal", left, prefix "  "
+%tab 1 size 4, vgap 30, prefix "     ", icon arc "yellow" 40, leftfill
+%tab 2 prefix "            ", icon arc "yellow" 40, leftfill
+%tab 3 prefix "                   ", icon arc "brown" 40, leftfill
+%tab 4 prefix "                          ", icon arc "darkmagenta" 40, leftfill
+%tab 5 prefix "                                ", icon arc "magenta" 40, leftfill
+%%------------------------- end of headers -----------------------------
+%page
+
+
+
+
+
+%size 10, center, fore "yellow"
+Software Livre
+
+%size 7
+Experiências de um Desenvolvedor
+
+%font "normal",size 6,fore "white"
+Aurélio Marinho Jargas
+
+%font "normal", size 5
+
+%page
+
+Conteúdo da Palestra
+
+	
+%cont, fore "green"
+Parte 1:
+%cont, fore "white"
+ O que é ser um desenvolvedor de Software Livre
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Parte 2:
+%cont, fore "white"
+ Como criar e lançar um Software Livre
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Parte 3:
+%cont, fore "white"
+ Os Detalhes Que Fazem a Diferença
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Parte 4:
+%cont, fore "white"
+ Experiência recente: RAC
+
+%page
+
+O Palestrante
+
+	
+%cont, fore "green"
+Experiência:
+%cont, fore "white"
+ Desenvolvedor de Software Livre há 4 anos
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Programas:
+%cont, fore "white"
+ Funções ZZ, txt2regex, txt2tags, sedsed, SedSokoban
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Distribuições:
+%cont, fore "white"
+ Conectiva, Debian, FreeBSD, Knoppix, Gentoo e Fink
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Sites:
+%cont, fore "white"
+ unixreview.com, linux.org, serverwatch.com, Dicas-L, Linux in Brazil
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Revistas:
+%cont, fore "white"
+ ASCII Linux (jp), Linux Format (fr), Revista do Linux (br)
+%font "normal", size 5
+
+	
+%cont, fore "green"
+GNU:
+%cont, fore "white"
+ http://www.gnu.org/directory/txt2tags.html
+
+%page
+
+O que é ser um desenvolvedor de Software Livre
+
+
+
+%cont, size 60, center
+?
+
+%page
+
+Características do Desenvolvedor
+
+	Programa nas horas vagas
+%font "normal", size 5
+
+	Programa por prazer
+%font "normal", size 5
+
+	Quer sempre melhorar seu programa
+%font "normal", size 5
+
+	Quer ter seu trabalho reconhecido
+%font "normal", size 5
+
+	Não tem tempo de ver novela, navegar na Internet e dormir até tarde
+
+%page
+
+A Minha Experiência
+
+	
+%cont, font "mono"
+Fev/2000
+%cont, font "normal"
+: funções ZZ (
+%cont, fore "green"
+Shell, nacional, parceria, +40
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	
+%cont, font "mono"
+Nov/2000
+%cont, font "normal"
+: txt2regex (
+%cont, fore "green"
+Shell, distros, artigos
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	
+%cont, font "mono"
+Jul/2001
+%cont, font "normal"
+: txt2tags (
+%cont, fore "green"
+Python, GNU, colaboração
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	
+%cont, font "mono"
+Dez/2001
+%cont, font "normal"
+: sedsed (
+%cont, fore "green"
+Python, uma idéia, 5 linhas
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	
+%cont, font "mono"
+Mar/2002
+%cont, font "normal"
+: SedSokoban (
+%cont, fore "green"
+SED, 8 horas, SlashDot
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	
+%cont, font "mono"
+Dez/2003
+%cont, font "normal"
+: rac! (
+%cont, fore "green"
+C, parceria++
+%cont, fore "white"
+)
+
+%page
+
+O Ritmo Frenético de Atualizações
+
+
+%font "mono", size 3
+       Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez TOTAL
+------+---+---+---+---+---+---+---+---+---+---+---+---+-----
+ 2000 |   | 1 |   | 1 | 2 | 1 |   |   | 1 |   | 2 | 1 |   9
+ 2001 |   | 2 |   | 1 |   | 2 | 2 | 4 | 1 | 2 | 1 | 4 |  19
+ 2002 | 1 | 5 | 8 | 2 | 1 | 4 | 2 | 2 | 1 | 1 | 3 | 3 |  33
+ 2003 | 2 | 4 | 1 | 1 | 3 | 1 | 2 |   |   | 1 | 3 |   |  18
+------+---+---+---+---+---+---+---+---+---+---+---+---+-----
+TOTAL | 3 |12 | 9 | 5 | 6 | 8 | 6 | 6 | 3 | 4 | 9 | 8 |  79 
+%font "normal"
+
+
+%center
+%newimage "seumadruga.jpg", left
+
+
+%page
+
+Qual a Recompensa?
+
+	Satisfação pessoal
+%font "normal", size 5
+
+	Amigos e contatos 
+%cont, fore "green"
+[Importante]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	Oportunidades
+%font "normal", size 5
+
+	Experiência, currículo
+%font "normal", size 5
+
+	Dinheiro!
+
+%page
+
+Como criar e lançar Software Livre
+
+
+
+%cont, size 60, center
+?
+
+%page
+
+O Ciclo de Vida de um Programa
+
+	A idéia
+%font "normal", size 5
+
+	O projeto
+%font "normal", size 5
+
+	O desenvolvimento
+%font "normal", size 5
+
+	O lançamento
+%font "normal", size 5
+
+	A manutenção
+
+%page
+
+A idéia
+
+	Melhorar um programa já existente - PATCH
+%font "normal", size 5
+
+	Melhorar um programa, criando outro - FORK
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Criar um programa novo
+%cont, fore "white"
+
+
+%page
+
+O Desenvolvimento da Idéia
+
+	Identificar uma necessidade
+%font "normal", size 5
+
+	Encontrar uma solução
+%font "normal", size 5
+
+	Simulações de uso, protótipo
+%font "normal", size 5
+
+	
+%cont, fore "green"
+Papel!
+%cont, fore "white"
+
+
+%page
+
+O projeto
+
+	Especificação básica
+%font "normal", size 5
+
+	Público alvo (nível, língua)
+%font "normal", size 5
+
+	Escopo do programa
+%font "normal", size 5
+
+	Interface com o usuário
+%font "normal", size 5
+
+	Escolha da linguagem (Python, Shell, C, PHP)
+
+%page
+
+O desenvolvimento
+
+%bar "white" 5
+
+	Especificação completa
+%font "normal", size 5
+
+	Codificação
+%font "normal", size 5
+
+	Suíte de Testes
+
+%bar "white" 5
+
+	Documentação
+
+%bar "white" 5
+
+%page
+
+Codificação e Testes
+
+	Especificação completa
+		Escopo, objetivo, descrição
+		Sintaxe, opções, uso
+		Cronograma, planejamento
+%font "normal", size 5
+
+	Codificação
+		Controle de alterações (CVS)
+		Versões Alpha e Beta
+		Troca de idéias com testadores
+%font "normal", size 5
+
+	Suíte de Testes
+		Completa
+		Sincronizada com o código
+		Prever erros do usuário
+
+%page
+
+Documentação
+
+	Tela de ajuda (--help)
+%font "normal", size 5
+
+	Página de Manual (man)
+%font "normal", size 5
+
+	FAQ, Guia do usuário, Tutorial
+%font "normal", size 5
+
+	Exemplos 
+%cont, fore "green"
+[Importante]
+%cont, fore "white"
+
+
+%page
+
+O lançamento
+
+	Testes completos e minuciosos 
+%cont, fore "green"
+[Importante]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	Versionamento
+%font "normal", size 5
+
+	Empacotamento (.tar.gz)
+%font "normal", size 5
+
+	Homepage, Lista de discussão
+%font "normal", size 5
+
+	Anúncio, Marketing
+%font "normal", size 5
+
+	Atendimento aos usuários
+
+%page
+
+A manutenção
+
+	Arrumar problemas (bugs) encontrados
+%font "normal", size 5
+
+	Avaliar pedidos de funcionalidades 
+%cont, fore "green"
+[Difícil]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	Código limpo para facilitar contribuições
+%font "normal", size 5
+
+	Aceitar/rejeitar patches 
+%cont, fore "green"
+[Difícil]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	Agradecimentos
+%font "normal", size 5
+
+	Atualizações constantes
+
+%page
+
+Os Detalhes Que Fazem a Diferença
+
+
+
+%cont, size 60, center
+!!!
+
+%page
+
+Marketing
+
+	Nome do programa 
+%cont, fore "green"
+[Muito Importante]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	FreshMeat (
+%cont, fore "green"
+http://freshmeat.net
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	SourceForge (
+%cont, fore "green"
+http://sf.net
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	Listas de discussão, fórums, assinatura de email
+%font "normal", size 5
+
+	Sites de notícias
+%font "normal", size 5
+
+	Mascote, logo, frase, botão (Powered by)
+%font "normal", size 5
+
+	SlashDot (
+%cont, fore "green"
+http://slashdot.org
+%cont, fore "white"
+)
+
+%page
+
+Página da Internet
+
+	Endereço curto 
+%cont, fore "green"
+[Importante]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	Texto rápido, direto ao ponto
+%font "normal", size 5
+
+	Screenshots 
+%cont, fore "green"
+[Importante]
+%cont, fore "white"
+
+%font "normal", size 5
+
+	Link para download bem visível
+%font "normal", size 5
+
+	Endereço para contato com o autor
+%font "normal", size 5
+
+	Apresentação profissional
+
+%page
+
+Programas GNU
+
+	Opções padrão de linhas de comando
+%font "normal", size 5
+
+		-h, --help
+		-V, --version
+%font "normal", size 5
+
+	Arquivos padrão
+%font "normal", size 5
+
+		LICENSE
+		README
+		INSTALL
+		NEWS
+		AUTHORS
+		ChangeLog
+
+%page
+
+Rows And Columns
+
+
+
+%cont, size 60, center
+RAC
+
+%page
+
+RAC: Características
+
+	Pensado para ser aceito pelas distribuições UNIX/Linux
+%font "normal", size 5
+
+	Parceria bem definida para o desenvolvimento
+%font "normal", size 5
+
+	Lançamento nacional, ambição mundial
+%font "normal", size 5
+
+	Marketing mais agressivo (esta palestra! :)
+%font "normal", size 5
+
+	Cronograma com data de entrega da primeira versão
+
+%page
+
+RAC: O que é?
+
+	Extrator de textos
+%font "normal", size 5
+
+	Engloba funções do grep, sed, head, tail, tac, cat, rev, cut e awk
+%font "normal", size 5
+
+	O texto pode ser endereçado por número de linha/coluna, intervalos e saltos
+%font "normal", size 5
+
+	Tem suporte a ordenação, repetição e contagem reversa
+%font "normal", size 5
+
+	Versões futuras contarão com definição de campos, suporte a strings e expressões regulares
+
+%page
+
+RAC: Exemplos
+
+	Eu quero as 15 primeiras linhas (
+%cont, fore "green"
+1:15
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	Eu quero as 15 últimas linhas (
+%cont, fore "green"
+-15:-1
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	Eu quero somente as colunas ímpares (
+%cont, fore "green"
+[1~2]
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	Eu quero o texto da coluna 25 da linha 7 até a penúltima coluna da penúltima linha (
+%cont, fore "green"
+7[25]:-2[-2]
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	Eu quero voltar de 3 em 3 linhas, à partir da linha 25 (
+%cont, fore "green"
+25~-3
+%cont, fore "white"
+)
+%font "normal", size 5
+
+	
+%cont, fore "green"
+http://aurelio.net/rac
+%cont, fore "white"
+
+
+%page
+
+É Isso
+
+
+
+%cont, size 60, center
+&:)
+
+%page
+
+Letrinhas Que Sobem...
+
+	Esta apresentação foi 100% produzida com Softwares Livres.
+%font "normal", size 5
+
+	Foi usando o editor 
+%cont, fore "green"
+Vim
+%cont, fore "white"
+ para escrever o texto no formato do 
+%cont, fore "green"
+txt2tags
+%cont, fore "white"
+, que converteu o arquivo para o formato do 
+%cont, fore "green"
+MagicPoint
+%cont, fore "white"
+, que gera as telas da apresentação.
+%font "normal", size 5
+
+	A interface utilizada foi o 
+%cont, fore "green"
+WindowMaker
+%cont, fore "white"
+, rodando no sistema operacional 
+%cont, fore "green"
+Yellow Dog Linux
+%cont, fore "white"
+, sob plataforma PowerPC num 
+%cont, fore "green"
+ibook
+%cont, fore "white"
+ joiado (também conhecido como laptop da Xuxa) 
+%center
+%newimage "ibook.jpg", left
+
+
+%% mgp code generated by txt2tags 1.7 (http://txt2tags.sf.net)
+%% cmdline: txt2tags -t mgp -o desenvolvedor-preto-utopia.mgp t2t-tmp
+%%EOD

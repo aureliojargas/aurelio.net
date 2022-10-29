@@ -1,0 +1,47 @@
+/* Generic horizontal bars layout */
+/* by Aurelio Jargas, 2014-04-02, MIT licensed */
+
+body {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.bar {
+  margin: 0;
+  padding: 2em 0;
+  background-color: #ded;  /* green */
+  color: #050;
+}
+.bar > * {
+  max-width: 40em;  /* content width */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.bar-spaced {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.bar-transparent {
+  background-color: inherit;
+  color: inherit;
+}
+
+/* ------------------------------------  iPhone = 320x480 */
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+/*  
+  .bar {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .bar-spaced {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+*/
+}

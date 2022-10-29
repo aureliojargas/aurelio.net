@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>RAC - Página de manual (manpage) | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/rac/rac.css">
+    
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body>
+    <h1>RAC - Página de manual (manpage)</h1>
+
+    <p class="menu">
+      <a href="/rac/">Início</a> |
+      <a href="/rac/info/">Info</a> |
+      <a href="/rac/download/">Download</a> |
+      <a href="/rac/comunidade.html">Comunidade</a> |
+      <a href="/rac/recados.html">Recados</a>
+    </p>
+
+  
+    <p class="submenu">
+      <a href="/rac/info/">Sobre</a> |
+      <a href="/rac/info/screenshots.html">Screenshots</a> |
+      <a href="/rac/info/iniciante.html">Iniciantes</a> |
+      <a href="/rac/info/docs.html">Documentação</a> |
+      <a href="/rac/info/ficha.html">Ficha técnica</a>
+    </p>
+  
+
+  
+
+    <center>
+  <h2>RAC</h2><font size="4">Abril, 2005</font>
+</center>
+
+<h2>NOME</h2>
+
+<p>rac - Rows And Columns, ferramenta para extração de textos</p>
+
+<h2>SINOPSE</h2>
+
+<p><b>rac</b> [<i>OPÇÕES</i>] <i>ENDEREÇO</i> [<i>ARQUIVO</i>]</p>
+
+<h2>DESCRIÇÃO</h2>
+
+<p>O <b>rac</b> é uma ferramenta GPL para a extração de textos. Ele lê um arquivo (ou STDIN) e retorna o texto que casa com o endereço especificado. Este endereço é composto por linhas, colunas ou uma combinação de ambos. Diferente de outras ferramentas UNIX, o <b>rac</b> é orientado por <i>caracteres</i>, e não <i>linhas</i>.</p>
+
+<p>Intervalos, contador reverso, saltos (step) e repetição são permitidos. O endereço '1; 3; 5:7; 1; 6:4; -1' aplicado em um arquivo de 10 linhas retorna as seguintes linhas: 1 3 5 6 7 1 6 5 4 10 (a ordem é preservada).</p>
+
+<p>Além de especificação direta pelo número da linha, também é possível endereçar linhas por seu conteúdo, procurando por textos (strings) ou por expressões regulares (regex). Para mostrar as linhas que contenham a palavra "root" basta fazer "=root=". Para mostras as linhas que se iniciam por números basta fazer "/^[0-9]/".</p>
+
+<p>É útil para extrair quaisquer linhas e/ou colunas de um texto, ou intervalos complicados como: da linha 10 coluna 13 até a linha 15 coluna 4. Visite a página do programa em: <i>https://aurelio.net/rac</i>.</p>
+
+<h2>OPÇÕES</h2>
+
+<dl>
+  <dt><b>-b</b>, <b>--bre</b></dt>
+  <dd>Usa a notação antiga para expressões regulares (BRE). Por padrão o RAC usa a notação moderna (ERE) onde nenhum metacaractere precisa ser escapado para ser especial. A notação antiga é a mesma do grep, AWK e SED, onde alguns metacaracteres são escapados: <code>\+ \? \{\} \(\) \|</code>.</dd>
+  <dt><b>-h</b>, <b>--help</b></dt>
+  <dd>Mostra a tela de ajuda do programa.</dd>
+  <dt><b>-i</b>, <b>--ignore-case</b></dt>
+  <dd>Trata maiúsculas e minúsculas como iguais. Com esta opção não importa se o texto pesquisado está escrito com letras maiúsculas ou minúsculas, é indiferente. Assim, os endereços =Rock= e /rock/ mostrarão uma linha que possua o texto ROCK.</dd>
+  <dt><b>-V</b>, <b>--version</b></dt>
+  <dd>Mostra a versão do programa.</dd>
+</dl>
+
+<p>Se omitido o nome do arquivo ou usado '-', o texto será lido da entrada padrão (STDIN).</p>
+
+<h2>EXEMPLOS</h2>
+
+<dl>
+  <dt><b>Mostra a terceira linha</b></dt>
+  <dd>$ rac '3' arquivo.txt</dd>
+  <dt><b>Mostra da terceira linha até a quinta linha, incluindo</b></dt>
+  <dd>$ rac '3:5' arquivo.txt</dd>
+  <dt><b>Mostra a última linha (tail -1)</b></dt>
+  <dd>$ rac '-1' arquivo.txt</dd>
+  <dt><b>Mostra as últimas 10 linhas (tail)</b></dt>
+  <dd>$ rac '-10:-1' arquivo.txt</dd>
+  <dt><b>Mostra as primeiras 10 colunas de cada linha (cut -c1-10)</b></dt>
+  <dd>$ rac '[1:10]' arquivo.txt</dd>
+  <dt><b>Mostra o último caractere de cada linha</b></dt>
+  <dd>$ rac '[-1]' arquivo.txt</dd>
+  <dt><b>Inverte as linhas do arquivo (tac)</b></dt>
+  <dd>$ rac '-1:1' arquivo.txt</dd>
+  <dt><b>Inverte as colunas das linhas (rev)</b></dt>
+  <dd>$ rac '[-1:1]' arquivo.txt</dd>
+  <dt><b>Linhas que contêm a palavra root (grep)</b></dt>
+  <dd>$ rac '=root=' arquivo.txt</dd>
+  <dt><b>A segunda linha após a que contém root</b></dt>
+  <dd>$ rac '=root=+2' arquivo.txt</dd>
+  <dt><b>A segunda linha anterior a que contém root</b></dt>
+  <dd>$ rac '=root=-2' arquivo.txt</dd>
+  <dt><b>A terceira linha que contém root</b></dt>
+  <dd>$ rac '=root=*3' arquivo.txt</dd>
+  <dt><b>A penúltima linha que contém root</b></dt>
+  <dd>$ rac '=root=*-2' arquivo.txt</dd>
+  <dt><b>Partindo da 1a linha com root, volte de 2 em 2</b></dt>
+  <dd>$ rac '=root=*1~-2' arquivo.txt</dd>
+  <dt><b>Partindo da 1a linha que se inicia com root, volte de 2 em 2</b></dt>
+  <dd>$ rac '/^root/*1~-2' arquivo.txt</dd>
+</dl>
+
+<h2>SINTAXE</h2>
+
+<pre>
+      N          A linha número N
+     [N]         A coluna número N
+  
+    N;M;I        As linhas N, M e I
+   [N,M,I]       As colunas N, M e I
+  
+     N:M         Da linha N até a linha M
+    [N:M]        Da coluna N até a coluna M
+  N[M]:I[J]      Da linha N coluna M até a linha I coluna J
+  
+     N~M         Começa na linha N, saltando M linhas
+    [N~M]        Começa na coluna N, saltando M colunas
+  
+    =T=          Linhas que contêm o texto T
+    =T=+N        N-ésima linha após a que contém T
+    =T=-N        N-ésima linha anterior a que contém T
+    =T=*N        N-ésima linha que contêm T
+    =T=*N~M      N-ésima linha com T, então ande de M em M
+  
+    /E/          Linhas que casam com a expressão regular E
+    /E/+N        N-ésima linha após a que casa com E
+    /E/-N        N-ésima linha anterior a que casa com E
+    /E/*N        N-ésima linha que casa com E
+    /E/*N~M      N-ésima linha que casa com E, então ande de M em M
+  
+      ;          Separador de endereços
+  
+</pre>
+
+<p>Se o número for negativo, começa contando da última linha/coluna.</p>
+
+<h2>AUTORES</h2>
+
+<p>Aurélio Marinho Jargas &lt;verde (a) aurelio net&gt; e Thobias Salazar Trevisan &lt;thobias (a) thobias org&gt;</p>
+
+<h2>COPYRIGHT</h2>
+
+<p>Copyright © 2003, 2004, 2005 Aurélio Marinho Jargas, Thobias Salazar Trevisan</p>
+
+<p>Este é um software livre. Veja o fonte para as condições de cópia. NÃO há garantia nem mesmo de COMERCIALIZAÇÃO ou de APLICABILIDADE PARA UM USO ESPECÍFICO.</p>
+
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>Use o circunflexo - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="nao-complique.html">
+<link rel="next" href="evite-lista-negada.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="nao-complique.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="evite-lista-negada.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>Use o circunflexo</h1>
+
+      <p>Sempre que possível, <i>comece sua ER com o circunflexo</i>. Como já vimos, o robozinho vai tentando casá-la, caractere por caractere, da esquerda para a direita, a partir do começo da linha. Então, o ponto inicial de pesquisa, é o começo de linha.</p>
+
+<p>Se você não coloca o circunflexo em sua ER, o robozinho tentará casá-la em qualquer parte da linha. Isso significa ir varrendo a linha, um por um, até chegar no final e caso não encontre o padrão, retorna falha na pesquisa.</p>
+
+<p>Se você coloca o circunflexo na sua ER, forçando o casamento do começo de linha, se o primeiro componente da ER após o <b><code>^</code></b> já não casar com o primeiro caractere da linha, dali mesmo já retorna falha de pesquisa, sem precisar varrer o resto da linha.</p>
+
+<p>Por exemplo, se você procura valores em reais "R$", pode simplesmente dizer <b><code>R\$</code></b>. Mas se você sabe que os reais que lhe interessam estão sempre no começo da linha, digam isso com sua ER: <b><code>^R\$</code></b>. Assim, em um exemplo como:</p>
+
+<pre>
+R$ 200,00 : fósforos e velas
+  essenciais na crise de energia.
+  comprados das marcas mais baratas.
+R$ 100,00 : caixas de ovos vazias
+</pre>
+
+<p>Ambas as ERs casam as linhas 1 e 4 imediatamente, pois têm o <u>R$</u> já no começo. Mas nas linhas 2 e 3, onde não há nossos reais desejados, a primeira ER seria tentada em ambas, em todas as posições, até o final, para ver que falhou. Já a segunda, ao encontrar um espaço em branco no começo da linha, já retorna falha, pois ele não é um <code>R</code>.</p>
+
+<p>Em um exemplo mais palpável, suponha que seu chefe tenha uma mesa enorme, com oito gavetas. E se ele lhe falar: "Me traga a pasta verde, está na minha gaveta", ou então "Me traga a pasta verde, que está na última gaveta. Na última hein? Não fuce no resto de minhas coisas!". Tem uma diferença, não? &amp;:)</p>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="nao-complique.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="evite-lista-negada.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

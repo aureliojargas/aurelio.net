@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>Os Metacaracteres - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="utilidade.html">
+<link rel="next" href="representantes.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="utilidade.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="representantes.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>Os Metacaracteres</h1>
+
+      <p>Então, para já matar sua curiosidade, aqui estão os tão falados metacaracteres-padrão que serão nossos personagens das próximas páginas: <b><code>. ? * + ^ $ | [ ] { } ( ) \</code></b>. E aí, sentiu um frio na barriga? Cada simbolozinho desses tem sua função específica, que pode mudar dependendo do contexto no qual está inserido, e podemos agregá-los uns com os outros, combinando suas funções e fazendo construções mais complexas. Olha, ainda dá tempo de fechar o livro e voltar a assistir à novela....</p>
+
+<p>Então deixa eu te assustar mais um pouquinho. Além destes, temos outros metacaracteres estendidos que foram criados posteriormente, pois tarefas mais complexas requisitavam funções mais específicas ainda. E para terminar de complicar, sua sintaxe de utilização não é a mesma para todos os programas que suportam expressões regulares.</p>
+
+<p>Bem, já que você não desistiu (eu tentei), vamos logo ao que interessa, e para começar vamos dar nomes aos bois. Leia, releia e "treleia" esta lista, repetindo para si mesmo e associando o nome ao símbolo, pois estas palavras farão parte de sua vida, de sua rotina. Acostume-se com os nomes e não os mude.</p>
+
+<pre>
+meta    mnemônico
+------------------------------
+.       ponto
+[]      lista
+[^]     lista negada
+?       opcional
+*       asterisco
++       mais
+{}      chaves
+^       circunflexo
+$       cifrão
+\b      borda
+\       escape
+|       ou
+()      grupo
+\1      retrovisor
+</pre>
+
+<p>Agora que sabemos como chamar nossos amigos novos, veremos uma prévia, um apanhado geral de todos os metacaracteres e suas funções. Eles estão divididos em quatro grupos distintos, de acordo com características comuns entre eles.</p>
+
+<p><b>Representantes</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+.       ponto           um caractere qualquer
+[...]   lista           lista de caracteres permitidos
+[^...]  lista negada    lista de caracteres proibidos
+</pre>
+
+<p><b>Quantificadores</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+?       opcional        zero ou um
+*       asterisco       zero, um ou mais
++       mais            um ou mais
+{n,m}   chaves          de n até m
+</pre>
+
+<p><b>Âncoras</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+^       circunflexo     início da linha
+$       cifrão          fim da linha
+\b      borda           início ou fim de palavra
+</pre>
+
+<p><b>Outros</b></p>
+
+<pre>
+meta    mnemônico       função
+---------------------------------------------------------------
+\c      escape          torna literal o caractere c
+|       ou              ou um ou outro
+(...)   grupo           delimita um grupo
+\1...\9 retrovisor      texto casado nos grupos 1...9
+</pre>
+
+<blockquote>
+  <i>Aaaah, ? e * eu já uso na linha de comando!</i>
+</blockquote>
+
+<p>Opa, não confunda! Os curingas usados na linha de comando para especificar nomes de arquivos, como <code>*.txt</code>, <code>relatorio.{txt,doc}</code> e <code>guia-??.html</code> <b>não são</b> expressões regulares. São curingas específicos de nomes de arquivo, e apesar de parecidos, são outra coisa e os significados de seus símbolos são diferentes dos das expressões, então o melhor que você faz agora é <b>esquecer</b> esses curingas, senão eles podem confundi-lo e atrapalhar seu aprendizado.</p>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="utilidade.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="representantes.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<html>
+<!--
+	RELÓGIO
+	aurelio.net/coisinha/relogio
+
+	Criado por Aurelio Jargas (www.aurelio.net)
+	Novembro de 2007
+-->
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<meta name="author" content="Aurelio Jargas www.aurelio.net">
+<meta name="keywords" content="relógio, digital, texto, palavras, cores, clock, extenso, javascript">
+<meta name="description" content="Um relógio diferente, feito apenas com palavras e cores!">
+
+<title>RELÓGIO feito com texto — Web app simples</title>
+
+<style type="text/css">
+	body {
+		background:black;
+		font-family:Arial, sans-serif;
+	}
+	body {
+		color:#444;
+	}
+	#clock .active, a {
+		color:yellow;
+	}
+	#clock {
+		line-height:90%;
+		word-spacing:-0.25em;
+/*		text-align:justify;*/
+
+	}
+	#h, #m, #s {
+		display:inline;
+	}
+	#footer {
+		margin:5em 0;
+		font-style:italic;
+		text-align:center;
+	}
+	#noscript {
+		color:white;
+		padding:50px 100px;
+	}
+	@media (min-width: 600px) {
+		#clock { font-size:150%; }
+	}
+</style>
+
+<script type="text/javascript">
+
+	/*global document, window, setInterval */
+
+	function limpa(elemento) {
+		var i, spans;
+		spans = document.getElementById(elemento).getElementsByTagName('span');
+		for (i = 0; i < spans.length ; i++) {
+			spans[i].className = '';
+		}
+	}
+	function atualiza() {
+		var date, H, M, S;
+
+		date = new Date();
+		H = date.getHours();
+		M = date.getMinutes();
+		S = date.getSeconds();
+
+		limpa('s');
+		if (S === 0)            { limpa('m'); }
+		if (S === 0 && M === 0) { limpa('h'); }
+
+		document.getElementById(H + 'h').className = 'active';
+		document.getElementById(M + 'm').className = 'active';
+		document.getElementById(S + 's').className = 'active';
+	}
+	function dispara() {
+		atualiza();
+		setInterval(atualiza, 1000);
+	}
+	window.onload = dispara;
+</script>
+
+<!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-280222-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<!-- AdSense Page-level ads (mobile) -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-0009608813278754",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+<body id="relogio">
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /Facebook SDK -->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - !js -->
+<noscript>
+	<div id="noscript">
+	<h3>JavaScript DESLIGADO</h3>
+	Você tem que <a href="http://www.google.pt/support/adsense/bin/answer.py?answer=12654">ligar o JavaScript</a> em seu navegador,<br>
+	pois as coisinhas precisam dele!
+	</div>
+</noscript>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - /!js -->
+
+<div id="clock">
+<div id="h">
+<span id="0h">zero</span>
+<span id="1h">uma</span>
+<span id="2h">duas</span>
+<span id="3h">três</span>
+<span id="4h">quatro</span>
+<span id="5h">cinco</span>
+<span id="6h">seis</span>
+<span id="7h">sete</span>
+<span id="8h">oito</span>
+<span id="9h">nove</span>
+<span id="10h">dez</span>
+<span id="11h">onze</span>
+<span id="12h">doze</span>
+<span id="13h">treze</span>
+<span id="14h">catorze</span>
+<span id="15h">quinze</span>
+<span id="16h">dezesseis</span>
+<span id="17h">dezessete</span>
+<span id="18h">dezoito</span>
+<span id="19h">dezenove</span>
+<span id="20h">vinte</span>
+<span id="21h">vinte e uma</span>
+<span id="22h">vinte e duas</span>
+<span id="23h">vinte e três</span>
+</div>
+<span class="active">horas,</span>
+
+<div id="m">
+<span id="0m">zero</span>
+<span id="1m">um</span>
+<span id="2m">dois</span>
+<span id="3m">três</span>
+<span id="4m">quatro</span>
+<span id="5m">cinco</span>
+<span id="6m">seis</span>
+<span id="7m">sete</span>
+<span id="8m">oito</span>
+<span id="9m">nove</span>
+<span id="10m">dez</span>
+<span id="11m">onze</span>
+<span id="12m">doze</span>
+<span id="13m">treze</span>
+<span id="14m">catorze</span>
+<span id="15m">quinze</span>
+<span id="16m">dezesseis</span>
+<span id="17m">dezessete</span>
+<span id="18m">dezoito</span>
+<span id="19m">dezenove</span>
+<span id="20m">vinte</span>
+<span id="21m">vinte e um</span>
+<span id="22m">vinte e dois</span>
+<span id="23m">vinte e três</span>
+<span id="24m">vinte e quatro</span>
+<span id="25m">vinte e cinco</span>
+<span id="26m">vinte e seis</span>
+<span id="27m">vinte e sete</span>
+<span id="28m">vinte e oito</span>
+<span id="29m">vinte e nove</span>
+<span id="30m">trinta</span>
+<span id="31m">trinta e um</span>
+<span id="32m">trinta e dois</span>
+<span id="33m">trinta e três</span>
+<span id="34m">trinta e quatro</span>
+<span id="35m">trinta e cinco</span>
+<span id="36m">trinta e seis</span>
+<span id="37m">trinta e sete</span>
+<span id="38m">trinta e oito</span>
+<span id="39m">trinta e nove</span>
+<span id="40m">quarenta</span>
+<span id="41m">quarenta e um</span>
+<span id="42m">quarenta e dois</span>
+<span id="43m">quarenta e três</span>
+<span id="44m">quarenta e quatro</span>
+<span id="45m">quarenta e cinco</span>
+<span id="46m">quarenta e seis</span>
+<span id="47m">quarenta e sete</span>
+<span id="48m">quarenta e oito</span>
+<span id="49m">quarenta e nove</span>
+<span id="50m">cinquenta</span>
+<span id="51m">cinquenta e um</span>
+<span id="52m">cinquenta e dois</span>
+<span id="53m">cinquenta e três</span>
+<span id="54m">cinquenta e quatro</span>
+<span id="55m">cinquenta e cinco</span>
+<span id="56m">cinquenta e seis</span>
+<span id="57m">cinquenta e sete</span>
+<span id="58m">cinquenta e oito</span>
+<span id="59m">cinquenta e nove</span>
+</div>
+<span class="active">minutos,</span>
+
+<div id="s">
+<span id="0s">zero</span>
+<span id="1s">um</span>
+<span id="2s">dois</span>
+<span id="3s">três</span>
+<span id="4s">quatro</span>
+<span id="5s">cinco</span>
+<span id="6s">seis</span>
+<span id="7s">sete</span>
+<span id="8s">oito</span>
+<span id="9s">nove</span>
+<span id="10s">dez</span>
+<span id="11s">onze</span>
+<span id="12s">doze</span>
+<span id="13s">treze</span>
+<span id="14s">catorze</span>
+<span id="15s">quinze</span>
+<span id="16s">dezesseis</span>
+<span id="17s">dezessete</span>
+<span id="18s">dezoito</span>
+<span id="19s">dezenove</span>
+<span id="20s">vinte</span>
+<span id="21s">vinte e um</span>
+<span id="22s">vinte e dois</span>
+<span id="23s">vinte e três</span>
+<span id="24s">vinte e quatro</span>
+<span id="25s">vinte e cinco</span>
+<span id="26s">vinte e seis</span>
+<span id="27s">vinte e sete</span>
+<span id="28s">vinte e oito</span>
+<span id="29s">vinte e nove</span>
+<span id="30s">trinta</span>
+<span id="31s">trinta e um</span>
+<span id="32s">trinta e dois</span>
+<span id="33s">trinta e três</span>
+<span id="34s">trinta e quatro</span>
+<span id="35s">trinta e cinco</span>
+<span id="36s">trinta e seis</span>
+<span id="37s">trinta e sete</span>
+<span id="38s">trinta e oito</span>
+<span id="39s">trinta e nove</span>
+<span id="40s">quarenta</span>
+<span id="41s">quarenta e um</span>
+<span id="42s">quarenta e dois</span>
+<span id="43s">quarenta e três</span>
+<span id="44s">quarenta e quatro</span>
+<span id="45s">quarenta e cinco</span>
+<span id="46s">quarenta e seis</span>
+<span id="47s">quarenta e sete</span>
+<span id="48s">quarenta e oito</span>
+<span id="49s">quarenta e nove</span>
+<span id="50s">cinquenta</span>
+<span id="51s">cinquenta e um</span>
+<span id="52s">cinquenta e dois</span>
+<span id="53s">cinquenta e três</span>
+<span id="54s">cinquenta e quatro</span>
+<span id="55s">cinquenta e cinco</span>
+<span id="56s">cinquenta e seis</span>
+<span id="57s">cinquenta e sete</span>
+<span id="58s">cinquenta e oito</span>
+<span id="59s">cinquenta e nove</span>
+</div>
+<span class="active">segundos.</span>
+</div>
+
+<div id="footer">
+	<!-- Facebook Like button DARK -->
+	<div style="margin-bottom:2em;">
+		<div class="fb-like" data-send="true" data-width="500" data-show-faces="true" data-colorscheme="dark"></div>
+	</div>
+
+	<a href="/coisinha/">aurelio.net/coisinha</a>
+</div>
+
+</body>
+</html>

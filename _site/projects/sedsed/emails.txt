@@ -1,0 +1,2 @@
+user@abc.com
+otheruser@xyz.net

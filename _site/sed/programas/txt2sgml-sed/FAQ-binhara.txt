@@ -1,0 +1,43 @@
+From alessandro.binhara@sigma.com.br Sat Dec  9 03:16:40 2000
+
+REQUISITOS
+
+ Voce presisara da versao mais recente do SED.
+ A versao que vem no REDHAT 7.0 apesar de ser recente nao funciona com o
+script adequadamente.
+
+ Outro cuidado que se deve cuidar e com arquivo txt escrito em DOS,
+apresentarao problemas na conversao. Para resolver este problema voce
+devera
+usar o programa dos2unix para converter os finalizadores de linha.
+
+
+-----------------------------------------------------------------------------
+
+PROBLEMAS E SOLUCOES
+
+ P:Quando voce faz a conversao para sgml aparence alguns "n" perdidos no
+codigo
+sqml.
+ R:Voce esta com a versao desatualizada do SED, va no site do aurelio e
+pegue
+ a versao atualizada do SED. O .rpm pode ser um pouco complicado pois no
+ Conectiva 5.0 ele vai pedir que vc atualize muitas bibliotecas.
+ Pegue em formato tar.gz digite  tar -zxvf sed*.tar.gz
+
+ Compile o sed
+ ./configure
+ make
+ make install
+
+ isso deve resolver o problema
+
+ P: Continuo tendo problemas com a conversao e ja atualizei a versao do SED
+ R: E provavel que voce tenha compilado o sed mas ele ainda continua usando
+ um versao antiga. Pegue o binario que voce compilou e copie sobre as
+versoes
+ do sed que vc tenha na maquina.
+
+ ex:  locate sed | grep bin
+ voce provavelmente ira encotrar um binario do sed em /bin e /usr/bin
+ copie a novar versao sobre elas e deve funcionar.

@@ -1,0 +1,53 @@
+
+
+
+
+
+ LICENÇA DA APOSTILA "PROGRAMAÇÃO PROFISSIONAL EM SHELL"
+ -------------------------------------------------------
+
+
+A apostila intitulada CURSO PROGRAMAÇÃO PROFISSIONAL EM
+SHELL é uma obra registrada no Escritório de Direitos
+Autorais da Biblioteca Nacional em Novembro de 2003, sob o
+número 303.593, livro 552, folha 253 em nome de AURÉLIO
+MARINHO JARGAS, adiante referenciado como AUTOR.
+
+A apostila é vendida em formato digital, como um arquivo
+PDF. O indivíduo que adquire este arquivo se torna
+proprietário, devendo respeitar as seguintes regras:
+
+
+* É permitido ao PROPRIETÁRIO fazer múltiplas cópias deste
+  arquivo PDF, para uso pessoal e particular.
+
+
+* É permitido ao PROPRIETÁRIO fazer a impressão em papel,
+  parcial ou integral, sem limite de número de cópias, para
+  uso pessoal e particular.
+
+
+* É permitido ao PROPRIETÁRIO citar trechos do material em
+  canais públicos como e-mail e páginas de Internet, desde
+  que o trecho não ultrapasse 300 palavras e a autoria seja
+  também citada, com o nome completo do AUTOR e o endereço
+  de seu site: http://aurelio.net.
+
+
+* É proibida a reprodução pública desta obra, como
+  disponibilizá-la para download na Internet, enviá-la por
+  e-mail a terceiros, trocá-la por outros arquivos em
+  sistemas P2P e outros.
+
+
+* É proibida a conversão deste documento PDF para outros
+  formatos digitais como HTML, RTF, e TXT. No caso do
+  PROPRIETÁRIO ter necessidades especiais em que o formato
+  PDF seja ilegível, favor contatar o AUTOR.
+
+
+* É repudiado e proibido o uso deste material para fins
+  lucrativos, como revenda ou uso em cursos e treinamentos
+  pagos, sem prévia autorização, por escrito, do autor.
+
+

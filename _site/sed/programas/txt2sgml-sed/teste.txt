@@ -1,0 +1,175 @@
+
+o cabeçalho acima esta embutido no próprio conversor, mas pode ser lido de
+um arquivo externo também
+
+este documento apóia a campanha NO MOUSE!
+%%imagem: no-mouse.png
+
+  // você também pode colocar comentários começando uma linha com //, eles
+  // serão ignorados na converção
+
+converte arquivos texto para o formato SGML, no padrão HOWTO (linuxdoc).
+
+-----------------------------------------------------------------------------
+
+INTRODUÇÃO
+
+aqui temos nossa seção primária.
+
+ela é definida com um título todo em maiúsculas, SEM espaços em branco no
+começo.
+
+a linha abaixo só aparece no TXT como separador visual, no HTML não. as
+linhas separadoras podem ser compostas por hífens, asteriscos, sinais de
+igual, ou sublinhados, ou seja: -=*_, acompanhados ou não de espaços em
+branco.
+
+esse comportamento pode ser mudado mas não achei um motivo forte pra isso
+ainda &:)
+
+-----------------------------------------------------------------------------
+
+ FINALIDADE E FILOSOFIA
+
+a idéia principal é escrever *descompromissadamente* (ou quase) um texto sem
+se preocupar com formatos. é um texto puro. o conversor tenta "pescar"
+alguns padrões neste texto e o transforma para entidades *SGML*. do *SGML*,
+você pode convertê-lo para *HTML* com o `sgml2html`.
+
+então a idéia principal é que seu *TXT* seja legível, utilizável, com o
+mínimo de marcações possível, e dele se consiga extrair um *SGML* simples.
+
+depois você pega esse *SGML* e arruma na mão (ou no ecamacs), mas o mais
+grosso, o trabalho braçal foi feito.
+
+é basicamente pra quem quer escrever, simplesmente escrever, sem se
+preocupar com a formatação do texto. isso o conversor faz pra você (ou não)
+&:)
+
+-----------------------------------------------------------------------------
+
+ SOBRE AS SUBSEÇÕES
+
+aqui é uma subseção. é um título todo em maiúsculas com 1 espaço em branco
+no começo da linha.
+
+como você pode imaginar sub-subseções são feitas colocando-se mais espaços
+em branco no começo da linha:
+
+  SUB-SUBSEÇÃO
+
+é o `section2` do sgml.
+
+   SUB-SUB-SUBSEÇÃO
+
+é o `section3` do sgml.
+
+    SUB-SUB-SUB-SUBSEÇÃO
+
+é o `section4` do sgml.
+
+-----------------------------------------------------------------------------
+
+ EMBONECAMENTO
+
+mais uma subseção.
+
+e aqui temos algumas *palavras em negrito*,
+e aqui temos algumas **palavras em strong**,
+também algumas "palavras em itálico",
+e palavras em `type-writer`.
+e as entidades especiais são tratadas, como `&` `<` e `>`.
+
+ou ainda, para declarar um comando basta colocar 4 espaços em
+branco antes, assim:
+
+    prompt$ ls /tmp/mala
+
+pode-se também colocar um texto pré-formatado:
+
+=--
+              ____    ____   ___
+             |       |      |   \
+             |____   |__    |    |
+                  |  |      |    |
+             _____|  |____  |___/
+
+=--
+
+e é claro, os links também já são colocado "tomáticamente",
+http://aurelio.net e seu_mala@aurelio.net
+
+e ainda, links para outros tópicos do próprio documento também funcionam!
+você pode voltar para a _INTRODUÇÃO_ ou ir direto às _DICAS_
+
+-----------------------------------------------------------------------------
+
+ LISTAS
+
+mais uma subseção.
+esta tem uma lista de itens, que segue a hierarquia pelos marcadores -, + e
+*.
+
+difícil decorar? que nada. basta olhar de quantos traços são feitos cada
+símbolo:
+
+    1 -       lista
+    2 +    sublista
+    3 * subsublista
+
+fácil né &:)
+
+- o primeiro item da lista
+- o segundo  item da lista
+  + o primeiro item da sublista do segundo item da lista
+  + o segundo  item da sublista do segundo item da lista
+    * o primeiro item da subsublista do segundo item da sublista do segundo
+      item da lista
+ * pode-se colocar em qualquer identação
+               * pode-se quebrar linhas
+
+               e continuar o mesmo item aqui embaixo
+
+       + subir a lista um nível.
+    - subir mais um nível e voltar ao principal.
+
+
+e para acabar a lista, bastam 2 linhas em banco seguidas.
+
+ah! e se você olhar o sgml resultante, as listas acima são identadas
+corretamente.
+
+-----------------------------------------------------------------------------
+
+DICAS
+
+listas são malas, você *SEMPRE* deve fechá-las.
+
+para ficar mais massa ainda, edite seu arquivo texto no vim, com as regras
+de sintaxe txt.vim, que coloriza várias estruturas reconhecidas por este
+conversor. ele está em http://aurelio.net/vim/txt.vim
+
+você escreveu seu texto. como gerar o sgml e o html?
+
+    prompt$ ./txt2sgml.sed arquivo.txt > arquivo.sgml
+    prompt$ sgml2html --language=portuguese arquivo.sgml
+    Processing file arquivo.sgml
+    prompt$ lynx arquivo.html
+
+-----------------------------------------------------------------------------
+
+DETALHES
+
+- em todos os lugares, "espaços em branco" se referem a espaços. não estou
+  tratando o `TAB` (e não sei se devo). por falar nisso *TODOS* os `TABs`
+  consecutivos são trocados por um simples espaço em branco.
+
+- as listas são meio malas, pois tem que ler tudo de uma só vez, então
+  comandos, entidades especiais, linhas separadoras e comentários não são
+  interpretados dentro delas.
+
+- os "embonecamentos" são tratados apenas se estiverem em uma linha. não
+  sei se seria legal tê-lo multilinha tipo abre um negrito numa linha e
+  fecha em outra, isso poderia confundir muito.
+
+

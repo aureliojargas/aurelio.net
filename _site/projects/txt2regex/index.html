@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+	<title>txt2regex - Regular expression wizard for the command line | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+
+
+  
+    <link rel="stylesheet" type="text/css" href="/projects/txt2regex/index.css">
+  
+  
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+</head>
+
+<body>
+  
+
+  
+
+  <div id="header">
+  <h1>txt2regex</h1>
+
+  <p class="figure"><img src="/projects/txt2regex/img/demo.gif" width="500"></p>
+</div>
+
+<div id="content">
+
+<p><b>Txt2regex is a regular expression wizard for the command line.</b></p>
+
+<p>Users with little or no knowledge of regular expressions can quickly create hairy regexes by answering questions in a simple text-based  interactive interface.</p>
+
+<p>Txt2regex is aware of the particular notation and caveats of many different regular expression flavors, generating valid regexes for more than 20 targets, including grep, sed, Vim, Emacs, JavaScript, Python, PHP, PostgreSQL.</p>
+
+<p>Txt2regex is a one-file shell script made 100% with Bash builtin commands. The only requirement is Bash itself, since no grep, find, sed or any other system command is used.</p>
+
+<p><b>Download:</b> <a href="https://github.com/aureliojargas/txt2regex/releases/tag/v0.9">txt2regex 0.9</a> (released May 21, 2020) - <a href="https://github.com/aureliojargas/txt2regex/blob/master/CHANGELOG.md">Changelog</a></p>
+
+<p><b>License:</b> GPLv2</p>
+
+<p><b>Doc:</b> <a href="/projects/txt2regex/manpage.html">Manual Page</a></p>
+
+<p><b>GitHub:</b> <a href="https://github.com/aureliojargas/txt2regex">https://github.com/aureliojargas/txt2regex</a></p>
+
+<h3>Supported targets (22)</h3>
+
+<p>Text editors:</p>
+<ul>
+  <li>ed</li>
+  <li>Emacs</li>
+  <li>vi</li>
+  <li>Vim</li>
+</ul>
+
+<p>Tools:</p>
+<ul>
+  <li>AWK</li>
+  <li>egrep</li>
+  <li>expect</li>
+  <li>find</li>
+  <li>gawk</li>
+  <li>grep</li>
+  <li>lex</li>
+  <li>mawk</li>
+  <li>procmail</li>
+  <li>sed</li>
+</ul>
+
+<p>Databases:</p>
+<ul>
+  <li>MySQL</li>
+  <li>PostgreSQL</li>
+</ul>
+
+<p>Programming languages:</p>
+<ul>
+  <li>CHICKEN Scheme</li>
+  <li>JavaScript</li>
+  <li>Perl</li>
+  <li>PHP</li>
+  <li>Python</li>
+  <li>Tcl</li>
+</ul>
+
+<h3>Features</h3>
+
+<p>Support for POSIX classes, such as <code>[:alpha:]</code>, <code>[:lower:]</code> and friends:</p>
+<p class="figure"><img src="/projects/txt2regex/img/posix.png"></p>
+
+<p>Support for groups, including nested groups and a nice balance control on the number of opened/closed groups:</p>
+<p class="figure"><img src="/projects/txt2regex/img/group.png"></p>
+
+<p>Full support for localization, this is the Spanish translation:</p>
+<p class="figure"><img src="/projects/txt2regex/img/spanish.png"></p>
+
+<p>Option <code>--showmeta</code> shows a complete table for all the supported metacharacters used in all the supported flavors:</p>
+
+<pre>
+$ ./txt2regex.sh --showmeta
+
+awk             +      ?             |      ()    awk version 20121220
+chicken         +      ?     {}      |      ()    CHICKEN 4.12.0
+ed             \+     \?   \{\}     \|    \(\)    GNU Ed 1.10
+egrep           +      ?     {}      |      ()    grep (GNU grep) 3.1
+emacs           +      ? \\{\\}    \\|  \\(\\)    GNU Emacs 25.2.2
+expect          +      ?     {}      |      ()    expect version 5.45.4
+find            +      ?     {}      |      ()    find (GNU findutils) 4.7.0-git
+gawk            +      ?     {}      |      ()    GNU Awk 4.1.4
+grep           \+     \?   \{\}     \|    \(\)    grep (GNU grep) 3.1
+javascript      +      ?     {}      |      ()    node v8.10.0
+lex             +      ?     {}      |      ()    flex 2.6.4
+mawk            +      ?             |      ()    mawk 1.3.3 Nov 1996
+mysql           +      ?     {}      |      ()    mysql  Ver 14.14 Distrib 5.7.29
+perl            +      ?     {}      |      ()    perl v5.26.1
+php             +      ?     {}      |      ()    PHP 7.2.24-0ubuntu0.18.04.4
+postgres        +      ?     {}      |      ()    psql (PostgreSQL) 10.12
+procmail        +      ?             |      ()    procmail v3.23pre 2001/09/13
+python          +      ?     {}      |      ()    Python 3.6.9
+sed            \+     \?   \{\}     \|    \(\)    sed (GNU sed) 4.4
+tcl             +      ?     {}      |      ()    tcl 8.6
+vi                         \{\}           \(\)    nvi 1.81.6-13
+vim            \+     \=    \{}     \|    \(\)    VIM - Vi IMproved 8.0 (2016 Sep 12)
+
+NOTE: . [] [^] and * are the same on all programs.
+
+$
+</pre>
+
+<p>Option <code>--make</code> shows handy ready-to-use regexes for common patterns, such as a regex to match a date:</p>
+
+<pre>
+$ ./txt2regex.sh --make date2
+
+### date LEVEL 2: mm/dd/yyyy: matches from 00/00/1000 to 19/39/2999
+
+ Regex python: [01][0-9]/[0123][0-9]/[12][0-9]{3}
+ Regex egrep : [01][0-9]/[0123][0-9]/[12][0-9]{3}
+ Regex grep  : [01][0-9]/[0123][0-9]/[12][0-9]\{3\}
+ Regex sed   : [01][0-9]/[0123][0-9]/[12][0-9]\{3\}
+ Regex vim   : [01][0-9]/[0123][0-9]/[12][0-9]\{3}
+ Regex emacs : [01][0-9]/[0123][0-9]/[12][0-9]\\{3\\}
+
+$
+</pre>
+
+<p>For a complete list of all the command line options and features, please see the following documents:</p>
+
+<ul class="spaced">
+  <li><a href="https://github.com/aureliojargas/txt2regex/blob/master/tests/cmdline.md">https://github.com/aureliojargas/txt2regex/blob/master/tests/cmdline.md</a></li>
+  <li><a href="https://github.com/aureliojargas/txt2regex/blob/master/tests/features.md">https://github.com/aureliojargas/txt2regex/blob/master/tests/features.md</a></li>
+</ul>
+
+<h3>Packages</h3>
+
+<p>Txt2regex is a stand-alone Bash script, it doesn't need to be installed. But if you want to try it effortlessly using your package manager, it's available for some systems:</p>
+
+<ul class="spaced">
+  <li>
+    <a href="http://rpmfind.net/linux/rpm2html/search.php?query=txt2regex">RPM package (Fedora, OpenMandriva, EPEL)</a>
+  </li>
+  <li>
+    <a href="https://packages.debian.org/search?keywords=txt2regex&amp;searchon=names">Debian package (Debian, Ubuntu)</a>
+  </li>
+  <li>
+    <a href="https://packages.gentoo.org/packages/dev-util/txt2regex">Gentoo Linux</a>
+  </li>
+  <li>
+    <a href="http://www.finkproject.org/pdb/package.php/txt2regex">Fink for macOS</a>
+  </li>
+</ul>
+
+<h3>Magazine/site reviews</h3>
+
+<table class="reviews">
+  <tr>
+    <th>date</th>
+    <th>source</th>
+    <!-- <th>section</th> -->
+    <th>page</th>
+    <th>link</th>
+  </tr>
+  <tr>
+    <td><strong><code>Dez 2004</code></strong></td>
+    <td>
+      <a href="http://www.linuxmagazine.com.br">Linux Magazine (Brazil)</a>
+    </td>
+    <!-- <td>Linux User</td> -->
+    <td class="center">82, 83</td>
+    <td>
+      <a href="/projects/txt2regex/pdf/2004-linux-magazine-brazil.pdf">PDF</a> (Portuguese)
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Oct 2004</code></strong></td>
+    <td>
+      <a href="http://www.computerwoche.de">ComputerWoche.de site</a>
+    </td>
+    <!-- <td>Produkte + Technologien</td> -->
+    <td class="center">-</td>
+    <td>
+      <a href="https://web.archive.org/web/20050521171157/https://www.computerwoche.de/index.cfm?type=detail&amp;artid=66533&amp;category=160&amp;Pageid=255">Original review</a> (German)
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Oct 2004</code></strong></td>
+    <td>
+      <a href="http://www.linux-magazine.com">Linux Magazine (International)</a>
+    </td>
+    <!-- <td>Linux User</td> -->
+    <td class="center">76, 77</td>
+    <td>
+      <a href="/projects/txt2regex/pdf/2004-linux-magazine-international.pdf">PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Set 2004</code></strong></td>
+    <td>
+      <a href="http://www.linux-user.de">Linux User (Germany)</a>
+    </td>
+    <!-- <td>Im Test</td> -->
+    <td class="center">66, 67</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><strong><code>Dec 2003</code></strong></td>
+    <td>
+      <a href="http://slashdot.jp">Slashdot Japan</a>
+    </td>
+    <!-- <td>dseg's journal</td> -->
+    <td class="center">-</td>
+    <td>
+      <a href="http://slashdot.jp/journal.pl?op=display&amp;uid=14237&amp;id=177863">Original review</a> (Japanese)
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Oct 2003</code></strong></td>
+    <td>
+      <a href="http://www.serverwatch.com">Server Watch site</a>
+    </td>
+    <!-- <td>Tips of the Trade</td> -->
+    <td class="center">-</td>
+    <td>
+      <a href="https://web.archive.org/web/20040606195305/http://www.serverwatch.com/news/article.php/3093001">Original review</a>
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>May 2002</code></strong></td>
+    <td>
+      <a href="http://www.ascii.co.jp/linux/linuxmag">ASCII's Linux Magazine</a>
+    </td>
+    <!-- <td>World Freesoft Collection</td> -->
+    <td class="center">123</td>
+    <td>
+      <a href="img/asciimagazine2.jpg">Scanned page</a> (Japanese)
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Feb 2002</code></strong></td>
+    <td>
+      <a href="http://www.unixreview.com">UnixReview.com site</a>
+    </td>
+    <!-- <td>Tool of the Month</td> -->
+    <td class="center">-</td>
+    <td>
+      <a href="https://web.archive.org/web/20020306002607/http://www.unixreview.com/documents/s=2424/uni1014756451188/0202k.htm">Original review</a>
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Nov 2001</code></strong></td>
+    <td>
+      <a href="http://www.ascii.co.jp/linux/linuxmag">ASCII's Linux Magazine</a>
+    </td>
+    <!-- <td>Free Application Showcase</td> -->
+    <td class="center">141</td>
+    <td>
+      <a href="img/asciimagazine.jpg">Scanned page</a> (Japanese)
+    </td>
+  </tr>
+  <tr>
+    <td><strong><code>Apr 2001</code></strong></td>
+    <td>
+      <a href="http://www.linuxformat.co.uk">Linux Format Magazine</a>
+    </td>
+    <!-- <td>-</td> -->
+    <td class="center">47</td>
+    <td>
+      <a href="img/linuxformat.png">Scanned page</a>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div id="footer">
+  <p>© <a href="/about.html">Aurelio Jargas</a></p>
+</div>
+
+<!--
+: **Sites that lists it**
+  - [linux.org http://www.linux.org/apps/AppId_7263.html]
+  - [linuxlinks.com http://www.linuxlinks.com/Software/Utilities/Text_Utilities/index.shtml]
+  - [linuxworld.com http://www.linuxworld.com/download/tools.html]
+  - [ABS (Advanced Bash-Scripting Guide) Bibliography http://www.tldp.org/LDP/abs/html/biblio.html]
+  - [Wikipedia http://en.wikipedia.org/wiki/Regular_expression]
+-->
+
+
+  
+</body>
+</html>

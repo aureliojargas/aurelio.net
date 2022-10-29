@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Série Tela Preta: Aprenda o “jeito shell script” de resolver problemas | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/tela-preta/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Série Tela Preta: Aprenda o “jeito shell script” de resolver problemas" />
+	<meta property="og:url" content="https://aurelio.net/tela-preta/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/tela-preta/" title="Permalink" rel="bookmark">Série Tela Preta: Aprenda o “jeito shell script” de resolver problemas</a></h1>
+
+			
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<p>por <a href="/aurelio/">Aurelio Jargas</a></p>
+
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen></iframe>
+<br><i>Curta o vídeo em tela cheia!</i></span></p>
+
+<p><strong>Tela Preta</strong> é a minha série de vídeos nerds gravados na linha de comando do Unix, demonstrando o “jeito shell script” de resolver problemas. Todos os vídeos contam com narração e legendas em português, estão em alta resolução (HD) e são reais: sem ensaio, sem cortes, sem edição posterior. <a href="https://www.youtube.com/user/aureliojargas">Assine meu canal lá no YouTube</a> para ser notificado(a) quando sair um vídeo novo.</p>
+
+<blockquote>
+<p>Os vídeos que mais gosto de fazer são os de linha de comando. Somente a tela preta, o prompt ali piscando e os comandos que vão surgindo um atrás do outro. Este é o ambiente que mais me sinto à vontade, então posso gravar bem relaxado, sem medo de errar.</p>
+</blockquote>
+
+<h2>Os vídeos</h2>
+
+<p>O jeito mais prático de ver os vídeos é abrir a <a href="https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">playlist no YouTube</a>.</p>
+
+<p>Mas se preferir, aqui está a lista completa de todos os episódios, com links para o vídeo no YouTube e para o post no blog onde explico melhor os comandos utilizados em cada vídeo:</p>
+
+<ol>
+
+    <li>
+        Datar JPG com data da foto (EXIF) em shell script (exiftool touch grep cut tr sed)
+        <br>
+        <small>
+            <a href="/blog/2010/05/15/datas-fotos-e-shell/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=N15r3NCgIPA&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            15/05/2010
+        </small>
+    </li>
+
+    <li>
+        Extrair tag de arquivo XML com shell script (grep sed sort uniq expand)
+        <br>
+        <small>
+            <a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=jKkEoHXfmA4&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            19/04/2011
+        </small>
+    </li>
+
+    <li>
+        Otimizar imagens com shell script e Smush.it (find sed grep sh pbcopy)
+        <br>
+        <small>
+            <a href="/blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=GqV3psNyzy8&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            02/09/2011
+        </small>
+    </li>
+
+    <li>
+        Extrair dados de arquivo texto com shell script (grep cut sed tr)
+        <br>
+        <small>
+            <a href="/blog/2012/04/11/o-jeito-shell-script-de-resolver-problemas-parte-2/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=6i3I0vKHtO8&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            11/04/2012
+        </small>
+    </li>
+
+    <li>
+        Dividir arquivo a cada N linhas com shell script (split paste sed)
+        <br>
+        <small>
+            <a href="/blog/2012/05/10/o-jeito-shell-script-de-resolver-problemas-parte-3/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=usjTrYwIZCo&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            10/05/2012
+        </small>
+    </li>
+
+    <li>
+        Sorteio no Facebook com shell script (grep cut sed $RANDOM)
+        <br>
+        <small>
+            <a href="/blog/2013/05/10/video-aula-sorteio-no-facebook-usando-shell-script/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=2cELY-UG_VQ&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            10/05/2013
+        </small>
+    </li>
+
+    <li>
+        Editar database do WordPress com shell script, CSV→SQL (tr cut paste sed expand)
+        <br>
+        <small>
+            <a href="/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=woN4BZjr0Os&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            22/03/2014
+        </small>
+    </li>
+
+    <li>
+        Trocar a extensão de arquivos com shell script (find sed sh)
+        <br>
+        <small>
+            <a href="/blog/2015/06/06/tela-preta-8/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=dOUTr8epomM&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            06/06/2015
+        </small>
+    </li>
+
+    <li>
+        Contar palavras com shell script (egrep sort uniq)
+        <br>
+        <small>
+            <a href="/blog/2016/08/09/tela-preta-9/">Blog</a>,
+            <a href="https://www.youtube.com/watch?v=BYYyt6Ag3Kc&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
+            <br>
+            09/08/2016
+        </small>
+    </li>
+
+</ol>
+
+<h2>O jeito shell script</h2>
+
+<p>Sou programador, então estou acostumado a usar loops, condicionais e algoritmos para resolver problemas. Porém, a linha de comando é um outro mundo, com suas próprias regras e ferramentas, então é preciso enxergar seus problemas de maneira diferente para poder resolvê-los com facilidade neste ambiente.</p>
+
+<p>À sua disposição estão a shell, pipes, redirecionamento, expansão de globs e variáveis, e claro, os comandos do Unix e suas opções.</p>
+
+<p>Este ambiente é especialmente poderoso para manipular texto. Se você conseguir transformar o seu problema atual em um problema de texto, a solução sairá naturalmente na linha de comando. O ideal é que o fluxo seja: <strong>entra texto, sai texto</strong>, ou seja, você começa com um texto de início, o manipula com as ferramentas do Unix, e o resultado é um novo texto.</p>
+
+<p>O <a href="/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/">episódio 7</a> ilustra bem essa diferença de pensamento:</p>
+
+<blockquote>
+<p>Mas como usar a zzarrumacidade (um programa que está em meu computador) para arrumar os dados que estão dentro do banco de dados do WordPress (uma entidade que está lá no servidor)?</p>
+
+<p><strong>Pensamento conservador:</strong> fazer um programa em Python que conecta no banco de dados, puxa os dados, faz um loop nos resultados, executa a zzarrumacidade, captura o resultado, salva de volta no banco os dados corrigidos.</p>
+
+<p><strong>Pensamento shell script:</strong> transformar meu problema num problema de texto, ou seja, entra texto, sai texto. Faço um dump dos dados pra um arquivo CSV, manipulo o texto desse arquivo pela linha de comando arrumando os nomes das cidades e como resultado gerarei um texto com os comandos SQL que vão atualizar os dados no banco. Sem loops, sem complexidade, apenas a boa e velha manipulação de texto.</p>
+</blockquote>
+
+<h2>Características da série Tela Preta</h2>
+
+<ul>
+<li><p><strong>Vídeos em alta definição (HD):</strong> Porque a linha de comando merece brilhar em alta definição. Experimente ver o vídeo em tela cheia, na sua TVzona da sala, é massa!</p></li>
+<li><p><strong>Sem cortes, sem edição:</strong> Os vídeos são gravados “ao vivo”, sem cortes. Eu aperto o botão de gravar e só desligo no final do vídeo. Não há pausas, não há edição posterior. Cada vídeo é uma sessão completa de shell, em tempo real, sem fru-fru e sem trapaças. Às vezes eu erro, às vezes esqueço de algo. Está tudo lá no vídeo. É como se você estivesse aqui na cadeira ao lado, acompanhando tudo.</p></li>
+<li><p><strong>Prompt otimizado:</strong> Já tentei vários formatos diferentes de prompt em meus vídeos, mas acho que agora consegui criar um que é ideal para esse tipo de vídeoaula na linha de comando. A linha separadora na cor verde deixa claro onde terminou a saída do comando anterior. O prompt simples ▶, também em verde e sem nenhuma informação adicional (username, path, …) chama a atenção e não distrai, deixando que os comandos brilhem sozinhos.</p>
+
+<p class="image"><img src="/img/tela-preta-prompt.png" alt=""></p>
+
+<p>Ficou curioso(a) como faz esse prompt? É bem simples, na verdade. Os hífens são colocados na quantidade exata para encher o tamanho da janela. Depois vem uma quebra de linha <code>\n</code> e o triângulo, que é um caractere Unicode. Assim:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">PS1</span><span class="o">=</span><span class="s1">'----------------------------------------\n▶ '</span>
+</code></pre></div>
+<p>As cores você pode colocar com caracteres ANSI, veja referência no <a href="/shell/canivete/#cores">Canivete Suíço do Shell</a>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">PS1</span><span class="o">=</span><span class="s1">'\[\e[32;1m\]----------------------------------------\n▶ \[\e[m\]'</span>
+</code></pre></div>
+<p>Se preferir algo mais sofisticado, que calcule o tamanho da janela automaticamente, dá pra fazer mágica usando o <code>tput</code> e o <code>printf</code>.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'printf "%-$(tput cols)s" - | tr " " -'</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">'▶ '</span>
+</code></pre></div></li>
+<li><p><strong>Legendas em português:</strong> As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.</p></li>
+<li><p><strong>Identidade visual:</strong> Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.</p>
+
+<p class="image"><img src="/img/tela-preta-capas-4.png" alt=""></p></li>
+<li><p><strong>Playlist do YouTube:</strong> Esta série conta com uma <a href="https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">playlist própria</a>, que serve para agrupar todos os vídeos em um único lugar, além de aparecer aquela interface bacana no YouTube para você poder ver todos os vídeos em sequência.</p>
+
+<p class="image"><img src="/img/tela-preta-playlist.png" alt=""></p></li>
+</ul>
+
+<p>Infelizmente, os vídeos mais antigos (os primeiros da série) não contam com todas as características dos mais recentes. Foi um processo de evolução até chegar no formato atual.</p>
+
+<h2>Meu ajude!</h2>
+
+<p><a href="https://www.youtube.com/user/aureliojargas">Assine o canal</a>, deixe um comentário, dê um “curtir”, compartilhe, me demonstre de alguma maneira que <strong>você se importa</strong>. Sem público, não tem sentido continuar gravando.</p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=S%C3%A9rie%20Tela%20Preta:%20Aprenda%20o%20%E2%80%9Cjeito%20shell%20script%E2%80%9D%20de%20resolver%20problemas%20https://aurelio.net/tela-preta/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/tela-preta/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/tela-preta/">LinkedIn</a>
+		</p>
+
+
+
+		<p class="article-tags">
+			Tags: 
+	<a rel="tag" href="/tags/#screencast">screencast</a>,
+	<a rel="tag" href="/tags/#tela-preta">tela-preta</a>
+		</p>
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

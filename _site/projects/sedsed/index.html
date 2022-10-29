@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+	<title>sedsed | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+
+
+  
+    <link rel="stylesheet" type="text/css" href="index.css">
+  
+  
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+</head>
+
+<body>
+  
+
+  
+
+  <h1>sedsed</h1>
+
+<p>by <a href="/about.html">Aurelio Jargas</a></p>
+
+<h2 id="description">DESCRIPTION</h2>
+
+<p>sedsed can debug, indent, tokenize and HTMLize your <a href="http://sed.sourceforge.net/">sed</a> scripts.</p>
+
+<p>In <a href="#debug">debug</a> mode it reads your script and add extra commands to it. When executed you can see the data flow between the commands, revealing all the magic sed does on its internal buffers.</p>
+
+<p>In <a href="#indent">indent</a> mode your script is reformatted with standard spacing.</p>
+
+<p>In <strong>tokenize</strong> mode you can see the elements of every command you use.</p>
+
+<p>In <a href="#htmlize">HTMLize</a> mode your script is converted to a beautiful colored HTML file, with all the commands and parameters identified for your viewing pleasure.</p>
+
+<p>With sedsed you can master ANY sed script. No more secrets, no more hidden buffers.</p>
+
+<h2 id="download">DOWNLOAD</h2>
+
+<p>Sedsed is available as a <a href="https://pypi.org/project/sedsed/">pip package</a>, just install it:</p>
+
+<pre>pip install --user sedsed</pre>
+
+<ul>
+  <li>Language: Python (compatible with versions 2.7 and 3.x)</li>
+  <li>License: GPLv3</li>
+  <li>
+    <a href="https://github.com/aureliojargas/sedsed/blob/master/CHANGELOG.md">Changelog</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/sedsed">GitHub repository</a>
+  </li>
+</ul>
+
+<p>Found a bug? Please <a href="https://github.com/aureliojargas/sedsed/issues">submit an issue</a>.</p>
+
+<p>Alternative: sedsed is a single file application, so you can also just download and run <a href="https://raw.githubusercontent.com/aureliojargas/sedsed/master/sedsed.py">sedsed.py</a>. Note that you'll also need to download its only external requirement, <a href="https://raw.githubusercontent.com/aureliojargas/sedparse/master/sedparse.py">sedparse.py</a>.</p>
+</blockquote>
+
+<h2 id="usage">USAGE</h2>
+
+<pre>
+<b>prompt$ </b>sedsed --help
+
+usage: sedsed OPTION [-e sedscript] [-f sedscriptfile] [inputfile]
+
+OPTIONS:
+
+     -f, --file          add file contents to the commands to be parsed
+     -e, --expression    add the script to the commands to be parsed
+     -n, --quiet         suppress automatic printing of pattern space
+         --silent        alias to --quiet
+
+     -d, --debug         debug the sed script
+         --hide          hide some debug info (options: PATT,HOLD,COMM)
+         --color         shows debug output in colors (default: ON)
+         --nocolor       no colors on debug output
+         --dump-debug    dumps to screen the debugged sed script
+
+     -i, --indent        script beautifier, prints indented and
+                         one-command-per-line output do STDOUT
+         --prefix        indent prefix string (default: 4 spaces)
+
+     -t, --tokenize      script tokenizer, prints extensive
+                         command by command information
+     -H, --htmlize       converts sed script to a colorful HTML page
+</pre>
+
+<h2 id="screenshots">SCREENSHOTS</h2>
+
+<h3>Quick sample</h3>
+
+<p><img class="center" src="quicksample.png" alt=""></p>
+
+<ul>
+  <li>The <code>-d</code> option turns debug ON.</li>
+  <li>The <code>--hide=hold</code> options hides the HOLD SPACE buffer contents, because it is always empty on this example.</li>
+  <li>The <code>PATT:</code> lines on sedsed's output shows the PATTERN SPACE buffer contents.</li>
+  <li>The <code>COMM:</code> yellow lines show the command which is being executed.</li>
+  <li>The <code>user</code> and <code>otheruser</code> lines are the sed's normal output.</li>
+  <li>The <code>$</code> sign at the end of <code>PATT:</code> lines represent the end of the buffer.</li>
+</ul>
+
+<h3 id="indent">Indent</h3>
+
+<p><img class="center" src="indent.png" alt=""></p>
+
+<ul>
+  <li>The <code>-f</code> option reads the sed script from a file (just like in sed).</li>
+  <li>The <code>--indent</code> option reformats complicated sed scripts into beautiful human-friendly scripts.</li>
+</ul>
+
+<h3 id="debug">Debug</h3>
+
+<p><img class="center" src="debug.png" alt=""></p>
+
+<ul>
+  <li>The <code>-d</code> option turns debug ON.</li>
+  <li>The <code>HOLD:</code> lines shows the HOLD SPACE buffer contents.</li>
+  <li>See how the PATTERN and HOLD SPACE buffers change between the sed commands.</li>
+  <li>See the buffers swap with the <code>x</code> command.</li>
+  <li>See the <code>\n</code> that is inserted in PATTERN SPACE between the two lines joined by the <code>G</code> command.</li>
+  <li><strong>See sed under the curtains!</strong></li>
+</ul>
+
+<h3 id="htmlize">HTMLize</h3>
+
+<p>Besides indent and debug, sedsed also has the ability to convert your sed scripts to nice HTML pages, with the syntax highlighted just as in <a href="http://www.vim.org">Vim Editor</a>, with nice colors!</p>
+
+<pre>
+<b>prompt$ </b>cat email-linker.sed
+h;s|.*|&lt;link&gt;&amp;&lt;/link&gt;|;x;/@/{s/@.*/'s email:/;G;}
+
+<b>prompt$ </b>sedsed --htmlize -f email-linker.sed &gt; email-linker.sed.html
+</pre>
+
+<p>Here is the resulting HTML file:</p>
+
+<p><a href="email-linker.sed.html"><img class="center" src="htmlize.png" alt=""></a></p>
+
+<p>Visit the <a href="http://sed.sourceforge.net/local/scripts">sed Website</a> for examples of more than 60 sed scripts HTMLized.</p>
+
+<h2 id="reference">REFERENCE</h2>
+
+<table>
+  <tr>
+    <th colspan="2">sedsed Output</th>
+  </tr>
+  <tr>
+    <td class="center"><code>PATT:</code></td>
+    <td>Contents of the PATTERN SPACE buffer</td>
+  </tr>
+  <tr>
+    <td class="center"><code>HOLD:</code></td>
+    <td>Contents of the HOLD SPACE buffer</td>
+  </tr>
+  <tr>
+    <td class="center"><code>COMM:</code></td>
+    <td>The sed command being executed</td>
+  </tr>
+  <tr>
+    <td class="center"><code>$</code></td>
+    <td>Terminates the PATT and HOLD contents</td>
+  </tr>
+  <tr>
+    <td class="center"><code>...</code></td>
+    <td>Lines that don't begin with any identifiers are STDOUT</td>
+  </tr>
+  <tr>
+    <th colspan="2">Action Options</th>
+  </tr>
+  <tr>
+    <td><code>--debug</code></td>
+    <td>DEBUG the sed script</td>
+  </tr>
+  <tr>
+    <td><code>--indent</code></td>
+    <td>Script beautifier, show indented source</td>
+  </tr>
+  <tr>
+    <td><code>--tokenize</code></td>
+    <td>Script tokenizer, show info about each command</td>
+  </tr>
+  <tr>
+    <td><code>--htmlize</code></td>
+    <td>Converts sed script to a colorful HTML page</td>
+  </tr>
+  <tr>
+    <th colspan="2">Tips</th>
+  </tr>
+  <tr>
+    <td colspan="2">less -r is your friend to page the colorful output of -d</td>
+  </tr>
+  <tr>
+    <td colspan="2">Use the <code>--hide</code> option to a cleaner debug output</td>
+  </tr>
+  <tr>
+    <td colspan="2"><code>--htmlize</code> send results to STDOUT, so redirect it</td>
+  </tr>
+</table>
+
+<h2 id="tests">QA</h2>
+
+<p>sedsed was tested successfully against all the 5 stars (<code>*****</code>) extreme sed scripts from the <a href="http://sed.sf.net/grabbag/scripts">Bonzini's excellent grab-bag site</a>. So all the sed commands and structures wrote on these scripts, which are <strong>EXTREME</strong>, are correctly parsed.</p>
+
+<p>If you want to try at home, download and execute them this way:</p>
+
+<pre>
+echo -e "one\ntwo\nthree\nfour" | sedsed -d -f sodelnum.sed
+
+echo -e "one\ntwo\nthree\nfour" | sedsed -d -f sort.sed
+
+echo a{b{c{bla}}} | sedsed -d -f tex2xml.sed
+
+echo "aa='abc" | sedsed -d -f config.sed
+
+(date +'%w %d' ; date +'%-m %Y') | sedsed -d -f cal.sed
+
+echo 4 4 + p | sedsed -d -f dc.sed
+</pre>
+
+<p><img src="dc.png" alt=""></p>
+
+<p>YES! Now you can (try to) understand what happens inside the unbelievable <a href="http://sed.sourceforge.net/local/scripts/dc.sed.html">dc.sed</a> calculator. Check this great shot of a simple "4+4" becoming "8" :)</p>
+
+<h2 id="seealso">SEE ALSO</h2>
+
+<ul>
+  <li>
+    <a href="https://github.com/aureliojargas/sedparse">sedparse</a> is a Python module to parse sed scripts.
+  </li>
+  <li>
+    When debugging a sed script, sedsed shows the buffers contents between all commands, having no support for user-defined spypoints. If you want this feature, you should try <a href="http://sed.sourceforge.net/grabbag/scripts/sd.sh.txt">sd</a>, the spypoint-aware sed debugger written in shell script by Brian Hiles.
+  </li>
+  <li>
+    Want to write portable scripts that will work on a wide range of sed flavors out there? Use the Laurent Voguel's <a href="http://lvogel.free.fr/sed/sedcheck.sed">sedcheck</a> tool (it is a sed script!)
+  </li>
+  <li>
+    Want to learn more about sed? Visit the <a href="http://sed.sourceforge.net">sed Website</a>, that has lots of documents and sample scripts.
+  </li>
+  <li>
+    You will find more useful softwares at <a href="/projects/">Aurelio's website</a>.
+  </li>
+</ul>
+
+<div id="footer">
+  <img src="/img/madeinbr.png" alt="Made in Brazil">
+</div>
+
+
+  
+</body>
+</html>

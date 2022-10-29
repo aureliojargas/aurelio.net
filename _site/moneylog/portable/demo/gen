@@ -1,0 +1,14 @@
+/a/git/moneylog/util/gen-portable > /tmp/z
+diff -u index.html /tmp/z | mate -
+
+echo "Atualizar mesmo? ^C cancela"
+read f
+cat /tmp/z > index.html
+cat /tmp/z > ../moneylog5.html
+echo feito
+# exit
+
+echo "Atualizar site aurelio.net? ^C cancela"
+read f
+cd /a/www && ./upload moneylog/portable/demo/index.html
+cd /a/www && ./upload moneylog/portable/moneylog5.html

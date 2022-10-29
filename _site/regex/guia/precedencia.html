@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>Precedência entre metacaracteres - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="modernosos-codigo.html">
+<link rel="next" href="mandamentos.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="modernosos-codigo.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="mandamentos.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>Precedência entre metacaracteres</h1>
+
+      <p>Falamos falamos, mas para fechar o estudo dos metacaracteres, faltou conhecer os relacionamentos entre eles, quem é mais forte, mais fraco, quem arrasta os outros...</p>
+
+<p>É bem simples, sabe na matemática, onde temos as ordens de precedência entre a adição e a multiplicação, onde esta é mais "forte" que aquela?</p>
+
+<p>Por exemplo "2+4*6", é "quatro vezes seis, e depois soma com o dois". Mesmo vindo depois, a multiplicação tem preferência. Com as ERs acontece o mesmo, seguindo estas regras:</p>
+
+<pre>
+tipo de meta    exemplo precedência
+quantificador   ab+     maior
+concatenação    ab      média
+ou              ab|c    menor
+</pre>
+
+<p>Ou seja, na situação <b><code>ab*</code></b> não é "a com b, em qualquer quantidade", e sim "a, seguido de b em qualquer quantidade", ou seja, a concatenação <i>a seguido de b</i> não é mais forte que a quantificação, que rouba o <code>b</code> para ela.</p>
+
+<p>Na última <b><code>ab|c</code></b> em vez de "a, seguido de b ou c" é na verdade "ab ou c", pois o ou é o mais fraquinho de todos, não puxa nada para o cesto dele.</p>
+
+<p>Por isso que <b><code>boa-tarde|boa-noite</code></b> funciona, pois os caracteres se juntam e se grudam uns com os outros, e o ou não tem força para quebrar isso.</p>
+
+<p>E como na matemática também, os parênteses servem para juntar na marra e dar força aos fracos. Por isso se diz que o grupo aumenta o poder do ou.</p>
+
+<p>Só com a dobradinha grupo+ou é possível algo como <b><code>boa-tard(e|b)oa-noite</code></b>, o que não faz sentido, mas mostra que juntos eles conseguem quebrar a união da concatenação.</p>
+
+<p>Com isso em mente, como fica a relação de forças em <b><code>ab|cd*</code></b>? Vamos colocar os "amigos" entre chaves para ilustrar essa quebra de braço:</p>
+
+<p><b>ab|c{d*}</b></p>
+
+<p>O <b>d</b> é do <code>*</code> pela quantificação ser mais forte que a concatenação, então o <b>c</b> coitado não tem força para puxar o seu amigo <b>d</b> para o seu lado.</p>
+
+<p><b>ab|{c{d*}}</b></p>
+
+<p>Agora o <b>c</b> fica na dúvida, mas se juntar com o <b>|</b> não dá, pois ele é o mais fraquinho de todos, então ele se junta com o <b>d</b> quantificado. Como o <b>|</b> já perdeu a briga à direita, ele olha para o outro lado e...</p>
+
+<p><b>{ab}|{c{d*}}</b></p>
+
+<p>O <b>b</b> rapidinho se junta com o <b>a</b> (concatenação) para fugir do fracote. É como no primário onde sempre tem aquele cara desengonçado que fica por último na escolha dos jogadores para o futebol com bola de meia, o <b>|</b> fica com o que sobrou, de um lado <b>ab</b> e do outro <b>cd*</b>.</p>
+
+<p>Esse mundo é mesmo muito cruel com os mais fracos, até os metacaracteres sofrem com essa discriminação &amp;:)</p>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="modernosos-codigo.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="mandamentos.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

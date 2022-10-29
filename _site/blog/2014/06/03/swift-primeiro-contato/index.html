@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Minhas primeiras impressões da linguagem Swift | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/blog/2014/06/03/swift-primeiro-contato/" />
+
+
+	<link rel="prev" title="Reaprendendo meu próprio código" href="/blog/2014/05/10/reaprendendo-meu-codigo/" />
+	<link rel="next" title="Uso o Plant Nanny pra tomar 2L/dia de água" href="/blog/2014/09/20/plant-nanny/" />
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Minhas primeiras impressões da linguagem Swift" />
+	<meta property="og:url" content="https://aurelio.net/blog/2014/06/03/swift-primeiro-contato/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/blog/2014/06/03/swift-primeiro-contato/" title="Permalink" rel="bookmark">Minhas primeiras impressões da linguagem Swift</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">03/06/2014</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+	<div class="ad-blog-box-top">
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Blog 336x280 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:336px;height:280px"
+		     data-ad-client="ca-pub-0009608813278754"
+		     data-ad-slot="1899275611"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+	</div>
+
+
+			<p>Ontem a Apple lançou a linguagem <a href="https://developer.apple.com/swift/">Swift</a> na WWDC 2014. Como nunca gostei da jurássica Objective-C (feia boba chata cara-de-melão), fiquei muito empolgado com a novidade. Finalmente uma linguagem moderna para se programar para Mac e iOS!</p>
+
+<p>É uma linguagem com sintaxe moderna, limpa, prazerosa de programar, lembrando a sintaxe de linguagens interpretadas como Ruby, Python e JavaScript. Mas diferentemente dessas, a Swift é uma linguagem compilada e de tipagem <del title="Obrigado Ulysses Almeida pela correção.">forte</del> <a href="http://fgsl.eti.br/blog/?p=118">estática</a>, que te força a sempre informar qual o tipo de conteúdo das variáveis, argumentos e retorno de funções: inteiro, string, array?</p>
+
+<p>Essa obrigação de informar o tipo traz uma grande vantagem: seus erros serão detectados já pelo compilador, e não pelo usuário. Te força a fazer um código mais previsível e robusto, e o compilador ainda pode fazer otimizações para que o código rode mais rápido.</p>
+
+<p>Já no lançamento a Apple disponibilizou gratuitamente um guia completo sobre a linguagem, em inglês, nos formatos <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/">HTML</a> e <a href="https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11">iBook</a>.</p>
+
+<p>Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alguns dos pontos que me chamaram a atenção:</p>
+
+<ul>
+<li><p>A documentação fala muito sobre <strong>código legível</strong>. Eu levei anos para finalmente compreender a importância disso, e fico feliz que eles estejam dando a devida importância. Veja uma citação do livro: “Readability is always preferred over brevity”.</p></li>
+<li><p>Para melhorar a legibilidade dos <strong>números</strong> no código, é permitido colocar zeros à esquerda livremente (zero padding), inserir <code>_</code> para separar grupos de números e adicionar sinais de <code>+</code> na frente. Tudo isso não altera em nada o valor do número, serve apenas para melhorar sua leitura pelo programador.</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// normal</span>
+<span class="k">let</span> <span class="nv">um_milhao</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="k">let</span> <span class="nv">seis_casas_decimais</span> <span class="o">=</span> <span class="mf">0.000001</span>
+
+<span class="c1">// mais legível</span>
+<span class="k">let</span> <span class="nv">um_milhao</span> <span class="o">=</span> <span class="mi">1_000_000</span>
+<span class="k">let</span> <span class="nv">seis_casas_decimais</span> <span class="o">=</span> <span class="mf">0.000_0</span><span class="mo">01</span>
+</code></pre></div></li>
+<li><p><strong>Intervalos numéricos</strong> práticos <code>0..5</code> e <code>0...5</code>, igual em Ruby.</p></li>
+<li><p>Pode usar <strong>caracteres Unicode em nomes de variáveis</strong>. Inclusive na documentação eles mostram exemplos que usam Emojis (veja The Basics → Naming Constants and Variables). A única exceção são os caracteres de setas (como ← e →) que estão reservados. Imagino que poderão ser operadores no futuro, no lugar do feioso <code>-&gt;</code> que é hoje usado nas funções.</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">π</span> <span class="o">=</span> <span class="mf">3.14159</span>
+<span class="k">let</span> <span class="nv">🐶🐮</span> <span class="o">=</span> <span class="s">"dogcow"</span>  <span class="c1">// Os Emojis podem não aparecer no seu navegador</span>
+</code></pre></div></li>
+<li><p><strong>Comentários multilinha</strong> podem ser aninhados. Já tentou comentar um trecho grande de código que já possuía alguns comentários multilinha com <code>/* … */</code>? Pois é. Na Swift rola.</p></li>
+<li><p><strong>Interpolação de strings</strong> (expandir variáveis e expressões dentro de strings) achei bem estranho ser <code>\(assim)</code>. Parênteses escapados? Fala sério! Se bem que não há um padrão estabelecido, cada linguagem faz diferente: <code>$shell</code>, <code>{$php}</code>, <code>#{ruby}</code>, <code>%(python)s</code>. Mas depois de ver bastante exemplos na documentação comecei a me acostumar. E se pensar que já tem <code>\t</code> e <code>\n</code> que significam “coisas especiais” no meio de uma string, usar <code>\(…)</code> é uma escolha que faz sentido.</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">nome_completo</span> <span class="o">=</span> <span class="s">"Fulano da Silva"</span>
+<span class="k">var</span> <span class="nv">idade</span> <span class="o">=</span> <span class="mi">77</span>
+<span class="n">println</span> <span class="s">"Olá </span><span class="se">\(</span><span class="n">nome_completo</span><span class="se">)</span><span class="s">, você tem </span><span class="se">\(</span><span class="n">idade</span><span class="se">)</span><span class="s"> anos."</span>
+</code></pre></div></li>
+<li><p>Mesmo acostumando com o <code>\(…)</code> dentro das strings, tem que levar em conta que o parser dele é bem limitado: “The expressions you write inside parentheses within an interpolated string cannot contain an unescaped double quote (<code>&quot;</code>) or backslash (<code>\</code>), and cannot contain a carriage return or line feed.”</p></li>
+<li><p>Há poucas funções/métodos nativos para lidar com <strong>strings</strong>. E o que eu mais gosto é lidar com strings. Que pena. Alguns deles: <code>hasPrefix</code>, <code>hasSuffix</code>, <code>uppercaseString</code>, <code>lowercaseString</code>, <code>countElements</code>, <code>isEmpty</code>.</p></li>
+<li><p>Pasmem: não tem <a href="/regex/">Expressões Regulares</a> :(</p></li>
+<li><p>Há o conceito de <strong>variáveis opcionais</strong>. Somente elas podem ser definidas como <code>nil</code>, as variáveis normais não. Então uma variável normal não pode ser zerada. É mais um efeito colateral da tipagem forte, tem que acostumar.</p></li>
+<li><p>Tem o controverso <a href="http://en.wikipedia.org/wiki/%3F:">operador ternário</a> <code>(condição ? sim : não)</code>. Não adianta, ele nunca vai morrer :)</p></li>
+<li><p>O comando <code>switch</code> tem o <code>break</code> implícito, ou seja, executa somente um <code>case</code> e não pula para o próximo. Aliás, assim deveriam ser todos os <code>switch</code> do mundo, para preservar a sanidade dos programadores. Mas se precisar pular para o próximo, basta usar o comando <code>fallthrough</code>.</p></li>
+<li><p>Achei interessante a ideia de dar nomes aos blocos de comandos <code>switch</code> e <code>while</code>. Assim, quando você está no meio de um loop, dentro de outro loop, dentro de outro loop, pode dar um <code>break nome</code>, para especificar exatamente de qual bloco você está saindo.</p></li>
+<li><p>A linha da declaração de uma função é um mundo à parte. Pode ser simples e concisa, mas também pode ser um caminhão de informações ao especificar, para cada argumento: nome externo, nome interno, tipo e valor default. E o tipo do argumento ainda pode ser um “function type” como por exemplo <code>(Int, Int) -&gt; Int</code>. E no final da linha, ainda tem o operador <code>-&gt;</code> e o retorno da função, sendo que este retorno pode ser uma tupla com vários elementos, onde é preciso especificar o tipo e opcionalmente o nome de cada um.</p>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Exemplo de declaração de função que recebe 3 argumentos</span>
+<span class="c1">// e retorna uma tupla com 3 elementos.</span>
+<span class="c1">//</span>
+<span class="c1">// Nomes externos dos argumentos: texto, iniciaEm, terminaEm</span>
+<span class="c1">// Nomes internos dos argumentos: txt, ini, fim</span>
+<span class="c1">// Tupla de retorno: (vogais, consoantes, outros)</span>
+<span class="c1">//</span>
+<span class="kd">func</span> <span class="nf">contaElementos</span><span class="p">(</span><span class="n">texto</span> <span class="nv">txt</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">iniciaEm</span> <span class="nv">ini</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">terminaEm</span> <span class="nv">fim</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">vogais</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">consoantes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">outros</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// corpo da função</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+
+<p>No geral, gostei do que vi. É chato ter que especificar sempre os tipos de dados, e a falta de regex é um pecado, mas fora isso parece ser uma linguagem prazerosa de programar (algo que a Objective-C nunca foi). Pretendo brincar com ela.</p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="/blog/sumario/">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Minhas%20primeiras%20impress%C3%B5es%20da%20linguagem%20Swift%20https://aurelio.net/blog/2014/06/03/swift-primeiro-contato/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/blog/2014/06/03/swift-primeiro-contato/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/blog/2014/06/03/swift-primeiro-contato/">LinkedIn</a>
+		</p>
+
+
+
+		<p class="article-tags">
+			Tags: 
+	<a rel="tag" href="/tags/#meu-querido-diario">meu-querido-diario</a>,
+	<a rel="tag" href="/tags/#programador">programador</a>
+		</p>
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+<div id="prev-next" class="bar">
+	<div class="wrapper">
+		<div class="nav-previous"><a href="/blog/2014/05/10/reaprendendo-meu-codigo/" rel="prev">← Reaprendendo meu próprio código</a></div>
+		<div class="nav-next"><a href="/blog/2014/09/20/plant-nanny/" rel="next">Uso o Plant Nanny pra tomar 2L/dia de água →</a></div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+
+
+
+
+<div id="ad-bottom" class="bar">
+	<div class="wrapper">
+		
+	<div class="ad-blog-box-bottom">
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Blog 336x280 -->
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:336px;height:280px"
+		     data-ad-client="ca-pub-0009608813278754"
+		     data-ad-slot="1899275611"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+	</div>
+
+
+	</div>
+</div>
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

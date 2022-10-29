@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>JavaScript - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="awk.html">
+<link rel="next" href="perl.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="awk.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="perl.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>JavaScript</h1>
+
+      <pre>
+característica  como fazer
+-------------------------------------------------------
+busca           métodos test, search, exec, match
+substituição    método replace
+divisão         método split
+ER crua         /entre barras/
+ignore M/m      modificador i
+global          modificador g
+</pre>
+
+<p>O suporte a ERs no Javascript foi incluído nos dois navegadores mais famosos desde as seguintes versões: <i>Netscape 4.0x</i> e <i>Internet Explorer 4.0</i>, e o nosso personagem principal agora vai ser o objeto global <code>RegExp</code>.</p>
+
+<p>Para definir uma ER no formato cru, basta colocá-la entre /barras/, e logo após a segunda barra, podemos colocar os modificadores de maiúsculas e minúsculas e substituição global, assim: <b><code>/[a-z]/ig</code></b>.</p>
+
+<p>Para criar um objeto do tipo <code>RegExp</code>, basta definir uma variável com uma /ER/. O método <code>test</code> é um dos que fazem a busca de padrões:</p>
+
+<pre>
+var er = /^[a-z]+$/i;
+if (er.test("JAVA"))
+  alert("casou!");
+</pre>
+
+<p>Fácil, não? Então para complicar, se você quiser fazer uma substituição, o método <code>replace</code> deve ser usado. Detalhe: ele é um método de uma <i>string</i> e não de uma /ER/, mas recebe ERs. Não entendeu? Veja:</p>
+
+<pre>
+var eu = "estou com fome";
+document.write(eu.replace(/....$/, "sono"));
+</pre>
+
+<p>Em Javascript, temos uma simetria entre os objetos <code>regexp</code> e <code>string</code>, com métodos de mesma função, mas nomes diferentes. Os "gêmeos siameses" são <code>test</code> e <code>search</code> para busca simples e <code>exec</code> e <code>match</code> para busca com pescagem de dados. E lembre-se de que um método <code>regexp</code> recebe como parâmetro uma <code>string</code> e vice-versa, veja:</p>
+
+<pre>
+regexp.test("string")
+string.search(/regexp/)
+
+regexp.exec("string")
+string.match(/regexp/)
+</pre>
+
+<p>Cuidado para não confundir! Falando em confundir, vamos ver o mais complicado de todos: o <code>exec</code>, que, além de fazer o casamento, povoa uma matriz com vários dados que podem ser recuperados posteriormente. Acompanhe o exemplo a seguir e note que o <code>matriz[1]</code> é o similar Javascript para o retrovisor <b><code>\1</code></b>:</p>
+
+<pre>
+var er = /^(\w+) (\w+)/;
+var matriz = er.exec("um dois três");
+document.write(matriz.index, "&lt;BR&gt;",
+               matriz.input, "&lt;BR&gt;",
+               matriz[0],    "&lt;BR&gt;",
+               matriz[1],    "&lt;BR&gt;",
+               matriz[2]);
+
+//Resultado:
+// 0              // índice do casamento
+// um dois três   // texto original
+// um dois        // trecho casado
+// um             // conteúdo do grupo 1
+// dois           // conteúdo do grupo 2
+</pre>
+
+<p>Mais informações podem ser encontradas em:</p>
+
+<ul>
+  <li>
+    <a href="http://www.webreference.com/js/column5">http://www.webreference.com/js/column5</a>
+  </li>
+  <li>
+    <a href="http://www.zdnet.com/devhead/stories/articles/0,4413,2354285,00.html">http://www.zdnet.com/devhead/stories/articles/0,4413,2354285,00.html</a>
+  </li>
+</ul>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="awk.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="perl.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

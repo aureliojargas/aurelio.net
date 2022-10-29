@@ -1,0 +1,16 @@
+/* TODO fonte padrao maior, tamanho 4 */
+
+body {
+	background-color: #696;
+	color: black;
+	margin: 2em;
+}
+
+code {
+	color: white;
+	font-weight: bold;
+}
+
+i {
+	background-color: white;
+}

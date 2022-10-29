@@ -1,0 +1,175 @@
+<html>
+<head>
+
+<!--
+TV Bars CSS game
+
+by Aurelio Marinho Jargas on Apr 2006
+https://aurelio.net
+
+A tiny game taht explores the imediatism and no-way-back of
+the display:none when used in :active and :visited.
+
+The first version used links as blocks, but using p:active
+is just fine.
+
+On Gecko, when users click the cell vanishes, but when releases
+it is back :/
+-->
+
+	<title>Barras da TV</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+	<style type="text/css">
+	
+		body
+			{
+			font-family	: Arial;
+			font-size	: 90%;
+			margin		: 2em;
+			text-align	: center;
+			}
+		p
+			{
+			text-align	: justify;
+			}
+		#en
+			{
+			float		: right;
+			width		: 30%;
+			}
+		#pt
+			{
+			float		: left;
+			width		: 30%;
+			}
+		#tv
+			{
+			width		: 200px;
+			height		: 234px;
+			margin-top	: 10px;
+			border		: 3px solid black;
+			background-image	: url(tvbars-bottom.png);
+			background-repeat	: no-repeat;
+			background-position	: bottom;
+
+			/* margin:auto centraliza o conteúdo */
+			margin-left	: auto;
+			margin-right	: auto;
+			}
+		#tv2
+			{
+			width		: 200px;
+			margin-left	: auto;
+			margin-right	: auto;
+			font-size	: 10px;
+			}
+		#tv p
+			{
+			/* vai empilhando as casas */
+			display		: block;
+			float		: right;
+			margin		: 0px;
+		
+			width		: 50px;
+			height		: 50px;
+			text-decoration	: none;
+			}
+	
+		#tv p.zR { background	: #f33; }
+		#tv p.zY { background	: #ff0; }
+		#tv p.zG { background	: #0f6; }
+		#tv p.zB { background	: #36f; }
+		
+		#tv p:active, #tv p:visited
+			{
+			display		: none;
+			}
+		#browsers
+			{
+			clear		: both;
+			width		: 100%;
+			margin-top	: 20px;
+			text-align	: right;
+			font-weight	: bold;
+			border-top	: 1px solid gray;
+			}
+		.browserok  { color	: #0c0; }
+		.browsernok { color	: #f00; }
+	</style>	
+</head>
+
+<body>
+
+<div id="pt">
+	<h2>Barras da TV</h2>
+	<p>Há algo errado com essa televisão. Ela está sem sinal, mas
+	as barras coloridas estão misturadas. Será que você
+	conseguiria arrumar essa bagunça?</p>
+	
+	<p>Clique até sobrar quatro colunas coloridas, uma de cada
+	cor, enchendo toda a TV. Recarregue a página para tentar
+	novamente.</p>
+
+	<img src="tvbars-mini.png">
+</div>
+
+<div id="en">
+	<h2>TV Bars</h2>
+	<p>Look at this TV set. There is no signal, but the
+	usual color bars are chaotic. Could you fix this mess?</p>
+
+	<p>Click on the television until there's only four colored
+	columns left, one color each, filling all the TV box. Reload
+	page to retry.</p>
+
+	<img src="tvbars-mini.png">
+</div>
+
+<div id="tv">
+	<p class="zR"></p>
+	<p class="zY"></p>
+	<p class="zB"></p>
+	<p class="zG"></p>
+ 	<p class="zB"></p>
+	<p class="zR"></p>
+ 	<p class="zY"></p>
+	<p class="zG"></p>
+	<p class="zY"></p>
+ 	<p class="zR"></p>
+	<p class="zB"></p>
+ 	<p class="zG"></p>
+	<p class="zG"></p>
+	<p class="zB"></p>
+	<p class="zR"></p>
+	<p class="zY"></p>
+	<p class="zG"></p>
+	<p class="zR"></p>
+	<p class="zG"></p>
+	<p class="zB"></p>
+	<p class="zY"></p>
+	<p class="zR"></p>
+	<p class="zG"></p>
+	<p class="zR"></p>
+	<p class="zR"></p>
+	<p class="zB"></p>
+	<p class="zG"></p>
+	<p class="zY"></p>
+	<p class="zB"></p>
+	<p class="zR"></p>
+	<p class="zG"></p>
+	<p class="zR"></p>
+</div>
+<div id="tv2">
+Click! Click! Click!
+</div>
+
+<div id="browsers">
+<span class="browserok">Safari</span> .
+<span class="browsernok">Camino</span> .
+<span class="browsernok">Firefox</span> .
+<span class="browsernok">Opera</span>
+</div>
+
+</body>
+</html>

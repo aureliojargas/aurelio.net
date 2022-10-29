@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Simple Text Tool - Aurelio.net</title>
+  <meta name="author" content="Aurelio Jargas">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!--mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!--normalize-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--====================================================-->
+
+  <!--Our nice text tools-->
+  <script>
+    /*global $*/
+
+    String.prototype.stripLeft = function () {
+      return this.replace(/^\s+/, '');
+    };
+    String.prototype.stripRight = function () {
+      return this.replace(/\s+$/, '');
+    };
+    String.prototype.reverse = function () {
+      return this.split('').reverse().join('');
+    };
+    String.prototype.replaceAll = function (from, to) {
+      return this.split(from).join(to);
+      // http://stackoverflow.com/a/17606289/1623438
+    };
+    String.prototype.tr = function (set1, set2) { // unix: tr abc123 xyz789
+      var i, j, letter;
+      var result = [];
+      for (i = 0; i < this.length; i++) {
+        letter = this[i];
+        for (j = 0; j < set1.length; j++) {
+          if (letter == set1[j]) {
+            letter = set2[j];
+            break;
+          }
+        }
+        result.push(letter);
+      }
+      return result.join('');
+    };
+
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // Apply a character translation table to a string (y///)
+    function applyTable(table, text) {
+      var i, c, r, result;
+      result = new Array(text.length);
+      for (i = 0; i < text.length; i++) {
+        c = text.charAt(i);
+        r = table[c];
+        result[i] = r ? r : c;
+      }
+      return result.join('');
+    }
+
+
+    function grep(txt) {
+      var regex = new RegExp($('#grep-regex').val());
+
+      return $.grep(txt.split('\n'), function (line, i) {
+        return line.match(regex);
+      }).join('\n');
+    }
+
+    function number(txt) {
+      var separator = $('#number-sep').val();
+      var count = $('#number-start').val() || 1;
+      var lines = txt.split('\n');
+
+      for (var i = 0; i < lines.length; i++) {
+        lines[i] = count + separator + lines[i];
+        count++;
+      }
+      return lines.join('\n');
+    }
+
+    function prefix(txt) {
+      var prefix = $('#prefix-string').val();
+
+      return $.map(txt.split('\n'), function (line, i) {
+        return prefix + line;
+      }).join('\n');
+    }
+
+    function replace(txt) {
+      var mode = $('#replace-mode').val();
+      var from = $('#replace-from').val();
+      var to = $('#replace-to').val();
+
+      // multiline replace
+      return $.map(txt.split('\n'), function (line, i) {
+        if (mode === 'all') {
+          return line.replaceAll(from, to);
+        } else {
+          return line.replace(from, to);  // first only
+        }
+      }).join('\n');
+    }
+
+    function reverse(txt) {
+      var mode = $('#reverse-mode').val();
+      return (mode === 'lines') ? tac(txt) : rev(txt);
+    }
+
+    function rotate(txt) {
+      var mode = $('#rotate-mode').val();
+      switch (mode) {
+        case 'ROT5': return rot5(txt);
+        case 'ROT13': return rot13(txt);
+        case 'ROT47': return rot47(txt);
+        case 'ROT13.5': return rot13(rot5(txt));
+        default: return txt ;
+      }
+    }
+
+    function rot5(txt) {
+      return txt.tr(
+        '1234567890',
+        '6789012345'
+      );
+    }
+  
+    function rot13(txt) {
+      return txt.tr(
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+      );
+    }
+  
+    function rot47(txt) {
+      return txt.tr(
+        '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~',
+        'PQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNO'
+      );
+    }
+  
+    function suffix(txt) {
+      var suffix = $('#suffix-string').val();
+
+      return $.map(txt.split('\n'), function (line, i) {
+        return line + suffix;
+      }).join('\n');
+    }
+
+    function tac(txt) {
+      return txt.split('\n').reverse().join('\n');
+    }
+
+    function rev(txt) {
+      // multiline rev
+      return $.map(txt.split('\n'), function (line, i) {
+        return line.reverse();
+      }).join('\n');
+    }
+
+    function split(txt) {
+      var sep = $('#split-sep').val();
+      if (sep) {
+        return txt.replaceAll(sep, '\n');
+      } else {
+        // if empty, split by sequences of spaces or tabs
+        return txt.replace(/[ \t]+/g, '\n');
+      }
+    }
+
+    function strip(txt) {
+      // multiline strip
+      var mode = $('#strip-mode').val();
+      return $.map(txt.split('\n'), function (line, i) {
+        switch (mode) {
+          case 'left': return line.stripLeft();
+          case 'right': return line.stripRight();
+          default: return line.stripLeft().stripRight();
+        }
+      }).join('\n');
+    }
+
+    function sort(txt) {
+      var arr = txt.split('\n');
+      arr.sort();
+      return arr.join('\n');
+    }
+
+    function lower(txt) {
+      return txt.toLowerCase();
+    }
+
+    function upper(txt) {
+      return txt.toUpperCase();
+    }
+
+    function join(txt) {
+      var sep = $('#join-sep').val();
+      return txt.replace(/\r*\n/g, sep);
+    }
+
+    function squeeze(txt) {
+      var char = $('#squeeze-char').val();
+      if (char) {
+        var char_safe = escapeRegExp(char);
+        var regex = new RegExp(char_safe + '{2,}', 'g');
+        return txt.replace(regex, char);
+      } else {
+        return txt.replace(/[ \t][ \t]+/g, ' ');
+      }
+    }
+
+    function unique(txt) {
+      var array = txt.split('\n');
+      // http://stackoverflow.com/a/10192255/1623438
+      var result =  $.grep(array, function(el, index) {
+          return index === $.inArray(el, array);
+      });
+      return result.join('\n');
+    }
+
+    function unaccent(txt) {
+      var unaccentTable = {
+        'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE',
+        'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E',
+        'Ì': 'I', 'Í': 'I',  'Î': 'I', 'Ï': 'I',
+        'Ò': 'O', 'Ó': 'O', 'Ô': 'O', 'Õ': 'O',  'Ö': 'O', 'Ő': 'O', 'Ø': 'O',
+        'Ù': 'U', 'Ú': 'U', 'Û': 'U', 'Ü': 'U',  'Ű': 'U',
+        'Ç': 'C', 'Ñ': 'N', 'Ý': 'Y',
+        'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'ae',
+        'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
+        'ì': 'i', 'í': 'i',  'î': 'i', 'ï': 'i',
+        'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o',  'ö': 'o', 'ő': 'o', 'ø': 'o',
+        'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',  'ű': 'u',
+        'ç': 'c', 'ñ': 'n', 'ý': 'y',
+        'Þ': 'P', 'þ': 'p', 'Ð': 'D', 'ð': 'd', 'ß': 'B', '§': 'S', 'µ': 'u',
+        '¢': 'c', '£': 'L', '¥': 'Y',
+        'ª': 'a', 'º': 'o'
+      };
+      return applyTable(unaccentTable, txt);
+    }
+
+    function deactivateAll() {
+      $('#filters li').removeClass('active');
+    }
+
+    // init
+    $(document).ready(function () {
+
+      $('#filters .button').click(function(event) {
+
+        // highlight clicked button
+        deactivateAll();
+        $(event.target).parent().addClass('active');
+
+        // run the function named as filter name
+        var filter = $(event.target).text();
+        var input = $('#input-text').val();
+        var result = window[filter](input);
+
+        // show output
+        $('#output-text').val(result);
+        $('#pipe').css('visibility', 'visible');
+      });
+
+      // Changing options rerun the current filter
+      $('#filters .options').change(function(event) {
+        $('li.active').children('.button').click();
+      });
+
+      // Pipe: Use current output as input
+      $('#pipe').click(function(event) {
+
+        // set input, clear output
+        $('#input-text').val($('#output-text').val());
+        $('#output-text').val('');
+
+        // reset UI
+        $('#pipe').css('visibility', 'hidden')
+        deactivateAll();
+      });
+
+      // Startup focus
+      $('#input-text').focus();
+    });
+
+  </script>
+
+<!--====================================================-->
+
+  <style type="text/css">
+    body {
+      background: black;
+      color: lime;
+      padding: 0 2em;
+      text-align: center;
+      font-family: monospace;
+    }
+    a {
+      color: lime;
+    }
+    textarea {
+      height: 7em;
+      width: 100%;
+    }
+    input[type=text] {
+      width: 1.5em;
+    }
+    input[type=number] {
+      width: 2.5em;  /* make room for the browser arrows */
+    }
+    #filters ul {
+      padding: 0;
+    }
+    #filters li {
+      display: inline-block;
+      margin: 0.5em;
+      padding: 0.5em;
+      border: 1px solid lime;
+      cursor: pointer;
+    }
+    .active {
+      background: lime;
+      color: black;
+    }
+    .options {
+      display: none;
+    }
+    .active .options {
+      display: inline;
+    }
+    #pipe {
+      margin-top: 0.5em;
+      visibility: hidden;
+      cursor: pointer;
+    }
+    footer {
+      margin: 7em 0 2em 0;
+    }
+  </style>
+
+<!--====================================================-->
+
+</head>
+<body>
+
+  <h1>Simple Text Tool</h1>
+
+  <div id="input">
+    <textarea id="input-text"></textarea>
+  </div>
+
+  <div id="filters">
+    <ul>
+      <li>
+        <span class="button">grep</span>
+        <span class="options">
+          -E
+          <input id="grep-regex" type="text" value="[0-9]">
+        </span>
+      </li>
+      <li>
+        <span class="button">join</span>
+        <span class="options">
+          lines by
+          <input id="join-sep" type="text" value=" ">
+        </span>
+      </li>
+      <li>
+        <span class="button">lower</span>
+      </li>
+      <li>
+        <span class="button">number</span>
+        <span class="options">
+          lines: start by
+          <input id="number-start" type="number" value="1">,
+          separate by
+          <input id="number-sep" type="text" value=". ">
+        </span>
+      </li>
+      <li>
+        <span class="button">prefix</span>
+        <span class="options">
+          lines with
+          <input id="prefix-string" type="text" value="@">
+        </span>
+      </li>
+      <li>
+        <span class="button">replace</span>
+        <span class="options">
+          <select id="replace-mode">
+            <option>all</option>
+            <option>first</option>
+          </select>
+          <input id="replace-from" type="text" value="a">
+          with
+          <input id="replace-to" type="text" value="XX">
+        </span>
+      </li>
+      <li>
+        <span class="button">reverse</span>
+        <span class="options">
+          <select id="reverse-mode">
+            <option>lines</option>
+            <option>letters</option>
+          </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">rotate</span>
+        <span class="options">
+          using
+          <select id="rotate-mode">
+            <option>ROT5</option>
+            <option selected>ROT13</option>
+            <option>ROT13.5</option>
+            <option>ROT47</option>
+          </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">sort</span>
+      </li>
+      <li>
+        <span class="button">split</span>
+        <span class="options">
+          by
+          <input id="split-sep" type="text">
+        </span>
+      </li>
+      <li>
+        <span class="button">squeeze</span>
+        <span class="options">
+          char
+          <input id="squeeze-char" type="text" maxlength="1">
+        </span>
+      </li>
+      <li>
+        <span class="button">strip</span>
+        <span class="options">
+          <select id="strip-mode">
+            <option>both</option>
+            <option>left</option>
+            <option>right</option>
+          </select>
+        </span>
+      </li>
+      <li>
+        <span class="button">suffix</span>
+        <span class="options">
+          lines with
+          <input id="suffix-string" type="text" value="@">
+        </span>
+      </li>
+      <li>
+        <span class="button">unaccent</span>
+      </li>
+      <li>
+        <span class="button">unique</span>
+      </li>
+      <li>
+        <span class="button">upper</span>
+      </li>
+    </ul>
+  </div>
+
+  <div id="output">
+    <textarea id="output-text"></textarea>
+    <div id="pipe">
+      &orarr; Use results as input
+    </div>
+  </div>
+
+  <footer>
+    <p>Want to contribute? <a href="https://github.com/aureliojargas/aurelio.net/blob/master/util/text-tool.html">GitHub</a></p>
+
+    <p>See also: <a href="http://www.text-tools-online.com">http://www.text-tools-online.com</a></p>
+  </footer>
+</body>
+</html>

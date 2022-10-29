@@ -1,0 +1,127 @@
+Você realmente usa a tecla CAPS LOCK?
+-------------------------------------
+
+Pare para pensar:
+
+- Quantas vezes você já digitou LS, CD /TMP e outros comandos em
+  maiúsculas porque o CAPS estava ligado e você não percebeu?
+
+- Quantas vezes no editor de textos você digita a frASE E DE REPENTE
+  TUDO <caps off> fica em mAIÚSCULAS <caps off> porque o CAPS é do
+  lADO DA LETRA A?
+
+- Quantas vezes você não ficou louco ao digitar sua senha corretamente
+  mais de 15 vezes e o sistema não aceitar porque o CAPS estava ligado
+  e você não percebeu?
+
+- VOCÊ NÃO ODEIA AQUELES TEXTOS TODOS EM MAIÚSCULAS, GRITANDO PRA VOCÊ?
+
+--------------------------------------------------------------------
+
+Apresentamos a solução para o seu problema!!!
+
+   *ARRANQUE* seu CAPS LOCK
+   *ARRANQUE* seu CAPS LOCK
+   *ARRANQUE* seu CAPS LOCK
+
+E o melhor: É de graça!!! Faça-você-mesmo!
+
+--------------------------------------------------------------------
+
+Vários colegas de trabalho já fizeram e aprovaram!
+
+E nos Estados Unidos, um país de tecnologia avançada, isso já é
+prática comum! Ouça alguns depoimentos traduzidos!!
+
+"Minha vida está muto mais feliz sem o CAPS"
+                         John, Massaxúsetz
+"Após retirar o CAPS, voltei a sentir desejo pelo meu marido"
+                         Hannah, O raio
+"O CAPS era uma droga em minha vida, agora estou curado"
+                         Joseph, Luís & Ana
+"Após retirar o CAPS eu vi a luz. Me reencontrei com deus."
+                         Linda, Mai Ame
+
+--------------------------------------------------------------------
+
+Para fazer o mesmo e tornar sua vida um mar de rosas, arranque o seu
+CAPS também!! Não requer prática nem habilidade, acompanhe as
+instruções.
+
+1) Com os dedos, ou com o auxílio de uma chave de carro ou de fenda,
+   force a tecla para cima. Não se preocupe, não vai quebrar pois
+   ela é só encaixada.
+
+2) Arranque-a para fora do teclado. Caso você tenha usado alguma
+   ferramenta, aprecie o belo vôo da tecla maldita em sua trajetória
+   parabólica.
+
+3) Analise o que sobrou no teclado, se apenas um buraco ou um plástico
+   com mola.
+
+4) Se for apenas um buraco, simplesmente tape-o com durex ou um adesivo
+   do seu time, do piupiu, ou o rosto da mulher amada.
+
+5) Se ficou o toquinho plástico, aperte-o (desligando o CAPS) e
+   prenda-o com um durex nessa posição, de maneira que ele não possa
+   mais ser ligado.
+
+5b) Se você for mais radical, ao invés de durex, pode usar cola.
+
+6) Me mande uma foto do seu teclado e da famigerada tecla arrancada para
+   fazer parte do memorial dos CAPS inúteis.
+
+--------------------------------------------------------------------
+
+Se você não pode por algum motivo remover a tecla, desabilite seu
+funcionamento via software.
+
+
+Linux modo texto
+~~~~~~~~~~~~~~~~
+
+    $ vi /usr/lib/kbd/keymaps/i386/qwerty/us-acentos.kmap.gz +/Caps
+
+    E troque Caps_Lock por nul
+
+    $ loadkeys /usr/lib/kbd/keymaps/i386/qwerty/us-acentos.kmap.gz
+
+    Ou se for teclado abnt, só muda o nome do arquivo.
+
+
+Linux modo gráfico
+~~~~~~~~~~~~~~~~~~
+
+    $ echo 'keycode 66 =' >> ~/.Xmodmap
+
+
+Linux no KDE
+~~~~~~~~~~~~
+
+    Acesse o Painel de Controle -> Teclado -> Disposição do Teclado
+
+    Procure o item "Comportamento da tecla Caps Lock" e escolha a
+    opção "Nenhum".
+
+--------------------------------------------------------------------
+
+DICAS:
+
+- Geralmente são tão poucas as vezes que se precisa escrever uma
+  palavra inteira ou mais em maiúsculas que ficar segurando o 'Shift'
+  com o mindinho é mais rápido que ligar e desligar o 'CAPS LOCK'.
+
+- Se precisar escrever um texto em maiúsculas, qualquer editor de
+  texto decente tem a função de "capitalizar" um texto selecionado.
+  No VI basta selecionar o texto com o comando 'v' e apertar 'U'.
+
+--------------------------------------------------------------------
+
+Seja feliz, note como sua produtividade aumentou e seu estresse se
+foi, pois agora você não erra mais por causa de uma tecla inútil!!
+
+
+* EXTRA: Veja fotos e vídeos com as teclas arrancadas:
+         https://aurelio.net/doc/nerd.html#caps-lock
+
+

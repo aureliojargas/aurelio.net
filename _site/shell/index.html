@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Portal brasileiro de Shell Script | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/regex/regex.css">
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/shell/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Shell Script" />
+	<meta property="og:url" content="https://aurelio.net/shell/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/shell/" title="Permalink" rel="bookmark">Shell Script</a></h1>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<div class="banner" style="background: #fafafa; border: 1px solid #ddd; margin: 2em 0; padding: 15px 0">
+  <a href="https://www.shellscript.com.br">
+    <img src="/img/icon/128/livroshell.png" style="float:left">
+  </a>
+  <p>
+      Eu escrevi um livro de quase 500 páginas sobre shell! O nome é <A HREF="https://www.shellscript.com.br">Shell Script Profissional</A> e está à venda nas livrarias do país. Também tem a versão digital (e-book). Você me ajuda comprando o livro e eu te ajudo a dominar o shell. Combinado? :)
+  </p>
+  <div class="clearfix"></div>
+</div>
+
+<table class="tableborder">
+  <tr>
+    <td>
+      <p>Destaques:</p>
+      <ul>
+        <li><a href="/shell/apostila-introducao-shell.pdf">Apostila Shell Básico</a></li>
+        <li><a href="/shell/canivete/">Canivete Suíço</a></li>
+        <li><a href="/shell/miniman/">miniman</a></li>
+        <li><a href="/shell/dialog/">Dialog --tudo</a></li>
+        <li><a href="https://funcoeszz.net">Funções ZZ</a></li>
+        <li><a href="https://codare.aurelio.net/category/shell/">Shell no CODARE</a></li>
+      </ul>
+    </td>
+    <td>
+      <p>Veja também:</p>
+      <uL>
+        <li><a href="/sed/">Sed</a></li>
+        <li><a href="/regex/">Expressões Regulares</a></li>
+        <li><a href="/vim/">Vim</a></li>
+        <li><a href="/cygwin/">Cygwin</a></li>
+        <li><a href="https://codare.aurelio.net">CODARE</a></li>
+        <li><a href="/doc/nerd.html">docz nerdz</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<p><img style="float:right" src="/img/icon/128/shell.png"></p>
+
+<p>Olá, eu sou o Aurelio e esta é a minha página sobre shell script.</p>
+
+<p>Conheci o shell em 1997, quando comecei a trabalhar na Conectiva, e fui apresentado ao Sr. Bash. O início de nosso relacionamento foi bem difícil, ele simplesmente não queria me obedecer, não importa o que eu digitasse, ele fazia outra coisa completamente diferente, e insistia em repetir &quot;<em>command not found</em>&quot; e &quot;<em>syntax error near unexpected token</em>&quot;...</p>
+
+<p>Mas com o tempo, paciência, dedicação e muitos, <strong>muitos</strong> arquivos apagados acidentalmente e <strong>muita</strong> leitura sem noção de páginas de manual em inglês<strong>¹</strong>, finalmente eu vi a luz do shell e hoje o temível Sr. Bash me obedece. Bem... nem sempre ;)</p>
+
+<blockquote>
+<p>Ler o &quot;man bash&quot; em inglês, inteiro, é algo memorável que só se faz uma vez na vida...</p>
+</blockquote>
+
+<p>A idéia dessa página é juntar links de qualidade relativos a shell script <strong>em português</strong>. Um ponto de partida para o aprendizado ou consulta rápida. Aceito colaborações!</p>
+
+<p>O primeiro e mais importante link é a <a href="http://br.groups.yahoo.com/group/shell-script/">lista de discussão shell script</a>. É um lugar especial, onde centenas de shelleiros conversam sobre o assunto. Melhor do quer ler documentação, é interagir com outras pessoas. Assine agora mesmo e aprenda rápido!</p>
+
+<h2>O que é shell?</h2>
+
+<p>Shell é a linha de comando do Linux (e UNIX). É o shell quem
+interpreta a linha de comandos digitada pelo usuário no terminal e
+chama os programas desejados. Lê-se &quot;xéu&quot;, como em &quot;meu deu du xéu&quot;
+:)</p>
+
+<p>Além de executar comandos do sistema, o shell também tem seus próprios
+comandos, como IF, FOR e WHILE, e também possui variáveis e funções.
+Tudo isso para tornar um pouco mais &quot;esperta&quot; e flexível essas
+chamadas de comandos feitas pelo usuário.</p>
+
+<p>Como estas são as características de uma linguagem de programação, o
+shell é uma ferramenta muito poderosa para desenvolver scripts e
+programinhas rápidos para automatizar tarefas do dia-a-dia.</p>
+
+<p>Para os que vêm do mundo MSDOS, pense no shell como um Batch (dos
+arquivos .BAT). O shell é como um Batch (muito) melhorado.</p>
+
+<p>Mas não se engane, o shell não é um brinquedo.</p>
+
+<p>Assim como serve para fazer scripts de 5 ou 10 linhas, ele é versátil
+e completo o suficiente para que GRANDES programas sejam feitos nele.
+A interação natural com o sistema operacional e seus programas
+multiplica os poderes do shell.</p>
+
+<p>Interfaces interativas com o usuário, programas de cálculos, CGI,
+instaladores de software, manipulação de banco de dados, rotinas de
+backup, tudo isso pode ser feito em shell!</p>
+
+<p>Quer exemplos? Dê um <code>file /usr/bin/* | grep shell</code> aí no seu Linux
+para ver como o shell já faz parte de sua vida.</p>
+
+<h2>Documentação</h2>
+
+<ul>
+<li><p><a href="/shell/canivete/">Canivete Suíço do Shell</a> <em>por Aurelio Marinho Jargas</em>
+Referência rápida do shell do Unix/Linux/Mac, com várias tabelas que resumem comandos, operadores, opções, conceitos, exemplos, dicas e listagens. Nada de texto, só tabelas. Bom para guardar, imprimir, ter sempre à mão para tirar dúvidas.</p></li>
+<li><p><a href="/shell/miniman/">miniman</a> <em>por Aurelio Marinho Jargas</em>
+Você não gosta de man pages? Então experimente o miniman! É uma versão rápida e resumida das páginas de manual, com tabelas que listam somente as opções mais utilizadas dos comandos mais utilizados.</p></li>
+<li><p><a href="http://www.julioneves.com">Papo de Botequim</a> <em>por Julio Cezar Neves</em>
+Site do Julio, autor do livro <a href="#livros">Programação Shell Linux</a>, que traz uma série de artigos em linguagem descontraída que ensinam shell de maneira divertida. Leitura obrigatória!</p></li>
+<li><p><a href="http://www.dicas-l.com.br/cantinhodoshell/">Cantinho do Shell (Dicas-L)</a> <em>por diversos autores</em>
+Uma coleção preciosa com vários artigos rápidos dando dicas de Shell. Dê uma olhada que com certeza encontrará algo útil para o seu dia a dia.</p></li>
+<li><p><a href="http://olinux.uol.com.br/Programacao">Curso de Shell Online</a> <em>por Alex Borro</em>
+Curso em várias aulas sobre shell. Nesse mesmo link também tem um curso sobre Algoritmos. Aparentemente essa página só abre direito no IE :(</p></li>
+<li><p><a href="/shell/apostila-introducao-shell.pdf">Introdução ao Shell Script</a> <em>por Aurelio Marinho Jargas</em>
+Apostila introdutória sobre Shell Script, com 22 páginas de uma abordagem rápida e direta sobre como fazer scripts em shell. Útil para quem já usa o UNIX/Linux na linha de comando e quer começar a fazer alguns scripts para automatizar tarefas.</p></li>
+<li><p><a href="http://www.inf.ufpr.br/afms03/shell.html">Guia de programação Shell Script</a> <em>por Alexandre Felipe Muller De Souza</em>
+Um guia completo sobre shell, que ensina tanto os conceitos básicos como sintaxe e comandos, quanto tópicos avançados como <a href="/regex/">expressões regulares</a> e criação segura de arquivos temporários. Leitura recomendada!</p></li>
+<li><p><a href="https://meleu.sh/shebang/">O que o #! realmente faz</a> <em>por meleu</em>
+Artigo que explica a função do #! no início dos scripts shell.</p></li>
+<li><p><a href="https://meleu.gitbooks.io/bashscripting/content/">Programação em Bourne-Again Shell</a> <em>por meleu</em>
+Tutorial de Bash, ensinando devagarzinho, com carinho e vai avançando. Também fala sobre o <code>getopts</code>, o <code>select</code> e o Dialog.</p></li>
+<li><p><a href="http://linuxfocus.berlios.de/Portugues/September2001/article216.shtml">Programação Shell</a> <em>por Guido Socher</em>
+Tutorial de Bash, de leitura rápida e direto ao ponto. Indicado para iniciantes que já programam em outras linguagens.</p></li>
+<li><p><a href="http://www.devin.com.br/eitch/shell_script/">Programando em shell-script</a> <em>por Hugo Cisneiros</em>
+Tutorial de Bash, de leitura rápida, passando pelas estruturas, funções e finalizando com um script completo.</p></li>
+<li><p><a href="/curso/conectiva/conectiva-shell-prompt.html">Prompt-doc: &quot;Tira Dúvidas&quot; sobre Shell</a> <em>por Aurelio Marinho Jargas</em>
+Histórico da linha de comando de uma palestra ministrada pelo Aurelio para os funcionários da Conectiva sobre shell script em Dezembro de 2003. Não ensina shell, mas sim dá dicas valiosas e sana dúvidas.</p></li>
+<li><p><a href="http://www.openslack.org/%7Epiterpk/artigos/aposhell.ps">Shell Script para Iniciantes</a> <em>por Roberto Freires Batista (Piter Punk)</em>
+Apostila completa, com mais de 60 páginas que começa explicando os conceitos da linha de comando e depois entra no shell script. O interessante é que seu conteúdo está dividido por temas, facilitando a consulta posterior. A linguagem é descontraída e leve. Leitura altamente recomendada!</p></li>
+<li><p><a href="/doc/coluna/coluna-10.html">Mpage — Impressão ágil em PostScript</a> <em>por Aurelio Marinho Jargas</em>
+Conheça o comando mpage, que é uma ferramenta versátil para paginar seu texto e mandá-lo para a impressora, tudo direto pela linha de comando.</p></li>
+<li><p><a href="/doc/coluna/coluna-03.html">Zgv/ImageMagick — Manipulação de imagens</a> <em>por Aurelio Marinho Jargas</em>
+Aprenda a mostrar e editar imagens pelo modo texto, com o comando zgv e as ferramentas poderosas do ImageMagick.</p></li>
+<li><p><a href="/doc/coluna/coluna-11.html">Caracteres de Controle — Não fuja, domine-os</a> <em>por Aurelio Marinho Jargas</em>
+Uma viagem ao mundo estranho e avançado dos caracteres de controle, cheio de exemplos para você perder o medo e conseguir movimentar o cursor, usar texto colorido, entre outros.</p></li>
+</ul>
+
+<h2>Ferramentas e conceitos</h2>
+
+<ul>
+<li><p><a href="http://geocities.yahoo.com.br/cesarakg/artigos.html#programacao">Artigos traduzidos</a> <em>por César A. K. Grossmann</em>
+Artigos traduzidos do inglês sobre utilitários UNIX, bash, awk e sed.</p></li>
+<li><p><a href="http://thobias.org/doc/cgi_shell.html">CGI em Shell Script</a> <em>por Thobias Salazar Trevisan</em>
+Tutorial completo sobre como programar em CGI (Internet) usando
+shell script. Esqueça Perl, esqueça PHP, shell é o que há :)</p></li>
+<li><p><a href="/cygwin/">Cygwin - O Linux no Windows</a> <em>por Aurelio Marinho Jargas</em>
+Central de informações sobre o Cygwin, o programa que traz os poderes do
+shell script para máquinas Windows.</p></li>
+<li><p><a href="/shell/dialog/">Dialog --tudo</a> <em>por Aurelio Marinho Jargas</em>
+Tutorial sobre o Dialog, o programa que faz interfaces &quot;gráficas&quot; no modo
+texto, com botões, menus e caixas de texto. (Lembre-se da instalação modo
+texto das distribuições de Linux)</p></li>
+<li><p><a href="/regex/">Expressões Regulares</a> <em>por Aurelio Marinho Jargas</em>
+Ponto de partida para vários documentos, artigos e inclusive um livro
+completo sobre Expressões Regulares, todos em português.</p></li>
+<li><p><a href="/sed/">Sed</a> <em>por Aurelio Marinho Jargas</em>
+Vários links para documentos em português sobre o editor sed.
+São vários: sed-HOWTO, Só Sed, sed 1liners, ...</p></li>
+<li><p><a href="http://thobias.org/doc/shell_bd.html">Shell Script e Banco de Dados</a> <em>por Thobias Salazar Trevisan</em>
+Excelente documento sobre como acessar o MySQL ou o Postgres da linha de
+comando, usando shell. O assunto está bem mastigado e há muitos scripts de
+exemplo.</p></li>
+<li><p><a href="http://brlinux.linuxsecurity.com.br/artigos/awk_intro.htm">Tutorial de AWK</a> <em>por Augusto Campos</em>
+Tutorial muito bem escrito sobre o AWK. A leitura é direcionada a
+programadores de outras linguagens, mas é possível aprender sobre
+o AWK mesmo não sendo programador.</p></li>
+</ul>
+
+<h2>Livros</h2>
+
+<ul>
+<li><p><a href="http://brasport.com.br/index.php?Escolha=8&amp;Livro=L00191">Programação Shell Linux</a> <em>por Julio Cezar Neves</em>
+Qualquer um que quer iniciar em shell script deve adquirir este livro. Em
+linguagem extremamente descontraída, o autor explica e ensina os conceitos
+envolvidos, com bastante exemplos e códigos prontos. A leitura é light e
+agradável, como uma conversa ao vivo, acelerando o aprendizado.</p></li>
+<li><p><a href="https://www.shellscript.com.br">Shell Script Profissional</a> <em>por Aurelio Marinho Jargas</em>
+Se você não é mais leigo e já faz os seus scripts, com este livro você mergulhar de vez no assunto, aprendendo a fazer programas de qualidade em shell, com ênfase em código legível, portabilidade e manutenção futura. Muito didático e de fácil entendimento, o livro ensina opções de linha de comando, arquivo de configuração, banco de dados, interface amigável ao usuário com dialog, CGI, ferramentas do sistema, expressões regulares e caracteres de controle, entre outros.</p></li>
+<li><p><a href="http://novateceditora.com.br/guias/bash/">BASH - Guia de Consulta Rápida</a> <em>por Joel Saade</em>
+Indispensável para quem precisa trabalhar com o shell, este guia é barato
+(cerca de 20 reais nas livrarias) e está no formato &quot;consulta rápida&quot;, sendo
+estreito para caber no bolso e com o conteúdo em tópicos, listando e
+pincelando todos os conceitos envolvidos no Bash. Este guia não serve para
+leigos em shell, pois seu formato está mais para &quot;man page&quot; do que para
+tutorial.</p></li>
+<li><p><a href="https://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a> <em>por Aurelio Marinho Jargas</em>
+Pode um shelleiro sobreviver sem nunca aprender Expressões Regulares? Pode.
+Mas somente quem experimenta as expressões sabe como elas poupam tempo e
+dores de cabeça, servindo para diversas áreas da informática, inclusive ao
+usar um editor de textos. Este é um livro completo sobre Expressões
+Regulares, sua história, conceitos e aplicação. Útil para leigos no assunto
+pelas explicações passo-a-passo, de maneira didática e em linguagem
+descontraída. Útil para os já iniciados, com várias tabelas que resumem os
+conceitos.</p></li>
+</ul>
+
+<p><strong>Caminho das pedras (e do bolso vazio):</strong></p>
+
+<ol>
+<li>Para iniciar no shell, compre livro do Julio.</li>
+<li>Aprendeu? Gostou? Trabalha com shell? Compre o livro do Aurelio para tornar-se um especialista.</li>
+<li>Viciou? Quer ser guru? Compre o guia de Expressões Regulares.</li>
+</ol>
+
+<h2>Scripts</h2>
+
+<ul>
+<li><p><a href="http://alonso-andres.sites.uol.com.br/ansi2html.sh.zip">ansi2html</a> <em>por Alonso Andres</em>
+Converte textos coloridos com caracteres ANSI (como a saída do comando &quot;ls
+--color&quot;) em uma página HTML, preservando as cores originais. É um script
+shell com o coração da conversão sendo um script SED. Ainda usa CSS além do
+próprio HTML. Idéia simples, resultado poderoso!</p></li>
+<li><p><a href="http://thobias.org/bin/einstein">einstein</a> <em>por Thobias Salazar Trevisan</em>
+A versão do programa Einstein em shell script. Bom para sacanear os
+amigos :) Funciona assim: Você digita uma frase qualquer (uma
+resposta) enquanto o programa solta frases pré-definidas na tela.
+Depois você faz a pergunta e o computador responde corretamente
+aquilo que você digitou &quot;escondido&quot;.</p></li>
+<li><p><a href="http://thobias.org/bin/gravar">gravar</a> <em>por Thobias Salazar Trevisan</em>
+Script para gravar CDs de Dados e Áudio. Funciona com menus
+amigáveis e usa as ferramentas já existentes no Linux para
+extrair faixas, gerar ISO e gravar o CD.</p></li>
+<li><p><a href="http://thobias.org/bin/matematica">matematica</a> <em>por Thobias Salazar Trevisan</em>
+Script interativo pra treinar a matemática básica. Faz perguntas de
+<code>+ - / *</code>, e no final mostra as estatísticas de acerto. Bom para
+iniciar os filhos no bom caminho do modo texto :)</p></li>
+<li><p><a href="http://www.meleuzord.hpg.ig.com.br/src/mp3select">mp3select</a> <em>por Meleu</em>
+Script interativo que usa o Dialog para mostrar um menu com a lista
+de arquivos mp3 do usuário. Ao selecionar a música, o mpg213 é
+chamado para tocá-la.</p></li>
+<li><p><a href="/bin/bash/oofind">oofind</a> <em>por Aurelio Marinho Jargas</em>
+É um &quot;grep&quot; para arquivos .SXW do OpenOffice.org. Você informa o
+texto de pesquisa e ele lhe diz se o(s) arquivo(s) .SXW possui
+este texto ou não.</p></li>
+<li><p><a href="http://www.meleuzord.hpg.ig.com.br/src/telme">telme</a> <em>por Meleu</em>
+Script para enviar SMS para telefones celulares usando o serviço
+telme (<a href="http://www.telme.com.br">http://www.telme.com.br</a>).</p></li>
+</ul>
+
+<h2>Programas</h2>
+
+<p>Os programas aqui listados nada mais são do que shell scripts escritos
+em Bash, mas que por terem documentação, usuários, página na Internet
+e tudo mais, podem ser considerados programas completos.</p>
+
+<ul>
+<li><p><a href="https://funcoeszz.net">Funções ZZ</a> <em>por Aurelio Marinho Jargas e Thobias Salazar Trevisan</em>
+Coletânea de microfunções para bash (compatíveis com bash1), com
+funcionalidades diversas, algumas com pesquisa na internet. Útil
+para carregá-las no seu ~/.bashrc e usar no dia-a-dia. O script é
+constantemente atualizado para manter as mais de 60 funções
+funcionando. Código todo em português!</p></li>
+<li><p><a href="/projects/txt2regex/">txt2regex</a> <em>por Aurelio Marinho Jargas</em>
+Quer ver na prática as funcionalidades avançadas do Bash2? Veja o
+código desse programa. Eu o fiz basicamente para aprender as
+novidades do Bash2 e o resultado foi um programa completo,
+interativo, com desenho de tela, cores e internacionalização (i18n),
+e tudo isso usando <strong>apenas os comandos nativos do Bash2</strong>. Nada de
+sed, cut, grep e compania, só comandos &quot;builtin&quot; do Bash2.
+O programa é um assistente para se fazer expressões regulares em
+vários programas conhecidos. Apenas navegando entre menus (no modo
+texto é claro!) e escolhendo opções você vai construindo sua
+expressão.</p></li>
+<li><p><a href="http://thobias.org/datas/">Datas</a> <em>por Thobias Salazar Trevisan</em>
+Um programa de calendário e compromissos. Diferente de programas de
+agenda que são geralmente grandes, pesados ou precisam de interface
+gráfica, este funciona na linha de comando. Sabe o comando &quot;cal&quot;?
+Imagine que ele soubesse quais são seus compromissos do mês e os
+mostrasse no lado direito da tela. Esse é o Datas.
+Anotar os compromissos é fácil, basta editar um arquivo texto e o
+programa se encarrega de gerenciá-los. Também é possível colocá-lo
+no cron e mandar o calendário por e-mail periodicamente. O código
+ficou compacto e é uma boa fonte de estudos. Na página
+do programa tem screenshots e instruções de uso.</p></li>
+<li><p><a href="http://cltfc.sites.uol.com.br">Piano Gripe</a> <em>por Pablo Fernandes</em>
+O Piano Gripe é um emulador de teclado musical para o modo texto.
+Com uma interface com usuário muito bonita e bem feita usando
+caracteres de controle, o usuário aperta teclas e vai compondo uma
+música, que é tocada utilizando o Speaker (beep) do computador.
+As notas são conseguidas modificando a frequência do som do Speaker,
+genial! Destaque para o código comentado que ajuda a entender como o
+programa funciona. Em português!</p></li>
+<li><p><a href="http://www.cathedrallabs.org/thumbs/">Thumbs</a> <em>por Aristeu Sergio Rozanski Filho</em>
+O Thumbs é um programa muito útil para criar álbums com fotografias
+e colocá-los na Internet. Se você tem um diretório cheio de fotos,
+o Thumbs cria automaticamente uma página HTML com miniaturas dessas
+fotos, e links para as fotos em tamanho original. É muito prático e
+fácil de usar. Além disso, ele ainda consegue extrair dados do
+formato EXIF, que é o formato utilizado por grande partes das
+câmeras fotográficas digitais.</p></li>
+<li><p><a href="http://mailnees.kicks-ass.org">mailnees</a> <em>por Marcelo Barreto Nees</em>
+O mailnees é um verificador de conteúdo de e-mails para servidores
+Linux. Ele bloqueia vírus, spam, textos e anexos diretamente no
+servidor, tanto para os enviados quanto os recebidos. Sua instalação
+e seu uso estão bem documentados, inclusive com exemplos. Acesse a
+página do programa para mais informações.</p></li>
+<li><p><a href="http://www.ngsys.eti.br/mkdistro/">mkdistro</a> <em>por Nelson Gomes da Silveira</em>
+O mkdistro é um programa que constrói uma distro Linux completa,
+baseada no Debian (usando a estrutura modular do Morphix, Knoppix ou
+Mepis). Ele também remasteriza a distro a partir do CD, de uma imagem ISO
+ou do sistema instalado no HD. É a base na qual foi construído o
+<a href="http://www.dreamlinux.com.br">Dreamlinux</a>, que virou um projeto de distro
+brasileira, com visual inovador (à Mac OS).</p></li>
+</ul>
+
+<h2>Divirta-se!</h2>
+
+<p class="figure"><img src="/shell/img/bash-errors-quoting.jpg" alt="Veja como é fácil corrigir erros em seu script"><span>Veja como é fácil corrigir erros em seu script</span></p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=Shell%20Script%20https://aurelio.net/shell/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/shell/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/shell/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

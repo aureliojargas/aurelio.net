@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[ "$1" ] || { echo "Uso: $0  2006-02/01  8  (dir, numero foto)" ; exit; }
+set -x
+convert -quality 95 -geometry 120x90 $1/mini/$2.jpg $1/thumb.jpg
+set +x

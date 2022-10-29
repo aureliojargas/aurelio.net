@@ -1,0 +1,31 @@
+body {
+  max-width: 33em;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  background: #894;
+  font-family: sans-serif;
+  text-align: justify;
+}
+h1 {
+  color: white;
+  font-size: 100%;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: yellow;
+}
+.prev-next,
+.footer {
+  margin-top: 1em;
+  border-top: 1px solid white;
+  padding-top: 1em;
+  text-align: center;
+}
+.prev-next {
+  word-spacing: 1em;
+}

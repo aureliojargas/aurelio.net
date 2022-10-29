@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>iPhoto Set Sequential Title - Batch change your photos&#39; title using a number sequence</title>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="author" content="Aurelio Jargas">
+    <meta name="generator" content="Jekyll">
+
+    <link rel="stylesheet" type="text/css" href="/projects/soft4.css">
+    
+
+
+
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+  </head>
+
+  <body id="" class="applescriptiphoto">
+
+    <div id="header" class="header">
+      <h1>iPhoto Set Sequential Title</h1>
+      <h2>Batch change your photos&#39; title using a number sequence</h2>
+
+      <p><a rel="author" href="/about.html">by Aurelio Jargas</a></p>
+
+    </div>
+
+    <div id="body" class="body">
+
+      
+
+      
+        
+          <div id="sidebar">
+
+  <p>
+    <a href="/projects/">
+      <center>
+        <img align="middle" src="/projects/img/lemon.png" border="0" alt="">
+      </center>
+    </a>
+  </p>
+
+  <div class="box">
+    <h3>Free Softwares</h3>
+    <ul>
+      <li><a href="https://github.com/aureliojargas/clitest">clitest</a>    Unix command line tester</li></li>
+      <li><a href="/projects/emomemory/">EmoMemory</a>  Emotional Memory game</li></li>
+      <li><a href="/projects/adiumbook/">AdiumBook</a>  Sync Adium and Address Book</li></li>
+      <li><a href="/projects/css-sandbox/">CSS Sandbox</a> Explore CSS in real-time</li></li>
+      <li><a href="/projects/moneylog/">MoneyLog Experience</a>   Personal finances made real simple</li></li>
+      <li><a href="http://txt2tags.org">txt2tags</a>   Text to HTML, LaTeX, Man page, ...</li></li>
+      <li><a href="/projects/txt2regex/">txt2regex</a>  Regular expression (regex) wizard</li></li>
+      <li><a href="/projects/sedsed/">sedsed</a>     Debugger &amp; HTMLizer for SED scripts</li></li>
+      <li><a href="/projects/sedsokoban/">SedSokoban</a>    Sokoban game written in SED!</li></li>
+      <li><a href="/projects/sedarkanoid/">SedArkanoid</a>   Arkanoid game written in SED</li></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Free AppleScripts</h3>
+    <ul>
+      <li><a href="/projects/export-contacts-to-mp3-player/">Export Contacts to MP3 Player</a></li></li>
+      <li><a href="/projects/export-contacts-to-yahoo-csv/">Export Contacts to Yahoo CSV</a></li></li>
+      <li><a href="/projects/gmail-to-jabber/">Gmail to Jabber</a></li></li>
+      <li><a href="/projects/iphoto-sed/">iPhoto SED</a></li></li>
+      <li><a href="/projects/iphoto-set-sequential-title/">iPhoto Set Sequential Title</a></li></li>
+      <li><a href="/projects/itunes-find-artwork-less/">iTunes Find Artwork-less</a></li></li>
+      <li><a href="/projects/itunes-rename-disk-file/">iTunes Rename Disk File</a></li></li>
+      <li><a href="/projects/itunes-search-in-lyrics/">iTunes Search in Lyrics</a></li></li>
+      <li><a href="/projects/itunes-sed/">iTunes SED</a></li></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Other</h3>
+    <ul>
+      <li><a href="/projects/">Main Page</a></li></li>
+      <li><a href="/projects/padfiles/">PAD Files</a></li></li>
+      <li><a href="/projects/donate.html">Donate</a></li></li>
+    </ul>
+  </div>
+
+</div><!--sidebar-->
+
+        
+      
+
+      <div id="content">
+        <p>This script changes the titles of the selected iPhoto pictures. The new titles are composed by numbers in a sequence (1, 2, 3, 4, ...), with optional prefixes and suffixes.</p>
+
+<p>Just select the desired pictures and run this script. Those ugly "DSC02345", "DSC02369" and "DSC02405" will turn to nice "Beach Party 01", "Beach Party 02" and "Beach Party 03".</p>
+
+<ul>
+  <li>Free / Open Source AppleScript (Mac only)</li>
+  <li>
+    <a href="/articles/applescript-install.html">See installation instructions</a>
+  </li>
+  <li>
+    <a href="http://aureliosoft.wordpress.com/iphoto-set-sequential-title/">User reviews</a>
+  </li>
+  <li>
+    <a href="https://github.com/aureliojargas/applescripts">See source code (GitHub)</a>
+  </li>
+</ul>
+
+<div class="downloadbox">
+  <table>
+    <tr>
+      <td><img class="center" src="/projects/img/icon/32/download.png" alt=""></td>
+      <td>
+        <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/aurelio/iPhoto_Set_Sequential_Title-1.0.zip">Download</a>
+      </td>
+      <td><img class="center" src="/projects/img/icon/32/finder.png" title="Made for the Mac" alt=""></td>
+    </tr>
+  </table>
+</div>
+
+<h2>Road Map</h2>
+
+<h3>Step 1</h3>
+
+<p>The main screen shows the settings for the new titles. There are optional prefix and suffix texts, the initial count (usually one) and the number of digits (will be zero padded). Right above there is a sample of how the titles will look like. Press the Change Settings button to modify the default values.</p>
+
+<p class="figure">
+  <img src="step-1.png">
+</p>
+
+<h3>Step 2</h3>
+
+<p>You'll enter on the configuration wizard, that shows one setting per screen, in four steps. Fill the new value and press the Next button to continue. To quit the configuration process and get back to the main screen, press the Done button anytime.</p>
+
+<p class="figure">
+  <img src="step-2.png">
+</p>
+
+<h3>Step 3</h3>
+
+<p>Now that the settings are fine, press the Set Titles button and the pictures' titles will be changed on iPhoto. Wait a few seconds and click on the photos area to refresh the listing.</p>
+
+<p class="figure">
+  <img src="step-3.png">
+</p>
+
+      </div>
+
+      
+
+      <div id="footer">
+        <p>© <a href="/about.html">Aurelio Jargas</a></p>
+      </div>
+
+    </div><!--body-->
+  </body>
+</html>

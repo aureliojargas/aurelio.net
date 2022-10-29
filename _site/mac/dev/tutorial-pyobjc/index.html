@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Vídeo-Tutorial de PyObjC | Aurelio.net</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+	<meta name="theme-color" content="#27ae60" /><!--same as #header background color-->
+	<link rel="stylesheet" type="text/css" href="/assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bars2.css">
+	<link rel="stylesheet" type="text/css" href="/assets/2014.css">
+	<link rel="stylesheet" type="text/css" href="/assets/monokai.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	
+
+	<link rel="alternate" type="application/rss+xml" title="Aurelio.net - Feed RSS" href="/feed/" />
+
+	<link rel="canonical" href="https://aurelio.net/mac/dev/tutorial-pyobjc/" />
+
+
+
+
+
+
+	<!-- Open Graph Tags - http://ogp.me/ -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Vídeo-Tutorial de PyObjC" />
+	<meta property="og:url" content="https://aurelio.net/mac/dev/tutorial-pyobjc/" />
+	<meta property="og:image" content="http://www.gravatar.com/avatar/e583bca48acb877efd4a29229bf7927f" />
+	<meta property="og:site_name" content="Aurelio.net" />
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="header" class="bar">
+	<div class="wrapper">
+
+		<div id="site-title">
+			<a href="/">Aurelio.net</a>
+		</div>
+
+		<ul id="social-icons">
+			<li>
+				<a href="http://twitter.com/oreio" title="Siga-me no Twitter: @oreio"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/aureliojargas" title="Veja meus vídeos no YouTube"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://github.com/aureliojargas" title="Veja meus projetos no GitHub"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-github-alt fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="https://br.linkedin.com/in/aureliojargas" title="Veja meu currículo no LinkedIn"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+			</li>
+			<li>
+				<a href="/feed/" title="Assine o Feed RSS do Aurelio.net"
+					><span class="fa-stack fa-lg"
+					><i class="fa fa-circle fa-stack-2x"></i
+					><i class="fa fa-rss fa-stack-1x"></i></span></a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+</div><!--#header-->
+
+
+
+<div id="content" class="bar">
+	<div class="wrapper">
+
+		<div id="article-header">
+			<h1><a href="/mac/dev/tutorial-pyobjc/" title="Permalink" rel="bookmark">Vídeo-Tutorial de PyObjC</a></h1>
+
+			<h2>Palestra &quot;Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa programando em Python (PyObjC)&quot;, ministrada na PyCon Brasil [3]</h2>
+
+			
+		<p class="byline">
+			Escrito por 
+			<a class="author" rel="author" href="/aurelio/">Aurelio Jargas</a>
+
+			em <span class="date">31/08/2007</span>
+		</p>
+
+		</div><!--#article-header-->
+
+		<div id="article-body">
+			
+
+			<!--
+  2007-08-29 4h Idéias, programa, workflow, preparação do ambiente
+  2007-08-30 9h30
+-->
+
+<p><strong>Veja o vídeo da palestra completa (34 minutos):</strong></p>
+
+<p><embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="https://video.google.com/googleplayer.swf?docId=-82892405626718533&hl=en" flashvars=""></p>
+
+<p><a href="http://ist.sociesc.org.br/download/pyConBrasil3/videos/Tem_Cobra_dentro_da_Ma%e7%e3_-_Como_fazer_um_aplicativo_Cocoa_programando_em_Python_(PyObjC).avi">Vídeo original aqui</a></p>
+
+<p><strong>Acompanhe o tutorial em seu Mac, seguindo estas instruções:</strong></p>
+<nav>
+  <ul>
+    <li>
+      <a href="#toc1">1. Apresentação</a>
+    </li>
+    <li>
+      <a href="#toc2">2. Dolar - Versão com Outlets e Actions</a>
+      <ul>
+        <li>
+          <a href="#toc3">2.1. Instale o ambiente de desenvolvimento</a>
+        </li>
+        <li>
+          <a href="#toc4">2.2. Crie um projeto novo e salve na mesa</a>
+        </li>
+        <li>
+          <a href="#toc5">2.3. Veja os arquivos criados</a>
+        </li>
+        <li>
+          <a href="#toc6">2.4. Crie a interface no IB</a>
+        </li>
+        <li>
+          <a href="#toc7">2.5. Crie as ligações para comunicar-se com a classe</a>
+        </li>
+        <li>
+          <a href="#toc8">2.6. Conecte os elementos com as ligações</a>
+        </li>
+        <li>
+          <a href="#toc9">2.7. Crie o executável</a>
+        </li>
+        <li>
+          <a href="#toc10">2.8. Teste o programa</a>
+        </li>
+        <li>
+          <a href="#toc11">2.9. Arrume o erro do log</a>
+        </li>
+        <li>
+          <a href="#toc12">2.10. Descubra objetos e métodos</a>
+        </li>
+        <li>
+          <a href="#toc13">2.11. Faça o algoritmo do cálculo</a>
+        </li>
+        <li>
+          <a href="#toc14">2.12. Descubra como gravar o conteúdo do TextField</a>
+        </li>
+        <li>
+          <a href="#toc15">2.13. Melhorando: Use formatadores de dinheiro</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#toc16">3. Dolar - Versão com Bindings</a>
+      <ul>
+        <li>
+          <a href="#toc17">3.1. Crie um projeto novo para Bindings</a>
+        </li>
+        <li>
+          <a href="#toc18">3.2. Limpe os Outlets e Actions</a>
+        </li>
+        <li>
+          <a href="#toc19">3.3. Crie os Bindings no IB</a>
+        </li>
+        <li>
+          <a href="#toc20">3.4. Crie os Bindings no Python</a>
+        </li>
+        <li>
+          <a href="#toc21">3.5. Crie o método para converter Dólares em Reais</a>
+        </li>
+        <li>
+          <a href="#toc22">3.6. Crie o método para converter Reais em Dólares</a>
+        </li>
+        <li>
+          <a href="#toc23">3.7. Melhorias na interface</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#toc24">4. Outros Programas</a>
+      <ul>
+        <li>
+          <a href="#toc25">4.1. Markup Babel - Interface Cocoa para programa de console</a>
+        </li>
+        <li>
+          <a href="#toc26">4.2. contatos.py - Programa de linha de comando com PyObjC</a>
+        </li>
+        <li>
+          <a href="#toc27">4.3. AB Reports - Programa complexo</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<h2 id="toc1">1. Apresentação</h2>
+
+<p>Este tutorial é uma demonstração do <a href="http://pyobjc.sourceforge.net">PyObjC</a>, que faz a ponte entre <a href="http://www.pythonbrasil.com.br">Python</a> e <a href="http://en.wikipedia.org/wiki/Cocoa_(API)">Cocoa</a>, a poderosa API usada pelos aplicativos do <a href="http://en.wikipedia.org/wiki/Mac_OS_X">Mac OS X</a>.</p>
+
+<p>Com ele instalado, o programador usa o <a href="http://en.wikipedia.org/wiki/Xcode">Xcode</a> e o <a href="http://en.wikipedia.org/wiki/Interface_Builder">Interface Builder</a> normalmente, codificando em Python, sem precisar saber nada de <a href="http://en.wikipedia.org/wiki/Objective-C">Objective-C</a> ou <a href="http://en.wikipedia.org/wiki/AppleScript">AppleScript</a>.</p>
+
+<p>Os aplicativos resultantes funcionam exclusivamente no Mac, usufruindo de todas as suas tecnologias nativas.</p>
+
+<p>Para saber mais:</p>
+
+<ul>
+  <li>
+    <a href="http://developer.apple.com/cocoa/pyobjc.html">Tutorial da Apple sobre PyObjC</a>
+  </li>
+  <li>
+    <a href="http://scm.wilcoxd.com/blog/?p=36">Artigo introdutório de Ryan Wilcox</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Human_Interface_Guidelines">Human Interface Guidelines</a>
+  </li>
+</ul>
+
+<h2 id="toc2">2. Dolar - Versão com Outlets e Actions</h2>
+
+<p><img class="center" src="dolar-1.jpg" alt=""></p>
+
+<p><a href="dolar.zip">Baixe os fontes</a> (Zip, 60 KB)</p>
+
+<h3 id="toc3">2.1. Instale o ambiente de desenvolvimento</h3>
+
+<ul>
+  <li>Instale o Xcode (<a href="/mac/dev/#xcode">leia instruções</a>)
+  </li>
+  <li>
+    <del>Instale o PyObjC</del> À partir do Leopard, o PyObjC já faz parte do sistema.
+  </li>
+</ul>
+
+<h3 id="toc4">2.2. Crie um projeto novo e salve na mesa</h3>
+
+<ul>
+  <li>Abra o Xcode</li>
+  <li>New Project → Application → PyObjC Application</li>
+  <li>Project Directory: ~/Desktop/<strong>Dolar</strong></li>
+</ul>
+
+<h3 id="toc5">2.3. Veja os arquivos criados</h3>
+
+<ul>
+  <li>Info.plist
+    <ul>
+      <li>CFBundleShortVersionString</li>
+      <li>Copyright</li>
+    </ul>
+  </li>
+  <li>setup.py
+    <ul>
+      <li>Construção do aplicativo</li>
+      <li>Não precisa mexer</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Dolar</strong>.py
+    <ul>
+      <li>Arquivo principal do programa</li>
+      <li>Não precisa mexer</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Dolar</strong>AppDelegate.py
+    <ul>
+      <li>Classe base para brincar (já instanciada no Interface Builder)</li>
+      <li>Coloque aqui seus métodos</li>
+    </ul>
+  </li>
+  <li>MainMenu.nib
+    <ul>
+      <li>Editável no Interface Builder (chamado de IB daqui adiante)</li>
+      <li>Arquivo com as definições de posicionamentos e <strong>conexões</strong> entre elementos</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="toc6">2.4. Crie a interface no IB</h3>
+
+<ul>
+  <li>Chame o Interface Builder <em>Duplo clique no MainMenu.nib</em></li>
+  <li>Mostre o Inspetor <em>Tools → Show Inspector</em></li>
+  <li>Dê um título para a janela <em>Inspetor → Attributes → Window Title: Conversor Dólar - Real</em></li>
+  <li>Ligue as guias de posicionamento <em>Layout → Guides → Enable Aqua Guidelines</em></li>
+  <li>Mostre as paletas <em>Tools → Palettes → Show Palettes</em></li>
+  <li>Arraste os elementos para a janela
+    <ul>
+      <li>3 labels <em>Paleta → Text → System Font Text</em></li>
+      <li>3 caixas de texto <em>Paleta → Text → NSTextField</em></li>
+      <li>1 botão <em>Paleta → Controls → Button</em></li>
+    </ul>
+  </li>
+  <li>Coloque nomes nos labels e no botão <em>Duplo clique no elemento</em>
+    <ul>
+      <li>Cotação do dia:</li>
+      <li>Dólares:</li>
+      <li>Reais:</li>
+      <li>Converter</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="toc7">2.5. Crie as ligações para comunicar-se com a classe</h3>
+
+<ul>
+  <li>Duplo clique na instância do AppDelegate (cubo azul)</li>
+  <li>Adicione outlets para as caixas de texto <em>Inspetor → Attributes → Outlets → Add</em>
+    <ul>
+      <li>cotacao</li>
+      <li>dolares</li>
+      <li>reais</li>
+    </ul>
+  </li>
+  <li>Adicione um action para o botão <em>Inspetor → Attributes → Action → Add</em>
+    <ul>
+      <li>converte:</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="toc8">2.6. Conecte os elementos com as ligações</h3>
+
+<ul>
+  <li>Conecte os outlets com suas respectivas caixas de texto
+    <ul>
+      <li>Ctrl-click na instância do AppDelegate (cubo azul)</li>
+      <li>Arrasta até a caixa de texto da cotação</li>
+      <li>Inspetor → Connections → Outlets → cotacao → Connect</li>
+      <li>Repita para as outras caixas de texto</li>
+    </ul>
+  </li>
+  <li>Conecte o botão com sua ação
+    <ul>
+      <li>Ctrl-click no botão</li>
+      <li>Arrasta até a instância do AppDelegate</li>
+      <li>Inspetor → Connections → Target/Action → converte: → Connect</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="toc9">2.7. Crie o executável</h3>
+
+<ul>
+  <li>Volte ao Xcode</li>
+  <li>Project → New Custom Executable...
+    <ul>
+      <li>Executable Name: <strong>Dolar</strong> (uma palavra para não complicar)</li>
+      <li>Executable Path: /usr/bin/env</li>
+    </ul>
+  </li>
+  <li>Groups &amp; Files → Executables → Seleciona teu executável</li>
+  <li>File → Get Info → Arguments → Botão [+]
+    <ul>
+      <li>Argument: <strong>Dolar</strong>.app/Contents/MacOS/<strong>Dolar</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="toc10">2.8. Teste o programa</h3>
+
+<ul>
+  <li>Build → Build and Run</li>
+  <li>Botão não faz nada</li>
+  <li>Veja no log a mensagem sobre falha na conexão do action converte:</li>
+</ul>
+
+<h3 id="toc11">2.9. Arrume o erro do log</h3>
+
+<ul>
+  <li>Edite o código Python <em>Duplo clique em <strong>Dolar</strong>AppDelegate.py</em></li>
+  <li>Dentro da classe, crie o método converte_
+    <ul>
+      <li>def converte_(self, sender): pass</li>
+      <li>Sempre lembre-se que ":" deve virar "_" no nome do método</li>
+      <li>Teste o programa novamente</li>
+    </ul>
+  </li>
+  <li>Agora sem erros no log, mas o botão continua sem ação</li>
+</ul>
+
+<h3 id="toc12">2.10. Descubra objetos e métodos</h3>
+
+<ul>
+  <li>Coloque comandos dentro do converte_()
+    <ul>
+      <li>print self.cotacao # outlet</li>
+      <li>&lt;NSTextField: 0x154c110&gt;</li>
+    </ul>
+  </li>
+  <li>Rode e teste o programa</li>
+  <li>Descubra os métodos do NSTextField
+    <ul>
+      <li>Chame a Ajuda para o Cocoa <em>Help → Documentation → Search Groups → Cocoa</em></li>
+      <li>Faça a pesquisa pelo elemento <em>Digite NSTextField na caixa de busca</em></li>
+    </ul>
+  </li>
+  <li>Veja os métodos
+    <ul>
+      <li>Nenhum em especial</li>
+    </ul>
+  </li>
+  <li>Veja os métodos do pai NSControl (herdado)
+    <ul>
+      <li>floatValue()</li>
+    </ul>
+  </li>
+  <li>Mude o print para mostrar o conteúdo da caixa de texto
+    <ul>
+      <li>print self.dolares.floatValue()
+        <ul>
+          <li>self: Instância da classe (Python)</li>
+          <li>dolares: Outlet de comunicação (Interface Builder)</li>
+          <li>floatValue(): Método do NSTextField (Objective-C)</li>
+          <li>Salada! :)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Rode e teste o programa</li>
+</ul>
+
+<h3 id="toc13">2.11. Faça o algoritmo do cálculo</h3>
+
+<ul>
+  <li>dolares = self.dolares.floatValue()</li>
+  <li>cotacao = self.cotacao.floatValue()</li>
+  <li>reais = dolares * cotacao</li>
+  <li>print reais</li>
+</ul>
+
+<h3 id="toc14">2.12. Descubra como gravar o conteúdo do TextField</h3>
+
+<ul>
+  <li>Veja Documentação novamente</li>
+  <li>Ache o setFloatValue: do NSControl</li>
+  <li>Grave o resultado do cálculo na caixa de texto dos Reais
+    <ul>
+      <li>self.reais.setFloatValue_(reais)</li>
+      <li>Lembre-se que no Python o ":" vira "_"</li>
+    </ul>
+  </li>
+  <li>Rode e teste o programa</li>
+</ul>
+
+<h3 id="toc15">2.13. Melhorando: Use formatadores de dinheiro</h3>
+
+<ul>
+  <li>Vá no IB</li>
+  <li>Arraste o formatador de dinheiro para cada caixa de texto da cotação <em>Paleta → Text → NSNumberFormatter</em></li>
+  <li>Configure o formatador para nossa moeda <em>Inspetor → Formatter → [x] Localize</em></li>
+  <li>Repita o procedimento para as caixas de dólares e reais</li>
+  <li>Rode e teste o programa</li>
+</ul>
+
+<h2 id="toc16">3. Dolar - Versão com Bindings</h2>
+
+<p><img class="center" src="dolar-2.jpg" alt=""></p>
+
+<p><a href="dolar-bindings.zip">Baixe os fontes</a> (Zip, 60 KB)</p>
+
+<h3 id="toc17">3.1. Crie um projeto novo para Bindings</h3>
+
+<ul>
+  <li>Salve e feche projeto atual no Xcode e IB</li>
+  <li>Vá na mesa <em>F11</em></li>
+  <li>Duplique o diretório do projeto <em>Command-D</em></li>
+  <li>Renomeie a pasta nova para: Dolar Bindings</li>
+  <li>Entre nessa pasta e abra o arquivo <strong>Dolar</strong>.xcodeproj</li>
+  <li>Rode o programa para ter certeza que tudo continua funcionando <em>Build → Build and Run</em></li>
+</ul>
+
+<h3 id="toc18">3.2. Limpe os Outlets e Actions</h3>
+
+<ul>
+  <li>Vá no IB <em>Duplo clique no MainMenu.nib</em></li>
+  <li>Apague todos os outlets <em>Duplo clique na instância do AppDelegate (cubo azul)</em> <em>Inspetor → Attributes → Outlets → Remove</em></li>
+  <li>Apague o Action <em>Inspetor → Attributes → Action → Remove</em></li>
+  <li>Apague o botão "Converter", pois não será mais usado <em>Selecione o botão na janela e aperte Delete</em></li>
+</ul>
+
+<h3 id="toc19">3.3. Crie os Bindings no IB</h3>
+
+<ul>
+  <li>Selecione a caixa de texto da cotação</li>
+  <li>Inspetor → Bindings → Value → value
+    <ul>
+      <li>Bind to: <strong>Dolar</strong>AppDelegate</li>
+      <li>Model Key Path: cotacao</li>
+      <li>[x] Continuously Update Values
+        <ul>
+          <li>Isso mandará uma ação a cada alteração no texto da caixa</li>
+          <li>E chamará automaticamente o método setCotacao_ no Python</li>
+          <li>O nome do método é sempre "set" + capitalize(Model Key Path) + "_"</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Repita o procedimento para as outras caixas de texto</li>
+</ul>
+
+<h3 id="toc20">3.4. Crie os Bindings no Python</h3>
+
+<ul>
+  <li>Vá no Xcode</li>
+  <li>Edite o <strong>Dolar</strong>AppDelegate.py</li>
+  <li>Importe o módulo "objc"
+    <ul>
+      <li>import objc</li>
+    </ul>
+  </li>
+  <li>Logo após a declaração da classe DolarAppDelegate, crie três "ivar"
+    <ul>
+      <li>cotacao = objc.ivar(u"cotacao")</li>
+      <li>dolares = objc.ivar(u"dolares")</li>
+      <li>reais = objc.ivar(u"reais")</li>
+    </ul>
+  </li>
+  <li>Atente aos detalhes
+    <ul>
+      <li>Lembre-se que o nome do binding vem em Unicode</li>
+      <li>Esse nome do binding é o Model Key Path que você preencheu no IB</li>
+      <li>Cada um destes bindings representa o <strong>conteúdo</strong> da caixa de texto</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="toc21">3.5. Crie o método para converter Dólares em Reais</h3>
+
+<ul>
+  <li>Ao se digitar o valor em dólares, o valor em reais será calculado automaticamente</li>
+  <li>Para isso, crie o método que cuidará das alterações na caixa de dólares
+    <ul>
+      <li>def setDolares_(self, valor):</li>
+      <li>Lembre-se do _ no final, pois recebe argumento</li>
+    </ul>
+  </li>
+  <li>Guarde o valor digitado pelo usuário na referência ao binding (ivar)
+    <ul>
+      <li>self.dolares = valor</li>
+    </ul>
+  </li>
+  <li>Faça as contas e guarde o resultado
+    <ul>
+      <li>self.reais = self.dolares * self.cotacao</li>
+      <li>O resultado será atualizado automaticamente</li>
+    </ul>
+  </li>
+  <li>Rode e teste o programa</li>
+</ul>
+
+<h3 id="toc22">3.6. Crie o método para converter Reais em Dólares</h3>
+
+<ul>
+  <li>Ao se digitar o valor em reais, o valor em dólares será calculado automaticamente</li>
+  <li>Similar ao passo anterior, crie o método set
+    <ul>
+      <li>def setReais_(self, valor):</li>
+    </ul>
+  </li>
+  <li>Guarde o valor e faça o cálculo
+    <ul>
+      <li>self.reais = valor</li>
+      <li>self.dolares = self.reais / self.cotacao</li>
+    </ul>
+  </li>
+  <li>Rode e teste o programa</li>
+  <li>Perceba que o antigo método converte_() não é mais necessário</li>
+</ul>
+
+<h3 id="toc23">3.7. Melhorias na interface</h3>
+
+<ul>
+  <li>Visualização dos resultados
+    <ul>
+      <li>Crie outros labels usando letras grandes e coloridas para mostrar os valores em reais e dólares</li>
+      <li>Faça bindings destes textos com o conteúdo das caixas de texto, para serem atualizados automaticamente</li>
+    </ul>
+  </li>
+  <li>Usabilidade
+    <ul>
+      <li>Use um binding para esconder as caixas de dólares e reais enquanto a cotação não for digitada</li>
+      <li>Inspetor → Bindings → Availability → hidden
+        <ul>
+          <li>Bind to: <strong>Dolar</strong>AppDelegate</li>
+          <li>Model Key Path: cotacao</li>
+          <li>Value Transformer: NSIsNil</li>
+        </ul>
+      </li>
+      <li>Isso deixa claro para o usuário que a cotação deve ser digitada primeiro</li>
+      <li>Além de evitar a necessidade de verificações no código Python, pois a cotação sempre vai estar preenchida
+        <ul>
+          <li>Chega de "if self.cotacao:" nos setFoo_()</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img class="center" src="dolar-3-1.jpg" alt=""></p>
+
+<p><img class="center" src="dolar-3-2.jpg" alt=""></p>
+
+<p><img class="center" src="dolar-3-3.jpg" alt=""></p>
+
+<p><a href="dolar-bindings-melhorado.zip">Baixe os fontes</a> (Zip, 68 KB)</p>
+
+<h2 id="toc24">4. Outros Programas</h2>
+
+<h3 id="toc25">4.1. Markup Babel - Interface Cocoa para programa de console</h3>
+
+<p>Um exemplo de como fazer um interface Cocoa para um programa Python já existente. O aplicativo <a href="http://txt2tags.sf.net/pt">txt2tags</a> foi usado como módulo, convertendo textos automaticamente enquanto o usuário digita. Foi usada a técnica de binding no conteúdo com o método setReferencia_() agindo a cada tecla digitada.</p>
+
+<p><a href="pyobjc-app-1.jpg"><img class="center" src="pyobjc-app-1.mini.jpg" alt=""></a></p>
+
+<p><a href="markup-babel.zip">Baixe os fontes</a>, abra no Xcode e rode (Build and Run).</p>
+
+<h3 id="toc26">4.2. contatos.py - Programa de linha de comando com PyObjC</h3>
+
+<p>Um exemplo de como usar o PyObjC para programas de linha de comando. É utilizado o framework da Agenda do Mac (Address Book), acessando os dados dos contatos em tempo real e mostrando na tela.</p>
+
+<p><a href="contatos.py">Baixe os fontes</a> e execute no Terminal.app: <strong>python contatos.py</strong></p>
+
+<h3 id="toc27">4.3. AB Reports - Programa complexo</h3>
+
+<p>Um exemplo de como fazer um programa mais complexo, utilizando as tecnologias disponíveis no Mac OS X.</p>
+
+<ul>
+  <li>Data source (tabelas)
+    <ul>
+      <li>Ordenar os dados pela coluna FOO (ordem direta e reversa)</li>
+      <li>Trocar colunas de lugar (arrastando)</li>
+    </ul>
+  </li>
+  <li>Live search
+    <ul>
+      <li>Com o uso de bindings, fazer pesquisas em tempo real, enquanto digita</li>
+    </ul>
+  </li>
+  <li>Picture resize
+    <ul>
+      <li>Com o uso de sliders e bindings, fica fácil alterar o tamanho das fotos em tempo real, enquanto arrasta o botão</li>
+    </ul>
+  </li>
+  <li>Performance
+    <ul>
+      <li>Mesmo lidando com muitos dados e fotos, a performance fica excelente</li>
+      <li>O PyObjC não sobrecarrega o aplicativo, é uma ponte enxuta</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="pyobjc-app-3.jpg"><img class="center" src="pyobjc-app-3.mini.jpg" alt=""></a></p>
+
+<p>Programa ainda inacabado, fontes não disponíveis.</p>
+
+		</div><!--article-body-->
+
+		<div id="article-footer">
+			<div id="eof">— EOF —</div>
+
+		</div>
+
+	</div>
+</div><!--#content-->
+
+
+
+
+<div id="content-action" class="bar">
+	<div class="wrapper">
+
+
+	
+		<p class="read-more">
+			<span class="unicode-char heart">♥</span>
+			Gostou desse texto?
+			<a href="..">Aqui tem mais</a>.
+		</p>
+
+		<p class="subscribe">
+			Assine o blog via
+			<a href="/feed/">RSS</a> ou
+			<a href="https://feedburner.google.com/fb/a/mailverify?uri=AurelioJargas&amp;loc=pt_BR">receba os textos por e-mail</a>.
+		</p>
+
+
+
+		<!-- http://www.sharelinkgenerator.com/ -->
+		<p class="share">
+			#compartilhe:
+			<a target="_blank" rel="nofollow" href="https://twitter.com/home?status=V%C3%ADdeo-Tutorial%20de%20PyObjC%20https://aurelio.net/mac/dev/tutorial-pyobjc/">Twitter</a>,
+			<a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://aurelio.net/mac/dev/tutorial-pyobjc/">Facebook</a>,
+			<a target="_blank" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aurelio.net/mac/dev/tutorial-pyobjc/">LinkedIn</a>
+		</p>
+
+
+
+
+	</div>
+</div><!--#content-action-->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar" class="bar">
+	<div class="wrapper">
+			<div id="bio" class="sidebar-box">
+		<p>
+			<img src="/img/avatar-alpha.png">
+			Oi! Sou o
+			Aur<a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">e</a>lio Jargas,
+			44,
+			pai, nerd e
+			<a href="/blog/2009/09/24/escritor/">escritor</a>.
+			Moro em Ulm (Alemanha) com minha amada esposa <a href="/tags/#mog">Mog</a> e meus filhos Marcelo e Melissa.
+		</p>
+	</div>
+
+	<div id="meus-livros" class="sidebar-box">
+		<h4>Meus livros</h4>
+		<p>
+			<a href="https://www.piazinho.com.br">Expressões Regulares</a><br>
+			<a href="https://www.shellscript.com.br">Shell Script Profissional</a>
+		</p>
+	</div>
+
+	<div id="softwares" class="sidebar-box">
+		<h4>Meus softwares</h4>
+		<p>
+			<a href="/projects/adiumbook/">AdiumBook</a>,
+			<a href="/coisinha/caraoucoroa/">Cara ou Coroa?</a>,
+			<a href="/projects/css-sandbox/">CSS Sandbox</a>,
+			<a href="https://github.com/aureliojargas/clitest">clitest</a>,
+			<a href="/coisinha/embriagueitor/">Embriagueitor</a>,
+			<a href="/projects/emomemory/">EmoMemory</a>,
+			<a href="/coisinha/engripeitor/">Engripeitor</a>,
+			<a href="https://funcoeszz.net">Funções ZZ</a>,
+			<a href="/coisinha/miguxeitor/">MiGuXeiToR</a>,
+			<a href="/moneylog/">MoneyLog</a>,
+			<a href="/rac/">RAC</a>,
+			<a href="/coisinha/relogio/">Relógio textual</a>,
+			<a href="/projects/sedarkanoid/">SedArkanoid</a>,
+			<a href="/projects/sedsokoban/">SedSokoban</a>,
+			<a href="/projects/sedsed/">sedsed</a>,
+			<a href="/coisinha/subwaytor/">Subwaytor</a>,
+			<a href="/coisinha/tabuada/">Tabuada</a>,
+			<a href="/util/text-tool.html">Simple Text Tool</a>,
+			<a href="/projects/txt2regex/">txt2regex</a>,
+			<a href="http://txt2tags.org">txt2tags</a>,
+			<a href="http://umportugues.com">Um Português</a>,
+			<a href="/coisinha/viravira/">vira|ɐɹıʌ</a>
+		</p>
+	</div>
+
+	<div id="blog" class="sidebar-box">
+		<h4>Blog</h4>
+		<p>
+			<a href="/blog/sumario/">sumário</a>,
+			<a href="/tags/">tags</a>,
+			<a href="/blog/">posts recentes</a>
+		</p>
+	</div>
+
+	<div id="nerd" class="sidebar-box">
+		<h4>Nerdices</h4>
+		<p>
+			<a href="/applescript/">applescript</a>
+			<a href="/bin/">bin</a>
+			<a href="/shell/canivete/">canivete</a>
+			<a href="https://codare.aurelio.net">codare</a>
+			<a href="/coisinha/">coisinha</a>
+			<a href="/cygwin/">cygwin</a>
+			<a href="/shell/dialog/">dialog</a>
+			<a href="/doc/">doc</a>
+			<a href="/curso/">eventos</a>
+			<a href="/doc/coluna/">linux</a>
+			<a href="/livro/">livro</a>
+			<a href="/mac/">mac</a>
+			<a href="/shell/miniman/">miniman</a>
+			<a href="/mac/dev/tutorial-pyobjc/">pyobjc</a>
+			<a href="/regex/">regex</a>
+			<a href="/tags/#screencast">screencast</a>
+			<a href="/sed/">sed</a>
+			<a href="/shell/">shell</a>
+			<a href="/vim/">vim</a>
+			<a href="/unicode.txt">unicode</a>
+			<a href="/wordpress/">wordpress</a>
+		</p>
+	</div>
+
+	<div id="outros" class="sidebar-box">
+		<h4>Outros</h4>
+		<p>
+			<a href="/viagem/atacama/">atacama</a>
+			<a href="/musica/#minhas-bandas">bandas</a>
+			<a href="/baterna/">baterna</a>
+			<a href="/carve/">carveboard</a>
+			<a href="/fvm/">faça-você-mesmo</a>
+			<a href="/musica/">música</a>
+			<a href="/foto/pe/">pé</a>
+			<a href="/pogo/">pogo</a>
+			<a href="/surf/">surf</a>
+			<a href="/viagem/">viagem</a>
+		</p>
+	</div>
+
+	<div id="jaba" class="sidebar-box">
+		<h4>Jabá</h4>
+		<ul>
+			<li title="Use este link e o código OREIO30 para ganhar 30 dólares de desconto ao assinar o plano de hospedagem do DreamHost.">
+				<a href="http://www.dreamhost.com/r.cgi?251258">DreamHost:</a>
+				-$30 com OREIO30
+			</li>
+			<li title="Clique neste link antes de assinar o pacote de temas do ElegantThemes. Ganharei 50% do valor que você pagar.">
+				<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=5032">ElegantThemes:</a>
+				ganho 50%
+			</li>
+			<li title="Você usa muito a Wikipédia? Eu também! Faça sua parte, doando $$ para eles continuarem firmes online.">
+				<a href="https://donate.wikimedia.org">Doe $$ pra Wikipédia!</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="top-15" class="sidebar-box">
+		<h4>Top 15</h4>
+		<ul>
+			<li><a href="/blog/2007/05/27/choque-de-realidade/">Choque de realidade</a></li>
+			<li><a href="/blog/2007/10/04/ida-ao-banco-em-matinhos/">Ida ao banco em Matinhos</a></li>
+			<li><a href="/blog/2008/06/27/bingo/">BINGO!</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">Vamos falar de grana $$$</a></li>
+			<li><a href="/blog/2007/10/07/fiz-trinta/">Fiz trinta</a></li>
+			<li><a href="/blog/2008/04/22/a-mog-foi-no-fisl/">A Mog foi no FISL</a></li>
+			<li><a href="/blog/2008/09/03/faire/">Fáire! Meu Fiat Uno pegou fogo</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/05/15/e-book-ou-livro-impresso-como-publicar-sua-obra/">E-book ou livro impresso?</a></li>
+			<li><a href="/blog/2009/03/11/garoto-de-programa/">Garoto de programa</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">Escritor</a></li>
+			<li><a href="/blog/2009/12/11/game-over-quase/">Game Over? Quase!</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">Estou há 5 anos desempregado! Viva!</a></li>
+			<li><a href="/blog/2011/04/19/o-jeito-shell-script-de-resolver-problemas/">O jeito Shell Script de resolver problemas</a></li>
+			<li><a href="/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/">Aos 33, descobri que meu nome não tem acento!</a></li>
+			<li><a href="/blog/2012/08/25/rotina-de-escritor/">Rotina de escritor</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar-box">
+		<h4>Minha carreira</h4>
+		<ul>
+			<li>1997 – Entrei na Conectiva</li>
+			<li><a href="/blog/2005/09/23/free-as-in-bird/">2005 – Saí da Conectiva</a></li>
+			<li><a href="/blog/2005/11/30/processo-de-desnerdizacao/">2005 – Processo de desnerdização</a></li>
+			<li><a href="/blog/2006/02/08/de-nerd-a-fotografo/">2006 – Fotógrafo de surfe</a></li>
+			<li><a href="/blog/2007/03/29/vamos-falar-de-grana/">2007 – Como ganho dinheiro</a></li>
+			<li><a href="/blog/2009/09/24/escritor/">2009 – Escritor</a></li>
+			<li><a href="/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/">2010 – Desempregado há 5 anos</a></li>
+			<li><a href="/blog/2014/11/08/funcionario-publico/">2013 – Funcionário público</a></li>
+			<li><a href="/blog/2017/02/06/contaazul/">2016 – ContaAzul</a></li>
+			<li><a href="https://twitter.com/oreio/status/1017739410534748160">2018 – BMW, Alemanha</a></li>
+		</ul>
+	</div>
+
+	<div id="recentes" class="sidebar-box">
+		<h4>Textos Recentes</h4>
+		<ul>
+
+			<li><a href="/blog/2017/02/06/contaazul/">Minha experiência na ContaAzul</a></li>
+
+			<li><a href="/blog/2016/11/09/serei-papai/">Serei papai \o/</a></li>
+
+			<li><a href="/blog/2016/08/09/tela-preta-9/">Tela Preta episódio 9: Contar palavras com egrep|sort|uniq</a></li>
+
+			<li><a href="/curso/fisl-17/">Palestra “Shell Script Moderno” no FISL17</a></li>
+
+			<li><a href="/blog/2016/06/18/ensaio-banda/">Raridade: teve ensaio da banda</a></li>
+
+			<li><a href="/curso/sc-dev-summit/">Palestra “O poder da linha de comando” no SC Dev Summit 2016</a></li>
+
+			<li><a href="/blog/2016/04/02/tres-empregos/">Tenho três empregos</a></li>
+
+			<li><a href="/blog/2016/03/02/aprender-regex/">Aprenda expressões regulares em um dia</a></li>
+
+			<li><a href="/blog/2016/02/09/sed-salva/">Sed salva o dia novamente</a></li>
+
+			<li><a href="/blog/2015/10/03/poscomp/">Fiz a prova POSCOMP</a></li>
+
+			<li><a href="/blog/2015/09/18/eu-no-podcast-castalio/">Eu no podcast Castálio</a></li>
+
+			<li><a href="/blog/sumario/">→ Veja mais…</a></li>
+		</ul>
+	</div>
+
+	</div>
+</div><!--#sidebar-->
+
+
+
+
+<div id="comments" class="bar">
+	<div class="wrapper">
+		
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+</div><!--#comments-->
+
+
+
+
+<div id="footer" class="bar">
+	<div class="wrapper">
+		<a href="/">Aurelio.net</a> é o site pessoal de
+		<a href="/aurelio/">Aurelio Jargas</a>.
+		<br>
+		<a href="/blog/2009/06/27/10-anos-de-saite/">Desde 1999 no ar</a>,
+		feito com <span class="unicode-char heart">♥</span>,
+		<a href="http://txt2tags.org">txt2tags</a>,
+		<a href="http://jekyllrb.com/">Jekyll</a> e
+		<a href="https://www.netlify.com/">Netlify</a>.
+		<br>
+		Conteúdo livre:
+		<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt_BR">CC BY-NC 3.0</a>
+	</div>
+</div><!--#footer-->
+
+</body>
+</html>

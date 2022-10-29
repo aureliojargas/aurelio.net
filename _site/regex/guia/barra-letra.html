@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	<meta charset="utf-8">
+	<title>Metacaracteres tipo barra-letra - Livro EXPRESSÕES REGULARES, por Aurelio Jargas</title>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="author" content="Aurelio Jargas">
+	<meta name="generator" content="Jekyll">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="prev" href="quantificadores-nao-gulosos.html">
+<link rel="next" href="modernosos.html">
+
+    <link rel="stylesheet" type="text/css" href="/regex/guia/styles.css">
+    
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+    
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="book-name">
+        <a href="/regex/guia/">
+          Expressões Regulares<br>
+          Guia de Consulta Rápida
+        </a>
+      </div>
+      <div class="by-line">
+        por <a href="/">Aurelio Marinho Jargas</a><br>
+        e <a href="http://novatec.com.br">Editora Novatec</a>,
+        <a href="copyright.html">©2001</a>
+      </div>
+    </div><!--header-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="quantificadores-nao-gulosos.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="modernosos.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="contents">
+      <h1>Metacaracteres tipo barra-letra</h1>
+
+      <p>Os metacaracteres do tipo barra-letra são átomos representados por uma barra invertida <code>\</code> seguida de uma letra qualquer, como <code>\s</code> e <code>\W</code>. Dependendo da letra, muda-se o significado desse metacaractere.</p>
+
+<p>Contando que o alfabeto nos dá 26 letras e que maiúsculas são diferentes de minúsculas, duplicamos para 52 metacaracteres novos. Calma, nem todas as letras estão ocupadas... Ainda &amp;:)</p>
+
+<p>Tudo começou nas linguagens de programação com os <code>printf</code> da vida, que começaram a interpretar coisas, como <code>\n</code> e <code>\t</code>, para significar quebra de linha e TAB, pois visualmente é ambíguo se "1 2" é <i>um, TAB, dois</i> ou <i>um, espaços, dois</i>.</p>
+
+<p>Exceto estes, havia outros barra-letra para representar aqueles caracteres de controle chatos que de vez em quando aparecem em nossa vida e são difíceis de ver e representar.</p>
+
+<p>Essa representação simplificada e útil se tornou padrão e hoje a grande maioria dos aplicativos os entende. Eis a lista:</p>
+
+<pre>
+b-l     nome            tradução
+----------------------------------------------------
+\a      alert           alerta (bipe)
+\b      backspace       caractere Backspace
+\e      escape          caractere Esc
+\f      form feed       alimentação
+\n      newline         linha nova
+\r      carriage ret    retorno de carro
+\t      htab            tabulação horizontal
+\v      vtab            tabulação vertical
+</pre>
+
+<p>Como esses barra-letras também poderiam ser muito úteis para escrever nossas expressões regulares, os robozinhos começaram a ter suporte a eles também, ou senão a linguagem recebe a ER como um dado do tipo <i>string</i> e os interpreta, passando ao robozinho seus valores literais. Mais detalhes sobre isso no tópico "ERs Pré-Processadas e Cruas" adiante.</p>
+
+<p>Ah! Note que o <code>\b</code> se confunde com a borda. Cada aplicativo trata essa exceção à sua maneira: ou só é válido dentro da lista, ou depende do contexto, ou...</p>
+
+<p>Aí é aquela história: <i>onde passa boi, passa boiada</i>. Observaram bem as classes POSIX, com aquela representação extensa e feia, depois compararam com os barra-letra, que são curtos e charmosos e foi um estalo: criaram barra-letras novos para representar as classes mais utilizadas.</p>
+
+<p>São como "apelidos", pois têm a mesma funcionalidade de seu equivalente POSIX, levando em conta a localização do sistema (acentuação), o que muito nos interessa.</p>
+
+<pre>
+b-l     POSIX equiv.    mnemônico
+-------------------------------------------
+\d      [[:digit:]]     dígito
+\D      [^[:digit:]]    não-dígito
+\w      [[:alnum:]_]    palavra
+\W      [^[:alnum:]_]   não-palavra
+\s      [[:space:]]     branco
+\S      [^[:space:]]    não-branco
+</pre>
+
+<blockquote>
+  <u>Geralmente um barra-<b>LETRA</b> é a negação de um barra-<b>letra</b>.</u>
+</blockquote>
+
+<p>A grande diferença desses barra-letras para as classes POSIX, é que eles são válidos fora das listas.</p>
+
+<p>Dependendo do aplicativo, eles são válidos dentro das listas também, bagunçando aquela regra que vimos de que <i>dentro da lista todo mundo é normal</i>. Dependendo também, o sublinhado faz parte ou não do <code>\w</code>.</p>
+
+<p>Com os poderes barra-letrísticos recém-adquiridos, podemos diminuir nossa ER para casar o RG:</p>
+
+<pre>
+[0-9]\.[0-9]{3}\.[0-9]{3}-[0-9]
+\d\.\d{3}\.\d{3}-\d
+</pre>
+
+<p>Mas aí, como já estava feita a festa e ainda sobravam muitas letras do alfabeto, começaram a aparecer barra-letras aleatórios. Segue uma coletânea misturada deles, encontrados apenas em alguns poucos aplicativos, então confirme antes de usá-los:</p>
+
+<pre>
+b-l     significado             similar
+-----------------------------------------------------
+\a      alfabeto                [[:alpha:]]
+\A      não-alfabeto            [^[:alpha:]]
+\h      cabeça de palavra       [[:alpha]_]
+\H      não-cabeça de palavra   [^[:alpha:]_]
+\l      minúsculas              [[:lower:]]
+\L      não-minúsculas          [^[:lower:]]
+\u      maiúsculas              [[:upper:]]
+\U      não-maiúsculas          [^[:upper:]]
+\o      número octal            [0-7]
+\O      não-número octal        [^0-7]
+\B      não-borda
+\A      início do texto
+\Z      fim do texto
+\l      torna minúscula
+\L      torna minúscula até \E
+\u      torna maiúscula
+\U      torna maiúscula até \E
+\Q      escapa até \E
+\E      fim da modificação
+\G      fim do casamento anterior
+</pre>
+
+<p>Conclusão: agora lhe resta procurar na documentação de seu aplicativo, se os barra-letras são suportados, se sim, se pelo robozinho ou pela interpretação de <i>strings</i>, quais barra-letras, e se são válidos dentro e/ou fora das listas.</p>
+
+<p>Nossa! Essa "padronização" das implementações de expressões regulares realmente impressiona...</p>
+
+
+      
+      <div class="bookbox">
+        <a href="https://www.piazinho.com.br">
+          <img src="/regex/guia/img/livro.jpg">
+        </a>
+        <a href="https://www.piazinho.com.br">
+          Está gostando da leitura?<br>
+          Está aprendendo?<br>
+
+          Compre o livro novo que traz mais conteúdo, texto atualizado e ilustrações!
+        </a>
+      </div>
+      
+    </div><!--contents-->
+
+    
+  <div class="prev-next">
+
+    
+      ← <a href="quantificadores-nao-gulosos.html">anterior</a>
+    
+    |
+
+    
+      <a href="/regex/guia/">início</a> |
+    
+
+    
+      <a href="modernosos.html">próxima</a> →
+    
+
+  </div>
+
+
+
+    <div id="footer">
+      <a href="/regex/guia/errata.html">Errata</a> —
+      <a href="/regex/guia/opiniao.html">Deixe sua opinião</a> —
+      <a href="/">Site do autor</a>
+    </div>
+  </body>
+</html>

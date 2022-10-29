@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dropbox: Selective Sync Pitfalls, by Aurelio Jargas</title>
+	<meta name="author" content="Aurelio Jargas">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="/assets/reset.css">
+	<link rel="stylesheet" href="/assets/articles.css">
+	<link rel="stylesheet" href="/assets/bars.css">
+	<link rel="stylesheet" href="/assets/monokai.css">
+
+	<!-- Fork me -->
+	<link rel="stylesheet" href="/assets/gh-fork-ribbon.css">
+	<!--[if lt IE 9]>
+		<style>.github-fork-ribbon-wrapper { display: none; }</style>
+	<![endif]-->
+
+
+	<!-- Google Analytics -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-280222-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+
+
+    <!-- AdSense auto ads -->
+    <script data-ad-client="ca-pub-0009608813278754" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+</head>
+
+<body id="dropbox-selective-sync">
+
+	<div class="bar">
+		<div id="article-header">
+
+			<h1><a href="/articles/dropbox-selective-sync.html" title="Permalink" rel="bookmark">Dropbox: Selective Sync Pitfalls</a></h1>
+
+			
+			<p class="byline">
+				Written by
+				<a class="name" rel="author" href="/about.html">Aurelio Jargas</a>
+				
+					on <span class="date">December 03, 2012</span>
+				
+			</p>
+
+		</div>
+	</div>
+
+
+	<div class="bar bar-transparent">
+		<div id="article-body">
+
+<p>The <a href="https://www.dropbox.com/help/175/en">Selective Sync</a> feature of Dropbox allows you to select which folders will be synced to your computer.</p>
+
+<!--<p>If you're installing Dropbox for the first time in a new computer, using this feature before the initial download will be a huge saving in disk space and bandwidth when you uncheck the biggest folders. But if you already use Dropbox and have all your files synced, it's important to understand how this feature works before using it, to avoid problems.</p>-->
+
+<p>You're safe using this feature when installing Dropbox in a second computer, to speed up the initial download of your files by excluding the big folders. But in your working computer, with all your files already synced, it's important to understand how this feature works before using it, to avoid problems.</p>
+
+
+<h2 id="removed">The local folder is removed</h2>
+
+<p>When you open the Selective Sync settings, you have the option to uncheck any of your folders, to stop syncing them. This is the exact wording Dropbox provides at the top of the window:</p>
+
+<blockquote>
+  Only checked folders will sync to this computer.
+</blockquote>
+
+<p>So, what happens when you uncheck a folder and confirm? Some may think that the local copy will be left alone and Dropbox will ignore all future changes to that folder. But no, in this case "not syncing" a folder really means that <strong>the folder will be removed from your computer</strong>. The remote copy in the server will be left untouched. The confirmation message that follows tries to explain that:</p>
+
+<blockquote>
+  Update Selective Sync settings? — Unchecked folders will stop syncing to this computer. Updating your settings will remove them from this computer's Dropbox.
+</blockquote>
+
+<p>In my opinion Dropbox does not make it as clear as it should be, since we're talking about deleting user data. In this case it's only local data, but when symlinks are involved, even remote data can be deleted. We'll talk about it later.</p>
+
+
+<h2 id="ignored">Recreated unchecked folders are ignored</h2>
+
+<p>When you uncheck a folder in Selective Sync, that folder is removed from your computer. But if you recreate that folder locally, in the same location with the same name, Dropbox will ignore it. You can add files to that folder and modify them, but Dropbox won't sync those changes to the server.</p>
+
+<p>This behavior is handy to <a href="/articles/dropbox-ignore-folder.html">ignore folders with temporary files</a> (caches, builds) that reside inside your Dropbox. But note that if you check again that same folder in the Selective Sync settings, you will get a <a href="https://www.dropbox.com/help/36/en">conflicted copy</a>.</p>
+
+
+<h2 id="symlink">Unchecked symlink remove original folder contents</h2>
+
+<p>Unix geeks, beware:</p>
+
+<pre>
+$ cd ~/Dropbox
+$ mkdir a
+$ touch a/foo.txt
+$ ln -s a b
+</pre>
+
+<p>Now uncheck "b" in Selective Sync. As you expect, the symlink "b" will be removed. As you do not expect, the folder "a" is now empty.</p>
+
+<!--In the server, now "a" is also empty and "b" is a plain folder with foo.txt-->
+
+<p>Since <a href="/articles/dropbox-symlinks.html">Dropbox does not preserve symlinks</a>, "b" is handled as a folder. So the Selective Sync unchecking first remove the folder contents before removing the folder itself. This is a dangerous combination for symlinked folders :(</p>
+
+
+			<div id="eof">— EOF —</div>
+
+		</div><!--article-body-->
+	</div><!--bar-->
+
+
+	<div class="bar">
+<div id="nav">
+	<ul>
+	<li>
+		Dropbox
+		<ul>
+		<li><a href="/articles/dropbox-iphoto-import.html" >Dropbox iPhoto Import – The Missing FAQ</a></li>
+		<li><a href="/articles/dropbox-selective-sync.html">Dropbox: Selective Sync Pitfalls</a></li>
+		<li><a href="/articles/dropbox-symlinks.html"      >Dropbox and symlinks</a></li>
+		<li><a href="/articles/dropbox-ignore-folder.html" >Ignore a local folder inside Dropbox</a></li>
+		</ul>
+	</li>
+	<li>
+		iPhoto
+		<ul>
+		<li><a href="/articles/dropbox-iphoto-11.html">Fix: iPhoto '11 library doubled size in Dropbox</a></li>
+		<li><a href="/articles/iphoto-symlinks.html"  >Symlinks inside the iPhoto library</a></li>
+		</ul>
+	</li>
+	<li>
+		Reference
+		<ul>
+		<li><a href="/articles/sed-abc.html"              >The sed alphabet</a></li>
+		<li><a href="/articles/applescript-vs-python.html">AppleScript for Python Programmers (Comparison Chart)</a></li>
+		<li><a href="/articles/shell-reference.html"      >Bash Shell Quick Reference</a></li>
+		</ul>
+	</li>
+	<li>
+		Other
+		<ul>
+		<li><a href="/articles/nexus-5x-bootloop-fix.html">Nexus 5X bootloop fix - Install Android monthly security updates</a></li>
+		<li><a href="/articles/hungry-sumo-high-scores.html">Tips for high scores in Hungry Sumo for iOS (iPhone, iPad)</a></li>
+		<!-- <li><a href="/articles/applescript-install.html">How to install AppleScripts on your Mac</a></li> -->
+		</ul>
+	</li>
+	<li>
+		<a style="text-decoration:none;" href="/about.html">←</a>
+	</li>
+	</ul>
+</div>
+
+	</div>
+
+	<div class="bar bar-transparent">
+
+	<!-- Disqus comments -->
+
+	<div id="disqus_thread"></div>
+	<script>
+	    (function() {
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://aurelionet.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<!-- /Disqus comments -->
+
+
+	</div>
+
+	<!-- Fork me -->
+	<div class="github-fork-ribbon-wrapper right">
+		<div class="github-fork-ribbon">
+			<a href="https://github.com/aureliojargas/aurelio.net/tree/master/articles/dropbox-selective-sync.html">GitHub</a>
+		</div>
+	</div>
+
+<!-- My head -->
+<a class="aureliohead"
+	style="position:fixed; right:5px; bottom:0px;"
+	href="/about.html"
+	title="Aurelio Jargas"><img
+	style="width: 64px; height: 64px;"
+	src="/img/articles/aurelio.png"></a>
+
+
+</body>
+</html>

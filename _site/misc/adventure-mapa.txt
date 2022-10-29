@@ -1,0 +1,182 @@
+* jogo adventure
+detalhes sobre o labirinto de cavernas
+
+estava eu sem nada de melhor pra fazer num sábado à tarde (que não teve
+ensaio da banda), então resolvi mapear TODO o labirinto de cavernas do
+clássico jogo adventure, inicialmente feito para se jogar em
+computadores que nem monitor tinham, a resposta era impressa em papel!
+
+o jogo é muito legal, mas este labirinto é pentelho porque se perde
+muito tempo nele e não tem uma lógica fácil de seguir para encontrar a
+saída, então decidi mapeá-lo pra não perder mais tempo nisso.
+
+se você nunca jogou adventure, eu aconselho, é muito massa, é apenas
+texto e você digita as ações que seu personagem deve fazer. o grande
+charme de ser um jogo com apenas texto é justo você viajar e imaginar as
+paisagens, os lugares, os atores, pois o jogo não lhe impõe isso como
+algo pronto como num jogo gráfico.
+
+eu ainda não o terminei, sou iniciante, mas é fascinante.
+
+ah! quando aqui no texto eu falo pra NÃO ler a próxima parte sem antes
+brincar no labirinto um pouco, é pra NÃO LER mesmo! se você ler tudo
+aqui sem antes jogar um pouco no labirinto, vai perder toda a graça.
+a não ser é claro que você já o jogue faz tempo o labirinto já não lhe é
+mais novidade.
+
+a intenção deste documento é lhe ajudar a não perder tempo, e não tirar
+a graça dessa parte do jogo.
+
+------------------------------------------------------------------------
+
+para chegar rapidamente ao labirinto:
+/usr/games/adventure
+n           não quero instruções
+in          entra no castelo
+get lamp    as cavernas são escuras, precisa levar luz
+xyzzy       palavra mágica que leva às cavernas
+on          para ligar a lanterna
+e           para voltar a caverna que tem a gaiola
+get cage    pega a gaiola
+w           volta a caverna anterior
+w           vai para o canyon
+w           caverna do passarinho
+get bird    pega o passarinho
+w           vai para o pit
+d           desce para o hall
+d           caverna da cobra
+free bird   solta o passarinho (espanta a cobra)
+w           caverna das moedas
+get coins   pega as moedas
+w           vai para o cruzamento (crossover)
+w           vai para o hall (long hall)
+w           vai para a outra ponta (oeste) do hall
+s           entra no labirinto
+
+"You are in a maze of twisty little passages, all diferent."
+
+aqui estamos no labirinto, note a frase, "_M_aze of twist_Y_ _L_ittle",
+sendo a caverna de nome MYL. e assim são todas as cavernas, nomeadas
+estas 3 palavras colocadas em ordens diferentes e "twist_Y_" podendo
+variar para "_T_wisting", tendo assim um total de 4 palavras possíveis,
+sempre agrupadas de 3 em três.
+
+são ao todo 11 cavernas, e cada uma tem 10 (isso mesmo, dez!) saídas
+possíveis, sendo os 8 pontos cardeais e mais pra cima e pra baixo:
+n s e w ne nw se sw u d
+
+se você quer brincar no labirinto e se divertir nele, PARE de ler agora.
+
+------------------------------------------------------------------------
+
+tudo bem, você já brincou bastante no labirinto ou não tem saco pra
+isso. então aqui está TODO ele mapeado para que você consiga saber para
+onde está indo, para qual caverna você irá se seguir a direção X.
+não que isso vá ajudar muito, caso você não saiba mais detalhes do
+labirinto.
+
+no mapa (que na verdade é uma tabela), cada linha é uma caverna, e em
+seguida está em qual caverna você sairá de se seguir a direção indicada
+na parte superior da tabela.
+
+DETALHES
+tlym  Twisting Little twistY Maze
+MYL   1ª caverna do labirinto
+
+     n   s   e   w  ne  nw  se  sw  u   d
+LMT lmy  ? tml lym yml tlm ylm mtl mly mlt
+LMY tml tlm mlt ylm lym myl lmt yml mtl mly
+LYM yml lmy mly lmt mtl ylm myl mlt tlm tml
+MLT ylm yml mtl tlm lmy lmt lym mly tml myl
+MLY tlm mlt lmy tml lmt mtl yml myl lym ylm
+MTL mlt mly lmt myl ylm tml lmy tlm yml lym
+MYL mly mtl lym mlt tml yml tlm lmy ylm  ?
+TLM mtl lym ylm mly myl lmy tml lmt mlt yml
+TML lym lmt yml lmy tlm mlt mly ylm myl mtl
+YLM myl tml tlm yml mlt mly mtl lym lmt lmy
+YML lmt ylm myl mtl mly lym mlt tml lmy tlm
+
+brinque mais um pouco, seguindo o mapa, tentando encontrar a saída, ou
+itens, depois continue a leitura.
+
+------------------------------------------------------------------------
+
+se você está lendo aqui é porque já brincou bastante no labirinto e deve
+estar se perguntando porque alguém ia fazer um labirinto idiota desses
+que é vazio, não tem itens nem saída, só serve pra você ficar perdido.
+
+essa é a graça, fazer você perder tempo, gasta pilha da lanterna e os
+mais fracos já desistem do jogo aqui, pois não conseguem mais sair.
+
+a essa altura também, você já deve ter notado que se sair de uma caverna
+pelo norte e tentar voltar pelo sul, você não voltará para a caverna
+anterior! é que antes de chegar na próxima caverna, você percorre um
+corredor que faz várias curvas e muda de direção, então você sai de uma
+caverna pelo norte e entrará na próxima por nordeste por exemplo (e não
+pelo sul).
+
+por esse motivo, e por cada caverna apresentar 10 saídas possíveis, o
+mapeamento físico (ilustrativo) desse labirinto é virtualmente
+impossível sem o auxílio de um programa específico para isso, pois é
+tridimensional e intrincado. se alguém tiver saco para fazê-lo, me
+envie, iria ser um marco na história do jogo &:)
+
+abaixo segue o mesmo mapa anterior, só que no estilo mapa rodoviário,
+com o caminho que você precisa seguir para ir da caverna X até a
+caverna Y.
+
+    LMT LMY LYM MLT MLY MTL MYL TLM TML YLM YML -M- -E-
+LMT -   n   w   d   u   sw  .   nw  e   se  ne  s   .
+LMY se  -   ne  e   d   u   nw  s   n   w   sw  .   .
+LYM w   s   -   sw  e   ne  se  u   d   nw  n   .   .
+MLT nw  ne  se  -   sw  e   d   w   u   n   s   .   .
+MLY ne  e   u   s   -   nw  sw  n   w   d   se  .   .
+MTL e   se  d   n   s   -   w   sw  nw  ne  u   .   .
+MYL .   sw  e   w   n   s   -   se  ne  u   nw  .   d
+TLM sw  nw  s   u   w   n   ne  -   se  e   d   .   .
+TML s   w   n   nw  se  d   u   ne  -   sw  e   .   .
+YLM u   d   sw  ne  nw  se  n   e   s   -   w   .   .
+YML n   u   nw  se  ne  w   e   d   sw  s   -   .   .
+-M- n   .   .   .   .   .   .   .   .   .   .   -   .
+-E- .   .   .   .   .   .   s   .   .   .   .   .   -
+
+LEGENDA
+-M-   máquina de pilhas (battery massive vending machine)
+-E-   entrada do labirinto
+.     não há caminho disponível
+
+
+mapeado o labirinto, agora você já sabe que as únicas coisas que ele tem
+fora cavernas, é uma entrada, e uma máquina que vende pilhas. isso
+mesmo, não tem saída. a única coisa de útil que você pode fazer nele é
+entrar, pegar pilhas novas para sua lanterna e sair (não se esqueça de
+vir até aqui com as moedas!).
+
+resta a você apenas analisar o mapa e descobrir o caminho mais fácil de
+ida e volta até a caverna das pilhas. só continue lendo casa você seja
+MUITO preguiçoso mesmo.
+
+------------------------------------------------------------------------
+
+bem, você é um vadio mesmo, então está aqui, mastigado, passo-a-passo,
+receita de bolo, sobre como dominar o labirinto sem fazer esforço:
+
+chegue até o lado oeste do "long featureless hall" (sobre como fazer
+isso, veja no começo dessa página), faça:
+
+s
+s
+e
+s            rota para chegar na caverna da máquina
+drop coins   para colocar moedas na máquina
+get batter   para pegar as pilhas novas
+n
+d
+d
+d            rota para voltar ao "long hall"
+
+pronto. esqueça do labirinto, é só pra isso que ele serve.
+
+--
+http://aurelio.net/misc/adventure-mapa.txt
+20000702 Aurelio Marinho Jargas

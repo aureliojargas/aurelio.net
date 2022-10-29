@@ -1,0 +1,34 @@
+DVD - sistema de Distribuidora Virtual de fitas Demo
+----------------------------------------------------
+       aurélio marinho jargas <verde (a) aurelio net>
+
+
+
+DESCRIÇÃO
+
+projeto final do curso de tecnólogo em processamento de dados na
+faculdade ESEEI. É uma empresa virtual de vendas on-line demonstrando
+a independência entre camadas (Three-Tear), com banco de dados, CGI e
+interface WWW (Postgres, Php e Apache).
+
+
+FUNCIONAMENTO
+
+as bandas cadastram seus dados e ganham uma página na internet.
+Clientes acessam as páginas e se gostaram da banda, fazem o pedido da
+fita demo, que será enviada pelo correio.
+
+
+!!IMPORTANTE!!
+
+eu fiz esse projeto em 2000, apresentei à banca, e depois nunca mais
+mexi. não posso garantir que ainda esteja funcionando.
+
+QUALQUER UM pode pegar esse sistema e fazer o que bem entender com
+ele, mas atenção: SE VIRE.
+
+não vou dar suporte porque nem lembro mais como ele funciona &:)
+e infelizmente a documentação dele que eu tinha estava no meu
+computador que foi roubado &:(
+
+dica: o coração dele são os arquivos lib*.

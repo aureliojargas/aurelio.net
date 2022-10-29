@@ -1,0 +1,42 @@
+#!/bin/bash
+# Show a list of all surfer names, one per line
+
+unaccent() {
+    sed '
+        y/àáâãäåèéêëìíîïòóôõöùúûü/aaaaaaeeeeiiiiooooouuuu/
+        y/ÀÁÂÃÄÅÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜ/AAAAAAEEEEIIIIOOOOOUUUU/
+        y/çÇñÑß¢Ðð£Øø§µÝý¥¹²³ªº/cCnNBcDdLOoSuYyY123ao/
+    '
+}
+
+slugify() {
+    unaccent | tr A-Z a-z | tr -d \" | tr ' ' -
+}
+
+grep '^ *<br><br>[^<]' 2006-??-??/html/* |
+
+    # Remove junk
+    sed 's/.*<br>//' |
+
+    # Remove false positives
+    sed '
+        /,/d
+        /?/d
+        /^Onda /d
+        /^Parede /d
+        /^Entubado$/d
+        /^Ops!$/d
+        /^:)/d
+        ' |
+
+    # Magic
+    sort --ignore-case |
+    uniq -i |
+
+    # Show as:
+    # slug-string   Full Name
+    while read name
+    do
+        slug=$(echo "$name" | slugify)
+        printf "%-29s %s\n" "$slug" "$name"
+    done

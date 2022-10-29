@@ -1,0 +1,63 @@
+### apostila-sh-papel.gpi
+### 
+### Arquivo de comandos do gnuplot para gerar este gráfico:
+### https://aurelio.net/shell/apostila/vendas-papel.png
+###
+### Os dados originais estão no arquivo "plot.dat", no formato:
+###
+###      YYYY-MM NN
+###
+### um registro por linha, onde YYYY é o ano, MM é o mês e
+### NN é o número de exemplares vendidos naquele mês. Exemplo:
+###
+###      2001-07 60
+###      2001-08 96
+###      2001-09 29
+###      2001-10 46
+###      ...
+###
+### Para gerar o gráfico:
+###
+###      $ gnuplot apostila-sh-papel.gpi
+###
+### Mais info sobre o programa em http://gnuplot.sf.net
+###
+
+
+### define o título do gráfico
+set title "Vendas da Apostila de Shell Profissional IMPRESSA"
+
+### define o nome do eixo Y
+set ylabel "Unidades Vendidas (69)"
+
+### define o estilo do gráfico: barras
+set boxwidth 0.9 relative
+set style fill solid 1.0
+set style data boxes
+
+### não mostra o comando no canto superior direito
+set nokey
+
+### indica que o eixo X é composto por datas
+set xdata time
+
+### define os limites dos eixos X e Y
+set yrange [0:23]
+set xrange ["13/08/03":"19/02/04"]
+
+### grid horizontal somente
+set grid ytics
+
+### indica o formato original da data
+set timefmt "%Y-%m"
+
+### define o formato da data no gráfico
+set format x "%b/%y"
+
+### define o nome e tipo do arquivo de saída
+set output "vendas-papel.png"
+set terminal png
+set size 0.75,0.75
+
+### plota o gráfico, usando as duas primeiras colunas de dados
+plot "plot.dat" using 1:2
