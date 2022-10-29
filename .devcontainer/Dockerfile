@@ -17,6 +17,7 @@ RUN apt update && export DEBIAN_FRONTEND=noninteractive \
     bundler=2.3.5-2 \
     ruby=1:3.0~exp1 \
     ruby-dev=1:3.0~exp1 \
+    tidy=2:5.6.0-11build2 \
     && rm -rf /var/lib/apt/lists/*
 
 # Setup bundler
