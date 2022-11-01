@@ -21,7 +21,7 @@ O problema é o seguinte: tenho um site no WordPress, e peço que os visitantes 
 
 As [Funções ZZ](https://funcoeszz.net/) possuem a utilíssima [zzarrumacidade](https://funcoeszz.net/man.html#zzarrumacidade), que é especialista em nomes de cidades brasileiras, arrumando a bagunça de maiúsculas e minúsculas, adicionando acentos e expandindo abreviações.
 
-> Curiosidade: Veja [o código da zzarrumacidade](https://github.com/aureliojargas/funcoeszz/blob/master/zz/zzarrumacidade.sh), é um único sed mágico!
+> Curiosidade: Veja [o código da zzarrumacidade](https://github.com/funcoeszz/funcoeszz/blob/master/zz/zzarrumacidade.sh), é um único sed mágico!
 
 Mas como usar a zzarrumacidade (um programa que está em meu computador) para arrumar os dados que estão dentro do banco de dados do WordPress (uma entidade que está lá no servidor)?
 
