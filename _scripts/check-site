@@ -22,7 +22,11 @@ test -d _site || { echo "_site not found"; exit 1; }
 
 all_files=$(_scripts/list-site-files all)
 text_files=$(_scripts/list-site-files text)
+css_files2=$(_scripts/list-site-files css)
 css_files=$(echo "$text_files" | grep '\.css$')
+echo $css_files
+diff -u <(echo "$css_files") <(echo x"$css_files2")
+exit 0
 
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
