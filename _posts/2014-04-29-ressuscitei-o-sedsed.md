@@ -63,10 +63,10 @@ HOLD:foo$
 foo:foo:foo
 ```
 
-Para usar o sedsed, basta baixar [este arquivo Python](https://raw.github.com/aureliojargas/sedsed/main/sedsed.py), torná-lo executável e colocá-lo no seu PATH. Tipo assim:
+Para usar o sedsed, basta baixar [este arquivo Python](https://raw.githubusercontent.com/aureliojargas/sedsed/main/sedsed.py), torná-lo executável e colocá-lo no seu PATH. Tipo assim:
 
 ```console
-$ curl -L https://raw.github.com/aureliojargas/sedsed/main/sedsed.py > ~/bin/sedsed
+$ curl -L https://raw.githubusercontent.com/aureliojargas/sedsed/main/sedsed.py > ~/bin/sedsed
 $ chmod +x ~/bin/sedsed
 ```
 
