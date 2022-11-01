@@ -212,7 +212,7 @@
 /curso/material/tutorial-pyobjc/*                 /mac/dev/tutorial-pyobjc/:splat
 
 # 2013-09-22
-/projects/txt2regex/README.html                   https://github.com/aureliojargas/txt2regex/blob/master/README.md
+/projects/txt2regex/README.html                   https://github.com/aureliojargas/txt2regex/blob/main/README.md
 /projects/txt2regex/txt2regex-0.8.tgz             https://github.com/aureliojargas/txt2regex/archive/v0.8.tar.gz
 /projects/txt2regex/old/                          https://github.com/aureliojargas/txt2regex/releases
 
