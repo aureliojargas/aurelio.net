@@ -1,0 +1,21 @@
+#!/bin/bash
+
+indent="  "
+
+list() {
+    echo '<ul>'
+    while read line
+    do
+        echo "$indent<li>$line</li>"
+    done
+    echo '</ul>'
+}
+
+case "$1" in
+    ul) list;;
+    *)
+        echo "Unknown mode: $1"
+        exit 1
+        ;;
+esac
+
