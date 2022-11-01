@@ -229,11 +229,11 @@ Eu costumava usar um contador de acesso nas minhas páginas, que é esse script 
 
 - [Gerador de RSS (segundo)](sed/rss.sed) (**SED**):
 Um script SED que extrai as notícias da página principal do meu site e as converte para o formato RSS (validado). Além do título e conteúdo, cada notícia vem com a data de publicação e um link para o site principal. Este script pode ser usado em outros sites, porém adaptações terão que ser feitas nos padrões de pesquisa. casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br>**APOSENTADO: Estou usando o <del>WordPress</del>[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/master/feed.xml) agora.**
+<br>**APOSENTADO: Estou usando o <del>WordPress</del>[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
 
 - [Gerador de RSS (primeiro)](php/rss-old.phps) (**PHP**):
 O primeiro script gerador de RSS que usei, uma contribuição do amigo *Deivison Alves Elias*, que me "deu de presente". Fiz pequenas modificações. Uma única expressão regular casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br>**APOSENTADO: Estou usando o <del>WordPress</del>[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/master/feed.xml) agora.**
+<br>**APOSENTADO: Estou usando o <del>WordPress</del>[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
 
 - [Página com cores aleatórias](php/randbody.phps) (**PHP**):
 Numa versão antiga de meu site, cada vez que você entrava na página, o fundo e o texto apareciam em cores diferentes, escolhidas ao acaso (aleatórias). Este é o script tosco de 18 linhas que faz isso. Você pode inclusive colocar suas próprias opções de cores, pois o código está bem facinho de entender.
