@@ -23,7 +23,7 @@ Não era minha intenção, mas ao testá-lo e reler seu código, acabei me apaix
 - Projeto migrado do Google Code (SVN) para o [GitHub](https://github.com/aureliojargas/sedsed).
 - Código modernizado para funcionar no Python 3.
 - Código mais legível ([PEP-8](http://legacy.python.org/dev/peps/pep-0008/)) e robusto ([pylint](http://www.pylint.org/)).
-- [Suíte de testes](https://github.com/aureliojargas/sedsed/tree/master/test) completa.
+- [Suíte de testes](https://github.com/aureliojargas/sedsed/tree/main/test) completa.
 - [Correção de bugs](https://github.com/aureliojargas/sedsed/issues?page=1&state=closed) apontados pelos testes.
 
 > Olhando a lista parece pouco, mas foram mais de 50 horas de trabalho para fazer tudo isso.
@@ -63,10 +63,10 @@ HOLD:foo$
 foo:foo:foo
 ```
 
-Para usar o sedsed, basta baixar [este arquivo Python](https://raw.github.com/aureliojargas/sedsed/master/sedsed.py), torná-lo executável e colocá-lo no seu PATH. Tipo assim:
+Para usar o sedsed, basta baixar [este arquivo Python](https://raw.github.com/aureliojargas/sedsed/main/sedsed.py), torná-lo executável e colocá-lo no seu PATH. Tipo assim:
 
 ```console
-$ curl -L https://raw.github.com/aureliojargas/sedsed/master/sedsed.py > ~/bin/sedsed
+$ curl -L https://raw.github.com/aureliojargas/sedsed/main/sedsed.py > ~/bin/sedsed
 $ chmod +x ~/bin/sedsed
 ```
 
