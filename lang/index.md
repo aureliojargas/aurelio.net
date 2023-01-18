@@ -7,8 +7,6 @@ hide_tags: true
 #hide_ads: true
 ---
 
-# Idiomas que estudo
-
 Gosto muito de estudar idiomas. Acho divertido aprender os sons, as palavras, as peculiaridades, e no processo, aprender um pouco sobre a cultura daquele povo.
 
 Gosto também de estudar sozinho em vez de fazer cursos em escolas de idioma. Eu me divirto mais assim, pois vou seguindo livremente, estudando somente quando estou com vontade, e da maneira que achar melhor.
@@ -101,4 +99,3 @@ Podcast:
 
 - DW - Langsam gesprochene Nachrichten
 - Coffee Break German
-
