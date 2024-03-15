@@ -38,6 +38,7 @@ article_footer_after: false
 > [Apostila de introdução](/regex/apostila-conhecendo-regex.pdf),
 > [Livro em português](https://www.piazinho.com.br),
 > [Testador online](http://regex101.com),
+> [Visualizador online](https://extendsclass.com/regex-tester.html),
 > [10 anos de regex](/blog/2009/07/17/10anos-expressoes-regulares/).
 
 > Veja também:
