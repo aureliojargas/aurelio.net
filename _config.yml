@@ -47,6 +47,7 @@ defaults:
       path: ""
       type: posts
     values:
+      hide_ads: true
       # /blog/2009/04/29/slap-chop/index.html
       permalink: /blog/:year/:month/:day/:title/
   -
