@@ -67,6 +67,11 @@ defaults:
       hide_tags: true
   -
     scope:
+      path: "doc"
+    values:
+      hide_ads: true
+  -
+    scope:
       path: "doc/coluna"
     values:
       layout: coluna
