@@ -4,7 +4,6 @@ title: 'WordPress: Dicas para o tema Twenty Ten'
 hide_date: true
 hide_comments: true
 hide_read_more: true
-hide_share: true
 hide_tags: true
 hide_ads: true
 ---

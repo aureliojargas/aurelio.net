@@ -162,7 +162,6 @@ You can hide page elements, such as the ads or the comments section, using speci
 - `hide_ad_top: true`
 - `hide_tags: true`
 - `hide_read_more: true`
-- `hide_share: true`
 - `hide_comments: true`
 
 ## Custom page configuration

@@ -3,7 +3,6 @@ date: 2008-11-04
 title: Próximo Livro
 hide_byline: true
 hide_read_more: true
-hide_share: true
 hide_ads: true
 hide_tags: true
 ---

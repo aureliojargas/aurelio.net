@@ -4,7 +4,6 @@ title: Texto do Leitor
 hide_author: true
 hide_date: true
 hide_read_more: true
-hide_share: true
 hide_ads: true
 hide_tags: true
 ---

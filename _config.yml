@@ -65,7 +65,6 @@ defaults:
       hide_ads: true
       hide_date: true
       hide_tags: true
-      hide_share: true
   -
     scope:
       path: "doc/coluna"
@@ -86,7 +85,6 @@ defaults:
       title_suffix: ""
       hide_byline: true
       hide_read_more: true
-      hide_share: true
       hide_comments: true
   -
     scope:
@@ -189,7 +187,6 @@ defaults:
 # hide_ad_top: true
 # hide_tags: true
 # hide_read_more: true
-# hide_share: true
 # hide_comments: true
 
 # Use _data folder to store data files
