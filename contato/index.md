@@ -9,13 +9,6 @@ hide_comments: true
 ---
 
 
-## Twitter
-
-<http://twitter.com/oreio>
-
-Se você quer falar comigo ou perguntar algo, use o twitter. Meu perfil é o [@oreio](http://twitter.com/oreio). Este é o canal que eu mais frequento, então as respostas virão mais rápido.
-
-
 ## GitHub
 
 <https://github.com/aureliojargas>

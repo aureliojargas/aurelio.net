@@ -128,10 +128,6 @@
 		t = t.replace(/\.\.\./g,					'... zZzzZzZzz');
 
 		document.getElementById('texto-traduzido').value = t;
-
-		// Atualiza o link do botão tweet this
-		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/BeBuM');
-		document.getElementById('tuitar').style.display = '';
 	}
 	function carrega() {
 		document.getElementById('texto-original').value = ''+
@@ -236,7 +232,6 @@
 		<td></td>
 		<td></td>
 		<td class="traduzido">
-			<a id="tuitar" href="" style="display:none;"><img src="/coisinha/img/tweet.png"> Clique aqui para tuitar isso!!!</a>
 		</td>
 	</tr>
 </table>
@@ -286,8 +281,7 @@
 
 <div class="copyright">
 	Copyright © 2008-2016
-	<a href="/">Aurelio Jargas</a>,
-	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<a href="/">Aurelio Jargas</a>
 	<img alt="" src="/coisinha/img/aureliohead.gif">
 </div>
 </div><!-- footer -->

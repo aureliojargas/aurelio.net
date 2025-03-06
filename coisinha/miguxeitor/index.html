@@ -376,10 +376,6 @@
 		document.getElementById('icon').src = '/coisinha/miguxeitor/' + icons[level-1];
 		document.getElementById('icon').style.display = '';
 		document.getElementById('iconlink').href = 'http://www.submarino.com.br/HomeCache/AllSearchResult.aspx?Query='+ kwords[level-1]+ '&PageHits=50&franq=&OrderBy=sortordersell';
-		// Atualiza o link do botão tweet this
-		document.getElementById('tuitar').href = 'http://twitter.com/home?status=' + encodeURIComponent(t + ' http://bit.ly/MIGUXO');
-		document.getElementById('tuitar').style.display = '';
-
 	}
 	window.onload = _init;
 </script>
@@ -480,11 +476,6 @@
 		</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td><a id="tuitar" href="" style="display:none;"><img src="/coisinha/img/tweet.png"> Clique aqui para tuitar isso!!!</a></td>
-	</tr>
-	<tr>
 		<td colspan="2">
 		<p><br>Está sem criatividade? Carregue estes textos:</p>
 
@@ -539,8 +530,7 @@
 
 <div class="copyright">
 	Copyright © 2008-2016
-	<a href="/">Aurelio Jargas</a>,
-	<a href="http://twitter.com/oreio" title="Siga-me no twitter!">@oreio</a>
+	<a href="/">Aurelio Jargas</a>
 	<img alt="" src="/coisinha/img/aureliohead.gif">
 </div>
 </div><!-- footer -->

@@ -34,9 +34,6 @@ table#tradutor td { vertical-align:top; padding:0 2px; }
 table#tradutor th.original  { width:50%; }
 table#tradutor th.traduzido { width:50%; }
 
-/* Botão Tweet This alinhado com o texto */
-#tuitar img { vertical-align:middle; }
-
 /* Links */
 .links {
 	margin:3em 1em 3em 1em;
