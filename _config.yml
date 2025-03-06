@@ -7,7 +7,7 @@ production: true
 
 name: Aurelio.net
 url: https://aurelio.net
-description: 'Relaxe, leia com calma, aproveite a viagem.'
+description: Relaxe, leia com calma, aproveite a viagem.
 
 ### Syntax Highlight
 highlighter: rouge  # Default since Jekyll 3.0
@@ -52,14 +52,14 @@ defaults:
       permalink: /blog/:year/:month/:day/:title/
   -
     scope:
-      path: "correria"
+      path: correria
     values:
       layout: correria
       title_prefix: "Banda CORRERIA HC :: "
       title_suffix: ""
   -
     scope:
-      path: "curso"
+      path: curso
     values:
       title_prefix: "Evento: "
       hide_ads: true
@@ -67,23 +67,23 @@ defaults:
       hide_tags: true
   -
     scope:
-      path: "doc"
+      path: doc
     values:
       hide_ads: true
   -
     scope:
-      path: "doc/coluna"
+      path: doc/coluna
     values:
       layout: coluna
   -
     scope:
-      path: "email"
+      path: email
     values:
       layout: email
       title_suffix: " — Textos de E-mail"
   -
     scope:
-      path: "fvm"
+      path: fvm
     values:
       layout: 2013-page
       article_footer_after: fvm-nav.html
@@ -93,25 +93,25 @@ defaults:
       hide_comments: true
   -
     scope:
-      path: "moneylog"
+      path: moneylog
     values:
       article_footer_after: moneylog-nav.html
       hide_ads: true
       hide_read_more: true
   -
     scope:
-      path: "projects"
+      path: projects
     values:
       layout: projects
   -
     scope:
-      path: "rac"
+      path: rac
     values:
       layout: rac
       title_prefix: "RAC - "
   -
     scope:
-      path: "rac/info/tutorial"
+      path: rac/info/tutorial
     values:
       layout: minimal
       css: /rac/info/tutorial/tutorial.css
@@ -120,7 +120,7 @@ defaults:
       after_content: rac-tutorial-footer.html
   -
     scope:
-      path: "regex"
+      path: regex
     values:
       css_extra: /regex/regex.css
       article_footer_after: regex-footer.html
@@ -128,7 +128,7 @@ defaults:
       hide_read_more: true
   -
     scope:
-      path: "regex/guia"
+      path: regex/guia
     values:
       layout: regex-guia
       title_suffix: " - Livro EXPRESSÕES REGULARES, por Aurelio Jargas"
@@ -136,7 +136,7 @@ defaults:
       hide_ads: true
   -
     scope:
-      path: "shell"
+      path: shell
     values:
       css_extra: /regex/regex.css
       article_footer_after: shell-learn-more.html
@@ -144,12 +144,12 @@ defaults:
       hide_read_more: true
   -
     scope:
-      path: "shell/apostila"
+      path: shell/apostila
     values:
       article_footer_after: shell-apostila-nav.html
   -
     scope:
-      path: "sed"
+      path: sed
     values:
       css_extra: /regex/regex.css
       article_footer_after: sed-learn-more.html
@@ -157,19 +157,19 @@ defaults:
       hide_read_more: true
   -
     scope:
-      path: "viagem/atacama"
+      path: viagem/atacama
     values:
       layout: 2013-page
       article_footer_after: atacama-nav.html
   -
     scope:
-      path: "viagem/atacama/album"
+      path: viagem/atacama/album
     values:
       layout: 2013-page
       article_footer_after: atacama-albuns.html
   -
     scope:
-      path: "vim"
+      path: vim
     values:
       css_extra: /regex/regex.css
       article_footer_after: vim-learn-more.html
