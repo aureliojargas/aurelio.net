@@ -20,7 +20,7 @@ Se você quer contribuir com algum software meu, informando algum problema, dand
 
 <http://www.linkedin.com/in/aureliojargas>
 
-Tenho um perfil (currículo) no LinkedIn, lotado de informações profissionais, caso isso te interesse.
+Tenho um perfil (currículo) no LinkedIn, lotado de informações profissionais, caso isso te interesse. Porém não acesso o site, então não vou ler nenhuma mensagem que você me postar lá.
 
 
 ## E-mail
