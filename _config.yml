@@ -51,6 +51,11 @@ defaults:
       permalink: /blog/:year/:month/:day/:title/
 
   - scope:
+      path: articles
+    values:
+      hide_ads: true
+
+  - scope:
       path: correria
     values:
       layout: correria
@@ -97,6 +102,11 @@ defaults:
       article_footer_after: moneylog-nav.html
       hide_ads: true
       hide_read_more: true
+
+  - scope:
+      path: musica
+    values:
+      hide_ads: true
 
   - scope:
       path: projects

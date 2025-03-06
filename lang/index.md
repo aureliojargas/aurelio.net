@@ -4,7 +4,7 @@ title: Idiomas que estudo
 hide_date: true
 hide_read_more: true
 hide_tags: true
-#hide_ads: true
+hide_ads: true
 ---
 
 Gosto muito de estudar idiomas. Acho divertido aprender os sons, as palavras, as peculiaridades, e no processo, aprender um pouco sobre a cultura daquele povo.
