@@ -35,54 +35,53 @@ include:
   - _cabecalho.sgml
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""  # all files in the project
     values:
       layout: "2014"
       author: aurelio
       title_suffix: " | Aurelio.net"
-  -
-    scope:  # all posts
+
+  - scope:  # all posts
       path: ""
       type: posts
     values:
       hide_ads: true
       # /blog/2009/04/29/slap-chop/index.html
       permalink: /blog/:year/:month/:day/:title/
-  -
-    scope:
+
+  - scope:
       path: correria
     values:
       layout: correria
       title_prefix: "Banda CORRERIA HC :: "
       title_suffix: ""
-  -
-    scope:
+
+  - scope:
       path: curso
     values:
       title_prefix: "Evento: "
       hide_ads: true
       hide_date: true
       hide_tags: true
-  -
-    scope:
+
+  - scope:
       path: doc
     values:
       hide_ads: true
-  -
-    scope:
+
+  - scope:
       path: doc/coluna
     values:
       layout: coluna
-  -
-    scope:
+
+  - scope:
       path: email
     values:
       layout: email
       title_suffix: " — Textos de E-mail"
-  -
-    scope:
+
+  - scope:
       path: fvm
     values:
       layout: 2013-page
@@ -91,26 +90,26 @@ defaults:
       hide_byline: true
       hide_read_more: true
       hide_comments: true
-  -
-    scope:
+
+  - scope:
       path: moneylog
     values:
       article_footer_after: moneylog-nav.html
       hide_ads: true
       hide_read_more: true
-  -
-    scope:
+
+  - scope:
       path: projects
     values:
       layout: projects
-  -
-    scope:
+
+  - scope:
       path: rac
     values:
       layout: rac
       title_prefix: "RAC - "
-  -
-    scope:
+
+  - scope:
       path: rac/info/tutorial
     values:
       layout: minimal
@@ -118,57 +117,57 @@ defaults:
       title_prefix: ""
       title_as_h1: true
       after_content: rac-tutorial-footer.html
-  -
-    scope:
+
+  - scope:
       path: regex
     values:
       css_extra: /regex/regex.css
       article_footer_after: regex-footer.html
       hide_ads: true
       hide_read_more: true
-  -
-    scope:
+
+  - scope:
       path: regex/guia
     values:
       layout: regex-guia
       title_suffix: " - Livro EXPRESSÕES REGULARES, por Aurelio Jargas"
       index: /regex/guia/
       hide_ads: true
-  -
-    scope:
+
+  - scope:
       path: shell
     values:
       css_extra: /regex/regex.css
       article_footer_after: shell-learn-more.html
       hide_ads: true
       hide_read_more: true
-  -
-    scope:
+
+  - scope:
       path: shell/apostila
     values:
       article_footer_after: shell-apostila-nav.html
-  -
-    scope:
+
+  - scope:
       path: sed
     values:
       css_extra: /regex/regex.css
       article_footer_after: sed-learn-more.html
       hide_ads: true
       hide_read_more: true
-  -
-    scope:
+
+  - scope:
       path: viagem/atacama
     values:
       layout: 2013-page
       article_footer_after: atacama-nav.html
-  -
-    scope:
+
+  - scope:
       path: viagem/atacama/album
     values:
       layout: 2013-page
       article_footer_after: atacama-albuns.html
-  -
-    scope:
+
+  - scope:
       path: vim
     values:
       css_extra: /regex/regex.css
