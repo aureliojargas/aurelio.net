@@ -41,7 +41,7 @@ echo "$track" > track.html
 
 # These are the insertion points in the original file:
 
-#	See more free softwares at
+#	See more free software at
 #	www.aurelio.net/projects/
 
 # <div id="sidebar">

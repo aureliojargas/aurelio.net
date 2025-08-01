@@ -26,7 +26,7 @@ My nerd interests include regex, Unix, Bash, sed, Python, JavaScript, HTML, text
 
 I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.org/wiki/Mandriva).
 
-## My softwares
+## My software
 
 - [AdiumBook](/projects/adiumbook/) — sync Adium and Address Book contacts (Mac).
 - [clitest](https://github.com/aureliojargas/clitest) — Unix command line tester.
@@ -40,7 +40,7 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 - [SedSokoban](/projects/sedsokoban/) — the Sokoban game written in sed.
 - [more…](/projects/)
 
-> All my softwares are [Open Source](http://en.wikipedia.org/wiki/Open-source_software).
+> All my software is [Open Source](http://en.wikipedia.org/wiki/Open-source_software).
 
 ## My books
 
