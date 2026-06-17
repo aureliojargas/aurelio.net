@@ -36,11 +36,11 @@ cd aurelio.net
 sudo apt install ruby ruby-dev
 
 # Install bundler
-gem install bundler
+gem install bundler --user-install
 
 # Set up bundler (check the exact path for **/bin under .gem)
-echo 'export BUNDLE_PATH="$HOME/.gem"' >> ~/.bashrc
-echo 'export PATH="$BUNDLE_PATH/ruby/2.5.0/bin:$PATH"' >> ~/.bashrc
+echo 'export BUNDLE_PATH="$HOME/.local/share/gem"' >> ~/.bashrc
+echo 'export PATH="$BUNDLE_PATH/ruby/3.1.0/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 # Install the Jekyll required gems
@@ -93,7 +93,7 @@ Extra setup for **Chrome OS Linux**:
 
 ```bash
 # Install the required packages
-sudo apt install ruby ruby-dev python tidy file
+sudo apt install ruby ruby-dev python3 tidy file
 ```
 
 ## Local Jekyll build
