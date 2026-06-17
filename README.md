@@ -151,15 +151,13 @@ In HTML files, use the following structure:
 
 ## Hide optional page elements
 
-You can hide page elements, such as the ads or the comments section, using special flags in front matter:
+You can hide page elements, such as the date or the comments section, using special flags in front matter:
 
 - `hide_heading: true`
 - `hide_prev_next: true`
 - `hide_byline: true`
 - `hide_author: true`
 - `hide_date: true`
-- `hide_ads: true`
-- `hide_ad_top: true`
 - `hide_tags: true`
 - `hide_read_more: true`
 - `hide_comments: true`

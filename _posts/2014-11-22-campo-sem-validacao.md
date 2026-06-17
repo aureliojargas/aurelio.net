@@ -1,7 +1,6 @@
 ---
 title: "Campo sem validação == Caos"
 tags: [programador]
-hide_ads: true
 worked: 2:20
 
 #2014-11-22 2:20

@@ -4,7 +4,6 @@ title: Shell Script
 hide_comments: true
 hide_read_more: true
 hide_tags: true
-hide_ads: true
 article_footer_after: false
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Refiz o site usando mobile first
 tags: [site]
-hide_ads: true
 worked: 9:00
 
 #2014-09-28 0:20 ideias iniciais

@@ -1,7 +1,6 @@
 ---
 title: 15 anos de Funções ZZ
 tags: [festa, app, zz, programador, meu-querido-diario]
-hide_ads: true
 worked: 2:00
 ---
 

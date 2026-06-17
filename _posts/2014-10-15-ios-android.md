@@ -1,7 +1,6 @@
 ---
 title: Mudei do iOS pro Android e estou feliz
 tags: [meu-querido-diario]
-hide_ads: true
 worked: 7:00
 
 #2014-10-09 1:11

@@ -1,7 +1,6 @@
 ---
 title: "Raridade: teve ensaio da banda"
 tags: [musica, meu-querido-diario]
-hide_ads: true
 worked: 5:00
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Tenho três empregos
 tags: [meu-querido-diario, livro, mog]
-hide_ads: true
 worked: 4:00
 ---
 

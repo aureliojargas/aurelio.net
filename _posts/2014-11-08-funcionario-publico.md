@@ -1,7 +1,6 @@
 ---
 title: Funcionário Público
 tags: [meu-querido-diario]
-hide_ads: true
 worked: 10:30
 
 #2014-10-10 3:45

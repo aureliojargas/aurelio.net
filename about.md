@@ -1,6 +1,5 @@
 ---
 title: Aurelio Jargas – Coder & Writer
-hide_ads: true
 hide_author: true
 hide_read_more: true
 hide_comments: true

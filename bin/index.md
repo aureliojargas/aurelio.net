@@ -1,7 +1,6 @@
 ---
 title: Meus softwares (apps)
 subtitle: Softwares livres, abertos, open source, grátis, etcetcetc
-hide_ads: true
 ---
 
 > **Programar é criar** — Uma idéia de sua cabeça vira um "ser vivo" que habita o computador e se relaciona com outros programas e seres humanos.

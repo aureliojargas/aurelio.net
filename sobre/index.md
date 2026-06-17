@@ -2,7 +2,6 @@
 title: Sobre
 hide_prev_next: true
 hide_byline: true
-hide_ads: true
 hide_tags: true
 hide_read_more: true
 hide_comments: true

@@ -1,6 +1,5 @@
 ---
 title: Cygwin – Portal brasileiro
-hide_ads: true
 hide_date: true
 ---
 

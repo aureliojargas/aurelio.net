@@ -1,7 +1,6 @@
 ---
 title: Aprenda expressões regulares em um dia
 tags: [regex]
-hide_ads: true
 worked: 3:00
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 'Liberou geral: PDF do miniman agora é gratuito'
 tags: [barbada, shell]
-hide_ads: true
 worked: 4:00
 ---
 

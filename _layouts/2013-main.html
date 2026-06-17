@@ -5,18 +5,13 @@
 
 	<link rel="stylesheet" href="/assets/common.css">
 	<link rel="stylesheet" href="/assets/2013/site.css">
-{% if page.hide_ads != true %}
-	<link rel="stylesheet" href="/assets/2013/ads.css">
-{% else %}
 	<link rel="stylesheet" href="/assets/2013/topbar.css">
 	<link rel="stylesheet" href="/assets/monokai.css">
-{% endif %}
 {% if page.css_extra %}
 	<link rel="stylesheet" href="{{ page.css_extra }}">
 {% endif %}
 {% include head-open-graph.html %}
 {% include analytics.html %}
-{% include ad-auto.html %}
 </head>
 <body>
 
@@ -25,14 +20,6 @@
 {{ content }}
 
 </div><!--main-->
-
-{% if page.hide_ads != true %}
-<div id="sidebar">
-{% include ad-300x600.html %}
-{% include ad-300x600.html %}
-{% include ad-300x600.html %}
-</div><!--sidebar-->
-{% endif %}
 
 {% include footer.html %}
 {% include aureliohead.html %}

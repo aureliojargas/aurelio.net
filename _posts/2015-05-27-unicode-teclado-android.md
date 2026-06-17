@@ -1,7 +1,6 @@
 ---
 title: Como usar Unicode (→★♥♪) no teclado do Android
 tags: []
-hide_ads: true
 worked: 3:30
 ---
 

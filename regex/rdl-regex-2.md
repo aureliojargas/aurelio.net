@@ -3,7 +3,6 @@ date: 2000-07-01
 title: 'Expressões Regulares: Conhecendo as ferramentas complementares'
 hide_comments: true
 hide_tags: true
-hide_ads: true
 article_footer_after: regex-learn-more.html
 ---
 

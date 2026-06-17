@@ -326,3 +326,5 @@
 
 # 2026-06-17
 /email/*                                          /410.html  410
+/ads.txt                                          /410.html  410
+/assets/2013/ads.css                              /410.html  410

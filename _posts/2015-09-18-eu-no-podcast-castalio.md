@@ -1,7 +1,6 @@
 ---
 title: Eu no podcast Castálio
 tags: [meu-querido-diario, podcast]
-hide_ads: true
 worked: 3:00
 ---
 

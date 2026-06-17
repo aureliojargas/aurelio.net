@@ -1,7 +1,6 @@
 ---
 title: "Saindo da caverna: darei cursos em São Paulo"
 tags: [evento, programador, regex, shell]
-hide_ads: true
 worked: 5:30
 ---
 

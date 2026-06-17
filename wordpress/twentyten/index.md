@@ -5,7 +5,6 @@ hide_date: true
 hide_comments: true
 hide_read_more: true
 hide_tags: true
-hide_ads: true
 ---
 
 Em meus sites com [WordPress](/wordpress/), geralmente uso versões modificadas do tema padrão [Twenty Ten](http://wordpress.org/extend/themes/twentyten).

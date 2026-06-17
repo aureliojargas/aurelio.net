@@ -1,7 +1,6 @@
 ---
 title: "Cygwin – O Linux no Windows (artigo de capa, Revista do Linux #47)"
 date: 2003-11-01
-hide_ads: true
 ---
 
 <!--

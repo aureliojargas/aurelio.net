@@ -1,7 +1,6 @@
 ---
 title: Resposta rápida do desenvolvedor
 tags: [meu-querido-diario, programador]
-hide_ads: true
 worked: 4:00
 ---
 

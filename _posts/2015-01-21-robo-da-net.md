@@ -1,7 +1,6 @@
 ---
 title: O robô da NET me atendeu muito bem
 tags: [meu-querido-diario]
-hide_ads: true
 worked: 2:30
 
 #2015-01-21 2:30

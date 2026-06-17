@@ -1,7 +1,6 @@
 ---
 title: Uso o Plant Nanny pra tomar 2L/dia de água
 tags: [meu-querido-diario]
-hide_ads: true
 worked: 4:30
 
 #????-??-?? 1:00 texto inicial

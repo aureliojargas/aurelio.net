@@ -46,14 +46,8 @@ defaults:
       path: ""
       type: posts
     values:
-      hide_ads: true
       # /blog/2009/04/29/slap-chop/index.html
       permalink: /blog/:year/:month/:day/:title/
-
-  - scope:
-      path: articles
-    values:
-      hide_ads: true
 
   - scope:
       path: correria
@@ -66,14 +60,8 @@ defaults:
       path: curso
     values:
       title_prefix: "Evento: "
-      hide_ads: true
       hide_date: true
       hide_tags: true
-
-  - scope:
-      path: doc
-    values:
-      hide_ads: true
 
   - scope:
       path: doc/coluna
@@ -94,13 +82,7 @@ defaults:
       path: moneylog
     values:
       article_footer_after: moneylog-nav.html
-      hide_ads: true
       hide_read_more: true
-
-  - scope:
-      path: musica
-    values:
-      hide_ads: true
 
   - scope:
       path: projects
@@ -127,7 +109,6 @@ defaults:
     values:
       css_extra: /regex/regex.css
       article_footer_after: regex-footer.html
-      hide_ads: true
       hide_read_more: true
 
   - scope:
@@ -136,14 +117,12 @@ defaults:
       layout: regex-guia
       title_suffix: " - Livro EXPRESSÕES REGULARES, por Aurelio Jargas"
       index: /regex/guia/
-      hide_ads: true
 
   - scope:
       path: shell
     values:
       css_extra: /regex/regex.css
       article_footer_after: shell-learn-more.html
-      hide_ads: true
       hide_read_more: true
 
   - scope:
@@ -156,7 +135,6 @@ defaults:
     values:
       css_extra: /regex/regex.css
       article_footer_after: sed-learn-more.html
-      hide_ads: true
       hide_read_more: true
 
   - scope:
@@ -176,7 +154,6 @@ defaults:
     values:
       css_extra: /regex/regex.css
       article_footer_after: vim-learn-more.html
-      hide_ads: true
       hide_read_more: true
 
 
@@ -191,8 +168,6 @@ defaults:
 # hide_byline: true
 # hide_author: true
 # hide_date: true
-# hide_ads: true
-# hide_ad_top: true
 # hide_tags: true
 # hide_read_more: true
 # hide_comments: true

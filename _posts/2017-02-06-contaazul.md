@@ -1,7 +1,6 @@
 ---
 title: Minha experiência na ContaAzul
 tags: [meu-querido-diario]
-hide_ads: true
 worked: 12:00
 ---
 
