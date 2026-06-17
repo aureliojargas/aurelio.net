@@ -81,12 +81,6 @@ defaults:
       layout: coluna
 
   - scope:
-      path: email
-    values:
-      layout: email
-      title_suffix: " — Textos de E-mail"
-
-  - scope:
       path: fvm
     values:
       layout: 2013-page
