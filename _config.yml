@@ -13,9 +13,21 @@ description: Relaxe, leia com calma, aproveite a viagem.
 highlighter: rouge  # Default since Jekyll 3.0
 
 ### Markdown
-markdown: redcarpet
-redcarpet:
-  extensions: ["fenced_code_blocks", "autolink"]
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  # Disables smart quotes (forces straight single and double quotes via HTML entities)
+  smart_quotes: [apos, apos, quot, quot]
+
+  # Disables all typographic symbol conversions
+  typographic_symbols:
+    ndash: --        # Prevents conversion of -- to – (en-dash)
+    mdash: ---       # Prevents conversion of --- to — (em-dash)
+    hellip: ...      # Prevents conversion of ... to … (ellipsis)
+    apostrophe: "'"  # Prevents conversion of ' to ’ (typographic apostrophe)
+
 # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
 # Recursive glob: assets/**/*.js
