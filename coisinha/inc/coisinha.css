@@ -87,28 +87,6 @@ table#tradutor th.traduzido { width:50%; }
 	text-decoration:underline;
 }
 
-/* Ads */
-#adleft, #adright {
-	vertical-align:top;
-/*	padding-top:20px;*/
-}
-#adright    { text-align:right; width:121px; }
-#adleft     { text-align:left ; width:161px; }
-#adleft300  { text-align:left ; width:301px; }
-.adbox      { width:336px; }
-.adtwins    { width:672px; margin:4em; }
-.twinleft   { padding-right:30px; }
-.adcenter   { margin-right:auto; margin-left:auto; }
-.adbottom   { margin-top:25px; margin-bottom:25px; }
-.adtop      { margin-top: 5px; margin-bottom:25px; }  /* 20px é padding-top do #content */
-#ad-top-resp {
-	background-color: black;
-	color: silver;
-	margin: 0;
-	text-align: center;
-	padding: 30px 0;
-}
-
 /* Tema preto e amarelo */
 body               { color:#ccc  ; background-color:black; }
 body a             { color:yellow;                         text-decoration:none; }
