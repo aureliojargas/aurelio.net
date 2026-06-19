@@ -38,7 +38,6 @@ Bem, eu tive a paciência de tocar em cada uma das teclas e anotar todos os cara
 
 <table id="unicodes" class="tableborder">
     <tr><th colspan="2">Teclado numérico [?123]</th></tr>
-
     <tr><td> 1 </td><td> ¹ ½ ⅓ ¼ ⅛ </td></tr>
     <tr><td> 2 </td><td> ² ⅔       </td></tr>
     <tr><td> 3 </td><td> ³ ¾ ⅜     </td></tr>
@@ -50,17 +49,15 @@ Bem, eu tive a paciência de tocar em cada uma das teclas e anotar todos os cara
     <tr><td> % </td><td> ‰         </td></tr>
     <tr><td> - </td><td> — _ – ·   </td></tr>
     <tr><td> + </td><td> ±         </td></tr>
-    <tr><td> ( </td><td> < { [     </td></tr>
-    <tr><td> ) </td><td> > } ]     </td></tr>
-    <tr><td> * </td><td> ★ † ‡    </td></tr>
+    <tr><td> ( </td><td> &lt; { [  </td></tr>
+    <tr><td> ) </td><td> &gt; } ]  </td></tr>
+    <tr><td> * </td><td> ★ † ‡     </td></tr>
     <tr><td> " </td><td> „ “ ” « » </td></tr>
     <tr><td> ' </td><td> ‚ ‘ ’ ‹ › </td></tr>
     <tr><td> ! </td><td> ¡         </td></tr>
     <tr><td> ? </td><td> ¿         </td></tr>
     <tr><td> . </td><td> …         </td></tr>
-
     <tr><th colspan="2">Teclado de símbolos [=\&lt;]</th></tr>
-
     <tr><td> • </td><td> ♣ ♠ ♥ ♦ ♪ </td></tr>
     <tr><td> π </td><td> Π         </td></tr>
     <tr><td> ¶ </td><td> §         </td></tr>

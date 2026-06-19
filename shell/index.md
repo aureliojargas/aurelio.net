@@ -208,8 +208,8 @@ conceitos.
 ## Scripts
 
 * [ansi2html](http://alonso-andres.sites.uol.com.br/ansi2html.sh.zip) *por Alonso Andres*
-Converte textos coloridos com caracteres ANSI (como a saída do comando "ls
---color") em uma página HTML, preservando as cores originais. É um script
+Converte textos coloridos com caracteres ANSI (como a saída do comando
+`ls --color`) em uma página HTML, preservando as cores originais. É um script
 shell com o coração da conversão sendo um script SED. Ainda usa CSS além do
 próprio HTML. Idéia simples, resultado poderoso!
 

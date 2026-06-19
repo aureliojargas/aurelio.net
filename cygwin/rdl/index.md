@@ -283,15 +283,15 @@ Começou a ter idéias? Já imaginou não depender mais exclusivamente das ferra
 
 Para os já iniciados no modo texto: você conecta o cabo USB da sua câmera fotográfica digital e precisa passar para o computador todas as fotos armazenadas nela. O que é mais rápido:
 
-1.  Abrir o Windows Explorer
-2.  Clicar em “Meu Computador”
-3.  Clicar em “E:” (ou “F:” ou ...)
-4.  Clicar nas pastas da câmera até chegar na fotos
-5.  Selecionar todos os arquivos
-6.  Apertar Ctrl+X (recortar)
-7.  Clicar em “C:”
-8.  Clicar nas pastas até escolher o destino
-9.  Apertar Ctrl+V (colar)
+1. Abrir o Windows Explorer
+2. Clicar em “Meu Computador”
+3. Clicar em “E:” (ou “F:” ou ...)
+4. Clicar nas pastas da câmera até chegar na fotos
+5. Selecionar todos os arquivos
+6. Apertar Ctrl+X (recortar)
+7. Clicar em “C:”
+8. Clicar nas pastas até escolher o destino
+9. Apertar Ctrl+V (colar)
 10. Fechar o Windows Explorer
 
 Ou simplesmente:
