@@ -18,4 +18,4 @@ serve: url-chromeos
 	bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0
 
 url-chromeos:
-	@if test "$$(uname -n)" = penguin; then echo "http://$$(hostname -I | tr -dc 0-9.):4000"; fi
+	@if test "$$(uname -n)" = penguin; then echo "http://$$(hostname -I | cut -d ' ' -f 1):4000"; fi
