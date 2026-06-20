@@ -102,7 +102,7 @@ repos:
         exclude: |
           (?x)
           ^(
-          # Those propbably can be fixed
+          # Those probably can be fixed
           _includes/disqus\.html |
           _includes/projects-sidebar\.html |
           _layouts/correria\.html |
