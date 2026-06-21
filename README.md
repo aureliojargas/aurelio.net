@@ -115,6 +115,18 @@ bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0
 bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0 --port 8080
 ```
 
+## Linters
+
+Install [pre-commit](https://pre-commit.com/#install).
+
+Configure it to run automatically in every commit and push:
+
+```console
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+pre-commit installed at .git/hooks/pre-push
+```
+
 ## Images with captions
 
 The only special markup I use in my articles is the centered image with caption at bottom.

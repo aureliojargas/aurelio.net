@@ -1,0 +1,40 @@
+default_install_hook_types: [pre-commit, pre-push]
+exclude: |
+  (?x)
+  ^
+  # Released files, never change them
+  moneylog/moneylog4-txt\.html |
+  moneylog/moneylog[1234]\.html |
+  moneylog/portable/moneylog5\.html |
+  projects/moneylog/moneylog[234]\.html
+  $
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      #- id: check-executables-have-shebangs
+      #- id: check-shebang-scripts-are-executable
+      - id: check-vcs-permalinks
+        exclude: |
+          (?x)
+          ^
+          _posts/2011-06-24-vi-livro-sed-txt\.html |
+          _posts/2011-12-17-jogo-emomemory-agora-e-gratuito-codigo-fonte-liberado\.html
+          $
+      - id: check-xml
+        exclude: |
+          (?x)
+          ^
+          feed\.xml  # has front matter
+          $
+      - id: check-yaml
+      #- id: end-of-file-fixer
+      - id: mixed-line-ending
+        exclude: |
+          (?x)
+          ^
+          bin/php/recados\.phps |     # false positive: has ^M
+          doc/dotfiles/screenrc\.txt  # false positive: has ^M
+          $
+      #- id: trailing-whitespace
