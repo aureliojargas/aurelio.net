@@ -13,6 +13,7 @@ build:
 update-html-repo:
 	rm -r ../aurelio.net.html/*
 	mv _site/* ../aurelio.net.html
+	rmdir _site
 
 serve: url-chromeos
 	bundle exec jekyll serve --watch --limit_posts 10 --incremental --host 0.0.0.0
