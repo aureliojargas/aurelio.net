@@ -31,6 +31,11 @@
 module Jekyll
 	module ImgcaptionFilter
 		def imgcaption(input)
+
+			# We only act on Markdown files, skip others (e.g., HTML)
+			current_page = @context.registers[:page]
+			return input unless current_page && current_page['path'] && current_page['path'].end_with?('.md')
+
 			input.gsub(
 				/<p>(<img src=".+?" alt="">)<\/p>/,
 				'<p class="image">\1</p>'
