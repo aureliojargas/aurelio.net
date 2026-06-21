@@ -38,3 +38,67 @@ repos:
           doc/dotfiles/screenrc\.txt  # false positive: has ^M
           $
       #- id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: htmlhint
+        name: HTMLHint (Linter)
+        entry: htmlhint --config .htmlhintrc --format unix
+        language: node
+        additional_dependencies: [htmlhint@latest]  # Requires: sudo apt install libatomic1
+        types: [html]
+        require_serial: true  # otherwise it uses batches, confusing output
+
+        # Paths violating active rules. Fix them.
+        exclude: |
+          (?x)
+          ^
+          # Those propbably can be fixed
+          _includes/disqus\.html |
+          _includes/projects-sidebar\.html |
+          _layouts/correria\.html |
+          _posts/2004-08-08-vida-de-pia\.html |
+          _posts/2005-06-10-toc-toc-toc-tem-alguem-ai\.html |
+          _posts/2006-09-26-adium-book-nos-holofotes\.html |
+          _posts/2007-02-02-moneylog-experience-2\.html |
+          _posts/2007-02-27-numero-13-sorte-e-coincidencia\.html |
+          _posts/2007-05-09-dias-agitados-em-curitiba-ii\.html |
+          _posts/2007-05-11-captcha-de-pobre\.html |
+          _posts/2008-04-04-parto-prematuro\.html |
+          _posts/2009-06-30-10anos-vim\.html |
+          _posts/2009-07-17-10anos-expressoes-regulares\.html |
+          _posts/2009-08-26-miniman\.html |
+          _posts/2009-10-03-expressoes-regulares-3a-edicao\.html |
+          _posts/2009-12-02-cara-ou-coroa\.html |
+          _posts/2009-12-16-10-meses-de-twitter\.html |
+          _posts/2010-07-19-como-impedir-uma-particao-de-montar-automaticamente-no-mac-os-x\.html |
+          _posts/2010-09-18-dvd-do-brecho\.html |
+          _posts/2011-01-31-configurar-seu-mac-para-simular-uma-impressora-pdf-printer\.html |
+          _posts/2011-02-04-imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint\.html |
+          _posts/2011-06-21-iphone-tim-ddd-fail\.html |
+          aurelio/index\.html |
+          bin/java/cadusu\.html |
+          bin/java/conectar\.html |
+          blog-arquivo\.html |
+          carve/index\.html |
+          coisinha/subwaytor/index\.html |
+          curso/material/desenvolvedor/index\.html |
+          curso/material/vim-ref\.html |
+          curso/sdsl-2/desenvolvedor/index\.html |
+          curso/sucesu/sucesu-desenvolvedor-apoio\.html |
+          curso/sucesu/sucesu-seder-apoio\.html |
+          doc/rdl/areas-compartilhadas\.html |
+          doc/rdl/poder-modo-texto\.html |
+          dumbs/.* |
+          foto/tosco/index\.html |
+          log/index\.html |
+          misc/leitura_dinamica/index\.html |
+          moneylog/portable/demo/index\.html |
+          musica/ddd/.* |
+          projects/sedsed/index\.html |
+          regex/casar-ip\.html |
+          sed/gsed4_random_thread\.html |
+          surf/index\.html |
+          valeta/historia\.html |
+          valeta/index\.html
+          $
