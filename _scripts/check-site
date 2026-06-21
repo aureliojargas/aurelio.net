@@ -25,6 +25,11 @@ text_files=$(_scripts/list-site-files text)
 html_files=$(_scripts/list-site-files html)
 css_files=$(_scripts/list-site-files css)
 
+test -z "$all_files" && { echo "no files found in _site"; exit 1; }
+test -z "$text_files" && { echo "no text files found in _site"; exit 1; }
+test -z "$html_files" && { echo "no HTML files found in _site"; exit 1; }
+test -z "$css_files" && { echo "no CSS files found in _site"; exit 1; }
+
 # Search for the {{...}} pattern in repo files
 check_accidental_liquid_markup() {
     git grep -I '{{.*}}' |
