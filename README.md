@@ -40,7 +40,7 @@ gem install bundler --user-install --no-document
 
 # Set up bundler (check the exact path for **/bin under .gem)
 echo 'export BUNDLE_PATH="$HOME/.local/share/gem"' >> ~/.bashrc
-echo 'export PATH="$BUNDLE_PATH/ruby/3.1.0/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$BUNDLE_PATH/ruby/3.3.0/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 # Install the Jekyll required gems
