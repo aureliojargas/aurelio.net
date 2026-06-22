@@ -36,7 +36,7 @@ cd aurelio.net
 sudo apt install ruby ruby-dev
 
 # Install bundler
-gem install bundler --user-install
+gem install bundler --user-install --no-document
 
 # Set up bundler (check the exact path for **/bin under .gem)
 echo 'export BUNDLE_PATH="$HOME/.local/share/gem"' >> ~/.bashrc
