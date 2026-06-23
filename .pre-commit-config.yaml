@@ -1,12 +1,36 @@
 default_install_hook_types: [pre-commit, pre-push]
+
 exclude: |
   (?x)
   ^(
-  # Released files, never change them
+  # Released (versioned) files
+  bin/python/txt2tags-r900\.py |
   moneylog/moneylog4-txt\.html |
-  moneylog/moneylog[1234]\.html |
+  moneylog/moneylog[1-4]\.html |
   moneylog/portable/moneylog5\.html |
-  projects/moneylog/moneylog[234]\.html
+  projects/moneylog/moneylog[234]\.html |
+  projects/sedsed/sedsed-1\.0 |
+  sed/programas/arkanoid/arkanoid-1\.0\.sed |
+  sed/programas/arkanoid/arkanoid-1\.1\.sed |
+  sed/sokoban/sokoban\.sed |
+  sed/1liners-ptBR\.txt |
+  shell/dialog/index-v[1-6]\.t2t |
+  vim/tutor\.pt_BR |
+  vim/vimrc-ivan\.txt |
+  vim/vimrc-voyeg3r\.txt |
+
+  # Generated files
+  moneylog/browser/app/index\.html |
+  moneylog/portable/demo/index\.html |
+  projects/moneylog/online/index\.html |
+  projects/sedarkanoid/arkanoid\.sed\.html |
+  projects/sedsed/email-linker\.sed\.html |
+  projects/sedsokoban/sokoban\.sed\.html |
+  sed/programas/arkanoid/arkanoid\.sed\.html |
+  sed/sokoban/sokoban\.sed\.html |
+
+  # Other
+  log/index\.html  # moneylog v3 spinoff
   )$
 
 repos:
