@@ -14,7 +14,7 @@ repos:
     rev: v6.0.0
     hooks:
       #- id: check-executables-have-shebangs
-      #- id: check-shebang-scripts-are-executable
+      - id: check-shebang-scripts-are-executable
       - id: check-vcs-permalinks
         exclude: |
           (?x)

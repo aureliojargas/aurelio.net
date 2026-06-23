@@ -1,4 +1,3 @@
-#!/bin/sh
 # dialog-lib.sh : biblioteca padrão para dialog em roteiros em bash
 #                 necessita do pacote dialog instalado
 # Autor: aurélio marinho jargas <verde (a) aurelio net>

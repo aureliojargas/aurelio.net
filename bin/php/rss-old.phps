@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?
 # Autor: Deivison Alves Elias http://www.noticiaslinux.com.br, Agosto de 2004
 # URL  : http://aurelio.net/bin/php/rss-old.php
