@@ -1,3 +1,4 @@
+#!/bin/bash
 /a/git/moneylog/util/gen-portable > /tmp/z
 diff -u index.html /tmp/z | mate -
 
