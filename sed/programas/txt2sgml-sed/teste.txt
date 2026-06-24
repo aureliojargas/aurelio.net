@@ -171,5 +171,3 @@ DETALHES
 - os "embonecamentos" são tratados apenas se estiverem em uma linha. não
   sei se seria legal tê-lo multilinha tipo abre um negrito numa linha e
   fecha em outra, isso poderia confundir muito.
-
-

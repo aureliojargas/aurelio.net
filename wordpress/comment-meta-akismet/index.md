@@ -43,4 +43,3 @@ OPTIMIZE TABLE wp_commentmeta
 E aí, economizou muito espaço? Conte pra gente nos comentários!
 
 > **Nota:** Ainda estou procurando uma maneira limpa de impedir que o Akismet grave estes dados na tabela. Quando eu achar, atualizarei este post.
-

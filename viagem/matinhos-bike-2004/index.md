@@ -122,4 +122,3 @@ Confortável, de carro :)
   * **Torcida:** Ninguém botou fé que a gente ia conseguir :) No fim do dia foram vários telefonemas de parentes e conhecidos. "O quê, eles chegaram mesmo?"
 
   * **Dores:** Após os 70 km de percurso, a diversão deu lugar às dores. Tive dores na bunda de ficar sentado no banco o dia todo e dores no joelho pela força nas pedaladas. No dia seguinte acordei com dores na parte de trás do joelho esquerdo e no terceiro dia tive dores nas coxas.
-

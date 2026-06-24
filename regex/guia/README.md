@@ -21,4 +21,3 @@ Todos os demais são arquivos HTML com o conteúdo do livro.
 Estes arquivos foram gerados anos atrás. Primeiro foi gerado um único arquivão HTML à partir dos fontes originais do livro (no formato [txt2tags](http://txt2tags.org)). Depois esse arquivo foi dividido em vários pelo saudoso HTMLDOC. Ainda tinha alguns scripts em shell para inserir cabeçalhos, rodapé, anúncios, essas coisas.
 
 Como nunca mais precisei mexer nisso, arquivei todo o ambiente original e agora só restaram os HTML gerados. Se um dia precisar mudar algo, faço alterações em lote em todos os arquivos de uma vez.
-

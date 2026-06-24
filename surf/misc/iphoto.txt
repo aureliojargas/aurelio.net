@@ -22,5 +22,3 @@ Procedimento completo das fotos:
 - Rodar os scripts para finalizar as páginas (fix & watermark) e conferir
 - Atualizar index.html
 - Upload e corre pro abraço
-
-

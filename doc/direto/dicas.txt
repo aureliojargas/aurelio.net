@@ -112,4 +112,3 @@ lmtpsocket: /var/lib/imap/socket/lmtp
 # and run the daemon: saslauthd -a pam
 #sasl_pwcheck_method: pwcheck
 sasl_pwcheck_method: saslauthd
-

@@ -8,4 +8,3 @@ title: Expressões Regulares + Ruby
 * http://www.ruby-doc.org/core/classes/String.html
 * http://www.regular-expressions.info/ruby.html
 * http://rubular.com
-

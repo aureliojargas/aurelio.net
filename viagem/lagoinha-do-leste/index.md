@@ -128,4 +128,3 @@ Mas no rosto há um sorriso de satisfação ao lembrar de tantos momentos felize
     * [Guia Floripa](http://www.guiafloripa.com.br/turismo/praias/lleste.php3)
     * [Guia da Trilhas da Ilha](http://www.guiafloripa.com.br/trilhas/11_lagoinha/lagoinha.html)
     * [Ao Redor Da Ilha](http://www.aoredordailha.com.br/trekking-florianopolis/lagoinha-do-leste.asp)
-

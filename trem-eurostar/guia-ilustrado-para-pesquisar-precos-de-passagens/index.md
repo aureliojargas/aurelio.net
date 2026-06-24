@@ -134,4 +134,3 @@ Ele te ajudou a encontrar a passagem que você queira?
 Ficou faltando alguma coisa, tem alguma sugestão?
 
 Investi um bom tempo para fazer deste guia algo bem didático, de fácil entendimento, especialmente para ajudar aqueles que não dominam a língua inglesa. Agora eu quero saber o que você achou dele. Olha a caixa aí embaixo, **deixe seu comentário! :)**
-

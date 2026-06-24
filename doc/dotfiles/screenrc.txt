@@ -133,6 +133,3 @@ screen -t freshmeat    3 lynx http://www.freshmeat.net
 screen -t zznoticias   4 bash -c "funcoeszz zznoticiaslinux; echo; echo ---FIM---; read"
 screen -t artistas     5 bash -c "funcoeszz zzcasadosartistas; echo; echo ---FIM---; read"
 select 1
-
-
-
