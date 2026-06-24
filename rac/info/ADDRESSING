@@ -300,4 +300,3 @@ FIRST AND LAST OCCURRENCE
 	use *1, as in =foobar=*1.
 
 	For the last occurrence, use *-1.
-

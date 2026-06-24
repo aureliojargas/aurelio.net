@@ -124,9 +124,9 @@ Outro que matou a pau foi o _Yoshi’s Island_, a continuação do _Super Mario 
 Fora os joguinhos, também escrevi muito nessas férias. O aurelio.net sofreu um faxina geral, daquelas do tipo "quando eu tiver tempo eu faço". Foram criadas áreas novas, reorganizadas outras que estavam bagunçadas e um CSS padronizado e limpo para ser usado na maioria das páginas.
 
   * Na parte musical foi criada uma área específica, contando com várias histórias e [um artigo novinho em folha que descreve o pogo, a "dança" punk](/pogo/).
-  
+
   * Na parte de documentação foi criado [um índice centralizado para todos os textos técnicos que já escrevi](/doc/nerd.html). Também fiz o FAQ VERDE. Dois itens que estavam há tempos na minha lista de pendências.
-  
+
   * E para minha surpresa, surgiu a idéia de um livro novo e escrevi um pedação. O detalhe é que é uma história, com personagens e roteiro. Roteiro nerd, é claro. Mas esse projeto ainda é uma criança, vamos ver se vai para frente.
 
 Como é bom ficar sem Internet, o tempo rende que é uma beleza, sem distrações!

@@ -8,4 +8,3 @@ title: Expressões Regulares + Tcl
 * http://www.tcl.tk/doc/howto/regexp81.tml
 * http://www.tcl.tk/man/tcl8.1/TclCmd/re_syntax.htm
 * http://www.regular-expressions.info/tcl.html
-

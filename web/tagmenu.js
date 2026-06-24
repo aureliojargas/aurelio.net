@@ -156,8 +156,8 @@ var allLinks = [
 [0, 'Dumbs',		'dumbs/', 'banda musica'],
 [0, 'DDD',		'musica/ddd/', 'musica'],
 [0, 'Baterna',		'baterna/', 'musica'],
-[0, 'Bateria',		'musica/', 'musica'], 
-[0, 'Carbona',		'blog/2006/04/30/dica-de-banda-carbona/', 'banda musica'], 
+[0, 'Bateria',		'musica/', 'musica'],
+[0, 'Carbona',		'blog/2006/04/30/dica-de-banda-carbona/', 'banda musica'],
 [1, 'Roda de Pogo - A Dança Punk',	'pogo/', 'musica'],
 
 // site
@@ -255,7 +255,7 @@ if(!Array.indexOf){ // IE6, Safari 2 & friends
 function getActiveTags() {
 	var menuTags = getAllMenuTags();
 	var activeTags = new Array();
-	
+
 	for (var i = 0; i < menuTags.length; i++) {
 		var thisTag = menuTags[i];
 		if (thisTag.className == 'on') {
@@ -322,7 +322,7 @@ function clicked() {
 	} else {
 		toggleTag(this);
 	}
-	return false;	
+	return false;
 }
 
 function toggleMore() {
@@ -333,12 +333,12 @@ function toggleMore() {
 		this.innerHTML = '&gt;';
 		this.nextSibling.style.display = 'none';
 	}
-	return false;	
+	return false;
 }
 function toggleMode() {
 	this.innerHTML = (this.innerHTML == 'Single Mode') ?
 		'Multiple Mode' : 'Single Mode';
-	return false;	
+	return false;
 }
 function toggleNumbers() {
 	var els = document.getElementById('menutags').getElementsByTagName('span');
@@ -357,7 +357,7 @@ function toggleNumbers() {
 			els[i].style.display = elDisplay;
 		}
 	}
-	return false;	
+	return false;
 }
 
 function init() {
@@ -371,7 +371,7 @@ function init() {
 			var thisTag = theTags[j];
 			if (tagCount[thisTag]) {
 				tagCount[thisTag] += 1;
-			} else {	
+			} else {
 				tagCount[thisTag] = 1;
 				allTags.push(thisTag);
 			}
@@ -382,7 +382,7 @@ function init() {
 	// Create tag cloud
 	var tagsArea = document.getElementById('menutags');
 	for (var i = 0; i < allTags.length ; i++) {
-		
+
 		// The tag count
 		el = document.createElement('span');
 		el.className = 'menutagcount';
@@ -435,7 +435,7 @@ function init() {
 	// Pack it all
        	extraArea.appendChild(extraAreaMore);
     	tagsArea.appendChild(extraArea);
-	
+
 	// Create link cloud
 	var linksArea = document.getElementById('menulinks');
 	allLinks.sort(sortLinkArray);
@@ -445,7 +445,7 @@ function init() {
 		el.href = allLinks[i][2];
 		el.className = allLinks[i][3];
      	  	el.appendChild(document.createTextNode(allLinks[i][1]));
-		
+
 		// Using one weight level (bold) instead multi (font-size)
 		//el.style.fontSize = linksWeightSize[allLinks[i][0]] + 'em';
 		if (allLinks[i][0] > 0) { el.style.fontWeight = 'bold'; }
@@ -453,7 +453,7 @@ function init() {
 		// Shows only the default tag links
 		el.style.display = (showorNot(el, [defaultTag])
 			) ? 'block' : 'none';
-		
+
     		linksArea.appendChild(el);
         	linksArea.appendChild(document.createTextNode('\n')); //sep
 	}

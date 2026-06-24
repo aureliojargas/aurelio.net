@@ -183,4 +183,3 @@ No site oficial do parque, além das informações, há várias fotos e vídeos 
   * [Estação Mata Atlântica](http://www.unipraias.com.br/estacao-mata-atlantica.php#topo)
   * [Estação Laranjeiras](http://www.unipraias.com.br/estacao-laranjeiras.php#topo)
   * [YouHooo - Trenó de montanha](http://www.youhooo.com.br)
-

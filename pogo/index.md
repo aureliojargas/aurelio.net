@@ -213,5 +213,3 @@ Links da Wikipedia sobre o assunto (em inglês):
   * [Circle Pit](http://en.wikipedia.org/wiki/Circle_pit)
   * [Stage Diving](http://en.wikipedia.org/wiki/Stage_diving)
   * [Skank](http://en.wikipedia.org/wiki/Skank)
- 
-  

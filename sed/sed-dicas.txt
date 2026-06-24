@@ -1,4 +1,4 @@
-# 20000524 <verde (a) aurelio net> 
+# 20000524 <verde (a) aurelio net>
 
 # aceita várias substituições, separadas por ponto-e-vírgula ou ENTER
 sed 's/uqe/que/; s/qeu/que/; s/euq/que/'
@@ -55,7 +55,7 @@ sed 's/.\{2,4\}//'              # apaga de 2 a 4 caracteres (o máx. que tiver)
 
 sed '/padrão/q'                 # para a leitura do arquivo ao achar o padrão
 sed '/padrão/d'                 # apaga as linhas que contém o padrão
-sed '/padrão1/,/padrão2/d"      # apaga um bloco de linhas 
+sed '/padrão1/,/padrão2/d"      # apaga um bloco de linhas
 
 
 # muito útil!!!!
@@ -108,7 +108,7 @@ passados como uma coisa única para um comando, no caso o sed.
 atenção: isso é bash e não sed! (então por quê não está nas dicas
 de bash? boa pergunta.  &:)  )
 
--------------------------------------------------------------------  
+-------------------------------------------------------------------
 
 APRENDENDO SOBRE O SED:
 ----------------------
@@ -116,7 +116,7 @@ APRENDENDO SOBRE O SED:
 
 # txt -> HTML:
 # -----------
-# 
+#
 # tranforma texto (URL) em tags HTML de links.
 # era : http://www.com
 # fica: <a href="http://www.com">http://www.com</a>
@@ -140,7 +140,7 @@ sed 's_\<\(ht\|f\)tp://[^ ]*_<a href="&">&</a>_'
 # o & pega o padrão selecionado que está no buffer
 
 
--------------------------------------------------------------------  
+-------------------------------------------------------------------
 
 alinhamento:
 -----------
@@ -156,7 +156,7 @@ coloque um espaço em branco no começo dessa linha
     <ESPAÇO>&
 caso uma substituição tenha sido feita na última s///, vá até (t) a marca "a"
     ta
-	
+
 e assim volta-se para o início da linha, fazendo um laço que só acaba quando
 a linha toda tiver mais que 79 caracteres, aí a substituição não será feita,
 e comando t nada fará, continuando o processamento normalmente para a próxima
@@ -171,7 +171,7 @@ centro  : sed ':a;s/^.\{1,78\}$/ & /;ta'
 vertical: sed 's/./&\
 /g'
 
--------------------------------------------------------------------  
+-------------------------------------------------------------------
 
 5 maneiras de se emular o head
 ------------------------------
@@ -181,4 +181,3 @@ sed 1,10!d
 sed 10q
 sed 11,$d
 sed -n 11,$!p
-

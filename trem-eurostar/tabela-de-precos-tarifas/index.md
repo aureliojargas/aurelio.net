@@ -25,4 +25,3 @@ Assim sendo, para saber o preço de uma viagem, você precisará fazer uma pesqu
 Não se preocupe, preparei um guia ilustrado para te ajudar, que mostra passo a passo como fazer a pesquisa de preços:
 
   * [Trem Eurostar: Guia ilustrado para pesquisar preços de passagens](/trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/).
-

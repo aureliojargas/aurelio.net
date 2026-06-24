@@ -1,4 +1,3 @@
-#!/bin/sh
 # sh-lib.sh : biblioteca padrão para roteiros em bash
 #
 # Autor: aurélio marinho jargas <verde (a) aurelio net>

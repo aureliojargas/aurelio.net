@@ -3,7 +3,7 @@
 ;; Copyright (C) 2009  Leslie Harlley Watter
 
 ;; Author: Leslie Harlley Watter <leslie@watter.org>
-;; Keywords: 
+;; Keywords:
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

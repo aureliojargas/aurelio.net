@@ -8,11 +8,11 @@ INTRODUÇÃO:
 No vim temos vários "modos", que são estados do editor.
 São eles:
 
-Modo               Tecla   Rodapé          Descrição 
----------------------------------------------------------------------------  
+Modo               Tecla   Rodapé          Descrição
+---------------------------------------------------------------------------
 de Inserção        i       -- INSERT --    Inserção de texto
 de Comandos        <ESC>                   Comandos de manipulação de texto
-Linha de comando   :       :               Comandos de manipulação arquivo 
+Linha de comando   :       :               Comandos de manipulação arquivo
 Visual             v       -- VISUAL --    Seleção visual de texto
 Busca              /       /               Busca de padrões no texto
 Reposição          R       -- REPLACE --   Inserção sobreescrevendo

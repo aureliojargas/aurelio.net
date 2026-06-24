@@ -1,3 +1,4 @@
+#!/bin/bash
 vim \
   -c 'set background=dark' \
   -c 'TOhtml' \

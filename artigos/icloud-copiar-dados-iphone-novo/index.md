@@ -66,4 +66,3 @@ Quer um conselho? Deixe o iPhone quieto e vá fazer outra coisa.
 Quando tudo estiver terminado, dê uma boa conferida se não está faltando nada. Sabe como é, melhor conferir do que se arrepender depois de apagar o iPhone antigo :)
 
 Para mais informações sobre iCloud, backup e restauração, [leia este artigo da Apple](http://support.apple.com/kb/HT4859?viewlocale=pt_BR).
-

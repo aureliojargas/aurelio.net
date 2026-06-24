@@ -15,28 +15,28 @@ voce vai precisar para fazer este programinha rodar :-)
 
 
 
-* Configurando o script 
+* Configurando o script
 
-vamos lah, primeiro voce vai ter que setar algumas variaveis 
+vamos lah, primeiro voce vai ter que setar algumas variaveis
 
-$owner - aqui voce vai colocar o seu e-mail ou da pessoa que vai 
+$owner - aqui voce vai colocar o seu e-mail ou da pessoa que vai
          receber os relatorios de visitas
 
 $report - de quantas em quantas visitas voce quer receber o relatorio.
 
 $dir - diretorio onde sera gravada a base de dados do contador.
 
-fez isto, vamos agora para a parte de colocar o contador rodando 
+fez isto, vamos agora para a parte de colocar o contador rodando
 
 
 
 * Colocando o script para funcionar :
 
-Hey, agora vamos lah. este script eh legal pq ele lhe da a 
+Hey, agora vamos lah. este script eh legal pq ele lhe da a
 possibilidade de ter varios contadores usando um mesmo script,
 para isto, voce vai fazer o seguinte comando :
 
-  $ ln counter.php nome_do_contador.cnt 
+  $ ln counter.php nome_do_contador.cnt
 
 ou seja, voce vai poder criar varios contadores, somente criando links
 simbolicos com a terminacao .cnt no seu servidor.
@@ -45,7 +45,7 @@ lembre-se de  setar a permissao de execucao :
 
   $ chmod 755 nome_do_contador.cnt
 
-alem disto voce tem que criar o diretorio nobody ( onde serao gravados 
+alem disto voce tem que criar o diretorio nobody ( onde serao gravados
 os dados do contador ) e seta-lo com possibilidades de escrita :
 
   $ mkdir nobody

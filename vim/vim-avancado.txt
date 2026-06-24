@@ -1,5 +1,5 @@
 v i m    a v a n ç a d o       por Aurélio Marinho Jargas
-- - -    - - - - - - - - 
+- - -    - - - - - - - -
 
 
 REGISTRADORES:
@@ -69,4 +69,3 @@ Type       = verde
 Todo   = preto, fundo marrom
 Error  = branco, fundo vermelho
 Ignore = preto, fundo preto! - esconde
-

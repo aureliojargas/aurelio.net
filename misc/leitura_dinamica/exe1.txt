@@ -35,7 +35,7 @@ EXERCíCIO DE OLHO 1
   pele     de     não     oca     ala     oba     pré     léu     fim
    .       .       .       .       .       .       .       .       .
   hora    zona    hino    ela      tu     mão     cimo    céu     véu
-   .       .       .       .       .       .       .       .       . 
+   .       .       .       .       .       .       .       .       .
   lira    rota    ego     cego    dão     seco    cem     traz    laje
    .       .       .       .       .       .       .       .       .
   fila    fone    gelo    ele     rio     rei     lei     hino    aro
@@ -43,7 +43,7 @@ EXERCíCIO DE OLHO 1
   frio    vale    alto    doa     saco    sino    sei     ira     seca
    .       .       .       .       .       .       .       .       .
   pás     luz     eco     lama    cepo     já     fui     toma    tora
-   .       .       .       .       .       .       .       .       . 
+   .       .       .       .       .       .       .       .       .
   calo    selo    fino    faz     nata    lixo    cota    rima    dano
    .       .       .       .       .       .       .       .       .
   tipo    toma    lado    fome    neta    lata    pote    tela    teia
@@ -51,4 +51,3 @@ EXERCíCIO DE OLHO 1
   tema    meio    tio     anil    raio    siga    anel    cego    azar
    .       .       .       .       .       .       .       .       .
   veia    soma    cena    jaca    peca    caça    ímã     mói     foi
-

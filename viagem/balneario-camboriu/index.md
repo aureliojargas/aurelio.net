@@ -77,4 +77,3 @@ Se você só tem um dia para visitar Balneário Camboriú, segue aqui uma sugest
 
   * [Bondindinho](/viagem/balneario-camboriu/bondindinho/)
   * [Teleférico Camboriú-Laranjeiras – Parque Unipraias](/viagem/balneario-camboriu/parque-unipraias/)
-
