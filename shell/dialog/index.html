@@ -1293,7 +1293,7 @@ done
 
 dialog --title 'LICENÇA do Software' --textbox $0 16 65 \
        --and-widget \
-       --yesno '\nVocê aceita os Termos da Licença?' 8 30 
+       --yesno '\nVocê aceita os Termos da Licença?' 8 30
 </pre>
 
 <p><a href="duas.sh">Baixar este script</a></p>
@@ -1367,21 +1367,21 @@ dialog --begin 5 0 \
 #
 #        80/2 = 40
 #        25/2 = 12
-# 
+#
 # Com isso, sabemos que todas as janelas terão 12 linhas e 40
 # colunas. Esses números também definem as coordenadas de
 # posicionameto:
 #
 #                               0        40        80 colunas
 #      Coordenadas:            0+---------+---------+
-#        ( x, y )               | 0,0     | 0,40    |     
+#        ( x, y )               | 0,0     | 0,40    |
 #          0, 0                 |       #1|       #2|
 #          0,40               12+---------+---------+
 #         12, 0                 | 12,0    | 12,40   |
 #         12,40                 |       #3|       #4|
 #                             24+---------+---------+
 #                               linhas
-#     
+#
 #
 # Obs.: O --no-shadow é usado para que a caixa não tenha
 #       sombra.
@@ -1579,23 +1579,23 @@ trap "kill $CPPID" 2 15
 (
         # enquanto o processo de cópia estiver rodando
         while running $CPPID; do
-        
+
                 # quanto já foi copiado?
                 COPIADO=$(sizeof $DIR_DESTINO)
-                
+
                 # qual a porcentagem do total?
                 PORCENTAGEM=$((COPIADO*100/TOTAL))
-                
+
                 # envia a porcentagem para o dialog
                 echo $PORCENTAGEM
-                
+
                 # aguarda até a próxima checagem
                 sleep $INTERVALO
-        done    
+        done
 
         # cópia finalizada, mostra a porcentagem final
         echo 100
-        
+
 ) | dialog --title "$TITLE" --gauge "$MSG" 8 40 0
 
 #................................................................

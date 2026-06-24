@@ -18,7 +18,7 @@
 # sorendition ab cd  //  a,c=bg  b,d=fg
 #
 #  ab             c&d       c&d
-#  00 normal       0 black   4 blue 
+#  00 normal       0 black   4 blue
 #  1- invert       1 red     5 magenta
 #  25 bright       2 green   6 cyan
 #  3- 1+2          3 brown   7 silver
@@ -26,7 +26,7 @@
 # * attributes are cumulative, so a=3 is invert+bright
 # * colors use the same codes for bg & fg colors,
 #   so cd=22 all you get is green, text unreadable
-# 
+#
 # examples:
 #  00 02 - black bg (0), green fg (2), no attributes (00)
 #  20 30 - brown bg (3), black fg (0), bright bg (2) -> turns yellow
@@ -110,7 +110,7 @@ bind 'K' kill
 shelltitle '] |_'
 
 # para colar no vim sem "identar"
-# ATENÇÃO: é ^a^] 
+# ATENÇÃO: é ^a^]
 register [ "\033:set   pastea"
 register ] "\033:set nopastea"
 bind ^] paste [.]

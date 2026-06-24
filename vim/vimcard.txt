@@ -1,46 +1,46 @@
 
-VIM - CARTÃO DE REFERÊNCIA 
+VIM - CARTÃO DE REFERÊNCIA
 ===========================
 
 
-Movimentos básicos 
+Movimentos básicos
 ------------------
 
 
-h l k j . . . . . . . . . caracter esq., dir., linha acima, abaixo 
-b w . . . . . . . . . . . palavra/token esquerda, direita 
-ge e  . . . . . . . . . . fim palavra/token esquerda, direita 
-{ } . . . . . . . . . . . começo parágrafo anterior, posterior 
-( ) . . . . . . . . . . . começo sentença anterior, posterior 
-0 gm  . . . . . . . . . . começo, meio da linha 
-^ $ . . . . . . . . . . . primeiro, último caracter da linha 
-nG ngg  . . . . . . . . . linha n, padrão o último, primeiro 
+h l k j . . . . . . . . . caracter esq., dir., linha acima, abaixo
+b w . . . . . . . . . . . palavra/token esquerda, direita
+ge e  . . . . . . . . . . fim palavra/token esquerda, direita
+{ } . . . . . . . . . . . começo parágrafo anterior, posterior
+( ) . . . . . . . . . . . começo sentença anterior, posterior
+0 gm  . . . . . . . . . . começo, meio da linha
+^ $ . . . . . . . . . . . primeiro, último caracter da linha
+nG ngg  . . . . . . . . . linha n, padrão o último, primeiro
 n%  . . . . . . . . . . . porcentagem n do arquivo (n deve existir)
-n|  . . . . . . . . . . . coluna n da linha atual 
-% . . . . . . . . . . . . acha próximo parêntese, colchete, coment., #define 
-nH nL . . . . . . . . . . linha n do topo, base da janela 
+n|  . . . . . . . . . . . coluna n da linha atual
+% . . . . . . . . . . . . acha próximo parêntese, colchete, coment., #define
+nH nL . . . . . . . . . . linha n do topo, base da janela
 M . . . . . . . . . . . . linha do meio da janela
 
-Inserção & substituição ! modo insert 
+Inserção & substituição ! modo insert
 -------------------------------------
 
-i a . . . . . . . . . . . insere antes, depois do cursor 
-I A . . . . . . . . . . . insere no início, fim da linha 
-gi  . . . . . . . . . . . insere texto na última posição de iserção  
-gI  . . . . . . . . . . . insere texto na primeira coluna 
-o O . . . . . . . . . . . abre nova linha abaixo, acima da linha atual 
-rc  . . . . . . . . . . . substitui caracter sob cursor por c 
-grc . . . . . . . . . . . como r, mas sem afetar o layout 
-R   . . . . . . . . . . . substitui caracteres começando do cursor 
-gR  . . . . . . . . . . . como R, mas sem afetar o layout 
-cm  . . . . . . . . . . . muda texto do comando de movimento m 
-cc ou S . . . . . . . . . muda linha atual 
-C . . . . . . . . . . . . muda até o fim da linha 
-s . . . . . . . . . . . . muda um caracter e insere 
-~ . . . . . . . . . . . . muda maiúsc./minúsc. e avança cursor 
+i a . . . . . . . . . . . insere antes, depois do cursor
+I A . . . . . . . . . . . insere no início, fim da linha
+gi  . . . . . . . . . . . insere texto na última posição de iserção
+gI  . . . . . . . . . . . insere texto na primeira coluna
+o O . . . . . . . . . . . abre nova linha abaixo, acima da linha atual
+rc  . . . . . . . . . . . substitui caracter sob cursor por c
+grc . . . . . . . . . . . como r, mas sem afetar o layout
+R   . . . . . . . . . . . substitui caracteres começando do cursor
+gR  . . . . . . . . . . . como R, mas sem afetar o layout
+cm  . . . . . . . . . . . muda texto do comando de movimento m
+cc ou S . . . . . . . . . muda linha atual
+C . . . . . . . . . . . . muda até o fim da linha
+s . . . . . . . . . . . . muda um caracter e insere
+~ . . . . . . . . . . . . muda maiúsc./minúsc. e avança cursor
 g~m . . . . . . . . . . . muda maiúsc./minúsc. do movimento m
 gum gUm . . . . . . . . . texto do movim. m minúsculo, maiúsculo
-<m >m . . . . . . . . . . desloca esq., dir. texto do movimento m 
+<m >m . . . . . . . . . . desloca esq., dir. texto do movimento m
 n<< n>> . . . . . . . . . desloca n linhas esquerda, direita
 
 
@@ -53,17 +53,17 @@ dd D  . . . . . . . . . . apaga linha atual, até fim da linha
 J gJ  . . . . . . . . . . junta linha atual com próxima, sem espaço
 :rd [Enter] . . . . . . . apaga r linhas
 :rdx [Enter]  . . . . . . apaga r linhas, põe registrador x
-xp  . . . . . . . . . . . iverte posicionamento de caracteres           
-dl  . . . . . . . . . . . deleta um caracter sobre o cursor             
-diB . . . . . . . . . . . deleta interior de {}                         
-daB . . . . . . . . . . . deleta interior de {} e {}                    
-dib . . . . . . . . . . . deleta interior de ()                         
-dab . . . . . . . . . . . deleta interior de () e ()                    
+xp  . . . . . . . . . . . iverte posicionamento de caracteres
+dl  . . . . . . . . . . . deleta um caracter sobre o cursor
+diB . . . . . . . . . . . deleta interior de {}
+daB . . . . . . . . . . . deleta interior de {} e {}
+dib . . . . . . . . . . . deleta interior de ()
+dab . . . . . . . . . . . deleta interior de () e ()
 
-b  . . . . . . . . . . . ()                                              
-B  . . . . . . . . . . . {}                                              
-i  . . . . . . . . . . . inner interior                                  
-a  . . . . . . . . . . . all tudo                        
+b  . . . . . . . . . . . ()
+B  . . . . . . . . . . . {}
+i  . . . . . . . . . . . inner interior
+a  . . . . . . . . . . . all tudo
 
 
 
@@ -81,7 +81,7 @@ Caracteres especiais em padrões de busca
 \f \F . . . . . . . . . . um nome de arquivo, excluindo dígitos
 \p \P . . . . . . . . . . um caracter imprimível, excluindo dígitos
 \s \S . . . . . . . . . . um espaço em branco, um espaço não-branco
-\e \t \r \b . . . . . . . <esc>, <tab>, [Enter], <bs> 
+\e \t \r \b . . . . . . . <esc>, <tab>, [Enter], <bs>
 \= * \+ . . . . . . . . . combina 0..1, 0..inf, 1..inf de átomos preced.
 \|  . . . . . . . . . . . separa dois ramos (or = ou lógico)
 \( \) . . . . . . . . . . agrupa padrões em um átomo
@@ -139,7 +139,7 @@ Modo Inserção
 ^W  . . . . . . . . . . . apaga palavra antes do cursor
 ^U  . . . . . . . . . . . apaga todos caracteres inseridos linha atual
 ^D ^T . . . . . . . . . . desloca esquerda, direita largura 1 desloc.
-^Kc1c2 ou c1 <- c2  . . . entra dígrafo {c1, c2} 
+^Kc1c2 ou c1 <- c2  . . . entra dígrafo {c1, c2}
 ^Oc . . . . . . . . . . . executa c em modo comando temporário
 ^X^E ^X^Y . . . . . . . . rola acima, abaixo
 <esc> ou ^[ . . . . . . . abandona edição ! modo comando
@@ -158,7 +158,7 @@ yy ou Y . . . . . . . . . copia texto da linha atual no registrador
 p P . . . . . . . . . . . cola registrador depois, antes da posição cursor
 ]p [p . . . . . . . . . . como p, P com recuo ajustado
 gp gP . . . . . . . . . . como p, P deixando cursor depois texto novo
-^e  . . . . . . . . . . . copia a linha abaixo na linha atual (- insert mode -) 
+^e  . . . . . . . . . . . copia a linha abaixo na linha atual (- insert mode -)
 
 
 
@@ -343,9 +343,9 @@ ga  . . . . . . . . . . . mostra valor ASCII do caracter sob cursor
 gf  . . . . . . . . . . . abre arquivo cujo nome está sob cursor
 :redir>f [Enter]  . . . . redireciona saída para arquivo f
 ^@ ^K ^_ \  . . . . . . . teclas sem uso, disponíveis para mape
-q:  . . . . . . . . . . . edita o histórico da linha de comandos  
-q?  . . . . . . . . . . . edita o histórico de pesquisa 
-q/  . . . . . . . . . . . edita o histórico de pesquisa 
+q:  . . . . . . . . . . . edita o histórico da linha de comandos
+q?  . . . . . . . . . . . edita o histórico de pesquisa
+q/  . . . . . . . . . . . edita o histórico de pesquisa
 
 
 )  n)              move o cursor para o início da próxima frase adjacente
@@ -385,7 +385,7 @@ d?pattern<ret> delete text from current pos to first occurrence of
 
  O comando append
  ----------------
- 
+
   Um recurso muito interessante para adicionar texto
   na linha ln+1 é utilizar o comando append
   onde basta você especificar `ln` linha e  escrever

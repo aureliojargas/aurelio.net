@@ -62,7 +62,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
 ```
-    
+
 Traduzindo: o WordPress só vai entrar em ação caso não seja encontrado nem um arquivo nem uma pasta com o endereço requisitado. Sendo mais direto, isso significa que **o site estático tem preferência**. Veja como ficam estas regras aplicadas na prática:
 
   * Se o visitante digitar o endereço de uma página estática, o Apache a entrega na hora e o WordPress nem fica sabendo.
@@ -77,11 +77,11 @@ Perfeito! Sim, é possível ter o site estático e o WordPress rodando ao mesmo 
 Uma instalação típica do WordPress traz muitos arquivos e pastas em seu primeiro nível (contei 27). Fica bagunçado demais instalar tudo isso direto na raiz do site, ainda mais que minha raiz já está bem poluída pelo site estático, com 62 arquivos e pastas. Seria tão bom se eu pudesse colocar os arquivos do WordPress numa pastinha sem estragar meu esquema...
 
     ### INTERVALO NERD ###
-    
+
     # Para saber o número de pastas
     $ ls -1F | grep /$ | wc -l
     38
-    
+
     # Para saber o número de arquivos
     $ ls -1F | grep -v /$ | wc -l
     24

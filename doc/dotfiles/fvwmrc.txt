@@ -14,7 +14,7 @@ StickyBackColor  SlateGrey
 MenuForeColor    Grey
 MenuBackColor    DarkGreen
 MenuStippleColor SteelBlue3
- 
+
 # Fonts ----------------------------------------------------------------
 WindowFont -adobe-helvetica-medium-r-*-*-16-*-*-*-*-*-*-*
 Font       -misc-fixed-medium-r-*-*-14-*-*-*-*-*-*-*

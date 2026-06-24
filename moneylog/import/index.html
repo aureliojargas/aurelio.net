@@ -159,7 +159,7 @@ function convertQIF(rawData, version) {
             continue;
         }
 
-        // @@@D31/12'09 or @@@D31/12/09 or @@@D12/31'09 --> 09-12-31		
+        // @@@D31/12'09 or @@@D31/12/09 or @@@D12/31'09 --> 09-12-31
         m = rows[i].match(/@@@D(\d\d)\/(\d\d)['\/](\d\d)/);
         if (m) {
             if (version == 'quicken') {

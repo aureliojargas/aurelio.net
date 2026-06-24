@@ -22,11 +22,11 @@
 		}
 	td
 		{
-		width		: 44px; 
+		width		: 44px;
 		line-height	: 44px;
 		border		: 2px outset gray;
 		text-align	: center;
-		
+
 		/* manha de "esconder" o texto */
 		background-color: #999;
 		color		: #999;
@@ -91,7 +91,7 @@ function setMessage(text) {
 function drawBoard() {
 	// Converte o array em uma tabela e a insere no DIV #board
 	// Note o parametro onclick, que deixa cada celula "clicavel"
-	var board = new Array();  
+	var board = new Array();
 
 	board.push("<table><tr>");
 	for (var i = 0; i < mineField.length; i++) {
@@ -106,7 +106,7 @@ function drawBoard() {
 			);
 		}
 	}
-	board.push("</tr></table>"); 
+	board.push("</tr></table>");
 	document.getElementById("board").innerHTML = board.join("\n");
 }
 
@@ -121,7 +121,7 @@ function cellClicked(thisCell) {
 		setMessage("Vai ganhar de novo?");
 		return;
 	}
-	
+
 	// Se esse quadrado ja foi clicado, ignora
 	if (thisCell.className == "clicked") return;
 

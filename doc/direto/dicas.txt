@@ -18,7 +18,7 @@ Nov/2003
 
 - DIRETO:
   - URL USER : http://localhost:8080/direto/
-  - URL ADMIN: http://localhost:8080/direto/html/admin/ 
+  - URL ADMIN: http://localhost:8080/direto/html/admin/
 
 - ERROS:
   - org.procergs.direto.DiretoException: Login failed: generic failure
@@ -57,7 +57,7 @@ Nov/2003
 
 - Cyrus:
   - servidor IMAP
-  - daemon escutador da senha em PAM: saslauthd -a pam -d 
+  - daemon escutador da senha em PAM: saslauthd -a pam -d
   - o usuário padrão 'cyrus' não é usado como admin pois a autenticação é
     remota (PAM) e não local (shadow)
   - o admin é o conectiva-direto, ou melhor, COMPANY-direto, e a senha

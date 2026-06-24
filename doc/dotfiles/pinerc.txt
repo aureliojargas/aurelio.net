@@ -343,7 +343,7 @@ new-version-threshold=
 form-letter-folder=
 
 # Sets presentation order of folder list entries. Choices: ,
-# 
+#
 # Default: "alpha-with-directories-last".
 folder-sort-rule=
 

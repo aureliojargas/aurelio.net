@@ -56,7 +56,7 @@ is the current GNU SED maintainer.
 
 
 
- 
+
 
 
 
@@ -109,7 +109,7 @@ i dislike zap command idea
    *joined* do big things.  x;s/.*//;x is just about it.
    "know your tools"
 
-  
+
 i dislike \# to do count idea
 i dislike the macro idea
 
@@ -138,17 +138,17 @@ i also dislike sed doing Perl weird Regexes (as ssed does)
    if you want sed to mimic perl, install miniperl instead
    and be happy! sed is older than perl and has nothing to
    do with it.
-   
+
 
 i dislike the 'e' command and modifier inserted into GNU sed
 
    sed interacting with system commands is way far from
    what sed proposes to be. sed is about text, not commands.
-   
+
    using this command brings to sed scripts a new world of
    problems it should never have! problems that the shell
    and shell script language should be used for.
-    
+
    now sed scripts could not work if the system command used
    by the 'e' command:
 
@@ -162,7 +162,7 @@ i dislike the 'e' command and modifier inserted into GNU sed
 
    and of course, platform compatibility is completelly
    lost on scripts that uses that.
-   
+
 
 i dislike the 'M', 'm' modifiers inserted into GNU sed
 
@@ -185,7 +185,7 @@ i dislike the 'T' command inserted into GNU sed
    the if/then/else structures was already fully supported
    by plain sed, as eric shows, so why T?
    http://www.student.northpark.edu/pemente/sed/ifelse.txt
-   
+
 
 
 well, now i said what i should have said before but the
@@ -329,7 +329,7 @@ i think sed must remain as UNIX, little commands, that
 </i></font>
   [ed rosten]
   True in one way, except that z will presumable run rather faster.
-  
+
   [peter tillier]
   I agree (sorry Eric) I much prefer the early UNIX philosophy of many
   tools that each perform a set of well-defined functions linked by
@@ -439,7 +439,7 @@ to be. sed is about text, not commands.
 using this command brings to sed scripts a new world of problems it
 should never have! problems that the shell and shell script language
 should be used for.
- 
+
 now sed scripts could not work if the system command used by the 'e'
 command:
 
@@ -640,7 +640,7 @@ s///v # allow var substs of (pushed) \1, \2, ...
 	  (it already is, but I hope you get my meaning). There is already
 	  a multitude of other tools to choose from if you need printf,
 	  file manipulation, variables, debugger, etc. Why bloat sed? Why
-	  make GNU sed into something which is not sed? 
+	  make GNU sed into something which is not sed?
 
 	  I would recommend anyone thinking of all these dramatic
 	  extensions to sed to read the original sed manual at Laura's
@@ -650,7 +650,7 @@ s///v # allow var substs of (pushed) \1, \2, ...
 	  All the extensions I have read about so far, was technically
 	  possible to implement in the orginal sed (except maybe perl REs
 	  :-), yet they wasn't.
-      
+
         [paolo]
         Q is not (except at a very high cost in performance, or by
         forcing one to use -n).  R is not.
@@ -666,7 +666,7 @@ s///v # allow var substs of (pushed) \1, \2, ...
             [paolo]
 			Ah, I meant "it was possible to obtain their effect with
 			the original sed".
-      
+
               [björn]
 			  Oh, ok. All the below is said IMO. I'd like to first say
 			  that I don't think the fact that a feature is useful is
@@ -737,7 +737,7 @@ s///v # allow var substs of (pushed) \1, \2, ...
 	  foot print, but rather in the featuritis sense), I personally
 	  will switch to BSD sed or earlier GNU versions for use on my
 	  GNU/Linux systems.
-      
+
 	  (I don't like most of the new commands I've seen from the new
 	  GNU sed 4. I wasn't aware of them until I saw them described by
 	  aurelio earlier in this thread.) If GNU sed is becoming super
@@ -747,7 +747,7 @@ s///v # allow var substs of (pushed) \1, \2, ...
 		Since GNU sed 4, super sed does not have anything new except
 		Perl REs. That is, super sed is simply GNU sed  with a
 		different regular expression matcher and with Perl REs.
-      
+
           [björn]
           Ok. I never did look too closely on super sed, all I know
           about it is from what I've read on this group.
@@ -842,7 +842,7 @@ printf/readf directives,
 		the reason that I had thought readf was so important was the
 		very reason I was going on and on about providing just such a
 		hook for an external debugger.
-        
+
 		My aforementioned debugger (before it get written _back_ into
 		ksh(1)) cannot break at a spypoint -- that is, it cannot have
 		specified the place to stop execution temporarily to allow the
@@ -890,7 +890,7 @@ than one -l option argument.
 	  concepts for all the commands except perhaps the fmt-like L, and
 	  e (which I think is maybe not orthodox for scripts, but is very
 	  nice for one-liners and pipelines).
-      
+
 	  The commands I added don't add constructs to sed, only
 	  functionality (Q to quit without printing, T to jump on not
 	  substituted, R to read one line of a given file into pattern
@@ -1104,13 +1104,13 @@ but of course the release is far from mature) is:
 	  contardictory to sed being a /streaming/ editor, IMO. The usual
 	  way of doing in-place editing would be with ed.
 <i><font color="darkcyan">
-        [paolo]                
+        [paolo]
 		Which is much more complex and not always really up to the
 		job, for example for complex tasks like removing C comments.
 		sed scripts are quite widespread (at least on this list's
 		subscriber's PCs...) and it takes little to add -i to a
 		command line.
-</i></font>      
+</i></font>
           [björn]
 		  If I were to change C source files, I sure as hell wouldn't
 		  run an automated script without keeping backups until I can
@@ -1137,18 +1137,18 @@ but of course the release is far from mature) is:
           [björn]
 		  I should mention that there are a few other ways of doing
 		  in-place editing with sed:
-          
+
           1) The traditional method:
-          
+
              sed -f script file &gt; file.tmp
              mv file.tmp file
-          
+
              Easy and reliable.
-          
+
 		  2) There are also ways to avoid having to create a temporary
 			 file. As I understand it, even gsed -i creates a
 			 temporary, so this method has an advantage to gsed too:
-          
+
              (rm -f file; sed -f script &gt; file) &lt; file
 <i><font color="darkcyan">
             [paolo]
@@ -1161,13 +1161,13 @@ but of course the release is far from mature) is:
       [björn]
 	  I also question the -s option. It is very easy to implement the
 	  -s option, eg with Bourne shell syntax:
-      
+
          for f in file1 file2 file3
          do
             sed -f script.sed $f
          done
 <i><font color="darkcyan">
-        [paolo]                
+        [paolo]
 		The -s option is a freebie that is needed to implement -i
 		correctly because -i implies it.  It might be featuritis to
 		allow it even when -i is not there.
@@ -1203,13 +1203,13 @@ but of course the release is far from mature) is:
 <i><font color="darkcyan">
             [paolo]
             I might be too picky in counting keypresses, but I prefer
-            
+
             ls | sed 's/.*/mv &amp; \L&amp;/e'
-            
+
             to
-            
+
             ls | sed 's/.*/cp &amp; \L&amp;/' | sh
-            
+
             :-)
 </i></font>
               [björn]
@@ -1236,7 +1236,7 @@ but of course the release is far from mature) is:
         [paolo]
 		Why Q?  And if R and W are designed to replace Unix tools I
 		don't see why r and w aren't.
-</i></font>        
+</i></font>
           [björn]
 		  Are you suggesting that I cannot be in favour of not having
 		  R &amp; W without also wanting to get rid of r &amp; w?
@@ -1294,7 +1294,7 @@ but of course the release is far from mature) is:
 
 			  You are right that bash is not completely compatible
 			  with either old sh or POSIX.
-            
+
 <i><font color="darkcyan">
             [paolo]
 			I also happen to agree with you about obtrusive changes,
@@ -1330,17 +1330,17 @@ but of course the release is far from mature) is:
                 POSIXLY_CORRECT=1 sed gsed ${1+"$@"}
 </i></font>
                   [björn]
-                  I presume you mean 
-                  
+                  I presume you mean
+
                   POSIXLY_CORRECT=1 /bin/gsed "$@"
-                  
+
 				  ? If not, what is your script supposed to accomplish
 				  exactly?
 <i><font color="darkcyan">
                     [paolo]
 					Of course.  Also, `v' disables POSIXLY_CORRECT
 					behavior so you can use extensions freely.
-                    
+
                 [paolo]
                 Escapes are all disabled in POSIXLY_CORRECT mode.
 </i></font>
@@ -1405,7 +1405,7 @@ but of course the release is far from mature) is:
 </i></font>
       [björn]
       echo -e ',s/^/&gt;/\nwq' | ed file
-      
+
 	  I know I'm coming of a bit harsh here, and in a way it is not
 	  very useful to complain about the features you have already
 	  included. I'm just out for the discussion really, of what sed is
@@ -1487,7 +1487,7 @@ and P/NP complete. It is possible to prove this mathematically.
 			  All the above has the virtue of being both a proper
 			  superset of sed(1) and P/NP complete. It is possible to
 			  prove this mathematically.
-</i></font>          
+</i></font>
           [björn]
 		  With "the above" referring to your suggestions of changes to
 		  sed. In what way do you mean to say that those changes are

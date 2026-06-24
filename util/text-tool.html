@@ -135,21 +135,21 @@
         '6789012345'
       );
     }
-  
+
     function rot13(txt) {
       return txt.tr(
         'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
         'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
       );
     }
-  
+
     function rot47(txt) {
       return txt.tr(
         '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~',
         'PQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNO'
       );
     }
-  
+
     function suffix(txt) {
       var suffix = $('#suffix-string').val();
 

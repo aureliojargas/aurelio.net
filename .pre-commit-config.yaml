@@ -68,7 +68,25 @@ repos:
           bin/php/recados\.phps |     # false positive: has ^M
           doc/dotfiles/screenrc\.txt  # false positive: has ^M
           )$
-      #- id: trailing-whitespace
+      - id: trailing-whitespace
+        exclude: |
+          (?x)
+          ^(
+          _posts/2012-02-08-destacar-espacos-inuteis-no-codigo\.html |  # code with intended spaces
+          _posts/2014-11-08-funcionario-publico\.md |  # Markdown line break
+          _posts/2015-04-03-resposta-rapida-dev\.md |  # Markdown line break
+          bin/bash/cgrep |  # code
+          bin/bash/showlink |  # code
+          bin/python/quizz/quizz |  # code
+          doc/direto/anuncio\.txt |  # email signature delimiter
+          doc/dotfiles/vimrc\.txt |  # comments and code with intended spaces
+          pogo/index\.md |  # Markdown line break
+          trem-eurostar/guia-ilustrado-para-pesquisar-precos-de-passagens/index\.md |  # Markdown line break
+          trem-eurostar/tabela-de-precos-tarifas/index\.md |  # Markdown line break
+          .*\.mgp |  # I don't remember if the spaces are required in Magic Point files
+          .*\.t2t |  # txt2tags markup considers spaces
+          .*\.(java|phps?|py|sed|sh|sql)  # code
+          )$
 
   - repo: local
     hooks:

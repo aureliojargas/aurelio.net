@@ -36,9 +36,9 @@ obs.: pontuação, espaço ou o ENTER, disparam a expansão de uma abreviação.
 OPÇÕES DO SET:
 -------------
 
-:set 
+:set
 autowrite      aw    salva a cada alteração
-backspace      bs    comportamento backspace(1 ou 2) 
+backspace      bs    comportamento backspace(1 ou 2)
 errorbell      eb    campainha de erro
 expandtab      et    troca tab por espacos
 fileformat=dos ff    converte o arquivo para DOS
@@ -94,7 +94,7 @@ Ctrl+:
 modo COMANDO:
 
 A = incrementa um número                    (Add)
-X = decrementa um número                                 
+X = decrementa um número
 S = ScrollLock
 L = redesenha tela
 V = modo visual                             (Visual Vertical)
@@ -146,8 +146,8 @@ ARQUIVOS E JANELAS MÚLTIPLOS:
 :all          abre todos os arquivos em janelas individuais
 
 Tecla chave das janelas = Crtl+W
-j, seta abaixo          move para janela abaixo 
-k, seta acima           move para janela acima 
+j, seta abaixo          move para janela abaixo
+k, seta acima           move para janela acima
 o                       apenas esta janela, fecha todas as outras   (Only)
 +, -                    muda o tamanho da janela
 =                       deixa todas as janelas com tamanhos iguais

@@ -1,6 +1,6 @@
 "
 "                           .vimrc do aurelio
-"                       ------------------------- 
+"                       -------------------------
 "                   Copie, altere, arrume, use, venda
 "                 -------------------------------------
 "               https://aurelio.net/doc/dotfiles/vimrc.txt
@@ -110,7 +110,7 @@ cab W w| cab Q q| cab Wq wq| cab wQ wq| cab WQ wq
 "imap <F4> <esc><c-w><c-w>i
 " DiffApaga: apagar uma entrada num arquivao DIFF
 "map ,di :.,/diff -[uNr]/-d<cr>
-" HtmlSyntaxe: carregar uma sintaxe HTML alternativa 
+" HtmlSyntaxe: carregar uma sintaxe HTML alternativa
 "map ,hs :so ~/.vim/synload.vim<cr>:so ~/.vim/html.vim<cr>
 " HtmlData: atualiza data no fim do arquivo HTML
 "map ,hd G:?^$<cr>O<pre><cr>--<cr>
@@ -191,7 +191,7 @@ hi p_c ctermbg=white ctermfg=black
 " Mail: Configuracoes especiais para arquivos de email
 au FileType Mail set fo=ctq tw=65 et
 
-" Man: Paginas de manual sao na verdade textos em NROFF 
+" Man: Paginas de manual sao na verdade textos em NROFF
 au BufNewFile,BufRead *.man set ft=nroff
 
 " TXT: Arquivos texto tem tratamento especial
@@ -221,18 +221,18 @@ au FileType mgp hi mgpCommand ctermfg=yellow
 " Spec: usar o meu arquivo e não o default
 au! Syntax spec
 au  Syntax spec so /a/www/doc/vim/spec.vim
-au BufNewFile,BufRead *.spec set tw=75 et 
+au BufNewFile,BufRead *.spec set tw=75 et
 
 " Php: Para usar o meu arquivo de sintaxe do php3
 "au! Syntax php3
 "au  Syntax php3 so ~/www/doc/vim/php3.vim
-"au BufNewFile,BufRead *.php   source /a/www/doc/vim/php3.vim 
-"au BufNewFile,BufRead *.php3  source /a/www/doc/vim/php3.vim 
+"au BufNewFile,BufRead *.php   source /a/www/doc/vim/php3.vim
+"au BufNewFile,BufRead *.php3  source /a/www/doc/vim/php3.vim
 au BufNewFile,BufRead *.phps   set ft=php
 au FileType php set list listchars=tab:··
 
 " Nsi: NullSoft SuperPimp Installer
-"au BufNewFile,BufRead *.nsi   source /a/txt2tags/exe/nsi.vim 
+"au BufNewFile,BufRead *.nsi   source /a/txt2tags/exe/nsi.vim
 
 " HTML: Funcoes particulares para editar arquivos HTML
 "au BufNewFile,BufRead *.html,*.shtml so ~/.vimrc-html

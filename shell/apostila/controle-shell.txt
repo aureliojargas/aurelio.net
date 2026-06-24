@@ -129,7 +129,7 @@ do arquivo.
 
 Exemplos da saída deste programa, com estes dados:
 
-$ sh controle-shell.txt 
+$ sh controle-shell.txt
 34,97  Fulano da Silva           28-Ago/04-Jan comentários enviados
 34,98  Cicrano da Silva          05-Set/09-Out apostila enviada
 30,00  Beltrano da Silva         11-Set/       primeiro contato
@@ -142,7 +142,7 @@ $ sh controle-shell.txt status
   PAG  APO                      cicrano@xyz.com.br
                                 beltrano@mno.com.br
 
-$ sh controle-shell.txt email 
+$ sh controle-shell.txt email
 comentário  Fulano da Silva       fulano@abc.com.br
 apostila e  Cicrano da Silva      cicrano@xyz.com.br
 primeiro c  Beltrano da Silva     beltrano@mno.com.br
@@ -151,7 +151,7 @@ $ sh controle-shell.txt cidade
  | Juiz de Fora       | MG | `#####`
  | São Paulo          | SP | `#####`
 
-$ 
+$
 
 --------------------------------------------------------------
 @@@

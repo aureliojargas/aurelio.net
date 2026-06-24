@@ -3,7 +3,7 @@
 
 <!--
 	Campo Minado em CSS
-	
+
 	por Aurelio Marinho Jargas, Abr 2006.
 	https://aurelio.net
 
@@ -11,7 +11,7 @@
 	e :visited. O código está comentado, aproveite. Melhor ainda,
 	consulte a versão DIET (mina-diet.html) neste mesmo diretório,
 	que traz apenas o código necessário ao jogo, sem fru-frus.
-	
+
 	Funcionou no Camino (Gecko). No Safari (KHTML) ele funciona
 	o :active mas não preserva o estado do :visited, não
 	desvendando a casa após o clique. Não testei outros programas.
@@ -24,12 +24,12 @@
 	evitar esse furo tem que usar imagens de fundo ao invés de
 	números.
 -->
-	
+
 	<title>Campo Minado em CSS</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	
+
 	<style type="text/css">
-	
+
 		body
 			{
 			width		: 432px;
@@ -47,38 +47,38 @@
 			/* vai empilhando as casas */
 			display		: block;
 			float		: left;
-		
-			width		: 50px; 
+
+			width		: 50px;
 			line-height	: 50px;
 			border		: 2px solid white;
-			
+
 			font-size	: 25px;
 			text-align	: center;
 			text-decoration	: none;
-			
+
 			/* manha de "esconder" o texto */
 			background	: blue;
 			color		: blue;
 			}
-	
+
 		a:hover
 			{
 			/* seleção em preto quando passa o mouse */
 			border		: 2px solid black;
 			}
-	
+
 		a:active, a:visited
 			{
 			/* quando clica, "desesconde" o texto */
 			color		: white;
-			
+
 			}
 		br
 			{
 			/* necessário pra não encavalar as linhas */
 			clear		: left;
 			}
-		
+
 		/* aqui é só frescurada para o texto explicativo, não
 		 * influi no jogo. */
 		p
@@ -107,7 +107,7 @@
 		.browserok  { color	: #0c0; }
 		.browseraok { color	: #f60; }
 		.browsernok { color	: #f00; }
-	</style>	
+	</style>
 </head>
 
 <body>

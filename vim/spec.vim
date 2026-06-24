@@ -34,7 +34,7 @@
 "
 "  <verde (a) aurelio net>
 "20001026 specIf also permitted in %files
-"20010220 blank spaces permitted at specSectionMacroArea beginning 
+"20010220 blank spaces permitted at specSectionMacroArea beginning
 "         %trigger == %post, BuildPreReq tag is now obsoleted
 "20010322 PACKAGE_(VERSION|RELEASE) tags accepted
 "20010410 -:- a spec's shell area total cleanup -:-
@@ -59,7 +59,7 @@
 "         specScriptArea: added trigger(in|un), removed trigger
 "20010628 specIf: %if added
 "         specScriptArea: %verifyscript added
-           
+
 "TODO <<\s*EOF
 "TODO register %files macros directives?
 "TODO why shSpecial and shHereDoc colors doesn't work?

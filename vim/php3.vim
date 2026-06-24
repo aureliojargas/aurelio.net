@@ -12,11 +12,11 @@
 " added initialization of php3_minlines, php3_sql_query
 " added , and ; as php3Operator
 " added highlight on simple html tags inside php3String* (php3StringHtml)
-" added highlight for user functions                     (php3FunctionsMine) 
+" added highlight for user functions                     (php3FunctionsMine)
 " added themes support                                   (php3_syntax_theme)
 "   the main idea is to highlight _everything_ on the file
 "   comments on gray (no color)
-"   available themes: forest1, forest2 
+"   available themes: forest1, forest2
 "
 " just copy this file to ~/.php3.vim and put this line in your ~/.vimrc:
 " au! Syntax php3 so ~/.php3.vim
@@ -50,7 +50,7 @@ if exists( "php3_sql_query")
     "if you'll put this file in your home dir, use absolute path to html.vim
     "syn include @php3Sql <sfile>:p:h/sql.vim
     syn include @php3Sql /usr/share/vim/vim55/syntax/sql.vim
-    
+
   endif
 endif
 syn cluster php3Sql remove=sqlString,sqlComment
@@ -295,7 +295,7 @@ syn match php3ParentError "[)}\]]" contained
 " Todo
 syn keyword php3Todo TODO Todo todo contained
 
-"--aurélio's hacks 
+"--aurélio's hacks
 syn match   php3Operator  "[;,]" contained
 syn match   php3StringHtml "<\(/\{0,1}\([biup]\|li\|ul\|h[1-6]\)\|[hb]r\)>" contained
 syn case match
@@ -331,7 +331,7 @@ endif
 
 if !exists("did_php3_syntax_inits")
   let did_php3_syntax_inits = 1
-  
+
   "default colors
   if !exists("php3_syntax_theme")
     hi link php3Comment                   Comment
@@ -363,19 +363,19 @@ if !exists("did_php3_syntax_inits")
   endif
 
   if exists("php3_syntax_theme")
-  
+
     "default for all themes
     hi link php3Type             Type
     hi link php3ParentError	 Error
     hi link php3OctalError	 Error
     hi link php3Todo             Todo
     hi php3Comment               ctermfg=gray
- 
+
     hi link php3FunctionsMine     A_FunctionsMine
     hi link php3StringHtml        A_StringLight
     hi link Delimiter             A_Operator
     "--------------------------------------------
-    hi link php3StringSingle      A_String 
+    hi link php3StringSingle      A_String
     hi link php3StringDouble      A_String
     hi link php3Number            A_Number
     hi link php3Float             A_Number
@@ -396,7 +396,7 @@ if !exists("did_php3_syntax_inits")
     hi link php3SpecialChar       A_SpecialChar
     hi link php3Relation          A_Operator
     hi link php3Operator          A_Operator
-    
+
     if php3_syntax_theme == 'forest1'
       hi A_String         ctermfg=darkcyan
       hi A_StringLight    ctermfg=lightcyan
@@ -412,7 +412,7 @@ if !exists("did_php3_syntax_inits")
       hi A_SpecialChar    ctermfg=lightred
       hi A_Operator       ctermfg=white
     endif
-    
+
     if php3_syntax_theme == 'forest2'
       hi A_Declare        ctermfg=yellow
       hi A_String         ctermfg=darkcyan
@@ -432,8 +432,8 @@ if !exists("did_php3_syntax_inits")
     " if you want to do you own theme, just copy the "if ... endif"
     " structure above and change the theme name and colors. turn syntax
     " on to vim visually show you if your color has a invalid name
-    
-  endif  
+
+  endif
 endif
 
 let b:current_syntax = "php3"

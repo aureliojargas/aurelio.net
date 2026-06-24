@@ -112,7 +112,7 @@ thieves in the streets
 they gotta be killed?
 
 
-ERRAND 
+ERRAND
 ------
 hey pretty girl, listen to me
 you're not the best thing we've ever seen
@@ -169,7 +169,7 @@ require handling, prepare the body for a burial
 
 
 CRAZY
------ 
+-----
 i'm known as a crazy guy
 and i don't know why they say
 that i'm completely nuts, getting mad and going insane
@@ -207,7 +207,7 @@ but i think you're here, what a hell i want to be
 i can't forget your existence was here
 
 
-RAPHAELLIUS 
+RAPHAELLIUS
 -----------
 mouro ou buda?
 eu não sei não!

@@ -10,7 +10,7 @@ syn case ignore
 " tags
 syn region pm6String   contained start=+"+ end=+"+ keepend
 syn region pm6String   contained start=+'+ end=+'+ keepend
-syn match  pm6HeaderName contained 'PMTags[0-9.]\+ win' 
+syn match  pm6HeaderName contained 'PMTags[0-9.]\+ win'
 syn match  pm6Number '\(^-\|[ \t]-\)\=\<[0-9.-]*[0-9]\>'
 syn match  pm6Value    contained "=[\t ]*[^'" \t>][^ \t>]*"hs=s+1
 syn match  pm6Special contained '[$()]'
@@ -57,5 +57,5 @@ hi link pm6Bold                      pm6Destak
 hi link pm6Italic                    pm6Destak
 hi link pm6Underline                 pm6Destak
 hi link pm6Comment                   Comment
-  
+
 let b:current_syntax = "pm6"

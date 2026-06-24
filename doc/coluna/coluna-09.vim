@@ -131,9 +131,9 @@ map <F11> :call CommOnOff()<cr>
 " daquela seleção que aparece quando você procura algo com o comando / ?
 " é fácil, basta definir a cor do componente da sintaxe. ah sim, a opção
 " hls (veja abaixo) deve estar ativa.
-" 
+"
 " você pode colocar as cores que quiser, em inglês. note que é ctermBG e
-" FG, de  background e foreground  (fundo e letra). e veja  também que o 
+" FG, de  background e foreground  (fundo e letra). e veja  também que o
 " IncSearch (busca enquanto você digita) é invertido!
 "
 hi    Search ctermbg=green ctermfg=black
@@ -189,7 +189,7 @@ syn on
 " (BufRead) com essa extensão.
 "
 au BufNewFile,BufRead *.xyz set ft=html
-" 
+"
 " ou ainda,  se for um arquivo  de um tipo  já reconhecido pelo vim, use
 " diretamente a opção FileType. vamos usar de exemplo a linguagem python
 " onde os TABs indicam os blocos de comandos, então é legal `vê-los`.
@@ -197,7 +197,7 @@ au BufNewFile,BufRead *.xyz set ft=html
 " para isso definimos uma  regra rápida de sintaxe chamada `pythonTAB` e
 " a ela associamos a cor azul. além disso definimos algumas opções com o
 " comando set e  para fechar,  trocamos a cor  das "strings" para verde,
-" porque aquele rosinha é muito palha. 
+" porque aquele rosinha é muito palha.
 "
 au FileType python syn match pythonTAB '\t\+'
 au FileType python hi pythonTAB ctermbg=blue
