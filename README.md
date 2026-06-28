@@ -161,6 +161,21 @@ In HTML files, use the following structure:
 </p>
 ```
 
+## Right-aligned images
+
+Centered, solo images (with or without captions) are preferred. They are placed between paragraphs (or other blocks) vertically separating chunks of text, adding some pause to the reading and providing information or demonstration about the current topic.
+
+But sometimes, a small, purely decorative image (not informational) gives some flare to a text. They should not break the reading flow neither cause vertical separation.
+
+Insert decorative images as right-aligned (using the `right` class) inside the desired paragraph. Example:
+
+```html
+<p>
+  <img class="right" src="...">
+  Lorem ipsum...
+</p>
+```
+
 ## Hide optional page elements
 
 You can hide page elements, such as the date or the comments section, using special flags in front matter:
