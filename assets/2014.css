@@ -195,8 +195,9 @@ table.grid tr:hover td {
 .figures span,
 .figure span {
   font-family: Arial, sans-serif;
-  font-size: 75%;
+  font-style: italic;
   margin: 0;
+  padding-top: 0.3em;
   display: block;
   color: gray;
 }
