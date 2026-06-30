@@ -48,13 +48,19 @@ tags: [programador]
 <pre>{	name = 'invalid.js';
 	match = '^(\t+ | +\t)|[\t ]+$';
 },</pre>
-<p><img class="aligncenter" src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="TextMate Bundle Editor - Show blanks" width="500" height="384"/></p>
+<p class="figure">
+  <img src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" />
+  <span>Bundle Editor do editor TextMate, com as linhas novas destacadas em azul</span>
+</p>
 <p>Aperte o botão Test para salvar, os vermelhinhos já vão aparecer em seus códigos. Você pode fazer isso para outras linguagens, basta repetir o procedimento, trocando js pelo identificador da outra linguagem.</p>
 <h2>Vim</h2>
 <p>Já faz alguns anos que parei de usar o Vim, mas ainda tenho aqui no <a href="/doc/dotfiles/vimrc.txt">meu vimrc</a> a linha mágica que eu usava para mostrar os espaços inúteis:</p>
 <pre>" Mostra os espaços em branco inúteis no final da linha
 au BufNewFile,BufRead * syn match brancomala '\s\+$' | hi brancomala ctermbg=red</pre>
-<p><img class="aligncenter" src="/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="Vim highlight blank spaces" width="500" height="379" /></p>
+<p class="figure">
+  <img src="/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="" />
+  <span>Editor Vim mostrando os brancos inúteis em vermelho sangue</span>
+</p>
 <p>Fica como lição de casa para o leitor atualizar a expressão regular para também pegar os espaços no meio dos Tabs do início da linha ;)</p>
 <h2>Outros</h2>
 <p>E você, usa algum outro editor de textos?</p>
