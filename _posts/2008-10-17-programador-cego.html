@@ -64,14 +64,14 @@ Data: 12 de setembro de 2008 </span></em></p>
 <p>Primeiro, um bloco “{” sempre se inicia em uma nova linha, e após o início do bloco vem um comentário que descreve o conteúdo do bloco.</p>
 <p>Ao final do bloco, seu fechamento “}” é feito também em uma nova linha seguido do mesmo comentário da abertura.</p>
 <p>Fica mais ou menos assim:</p>
-<pre>  if ($carro)
-  { // possui carro
-  print $carro
-  } // possui carro
-  else
-  { // não possui carro
-  print 'O carro sumiu!';
-  } // não possui carro</pre>
+<pre>if ($carro)
+{ // possui carro
+print $carro
+} // possui carro
+else
+{ // não possui carro
+print 'O carro sumiu!';
+} // não possui carro</pre>
 <p>Parece besta, mas em alguns trechos do código acabam por haver inúmeros blocos aninhados, e esta forma de comentá-los se torna extremamente eficiente:</p>
 <p>Aqui vai um pequeno script como exemplo e logo abaixo seu código</p>
 <blockquote><p>array_sub_search</p>
@@ -149,7 +149,7 @@ fim do bloco nota presente</p></blockquote>
 <h4 style="text-align:right;">Blocos sempre iniciam em uma nova linha</h4>
 <p>Quando passamos o cursor de uma linha para a outra, o sintetizador passa a ler a nova linha. Nem sempre temos tempo de ouvir uma linha inteira para saber que no final haverá um início de bloco “{”. Por isto a decisão de que qualquer bloco deve ser iniciado em uma nova linha.</p>
 <p>Agora imagina o saco que é ler um código escrito por quem enxerga, onde blocos são abertos e fechados no fim das linhas… Ou pior:</p>
-<pre>  { else }</pre>
+<pre>{ else }</pre>
 <p>Mas isto é o fim!</p>
 <h4 style="text-align:right;">Código HTML: Organização das tags</h4>
 <p>Também no html eu utilizo a mesma regra: tags que iniciam em uma nova linha, são fechadas em uma nova linha. Também podem ser abertas e fechadas na mesma linha.</p>

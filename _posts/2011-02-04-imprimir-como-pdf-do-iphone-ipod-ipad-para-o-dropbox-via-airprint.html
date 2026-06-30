@@ -32,15 +32,15 @@ tags: []
 <div id="attachment_1402" class="wp-caption aligncenter" style="width: 410px"><a href="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png"><img src="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png" alt="pdf-printer-folder" width="400" height="129" /></a><p class="wp-caption-text">Seu HD &gt; Usuários &gt; Compartilhado &gt; CUPS-PDF</p></div>
 <p>Se tudo deu certo, ali haverá uma pasta chamada <strong>guest</strong> e seu PDF estará dentro dela.</p>
 <blockquote><p><strong>Aqui vem a pegadinha:</strong> a pasta guest é protegida e você não tem permissão para ver seu conteúdo. É preciso fazer mágicas no Terminal para resolver este problema:</p>
-<pre>  cd /var/spool/cups-pdf
-  sudo chmod o+rwx guest/
-  sudo chmod 666 guest/*</pre>
+<pre>cd /var/spool/cups-pdf
+sudo chmod o+rwx guest/
+sudo chmod 666 guest/*</pre>
 <p>Agora sim, você poderá ver seu PDF. Mais pra frente eu te ensino como fazer para que não ocorra mais esse problema de permissões.</p></blockquote>
 <p>Então neste ponto já está quase tudo funcionando, você consegue imprimir do iPhone e salvar como PDF em seu Mac. Agora vem o pulo do gato, que é colocar este PDF na nuvem.</li>
 <li><strong>Dentro do seu Dropbox, faça um link para a pasta com os PDFs. </strong>Primeiro, entre em sua pasta do Dropbox:
-<pre>  cd ~/Dropbox</pre>
+<pre>cd ~/Dropbox</pre>
 <p>Agora crie um link para a pasta com os PDFs de impressão. Chamarei o link de “PDF”, mas use o nome que você quiser:</p>
-<pre>  ln -s /var/spool/cups-pdf/guest PDF</pre>
+<pre>ln -s /var/spool/cups-pdf/guest PDF</pre>
 </li>
 </ol>
 <p>Pronto! O Dropbox já vai começar a mandar seus PDFs para a nuvem.</p>
@@ -49,9 +49,9 @@ tags: []
 <p>O programa cups-pdf é responsável por salvar o PDF em seu Mac. Você pode configurá-lo editando o arquivo <code>/etc/cups/cups-pdf.conf</code>. Ali você consegue resolver o problema das permissões, e ainda pode mudar o nome dos arquivos PDF gerados.</p>
 <ul>
 <li><strong>Permissões:</strong> Procure pela configuração UserUMask e deixe-a somente com zeros. Assim você não terá mais problemas para ler os PDFs gerados.
-<pre>  UserUMask 0000</pre>
+<pre>UserUMask 0000</pre>
 </li>
 <li><strong>Prefixo job_:</strong> Todos os PDFs criados ganham um prefixo “job_” seguido de um número. Para remover este prefixo, mude a configuração Label para zero.
-<pre>  Label 0</pre>
+<pre>Label 0</pre>
 <p>Após fazer estas alterações, basta salvar o arquivo que elas já entrarão em vigor. Mande outra impressão para testar se tudo está certo.</li>
 </ul>
