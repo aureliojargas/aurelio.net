@@ -58,7 +58,7 @@ $campos['cidade'] =  '' .
 
 Você pode copiar e colar esta parte do código dentro de sua função `adiciona_campos()` e trocar a palavra _cidade_ por _idade_ ou _telefone_, por exemplo. Crie tantos campos quantos precisar, basta repetir o código. Se o campo for de preenchimento opcional, basta remover a linha com a tag SPAN, responsável por colocar o asterisco que indica o preenchimento obrigatório.
 
-> <del>**Nota:** Apesar do asterisco ali no código, eu ainda não sei como forçar a verificação do campo. O comentário vai ser aprovado mesmo que o campo Cidade esteja vazio. Quando eu aprender como faz, atualizarei este texto.</del> Aprendi. Veja o novo passo 2 :)
+> <s>**Nota:** Apesar do asterisco ali no código, eu ainda não sei como forçar a verificação do campo. O comentário vai ser aprovado mesmo que o campo Cidade esteja vazio. Quando eu aprender como faz, atualizarei este texto.</s> Aprendi. Veja o novo passo 2 :)
 
 Para preencher o código HTML do campo Estado é a mesma coisa, porém, como quero fazer um menu com todos os estados brasileiros, usarei um SELECT no lugar do INPUT. Só isso.
 

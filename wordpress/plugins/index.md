@@ -76,7 +76,7 @@ Esta é minha lista dos plugins indispensáveis para o WordPress. Todos eles est
 
 Além destes, também uso outros plugins, que por um motivo ou outro, não me deixam completamente satisfeito. Aqui também listo os novatos, que uso há pouco tempo e ainda não me sinto à vontade para recomendar. São eles:
 
-  * <del>[Contact Form 7](http://wordpress.org/extend/plugins/contact-form-7/) — Formulário de contato, [usado aqui](/contato/).</del> **REMOVIDO:** Era muito pesadão, adicionava HTML, CSS e JS em todas as páginas. Em vez de instalar uma alternativa, parei de usar formulário para contato: agora apenas menciono meu email. É o suficiente para quem realmente precisa entrar em contato.
+  * <s>[Contact Form 7](http://wordpress.org/extend/plugins/contact-form-7/) — Formulário de contato, [usado aqui](/contato/).</s> **REMOVIDO:** Era muito pesadão, adicionava HTML, CSS e JS em todas as páginas. Em vez de instalar uma alternativa, parei de usar formulário para contato: agora apenas menciono meu email. É o suficiente para quem realmente precisa entrar em contato.
 
   * [FD Feedburner Plugin](http://wordpress.org/extend/plugins/feedburner-plugin/) — Redireciona os feeds RSS para o FeedBurner.
 
@@ -90,11 +90,11 @@ Além destes, também uso outros plugins, que por um motivo ou outro, não me de
 
   * [WordPress.com Popular Posts](http://wordpress.org/extend/plugins/wordpresscom-popular-posts/) — A caixinha "Textos mais lidos" ali no menu lateral.
 
-  * <del>[WordTwit](http://wordpress.org/extend/plugins/wordtwit/) — Avisa no twitter cada post novo do blog.</del> **REMOVIDO:** Mais incomodava do que ajudava. Publiquei um post sem querer (cliquei em "Publicar" em vez do "Salvar rascunho"…) e lá foi ele pro twitter. Também às vezes preferia fazer uma frase personalizada em vez de tuitar o título do blog. Enfim, tuitar na mão nem dá trabalho e é mais flexível.
+  * <s>[WordTwit](http://wordpress.org/extend/plugins/wordtwit/) — Avisa no twitter cada post novo do blog.</s> **REMOVIDO:** Mais incomodava do que ajudava. Publiquei um post sem querer (cliquei em "Publicar" em vez do "Salvar rascunho"…) e lá foi ele pro twitter. Também às vezes preferia fazer uma frase personalizada em vez de tuitar o título do blog. Enfim, tuitar na mão nem dá trabalho e é mais flexível.
 
   * [WP Super Cache](http://wordpress.org/extend/plugins/wp-super-cache/) — Faz cache (cópia estática) das páginas e posts, deixando o site muito mais rápido para carregar. Ainda estou testando.
 
-  * <del>[WP Minify](http://wordpress.org/extend/plugins/wp-minify/) — Otimiza arquivos HTML, CSS e JS, removendo comentários e espaços inúteis.</del> **REMOVIDO:** Apesar de funcionar bem na otimização, tem um bug incômodo de [remover as linhas em branco dentro da tag PRE](http://wordpress.org/support/topic/plugin-wp-minify-minify-removes-carriage-returns-from-pre-code-blocks). Isso arruina meus trechos de código. Eu seu lugar, atualmente estou otimizando a carga de JavaScript com o plugin [Use Google Libraries](http://wordpress.org/extend/plugins/use-google-libraries/), que carrega o jQuery direto dos servidores do Google, aliviando meu pobre servidor barato compartilhado.
+  * <s>[WP Minify](http://wordpress.org/extend/plugins/wp-minify/) — Otimiza arquivos HTML, CSS e JS, removendo comentários e espaços inúteis.</s> **REMOVIDO:** Apesar de funcionar bem na otimização, tem um bug incômodo de [remover as linhas em branco dentro da tag PRE](http://wordpress.org/support/topic/plugin-wp-minify-minify-removes-carriage-returns-from-pre-code-blocks). Isso arruina meus trechos de código. Eu seu lugar, atualmente estou otimizando a carga de JavaScript com o plugin [Use Google Libraries](http://wordpress.org/extend/plugins/use-google-libraries/), que carrega o jQuery direto dos servidores do Google, aliviando meu pobre servidor barato compartilhado.
 
   * [WPtouch](http://wordpress.org/extend/plugins/wptouch/) — Tema especial para smartphones. É o que todo mundo usa.
 

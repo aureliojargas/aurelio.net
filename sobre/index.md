@@ -27,7 +27,7 @@ Se quiser consultar uma segunda opinião, leia o que meu amigo Matheus Eduardo [
 
 Morgana Laemmle, apelido Mog. Ela é minha
 [vida](/blog/2009/05/15/dois-corpos-um-espaco/),
-<del>[noiva](/blog/2008/07/18/a-lua-a-pedra-e-o-amor/)</del>
+<s>[noiva](/blog/2008/07/18/a-lua-a-pedra-e-o-amor/)</s>
 [esposa](/blog/2011/05/13/casamento/),
 [cabeleireira](/blog/2009/08/05/barbearia-morgana/),
 [parceira no bingo](/blog/2008/06/27/bingo/) e
