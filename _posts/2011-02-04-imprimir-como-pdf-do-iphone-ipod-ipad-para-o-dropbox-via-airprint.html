@@ -46,8 +46,12 @@ sudo chmod 666 guest/*</pre>
 </li>
 </ol>
 <p>Pronto! O Dropbox já vai começar a mandar seus PDFs para a nuvem.</p>
-<p style="text-align: center;"><a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations"><img class="aligncenter" src="/wp/wp-content/uploads/2011/02/nuvem.jpg" alt="nuvem" width="500" /></a></p>
-<p style="text-align: center;"><em>Mais nuvens bizarras <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">aqui</a>.</em></p>
+<p class="figure">
+  <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">
+    <img src="/wp/wp-content/uploads/2011/02/nuvem.jpg" alt="Foto com uma nuvem estranha" />
+  </a>
+  <span>Mais nuvens bizarras <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">aqui</a>.</span>
+</p>
 <p>O programa cups-pdf é responsável por salvar o PDF em seu Mac. Você pode configurá-lo editando o arquivo <code>/etc/cups/cups-pdf.conf</code>. Ali você consegue resolver o problema das permissões, e ainda pode mudar o nome dos arquivos PDF gerados.</p>
 <ul>
 <li><strong>Permissões:</strong> Procure pela configuração UserUMask e deixe-a somente com zeros. Assim você não terá mais problemas para ler os PDFs gerados.
