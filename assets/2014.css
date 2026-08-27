@@ -179,12 +179,12 @@ table.grid tr:hover td {
 }
 
 .figures,
-.figure,
+figure,
 .image {
   text-align: center;
 }
 
-.figure img,
+figure img,
 .image img {
   max-width: 100%;
   display: block;
@@ -193,7 +193,7 @@ table.grid tr:hover td {
 
 #article-body > p > img + em,  /* Markdown image\n*caption* */
 .figures span,
-.figure span {
+figcaption {
   font-family: Arial, sans-serif;
   font-size: 85%;
   margin: 0;

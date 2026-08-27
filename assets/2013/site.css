@@ -214,18 +214,18 @@ table.grid tr:hover td {
   display: block;
   margin: 1.5em auto;
 }
-.figure,
+figure,
 .image {
   text-align: center;
 }
-.figure img,
+figure img,
 .image img {
   max-width: 35em;  /* @width */
   display: block;
   margin: 0 auto;
 }
 #article-body > p > img + em, /* Markdown image\n*caption* */
-.figure span {
+figcaption {
   font-family: Arial, sans-serif;
   margin: 0;
   display: block;
@@ -252,7 +252,7 @@ table.grid tr:hover td {
     margin-left: 1em;
     margin-right: 1em;
   }
-  .figure img,
+  figure img,
   .image img,
   p img {
     max-width: 100%;
