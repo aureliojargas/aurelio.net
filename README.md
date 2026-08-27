@@ -148,7 +148,7 @@ In HTML files, use the following structures:
 
 <figure>
   <img src="image.jpg" alt="alt text">
-  <span>Image caption</span>
+  <figcaption>Image caption</figcaption>
 </figure>
 
 <!-- Linked image with caption: -->
@@ -157,7 +157,7 @@ In HTML files, use the following structures:
   <a href="foo.html">
     <img src="image.jpg" alt="alt text">
   </a>
-  <span>Image caption</span>
+  <figcaption>Image caption</figcaption>
 </figure>
 
 <!-- Image with no caption (omit the `<span>` tag): -->

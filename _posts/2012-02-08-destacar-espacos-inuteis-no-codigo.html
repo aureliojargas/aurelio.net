@@ -45,7 +45,7 @@ tags: [programador]
 <h2>TextMate</h2>
 <figure>
   <img src="/wp/wp-content/uploads/2012/02/textmate-blanks.png" alt="Foto da janela do TextMate mostrando um código simples em JavaScript, mas com espaços em branco no final de algumas linhas, destacados em vermelho" />
-  <span>Sabe quando você vê uma barata, dá aquele alerta interno e você tem que agir rápido? Tenho uma sensação parecida cada vez que vejo um vermelhinho destes em meus códigos. Apaga! Apaga! Apaga!</span>
+  <figcaption>Sabe quando você vê uma barata, dá aquele alerta interno e você tem que agir rápido? Tenho uma sensação parecida cada vez que vejo um vermelhinho destes em meus códigos. Apaga! Apaga! Apaga!</figcaption>
 </figure>
 <p>Eu uso o TextMate, e é fácil configurá-lo para destacar estes espaços inúteis, usando a expressão regular mágica. Abra o Bundle Editor (⌃⌥⌘B), escolha a linguagem, e encontre o item cinza marcado com a letra L. No conteúdo dele, já no início tem um array chamado patterns. Ali dentro você vai colar as seguintes linhas:</p>
 <pre>{	name = 'invalid.js';
@@ -53,7 +53,7 @@ tags: [programador]
 },</pre>
 <figure>
   <img src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" />
-  <span>Bundle Editor do editor TextMate, com as linhas novas destacadas em azul</span>
+  <figcaption>Bundle Editor do editor TextMate, com as linhas novas destacadas em azul</figcaption>
 </figure>
 <p>Aperte o botão Test para salvar, os vermelhinhos já vão aparecer em seus códigos. Você pode fazer isso para outras linguagens, basta repetir o procedimento, trocando js pelo identificador da outra linguagem.</p>
 <h2>Vim</h2>
@@ -62,7 +62,7 @@ tags: [programador]
 au BufNewFile,BufRead * syn match brancomala '\s\+$' | hi brancomala ctermbg=red</pre>
 <figure>
   <img src="/wp/wp-content/uploads/2012/02/vim-blanks.png" alt="" />
-  <span>Editor Vim mostrando os brancos inúteis em vermelho sangue</span>
+  <figcaption>Editor Vim mostrando os brancos inúteis em vermelho sangue</figcaption>
 </figure>
 <p>Fica como lição de casa para o leitor atualizar a expressão regular para também pegar os espaços no meio dos Tabs do início da linha ;)</p>
 <h2>Outros</h2>

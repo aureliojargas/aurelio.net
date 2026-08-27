@@ -71,14 +71,14 @@ tags: [programador]
 <p>Com o Xcode atualizado, o próximo que me deu dores de cabeça foi o <a href="http://sparkle.andymatuschak.org/">Sparkle</a>. Ele é um carinha muito bacana que você enfia no teu programa e ele faz a mágica da atualização automática. Funciona assim: a próxima vez que eu lançar uma versão nova do AdiumBook, vai aparecer automaticamente uma janelinha para o usuário, dizendo: “tem uma versão nova desse programa, quer baixar e instalar?” e então ele faz tudo sozinho. É lindo de ver. Mas… Levei horas para fazer ele funcionar. E nem posso xingar o carinha, pois o erro foi meu. A maneira que eu informava a versão do AdiumBook no Xcode estava errada. Arrumei isso e o Sparkle começou a funcionar. Coisas da vida…</p>
 <figure>
   <img src="/wp/wp-content/uploads/2009/03/sparkle-window.jpg" />
-  <span>Janelinha do Sparkle atualizando o AdiumBook</span>
+  <figcaption>Janelinha do Sparkle atualizando o AdiumBook</figcaption>
 </figure>
 <blockquote><p>Estou há duas horas escrevendo esse texto já. Isso que nem revisei nada ainda. É, vai demorar…</p></blockquote>
 <p>Já que fui forçado (para o bem) a mudar meu esquema de versões, resolvi por o número de revisão do SVN ali também, para ficar igual software de gente grande. A versão de lançamento ficou “1.5 (50)”, ou seja, versão 1.5, revisão 50 do SVN. Mas como eu não ia ficar mudando a revisão do SVN “na mão” a cada alteração, procurei uma maneira de fazer isso automaticamente. Achei <a href="http://blog.shinyfrog.net/2008/05/19/sync-svn-version-and-cfbundleversion-xcode/">um script em Python</a> que deu erro aqui mas consegui arrumar. No fim, todo esse problema acabou deixando o programa mais profissional e ainda pude automatizar a geração do ZIP para lançamento.</p>
 <p>Ah é, o <a href="http://en.wikipedia.org/wiki/ZIP_(file_format)">ZIP</a>. Antes eu usava o formato <a href="http://en.wikipedia.org/wiki/Apple_Disk_Image">DMG</a> (Disk Image) para “empacotar” e distribuir o AdiumBook. Esse tal DMG é um treco que só tem no Mac. É bacana, imagine um arquivo ZIP que quando você abre aparece uma janelinha bonitinha, com desenhos, cores, tudo bem personalizado para o seu programa. Só que o Sparkle tem <a href="https://github.com/andymatuschak/Sparkle/wiki/Publishing-An-Update">algumas pegadinhas</a> para usar com o DMG. Então para simplificar as coisas para mim, mudei para o ZIP, que é mais padrão.</p>
 <figure>
   <img src="/wp/wp-content/uploads/2009/03/adium-dmg.jpg" />
-  <span>O DMG do Adium é tãaaao bonitinho</span>
+  <figcaption>O DMG do Adium é tãaaao bonitinho</figcaption>
 </figure>
 <p>Percebeu o tamanho das encrencas não-planejadas que aparecem quando você só quer mexer sossegado no seu programa e nada mais? Recapitulando: baixar e instalar o Xcode, Sparkle com problemas, mudar o esquema de versionamento, script para versão automática, mudar de DMG para ZIP. Por isso ocorre o “vezes dois”, que nesse caso foi um “vezes quatro” pelo menos :)</p>
 <p><strong>Quarta lição:<br />
