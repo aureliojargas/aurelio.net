@@ -16,17 +16,17 @@
 #   HTML:     <p><a href="http://example.com"><img src="http://example.com/image.jpg" alt=""></a></p>
 #   Plugin:   <p class="image"><a href="http://example.com"><img src="http://example.com/image.jpg" alt=""></a></p>
 #
-# Images with caption are marked with 'figure' class and the caption is placed inside a <span> tag.
+# Images with caption are marked with the <figure> tag.
 #
 #   Markdown: ![caption1](http://example.com/image.jpg)
 #   HTML:     <p><img src="http://example.com/image.jpg" alt="caption1"></p>
-#   Plugin:   <p class="figure"><img src="http://example.com/image.jpg" alt="caption1"><span>caption1</span></p>
+#   Plugin:   <figure><img src="http://example.com/image.jpg" alt="caption1"><figcaption>caption1</figcaption></figure>
 #
 # Also works for images with caption and surrounded by a link.
 #
 #   Markdown: [![caption2](http://example.com/image.jpg)](http://example.com)
 #   HTML:     <p><a href="http://example.com"><img src="http://example.com/image.jpg" alt="caption2"></a></p>
-#   Plugin:   <p class="figure"><a href="http://example.com"><img src="http://example.com/image.jpg" alt="caption2"></a><span>caption2</span></p>
+#   Plugin:   <figure><a href="http://example.com"><img src="http://example.com/image.jpg" alt="caption2"></a><figcaption>caption2</figcaption></figure>
 
 module Jekyll
 	module ImgcaptionFilter
@@ -44,10 +44,10 @@ module Jekyll
 				'<p class="image">\1</p>'
 			).gsub(
 				/<p>(<img src=".+?" alt="(.+)">)<\/p>/,
-				'<p class="figure">\1<span>\2</span></p>'
+				'<figure>\1<figcaption>\2</figcaption></figure>'
 			).gsub(
 				/<p>(<a href=".*?"><img src=".+?" alt="(.+)"><\/a>)<\/p>/,
-				'<p class="figure">\1<span>\2</span></p>'
+				'<figure>\1<figcaption>\2</figcaption></figure>'
 			)
 		end
 	end
