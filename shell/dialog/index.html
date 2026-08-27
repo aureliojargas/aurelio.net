@@ -286,9 +286,9 @@ $ dialog --msgbox 'minha primeira tela' 5 40
 
 <p>Imediatamente sua tela ficará assim:</p>
 
-<p class="figure">
+<figure>
   <img src="primeira.png">
-</p>
+</figure>
 
 <p>Fácil não? Desenhamos uma caixa de mensagens (msgbox) de tamanho 5 por 40.</p>
 
@@ -633,9 +633,9 @@ dialog --yesno 'sim ou não?' 0 0
 dialog --yesno 'sim ou não?' 0 0 ; echo Retorno: $?
 </pre>
 
-<p class="figure">
+<figure>
   <img src="simnao.png">
-</p>
+</figure>
 
 <p>Fácil! Zero para Sim, um para não.</p>
 
@@ -663,9 +663,9 @@ fi
 dialog --yesno 'Quer ver as horas?' 0 0 &amp;&amp; echo "Agora são: $(date)"
 </pre>
 
-<p class="figure">
+<figure>
   <img src="horas.png">
-</p>
+</figure>
 
 <p>Usando o Dialog fica fácil definir variáveis de estado ("<em>flags</em>") ou opções antes da execução de um programa! Por exemplo, um programa simples para listar arquivos do diretório atual:</p>
 
@@ -718,9 +718,9 @@ nome=$( cat /tmp/nome.txt )
 echo "O seu nome é: $nome"
 </pre>
 
-<p class="figure">
+<figure>
   <img src="nome.png">
-</p>
+</figure>
 
 <p>Guardamos na variável 'nome' o conteúdo do arquivo temporário. A notação <code>$(comando)</code> para subshell será a utilizada em todo o documento. A similar usando crases também funciona, mas é facilmente confundida com aspas simples, então será evitada.</p>
 
@@ -757,9 +757,9 @@ user=$( dialog --stdout --menu 'Bobice:' 0 0 0   1 um 2 dois 3 três )
 echo Você escolheu o número $user
 </pre>
 
-<p class="figure">
+<figure>
   <img src="bobice1.png">
-</p>
+</figure>
 
 <p>A primeira grande diferença a se notar é que a linha de comando do Dialog ficou gigante, cheia de parâmetros! Vamos destrinchá-la.</p>
 
@@ -771,9 +771,9 @@ echo Você escolheu o número $user
 dialog --stdout --menu 'Bobice:' 0 0 1   1 um 2 dois 3 três
 </pre>
 
-<p class="figure">
+<figure>
   <img src="bobice2.png">
-</p>
+</figure>
 
 <p>Agora apenas um item é visível por vez, diminuindo o tamanho da caixa. Isso pode ser útil quando o Menu tem muitas opções, mas para que a caixa fique num tamanho aceitável, mostra-se apenas parte delas por vez e deve-se fazer uma "rolagem" para ver o resto.</p>
 
@@ -801,9 +801,9 @@ cor=$( dialog --stdout --menu 'As cores:' 0 0 0 amarelo 'a cor do sol' verde 'a 
 echo Você escolheu a cor $cor
 </pre>
 
-<p class="figure">
+<figure>
   <img src="cor1.png">
-</p>
+</figure>
 
 <p>Não é tão difícil hein? A dica para não se confundir é enxergar a linha de comando como várias pequena partes, identificando e isolando cada uma delas:</p>
 
@@ -866,9 +866,9 @@ dialog --radiolist 'As cores:' 0 0 0 \
         azul    'a cor do céu'   OFF
 </pre>
 
-<p class="figure">
+<figure>
   <img src="cor2.png">
-</p>
+</figure>
 
 <p>Ah! A outra diferença do Radiolist para o Menu é que ele usa os parênteses <code>(X)</code> para marcar o item.</p>
 
@@ -890,9 +890,9 @@ estilos=$( dialog --stdout \
 echo "Você escolheu: $estilos"
 </pre>
 
-<p class="figure">
+<figure>
   <img src="rock1.png">
-</p>
+</figure>
 
 <p>A sintaxe é a mesma da Radiolist, e compomos uma lista onde os itens não têm descrição (usando as aspas vazias ''). A diferença agora é que temos mais de um item selecionado.</p>
 
@@ -917,9 +917,9 @@ do
 done
 </pre>
 
-<p class="figure">
+<figure>
   <img src="rock2.png">
-</p>
+</figure>
 
 <h3 id="botaocancelar">4.6. E se o usuário apertar o botão CANCELAR?</h3>
 
@@ -1007,9 +1007,9 @@ esac
 
 <h3 id="menuloop">5.1. Exemplo de menu amarrado (em loop)</h3>
 
-<p class="figure">
+<figure>
   <img src="tia.png">
-</p>
+</figure>
 
 <pre>
 #!/bin/bash
@@ -1072,9 +1072,9 @@ echo 'Tchau Tia!'
 
 <h3 id="encadeado">5.2. Exemplo de telas encadeadas (navegação sem volta)</h3>
 
-<p class="figure">
+<figure>
   <img src="encadeado.png">
-</p>
+</figure>
 
 <pre>
 #!/bin/sh
@@ -1273,9 +1273,9 @@ done
 
 <h3 id="confirmacao">5.4. Exemplo de pedido de confirmação (uma caixa sobre outra)</h3>
 
-<p class="figure">
+<figure>
   <img src="duas.png">
-</p>
+</figure>
 
 <pre>
 #!/bin/sh
@@ -1300,9 +1300,9 @@ dialog --title 'LICENÇA do Software' --textbox $0 16 65 \
 
 <h3 id="posicionar">5.5. Exemplo de posicionamento de caixas (não centralizado)</h3>
 
-<p class="figure">
+<figure>
   <img src="posicao.png">
-</p>
+</figure>
 
 <pre>
 #!/bin/sh
@@ -1325,13 +1325,13 @@ dialog --begin 5 0 \
 
 <h3 id="multicaixas">5.6. Exemplo de várias caixas na mesma tela (multicaixas!)</h3>
 
-<p class="figure">
+<figure>
   <img src="multi1.png">
-</p>
+</figure>
 
-<p class="figure">
+<figure>
   <img src="multi2.png">
-</p>
+</figure>
 
 <pre>
 #!/bin/sh
@@ -1412,9 +1412,9 @@ dialog --no-shadow \
 
 <h3 id="menudinamico">5.7. Exemplo de menu com itens dinâmicos (definidos em execução)</h3>
 
-<p class="figure">
+<figure>
   <img src="users.png">
-</p>
+</figure>
 
 <pre>
 #!/bin/bash
@@ -1870,9 +1870,9 @@ itemhelp_color         = (GREEN,BLACK,ON)
 
 <h3 id="whiptail">7.1. Whiptail</h3>
 
-<p class="figure">
+<figure>
   <img src="whiptail.png">
-</p>
+</figure>
 
 <p>Clone modo texto, que usa a biblioteca <code>newt</code> ao invés da <code>ncurses</code>.</p>
 
@@ -1889,9 +1889,9 @@ itemhelp_color         = (GREEN,BLACK,ON)
 
 <h3 id="xdialog">7.2. Xdialog</h3>
 
-<p class="figure">
+<figure>
   <img src="xdialog.png">
-</p>
+</figure>
 
 <p>É o Dialog para a interface gráfica, que usa a biblioteca Gtk+.</p>
 
@@ -1910,9 +1910,9 @@ itemhelp_color         = (GREEN,BLACK,ON)
 
 <h3 id="kdialog">7.3. Kdialog</h3>
 
-<p class="figure">
+<figure>
   <img src="kdialog.png">
-</p>
+</figure>
 
 <p>O Dialog do time do KDE, que usa a biblioteca Qt.</p>
 
@@ -1929,9 +1929,9 @@ itemhelp_color         = (GREEN,BLACK,ON)
 
 <h3 id="gdialog">7.4. gdialog</h3>
 
-<p class="figure">
+<figure>
   <img src="gdialog.png">
-</p>
+</figure>
 
 <p>O antigo Dialog do time do Gnome, que usa a biblioteca Gtk.</p>
 
@@ -1939,9 +1939,9 @@ itemhelp_color         = (GREEN,BLACK,ON)
 
 <h3 id="zenity">7.5. Zenity</h3>
 
-<p class="figure">
+<figure>
   <img src="zenity.png">
-</p>
+</figure>
 
 <p>O Dialog do time do Gnome, que usa a biblioteca Gtk.</p>
 

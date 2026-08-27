@@ -146,19 +146,19 @@ In HTML files, use the following structures:
 ```html
 <!-- Image with caption: -->
 
-<p class="figure">
+<figure>
   <img src="image.jpg" alt="alt text">
   <span>Image caption</span>
-</p>
+</figure>
 
 <!-- Linked image with caption: -->
 
-<p class="figure">
+<figure>
   <a href="foo.html">
     <img src="image.jpg" alt="alt text">
   </a>
   <span>Image caption</span>
-</p>
+</figure>
 
 <!-- Image with no caption (omit the `<span>` tag): -->
 
