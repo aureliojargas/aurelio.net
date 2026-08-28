@@ -158,8 +158,7 @@ img {
   ol, ul, dd {  /* lists */
     margin-left: 1em;
   }
-  .figure img,
-  .image img,
+  figure img,
   p img {
     max-width: 100%;
     padding: 0;
