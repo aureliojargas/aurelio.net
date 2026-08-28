@@ -129,43 +129,47 @@ pre-commit installed at .git/hooks/pre-commit
 pre-commit installed at .git/hooks/pre-push
 ```
 
-## Images with captions
+## Centered images (with or without captions)
 
-The only special markup I use in my articles is the centered image with caption at bottom.
+The only special markup I use in my articles is the centered image with optional caption at the bottom.
 
-In Markdown files, use the image tag solo in a paragraph of its own, and provide the caption. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/main/_plugins/imgcaption.rb) will generate the HTML markup at build:
+They are placed between paragraphs (or other blocks) vertically separating chunks of text, adding some pause to the reading and providing information or demonstration about the current topic.
+
+In Markdown files, use the image tag solo in a paragraph of its own. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/main/_plugins/imgcaption.rb) will generate the HTML markup at build time:
 
 ```md
 ![Image caption](image.jpg)
 ```
 
-In HTML files, use the following structure:
+In HTML files, use the following structures:
 
 ```html
+<!-- Image with caption: -->
+
 <p class="figure">
-  <img src="image.jpg">
+  <img src="image.jpg" alt="alt text">
   <span>Image caption</span>
 </p>
 
-<!-- Linked image: -->
+<!-- Linked image with caption: -->
 
 <p class="figure">
   <a href="foo.html">
-    <img src="image.jpg">
+    <img src="image.jpg" alt="alt text">
   </a>
   <span>Image caption</span>
 </p>
 
-<!-- No caption: -->
+<!-- Image with no caption (omit the `<span>` tag): -->
 
-<p class="figure">
-  <img src="image.jpg">
+<p class="image">
+  <img src="image.jpg" alt="alt text">
 </p>
 ```
 
-## Right-aligned images
+## Right-aligned images (decorative)
 
-Centered, solo images (with or without captions) are preferred. They are placed between paragraphs (or other blocks) vertically separating chunks of text, adding some pause to the reading and providing information or demonstration about the current topic.
+Centered, solo images (with or without captions) are preferred (see previous topic).
 
 But sometimes, a small, purely decorative image (not informational) gives some flare to a text. They should not break the reading flow neither cause vertical separation.
 
