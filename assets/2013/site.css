@@ -214,12 +214,10 @@ table.grid tr:hover td {
   display: block;
   margin: 1.5em auto;
 }
-figure,
-.image {
+figure {
   text-align: center;
 }
-figure img,
-.image img {
+figure img {
   max-width: 35em;  /* @width */
   display: block;
   margin: 0 auto;
@@ -253,7 +251,6 @@ figcaption {
     margin-right: 1em;
   }
   figure img,
-  .image img,
   p img {
     max-width: 100%;
     padding: 0;

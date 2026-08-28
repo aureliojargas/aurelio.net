@@ -8,13 +8,13 @@
 #
 #   Markdown: ![](http://example.com/image.jpg)
 #   HTML:     <p><img src="http://example.com/image.jpg" alt=""></p>
-#   Plugin:   <p class="image"><img src="http://example.com/image.jpg" alt=""></p>
+#   Plugin:   <figure><img src="http://example.com/image.jpg" alt=""></figure>
 #
 # The same happens for images with no caption, but surrounded by a link.
 #
 #   Markdown: [![](http://example.com/image.jpg)](http://example.com)
 #   HTML:     <p><a href="http://example.com"><img src="http://example.com/image.jpg" alt=""></a></p>
-#   Plugin:   <p class="image"><a href="http://example.com"><img src="http://example.com/image.jpg" alt=""></a></p>
+#   Plugin:   <figure><a href="http://example.com"><img src="http://example.com/image.jpg" alt=""></a></figure>
 #
 # Images with caption are marked with the <figure> tag.
 #
@@ -38,10 +38,10 @@ module Jekyll
 
 			input.gsub(
 				/<p>(<img src=".+?" alt="">)<\/p>/,
-				'<p class="image">\1</p>'
+				'<figure>\1</figure>'
 			).gsub(
 				/<p>(<a href=".*?"><img src=".+?" alt=""><\/a>)<\/p>/,
-				'<p class="image">\1</p>'
+				'<figure>\1</figure>'
 			).gsub(
 				/<p>(<img src=".+?" alt="(.+)">)<\/p>/,
 				'<figure>\1<figcaption>\2</figcaption></figure>'

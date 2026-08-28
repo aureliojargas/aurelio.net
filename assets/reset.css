@@ -159,7 +159,6 @@ img {
     margin-left: 1em;
   }
   figure img,
-  .image img,
   p img {
     max-width: 100%;
     padding: 0;

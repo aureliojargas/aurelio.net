@@ -179,13 +179,11 @@ table.grid tr:hover td {
 }
 
 .figures,
-figure,
-.image {
+figure {
   text-align: center;
 }
 
-figure img,
-.image img {
+figure img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
@@ -321,7 +319,7 @@ nav {
   margin-top: 1em;
 }
 
-#content p.image {
+#content figure {
   margin-top: 2em;
   margin-bottom: 2em;
 }
