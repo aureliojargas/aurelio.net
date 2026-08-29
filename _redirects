@@ -1,4 +1,5 @@
 # Site redirects (Netlify syntax)
+# https://docs.netlify.com/manage/routing/redirects/overview/
 
 # Blog feeds
 # Official /feed redir to FeedBurner, who reads /feed.xml
