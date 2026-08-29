@@ -12,7 +12,7 @@ It took me more than a decade to finally put my local `/a/www` folder into versi
 
 Every commit to the `main` branch triggers a complete site build and deploy in Netlify.
 
-The Ruby version used by the deploy build is determined by the `.ruby-version` file.
+The deploy configuration is in the `netlify.toml` file.
 
 The deploy logs are in https://app.netlify.com/sites/aurelio/deploys.
 

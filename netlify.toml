@@ -1,0 +1,14 @@
+# Build and deploy configuration for Netlify
+# https://docs.netlify.com/build/configure-builds/file-based-configuration/
+#
+# This file has precedence over corresponding settings in the Netlify UI.
+#
+# As of 2026-08-29, the deploy server is on Ubuntu 24.04. This is set in Netlify UI only.
+# https://docs.netlify.com/build/configure-builds/overview/#build-image-selection
+#
+# Pinned Ruby version used to build the site is taken from the .ruby-version file.
+# https://docs.netlify.com/build/configure-builds/manage-dependencies/#ruby
+
+[build]
+  command = "make build"
+  publish = "_site"
