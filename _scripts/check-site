@@ -271,7 +271,7 @@ active_checks="
 for check in $active_checks
 do
     echo "Running $check..."
-    wrong=$($check)
+    wrong=$($check 2>&1)
     test -n "$wrong" && error "$wrong"
 done
 
