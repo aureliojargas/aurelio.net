@@ -10,5 +10,5 @@
 # https://docs.netlify.com/build/configure-builds/manage-dependencies/#ruby
 
 [build]
-  command = "make build"
+  command = "make build && make check"
   publish = "_site"
