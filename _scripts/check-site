@@ -226,7 +226,7 @@ check_windows_linebreak() {
 # markup errors - #77
 check_broken_html() {
     # Is tidy available?
-    tidy -version >/dev/null
+    tidy -version >/dev/null || return 1
 
     echo "$html_files" |
         while read file
