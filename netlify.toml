@@ -10,5 +10,5 @@
 # https://docs.netlify.com/build/configure-builds/manage-dependencies/#ruby
 
 [build]
-  command = "sudo apt install -y tidy && make build && make check"
+  command = "make build"
   publish = "_site"
