@@ -1,9 +1,14 @@
 {% unless page.hide_read_more %}
-{% if include.more_url              %}{% assign more_url = include.more_url %}
-{% elsif page.url contains '/blog/' %}{% assign more_url = '/blog/sumario/' %}
-{% else                             %}{% assign more_url = '..' %}{% endif %}
-	<p class="read-more">
-		<span class="unicode-char heart">♥</span>
-		Gostou desse texto?
-		<a href="{{ more_url }}">Aqui tem mais</a>.
-	</p>{% endunless %}
+  {% if include.more_url %}
+    {% assign more_url = include.more_url %}
+  {% elsif page.url contains '/blog/' %}
+    {% assign more_url = '/blog/sumario/' %}
+  {% else %}
+    {% assign more_url = '..' %}
+  {% endif %}
+  <p class="read-more">
+    <span class="unicode-char heart">♥</span>
+    Gostou desse texto?
+    <a href="{{ more_url }}">Aqui tem mais</a>.
+  </p>
+{% endunless %}

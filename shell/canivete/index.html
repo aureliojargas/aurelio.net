@@ -63,7 +63,9 @@ TODO Classes POSIX regex (Renan Wagner)
   <table>
     <tr>
       <td>
-        <a href="https://www.shellscript.com.br"><img class="center" src="/img/icon/128/livroshell.png" alt=""></a>
+        <a href="https://www.shellscript.com.br">
+          <img class="center" src="/img/icon/128/livroshell.png" alt="">
+        </a>
       </td>
     </tr>
     <tr>
@@ -111,9 +113,7 @@ TODO Classes POSIX regex (Renan Wagner)
   </ul>
 </div>
 
-
 <h2 id="operadores">1. Operadores</h2>
-
 
 <table class="tableborder">
 
@@ -284,9 +284,7 @@ TODO Classes POSIX regex (Renan Wagner)
   </tr>
 </table>
 
-
 <h2 id="redir">2. Redirecionamento</h2>
-
 
 <table class="tableborder">
 
@@ -357,9 +355,7 @@ TODO Classes POSIX regex (Renan Wagner)
   </tr>
 </table>
 
-
 <h2 id="variaveis">3. Variáveis especiais</h2>
-
 
 <table class="tableborder">
 
@@ -428,9 +424,7 @@ TODO Classes POSIX regex (Renan Wagner)
   </tr>
 </table>
 
-
 <h2 id="expansao">4. Expansão de variáveis</h2>
-
 
 <table class="tableborder">
 
@@ -467,14 +461,14 @@ TODO Classes POSIX regex (Renan Wagner)
   </tr>
   <tr>
     <td><code>${#var}</code></td>
-    <td>Retorna o tamanho da string</td>
-  </tr>
-  <tr>
-    <td><code>${!var}</code></td>
-    <td>Executa o conteúdo de $var (igual 'eval \$$var')</td>
-  </tr>
-  <tr>
-    <td><code>${!texto*}</code></td>
+<td>Retorna o tamanho da string</td>
+</tr>
+<tr>
+<td><code>${!var}</code></td>
+<td>Executa o conteúdo de $var (igual 'eval \$$var')</td>
+</tr>
+<tr>
+<td><code>${!texto*}</code></td>
     <td>Retorna os nomes de variáveis começadas por 'texto'</td>
   </tr>
   <tr>
@@ -543,9 +537,7 @@ TODO Classes POSIX regex (Renan Wagner)
   </tr>
 </table>
 
-
 <h2 id="blocos">5. Blocos e agrupamentos</h2>
-
 
 <table class="tableborder">
 
@@ -612,9 +604,7 @@ TODO Classes POSIX regex (Renan Wagner)
   </tr>
 </table>
 
-
 <h2 id="ifwhilefor">6. if, for, select, while, until, case</h2>
-
 
 <table>
 
@@ -678,9 +668,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="test">7. Opções do comando test ou [</h2>
-
 
 <table class="tableborder">
 
@@ -841,9 +829,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="prompt">8. Escapes especiais para usar no prompt (PS1)</h2>
-
 
 <table class="tableborder">
 
@@ -985,9 +971,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="echo">9. Escapes reconhecidos pelo comando echo</h2>
-
 
 <table class="tableborder">
 
@@ -1059,9 +1043,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="date">10. Formatadores do comando date</h2>
-
 
 <table class="tableborder">
 
@@ -1140,9 +1122,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="printf">11. Formatadores do comando printf</h2>
-
 
 <table class="tableborder">
 
@@ -1185,9 +1165,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="ls">12. Letras identificadoras de arquivos no comando ls -l</h2>
-
 
 <table class="tableborder">
 
@@ -1286,9 +1264,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="glob">13. Curingas para nomes de arquivo (glob)</h2>
-
 
 <table class="tableborder">
 
@@ -1325,9 +1301,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="case">14. Curingas para os itens do comando case</h2>
-
 
 <table class="tableborder">
 
@@ -1364,9 +1338,7 @@ esac
   </tr>
 </table>
 
-
 <h2 id="sinais">15. Sinais para usar com trap/kill/killall</h2>
-
 
 <!-- kill -l | tr '\t' '\n' | sed 's/)/ |/;s/^/ | /' -->
 
@@ -1779,13 +1751,13 @@ esac
   </tr>
 </table>
 
-<p>Como obter a listagem: trap -l, kill -l ou killall -l
-<br>
-Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</a></p>
-
+<p>
+  Como obter a listagem: trap -l, kill -l ou killall -l
+  <br>
+  Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 signal</a>
+</p>
 
 <h2 id="exitcode">16. Códigos de retorno de comandos</h2>
-
 
 <table class="tableborder">
 
@@ -1842,9 +1814,7 @@ Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 sign
   </tr>
 </table>
 
-
 <h2 id="cores">17. Códigos de cores (ANSI)</h2>
-
 
 <table class="tableborder">
 
@@ -1958,11 +1928,11 @@ Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 sign
   </tr>
 </table>
 
-<figure><img src="/shell/canivete/zzcores.gif"></figure>
-
+<figure>
+  <img src="/shell/canivete/zzcores.gif">
+</figure>
 
 <h2 id="metacaracteres">18. Os metacaracteres das expressões regulares</h2>
-
 
 <table class="tableborder">
 
@@ -2074,9 +2044,7 @@ Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 sign
   </tr>
 </table>
 
-
 <h2 id="metadif">19. Metacaracteres que são diferentes nos aplicativos</h2>
-
 
 <table class="tableborder">
 
@@ -2218,9 +2186,7 @@ Veja também: <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?signal+7">man 7 sign
   </tr>
 </table>
 
-
 <h2 id="ascii">20. Caracteres ASCII imprimíveis (ISO-8859-1) - texto</h2>
-
 
 <pre>
 $ <a href="https://funcoeszz.net/todas.html">zzascii</a>
@@ -2258,15 +2224,13 @@ $ <a href="https://funcoeszz.net/todas.html">zzascii</a>
 63  ?     95  _    161  ¡    193  Á    225  á
 </pre>
 
-
 <h2 id="asciiimg">21. Caracteres ASCII imprimíveis (ISO-8859-1) - imagem</h2>
 
-
-<figure><img src="/shell/canivete/ascii.gif"></figure>
-
+<figure>
+  <img src="/shell/canivete/ascii.gif">
+</figure>
 
 <h2 id="codigos">22. Códigos prontos para copiar e colar</h2>
-
 
 <table class="tableborder">
 
@@ -2450,9 +2414,7 @@ $ <a href="https://funcoeszz.net/todas.html">zzascii</a>
   </tr>
 </table>
 
-
 <h2 id="emacs">23. Atalhos da linha de comando (set -o emacs)</h2>
-
 
 <!-- os atalhos com a tecla Alt não funcionam no Mac, por isso não coloquei no canivete. -->
 
@@ -2576,9 +2538,7 @@ $ <a href="https://funcoeszz.net/todas.html">zzascii</a>
   </tr>
 </table>
 
-
 <h2 id="ferramentas">24. A caixa de ferramentas do shelleiro</h2>
-
 
 <table class="tableborder">
 

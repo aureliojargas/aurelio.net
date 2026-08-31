@@ -11,7 +11,6 @@ wp_tags:
 tags: [programador]
 ---
 
-
 <p>Costumo prestar atenção aos detalhes e sou perfeccionista. Essa combinação, apesar de gerar resultados positivos, é um calvário para o praticante, pois às vezes perco muito tempo trabalhando em “coisas que ninguém vai perceber”.</p>
 <p>Quer um exemplo? Veja se você consegue perceber o problema no código JavaScript a seguir:</p>
 <pre>function mySort(a, b) { 
@@ -25,26 +24,37 @@ tags: [programador]
 }</pre>
 <p>Olhando assim não tem como perceber, mas este pequeno trecho de código não possui apenas um, mas QUATRO PROBLEMAS GRAVÍSSIMOS!!! &lt;/drama&gt;</p>
 <ol>
-<li>Um espaço em branco inútil no final da primeira linha</li>
-<li>Um Tab inútil na segunda linha, que era para ser vazia</li>
-<li>Um espaço inútil entre os dois Tabs da linha “return 1”</li>
-<li>Um Tab inútil no final da penúltima linha</li>
+  <li>Um espaço em branco inútil no final da primeira linha</li>
+  <li>Um Tab inútil na segunda linha, que era para ser vazia</li>
+  <li>Um espaço inútil entre os dois Tabs da linha “return 1”</li>
+  <li>Um Tab inútil no final da penúltima linha</li>
 </ol>
 <p>Vai selecionando devagar com o mouse que você verá.</p>
-<blockquote><p><strong>Atualização:</strong> <s>O chato do WordPress estragou minha brincadeira. Ele removeu do código os Tabs inúteis na hora de salvar o post. Tentei colocar de novo, mas ele sempre tira. Viu como não sou só eu que não gosta deles?</s> — WordPress removido, problema resolvido :)</p></blockquote>
+<blockquote>
+  <p><strong>Atualização:</strong> <s>O chato do WordPress estragou minha brincadeira. Ele removeu do código os Tabs inúteis na hora de salvar o post. Tentei colocar de novo, mas ele sempre tira. Viu como não sou só eu que não gosta deles?</s> — WordPress removido, problema resolvido :)</p>
+</blockquote>
 <p>Tá, eu sei. Estes espaços excedentes não influem em nada no funcionamento do programa e removê-los não vai fazer diferença. Até a economia de bytes, que poderia ser um argumento para a limpeza, é irrisória.</p>
-<blockquote><p>Irrisória! Faz anos que eu não digito essa palavra. Irrisória. Irrisória. Irrisória. Pronto, matei a saudade :)</p></blockquote>
+<blockquote>
+  <p>Irrisória! Faz anos que eu não digito essa palavra. Irrisória. Irrisória. Irrisória. Pronto, matei a saudade :)</p>
+</blockquote>
 <p>Mas eu detesto ter qualquer coisa “sobrando” em meus códigos, então estes espaços em branco são inadmissíveis. Geralmente uso uma <a href="/regex/">expressão regular</a> para vasculhar o código e remover todos estes espaços:</p>
 <pre>^(\t+ | +\t)|[\t ]+$</pre>
-<blockquote><p>Traduzindo: Procure espaços e Tabs misturados no início da linha, ou por qualquer combinação de Tabs e espaços no final das linhas.</p></blockquote>
+<blockquote>
+  <p>Traduzindo: Procure espaços e Tabs misturados no início da linha, ou por qualquer combinação de Tabs e espaços no final das linhas.</p>
+</blockquote>
 <p>Mas é claro que eu esqueço de fazer esta pesquisa e os famigerados espaços parasitas acabam ficando no código.</p>
 <p>Eu poderia configurar o SVN para disparar um <a href="/shell/">shell script</a> que remove estes espaços a cada commit, mas tenho preguiça de procurar como se faz isso. De qualquer forma, isso eliminaria o prazer de fazer a limpeza eu mesmo.</p>
-<blockquote><p>Tipo se orgulhar de ver a casa limpa depois da faxina que você mesmo fez. Quando a faxineira limpa não tem essa emoção.</p></blockquote>
+<blockquote>
+  <p>Tipo se orgulhar de ver a casa limpa depois da faxina que você mesmo fez. Quando a faxineira limpa não tem essa emoção.</p>
+</blockquote>
 <p>Perdoem-me pelo imperdoável deslize anti-automação, mas essa tarefa eu gosto de fazer “na mão”. Assim sendo, nada melhor do que configurar o editor de textos para destacar em uma cor diferente estes espaços, para que eu possa apagá-los um por um, sem piedade.</p>
-<blockquote><p>Aleluia! Finalmente consegui chegar no assunto do post :)</p></blockquote>
+<blockquote>
+  <p>Aleluia! Finalmente consegui chegar no assunto do post :)</p>
+</blockquote>
 <h2>TextMate</h2>
 <figure>
-  <img src="/wp/wp-content/uploads/2012/02/textmate-blanks.png" alt="Foto da janela do TextMate mostrando um código simples em JavaScript, mas com espaços em branco no final de algumas linhas, destacados em vermelho" />
+  <img src="/wp/wp-content/uploads/2012/02/textmate-blanks.png"
+       alt="Foto da janela do TextMate mostrando um código simples em JavaScript, mas com espaços em branco no final de algumas linhas, destacados em vermelho" />
   <figcaption>Sabe quando você vê uma barata, dá aquele alerta interno e você tem que agir rápido? Tenho uma sensação parecida cada vez que vejo um vermelhinho destes em meus códigos. Apaga! Apaga! Apaga!</figcaption>
 </figure>
 <p>Eu uso o TextMate, e é fácil configurá-lo para destacar estes espaços inúteis, usando a expressão regular mágica. Abra o Bundle Editor (⌃⌥⌘B), escolha a linguagem, e encontre o item cinza marcado com a letra L. No conteúdo dele, já no início tem um array chamado patterns. Ali dentro você vai colar as seguintes linhas:</p>
@@ -52,7 +62,8 @@ tags: [programador]
 	match = '^(\t+ | +\t)|[\t ]+$';
 },</pre>
 <figure>
-  <img src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png" alt="" />
+  <img src="/wp/wp-content/uploads/2012/02/textmate-bundle-editor-blanks.png"
+       alt="" />
   <figcaption>Bundle Editor do editor TextMate, com as linhas novas destacadas em azul</figcaption>
 </figure>
 <p>Aperte o botão Test para salvar, os vermelhinhos já vão aparecer em seus códigos. Você pode fazer isso para outras linguagens, basta repetir o procedimento, trocando js pelo identificador da outra linguagem.</p>

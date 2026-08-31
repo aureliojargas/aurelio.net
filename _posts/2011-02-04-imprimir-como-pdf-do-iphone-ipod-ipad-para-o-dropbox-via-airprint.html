@@ -12,10 +12,10 @@ wp_tags:
 tags: []
 ---
 
-
 <p>Imagine que legal: você está em seu iPhone (ou iPod/iPad) lendo um email. Aí você usa o botão Imprimir e plim, aparece um PDF dentro do seu Dropbox, contendo o email. Depois você abre o Safari e acessa um site legal. Novamente usa o botão imprimir e plim, um PDF com o site aparece em seu Dropbox. Depois você abre o Pages, edita um documento e… Acho que você já entendeu, né?</p>
 <figure>
-  <img src="/wp/wp-content/uploads/2011/02/iphone-airprint-dropbox.jpg" alt="" />
+  <img src="/wp/wp-content/uploads/2011/02/iphone-airprint-dropbox.jpg"
+       alt="" />
 </figure>
 <p>Em qualquer aplicativo do iOS que tenha a função de imprimir, você pode gerar um PDF e guardá-lo automaticamente em seu Dropbox, ficando disponível em todos os seus computadores, smartphones, etc. Você só precisa de um Mac (ou Windows, ou Linux) na mesma rede, configurado para funcionar com o <a href="http://www.apple.com/br/iphone/features/airprint.html">AirPrint</a> e <a href="https://www.dropbox.com/">Dropbox</a>. Vou te ensinar como se faz.</p>
 <p>Mas antes, deixa eu te explicar o porquê.</p>
@@ -23,44 +23,56 @@ tags: []
 <p>Como vou fazer isso? Não posso baixar arquivos nem tem a opção mágica de imprimir como PDF, que eu sempre uso no Mac. E depois, mesmo que eu conseguisse, ainda teria que plugar o iPad no computador para enfim poder copiar o comprovante para junto de meus arquivos. Que saco.</p>
 <p>Na busca de uma solução, aprendi <a href="/blog/2011/01/28/salvar-site-como-pdf-no-iphone-ipod-ipad/">como converter um site pra PDF e guardá-lo na biblioteca do iBooks</a>. Mas isso não funcionaria no site do banco, que é inacessível para os sites externos que poderiam convertê-lo para PDF. Pesquisando mais, caí <a href="http://www.tuaw.com/2010/11/16/how-to-create-pdfs-with-your-ios-device">neste artigo</a> que mostrou a solução para o meu problema:</p>
 <ul>
-<li><strong>A partir do iOS, imprimir via AirPrint para uma impressora PDF em meu Mac, que salva direto dentro do meu Dropbox.</strong></li>
+  <li><strong>A partir do iOS, imprimir via AirPrint para uma impressora PDF em meu Mac, que salva direto dentro do meu Dropbox.</strong></li>
 </ul>
 <p>Sei que isso parece complicado (e na verdade é!), mas já expliquei aqui no blog como fazer a parte mais difícil. Vamos lá para o passo a passo.</p>
 <ol>
-<li><a href="/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/">Configure seu Mac para ser uma impressora PDF</a>.</li>
-<li><a href="/blog/2011/02/02/ativar-airprint-no-mac-os-x-com-uma-unica-linha/">Ative o AirPrint em seu Mac</a>.</li>
-<li><strong>Mande imprimir algo</strong> direto do iPhone para testar tudo e para que seja criada a pasta especial que guarda os PDFs.</li>
-<li><strong>Confira se o PDF foi mesmo criado.</strong> Para isso, abra a seguinte pasta:
-<figure>
-  <img src="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png" alt="Foto do Finder mostrando a pasta CUPS-PDF" />
-  <figcaption>Seu HD &gt; Usuários &gt; Compartilhado &gt; CUPS-PDF</figcaption>
-</figure>
-<p>Se tudo deu certo, ali haverá uma pasta chamada <strong>guest</strong> e seu PDF estará dentro dela.</p>
-<blockquote><p><strong>Aqui vem a pegadinha:</strong> a pasta guest é protegida e você não tem permissão para ver seu conteúdo. É preciso fazer mágicas no Terminal para resolver este problema:</p>
-<pre>cd /var/spool/cups-pdf
+  <li><a href="/blog/2011/01/31/configurar-seu-mac-para-simular-uma-impressora-pdf-printer/">Configure seu Mac para ser uma impressora PDF</a>.</li>
+  <li><a href="/blog/2011/02/02/ativar-airprint-no-mac-os-x-com-uma-unica-linha/">Ative o AirPrint em seu Mac</a>.</li>
+  <li><strong>Mande imprimir algo</strong> direto do iPhone para testar tudo e para que seja criada a pasta especial que guarda os PDFs.</li>
+  <li>
+    <strong>Confira se o PDF foi mesmo criado.</strong> Para isso, abra a seguinte pasta:
+    <figure>
+      <img src="/wp/wp-content/uploads/2011/01/pdf-printer-folder.png"
+           alt="Foto do Finder mostrando a pasta CUPS-PDF" />
+      <figcaption>Seu HD &gt; Usuários &gt; Compartilhado &gt; CUPS-PDF</figcaption>
+    </figure>
+    <p>Se tudo deu certo, ali haverá uma pasta chamada <strong>guest</strong> e seu PDF estará dentro dela.</p>
+    <blockquote>
+      <p><strong>Aqui vem a pegadinha:</strong> a pasta guest é protegida e você não tem permissão para ver seu conteúdo. É preciso fazer mágicas no Terminal para resolver este problema:</p>
+      <pre>cd /var/spool/cups-pdf
 sudo chmod o+rwx guest/
 sudo chmod 666 guest/*</pre>
-<p>Agora sim, você poderá ver seu PDF. Mais pra frente eu te ensino como fazer para que não ocorra mais esse problema de permissões.</p></blockquote>
-<p>Então neste ponto já está quase tudo funcionando, você consegue imprimir do iPhone e salvar como PDF em seu Mac. Agora vem o pulo do gato, que é colocar este PDF na nuvem.</li>
-<li><strong>Dentro do seu Dropbox, faça um link para a pasta com os PDFs. </strong>Primeiro, entre em sua pasta do Dropbox:
-<pre>cd ~/Dropbox</pre>
-<p>Agora crie um link para a pasta com os PDFs de impressão. Chamarei o link de “PDF”, mas use o nome que você quiser:</p>
-<pre>ln -s /var/spool/cups-pdf/guest PDF</pre>
-</li>
-</ol>
-<p>Pronto! O Dropbox já vai começar a mandar seus PDFs para a nuvem.</p>
-<figure>
-  <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">
-    <img src="/wp/wp-content/uploads/2011/02/nuvem.jpg" alt="Foto com uma nuvem estranha" />
-  </a>
-  <figcaption>Mais nuvens bizarras <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">aqui</a>.</figcaption>
-</figure>
-<p>O programa cups-pdf é responsável por salvar o PDF em seu Mac. Você pode configurá-lo editando o arquivo <code>/etc/cups/cups-pdf.conf</code>. Ali você consegue resolver o problema das permissões, e ainda pode mudar o nome dos arquivos PDF gerados.</p>
-<ul>
-<li><strong>Permissões:</strong> Procure pela configuração UserUMask e deixe-a somente com zeros. Assim você não terá mais problemas para ler os PDFs gerados.
-<pre>UserUMask 0000</pre>
-</li>
-<li><strong>Prefixo job_:</strong> Todos os PDFs criados ganham um prefixo “job_” seguido de um número. Para remover este prefixo, mude a configuração Label para zero.
-<pre>Label 0</pre>
-<p>Após fazer estas alterações, basta salvar o arquivo que elas já entrarão em vigor. Mande outra impressão para testar se tudo está certo.</li>
-</ul>
+      <p>Agora sim, você poderá ver seu PDF. Mais pra frente eu te ensino como fazer para que não ocorra mais esse problema de permissões.</p>
+    </blockquote>
+    <p>
+      Então neste ponto já está quase tudo funcionando, você consegue imprimir do iPhone e salvar como PDF em seu Mac. Agora vem o pulo do gato, que é colocar este PDF na nuvem.
+    </li>
+    <li>
+      <strong>Dentro do seu Dropbox, faça um link para a pasta com os PDFs. </strong>Primeiro, entre em sua pasta do Dropbox:
+      <pre>cd ~/Dropbox</pre>
+      <p>Agora crie um link para a pasta com os PDFs de impressão. Chamarei o link de “PDF”, mas use o nome que você quiser:</p>
+      <pre>ln -s /var/spool/cups-pdf/guest PDF</pre>
+    </li>
+  </ol>
+  <p>Pronto! O Dropbox já vai começar a mandar seus PDFs para a nuvem.</p>
+  <figure>
+    <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">
+      <img src="/wp/wp-content/uploads/2011/02/nuvem.jpg"
+           alt="Foto com uma nuvem estranha" />
+    </a>
+    <figcaption>Mais nuvens bizarras <a href="http://www.euphoria-magazine.com/science/310-punch-hole-clouds-and-other-rarely-seen-cloud-formations">aqui</a>.</figcaption>
+  </figure>
+  <p>O programa cups-pdf é responsável por salvar o PDF em seu Mac. Você pode configurá-lo editando o arquivo <code>/etc/cups/cups-pdf.conf</code>. Ali você consegue resolver o problema das permissões, e ainda pode mudar o nome dos arquivos PDF gerados.</p>
+  <ul>
+    <li>
+      <strong>Permissões:</strong> Procure pela configuração UserUMask e deixe-a somente com zeros. Assim você não terá mais problemas para ler os PDFs gerados.
+      <pre>UserUMask 0000</pre>
+    </li>
+    <li>
+      <strong>Prefixo job_:</strong> Todos os PDFs criados ganham um prefixo “job_” seguido de um número. Para remover este prefixo, mude a configuração Label para zero.
+      <pre>Label 0</pre>
+      <p>
+        Após fazer estas alterações, basta salvar o arquivo que elas já entrarão em vigor. Mande outra impressão para testar se tudo está certo.
+      </li>
+    </ul>

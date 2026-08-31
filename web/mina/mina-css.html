@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-<head>
-<title>Campo Minado em CSS</title>
-<meta name="generator" content="Vim :)">
-<meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
+  <head>
+    <title>Campo Minado em CSS</title>
+    <meta name="generator" content="Vim :)">
+    <meta name="author" content="Aurelio Marinho Jargas www.aurelio.net">
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<!--
+    <!--
 	Campo Minado em CSS
 
 	por Aurelio Marinho Jargas, Abr 2006.
@@ -29,8 +29,7 @@
 	números.
 -->
 
-
-<style type="text/css">
+    <style type="text/css">
 
 	body
 		{
@@ -107,14 +106,14 @@
 	.browserok  { color	: #0c0; }
 	.browseraok { color	: #f60; }
 	.browsernok { color	: #f00; }
-</style>
-</head>
+    </style>
+  </head>
 
-<body>
+  <body>
 
-<h1>Mina CSS</h1>
+    <h1>Mina CSS</h1>
 
-<!--
+    <!--
 	E agora o código HTML do tabuleiro, que é simplesmente um
 	conjunto de links. As linhas são quebradas pelo BR, que dá o
 	clear:left.
@@ -125,65 +124,71 @@
 	funciona.
 -->
 
-<div id="board">
-	<a href="#11">1</a>
-	<a href="#12">2</a>
-	<a href="#13">*</a>
-	<a href="#14">1</a>
-	<br />
-	<a href="#21">2</a>
-	<a href="#22">*</a>
-	<a href="#23">3</a>
-	<a href="#24">1</a>
-	<br />
-	<a href="#31">2</a>
-	<a href="#32">*</a>
-	<a href="#33">3</a>
-	<a href="#34">1</a>
-	<br />
-	<a href="#41">1</a>
-	<a href="#42">1</a>
-	<a href="#43">2</a>
-	<a href="#44">*</a>
-</div>
+    <div id="board">
+      <a href="#11">1</a>
+      <a href="#12">2</a>
+      <a href="#13">*</a>
+      <a href="#14">1</a>
+      <br />
+      <a href="#21">2</a>
+      <a href="#22">*</a>
+      <a href="#23">3</a>
+      <a href="#24">1</a>
+      <br />
+      <a href="#31">2</a>
+      <a href="#32">*</a>
+      <a href="#33">3</a>
+      <a href="#34">1</a>
+      <br />
+      <a href="#41">1</a>
+      <a href="#42">1</a>
+      <a href="#43">2</a>
+      <a href="#44">*</a>
+    </div>
 
-<div id="statusline">
-Evite as bombas!
-</div>
+    <div id="statusline">Evite as bombas!</div>
 
-<p><br /></p>
-<hr>
+    <p>
+      <br />
+    </p>
+    <hr>
 
-<p>
-Feito somente com HTML e CSS, não tem inteligência, apenas responde às
-ações do jogador.
-</p>
-<p>
-Cada casa do jogo é um <b>link</b>. O CSS formata o link como um quadrado
-cinza com bordas. O texto do link fica cinza também, escondendo-o do
-jogador. Todos os links apontam para esta mesma página, porém cada um
-com um ID diferente (<b>#anchor</b>). Com o uso da pseudo-classe
-<b>:hover</b> é feito o destaque em amarelo da casa sob o mouse. Com a
-pseudo-classe <b>:visited</b> o conteúdo da casa é revelado,
-trocando-se suas cores.
-</p>
-<p>Jogando-se uma vez, todos os links são marcados como visitados e
-não é possível jogar novamente a não ser que se limpe o histórico do
-navegador ou se salve este arquivo em seu computador com outro nome.
-</p>
-<p>Fontes:
-<a href="mina-css.html">mina-css.html</a>
-</p>
+    <p>
+      Feito somente com HTML e CSS, não tem inteligência, apenas responde às
+      ações do jogador.
+    </p>
+    <p>
+      Cada casa do jogo é um <b>link</b>. O CSS formata o link como um quadrado
+      cinza com bordas. O texto do link fica cinza também, escondendo-o do
+      jogador. Todos os links apontam para esta mesma página, porém cada um
+      com um ID diferente (<b>#anchor</b>). Com o uso da pseudo-classe
+      <b>:hover</b> é feito o destaque em amarelo da casa sob o mouse. Com a
+      pseudo-classe <b>:visited</b> o conteúdo da casa é revelado,
+      trocando-se suas cores.
+    </p>
+    <p>
+      Jogando-se uma vez, todos os links são marcados como visitados e
+      não é possível jogar novamente a não ser que se limpe o histórico do
+      navegador ou se salve este arquivo em seu computador com outro nome.
+    </p>
+    <p>
+      Fontes:
+      <a href="mina-css.html">mina-css.html</a>
+    </p>
 
-<p><br /><br /><br /></p>
+    <p>
+      <br />
+      <br />
+      <br />
+    </p>
 
-<div id="browsers">
-<span class="browserok">Camino</span> .
-<span class="browserok">Firefox</span> .
-<span class="browseraok">Safari</span> .
-<span class="browseraok">Opera</span> .
-<span class="browsernok">IE</span>
-</div>
+    <div id="browsers">
+      <span class="browserok">Camino</span> .
+      <span class="browserok">Firefox</span> .
+      <span class="browseraok">Safari</span> .
+      <span class="browseraok">Opera</span> .
+      <span class="browsernok">IE</span>
+    </div>
 
-</body>
+  </body>
 </html>

@@ -169,7 +169,9 @@ title: Configuração do MoneyLog
   <dt>
     <a href="/moneylog/cloud/">MoneyLog Cloud</a>:
   </dt>
-  <dd>Todas as configurações devem ser colocadas no arquivo <code>/Apps/MoneyLog Cloud/config.js</code>, que é criado automaticamente.</dd>
+  <dd>
+    Todas as configurações devem ser colocadas no arquivo <code>/Apps/MoneyLog Cloud/config.js</code>, que é criado automaticamente.
+  </dd>
   <dt>
     <a href="/moneylog/beta/">MoneyLog Beta</a>:
   </dt>
@@ -179,11 +181,15 @@ title: Configuração do MoneyLog
   <dt>
     <a href="/moneylog/portable/">MoneyLog Portable</a>:
   </dt>
-  <dd>Todas as configurações devem ser alteradas direto no arquivo HTML. Abra-o num editor de textos simples e procure por "<em>User Config</em>".</dd>
+  <dd>
+    Todas as configurações devem ser alteradas direto no arquivo HTML. Abra-o num editor de textos simples e procure por "<em>User Config</em>".
+  </dd>
   <dt>
     <a href="/moneylog/browser/">MoneyLog Browser</a>:
   </dt>
-  <dd>Não há como fazer configurações.</dd>
+  <dd>
+    Não há como fazer configurações.
+  </dd>
 </dl>
 
 <h3 id="ligar-desligar">Ligar/desligar</h3>
@@ -1050,7 +1056,8 @@ ignoreDataNewerThan = '2020-12-31';   // Ignorar lançamentos após 2020
 
 <ul>
   <li>No MoneyLog Cloud, basta colocar os arquivos TXT dentro da pasta <code>/Apps/MoneyLog Cloud/txt/</code> de seu Dropbox, que eles serão carregados automaticamente.</li>
-  <li>No MoneyLog Beta, você deve informar a localização dos arquivos TXT na configuração <a href="#dataFiles">dataFiles</a>.
+  <li>
+    No MoneyLog Beta, você deve informar a localização dos arquivos TXT na configuração <a href="#dataFiles">dataFiles</a>.
   </li>
 </ul>
 
@@ -1093,7 +1100,8 @@ dataFiles = ['*', 'geral.txt', 'salario.txt', 'carro.txt', 'escola.txt'];
 <p>Dicas:</p>
 
 <ul>
-  <li>Aconselho criar uma pasta chamada <code>txt</code> dentro da sua cópia do repositório e colocar seus arquivos ali. A vantagem é poder atualizar o Git sem preocupação e ainda <a href="/moneylog/beta/#cloud">garantir compatibilidade com o MoneyLog Cloud</a>, que também usa esta pasta.
+  <li>
+    Aconselho criar uma pasta chamada <code>txt</code> dentro da sua cópia do repositório e colocar seus arquivos ali. A vantagem é poder atualizar o Git sem preocupação e ainda <a href="/moneylog/beta/#cloud">garantir compatibilidade com o MoneyLog Cloud</a>, que também usa esta pasta.
   </li>
   <li>O arquivo TXT deve ter a codificação UTF-8.</li>
   <li>As quebras de linha podem ser no formato Unix (LF) ou Windows (CR+LF), tanto faz.</li>

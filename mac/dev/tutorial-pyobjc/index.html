@@ -11,7 +11,14 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <p><strong>Veja o vídeo da palestra completa (34 minutos):</strong></p>
 
-<p><embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="https://video.google.com/googleplayer.swf?docId=-82892405626718533&hl=en" flashvars=""></p>
+<p>
+  <embed style="width:400px;
+                height:326px"
+         id="VideoPlayback"
+         type="application/x-shockwave-flash"
+         src="https://video.google.com/googleplayer.swf?docId=-82892405626718533&hl=en"
+         flashvars="">
+</p>
 
 <p><a href="http://ist.sociesc.org.br/download/pyConBrasil3/videos/Tem_Cobra_dentro_da_Ma%e7%e3_-_Como_fazer_um_aplicativo_Cocoa_programando_em_Python_(PyObjC).avi">Vídeo original aqui</a></p>
 
@@ -132,14 +139,17 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <h2 id="toc2">2. Dolar - Versão com Outlets e Actions</h2>
 
-<p><img class="center" src="dolar-1.jpg" alt=""></p>
+<p>
+  <img class="center" src="dolar-1.jpg" alt="">
+</p>
 
 <p><a href="dolar.zip">Baixe os fontes</a> (Zip, 60 KB)</p>
 
 <h3 id="toc3">2.1. Instale o ambiente de desenvolvimento</h3>
 
 <ul>
-  <li>Instale o Xcode (<a href="/mac/dev/#xcode">leia instruções</a>)
+  <li>
+    Instale o Xcode (<a href="/mac/dev/#xcode">leia instruções</a>)
   </li>
   <li>
     <s>Instale o PyObjC</s> À partir do Leopard, o PyObjC já faz parte do sistema.
@@ -157,13 +167,15 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <h3 id="toc5">2.3. Veja os arquivos criados</h3>
 
 <ul>
-  <li>Info.plist
+  <li>
+    Info.plist
     <ul>
       <li>CFBundleShortVersionString</li>
       <li>Copyright</li>
     </ul>
   </li>
-  <li>setup.py
+  <li>
+    setup.py
     <ul>
       <li>Construção do aplicativo</li>
       <li>Não precisa mexer</li>
@@ -183,7 +195,8 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
       <li>Coloque aqui seus métodos</li>
     </ul>
   </li>
-  <li>MainMenu.nib
+  <li>
+    MainMenu.nib
     <ul>
       <li>Editável no Interface Builder (chamado de IB daqui adiante)</li>
       <li>Arquivo com as definições de posicionamentos e <strong>conexões</strong> entre elementos</li>
@@ -199,14 +212,16 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
   <li>Dê um título para a janela <em>Inspetor → Attributes → Window Title: Conversor Dólar - Real</em></li>
   <li>Ligue as guias de posicionamento <em>Layout → Guides → Enable Aqua Guidelines</em></li>
   <li>Mostre as paletas <em>Tools → Palettes → Show Palettes</em></li>
-  <li>Arraste os elementos para a janela
+  <li>
+    Arraste os elementos para a janela
     <ul>
       <li>3 labels <em>Paleta → Text → System Font Text</em></li>
       <li>3 caixas de texto <em>Paleta → Text → NSTextField</em></li>
       <li>1 botão <em>Paleta → Controls → Button</em></li>
     </ul>
   </li>
-  <li>Coloque nomes nos labels e no botão <em>Duplo clique no elemento</em>
+  <li>
+    Coloque nomes nos labels e no botão <em>Duplo clique no elemento</em>
     <ul>
       <li>Cotação do dia:</li>
       <li>Dólares:</li>
@@ -220,14 +235,16 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <ul>
   <li>Duplo clique na instância do AppDelegate (cubo azul)</li>
-  <li>Adicione outlets para as caixas de texto <em>Inspetor → Attributes → Outlets → Add</em>
+  <li>
+    Adicione outlets para as caixas de texto <em>Inspetor → Attributes → Outlets → Add</em>
     <ul>
       <li>cotacao</li>
       <li>dolares</li>
       <li>reais</li>
     </ul>
   </li>
-  <li>Adicione um action para o botão <em>Inspetor → Attributes → Action → Add</em>
+  <li>
+    Adicione um action para o botão <em>Inspetor → Attributes → Action → Add</em>
     <ul>
       <li>converte:</li>
     </ul>
@@ -237,7 +254,8 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <h3 id="toc8">2.6. Conecte os elementos com as ligações</h3>
 
 <ul>
-  <li>Conecte os outlets com suas respectivas caixas de texto
+  <li>
+    Conecte os outlets com suas respectivas caixas de texto
     <ul>
       <li>Ctrl-click na instância do AppDelegate (cubo azul)</li>
       <li>Arrasta até a caixa de texto da cotação</li>
@@ -245,7 +263,8 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
       <li>Repita para as outras caixas de texto</li>
     </ul>
   </li>
-  <li>Conecte o botão com sua ação
+  <li>
+    Conecte o botão com sua ação
     <ul>
       <li>Ctrl-click no botão</li>
       <li>Arrasta até a instância do AppDelegate</li>
@@ -258,14 +277,16 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <ul>
   <li>Volte ao Xcode</li>
-  <li>Project → New Custom Executable...
+  <li>
+    Project → New Custom Executable...
     <ul>
       <li>Executable Name: <strong>Dolar</strong> (uma palavra para não complicar)</li>
       <li>Executable Path: /usr/bin/env</li>
     </ul>
   </li>
   <li>Groups &amp; Files → Executables → Seleciona teu executável</li>
-  <li>File → Get Info → Arguments → Botão [+]
+  <li>
+    File → Get Info → Arguments → Botão [+]
     <ul>
       <li>Argument: <strong>Dolar</strong>.app/Contents/MacOS/<strong>Dolar</strong></li>
     </ul>
@@ -284,7 +305,8 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <ul>
   <li>Edite o código Python <em>Duplo clique em <strong>Dolar</strong>AppDelegate.py</em></li>
-  <li>Dentro da classe, crie o método converte_
+  <li>
+    Dentro da classe, crie o método converte_
     <ul>
       <li>def converte_(self, sender): pass</li>
       <li>Sempre lembre-se que ":" deve virar "_" no nome do método</li>
@@ -297,32 +319,38 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <h3 id="toc12">2.10. Descubra objetos e métodos</h3>
 
 <ul>
-  <li>Coloque comandos dentro do converte_()
+  <li>
+    Coloque comandos dentro do converte_()
     <ul>
       <li>print self.cotacao # outlet</li>
       <li>&lt;NSTextField: 0x154c110&gt;</li>
     </ul>
   </li>
   <li>Rode e teste o programa</li>
-  <li>Descubra os métodos do NSTextField
+  <li>
+    Descubra os métodos do NSTextField
     <ul>
       <li>Chame a Ajuda para o Cocoa <em>Help → Documentation → Search Groups → Cocoa</em></li>
       <li>Faça a pesquisa pelo elemento <em>Digite NSTextField na caixa de busca</em></li>
     </ul>
   </li>
-  <li>Veja os métodos
+  <li>
+    Veja os métodos
     <ul>
       <li>Nenhum em especial</li>
     </ul>
   </li>
-  <li>Veja os métodos do pai NSControl (herdado)
+  <li>
+    Veja os métodos do pai NSControl (herdado)
     <ul>
       <li>floatValue()</li>
     </ul>
   </li>
-  <li>Mude o print para mostrar o conteúdo da caixa de texto
+  <li>
+    Mude o print para mostrar o conteúdo da caixa de texto
     <ul>
-      <li>print self.dolares.floatValue()
+      <li>
+        print self.dolares.floatValue()
         <ul>
           <li>self: Instância da classe (Python)</li>
           <li>dolares: Outlet de comunicação (Interface Builder)</li>
@@ -349,7 +377,8 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <ul>
   <li>Veja Documentação novamente</li>
   <li>Ache o setFloatValue: do NSControl</li>
-  <li>Grave o resultado do cálculo na caixa de texto dos Reais
+  <li>
+    Grave o resultado do cálculo na caixa de texto dos Reais
     <ul>
       <li>self.reais.setFloatValue_(reais)</li>
       <li>Lembre-se que no Python o ":" vira "_"</li>
@@ -370,7 +399,9 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <h2 id="toc16">3. Dolar - Versão com Bindings</h2>
 
-<p><img class="center" src="dolar-2.jpg" alt=""></p>
+<p>
+  <img class="center" src="dolar-2.jpg" alt="">
+</p>
 
 <p><a href="dolar-bindings.zip">Baixe os fontes</a> (Zip, 60 KB)</p>
 
@@ -398,11 +429,13 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <ul>
   <li>Selecione a caixa de texto da cotação</li>
-  <li>Inspetor → Bindings → Value → value
+  <li>
+    Inspetor → Bindings → Value → value
     <ul>
       <li>Bind to: <strong>Dolar</strong>AppDelegate</li>
       <li>Model Key Path: cotacao</li>
-      <li>[x] Continuously Update Values
+      <li>
+        [x] Continuously Update Values
         <ul>
           <li>Isso mandará uma ação a cada alteração no texto da caixa</li>
           <li>E chamará automaticamente o método setCotacao_ no Python</li>
@@ -419,19 +452,22 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <ul>
   <li>Vá no Xcode</li>
   <li>Edite o <strong>Dolar</strong>AppDelegate.py</li>
-  <li>Importe o módulo "objc"
+  <li>
+    Importe o módulo "objc"
     <ul>
       <li>import objc</li>
     </ul>
   </li>
-  <li>Logo após a declaração da classe DolarAppDelegate, crie três "ivar"
+  <li>
+    Logo após a declaração da classe DolarAppDelegate, crie três "ivar"
     <ul>
       <li>cotacao = objc.ivar(u"cotacao")</li>
       <li>dolares = objc.ivar(u"dolares")</li>
       <li>reais = objc.ivar(u"reais")</li>
     </ul>
   </li>
-  <li>Atente aos detalhes
+  <li>
+    Atente aos detalhes
     <ul>
       <li>Lembre-se que o nome do binding vem em Unicode</li>
       <li>Esse nome do binding é o Model Key Path que você preencheu no IB</li>
@@ -444,18 +480,21 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <ul>
   <li>Ao se digitar o valor em dólares, o valor em reais será calculado automaticamente</li>
-  <li>Para isso, crie o método que cuidará das alterações na caixa de dólares
+  <li>
+    Para isso, crie o método que cuidará das alterações na caixa de dólares
     <ul>
       <li>def setDolares_(self, valor):</li>
       <li>Lembre-se do _ no final, pois recebe argumento</li>
     </ul>
   </li>
-  <li>Guarde o valor digitado pelo usuário na referência ao binding (ivar)
+  <li>
+    Guarde o valor digitado pelo usuário na referência ao binding (ivar)
     <ul>
       <li>self.dolares = valor</li>
     </ul>
   </li>
-  <li>Faça as contas e guarde o resultado
+  <li>
+    Faça as contas e guarde o resultado
     <ul>
       <li>self.reais = self.dolares * self.cotacao</li>
       <li>O resultado será atualizado automaticamente</li>
@@ -468,12 +507,14 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <ul>
   <li>Ao se digitar o valor em reais, o valor em dólares será calculado automaticamente</li>
-  <li>Similar ao passo anterior, crie o método set
+  <li>
+    Similar ao passo anterior, crie o método set
     <ul>
       <li>def setReais_(self, valor):</li>
     </ul>
   </li>
-  <li>Guarde o valor e faça o cálculo
+  <li>
+    Guarde o valor e faça o cálculo
     <ul>
       <li>self.reais = valor</li>
       <li>self.dolares = self.reais / self.cotacao</li>
@@ -486,16 +527,19 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <h3 id="toc23">3.7. Melhorias na interface</h3>
 
 <ul>
-  <li>Visualização dos resultados
+  <li>
+    Visualização dos resultados
     <ul>
       <li>Crie outros labels usando letras grandes e coloridas para mostrar os valores em reais e dólares</li>
       <li>Faça bindings destes textos com o conteúdo das caixas de texto, para serem atualizados automaticamente</li>
     </ul>
   </li>
-  <li>Usabilidade
+  <li>
+    Usabilidade
     <ul>
       <li>Use um binding para esconder as caixas de dólares e reais enquanto a cotação não for digitada</li>
-      <li>Inspetor → Bindings → Availability → hidden
+      <li>
+        Inspetor → Bindings → Availability → hidden
         <ul>
           <li>Bind to: <strong>Dolar</strong>AppDelegate</li>
           <li>Model Key Path: cotacao</li>
@@ -503,7 +547,8 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
         </ul>
       </li>
       <li>Isso deixa claro para o usuário que a cotação deve ser digitada primeiro</li>
-      <li>Além de evitar a necessidade de verificações no código Python, pois a cotação sempre vai estar preenchida
+      <li>
+        Além de evitar a necessidade de verificações no código Python, pois a cotação sempre vai estar preenchida
         <ul>
           <li>Chega de "if self.cotacao:" nos setFoo_()</li>
         </ul>
@@ -512,11 +557,17 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
   </li>
 </ul>
 
-<p><img class="center" src="dolar-3-1.jpg" alt=""></p>
+<p>
+  <img class="center" src="dolar-3-1.jpg" alt="">
+</p>
 
-<p><img class="center" src="dolar-3-2.jpg" alt=""></p>
+<p>
+  <img class="center" src="dolar-3-2.jpg" alt="">
+</p>
 
-<p><img class="center" src="dolar-3-3.jpg" alt=""></p>
+<p>
+  <img class="center" src="dolar-3-3.jpg" alt="">
+</p>
 
 <p><a href="dolar-bindings-melhorado.zip">Baixe os fontes</a> (Zip, 68 KB)</p>
 
@@ -526,7 +577,11 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 
 <p>Um exemplo de como fazer um interface Cocoa para um programa Python já existente. O aplicativo <a href="http://txt2tags.sf.net/pt">txt2tags</a> foi usado como módulo, convertendo textos automaticamente enquanto o usuário digita. Foi usada a técnica de binding no conteúdo com o método setReferencia_() agindo a cada tecla digitada.</p>
 
-<p><a href="pyobjc-app-1.jpg"><img class="center" src="pyobjc-app-1.mini.jpg" alt=""></a></p>
+<p>
+  <a href="pyobjc-app-1.jpg">
+    <img class="center" src="pyobjc-app-1.mini.jpg" alt="">
+  </a>
+</p>
 
 <p><a href="markup-babel.zip">Baixe os fontes</a>, abra no Xcode e rode (Build and Run).</p>
 
@@ -541,23 +596,27 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
 <p>Um exemplo de como fazer um programa mais complexo, utilizando as tecnologias disponíveis no Mac OS X.</p>
 
 <ul>
-  <li>Data source (tabelas)
+  <li>
+    Data source (tabelas)
     <ul>
       <li>Ordenar os dados pela coluna FOO (ordem direta e reversa)</li>
       <li>Trocar colunas de lugar (arrastando)</li>
     </ul>
   </li>
-  <li>Live search
+  <li>
+    Live search
     <ul>
       <li>Com o uso de bindings, fazer pesquisas em tempo real, enquanto digita</li>
     </ul>
   </li>
-  <li>Picture resize
+  <li>
+    Picture resize
     <ul>
       <li>Com o uso de sliders e bindings, fica fácil alterar o tamanho das fotos em tempo real, enquanto arrasta o botão</li>
     </ul>
   </li>
-  <li>Performance
+  <li>
+    Performance
     <ul>
       <li>Mesmo lidando com muitos dados e fotos, a performance fica excelente</li>
       <li>O PyObjC não sobrecarrega o aplicativo, é uma ponte enxuta</li>
@@ -565,6 +624,10 @@ subtitle: Palestra "Tem cobra dentro da maçã - Como fazer um aplicativo Cocoa 
   </li>
 </ul>
 
-<p><a href="pyobjc-app-3.jpg"><img class="center" src="pyobjc-app-3.mini.jpg" alt=""></a></p>
+<p>
+  <a href="pyobjc-app-3.jpg">
+    <img class="center" src="pyobjc-app-3.mini.jpg" alt="">
+  </a>
+</p>
 
 <p>Programa ainda inacabado, fontes não disponíveis.</p>

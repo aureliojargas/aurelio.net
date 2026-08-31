@@ -10,7 +10,6 @@ wp_tags:
 tags: [site]
 ---
 
-
 <p>Faz alguns anos já que leio aqui e ali sobre a tal <a href="http://css-tricks.com/158-css-sprites/">técnica de CSS Sprites</a>, mas nunca experimentei. Sempre achei que era complicado demais e que era desnecessário, que o ganho seria irrisório.</p>
 <p>Como eu estava enganado!</p>
 <p>Na cruzada sagrada para diminuir o tempo de carregamento do blog e do site, melhorando sua performance, descobri esta excelente ferramenta online <a href="http://www.webpagetest.org">WebPageTest</a>.</p>
@@ -19,14 +18,19 @@ tags: [site]
 <p>Uma das sugestões que a ferramenta me deu para melhorar isso, foi justamente… o CSS Sprites. Tá, você venceu. Não vou mais te ignorar. Bora aprender de vez o que é isso e como implementar.</p>
 <p>Mas antes, deixa eu te mostrar qual era o meu problema. Esta é uma foto da home do meu site, a página lerda:</p>
 <figure>
-  <img src="/wp/wp-content/uploads/2011/09/home-matrix.jpg" alt="Página principal do site com uma seta apontando para a tabela de ícones" />
+  <img src="/wp/wp-content/uploads/2011/09/home-matrix.jpg"
+       alt="Página principal do site com uma seta apontando para a tabela de ícones" />
 </figure>
 <p>Tá vendo aquela tabela cheia de ícones ali? São 30 ao todo. Pois é, eu sempre achei que era melhor ter várias imagens pequenas, que o navegador poderia baixar rapidamente cada uma e fazer cache. Na minha cabeça isso era melhor do que uma única imagem enorme com todos aqueles ícones.</p>
 <p><a href="http://yuiblog.com/blog/2006/11/28/performance-research-part-1/">Mas é justo o contrário!</a></p>
 <p>No fim das contas o navegador consegue baixar mais rápido uma única imagem maior do que várias pequenas, pelo fato de que ele não pode abrir muitas conexões simultâneas. O número varia, mas consideremos que é no máximo quatro conexões.</p>
-<blockquote><p>É como um banco lotado com somente quatro atendentes. Aí forma uma fila com todas essas 30 imagenzinhas, que também concorrem com os arquivos CSS, Javascript, outras imagens e todos os outros componentes que compõem a página. E assim, de quatro em quatro por vez, todo mundo fica naquela fila enooorme esperando sua vez e a página demora pra carregar.</p></blockquote>
+<blockquote>
+  <p>É como um banco lotado com somente quatro atendentes. Aí forma uma fila com todas essas 30 imagenzinhas, que também concorrem com os arquivos CSS, Javascript, outras imagens e todos os outros componentes que compõem a página. E assim, de quatro em quatro por vez, todo mundo fica naquela fila enooorme esperando sua vez e a página demora pra carregar.</p>
+</blockquote>
 <p>A técnica do CSS Sprites consiste em juntar todos estes 30 ícones numa única imagem e deixar que as regras do CSS façam os recortes necessários nesta imagem (usando background-position) para mostrar cada pedaço no lugar certo. A grande vantagem é que sendo uma única imagem em vez de 30, ela ocupa somente uma “atendente do banco”, deixando as outras três livres para atender os outros elementos, e assim a fila anda mais rápido.</p>
-<blockquote><p>É, o CSS Sprites é aquele office boy que chega com uma pasta lotada de boletos e monopoliza um dos caixas do banco por vários minutos :)</p></blockquote>
+<blockquote>
+  <p>É, o CSS Sprites é aquele office boy que chega com uma pasta lotada de boletos e monopoliza um dos caixas do banco por vários minutos :)</p>
+</blockquote>
 <h2>Ok, e como implementar o CSS Sprites?</h2>
 <p>Nem perca tempo querendo fazer isso “na mão” que já tem várias ferramentas prontas na web. Basta procurar por <a href="http://www.google.com.br/search?q=CSS+Sprites+generator">CSS Sprites generator</a>.</p>
 <p>A que eu mais gostei foi a <a href="http://spritegen.website-performance.org">http://spritegen.website-performance.org</a>. Você coloca todas as imagens dentro de um ZIP (no meu caso, os ícones) e manda para o generator, que te retorna uma única imagem e ainda de brinde já te dá as regras CSS prontinhas para usar.</p>
@@ -37,7 +41,9 @@ tags: [site]
   <figcaption>Tela principal do CSS Sprite Generator</figcaption>
 </figure>
 <p>Dê uma olhada lá, há várias opções para você escolher na hora de compor a imagem final, como formato (PNG, JPG, GIF), número de cores e qualidade (ambos importantes para deixar o arquivo pequeno!). Também há opções para as regras do CSS, como adicionar prefixo ou sufixo para cada uma.</p>
-<blockquote><p><strong>Dica:</strong> Para facilitar sua vida, atente para o nome de cada imagem antes de fazer o ZIP, deixe curto e descritivo, pois ele usará os nomes para gerar as regras do CSS.</p></blockquote>
+<blockquote>
+  <p><strong>Dica:</strong> Para facilitar sua vida, atente para o nome de cada imagem antes de fazer o ZIP, deixe curto e descritivo, pois ele usará os nomes para gerar as regras do CSS.</p>
+</blockquote>
 <p>Usei este site para gerar <a href="/img/index-sprites.png">um PNG com todos os meus ícones</a>, e depois passei este PNG no <a href="/blog/2011/09/02/usando-smush-it-e-shell-script-para-otimizar-imagens-de-um-site/">Smush.it</a> para garantir que ele não fique pesado.</p>
 <p>A imagem ficou com 120KB no final. Não é leve, mas também não é um monstro. Mas o mais importante foi a <strong>diferença brutal no tempo de carregamento da página</strong>: o que antes eram 40 segundos, agora com CSS Sprites ficou apenas 8 segundos!</p>
 <p>Se o seu site está pesado e carrega muitas imagens pequenas, faça a experiência de juntá-las em uma só, que você pode ter um resultado parecido com o meu.</p>

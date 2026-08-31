@@ -25,7 +25,9 @@ date: 2003-06-25
   <table>
     <tr>
       <td>
-        <a href="https://www.shellscript.com.br"><img class="center" src="/img/icon/128/livroshell.png" alt=""></a>
+        <a href="https://www.shellscript.com.br">
+          <img class="center" src="/img/icon/128/livroshell.png" alt="">
+        </a>
       </td>
     </tr>
     <tr>
@@ -566,15 +568,21 @@ dialog                                          \
 
 <dl>
   <dt><strong>Sim</strong></dt>
-  <dd>Ótimo! Então vamos continuar o aprendizado e conhecer os detalhes do Dialog para poder usá-lo em scripts.</dd>
+  <dd>
+    Ótimo! Então vamos continuar o aprendizado e conhecer os detalhes do Dialog para poder usá-lo em scripts.
+  </dd>
   <dt><strong>Não</strong></dt>
   <dd>
     Você seguiu as instruções do tópico anterior?
     <dl>
       <dt><strong>Sim</strong></dt>
-      <dd>Então invista mais um tempo na shell, executando os exemplos, modificando-os, avaliando as possibilidades do Dialog. Veja as figuras, imagine onde você poderia utilizar aquelas telinhas, nos seus programas atuais, em programas novos que você poderia fazer... Depois volte aqui e continuamos a leitura.</dd>
+      <dd>
+        Então invista mais um tempo na shell, executando os exemplos, modificando-os, avaliando as possibilidades do Dialog. Veja as figuras, imagine onde você poderia utilizar aquelas telinhas, nos seus programas atuais, em programas novos que você poderia fazer... Depois volte aqui e continuamos a leitura.
+      </dd>
       <dt><strong>Não</strong></dt>
-      <dd>É uma pena. Nesse ponto do documento você já seria um conhecedor do Dialog. Considere voltar ao tópico anterior e tentar de novo.</dd>
+      <dd>
+        É uma pena. Nesse ponto do documento você já seria um conhecedor do Dialog. Considere voltar ao tópico anterior e tentar de novo.
+      </dd>
     </dl>
   </dd>
 </dl>
@@ -602,11 +610,17 @@ dialog --tipo-da-caixa '&lt;texto&gt;' &lt;altura&gt; &lt;largura&gt;
 
 <dl>
   <dt><em>texto</em></dt>
-  <dd>O texto é a palavra ou frase que aparece no início da caixa, logo após a primeira linha (borda superior). Passe uma string vazia '' caso não deseje texto. Caso o texto seja maior que o tamanho da janela, ele será ajustado automaticamente, quebrando a linha. Para colocar as quebras de linhas manualmente, insira o padrão '\n' (barra-ene) onde desejar as quebras. Exemplo: '<em>Primeira linha.\nSegunda.</em>'</dd>
+  <dd>
+    O texto é a palavra ou frase que aparece no início da caixa, logo após a primeira linha (borda superior). Passe uma string vazia '' caso não deseje texto. Caso o texto seja maior que o tamanho da janela, ele será ajustado automaticamente, quebrando a linha. Para colocar as quebras de linhas manualmente, insira o padrão '\n' (barra-ene) onde desejar as quebras. Exemplo: '<em>Primeira linha.\nSegunda.</em>'
+  </dd>
   <dt><em>altura</em></dt>
-  <dd>A altura é o número de linhas que serão utilizadas para desenhar a caixa, inclusive a primeira e a última que fazem as bordas superior e inferior. Se informado o número zero, o Dialog ajusta automaticamente a altura da caixa para caber o conteúdo.</dd>
+  <dd>
+    A altura é o número de linhas que serão utilizadas para desenhar a caixa, inclusive a primeira e a última que fazem as bordas superior e inferior. Se informado o número zero, o Dialog ajusta automaticamente a altura da caixa para caber o conteúdo.
+  </dd>
   <dt><em>largura</em></dt>
-  <dd>A largura é o número de colunas que serão utilizadas para desenhar a caixa, inclusive a primeira e a última que fazem as bordas esquerda e direita. Se informado o número zero, o Dialog ajusta automaticamente a largura da caixa para caber o conteúdo.</dd>
+  <dd>
+    A largura é o número de colunas que serão utilizadas para desenhar a caixa, inclusive a primeira e a última que fazem as bordas esquerda e direita. Se informado o número zero, o Dialog ajusta automaticamente a largura da caixa para caber o conteúdo.
+  </dd>
 </dl>
 
 <p>Na prática, é melhor deixar que o Dialog quebre o texto e ajuste o tamanho das caixas automaticamente. Então nos exemplos desse documento não haverá quebras de linha manuais (\n) e os tamanhos serão sempre especificados como "0 0" (zero zero).</p>
@@ -787,11 +801,17 @@ dialog --menu '&lt;texto&gt;' 0 0 &lt;núm-itens&gt; &lt;item1&gt; &lt;desc1&gt;
 
 <dl>
   <dt><em>núm-itens</em></dt>
-  <dd>O número máximo de itens do menu que serão mostrados na caixa. Os demais ficarão ocultos e podem ser acessados rolando a lista com as setas do teclado. Caso especificado como zero, o Dialog mostra todos os itens, ou ajusta automaticamente o número ideal para que a caixa caiba na tela.</dd>
+  <dd>
+    O número máximo de itens do menu que serão mostrados na caixa. Os demais ficarão ocultos e podem ser acessados rolando a lista com as setas do teclado. Caso especificado como zero, o Dialog mostra todos os itens, ou ajusta automaticamente o número ideal para que a caixa caiba na tela.
+  </dd>
   <dt><em>item</em></dt>
-  <dd>O item deve ser um nome único, diferente para cada item. O item é o texto retornado pelo Dialog ao script, quando o usuário escolhe uma opção.</dd>
+  <dd>
+    O item deve ser um nome único, diferente para cada item. O item é o texto retornado pelo Dialog ao script, quando o usuário escolhe uma opção.
+  </dd>
   <dt><em>descrição</em></dt>
-  <dd>A descrição é um texto explicativo que serve para detalhar do que se trata o item. A descrição pode ser omitida passando a string vazia ''. Exemplo: <code>dialog --menu 'texto' 0 0 0 item1 '' item2 '' item3 ''</code></dd>
+  <dd>
+    A descrição é um texto explicativo que serve para detalhar do que se trata o item. A descrição pode ser omitida passando a string vazia ''. Exemplo: <code>dialog --menu 'texto' 0 0 0 item1 '' item2 '' item3 ''</code>
+  </dd>
 </dl>
 
 <p>Agora que sabemos compor esse monstro que é a linha de comando de um Menu, vamos fazer mais um exemplo, com nomes ao invés de números nos itens do menu:</p>
@@ -1131,21 +1151,33 @@ echo Você desistiu antes de chegar no final...
 
 <table>
   <tr>
-    <td><img class="center" src="nav1.png" alt=""></td>
+    <td>
+      <img class="center" src="nav1.png" alt="">
+    </td>
     <td>→</td>
-    <td><img class="center" src="nav2.png" alt=""></td>
-    <td>→</td>
-  </tr>
-  <tr>
-    <td><img class="center" src="nav3.png" alt=""></td>
-    <td>→</td>
-    <td><img class="center" src="nav4.png" alt=""></td>
+    <td>
+      <img class="center" src="nav2.png" alt="">
+    </td>
     <td>→</td>
   </tr>
   <tr>
-    <td><img class="center" src="nav5.png" alt=""></td>
+    <td>
+      <img class="center" src="nav3.png" alt="">
+    </td>
     <td>→</td>
-    <td><img class="center" src="nav6.png" alt=""></td>
+    <td>
+      <img class="center" src="nav4.png" alt="">
+    </td>
+    <td>→</td>
+  </tr>
+  <tr>
+    <td>
+      <img class="center" src="nav5.png" alt="">
+    </td>
+    <td>→</td>
+    <td>
+      <img class="center" src="nav6.png" alt="">
+    </td>
     <td>fim</td>
   </tr>
 </table>
@@ -1484,10 +1516,14 @@ dialog --menu \"Dois campos por linha, 2o item com espaços\" \
 
 <table>
   <tr>
-    <td><img class="center" src="copydir1.png" alt=""></td>
+    <td>
+      <img class="center" src="copydir1.png" alt="">
+    </td>
   </tr>
   <tr>
-    <td><img class="center" src="copydir2.png" alt=""></td>
+    <td>
+      <img class="center" src="copydir2.png" alt="">
+    </td>
   </tr>
 </table>
 
@@ -1688,8 +1724,12 @@ export DIALOGRC=$HOME/dialog/tema-verde.cfg
 
 <table>
   <tr>
-    <td><img class="center" src="temaverde1.png" alt=""></td>
-    <td><img class="center" src="temaverde2.png" alt=""></td>
+    <td>
+      <img class="center" src="temaverde1.png" alt="">
+    </td>
+    <td>
+      <img class="center" src="temaverde2.png" alt="">
+    </td>
   </tr>
 </table>
 
@@ -1750,110 +1790,190 @@ itemhelp_color         = (GREEN,BLACK,ON)
 
 <dl>
   <dt><code>--backtitle &lt;texto&gt;</code></dt>
-  <dd>Especifica o título do topo da tela, que fica no plano de fundo, atrás da caixa (Veja exemplo do "Pegador de Dados").</dd>
+  <dd>
+    Especifica o título do topo da tela, que fica no plano de fundo, atrás da caixa (Veja exemplo do "Pegador de Dados").
+  </dd>
   <dt><code>--title &lt;texto&gt;</code></dt>
-  <dd>Define o título da caixa, colocado centralizado na borda superior.</dd>
+  <dd>
+    Define o título da caixa, colocado centralizado na borda superior.
+  </dd>
   <dt><code>--cancel-label &lt;texto&gt;</code></dt>
-  <dd>Especifica o texto para ser mostrado no botão "Cancel".</dd>
+  <dd>
+    Especifica o texto para ser mostrado no botão "Cancel".
+  </dd>
   <dt><code>--exit-label &lt;texto&gt;</code></dt>
-  <dd>Especifica o texto para ser mostrado no botão "Exit".</dd>
+  <dd>
+    Especifica o texto para ser mostrado no botão "Exit".
+  </dd>
   <dt><code>--help-label &lt;texto&gt;</code></dt>
-  <dd>Especifica o texto para ser mostrado no botão "Help".</dd>
+  <dd>
+    Especifica o texto para ser mostrado no botão "Help".
+  </dd>
   <dt><code>--ok-label &lt;texto&gt;</code></dt>
-  <dd>Especifica o texto para ser mostrado no botão "OK".</dd>
+  <dd>
+    Especifica o texto para ser mostrado no botão "OK".
+  </dd>
 </dl>
 
 <h3 id="opcoes-ajustes-textos">6.2. Opções para fazer ajustes no texto da caixa</h3>
 
 <dl>
   <dt><code>--cr-wrap</code></dt>
-  <dd>Mantém as quebras de linha originais do texto da caixa, para não precisar colocar os '\n'. Mas lembre-se que caso a linha fique muito grande, o Dialog a quebrará no meio para caber na caixa.</dd>
+  <dd>
+    Mantém as quebras de linha originais do texto da caixa, para não precisar colocar os '\n'. Mas lembre-se que caso a linha fique muito grande, o Dialog a quebrará no meio para caber na caixa.
+  </dd>
   <dt><code>--no-collapse</code></dt>
-  <dd>Mantém o espaçamento original do texto, não retirando os TABs nem os espaços em branco consecutivos.</dd>
+  <dd>
+    Mantém o espaçamento original do texto, não retirando os TABs nem os espaços em branco consecutivos.
+  </dd>
   <dt><code>--tab-correct</code></dt>
-  <dd>Converte cada TAB para N espaços. O N é especificado na opção '--tab-len' ou o padrão 8 é assumido.</dd>
+  <dd>
+    Converte cada TAB para N espaços. O N é especificado na opção '--tab-len' ou o padrão 8 é assumido.
+  </dd>
   <dt><code>--tab-len &lt;N&gt;</code></dt>
-  <dd>Especifica o número de espaços que serão colocados no lugar de cada TAB, quando usar o opção '--tab-correct'.</dd>
+  <dd>
+    Especifica o número de espaços que serão colocados no lugar de cada TAB, quando usar o opção '--tab-correct'.
+  </dd>
   <dt><code>--trim</code></dt>
-  <dd>Limpa o texto da caixa, apagando espaços em branco no início, espaços consecutivos e quebras de linha literais.</dd>
+  <dd>
+    Limpa o texto da caixa, apagando espaços em branco no início, espaços consecutivos e quebras de linha literais.
+  </dd>
 </dl>
 
 <h3 id="opcoes-ajustes">6.3. Opções para fazer ajustes na caixa</h3>
 
 <dl>
   <dt><code>--aspect &lt;taxa&gt;</code></dt>
-  <dd>Taxa que ajusta o dimensionamento automático das caixas. É a relação largura / altura, sendo o padrão 9, que significa 9 colunas para cada linha.</dd>
+  <dd>
+    Taxa que ajusta o dimensionamento automático das caixas. É a relação largura / altura, sendo o padrão 9, que significa 9 colunas para cada linha.
+  </dd>
   <dt><code>--begin &lt;y&gt; &lt;x&gt;</code></dt>
-  <dd>Especifica a posição inicial da caixa, relativo ao canto superior esquerdo.</dd>
+  <dd>
+    Especifica a posição inicial da caixa, relativo ao canto superior esquerdo.
+  </dd>
   <dt><code>--defaultno</code></dt>
-  <dd>Faz o botão 'Não' ser o padrão da caixa YesNo.</dd>
+  <dd>
+    Faz o botão 'Não' ser o padrão da caixa YesNo.
+  </dd>
   <dt><code>--default-item &lt;item&gt;</code></dt>
-  <dd>Define qual vai ser o item pré-selecionado do Menu. Se não especificado, o primeiro item será o selecionado.</dd>
+  <dd>
+    Define qual vai ser o item pré-selecionado do Menu. Se não especificado, o primeiro item será o selecionado.
+  </dd>
   <dt><code>--shadow</code></dt>
-  <dd>Desenha a sombra da caixa. Opção já usada normalmente.</dd>
+  <dd>
+    Desenha a sombra da caixa. Opção já usada normalmente.
+  </dd>
   <dt><code>--no-shadow</code></dt>
-  <dd>Não desenha a sombra da caixa.</dd>
+  <dd>
+    Não desenha a sombra da caixa.
+  </dd>
   <dt><code>--no-cancel</code> ou <code>--nocancel</code></dt>
-  <dd>Não mostra o botão CANCELAR nas caixas Checklist, Inputbox e Menu. A tecla Esc continua valendo para sair da caixa.</dd>
+  <dd>
+    Não mostra o botão CANCELAR nas caixas Checklist, Inputbox e Menu. A tecla Esc continua valendo para sair da caixa.
+  </dd>
   <dt><code>--item-help</code></dt>
-  <dd>Usada nas caixas Checklist, Radiolist ou Menu, mostra uma linha de ajuda no rodapé da tela para o item selecionado. Esse texto é declarado se adicionando uma nova coluna no final da definição de cada item.</dd>
+  <dd>
+    Usada nas caixas Checklist, Radiolist ou Menu, mostra uma linha de ajuda no rodapé da tela para o item selecionado. Esse texto é declarado se adicionando uma nova coluna no final da definição de cada item.
+  </dd>
   <dt><code>--help-button</code></dt>
-  <dd>Mostra um botão de "Help". Seu código de retorno é 2.</dd>
+  <dd>
+    Mostra um botão de "Help". Seu código de retorno é 2.
+  </dd>
 </dl>
 
 <h3 id="opcoes-dados">6.4. Opções relativas aos dados informados pelo usuário</h3>
 
 <dl>
   <dt><code>--separate-output</code></dt>
-  <dd>Na caixa Checklist, retorna os itens selecionados, um por linha e sem aspas. Bom para scripts!</dd>
+  <dd>
+    Na caixa Checklist, retorna os itens selecionados, um por linha e sem aspas. Bom para scripts!
+  </dd>
   <dt><code>--separate-widget &lt;separador&gt;</code></dt>
-  <dd>Define o separador que será colocado entre os retornos de cada caixa. Útil quando se trabalha com múltiplas caixas. O separador padrão é o TAB.</dd>
+  <dd>
+    Define o separador que será colocado entre os retornos de cada caixa. Útil quando se trabalha com múltiplas caixas. O separador padrão é o TAB.
+  </dd>
   <dt><code>--stderr</code></dt>
-  <dd>Retorna os dados na Saída de Erros (STDERR). Opção já usada normalmente.</dd>
+  <dd>
+    Retorna os dados na Saída de Erros (STDERR). Opção já usada normalmente.
+  </dd>
   <dt><code>--stdout</code></dt>
-  <dd>Retorna os dados na Saída Padrão (STDOUT) ao invés da STDERR.</dd>
+  <dd>
+    Retorna os dados na Saída Padrão (STDOUT) ao invés da STDERR.
+  </dd>
   <dt><code>--max-input &lt;tamanho&gt;</code></dt>
-  <dd>Tamanho máximo do texto que o usuário pode digitar nas caixas. O tamanho padrão é 2000 caracteres.</dd>
+  <dd>
+    Tamanho máximo do texto que o usuário pode digitar nas caixas. O tamanho padrão é 2000 caracteres.
+  </dd>
 </dl>
 
 <h3 id="opcoes-sozinhas">6.5. Opções que devem ser usadas sozinhas na linha de comando</h3>
 
 <dl>
   <dt><code>--clear</code></dt>
-  <dd>Restaura a tela caso o Dialog a tenha bagunçado.</dd>
+  <dd>
+    Restaura a tela caso o Dialog a tenha bagunçado.
+  </dd>
   <dt><code>--create-rc &lt;arquivo&gt;</code></dt>
-  <dd>Gera uma arquivo de configuração do Dialog.</dd>
+  <dd>
+    Gera uma arquivo de configuração do Dialog.
+  </dd>
   <dt><code>--help</code></dt>
-  <dd>Mostra a ajuda do dialog, com as opções disponíveis.</dd>
+  <dd>
+    Mostra a ajuda do dialog, com as opções disponíveis.
+  </dd>
   <dt><code>--print-maxsize</code></dt>
-  <dd>Mostra o tamanho atual da tela na STDERR.</dd>
+  <dd>
+    Mostra o tamanho atual da tela na STDERR.
+  </dd>
   <dt><code>--print-version</code></dt>
-  <dd>Mostra a versão do Dialog na STDERR.</dd>
+  <dd>
+    Mostra a versão do Dialog na STDERR.
+  </dd>
   <dt><code>--version</code></dt>
-  <dd>O mesmo que '--print-version'.</dd>
+  <dd>
+    O mesmo que '--print-version'.
+  </dd>
 </dl>
 
 <h3 id="opcoes-outras">6.6. Outras opções</h3>
 
 <dl>
   <dt><code>--ignore</code></dt>
-  <dd>Ignora as opções inválidas. Serve para manter compatibilidade apenas.</dd>
+  <dd>
+    Ignora as opções inválidas. Serve para manter compatibilidade apenas.
+  </dd>
   <dt><code>--size-err</code></dt>
-  <dd>Opção antiga que não é mais usada.</dd>
+  <dd>
+    Opção antiga que não é mais usada.
+  </dd>
   <dt><code>--beep</code></dt>
-  <dd>Apita cada vez que a tela é desenhada.</dd>
+  <dd>
+    Apita cada vez que a tela é desenhada.
+  </dd>
   <dt><code>--beep-after</code></dt>
-  <dd>Apita na saída com o Ctrl+C</dd>
+  <dd>
+    Apita na saída com o Ctrl+C
+  </dd>
   <dt><code>--sleep &lt;N&gt;</code></dt>
-  <dd>Faz uma pausa de N segundos após processar a caixa. Útil para a Infobox.</dd>
+  <dd>
+    Faz uma pausa de N segundos após processar a caixa. Útil para a Infobox.
+  </dd>
   <dt><code>--timeout &lt;N&gt;</code></dt>
-  <dd>Sai do programa com erro caso o usuário não faça nada em N segundos.</dd>
+  <dd>
+    Sai do programa com erro caso o usuário não faça nada em N segundos.
+  </dd>
   <dt><code>--no-kill</code></dt>
-  <dd>Coloca a caixa Tailboxbg em segundo plano (desabilitando seu SIGHUP) e mostra o ID de seu processo na STDERR.</dd>
+  <dd>
+    Coloca a caixa Tailboxbg em segundo plano (desabilitando seu SIGHUP) e mostra o ID de seu processo na STDERR.
+  </dd>
   <dt><code>--print-size</code></dt>
-  <dd>Mostra o tamanho de cada caixa na STDERR.</dd>
+  <dd>
+    Mostra o tamanho de cada caixa na STDERR.
+  </dd>
   <dt><code>--and-widget</code></dt>
-  <dd>Junta uma ou mais caixas numa mesma tela (sem limpá-la).</dd>
+  <dd>
+    Junta uma ou mais caixas numa mesma tela (sem limpá-la).
+  </dd>
 </dl>
 
 <h2 id="clones">7. APÊNDICE B: Os clones: Xdialog, Kdialog, gdialog, ...</h2>

@@ -3,7 +3,8 @@ title: Página de manual (manpage)
 ---
 
 <center>
-  <h2>RAC</h2><font size="4">Abril, 2005</font>
+  <h2>RAC</h2>
+  <font size="4">Abril, 2005</font>
 </center>
 
 <h2>NOME</h2>
@@ -28,13 +29,21 @@ title: Página de manual (manpage)
 
 <dl>
   <dt><b>-b</b>, <b>--bre</b></dt>
-  <dd>Usa a notação antiga para expressões regulares (BRE). Por padrão o RAC usa a notação moderna (ERE) onde nenhum metacaractere precisa ser escapado para ser especial. A notação antiga é a mesma do grep, AWK e SED, onde alguns metacaracteres são escapados: <code>\+ \? \{\} \(\) \|</code>.</dd>
+  <dd>
+    Usa a notação antiga para expressões regulares (BRE). Por padrão o RAC usa a notação moderna (ERE) onde nenhum metacaractere precisa ser escapado para ser especial. A notação antiga é a mesma do grep, AWK e SED, onde alguns metacaracteres são escapados: <code>\+ \? \{\} \(\) \|</code>.
+  </dd>
   <dt><b>-h</b>, <b>--help</b></dt>
-  <dd>Mostra a tela de ajuda do programa.</dd>
+  <dd>
+    Mostra a tela de ajuda do programa.
+  </dd>
   <dt><b>-i</b>, <b>--ignore-case</b></dt>
-  <dd>Trata maiúsculas e minúsculas como iguais. Com esta opção não importa se o texto pesquisado está escrito com letras maiúsculas ou minúsculas, é indiferente. Assim, os endereços =Rock= e /rock/ mostrarão uma linha que possua o texto ROCK.</dd>
+  <dd>
+    Trata maiúsculas e minúsculas como iguais. Com esta opção não importa se o texto pesquisado está escrito com letras maiúsculas ou minúsculas, é indiferente. Assim, os endereços =Rock= e /rock/ mostrarão uma linha que possua o texto ROCK.
+  </dd>
   <dt><b>-V</b>, <b>--version</b></dt>
-  <dd>Mostra a versão do programa.</dd>
+  <dd>
+    Mostra a versão do programa.
+  </dd>
 </dl>
 
 <p>Se omitido o nome do arquivo ou usado '-', o texto será lido da entrada padrão (STDIN).</p>
@@ -43,35 +52,65 @@ title: Página de manual (manpage)
 
 <dl>
   <dt><b>Mostra a terceira linha</b></dt>
-  <dd>$ rac '3' arquivo.txt</dd>
+  <dd>
+    $ rac '3' arquivo.txt
+  </dd>
   <dt><b>Mostra da terceira linha até a quinta linha, incluindo</b></dt>
-  <dd>$ rac '3:5' arquivo.txt</dd>
+  <dd>
+    $ rac '3:5' arquivo.txt
+  </dd>
   <dt><b>Mostra a última linha (tail -1)</b></dt>
-  <dd>$ rac '-1' arquivo.txt</dd>
+  <dd>
+    $ rac '-1' arquivo.txt
+  </dd>
   <dt><b>Mostra as últimas 10 linhas (tail)</b></dt>
-  <dd>$ rac '-10:-1' arquivo.txt</dd>
+  <dd>
+    $ rac '-10:-1' arquivo.txt
+  </dd>
   <dt><b>Mostra as primeiras 10 colunas de cada linha (cut -c1-10)</b></dt>
-  <dd>$ rac '[1:10]' arquivo.txt</dd>
+  <dd>
+    $ rac '[1:10]' arquivo.txt
+  </dd>
   <dt><b>Mostra o último caractere de cada linha</b></dt>
-  <dd>$ rac '[-1]' arquivo.txt</dd>
+  <dd>
+    $ rac '[-1]' arquivo.txt
+  </dd>
   <dt><b>Inverte as linhas do arquivo (tac)</b></dt>
-  <dd>$ rac '-1:1' arquivo.txt</dd>
+  <dd>
+    $ rac '-1:1' arquivo.txt
+  </dd>
   <dt><b>Inverte as colunas das linhas (rev)</b></dt>
-  <dd>$ rac '[-1:1]' arquivo.txt</dd>
+  <dd>
+    $ rac '[-1:1]' arquivo.txt
+  </dd>
   <dt><b>Linhas que contêm a palavra root (grep)</b></dt>
-  <dd>$ rac '=root=' arquivo.txt</dd>
+  <dd>
+    $ rac '=root=' arquivo.txt
+  </dd>
   <dt><b>A segunda linha após a que contém root</b></dt>
-  <dd>$ rac '=root=+2' arquivo.txt</dd>
+  <dd>
+    $ rac '=root=+2' arquivo.txt
+  </dd>
   <dt><b>A segunda linha anterior a que contém root</b></dt>
-  <dd>$ rac '=root=-2' arquivo.txt</dd>
+  <dd>
+    $ rac '=root=-2' arquivo.txt
+  </dd>
   <dt><b>A terceira linha que contém root</b></dt>
-  <dd>$ rac '=root=*3' arquivo.txt</dd>
+  <dd>
+    $ rac '=root=*3' arquivo.txt
+  </dd>
   <dt><b>A penúltima linha que contém root</b></dt>
-  <dd>$ rac '=root=*-2' arquivo.txt</dd>
+  <dd>
+    $ rac '=root=*-2' arquivo.txt
+  </dd>
   <dt><b>Partindo da 1a linha com root, volte de 2 em 2</b></dt>
-  <dd>$ rac '=root=*1~-2' arquivo.txt</dd>
+  <dd>
+    $ rac '=root=*1~-2' arquivo.txt
+  </dd>
   <dt><b>Partindo da 1a linha que se inicia com root, volte de 2 em 2</b></dt>
-  <dd>$ rac '/^root/*1~-2' arquivo.txt</dd>
+  <dd>
+    $ rac '/^root/*1~-2' arquivo.txt
+  </dd>
 </dl>
 
 <h2>SINTAXE</h2>

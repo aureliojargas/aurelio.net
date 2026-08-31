@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
 
-  <title>Simple Text Tool - Aurelio.net</title>
-  <meta name="author" content="Aurelio Jargas">
-  <link rel="shortcut icon" href="/favicon.ico">
+    <title>Simple Text Tool - Aurelio.net</title>
+    <meta name="author" content="Aurelio Jargas">
+    <link rel="shortcut icon" href="/favicon.ico">
 
-  <!--mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <!--normalize-->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!--normalize-->
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
-  <!--jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!--====================================================-->
+    <!--====================================================-->
 
-  <!--Our nice text tools-->
-  <script>
+    <!--Our nice text tools-->
+    <script>
     /*global $*/
 
     String.prototype.stripLeft = function () {
@@ -295,11 +297,11 @@
       $('#input-text').focus();
     });
 
-  </script>
+    </script>
 
-<!--====================================================-->
+    <!--====================================================-->
 
-  <style type="text/css">
+    <style type="text/css">
     body {
       background: black;
       color: lime;
@@ -348,144 +350,142 @@
     footer {
       margin: 7em 0 2em 0;
     }
-  </style>
+    </style>
 
-<!--====================================================-->
+    <!--====================================================-->
 
-</head>
-<body>
+  </head>
+  <body>
 
-  <h1>Simple Text Tool</h1>
+    <h1>Simple Text Tool</h1>
 
-  <div id="input">
-    <textarea id="input-text"></textarea>
-  </div>
-
-  <div id="filters">
-    <ul>
-      <li>
-        <span class="button">grep</span>
-        <span class="options">
-          -E
-          <input id="grep-regex" type="text" value="[0-9]">
-        </span>
-      </li>
-      <li>
-        <span class="button">join</span>
-        <span class="options">
-          lines by
-          <input id="join-sep" type="text" value=" ">
-        </span>
-      </li>
-      <li>
-        <span class="button">lower</span>
-      </li>
-      <li>
-        <span class="button">number</span>
-        <span class="options">
-          lines: start by
-          <input id="number-start" type="number" value="1">,
-          separate by
-          <input id="number-sep" type="text" value=". ">
-        </span>
-      </li>
-      <li>
-        <span class="button">prefix</span>
-        <span class="options">
-          lines with
-          <input id="prefix-string" type="text" value="@">
-        </span>
-      </li>
-      <li>
-        <span class="button">replace</span>
-        <span class="options">
-          <select id="replace-mode">
-            <option>all</option>
-            <option>first</option>
-          </select>
-          <input id="replace-from" type="text" value="a">
-          with
-          <input id="replace-to" type="text" value="XX">
-        </span>
-      </li>
-      <li>
-        <span class="button">reverse</span>
-        <span class="options">
-          <select id="reverse-mode">
-            <option>lines</option>
-            <option>letters</option>
-          </select>
-        </span>
-      </li>
-      <li>
-        <span class="button">rotate</span>
-        <span class="options">
-          using
-          <select id="rotate-mode">
-            <option>ROT5</option>
-            <option selected>ROT13</option>
-            <option>ROT13.5</option>
-            <option>ROT47</option>
-          </select>
-        </span>
-      </li>
-      <li>
-        <span class="button">sort</span>
-      </li>
-      <li>
-        <span class="button">split</span>
-        <span class="options">
-          by
-          <input id="split-sep" type="text">
-        </span>
-      </li>
-      <li>
-        <span class="button">squeeze</span>
-        <span class="options">
-          char
-          <input id="squeeze-char" type="text" maxlength="1">
-        </span>
-      </li>
-      <li>
-        <span class="button">strip</span>
-        <span class="options">
-          <select id="strip-mode">
-            <option>both</option>
-            <option>left</option>
-            <option>right</option>
-          </select>
-        </span>
-      </li>
-      <li>
-        <span class="button">suffix</span>
-        <span class="options">
-          lines with
-          <input id="suffix-string" type="text" value="@">
-        </span>
-      </li>
-      <li>
-        <span class="button">unaccent</span>
-      </li>
-      <li>
-        <span class="button">unique</span>
-      </li>
-      <li>
-        <span class="button">upper</span>
-      </li>
-    </ul>
-  </div>
-
-  <div id="output">
-    <textarea id="output-text"></textarea>
-    <div id="pipe">
-      &orarr; Use results as input
+    <div id="input">
+      <textarea id="input-text"></textarea>
     </div>
-  </div>
 
-  <footer>
-    <p>Want to contribute? <a href="https://github.com/aureliojargas/aurelio.net/blob/main/util/text-tool.html">GitHub</a></p>
+    <div id="filters">
+      <ul>
+        <li>
+          <span class="button">grep</span>
+          <span class="options">
+            -E
+            <input id="grep-regex" type="text" value="[0-9]">
+          </span>
+        </li>
+        <li>
+          <span class="button">join</span>
+          <span class="options">
+            lines by
+            <input id="join-sep" type="text" value=" ">
+          </span>
+        </li>
+        <li>
+          <span class="button">lower</span>
+        </li>
+        <li>
+          <span class="button">number</span>
+          <span class="options">
+            lines: start by
+            <input id="number-start" type="number" value="1">,
+            separate by
+            <input id="number-sep" type="text" value=". ">
+          </span>
+        </li>
+        <li>
+          <span class="button">prefix</span>
+          <span class="options">
+            lines with
+            <input id="prefix-string" type="text" value="@">
+          </span>
+        </li>
+        <li>
+          <span class="button">replace</span>
+          <span class="options">
+            <select id="replace-mode">
+              <option>all</option>
+              <option>first</option>
+            </select>
+            <input id="replace-from" type="text" value="a">
+            with
+            <input id="replace-to" type="text" value="XX">
+          </span>
+        </li>
+        <li>
+          <span class="button">reverse</span>
+          <span class="options">
+            <select id="reverse-mode">
+              <option>lines</option>
+              <option>letters</option>
+            </select>
+          </span>
+        </li>
+        <li>
+          <span class="button">rotate</span>
+          <span class="options">
+            using
+            <select id="rotate-mode">
+              <option>ROT5</option>
+              <option selected>ROT13</option>
+              <option>ROT13.5</option>
+              <option>ROT47</option>
+            </select>
+          </span>
+        </li>
+        <li>
+          <span class="button">sort</span>
+        </li>
+        <li>
+          <span class="button">split</span>
+          <span class="options">
+            by
+            <input id="split-sep" type="text">
+          </span>
+        </li>
+        <li>
+          <span class="button">squeeze</span>
+          <span class="options">
+            char
+            <input id="squeeze-char" type="text" maxlength="1">
+          </span>
+        </li>
+        <li>
+          <span class="button">strip</span>
+          <span class="options">
+            <select id="strip-mode">
+              <option>both</option>
+              <option>left</option>
+              <option>right</option>
+            </select>
+          </span>
+        </li>
+        <li>
+          <span class="button">suffix</span>
+          <span class="options">
+            lines with
+            <input id="suffix-string" type="text" value="@">
+          </span>
+        </li>
+        <li>
+          <span class="button">unaccent</span>
+        </li>
+        <li>
+          <span class="button">unique</span>
+        </li>
+        <li>
+          <span class="button">upper</span>
+        </li>
+      </ul>
+    </div>
 
-    <p>See also: <a href="http://www.text-tools-online.com">http://www.text-tools-online.com</a></p>
-  </footer>
-</body>
+    <div id="output">
+      <textarea id="output-text"></textarea>
+      <div id="pipe">&orarr; Use results as input</div>
+    </div>
+
+    <footer>
+      <p>Want to contribute? <a href="https://github.com/aureliojargas/aurelio.net/blob/main/util/text-tool.html">GitHub</a></p>
+
+      <p>See also: <a href="http://www.text-tools-online.com">http://www.text-tools-online.com</a></p>
+    </footer>
+  </body>
 </html>

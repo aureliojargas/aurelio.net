@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-{% include head-base.html %}
+  <head>
+    {% include head-base.html %}
 
-{% if page.url == '/correria/' %}
-<meta name="Description" content="Site da banda CORRERIA HC">
-<meta name="Keywords" content="correria, banda, curitiba, brasil, hardcore, punk, punkrock, pesado, tosco, show, dumbs">
-{% endif %}
+    {% if page.url == '/correria/' %}
+      <meta name="Description" content="Site da banda CORRERIA HC">
+      <meta name="Keywords"
+            content="correria, banda, curitiba, brasil, hardcore, punk, punkrock, pesado, tosco, show, dumbs">
+    {% endif %}
 
-<style>
+    <style>
   body {
     background-color: #333;
     color: #333;
@@ -133,43 +134,49 @@
       margin: 0;
     }
   }
-</style>
+    </style>
 
-{% include analytics.html %}
+    {% include analytics.html %}
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-<div id="topo">
-  <div class="figure">
-    <a href="/correria/">
-        <img src="/correria/img/logo-cinza.gif" alt="Banda Correria"> HC
-    </a>
-  </div>
-</div>
+    <div id="topo">
+      <div class="figure">
+        <a href="/correria/">
+          <img src="/correria/img/logo-cinza.gif" alt="Banda Correria">
+          HC
+        </a>
+      </div>
+    </div>
 
-<div id="menu">
-  <ul>
-    <!--<li><a href="/correria/">PRINCIPAL</a>-->
-    <li><a href="/correria/mp3.html">MP3</a>
-    <li><a href="/correria/letras.html">LETRAS</a>
-    <li><a href="/correria/video.html">VÍDEO</a>
-    <li><a href="/correria/blog.html">BLOG</a>
-  </ul>
-</div>
+    <div id="menu">
+      <ul>
+        <!--<li><a href="/correria/">PRINCIPAL</a>-->
+        <li>
+          <a href="/correria/mp3.html">MP3</a>
+          <li>
+            <a href="/correria/letras.html">LETRAS</a>
+            <li>
+              <a href="/correria/video.html">VÍDEO</a>
+              <li>
+                <a href="/correria/blog.html">BLOG</a>
+              </ul>
+            </div>
 
-<div id="corpo">
-  <h1>{{ page.title | escape }}</h1>
-  {{ content }}
-</div>
+            <div id="corpo">
+              <h1>{{ page.title | escape }}</h1>
+              {{ content }}
+            </div>
 
-<div id="rodape">
-  <p>
-    Banda CORRERIA HC, Curitiba - PR<br>
-    Hardcore Nervoso em Português
-  </p>
-</div>
+            <div id="rodape">
+              <p>
+                Banda CORRERIA HC, Curitiba - PR
+                <br>
+                Hardcore Nervoso em Português
+              </p>
+            </div>
 
-</body>
-</html>
+          </body>
+        </html>

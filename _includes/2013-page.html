@@ -1,19 +1,20 @@
-	<div id="topbar">
-	<div id="article-header">
-		<h1>{{ page.title | escape }}</h1>
-{% include page-byline.html %}
-	</div>
-	</div>
+<div id="topbar">
+  <div id="article-header">
+    <h1>{{ page.title | escape }}</h1>
+    {% include page-byline.html %}
+  </div>
+</div>
 
-	<div id="article-body">
+<div id="article-body">
 
-{{ content | imgcaption }}
+  {{ content | imgcaption }}
 
-{% if page.article_footer_after %}
-{% include {{ page.article_footer_after }} %}
-{% endif %}
+  {% if page.article_footer_after %}
+    {% include {{ page.article_footer_after }} %}
+  {% endif %}
 
-	</div><!--article-body-->
+</div>
+<!--article-body-->
 
 {% include article-footer.html more_url=".." %}
 
