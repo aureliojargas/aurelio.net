@@ -1,0 +1,961 @@
+
+
+
+404.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:6 Tag seems to be an orphan. <li>
+H025 14:6 Tag seems to be an orphan. <li>
+H025 15:6 Tag seems to be an orphan. <li>
+
+_includes/projects-sidebar.html
+───────────────────────────────────────────────────────────────────────────────
+H025 14:105 Tag seems to be an orphan. </li>
+H025 15:82 Tag seems to be an orphan. </li>
+H025 16:88 Tag seems to be an orphan. </li>
+H025 17:88 Tag seems to be an orphan. </li>
+H025 18:105 Tag seems to be an orphan. </li>
+H025 19:94 Tag seems to be an orphan. </li>
+H025 20:94 Tag seems to be an orphan. </li>
+H025 21:97 Tag seems to be an orphan. </li>
+H025 22:93 Tag seems to be an orphan. </li>
+H025 23:94 Tag seems to be an orphan. </li>
+H025 30:99 Tag seems to be an orphan. </li>
+H025 31:97 Tag seems to be an orphan. </li>
+H025 32:71 Tag seems to be an orphan. </li>
+H025 33:61 Tag seems to be an orphan. </li>
+H025 34:95 Tag seems to be an orphan. </li>
+H025 35:89 Tag seems to be an orphan. </li>
+H025 36:87 Tag seems to be an orphan. </li>
+H025 37:87 Tag seems to be an orphan. </li>
+H025 38:61 Tag seems to be an orphan. </li>
+H025 45:49 Tag seems to be an orphan. </li>
+H025 46:58 Tag seems to be an orphan. </li>
+
+_layouts/correria.html
+───────────────────────────────────────────────────────────────────────────────
+H025 155:4 Tag seems to be an orphan. <li>
+H025 156:4 Tag seems to be an orphan. <li>
+H025 157:4 Tag seems to be an orphan. <li>
+H025 158:4 Tag seems to be an orphan. <li>
+
+_posts/2004-08-08-vida-de-pia.html
+───────────────────────────────────────────────────────────────────────────────
+H025 15:0 Tag seems to be an orphan. <li>
+H025 16:0 Tag seems to be an orphan. <li>
+H025 17:0 Tag seems to be an orphan. <li>
+H025 18:0 Tag seems to be an orphan. <li>
+
+_posts/2005-06-10-toc-toc-toc-tem-alguem-ai.html
+───────────────────────────────────────────────────────────────────────────────
+H025 15:0 Tag seems to be an orphan. <li>
+H025 16:0 Tag seems to be an orphan. <li>
+H025 17:0 Tag seems to be an orphan. <li>
+
+_posts/2006-09-26-adium-book-nos-holofotes.html
+───────────────────────────────────────────────────────────────────────────────
+H025 21:0 Tag seems to be an orphan. <li>
+H025 22:0 Tag seems to be an orphan. <li>
+H025 23:0 Tag seems to be an orphan. <li>
+H025 24:0 Tag seems to be an orphan. <li>
+
+_posts/2007-02-02-moneylog-experience-2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 75:0 Tag seems to be an orphan. <p>
+
+_posts/2007-02-27-numero-13-sorte-e-coincidencia.html
+───────────────────────────────────────────────────────────────────────────────
+H025 36:0 Tag seems to be an orphan. <p>
+
+_posts/2007-05-09-dias-agitados-em-curitiba-ii.html
+───────────────────────────────────────────────────────────────────────────────
+H025 26:0 Tag seems to be an orphan. <p>
+H025 28:0 Tag seems to be an orphan. <p>
+H025 30:0 Tag seems to be an orphan. <p>
+
+_posts/2007-05-11-captcha-de-pobre.html
+───────────────────────────────────────────────────────────────────────────────
+H025 18:0 Tag seems to be an orphan. <p>
+H025 20:0 Tag seems to be an orphan. <p>
+H025 22:0 Tag seems to be an orphan. <p>
+H025 57:0 Tag seems to be an orphan. <p>
+H025 59:0 Tag seems to be an orphan. <p>
+
+_posts/2008-04-04-parto-prematuro.html
+───────────────────────────────────────────────────────────────────────────────
+H025 22:29 Tag seems to be an orphan. </p>
+
+_posts/2009-07-17-10anos-expressoes-regulares.html
+───────────────────────────────────────────────────────────────────────────────
+H025 194:0 Tag seems to be an orphan. <p style="text-align
+
+_posts/2009-08-26-miniman.html
+───────────────────────────────────────────────────────────────────────────────
+H025 34:0 Tag seems to be an orphan. <p style="text-align
+H025 37:0 List tags should not be nested inside p tags. <ul>
+H025 42:0 List tags should not be nested inside p tags. <ul>
+H025 51:0 List tags should not be nested inside p tags. <ul>
+
+_posts/2009-10-03-expressoes-regulares-3a-edicao.html
+───────────────────────────────────────────────────────────────────────────────
+H025 20:0 Tag seems to be an orphan. <p style="text-align
+H025 38:0 List tags should not be nested inside p tags. <ul>
+
+_posts/2009-12-02-cara-ou-coroa.html
+───────────────────────────────────────────────────────────────────────────────
+H025 42:0 Tag seems to be an orphan. <p style="text-align
+
+_posts/2011-02-04-imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint.html
+───────────────────────────────────────────────────────────────────────────────
+H025 44:0 Tag seems to be an orphan. <p>
+H025 65:0 Tag seems to be an orphan. <p>
+
+_scripts/replace-templates/wordpress-image-caption-from.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <div [^>
+
+_scripts/replace-templates/wordpress-linked-image-caption-from.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <div [^>
+H025 1:11 Tag seems to be an orphan. <a href="(.*?)">
+
+aurelio/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 18:0 Tag seems to be an orphan. <li>
+H025 36:0 Tag seems to be an orphan. <p>
+
+bin/java/cadusu.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <html>
+H025 2:0 Tag seems to be an orphan. <body>
+
+bin/java/conectar.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <html>
+H025 2:0 Tag seems to be an orphan. <body>
+
+blog-arquivo.html
+───────────────────────────────────────────────────────────────────────────────
+H025 759:4 Tag seems to be an orphan. <p>
+H025 1653:6 Tag seems to be an orphan. <p>
+
+coisinha/viravira/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <html>
+H025 20:0 Tag seems to be an orphan. <head>
+
+curso/material/desenvolvedor/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 67:0 Tag seems to be an orphan. <p>
+
+curso/material/vim-ref.html
+───────────────────────────────────────────────────────────────────────────────
+H025 8:0 Tag seems to be an orphan. <P ALIGN="center">
+H025 14:0 Tag seems to be an orphan. <table align="center
+H025 14:38 Tag seems to be an orphan. <tr>
+H025 14:42 Tag seems to be an orphan. <td>
+H025 19:0 List tags should not be nested inside p tags. <UL>
+H025 20:0 Tag seems to be an orphan. <LI>
+H025 21:0 Tag seems to be an orphan. <LI>
+H025 27:0 List tags should not be nested inside p tags. <UL>
+H025 28:0 Tag seems to be an orphan. <LI>
+H025 29:0 Tag seems to be an orphan. <LI>
+H025 30:0 Tag seems to be an orphan. <LI>
+H025 31:0 Tag seems to be an orphan. <LI>
+H025 32:0 Tag seems to be an orphan. <LI>
+H025 38:0 List tags should not be nested inside p tags. <UL>
+H025 39:0 Tag seems to be an orphan. <LI>
+H025 40:0 Tag seems to be an orphan. <LI>
+H025 41:0 Tag seems to be an orphan. <LI>
+H025 47:0 List tags should not be nested inside p tags. <UL>
+H025 48:0 Tag seems to be an orphan. <LI>
+H025 49:0 Tag seems to be an orphan. <LI>
+H025 50:0 Tag seems to be an orphan. <LI>
+H025 51:0 Tag seems to be an orphan. <LI>
+H025 52:0 Tag seems to be an orphan. <LI>
+H025 58:0 List tags should not be nested inside p tags. <UL>
+H025 59:0 Tag seems to be an orphan. <LI>
+H025 60:0 Tag seems to be an orphan. <LI>
+H025 61:0 Tag seems to be an orphan. <LI>
+H025 62:0 Tag seems to be an orphan. <LI>
+H025 63:0 Tag seems to be an orphan. <LI>
+H025 64:0 Tag seems to be an orphan. <LI>
+H025 70:0 List tags should not be nested inside p tags. <UL>
+H025 71:0 Tag seems to be an orphan. <LI>
+H025 72:0 Tag seems to be an orphan. <LI>
+H025 73:0 Tag seems to be an orphan. <LI>
+H025 74:0 Tag seems to be an orphan. <LI>
+H025 75:0 Tag seems to be an orphan. <LI>
+H025 76:0 Tag seems to be an orphan. <LI>
+H025 77:0 Tag seems to be an orphan. <LI>
+H025 83:0 List tags should not be nested inside p tags. <UL>
+H025 84:0 Tag seems to be an orphan. <LI>
+H025 85:0 Tag seems to be an orphan. <LI>
+H025 86:0 Tag seems to be an orphan. <LI>
+H025 87:0 Tag seems to be an orphan. <LI>
+H025 88:0 Tag seems to be an orphan. <LI>
+H025 89:0 Tag seems to be an orphan. <LI>
+H025 90:0 Tag seems to be an orphan. <LI>
+H025 91:0 Tag seems to be an orphan. <LI>
+H025 97:0 List tags should not be nested inside p tags. <UL>
+H025 98:0 Tag seems to be an orphan. <LI>
+H025 99:0 Tag seems to be an orphan. <LI>
+H025 100:0 Tag seems to be an orphan. <LI>
+H025 101:0 Tag seems to be an orphan. <LI>
+H025 102:0 Tag seems to be an orphan. <LI>
+H025 103:0 Tag seems to be an orphan. <LI>
+H025 109:0 List tags should not be nested inside p tags. <UL>
+H025 110:0 Tag seems to be an orphan. <LI>
+H025 111:0 Tag seems to be an orphan. <LI>
+H025 115:0 Tag seems to be an orphan. </td>
+H025 115:5 Tag seems to be an orphan. <td>
+H025 330:0 Tag seems to be an orphan. </td>
+H025 330:5 Tag seems to be an orphan. </tr>
+H025 330:10 Tag seems to be an orphan. </table>
+
+curso/sdsl-2/desenvolvedor/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 14:3 Tag seems to be an orphan. <p>
+H025 16:0 Tag seems to be an orphan. <p>
+
+curso/sucesu/sucesu-desenvolvedor-apoio.html
+───────────────────────────────────────────────────────────────────────────────
+H025 18:0 Tag seems to be an orphan. <LI>
+H025 19:0 Tag seems to be an orphan. <LI>
+H025 20:0 Tag seems to be an orphan. <LI>
+H025 21:0 Tag seems to be an orphan. <LI>
+H025 22:0 Tag seems to be an orphan. <LI>
+H025 23:0 Tag seems to be an orphan. <LI>
+H025 29:0 Tag seems to be an orphan. <LI>
+H025 30:0 Tag seems to be an orphan. <LI>
+H025 31:0 Tag seems to be an orphan. <LI>
+H025 32:0 Tag seems to be an orphan. <LI>
+H025 38:0 Tag seems to be an orphan. <LI>
+H025 39:0 Tag seems to be an orphan. <LI>
+H025 40:0 Tag seems to be an orphan. <LI>
+H025 41:0 Tag seems to be an orphan. <LI>
+H025 42:0 Tag seems to be an orphan. <LI>
+H025 43:0 Tag seems to be an orphan. <LI>
+H025 44:0 Tag seems to be an orphan. <LI>
+H025 45:0 Tag seems to be an orphan. <LI>
+H025 46:0 Tag seems to be an orphan. <LI>
+H025 52:0 Tag seems to be an orphan. <LI>
+H025 53:0 Tag seems to be an orphan. <LI>
+H025 54:0 Tag seems to be an orphan. <LI>
+H025 55:0 Tag seems to be an orphan. <LI>
+H025 56:0 Tag seems to be an orphan. <LI>
+
+curso/sucesu/sucesu-seder-apoio.html
+───────────────────────────────────────────────────────────────────────────────
+H025 15:0 Tag seems to be an orphan. <center>
+H025 15:8 Tag seems to be an orphan. <table border="1" al
+H025 15:57 Tag seems to be an orphan. <tr>
+H025 15:61 Tag seems to be an orphan. <td>
+H025 117:0 Tag seems to be an orphan. </td>
+H025 117:5 Tag seems to be an orphan. <td>
+H025 218:0 Tag seems to be an orphan. <P>
+H025 219:0 Tag seems to be an orphan. </td>
+H025 219:5 Tag seems to be an orphan. </tr>
+H025 219:10 Tag seems to be an orphan. </table>
+H025 233:0 Tag seems to be an orphan. <center>
+H025 233:8 Tag seems to be an orphan. <table border="0" al
+H025 233:57 Tag seems to be an orphan. <tr>
+H025 233:61 Tag seems to be an orphan. <td>
+H025 236:62 Tag seems to be an orphan. <DD>
+H025 239:70 Tag seems to be an orphan. <DD>
+H025 242:74 Tag seems to be an orphan. <DD>
+H025 245:102 Tag seems to be an orphan. <DD>
+H025 250:0 Tag seems to be an orphan. </td>
+H025 250:5 Tag seems to be an orphan. <td>
+H025 253:102 Tag seems to be an orphan. <DD>
+H025 256:58 Tag seems to be an orphan. <DD>
+H025 259:118 Tag seems to be an orphan. <DD>
+H025 264:0 Tag seems to be an orphan. </td>
+H025 264:5 Tag seems to be an orphan. </tr>
+H025 264:10 Tag seems to be an orphan. </table>
+H025 264:18 Tag seems to be an orphan. </center>
+
+doc/rdl/areas-compartilhadas.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <html>
+H025 3:7 Tag seems to be an orphan. <body>
+H025 120:0 Tag seems to be an orphan. <P>
+H025 121:0 Tag seems to be an orphan. <P>
+H025 122:0 Tag seems to be an orphan. <P>
+H025 123:0 Tag seems to be an orphan. <P>
+H025 124:0 Tag seems to be an orphan. <P>
+H025 125:0 Tag seems to be an orphan. <P>
+H025 126:0 Tag seems to be an orphan. <P>
+
+doc/rdl/poder-modo-texto.html
+───────────────────────────────────────────────────────────────────────────────
+H025 1:0 Tag seems to be an orphan. <html>
+H025 3:7 Tag seems to be an orphan. <body>
+H025 4:0 Tag seems to be an orphan. <p>
+H025 262:0 List tags should not be nested inside p tags. <ol>
+H025 263:1 Tag seems to be an orphan. <li>
+H025 277:0 Tag seems to be an orphan. <li>
+H025 291:0 Tag seems to be an orphan. <li>
+
+dumbs/dumbiografia.html
+───────────────────────────────────────────────────────────────────────────────
+H025 54:0 Tag seems to be an orphan. <li>
+H025 58:0 Tag seems to be an orphan. <p>
+H025 59:0 Tag seems to be an orphan. <li>
+H025 62:0 Tag seems to be an orphan. <p>
+H025 63:0 Tag seems to be an orphan. <li>
+H025 83:0 Tag seems to be an orphan. <p>
+H025 87:59 Tag seems to be an orphan. <p>
+H025 457:0 Tag seems to be an orphan. <p>
+
+dumbs/fitografia/fitademo0.html
+───────────────────────────────────────────────────────────────────────────────
+H025 15:0 Tag seems to be an orphan. <p>
+H025 15:7 Tag seems to be an orphan. <p>
+
+dumbs/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <center>
+H025 26:0 Tag seems to be an orphan. <p>
+H025 42:0 Tag seems to be an orphan. <p>
+H025 43:0 Tag seems to be an orphan. <p>
+H025 46:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/carol.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 30:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/cdf.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 32:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/cogumelo.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 31:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/espera.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 30:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/fraco.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 30:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/gas.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 28:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 32:2 Tag seems to be an orphan. <td>
+H025 36:21 Tag seems to be an orphan. <a href="/dumbs/mp3/
+H025 43:2 Tag seems to be an orphan. <td>
+H025 47:21 Tag seems to be an orphan. <a href="/dumbs/mp3/
+H025 52:21 Tag seems to be an orphan. <a href="/dumbs/mp3/
+H025 59:2 Tag seems to be an orphan. <td>
+H025 70:2 Tag seems to be an orphan. <td>
+H025 74:21 Tag seems to be an orphan. <a href="/dumbs/mp3/
+H025 89:21 Tag seems to be an orphan. <a href="/dumbs/mp3/
+H025 106:2 Tag seems to be an orphan. <td>
+H025 112:2 Tag seems to be an orphan. <td>
+
+dumbs/musicas/intro.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 28:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/lessonone.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 33:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/lifeomine.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 28:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/mentira.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 28:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/milhoverde.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 20:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/naotequeromais.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 30:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/opiniao.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 29:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/paosemvina.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 30:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/pasto.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 21:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/seligaedesliga.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 29:0 Tag seems to be an orphan. <p>
+H025 34:0 Tag seems to be an orphan. <p>
+
+dumbs/musicas/voudormir.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 29:0 Tag seems to be an orphan. <p>
+
+dumbs/nos/aurelio.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+
+dumbs/nos/daniel.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+
+dumbs/nos/fejao.html
+───────────────────────────────────────────────────────────────────────────────
+H025 14:0 Tag seems to be an orphan. <p>
+
+dumbs/nos/nissin.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19951027.html
+───────────────────────────────────────────────────────────────────────────────
+H025 51:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19961019.html
+───────────────────────────────────────────────────────────────────────────────
+H025 49:0 Tag seems to be an orphan. <p>
+H025 52:0 Tag seems to be an orphan. <p>
+H025 55:0 Tag seems to be an orphan. <p>
+H025 58:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19970307.html
+───────────────────────────────────────────────────────────────────────────────
+H025 43:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19990814.html
+───────────────────────────────────────────────────────────────────────────────
+H025 64:0 Tag seems to be an orphan. <p>
+H025 68:0 Tag seems to be an orphan. <p>
+H025 71:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19990911.html
+───────────────────────────────────────────────────────────────────────────────
+H025 58:0 Tag seems to be an orphan. <p>
+H025 61:0 Tag seems to be an orphan. <p>
+H025 65:0 Tag seems to be an orphan. <p>
+H025 68:0 Tag seems to be an orphan. <p>
+H025 71:0 Tag seems to be an orphan. <p>
+H025 74:0 Tag seems to be an orphan. <p>
+H025 77:0 Tag seems to be an orphan. <p>
+H025 80:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19991002.html
+───────────────────────────────────────────────────────────────────────────────
+H025 52:0 Tag seems to be an orphan. <p>
+H025 55:0 Tag seems to be an orphan. <p>
+H025 58:0 Tag seems to be an orphan. <p>
+H025 61:0 Tag seems to be an orphan. <p>
+H025 64:0 Tag seems to be an orphan. <p>
+H025 67:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19991121.html
+───────────────────────────────────────────────────────────────────────────────
+H025 57:0 Tag seems to be an orphan. <p>
+H025 60:0 Tag seems to be an orphan. <p>
+H025 63:0 Tag seems to be an orphan. <p>
+H025 66:0 Tag seems to be an orphan. <p>
+H025 69:0 Tag seems to be an orphan. <p>
+H025 73:0 Tag seems to be an orphan. <p>
+H025 76:0 Tag seems to be an orphan. <p>
+H025 79:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19991210.html
+───────────────────────────────────────────────────────────────────────────────
+H025 66:0 Tag seems to be an orphan. <p>
+H025 70:0 Tag seems to be an orphan. <p>
+H025 73:0 Tag seems to be an orphan. <p>
+H025 76:0 Tag seems to be an orphan. <p>
+H025 79:0 Tag seems to be an orphan. <p>
+H025 85:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/19991217.html
+───────────────────────────────────────────────────────────────────────────────
+H025 57:0 Tag seems to be an orphan. <p>
+H025 60:0 Tag seems to be an orphan. <p>
+H025 63:0 Tag seems to be an orphan. <p>
+H025 66:0 Tag seems to be an orphan. <p>
+H025 69:0 Tag seems to be an orphan. <p>
+
+dumbs/shows/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 49:0 Tag seems to be an orphan. <p>
+H025 114:0 Tag seems to be an orphan. <p>
+H025 160:0 Tag seems to be an orphan. <p>
+
+dumbs/valeu.html
+───────────────────────────────────────────────────────────────────────────────
+H025 23:0 List tags should not be nested inside p tags. <ul>
+H025 59:0 Tag seems to be an orphan. </p>
+
+foto/tosco/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 9:0 Tag seems to be an orphan. <center>
+H025 12:17 Tag seems to be an orphan. <font size="5">
+H025 12:42 Tag seems to be an orphan. <p>
+H025 12:49 Tag seems to be an orphan. <p>
+H025 14:20 Tag seems to be an orphan. <font size="5">
+H025 18:0 Tag seems to be an orphan. <p>
+H025 188:0 Tag seems to be an orphan. <p>
+H025 192:0 Tag seems to be an orphan. <p>
+
+log/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 739:0 Tag seems to be an orphan. <body>
+H025 814:0 Tag seems to be an orphan. <pre id="data">
+
+misc/leitura_dinamica/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 21:0 Tag seems to be an orphan. <p>
+H025 21:3 List tags should not be nested inside p tags. <ul>
+H025 45:0 Tag seems to be an orphan. <p>
+H025 46:0 List tags should not be nested inside p tags. <ol>
+
+moneylog/moneylog1.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 271:0 Tag seems to be an orphan. <body>
+H025 325:0 Tag seems to be an orphan. <pre id="data">
+
+moneylog/moneylog2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 469:0 Tag seems to be an orphan. <body>
+H025 513:1 List tags should not be nested inside p tags. <ul>
+H025 526:1 Tag seems to be an orphan. </p>
+H025 526:5 Tag seems to be an orphan. <p>
+H025 541:0 Tag seems to be an orphan. <pre id="data">
+
+moneylog/moneylog3.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 724:0 Tag seems to be an orphan. <body>
+H025 785:1 List tags should not be nested inside p tags. <ul>
+H025 792:2 List tags should not be nested inside p tags. <ul>
+H025 805:1 Tag seems to be an orphan. </p>
+H025 805:5 Tag seems to be an orphan. <p>
+H025 813:1 List tags should not be nested inside p tags. <ul>
+H025 820:2 List tags should not be nested inside p tags. <ul>
+H025 833:1 Tag seems to be an orphan. </p>
+H025 833:5 Tag seems to be an orphan. <p>
+H025 864:0 Tag seems to be an orphan. <pre id="data">
+
+moneylog/moneylog4-txt.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 1902:0 Tag seems to be an orphan. <body>
+H025 2058:1 Tag seems to be an orphan. <p>
+H025 2104:0 Tag seems to be an orphan. <pre id="data">
+
+moneylog/moneylog4.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 1912:0 Tag seems to be an orphan. <body>
+H025 2068:1 Tag seems to be an orphan. <p>
+H025 2114:0 Tag seems to be an orphan. <pre id="data">
+
+moneylog/portable/demo/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 5041:0 Tag seems to be an orphan. <body>
+H025 5042:0 Tag seems to be an orphan. <div id="container">
+H025 5271:0 Tag seems to be an orphan. <pre id="data">
+
+moneylog/portable/moneylog5.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 5041:0 Tag seems to be an orphan. <body>
+H025 5042:0 Tag seems to be an orphan. <div id="container">
+H025 5271:0 Tag seems to be an orphan. <pre id="data">
+
+musica/ddd/ativistas/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 77:0 Tag seems to be an orphan. <p align="center">
+H025 137:25 Tag seems to be an orphan. </font>
+H025 143:26 Tag seems to be an orphan. </font>
+H025 149:26 Tag seems to be an orphan. </font>
+H025 155:26 Tag seems to be an orphan. </font>
+
+musica/ddd/bulimia/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 32:0 Tag seems to be an orphan. <p>
+
+musica/ddd/dumbs/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 73:0 Tag seems to be an orphan. <p align="center">
+H025 133:24 Tag seems to be an orphan. </font>
+H025 139:26 Tag seems to be an orphan. </font>
+H025 145:25 Tag seems to be an orphan. </font>
+H025 151:24 Tag seems to be an orphan. </font>
+H025 157:24 Tag seems to be an orphan. </font>
+
+musica/ddd/godzilla/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 110:24 Tag seems to be an orphan. </font>
+H025 116:24 Tag seems to be an orphan. </font>
+H025 122:25 Tag seems to be an orphan. </font>
+H025 128:28 Tag seems to be an orphan. </font>
+H025 134:28 Tag seems to be an orphan. </font>
+
+musica/ddd/imortal/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 57:0 Tag seems to be an orphan. <p align="center">
+H025 117:25 Tag seems to be an orphan. </font>
+H025 123:24 Tag seems to be an orphan. </font>
+H025 129:27 Tag seems to be an orphan. </font>
+H025 135:24 Tag seems to be an orphan. </font>
+H025 141:24 Tag seems to be an orphan. </font>
+
+musica/ddd/impatrioticos/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 90:0 Tag seems to be an orphan. <p align="center">
+H025 150:27 Tag seems to be an orphan. </font>
+H025 156:23 Tag seems to be an orphan. </font>
+H025 162:24 Tag seems to be an orphan. </font>
+H025 168:27 Tag seems to be an orphan. </font>
+H025 174:24 Tag seems to be an orphan. </font>
+
+musica/ddd/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 42:0 Tag seems to be an orphan. <p>
+H025 43:0 List tags should not be nested inside p tags. <ul>
+H025 59:0 Tag seems to be an orphan. <p>
+H025 60:0 List tags should not be nested inside p tags. <ul>
+H025 82:0 Tag seems to be an orphan. <p>
+H025 83:0 List tags should not be nested inside p tags. <ul>
+H025 89:2 Tag seems to be an orphan. </li>
+H025 139:0 Tag seems to be an orphan. <p>
+
+musica/ddd/lavajato/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 56:0 Tag seems to be an orphan. <p align="center">
+H025 116:25 Tag seems to be an orphan. </font>
+H025 122:23 Tag seems to be an orphan. </font>
+H025 128:24 Tag seems to be an orphan. </font>
+H025 134:23 Tag seems to be an orphan. </font>
+H025 140:25 Tag seems to be an orphan. </font>
+
+musica/ddd/leidocao/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 89:0 Tag seems to be an orphan. <p align="center">
+H025 149:28 Tag seems to be an orphan. </font>
+H025 155:25 Tag seems to be an orphan. </font>
+H025 161:26 Tag seems to be an orphan. </font>
+H025 167:28 Tag seems to be an orphan. </font>
+H025 173:26 Tag seems to be an orphan. </font>
+
+musica/ddd/losmox/demo1.html
+───────────────────────────────────────────────────────────────────────────────
+H025 105:0 Tag seems to be an orphan. <p align="center">
+H025 166:25 Tag seems to be an orphan. </font>
+H025 172:26 Tag seems to be an orphan. </font>
+H025 178:24 Tag seems to be an orphan. </font>
+H025 184:25 Tag seems to be an orphan. </font>
+
+musica/ddd/losmox/demo2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 66:0 Tag seems to be an orphan. <p align="center">
+H025 127:25 Tag seems to be an orphan. </font>
+H025 133:26 Tag seems to be an orphan. </font>
+H025 139:24 Tag seems to be an orphan. </font>
+H025 145:22 Tag seems to be an orphan. </font>
+H025 151:25 Tag seems to be an orphan. </font>
+
+musica/ddd/losmox/demo3.html
+───────────────────────────────────────────────────────────────────────────────
+H025 90:0 Tag seems to be an orphan. <p align="center">
+H025 151:25 Tag seems to be an orphan. </font>
+H025 157:26 Tag seems to be an orphan. </font>
+H025 163:24 Tag seems to be an orphan. </font>
+H025 169:22 Tag seems to be an orphan. </font>
+H025 175:25 Tag seems to be an orphan. </font>
+
+musica/ddd/losmox/demo4.html
+───────────────────────────────────────────────────────────────────────────────
+H025 132:25 Tag seems to be an orphan. </font>
+H025 138:25 Tag seems to be an orphan. </font>
+H025 144:24 Tag seems to be an orphan. </font>
+H025 150:22 Tag seems to be an orphan. </font>
+H025 156:25 Tag seems to be an orphan. </font>
+
+musica/ddd/losmox/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 37:5 Tag seems to be an orphan. <p>
+
+musica/ddd/milhouse/demo1.html
+───────────────────────────────────────────────────────────────────────────────
+H025 32:0 Tag seems to be an orphan. <p>
+
+musica/ddd/milhouse/demo2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 97:0 Tag seems to be an orphan. <p align="center">
+H025 158:25 Tag seems to be an orphan. </font>
+H025 164:24 Tag seems to be an orphan. </font>
+H025 170:24 Tag seems to be an orphan. </font>
+H025 176:23 Tag seems to be an orphan. </font>
+
+musica/ddd/milhouse/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 22:5 Tag seems to be an orphan. <p>
+H025 27:5 Tag seems to be an orphan. <p>
+
+musica/ddd/ndn/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 66:0 Tag seems to be an orphan. </center>
+
+musica/ddd/negative/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 63:0 Tag seems to be an orphan. </center>
+
+musica/ddd/nocontrol/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+musica/ddd/noname/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 132:31 Tag seems to be an orphan. </font>
+H025 138:23 Tag seems to be an orphan. </font>
+H025 144:27 Tag seems to be an orphan. </font>
+H025 150:31 Tag seems to be an orphan. </font>
+
+musica/ddd/nopainnogain/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 130:24 Tag seems to be an orphan. </font>
+H025 136:24 Tag seems to be an orphan. </font>
+H025 142:23 Tag seems to be an orphan. </font>
+H025 148:25 Tag seems to be an orphan. </font>
+
+musica/ddd/podium.html
+───────────────────────────────────────────────────────────────────────────────
+H025 20:0 Tag seems to be an orphan. <p align="center">
+
+musica/ddd/scarecrow/demo1.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+musica/ddd/scarecrow/demo2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 129:28 Tag seems to be an orphan. </font>
+H025 135:25 Tag seems to be an orphan. </font>
+H025 141:25 Tag seems to be an orphan. </font>
+H025 147:25 Tag seems to be an orphan. </font>
+
+musica/ddd/scarecrow/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 22:5 Tag seems to be an orphan. <p>
+H025 27:5 Tag seems to be an orphan. <p>
+
+musica/ddd/schnaps/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+musica/ddd/stn/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 118:36 Tag seems to be an orphan. </font>
+H025 124:25 Tag seems to be an orphan. </font>
+H025 130:31 Tag seems to be an orphan. </font>
+H025 136:33 Tag seems to be an orphan. </font>
+
+musica/ddd/stukaslazy/demo1.html
+───────────────────────────────────────────────────────────────────────────────
+H025 88:0 Tag seems to be an orphan. <p align="center">
+H025 149:23 Tag seems to be an orphan. </font>
+H025 155:22 Tag seems to be an orphan. </font>
+H025 161:22 Tag seems to be an orphan. </font>
+H025 167:23 Tag seems to be an orphan. </font>
+H025 173:22 Tag seems to be an orphan. </font>
+
+musica/ddd/stukaslazy/demo2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+musica/ddd/stukaslazy/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 27:5 Tag seems to be an orphan. <p>
+
+musica/ddd/thejerks/demo1.html
+───────────────────────────────────────────────────────────────────────────────
+H025 84:0 Tag seems to be an orphan. <p align="center">
+H025 145:23 Tag seems to be an orphan. </font>
+H025 151:25 Tag seems to be an orphan. </font>
+H025 157:23 Tag seems to be an orphan. </font>
+H025 163:25 Tag seems to be an orphan. </font>
+
+musica/ddd/thejerks/demo2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+musica/ddd/thejerks/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 27:5 Tag seems to be an orphan. <p>
+
+musica/ddd/undertaker/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+musica/ddd/wallride/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 30:0 Tag seems to be an orphan. <p>
+
+projects/moneylog/moneylog2.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 503:0 Tag seems to be an orphan. <body>
+H025 548:1 List tags should not be nested inside p tags. <ul>
+H025 561:1 Tag seems to be an orphan. </p>
+H025 561:5 Tag seems to be an orphan. <p>
+H025 571:1 List tags should not be nested inside p tags. <ul>
+H025 584:1 Tag seems to be an orphan. </p>
+H025 584:5 Tag seems to be an orphan. <p>
+H025 600:0 Tag seems to be an orphan. <pre id="data">
+
+projects/moneylog/moneylog3.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 724:0 Tag seems to be an orphan. <body>
+H025 785:1 List tags should not be nested inside p tags. <ul>
+H025 792:2 List tags should not be nested inside p tags. <ul>
+H025 805:1 Tag seems to be an orphan. </p>
+H025 805:5 Tag seems to be an orphan. <p>
+H025 813:1 List tags should not be nested inside p tags. <ul>
+H025 820:2 List tags should not be nested inside p tags. <ul>
+H025 833:1 Tag seems to be an orphan. </p>
+H025 833:5 Tag seems to be an orphan. <p>
+H025 864:0 Tag seems to be an orphan. <pre id="data">
+
+projects/moneylog/moneylog4.html
+───────────────────────────────────────────────────────────────────────────────
+H025 2:0 Tag seems to be an orphan. <html>
+H025 1912:0 Tag seems to be an orphan. <body>
+H025 2068:1 Tag seems to be an orphan. <p>
+H025 2114:0 Tag seems to be an orphan. <pre id="data">
+
+projects/sedsed/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 45:0 Tag seems to be an orphan. </blockquote>
+
+regex/casar-ip.html
+───────────────────────────────────────────────────────────────────────────────
+H025 44:0 Tag seems to be an orphan. <p>
+H025 55:0 Tag seems to be an orphan. <p>
+H025 109:0 Tag seems to be an orphan. <p>
+H025 192:0 Tag seems to be an orphan. <p>
+
+sed/gsed4_random_thread.html
+───────────────────────────────────────────────────────────────────────────────
+H025 11:0 Tag seems to be an orphan. <p>
+H025 17:0 Tag seems to be an orphan. <p>
+H025 20:0 List tags should not be nested inside p tags. <ul>
+H025 21:0 Tag seems to be an orphan. <li>
+H025 22:0 Tag seems to be an orphan. <li>
+H025 26:0 Tag seems to be an orphan. <p>
+H025 33:0 Tag seems to be an orphan. <p>
+H025 40:0 List tags should not be nested inside p tags. <ul>
+H025 41:0 Tag seems to be an orphan. <li>
+H025 42:0 Tag seems to be an orphan. <li>
+H025 43:0 Tag seems to be an orphan. <li>
+H025 44:0 Tag seems to be an orphan. <li>
+H025 45:0 Tag seems to be an orphan. <li>
+H025 46:0 Tag seems to be an orphan. <li>
+H025 47:0 Tag seems to be an orphan. <li>
+H025 50:0 Tag seems to be an orphan. <p>
+H025 50:7 Tag seems to be an orphan. <p>
+H025 63:0 Tag seems to be an orphan. <p>
+H025 69:0 Tag seems to be an orphan. </pre>
+H025 577:0 Tag seems to be an orphan. </pre>
+H025 1669:0 Tag seems to be an orphan. <p>
+
+surf/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 137:187 Tag seems to be an orphan. <DD>
+H025 142:80 Tag seems to be an orphan. <DD>
+H025 143:185 Tag seems to be an orphan. <DD>
+H025 148:184 Tag seems to be an orphan. <DD>
+H025 153:191 Tag seems to be an orphan. <DD>
+H025 158:89 Tag seems to be an orphan. <DD>
+H025 159:185 Tag seems to be an orphan. <DD>
+H025 164:82 Tag seems to be an orphan. <DD>
+H025 165:190 Tag seems to be an orphan. <DD>
+H025 170:191 Tag seems to be an orphan. <DD>
+H025 175:79 Tag seems to be an orphan. <DD>
+H025 176:184 Tag seems to be an orphan. <DD>
+H025 182:184 Tag seems to be an orphan. <DD>
+H025 187:189 Tag seems to be an orphan. <DD>
+H025 192:190 Tag seems to be an orphan. <DD>
+H025 197:190 Tag seems to be an orphan. <DD>
+H025 202:72 Tag seems to be an orphan. <DD>
+H025 203:184 Tag seems to be an orphan. <DD>
+H025 208:184 Tag seems to be an orphan. <DD>
+H025 213:63 Tag seems to be an orphan. <DD>
+H025 214:195 Tag seems to be an orphan. <DD>
+H025 219:194 Tag seems to be an orphan. <DD>
+H025 224:194 Tag seems to be an orphan. <DD>
+H025 229:80 Tag seems to be an orphan. <DD>
+H025 230:195 Tag seems to be an orphan. <DD>
+H025 235:194 Tag seems to be an orphan. <DD>
+H025 240:196 Tag seems to be an orphan. <DD>
+H025 245:77 Tag seems to be an orphan. <DD>
+H025 246:190 Tag seems to be an orphan. <DD>
+H025 251:189 Tag seems to be an orphan. <DD>
+H025 257:193 Tag seems to be an orphan. <DD>
+H025 262:195 Tag seems to be an orphan. <DD>
+H025 267:79 Tag seems to be an orphan. <DD>
+H025 268:190 Tag seems to be an orphan. <DD>
+H025 273:188 Tag seems to be an orphan. <DD>
+
+valeta/historia.html
+───────────────────────────────────────────────────────────────────────────────
+H025 13:0 Tag seems to be an orphan. <p>
+H025 19:0 Tag seems to be an orphan. <p>
+H025 23:0 Tag seems to be an orphan. <p>
+H025 29:0 Tag seems to be an orphan. <p>
+H025 32:0 Tag seems to be an orphan. <p>
+H025 37:0 Tag seems to be an orphan. <p>
+H025 42:0 Tag seems to be an orphan. <p>
+H025 46:0 Tag seems to be an orphan. <p>
+H025 50:0 Tag seems to be an orphan. <p>
+H025 53:0 Tag seems to be an orphan. <p>
+H025 55:0 Tag seems to be an orphan. <p>
+H025 61:0 Tag seems to be an orphan. <p>
+H025 65:0 Tag seems to be an orphan. <p>
+
+valeta/index.html
+───────────────────────────────────────────────────────────────────────────────
+H025 37:0 Tag seems to be an orphan. <li>
+H025 38:0 Tag seems to be an orphan. <li>
+H025 39:0 Tag seems to be an orphan. <li>
+H025 40:0 Tag seems to be an orphan. <li>
+H025 41:0 Tag seems to be an orphan. <li>
+H025 132:0 Tag seems to be an orphan. <p>
+
+Linted 1450 files, found 593 errors.
+

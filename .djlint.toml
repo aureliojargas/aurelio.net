@@ -1,0 +1,79 @@
+# https://djlint.com/docs/configuration/
+# Defaults: .venv/lib/python3.14/site-packages/djlint/settings.py
+
+# Jekyll uses Liquid as its template engine
+profile = "liquid"
+
+
+# ---------------------------------------------------------------------
+# Formatter
+# ---------------------------------------------------------------------
+
+# Two spaces indent is enough for HTML
+indent = 2  # default 4
+
+# The default setting removes all blank lines between block tags
+max_blank_lines = 1  # default 0
+
+
+# ---------------------------------------------------------------------
+# Linter
+# ---------------------------------------------------------------------
+
+# There's no ALL to ignore all rules.
+#
+# For the `liquid` profile, rules D J N M are excluded (see settings.py)
+# leaving us with rules H and T.
+
+ignore = [
+    # Won't fix
+    "H006",  # `img` tag should have `height` and `width` attributes.
+    "H018",  # Void tags are self closing by nature and must end with “>”, not “/>” (conflicts with: H017).
+    "H036",  # Avoid use of `br` tags.
+
+    # Try to fix
+    "H005",  # Html tag should have `lang` attribute.
+    "H007",  # `<!DOCTYPE ... >` should be present before the html tag.
+    "H009",  # Tag names should be lowercase.
+    "H010",  # Attribute names should be lowercase.
+    "H013",  # `img` tag should have alt attributes.
+    "H014",  # More than 2 blank lines.
+    "H015",  # Follow `h` tags with a line break.
+    "H016",  # Missing `title` tag in html.
+    "H017",  # Void tags should be self closing (conflicts with: H018).
+    "H019",  # Replace `javascript:abc()` with `on_` event and real url.
+    "H020",  # Empty tag pair found. Consider removing.
+    "H021",  # Inline styles should be avoided.
+    "H022",  # Use HTTPS for external links.
+    "H023",  # Do not use entity references.
+    "H025",  # Tag seems to be an orphan.
+    "H026",  # Empty id and class tags can be removed.
+    "H030",  # Consider adding a meta description.
+    "H031",  # Consider adding meta keywords.
+    "H035",  # Meta tags should be self closing.
+    "T001",  # Variables should be wrapped in whitespace. Ex: `{{ this }}`
+    "T032",  # Extra whitespace found in template tags.
+    "T039",  # Unclosed template tag found.
+]
+
+# Checks we're passing
+include = [
+    "H008",  # Attributes should be double quoted.
+    "H011",  # Attribute values should be quoted.
+    "H012",  # There should be no spaces around attribute `=`.
+    "H024",  # Omit type on scripts and styles.
+    "H029",  # Consider using lowercase form method values.
+    "H033",  # Extra whitespace found in form action.
+    "H037",  # Duplicate attribute found.
+    "H041",  # Tag is closed in a different template block than it was opened.
+    "H042",  # Label for attribute has no matching element id in this file.
+    "H043",  # Button tag should have a `type` attribute.
+    "H044",  # Thead should not mix `th` and `td` cells.
+    "T002",  # Double quotes should be used in tags. Ex `{% extends "this.html" %}`
+    "T003",  # Endblock should have name. Ex: `{% endblock body %}`.
+    "T027",  # Unclosed string found in template syntax.
+    "T028",  # Consider using spaceless tags inside attribute values. `{%- if/for -%}`
+    "T034",  # Did you intend to use {% … %} instead of {% … }%?
+    "T038",  # Block tag has no matching end tag.
+    "T040",  # Missing or empty template name in extends or include tag.
+]

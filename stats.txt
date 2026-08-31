@@ -1,0 +1,25 @@
+Statistics
+----------
+H005 647  Html tag should have lang attribute.
+H006 2073 Img tag should have height and width attributes.
+H007 189  <!DOCTYPE ... > should be present before the html tag.
+H009 4679 Tag names should be lowercase.
+H010 184  Attribute names should be lowercase.
+H013 862  Img tag should have an alt attribute.
+H014 432  Found extra blank lines.
+H015 2    Follow h tags with a line break.
+H016 12   Missing title tag in html.
+H019 6    Replace 'javascript:abc()' with on_ event and real url.
+H020 44   Empty tag pair found. Consider removing.
+H021 778  Inline styles should be avoided.
+H022 1819 Use HTTPS for external links.
+H023 13   Do not use entity references.
+H025 593  Tag seems to be an orphan.
+H026 1    Empty id and class tags can be removed.
+H030 624  Consider adding a meta description.
+H031 623  Consider adding meta keywords.
+H035 842  Meta tags should be self closing.
+H036 7176 Avoid use of <br> tags.
+T001 2    Variables should be wrapped in a whitespace.
+T032 7    Extra whitespace found in template tags.
+T039 4    Unclosed template tag found.
