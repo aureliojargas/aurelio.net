@@ -1,0 +1,5 @@
+# https://djlint.com/docs/configuration/
+# Defaults: .venv/lib/python3.14/site-packages/djlint/settings.py
+
+indent = 2  # default 4
+max_blank_lines = 1  # default 0
