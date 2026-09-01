@@ -27,7 +27,6 @@ ignore = [
     "H010",  # Attribute names should be lowercase.
     "H013",  # `img` tag should have alt attributes.
     "H014",  # More than 2 blank lines.
-    "H015",  # Follow `h` tags with a line break.
     "H016",  # Missing `title` tag in html.
     "H017",  # Void tags should be self closing (conflicts with: H018).
     "H019",  # Replace `javascript:abc()` with `on_` event and real url.
@@ -49,6 +48,7 @@ include = [
     "H008",  # Attributes should be double quoted.
     "H011",  # Attribute values should be quoted.
     "H012",  # There should be no spaces around attribute `=`.
+    "H015",  # Follow `h` tags with a line break.
     "H024",  # Omit type on scripts and styles.
     "H026",  # Empty id and class tags can be removed.
     "H029",  # Consider using lowercase form method values.
