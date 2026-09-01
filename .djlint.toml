@@ -15,6 +15,11 @@ extend_exclude = [
     "doc/rdl/poder-modo-texto.html",
     "doc/rdl/areas-compartilhadas.html",
 
+    # It looks like the parser can't handle this file, giving false-positives:
+    # H025 1:0 Tag seems to be an orphan. <html>
+    # H025 20:0 Tag seems to be an orphan. <head>
+    "coisinha/viravira/index.html",
+
     # Search/replace templates to match HTML code
     "_scripts/replace-templates/",
 ]
