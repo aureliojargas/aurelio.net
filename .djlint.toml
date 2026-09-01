@@ -25,6 +25,16 @@ extend_exclude = [
 ]
 
 # ---------------------------------------------------------------------
+# Formatter
+# ---------------------------------------------------------------------
+
+# Two spaces indent is enough for HTML
+indent = 2  # default 4
+
+# The default setting removes all blank lines between block tags
+max_blank_lines = 1  # default 0
+
+# ---------------------------------------------------------------------
 # Linter
 # ---------------------------------------------------------------------
 

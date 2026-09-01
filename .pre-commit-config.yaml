@@ -157,3 +157,4 @@ repos:
     rev: v1.44.2
     hooks:
       - id: djlint
+      - id: djlint-reformat
