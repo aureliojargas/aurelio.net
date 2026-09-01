@@ -36,7 +36,6 @@ ignore = [
     "H022",  # Use HTTPS for external links.
     "H023",  # Do not use entity references.
     "H025",  # Tag seems to be an orphan.
-    "H026",  # Empty id and class tags can be removed.
     "H030",  # Consider adding a meta description.
     "H031",  # Consider adding meta keywords.
     "H035",  # Meta tags should be self closing.
@@ -51,6 +50,7 @@ include = [
     "H011",  # Attribute values should be quoted.
     "H012",  # There should be no spaces around attribute `=`.
     "H024",  # Omit type on scripts and styles.
+    "H026",  # Empty id and class tags can be removed.
     "H029",  # Consider using lowercase form method values.
     "H033",  # Extra whitespace found in form action.
     "H037",  # Duplicate attribute found.
