@@ -56,7 +56,6 @@ ignore = [
     "H030",  # Consider adding a meta description.
     "H031",  # Consider adding meta keywords.
     "H035",  # Meta tags should be self closing.
-    "T001",  # Variables should be wrapped in whitespace. Ex: `{{ this }}`
     "T032",  # Extra whitespace found in template tags.
     "T039",  # Unclosed template tag found.
 ]
@@ -77,6 +76,7 @@ include = [
     "H042",  # Label for attribute has no matching element id in this file.
     "H043",  # Button tag should have a `type` attribute.
     "H044",  # Thead should not mix `th` and `td` cells.
+    "T001",  # Variables should be wrapped in whitespace. Ex: `{{ this }}`
     "T002",  # Double quotes should be used in tags. Ex `{% extends "this.html" %}`
     "T003",  # Endblock should have name. Ex: `{% endblock body %}`.
     "T027",  # Unclosed string found in template syntax.

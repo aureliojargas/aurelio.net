@@ -18,7 +18,7 @@
 {% unless page.hide_prev_next %}
 {% if page.previous.url %}	<link rel="prev" title="{{ page.previous.title | escape }}" href="{{ page.previous.url }}" />{% endif %}
 {% if page.next.url     %}	<link rel="next" title="{{ page.next.title     | escape }}" href="{{ page.next.url }}" />{% endif %}
-{% endunless%}
+{% endunless %}
 
 {% include head-open-graph.html %}
 {% include analytics.html %}
