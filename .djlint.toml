@@ -39,6 +39,10 @@ ignore = [
     "H018",  # Void tags are self closing by nature and must end with “>”, not “/>” (conflicts with: H017).
     "H036",  # Avoid use of `br` tags.
 
+    # False-positives
+    # Dynamic filenames confuse the linter. Example: {% include {{ page.before_content }} %}
+    "T039",  # Unclosed template tag found.
+
     # Try to fix
     "H005",  # Html tag should have `lang` attribute.
     "H007",  # `<!DOCTYPE ... >` should be present before the html tag.
@@ -57,7 +61,6 @@ ignore = [
     "H031",  # Consider adding meta keywords.
     "H035",  # Meta tags should be self closing.
     "T032",  # Extra whitespace found in template tags.
-    "T039",  # Unclosed template tag found.
 ]
 
 # Checks we're passing
