@@ -39,6 +39,9 @@ ignore = [
     "H018",  # Void tags are self closing by nature and must end with “>”, not “/>” (conflicts with: H017).
     "H036",  # Avoid use of `br` tags.
 
+    # Handled by the formatter
+    "H014",  # More than 2 blank lines.
+
     # False-positives
     # Dynamic filenames confuse the linter. Example: {% include {{ page.before_content }} %}
     "T039",  # Unclosed template tag found.
@@ -49,7 +52,6 @@ ignore = [
     "H009",  # Tag names should be lowercase.
     "H010",  # Attribute names should be lowercase.
     "H013",  # `img` tag should have alt attributes.
-    "H014",  # More than 2 blank lines.
     "H016",  # Missing `title` tag in html.
     "H017",  # Void tags should be self closing (conflicts with: H018).
     "H019",  # Replace `javascript:abc()` with `on_` event and real url.
