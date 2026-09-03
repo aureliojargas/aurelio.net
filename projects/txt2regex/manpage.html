@@ -8,6 +8,7 @@ body{background-color:#fff;color:#000;}
 hr{background-color:#000;border:0;color:#000;}
 hr.heavy{height:5px;}
 hr.light{height:1px;}
+dd{margin-top:1em;margin-bottom:1em;}
 img{border:0;display:block;}
 img.right{margin:0 0 0 auto;}
 img.center{border:0;margin:0 auto;}
@@ -85,43 +86,34 @@ programs is long. You will need a terminal window with more than 40
 lines for the user interface to fit. Also make sure that the <strong>$LINES</strong>
 shell variable is exported, so <strong>txt2regex</strong> can detect the current
 number of available lines.
-<p></p>
 </dd>
 <dt><strong>-h</strong>, <strong>--help</strong></dt><dd>
 Print the help message and quit.
-<p></p>
 </dd>
 <dt><strong>--history &lt;value&gt;</strong></dt><dd>
 Print a regex from the given history data. The history value is shown in
 the last screen of the wizard, when you quit.
-<p></p>
 </dd>
 <dt><strong>--make &lt;label&gt;</strong></dt><dd>
 Print a ready regex for the specified label. Inform an empty label to
 see the list of available labels.
-<p></p>
 </dd>
 <dt><strong>--nocolor</strong></dt><dd>
 Do not use colors.
-<p></p>
 </dd>
 <dt><strong>--prog &lt;program1,program2,...&gt;</strong></dt><dd>
 Specify which programs to use, separated by commas. Use <strong>--showmeta</strong>
 to see the complete list of available programs.
-<p></p>
 </dd>
 <dt><strong>--showinfo &lt;program&gt;</strong></dt><dd>
 Print regex-related info about the specified program. Use <strong>--nocolor</strong>
 to have a text-only output (no control characters).
-<p></p>
 </dd>
 <dt><strong>--showmeta</strong></dt><dd>
 Print a metacharacters table featuring all the programs.
-<p></p>
 </dd>
 <dt><strong>-V</strong>, <strong>--version</strong></dt><dd>
 Print the program version and quit.
-<p></p>
 </dd>
 <dt><strong>--whitebg</strong></dt><dd>
 Adjust colors for white background terminals.
@@ -134,47 +126,36 @@ Adjust colors for white background terminals.
 
 <dl>
 <dt>Using it as a wizard (interactive interface):</dt><dd>
-<p></p>
 <pre>
 txt2regex
 </pre>
 
-<p></p>
 </dd>
 <dt>Specify a custom selection of programs for the wizard:</dt><dd>
-<p></p>
 <pre>
 txt2regex --prog perl,python,php,javascript
 </pre>
 
-<p></p>
 </dd>
 <dt>Getting an extensive metacharacters table:</dt><dd>
-<p></p>
 <pre>
 txt2regex --showmeta
 </pre>
 
-<p></p>
 </dd>
 <dt>Getting regex-related information about sed:</dt><dd>
-<p></p>
 <pre>
 txt2regex --showinfo sed
 </pre>
 
-<p></p>
 </dd>
 <dt>Replay a regex by using history data:</dt><dd>
-<p></p>
 <pre>
 txt2regex --history '16421¤:01¤:'
 </pre>
 
-<p></p>
 </dd>
 <dt>Getting handy ready-to-use regexes for common patterns:</dt><dd>
-<p></p>
 <pre>
 txt2regex --make hour
 txt2regex --make number3 --prog perl
