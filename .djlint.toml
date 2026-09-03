@@ -55,7 +55,6 @@ ignore = [
     "H016",  # Missing `title` tag in html.
     "H017",  # Void tags should be self closing (conflicts with: H018).
     "H019",  # Replace `javascript:abc()` with `on_` event and real url.
-    "H020",  # Empty tag pair found. Consider removing.
     "H021",  # Inline styles should be avoided.
     "H022",  # Use HTTPS for external links.
     "H030",  # Consider adding a meta description.
@@ -70,6 +69,7 @@ include = [
     "H011",  # Attribute values should be quoted.
     "H012",  # There should be no spaces around attribute `=`.
     "H015",  # Follow `h` tags with a line break.
+    "H020",  # Empty tag pair found. Consider removing.
     "H023",  # Do not use entity references.
     "H024",  # Omit type on scripts and styles.
     "H025",  # Tag seems to be an orphan.
