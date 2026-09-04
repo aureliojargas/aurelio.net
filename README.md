@@ -35,7 +35,7 @@ Those are the initial steps for all the platforms:
 cd aurelio.net
 
 # Install Ruby and gem (use the following OR rbenv)
-sudo apt install ruby ruby-dev
+sudo apt install ruby ruby-dev build-essential
 
 # Install bundler
 gem install bundler --user-install --no-document
