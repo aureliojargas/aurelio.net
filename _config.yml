@@ -1,5 +1,4 @@
 # http://jekyllrb.com/docs/configuration/#default-configuration
-# No tabs, use spaces only.
 # Restart Jekyll --watch after editing here.
 
 # True to turn on Disqus, Analytics, etc.
@@ -9,14 +8,13 @@ name: Aurelio.net
 url: https://aurelio.net
 description: Relaxe, leia com calma, aproveite a viagem.
 
-### Syntax Highlight
+# Syntax highlight
 highlighter: rouge  # Default since Jekyll 3.0
 
-### Markdown
+# Markdown parser
 markdown: redcarpet
 redcarpet:
   extensions: ["fenced_code_blocks", "autolink"]
-# extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
@@ -26,7 +24,7 @@ exclude:
   - README.md
   - /**/README.md
   - /**/TODO
-  - vendor
+
 include:
   - _redirects
 # Cannot specify the full path in Jekyll :(
@@ -157,7 +155,8 @@ defaults:
       hide_read_more: true
 
 
-### Page config (to insert in Front Matter)
+# Page config (to insert in Front Matter)
+#
 # published: false   # means: ignore this file
 # title_prefix: "Foo: "
 # title_suffix: " | Foo"
@@ -172,5 +171,6 @@ defaults:
 # hide_read_more: true
 # hide_comments: true
 
-# Use _data folder to store data files
-# If there's a file members.yml under the directory, then you can access contents of the file through site.data.members.
+# Use `_data` directory to store data files. For example, to access the data
+# from the `_data/members.yml` file, use `site.data.members` in Liquid
+# templates.
