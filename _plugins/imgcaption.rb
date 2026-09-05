@@ -37,17 +37,17 @@ module Jekyll
 			return input unless current_page && current_page['path'] && current_page['path'].end_with?('.md')
 
 			input.gsub(
-				/<p>(<img src=".+?" alt="">)<\/p>/,
-				'<figure>\1</figure>'
+				/<p>(<img src=".+?" alt="")( \/)?><\/p>/,
+				'<figure>\1 /></figure>'
 			).gsub(
-				/<p>(<a href=".*?"><img src=".+?" alt=""><\/a>)<\/p>/,
-				'<figure>\1</figure>'
+				/<p>(<a href=".*?"><img src=".+?" alt="")( \/)?><\/a><\/p>/,
+				'<figure>\1 /></a></figure>'
 			).gsub(
-				/<p>(<img src=".+?" alt="(.+)">)<\/p>/,
-				'<figure>\1<figcaption>\2</figcaption></figure>'
+				/<p>(<img src=".+?" alt="(.+)")( \/)?><\/p>/,
+				'<figure>\1 /><figcaption>\2</figcaption></figure>'
 			).gsub(
-				/<p>(<a href=".*?"><img src=".+?" alt="(.+)"><\/a>)<\/p>/,
-				'<figure>\1<figcaption>\2</figcaption></figure>'
+				/<p>(<a href=".*?"><img src=".+?" alt="(.+)")( \/)?><\/a><\/p>/,
+				'<figure>\1 /></a><figcaption>\2</figcaption></figure>'
 			)
 		end
 	end
