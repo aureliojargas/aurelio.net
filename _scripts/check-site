@@ -229,28 +229,16 @@ check_broken_html() {
     # Is tidy available?
     tidy -version >/dev/null || return 1
 
+    output=$(mktemp)
     echo "$html_files" |
         while read file
         do
-            # Grep tidy stderr for critical warnings/errors (stdout is discarded)
-            _scripts/html-tidy -n "$file" 2>&1 >/dev/null |
-
-                # Insert filename in the line beginning
-                # Gotcha: s/// using space as delimiter to avoid filename chars clashes
-                sed "s ^ $file: " |
-
-                # Any warning related to link tags should be a critical problem
-                grep 'Warning: <a>' |
-
-                # Remove false positives: lots of accented URLs in blog posts
-                grep -v '^_site/blog/20.* Warning: <a> escaping malformed URI reference' |
-
-                # Remove false positives: empty hrefs will be filled by JavaScript
-                grep -E -v '^_site/coisinha/(embriagueitor|engripeitor|miguxeitor)/index.html:.*Warning: <a> attribute "href" lacks value' |
-
-                # tidy tends to repeat some output lines, remove them
-                uniq
+            # tidy exits 0 when no warnings, 1 for warnings, 2 for errors
+            tidy -quiet -errors "$file" > "$output" 2>&1
+            test $? -eq 2 &&
+            printf "HTML errors in $file\n$(grep Error: $output)\n"
         done
+    rm "$output"
 }
 
 active_checks="
