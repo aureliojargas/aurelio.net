@@ -23,7 +23,8 @@
 {% include analytics.html %}
 </head>
 
-<body id="{{ page.url | remove:'/articles/' | remove:'.html' }}">
+{% assign body_id = page.url | remove:'/articles/' | remove:'.html' -%}
+<body{% if body_id != "" %} id="{{ body_id }}"{% endif %}>
 
 	<div class="bar">
 		<div id="article-header">

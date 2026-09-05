@@ -102,6 +102,10 @@ repos:
         exclude: |
           (?x)
           ^(
+          # Liquid markup confuses the parser
+          _layouts/2013-articles\.html |
+          _layouts/projects\.html |
+
           # Those probably can be fixed
           _includes/disqus\.html |
           _scripts/replace-templates/.*\.html |
