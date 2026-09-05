@@ -1,3 +1,28 @@
+## redcarpet -> kramdown (2026)
+
+I confirmed kramdown does not touch HTML source files.
+
+But it fixes all HTML (inline or blocks) inside Markdown files. Make sure to
+fix HTML linter issues in those snippets:
+
+- attribute without value (e.g.: `<ifame ... allowfullscreen>`)
+- missing tag autoclose ` />`
+
+Check redcapet options. Maybe I can tweak it to bring the generated HTML closer
+to kramdown's. That would be a pre-migration step.
+
+- tag autoclose
+- indent
+- entities as chars
+
+Fix imgcaption plugin: kramdown autocloses tags, so now all `<img>` tags are
+`<img />`
+
+- the regex must match ` />` (also or only?)
+- the replacement should keep the original ending or force ` />`?
+
+----
+
 trocar tabs por espaços (html, css)
 page-2013 (ads) não aparece ads no mobile. fazer igual mulherzice
 lelolab no GitHub
