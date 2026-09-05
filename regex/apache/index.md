@@ -170,7 +170,7 @@ title: Expressões Regulares + Apache HTTPd
   <tr>
     <td align="center" colspan="4">Legenda: (s)erver, (v)host, (d)irectory, (h)taccess</td>
   </tr>
-<tfoot>
+</tfoot>
 </table>
 
 
