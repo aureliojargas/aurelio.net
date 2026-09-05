@@ -12,7 +12,7 @@ O dia começa cedo às 05:45. Estou acordando sozinho já, antes do despertador.
 
 Ali pelas 6 da manhã vou pra minha "máquina de escrever" (um iPad com teclado Bluetooth) e consigo trabalhar cerca de meia hora no livro novo. Não é muito, nem dá tempo de se concentrar de verdade, mas serve para reler e melhorar o texto do dia anterior, com a mente limpa. Reescrevo os trechos que não ficaram muito claros, e dou uma lapidada geral, fazendo melhorias pontuais aqui e ali.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr">5 da manhã, estou aqui escrevendo um livro novo, num tablet. É muita modernidade 😊 <a href="https://t.co/SH8XzXltXV">pic.twitter.com/SH8XzXltXV</a></p>&mdash; Aurelio Jargas (@oreio) <a href="https://twitter.com/oreio/status/712918596670906368">March 24, 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr">5 da manhã, estou aqui escrevendo um livro novo, num tablet. É muita modernidade 😊 <a href="https://t.co/SH8XzXltXV">pic.twitter.com/SH8XzXltXV</a></p>— Aurelio Jargas (@oreio) <a href="https://twitter.com/oreio/status/712918596670906368">March 24, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Às 06:45 pego minha bicicleta e vou para a Prefeitura de Joinville. [Sou funcionário Público há quase 3 anos](/blog/2014/11/08/funcionario-publico/), e lá trabalho como programador das 07:00 às 11:00. Atualmente desenvolvo em WordPress (PHP), construindo o site novo da prefeitura, que será fortemente inspirado no sensacional [GOV.UK](https://www.gov.uk/). Está sendo bem empolgante construir algo novo e moderno por lá.
