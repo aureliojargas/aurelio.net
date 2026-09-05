@@ -14,7 +14,7 @@ highlighter: rouge  # Default since Jekyll 3.0
 # Markdown parser
 markdown: redcarpet
 redcarpet:
-  extensions: ["fenced_code_blocks", "autolink"]
+  extensions: ["fenced_code_blocks", "autolink", "xhtml"]
 
 # Recursive glob: assets/**/*.js
 # https://github.com/mojombo/jekyll/issues/906
