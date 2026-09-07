@@ -81,7 +81,7 @@ Mais uma vez, fui surpreendido pela rapidez. Em apenas 40 minutos minha correç�
 Fiquei bastante impressionado e empolgado com a resposta rápida, então fiz o que qualquer homem de família respeitável faria nessa hora: [contei sobre o ocorrido no twitter](https://twitter.com/oreio/status/580490368522825728) :) Uma hora depois, veio outra surpresa:
 
 <blockquote class="twitter-tweet" lang="pt"><p><a href="https://twitter.com/oreio">@oreio</a> Obrigado pela sua contribuição :)</p>— GitLab (@gitlab) <a href="https://twitter.com/gitlab/status/580504840813543426">24 março 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Isso mesmo, os gringos do GitLab descobriram meu tuíte e deram uma resposta, **em português**!
 

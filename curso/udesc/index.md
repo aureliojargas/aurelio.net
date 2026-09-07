@@ -27,7 +27,7 @@ Vieram cerca de 50 pessoas, todos alunos da universidade.
 
 Quando no começo perguntei quem ali já tinha usado expressões regulares, poucos levantaram a mão. Que ótimo! Então eles estavam no lugar certo, pois minha palestra é introdutória: apresenta as expressões e explica onde utilizá-las. Veja os slides:
 
-<script async class="speakerdeck-embed" data-id="007e31626e6f48efab0b39bc71b3e91a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async="" class="speakerdeck-embed" data-id="007e31626e6f48efab0b39bc71b3e91a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 * https://speakerdeck.com/aureliojargas/expressoes-regulares
 

@@ -42,7 +42,7 @@ Foi bom ter feito isso, assim eu pude entender melhor a rotina deles, conheci as
 
 ## Os slides
 
-<script async class="speakerdeck-embed" data-id="68bcded4481a4da9bbcf2749b70410e0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async="" class="speakerdeck-embed" data-id="68bcded4481a4da9bbcf2749b70410e0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 * https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando
 

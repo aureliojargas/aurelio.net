@@ -38,6 +38,6 @@ Dica: Ligue a legenda (CC) para ver a letra da música.
 ## Bolhas, calos e pratos voadores
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr"><a href="https://twitter.com/oreio">@oreio</a> teve ensaio da banda, depois de 2 anos parados. Muita energia, muita porrada na batera (e bolhas na mão) 😁 <a href="https://t.co/Fj67P8b0ZZ">pic.twitter.com/Fj67P8b0ZZ</a></p>— Aurelio Jargas (@oreio) <a href="https://twitter.com/oreio/status/739576693950676994">June 5, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/mOR6sBvOhWU" frameborder="0" allowfullscreen=""></iframe>
