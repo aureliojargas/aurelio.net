@@ -48,7 +48,7 @@ Próximos cursos/palestras que farei:
             <td>{{ curso.tema }}</td>
             <td>
                 {{ curso.cidade }} - {{ curso.estado }}
-                <br>
+                <br />
                 <span class="evento">{{ curso.evento }}</span>
             </td>
             <td>
@@ -93,7 +93,7 @@ Já ministrados:
             <td>{{ curso.tema }}</td>
             <td>
                 {{ curso.cidade }} - {{ curso.estado }}
-                <br>
+                <br />
                 <span class="evento">{{ curso.evento }}</span>
             </td>
             <td style="text-align:center;">{{ curso.participantes }}</td>

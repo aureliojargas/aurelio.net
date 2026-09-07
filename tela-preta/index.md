@@ -9,7 +9,7 @@ worked: 5:00
 por [Aurelio Jargas](/aurelio/)
 
 <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen></iframe>
-<br><i>Curta o vídeo em tela cheia!</i></span></p>
+<br /><i>Curta o vídeo em tela cheia!</i></span></p>
 
 
 **Tela Preta** é a minha série de vídeos nerds gravados na linha de comando do Unix, demonstrando o “jeito shell script” de resolver problemas. Todos os vídeos contam com narração e legendas em português, estão em alta resolução (HD) e são reais: sem ensaio, sem cortes, sem edição posterior. [Assine meu canal lá no YouTube](https://www.youtube.com/user/aureliojargas) para ser notificado(a) quando sair um vídeo novo.
@@ -27,11 +27,11 @@ Mas se preferir, aqui está a lista completa de todos os episódios, com links p
 {% for video in site.data.telapreta %}
     <li>
         {{ video.youtube.title }}
-        <br>
+        <br />
         <small>
             <a href="{{ video.blog.url }}">Blog</a>,
             <a href="https://www.youtube.com/watch?v={{ video.youtube.id }}&amp;list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1">YouTube</a>
-            <br>
+            <br />
             {{ video.date | date: "%d/%m/%Y"}}
         </small>
     </li>
