@@ -45,7 +45,7 @@ Pelo que me lembro...
 
 Quer assistir também? Felizmente essa palestra foi gravada (boa FISL!), então você pode assisti-la e ver os slides ao mesmo tempo:
 
-<iframe class="youtube-player" width="420" height="315" src="https://www.youtube.com/embed/XBkBnKmu94U" frameborder="0" allowfullscreen></iframe>
+<iframe class="youtube-player" width="420" height="315" src="https://www.youtube.com/embed/XBkBnKmu94U" frameborder="0" allowfullscreen=""></iframe>
 
 <script async class="speakerdeck-embed" data-id="db472cc58dd44834a2061e52c21cd989" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 

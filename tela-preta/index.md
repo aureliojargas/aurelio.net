@@ -8,7 +8,7 @@ worked: 5:00
 
 por [Aurelio Jargas](/aurelio/)
 
-<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen></iframe>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen=""></iframe>
 <br /><i>Curta o vídeo em tela cheia!</i></span></p>
 
 
