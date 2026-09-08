@@ -44,7 +44,7 @@ Foi bom ter feito isso, assim eu pude entender melhor a rotina deles, conheci as
 
 <script async="" class="speakerdeck-embed" data-id="68bcded4481a4da9bbcf2749b70410e0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-* https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando
+* <https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando>
 
 Sei que a galera do front é mais ligada no visual do que os back-ends, e imaginei que os slides dos demais palestrantes seriam bem chamativos, com muitas imagens e vídeos (acertei 😁). Porém, segui o outro caminho e fiz slides espartanos, somente texto e fundo preto, pro pessoal já entrar no clima da linha de comando.
 

@@ -68,7 +68,7 @@ Alguns desses programas já deram passos importantes, entre eles:
 
 ### MoneyLog
 
-- Site: https://aurelio.net/moneylog/
+- Site: <https://aurelio.net/moneylog/>
 - Linguagem: Javascript
 - Interface: Web
 - Idioma: Português e [Inglês](/projects/moneylog/)
@@ -81,7 +81,7 @@ Acompanhe suas finanças de maneira simples e prática. Em um único arquivo fic
 
 ### EmoMemory
 
-- Site: https://aurelio.net/projects/emomemory/
+- Site: <https://aurelio.net/projects/emomemory/>
 - Linguagem: AppleScript
 - Interface: Gráfica Interativa
 - Idioma: Inglês
@@ -96,7 +96,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ### txt2tags
 
-- Site: http://txt2tags.org
+- Site: <http://txt2tags.org>
 - Linguagem: Python
 - Interface: Linha de comando, Web e Gráfica
 - Idioma: Português, Inglês e outros
@@ -113,7 +113,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ### RAC
 
-- Site: https://aurelio.net/rac/
+- Site: <https://aurelio.net/rac/>
 - Linguagem: C
 - Interface: Linha de comando
 - Idioma: Português
@@ -126,7 +126,7 @@ Uma ferramenta de extração de texto, feita em parceria com meu amigo [Thobias]
 
 ### Funções ZZ
 
-- Site: https://funcoeszz.net
+- Site: <https://funcoeszz.net>
 - Linguagem: Bash
 - Interface: Linha de comando
 - Idioma: Português
@@ -139,7 +139,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### AdiumBook
 
-- Site: https://aurelio.net/projects/adiumbook/
+- Site: <https://aurelio.net/projects/adiumbook/>
 - Linguagem: AppleScript
 - Interface: Gráfica Interativa
 - Idioma: Inglês
@@ -154,7 +154,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### txt2regex
 
-- Site: https://aurelio.net/projects/txt2regex/
+- Site: <https://aurelio.net/projects/txt2regex/>
 - Linguagem: Bash
 - Interface: Interativa para console
 - Idioma: Inglês (interface do programa em Português também)
@@ -167,7 +167,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### sedsed
 
-- Site: https://aurelio.net/projects/sedsed/
+- Site: <https://aurelio.net/projects/sedsed/>
 - Linguagem: Python
 - Interface: Linha de comando
 - Idioma: Inglês
@@ -180,7 +180,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### SedSokoban
 
-- Site: https://aurelio.net/projects/sedsokoban/
+- Site: <https://aurelio.net/projects/sedsokoban/>
 - Linguagem: SED
 - Interface: Interativa para console
 - Idioma: Inglês

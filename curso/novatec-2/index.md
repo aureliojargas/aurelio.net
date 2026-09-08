@@ -48,4 +48,4 @@ No fim do dia, com todos já bem treinados e sintonizados, conseguimos ver **tó
 
 ![Expressão que estávamos analisando](regex.jpg)
 
-Como hoje é tudo muito moderninho e fácil, posso dar o curso utilizando somente ferramentas online, como o excelente http://regex101.com. Só preciso de um navegador, então nem levei meu notebook, usei um qualquer que já tinha lá. Por isso o Windão na foto, não me julgue ;)
+Como hoje é tudo muito moderninho e fácil, posso dar o curso utilizando somente ferramentas online, como o excelente <http://regex101.com>. Só preciso de um navegador, então nem levei meu notebook, usei um qualquer que já tinha lá. Por isso o Windão na foto, não me julgue ;)

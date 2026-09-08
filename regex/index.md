@@ -131,7 +131,7 @@ Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular
 
 ## Grupo no Telegram
 
-Quer trocar uma ideia em português sobre regex? Junte-se a nós no https://telegram.me/ExpressoesRegulares
+Quer trocar uma ideia em português sobre regex? Junte-se a nós no <https://telegram.me/ExpressoesRegulares>
 
 ## Lista de discussão
 
@@ -485,7 +485,7 @@ Melhor mesmo é usar [a versão JavaScript](http://jimbly.github.io/regex-crossw
 
 [![](/regex/img/regex-crosswords-2021.png)](http://jimbly.github.io/regex-crossword/)
 
-Mas não precisa comecar por esse, que é muito grande e complicado. Tem um site inteiramente dedicado a gerar palavras cruzadas com regex, e você pode escolher a dificuldade: http://regexcrossword.com
+Mas não precisa comecar por esse, que é muito grande e complicado. Tem um site inteiramente dedicado a gerar palavras cruzadas com regex, e você pode escolher a dificuldade: <http://regexcrossword.com>
 
 E já que estamos aqui, que tal uma explicação de como fazer [um programa que resolve estes quebras-cabeças](http://herman.asia/solving-regex-crosswords-using-go)?
 

@@ -18,7 +18,7 @@ title: Expressões Regulares + JavaScript
 * [Mozilla — Regular Expressions](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Regular_Expressions)
 Tutorial da Mozilla sobre expressões regulares no JavaScript. É um guia sucinto e completo, com links para a documentação de cada método. Recomendo a leitura.
 
-* http://www.regular-expressions.info/javascript.html
+* <http://www.regular-expressions.info/javascript.html>
 Um apanhado de todas as funcionalidades das expressões regulares no JavaScript. De rápida leitura, serve para mostrar as possibilidades, dar uma visão global.
 
 * [w3schools - JavaScript RegExp Object](http://www.w3schools.com/jsref/jsref_obj_regexp.asp)

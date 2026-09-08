@@ -29,7 +29,7 @@ Quando no começo perguntei quem ali já tinha usado expressões regulares, pouc
 
 <script async="" class="speakerdeck-embed" data-id="007e31626e6f48efab0b39bc71b3e91a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-* https://speakerdeck.com/aureliojargas/expressoes-regulares
+* <https://speakerdeck.com/aureliojargas/expressoes-regulares>
 
 Tudo correu bem. Consegui falar o que queria e apesar de ver algumas “pescadas” aqui e ali, ninguém dormiu. Parece que até gostaram. Vitória! :D
 
