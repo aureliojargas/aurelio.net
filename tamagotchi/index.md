@@ -211,7 +211,7 @@ Se estiver errada, será preciso ajustar o relógio.
 
 ## Fotos do Tamagotchi Connection
 
-[![](tamagotchi-connection-1.jpg)](http://1heckofaguy.com/wp-content/photos/tamagotchi.jpg])
+[![](tamagotchi-connection-1.jpg)](http://1heckofaguy.com/wp-content/photos/tamagotchi.jpg)
 
 [![](tamagotchi-connection-2.jpg)](http://www.consoleup.com/shop/images/tama_v4redhearts.jpg)
 
