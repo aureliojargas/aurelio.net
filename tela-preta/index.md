@@ -63,36 +63,36 @@ O [episódio 7](/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/) 
 
 * **Prompt otimizado:** Já tentei vários formatos diferentes de prompt em meus vídeos, mas acho que agora consegui criar um que é ideal para esse tipo de vídeoaula na linha de comando. A linha separadora na cor verde deixa claro onde terminou a saída do comando anterior. O prompt simples ▶, também em verde e sem nenhuma informação adicional (username, path, …) chama a atenção e não distrai, deixando que os comandos brilhem sozinhos.
 
-    ![](/img/tela-preta-prompt.png)
+  ![](/img/tela-preta-prompt.png)
 
-    Ficou curioso(a) como faz esse prompt? É bem simples, na verdade. Os hífens são colocados na quantidade exata para encher o tamanho da janela. Depois vem uma quebra de linha `\n` e o triângulo, que é um caractere Unicode. Assim:
+  Ficou curioso(a) como faz esse prompt? É bem simples, na verdade. Os hífens são colocados na quantidade exata para encher o tamanho da janela. Depois vem uma quebra de linha `\n` e o triângulo, que é um caractere Unicode. Assim:
 
-    ```bash
-    PS1='----------------------------------------\n▶ '
-    ```
+  ```bash
+  PS1='----------------------------------------\n▶ '
+  ```
 
-    As cores você pode colocar com caracteres ANSI, veja referência no [Canivete Suíço do Shell](/shell/canivete/#cores):
+  As cores você pode colocar com caracteres ANSI, veja referência no [Canivete Suíço do Shell](/shell/canivete/#cores):
 
-    ```bash
-    PS1='\[\e[32;1m\]----------------------------------------\n▶ \[\e[m\]'
-    ```
+  ```bash
+  PS1='\[\e[32;1m\]----------------------------------------\n▶ \[\e[m\]'
+  ```
 
-    Se preferir algo mais sofisticado, que calcule o tamanho da janela automaticamente, dá pra fazer mágica usando o `tput` e o `printf`.
+  Se preferir algo mais sofisticado, que calcule o tamanho da janela automaticamente, dá pra fazer mágica usando o `tput` e o `printf`.
 
-    ```bash
-    PROMPT_COMMAND='printf "%-$(tput cols)s" - | tr " " -'
-    PS1='▶ '
-    ```
+  ```bash
+  PROMPT_COMMAND='printf "%-$(tput cols)s" - | tr " " -'
+  PS1='▶ '
+  ```
 
 * **Legendas em português:** As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.
 
 * **Identidade visual:** Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.
 
-    ![](/img/tela-preta-capas-4.png)
+  ![](/img/tela-preta-capas-4.png)
 
 * **Playlist do YouTube:** Esta série conta com uma [playlist própria](https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1), que serve para agrupar todos os vídeos em um único lugar, além de aparecer aquela interface bacana no YouTube para você poder ver todos os vídeos em sequência.
 
-    ![](/img/tela-preta-playlist.png)
+  ![](/img/tela-preta-playlist.png)
 
 
 Infelizmente, os vídeos mais antigos (os primeiros da série) não contam com todas as características dos mais recentes. Foi um processo de evolução até chegar no formato atual.
