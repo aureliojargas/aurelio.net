@@ -147,7 +147,7 @@ In HTML files, use the following structures:
 <!-- Image with caption: -->
 
 <figure>
-  <img src="image.jpg" alt="alt text">
+  <img src="image.jpg" alt="alt text" />
   <figcaption>Image caption</figcaption>
 </figure>
 
@@ -155,7 +155,7 @@ In HTML files, use the following structures:
 
 <figure>
   <a href="foo.html">
-    <img src="image.jpg" alt="alt text">
+    <img src="image.jpg" alt="alt text" />
   </a>
   <figcaption>Image caption</figcaption>
 </figure>
@@ -163,7 +163,7 @@ In HTML files, use the following structures:
 <!-- Image with no caption (omit the `<span>` tag): -->
 
 <p class="image">
-  <img src="image.jpg" alt="alt text">
+  <img src="image.jpg" alt="alt text" />
 </p>
 ```
 
@@ -177,7 +177,7 @@ Insert decorative images as right-aligned (using the `right` class) inside the d
 
 ```html
 <p>
-  <img class="right" src="...">
+  <img class="right" src="..." />
   Lorem ipsum...
 </p>
 ```
