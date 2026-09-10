@@ -57,7 +57,7 @@ OPTIMIZE TABLE wp_posts, wp_postmeta, wp_term_taxonomy
 
 Eu executei agora estes comandos aqui no meu blog. Veja os resultados:
 
-  * 349 posts de revisão foram encontrados e removidos
-  * Tabela wp_posts caiu de 3.8 MB para 1.5 MB (-40%)
+- 349 posts de revisão foram encontrados e removidos
+- Tabela wp_posts caiu de 3.8 MB para 1.5 MB (-40%)
 
 E aí no teu blog, como foi?

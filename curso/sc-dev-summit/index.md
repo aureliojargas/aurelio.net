@@ -7,11 +7,11 @@ worked: 3:30
 
 ![](/curso/sc-dev-summit/cartaz.jpg)
 
-* Palestra: O poder da linha de comando
-* Evento: [SC Dev Summit](http://scdevsummit.com.br/)
-* Local: Univille Universidade, Joinville - SC
-* Data: 21/05/2016
-* [Fotos do evento (Facebook)](https://www.facebook.com/media/set/?set=a.234931120219968.1073741832.155677364812011&type=3)
+- Palestra: O poder da linha de comando
+- Evento: [SC Dev Summit](http://scdevsummit.com.br/)
+- Local: Univille Universidade, Joinville - SC
+- Data: 21/05/2016
+- [Fotos do evento (Facebook)](https://www.facebook.com/media/set/?set=a.234931120219968.1073741832.155677364812011&type=3)
 
 Essa foi uma palestra nova, que fiz especialmente para o evento.
 
@@ -23,7 +23,6 @@ Esta foi a chamada da palestra:
 
 > Linha de comando é lugar para dev frontend? Com certeza! Vamos desvendar juntos os mistérios da tela preta. São ideias simples, numa interface textual, que trazem um enorme poder ao seu arsenal de ferramentas.
 
-
 ## Estudando as ferramentas de front-end
 
 Apesar de eu já ter criado vários sites “na mão”, e saber bem HTML e CSS, não estou por dentro das ferramentas de front que foram criadas nos últimos anos, que agilizam o processo.
@@ -32,34 +31,32 @@ Meu primeiro passo, antes mesmo de definir o escopo e roteiro da palestra, foi s
 
 Dos vários artigos que li, estes foram os mais úteis:
 
-* [The State of Front-End Dev](http://alistapart.com/event/front-end-dev)
-* [A Baseline for Front-End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers)
-* [Command Line Tools for Frontend Developers](https://seesparkbox.com/foundry/command_line_tools_for_frontend_developers)
-* [The Command Line for Web Design: Powering Up Front End Code](http://webdesign.tutsplus.com/tutorials/the-command-line-for-web-design-powering-up-front-end-code--cms-23453)
+- [The State of Front-End Dev](http://alistapart.com/event/front-end-dev)
+- [A Baseline for Front-End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers)
+- [Command Line Tools for Frontend Developers](https://seesparkbox.com/foundry/command_line_tools_for_frontend_developers)
+- [The Command Line for Web Design: Powering Up Front End Code](http://webdesign.tutsplus.com/tutorials/the-command-line-for-web-design-powering-up-front-end-code--cms-23453)
 
 Foi bom ter feito isso, assim eu pude entender melhor a rotina deles, conheci as ferramentas principais e pude fazer exemplos mais próximos de sua realidade em vez de exemplos genéricos.
-
 
 ## Os slides
 
 <script async="" class="speakerdeck-embed" data-id="68bcded4481a4da9bbcf2749b70410e0" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-* <https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando>
+- <https://speakerdeck.com/aureliojargas/o-poder-da-linha-de-comando>
 
 Sei que a galera do front é mais ligada no visual do que os back-ends, e imaginei que os slides dos demais palestrantes seriam bem chamativos, com muitas imagens e vídeos (acertei 😁). Porém, segui o outro caminho e fiz slides espartanos, somente texto e fundo preto, pro pessoal já entrar no clima da linha de comando.
 
 O assunto linha de comando é vasto e eu poderia [ficar um dia todo falando só sobre o básico](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/). Então decidi focar em pontos-chave que julguei serem importantes de saber, acima de tudo:
 
-* Unix é de 1970 e permanece praticamente igual até hoje (total oposto da web atual com seus frameworks da moda que mudam semanalmente).
-* Filosofia do Unix de poder e simplicidade.
-* Sintaxe de um comando: comando, subcomandos, opções, argumentos.
-* Redirecionamento de entrada e saída.
-* Aliases para criar comandos.
-* Pipe para combinar comandos.
-* Comandos de manipulação de texto: extrair, apagar, editar, ordenar, combinar.
+- Unix é de 1970 e permanece praticamente igual até hoje (total oposto da web atual com seus frameworks da moda que mudam semanalmente).
+- Filosofia do Unix de poder e simplicidade.
+- Sintaxe de um comando: comando, subcomandos, opções, argumentos.
+- Redirecionamento de entrada e saída.
+- Aliases para criar comandos.
+- Pipe para combinar comandos.
+- Comandos de manipulação de texto: extrair, apagar, editar, ordenar, combinar.
 
 > Apesar da simplicidade dos slides e do escopo reduzido, ainda assim fazê-los me tomou mais de 10 horas de trabalho. É um processo constante de lapidação e melhoria até chegar no resultado final. Uso o Google Slides, acho excelente.
-
 
 ## A palestra
 
@@ -82,7 +79,6 @@ O início, pra mim, é sempre a pior parte. Fora aquele nervosismozinho besta qu
 Fora a apresentação estranha, dali pra frente tudo fluiu bem. Consegui trazer bastante informações e dicas enquanto passava os slides. O pessoal estava prestando atenção, então fiquei tranquilo. Só não teve muita piadinha, acho que estou perdendo a veia humorística (ou só ficando véio chato mesmo).
 
 > Eu nunca faço scripts ou ensaios para as palestras, é sempre de improviso. Tenho uma ideia geral, uma lista de tópicos que quero abordar e é isso. Os slides servem de guia e falo o que vem na cabeça.
-
 
 ## A demonstração ao vivo
 
@@ -147,7 +143,6 @@ cat LICENSE | conta | numeros | pbcopy
 ```
 
 Pra quem usa Mac, o `pbcopy` copia a saída do comando anterior para a Área de Transferência. Aí é só colar (`Command-V`) em outra janela, ou usar o `pbpaste` em outro terminal.
-
 
 ## O sorteio dos livros, usando shell
 

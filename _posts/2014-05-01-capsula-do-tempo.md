@@ -19,7 +19,6 @@ Ao abrir esta cápsula e dar uma espiada no passado, foi engraçado perceber que
 
 Quero deixar registrado neste texto alguns dos achados dessa garimpagem.
 
-
 ## O inglês
 
 Ao ler os comentários do código, relembrei de alguns erros bobos de inglês que eu sempre cometia. Era passar o corretor ortográfico e lá estavam eles, sempre os mesmos! Se duvidar, alguns eu ainda faço até hoje :)
@@ -39,7 +38,6 @@ Um colaborador gringo fez a correção destes e de outros erros ortográficos qu
 Fora estes erros simples, em geral os textos dos comentários soam meio [Borat](https://www.youtube.com/watch?v=WH2CABcffAo). Eles não parecem textos nativos, mas sim uma tradução mais literal das frases em português.
 
 > Tea with me, I book your face ;)
-
 
 ## O código
 

@@ -127,25 +127,24 @@ title: Expressões Regulares + Nginx
 </tfoot>
 </table>
 
-
 ## Dicas
 
-* O Nginx usa [PCRE](http://www.pcre.org).
-* Sempre use aspas para proteger a regex.
-* Casamentos parciais são sempre válidos.
-* As diretivas principais com suporte a regex são: `server_name`, `location`, `if` e `rewrite`.
-* Use grupos nomeados na regex para criar variáveis que podem ser utilizadas em outras diretivas.
+- O Nginx usa [PCRE](http://www.pcre.org).
+- Sempre use aspas para proteger a regex.
+- Casamentos parciais são sempre válidos.
+- As diretivas principais com suporte a regex são: `server_name`, `location`, `if` e `rewrite`.
+- Use grupos nomeados na regex para criar variáveis que podem ser utilizadas em outras diretivas.
 
 ## Links
 
-* [Server names](http://nginx.org/en/docs/http/server_names.html)
-Artigo que demostra os tipos de valores que podem ser usados na diretiva `server_name`, e como eles são processados. É importante entender bem as regras de precedência entre casamentos exatos, com asterisco e com expressões regulares.
+- [Server names](http://nginx.org/en/docs/http/server_names.html)
+  Artigo que demostra os tipos de valores que podem ser usados na diretiva `server_name`, e como eles são processados. É importante entender bem as regras de precedência entre casamentos exatos, com asterisco e com expressões regulares.
 
-* [How nginx processes a request](http://nginx.org/en/docs/http/request_processing.html)
-Artigo resumido que explica todos os passos que o Nginx faz ao receber uma requisição. É importante entender bem as regras de precedência entre casamentos exatos, de prefixo e com expressões regulares.
+- [How nginx processes a request](http://nginx.org/en/docs/http/request_processing.html)
+  Artigo resumido que explica todos os passos que o Nginx faz ao receber uma requisição. É importante entender bem as regras de precedência entre casamentos exatos, de prefixo e com expressões regulares.
 
-* [Understanding Nginx Server and Location Block Selection Algorithms](https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms)
-Mesma proposta do artigo anterior, porém este é um guia completo, muito bem escrito, que explica em detalhes o funcionamento do Nginx ao processar uma requisição. Bom para entender como funciona o algoritmo, e assim poder escrever os blocos `server` e `location` com confiança.
+- [Understanding Nginx Server and Location Block Selection Algorithms](https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms)
+  Mesma proposta do artigo anterior, porém este é um guia completo, muito bem escrito, que explica em detalhes o funcionamento do Nginx ao processar uma requisição. Bom para entender como funciona o algoritmo, e assim poder escrever os blocos `server` e `location` com confiança.
 
-* [Converting rewrite rules](http://nginx.org/en/docs/http/converting_rewrite_rules.html)
-Guia rápido com algumas dicas de como converter para o Nginx as regras do `mod_rewrite` do [Apache](/regex/apache/).
+- [Converting rewrite rules](http://nginx.org/en/docs/http/converting_rewrite_rules.html)
+  Guia rápido com algumas dicas de como converter para o Nginx as regras do `mod_rewrite` do [Apache](/regex/apache/).

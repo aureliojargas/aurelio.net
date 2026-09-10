@@ -8,7 +8,6 @@ worked: 10:30
 #2014-11-08 5:00
 ---
 
-
 Eu nunca quis ser funcionário público.
 
 Como praticamente toda a minha família é de funcionários públicos (mãe, pai, padrasto, irmã, tios, tias, avô…), desde criança sempre ouvi histórias indignantes que eles contavam sobre o lado ruim do funcionalismo: morosidade, politicagem, pilantragem, desperdício, dinossauros…
@@ -23,7 +22,7 @@ Até que…
 
 Num belo dia, estava eu em casa, feliz, curtindo minha vida de desempregado, trabalhando em algum de meus projetos pessoais. De repente, minha querida esposa Mog me diz:
 
-— Ah, você tem um concurso pra fazer este domingo, tá?  
+— Ah, você tem um concurso pra fazer este domingo, tá?\
 — Como assim???!?!?111¡¿
 
 Isso foi em 2009. Sem eu saber, a Mog me inscreveu no [concurso da prefeitura de Joinville](https://prefeituradigital.joinville.sc.gov.br/servico/detalhe-41-Concurso+Edital+001+-+2009.html). Ela só me contou na última hora e me convenceu a ir fazer a prova.

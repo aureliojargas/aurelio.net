@@ -8,7 +8,7 @@ hide_tags: true
 ---
 
 Este é o espaço para você escrever o que quiser.
-Sem contexto, sem escopo, sem limites*.
+Sem contexto, sem escopo, sem limites\*.
 
 É uma experiência.
 

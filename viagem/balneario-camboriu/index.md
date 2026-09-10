@@ -47,33 +47,31 @@ Então entramos na rodovia BR-101 e voltamos para casa. Curtimos muito este pass
 
 Outras atrações da cidade, que infelizmente não deu tempo de visitarmos:
 
-  * **Cristo Luz:** estátua com 33 metros de altura e um canhão de luz no braço, que fica no alto do morro.
-  * **Parque Cyro Gevaerd:** com lagos, museus, aquário e zoológico, ao lado da BR-101.
-  * **Igreja de Santo Amaro:** construída entre 1849 e 1863, pelos escravos, com óleo de baleia e telhas moldadas nas coxas.
-
+- **Cristo Luz:** estátua com 33 metros de altura e um canhão de luz no braço, que fica no alto do morro.
+- **Parque Cyro Gevaerd:** com lagos, museus, aquário e zoológico, ao lado da BR-101.
+- **Igreja de Santo Amaro:** construída entre 1849 e 1863, pelos escravos, com óleo de baleia e telhas moldadas nas coxas.
 
 ## Roteiro para um dia
 
 Se você só tem um dia para visitar Balneário Camboriú, segue aqui uma sugestão de roteiro, com ênfase nas belezas naturais do local:
 
-  * De manhã, entrando na cidade, vá direto à Barra Sul.
-  * Ande pelo Molhe da Barra Sul e curta a paisagem.
-  * Pegue o teleférico e faça o passeio completo até a Praia de Laranjeiras. Almoce na praia.
-  * Pegue o teleférico para voltar à Barra Sul.
-  * Saindo da estação do teleférico, ali ao lado embarque no Bondindinho.
-  * Aproveite o passeio por toda a orla da Praia Central.
-  * Chegando no outro extremo da praia (Pontal Norte), desça do Bondindinho.
-  * Faça a trilha pela passarela de madeira, até a Praia do Buraco.
-  * Volte e pegue o Bondindinho novamente, no mesmo lugar onde você desceu dele.
-  * Aproveite o passeio pela Avenida Brasil, com suas infindáveis lojas.
-    * Se quiser fazer compras, desça do bonde no início das lojas, ali pela Rua 1001.
-    * Depois pegue o bonde novamente
-  * O ponto final do Bondindinho é a Barra Sul, onde este passeio começou.
+- De manhã, entrando na cidade, vá direto à Barra Sul.
+- Ande pelo Molhe da Barra Sul e curta a paisagem.
+- Pegue o teleférico e faça o passeio completo até a Praia de Laranjeiras. Almoce na praia.
+- Pegue o teleférico para voltar à Barra Sul.
+- Saindo da estação do teleférico, ali ao lado embarque no Bondindinho.
+- Aproveite o passeio por toda a orla da Praia Central.
+- Chegando no outro extremo da praia (Pontal Norte), desça do Bondindinho.
+- Faça a trilha pela passarela de madeira, até a Praia do Buraco.
+- Volte e pegue o Bondindinho novamente, no mesmo lugar onde você desceu dele.
+- Aproveite o passeio pela Avenida Brasil, com suas infindáveis lojas.
+  - Se quiser fazer compras, desça do bonde no início das lojas, ali pela Rua 1001.
+  - Depois pegue o bonde novamente
+- O ponto final do Bondindinho é a Barra Sul, onde este passeio começou.
 
 **Dica:** A menos que seja um dia de semana no inverno, não aconselho andar de carro pela cidade. O trânsito é pesado (e meio maluco) e não é fácil/barato encontrar estacionamento. Deixe o carro descansando e curta uma turistagem à pé.
 
-
 ## Outros artigos sobre Balneário Camboriú:
 
-  * [Bondindinho](/viagem/balneario-camboriu/bondindinho/)
-  * [Teleférico Camboriú-Laranjeiras – Parque Unipraias](/viagem/balneario-camboriu/parque-unipraias/)
+- [Bondindinho](/viagem/balneario-camboriu/bondindinho/)
+- [Teleférico Camboriú-Laranjeiras – Parque Unipraias](/viagem/balneario-camboriu/parque-unipraias/)

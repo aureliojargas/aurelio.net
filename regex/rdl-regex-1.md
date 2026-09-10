@@ -43,16 +43,16 @@ Bem, agora que já sabemos o básico de ERs, como faríamos para resolver um pro
 
 Você escreveu um texto, uma redação, um manual. Como fazer checagens ortográficas rápidas, procurando erros comuns como:
 
-* Eu "grudei" minha pontuação com a palavra anterior? Por exemplo:
-  * Hoje?
-  * Assim:
-  * Nossa!
-  * Fim.
-* Eu deixei um espaço em branco após a pontuação? Por exemplo:
-  * Hoje? Não vai dar.
-  * Assim: um, dois e três.
-  * Nossa! Que estranho.
-* Após finais de período, como ponto, exclamação e interrogação, eu comecei a frase seguinte com letra maiúscula?
+- Eu "grudei" minha pontuação com a palavra anterior? Por exemplo:
+  - Hoje?
+  - Assim:
+  - Nossa!
+  - Fim.
+- Eu deixei um espaço em branco após a pontuação? Por exemplo:
+  - Hoje? Não vai dar.
+  - Assim: um, dois e três.
+  - Nossa! Que estranho.
+- Após finais de período, como ponto, exclamação e interrogação, eu comecei a frase seguinte com letra maiúscula?
 
 É inútil dizer que sem ERs, qualquer uma das três checagens propostas seria trabalhosa, resumindo-se a testar cada uma das possibilidades uma a uma, e no caso da número 3, seria um teste de a a z, um por um. Desgastante.
 
@@ -62,22 +62,22 @@ Vamos às respostas:
 
 Temos uma palavra e devemos ter o sinal de pontuação logo em seguida, sem espaço entre eles.
 
- * Tática: Procurar um espaço seguido de um sinal de pontuação.
- * ER: `" [?!.:;]"` ou seja, procure um espaço em branco seguido de: `?`, ou `!`, ou `.`, ou `:`, ou `;`.
+- Tática: Procurar um espaço seguido de um sinal de pontuação.
+- ER: `" [?!.:;]"` ou seja, procure um espaço em branco seguido de: `?`, ou `!`, ou `.`, ou `:`, ou `;`.
 
 **Checagem 2:**
 
 Logo após um sinal de pontuação, deve haver um espaço em branco. Para procurar os erros, temos duas táticas, e conheceremos dois conceitos novos da ferramenta `[]`.
 
- * Tática 1: Procurar um sinal de pontuação seguido de uma letra.
- * ER: `[?!.:;][A-Za-z]` ou seja, procure por: `?`, ou `!`, ou `.`, ou `:`, ou `;`, seguido imediatamente por uma letra entre A e Z ou uma letra entre a e z.
+- Tática 1: Procurar um sinal de pontuação seguido de uma letra.
+- ER: `[?!.:;][A-Za-z]` ou seja, procure por: `?`, ou `!`, ou `.`, ou `:`, ou `;`, seguido imediatamente por uma letra entre A e Z ou uma letra entre a e z.
 
 Aqui temos um problema, pois acabamos perdendo erros como sinais seguidos de números, ou sinais repetidos como ??.
 
 Conceito novo: **Intervalo** — Dentro dos colchetes, dois caracteres com um hífen (-) entre eles significa um intervalo. Então `[A-Z]` é o mesmo que `[ABCDEFGHIJKLMNOPQRSTUWXYZ]`. Idem para `[a-z]`.
 
- * Tática 2: Procurar um sinal de pontuação seguido de qualquer coisa menos um espaço em branco.
- * ER: `[?!.:;][^ ]` ou seja, procure por: `?`, ou `!`, ou `.`, ou `:`, ou `;`, seguido imediatamente por qualquer coisa fora um espaço em branco.
+- Tática 2: Procurar um sinal de pontuação seguido de qualquer coisa menos um espaço em branco.
+- ER: `[?!.:;][^ ]` ou seja, procure por: `?`, ou `!`, ou `.`, ou `:`, ou `;`, seguido imediatamente por qualquer coisa fora um espaço em branco.
 
 Conceito novo: **Negação** — Dentro dos colchetes, se o primeiro caractere for um sinal de acento circunflexo (^), o significado dos colchetes muda para "qualquer letra, exceto as de dentro dos colchetes".
 
@@ -85,18 +85,20 @@ Conceito novo: **Negação** — Dentro dos colchetes, se o primeiro caractere f
 
 Logo após um sinal de pontuação de fim de período, e o espaço em branco, deve haver uma letra maiúscula, pois é um começo de frase.
 
- * Tática 1: Procurar um sinal de pontuação, um espaço em branco e uma letra minúscula.
- * ER: `[?!.] [a-z]` ou seja, procure por: `?`, ou `!`, ou `.`, seguido de um espaço em branco, seguido de uma letra minúscula entre a e z.
+- Tática 1: Procurar um sinal de pontuação, um espaço em branco e uma letra minúscula.
 
- * Tática 2: Procurar um sinal de pontuação, um espaço em branco e qualquer coisa menos uma letra maiúscula.
- * ER: `???` essa fica de exercício para o leitor.
+- ER: `[?!.] [a-z]` ou seja, procure por: `?`, ou `!`, ou `.`, seguido de um espaço em branco, seguido de uma letra minúscula entre a e z.
 
-Expostos os conceitos e dados alguns exemplos, aqui vão alguns exercícios para estimular sua imaginação. São todos simples, e não devem tomar muito de seu tempo, então pare de correr um pouco e tente fazê-los. 	Escreva, utilizando apenas os conceitos aprendidos, uma ER para casar:
+- Tática 2: Procurar um sinal de pontuação, um espaço em branco e qualquer coisa menos uma letra maiúscula.
 
- * A palavra "revista" no singular e no plural
- * A palavra "letra", em qualquer combinação de letras maiúsculas ou minúsculas (leTra, LEtrA, leTRA, Letra, letRa etc)
- * Números inteiros
- * Um número IP (um número IP tem o formato nnn.nnn.nnn.nnn, exemplo: 192.168.255.145).
+- ER: `???` essa fica de exercício para o leitor.
+
+Expostos os conceitos e dados alguns exemplos, aqui vão alguns exercícios para estimular sua imaginação. São todos simples, e não devem tomar muito de seu tempo, então pare de correr um pouco e tente fazê-los. Escreva, utilizando apenas os conceitos aprendidos, uma ER para casar:
+
+- A palavra "revista" no singular e no plural
+- A palavra "letra", em qualquer combinação de letras maiúsculas ou minúsculas (leTra, LEtrA, leTRA, Letra, letRa etc)
+- Números inteiros
+- Um número IP (um número IP tem o formato nnn.nnn.nnn.nnn, exemplo: 192.168.255.145).
 
 Como se pode constatar por essa introdução às Expressões Regulares, depois de entendido o conceito, o importante é praticar. Espero que este artigo tenha ajudado a esclarecer os pontos mais importantes relacionados a ERs, o que são e por que utilizá-las.
 

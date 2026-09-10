@@ -9,7 +9,6 @@ title_prefix: 'EU FUI: '
 
 ![Visual da praia de Matinhos numa manhã de sol](/img/viagem/matinhos-2005/praia.jpg)
 
-
 ## A Idéia
 
 Nas férias anteriores eu fiz viagens longas, como ir para o litoral sul de Santa Catarina ou para o deserto do Atacama no Chile. Dessa vez resolvi fazer algo diferente: ficar aqui do lado em Matinhos/Caiobá (120 Km), praia do Paraná onde minha família tem um apartamento.
@@ -22,39 +21,36 @@ Como sou nerd, um dos pontos cruciais das férias foi ficar sem Internet e todos
 
 Os 30 dias passaram voando e infelizmente terminaram (alguém aí quer me pagar para ficar na praia?). O lado nerd volta ao domínio novamente e cá estou eu escrevendo o relato das férias para colocar na Internet... Coisas da vida.
 
-
 ## Rotina
 
-  * Acordar 07h30 com o sol na cara (ou não)
-      * Se tiver onda, ir surfar
-      * Senão volta a dormir
-          * Acordar de novo às 09h00 e repetir a checagem das ondas
-              * Se tiver onda, comer algo leve e ir surfar
-              * Senão, tomar um cafézão pesado
-                  * Se estiver com sol, andar de bicicleta ou a pé no calçadão
-                  * Se estiver chovendo, jogar algum joguinho no computador
-  * Almoço entre 12h30 e 15h00
-      * Comer como se não houvesse amanhã
-      * Ficar lagarteando 2 horas depois do almoço
-      * Nova checagem das ondas
-          * Repete a rotina da manhã de surfar ou passear ou jogar
-  * Fim de tarde, caso não esteja no mar, nova checagem das ondas
-      * Se tiver onda, comer algo leve e ir surfar
-      * Senão, tomar um cafézão pesado e ir passear ou jogar
-  * Janta entre 20h00 e 23h00
-      * Se tiver voltado do mar, comer como se não houvesse amanhã
-      * Senão, comer qualquer coisa que tenha na geladeira
-  * Programa noturno
-      * Se o tempo estiver bom, andar de bicicleta ou a pé no calçadão
-      * Se o tempo estiver ruim, jogar algum joguinho no computador
-  * Ir dormir entre 00h00 e 03h00
-  * REPEAT
-
+- Acordar 07h30 com o sol na cara (ou não)
+  - Se tiver onda, ir surfar
+  - Senão volta a dormir
+    - Acordar de novo às 09h00 e repetir a checagem das ondas
+      - Se tiver onda, comer algo leve e ir surfar
+      - Senão, tomar um cafézão pesado
+        - Se estiver com sol, andar de bicicleta ou a pé no calçadão
+        - Se estiver chovendo, jogar algum joguinho no computador
+- Almoço entre 12h30 e 15h00
+  - Comer como se não houvesse amanhã
+  - Ficar lagarteando 2 horas depois do almoço
+  - Nova checagem das ondas
+    - Repete a rotina da manhã de surfar ou passear ou jogar
+- Fim de tarde, caso não esteja no mar, nova checagem das ondas
+  - Se tiver onda, comer algo leve e ir surfar
+  - Senão, tomar um cafézão pesado e ir passear ou jogar
+- Janta entre 20h00 e 23h00
+  - Se tiver voltado do mar, comer como se não houvesse amanhã
+  - Senão, comer qualquer coisa que tenha na geladeira
+- Programa noturno
+  - Se o tempo estiver bom, andar de bicicleta ou a pé no calçadão
+  - Se o tempo estiver ruim, jogar algum joguinho no computador
+- Ir dormir entre 00h00 e 03h00
+- REPEAT
 
 ## Surfe
 
 Este foi um Janeiro realmente atípico: deu onda! Lembro que anos atrás quando eu passava a temporada na praia no verão, eram vários os dias em que o mar ficava totalmente calmo (flat), aquele tapete liso sem onda alguma.
-
 
 ### O Mar
 
@@ -68,7 +64,6 @@ Me esbaldei, era surfe de manhã e de tarde, numa média de 5 horas por dia com 
 
 Aproveitei cinco dos sete dias de ondulação. No quinto dia (1º de Fevereiro) me cortei com a quilha da prancha e tive que ir para o Pronto Socorro levar 3 pontos no pé (mais detalhes no final deste relato). Tive que ficar sem entrar no mar até o carnaval, então o surfe acabou por aí.
 
-
 ### O progresso
 
 Antes dessas férias, eu já estava a uns quatro anos sem surfar sério. Apenas algumas raras exceções. E teve a incrível façanha de ter morado um ano e meio em Floripa e lá ter surfado apenas DOIS dias. Uma vergonha.
@@ -79,7 +74,6 @@ Da terceira semana em diante comecei a progredir lentamente, aprendendo dicas no
 
 ![Fantasia de carnaval: surfista](/img/viagem/matinhos-2005/surfista.jpg)
 
-
 ### O Iluminado
 
 Um dia qualquer, era de manhã perto das 11 e eu estava andando no calçadão, pois o mar estava palha. Pelo menos era o que eu achava. Aí vi um cara pegar uma onda pequena, dar um gás de leves e soltar um aéreo. Assim, na cara dura, numa onda de menos de meio metro.
@@ -88,46 +82,43 @@ Parei para olhar e o que presenciei foi uma seqüência de aéreos, 360 e desgar
 
 Ao ver aquela demonstração me senti iluminado. De repente compreendi que a limitação estava no surfista (eu) e não na onda. "_Não existem ondas ruins, apenas surfistas ruins_", pensava. Por observação, aprendi algumas lições para tentar por em prática:
 
-  * O gás é a chave da onda pequena. Dê gás, sempre. (Dar gás == Pegar velocidade)
-  * Ignore a espuma da quebra irregular. Passe por cima ou pelo lado, mas a onda ainda não acabou.
-  * Se a onda engordar, não desista. Mate barata até que ela se levante novamente.
-  * Pegue todas as ondas que puder, não somente as da série. Mesmo as intermediárias podem render boas manobras.
-  * Vá até o final da onda, até a areia se conseguir. Mesmo sem tamanho e força ainda é possível manobrar.
+- O gás é a chave da onda pequena. Dê gás, sempre. (Dar gás == Pegar velocidade)
+- Ignore a espuma da quebra irregular. Passe por cima ou pelo lado, mas a onda ainda não acabou.
+- Se a onda engordar, não desista. Mate barata até que ela se levante novamente.
+- Pegue todas as ondas que puder, não somente as da série. Mesmo as intermediárias podem render boas manobras.
+- Vá até o final da onda, até a areia se conseguir. Mesmo sem tamanho e força ainda é possível manobrar.
 
 VALEU CARA!
-
 
 ## Nerdz
 
 Eu fiquei 30 dias em Internet, mas não sem computador. Levei o iBook querido junto, para me fazer companhia nas noites de chuva. Antes da viagem "preparei" o bichinho, instalando vários emuladores e seus respectivos joguinhos: Atari, Super Nintendo, Arcade e Scumm (Lucas Games).
 
-
 ### Joguinhoz
 
 Foram várias as noites chuvosas, tive bastante tempo para brincar. Fazia muito tempo que eu não jogava assim, de ficar horas seguidas montando quebra-cabeças, passando fases, chegar até o final. Como é bom! Foi bom relembrar os jogos antigos. Segue a lista dos jogos terminados nestas férias:
 
-  * Aero Fighters 2 (mame)
-  * Cadillacs & Dinossaurs (mame)
-  * Mad Gear (mame)
-  * Road Fighter (mame)
-  * Day of the Tentacle (scumm)
-  * The Dig (scumm)
-  * Yoshi’s Island (snes)
+- Aero Fighters 2 (mame)
+- Cadillacs & Dinossaurs (mame)
+- Mad Gear (mame)
+- Road Fighter (mame)
+- Day of the Tentacle (scumm)
+- The Dig (scumm)
+- Yoshi’s Island (snes)
 
 Os joguinhos do Arcade são legais, mas show de bola mesmo são os jogos de aventura da Lucas Games. _Day of the Tentacle_ é uma piração, um jogo criativo e divertido de jogar. O _The Dig_ é um filme: os diálogos, os cenários, os quebra-cabeças... Tudo é perfeito, simples, intuitivo. Nada precisa ser explicado, basta experimentar. Tem o dedo do Spielberg e do George Lucas.
 
 Outro que matou a pau foi o _Yoshi’s Island_, a continuação do _Super Mario World_. Eu não conhecia e fiquei impressionado com a jogabilidade e efeitos de tela, nota 10 para os criadores. Um dos "chefes" você enfrenta num mini-mundo (tipo Pequeno Príncipe) e ao andar todo o cenário gira e você fica sempre no topo, muito massa. Outro é dentro do estômago dele, que fica se mexendo. É a evolução do Mario, show.
 
-
 ### Textoz
 
 Fora os joguinhos, também escrevi muito nessas férias. O aurelio.net sofreu um faxina geral, daquelas do tipo "quando eu tiver tempo eu faço". Foram criadas áreas novas, reorganizadas outras que estavam bagunçadas e um CSS padronizado e limpo para ser usado na maioria das páginas.
 
-  * Na parte musical foi criada uma área específica, contando com várias histórias e [um artigo novinho em folha que descreve o pogo, a "dança" punk](/pogo/).
+- Na parte musical foi criada uma área específica, contando com várias histórias e [um artigo novinho em folha que descreve o pogo, a "dança" punk](/pogo/).
 
-  * Na parte de documentação foi criado [um índice centralizado para todos os textos técnicos que já escrevi](/doc/nerd.html). Também fiz o FAQ VERDE. Dois itens que estavam há tempos na minha lista de pendências.
+- Na parte de documentação foi criado [um índice centralizado para todos os textos técnicos que já escrevi](/doc/nerd.html). Também fiz o FAQ VERDE. Dois itens que estavam há tempos na minha lista de pendências.
 
-  * E para minha surpresa, surgiu a idéia de um livro novo e escrevi um pedação. O detalhe é que é uma história, com personagens e roteiro. Roteiro nerd, é claro. Mas esse projeto ainda é uma criança, vamos ver se vai para frente.
+- E para minha surpresa, surgiu a idéia de um livro novo e escrevi um pedação. O detalhe é que é uma história, com personagens e roteiro. Roteiro nerd, é claro. Mas esse projeto ainda é uma criança, vamos ver se vai para frente.
 
 Como é bom ficar sem Internet, o tempo rende que é uma beleza, sem distrações!
 

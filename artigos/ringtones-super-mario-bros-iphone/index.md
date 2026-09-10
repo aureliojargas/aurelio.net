@@ -12,34 +12,32 @@ Hoje meu telefone é muito mais divertido, e abro um sorriso cada vez que algué
 
 Além do iPhone, você também pode usar estes sons no seu iPod e iPad, para avisos de: e-mail, tuíte, alarmes e alertas.
 
-
 ## Lista de toques disponíveis
 
-  * 1-Up
-  * Bomb
-  * Brick break
-  * Coin
-  * Coopa Theme
-  * Flagpole
-  * Game Over
-  * Jump
-  * Jump Big
-  * Kick
-  * Lvl-1 Theme
-  * Lvl-2 Theme
-  * Mario die
-  * Pause
-  * Pipe travel
-  * Powerup
-  * Stage Cleared
-  * Stomp
-  * Superstar
-  * Throw Fireball
-  * Time Warning
-  * Vine grow
-  * Water lvl Theme
-  * World Cleared
-
+- 1-Up
+- Bomb
+- Brick break
+- Coin
+- Coopa Theme
+- Flagpole
+- Game Over
+- Jump
+- Jump Big
+- Kick
+- Lvl-1 Theme
+- Lvl-2 Theme
+- Mario die
+- Pause
+- Pipe travel
+- Powerup
+- Stage Cleared
+- Stomp
+- Superstar
+- Throw Fireball
+- Time Warning
+- Vine grow
+- Water lvl Theme
+- World Cleared
 
 ## Download
 
@@ -59,7 +57,6 @@ Abra o iTunes e arraste para dentro da janela dele aquela pasta com os toques. O
 
 Agora que os toques estão em sua biblioteca, você já pode ouvi-los pelo iTunes mesmo, diversão garantida!
 
-
 ## Sincronizar com o iPhone
 
 Agora você pode copiar os toques para todos os dispositivos que sincronizam com seu iTunes: iPod, iPhone, iPad ou o que mais a Apple lançar.
@@ -68,19 +65,18 @@ Conecte seu iPhone ao iTunes (via cabo USB ou Wi-Fi), certifique-se que o item *
 
 ![](/wp/wp-content/uploads/2012/05/ringtones-sync.png)
 
-
 ## Configurar os toques
 
 No iPhone, entre em **Ajustes → Sons**. Ali você pode configurar os toques novos para vários itens do sistema. São eles:
 
-  * Toque
-  * Som de Mensagem
-  * Novo Voicemail
-  * Novo E-mail
-  * E-mail Enviado
-  * Tuíte
-  * Alertas de Calendário
-  * Alertas dos Lembretes
+- Toque
+- Som de Mensagem
+- Novo Voicemail
+- Novo E-mail
+- E-mail Enviado
+- Tuíte
+- Alertas de Calendário
+- Alertas dos Lembretes
 
 Os toques novos aparecerão antes dos toques originais do telefone, todos possuem o prefixo **smb** em seu nome:
 
@@ -90,10 +86,9 @@ Outro lugar que você pode usar estes toques é nos alarmes do aplicativo **Rel�
 
 Minhas preferências são estas:
 
-  * Toque — **smb Superstar**
-  * Som de Mensagem — **smb 1-UP**
-  * Alertas de Calendário — **smb Pipe**
-
+- Toque — **smb Superstar**
+- Som de Mensagem — **smb 1-UP**
+- Alertas de Calendário — **smb Pipe**
 
 ## Tetris
 

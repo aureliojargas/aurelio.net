@@ -63,7 +63,6 @@ Apesar de ser um texto antigo, o Cygwin não mudou muito com o passar dos anos, 
   </ul>
 </nav>
 
-
 <h2 id="toc1">Apresentando o Cygwin</h2>
 
 Esta é a Revista do Linux. O seu conteúdo é sobre Linux. Os seus leitores são fãs do Linux. Mas este artigo vai falar bastante sobre um assunto diferente: Microsoft Windows.
@@ -101,7 +100,6 @@ Ainda quer mais? Você aproveita e continua usando o Internet Explorer, Windows 
 Muito mais? Diversos programas já funcionam no Cygwin. É uma lista enorme ([http://cygwin.com/packages/](http://cygwin.com/packages/)). E novos programas estão sendo adaptados e mantidos por voluntários, sempre aparece uma novidade. Até o XFree86 funciona! É possível rodar o WindowMaker ou o KDE numa janelinha do Windows.
 
 E então? Está convencido a pelo menos experimentar? O Cygwin é GPL e o site do projeto fica em [http://cygwin.com](http://cygwin.com).
-
 
 <h2 id="toc2">Instalação</h2>
 
@@ -190,7 +188,6 @@ Não se assuste! Vão pipocar e desaparecer várias janelas pretas com textos, t
 
 Tudo certo! O Cygwin foi instalado com sucesso e já está pronto para usar. Atenção: não é necessário reiniciar a máquina! Clique no ícone do Cygwin na Área de Trabalho ou acesse o menu _Iniciar -> Programas -> Cygwin -> Cygwin Bash Shell_.
 
-
 <h2 id="toc3">Primeiro Contato com o Cygwin</h2>
 
 Senhoras e senhores, este é o Cygwin:
@@ -210,7 +207,6 @@ Não faz parte do escopo deste artigo uma introdução ao Linux e seus comandos,
 Com seus modestos 30 Mb, a instalação mínima contém vários utilitários de manipulação de arquivos e texto, úteis para a criação de shell scripts e uso diário. Para se ter uma idéia desse conjunto básico de comandos, aqui vai uma lista longa, porém incompleta, com os comandos mais conhecidos:
 
 awk, basename, bash, bzip2, cat, chroot, cmp, comm, cp, cut, date, dd, df, diff, dirname, du, env, expand, expr, find, fmt, grep, gzip, head, join, kill, ln, locate, ls, md5sum, mkdir, mount, mv, nice, od, paste, pr, printf, ps, pwd, rm, rmdir, sed, seq, sort, tac, tail, tar, tee, touch, tput, tr, uname, uniq, wc, which, who e xargs.
-
 
 <h2 id="toc4">Explorando o Ambiente</h2>
 
@@ -284,15 +280,15 @@ Começou a ter idéias? Já imaginou não depender mais exclusivamente das ferra
 Para os já iniciados no modo texto: você conecta o cabo USB da sua câmera fotográfica digital e precisa passar para o computador todas as fotos armazenadas nela. O que é mais rápido:
 
 1. Abrir o Windows Explorer
-2. Clicar em “Meu Computador”
-3. Clicar em “E:” (ou “F:” ou ...)
-4. Clicar nas pastas da câmera até chegar na fotos
-5. Selecionar todos os arquivos
-6. Apertar Ctrl+X (recortar)
-7. Clicar em “C:”
-8. Clicar nas pastas até escolher o destino
-9. Apertar Ctrl+V (colar)
-10. Fechar o Windows Explorer
+1. Clicar em “Meu Computador”
+1. Clicar em “E:” (ou “F:” ou ...)
+1. Clicar nas pastas da câmera até chegar na fotos
+1. Selecionar todos os arquivos
+1. Apertar Ctrl+X (recortar)
+1. Clicar em “C:”
+1. Clicar nas pastas até escolher o destino
+1. Apertar Ctrl+V (colar)
+1. Fechar o Windows Explorer
 
 Ou simplesmente:
 
@@ -307,7 +303,6 @@ Não tem comparação :)
 Esta pequena demonstração serviu para confirmar que, realmente, os dois sistemas funcionam de maneira totalmente integrada. As ferramentas de um não conflitam com as do outro e todos os arquivos são acessíveis.
 
 A grande vantagem do Cygwin contra um sistema “dual boot”, com Windows e Linux instalado no mesmo HD em partições diferentes, é que as ferramentas do Linux estão acessíveis instantaneamente, sem precisar reiniciar a máquina. E outra, com o Windows cuidando do hardware, nem precisa se preocupar com periféricos recém-saídos da fábrica, que o Linux ainda não tem drivers, WinModem e outros aliens. Você pode estar jogando Counter Strike com os amigos, e com um Alt+TAB roda um shell script para relaxar ;)
-
 
 <h2 id="toc5">Instalando e Removendo Pacotes</h2>
 
@@ -417,19 +412,15 @@ E tem muito mais. Uma lista completa e atualizada de todos os pacotes disponíve
 
 Mas faça um favor a si mesmo: NÃO INSTALE TUDO! Há muitos programas disponíveis e dificilmente alguém necessitará de todos eles. Quanto mais enxuto e otimizado o ambiente do Cygwin, mais rápido ele será e futuras atualizações de pacotes serão mais tranqüilas, não tendo que esperar baixar da Internet vários pacotes não utilizados.
 
-
 <h2 id="toc6">Detalhes, Pegadinhas e Chatices</h2>
-
 
 <h3 id="toc7">O comando man/less/gcc/... não funciona!</h3>
 
 É necessário instalá-los. Eles não fazem parte da instalação mínima. Basta usar o `setup.exe` conforme já explicado.
 
-
 <h3 id="toc8">Como alterar tamanho/cores/fonte da janela?</h3>
 
 Clique com o botão direito do mouse na barra de título da janela e acesse “Propriedades”. Nas abas “Layout”, “Fonte” e “Cores”, é possível alterar as características da janela do Cygwin. Se estiver disponível, a fonte “Lucida Console” é uma boa escolha. Ao apertar o botão OK, escolha “_Modificar o atalho que iniciou esta janela_” para que as configurações sejam salvas. Uma alternativa é usar o terminal `rxvt` (veja adiante) e usar suas opções de linha de comando.
-
 
 <h3 id="toc9">Como copiar e colar textos com o mouse?</h3>
 
@@ -443,21 +434,17 @@ Usando o rxvt:
 - **Copiar:** Selecione com o botão esquerdo pressionado
 - **Colar:** Aperte o botão do meio
 
-
 <h3 id="toc10">Meu arquivo texto está cheio de caracteres ^M. Por quê?</h3>
 
 Porque é um texto que está no formato do Windows. Para consertá-lo, converta-o para o formato do Cygwin com o comando `dos2unix arquivo.txt`.
-
 
 <h3 id="toc11">Todas as linhas do arquivo ficaram grudadas em uma só!</h3>
 
 Você está usando um programa do Windows, como o Bloco de Notas ou o Word, para abrir um arquivo feito no Cygwin. Primeiro converta-o para o formato do Windows com o comando `unix2dos arquivo.txt`.
 
-
 <h3 id="toc12">Tem como deixar o Cygwin em português?</h3>
 
 Sim e não. Adicione a linha `export LANG=pt_BR` no final do arquivo `.bash_profile`, dentro do seu diretório (`/home/usuário`). Se o arquivo ainda não existir, crie-o. Isso fará com que alguns programas que já foram traduzidos mostrem mensagens e o `--help` em português. Mas como não são todos, o sistema ficará metade em inglês, metade em português. As páginas de manual serão sempre em inglês.
-
 
 <h3 id="toc13">Como fazer funcionar a acentuação?</h3>
 
@@ -469,18 +456,15 @@ set convert-meta off
 set output-meta on
 ```
 
-
 <h3 id="toc14">Não consigo colar letras acentuadas na janela do Cygwin!</h3>
 
 Infelizmente, o terminal padrão do Cygwin sofre deste problema. É possível copiar, mas não colar acentos. Para contornar essa limitação, é possível colar corretamente usando a tecla “Insert” do teclado. Adicione no final do arquivo `.inputrc` a seguinte linha: `"\e[2~": paste-from-clipboard`. Outra solução é usar o terminal `rxvt` que não sofre desse problema (veja adiante).
-
 
 <h3 id="toc15">Posso usar o rxvt ao invés do terminal do Windows?</h3>
 
 Sim! O `rxvt` é um emulador de terminal que pode ser usado como o terminal padrão do Cygwin. A vantagem é que o `rxvt` aceita várias opções de linha de comando, lê o arquivo `.Xdefaults`, tem fundo branco (configurável), redimensiona corretamente a janela e lida melhor com caracteres acentuados. Basta instalar o pacote `rxvt` e editar o arquivo `C:\cygwin\cygwin.bat`, alterando a última linha para: `rxvt -e bash --login -i`
 
 ![](rxvt.png)
-
 
 <h3 id="toc16">Barra pra cá ou barra pra lá?</h3>
 
@@ -493,7 +477,6 @@ $ echo $PWD
 $ cygpath -w $PWD
 C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 ```
-
 
 <h2 id="toc17">Dicas para usuários do Windows/DOS</h2>
 
@@ -523,7 +506,6 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 
 - Todos os comandos que estão no PATH do DOS também estão disponíveis no Cygwin. Os do `COMMAND.COM` não.
 
-
 <h2 id="toc18">Dicas para usuários do Linux/UNIX</h2>
 
 - Esqueça `chmod`. Arquivos executáveis são automaticamente detectados pela extensão ou pela primeira linha mágica, como `#!/bin/sh`.
@@ -548,7 +530,6 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 
 - Use o comando `cygstart` para abrir um arquivo em seu programa respectivo. É o mesmo que clicar duas vezes sobre o arquivo, só que mais legal :) Exemplos: `cygstart imagem.gif` e `cygstart documento.pdf`
 
-
 <h2 id="toc19">Configuração</h2>
 
 Crie estes arquivos dentro do seu diretório (`/home/usuário`) para que o Cygwin fique bem configurado.
@@ -556,7 +537,6 @@ Crie estes arquivos dentro do seu diretório (`/home/usuário`) para que o Cygwi
 Se for criar estes arquivos em algum editor de textos do Windows, lembre-se de depois remover a extensão `.txt` com o comando `mv .arquivo.txt .arquivo` e usar o comando `dos2unix` para convertê-los para o formato UNIX.
 
 Nota: Há uma cópia destes arquivos em [https://aurelio.net/cygwin/](/cygwin/).
-
 
 <h3 id="toc20">.inputrc</h3>
 
@@ -572,7 +552,6 @@ set completion-ignore-case on
 # Fazer a tecla Insert colar
 #"\e[2~": paste-from-clipboard
 ```
-
 
 <h3 id="toc21">.bash_profile</h3>
 
@@ -595,14 +574,12 @@ alias nano="LANG=pt_BR nano"
 shopt -s nocaseglob
 ```
 
-
 <h3 id="toc22">.nanorc</h3>
 
 ```config
 set smooth      # rolar texto linha a linha
 #set const      # mostrar numero da coluna/linha
 ```
-
 
 <h3 id="toc23">.vimrc</h3>
 
@@ -611,7 +588,6 @@ set textwidth=70 background=dark
 set is hls ic scs aw ruler ls=2
 syntax on
 ```
-
 
 <h2 id="toc24">É isso</h2>
 
@@ -626,7 +602,6 @@ Vai dizer que você leu até aqui e ainda não se convenceu a usar o Cygwin? Que
 ![](rm-rf.png)
 
 > **Mensagem aos puristas:** Tecnicamente, o Cygwin não é um Linux e sim um ambiente POSIX. A apologia foi usada para fins didáticos.
-
 
 <h2 id="toc25">Para saber mais</h2>
 

@@ -51,7 +51,6 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - Mesmo acostumando com o `\(…)` dentro das strings, tem que levar em conta que o parser dele é bem limitado: “The expressions you write inside parentheses within an interpolated string cannot contain an unescaped double quote (`"`) or backslash (`\`), and cannot contain a carriage return or line feed.”
 
-
 - Há poucas funções/métodos nativos para lidar com **strings**. E o que eu mais gosto é lidar com strings. Que pena. Alguns deles: `hasPrefix`, `hasSuffix`, `uppercaseString`, `lowercaseString`, `countElements`, `isEmpty`.
 
 - Pasmem: não tem [Expressões Regulares](/regex/) :(

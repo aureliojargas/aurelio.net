@@ -41,7 +41,7 @@ Porto Alegre! Fomos direto à casa do amigo Domingos (ainda Conectivo),
 e sua esposa Bianca (ex-Conectiva), que gentilmente cederam espaço em
 sua casa para nos abrigar durante os dias do evento TCHÊ!
 
- ![](domingos_bianca.jpg)
+![](domingos_bianca.jpg)
 
 BAH TCHÊ! Escondido atrás da cabeça do Domingos está o Bernardo,
 herdeiro da família gaúcha, que nasceu há +- 6 meses atrás, TCHÊ!
@@ -88,10 +88,9 @@ muito tempo que eu não via:
 
 ![Marcelo Tosatti (Kernel)](marcelo.jpg)
 
-
 ## Sessão EXTRA - Rudá encontra seus ídolos
 
-Não há muito o que comentar, as fotos já dizem tudo &amp;:) O Rudá deixou
+Não há muito o que comentar, as fotos já dizem tudo &:) O Rudá deixou
 desabrochar seu lado fã e se desmanchou de alegria ao encontrar seus
 ídolos. Humildade do Rudá, pois ele mesmo é uma personalidade, tendo
 sido o protagonista principal do filme

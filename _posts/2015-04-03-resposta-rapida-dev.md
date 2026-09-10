@@ -12,10 +12,9 @@ Mas o que realmente me impressiona é a velocidade de resposta de alguns projeto
 
 Vou contar três experiências que tive recentemente.
 
-
 ## Editor Atom: bug corrigido em 1 dia
 
-> ⌘-/ keybinding shoud insert HTML comments, not C-syle /*…*/  
+> ⌘-/ keybinding shoud insert HTML comments, not C-syle /*…*/\
 > <https://github.com/atom/language-gfm/issues/24>
 
 [Em maio de 2014](https://twitter.com/oreio/status/465941002189303808) troquei meu querido [TextMate](https://macromates.com/) pelo [Atom](https://atom.io/), editor de textos criado pela equipe do GitHub. Ao editar textos no formato [Markdown](http://en.wikipedia.org/wiki/Markdown), percebi que o atalho para comentar uma linha (`Command-/`) estava inserindo o código errado.
@@ -26,10 +25,9 @@ Pude replicar a correção aqui na minha máquina e o atalho passou a funcionar 
 
 <!-- https://github.com/atom/language-gfm/releases/tag/v0.36.0 -->
 
-
 ## Editor Atom: resposta em 30s, funcionalidade nova em 1 dia
 
-> Option to update the HTML preview on file save  
+> Option to update the HTML preview on file save\
 > <https://github.com/atom/markdown-preview/issues/91>
 
 O editor Atom tem o plugin [markdown-preview](https://atom.io/packages/markdown-preview), que converte o Markdown para HTML em tempo real (enquanto digita). É muito útil para ir vendo como ficará o documento final, formatado.
@@ -58,10 +56,9 @@ Na tela do issue só aparece a data de cada evento, mas no código-fonte da pág
 
 Como se toda essa agilidade não fosse suficiente, ele já [implementou a funcionalidade](https://github.com/atom/markdown-preview/commit/d5d6b073ef6b1ab1978086e9a39bd01d7a6b2bce) no dia seguinte. Poucos dias depois saiu [a versão nova do editor](https://github.com/atom/atom/releases/tag/v0.104.0) e pude então voltar a escrever meu livro sem lentidão.
 
-
 ## GitLab: contribuição aceita em 40 minutos
 
-> Remove duplicate CHANGELOG items for v7.8.0  
+> Remove duplicate CHANGELOG items for v7.8.0\
 > <https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/447>
 
 Começamos a usar o [GitLab](https://about.gitlab.com/) lá no trabalho (obrigado a [todos que indicaram](/blog/2014/11/08/funcionario-publico/)) e eu acabei como o responsável por ele (“quem inventa, aguenta”). Saiu uma versão nova, então fui me informar para atualizá-lo. Ao ler o arquivo com as novidades ([Changelog](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/CHANGELOG)), percebi que havia uma frase repetida. Coisa boba, mas que caras chatos como eu percebem e se incomodam. [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)

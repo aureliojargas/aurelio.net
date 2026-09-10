@@ -6,7 +6,6 @@ worked: 2:30
 #2015-01-21 2:30
 ---
 
-
 Reclamar e falar mal das empresas é fácil, sai naturalmente. Mas é importante elogiar quando merecido.
 
 [Ontem deu chuva forte em Joinville](http://anoticia.clicrbs.com.br/sc/geral/noticia/2015/01/chuva-alaga-ruas-de-joinville-no-fim-da-tarde-desta-terca-feira-4684681.html) e minha internet caiu. Liguei pra [NET](http://www.netcombo.com.br/) no 106 21, e **sem precisar digitar ou falar absolutamente nada**, obtive todas as informações que eu precisava em menos de um minuto. Repito: não digitei nem falei nada, somente fiquei ouvindo, do início ao fim da ligação.

@@ -29,13 +29,13 @@ Muitas perguntas, muitas dúvidas. Não adianta perguntar pro Google, não tem n
 
 <p style="text-align:center;letter-spacing:2em;">👶👶👶👶👶</p>
 
-Sou muito muito muito feliz por ter uma história bem normal pra contar, sem drama: a futura mamãe se preparou (médico, alimentação, vitaminas), planejamos a data do nascimento (fim do verão), e tivemos a sorte de conceber já no primeiro mês! \o/
+Sou muito muito muito feliz por ter uma história bem normal pra contar, sem drama: a futura mamãe se preparou (médico, alimentação, vitaminas), planejamos a data do nascimento (fim do verão), e tivemos a sorte de conceber já no primeiro mês! \\o/
 
 Foi tão rápido que logo que a Mog começou a passar mal (enjoo e enxaqueca), cerca de duas semanas depois, demoramos para perceber que já era o bebê fazendo arte dentro da barriga da mamãe.
 
 **“Estou grávida.”**
 
-Que alegria ao ouvir isso. Era real. Deu certo. Foi. Já era. Done. Merged. Sem Control-Z. Grávidos! \o/
+Que alegria ao ouvir isso. Era real. Deu certo. Foi. Já era. Done. Merged. Sem Control-Z. Grávidos! \\o/
 
 <p style="text-align:center;letter-spacing:2em;">👶👶👶👶👶</p>
 
@@ -53,7 +53,7 @@ Secretamente, porém, ambos desejávamos um menino. Confessamos depois.
 
 No dia do exame para descobrir o sexo, lá estava “o baita” aparecendo na tela.
 
-**É um piazinho!** \o/
+**É um piazinho!** \\o/
 
 <p style="text-align:center;letter-spacing:2em;">👶👶👶👶👶</p>
 
@@ -86,6 +86,6 @@ entre [outros](/tags/#mog).
 
 - Sei que deve ser coisa de papai babão, mas eu JURO que ele se mexe quando eu coloco [hardcore](/musica/) pra tocar. Já tá lá pogando, cara! 🤘
 
-- Por falar nisso, olha a coincidência: outros dois amigos [da banda](/blog/2016/06/18/ensaio-banda/) também terão seus primeiros filhos na mesma época, e também serão meninos. A próxima geração da banda de malacos já está garantida  🎤
+- Por falar nisso, olha a coincidência: outros dois amigos [da banda](/blog/2016/06/18/ensaio-banda/) também terão seus primeiros filhos na mesma época, e também serão meninos. A próxima geração da banda de malacos já está garantida 🎤
 
 - Sei que vou me arrepender, mas estou pensando em tentar ([pela segunda vez](/blog/2012/07/13/entrei-no-facebook/)) começar a usar o Facebook, pra compartilhar fotos e fatos de como meu filho é o mais `bonito|forte|esperto|.*` do mundo 🏅
