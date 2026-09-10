@@ -246,7 +246,7 @@ For now those are the only paginated areas on the site:
 
 Since most of the site is made of plain HTML files, it's common to have to apply the same edits in multiple files.
 
-Fear not, use the [replace script](https://github.com/aureliojargas/replace) and be happy. Better yet, also use the [git\_replace function](https://github.com/aureliojargas/dotfiles/blob/main/.gitbash).
+Use the [replace script](https://github.com/aureliojargas/replace), it can use external files with multiple lines as match patterns (regex). There's some patterns in `_scripts/replace-templates/`. There's also the [`git sed`](https://github.com/aureliojargas/dotfiles/blob/74f3072904c1b9fc8ccc9985a5ae5997965a9a36/.gitconfig#L34-L35) command.
 
 ## License
 
