@@ -86,9 +86,9 @@ Os aplicativos GNU que funcionam no Cygwin não são programas reescritos ou mí
 
 Com o Cygwin é possível fazer programas, compilá-los, testá-los, escrever textos, fazer shell scripts, conexões remotas, ler e-mail, navegar na Internet. Em outras palavras: você não vai notar a diferença!
 
-Como experiência pessoal, ao ingressar no emprego novo que era “powered by Windows”, instalei o Cygwin e descompactei nele o .tar.gz de todo o meu $HOME de quase cinco anos de Linux. Para minha surpresa, tudo continuou funcionando, os links simbólicos, o VI, os scripts, os programas em Python, o Pine, fetchmail, lynx, tudo! Nenhuma adaptação foi necessária. Passado um ano e meio continuo usando máquinas com Linux e outras com Cygwin, movendo meu $HOME para lá e para cá sem estresse, tanto faz estar em um sistema ou outro, funcionam igual.
+Como experiência pessoal, ao ingressar no emprego novo que era “powered by Windows”, instalei o Cygwin e descompactei nele o `.tar.gz` de todo o meu `$HOME` de quase cinco anos de Linux. Para minha surpresa, tudo continuou funcionando, os links simbólicos, o VI, os scripts, os programas em Python, o Pine, fetchmail, lynx, tudo! Nenhuma adaptação foi necessária. Passado um ano e meio continuo usando máquinas com Linux e outras com Cygwin, movendo meu `$HOME` para lá e para cá sem estresse, tanto faz estar em um sistema ou outro, funcionam igual.
 
-Além de ser compatível com o Linux, o Cygwin interage amigavelmente com o Windows, acessando arquivos e se deixando acessar. Do Cygwin é possível acessar o C:, D:, ou abrir no Internet Explorer um arquivo HTML que está no seu $HOME do Cygwin. E tudo isso sem bagunçar o Windows! Para ele, o Cygwin é apenas mais um programa instalado e que ocupa um diretório, ou melhor, uma “pasta”. Nada de particionamento, reiniciar a máquina, configurar hardware: instalar o Cygwin é instalar um programa comum.
+Além de ser compatível com o Linux, o Cygwin interage amigavelmente com o Windows, acessando arquivos e se deixando acessar. Do Cygwin é possível acessar o `C:`, `D:`, ou abrir no Internet Explorer um arquivo HTML que está no seu `$HOME` do Cygwin. E tudo isso sem bagunçar o Windows! Para ele, o Cygwin é apenas mais um programa instalado e que ocupa um diretório, ou melhor, uma “pasta”. Nada de particionamento, reiniciar a máquina, configurar hardware: instalar o Cygwin é instalar um programa comum.
 
 Por ter a instalação extremamente facilitada e funcionar em conjunto com o Windows, o Cygwin é uma ótima opção para quem quer conhecer o Linux. É o ambiente ideal para o usuário novato dar seus primeiros comandos, instalar programas, experimentar, bagunçar e reinstalar tudo de novo...
 
@@ -115,7 +115,7 @@ Antes de executar o instalador, atente para dicas importantes que garantirão um
 
 Como qualquer outra instalação de programa no Windows, é aconselhável fechar todas as janelas de outros programas, para evitar problemas. Prevenir não dói e faz bem.
 
-Outra medida aconselhável é desligar o antivírus, se houver algum presente na sua máquina. Desative-o durante toda a instalação, pois alguns insistem em implicar com os pacotes .tar.gz do Cygwin.
+Outra medida aconselhável é desligar o antivírus, se houver algum presente na sua máquina. Desative-o durante toda a instalação, pois alguns insistem em implicar com os pacotes `.tar.gz` do Cygwin.
 
 Com o antivírus desativado e todas as janelas fechadas (do computador!), podemos prosseguir.
 
@@ -154,7 +154,7 @@ Como uma das funções da Revista do Linux é facilitar a vida do leitor, não �
 
 De todo o proceso de instalação, essa é única tela de “configuração”. É extremamente aconselhável que nada seja alterado, e simplesmente se aperte o botão “Avançar”, deixando as configurações padrão.
 
-O item “Root Directory” é a pasta onde o Cygwin vai ser instalado. Todo este artigo se baseará na escolha padrão `C:\cygwin`. Esta pasta será o diretório raiz, o /. Você pode colocá-lo em outra pasta se julgar apropriado, mas nunca, NUNCA instale o Cygwin no `C:\` ou numa outra pasta que já tenha outros arquivos dentro.
+O item “Root Directory” é a pasta onde o Cygwin vai ser instalado. Todo este artigo se baseará na escolha padrão `C:\cygwin`. Esta pasta será o diretório raiz, o `/`. Você pode colocá-lo em outra pasta se julgar apropriado, mas nunca, NUNCA instale o Cygwin no `C:\` ou numa outra pasta que já tenha outros arquivos dentro.
 
 O item “Install For” indica se o ambiente deve ser instalado para todos os usuários da máquina (All Users) ou somente para você (Just Me). Mesmo que você seja o único a usar o Cygwin, deixe no padrão "All Users".
 
@@ -162,7 +162,7 @@ O item “Default Text File Type” indica o tipo de texto padrão para leitura 
 
 ![](tela4.png)
 
-Nesta tela é escolhida a pasta onde estão os arquivos de instalação do Cygwin e seus programas. Os arquivos estão no CD da revista, dentro do mesmo diretório do setup.exe. O local já selecionado é o correto. Basta apertar o botão “Avançar”.
+Nesta tela é escolhida a pasta onde estão os arquivos de instalação do Cygwin e seus programas. Os arquivos estão no CD da revista, dentro do mesmo diretório do `setup.exe`. O local já selecionado é o correto. Basta apertar o botão “Avançar”.
 
 ![](tela5.png)
 
@@ -170,7 +170,7 @@ Nesta tela não há nada a se fazer a não ser esperar. O programa de instalaç�
 
 ![](tela6.png)
 
-Esta é a tela mais divertida, onde se escolhe quais “pacotes” serão instalados. Quem nunca usou um Linux, pode encarar pacotes como se fossem arquivos .ZIP com um ou vários programas dentro. Por exemplo, o pacote “grep” contém os programas “grep”, “fgrep” e “egrep”, sua documentação e arquivos auxiliares.
+Esta é a tela mais divertida, onde se escolhe quais “pacotes” serão instalados. Quem nunca usou um Linux, pode encarar pacotes como se fossem arquivos `.ZIP` com um ou vários programas dentro. Por exemplo, o pacote `grep` contém os programas `grep`, `fgrep` e `egrep`, sua documentação e arquivos auxiliares.
 
 Mas não vamos brincar de escolher pacotes agora. Simplesmente aperte o botão “Avançar” para que seja feita uma instalação mínima. Depois voltaremos a essa tela para escolher os pacotes um a um.
 
@@ -201,9 +201,9 @@ Uma janela preta, com letras em cinza. Quem já conhece o Linux no modo texto (c
 
 Essa janela preta é chamada de terminal, e este terminal está rodando um “shell”. “Shell” é o robozinho que está esperando por seus comandos. Basta digitá-los, e quando você apertar ENTER, este robô vai executar o comando.
 
-O texto que aparece é chamado de “prompt”. Ele indica que o sistema está esperando por seus comandos. Na figura, o texto é “_Windao@aurelio ~_”. Ele significa que esta é a máquina chamada “Windao”, o usuário chama-se “aurelio” e o diretório atual é o “~”, que é o diretório do usuário, ou seja, o $HOME.
+O texto que aparece é chamado de “prompt”. Ele indica que o sistema está esperando por seus comandos. Na figura, o texto é `Windao@aurelio ~`. Ele significa que esta é a máquina chamada `Windao`, o usuário chama-se `aurelio` e o diretório atual é o `~`, que é o diretório do usuário, ou seja, o `$HOME`.
 
-Logo abaixo está um sinal de cifrão ($) e o cursor (_) piscando, indicando que agora é sua vez: você deve digitar algum comando.
+Logo abaixo está um sinal de cifrão (`$`) e o cursor (`_`) piscando, indicando que agora é sua vez: você deve digitar algum comando.
 
 Não faz parte do escopo deste artigo uma introdução ao Linux e seus comandos, pois em várias edições anteriores da Revista do Linux esse assunto já foi visitado. Consulte suas revistas ou o site http://www.RevistadoLinux.com.br (Nota: site retirado do ar).
 
@@ -249,7 +249,7 @@ total 0
 $
 ```
 
-Não existe mais. Então, pelo Windows temos acesso total e irrestrito a todos os arquivos do Cygwin. Assim como o Windows Explorer, qualquer outro programa pode ser utilizado para manipular os arquivos do sistema do Cygwin. Pode-se abrir no Internet Explorer uma página local, fazer uma imagem no Paint e gravar no seu HOME, limpar o /tmp, e todo tipo de tarefa normal.
+Não existe mais. Então, pelo Windows temos acesso total e irrestrito a todos os arquivos do Cygwin. Assim como o Windows Explorer, qualquer outro programa pode ser utilizado para manipular os arquivos do sistema do Cygwin. Pode-se abrir no Internet Explorer uma página local, fazer uma imagem no Paint e gravar no seu `$HOME`, limpar o `/tmp`, e todo tipo de tarefa normal.
 
 > Para o Windows, `C:\cygwin` é uma pasta normal, como qualquer outra.
 
@@ -263,7 +263,7 @@ bin/  cygwin.bat*  cygwin.ico  etc/  home/  lib/  tmp/  usr/  var/
 $
 ```
 
-O ls não mostra, mas há um diretório especial chamado `/cygdrive` que provê acesso ao C:, D: e assemelhados. Veja:
+O `ls` não mostra, mas há um diretório especial chamado `/cygdrive` que provê acesso ao `C:`, `D:` e assemelhados. Veja:
 
 ```console
 $ cd /cygdrive
@@ -275,9 +275,9 @@ edlin.exe     eudcedit.exe  exe2bin.exe  extrac32.exe
 esentutl.exe  eventvwr.exe  expand.exe
 ```
 
-E pronto, estamos navegando “as pastas” do Windows como se fossem diretórios normais dentro do ambiente Cygwin. Note que continuamos usando as barras normais / e não \. Também é possível criar, modificar, salvar e apagar qualquer arquivo do Windows pela linha de comando do Cygwin. Cuidado para não apagar o que não deve!
+E pronto, estamos navegando “as pastas” do Windows como se fossem diretórios normais dentro do ambiente Cygwin. Note que continuamos usando as barras normais `/` e não `\`. Também é possível criar, modificar, salvar e apagar qualquer arquivo do Windows pela linha de comando do Cygwin. Cuidado para não apagar o que não deve!
 
-Este diretório cygdrive é “inteligente”, mostrando apenas os drives disponíveis no momento. Ao colocar um disquete, o diretório “a” aparecerá. O mesmo para CD, Zip, Câmera Digital, Memory Card, etc. Qualquer periférico que use algum drive do Windows pode ser acessado por este diretório especial.
+Este diretório cygdrive é “inteligente”, mostrando apenas os drives disponíveis no momento. Ao colocar um disquete, o diretório `a` aparecerá. O mesmo para CD, Zip, Câmera Digital, Memory Card, etc. Qualquer periférico que use algum drive do Windows pode ser acessado por este diretório especial.
 
 Começou a ter idéias? Já imaginou não depender mais exclusivamente das ferramentas do Windows e poder usar todo o poder da linha de comando do Linux, interagindo com outros programas e acessórios do sistema da Microsoft?
 
@@ -311,7 +311,7 @@ A grande vantagem do Cygwin contra um sistema “dual boot”, com Windows e Lin
 
 <h2 id="toc5">Instalando e Removendo Pacotes</h2>
 
-Usuários com algum conhecimento prévio em sistemas Linux vão notar que a instalação mínima deixou de fora alguns programas importantes como man, less e gcc. Para instalar programas novos ou remover programas já existentes, basta executar novamente o `setup.exe`.
+Usuários com algum conhecimento prévio em sistemas Linux vão notar que a instalação mínima deixou de fora alguns programas importantes como `man`, `less` e `gcc`. Para instalar programas novos ou remover programas já existentes, basta executar novamente o `setup.exe`.
 
 As mesmas recomendações de desativar o antivírus e fechar todas as janelas antes de começar continuam valendo!
 
@@ -358,7 +358,7 @@ Se você já tem alguma experiência em Linux, aperte o botão “View” para v
 
 Como a idéia é instalar pacotes novos, fique com a visão "Not Installed". Para cada pacote que você quiser instalar, clique na palavra “Skip” e ela mudará para o número da versão do pacote. Isso significa que este pacote está selecionado para instalação.
 
-Ao escolher alguns pacotes, outros serão marcados automaticamente para instalação. Ao escolher o pacote “man” por exemplo, os pacotes “groff”, “less” e “mktemp” serão selecionados. Deixe-os marcados, pois alguns pacotes precisam de outros para funcionarem corretamente. São pré-requisitos.
+Ao escolher alguns pacotes, outros serão marcados automaticamente para instalação. Ao escolher o pacote `man` por exemplo, os pacotes `groff`, `less` e `mktemp` serão selecionados. Deixe-os marcados, pois alguns pacotes precisam de outros para funcionarem corretamente. São pré-requisitos.
 
 Caso queira remover algum pacote já instalado, clique no botão “View” até chegar na visão “Up to Date”. Nos pacotes que quiser remover, clique em “Keep” até mudar para “Uninstall”.
 
@@ -423,7 +423,7 @@ Mas faça um favor a si mesmo: NÃO INSTALE TUDO! Há muitos programas disponív
 
 <h3 id="toc7">O comando man/less/gcc/... não funciona!</h3>
 
-É necessário instalá-los. Eles não fazem parte da instalação mínima. Basta usar o setup.exe conforme já explicado.
+É necessário instalá-los. Eles não fazem parte da instalação mínima. Basta usar o `setup.exe` conforme já explicado.
 
 
 <h3 id="toc8">Como alterar tamanho/cores/fonte da janela?</h3>
@@ -484,7 +484,7 @@ Sim! O `rxvt` é um emulador de terminal que pode ser usado como o terminal padr
 
 <h3 id="toc16">Barra pra cá ou barra pra lá?</h3>
 
-Dentro do Cygwin, todos os diretórios são acessados usando as barras /, como no Linux. Já no Windows, são usadas as barras \ para separar diretórios. Há um programinha chamado `cygpath` que se encarrega de traduzir diretórios de um formato para o outro. Por exemplo:
+Dentro do Cygwin, todos os diretórios são acessados usando as barras `/`, como no Linux. Já no Windows, são usadas as barras `\` para separar diretórios. Há um programinha chamado `cygpath` que se encarrega de traduzir diretórios de um formato para o outro. Por exemplo:
 
 ```console
 $ echo $PWD
@@ -517,11 +517,11 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 
 - Use o comando `cygstart` como substituto para o comando `start`.
 
-- O Windows não gosta dos arquivos ocultos do Cygwin, que iniciam com um ponto (.) no nome. Use o comando `mv arquivo .arquivo` para renomear um arquivo, colocando um ponto no início.
+- O Windows não gosta dos arquivos ocultos do Cygwin, que iniciam com um ponto (`.`) no nome. Use o comando `mv arquivo .arquivo` para renomear um arquivo, colocando um ponto no início.
 
 - Os arquivos especiais como PRN, LPT1, COM1 também funcionam como no DOS. Exemplo: `cat arquivo > PRN`
 
-- Todos os comandos que estão no PATH do DOS também estão disponíveis no Cygwin. Os do COMMAND.COM não.
+- Todos os comandos que estão no PATH do DOS também estão disponíveis no Cygwin. Os do `COMMAND.COM` não.
 
 
 <h2 id="toc18">Dicas para usuários do Linux/UNIX</h2>
@@ -532,7 +532,7 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 
 - Você é sempre root! Usuário “Administrador” ou usuário normal no Windows, ao usar Cygwin, tem poderes de root. Cuidado pois você pode apagar o `/home` ou outros diretórios importantes.
 
-- O `mount` do Cygwin é usado para mapear drives (D:, E:) e compartilharmentos de rede (shares) em diretórios normais. Diferente do `mount` do Linux, o ponto de montagem (diretório) não precisa existir. E o mapeamento é definitivo, permanecendo mesmo quando reiniciar a máquina. Use o `umount` para cancelar um mapeamento. Ex.: `mount C: /c`
+- O `mount` do Cygwin é usado para mapear drives (`D:`, `E:`) e compartilharmentos de rede (shares) em diretórios normais. Diferente do `mount` do Linux, o ponto de montagem (diretório) não precisa existir. E o mapeamento é definitivo, permanecendo mesmo quando reiniciar a máquina. Use o `umount` para cancelar um mapeamento. Ex.: `mount C: /c`
 
 - Se for alterar o PATH, lembre-se que o PATH original do Windows (`$PATH`) deve sempre estar anexado no final, exemplo: `PATH="/usr/local/bin:/usr/bin:/bin:$PATH"`
 
@@ -542,7 +542,7 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 
 - Os comandos também podem ser digitados EM MAIÚSCULAS. Estranho...
 
-- Os atalhos criados com o “ln -s” são, na verdade, atalhos do Windows (arquivos .lnk) e funcionam nos dois sistemas. Não se preocupe, se forem guardados com `tar` e expandidos num sistema Linux, viram links simbólicos normais.
+- Os atalhos criados com o `ln -s` são, na verdade, atalhos do Windows (arquivos `.lnk`) e funcionam nos dois sistemas. Não se preocupe, se forem guardados com `tar` e expandidos num sistema Linux, viram links simbólicos normais.
 
 - Não há o comando `ifconfig`. Para ver as configurações de rede, use `WINIPCFG` ou `IPCONFIG /ALL`.
 
@@ -553,7 +553,7 @@ C:\cygwin\home\aurelio\pessoal\aurelio.net\doc
 
 Crie estes arquivos dentro do seu diretório (`/home/usuário`) para que o Cygwin fique bem configurado.
 
-Se for criar estes arquivos em algum editor de textos do Windows, lembre-se de depois remover a extensão .txt com o comando `mv .arquivo.txt .arquivo` e usar o comando `dos2unix` para convertê-los para o formato UNIX.
+Se for criar estes arquivos em algum editor de textos do Windows, lembre-se de depois remover a extensão `.txt` com o comando `mv .arquivo.txt .arquivo` e usar o comando `dos2unix` para convertê-los para o formato UNIX.
 
 Nota: Há uma cópia destes arquivos em [https://aurelio.net/cygwin/](/cygwin/).
 

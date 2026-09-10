@@ -79,15 +79,15 @@ Veja o artigo [Cygwin no pendrive](http://mdicas.blogspot.com/2008/06/cygwin-no-
 
 Basta criar um arquivo .xinitrc (X init RC) no seu $HOME e torná-lo executável. Seguem os comandos necessários para fazer isso:
 
-```console
-$ echo wmaker >> ~/.xinitrc
-$ chmod +x ~/.xinitrc
+```bash
+echo wmaker >> ~/.xinitrc
+chmod +x ~/.xinitrc
 ```
 
 Só é preciso fazer isso uma vez. Para chamar a interface gráfica, basta usar o mesmo comando do Linux:
 
-```console
-$ startx
+```bash
+startx
 ```
 
 <h3 id="toc9">Dialog no Cygwin!</h3>
@@ -195,7 +195,7 @@ Os sinais no Cygwin são diferentes dos do Linux. O comando `trap -l` lista quai
 
 <h3 id="toc11">Arquivos de Configuração</h3>
 
-#### .inputrc
+#### `.inputrc`
 
 ```config
 # Acentuacao
@@ -210,7 +210,7 @@ set completion-ignore-case on
 #"\e[2~": paste-from-clipboard
 ```
 
-#### .bash_profile
+#### `.bash_profile`
 
 ```bash
 # Listagem de diretorios usando cores
@@ -231,14 +231,14 @@ alias nano="LANG=pt_BR nano"
 shopt -s nocaseglob
 ```
 
-#### .nanorc
+#### `.nanorc`
 
 ```config
 set smooth      # rolar texto linha a linha
 #set const      # mostrar numero da coluna/linha
 ```
 
-#### .vimrc
+#### `.vimrc`
 
 ```vim
 set textwidth=70 background=dark
@@ -281,7 +281,7 @@ Ambiente de testes:
 Procedimento:
 
 1. Do Windão, abri uma janela do Cygwin.
-2. Chamei o XFree com os parâmetros “-query IP-do-iBook”
+2. Chamei o XFree com os parâmetros `-query IP-do-iBook`
 3. O XFree do iBook respondeu, mandando a tela de login (KDM)
 4. Entrei com meu usuário e senha do Linux, e...
 
