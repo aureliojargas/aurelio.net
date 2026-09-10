@@ -36,8 +36,7 @@ uma construção beeeeem antiga, pé direito gigantesco, prédio
 retangular com um campo no meio, interessante. A cor externa é rosa,
 parece que por ter sido feita com óleo de baleia ou algo assim.
 
-![](academia.jpg)
-*Academia de Cadetes do Exército*
+![Academia de Cadetes do Exército](academia.jpg)
 
 ## A Palestra
 
@@ -48,8 +47,7 @@ pessoas, meu maior público até hoje!
 
 ![](galera2.jpg)
 
-![](galera1.jpg)
-*Pessoal do auditório de dois andares*
+![Pessoal do auditório de dois andares](galera1.jpg)
 
 > **Popismo:** Antes de começar a palestra, o amigo ex-virtual
 > Andreyev veio me contar que viu um cara em Campinas com uma
@@ -64,8 +62,7 @@ a "casa cheia". Perto das 22h muita gente saiu, imagino que por causa
 do último ônibus, ou talvez por não aguentar mais ouvirem a minha voz
 :)
 
-![](eu.jpg)
-*Eu, comemorando não lembro o que :)*
+![Eu, comemorando não lembro o que :)](eu.jpg)
 
 Foram 2h30 de palestra, acabando perto das 11 da noite. Nem eu
 acreditei quando me falaram que horas eram, mas ainda restavam umas 70
@@ -76,8 +73,7 @@ O interessante é que toda a palestra foi filmada, parece que vão
 tentar colocar ela num desses CDs de revistas de Linux, vamos ver se
 rola.
 
-![](staff.jpg)
-*André Déo, Anselmo Zago, Carlos Miglinski, Moça Bonita, eu, Adriano Pila*
+![André Déo, Anselmo Zago, Carlos Miglinski, Moça Bonita, eu, Adriano Pila](staff.jpg)
 
 ## O Depois
 
@@ -85,8 +81,7 @@ Depois fomos jantar num restaurante português, onde comi o tal do
 bacalhau pela primeira vez na vida. Sempre achei que bacalhau era
 ruim e palha, mas é bom.
 
-![](restaurante.jpg)
-*Em pé: Eu, Alexandra, Mig ::: Sentados: Adriano, Adriana, Magali, Marafon*
+![Em pé: Eu, Alexandra, Mig ::: Sentados: Adriano, Adriana, Magali, Marafon](restaurante.jpg)
 
 Enfim, cama, lá por 1h30 da manhã. Dia cheio: manhã e tarde
 trabalhando na Conectiva, depois viagem, depois palestra de 2h30,
@@ -101,5 +96,4 @@ O cara cortou o fusca logo após o banco do motorista e enjambrou uma
 mini-carroceria ali. Demorou até eu conseguir pegar a câmera dentro da
 mochila, então só consegui uma foto de um ângulo ruim, mas está aí:
 
-![](fusca.jpg)
-*Fusca com carroceria de madeira*
+![Fusca com carroceria de madeira](fusca.jpg)

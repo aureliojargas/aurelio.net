@@ -140,8 +140,7 @@ restaurante do hotel, com tudo pago pela organização do evento. Depois
 do almoço, uma reunião do pessoal na recepção do hotel para tirar
 fotos:
 
-![](img/galera.jpg)
-*Em pé: Não sei, Julio Neves, Rubens Queiroz, Maurício de Castro, Leonardo Lemes ::: Fileira do meio: Ribamar Santarosa, Daniel Ferreira, Pablo Dall'Oglio, Marcelo Malheiros, Nasair Júnior Silva ::: Na frente: César Brod, eu*
+![Em pé: Não sei, Julio Neves, Rubens Queiroz, Maurício de Castro, Leonardo Lemes ::: Fileira do meio: Ribamar Santarosa, Daniel Ferreira, Pablo Dall'Oglio, Marcelo Malheiros, Nasair Júnior Silva ::: Na frente: César Brod, eu](img/galera.jpg)
 
 > Nota 1: Me desculpe pelo "Não sei", mas eu realmente não sei
 > seu nome. Me mande e-mail avisando!
@@ -187,8 +186,7 @@ pequeno deslize, o resto do dia foi tranquilo e gratificante.
 
 ## Curso de Expressões Regulares
 
-![](img/turma-er.jpg)
-*Turma do curso, foto tirada ao meio-dia*
+![Turma do curso, foto tirada ao meio-dia](img/turma-er.jpg)
 
 O curso foi muito bacana. Ele foi andando num ritmo tranquilo, e no
 fim do dia todos os metacaracteres básicos tinham sido vistos em

@@ -88,8 +88,7 @@ que sempre me apoiaram, e que se não fosse o seu incentivo e força,
 nada disso estaria acontecendo agora. Julio, Rubens, vocês são os
 caras. **VALEU MESMO**.
 
-![](juliorubens.jpg)
-*Meus padrinhos Julio Neves e Rubens Queiroz, no FISL de 2003*
+![Meus padrinhos Julio Neves e Rubens Queiroz, no FISL de 2003](juliorubens.jpg)
 
 ## A Ida
 
@@ -233,8 +232,7 @@ Leonardo Vaz. Era uma festinha íntima, para umas 20 pessoas, e se
 tornou um evento com quase 100 cabeças. Foi um legítimo churrasco
 gaúcho feito por gaúchos tchê!
 
-![](churrasqueiro.jpg)
-*Bohne - O Churrasqueiro ::: Piter - O Controle de Qualidade*
+![Bohne - O Churrasqueiro ::: Piter - O Controle de Qualidade](churrasqueiro.jpg)
 
 A comilança aconteceu na sede do Serpro, mas como eu estava com pouca
 blusa e o frio naquela noite resolveu dar as caras, **fui embora cedo**
@@ -302,11 +300,9 @@ Na correria, esqueci totalmente de tirar a já tradicional
 encarecidamente para quem tirou alguma foto da palestra que me envie.
 **ATUALIZAÇÃO:** recebi algumas fotos da palestra, valeu amiguinhos!
 
-![](palestra1.jpg)
-*Hora da propaganda: Expressões Regulares e Python ;)*
+![Hora da propaganda: Expressões Regulares e Python ;)](palestra1.jpg)
 
-![](palestra2.jpg)
-*No final sessão de perguntas, com o Deivi coordenando*
+![No final sessão de perguntas, com o Deivi coordenando](palestra2.jpg)
 
 A palestra em si durou 45 minutos e depois foram mais 10 para
 as perguntas do pessoal. Foi a primeira vez que "tentei" falar menos
@@ -347,15 +343,13 @@ lembro quem que estava oferecendo. Muitos gringos por lá, que não se
 cansavam de tirar fotos dos espetos, das carnes, como quem não estava
 acreditando em toda aquela fartura de comida.
 
-![](churrasco2.jpg)
-*Eu, Paulino e Anahuac*
+![Eu, Paulino e Anahuac](churrasco2.jpg)
 
 Depois **aeroporto e avião**. Viemos eu, o Diego e o Rubens Queiroz
 papeando até Curitiba. Ah, o Rubens estava de aniversário! Pouso às
 15:50.
 
-![](aeroporto.jpg)
-*No aeroporto de POA: Eu, Marcus Maciel (UnderLinux.com.br), Rubens Queiroz (Dicas-L), Diego Linke (FreeBSD)*
+![No aeroporto de POA: Eu, Marcus Maciel (UnderLinux.com.br), Rubens Queiroz (Dicas-L), Diego Linke (FreeBSD)](aeroporto.jpg)
 
 Para minha surpresa, o Diego, meu companheiro de quarto que eu nunca
 tinha visto antes, é **meu vizinho**, de poucas quadras, então ainda
@@ -381,8 +375,7 @@ o Fernando Aires, quando vi meu cabeção no telão do estande do ITI
 (Governo Federal), que estava passando um vídeo. Saí na foto com cara
 de bobo e apontando para frente.
 
-![](olha_eu.jpg)
-*Olha eu lá! Olha eu lá!*
+![Olha eu lá! Olha eu lá!](olha_eu.jpg)
 
 Depois que fui ver que foi de uma entrevista que dei lá em Brasília,
 no evento de capacitação. Falei uns 30 minutos e no vídeo apareceram
@@ -390,68 +383,46 @@ somente duas frases sem graça e sem sal. Fazer o quê...
 
 ## A Galera
 
-![](thobias.jpg)
-*Thobias Salazar Trevisan (ZZ, RAC)*
+![Thobias Salazar Trevisan (ZZ, RAC)](thobias.jpg)
 
-![](morimoto.jpg)
-*Carlos Morimoto (Kurumin)*
+![Carlos Morimoto (Kurumin)](morimoto.jpg)
 
-![](brain.jpg)
-*Augusto Campos (br-linux.org)*
+![Augusto Campos (br-linux.org)](brain.jpg)
 
-![](guaracy.jpg)
-*Guaracy Monteiro (Ruby-Man)*
+![Guaracy Monteiro (Ruby-Man)](guaracy.jpg)
 
-![](bohne.jpg)
-*Frederico Bohne*
+![Frederico Bohne](bohne.jpg)
 
-![](sobral_kojima.jpg)
-*Tiago Sobral, Alfredo Kojima (Window Maker)*
+![Tiago Sobral, Alfredo Kojima (Window Maker)](sobral_kojima.jpg)
 
-![](fabs.jpg)
-*Fabianne Balvedi (Blender)*
+![Fabianne Balvedi (Blender)](fabs.jpg)
 
-![](paloma.jpg)
-*Paloma Costa (Java-Woman)*
+![Paloma Costa (Java-Woman)](paloma.jpg)
 
-![](pablo.jpg)
-*Pablo Dall'Oglio (PHP-Gtk)*
+![Pablo Dall'Oglio (PHP-Gtk)](pablo.jpg)
 
-![](priscilla.jpg)
-*Priscilla Pimenta*
+![Priscilla Pimenta](priscilla.jpg)
 
-![](brito.jpg)
-*Fabio Brito*
+![Fabio Brito](brito.jpg)
 
-![](tania.jpg)
-*Tania Moreira*
+![Tania Moreira](tania.jpg)
 
-![](jose.jpg)
-*José (CCL-BR)*
+![José (CCL-BR)](jose.jpg)
 
-![](kimie.jpg)
-*Kimie*
+![Kimie](kimie.jpg)
 
-![](toledo.jpg)
-*Leandro Toledo*
+![Leandro Toledo](toledo.jpg)
 
-![](glauber.jpg)
-*Glauber Costa*
+![Glauber Costa](glauber.jpg)
 
-![](fabioh.jpg)
-*Fabio Henrique (Honeypot-BR)*
+![Fabio Henrique (Honeypot-BR)](fabioh.jpg)
 
-![](pauloh.jpg)
-*Paulo Henrique (PH)*
+![Paulo Henrique (PH)](pauloh.jpg)
 
-![](galera_churrasco2.jpg)
-*Diego Linke, Till Kamppeter, Oscar Santos*
+![Diego Linke, Till Kamppeter, Oscar Santos](galera_churrasco2.jpg)
 
-![](galera.jpg)
-*Marcelo Gondim, Rudá Moura, Augusto Campos, eu, Thobias Trevisan, Lucas Santos*
+![Marcelo Gondim, Rudá Moura, Augusto Campos, eu, Thobias Trevisan, Lucas Santos](galera.jpg)
 
-![](galera2.jpg)
-*Lucas, Gondim, Simpson, Sulamita, eu, Wilson, Ramoni, Piter Punk*
+![Lucas, Gondim, Simpson, Sulamita, eu, Wilson, Ramoni, Piter Punk](galera2.jpg)
 
-![](openoffice.jpg)
-*Cláudio Ferreira (à esquerda) e time do projeto OpenOffice Brasil*
+![Cláudio Ferreira (à esquerda) e time do projeto OpenOffice Brasil](openoffice.jpg)

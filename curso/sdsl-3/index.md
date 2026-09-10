@@ -102,11 +102,9 @@ problema e fazer a expressão, apareceram duas respostas diferentes e
 fechamos o curso fazendo uma análise detalhada para decidir qual era a
 melhor solução. **MEGA NERD**.
 
-![](turma-quadro.jpg)
-*A turma de feras em Expressões Regulares, com suas crias no quadro*
+![A turma de feras em Expressões Regulares, com suas crias no quadro](turma-quadro.jpg)
 
-![](quadro.jpg)
-*As duas expressões de data que exercitaram os neurônios do pessoal*
+![As duas expressões de data que exercitaram os neurônios do pessoal](quadro.jpg)
 
 Para facilitar a leitura, as expressões espaçadas:
 
@@ -165,5 +163,4 @@ está de parabéns e a organização do evento também. Também consegui
 terminar de ler o livro do Kelly Slater, o hexa campeão mundial de
 surfe que lançou sua biografia, show de bola.
 
-![](amigos.jpg)
-*Luciano Ramalho, César Brod, Julio Neves e eu*
+![Luciano Ramalho, César Brod, Julio Neves e eu](amigos.jpg)

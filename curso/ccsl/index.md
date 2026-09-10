@@ -37,16 +37,14 @@ minhas fitinhas k7 (CD no carro? Coisa de preibói ;).
 Em duas horas estava em Joinville, a cidade que só chove. Mas aquele
 dia estava sol forte, hooray!
 
-![](img/joinville.jpg)
-*Portal de entrada de Joinville*
+![Portal de entrada de Joinville](img/joinville.jpg)
 
 O evento foi num local chamado Centreventos. O amigo toti me garantiu:
 "Pode vir tranqüilo que você acha". E foi mesmo. Parabéns à Prefeitura
 de Joinville, tinha placas indicando onde era o tal Centreventos desde
 a entrada de cidade, não tive como errar.
 
-![](img/centreventos.jpg)
-*Centreventos: bonito e grande, tudo novo e bem cuidado, legal*
+![Centreventos: bonito e grande, tudo novo e bem cuidado, legal](img/centreventos.jpg)
 
 ## Expressões Regulares
 
@@ -86,8 +84,7 @@ estar rodeado de mentes poderosas e poder papear e aprender com eles.
 
 Parte do pessoal, reunido na sala dos palestrantes:
 
-![](img/palestrantes.jpg)
-*Não sei, Sulamita, Cláudio, Helio, Roxo, Eu, Bolaños, Bruder, Fabianne, Marcelo, Julio, Paulino, Maddog*
+![Não sei, Sulamita, Cláudio, Helio, Roxo, Eu, Bolaños, Bruder, Fabianne, Marcelo, Julio, Paulino, Maddog](img/palestrantes.jpg)
 
 Ah, essa sala dos palestrantes era massa! Tinha cadeiras, link com
 Internet, água, refri, bolachas e frutas. Mordomia né?
@@ -147,5 +144,4 @@ solzão e fez um dia animal, embora sem ondas também. O jeito foi subir
 o morro e tirar fotos. Foi triste deixar a praia e voltar para
 Curitiba sem ter entrado na água, mas enfim...
 
-![](img/saochico.jpg)
-*Curitiba é pra lá, lá loooonge...*
+![Curitiba é pra lá, lá loooonge...](img/saochico.jpg)

@@ -43,8 +43,7 @@ RootSh na estação Paraíso e ele nos levou até o **Hotel** Real
 Paulista. Deu tempo de tomarmos o café da manhã com tranquilidade, e
 depois ir para o evento.
 
-![](banheiro.jpg)
-*Peculiaridade: pia, espelho e tomada dentro do box do chuveiro!*
+![Peculiaridade: pia, espelho e tomada dentro do box do chuveiro!](banheiro.jpg)
 
 O dia foi bem **descontraído**, (re)encontrando vários amigos, batendo
 papo, assistindo às palestras, aquele social massa.
@@ -128,23 +127,16 @@ Covolo, Indiox, Rafael.
 
 A comunidade do Software Livre é mesmo muito bacana. Longa vida a ela!
 
-![](galera1.jpg)
-*Sobral, eu, Sula, Julio, Léo*
+![Sobral, eu, Sula, Julio, Léo](galera1.jpg)
 
-![](galera2.jpg)
-*Piter Punk, eu, Santos*
+![Piter Punk, eu, Santos](galera2.jpg)
 
-![](galera3.jpg)
-*Márcio, Ralf, Lucas, eu, Toledo*
+![Márcio, Ralf, Lucas, eu, Toledo](galera3.jpg)
 
-![](galera4.jpg)
-*Gondim, Ramoni, Indiox, Santos, eu*
+![Gondim, Ramoni, Indiox, Santos, eu](galera4.jpg)
 
-![](alunos-centro.jpg)
-*Alunos do Centro Público de Formação Profissional em Tecnologia da Informação em Software Livre de Santo Andre - SP (ufa!)*
+![Alunos do Centro Público de Formação Profissional em Tecnologia da Informação em Software Livre de Santo Andre - SP (ufa!)](alunos-centro.jpg)
 
-![](nerds.jpg)
-*Nerds e seus computadores*
+![Nerds e seus computadores](nerds.jpg)
 
-![](boteco.jpg)
-*Galera no boteco comendo uma pizza*
+![Galera no boteco comendo uma pizza](boteco.jpg)

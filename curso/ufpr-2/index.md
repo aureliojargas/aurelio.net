@@ -25,8 +25,7 @@ Há cinco meses atrás, participei da [I Semana do Sofware Livre](/curso/ufpr-1/
 na UFPR. Agora estou novamente nessa II Semana, com a mesma palestra
 sobre desenvolvimento de Software Livre.
 
-![](turminha.jpg)
-*Amiguinhos vendo algo no telão: Fer, Boiko, Boto, Helio, Eu*
+![Amiguinhos vendo algo no telão: Fer, Boiko, Boto, Helio, Eu](turminha.jpg)
 
 A diferença é o enfoque. Na primeira o tempo acabou muito rápido e
 apenas a primeira parte da palestra ficou bem explicada. Dessa vez, a
@@ -38,8 +37,7 @@ palestra anterior, então estava tudo ocorrendo conforme os planos.
 
 ![](galera-esquerda.jpg)
 
-![](galera-direita.jpg)
-*Quantos desenvolvedores de Software Livre podem nascer daqui?*
+![Quantos desenvolvedores de Software Livre podem nascer daqui?](galera-direita.jpg)
 
 Apesar do início estar marcado para as 18h30, só fui começar às 19h15,
 pois pediram para que aguardasse o pessoal sair da aula. Foram 2 horas
@@ -51,8 +49,7 @@ algumas visitas especiais, como meus pais e minha irmã, que
 aproveitaram o evento local e gratuito para me ver falando pela
 primeira vez. Então para mim, essa palestra teve um sabor especial.
 
-![](familia.jpg)
-*Minha família no canto inferior direito: Karla (irmã), Geny (mãe), Gabriel (padrasto)*
+![Minha família no canto inferior direito: Karla (irmã), Geny (mãe), Gabriel (padrasto)](familia.jpg)
 
 O Groo estava lá, amigão meu dos bons tempos de CEFET, outro que
 acabou se enveredando pelo caminho nerdz também. Para completar a

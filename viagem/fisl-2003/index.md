@@ -72,29 +72,21 @@ Mas GURI, melhor ainda do que as palestras, foi a possibilidade de
 encontrar "ao vivo" amigos que eram apenas virtuais TCHÊ. Outros fazia
 muito tempo que eu não via:
 
-![](rubens.jpg)
-*Rubens Queiroz (Dicas-L)*
+![Rubens Queiroz (Dicas-L)](rubens.jpg)
 
-![](julio.jpg)
-*Julio Cezar Neves (Livro Shell Script)*
+![Julio Cezar Neves (Livro Shell Script)](julio.jpg)
 
-![](paradise.jpg)
-*Marcus Vinicius "Paradise"*
+![Marcus Vinicius "Paradise"](paradise.jpg)
 
-![](thobias.jpg)
-*Thobias Salazar Trevisan (Funções ZZ)*
+![Thobias Salazar Trevisan (Funções ZZ)](thobias.jpg)
 
-![](radtke.jpg)
-*Augusto César Radtke*
+![Augusto César Radtke](radtke.jpg)
 
-![](klayson.jpg)
-*Klayson Bonatto*
+![Klayson Bonatto](klayson.jpg)
 
-![](binhara.jpg)
-*Alessandro Binhara*
+![Alessandro Binhara](binhara.jpg)
 
-![](marcelo.jpg)
-*Marcelo Tosatti (Kernel)*
+![Marcelo Tosatti (Kernel)](marcelo.jpg)
 
 
 ## Sessão EXTRA - Rudá encontra seus ídolos
@@ -105,10 +97,8 @@ desabrochar seu lado fã e se desmanchou de alegria ao encontrar seus
 sido o protagonista principal do filme
 "[O PESTE](http://movieweb.com/movie/thepest/)".
 
-![](aoliva.jpg)
-*Rudá & Alexandre Oliva (gcc, RedHat)*
+![Rudá & Alexandre Oliva (gcc, RedHat)](aoliva.jpg)
 
-![](icaza.jpg)
-*Rudá & Miguel de Icaza (Gnome, MONO)*
+![Rudá & Miguel de Icaza (Gnome, MONO)](icaza.jpg)
 
 ![](fim.gif)

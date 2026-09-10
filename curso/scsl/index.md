@@ -39,8 +39,7 @@ estava nos esperando. Alguns amigos já tinham chegado, e fomos
 conversando num clima de festa enquanto a van percorria seu longo
 caminho até o hotel.
 
-![](van.jpg)
-*Galera na van, recém-chegada em Brasília*
+![Galera na van, recém-chegada em Brasília](van.jpg)
 
 ## A Chegada (Ou Seria Ralada? :)
 
@@ -58,8 +57,7 @@ organizadores expuseram o problema, pedindo a **colaboração** de todos
 para preparar mais salas para o dia seguinte. Limpeza, arrumação de
 mesas e cadeiras, instalação do Linux, tudo precisava ser feito.
 
-![](madrugada.jpg)
-*Robôs instaladores de máquinas, às 02:45 da madrugada*
+![Robôs instaladores de máquinas, às 02:45 da madrugada](madrugada.jpg)
 
 Todos sem exceção arregaçaram as mangas e com um intervalo para
 devorar sfihas do Habib's à meia-noite, seguimos aprontando os
@@ -82,8 +80,7 @@ após todos terem dito suas falas, os cursos começaram.
 
 ![](abertura1.jpg)
 
-![](abertura2.jpg)
-*Ministro José Dirceu, Senadora Serys, ITI, Serpro, Anatel, Correios, UnB, ...*
+![Ministro José Dirceu, Senadora Serys, ITI, Serpro, Anatel, Correios, UnB, ...](abertura2.jpg)
 
 ## 26.Abr.2004 ::: O Editor VI
 
@@ -117,8 +114,7 @@ Foi muito gratificante, eles realmente aprenderam.
 
 ![](turma-er1.jpg)
 
-![](turma-er2.jpg)
-*Turma do curso de Expressões Regulares*
+![Turma do curso de Expressões Regulares](turma-er2.jpg)
 
 ## 27.Abr.2004 ::: Python Básico
 
@@ -146,8 +142,7 @@ custou o único dia livre que eu iria ter em Brasília e como resultado
 não dei uma voltinha sequer na cidade, voltei pra Curitiba sem
 conhecer NADA....
 
-![](turma-python.jpg)
-*Turma do curso de Python*
+![Turma do curso de Python](turma-python.jpg)
 
 ## 28.Abr.2004 ::: Introdução ao Shell Script
 
@@ -161,8 +156,7 @@ eram principiantes. Variáveis, comandos, conceitos, e chegou o almoço.
 De tarde vimos bastante exercícios, pois sem prática não há como
 fixar. Se bateram, mas foram progredidndo e fazendo um por um.
 
-![](turma-shell.jpg)
-*Turma do curso de Shell*
+![Turma do curso de Shell](turma-shell.jpg)
 
 ## A Viagem de Volta
 
@@ -183,14 +177,10 @@ estava pousando em Curitiba.
 
 ## Aleatoriedades
 
-![](pagodeiros.jpg)
-*Grupo de pagodeiros que apareceu no evento (kov, verde, lucas)*
+![Grupo de pagodeiros que apareceu no evento (kov, verde, lucas)](pagodeiros.jpg)
 
-![](instrutores.jpg)
-*???, Helio, Aurelio, Márcio, Julio, Lucas, Ralf, Marcelo*
+![???, Helio, Aurelio, Márcio, Julio, Lucas, Ralf, Marcelo](instrutores.jpg)
 
-![](festa.jpg)
-*Festa na casa do Marcelo Branco*
+![Festa na casa do Marcelo Branco](festa.jpg)
 
-![](pavilhao.jpg)
-*Não precisava, não precisava... Dois pavilhões em minha homenagem! :)*
+![Não precisava, não precisava... Dois pavilhões em minha homenagem! :)](pavilhao.jpg)
