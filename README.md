@@ -131,14 +131,29 @@ pre-commit installed at .git/hooks/pre-push
 
 ## Centered images (with or without captions)
 
-The only special markup I use in my articles is the centered image with optional caption at the bottom.
+In posts and articles it's nice to have centered images with optional caption at the bottom. Use the `<figure>` tag for that.
 
-They are placed between paragraphs (or other blocks) vertically separating chunks of text, adding some pause to the reading and providing information or demonstration about the current topic.
+These images are placed between paragraphs (or other blocks) vertically separating chunks of text, adding some pause to the reading and providing information or demonstration about the current topic.
 
-In Markdown files, use the image tag solo in a paragraph of its own. My [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/main/_plugins/imgcaption.rb) will generate the HTML markup at build time:
+In Markdown files, use the image markup solo in a paragraph of its own:
 
 ```md
+Some text in a paragraph.
+
 ![Image caption](image.jpg)
+
+Another paragraph.
+```
+
+The [custom imgcaption.rb plugin](https://github.com/aureliojargas/aurelio.net/blob/main/_plugins/imgcaption.rb) will replace the generated HTML with the expected `<figure>` tags at build time.
+
+```html
+<p>Some text in a paragraph.</p>
+<figure>
+  <img src="image.jpg" alt="Image caption" />
+  <figcaption>Image caption</figcaption>
+</figure>
+<p>Another paragraph.</p>
 ```
 
 In HTML files, use the following structures:
@@ -162,16 +177,14 @@ In HTML files, use the following structures:
 
 <!-- Image with no caption (omit the `<span>` tag): -->
 
-<p class="image">
+<figure>
   <img src="image.jpg" alt="alt text" />
-</p>
+</figure>
 ```
 
 ## Right-aligned images (decorative)
 
-Centered, solo images (with or without captions) are preferred (see previous topic).
-
-But sometimes, a small, purely decorative image (not informational) gives some flare to a text. They should not break the reading flow neither cause vertical separation.
+Centered, solo images (with or without captions) are preferred (see previous topic). But sometimes, a small, purely decorative image (not informational) gives some flare to a text. They should not break the reading flow neither cause vertical separation.
 
 Insert decorative images as right-aligned (using the `right` class) inside the desired paragraph. Example:
 

@@ -4,7 +4,8 @@
 #
 # Usage: {{ content | imgcaption }}
 #
-# Images with no caption (alt="" attribute) are just marked with an 'image' class.
+# Images with no caption (alt="" attribute) are marked with the <figure> tag,
+# but without <figcaption>.
 #
 #   Markdown: ![](http://example.com/image.jpg)
 #   HTML:     <p><img src="http://example.com/image.jpg" alt="" /></p>
@@ -16,7 +17,7 @@
 #   HTML:     <p><a href="http://example.com"><img src="http://example.com/image.jpg" alt="" /></a></p>
 #   Plugin:   <figure><a href="http://example.com"><img src="http://example.com/image.jpg" alt="" /></a></figure>
 #
-# Images with caption are marked with the <figure> tag.
+# Images with caption are marked with the <figure> and <figcaption> tags.
 #
 #   Markdown: ![caption1](http://example.com/image.jpg)
 #   HTML:     <p><img src="http://example.com/image.jpg" alt="caption1" /></p>
