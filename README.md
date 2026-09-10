@@ -1,6 +1,6 @@
 # Sources for Aurelio.net website
 
-The full sources for my personal website https://aurelio.net, online since 1999, now with 4500+ files.
+The full sources for my personal website <https://aurelio.net>, online since 1999, now with 4500+ files.
 
 At the beginning it was only HTML files, then I started to use my own software [txt2tags](http://txt2tags.org) to generate the pages, then I moved the blog part to WordPress and now it is back as a static site, powered by [Jekyll](http://jekyllrb.com/) and Markdown.
 
@@ -14,7 +14,7 @@ Every commit to the `main` branch triggers a complete site build and deploy in N
 
 The deploy configuration is in the `netlify.toml` file.
 
-The deploy logs are in https://app.netlify.com/sites/aurelio/deploys.
+The deploy logs are in <https://app.netlify.com/sites/aurelio/deploys>.
 
 If you want to test locally the Netlify build, use their [Docker image](https://github.com/netlify/build-image).
 

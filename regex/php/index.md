@@ -57,6 +57,6 @@ Manual das antigas funções POSIX, para consultar caso você ainda precise supo
 * [Differences from POSIX regex](http://php.net/manual/en/reference.pcre.pattern.posix.php)
 Um miniguia para ajudar a migração de expressões regulares POSIX para PCRE.
 
-* http://www.regular-expressions.info/php.html
+* <http://www.regular-expressions.info/php.html>
 
-* http://www.regular-expressions.info/pcre.html
+* <http://www.regular-expressions.info/pcre.html>

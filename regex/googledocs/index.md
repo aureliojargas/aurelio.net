@@ -18,7 +18,7 @@ title: Expressões Regulares + Google Docs
 
 Decidi disponibilizar publicamente a planilha em que fiz todos os meus testes com as expressões, enquanto escrevia este tópico para o livro. Há muita informação importante concentrada ali, além de todos os exemplos que usei no texto. Faça uma cópia para o seu Google Docs (Google Drive) e brinque à vontade:
 
-https://docs.google.com/spreadsheet/ccc?key=0AkhT49x22EfMdG9TU2JHOGZPdEV6bzlESUNIc2xKMUE
+<https://docs.google.com/spreadsheet/ccc?key=0AkhT49x22EfMdG9TU2JHOGZPdEV6bzlESUNIc2xKMUE>
 
 
 ## Links

@@ -13,6 +13,6 @@ Artigo que mostra as diferenças (detalhes sórdidos) dos "wildcards" do Word pa
 
 * [Putting regular expressions to work in Word](http://office.microsoft.com/en-us/help/HA010873041033.aspx)
 
-* http://word.mvps.org/FAQs/General/UsingWildcards.htm
+* <http://word.mvps.org/FAQs/General/UsingWildcards.htm>
 
-* http://office.microsoft.com/en-us/assistance/HA010873051033.aspx
+* <http://office.microsoft.com/en-us/assistance/HA010873051033.aspx>

@@ -44,10 +44,10 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 ## My books
 
 - [Shell Script Profissional](https://www.shellscript.com.br) *(Professional Shell Script)*
-  <br>480 pages, ISBN 978-85-7522-152-5.
+  <br />480 pages, ISBN 978-85-7522-152-5.
 
 - [Expressões Regulares](https://www.piazinho.com.br) *(Regular Expressions)*
-  <br>248 pages, ISBN 978-85-7522-475-5.
+  <br />248 pages, ISBN 978-85-7522-475-5.
 
 > Both books are written in Portuguese.
 

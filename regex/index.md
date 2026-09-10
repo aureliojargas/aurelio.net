@@ -53,27 +53,27 @@ article_footer_after: false
 <table class="livros">
     <tr>
         <td><a href="https://www.piazinho.com.br"><img src="/img/icon/128/livroregex5.png"></a></td>
-        <td><a href="https://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a><br><br>Livro de 248 páginas lançado em fevereiro de 2016, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Está à venda na maioria das livrarias do país, na versão impressa <b>e também em e-book</b> (livro digital). ISBN: 978-85-7522-474-8</td>
+        <td><a href="https://www.piazinho.com.br">Expressões Regulares - Uma abordagem divertida (5ª edição)</a><br /><br />Livro de 248 páginas lançado em fevereiro de 2016, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Está à venda na maioria das livrarias do país, na versão impressa <b>e também em e-book</b> (livro digital). ISBN: 978-85-7522-474-8</td>
     </tr>
     <tr>
         <td><a href="https://www.piazinho.com.br/ed4/"><img src="/img/icon/128/livroregex4.png"></a></td>
-        <td><a href="https://www.piazinho.com.br/ed4/">Expressões Regulares - Uma abordagem divertida (4ª edição)</a><br><br>Livro de 224 páginas lançado em novembro de 2012, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-337-6 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed4/">Expressões Regulares - Uma abordagem divertida (4ª edição)</a><br /><br />Livro de 224 páginas lançado em novembro de 2012, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-337-6 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
         <td><a href="https://www.piazinho.com.br/ed3/"><img src="/img/icon/128/livroregex3.png"></a></td>
-        <td><a href="https://www.piazinho.com.br/ed3/">Expressões Regulares - Uma abordagem divertida (3ª edição)</a><br><br>Livro de 208 páginas lançado em outubro de 2009, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-212-6 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed3/">Expressões Regulares - Uma abordagem divertida (3ª edição)</a><br /><br />Livro de 208 páginas lançado em outubro de 2009, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-212-6 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
         <td><a href="https://www.piazinho.com.br/ed2/"><img src="/img/icon/128/livroregex2.png"></a></td>
-        <td><a href="https://www.piazinho.com.br/ed2/">Expressões Regulares - Uma abordagem divertida (2ª edição)</a><br><br>Livro de 168 páginas lançado em 2008, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-173-0 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed2/">Expressões Regulares - Uma abordagem divertida (2ª edição)</a><br /><br />Livro de 168 páginas lançado em 2008, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 978-85-7522-173-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
         <td><a href="https://www.piazinho.com.br/ed1/"><img src="/img/icon/128/livroregex1.png"></a></td>
-        <td><a href="https://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br><br> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
+        <td><a href="https://www.piazinho.com.br/ed1/">Expressões Regulares - Uma abordagem divertida (1ª edição)</a><br /><br /> Livro de 144 páginas lançado em 2006, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. ISBN: 85-7522-100-0 <b>[ESGOTADO]</b></td>
     </tr>
     <tr>
         <td><a href="/regex/guia/"><img src="/img/icon/128/guiaregex.png"></a></td>
-        <td><a href="/regex/guia/">Expressões Regulares - Guia de Consulta Rápida</a> — <a href="/regex/guia/">LEIA ONLINE</a><br><br>Livro de 96 páginas lançado em 2001, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Tem o formato "de bolso", fácil de carregar. Também pode ser <a href="/regex/guia/">consultado integral e gratuitamente na Internet</a>. ISBN: 85-7522-011-X <b>[ESGOTADO]</b></td>
+        <td><a href="/regex/guia/">Expressões Regulares - Guia de Consulta Rápida</a> — <a href="/regex/guia/">LEIA ONLINE</a><br /><br />Livro de 96 páginas lançado em 2001, escrito em uma linguagem descontraída e didática, que leva o leitor a uma viagem ao mundo das Expressões Regulares. Tem o formato "de bolso", fácil de carregar. Também pode ser <a href="/regex/guia/">consultado integral e gratuitamente na Internet</a>. ISBN: 85-7522-011-X <b>[ESGOTADO]</b></td>
     </tr>
 </table>
 
@@ -111,7 +111,7 @@ Artigo que explica como usar as expressões nos principais bancos de dados: Orac
 Artigo que demonstra porque é importante fazer uma expressão legível, mesmo que não seja a versão mais eficiente.
 
 * [Escreva corretamente: CaracterE cUringa](/blog/2006/09/17/caractere-curinga/)
-Não diga "coringa" quando o certo é curinga.<br>
+Não diga "coringa" quando o certo é curinga.<br />
 Não diga "caracter", "carácter" ou "caráter" quando o certo é caractere.
 
 * [Meus 10 anos de Expressões Regulares](/blog/2009/07/17/10anos-expressoes-regulares/)
@@ -131,7 +131,7 @@ Artigo bem antigo (e um pouco confuso) ensinando a montar uma expressão regular
 
 ## Grupo no Telegram
 
-Quer trocar uma ideia em português sobre regex? Junte-se a nós no https://telegram.me/ExpressoesRegulares
+Quer trocar uma ideia em português sobre regex? Junte-se a nós no <https://telegram.me/ExpressoesRegulares>
 
 ## Lista de discussão
 
@@ -485,7 +485,7 @@ Melhor mesmo é usar [a versão JavaScript](http://jimbly.github.io/regex-crossw
 
 [![](/regex/img/regex-crosswords-2021.png)](http://jimbly.github.io/regex-crossword/)
 
-Mas não precisa comecar por esse, que é muito grande e complicado. Tem um site inteiramente dedicado a gerar palavras cruzadas com regex, e você pode escolher a dificuldade: http://regexcrossword.com
+Mas não precisa comecar por esse, que é muito grande e complicado. Tem um site inteiramente dedicado a gerar palavras cruzadas com regex, e você pode escolher a dificuldade: <http://regexcrossword.com>
 
 E já que estamos aqui, que tal uma explicação de como fazer [um programa que resolve estes quebras-cabeças](http://herman.asia/solving-regex-crosswords-using-go)?
 

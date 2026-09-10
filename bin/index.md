@@ -68,7 +68,7 @@ Alguns desses programas já deram passos importantes, entre eles:
 
 ### MoneyLog
 
-- Site: https://aurelio.net/moneylog/
+- Site: <https://aurelio.net/moneylog/>
 - Linguagem: Javascript
 - Interface: Web
 - Idioma: Português e [Inglês](/projects/moneylog/)
@@ -81,7 +81,7 @@ Acompanhe suas finanças de maneira simples e prática. Em um único arquivo fic
 
 ### EmoMemory
 
-- Site: https://aurelio.net/projects/emomemory/
+- Site: <https://aurelio.net/projects/emomemory/>
 - Linguagem: AppleScript
 - Interface: Gráfica Interativa
 - Idioma: Inglês
@@ -96,7 +96,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ### txt2tags
 
-- Site: http://txt2tags.org
+- Site: <http://txt2tags.org>
 - Linguagem: Python
 - Interface: Linha de comando, Web e Gráfica
 - Idioma: Português, Inglês e outros
@@ -113,7 +113,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ### RAC
 
-- Site: https://aurelio.net/rac/
+- Site: <https://aurelio.net/rac/>
 - Linguagem: C
 - Interface: Linha de comando
 - Idioma: Português
@@ -126,7 +126,7 @@ Uma ferramenta de extração de texto, feita em parceria com meu amigo [Thobias]
 
 ### Funções ZZ
 
-- Site: https://funcoeszz.net
+- Site: <https://funcoeszz.net>
 - Linguagem: Bash
 - Interface: Linha de comando
 - Idioma: Português
@@ -139,7 +139,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### AdiumBook
 
-- Site: https://aurelio.net/projects/adiumbook/
+- Site: <https://aurelio.net/projects/adiumbook/>
 - Linguagem: AppleScript
 - Interface: Gráfica Interativa
 - Idioma: Inglês
@@ -154,7 +154,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### txt2regex
 
-- Site: https://aurelio.net/projects/txt2regex/
+- Site: <https://aurelio.net/projects/txt2regex/>
 - Linguagem: Bash
 - Interface: Interativa para console
 - Idioma: Inglês (interface do programa em Português também)
@@ -167,7 +167,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### sedsed
 
-- Site: https://aurelio.net/projects/sedsed/
+- Site: <https://aurelio.net/projects/sedsed/>
 - Linguagem: Python
 - Interface: Linha de comando
 - Idioma: Inglês
@@ -180,7 +180,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ### SedSokoban
 
-- Site: https://aurelio.net/projects/sedsokoban/
+- Site: <https://aurelio.net/projects/sedsokoban/>
 - Linguagem: SED
 - Interface: Interativa para console
 - Idioma: Inglês
@@ -224,15 +224,15 @@ Este script é o complemento do anterior, importando o dump dos contatos do Yaho
 
 - [Contador da página](php/counter.phps) (**PHP**):
 Eu costumava usar um contador de acesso nas minhas páginas, que é esse script simples. Ele soma 1 ao número atual e cospe o resultado na tela. Não conta *Reloads* vindos consecutivos do mesmo endereço IP e envia relatórios periódicos com os endereços de origem do visitante. Funciona 100% estável há anos, então o considero "pronto". Tem um [mini HOWTO](php/contador-HOWTO-ataliba.txt) de como instalá-lo, feito pelo amigo [Ataliba Teixeira](http://ataliba.eti.br).
-<br>**APOSENTADO: Estou usando o Google Analytics agora.**
+<br />**APOSENTADO: Estou usando o Google Analytics agora.**
 
 - [Gerador de RSS (segundo)](sed/rss.sed) (**SED**):
 Um script SED que extrai as notícias da página principal do meu site e as converte para o formato RSS (validado). Além do título e conteúdo, cada notícia vem com a data de publicação e um link para o site principal. Este script pode ser usado em outros sites, porém adaptações terão que ser feitas nos padrões de pesquisa. casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br>**APOSENTADO: Estou usando o <s>WordPress</s>[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
+<br />**APOSENTADO: Estou usando o ~~WordPress~~[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
 
 - [Gerador de RSS (primeiro)](php/rss-old.phps) (**PHP**):
 O primeiro script gerador de RSS que usei, uma contribuição do amigo *Deivison Alves Elias*, que me "deu de presente". Fiz pequenas modificações. Uma única expressão regular casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br>**APOSENTADO: Estou usando o <s>WordPress</s>[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
+<br />**APOSENTADO: Estou usando o ~~WordPress~~[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
 
 - [Página com cores aleatórias](php/randbody.phps) (**PHP**):
 Numa versão antiga de meu site, cada vez que você entrava na página, o fundo e o texto apareciam em cores diferentes, escolhidas ao acaso (aleatórias). Este é o script tosco de 18 linhas que faz isso. Você pode inclusive colocar suas próprias opções de cores, pois o código está bem facinho de entender.

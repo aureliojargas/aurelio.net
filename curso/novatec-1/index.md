@@ -72,7 +72,7 @@ Durante a aula, tento perceber o sentimento geral dos alunos, se estão entenden
 
 Expressões regulares é um assunto bom de explicar e de aprender. Não é vasto como uma linguagem de programação ou um sistema, você consegue aprender todos os conceitos em um único dia e já começar a criar suas próprias expressões. E assim foi.
 
-Passei as primeiras quatro horas explicando e demonstrando cada um dos metacaracteres. É importante entender o que faz cada um deles individualmente, para depois poder combiná-los e compor expressões maiores. Usei as ferramentas online http://regexpal.com e http://regex101.com, que mostram ao vivo o texto casado pela expressão digitada.
+Passei as primeiras quatro horas explicando e demonstrando cada um dos metacaracteres. É importante entender o que faz cada um deles individualmente, para depois poder combiná-los e compor expressões maiores. Usei as ferramentas online <http://regexpal.com> e <http://regex101.com>, que mostram ao vivo o texto casado pela expressão digitada.
 
 Após a parada para o almoço, focamos na aplicação das expressões: grupos, replace, extração de dados e claro, exercícios. É na hora dos exercícios que tudo fica realmente divertido, quando cada um tem que pensar sozinho e criar suas próprias expressões. Nessa hora pude dar uma boa assistência individual, e tirar dúvidas pontuais.
 
@@ -142,7 +142,7 @@ Este foi um curso de 4 horas, para aprender o essencial de expressões regulares
 
 > Viu como é bom não ter um roteiro fixo? :)
 
-Usei a ferramenta online http://regex101.com, excelente para ensinar os conceitos e demonstrar o funcionamento das expressões. Ela possui um modo Python, onde pudemos usar a sintaxe específica do Python para as expressões.
+Usei a ferramenta online <http://regex101.com>, excelente para ensinar os conceitos e demonstrar o funcionamento das expressões. Ela possui um modo Python, onde pudemos usar a sintaxe específica do Python para as expressões.
 
 Também usei o próprio prompt interativo do Python para digitar comandos e demonstrar na prática como aplicar as expressões nos vários métodos disponíveis.
 
@@ -161,7 +161,7 @@ Desliguei o projetor e voltei ao bom e velho quadro branco para continuar as exp
 
 ![Expressões Regulares no quadro branco](quadro-regex-js.jpg)
 
-Depois o Windows voltou e pude continuar a demonstração no projetor, usando a ferramenta online http://regexpal.com e o console JavaScript do próprio navegador. Com um foco mais direcionado a aplicativos web, vimos bastante sobre validação de dados e formatação de conteúdo.
+Depois o Windows voltou e pude continuar a demonstração no projetor, usando a ferramenta online <http://regexpal.com> e o console JavaScript do próprio navegador. Com um foco mais direcionado a aplicativos web, vimos bastante sobre validação de dados e formatação de conteúdo.
 
 ![Turma do curso de Expressões Regulares em JavaScript](turma-regex-js.jpg)
 

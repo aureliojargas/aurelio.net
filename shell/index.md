@@ -242,7 +242,7 @@ este texto ou não.
 
 * [telme](http://www.meleuzord.hpg.ig.com.br/src/telme) *por Meleu*
 Script para enviar SMS para telefones celulares usando o serviço
-telme (http://www.telme.com.br).
+telme (<http://www.telme.com.br>).
 
 ## Programas
 

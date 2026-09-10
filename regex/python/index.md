@@ -12,7 +12,7 @@ Um tutorial que ensina expressões regulares ao mesmo tempo que mostra como util
 
 * [Livro Dive Into Python — Chapter 7. Regular Expressions](http://www.diveintopython.net/regular_expressions/)
 
-* http://www.regular-expressions.info/python.html
+* <http://www.regular-expressions.info/python.html>
 Um apanhado de todas as funcionalidades das expressões regulares no Python. De rápida leitura, serve para mostrar as possibilidades, dar uma visão global.
 
 * [Regular expressions in Python and Perl](http://www.johndcook.com/python_regex.html)
