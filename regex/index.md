@@ -121,7 +121,7 @@ Texto recheado de nostalgia e reflexões, que conta os meus 10 anos de Expressõ
 Documento que registra o histórico da linha de comando de uma palestra sobre Expressões Regulares ministrada pelo Aurelio para os funcionários da Conectiva sobre em dezembro de 2003. Mostra um por um todos os metacaracteres e suas funções.
 
 * [Expressões Regulares - Como "farejar" um texto e aumentar a produtividade](/regex/rdl-regex-1.html) *Artigo publicado na Revista do Linux #3*
-Meu primeiro artigo sobre Expressões Regulares, escrito em 2000. É uma introdução ao assunto, explicando o básico e demonstrando com exemplos o uso de quatro metacaracteres: . + * []
+Meu primeiro artigo sobre Expressões Regulares, escrito em 2000. É uma introdução ao assunto, explicando o básico e demonstrando com exemplos o uso de quatro metacaracteres: `. + * []`
 
 * [Expressões Regulares II - Conhecendo as ferramentas complementares](/regex/rdl-regex-2.html) *Artigo publicado na Revista do Linux #7*
 Meu segundo artigo sobre Expressões Regulares, escrito em 2000. É uma continuação do artigo introdutório, agora apresentando conceitos mais avançados como as chaves, o opcional, os grupos e retrovisores. Também conta com uma tabela de exemplos.
@@ -163,7 +163,7 @@ Uma apresentação com 10 slides sobre Expressões Regulares, com muita ênfase 
 exemplos, sendo bem didático.
 
 * [Aritmética com Regexp](http://blog.ricbit.com/2010/07/aritmetica-com-regexp.html) *por Ricardo Bittencourt*
-Que tal brincar de fazer contas de + - / * com regex? Pior que dá :)
+Que tal brincar de fazer contas de `+`, `-`, `/` e `*` com regex? Pior que dá :)
 
 * [O que há de errado com expressões regulares?](http://juanlopes.net/devday2013/) *por Juan Lopes*
 Palestra que demonstra falhas de segurança nas implementações modernas de expressões regulares. Acompanhe [os slides](http://juanlopes.net/devday2013/) e [o vídeo](https://www.youtube.com/watch?v=GAq-6NAtVVQ).
@@ -184,7 +184,7 @@ expressões em Perl.
 
 * [Expressões Regulares com Java](http://lucasdecastro.freezope.org/blog/expressoes_regulares_com_java.html) *por Lucas de Castro*
 Tutorial com introdução às expressões e bastante exemplos da classe
-String e do pacote java.util.regex.
+`String` e do pacote `java.util.regex`.
 
 * [APIs de Expressões Regulares para Java](http://www.lazydog.hpg.ig.com.br/regexp.html) *por LazyDog*
 Um comparativo explicando as características das sete (7!!!) APIs de

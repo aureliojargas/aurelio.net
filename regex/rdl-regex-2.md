@@ -21,7 +21,7 @@ Bem, vamos começar a dar nomes aos bois e falar na língua que usuários de ERs
 
 Também foi visto que temos uma **classe negada de caracteres**, representada por `[^ ]` e ainda que podemos ter um **intervalo** dentro dessa classe, representado por um hífen `-` entre dois caracteres.
 
-Uma dúvida que deve ter ficado: "e como colocar um ^, - ou ] literal dentro de uma classe de caracteres?". Bem, o `^` só é especial se for o primeiro dentro da classe, então basta colocá-lo em outra posição, como em `[a^]`, que casa ou um `a` ou um `^`. O hífen, basta colocá-lo como primeiro ou último da classe, e o `]`, ponha-o no início. Assim, `[][^-]` casa um `]`, ou `[`, ou `^` ou `-`. Olhe de novo a ER, com calma, respire, você vai compreender :)
+Uma dúvida que deve ter ficado: "e como colocar um `^`, `-` ou `]` literal dentro de uma classe de caracteres?". Bem, o `^` só é especial se for o primeiro dentro da classe, então basta colocá-lo em outra posição, como em `[a^]`, que casa ou um `a` ou um `^`. O hífen, basta colocá-lo como primeiro ou último da classe, e o `]`, ponha-o no início. Assim, `[][^-]` casa um `]`, ou `[`, ou `^` ou `-`. Olhe de novo a ER, com calma, respire, você vai compreender :)
 
 Agora que relembramos as ferramentas já vistas, vamos aumentar nosso arsenal. A primeira novidade é a interrogação `?`. Ela também é um quantificador, que casa a entidade anterior 0 ou 1 vez apenas, ou seja, ela pode ser encarada como **opcional**, pode existir ou não.
 

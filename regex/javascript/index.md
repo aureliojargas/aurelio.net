@@ -4,13 +4,13 @@ title: Expressões Regulares + JavaScript
 
 ## Documentação dos métodos
 
-* [RegExp](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)
-* [RegExp.exec()](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec)
-* [RegExp.test()](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test)
-* [String.match()](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/match)
-* [String.replace()](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/replace)
-* [String.search()](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/search)
-* [String.split()](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/split)
+* [`RegExp`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)
+* [`RegExp.exec()`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec)
+* [`RegExp.test()`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/test)
+* [`String.match()`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/match)
+* [`String.replace()`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/replace)
+* [`String.search()`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/search)
+* [`String.split()`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/split)
 
 
 ## Links

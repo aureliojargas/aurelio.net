@@ -2,7 +2,7 @@
 title: Expressões Regulares + HTML5
 ---
 
-## Teste o &lt;input pattern="…"&gt;
+## Teste o `<input pattern="…">`
 
 [Montei uma página](pattern.html) para testar o novo atributo `pattern` do HTML5, que aceita expressões regulares para validar o conteúdo do campo `input`.
 

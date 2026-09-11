@@ -33,4 +33,4 @@ Referência completa dos metacaracteres usados pelo engine do Google, chamado RE
 Lista de todas as fórmulas disponíveis. Eu sugiro uma lida com calma, para conhecer as várias ferramentas úteis que você pode usar em suas fórmulas.
 
 * [Array formulas](http://support.google.com/docs/bin/answer.py?hl=en&answer=71291)
-Guia sobre o uso de ArrayFormula(), a função que possibilita usar arrays em funções que normalmente só recebem texto. Excelente companheira para as funções REGEX*. É similar ao Ctrl+Shift+Enter do Excel.
+Guia sobre o uso de `ArrayFormula()`, a função que possibilita usar arrays em funções que normalmente só recebem texto. Excelente companheira para as funções `REGEX*`. É similar ao `Ctrl+Shift+Enter` do Excel.

@@ -4,16 +4,16 @@ title: Expressões Regulares + Oracle
 
 ## Operadores / Funções
 
-* [REGEXP_SUBSTR](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions138.htm)
+* [`REGEXP_SUBSTR`](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions138.htm)
 Retorna o trecho de texto casado.
 
-* [REGEXP_INSTR](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions136.htm)
+* [`REGEXP_INSTR`](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions136.htm)
 Retorna a posição de início do trecho de texto casado.
 
-* [REGEXP_COUNT](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions135.htm)
+* [`REGEXP_COUNT`](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions135.htm)
 Conta quantas vezes a expressão casou.
 
-* [REGEXP_REPLACE](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions137.htm)
+* [`REGEXP_REPLACE`](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/functions137.htm)
 Substituição de textos.
 
 * [Pattern-matching Conditions](http://download.oracle.com/docs/cd/B28359_01/server.111/b28286/conditions007.htm)

@@ -12,7 +12,7 @@ Guia BEM avançado que mostra o funcionamento do motor das ERs no .NET
 * [.NET Framework Regular Expressions](http://msdn.microsoft.com/en-us/library/hs600312.aspx)
 
 * <http://msdn.microsoft.com/en-us/library/20bw873z.aspx>
-Matches any word character. Equivalent to the Unicode general categories [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]. If ECMAScript-compliant behavior is specified with the ECMAScript option, \w is equivalent to [a-zA-Z_0-9].
+Matches any word character. Equivalent to the Unicode general categories `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`. If ECMAScript-compliant behavior is specified with the ECMAScript option, `\w` is equivalent to `[a-zA-Z_0-9]`.
 
 * <http://www.regular-expressions.info/dotnet.html>
 
