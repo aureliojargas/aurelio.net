@@ -24,7 +24,7 @@ Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
 ## 2016 (6)
 
   * [Serei papai \o/](/blog/2016/11/09/serei-papai/)
-  * [Tela Preta episódio 9: Contar palavras com egrep\|sort\|uniq](/blog/2016/08/09/tela-preta-9/)
+  * [Tela Preta episódio 9: Contar palavras com `egrep|sort|uniq`](/blog/2016/08/09/tela-preta-9/)
   * [Raridade: teve ensaio da banda](/blog/2016/06/18/ensaio-banda/)
   * [Tenho três empregos](/blog/2016/04/02/tres-empregos/)
   * [Aprenda expressões regulares em um dia](/blog/2016/03/02/aprender-regex/)
@@ -36,7 +36,7 @@ Para ver os artigos do site (e não do blog), use o menu cinza-escuro.
   * [Fiz a prova POSCOMP](/blog/2015/10/03/poscomp/)
   * [Eu no podcast Castálio](/blog/2015/09/18/eu-no-podcast-castalio/)
   * [Saindo da caverna: darei cursos em São Paulo](/blog/2015/07/29/cursos-novatec/)
-  * [Tela Preta #8: Trocar a extensão de arquivos com find\|sed\|sed\|sh](/blog/2015/06/06/tela-preta-8/)
+  * [Tela Preta #8: Trocar a extensão de arquivos com `find|sed|sed|sh`](/blog/2015/06/06/tela-preta-8/)
   * [15 anos de Funções ZZ](/blog/2015/05/30/15-anos-de-funcoes-zz/)
   * [Como usar Unicode (→★♥♪) no teclado do Android](/blog/2015/05/27/unicode-teclado-android/)
   * [Liberou geral: PDF do miniman agora é gratuito](/blog/2015/05/13/miniman-pdf-agora-gratuito/)
