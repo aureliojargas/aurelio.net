@@ -131,8 +131,7 @@ Fora os joguinhos, também escrevi muito nessas férias. O aurelio.net sofreu um
 
 Como é bom ficar sem Internet, o tempo rende que é uma beleza, sem distrações!
 
-<a name="pontos"></a>
-## "Acho que vai uns 3 pontos"
+<h2 id="pontos">"Acho que vai uns 3 pontos"</h2>
 
 Terça-feira, primeiro de Fevereiro, meio-dia, sol forte. Mar grande e liso, com ondas de um metro e meio a dois metros na série, quebrando forte e fechado, abrindo a vala e fazendo o drop ser um mergulho no ar.
 
