@@ -97,7 +97,4 @@ Minhas preferências são estas:
 
 ## Tetris
 
-Se além do Super Mario você também gosta de [Tetris](http://pt.wikipedia.org/wiki/Tetris), boas notícias! No mesmo site foi disponibilizado um pacote com os toques do jogo, versões [Game Boy][] (a melhor!), NES e Tangen. Segue o [link](http://itones.posterous.com/tetris-iphone-ringtones-text-tones-soundpack).
-
-
-[Game Boy]: http://en.wikipedia.org/wiki/Tetris_(Game_Boy)
+Se além do Super Mario você também gosta de [Tetris](http://pt.wikipedia.org/wiki/Tetris), boas notícias! No mesmo site foi disponibilizado um pacote com os toques do jogo, versões [Game Boy](<http://en.wikipedia.org/wiki/Tetris_(Game_Boy)>) (a melhor!), NES e Tangen. Segue o [link](http://itones.posterous.com/tetris-iphone-ringtones-text-tones-soundpack).

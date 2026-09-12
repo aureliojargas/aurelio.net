@@ -18,11 +18,7 @@ Vou contar três experiências que tive recentemente.
 > ⌘-/ keybinding shoud insert HTML comments, not C-syle /*…*/  
 > <https://github.com/atom/language-gfm/issues/24>
 
-[Em maio de 2014](https://twitter.com/oreio/status/465941002189303808) troquei meu querido [TextMate][] pelo [Atom][], editor de textos criado pela equipe do GitHub. Ao editar textos no formato [Markdown][], percebi que o atalho para comentar uma linha (`Command-/`) estava inserindo o código errado.
-
-[TextMate]: https://macromates.com/
-[Atom]:     https://atom.io/
-[Markdown]: http://en.wikipedia.org/wiki/Markdown
+[Em maio de 2014](https://twitter.com/oreio/status/465941002189303808) troquei meu querido [TextMate](https://macromates.com/) pelo [Atom](https://atom.io/), editor de textos criado pela equipe do GitHub. Ao editar textos no formato [Markdown](http://en.wikipedia.org/wiki/Markdown), percebi que o atalho para comentar uma linha (`Command-/`) estava inserindo o código errado.
 
 [Abri um chamado](https://github.com/atom/language-gfm/issues/24) (issue) explicando o problema e para minha surpresa, já no dia seguinte um desenvolvedor havia feito [a correção](https://github.com/atom/language-gfm/pull/26)! Não é incrível ter uma solução assim, tão rapidamente?
 
