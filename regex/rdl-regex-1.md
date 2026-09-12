@@ -93,7 +93,9 @@ Logo após um sinal de pontuação de fim de período, e o espaço em branco, de
 
 - ER: `???` essa fica de exercício para o leitor.
 
-Expostos os conceitos e dados alguns exemplos, aqui vão alguns exercícios para estimular sua imaginação. São todos simples, e não devem tomar muito de seu tempo, então pare de correr um pouco e tente fazê-los. Escreva, utilizando apenas os conceitos aprendidos, uma ER para casar:
+Expostos os conceitos e dados alguns exemplos, aqui vão alguns exercícios para estimular sua imaginação. São todos simples, e não devem tomar muito de seu tempo, então pare de correr um pouco e tente fazê-los.
+
+Escreva, utilizando apenas os conceitos aprendidos, uma ER para casar:
 
 - A palavra "revista" no singular e no plural
 - A palavra "letra", em qualquer combinação de letras maiúsculas ou minúsculas (leTra, LEtrA, leTRA, Letra, letRa etc)
