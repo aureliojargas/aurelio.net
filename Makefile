@@ -5,10 +5,9 @@ check:
 	_scripts/list-non-utf8-files
 	_scripts/check-site
 
-build:
-	# Remove first, to avoid cache gotchas
+build: # without any cache or previous state
 	rm -rf _site
-	bundle exec jekyll build
+	bundle exec jekyll build --disable-disk-cache
 
 update-html-repo:
 	rm -r ../aurelio.net.html/*
