@@ -10,18 +10,17 @@ Diferente de shows de cantores e bandas famosas onde os fãs vão para ver a ban
 
 Essa é a "**Roda de Pogo**" (pronuncia-se _pôgo_), também chamada de "**Roda Punk**", aquele aparente tumulto em frente ao palco, que na verdade é a dança amigável de várias pessoas que estão felizes, chutando o estresse e curtindo um som. Esse documento vai tentar descrever essa dança e as suas características.
 
-  * O ambiente, vazio
-  * O ambiente, cheio
-  * O pogo
-  * A roda de pogo
-  * As variações da dança
-  * O mosh
-  * As regras
-  * A etiqueta do pogo
-  * O fim
+- O ambiente, vazio
+- O ambiente, cheio
+- O pogo
+- A roda de pogo
+- As variações da dança
+- O mosh
+- As regras
+- A etiqueta do pogo
+- O fim
 
 ![Pogo no show do Cólera](/musica/img/colera.jpg)
-
 
 ## O ambiente, vazio
 
@@ -29,17 +28,16 @@ Vamos começar com o lugar onde acontecem os shows. Nada de grandes galpões, pa
 
 Então imagine um bar comum, um boteco com balcão e mesas. No fundo, uma porta que está sempre fechada e leva a uma sala pequena, escura e vazia, sem móveis, sem decoração. Essa é a sala onde acontecem os shows. Suas características:
 
-  * As paredes são escuras (pintadas de preto ou simplesmente sujas).
-  * Não há janelas, pois o som não pode escapar para a vizinhança.
-  * Ventiladores são um extra e ar condicionado não existe.
-  * A iluminação é mínima, com luzes amareladas e cansadas.
-  * O cheiro é uma mistura de mofo com fumaça de cigarro, cerveja e suor dos shows anteriores, porém é suportável.
-  * O chão é grudento.
+- As paredes são escuras (pintadas de preto ou simplesmente sujas).
+- Não há janelas, pois o som não pode escapar para a vizinhança.
+- Ventiladores são um extra e ar condicionado não existe.
+- A iluminação é mínima, com luzes amareladas e cansadas.
+- O cheiro é uma mistura de mofo com fumaça de cigarro, cerveja e suor dos shows anteriores, porém é suportável.
+- O chão é grudento.
 
 No canto da sala tem um "palco", um tablado preto de 20cm de altura onde cabe uma banda de três integrantes. O palco é vazio também, pois os amplificadores, instrumentos e toda a aparelhagem são trazidas pelas bandas.
 
 Extintores? Saída de incêndio? Luzes de emergência? Esqueça.
-
 
 ## O ambiente, cheio
 
@@ -58,7 +56,6 @@ O lugar é fechado, então as paredes começam a suar. O teto também fica molha
 Não há seguranças. Não há policiamento. Não há qualquer tipo de controle. O dono do bar raramente se incomoda com o show. As bandas e o público tomam conta de tudo. O bom senso funciona, mesmo tendo vários bêbados e drogados no recinto.
 
 A primeira banda vai ao palco e o show vai começar. São cinco integrantes que se espremem para caber no mini-palco. É comum eles se trombarem durante o show. A primeira fileira da platéia consegue ver a banda toda, o resto do público só vê cabeças. Mas como o objetivo é dançar, ou melhor, pogar, isso não importa.
-
 
 ## O pogo
 
@@ -82,12 +79,11 @@ Algumas variações incluem uma posição diferente dos braços, dobrados na ver
 
 Então se você nunca viu, imagine a dança. Um boxeador defendendo a cabeça, gingando e dando chutes no ar. Isso é pogar. Agora imagine vários boxeadores suados e fedidos fazendo isso em um espaço minúsculo, se chocando e se batendo o tempo todo. Isso é um pogo.
 
-> Se passa a semana inteira, o que fazer para melhorar?  
-As contas estão esperando e o salário não vai dar.  
-Chega o fim de semana e eu sei que algo vai mudar,  
-Quando esqueço os meus problemas e começo a POGAR.  
-— banda Sociedade Armada
-
+> Se passa a semana inteira, o que fazer para melhorar?\
+> As contas estão esperando e o salário não vai dar.\
+> Chega o fim de semana e eu sei que algo vai mudar,\
+> Quando esqueço os meus problemas e começo a POGAR.\
+> — banda Sociedade Armada
 
 ## A roda de pogo
 
@@ -101,35 +97,33 @@ A roda geralmente se forma na frente do palco, logo atrás do pessoal do gargare
 
 No intervalo das músicas a roda pára e todos descansam. É comum ver abraços entre amigos, sorrisos e gritos, típicos de quem está se divertindo bastante. Os sorrisos também são comuns de ver no meio da roda. Chutar e ser chutado faz parte do jogo e todos fazem isso com alegria. É a libertação. É uma grande festa punk.
 
-> Quero uma festa com os Kennedys  
-Eles é que sabem o que é hardcore  
-Depois pra resfriar e afastar os junkies  
-POGUEAR um monte ouvindo Circle Jerks  
-Quero uma festa punk!  
-— banda Replicantes
-
+> Quero uma festa com os Kennedys\
+> Eles é que sabem o que é hardcore\
+> Depois pra resfriar e afastar os junkies\
+> POGUEAR um monte ouvindo Circle Jerks\
+> Quero uma festa punk!\
+> — banda Replicantes
 
 ## As variações da dança
 
 Quando a banda é realmente boa e todos estão muito empolgados, é comum ver variações do pogo clássico, que podem incluir:
 
-  * Rodar a camiseta acima da cabeça e gritar.
-  * Jogar cerveja para o alto e gritar.
-  * Subir no ombro de outro cara e rodar a camiseta e/ou jogar cerveja.
-  * Pular no ar num momento de ápice da música.
-  * Dar vários pulos consecutivos no ápice do momento de ápice da música.
-  * Levantar um braço com o punho fechado e cantar frases da letra.
-  * Levantar os dois braços e com os punhos e olhos fechados cantar a frase da letra que é realmente especial para você.
-  * Abraçar o primeiro cara que ver na frente e pogarem juntos por alguns segundos. Não ficar muito tempo abraçado que senão é viadagem.
-  * Fechar os olhos e simplesmente deixar o corpo solto, sendo jogado para todos os lados junto com o pogo.
-  * Fazer um mosh.
+- Rodar a camiseta acima da cabeça e gritar.
+- Jogar cerveja para o alto e gritar.
+- Subir no ombro de outro cara e rodar a camiseta e/ou jogar cerveja.
+- Pular no ar num momento de ápice da música.
+- Dar vários pulos consecutivos no ápice do momento de ápice da música.
+- Levantar um braço com o punho fechado e cantar frases da letra.
+- Levantar os dois braços e com os punhos e olhos fechados cantar a frase da letra que é realmente especial para você.
+- Abraçar o primeiro cara que ver na frente e pogarem juntos por alguns segundos. Não ficar muito tempo abraçado que senão é viadagem.
+- Fechar os olhos e simplesmente deixar o corpo solto, sendo jogado para todos os lados junto com o pogo.
+- Fazer um mosh.
 
-> Como se a vida fosse um punkrock em show  
-Temos 15 minutos para mostrar o que queremos  
-E você segue em frente contente com o show  
-CHUTANDO as coisas ruins, deixe tudo de lado  
-— banda Tequila Baby
-
+> Como se a vida fosse um punkrock em show\
+> Temos 15 minutos para mostrar o que queremos\
+> E você segue em frente contente com o show\
+> CHUTANDO as coisas ruins, deixe tudo de lado\
+> — banda Tequila Baby
 
 ## O mosh
 
@@ -147,7 +141,6 @@ Também não fique feito um trouxa pedindo para que o pessoal se junte para te s
 LEMBRE-SE: <strong>Qualquer permanência não solicitada de mais de cinco segundos em cima do palco é considerada manézisse extrema.</strong>
 </p>
 
-
 ## As regras
 
 Punks e regras não combinam. Mas o pogo é como um mundinho à parte, com as suas regras de conduta e de boa convivência que devem ser respeitadas.
@@ -156,38 +149,36 @@ Punks e regras não combinam. Mas o pogo é como um mundinho à parte, com as su
 
 Todos no pogo sabem quem são os que estão dançando na boa e os que estão abusando. Qualquer pancada diferente do normal é facilmente reconhecida e a repreensão pode vir verbalmente ou com outra pancada mais forte. "Sem querer", é claro. Brigas no pogo são raríssimas.
 
-
 ## ETIQUETA DO POGO
 
-  * Cada um pode dançar como quiser, batendo nos outros de maneira amigável e não intencional, sem abusos.
+- Cada um pode dançar como quiser, batendo nos outros de maneira amigável e não intencional, sem abusos.
 
-  * Se alguém cair no chão (escorregadio, lembra?) os que estão ao redor fazem uma "cabaninha" para protegê-lo e o ajudam a levantar.
+- Se alguém cair no chão (escorregadio, lembra?) os que estão ao redor fazem uma "cabaninha" para protegê-lo e o ajudam a levantar.
 
-  * Se precisar amarrar o tênis/bota/coturno, faça isso fora do pogo.
+- Se precisar amarrar o tênis/bota/coturno, faça isso fora do pogo.
 
-  * Se você achar alguma coisa no chão, entregue para o cara da banda anunciar no microfone no intervalo das músicas.
+- Se você achar alguma coisa no chão, entregue para o cara da banda anunciar no microfone no intervalo das músicas.
 
-  * Uma guria pogando ou dando mosh deve ser encarada como um punk suado fedido. Nada de aproveitar para tirar uma lasquinha. Isso é coisa de mané.
+- Uma guria pogando ou dando mosh deve ser encarada como um punk suado fedido. Nada de aproveitar para tirar uma lasquinha. Isso é coisa de mané.
 
-  * Se você quer que sua namorada pogue, deixe-a. Ficar protegendo a mulher no meio do pogo é ineficiente e atrapalha os demais. Ou deixe-a livre ou saiam da roda.
+- Se você quer que sua namorada pogue, deixe-a. Ficar protegendo a mulher no meio do pogo é ineficiente e atrapalha os demais. Ou deixe-a livre ou saiam da roda.
 
-  * Pogo e cigarro não combinam, pois brasa quente e caras sem camisa se atraem. Se quiser fumar, saia do pogo.
+- Pogo e cigarro não combinam, pois brasa quente e caras sem camisa se atraem. Se quiser fumar, saia do pogo.
 
-  * Cansou? Saia do pogo, não fique parado no meio atrapalhando o fluxo.
+- Cansou? Saia do pogo, não fique parado no meio atrapalhando o fluxo.
 
-  * Tomou uma pancada forte? Tente identificar se foi intencional ou sem
-    querer. Geralmente é sem querer. Saia da roda para se recuperar. Se foi
-    intencional, marque o cara e depois bata nele "sem querer" também em outra
-    música, para que ele saia do pogo. Se quiser ser mais construtivo tente
-    conversar e explicar o que ele fez de errado.
+- Tomou uma pancada forte? Tente identificar se foi intencional ou sem
+  querer. Geralmente é sem querer. Saia da roda para se recuperar. Se foi
+  intencional, marque o cara e depois bata nele "sem querer" também em outra
+  música, para que ele saia do pogo. Se quiser ser mais construtivo tente
+  conversar e explicar o que ele fez de errado.
 
-  * Bateu forte em alguém sem querer? Peça desculpas na hora para não ser
-    confundido como intencional. Mesmo se desculpando, sair do pogo por alguns
-    minutos pode ser uma boa idéia. Avalie a situação.
+- Bateu forte em alguém sem querer? Peça desculpas na hora para não ser
+  confundido como intencional. Mesmo se desculpando, sair do pogo por alguns
+  minutos pode ser uma boa idéia. Avalie a situação.
 
-  * Não brigue. Você notou que não há brigas no pogo? Faça a sua parte para que
-    isso continue assim.
-
+- Não brigue. Você notou que não há brigas no pogo? Faça a sua parte para que
+  isso continue assim.
 
 ## O fim
 
@@ -195,7 +186,7 @@ Terminados os shows, você está exausto, sem ar, com sede, com fome, fervendo, 
 
 E o principal: há um BAITA sorrisão em seu rosto e você se sente renovado, vivo, feliz.
 
-----
+______________________________________________________________________
 
 **Sobre o autor:** [Aurelio Marinho Jargas](/), nascido em 77, programador, baterista, já tocou nas seguintes bandas de hardcore: [CORRERIA HC](/correria/), [DUMBS](/dumbs/), SCARECROW, [VALETA](/valeta/) e NO SNACKS. Praticante da pogoterapia.
 
@@ -203,13 +194,13 @@ E o principal: há um BAITA sorrisão em seu rosto e você se sente renovado, vi
 
 Artigos similares neste site:
 
-  * [Show do Toy Dolls em Curitiba](/blog/2006/10/31/show-toy-dolls-curitiba/)
-  * [Baterna - Curso de bateria online e gratuito](/baterna/)
-  * [Musicalidades - Bandas, álbuns, shows, bateria](/musica/)
+- [Show do Toy Dolls em Curitiba](/blog/2006/10/31/show-toy-dolls-curitiba/)
+- [Baterna - Curso de bateria online e gratuito](/baterna/)
+- [Musicalidades - Bandas, álbuns, shows, bateria](/musica/)
 
 Links da Wikipedia sobre o assunto (em inglês):
 
-  * [Mosh](http://en.wikipedia.org/wiki/Mosh)
-  * [Circle Pit](http://en.wikipedia.org/wiki/Circle_pit)
-  * [Stage Diving](http://en.wikipedia.org/wiki/Stage_diving)
-  * [Skank](http://en.wikipedia.org/wiki/Skank)
+- [Mosh](http://en.wikipedia.org/wiki/Mosh)
+- [Circle Pit](http://en.wikipedia.org/wiki/Circle_pit)
+- [Stage Diving](http://en.wikipedia.org/wiki/Stage_diving)
+- [Skank](http://en.wikipedia.org/wiki/Skank)

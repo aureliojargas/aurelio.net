@@ -38,7 +38,6 @@ Chegando em Mariana, ficamos impressionados com a **Estação Ferroviária** del
 
 ![](/img/viagem/mariana/musical.jpg)
 
-
 ## Passeio
 
 Saindo da estação fomos à direita e atravessamos a **ponte**. Interessante que ainda tem gente procurando ouro no rio, represando alguns trechos para peneirar. Será que acham alguma coisa? ([Sim! Leia os comentários](/viagem/mariana/#comments))
@@ -88,7 +87,6 @@ Dica preciosa: compre frutas durante toda a viagem. A comida mineira é uma del�
 Para nos recuperarmos da batalha alimentícia, sentamos em um banco da praça e ficamos apreciando a paisagem pacata de uma cidade pequena que ainda não sofre dos males das grandes metrópoles. Famílias inteiras ali descansavam, passeavam, alimentavam os peixes, conversavam alegremente.
 
 O descanso foi tão bom que perdemos a noção do tempo e quando vimos já era hora de ir embora. Queríamos ter visitado a **Igreja de Nossa Senhora do Rosário**, que fica um pouco depois da estação do trem, mas não deu.
-
 
 ## Volta
 

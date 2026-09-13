@@ -7,11 +7,11 @@ worked: 2:30
 
 ![](/curso/udesc/banner.png)
 
-* Palestra: Expressões Regulares
-* Evento: [XVIII Semana da Computação](http://www.semanadacomputacao.joinville.udesc.br)
-* Local: UDESC, Joinville - SC
-* Data: 22/09/2016
-* [Fotos do evento (Facebook)](http://www.semanadacomputacao.joinville.udesc.br)
+- Palestra: Expressões Regulares
+- Evento: [XVIII Semana da Computação](http://www.semanadacomputacao.joinville.udesc.br)
+- Local: UDESC, Joinville - SC
+- Data: 22/09/2016
+- [Fotos do evento (Facebook)](http://www.semanadacomputacao.joinville.udesc.br)
 
 Essa palestra foi aqui em Joinville, perto de minha casa. Como é bom não precisar viajar e se preocupar com avião, hotel, táxi, e todo o estresse que isso envolve.
 
@@ -29,7 +29,7 @@ Quando no começo perguntei quem ali já tinha usado expressões regulares, pouc
 
 <script async="" class="speakerdeck-embed" data-id="007e31626e6f48efab0b39bc71b3e91a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-* <https://speakerdeck.com/aureliojargas/expressoes-regulares>
+- <https://speakerdeck.com/aureliojargas/expressoes-regulares>
 
 Tudo correu bem. Consegui falar o que queria e apesar de ver algumas “pescadas” aqui e ali, ninguém dormiu. Parece que até gostaram. Vitória! :D
 

@@ -63,7 +63,7 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 - [How to install AppleScripts on your Mac](/articles/applescript-install.html) — A visual guide.
 - [more…](/articles/)
 
-----
+______________________________________________________________________
 
 <!-- My musical taste in 2007 -->
 
@@ -110,14 +110,14 @@ I've worked for 7 years with Linux in [Conectiva/Mandriva](https://en.wikipedia.
 ## Music: Best brazilian punk rock bands
 
 - Sociedade Armada *(Old School Hardcore)*
-- Ratos de Porão   *(Crossover)*
-- Matanza          *(Countrycore)*
-- Cólera           *(Punk Rock)*
-- Tequila Baby     *(Punk Rock)*
-- Garotos Podres   *(Punk/Oi)*
-- Dead Fish        *(Hardcore)*
-- CPM 22           *(Pop punk)*
-- Raimundos        *(Rock)*
-- Ultraje a Rigor  *(80's Rock)*
-- Carbona          *(Bubble Gum)*
-- NX Zero          *(Emo)*
+- Ratos de Porão *(Crossover)*
+- Matanza *(Countrycore)*
+- Cólera *(Punk Rock)*
+- Tequila Baby *(Punk Rock)*
+- Garotos Podres *(Punk/Oi)*
+- Dead Fish *(Hardcore)*
+- CPM 22 *(Pop punk)*
+- Raimundos *(Rock)*
+- Ultraje a Rigor *(80's Rock)*
+- Carbona *(Bubble Gum)*
+- NX Zero *(Emo)*

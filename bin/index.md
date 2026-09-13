@@ -53,7 +53,6 @@ Resultado:
 
 - [LELOLAB](/bin/lelolab/) - Jogo de labirinto em Batch para MS-DOS
 
-
 ## Filhos mimados
 
 Estes são os queridinhos, os programas que eu gosto de cuidar e melhorar. Eles são completos, com documentação, versionamento, página na Internet, comunidade de usuários e toda a parafernália que acompanha um programa grande.
@@ -109,7 +108,7 @@ O EmoMemory é um jogo que mexe com a memória e com o coração. Ao invés de f
 
 ![](/img/t2tpowered.png)
 
-É um conversor de arquivos texto para vários formatos: HTML, XHTML, Sgml, LaTeX, Lout, Man Page, Wikipedia, Google Code Wiki, DokuWiki, MoinMoin, MagicPoint (mgp) e Adobe PageMaker, entre outros. Você escreve seu texto normalmente e coloca marcações mínimas, como ``**negrito**`` e ``//itálico//``, e o programa o converte para o formato desejado. Este programa eu utilizo para tudo: gerar as páginas do meu site (como esta que você está lendo), gerar os artigos e documentos que escrevo, slides de palestras, site da banda, site dos outros programas... É também utilizado por diversos sites nacionais e gringos (já são mais de 100, veja a [lista completa](http://txt2tags.org/children.html)) e é o formato original do meu [Guia de Expressões Regulares](/regex/guia/). Também tem listas de discussão em português e inglês, uma grande comunidade de usuários, tradução para várias línguas e vasta documentação. Ufa! Esse já virou um monstro.
+É um conversor de arquivos texto para vários formatos: HTML, XHTML, Sgml, LaTeX, Lout, Man Page, Wikipedia, Google Code Wiki, DokuWiki, MoinMoin, MagicPoint (mgp) e Adobe PageMaker, entre outros. Você escreve seu texto normalmente e coloca marcações mínimas, como `**negrito**` e `//itálico//`, e o programa o converte para o formato desejado. Este programa eu utilizo para tudo: gerar as páginas do meu site (como esta que você está lendo), gerar os artigos e documentos que escrevo, slides de palestras, site da banda, site dos outros programas... É também utilizado por diversos sites nacionais e gringos (já são mais de 100, veja a [lista completa](http://txt2tags.org/children.html)) e é o formato original do meu [Guia de Expressões Regulares](/regex/guia/). Também tem listas de discussão em português e inglês, uma grande comunidade de usuários, tradução para várias línguas e vasta documentação. Ufa! Esse já virou um monstro.
 
 ### RAC
 
@@ -150,7 +149,7 @@ Coletânea de mini-programas com funcionalidades diversas. São mais de 120 fun�
 
 ![](img/adiumbook.png)
 
-É um programa para Mac OS X que serve para manter sincronizados os contatos da Agenda e do Adium (cliente ICQ/MSN/*). O programa foi feito no Xcode (IDE do Mac), a interface Cocoa foi feita no Interface Builder e o código é AppleScript puro. É meu primeiro programa gráfico, com botões, menus, pesquisa, apelo visual e tratamento de eventos. Já tem uma boa base de usuários e foi [destaque no site do próprio Adium](/blog/2006/09/26/adium-book-nos-holofotes/).
+É um programa para Mac OS X que serve para manter sincronizados os contatos da Agenda e do Adium (cliente ICQ/MSN/\*). O programa foi feito no Xcode (IDE do Mac), a interface Cocoa foi feita no Interface Builder e o código é AppleScript puro. É meu primeiro programa gráfico, com botões, menus, pesquisa, apelo visual e tratamento de eventos. Já tem uma boa base de usuários e foi [destaque no site do próprio Adium](/blog/2006/09/26/adium-book-nos-holofotes/).
 
 ### txt2regex
 
@@ -202,61 +201,61 @@ Isso mesmo, o lendário jogo de empurrar caixas, Sokoban, inteiramente escrito e
 Estes são outros programas que fiz. Alguns são estudos, outros ferramentas pequenas e alguns são programas completos. Alguns pararam no tempo, outros eu atualizo de vez em quando, enfim, é um grande saco de gatos.
 
 - [Scraps](php/scraps.phps) (**PHP**):
-Este script pode ser usado tanto como livro de visitas (mural de recados, scraps) quanto comentários de artigos. O HTML gerado é enxuto e estrutural, com toda a formatação sendo feita via CSS. Funciona como módulo, podendo ser embutido em qualquer página já existente, bastando uma única linha de *require()*. O e-mail do visitante é "escondido" como tooltip no nome e há uma checagem contra SPAM. Funciona em inglês e português (configurável). Pequeno, flexível, adaptável, comentado em Português.
+  Este script pode ser usado tanto como livro de visitas (mural de recados, scraps) quanto comentários de artigos. O HTML gerado é enxuto e estrutural, com toda a formatação sendo feita via CSS. Funciona como módulo, podendo ser embutido em qualquer página já existente, bastando uma única linha de *require()*. O e-mail do visitante é "escondido" como tooltip no nome e há uma checagem contra SPAM. Funciona em inglês e português (configurável). Pequeno, flexível, adaptável, comentado em Português.
 
 - [BookCash](python/bookcash.py) (**Python**):
-Este é o programa que uso para gerar o relatório de vendas de meus livros e apostilas. Tudo o que faço é no fim do mês colocar a quantidade de livros vendida e ele já me gera uma tabela com todos os números deste e dos meses anteriores, com valores totais, acumulados e médias. O programa também gera [um gráfico das vendas](python/bookcash.png), para ficar mais fácil visualizar os dados. Funciona como módulo, podendo ser usado por vários scripts, um para cada livro. Além de livros e apostilas, pode ser usado para qualquer outra coisa que você queira acompanhar o número de unidades vendidas por mês.
+  Este é o programa que uso para gerar o relatório de vendas de meus livros e apostilas. Tudo o que faço é no fim do mês colocar a quantidade de livros vendida e ele já me gera uma tabela com todos os números deste e dos meses anteriores, com valores totais, acumulados e médias. O programa também gera [um gráfico das vendas](python/bookcash.png), para ficar mais fácil visualizar os dados. Funciona como módulo, podendo ser usado por vários scripts, um para cada livro. Além de livros e apostilas, pode ser usado para qualquer outra coisa que você queira acompanhar o número de unidades vendidas por mês.
 
 - [Importa contatos em CSV para o tocador de MP3](python/s1mp3-import-contacts.py) (**Python**):
-Vá na sua agenda (Outlook, Kontact, Yahoo!, ...) e exporte os contatos para o formato CSV. Então rode este programa e ele criará um arquivo binário com os seus contatos. Este arquivo pode ser então copiado para o seu tocador de MP3 do Paraguai (China, Coréia, ...) e ele lerá os dados, incluindo-os em sua agendinha. Mais informações no código do programa.
+  Vá na sua agenda (Outlook, Kontact, Yahoo!, ...) e exporte os contatos para o formato CSV. Então rode este programa e ele criará um arquivo binário com os seus contatos. Este arquivo pode ser então copiado para o seu tocador de MP3 do Paraguai (China, Coréia, ...) e ele lerá os dados, incluindo-os em sua agendinha. Mais informações no código do programa.
 
 - [iTunes SED](/projects/itunes-sed/) e [iPhoto SED](/projects/iphoto-sed/) (**AppleScript**):
-Que tal usar todo o poder do SED para fazer substituições automáticas (com [expressões regulares](/regex/)) nas tags ID3 (nome da música, artista, álbum, etc) de suas músicas do iTunes? Ou então fazer o mesmo nos dados das fotos do iPhoto (título, comentários)? É isso que estes dois scripts fazem.
+  Que tal usar todo o poder do SED para fazer substituições automáticas (com [expressões regulares](/regex/)) nas tags ID3 (nome da música, artista, álbum, etc) de suas músicas do iTunes? Ou então fazer o mesmo nos dados das fotos do iPhoto (título, comentários)? É isso que estes dois scripts fazem.
 
 - [iTunes Rename Disk File](/projects/itunes-rename-disk-file/) (**AppleScript**):
-Esse script renomeia os arquivos de áudio (MP3, AAC, etc) selecionados no iTunes, baseando-se nas informações da música (nome, banda, disco, etc). Ele remove os caracteres estranhos e tem a opção de usar ou não espaços em branco. Além dos formatos pré-cadastrados, o usuário pode fazer um formato personalizado.
+  Esse script renomeia os arquivos de áudio (MP3, AAC, etc) selecionados no iTunes, baseando-se nas informações da música (nome, banda, disco, etc). Ele remove os caracteres estranhos e tem a opção de usar ou não espaços em branco. Além dos formatos pré-cadastrados, o usuário pode fazer um formato personalizado.
 
 - [Export Contacts To Yahoo CSV](/projects/export-contacts-to-yahoo-csv/) (**AppleScript**):
-Meu primeiro AppleScript, serve para migrar os contatos da agenda do MacOS X (*Address Book*) para a agenda via Web do Yahoo!. O script extrai os dados e os converte para o formato CSV do Yahoo. Está bem completo, lidando inclusive com codificação de caracteres, grupos e os campos de data.
+  Meu primeiro AppleScript, serve para migrar os contatos da agenda do MacOS X (*Address Book*) para a agenda via Web do Yahoo!. O script extrai os dados e os converte para o formato CSV do Yahoo. Está bem completo, lidando inclusive com codificação de caracteres, grupos e os campos de data.
 
 - [Import Contacts From Yahoo CSV](as/ImportContactsFromYahooCSV.py) (**Python+AppleScript**):
-Este script é o complemento do anterior, importando o dump dos contatos do Yahoo! Endereços (CSV) para o *Address Book* do MacOS X. O detalhe interessante: é um script em Python, que gera um AppleScript, que por sua vez insere os contatos na agenda. Fiz assim pois eu já tinha pronto em Python o parser do arquivo CSV do Yahoo, que havia usado em outro programa.
+  Este script é o complemento do anterior, importando o dump dos contatos do Yahoo! Endereços (CSV) para o *Address Book* do MacOS X. O detalhe interessante: é um script em Python, que gera um AppleScript, que por sua vez insere os contatos na agenda. Fiz assim pois eu já tinha pronto em Python o parser do arquivo CSV do Yahoo, que havia usado em outro programa.
 
 - [Contador da página](php/counter.phps) (**PHP**):
-Eu costumava usar um contador de acesso nas minhas páginas, que é esse script simples. Ele soma 1 ao número atual e cospe o resultado na tela. Não conta *Reloads* vindos consecutivos do mesmo endereço IP e envia relatórios periódicos com os endereços de origem do visitante. Funciona 100% estável há anos, então o considero "pronto". Tem um [mini HOWTO](php/contador-HOWTO-ataliba.txt) de como instalá-lo, feito pelo amigo [Ataliba Teixeira](http://ataliba.eti.br).
-<br />**APOSENTADO: Estou usando o Google Analytics agora.**
+  Eu costumava usar um contador de acesso nas minhas páginas, que é esse script simples. Ele soma 1 ao número atual e cospe o resultado na tela. Não conta *Reloads* vindos consecutivos do mesmo endereço IP e envia relatórios periódicos com os endereços de origem do visitante. Funciona 100% estável há anos, então o considero "pronto". Tem um [mini HOWTO](php/contador-HOWTO-ataliba.txt) de como instalá-lo, feito pelo amigo [Ataliba Teixeira](http://ataliba.eti.br).
+  <br />**APOSENTADO: Estou usando o Google Analytics agora.**
 
 - [Gerador de RSS (segundo)](sed/rss.sed) (**SED**):
-Um script SED que extrai as notícias da página principal do meu site e as converte para o formato RSS (validado). Além do título e conteúdo, cada notícia vem com a data de publicação e um link para o site principal. Este script pode ser usado em outros sites, porém adaptações terão que ser feitas nos padrões de pesquisa. casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br />**APOSENTADO: Estou usando o ~~WordPress~~[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
+  Um script SED que extrai as notícias da página principal do meu site e as converte para o formato RSS (validado). Além do título e conteúdo, cada notícia vem com a data de publicação e um link para o site principal. Este script pode ser usado em outros sites, porém adaptações terão que ser feitas nos padrões de pesquisa. casa toda a notícia e depois ela é separada em chamada e conteúdo.
+  <br />**APOSENTADO: Estou usando o ~~WordPress~~[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
 
 - [Gerador de RSS (primeiro)](php/rss-old.phps) (**PHP**):
-O primeiro script gerador de RSS que usei, uma contribuição do amigo *Deivison Alves Elias*, que me "deu de presente". Fiz pequenas modificações. Uma única expressão regular casa toda a notícia e depois ela é separada em chamada e conteúdo.
-<br />**APOSENTADO: Estou usando o ~~WordPress~~[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
+  O primeiro script gerador de RSS que usei, uma contribuição do amigo *Deivison Alves Elias*, que me "deu de presente". Fiz pequenas modificações. Uma única expressão regular casa toda a notícia e depois ela é separada em chamada e conteúdo.
+  <br />**APOSENTADO: Estou usando o ~~WordPress~~[Jekyll](https://github.com/aureliojargas/aurelio.net/blob/main/feed.xml) agora.**
 
 - [Página com cores aleatórias](php/randbody.phps) (**PHP**):
-Numa versão antiga de meu site, cada vez que você entrava na página, o fundo e o texto apareciam em cores diferentes, escolhidas ao acaso (aleatórias). Este é o script tosco de 18 linhas que faz isso. Você pode inclusive colocar suas próprias opções de cores, pois o código está bem facinho de entender.
+  Numa versão antiga de meu site, cada vez que você entrava na página, o fundo e o texto apareciam em cores diferentes, escolhidas ao acaso (aleatórias). Este é o script tosco de 18 linhas que faz isso. Você pode inclusive colocar suas próprias opções de cores, pois o código está bem facinho de entender.
 
 - [Projeto Final da Faculdade - Lojinha Virtual](php/ESEEI-proj_final/) (**PHP**):
-Esse eu fiz em 2000, pra pegar o diplominha. É um sistema em PHP que usa banco de dados (Postgres). É o famoso programa da "vídeo locadora" no contexto Web: cadastrar, alterar, excluir, consultar. Era empresa virtual de vendas on-line de fitas demo de bandas independentes (seria a nova incarnação do site da [DDD](/musica/#ddd)). Ficou legalzinho até, mas nunca usei.
+  Esse eu fiz em 2000, pra pegar o diplominha. É um sistema em PHP que usa banco de dados (Postgres). É o famoso programa da "vídeo locadora" no contexto Web: cadastrar, alterar, excluir, consultar. Era empresa virtual de vendas on-line de fitas demo de bandas independentes (seria a nova incarnação do site da [DDD](/musica/#ddd)). Ficou legalzinho até, mas nunca usei.
 
 - [Simulador das eleições 2002](python/urna.py) (**Python**):
-Fiz um programelho no trabalho para simular uma urna eletrônica via Web e fazermos uma "prévia" das eleições para presidente. É um script Python que funciona como CGI. A autenticação dos "eleitores" é feita via Apache. É um exemplo bem simples de programa de enquetes, útil para brincar e para aprender, pois o código está bem explicado e em português.
+  Fiz um programelho no trabalho para simular uma urna eletrônica via Web e fazermos uma "prévia" das eleições para presidente. É um script Python que funciona como CGI. A autenticação dos "eleitores" é feita via Apache. É um exemplo bem simples de programa de enquetes, útil para brincar e para aprender, pois o código está bem explicado e em português.
 
 - [aass](bash/aass) (**Bash**):
-Ascii Art Screen Saver. Um típico exemplo de uma tarde sem muito o que fazer no trabalho. Nesse dia resolvi aprimorar os conhecimentos sobre os caracteres de controle do terminal, fazendo este programinha que usa os códigos de cores, posicionamento do cursor e limpa tela. Você passa pra ele uma letra, ou uma frase e ele enche sua tela com isso, em posições e cores aleatórias. Também tem uns "temas" já prontos em Ascii Art como siri, espaço sideral e avião. Ficou limpo, com help, diversas opções de linha de comando e funciona redondo. Ele foi resumido e hoje é parte das Funções ZZ, a **zzss**.
+  Ascii Art Screen Saver. Um típico exemplo de uma tarde sem muito o que fazer no trabalho. Nesse dia resolvi aprimorar os conhecimentos sobre os caracteres de controle do terminal, fazendo este programinha que usa os códigos de cores, posicionamento do cursor e limpa tela. Você passa pra ele uma letra, ou uma frase e ele enche sua tela com isso, em posições e cores aleatórias. Também tem uns "temas" já prontos em Ascii Art como siri, espaço sideral e avião. Ficou limpo, com help, diversas opções de linha de comando e funciona redondo. Ele foi resumido e hoje é parte das Funções ZZ, a **zzss**.
 
 - [Biblioteca shell](bash/lib/) (**Bash**):
-Biblioteca básica para Bash implementando tarefas comuns como fazer perguntas Sim/Não, menu, alinhamento de texto, etc. As funções têm um nome padronizado e também há uma versão da biblioteca que usa o programa Dialog.
+  Biblioteca básica para Bash implementando tarefas comuns como fazer perguntas Sim/Não, menu, alinhamento de texto, etc. As funções têm um nome padronizado e também há uma versão da biblioteca que usa o programa Dialog.
 
 - [ccat](bash/ccat) e [cgrep](bash/cgrep) (**Bash**):
-O "c" é de "color" ou "colorido", feitos com Bash+SED+caracteres de controle. O *cgrep* mostra o texto procurado em amarelo e o nome dos arquivos em branco. Hoje as versões mais novas do grep já possuem uma opção para colorizar o texto. O *ccat* sempre mostra todo o conteúdo de um arquivo, mas deixa coloridas as palavras especificadas na linha de comando.
+  O "c" é de "color" ou "colorido", feitos com Bash+SED+caracteres de controle. O *cgrep* mostra o texto procurado em amarelo e o nome dos arquivos em branco. Hoje as versões mais novas do grep já possuem uma opção para colorizar o texto. O *ccat* sempre mostra todo o conteúdo de um arquivo, mas deixa coloridas as palavras especificadas na linha de comando.
 
 - [showlink](bash/showlink) (**Bash**):
-Mostra todos os links para os quais páginas *html de um diretório apontam. Aceita várias opções para dizer que tipo de link se deseja, como arquivos de som, imagem, ftp, email etc. É útil para controlar os links de um site de internet.
+  Mostra todos os links para os quais páginas \*html de um diretório apontam. Aceita várias opções para dizer que tipo de link se deseja, como arquivos de som, imagem, ftp, email etc. É útil para controlar os links de um site de internet.
 
 - [sed](/sed/):
-Sou aficcionado por SED e fiz vários programinhas com ele. Eles estão listados no link indicado.
+  Sou aficcionado por SED e fiz vários programinhas com ele. Eles estão listados no link indicado.
 
 - [java](java/) e [sql](sql/):
-Alguns programinhas/comandos que fiz para a faculdade, de repente pode ser útil pra quem está iniciando nessas linguagens. Esta área era acima de tudo uma cópia de segurança, pois máquinas de faculdade sabe como é...
+  Alguns programinhas/comandos que fiz para a faculdade, de repente pode ser útil pra quem está iniciando nessas linguagens. Esta área era acima de tudo uma cópia de segurança, pois máquinas de faculdade sabe como é...

@@ -57,7 +57,7 @@ Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua vida vai mud
 - Deixe sempre as opções padrão já selecionadas, não mude: `C:\cygwin`, `All Users`, `UNIX`.
 - Faça a instalação mínima primeiro, apertando “Avançar” na tela da escolha de pacotes, SEM SELECIONAR NADA. Depois que o Cygwin estiver instalado e funcionando, use o Setup novamente para instalar os pacotes extras que desejar (uma coisa de cada vez pequeno gafanhoto).
 - Como referência, o [Adolfo da lista cygwin-br](http://br.groups.yahoo.com/group/cygwin-br/message/110) anotou quais os pacotes que vêm na instalação básica do Cygwin, são eles:
-    - ash, base-files, base-passwd, bash, bzip2, cygwin, diffutils, editrights, fileutils, findutils, gawk, gdbm, grep, groff, gzip, less, libgdbm, libgdm-devel, libgbm3, libgbm4, libgettextpo0, libiconv2, libintl1, libintl2, libncurses5, libncurses6, libncurses7, libpcre, libreadline4, libreadline2, login, man, mktemp, ncurses, readline, sed, sh-utils, tar, termcap, terminfo, texinfo, which, zlib, _update-info-dir
+  - ash, base-files, base-passwd, bash, bzip2, cygwin, diffutils, editrights, fileutils, findutils, gawk, gdbm, grep, groff, gzip, less, libgdbm, libgdm-devel, libgbm3, libgbm4, libgettextpo0, libiconv2, libintl1, libintl2, libncurses5, libncurses6, libncurses7, libpcre, libreadline4, libreadline2, login, man, mktemp, ncurses, readline, sed, sh-utils, tar, termcap, terminfo, texinfo, which, zlib, \_update-info-dir
 
 <h3 id="toc4">Artigo sobre Cygwin na Revista do Linux</h3>
 

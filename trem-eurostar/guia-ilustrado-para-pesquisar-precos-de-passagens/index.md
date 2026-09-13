@@ -10,7 +10,6 @@ As passagens do trem Eurostar são como passagens aéreas: não possuem preço f
 
 O uso do site pode ser complicado se você não domina o inglês, ou não tem experiência na compra de passagens pela internet. Mas não se preocupe: vou te ajudar e mostrar passo a passo como faz. Leia este guia com atenção que em poucos minutos você estará consultando suas passagens por conta própria, sem depender de agentes de viagem!
 
-
 ## ★ PASSO 1 — Escolher o país e o idioma
 
 Então vamos lá, para começar entre no site da Eurostar: [www.eurostar.com](http://www.eurostar.com).
@@ -33,7 +32,6 @@ Agora sim, você entrará na página principal do site da Eurostar, que aparecer
 
 > **Dica:** Se você escolheu o país errado e os preços aparecerem em libras (£) ou outra moeda, será preciso [apagar os cookies de seu navegador](http://www.google.com.br/support/accounts/bin/answer.py?answer=32050) e tentar novamente.
 
-
 ## ★ PASSO 2 — Informar os dados da viagem
 
 Já na tela principal do site da Eurostar é possível informar os dados da viagem para fazer a pesquisa de preços. Veja ali no canto, com o título **Book Online**.
@@ -44,20 +42,17 @@ Já na tela principal do site da Eurostar é possível informar os dados da viag
 
 Vou detalhar cada um destes campos para você saber exatamente como e o que preencher, sem ficar na dúvida. Acompanhe:
 
-
 ### From / To
 
 Cidades de origem e destino. Não é preciso digitar o nome da cidade, pois ao clicar no campo em branco vai aparecer uma lista de opções, então basta você clicar no nome da cidade. Lembre-se que os nomes das cidades são sempre informados em inglês: **London** (Londres) e **Brussels** (Bruxelas).
 
 ![](/wp/wp-content/uploads/2011/08/02-lista-cidades-explicado.jpg)
 
-
 ### Departing
 
 Data de partida (ida). Assim como na escolha das cidades, aqui você também não precisará digitar a data. Basta clicar no campo que aparecerá um calendário para você escolher o dia de sua viagem. Se precisar de um mês que não está aparecendo, clique em **Next months** para aparecer os meses seguintes.
 
 ![](/wp/wp-content/uploads/2011/08/02-calendario-explicado.png)
-
 
 ### One Way
 
@@ -69,11 +64,9 @@ Se esta é uma viagem somente de ida, marque esta opção. Se for viagem de ida 
 
 > **Open-jaw**: Infelizmente não é possível sair de um lugar e voltar para outro, como por exemplo ir de Paris a Londres e depois voltar de Londres para Bruxelas. Neste caso, você terá que comprar duas passagens de ida.
 
-
 ### Returning
 
 Data de retorno (volta). É o mesmo esquema que você já fez na data de ida: clique para aparecer o calendário, então escolha o dia da volta.
-
 
 ### Travellers
 
@@ -81,18 +74,17 @@ Contagem dos passageiros. Aqui você informa quantos passageiros estão em cada 
 
 ![Este exemplo serve para um casal com dois filhos: um de 9 anos (criança) e outro de 13 anos (jovem).](/wp/wp-content/uploads/2011/08/02-passageiros-exemplo.png)
 
-  * **Adults:** Adultos, de 26 a 59 anos.
-  * **Seniors:** Idosos, 60 anos ou mais.
-  * **Children:** Crianças, de 4 a 11 anos.
-  * **Youths:** Jovens, de 12 a 25 anos.
-  * **Infants:** Bebês, até 4 anos, que viajarão no colo de um adulto. Não precisa informar a quantidade, pois eles não pagam passagem.
+- **Adults:** Adultos, de 26 a 59 anos.
+- **Seniors:** Idosos, 60 anos ou mais.
+- **Children:** Crianças, de 4 a 11 anos.
+- **Youths:** Jovens, de 12 a 25 anos.
+- **Infants:** Bebês, até 4 anos, que viajarão no colo de um adulto. Não precisa informar a quantidade, pois eles não pagam passagem.
 
 Tudo preenchido? Maravilha!
 
 Confira com atenção todos os dados para ter certeza que sua consulta está correta. Agora basta agora apertar o botão **Search** para ver os preços e horários.
 
 ![](/wp/wp-content/uploads/2011/08/02-book-online-botao-search.png)
-
 
 ## ★ PASSO 3 — Resultado
 
@@ -112,25 +104,24 @@ Quando aparece um preço marcado com **less than 10 seats**, isso quer dizer que
 
 A Eurostar usa nomes diferentes para indicar o tipo da passagem. São eles:
 
-  * **Standard** — 2ª classe econômica
-  * **Standard Premier** — 2ª classe com mais conforto
-  * **Business Premier** — 1ª classe
+- **Standard** — 2ª classe econômica
+- **Standard Premier** — 2ª classe com mais conforto
+- **Business Premier** — 1ª classe
 
 Fora as classes, a flexibilidade de troca/cancelamento de cada passagem após efetuada a compra, é definida por três tipos:
 
-  * **Non flexible** — Não pode trocar nem cancelar.
-  * **Semi flexible** — Pode trocar ou cancelar pagando taxas.
-  * **Fully flexible** — Pode trocar ou cancelar sem pagar taxas.
+- **Non flexible** — Não pode trocar nem cancelar.
+- **Semi flexible** — Pode trocar ou cancelar pagando taxas.
+- **Fully flexible** — Pode trocar ou cancelar sem pagar taxas.
 
 Para saber todos os detalhes sobre cada tipo de passagem, clique nos links que aparecem lá no início da tabela:
 
 ![Apesar das cores diferentes, todas as palavras sublinhadas são links.](/wp/wp-content/uploads/2011/08/03-search-resultado-links.png)
 
-
 ## ★ PASSO 4 — Dê sua opinião :)
 
-E aí, diz pra mim, gostou deste guia?  
-Ele te ajudou a encontrar a passagem que você queira?  
+E aí, diz pra mim, gostou deste guia?\
+Ele te ajudou a encontrar a passagem que você queira?\
 Ficou faltando alguma coisa, tem alguma sugestão?
 
 Investi um bom tempo para fazer deste guia algo bem didático, de fácil entendimento, especialmente para ajudar aqueles que não dominam a língua inglesa. Agora eu quero saber o que você achou dele. Olha a caixa aí embaixo, **deixe seu comentário! :)**

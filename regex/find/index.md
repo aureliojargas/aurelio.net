@@ -19,8 +19,8 @@ posix-egrep     .  ^  $  *  +  ?  |  [ ]  { }  ( )  \1
 
 ## Links
 
-* [man find — Linux](http://linux.die.net/man/1/find)
-* [man find — FreeBSD](http://www.unix.com/man-page/FreeBSD/1/find/)
-* [man 7 regex — Linux](http://linux.die.net/man/7/regex)
-* [man 7 re_format — FreeBSD](http://www.unix.com/man-page/FreeBSD/7/re_format/)
-* [GNU find — Manual completo](http://www.gnu.org/software/findutils/manual/html_mono/find.html)
+- [man find — Linux](http://linux.die.net/man/1/find)
+- [man find — FreeBSD](http://www.unix.com/man-page/FreeBSD/1/find/)
+- [man 7 regex — Linux](http://linux.die.net/man/7/regex)
+- [man 7 re_format — FreeBSD](http://www.unix.com/man-page/FreeBSD/7/re_format/)
+- [GNU find — Manual completo](http://www.gnu.org/software/findutils/manual/html_mono/find.html)

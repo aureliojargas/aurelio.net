@@ -8,7 +8,6 @@ Fui à São Paulo dar um curso de 8 horas de [Expressões Regulares](/regex/) no
 
 Esse curso é o que eu mais gosto de fazer. É um intensivão, o dia todo viajando pelo mundo das regex, ensinando desde o básico até chegar em tópicos avançados. Sempre tem um engajamento muito bom da turma, mesmo quem nunca viu regex consegue terminar o dia criando suas próprias expressões, e isso me dá uma satisfação muito grande.
 
-
 ## Joinville ↔︎ São Paulo, de avião+táxi
 
 Esta foi segunda vez que fui dar curso no CT da Novatec. Na primeira eu fui de ônibus leito (9h de viagem), mas não consegui dormir e cheguei lá quebrado ([leia o relato completo](/curso/novatec-1/)). Dessa vez resolvi fazer diferente e fui de avião.
@@ -20,7 +19,6 @@ Eu detesto viajar de avião, por toda a perda de tempo e burocracia envolvida. D
 Uma viagem que tem somente 45 minutos de voo durou 5 horas no total. Saí direto do trabalho para o aeroporto de Joinville às 16:30 e cheguei no hotel em São Paulo às 21:30. Na volta foi mais rápido, pois era domingo cedo e durou somente 3 horas. Engraçado que tinha somente 12 passageiros no avião todo, veio vaziozão.
 
 > **Pegadinha do portão:** Enquanto esperava meu voo de volta, no bilhete que imprimi na hora dizia que o embarque seria no portão 12, porém na TV do aeroporto dizia que seria no portão 7. Na dúvida, fiquei ali pelo meio no portão 9. Nada disso, em cima da hora o cara no microfone falou que era no portão 11 e era embarque imediato. ¯\\\_(ツ)\_/¯
-
 
 ## O curso
 

@@ -18,7 +18,6 @@ Não perca usuáros, programe legal!
 >
 > Voce viu minha mensagem sobre o laptop 486? Então, eu fiquei com medo do txt2tags nao rodar la, pois é um slack 7.0 e python 1.5. Fiquei super feliz de voce manter a compatibilidade a partir desta versão. Estou me divertindo com o laptop, txt2tags (que esta ficando cada vez melhor).
 
-
 ## Módulo String
 
 Não use os métodos de string diretamente pela variável, como em:
@@ -37,7 +36,6 @@ Ao invés disso, importe o módulo `string` e use seus métodos:
 >>> print string.upper(texto)
 OI, TUDO BEM?
 ```
-
 
 ## Atalhos para operações aritméticas
 
@@ -61,7 +59,6 @@ Seja conservador e use a sintaxe normal:
 2
 ```
 
-
 ## self.METODO em lambda
 
 Não use variáveis ou métodos da instância da classe (self.NOME) em funções anônimas (lambda). Elas não fazem parte do escopo no Python 1.5!
@@ -81,7 +78,6 @@ for item in minhalista:
 minhalista = listatmp[:]
 del listatmp
 ```
-
 
 ## Pouco né?
 

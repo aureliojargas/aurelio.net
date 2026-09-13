@@ -13,13 +13,11 @@ No meio do caminho, lá no topo do morro, dá pra descer do bondinho e curtir as
 
 ![Foto: http://www.youhooo.com.br/sobre-o-youhooo.php](/wp/wp-content/uploads/2012/04/mapa-parque-unipraias.jpg)
 
-
 ## Como chegar
 
 Primeiro precisávamos chegar até a estação do teleférico, que fica lá no final (ou seria o início?) da Praia Central de Camboriú, bem na ponta, chamada **Barra Sul**.
 
 Fomos de carro, mas também é fácil chegar lá pegando o **Bondindinho**, ônibus para turistas que circula pela praia. Ele passa pela Avenida Atlântica e pela Avenida Brasil, basta acenar que ele para, e seu ponto final é justo na estação do teleférico, não tem erro. A passagem custa R$3 por pessoa. [Saiba mais sobre o Bondidinho](/viagem/balneario-camboriu/bondindinho/).
-
 
 ## Embarque: Estação Barra Sul
 
@@ -53,7 +51,6 @@ Em quatro pessoas, **o espaço interno é bem agradável**. Ninguém foi apertad
 
 Depois que você entra no bondinho, a porta fecha automaticamente e ele inicia o seu percurso.
 
-
 ## Subindo o morro
 
 ![Foto: http://www.unipraias.com.br/estacao-barra-sul.php](/wp/wp-content/uploads/2012/04/camboriu-teleferico-subida.jpg)
@@ -80,20 +77,19 @@ Eu não marquei o tempo que leva a subida, mas acho que deu uns 5 minutos.
 
 [Veja mais fotos no site da Estação Barra Sul](http://www.unipraias.com.br/estacao-barra-sul.php)
 
-
 ## Topo do morro: Estação Mata Atlântica
 
-  * Nome oficial: **Morro da Aguada**
-  * Altitude: 240m
+- Nome oficial: **Morro da Aguada**
+- Altitude: 240m
 
 O desembarque é igual ao embarque. O bondinho desacelera, mas não chega a parar. A porta abre automaticamente e você deve sair, com cuidado para não tropeçar. Há um funcionário da estação que auxiliará caso seja necessário.
 
 Aqui foi um quarto do trajeto. Depois iremos descer o morro até Laranjeiras para almoçar, e no fim de tarde será a volta. Mas agora que estamos no topo do morro, é hora de aproveitar as várias atrações!
 
-  * Caminhada pelas trilhas
-  * Mirantes
-  * YouHooo - Trenó de montanha
-  * Arvorismo
+- Caminhada pelas trilhas
+- Mirantes
+- YouHooo - Trenó de montanha
+- Arvorismo
 
 **Começamos com a caminhada.** As trilhas são passarelas construídas em meio à mata nativa, e foram muito bem feitas: amplas, chão de pedras, com placas de sinalização e informação, iluminação e lixeiras. Tudo integrado à natureza, com intervenção mínima.
 
@@ -133,7 +129,6 @@ Ah, somente quando cheguei em casa e fui ver no Google as fotos aéreas deste mo
 
 [Veja este mapa no Google Maps](http://maps.google.com.br/maps?q=-27.001612,-48.599889&hl=pt-BR&ll=-27.001775,-48.598237&spn=0.005573,0.00662&sll=-27.001612,-48.599889&sspn=0.005573,0.00662&t=h&z=17)
 
-
 ## Descendo o morro
 
 O topo do morro é a melhor parte do passeio, mas para completar o trajeto, ainda precisamos entrar no bondinho novamente para descer até o outro lado, na praia de Laranjeiras.
@@ -145,7 +140,6 @@ Voltamos à estação e fomos direto à área de embarque. Agora já conhecíamo
 Mais adiante, a altura do bondinho em relação ao solo aumenta bastante. Aquele pensamento besta do "e se cair?" fica mais intenso. Ainda mais que o teleférico parou mais uma vez, no meio do caminho. É um passeio com emoção :)
 
 **A vista da praia de Laranjeiras é incrível**. Tivemos a sorte de pegar um dia de sol forte, o mar estava com águas claras, havia vários barcos perto do pier, inclusive o Barco Pirata.
-
 
 ## Ponto final: Estação Laranjeiras
 
@@ -159,7 +153,6 @@ Se quiser curtir uma praia, pode alugar cadeiras, guarda-sol, caiaque, etc.
 
 Nós almoçamos e ficamos um tempo por lá batendo papo e curtindo a praia.
 
-
 ## A volta
 
 Voltamos à Estação Laranjeiras, para pegar o nosso bondinho de volta. Basta apresentar o bilhete, comprado lá no início do dia, para passar pela catraca. Se você perder o bilhete, vai ter que pagar os R$30 de novo para poder voltar, então cuida!
@@ -172,14 +165,13 @@ O início da descida deu novamente aquela sensação de montanha-russa, mas dest
 
 Aproveitamos mais uma vez a linda vista da orla e do rio, já nos despedindo de Balneário Camboriú, pois chegando em terra, de volta à estação Barra Sul, já pegamos o carro e viajamos de volta para casa.
 
-
 ## Mais informações
 
 No site oficial do parque, além das informações, há várias fotos e vídeos para você conhecer mais sobre as atrações.
 
-  * [Parque Unipraias](http://www.unipraias.com.br)
-  * [Tabela de preços](http://www.unipraias.com.br/precos.php#topo)
-  * [Estação Barra Sul](http://www.unipraias.com.br/estacao-barra-sul.php#topo)
-  * [Estação Mata Atlântica](http://www.unipraias.com.br/estacao-mata-atlantica.php#topo)
-  * [Estação Laranjeiras](http://www.unipraias.com.br/estacao-laranjeiras.php#topo)
-  * [YouHooo - Trenó de montanha](http://www.youhooo.com.br)
+- [Parque Unipraias](http://www.unipraias.com.br)
+- [Tabela de preços](http://www.unipraias.com.br/precos.php#topo)
+- [Estação Barra Sul](http://www.unipraias.com.br/estacao-barra-sul.php#topo)
+- [Estação Mata Atlântica](http://www.unipraias.com.br/estacao-mata-atlantica.php#topo)
+- [Estação Laranjeiras](http://www.unipraias.com.br/estacao-laranjeiras.php#topo)
+- [YouHooo - Trenó de montanha](http://www.youhooo.com.br)

@@ -8,20 +8,18 @@ Vou te explicar como transferir todos os seus dados (aplicativos, fotos, contato
 
 Todo este procedimento deve ser feito em um ambiente com rede Wi-fi, e quanto mais rápida a velocidade da internet, melhor. Então escolha o lugar ideal antes de começar o processo.
 
-
 ## 1. Confirme que o iCloud está ligado
 
 No seu iPhone antigo, vá em _Ajustes_ → _iCloud_ e confirme que o iCloud está ligado para todos os tipos de dados que você quer copiar para o iPhone novo:
 
-  * Mail
-  * Contatos
-  * Calendários
-  * Lembretes
-  * Favoritos
-  * Notas
-  * Compartilhar Fotos
-  * Documentos e Dados
-
+- Mail
+- Contatos
+- Calendários
+- Lembretes
+- Favoritos
+- Notas
+- Compartilhar Fotos
+- Documentos e Dados
 
 ## 2. Copie tudo para o iCloud (backup)
 
@@ -39,10 +37,9 @@ Quando o backup terminar, desligue o iPhone antigo e não mexa mais nele até o 
 
 Saiba que há alguns dados que não são copiados pelo backup do iCloud. Estes você precisa copiar para o computador primeiro, e depois para o iPhone novo:
 
-  * Música e programas de TV não adquiridos do iTunes Store
-  * Filmes, podcasts e audiolivros
-  * Fotos que foram originalmente sincronizadas em seu computador
-
+- Música e programas de TV não adquiridos do iTunes Store
+- Filmes, podcasts e audiolivros
+- Fotos que foram originalmente sincronizadas em seu computador
 
 ## 3. Copie tudo para o iPhone novo
 
@@ -59,7 +56,6 @@ _Restaurar de backup do iCloud_
 Inicie o processo de restauração e espere pacientemente que tudo seja copiado para o seu iPhone novo. Se você tinha muitas fotos e vídeos no Rolo da câmera do seu iPhone antigo, vai demorar até vir tudo. Os apps também demoram, pois são baixados e instalados um por um direto da App Store.
 
 Quer um conselho? Deixe o iPhone quieto e vá fazer outra coisa.
-
 
 ## 4. Confira o resultado!
 

@@ -17,9 +17,9 @@ oportunidade.
 
 ## Desenvolvedor de Software Livre
 
-* [Divulgação Oficial](http://www.inf.ufpr.br/ssl/)
+- [Divulgação Oficial](http://www.inf.ufpr.br/ssl/)
 
-* [Slides da palestra](/curso/material/desenvolvedor/)
+- [Slides da palestra](/curso/material/desenvolvedor/)
 
 Há cinco meses atrás, participei da [I Semana do Sofware Livre](/curso/ufpr-1/)
 na UFPR. Agora estou novamente nessa II Semana, com a mesma palestra

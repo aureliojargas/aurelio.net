@@ -8,12 +8,11 @@ worked: 2:00
 
 Imagino que deva ter usuários das [Funções ZZ](https://funcoeszz.net) que são mais novos do que isso :)
 
-Quando penso em softwares antigos, como as ferramentas originais do Unix, sempre imagino seus criadores como véios barbudos de óculos. Agora aqui estou eu, um jovem* gafanhoto que todo dia aprende algo novo, que nem barba tem direito (só uns fiapos), olhando meu próprio software completar 15 anos.
+Quando penso em softwares antigos, como as ferramentas originais do Unix, sempre imagino seus criadores como véios barbudos de óculos. Agora aqui estou eu, um jovem\* gafanhoto que todo dia aprende algo novo, que nem barba tem direito (só uns fiapos), olhando meu próprio software completar 15 anos.
 
 > \* Se é que alguém com 37 anos ainda pode ser considerado jovem…
 
 No [post comemorando os 13 anos](/blog/2013/02/28/13-anos-de-funcoes-zz/), já ponderei sobre o tempo que passou e o que me faz continuar trabalhando neste software, após tantos anos. Então dessa vez vamos direto ao que interessa.
-
 
 ## A versão nova
 
@@ -21,27 +20,26 @@ Para comemorar este aniversário, eu e o [Itamar](https://github.com/itamarnet) 
 
 Trabalhamos pesado nos últimos meses, usando nossas raras horas vagas de emprego/família/obrigações para discutir problemas, arrumar bugs, criar funções novas e melhorar as já existentes. O GitHub atesta a loucura que é esse desenvolvimento:
 
-* [1.080 commits desde a versão anterior](https://github.com/funcoeszz/funcoeszz/compare/13.2...15.5)
+- [1.080 commits desde a versão anterior](https://github.com/funcoeszz/funcoeszz/compare/13.2...15.5)
 
-* [50+ issues resolvidos](https://github.com/funcoeszz/funcoeszz/issues?page=1&q=is%3Aissue+is%3Aclosed+no%3Amilestone) desde a versão anterior
+- [50+ issues resolvidos](https://github.com/funcoeszz/funcoeszz/issues?page=1&q=is%3Aissue+is%3Aclosed+no%3Amilestone) desde a versão anterior
 
-* Mais [38 issues adicionais resolvidos](https://github.com/funcoeszz/funcoeszz/issues?q=milestone%3A%22Vers%C3%A3o+2015%22+is%3Aclosed) nas últimas semanas para deixar a versão nova “redonda”
+- Mais [38 issues adicionais resolvidos](https://github.com/funcoeszz/funcoeszz/issues?q=milestone%3A%22Vers%C3%A3o+2015%22+is%3Aclosed) nas últimas semanas para deixar a versão nova “redonda”
 
-* Muita pesquisa, investigação e problemas cabeludos:
+- Muita pesquisa, investigação e problemas cabeludos:
 
-  * [Fazer um gerador de números aleatórios portável](https://github.com/funcoeszz/funcoeszz/issues/75)
-  * [Consultar site da Caixa Econômica Federal](https://github.com/funcoeszz/funcoeszz/issues/159)
-  * [Ajustar os filtros awk/sed para serem portáveis](https://github.com/funcoeszz/funcoeszz/issues/170)
-  * [Fazer URL encode com UTF-8](https://github.com/funcoeszz/funcoeszz/issues/194)
-  * [Pegadinhas com printf e UTF-8](https://github.com/funcoeszz/funcoeszz/issues/180)
+  - [Fazer um gerador de números aleatórios portável](https://github.com/funcoeszz/funcoeszz/issues/75)
+  - [Consultar site da Caixa Econômica Federal](https://github.com/funcoeszz/funcoeszz/issues/159)
+  - [Ajustar os filtros awk/sed para serem portáveis](https://github.com/funcoeszz/funcoeszz/issues/170)
+  - [Fazer URL encode com UTF-8](https://github.com/funcoeszz/funcoeszz/issues/194)
+  - [Pegadinhas com printf e UTF-8](https://github.com/funcoeszz/funcoeszz/issues/180)
 
-* Incontáveis horas de trabalho consumidas no processo
+- Incontáveis horas de trabalho consumidas no processo
 
 O resultado é a **versão nova 15.5** ([download](https://funcoeszz.net/download/),
 [anúncio](https://funcoeszz.net/anuncio-15.5.html), [changelog](https://funcoeszz.net/changelog.html)), que traz um número recorde de 49 funções novas, deixando nosso querido software com um total de 178 funções!
 
 > Bônus: Sabe quem enviou [uma função nova](https://github.com/funcoeszz/funcoeszz/pull/215), para participar das comemorações? O [Thobias](https://funcoeszz.net/hist.html), antigo co-autor das funções que há anos não “aparecia” por estas bandas. Massa!
-
 
 ## Vem participar do projeto!
 

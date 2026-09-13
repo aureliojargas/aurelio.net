@@ -16,15 +16,15 @@ Eu nunca tomei muita água durante o dia, por puro esquecimento. Fico aqui no co
 
 Sei que tomar água faz bem pra saúde. Eu queria seguir aquela recomendação clássica de tomar 2 litros todos os dias. Mas como lembrar? Como controlar o quanto já tomei hoje?
 
-Tentei alguns métodos, mas o que funcionou pra mim foi o aplicativo [Plant Nanny][] (Android, iOS). Instalei em junho de 2013 e continuo usando até hoje, e graças a ele consigo atingir a meta diária na maioria dos dias.
+Tentei alguns métodos, mas o que funcionou pra mim foi o aplicativo [Plant Nanny](http://fourdesire.com/works/plantnanny) (Android, iOS). Instalei em junho de 2013 e continuo usando até hoje, e graças a ele consigo atingir a meta diária na maioria dos dias.
 
 ![](/img/blog/plant-nanny.jpg)
 
 No aplicativo, você tem uma planta e deve regá-la várias vezes ao dia, senão ela morre. Para regar a sua planta virtual, você deve tomar água no mundo real e informar a quantidade no app. Bebeu um copo d'água de 200ml? Então você rega a sua plantinha com 200ml. E assim vai, durante o dia, até chegar na meta diária de cerca de 2 litros.
 
-Seguindo a mesma mecânica de um [Tamagotchi][], a planta acaba se tornando seu bichinho virtual e você se conecta emocionalmente com ela. Assim, você se esforça (toma água) para cuidar bem dela e não deixá-la morrer.
+Seguindo a mesma mecânica de um [Tamagotchi](/tamagotchi/), a planta acaba se tornando seu bichinho virtual e você se conecta emocionalmente com ela. Assim, você se esforça (toma água) para cuidar bem dela e não deixá-la morrer.
 
-Parece bobo (e é), e há dezenas de aplicativos similares, mas o Plant Nanny se destaca por ter acertado em cheio vários detalhes que o tornam viciante e prazeroso de usar. É praticamente um jogo em vez de um mero aplicativo de anotações. O conceito de [gamification][] foi levado à sério.
+Parece bobo (e é), e há dezenas de aplicativos similares, mas o Plant Nanny se destaca por ter acertado em cheio vários detalhes que o tornam viciante e prazeroso de usar. É praticamente um jogo em vez de um mero aplicativo de anotações. O conceito de [gamification](http://en.wikipedia.org/wiki/Gamification) foi levado à sério.
 
 - Há várias plantas disponíveis, cada uma com sua própria personalidade, cores, formas e características. São os personagens do jogo.
 
@@ -40,12 +40,6 @@ Parece bobo (e é), e há dezenas de aplicativos similares, mas o Plant Nanny se
 
 - O ciclo completo de cada planta, desde seu nascimento até ser movida para o jardim, dura de 2 a 4 semanas. Plantas de nível fácil crescem mais rápido, porém geram menos moedas.
 
-- Há diversas conquistas ([achievements][]) disponíveis, trazendo mais desafios para te manter ligado no jogo (e bebendo água).
+- Há diversas conquistas ([achievements](<http://en.wikipedia.org/wiki/Achievement_(video_gaming)>)) disponíveis, trazendo mais desafios para te manter ligado no jogo (e bebendo água).
 
 É gay cuidar de uma florzinha virtual, eu sei. Mas funciona :)
-
-
-[Plant Nanny]:  http://fourdesire.com/works/plantnanny
-[Tamagotchi]:   /tamagotchi/
-[gamification]: http://en.wikipedia.org/wiki/Gamification
-[achievements]: http://en.wikipedia.org/wiki/Achievement_(video_gaming)

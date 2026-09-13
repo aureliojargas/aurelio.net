@@ -19,7 +19,6 @@ Cada alteração tem um lugar específico para ser feita. Às vezes é óbvio, �
 
 Se você já usa o Twenty Ten, ou está na dúvida de qual tema-base escolher para seus sites, leia as dicas e aprenda a "tunar" seu site/blog!
 
-
 ## Lista de dicas
 
 {% include list-sub-files.html %}

@@ -9,10 +9,10 @@ Quando você usa o plugin [Jetpack](http://jetpack.me) e ativa o módulo Sharing
 
 Você tem a opção de mostrar ou não os botões em cada post, mas não tem a opção de colocá-los onde bem entender. Eles sempre aparecem no final do post.
 
-  * E se você quiser colocar os botões antes do título?
-  * Ou logo abaixo do título?
-  * Ou no meio do texto?
-  * Ou em algum outro lugar?
+- E se você quiser colocar os botões antes do título?
+- Ou logo abaixo do título?
+- Ou no meio do texto?
+- Ou em algum outro lugar?
 
 Vou te mostrar como faz.
 

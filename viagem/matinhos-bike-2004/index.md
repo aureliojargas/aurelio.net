@@ -9,25 +9,23 @@ Este é o relato da viagem de bicicleta que fiz com a parentada para a praia, to
 
 Resumo:
 
-  * `08:00` Saída de casa, perto do Parque Barigüi, Aurelio e Gabriel
-  * `09:15` Saída do Posto na 277, ao lado do Mercadorama, com Roberval, Edenilson e Nata
-  * `12:00` Almoço na lanchonete Bela Vista, no pé da serra
-  * `15:00` Pneu da bicicleta do Aurelio furou
-  * `18:00` Chegada na beira da praia em Matinhos
-
+- `08:00` Saída de casa, perto do Parque Barigüi, Aurelio e Gabriel
+- `09:15` Saída do Posto na 277, ao lado do Mercadorama, com Roberval, Edenilson e Nata
+- `12:00` Almoço na lanchonete Bela Vista, no pé da serra
+- `15:00` Pneu da bicicleta do Aurelio furou
+- `18:00` Chegada na beira da praia em Matinhos
 
 ## A Equipe
 
-  * Aurelio (eu)
-  * Gabriel (meu padrasto)
-  * Roberval (meu tio)
-  * Edenilson (meu tio)
-  * Nataniel (amigo da família)
+- Aurelio (eu)
+- Gabriel (meu padrasto)
+- Roberval (meu tio)
+- Edenilson (meu tio)
+- Nataniel (amigo da família)
 
 O detalhe importante sobre a equipe é que **ninguém é atleta**. Somos todos sedentários comuns que não fazem academia nem praticam esportes regularmente.
 
 Eu nos meus 27 sou o caçula da turma. Os outros já contam com pelos menos 10 anos a mais de experiência de vida :)
-
 
 ## Os Preparativos
 
@@ -43,7 +41,6 @@ Cada um ficou de arranjar/arrumar a sua bike, comprar um capacete e se preparar 
 
 Uma semana antes fizemos uma prévia, saindo do Parque Barigüi e indo até a entrada de Campo Largo (cidade metropolitana), um percurso que soma 40 Km (ida e volta). Foi uma boa puxada, que serviu para cada um ver como anda seu físico e pegar intimidade com a bicicleta: definir a altura ótima para o banco, troca de marchas, dificuldades, etc.
 
-
 ## Minha Bike
 
 Por falar em marchas, a minha bicicleta tem uma peculiaridade: ela não tem marchas. Também não tem amortecedor, banco de gel e outras frescuras que essas bicicletas novas trazem. Pode-se dizer que é uma autêntica bike "das antigas".
@@ -51,7 +48,6 @@ Por falar em marchas, a minha bicicleta tem uma peculiaridade: ela não tem marc
 ![Como diz minha amiga Fabíola: uma mistura brega de bicicleta de pedreiro e Ceci](/foto/tosco/bike.jpg)
 
 Eu não gosto de marchas, minha bike é uma tipo Barra Forte, com garupa, banco confortável de molas e freio de tambor (no pé). Ela tem um guidão especial, tipo de moto que é alto e largo, podendo ficar com a coluna reta enquanto pedala. Ela foi comprada em Balneário Camboriú. "Coisa de catarina", como dizemos por aqui :)
-
 
 ## A Viagem
 
@@ -105,20 +101,18 @@ Quando chegamos na praia eram 18:00, 10 horas após o início da jornada em Curi
 
 Como resultado, cinco homens cansados e doídos, mas com o sorriso no rosto por terem conseguido. Essa viagem é realmente uma aventura, é longa e cansativa e ainda tivemos o agravante do frio e da chuva. Mas VALEU. Foi um dia memorável para depois contar para os netos e eles não acreditarem.
 
-
 ## A Volta
 
 Confortável, de carro :)
 
-
 ## Curiosidades
 
-  * **Buzina:** Impressionante como as pessoas buzinam para os ciclistas: caminhão, carro, moto. E para nós que estamos ali ralando, é uma distração, ajuda a dar força, funciona.
+- **Buzina:** Impressionante como as pessoas buzinam para os ciclistas: caminhão, carro, moto. E para nós que estamos ali ralando, é uma distração, ajuda a dar força, funciona.
 
-  * **Visão:** O que mais eu vi na viagem: os olhos de gato delimitando a pista e o acostamento e parafusos aleatórios perdidos pelo chão.
+- **Visão:** O que mais eu vi na viagem: os olhos de gato delimitando a pista e o acostamento e parafusos aleatórios perdidos pelo chão.
 
-  * **Animais:** Sabe aqueles animais atropelados que às vezes se vê nas estradas? De bicicleta você passa bem ao lado deles, e além de perceber que a quantidade é muito maior do que se vê de carro, as tripas e órgãos internos também são vistos em detalhes. Triste.
+- **Animais:** Sabe aqueles animais atropelados que às vezes se vê nas estradas? De bicicleta você passa bem ao lado deles, e além de perceber que a quantidade é muito maior do que se vê de carro, as tripas e órgãos internos também são vistos em detalhes. Triste.
 
-  * **Torcida:** Ninguém botou fé que a gente ia conseguir :) No fim do dia foram vários telefonemas de parentes e conhecidos. "O quê, eles chegaram mesmo?"
+- **Torcida:** Ninguém botou fé que a gente ia conseguir :) No fim do dia foram vários telefonemas de parentes e conhecidos. "O quê, eles chegaram mesmo?"
 
-  * **Dores:** Após os 70 km de percurso, a diversão deu lugar às dores. Tive dores na bunda de ficar sentado no banco o dia todo e dores no joelho pela força nas pedaladas. No dia seguinte acordei com dores na parte de trás do joelho esquerdo e no terceiro dia tive dores nas coxas.
+- **Dores:** Após os 70 km de percurso, a diversão deu lugar às dores. Tive dores na bunda de ficar sentado no banco o dia todo e dores no joelho pela força nas pedaladas. No dia seguinte acordei com dores na parte de trás do joelho esquerdo e no terceiro dia tive dores nas coxas.

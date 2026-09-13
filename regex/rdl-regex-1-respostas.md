@@ -28,8 +28,8 @@ Expressão: `revistas*`
 
 Como o quantificador `*` casa a ocorrência anterior (letra **s**) zero ou mais vezes, esta ER casa:
 
- * **revista**:  revista seguido da letra "s" **0** (zero) vezes
- * **revistas**: revista seguido da letra "s" **1** vez
+- **revista**: revista seguido da letra "s" **0** (zero) vezes
+- **revistas**: revista seguido da letra "s" **1** vez
 
 Leitores mais atentos notarão que esta ER também casa **revistass**, **revistasss**, etc. Existe um quantificador para "*a entidade imediatamente anterior um número X de vezes*" que é o `{X}`. Ele foi abordado [no próximo artigo](/regex/rdl-regex-2.html).
 

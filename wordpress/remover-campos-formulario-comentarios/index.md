@@ -7,10 +7,10 @@ Já teve a necessidade de simplificar o formulário de comentários de seu blog?
 
 No WordPress, o formulário padrão de comentários vem com os seguintes campos:
 
-  * Nome
-  * Email
-  * Site
-  * Comentário
+- Nome
+- Email
+- Site
+- Comentário
 
 Por exemplo, você pode remover somente o campo Site, que não é tão importante caso o seu público não seja versado em internet. Ou ainda, se quiser implementar uma espécie de caixa de sugestões, você pode fazer com que todos os comentários sejam anônimos removendo os campos Nome, Email e Site.
 
@@ -35,21 +35,18 @@ A primeira linha liga a nossa função remove_campos() com o filtro responsável
 
 E pronto!
 
-
 ## Detalhes
 
-  * Se você for remover os campos Nome ou Email, também deve desmarcar a opção "_O autor do comentário tem que preencher o nome e email_" em Configurações → Discussão, para que eles deixem de ser obrigatórios.
-  * Nesse esquema não é possível remover o campo Comentário.
-  * Esse esquema só funciona à partir do WordPress versão 3.0.
-
+- Se você for remover os campos Nome ou Email, também deve desmarcar a opção "_O autor do comentário tem que preencher o nome e email_" em Configurações → Discussão, para que eles deixem de ser obrigatórios.
+- Nesse esquema não é possível remover o campo Comentário.
+- Esse esquema só funciona à partir do WordPress versão 3.0.
 
 ## Referência
 
-  * <http://codex.wordpress.org/Theme_Development#Functions_File>
-  * <http://codex.wordpress.org/Function_Reference/comment_form>
-  * <http://codex.wordpress.org/Function_Reference/add_filter>
-  * <http://codex.wordpress.org/Plugin_API>
-
+- <http://codex.wordpress.org/Theme_Development#Functions_File>
+- <http://codex.wordpress.org/Function_Reference/comment_form>
+- <http://codex.wordpress.org/Function_Reference/add_filter>
+- <http://codex.wordpress.org/Plugin_API>
 
 ## Veja também
 

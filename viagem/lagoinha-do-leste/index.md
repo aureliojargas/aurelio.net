@@ -11,7 +11,6 @@ Conheci a praia da Lagoinha em Janeiro de 2007. Para chegar lá são duas horas 
 
 > "Os turistas a consideram a mais bonita da Ilha. Os moradores do Sul da Ilha garantem que ela é a mais misteriosa de Florianópolis. Os ecologistas a defendem como se fosse a última praia do mundo. Seja qual for a opinião sobre a Lagoinha do Leste, ela é única. A praia ainda preserva as características de quando os primeiros imigrantes aportaram nestas terras. A Lagoinha, como é carinhosamente chamada pelos ilhéus, impressiona seus visitantes com sua beleza, seu ar selvagem e seus mistérios." — Fonte: [Guia Floripa](http://www.guiafloripa.com.br/trilhas/11_lagoinha/lagoinha.html)
 
-
 ## Situando-se
 
 ![Fonte: http://www.aoredordailha.com.br/trekking-florianopolis/lagoinha-do-leste.asp](/img/viagem/lagoinha-do-leste/lagoinha-mapa.png)
@@ -23,7 +22,6 @@ Então. Lá estando, vá para o sul. Passe o Campeche e siga direto até a praia
 São 4,3 km na trilha de ida e 2,3 km na de volta. Não é moleza, mas também não requer físico de atleta. Reserve pelo menos 4 horas para o passeio todo. O ideal é o dia todo.
 
 **Resumão:** Ande até o final da praia do Matadeiro e siga pela trilha. Duas horas depois você pisará na praia da Lagoinha. Aproveite, coma, beba, nade, surfe, durma. Ande até o final da praia e entre à direita na trilha de volta. Uma hora depois você reencontrará a civilização no Pântano do Sul. Aproveite o ponto de ônibus e volte para a praia da Armação, caso tenha vindo de carro.
-
 
 ## O Início
 
@@ -42,7 +40,6 @@ Saindo do centrinho da Armação, fomos até a praia do Matadeiro e caminhamos p
 > Havia alguns senhores e senhoras de idade na boca da trilha, conversando. Não aceitaram nosso convite para seguir conosco até a Lagoinha, mas um deles profetizou: "Essa menina pequena aí, ela NÃO VAI AGÜENTAR chegar até o final". Mas hein?!?
 >
 > Todos sabemos o efeito motivador que uma declaração dessas exerce sobre uma pessoa. Nada como um "du-vi-do" para fazer-nos superar nossos limites. E assim foi :)
-
 
 ## A Ida
 
@@ -66,7 +63,6 @@ A primeira visão da praia é uma imagem que fica na sua mente por muito tempo. 
 
 ![E finalmente: a Praia da Lagoinha](/img/viagem/lagoinha-do-leste/lagoinha.jpg)
 
-
 ## Chegamos!
 
 Instintivamente, o primeiro e único desejo ao pisar na areia da praia é se jogar na água o mais rápido possível, como se você estivesse sendo perseguido por um exame de abelhas africanas assassinas. E foi o que fizemos.
@@ -82,7 +78,6 @@ Renovados, fomos explorar o local. No meio da praia fica a lagoinha, uma piscina
 Recapitulando: MAR transparente e gelado, LAGOA verde e quente.
 
 No final da praia há mais um córrego com água potável. Tem até um cano que facilita o acesso ao líquido precioso.
-
 
 ## A Volta
 
@@ -106,25 +101,24 @@ Mas no rosto há um sorriso de satisfação ao lembrar de tantos momentos felize
 
 ![Ei, quase me esqueci da foto poser! :D](/img/viagem/lagoinha-do-leste/poser.jpg)
 
-
 ## Dicas
 
-  * Leve uma mochila confortável de carregar, de preferência nas costas.
+- Leve uma mochila confortável de carregar, de preferência nas costas.
 
-  * Carregue o mínimo possível: protetor solar, canga, comida e água.
+- Carregue o mínimo possível: protetor solar, canga, comida e água.
 
-  * Bonés, viseiras, chapéus e assemelhados são bem-vindos. Há muitos trechos da trilha ao ar livre, com sol batendo direto no rosto.
+- Bonés, viseiras, chapéus e assemelhados são bem-vindos. Há muitos trechos da trilha ao ar livre, com sol batendo direto no rosto.
 
-  * Pode ir de tênis se quiser, mas não é obrigatório. Eu fui descalço e o único inconveniente foram duas topadas na pedra, com o mesmo dedinho!
+- Pode ir de tênis se quiser, mas não é obrigatório. Eu fui descalço e o único inconveniente foram duas topadas na pedra, com o mesmo dedinho!
 
-  * Fique atento com os espinhos. Nas laterais da trilha de ida tem várias daquelas plantas com espinhos nas folhas, que adoram cortar as canelas dos distraídos.
+- Fique atento com os espinhos. Nas laterais da trilha de ida tem várias daquelas plantas com espinhos nas folhas, que adoram cortar as canelas dos distraídos.
 
-  * Uma garrafa de água de 300 ml foi suficiente para duas pessoas. Reabastecida no meio da trilha de ida e na praia da Lagoinha.
+- Uma garrafa de água de 300 ml foi suficiente para duas pessoas. Reabastecida no meio da trilha de ida e na praia da Lagoinha.
 
-  * Não sei se é sempre, mas no domingo que fomos havia duas barracas na praia com tiozinhos vendendo água de coco, refrigerante e sanduíche natural.
+- Não sei se é sempre, mas no domingo que fomos havia duas barracas na praia com tiozinhos vendendo água de coco, refrigerante e sanduíche natural.
 
-  * Veja mais informações sobre a história e características do local, além de outras dicas úteis para fazer a trilha:
+- Veja mais informações sobre a história e características do local, além de outras dicas úteis para fazer a trilha:
 
-    * [Guia Floripa](http://www.guiafloripa.com.br/turismo/praias/lleste.php3)
-    * [Guia da Trilhas da Ilha](http://www.guiafloripa.com.br/trilhas/11_lagoinha/lagoinha.html)
-    * [Ao Redor Da Ilha](http://www.aoredordailha.com.br/trekking-florianopolis/lagoinha-do-leste.asp)
+  - [Guia Floripa](http://www.guiafloripa.com.br/turismo/praias/lleste.php3)
+  - [Guia da Trilhas da Ilha](http://www.guiafloripa.com.br/trilhas/11_lagoinha/lagoinha.html)
+  - [Ao Redor Da Ilha](http://www.aoredordailha.com.br/trekking-florianopolis/lagoinha-do-leste.asp)

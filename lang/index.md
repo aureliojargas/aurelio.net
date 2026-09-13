@@ -24,7 +24,6 @@ Minhas ferramentas preferidas são:
 
 Estas ferramentas podem ser usadas no computador e no celular. Dá pra estudar o idioma em qualquer hora/lugar, sem que isso atrapalhe sua rotina. Por exemplo: ouvir música durante o trabalho, ouvir podcast enquanto lava a louça ou vai pro trabalho, e fazer uma aula rápida no Duolingo enquanto está numa fila ou no banheiro :)
 
-
 ## Inglês
 
 Tive aula de inglês na escola, no primeiro grau. Mas foi bem fraco, só pra aprender o básico do básico. Depois me virei decorando letras de música, jogando jogos em inglês e lendo textos técnicos de informática.
@@ -36,7 +35,6 @@ Só com 20 anos de idade, já trabalhando com informática, comecei a ler e escr
 Lá pelos 30 anos comecei a ouvir podcasts diariamente, em inglês. Isso ajudou demais na compreensão da fala (listening). Principalmente em podcasts de entrevistas, onde a cada episódio vinha alguém diferente, com sotaque diferente. Depois de anos dessa rotina, fiquei bom em ouvir e entender bem mesmo ouvindo acelerado (1.5x da velocidade normal).
 
 Finalmente aos 40 anos de idade, comecei a falar inglês, pois me mudei pra Alemanha e o inglês é o idioma oficial na empresa. O começo foi bem difícil, destravar na marra, no dia a dia. Vai ficando mais fácil com o tempo, mas ainda tenho um inglês muito simples, cheio de lacunas, que não consigo me expressar exatamente como quero, pela falta de um vocabulário mais sofisticado. Mas tudo bem, a vida segue e vou melhorando aos poucos, devagar e sempre.
-
 
 ## Espanhol
 
@@ -62,7 +60,6 @@ Podcast:
 - News in Slow Spanish Latino
 - NHK World Radio Japan - Spanish News
 
-
 ## Italiano
 
 Acho tão divertido ouvir o idioma italiano, que decidi estudar. Foi cerca de um ano de estudos, em ritmo bem leve, depois tive que parar pra me dedicar ao alemão. Pretendo voltar a estudar no futuro.
@@ -79,7 +76,6 @@ Podcast:
 
 - Coffee Break Italian
 - News in Slow Italian
-
 
 ## Alemão
 

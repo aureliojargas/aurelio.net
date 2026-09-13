@@ -45,18 +45,17 @@ No PHP 5.3.0 (ano 2009) foram aposentadas (deprecated) todas as funções POSIX.
 </tbody>
 </table>
 
-
 ## Links
 
-* [PHP PCRE — Manual](http://www.php.net/pcre)
-Manual completo das funções que usam expressões regulares no PHP. Separe um tempo para ler com calma todos os links e entender bem como funciona cada função.
+- [PHP PCRE — Manual](http://www.php.net/pcre)
+  Manual completo das funções que usam expressões regulares no PHP. Separe um tempo para ler com calma todos os links e entender bem como funciona cada função.
 
-* [PHP POSIX — Manual](http://www.php.net/regex)
-Manual das antigas funções POSIX, para consultar caso você ainda precise suportar código antigo que dependa delas.
+- [PHP POSIX — Manual](http://www.php.net/regex)
+  Manual das antigas funções POSIX, para consultar caso você ainda precise suportar código antigo que dependa delas.
 
-* [Differences from POSIX regex](http://php.net/manual/en/reference.pcre.pattern.posix.php)
-Um miniguia para ajudar a migração de expressões regulares POSIX para PCRE.
+- [Differences from POSIX regex](http://php.net/manual/en/reference.pcre.pattern.posix.php)
+  Um miniguia para ajudar a migração de expressões regulares POSIX para PCRE.
 
-* <http://www.regular-expressions.info/php.html>
+- <http://www.regular-expressions.info/php.html>
 
-* <http://www.regular-expressions.info/pcre.html>
+- <http://www.regular-expressions.info/pcre.html>

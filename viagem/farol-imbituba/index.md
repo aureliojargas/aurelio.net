@@ -9,7 +9,6 @@ title_prefix: 'EU FUI: '
 
 Viagem de 1000 kilômetros e 8 dias, sozinho, para pegar as ondas do sul de Santa Catarina, passando antes pela serra catarinense, feita de 18 a 26 de janeiro de 2001.
 
-
 ## A Casa
 
 Esta foi uma viagem solitária e surfística, e como a namorada oficial ficou em curitiba, fui acompanhado da namorada reserva (a TOYOTA), que também serviu de casa onde dormi todas as noites.
@@ -17,7 +16,6 @@ Esta foi uma viagem solitária e surfística, e como a namorada oficial ficou em
 ![](/img/viagem/farol-imbituba/200101-toyota_casa.jpg)
 
 Confortável, com colchão (arranquei o banco do passageiro e o de trás pra dar o espaço), travesseiro, coberta (inútil na praia), porta-prancha (feito em casa), varal, cortinas de "blackout" (presas com arame) e luz de teto (gambiarra de 1,99), tudo isso interno, protegido do vento e da chuva.
-
 
 ## A Serra
 
@@ -28,7 +26,6 @@ O caminho até **Lages** não tem muito o que ver. Vai direto pela BR-116. Depoi
 E é claro, a atração máxima do caminho e o motivo de ter vindo pela 116 e não direto pela BR-101: a famosa descida da **Serra do Rio do Rastro**, com seus mais de 1000 metros de descida forte morro abaixo, com várias curvas, algumas de 180 graus, num visual alucinante.
 
 ![](/img/viagem/farol-imbituba/200101-serra.jpg)
-
 
 ## As Praias
 
@@ -45,7 +42,6 @@ Saindo do farol, subindo a norte pela areia da praia, alguns quilômetros, passa
 E subindo mais um pouco, chega-se no município de **Imbituba**, mais especificamente a **Praia da Vila** (2 Ls é palha), onde quebraram as melhores ondas da viagem num visual incrível. Além do tradicional morro, duas ilhotas próximas, numa praia de ondas looooooooongas, onde facilmente se pega uma de 20, 30 segundos. Até cansa &:) Tem camping na beira do mar e perto do pico, o Jangadeiro.
 
 Como eu estava surfando, é claro que não fiquei tirando foto das praias.
-
 
 ## Os Caminhos
 

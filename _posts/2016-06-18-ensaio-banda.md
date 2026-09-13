@@ -12,7 +12,6 @@ Eu e a Mog fomos pra Curitiba curtir a festa de aniversário dos nossos sobrinho
 
 Nunca tinha ido lá, mas gostei e recomendo. A estrutura é muito boa, com várias salas, estacionamento e equipamentos top. E mais, tudo estava limpo, arrumado e sem cheiro de jaula. Milagre! 😄
 
-
 ## Reencontrando os amigos
 
 ![Fejão, Aurelio, Nissin, Daniel](/img/blog/correria-2016.jpg)
@@ -20,7 +19,6 @@ Nunca tinha ido lá, mas gostei e recomendo. A estrutura é muito boa, com vári
 Eu não via os caras desde nosso último ensaio em 2014. Como é bom rever os amigos, dar aquele abraço apertado e ter aquela sensação que nem passou tanto tempo assim. Continuamos com uma ligação forte independentemente da distância. Somos amigos há mais de 20 anos. O Nissin (guitarra) conheço desde a adolescência e o Fejão (baixo, vocal) e o Daniel (guitarra) desde o CEFET-PR (hoje UTFPR).
 
 > Por falar em Nissin, ele chegou 30 minutos atrasado no ensaio, mantendo sua tradição milenar. Certas coisas nunca mudam, né? 🙄
-
 
 ## Fazendo barulho
 
@@ -33,7 +31,6 @@ Antes do ensaio, duvidosos, até combinamos de tocar mais devagar e tal. Mas que
 <iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/MXUxBgz4CU8" frameborder="0" allowfullscreen=""></iframe>
 
 Dica: Ligue a legenda (CC) para ver a letra da música.
-
 
 ## Bolhas, calos e pratos voadores
 

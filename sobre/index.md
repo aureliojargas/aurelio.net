@@ -7,7 +7,6 @@ hide_read_more: true
 hide_comments: true
 ---
 
-
 ## Sobre o Aurelio
 
 Oi, meu nome é Aur[e](/blog/2011/05/26/aos-33-descobri-que-meu-nome-nao-tem-acento/)lio Marinho Jargas, tenho 48 anos. Nasci e cresci em Curitiba, já morei em Floripa, Matinhos e Joinville, e desde 2018 moro em Ulm (Alemanha) com minha família.
@@ -21,7 +20,6 @@ Nunca bebi, nunca fumei, nunca me droguei. Me orgulho disso e quero continuar as
 Hoje [sou desempregado por opção](/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/), trabalho em casa e sou feliz assim.
 
 Se quiser consultar uma segunda opinião, leia o que meu amigo Matheus Eduardo [escreveu](http://maathe.us/blog/2007/11/aurelio-marinho-jargas/).
-
 
 ## Sobre a Mog
 
@@ -41,7 +39,6 @@ Em 2007 a Mog começou a participar do meu blog também. Como a reação dos lei
 
 A Mog também é a Rainha da Oncinha (hehe), com sua loja temática online que vende tudo com estampa de oncinha: roupas, bolsas, acessórios, utensílios, entre outros: [Loja Coisas de Oncinha](http://www.coisasdeoncinha.com.br/).
 
-
 ## Sobre o site Aurelio.net
 
 Eu sou o Aurelio e este é meu site. Aqui coloco tudo aquilo que quero compartilhar com o mundo. Meu trabalho, softwares que crio, artigos técnicos, textos pessoais, fotos, enfim, um site pessoal. Ou, como dizia-se na época que o criei, minha _homepage_.
@@ -60,7 +57,6 @@ Nos primórdios eu escrevia as páginas do site na mão, direto em HTML. Em 2001
 
 Em 2011 [meu blog foi integrado com o site](/blog/2011/04/13/site-blog-ambos/), tornando-se uma coisa só. Agora conteúdo dinâmico (blog) e estático (site) coexistem debaixo dessa entidade abstrata que me acompanha há tantos anos chamada site pessoal.
 
-
 ## Sobre o Blog
 
 Escrevo sobre tecnologia, música, viagens, esportes e fatos bizarros que acontecem comigo. Meu foco principal é o HUMANO. Gosto de fazer textos que falam de pessoas reais e que ao mesmo tempo inspiram o leitor, fazendo-o refletir.
@@ -72,7 +68,6 @@ Não escrevo diariamente, às vezes nem semanalmente. Troco quantidade por quali
 [Comecei o blog já em 1999](/blog-arquivo.html), quando ainda não existiam blogs. Eu usava a página principal de meu site como um grande registro daquilo tudo o que eu fazia. Quem quisesse acompanhar tinha que acessar o site de tempos em tempos para ver se havia algo novo. Usei este formato até 2006, quando finalmente [me rendi](/blog/2006/04/23/blog-novo-de-novo-dessa-vez-definitivo-e-bombado/) e abri um blog no endereço _aurelio.wordpress.com_. Anos mais tarde, em 2010, [trouxe o blog de volta](/blog/2010/06/29/blog-aurelio-net/) para o meu domínio, e o endereço mudou para _blog.aurelio.net_. Finalmente em 2011 consegui [integrar novamente o site e o blog](/blog/2011/04/13/site-blog-ambos/) embaixo do _aurelio.net_, agora eles formam uma coisa só: meu site pessoal.
 
 Saiba mais: [Por que tenho um blog?](/blog/2007/04/28/por-que-tenho-um-blog/), [Humanização do Blog](/blog/2007/05/01/humanizacao-do-blog/).
-
 
 ## Deixe sua opinião!
 

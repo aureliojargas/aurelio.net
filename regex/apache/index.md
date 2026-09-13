@@ -173,7 +173,6 @@ title: Expressões Regulares + Apache HTTPd
 </tfoot>
 </table>
 
-
 ## mod_rewrite
 
 O mod_rewrite é muito complexo. É preciso ler muito sobre ele para entender seu funcionamento e criar suas regras com mais sabedoria e confiança. Invista um tempo para estudar estes documentos, nesta ordem:
@@ -191,20 +190,19 @@ Os retrovisores são parte importante do mod_rewrite, inclusive há dois tipos d
 
 Fonte: <http://httpd.apache.org/docs/current/images/rewrite_backreferences.png>
 
-
 ## Links
 
-* [Directive Quick Reference](http://httpd.apache.org/docs/current/mod/quickreference.html)
-Lista completa com todas as diretivas do Apache, com links para sua documentação.
+- [Directive Quick Reference](http://httpd.apache.org/docs/current/mod/quickreference.html)
+  Lista completa com todas as diretivas do Apache, com links para sua documentação.
 
-* [How the sections are merged](http://httpd.apache.org/docs/current/sections.html#merging)
-Saiba mais sobre a ordem de execução das diretivas: primeiro todas as `<Directory>`, depois suas equivalentes regex (`<Directory ~ ...>` e `<DirectoryMatch>`) e depois vem na fila `Files*`, `Location*` e `If`.
+- [How the sections are merged](http://httpd.apache.org/docs/current/sections.html#merging)
+  Saiba mais sobre a ordem de execução das diretivas: primeiro todas as `<Directory>`, depois suas equivalentes regex (`<Directory ~ ...>` e `<DirectoryMatch>`) e depois vem na fila `Files*`, `Location*` e `If`.
 
-* [Apache RewriteRule and query string](http://www.simonecarletti.com/blog/2009/01/apache-rewriterule-and-query-string/)
-Artigo rápido e bem explicado sobre como lidar com as query strings da URL original ao usar o mod_rewrite.
+- [Apache RewriteRule and query string](http://www.simonecarletti.com/blog/2009/01/apache-rewriterule-and-query-string/)
+  Artigo rápido e bem explicado sobre como lidar com as query strings da URL original ao usar o mod_rewrite.
 
-* [Wiki — mod_rewrite recipes and guides](http://wiki.apache.org/httpd/Rewrite)
-Wiki oficial dos usuários do Apache, com vários artigos pequenos, com dics valiosas. Recomendo a leitura dos artigos desta seção especial sobre o mod_rewrite.
+- [Wiki — mod_rewrite recipes and guides](http://wiki.apache.org/httpd/Rewrite)
+  Wiki oficial dos usuários do Apache, com vários artigos pequenos, com dics valiosas. Recomendo a leitura dos artigos desta seção especial sobre o mod_rewrite.
 
-* [Apache mod_rewrite](http://httpd.apache.org/docs/current/rewrite/)
-Portal de entrada para a documentação do mod_rewrite, com vários links para outros documentos sobre ele.
+- [Apache mod_rewrite](http://httpd.apache.org/docs/current/rewrite/)
+  Portal de entrada para a documentação do mod_rewrite, com vários links para outros documentos sobre ele.

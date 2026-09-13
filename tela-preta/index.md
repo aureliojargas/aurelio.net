@@ -11,11 +11,9 @@ por [Aurelio Jargas](/aurelio/)
 <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0" allowfullscreen=""></iframe>
 <br /><i>Curta o vídeo em tela cheia!</i></span></p>
 
-
 **Tela Preta** é a minha série de vídeos nerds gravados na linha de comando do Unix, demonstrando o “jeito shell script” de resolver problemas. Todos os vídeos contam com narração e legendas em português, estão em alta resolução (HD) e são reais: sem ensaio, sem cortes, sem edição posterior. [Assine meu canal lá no YouTube](https://www.youtube.com/user/aureliojargas) para ser notificado(a) quando sair um vídeo novo.
 
 > Os vídeos que mais gosto de fazer são os de linha de comando. Somente a tela preta, o prompt ali piscando e os comandos que vão surgindo um atrás do outro. Este é o ambiente que mais me sinto à vontade, então posso gravar bem relaxado, sem medo de errar.
-
 
 ## Os vídeos
 
@@ -54,14 +52,13 @@ O [episódio 7](/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/) 
 >
 > **Pensamento shell script:** transformar meu problema num problema de texto, ou seja, entra texto, sai texto. Faço um dump dos dados pra um arquivo CSV, manipulo o texto desse arquivo pela linha de comando arrumando os nomes das cidades e como resultado gerarei um texto com os comandos SQL que vão atualizar os dados no banco. Sem loops, sem complexidade, apenas a boa e velha manipulação de texto.
 
-
 ## Características da série Tela Preta
 
-* **Vídeos em alta definição (HD):** Porque a linha de comando merece brilhar em alta definição. Experimente ver o vídeo em tela cheia, na sua TVzona da sala, é massa!
+- **Vídeos em alta definição (HD):** Porque a linha de comando merece brilhar em alta definição. Experimente ver o vídeo em tela cheia, na sua TVzona da sala, é massa!
 
-* **Sem cortes, sem edição:** Os vídeos são gravados “ao vivo”, sem cortes. Eu aperto o botão de gravar e só desligo no final do vídeo. Não há pausas, não há edição posterior. Cada vídeo é uma sessão completa de shell, em tempo real, sem fru-fru e sem trapaças. Às vezes eu erro, às vezes esqueço de algo. Está tudo lá no vídeo. É como se você estivesse aqui na cadeira ao lado, acompanhando tudo.
+- **Sem cortes, sem edição:** Os vídeos são gravados “ao vivo”, sem cortes. Eu aperto o botão de gravar e só desligo no final do vídeo. Não há pausas, não há edição posterior. Cada vídeo é uma sessão completa de shell, em tempo real, sem fru-fru e sem trapaças. Às vezes eu erro, às vezes esqueço de algo. Está tudo lá no vídeo. É como se você estivesse aqui na cadeira ao lado, acompanhando tudo.
 
-* **Prompt otimizado:** Já tentei vários formatos diferentes de prompt em meus vídeos, mas acho que agora consegui criar um que é ideal para esse tipo de vídeoaula na linha de comando. A linha separadora na cor verde deixa claro onde terminou a saída do comando anterior. O prompt simples ▶, também em verde e sem nenhuma informação adicional (username, path, …) chama a atenção e não distrai, deixando que os comandos brilhem sozinhos.
+- **Prompt otimizado:** Já tentei vários formatos diferentes de prompt em meus vídeos, mas acho que agora consegui criar um que é ideal para esse tipo de vídeoaula na linha de comando. A linha separadora na cor verde deixa claro onde terminou a saída do comando anterior. O prompt simples ▶, também em verde e sem nenhuma informação adicional (username, path, …) chama a atenção e não distrai, deixando que os comandos brilhem sozinhos.
 
   ![](/img/tela-preta-prompt.png)
 
@@ -84,19 +81,17 @@ O [episódio 7](/blog/2014/03/22/o-jeito-shell-script-de-resolver-problemas-4/) 
   PS1='▶ '
   ```
 
-* **Legendas em português:** As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.
+- **Legendas em português:** As legendas são muito importantes para quem tem problemas de audição, quem não domina o português, ou quem simplesmente não pode habilitar o áudio no momento. Todos os vídeos desta série são totalmente legendados (eu que faço, não é a legenda automática). Também deixo livre a parte de baixo da tela, para que as legendas não sobreponham os comandos.
 
-* **Identidade visual:** Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.
+- **Identidade visual:** Os vídeos da série possuem uma identidade visual consistente, para que você possa identificá-los facilmente. Os nomes são padronizados e a capa de cada vídeo é uma tela toda preta que traz o comando utilizado e o número do episódio (bem grande, numa “moedinha” estilo Super Mario). Levei hoooooras pra chegar nesse formato. Aurelio designer é muito ineficiente.
 
   ![](/img/tela-preta-capas-4.png)
 
-* **Playlist do YouTube:** Esta série conta com uma [playlist própria](https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1), que serve para agrupar todos os vídeos em um único lugar, além de aparecer aquela interface bacana no YouTube para você poder ver todos os vídeos em sequência.
+- **Playlist do YouTube:** Esta série conta com uma [playlist própria](https://www.youtube.com/playlist?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1), que serve para agrupar todos os vídeos em um único lugar, além de aparecer aquela interface bacana no YouTube para você poder ver todos os vídeos em sequência.
 
   ![](/img/tela-preta-playlist.png)
 
-
 Infelizmente, os vídeos mais antigos (os primeiros da série) não contam com todas as características dos mais recentes. Foi um processo de evolução até chegar no formato atual.
-
 
 ## Meu ajude!
 
