@@ -1,7 +1,7 @@
 ---
 title: Minhas primeiras impressões da linguagem Swift
 wp_categories:
-- meu-querido-diario
+  - meu-querido-diario
 tags: [meu-querido-diario, programador]
 worked: 3:30
 ---

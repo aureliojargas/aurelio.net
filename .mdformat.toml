@@ -1,4 +1,14 @@
 # https://mdformat.readthedocs.io/en/stable/users/configuration_file.html
+# https://mdformat.readthedocs.io/en/stable/users/plugins.html
 
 # Use consecutive numbering in ordered lists
 number = true
+
+# Required extensions. mdformat will error out if they are not installed.
+#
+# Install locally with:
+#   uv tool install mdformat --with mdformat-gfm --with mdformat-frontmatter
+extensions = [
+    "gfm",
+    "frontmatter",
+]

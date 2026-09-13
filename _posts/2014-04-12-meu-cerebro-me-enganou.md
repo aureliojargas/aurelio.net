@@ -1,7 +1,7 @@
 ---
 title: Meu cérebro me enganou
 wp_categories:
-- meu-querido-diario
+  - meu-querido-diario
 tags: [meu-querido-diario]
 worked: 1:00
 ---

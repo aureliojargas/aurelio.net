@@ -1,7 +1,7 @@
 ---
 title: "Cápsula do tempo: o Aurelio de 2004"
 wp_categories:
-- meu-querido-diario
+  - meu-querido-diario
 tags: [meu-querido-diario, programador]
 worked: 3:00
 ---
