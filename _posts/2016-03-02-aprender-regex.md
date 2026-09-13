@@ -8,7 +8,6 @@ Expressões regulares é um assunto que dá medo em muita gente. O cara olha aqu
 
 Mas depois que você “vê a luz” e aprende a ler e criar suas próprias expressões, um novo mundo de possibilidades se abre e você passa a querer usar expressões regulares em tudo! Do ódio ao vício, o que era trevas vira ferramenta indispensável.
 
-
 ## Eu uso expressões regulares todos os dias
 
 Dentro do editor de textos para fazer edições mais avançadas, dentro dos códigos do programa que estou desenvolvendo para casar/substituir textos, na linha de comando do Unix nos grep e sed da vida, no banco de dados para aquela query mais poderosa, na configuração do Apache/Nginx para criar as regras de redirecionamento, e por aí vai...
@@ -17,7 +16,6 @@ Dentro do editor de textos para fazer edições mais avançadas, dentro dos cód
 
 Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vida, que acho lastimável que esse conhecimento não seja universal na área nerd. Todos deveriam saber pelo menos o básico, e aplicar no seu dia a dia para economizar tempo. Tento fazer minha parte para ajudar a difundí-las: criei [um site](/regex/), escrevi [um livro](https://www.piazinho.com.br), fiz [vídeos](https://www.youtube.com/user/aureliojargas), e dou [palestras e cursos](/curso/).
 
-
 ## Não é tão difícil quanto parece
 
 Apesar de parecer ser muito complexo, o assunto em si não é extenso e pode ser explicado e demonstrado em algumas horas. Os conceitos são abstratos, mas junto com exemplos você vai entendendo pra que serve cada um daqueles símbolos (os metacaracteres) e como “montá-los” numa expressão para resolver o seu problema.
@@ -25,7 +23,6 @@ Apesar de parecer ser muito complexo, o assunto em si não é extenso e pode ser
 Não é decorar, numa questão de horas você realmente entende e aprende como funciona, e sai criando suas próprias expressões do zero. Olha só que massa, num mesmo dia você acorda sem saber nada de regex e **no fim do dia estará criando expressões**.
 
 Como posso afirmar isso? Porque vi acontecendo na minha frente, várias vezes, nos cursos que ministrei.
-
 
 ## Curso de expressões regulares
 

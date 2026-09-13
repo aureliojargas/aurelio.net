@@ -12,7 +12,6 @@ Ambos moramos no Paraná (Matinhos e Curitiba) e eu nunca tinha pisado em Minas.
 
 ![](/img/viagem/caxambu/cadeirinhas.jpg)
 
-
 ## Ida
 
 A Mog foi para Caxambu direto de Curitiba, com o ônibus da universidade (UFPR). Foram 14 longas horas... Ah Mog, conta da tua viagem!
@@ -41,7 +40,6 @@ Mas a melhor parte da viagem foi chegar na **rodoviária** de Caxambu e ver a Mo
 Lindo né?! Sabia a hora certinha que o ônibus chegaria. Perguntei na cidadezinha se a rodoviária era longe. Uns me falavam que era "Logo ali", outros "É longe sô". Na dúvida e na ansiedade, cheguei uma hora mais cedo.Ah, e a flor genérica (homens...) era um hibisco!
 </div>
 
-
 ## A cidade
 
 Fomos à pé até o **hotel** (Brasil Hotel, simples, R$ 65,00 o casal), ele ficava a poucas quadras da rodoviária. Andar pela cidade é muito bom, é tranqüila. Não precisa ônibus nem carro, tudo é perto. E para melhorar, os hotéis e os pontos turísticos estão reunidos ao redor do Parque das Águas.
@@ -61,7 +59,6 @@ Tem o **calçadão**. São duas quadras em que os carros não passam, povoadas p
 Tem as **charretes**. São carroças de madeira enfeitadas e puxadas por cavalos. São bem comuns em cidades pequenas aqui do sul. É o táxi rural dos turistas. Tem desde as menores para duas pessoas até os "microônibus" que levam a família toda. Eu queria ter passeado em uma delas, mas era tudo tão perto que íamos à pé mesmo.
 
 ![](/img/viagem/caxambu/charrete.jpg)
-
 
 ## Parque das Águas
 
@@ -119,7 +116,6 @@ Tem também um tobogã, que usa água mineral, claro!
 O Aurelio é ninja no tobogã. Eu entalei vergonhosamente.
 </div>
 
-
 ## Morro e teleférico
 
 Nós gostamos muito de subir morros. Pelo exercício, pela integração com a natureza, pela vista privilegiada do cume. **Subir o morro** de Caxambu à pé era parte do nosso roteiro de viagem. O teleférico é legal, mas preferimos caminhar.
@@ -130,7 +126,7 @@ Além de eu adorar caminhar, tinha mais: eu estava com medo do teleférico. Ele 
 
 ![](/img/viagem/caxambu/morro.jpg)
 
-Nos informamos* e subimos. Foi muito mais fácil do que esperávamos. Para chegar no início da "trilha", seguimos a rua do calçadão até o fim, passando por uma escola (prédio antigo e bonito!). A rua vira à direita passando pelo hospital, depois viramos à esquerda e já vimos a estrada de chão (desativada) que sobe até o topo.
+Nos informamos\* e subimos. Foi muito mais fácil do que esperávamos. Para chegar no início da "trilha", seguimos a rua do calçadão até o fim, passando por uma escola (prédio antigo e bonito!). A rua vira à direita passando pelo hospital, depois viramos à esquerda e já vimos a estrada de chão (desativada) que sobe até o topo.
 
 <div class="mog">
 * Informação é algo que era sempre fácil. Gente simpática na cidade é outra coisa! Até parece Curitiba...
@@ -172,7 +168,6 @@ Apesar do medo inicial, a descida é muito tranqüila. A paisagem é bonita e pa
 
 ![](/img/viagem/caxambu/teleferico.jpg)
 
-
 ## Não deu
 
 Queríamos ter ido até **São Tomé das Letras**, cidade hipponga esotérica que ficava a menos de 100 quilômetros, que a Mog sempre quis conhecer. Mas chovia todo fim de tarde na região, interrompendo a estrada na parte não asfaltada. Uma rota alternativa que podíamos ter pego era ir primeiro a **Três Corações**, que de lá a São Tomé era só asfalto. Mas a idéia de brincar de sapo, ficando alguns dias em uma cidade barrenta debaixo de chuva, não foi muito animadora :)
@@ -184,7 +179,6 @@ Viu como só chovia antes do Aurelio chegar, a ponto de interditar a estrada? Ne
 </div>
 
 Com isso resolvemos adiantar nossa ida para Ouro Preto. Outras cidades próximas que iríamos visitar, pois foram indicadas por mineiros amigos nossos eram: **São Lourenço**, **Lambari** e **Cambuquira**.
-
 
 ## Volta
 

@@ -22,8 +22,6 @@ O empurrão que faltava para eu fazer a mudança foi o anúncio dos [preços abu
 
 [Perguntei no Twitter](https://twitter.com/oreio/status/459442483374878720) qual telefone eu deveria comprar e me indicaram o Moto X. Paguei menos da metade do preço de um iPhone novo, só isso já me deixou bem feliz.
 
-
-
 ## Migração de apps e dados
 
 A migração de apps e dados foi tranquila, pois mesmo no iOS eu já usava os aplicativos do Google: Chrome, Gmail, Maps, Drive e tudo mais. Bastou logar-me e estava tudo lá (viva a nuvem!). Só o que deu um certo trabalho foram os contatos e os calendários, que estavam no iCloud e tive que migrar pro Google.
@@ -37,7 +35,6 @@ Precisei achar um substituto para o app Notas, nativo do iOS, que eu usava inten
 Também tenho uma pasta no Dropbox com centenas de arquivos TXT com anotações de ideias, tarefas e rascunhos que edito usando o [nvALT](http://brettterpstra.com/projects/nvalt/) no Mac e o [WriteRoom](http://www.hogbaysoftware.com/products/writeroom) no iOS. Mas no Android, não achei nenhum editor de textos simples que me deixasse feliz. Hoje quebro um galho com o [Jota+](https://play.google.com/store/apps/details?id=jp.sblo.pandora.jota.plus), mas não gosto dele.
 
 O que não consegui migrar foram os jogos e seus dados :( Meus anos de placares, conquistas e savegames ficaram lá no [Game Center](http://en.wikipedia.org/wiki/Game_Center) e no iCloud. No Android é usado outro sistema e comecei com tudo zerado. Por ora, continuo jogando os jogos antigos no iPad e no Android eu só brinco com os novos.
-
 
 ## Após 5 meses de uso…
 
@@ -57,7 +54,6 @@ Ainda sobre a loja, até hoje me surpreendo como há muitos **aplicativos simple
 
 **Recomendo o Moto X.** Gostei bastante do aparelho, é bem resistente (já deixei cair algumas vezes) e o preço é bom. Minhas únicas pequenas reclamações são o fundo arredondado (que impede o uso do telefone apoiado na mesa) e o plug do fone de ouvido ser na parte superior em vez da inferior.
 
-
 ## Conclusão
 
 Quem vive isolado no mundo Apple tem uma má impressão do Android que é totalmente descabida, ou que era realidade anos atrás, nas primeiras versões do sistema. O que encontrei foi um sistema maduro, estável e muito responsivo.
@@ -67,6 +63,5 @@ Quem vive isolado no mundo Apple tem uma má impressão do Android que é totalm
 E qual é o melhor, Android ou iOS? **Ambos.**
 
 Android e iOS têm suas características distintas, mas no geral, no uso do dia a dia, é tudo a mesma coisa. Os principais aplicativos estão em ambos, os dados estão na nuvem e os dois sistemas são fáceis e simples de usar.
-
 
 **Atualização em 2014-10-18:** Se você se interessou pelo assunto, indico mais dois relatos similares: [o do Lucas Caton](http://blog.lucascaton.com.br/index.php/2013/09/28/ha-um-mes-eu-troquei-o-ios-pelo-android/) com bastante detalhes e fotos e [o do Paul Stamatiou](http://paulstamatiou.com/android-is-better/) que num longo artigo conclui que o Android é melhor.

@@ -7,12 +7,11 @@ worked: 6:00
 
 [![](https://c8.staticflickr.com/8/7665/28248266711_258064cd0b.jpg)](https://www.flickr.com/photos/fisl17/28248266711/)
 
-* Palestra: Shell Script Moderno
-* Evento: [FISL17](http://softwarelivre.org/fisl17)
-* Local: Centro de Eventos PUCRS, Porto Alegre - RS
-* Data: 15/07/2016
-* [Fotos oficiais do evento (Flickr)](https://www.flickr.com/photos/fisl17)
-
+- Palestra: Shell Script Moderno
+- Evento: [FISL17](http://softwarelivre.org/fisl17)
+- Local: Centro de Eventos PUCRS, Porto Alegre - RS
+- Data: 15/07/2016
+- [Fotos oficiais do evento (Flickr)](https://www.flickr.com/photos/fisl17)
 
 ## A palestra
 
@@ -35,13 +34,13 @@ Como sempre, foi tudo no improviso. Eu não curto ensaiar antes nem fazer roteir
 
 Pelo que me lembro...
 
-* Tinha bastante gente pra assistir, cerca de 200 pessoas.
+- Tinha bastante gente pra assistir, cerca de 200 pessoas.
 
-* Achei meio estranho ficar em pé atrás de uma mesa, mas o começo foi tão conturbado por causa do atraso que nem pensei direito. Foi do jeito que foi.
+- Achei meio estranho ficar em pé atrás de uma mesa, mas o começo foi tão conturbado por causa do atraso que nem pensei direito. Foi do jeito que foi.
 
-* Pena que não tinha aquele negocinho de apertar para passar slides, aí tive que incomodar a moça lá no computador…
+- Pena que não tinha aquele negocinho de apertar para passar slides, aí tive que incomodar a moça lá no computador…
 
-* Faltou tempo, tive que acelerar. No fim deu 40 minutos de palestra, e eu precisava de uma hora. Uma pena.
+- Faltou tempo, tive que acelerar. No fim deu 40 minutos de palestra, e eu precisava de uma hora. Uma pena.
 
 Quer assistir também? Felizmente essa palestra foi gravada (boa FISL!), então você pode assisti-la e ver os slides ao mesmo tempo:
 
@@ -50,8 +49,7 @@ Quer assistir também? Felizmente essa palestra foi gravada (boa FISL!), então 
 <script async="" class="speakerdeck-embed" data-id="db472cc58dd44834a2061e52c21cd989" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 > Se não estiver aparecendo corretamente, tente os links diretos: [slides](https://speakerdeck.com/aureliojargas/shell-script-moderno),
-[vídeo](https://www.youtube.com/watch?v=XBkBnKmu94U).
-
+> [vídeo](https://www.youtube.com/watch?v=XBkBnKmu94U).
 
 ## Os autógrafos
 
@@ -60,7 +58,6 @@ Logo após a palestra, rolou uma sessão de autógrafos no meio da feira. A loji
 ![](/curso/fisl-17/autografo-1.jpg)
 
 ![](/curso/fisl-17/autografo-2.jpg)
-
 
 ## O evento
 
@@ -88,7 +85,6 @@ Encontrei por lá vários **amigos** que há anos não via. É muito bom rever o
 
 Gostei bastante do FISL17. Um ambiente agradável, com pessoas legais, boa estrutura e muita informação nova pra quem quer aprender. 👍
 
-
 ## Ida e volta de avião
 
 Eu serei repetitivo se eu disser mais uma vez que não gosto de viajar de avião. Pois bem, eu não gosto de viajar de avião. É tanta demora e tanto tempo de vida perdido em esperas, filas, deslocamento de/para o aeroporto e tudo mais, que a magia do “você está voando a [900 km/h](http://www.aviationforall.com/qual-a-velocidade-de-um-aviao/)” é como uma gota d'água no deserto.
@@ -98,7 +94,6 @@ Pior ainda quando o avião vai pro lado errado.
 Joinville não é capital (apesar de ser a maior cidade do estado de Santa Catarina), e não tem voo direto pra Porto Alegre. Tem que dar um pulinho lá em São Paulo antes de descer novamente pro sul.
 
 ![](/curso/fisl-17/trajeto-joi-poa.jpg)
-
 
 ## Agradecimentos
 

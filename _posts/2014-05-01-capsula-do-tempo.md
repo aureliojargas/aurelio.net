@@ -1,7 +1,7 @@
 ---
 title: "Cápsula do tempo: o Aurelio de 2004"
 wp_categories:
-- meu-querido-diario
+  - meu-querido-diario
 tags: [meu-querido-diario, programador]
 worked: 3:00
 ---
@@ -18,7 +18,6 @@ Ao abrir esta cápsula e dar uma espiada no passado, foi engraçado perceber que
 > Que bom, né? Se o do passado era pior, é sinal que houve uma evolução.
 
 Quero deixar registrado neste texto alguns dos achados dessa garimpagem.
-
 
 ## O inglês
 
@@ -39,7 +38,6 @@ Um colaborador gringo fez a correção destes e de outros erros ortográficos qu
 Fora estes erros simples, em geral os textos dos comentários soam meio [Borat](https://www.youtube.com/watch?v=WH2CABcffAo). Eles não parecem textos nativos, mas sim uma tradução mais literal das frases em português.
 
 > Tea with me, I book your face ;)
-
 
 ## O código
 

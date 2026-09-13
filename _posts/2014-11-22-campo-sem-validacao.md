@@ -73,10 +73,10 @@ O que você pode fazer é limitar a entrada dos dados. Um exemplo é usar menus 
 
 Mas atenção: mesmo com estas restrições na entrada, ainda é recomendado que você faça uma validação antes de gravar os dados no banco.
 
-* E se o usuário desligou o JavaScript no navegador?
-* E se o usuário usou a ferramenta “[Inspecionar elemento](https://developer.chrome.com/devtools)” para alterar o código HTML do site?
-* E se outro programa (como o [curl](http://curl.haxx.se/)) for usado para fazer o POST do formulário?
-* E se os dados estão vindo de outro sistema, via webservice?
+- E se o usuário desligou o JavaScript no navegador?
+- E se o usuário usou a ferramenta “[Inspecionar elemento](https://developer.chrome.com/devtools)” para alterar o código HTML do site?
+- E se outro programa (como o [curl](http://curl.haxx.se/)) for usado para fazer o POST do formulário?
+- E se os dados estão vindo de outro sistema, via webservice?
 
 Criar um campo de texto é fácil. Mas garantir que ele seja confiável, dá trabalho.
 

@@ -9,15 +9,14 @@ Adicionar campos não é um processo muito fácil, mas também não requer diplo
 
 Há quatro passos a serem executados:
 
-  1. Adicionar o campo no formulário de comentários
-  2. Verificar o que o usuário digitou no campo
-  3. Salvar no banco de dados o conteúdo do campo
-  4. Mostrar o conteúdo do campo, seja no backend (administração), na área de comentários ou ambos.
+1. Adicionar o campo no formulário de comentários
+2. Verificar o que o usuário digitou no campo
+3. Salvar no banco de dados o conteúdo do campo
+4. Mostrar o conteúdo do campo, seja no backend (administração), na área de comentários ou ambos.
 
 Nos exemplos seguintes, vou mostrar como adicionar dois campos ao formulário: cidade e estado. Para ficar mais elegante, o campo Estado será um menu que lista todos os estados brasileiros. Assim:
 
 ![Formulário WordPress com campos para Cidade e Estado](/img/wp/formulario-cidade-estado.png)
-
 
 ## Passo 1 - Adicionar o campo no formulário
 
@@ -124,14 +123,13 @@ Nesse ponto você já pode conferir em seu blog e os campos vão aparecer em seu
 
 Mas eles ainda são campos burros, que não guardam o que o visitante digitar. Se você preencher o formulário completo e enviar, verá que o comentário será gravado, mas as informações adicionais (cidade, estado) serão perdidas. Para evitar que isso aconteça, vamos ao próximo passo.
 
-
 ## Passo 2 - Verificar os dados
 
 Num mundo perfeito, este passo seria desnecessário. Mas infelizmente você não pode confiar cegamente em seus usuários.
 
-  * O usuário esqueceu de preencher um campo obrigatório?
-  * O usuário colocou um valor incorreto no campo?
-  * O usuário está tentando hackear o blog com um comentário malicioso?
+- O usuário esqueceu de preencher um campo obrigatório?
+- O usuário colocou um valor incorreto no campo?
+- O usuário está tentando hackear o blog com um comentário malicioso?
 
 Primeiro precisamos da verificação mais básica de todas, conferir se por acaso o usuário se esqueceu de preencher algum campo obrigatório. Ainda no arquivo functions.php, basta adicionar mais algumas linhas mágicas:
 
@@ -154,9 +152,9 @@ O procedimento é o mesmo que fizemos no passo anterior: criar uma função nova
 
 A função é bem simples, ela verifica se por acaso a cidade ou o estado estão vazios, e caso estejam, mostra uma mensagem de erro para o usuário. Alguns detalhes:
 
-  * O array `$_POST` guarda todos os dados do formulário.
-  * A função `wp_die()` interrompe a execução do WordPress e mostra uma mensagem de erro para o usuário.
-  * O array `$commentdata`, que a função recebe e retorna, pode ser ignorado pois não precisamos mexer nele.
+- O array `$_POST` guarda todos os dados do formulário.
+- A função `wp_die()` interrompe a execução do WordPress e mostra uma mensagem de erro para o usuário.
+- O array `$commentdata`, que a função recebe e retorna, pode ser ignorado pois não precisamos mexer nele.
 
 Tudo bem, com isso os campos vazios já não passam mais. Mas se em vez do nome da cidade o usuário digitar algum código malicioso para tentar confundir o sistema e invadir o seu blog?
 
@@ -191,7 +189,6 @@ Se você precisar de algum outro tipo de verificação, basta adicionar ali dent
 
 Agora que o formulário está validado, estamos prontos para o próximo passo.
 
-
 ## Passo 3 - Salvar no banco de dados
 
 Novamente em seu functions.php, agora adicione este código mágico no final:
@@ -217,17 +214,16 @@ Para cada campo novo que você adicionar ao formulário, adicione também uma li
 
 Tá, mas e aí? Para testar, você foi lá, preencheu tudo e enviou o comentário. Como saber se os dados foram realmente gravados no banco de dados?
 
-  * Se você for nerd, acesse o MySQL e veja os últimos registros da tabela `wp_commentmeta`.
-  * Se você não for nerd, vai ficar no escuro por enquanto, mas o próximo passo vai te ajudar :)
-
+- Se você for nerd, acesse o MySQL e veja os últimos registros da tabela `wp_commentmeta`.
+- Se você não for nerd, vai ficar no escuro por enquanto, mas o próximo passo vai te ajudar :)
 
 ## Passo 4 - Mostrar na tela
 
 Aqui é um ponto onde cada um pode seguir um caminho diferente.
 
-  * **Dados privados:** Se você criou campos adicionais no formulário para coletar informações pessoais sobre seus leitores, não vai querer divulgá-las, então elas devem estar acessíveis somente para você, na interface de administração do WordPress.
+- **Dados privados:** Se você criou campos adicionais no formulário para coletar informações pessoais sobre seus leitores, não vai querer divulgá-las, então elas devem estar acessíveis somente para você, na interface de administração do WordPress.
 
-  * **Dados públicos:** Se os campos adicionais forem públicos, como por exemplo a conta do twitter do visitante, é legal mostrar junto com o próprio comentário.
+- **Dados públicos:** Se os campos adicionais forem públicos, como por exemplo a conta do twitter do visitante, é legal mostrar junto com o próprio comentário.
 
 Pública ou privada, o método para obter a informação é o mesmo: basta usar a função `get_comment_meta()`, passando o ID do comentário e o nome do campo que você quer saber o conteúdo. Em nosso exemplo, este é o código para obter o nome da cidade e a sigla do estado e guardá-los em variáveis:
 
@@ -283,14 +279,13 @@ if (is_admin()) {
 
 ## Detalhe
 
-  * Esse esquema só funciona à partir do WordPress versão 3.0.
-
+- Esse esquema só funciona à partir do WordPress versão 3.0.
 
 ## Referência
 
-  * <http://codex.wordpress.org/Theme_Development#Functions_File>
-  * <http://codex.wordpress.org/Function_Reference/comment_form>
-  * <http://codex.wordpress.org/Function_Reference/add_action>
-  * <http://codex.wordpress.org/Function_Reference/add_filter>
-  * <http://codex.wordpress.org/Function_Reference/wp_die>
-  * <http://codex.wordpress.org/Plugin_API>
+- <http://codex.wordpress.org/Theme_Development#Functions_File>
+- <http://codex.wordpress.org/Function_Reference/comment_form>
+- <http://codex.wordpress.org/Function_Reference/add_action>
+- <http://codex.wordpress.org/Function_Reference/add_filter>
+- <http://codex.wordpress.org/Function_Reference/wp_die>
+- <http://codex.wordpress.org/Plugin_API>

@@ -23,7 +23,6 @@ hide_comments: true
     }
 </style>
 
-
 {% assign proximos = site.data.cursos | where: "participantes",0 %}
 
 {% if proximos.size > 0 %}
@@ -41,23 +40,26 @@ Próximos cursos/palestras que farei:
     </thead>
     <tbody>
 
-        {% for curso in proximos %}
-        <tr>
-            <td>{{ curso.data | date: "%d.%m.%Y" }}</td>
-            <td>{{ curso.duracao }}h</td>
-            <td>{{ curso.tema }}</td>
-            <td>
-                {{ curso.cidade }} - {{ curso.estado }}
-                <br />
-                <span class="evento">{{ curso.evento }}</span>
-            </td>
-            <td>
-                {% if curso.site %}
-                    <a href="{{ curso.site }}">site</a>{% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
+```
+    {% for curso in proximos %}
+    <tr>
+        <td>{{ curso.data | date: "%d.%m.%Y" }}</td>
+        <td>{{ curso.duracao }}h</td>
+        <td>{{ curso.tema }}</td>
+        <td>
+            {{ curso.cidade }} - {{ curso.estado }}
+            <br />
+            <span class="evento">{{ curso.evento }}</span>
+        </td>
+        <td>
+            {% if curso.site %}
+                <a href="{{ curso.site }}">site</a>{% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+```
+
 </table>
 
 Já ministrados:

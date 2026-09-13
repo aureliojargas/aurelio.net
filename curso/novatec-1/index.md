@@ -8,11 +8,11 @@ date: 2015-08-19
 
 Após 7 anos de hiato, voltei a dar cursos nerds. Aproveitei as férias no trabalho e dei cinco cursos diferentes durante quatro dias consecutivos, em São Paulo capital (de 19 a 22/08/2015) no [Centro de Treinamento da Novatec Editora](http://ctnovatec.com.br).
 
-* 19/08/2015 (Qua) 9h às 18h — [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/)
-* 20/08/2015 (Qui) 9h às 18h — [Shell Script Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/)
-* 21/08/2015 (Sex) 9h às 18h — [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/)
-* 22/08/2015 (Sáb) 9h às 13h — [Expressões Regulares em Python](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/)
-* 22/08/2015 (Sáb) 14h às 18h — [Expressões Regulares em JavaScript](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-javascript/)
+- 19/08/2015 (Qua) 9h às 18h — [Expressões Regulares: Imersão](http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/)
+- 20/08/2015 (Qui) 9h às 18h — [Shell Script Fundamental](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-fundamental/)
+- 21/08/2015 (Sex) 9h às 18h — [Shell Script para Programadores](http://ctnovatec.com.br/cursos/trilha-aurelio/shell-script-para-programadores/)
+- 22/08/2015 (Sáb) 9h às 13h — [Expressões Regulares em Python](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-python/)
+- 22/08/2015 (Sáb) 14h às 18h — [Expressões Regulares em JavaScript](http://ctnovatec.com.br/cursos/trilha-aurelio/expressoes-regulares-em-javascript/)
 
 Veja também: o [anúncio original](/blog/2015/07/29/cursos-novatec/) destes cursos, que fiz lá no meu blog.
 
@@ -26,7 +26,6 @@ O que aconteceu foi que dos meus 15 dias de férias, só descansei mesmo no últ
 
 Foi bem cansativo, mas no final valeu a pena. Gostei da experiência de ter voltado a dar cursos (tenho prazer em ensinar), ganhei uma grana legal, conheci gente nova e principalmente: os alunos gostaram e aprenderam.
 
-
 ## Joinville ↔︎ São Paulo, de ônibus
 
 Eu detesto todo o estresse e demora que envolve voar de avião, então decidi ir e voltar de ônibus mesmo. A viagem é longa (dura 9 horas), mas acontece durante a noite e chega no destino no dia seguinte, bem cedo.
@@ -37,22 +36,21 @@ Peguei o assento leito, que é caro (R$180, o dobro do preço do normal), achand
 
 Resultado: não dormi direito e fiquei todo doído, tanto na ida quanto na volta. Caí na pegadinha do leito.
 
-
 ## Diversos
 
-* A localização ficou excelente pra mim. O [hotel Íbis](http://www.ibis.com/pt-br/hotel-9596-ibis-styles-sao-paulo-anhembi/index.shtml) já era na frente da rodoviária, e o CT da Novatec ficava tão perto (700m) que pude ir à pé todos os dias. No mesmo prédio do CT tinha um restaurante, facilitando o almoço. Que alívio não precisar rodar por São Paulo!
+- A localização ficou excelente pra mim. O [hotel Íbis](http://www.ibis.com/pt-br/hotel-9596-ibis-styles-sao-paulo-anhembi/index.shtml) já era na frente da rodoviária, e o CT da Novatec ficava tão perto (700m) que pude ir à pé todos os dias. No mesmo prédio do CT tinha um restaurante, facilitando o almoço. Que alívio não precisar rodar por São Paulo!
 
-* Ficou **muito bom o CT** que a Novatec montou: tudo novo e limpo, salas bem equipadas (quadro branco, projetor, ar condicionado, tomadas, wi-fi, cadeiras confortáveis), espaço para lanches e até uma “banca” de livros manuseados com mega desconto de 70%. Os alunos fizeram a feira! :)
+- Ficou **muito bom o CT** que a Novatec montou: tudo novo e limpo, salas bem equipadas (quadro branco, projetor, ar condicionado, tomadas, wi-fi, cadeiras confortáveis), espaço para lanches e até uma “banca” de livros manuseados com mega desconto de 70%. Os alunos fizeram a feira! :)
 
-* Havia duas paradas para um lanche (**coffee break**) durante o dia, às 10:30 e 16:30. Muito boa a comida! Os alunos se empolgavam tanto conversando entre si ou comprando os livros com desconto, que eu tinha que chamar para voltar à aula :)
+- Havia duas paradas para um lanche (**coffee break**) durante o dia, às 10:30 e 16:30. Muito boa a comida! Os alunos se empolgavam tanto conversando entre si ou comprando os livros com desconto, que eu tinha que chamar para voltar à aula :)
 
-* **Acordei resfriado/alérgico** todos os dias. Não entendi direito o porquê, pois não passei frio. Mas das 6 da manhã até às 8:30 lá estava eu espirrando. Daí a caminhada até o CT me fazia melhorar. Sei lá.
+- **Acordei resfriado/alérgico** todos os dias. Não entendi direito o porquê, pois não passei frio. Mas das 6 da manhã até às 8:30 lá estava eu espirrando. Daí a caminhada até o CT me fazia melhorar. Sei lá.
 
-* Foi legal conhecer pessoalmente e conversar com os alunos que já **me conheciam virtualmente**, por acessar meu site e ler o blog. Como eles chegam já sabendo muito sobre mim, citando histórias do blog e tudo mais, dá uma impressão que já somos amigos há tempos.
+- Foi legal conhecer pessoalmente e conversar com os alunos que já **me conheciam virtualmente**, por acessar meu site e ler o blog. Como eles chegam já sabendo muito sobre mim, citando histórias do blog e tudo mais, dá uma impressão que já somos amigos há tempos.
 
-* Só uso teclado e não costumo **escrever à mão**, mas tive que demonstrar toda minha falta de habilidade com a caneta ao usar meus garranchos para assinar os certificados dos alunos e autografar seus livros :)
+- Só uso teclado e não costumo **escrever à mão**, mas tive que demonstrar toda minha falta de habilidade com a caneta ao usar meus garranchos para assinar os certificados dos alunos e autografar seus livros :)
 
-* Na última noite, dormia eu tranquilo, quando às 2 da manhã tocou o **alarme de incêndio do hotel**. Levei alguns segundos até entender o que era e fiquei esperando ele parar. Não parava. Glup, parece ser sério. Modo sobrevivência, ativar! Pulei da cama, catei o que pude e desci correndo pelas escadas (9 andares). Lá na portaria, me informaram que estava tudo bem, que o alarme disparou por causa de um hóspede que estava fumando no quarto. Grrrrrrr 😠
+- Na última noite, dormia eu tranquilo, quando às 2 da manhã tocou o **alarme de incêndio do hotel**. Levei alguns segundos até entender o que era e fiquei esperando ele parar. Não parava. Glup, parece ser sério. Modo sobrevivência, ativar! Pulei da cama, catei o que pude e desci correndo pelas escadas (9 andares). Lá na portaria, me informaram que estava tudo bem, que o alarme disparou por causa de um hóspede que estava fumando no quarto. Grrrrrrr 😠
 
 ## A metodologia
 
@@ -120,7 +118,6 @@ No final, ensinei como criar e executar scripts. Mas a grande mensagem que tente
 
 ![Turma do curso de Shell Script Fundamental](turma-shell-fund.jpg)
 
-
 ## Shell Script para Programadores
 
 Mais um curso de shell de 8 horas, porém este era direcionado a programadores que já possuíam experiência com a linha de comando do Unix/Linux.
@@ -134,7 +131,6 @@ Programador gosta é de código, então durante o curso analisamos alguns códig
 Depois criamos juntos, do zero, um script com elementos mais profissionais, como biblioteca de funções e opções de linha de comando.
 
 ![Turma do curso de Shell Script para Programadores](turma-shell-prog.jpg)
-
 
 ## Expressões Regulares em Python
 
@@ -150,7 +146,6 @@ Foi interessante que cada aluno tinha uma versão diferente do Python instalada,
 
 ![Turma do curso de Expressões Regulares em Python](turma-regex-py.jpg)
 
-
 ## Expressões Regulares em JavaScript
 
 Mais um curso de 4 horas, com proposta bem similar ao anterior, porém desta vez focado na linguagem JavaScript. Com apenas 3 alunos, este curso foi praticamente uma aula particular :)
@@ -164,7 +159,6 @@ Desliguei o projetor e voltei ao bom e velho quadro branco para continuar as exp
 Depois o Windows voltou e pude continuar a demonstração no projetor, usando a ferramenta online <http://regexpal.com> e o console JavaScript do próprio navegador. Com um foco mais direcionado a aplicativos web, vimos bastante sobre validação de dados e formatação de conteúdo.
 
 ![Turma do curso de Expressões Regulares em JavaScript](turma-regex-js.jpg)
-
 
 ## Mais fotos
 

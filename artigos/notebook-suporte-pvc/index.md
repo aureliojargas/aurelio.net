@@ -14,14 +14,12 @@ Estou usando este suporte há uma semana e estou satisfeito. A tela do notebook 
 
 ![](/wp/wp-content/uploads/2012/08/suporte-pvc-frente.jpg)
 
-
 ## Compre as peças
 
-  * Vá numa loja de materiais de construção que é mais barato. Em lojas de 1,99 é mais caro.
-  * Confira se todas as peças são do mesmo tamanho (20mm) e se encaixam bem.
-  * Compre tudo da mesma cor e marca, para ficar uniforme.
-  * Um metro de cano dá e sobra.
-
+- Vá numa loja de materiais de construção que é mais barato. Em lojas de 1,99 é mais caro.
+- Confira se todas as peças são do mesmo tamanho (20mm) e se encaixam bem.
+- Compre tudo da mesma cor e marca, para ficar uniforme.
+- Um metro de cano dá e sobra.
 
 ## Corte e monte
 
@@ -35,20 +33,17 @@ Cano cortado, é só encaixar as peças. Faça força para que elas encaixem bem
 
 ![](/wp/wp-content/uploads/2012/08/suporte-pvc-2.jpg)
 
-
 ## Serve para o iPad!
 
 ![](/wp/wp-content/uploads/2012/08/ipad-suporte-pvc.jpg)
 
 Se juntar as duas pontas da frente, o seu maravilhoso suporte de canos serve também como um suporte para iPad, esteja ele deitado ou em pé. Fica feio, tosco e brega. Mas na necessidade, serve :)
 
-
 ## Outro modelo de suporte PVC
 
 [![](https://farm7.staticflickr.com/6234/7001695669_e48c6ed4e2.jpg)](http://www.superziper.com/2012/03/diy-suporte-para-notebook.html)
 
 Este é um outro formato de suporte com canos de PVC, que usa praticamente as mesmas peças deste, com a diferença de o cano da base ficar inclinado. Eu fiquei com a impressão que este não seria tão estável, mas é uma questão de gosto. [O site SuperZiper ensina como fazer](http://www.superziper.com/2012/03/diy-suporte-para-notebook.html).
-
 
 ## E o seu?
 

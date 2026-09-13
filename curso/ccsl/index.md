@@ -21,10 +21,10 @@ Ana e o pessoal da organização pelo apoio.
 
 Links para os materiais:
 
-* [Expressões Regulares - Apostila Introdutória](/curso/material/apostila-expressoes-intro.pdf)
-* [Expressões Regulares - Meu Livro, versão online](/regex/guia/)
-* [Expressões Regulares - Histórico da Linha de Comando](ccsl2-er-prompt.html)
-* [Desenvolvimento de Software Livre - Slides](/curso/material/desenvolvedor/)
+- [Expressões Regulares - Apostila Introdutória](/curso/material/apostila-expressoes-intro.pdf)
+- [Expressões Regulares - Meu Livro, versão online](/regex/guia/)
+- [Expressões Regulares - Histórico da Linha de Comando](ccsl2-er-prompt.html)
+- [Desenvolvimento de Software Livre - Slides](/curso/material/desenvolvedor/)
 
 ## Fui e Cheguei
 

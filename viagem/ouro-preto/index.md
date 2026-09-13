@@ -22,7 +22,6 @@ Enfim, Ouro Preto é uma cidade que vale a pena conhecer!
 
 ![](/img/viagem/ouro-preto/noite.jpg)
 
-
 ## Ida
 
 De [Caxambu](/viagem/caxambu/) viemos de ônibus até Belo Horizonte. Na rodoviária compramos a passagem para Ouro Preto (empresa Pássaro Verde, guichê 7, **R$ 17,85**) e o ônibus saiu logo em seguida, nem tivemos que esperar muito.
@@ -49,7 +48,6 @@ Ficamos na **Pousada Tiradentes**, que fica em um prédio bem antigo (e conserva
 O massa das pousadas é que como são casarões muito antigos, eles não são grandes por dentro. Então, cada pousada tem no máximo uns 7 quartos. E é ótimo assim! Dá um tom intimista pra pousada!
 </div>
 
-
 ## A cidade
 
 Aquilo que já sabíamos sobre a cidade confirmou-se: muitas ladeiras, ruas estreitas, casas antigas e várias igrejas. Mas mesmo assim ficamos surpresos do **quão íngremes** são aquelas ladeiras. Você pode ver as fotos, assistir os vídeos. Mas só estando lá para sentir a dor na panturrilha e pensar "como essa gente agüenta subir isso todo dia?".
@@ -64,13 +62,13 @@ O engraçado é que logo que chegamos, ao andar pela rua, tropeçávamos um mont
 
 Por falar em **trânsito**, ele é insano:
 
-  * Há bastante veículos, mas não há semáforos nem preferenciais. Em caso de dúvida, o motorista que olhar com a cara mais feia ganha a passagem.
-  * O tráfego de ônibus é intenso, e eles gostam de correr.
-  * Caminhões pequenos (com furgão) também transitam sem muito cuidado.
-  * Os motoqueiros parecem ignorar as ladeiras: aceleram e freiam bruscamente, sempre.
-  * Há muitas pessoas andando no meio da rua, moradores e turistas.
-  * As ruas são íngremes, escorregadias e estreitas.
-  * É o inferno das auto-escolas :)
+- Há bastante veículos, mas não há semáforos nem preferenciais. Em caso de dúvida, o motorista que olhar com a cara mais feia ganha a passagem.
+- O tráfego de ônibus é intenso, e eles gostam de correr.
+- Caminhões pequenos (com furgão) também transitam sem muito cuidado.
+- Os motoqueiros parecem ignorar as ladeiras: aceleram e freiam bruscamente, sempre.
+- Há muitas pessoas andando no meio da rua, moradores e turistas.
+- As ruas são íngremes, escorregadias e estreitas.
+- É o inferno das auto-escolas :)
 
 A **paisagem** é muito bonita: a cidade é um sobe-desce composto por várias igrejas suntuosas que destacam-se em meio a um mar de casinhas antigas amontoadas, tudo isso cercado por uma cadeia de montanhas.
 
@@ -85,7 +83,6 @@ O **centro histórico** é muito bem preservado. Todas as casas estão restaurad
 <div class="mog">
 Soubemos que os proprietários podem reformar a casa por dentro. Como acontece no caso das pousadas, que muitas vezes são casarões de 1700 e bolinha (a nossa pousada era!), e por dentro é necessário fazer novas instalações, como banheiros nos quartos. Mas é incrível como por fora são todas incrivelmente preservadas! Parecem até de mentira, montadas, maquetes.
 </div>
-
 
 ## Igrejas
 
@@ -113,7 +110,6 @@ Das igrejas que vimos destacam-se a **Igreja de São Francisco de Assis** e a **
 <strong>Momento babado:</strong> no primeiro dia que saímos para passear, a primeira parada foi na Igreja de São Francisco de Assis. Quando entramos na igreja havia também um grupo de escola lá dentro, com seus professores e um guia da cidade. Resultado: ganhamos uma explicação de graça do guia, porque ficamos logo atrás dos "escolares", de orelha em pé ouvindo tudo. Foi massa. A partir daí vimos o quanto um guia era importante. Ou então que devíamos sempre seguir as crianças das escolas.
 </div>
 
-
 ## Feira de Pedra Sabão
 
 ![](/img/viagem/ouro-preto/feira.jpg)
@@ -128,12 +124,11 @@ Dá pra ver muitos artistas esculpindo a pedra na hora, fazendo potes, quadros, 
 
 > Dica: Cuidado que apesar de ser de pedra, é **frágil**. Tem que embalar bem para trazer na mala.
 
-
 ## Museu da Inconfidência
 
 ![](/img/viagem/ouro-preto/museu.jpg)
 
-Gostamos de visitar o museu (**R$ 6,00**), que fica na Praça Tiradentes* (sempre ela). É um prédio antigo, porém muito bem conservado. Antigamente era uma cadeia e hoje é um museu modernoso.
+Gostamos de visitar o museu (**R$ 6,00**), que fica na Praça Tiradentes\* (sempre ela). É um prédio antigo, porém muito bem conservado. Antigamente era uma cadeia e hoje é um museu modernoso.
 
 <div class="mog">
 * É legal sentar um pouco na Praça Tiradentes e olhar o movimento da cidade. É um exercício antropológico que vale a pena ser feito: você enxerga detalhes tanto da arquitetura quanto do cotidiano da cidade que na correria dos passeios não dá pra ver. E admira ainda mais a beleza do lugar.
@@ -148,7 +143,6 @@ Nos divertimos com os **computadores** em que tocávamos na tela para ver vídeo
 <div class="mog">
 Hã?
 </div>
-
 
 ## Casa dos Contos
 
@@ -175,7 +169,6 @@ Ali também era feita a **fundição** de todo o ouro extraído pelos mineradore
 Vale mesmo a visita.
 
 > Dica: Não se acanhe, pergunte, peça para os funcionários te explicarem mais sobre a casa e sua história. É uma viagem no tempo.
-
 
 ## Mina de Santa Rita
 
@@ -213,7 +206,6 @@ Um pouco de história, que ouvimos do guia:
 >
 > As crianças começavam a trabalhar cedo, aos **cinco anos** de idade. Com essa rotina insana de trabalho e as doenças respiratórias que a mina provocava, os escravos morriam com **22 anos** de idade.
 
-
 ## Curiosidades
 
 <div class="mog">
@@ -245,7 +237,6 @@ Vou entregar o Aurelio: ele leu a placa, mas achou normal. Não teve maldade no 
 <div class="mog">
 Outra curiosidade que o Aurelio percebeu num dia que estava sentado na Praça Tiradentes olhando o movimento, é que todo mundo anda de calça lá. Não dá pra entender. Naquele calorão, e a galera de calça.
 </div>
-
 
 ## Volta
 

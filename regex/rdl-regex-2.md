@@ -21,7 +21,7 @@ Bem, vamos começar a dar nomes aos bois e falar na língua que usuários de ERs
 
 Também foi visto que temos uma **classe negada de caracteres**, representada por `[^ ]` e ainda que podemos ter um **intervalo** dentro dessa classe, representado por um hífen `-` entre dois caracteres.
 
-Uma dúvida que deve ter ficado: "e como colocar um ^, - ou ] literal dentro de uma classe de caracteres?". Bem, o `^` só é especial se for o primeiro dentro da classe, então basta colocá-lo em outra posição, como em `[a^]`, que casa ou um `a` ou um `^`. O hífen, basta colocá-lo como primeiro ou último da classe, e o `]`, ponha-o no início. Assim, `[][^-]` casa um `]`, ou `[`, ou `^` ou `-`. Olhe de novo a ER, com calma, respire, você vai compreender :)
+Uma dúvida que deve ter ficado: "e como colocar um `^`, `-` ou `]` literal dentro de uma classe de caracteres?". Bem, o `^` só é especial se for o primeiro dentro da classe, então basta colocá-lo em outra posição, como em `[a^]`, que casa ou um `a` ou um `^`. O hífen, basta colocá-lo como primeiro ou último da classe, e o `]`, ponha-o no início. Assim, `[][^-]` casa um `]`, ou `[`, ou `^` ou `-`. Olhe de novo a ER, com calma, respire, você vai compreender :)
 
 Agora que relembramos as ferramentas já vistas, vamos aumentar nosso arsenal. A primeira novidade é a interrogação `?`. Ela também é um quantificador, que casa a entidade anterior 0 ou 1 vez apenas, ou seja, ela pode ser encarada como **opcional**, pode existir ou não.
 
@@ -37,22 +37,22 @@ Até agora sempre que os quantificadores foram referenciados, se disse que eram 
 
 Como numa expressão matemática, os parênteses definem um grupo, e seu conteúdo pode ser visto como um bloco à parte na expressão. Agora as ERs começam a ficar divertidas. Veja por exemplo `(governa)?dor`. A "entidade" que a interrogação deixou opcional neste caso foi todo o agrupamento dos parênteses, então essa ER casa `governador` e `dor`.
 
-E ainda, como ferramenta complementar ao agrupamento, temos a **alternância**, representada pela barra vertical `|`. Seriam alternativas possíveis a uma posição, um "OU" lógico. Assim, vamos fazer uma ER que  case algumas possibilidades de cargos públicos que poderíamos ocupar e não nos preocuparmos mais em aprender essas expressões complicadas...
+E ainda, como ferramenta complementar ao agrupamento, temos a **alternância**, representada pela barra vertical `|`. Seriam alternativas possíveis a uma posição, um "OU" lógico. Assim, vamos fazer uma ER que case algumas possibilidades de cargos públicos que poderíamos ocupar e não nos preocuparmos mais em aprender essas expressões complicadas...
 
 Comecemos com `(governa|sena|verea)dor`. sem a `?` no grupo, deixamos a `dor` atrelada aos três cargos públicos de uma só vez: `governador`, `senador` e `vereador`. Mas é claro, não podemos nos esquecer da ala feminina, para empregar a mulher, a irmã... Incluiremos um `a` opcional no final: `(governa|sena|verea)dora?`. Mas ainda faltam os primos, cunhados e afins, então cargos de vice pra eles: `(vice-)?(governa|sena|verea)dora?`. Uau! Nossa expressão agora reconhece oito cargos públicos:
 
- * governador
- * governadora
- * vice-governador
- * vice-governadora
- * senador
- * senadora
- * vice-senador
- * vice-senadora
- * vereador
- * vereadora
- * vice-vereador
- * vice-vereadora
+- governador
+- governadora
+- vice-governador
+- vice-governadora
+- senador
+- senadora
+- vice-senador
+- vice-senadora
+- vereador
+- vereadora
+- vice-vereador
+- vice-vereadora
 
 A família toda está garantida :) Bem, deixando a politicagem de lado, creio que é perceptível o quão poderosa é a sintaxe das ERs, que com poucas ferramentas se consegue ser bem específico, conseguindo dizer muito com pouco.
 
