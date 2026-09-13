@@ -201,8 +201,8 @@ para ver como o shell já faz parte de sua vida.
 **Caminho das pedras (e do bolso vazio):**
 
 1. Para iniciar no shell, compre livro do Julio.
-1. Aprendeu? Gostou? Trabalha com shell? Compre o livro do Aurelio para tornar-se um especialista.
-1. Viciou? Quer ser guru? Compre o guia de Expressões Regulares.
+2. Aprendeu? Gostou? Trabalha com shell? Compre o livro do Aurelio para tornar-se um especialista.
+3. Viciou? Quer ser guru? Compre o guia de Expressões Regulares.
 
 ## Scripts
 

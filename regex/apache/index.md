@@ -178,11 +178,11 @@ title: Expressões Regulares + Apache HTTPd
 O mod_rewrite é muito complexo. É preciso ler muito sobre ele para entender seu funcionamento e criar suas regras com mais sabedoria e confiança. Invista um tempo para estudar estes documentos, nesta ordem:
 
 1. <http://httpd.apache.org/docs/current/rewrite/intro.html>
-1. <http://httpd.apache.org/docs/current/mod/mod_rewrite.html>
-1. <http://httpd.apache.org/docs/current/rewrite/flags.html>
-1. <http://httpd.apache.org/docs/current/rewrite/remapping.html>
-1. <http://httpd.apache.org/docs/current/rewrite/avoid.html>
-1. <http://httpd.apache.org/docs/current/rewrite/tech.html>
+2. <http://httpd.apache.org/docs/current/mod/mod_rewrite.html>
+3. <http://httpd.apache.org/docs/current/rewrite/flags.html>
+4. <http://httpd.apache.org/docs/current/rewrite/remapping.html>
+5. <http://httpd.apache.org/docs/current/rewrite/avoid.html>
+6. <http://httpd.apache.org/docs/current/rewrite/tech.html>
 
 Os retrovisores são parte importante do mod_rewrite, inclusive há dois tipos de retrovisores: $1 para grupos do RewriteRule e %1 para grupos do RewriteCond:
 

@@ -10,9 +10,9 @@ Adicionar campos não é um processo muito fácil, mas também não requer diplo
 Há quatro passos a serem executados:
 
 1. Adicionar o campo no formulário de comentários
-1. Verificar o que o usuário digitou no campo
-1. Salvar no banco de dados o conteúdo do campo
-1. Mostrar o conteúdo do campo, seja no backend (administração), na área de comentários ou ambos.
+2. Verificar o que o usuário digitou no campo
+3. Salvar no banco de dados o conteúdo do campo
+4. Mostrar o conteúdo do campo, seja no backend (administração), na área de comentários ou ambos.
 
 Nos exemplos seguintes, vou mostrar como adicionar dois campos ao formulário: cidade e estado. Para ficar mais elegante, o campo Estado será um menu que lista todos os estados brasileiros. Assim:
 

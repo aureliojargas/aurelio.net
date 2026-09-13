@@ -281,9 +281,9 @@ Ambiente de testes:
 Procedimento:
 
 1. Do Windão, abri uma janela do Cygwin.
-1. Chamei o XFree com os parâmetros `-query IP-do-iBook`
-1. O XFree do iBook respondeu, mandando a tela de login (KDM)
-1. Entrei com meu usuário e senha do Linux, e...
+2. Chamei o XFree com os parâmetros `-query IP-do-iBook`
+3. O XFree do iBook respondeu, mandando a tela de login (KDM)
+4. Entrei com meu usuário e senha do Linux, e...
 
 Resultado:
 

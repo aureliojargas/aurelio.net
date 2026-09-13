@@ -1,0 +1,4 @@
+# https://mdformat.readthedocs.io/en/stable/users/configuration_file.html
+
+# Use consecutive numbering in ordered lists
+number = true
