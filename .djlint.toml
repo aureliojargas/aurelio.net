@@ -36,7 +36,7 @@ extend_exclude = [
 ignore = [
     # Won't fix
     "H006",  # `img` tag should have `height` and `width` attributes.
-    "H018",  # Void tags are self closing by nature and must end with “>”, not “/>” (conflicts with: H017).
+    "H018",  # Void tags are self closing by nature and must end with ">", not "/>" (conflicts with: H017).
     "H036",  # Avoid use of `br` tags.
 
     # Handled by the formatter

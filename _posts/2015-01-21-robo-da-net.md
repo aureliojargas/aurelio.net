@@ -10,7 +10,7 @@ Reclamar e falar mal das empresas é fácil, sai naturalmente. Mas é importante
 
 [Ontem deu chuva forte em Joinville](http://anoticia.clicrbs.com.br/sc/geral/noticia/2015/01/chuva-alaga-ruas-de-joinville-no-fim-da-tarde-desta-terca-feira-4684681.html) e minha internet caiu. Liguei pra [NET](http://www.netcombo.com.br/) no 106 21, e **sem precisar digitar ou falar absolutamente nada**, obtive todas as informações que eu precisava em menos de um minuto. Repito: não digitei nem falei nada, somente fiquei ouvindo, do início ao fim da ligação.
 
-Quem me atendeu, como de costume, foi o robô da NET: um “cara legal”, que conversa contigo em tom descontraído (sem [gerundismo](http://pt.wikipedia.org/wiki/Gerundismo)) e te apresenta as opções do menu. É uma voz gravada, claro, mas é feito de maneira que soa natural, com simpatia. Liga lá e confira.
+Quem me atendeu, como de costume, foi o robô da NET: um "cara legal", que conversa contigo em tom descontraído (sem [gerundismo](http://pt.wikipedia.org/wiki/Gerundismo)) e te apresenta as opções do menu. É uma voz gravada, claro, mas é feito de maneira que soa natural, com simpatia. Liga lá e confira.
 
 Infelizmente não gravei a ligação, mas foi mais ou menos assim:
 

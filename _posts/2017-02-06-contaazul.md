@@ -15,29 +15,29 @@ Eis que chega em meu email um convite para trabalhar na loucura agitada de uma s
 - Então tá tudo certo, certo?
 - Errado.
 
-A parte de programação tudo bem, nunca parei de estudar e praticar. Mas na parte de administração de servidores, eu era um [dinossauro dos anos 90](https://cache.readovka.ru/bb5bf31334d41a10c2cd184868e47635_XL.jpg) com seus servidores físicos, locais (“my precious”) que você instalava o CD do Linux e editava artesanalmente uma série de arquivos `.conf` até tudo ficar lindo. Parei no tempo e perdi a migração do mercado para as VMs e depois para a nuvem: [Pet → Cattle](https://medium.com/build-acl/pets-and-cattle-infrastructure-for-software-as-a-service-saas-7d386ec56c0c).
+A parte de programação tudo bem, nunca parei de estudar e praticar. Mas na parte de administração de servidores, eu era um [dinossauro dos anos 90](https://cache.readovka.ru/bb5bf31334d41a10c2cd184868e47635_XL.jpg) com seus servidores físicos, locais ("my precious") que você instalava o CD do Linux e editava artesanalmente uma série de arquivos `.conf` até tudo ficar lindo. Parei no tempo e perdi a migração do mercado para as VMs e depois para a nuvem: [Pet → Cattle](https://medium.com/build-acl/pets-and-cattle-infrastructure-for-software-as-a-service-saas-7d386ec56c0c).
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Conectiva_Linux_3.0.jpg/440px-Conectiva_Linux_3.0.jpg)
 
 A ContaAzul, como empresa moderna, era 100% na nuvem, sem servidores locais. E agora, José? 😱
 
-Na entrevista deixei claro que **eu não manjava absolutamente nada** desse novo mundo, mas que tinha vontade de aprender. Concordamos em começar com um contrato temporário de 3 meses, onde eu aprenderia na prática, estudando e resolvendo os pepinos do dia a dia. Perfeito! Será o meu “mestrado”, além de uma atualização de carreira.
+Na entrevista deixei claro que **eu não manjava absolutamente nada** desse novo mundo, mas que tinha vontade de aprender. Concordamos em começar com um contrato temporário de 3 meses, onde eu aprenderia na prática, estudando e resolvendo os pepinos do dia a dia. Perfeito! Será o meu "mestrado", além de uma atualização de carreira.
 
 Mas e a prefeitura?
 
 Não deixei a prefeitura, então **fiquei com dois empregos**. Reduzi minha carga horária (e meu salário) na prefeitura para 4h (das 7 às 11) e na ContaAzul trabalhava mais 6h (das 13 às 19). Foi cansativo bagaraio, mas valeu a pena. 👍
 
-## Trabalhar em “startup”
+## Trabalhar em "startup"
 
 Eu estava com umas ideias de ir pro exterior e trabalhar numa dessas empresas modernosas, para conhecer o clima de startup e aprender tecnologias de ponta. Nem precisou. No fim, a ContaAzul era uma empresa aqui da minha cidade, que tinha exatamente essa experiência para oferecer.
 
 E não decepcionou.
 
-Os itens esperados da checklist de “empresa cool” estavam lá: ambiente bem informal (puffs, paredes rabiscadas, post-its coloridos por toda parte, roupas bizarras, pantufas, decoração temática, música alta, festas), brinquedos (video game, ping pong, skate, bateria, nerf gun), comida e bebida à vontade, horário de trabalho flexível (sem ponto), e muita gente jovem.
+Os itens esperados da checklist de "empresa cool" estavam lá: ambiente bem informal (puffs, paredes rabiscadas, post-its coloridos por toda parte, roupas bizarras, pantufas, decoração temática, música alta, festas), brinquedos (video game, ping pong, skate, bateria, nerf gun), comida e bebida à vontade, horário de trabalho flexível (sem ponto), e muita gente jovem.
 
-> Por falar em idade, eu era um dos “top 5” funcionários mais velhos da empresa. Isso numa empresa de 200+, pensa! 😱
+> Por falar em idade, eu era um dos "top 5" funcionários mais velhos da empresa. Isso numa empresa de 200+, pensa! 😱
 
-A **máquina de trabalho** era um notebook (plugado a monitor e teclado externos quando na mesa), o que garantia mobilidade total para ir até a mesa do colega e juntos resolver os problemas, codando ao mesmo tempo. Ou ainda, passar a tarde no refeitório (chamado de “lounge” por quem é mais cool do que eu), programando enquanto come até enjoar as guloseimas da cozinha. Ou programar no puff, no sofá, no chão... Eu sou mais conservador e saía pouco de minha mesa. Mas percebia que o pessoal mais novo adorava mudar o local de trabalho com frequência.
+A **máquina de trabalho** era um notebook (plugado a monitor e teclado externos quando na mesa), o que garantia mobilidade total para ir até a mesa do colega e juntos resolver os problemas, codando ao mesmo tempo. Ou ainda, passar a tarde no refeitório (chamado de "lounge" por quem é mais cool do que eu), programando enquanto come até enjoar as guloseimas da cozinha. Ou programar no puff, no sofá, no chão... Eu sou mais conservador e saía pouco de minha mesa. Mas percebia que o pessoal mais novo adorava mudar o local de trabalho com frequência.
 
 A **comida à vontade** é uma coisa muito boa. Foi a primeira vez que trabalhei em um lugar assim e gostei bastante. A qualquer momento que bate aquela fome, ou aquela vontade de dar uma espairecida, era só ir até o refeitório e se servir, sem limites. Tinha água, refrigerante, suco, café, cerveja, iogurte, Yakult, granola, bolachas (várias), salgadinhos (Cheetos), doces (paçoca era meu preferido), pão, queijo, presunto, geleias, e vários tipos de frutas. Cozinha bem equipada, que o pessoal usava pra preparar sanduíches, vitaminas, e lanches mais elaborados. Era frequente rolar algum lanche especial, feito pelas moças responsáveis pela limpeza, como: cachorro quente, bolo, pipoca e torta. Desnecessário dizer que é fácil engordar lá se a pessoa não for controlada 😋
 
@@ -49,7 +49,7 @@ Houve várias **festas temáticas** na minha estadia por lá. A maioria já vinh
 
 O **horário era flexível**, sem ponto de entrada/saída. Durante o expediente, cada um era livre para trabalhar como e quando quiser, sem cobrança. Está estressado? Vai lá e fica meia hora jogando ping pong. Ou vai no refeitório e fica comendo e batendo papo com os amigos. Ou vai tirar uma soneca no puff. Ou chama os colegas pra jogar um [Counter Strike](<https://en.wikipedia.org/wiki/Counter-Strike_(video_game)>), [Age of Empires](https://en.wikipedia.org/wiki/Age_of_Empires_II)... Era bem comum o pessoal ficar trabalhando depois do horário. Tem dia que trabalha a mais, no outro a menos, e assim vai, cada um cuidando do seu próprio tempo.
 
-Uma coisa que eu gostava era que toda a sexta-feira tinha uma **reunião geral** com todos os funcionários, que durava cerca de uma hora. Nela, o CEO (e outros líderes) expunham de maneira transparente os números da empresa, se estava indo bem ou mal, quais eram os próximos desafios, essas coisas. Também havia espaço para perguntas, onde o funcionário podia expor suas dúvidas, preocupações e ideias, ali na frente de todos. Gostei bastante desse formato e de poder ter essa dose semanal de notícias mais globais da empresa, saindo um pouco da “bolha” nerd ali do dia a dia.
+Uma coisa que eu gostava era que toda a sexta-feira tinha uma **reunião geral** com todos os funcionários, que durava cerca de uma hora. Nela, o CEO (e outros líderes) expunham de maneira transparente os números da empresa, se estava indo bem ou mal, quais eram os próximos desafios, essas coisas. Também havia espaço para perguntas, onde o funcionário podia expor suas dúvidas, preocupações e ideias, ali na frente de todos. Gostei bastante desse formato e de poder ter essa dose semanal de notícias mais globais da empresa, saindo um pouco da "bolha" nerd ali do dia a dia.
 
 Claro que nem tudo são flores. Infelizmente, tem gente que não sabe lidar com toda essa liberdade e abusa. Tinha os porcalhões que não limpavam sua sujeira no refeitório ou que deixavam o banheiro sujo. Tinha os que deixavam as salas de reunião bagunçadas. Tinha os fumantes que jogavam suas bitucas no jardim. Tinha os babacas que estacionavam de maneira não civilizada. Enfim, humanos. [Sempre estragando o que é bonito](https://www.youtube.com/watch?v=IM1-DQ2Wo_w). Mas isso era uma pequena parcela, no geral o saldo era bem positivo e o clima interno era muito empolgante!
 
@@ -61,9 +61,9 @@ Se quiser saber mais sobre o ambiente de trabalho, dá uma olhada lá nas fotos 
 
 Como já comentei, eu cheguei lá sem saber **nada** das tecnologias que eles utilizavam.
 
-Imagina um cara “das antigas” numa empresa moderninha 100% na nuvem.
+Imagina um cara "das antigas" numa empresa moderninha 100% na nuvem.
 
-Foi bem interessante essa experiência de chegar “virjão” e ser um total iniciante. Todos da equipe já eram experientes em nuvem, e eu era o perdido, o aprendiz, o estagiário. Tudo eu tinha que perguntar, descobrir o que é, pra que serve, que problema resolve, como funciona, e aos poucos ia construindo uma base de conhecimento nova. Levei meses para começar a ficar à vontade.
+Foi bem interessante essa experiência de chegar "virjão" e ser um total iniciante. Todos da equipe já eram experientes em nuvem, e eu era o perdido, o aprendiz, o estagiário. Tudo eu tinha que perguntar, descobrir o que é, pra que serve, que problema resolve, como funciona, e aos poucos ia construindo uma base de conhecimento nova. Levei meses para começar a ficar à vontade.
 
 > Mesmo ainda sendo um girino na nuvem, ganhei acesso de administrador em produção já no primeiro dia de trabalho! Ah, que diferença das mil regras de acesso da prefeitura... 🤠
 
@@ -82,7 +82,7 @@ Aliás, a única coisa que já me era familiar nesse novo ambiente era o Linux e
 - E aí, como é ser um quase quarentão trabalhando no meio da molecada de 20 e poucos anos?
 - Foi supimpa! 👴
 
-Antes de começar lá, tive receio de ser o “[tio da Sukita](http://desciclopedia.org/wiki/Tio_da_Sukita)”, deslocado no meio da gurizada. Mas não foi nada disso. Me receberam muito bem desde o início, me incluindo nas atividades, nas histórias e claro, nas zoações. Afinal, zoar e ser zoado é a parte mais importante do convívio social sadio no trabalho 😂
+Antes de começar lá, tive receio de ser o "[tio da Sukita](http://desciclopedia.org/wiki/Tio_da_Sukita)", deslocado no meio da gurizada. Mas não foi nada disso. Me receberam muito bem desde o início, me incluindo nas atividades, nas histórias e claro, nas zoações. Afinal, zoar e ser zoado é a parte mais importante do convívio social sadio no trabalho 😂
 
 Que eu me lembro, foram dois pontos que percebi uma diferença significativa entre gerações.
 
@@ -116,15 +116,15 @@ O mais louco era diariamente transitar entre dois mundos opostos: de manhã func
 
 Na minha experiência vivenciando isso, **os dois métodos de trabalho funcionam**, não tem melhor ou pior. Cada um encaixa melhor num tipo de empresa e de funcionário. A prefeitura é um órgão público com funcionários já mais velhos e precavidos, a ContaAzul é uma startup com uma molecada cheia de gás e sem freio.
 
-Eu notei que o que mais me cansava nessa dupla jornada não eram as 10 horas diárias de trabalho (afinal, isso sempre foi rotina [quando eu trabalhava em casa](/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/)), mas sim o chaveamento intelectual de ter que entrar no “modo prefeitura” de manhã e depois do almoço mudar para o “modo startup”. Além da diferenças tecnológicas e de metodologia de trabalho, também tinha a diferença de sistemas operacionais (Windows e Linux) e de teclados (ABNT e US Internacional). Fim do dia eu já estava zuretão, confundindo tudo. A cabeça doía.
+Eu notei que o que mais me cansava nessa dupla jornada não eram as 10 horas diárias de trabalho (afinal, isso sempre foi rotina [quando eu trabalhava em casa](/blog/2010/09/23/estou-ha-5-anos-desempregado-viva/)), mas sim o chaveamento intelectual de ter que entrar no "modo prefeitura" de manhã e depois do almoço mudar para o "modo startup". Além da diferenças tecnológicas e de metodologia de trabalho, também tinha a diferença de sistemas operacionais (Windows e Linux) e de teclados (ABNT e US Internacional). Fim do dia eu já estava zuretão, confundindo tudo. A cabeça doía.
 
-> Alguns dias ainda tinha a terceira jornada onde eu precisava [chavear para o “modo escritor”](/blog/2016/04/02/tres-empregos/). Pensa num cara que já nem sabia mais o que estava fazendo :)
+> Alguns dias ainda tinha a terceira jornada onde eu precisava [chavear para o "modo escritor"](/blog/2016/04/02/tres-empregos/). Pensa num cara que já nem sabia mais o que estava fazendo :)
 
 ## A saída
 
 Por mais que eu estivesse feliz na ContaAzul, pelo trabalho e pelas amizades que lá fiz, depois de 11 meses de uma rotina de dois empregos, trabalhando 10 horas por dia, eu estava bem cansado.
 
-Com [a gravidez da Mog](/blog/2016/11/09/serei-papai/), minhas prioridades mudaram. A barriga ali crescendo, e eu senti que devia desacelerar, trabalhar menos e ir me preparando para iniciar o “modo pai” e curtir o filho que estava a caminho.
+Com [a gravidez da Mog](/blog/2016/11/09/serei-papai/), minhas prioridades mudaram. A barriga ali crescendo, e eu senti que devia desacelerar, trabalhar menos e ir me preparando para iniciar o "modo pai" e curtir o filho que estava a caminho.
 
 Pedi demissão na ContaAzul e voltei ao meu horário normal na prefeitura, de 6 horas. Fim de um ciclo.
 

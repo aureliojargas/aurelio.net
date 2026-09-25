@@ -25,7 +25,7 @@ Você tem um site ou um blog e quer ganhar dinheiro com ele também? É fácil, 
 
 ## Como funciona o AdSense e o AdWords
 
-Ao colocar o código do AdSense no site, estou na verdade apenas reservando um espaço para anúncios, mas não sei o que vai aparecer ali. É como se eu dissesse: “Google, coloque o anúncio que quiser aqui, confio em você”.
+Ao colocar o código do AdSense no site, estou na verdade apenas reservando um espaço para anúncios, mas não sei o que vai aparecer ali. É como se eu dissesse: "Google, coloque o anúncio que quiser aqui, confio em você".
 
 O Google lê automaticamente o meu site e escolhe os anúncios que **têem a ver com o conteúdo** do site. É tudo automático, eu não preciso fazer nada.
 

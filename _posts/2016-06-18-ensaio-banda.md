@@ -6,7 +6,7 @@ worked: 5:00
 
 Sábado retrasado teve ensaio da banda, [Correria HC](/correria/). Esse é um evento raro, que acontece uma vez a cada N anos, quando um alinhamento cósmico faz com que todos os integrandes estejam na mesma cidade durante algumas horas. **Nos últimos 10 anos, só tivemos três ensaios**: um em 2010, outro em 2014 e esse agora em 2016.
 
-> Curiosidade: Na primeira versão desse texto, o parágrafo anterior começava com “sábado passado”, pois eu comecei a escrevê-lo poucos dias após o ensaio. Mas não consegui terminar o texto e os dias foram passando, passando… É a vida.
+> Curiosidade: Na primeira versão desse texto, o parágrafo anterior começava com "sábado passado", pois eu comecei a escrevê-lo poucos dias após o ensaio. Mas não consegui terminar o texto e os dias foram passando, passando… É a vida.
 
 Eu e a Mog fomos pra Curitiba curtir a festa de aniversário dos nossos sobrinhos (não são gêmeos, nasceram em dias próximos em anos diferentes, aí é festa compartilhada). Como os outros três integrantes da banda também estavam na cidade naquele dia, marcamos 2 horas de ensaio no estúdio do [SEKO](https://sekoaudioworks.com).
 
@@ -26,7 +26,7 @@ Acho incrível como ainda conseguimos lembrar das músicas. Algumas partes preci
 
 Lembrar é uma coisa, mas e **conseguir tocar**? Afinal, já não somos mais aqueles jovens de 18 anos que criaram aquelas músicas e conseguiam tocá-las na velocidade acelerada do hardcore.
 
-Antes do ensaio, duvidosos, até combinamos de tocar mais devagar e tal. Mas que nada! A primeira música já saiu “no gás” e dali pra frente foi aquela correria de sempre, pisando fundo ladeira abaixo. Os quase-quarentões ainda rockam! 🤘
+Antes do ensaio, duvidosos, até combinamos de tocar mais devagar e tal. Mas que nada! A primeira música já saiu "no gás" e dali pra frente foi aquela correria de sempre, pisando fundo ladeira abaixo. Os quase-quarentões ainda rockam! 🤘
 
 <iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/MXUxBgz4CU8" frameborder="0" allowfullscreen=""></iframe>
 

@@ -20,7 +20,7 @@ title: Expressões Regulares + Notepad++
 - O Notepad++ usa [PCRE](http://www.pcre.org) desde sua versão 6.0 (de 2012).
 - Use o **Localizar** (Ctrl+F) ou **Substituir** (Ctrl+H).
 - A aba **Marcar** é meio que um [RegexPal](http://regexpal.com) dentro do editor, destacando tudo o que a regex casa.
-- A opção “**. considerar queb**” é equivalente ao modificador `(?s)`, que faz o ponto casar a quebra de linha.
+- A opção "**. considerar queb**" é equivalente ao modificador `(?s)`, que faz o ponto casar a quebra de linha.
 - Acentuação funciona normalmente no `\w`, `\l` e `\u`.
 - Retrovisores na substituição: `$0`, `$1`, `${1}`, `$+{nome}`.
 - Substituição, escapar para inserir literal: `\$`, `\(`, `\)`, `\\`.

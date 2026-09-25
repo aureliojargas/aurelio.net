@@ -1,5 +1,5 @@
 ---
-title: Palestra “Expressões Regulares” na XVIII Semana da Computação UDESC
+title: Palestra "Expressões Regulares" na XVIII Semana da Computação UDESC
 subtitle: 22 de setembro de 2016, Joinville - SC
 date: 2016-09-22
 worked: 2:30
@@ -31,7 +31,7 @@ Quando no começo perguntei quem ali já tinha usado expressões regulares, pouc
 
 - <https://speakerdeck.com/aureliojargas/expressoes-regulares>
 
-Tudo correu bem. Consegui falar o que queria e apesar de ver algumas “pescadas” aqui e ali, ninguém dormiu. Parece que até gostaram. Vitória! :D
+Tudo correu bem. Consegui falar o que queria e apesar de ver algumas "pescadas" aqui e ali, ninguém dormiu. Parece que até gostaram. Vitória! :D
 
 No final da palestra os organizadores me deram um certificado de participação no evento e uma caneca de presente. Eba! E como já era hora da pausa para o lanche, ainda pude aproveitar uma mesa cheia de guloseimas à vontade. Hooray!
 

@@ -46,7 +46,7 @@ Sendo apenas mais uma janela no ambiente, você continua usando seu Windows norm
 
 Basta baixar o `setup.exe` do Cygwin, escolher quais os pacotes que quer instalar e turbinar seu Windows. Tem de tudo: Python, Perl, man pages, VI, Emacs, mutt, pine, Apache, PostgreSQL e inclusive a interface gráfica (XFree86 e X.org)! É possível rodar o WindowMaker, KDE ou Gnome, tudo dentro de uma janelinha do Windows!
 
-Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua vida vai mudar, o Windows vai até ficar “legal” de usar.
+Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua vida vai mudar, o Windows vai até ficar "legal" de usar.
 
 <h2 id="toc2">Instalação</h2>
 
@@ -55,7 +55,7 @@ Confie no que digo: se você usa Windows, **instale o Cygwin**. Sua vida vai mud
 - Baixe o [setup.exe](https://cygwin.com/install.html) e execute-o.
 - Escolha `Install from Internet`, para o instalador baixar os pacotes e já instalá-los.
 - Deixe sempre as opções padrão já selecionadas, não mude: `C:\cygwin`, `All Users`, `UNIX`.
-- Faça a instalação mínima primeiro, apertando “Avançar” na tela da escolha de pacotes, SEM SELECIONAR NADA. Depois que o Cygwin estiver instalado e funcionando, use o Setup novamente para instalar os pacotes extras que desejar (uma coisa de cada vez pequeno gafanhoto).
+- Faça a instalação mínima primeiro, apertando "Avançar" na tela da escolha de pacotes, SEM SELECIONAR NADA. Depois que o Cygwin estiver instalado e funcionando, use o Setup novamente para instalar os pacotes extras que desejar (uma coisa de cada vez pequeno gafanhoto).
 - Como referência, o [Adolfo da lista cygwin-br](http://br.groups.yahoo.com/group/cygwin-br/message/110) anotou quais os pacotes que vêm na instalação básica do Cygwin, são eles:
   - ash, base-files, base-passwd, bash, bzip2, cygwin, diffutils, editrights, fileutils, findutils, gawk, gdbm, grep, groff, gzip, less, libgdbm, libgdm-devel, libgbm3, libgbm4, libgettextpo0, libiconv2, libintl1, libintl2, libncurses5, libncurses6, libncurses7, libpcre, libreadline4, libreadline2, login, man, mktemp, ncurses, readline, sed, sh-utils, tar, termcap, terminfo, texinfo, which, zlib, \_update-info-dir
 

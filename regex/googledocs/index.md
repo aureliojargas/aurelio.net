@@ -21,7 +21,7 @@ Decidi disponibilizar publicamente a planilha em que fiz todos os meus testes co
 ## Links
 
 - [Find and replace in spreadsheets](http://support.google.com/docs/bin/answer.py?hl=en&answer=141704)
-  Documentação oficial do Google sobre o “Localizar e substituir” nas planilhas. Tem uma tabela com um resumo dos metacaracteres, e exemplos de uso. Este é o link "Ajuda" que aparece na janelinha da busca.
+  Documentação oficial do Google sobre o "Localizar e substituir" nas planilhas. Tem uma tabela com um resumo dos metacaracteres, e exemplos de uso. Este é o link "Ajuda" que aparece na janelinha da busca.
 
 - [RE2 Syntax](http://code.google.com/p/re2/wiki/Syntax)
   Referência completa dos metacaracteres usados pelo engine do Google, chamado RE2.

@@ -24,7 +24,7 @@ Além da leitura, eu também preciso programar, ou seja, alterar este código m�
 - Não vai quebrar nada?
 - Onde será que esse trecho é usado?
 
-Estou aqui “pisando em ovos”, fazendo tudo com muito cuidado, tentando fazer alterações sem causar muito impacto. Às vezes uma mudança aparentemente inofensiva pode quebrar uma outra parte do programa, que dependia daquilo. O [Aurelio de 2004](/blog/2014/05/01/capsula-do-tempo/) saberia, mas o de 2014 está no escuro.
+Estou aqui "pisando em ovos", fazendo tudo com muito cuidado, tentando fazer alterações sem causar muito impacto. Às vezes uma mudança aparentemente inofensiva pode quebrar uma outra parte do programa, que dependia daquilo. O [Aurelio de 2004](/blog/2014/05/01/capsula-do-tempo/) saberia, mas o de 2014 está no escuro.
 
 Para não depender tanto da sorte, estou contando com a ajuda dos testes automatizados para me avisarem quando eu estragar algo. E no processo também estou melhorando os próprios testes, para que cubram mais áreas do programa.
 

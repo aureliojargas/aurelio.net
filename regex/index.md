@@ -490,5 +490,5 @@ E já que estamos aqui, que tal uma explicação de como fazer [um programa que 
 - [You can't parse (X)HTML with regex](http://stackoverflow.com/a/1732454/1623438)
   Resposta muito criativa (e trabalhosa!) sobre a velha pergunta de fazer parsing de HTML com regex.
 
-- [Origem da frase “Now you have two problems”](http://regex.info/blog/2006-09-15/247)
-  Você já deve ter visto essa frase por aí, que diz: *Algumas pessoas, quando encontram um problema, pensam “já sei, vou usar expressões regulares”. Agora elas têm dois problemas.* O Jeffrey Friedl rastreou a origem dessa citação e fez um post a respeito. Nos comentários, aparecem alguns famosos, inclusive o [Jamie Zawinski (jwz)](http://www.jwz.org), responsável pela citação original.
+- [Origem da frase "Now you have two problems"](http://regex.info/blog/2006-09-15/247)
+  Você já deve ter visto essa frase por aí, que diz: *Algumas pessoas, quando encontram um problema, pensam "já sei, vou usar expressões regulares". Agora elas têm dois problemas.* O Jeffrey Friedl rastreou a origem dessa citação e fez um post a respeito. Nos comentários, aparecem alguns famosos, inclusive o [Jamie Zawinski (jwz)](http://www.jwz.org), responsável pela citação original.

@@ -12,7 +12,7 @@ tags: [programador]
 ---
 
 
-<p>Costumo prestar atenção aos detalhes e sou perfeccionista. Essa combinação, apesar de gerar resultados positivos, é um calvário para o praticante, pois às vezes perco muito tempo trabalhando em “coisas que ninguém vai perceber”.</p>
+<p>Costumo prestar atenção aos detalhes e sou perfeccionista. Essa combinação, apesar de gerar resultados positivos, é um calvário para o praticante, pois às vezes perco muito tempo trabalhando em "coisas que ninguém vai perceber".</p>
 <p>Quer um exemplo? Veja se você consegue perceber o problema no código JavaScript a seguir:</p>
 <pre>function mySort(a, b) { 
 	
@@ -27,20 +27,20 @@ tags: [programador]
 <ol>
 <li>Um espaço em branco inútil no final da primeira linha</li>
 <li>Um Tab inútil na segunda linha, que era para ser vazia</li>
-<li>Um espaço inútil entre os dois Tabs da linha “return 1”</li>
+<li>Um espaço inútil entre os dois Tabs da linha "return 1"</li>
 <li>Um Tab inútil no final da penúltima linha</li>
 </ol>
 <p>Vai selecionando devagar com o mouse que você verá.</p>
 <blockquote><p><strong>Atualização:</strong> <s>O chato do WordPress estragou minha brincadeira. Ele removeu do código os Tabs inúteis na hora de salvar o post. Tentei colocar de novo, mas ele sempre tira. Viu como não sou só eu que não gosta deles?</s> — WordPress removido, problema resolvido :)</p></blockquote>
 <p>Tá, eu sei. Estes espaços excedentes não influem em nada no funcionamento do programa e removê-los não vai fazer diferença. Até a economia de bytes, que poderia ser um argumento para a limpeza, é irrisória.</p>
 <blockquote><p>Irrisória! Faz anos que eu não digito essa palavra. Irrisória. Irrisória. Irrisória. Pronto, matei a saudade :)</p></blockquote>
-<p>Mas eu detesto ter qualquer coisa “sobrando” em meus códigos, então estes espaços em branco são inadmissíveis. Geralmente uso uma <a href="/regex/">expressão regular</a> para vasculhar o código e remover todos estes espaços:</p>
+<p>Mas eu detesto ter qualquer coisa "sobrando" em meus códigos, então estes espaços em branco são inadmissíveis. Geralmente uso uma <a href="/regex/">expressão regular</a> para vasculhar o código e remover todos estes espaços:</p>
 <pre>^(\t+ | +\t)|[\t ]+$</pre>
 <blockquote><p>Traduzindo: Procure espaços e Tabs misturados no início da linha, ou por qualquer combinação de Tabs e espaços no final das linhas.</p></blockquote>
 <p>Mas é claro que eu esqueço de fazer esta pesquisa e os famigerados espaços parasitas acabam ficando no código.</p>
 <p>Eu poderia configurar o SVN para disparar um <a href="/shell/">shell script</a> que remove estes espaços a cada commit, mas tenho preguiça de procurar como se faz isso. De qualquer forma, isso eliminaria o prazer de fazer a limpeza eu mesmo.</p>
 <blockquote><p>Tipo se orgulhar de ver a casa limpa depois da faxina que você mesmo fez. Quando a faxineira limpa não tem essa emoção.</p></blockquote>
-<p>Perdoem-me pelo imperdoável deslize anti-automação, mas essa tarefa eu gosto de fazer “na mão”. Assim sendo, nada melhor do que configurar o editor de textos para destacar em uma cor diferente estes espaços, para que eu possa apagá-los um por um, sem piedade.</p>
+<p>Perdoem-me pelo imperdoável deslize anti-automação, mas essa tarefa eu gosto de fazer "na mão". Assim sendo, nada melhor do que configurar o editor de textos para destacar em uma cor diferente estes espaços, para que eu possa apagá-los um por um, sem piedade.</p>
 <blockquote><p>Aleluia! Finalmente consegui chegar no assunto do post :)</p></blockquote>
 <h2>TextMate</h2>
 <figure>

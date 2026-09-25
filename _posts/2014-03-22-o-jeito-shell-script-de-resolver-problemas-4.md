@@ -29,7 +29,7 @@ Mas como usar a zzarrumacidade (um programa que está em meu computador) para ar
 
 **Pensamento shell script:** transformar meu problema num problema de texto, ou seja, **entra texto, sai texto**. Faço um dump dos dados pra um arquivo CSV, manipulo o texto desse arquivo pela linha de comando arrumando os nomes das cidades e como resultado gerarei um texto com os comandos SQL que vão atualizar os dados no banco. Sem loops, sem complexidade, apenas a boa e velha manipulação de texto.
 
-> Esse é o mantra do shelleiro “de raiz”, repita comigo: Entra texto, sai texto. Entra texto, sai texto. Entra texto, sai texto...
+> Esse é o mantra do shelleiro "de raiz", repita comigo: Entra texto, sai texto. Entra texto, sai texto. Entra texto, sai texto...
 
 <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/woN4BZjr0Os?list=PLkMH2SrZj2aiWw-t6rLgciBQqqoZZn5t1" frameborder="0"></iframe></span></p>
 

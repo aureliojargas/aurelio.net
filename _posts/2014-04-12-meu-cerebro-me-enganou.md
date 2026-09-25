@@ -24,6 +24,6 @@ O sonho continuou por mais um tempo, com mais bate-papos.
 
 Só depois que acordei e lembrei do sonho, me dei conta que **meu cérebro me enganou**!
 
-Na verdade, o cérebro não conseguiu criar diálogos em espanhol no sonho (óbvio, porque não domino a língua) e improvisou com o português mesmo. Quando percebi essa falha, na maior cara de pau ele me mandou esse caô de “aprender português na escola”. E o mané aqui acreditou.
+Na verdade, o cérebro não conseguiu criar diálogos em espanhol no sonho (óbvio, porque não domino a língua) e improvisou com o português mesmo. Quando percebi essa falha, na maior cara de pau ele me mandou esse caô de "aprender português na escola". E o mané aqui acreditou.
 
 Estou indignado, não se pode confiar no próprio cérebro! :)

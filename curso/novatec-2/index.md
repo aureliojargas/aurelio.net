@@ -24,7 +24,7 @@ Uma viagem que tem somente 45 minutos de voo durou 5 horas no total. Saí direto
 
 Passado o estresse da viagem do dia anterior, o sábado foi inteiro dedicado ao curso e foi muito bom. Pude ir à pé até o CT, pois ele fica a poucas quadras do hotel.
 
-Com a caminhada matinal revigorante, cheguei uns 40 minutos antes do horário do curso. Pude ver “ao vivo” pela primeira vez a [capa vermelha luxo](https://twitter.com/novateceditora/status/699232860134367232) da 5ª edição do [meu livro de regex](https://www.piazinho.com.br), que tinha sido recém-lançada. Cada aluno também ganhou um exemplar, que autografei no fim do curso.
+Com a caminhada matinal revigorante, cheguei uns 40 minutos antes do horário do curso. Pude ver "ao vivo" pela primeira vez a [capa vermelha luxo](https://twitter.com/novateceditora/status/699232860134367232) da 5ª edição do [meu livro de regex](https://www.piazinho.com.br), que tinha sido recém-lançada. Cada aluno também ganhou um exemplar, que autografei no fim do curso.
 
 [![Sala lotada no curso de Expressões Regulares](turma-800.jpg)](turma.jpg)
 
@@ -38,11 +38,11 @@ No início do curso, cada aluno se apresentou e deu uma nota para o que julgava 
 
 > Difícil é ter disposição para voltar para o exercício mental depois de tanta carne, mas o pessoal conseguiu :)
 
-Na parte da tarde foi 100% **exercícios**, onde cada um vai avançando conforme seu nível, e eu tenho a chance de ir mesa a mesa, auxiliando e tirando dúvidas. É nesse momento que o aluno realmente fixa o aprendizado e cria suas próprias soluções para os problemas propostos. É a hora de criar, errar, testar, experimentar. De repente, todos estão criando expressões regulares por conta própria, e aquele “bicho papão” torna-se uma ferramenta conhecida.
+Na parte da tarde foi 100% **exercícios**, onde cada um vai avançando conforme seu nível, e eu tenho a chance de ir mesa a mesa, auxiliando e tirando dúvidas. É nesse momento que o aluno realmente fixa o aprendizado e cria suas próprias soluções para os problemas propostos. É a hora de criar, errar, testar, experimentar. De repente, todos estão criando expressões regulares por conta própria, e aquele "bicho papão" torna-se uma ferramenta conhecida.
 
-Ao mesmo tempo é também um momento de descontração, pois eu vou nas mesas e tento “quebrar” as expressões do pessoal, inserindo textos com variações, que expõem falhas de precisão nas expressões. **Eu** me divirto :D
+Ao mesmo tempo é também um momento de descontração, pois eu vou nas mesas e tento "quebrar" as expressões do pessoal, inserindo textos com variações, que expõem falhas de precisão nas expressões. **Eu** me divirto :D
 
-No fim do dia, com todos já bem treinados e sintonizados, conseguimos ver **tópicos mais avançados**, como expressões com comentários, grupos nomeados, otimização e diferentes maneiras de resolver um mesmo problema. Foi a hora que o “papo de louco” estava no seu ápice, com a turma discutindo algo abstrato como se fosse fácil.
+No fim do dia, com todos já bem treinados e sintonizados, conseguimos ver **tópicos mais avançados**, como expressões com comentários, grupos nomeados, otimização e diferentes maneiras de resolver um mesmo problema. Foi a hora que o "papo de louco" estava no seu ápice, com a turma discutindo algo abstrato como se fosse fácil.
 
 ![Expressão que estávamos analisando](regex.jpg)
 

@@ -48,9 +48,9 @@ Sempre ouvi falar em como as notificações do Android eram superiores às do iO
 
 Em alguns aplicativos que eu já estava bem acostumado a usar, como o Dropbox e o Duolingo, me surpreendi ao ver que **a versão para Android tem mais funcionalidades do que a versão para iOS**. Tá, isso é meio óbvio já que a Apple é a rainha das limitações, mas eu não esperava.
 
-Hoje já me acostumei, mas lembro que no início foi estranho entrar na loja ([Play Store](https://play.google.com/store/apps)) e ver os ícones toscos e apps com interface “feita por programador”. Na loja da Apple é tudo mais polido e bonito.
+Hoje já me acostumei, mas lembro que no início foi estranho entrar na loja ([Play Store](https://play.google.com/store/apps)) e ver os ícones toscos e apps com interface "feita por programador". Na loja da Apple é tudo mais polido e bonito.
 
-Ainda sobre a loja, até hoje me surpreendo como há muitos **aplicativos simples com permissões abusivas**. Parece haver todo um “submundo” de criar aplicativos gratuitos que na verdade são armadilhas para ter acesso aos dados do usuário. Aplicativos de lanterna são um bom exemplo.
+Ainda sobre a loja, até hoje me surpreendo como há muitos **aplicativos simples com permissões abusivas**. Parece haver todo um "submundo" de criar aplicativos gratuitos que na verdade são armadilhas para ter acesso aos dados do usuário. Aplicativos de lanterna são um bom exemplo.
 
 **Recomendo o Moto X.** Gostei bastante do aparelho, é bem resistente (já deixei cair algumas vezes) e o preço é bom. Minhas únicas pequenas reclamações são o fundo arredondado (que impede o uso do telefone apoiado na mesa) e o plug do fone de ouvido ser na parte superior em vez da inferior.
 

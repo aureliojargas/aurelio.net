@@ -32,7 +32,7 @@ O coração ♥ está na terceira parte do teclado, que você acessa primeiro to
 
 ![](/img/blog/unicode-android.gif)
 
-Bem, eu tive a paciência de tocar em cada uma das teclas e anotar todos os caracteres que aparecem. Então aqui está, mastigada, a lista completa de todos os símbolos “escondidos” atrás das teclas.
+Bem, eu tive a paciência de tocar em cada uma das teclas e anotar todos os caracteres que aparecem. Então aqui está, mastigada, a lista completa de todos os símbolos "escondidos" atrás das teclas.
 
 > Aproveite e memorize aqueles que você mais gosta, para tornar seus textos mais frufruzentos :P
 
