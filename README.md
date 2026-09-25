@@ -28,6 +28,15 @@ See [.devcontainer/](.devcontainer/).
 
 ## Setup local development
 
+> [!NOTE]
+> Simplified setup with `rv`:
+>
+> ```bash
+> brew install rv
+> rv clean-install
+> rv run jekyll build
+> ```
+
 Those are the initial steps for all the platforms:
 
 ```bash
