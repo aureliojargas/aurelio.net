@@ -12,7 +12,7 @@ tags: [regex]
 <p>Uso <a href="/regex/">expressões regulares</a> há tantos anos, que hoje para mim é muito natural, diria até automático, ficar compondo uma regex na cabeça, nas mais diversas (e inúteis) situações. Por exemplo, se estou relaxado lendo um artigo e em seu texto aparece alguma repetição, pequena variação ou formato numérico, me pego pensando nos metacaracteres que casariam aquilo.</p>
 <blockquote><p>Tá, é bizarro, eu sei :)</p></blockquote>
 <p>Nos <a href="/blog/2011/01/28/salvar-site-como-pdf-no-iphone-ipod-ipad/">artigos</a> <a href="/blog/2011/02/04/imprimir-como-pdf-do-iphone-ipod-ipad-para-o-dropbox-via-airprint/">anteriores</a> do blog, falei sobre os equipamentos da Apple e várias vezes precisei citar os três brinquedos pretos: <strong>iPod</strong>, <strong>iPad</strong> e <strong>iPhone</strong>. Ao escrever estes nomes, um alerta apita aqui dentro: <em>Epa! Repetição e variação detectados!</em></p>
-<blockquote><p><a href="http://macmagazine.com.br/2010/10/11/theres-an-app-for-that-agora-e-uma-marca-registrada-da-apple/">There’s a regex for that</a> :)</p></blockquote>
+<blockquote><p><a href="http://macmagazine.com.br/2010/10/11/theres-an-app-for-that-agora-e-uma-marca-registrada-da-apple/">There's a regex for that</a> :)</p></blockquote>
 <p>Compor uma expressão regular que case os três nomes não é difícil. Uma primeira alternativa, mais simplista, seria usar o metacaractere <strong>ou</strong> para fazer a lista de palavras permitidas:</p>
 <pre>iPod|iPad|iPhone</pre>
 <p>A barra vertical indica que esta expressão casa iPod <strong>ou</strong> iPad <strong>ou</strong> iPhone. Simples, não? Fácil de ler e entender. Mas podemos tornar esta expressão menor e mais eficiente.</p>
