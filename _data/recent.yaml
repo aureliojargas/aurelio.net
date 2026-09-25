@@ -1,35 +1,35 @@
 # Hand made, so I can include posts and pages
 # Used in main index, sidebar, feed
 
-- title: "Minha experiência na ContaAzul"
+- title: Minha experiência na ContaAzul
   url: /blog/2017/02/06/contaazul/
 
-- title: "Serei papai \\o/"
+- title: Serei papai \o/
   url: /blog/2016/11/09/serei-papai/
 
-- title: "Tela Preta episódio 9: Contar palavras com egrep|sort|uniq"
+- title: 'Tela Preta episódio 9: Contar palavras com egrep|sort|uniq'
   url: /blog/2016/08/09/tela-preta-9/
 
-- title: 'Palestra "Shell Script Moderno" no FISL17'
+- title: Palestra "Shell Script Moderno" no FISL17
   url: /curso/fisl-17/
 
-- title: "Raridade: teve ensaio da banda"
+- title: 'Raridade: teve ensaio da banda'
   url: /blog/2016/06/18/ensaio-banda/
 
-- title: 'Palestra "O poder da linha de comando" no SC Dev Summit 2016'
+- title: Palestra "O poder da linha de comando" no SC Dev Summit 2016
   url: /curso/sc-dev-summit/
 
-- title: "Tenho três empregos"
+- title: Tenho três empregos
   url: /blog/2016/04/02/tres-empregos/
 
-- title: "Aprenda expressões regulares em um dia"
+- title: Aprenda expressões regulares em um dia
   url: /blog/2016/03/02/aprender-regex/
 
-- title: "Sed salva o dia novamente"
+- title: Sed salva o dia novamente
   url: /blog/2016/02/09/sed-salva/
 
-- title: "Fiz a prova POSCOMP"
+- title: Fiz a prova POSCOMP
   url: /blog/2015/10/03/poscomp/
 
-- title: "Eu no podcast Castálio"
+- title: Eu no podcast Castálio
   url: /blog/2015/09/18/eu-no-podcast-castalio/

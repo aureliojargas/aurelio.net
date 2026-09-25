@@ -280,7 +280,7 @@
 
 - data: 2015-08-19
   duracao: 8
-  tema: "Expressões Regulares: Imersão"
+  tema: 'Expressões Regulares: Imersão'
   evento: Centro de Treinamento da Novatec
   # site: http://ctnovatec.com.br/cursos/trilha-ferramentas-de-produtividade/expressoes-regulares-imersao/
   cidade: São Paulo
@@ -356,7 +356,7 @@
 
 - data: 2015-10-15
   duracao: 4
-  tema: "Expressões Regulares: Imersão"
+  tema: 'Expressões Regulares: Imersão'
   evento: Latinoware 2015
   site: http://2015.latinoware.org
   cidade: Foz do Iguaçu
@@ -384,7 +384,7 @@
 
 - data: 2016-02-20
   duracao: 8
-  tema: "Expressões Regulares: Imersão"
+  tema: 'Expressões Regulares: Imersão'
   evento: Centro de Treinamento da Novatec
   cidade: São Paulo
   estado: SP
@@ -393,7 +393,7 @@
 
 - data: 2016-04-09
   duracao: 8
-  tema: "Expressões Regulares: Imersão"
+  tema: 'Expressões Regulares: Imersão'
   evento: Centro de Treinamento da Novatec
   cidade: São Paulo
   estado: SP
@@ -423,7 +423,7 @@
 
 - data: 2016-09-03
   duracao: 8
-  tema: "Expressões Regulares: Imersão"
+  tema: 'Expressões Regulares: Imersão'
   evento: Centro de Treinamento da Novatec
   cidade: São Paulo
   estado: SP
@@ -458,7 +458,7 @@
 
 - data: 2018-06-16
   duracao: 8
-  tema: "Expressões Regulares: Imersão"
+  tema: 'Expressões Regulares: Imersão'
   evento: Centro de Treinamento da Novatec
   cidade: São Paulo
   estado: SP
