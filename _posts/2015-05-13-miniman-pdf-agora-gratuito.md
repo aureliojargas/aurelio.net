@@ -14,7 +14,7 @@ O [miniman](/shell/miniman/) é um guia rápido que lista os principais comandos
 
 O PDF ficou bem bacana, coube tudo em uma única página, perfeito para imprimir e deixar perto do computador. Ou ainda, usar como fundo de tela, copiar para o seu telefone ou deixar no teu Dropbox para consultar quando precisar.
 
-<span class="unicode-char heart">♥</span> <strong>MUITO OBRIGADO</strong> a todos que contribuíram com meu trabalho comprando o PDF nestes anos em que ele esteve à venda. Agradeço também pelo respeito, pois o arquivo não “vazou” na internet. Com estas atitudes, vocês me incentivam a continuar produzindo e acreditando na comunidade. Valeu!
+<span class="unicode-char heart">♥</span> <strong>MUITO OBRIGADO</strong> a todos que contribuíram com meu trabalho comprando o PDF nestes anos em que ele esteve à venda. Agradeço também pelo respeito, pois o arquivo não "vazou" na internet. Com estas atitudes, vocês me incentivam a continuar produzindo e acreditando na comunidade. Valeu!
 
 ## Nerdices: estatísticas de vendas
 

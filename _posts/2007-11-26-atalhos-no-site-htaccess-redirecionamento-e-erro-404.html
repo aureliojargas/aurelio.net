@@ -12,7 +12,7 @@ tags: [site]
 
 
 <p>Hoje uma dica nerd, só para variar ;)</p>
-<p>Se você visitou o <a href="/">AURELIO.NET</a> recentemente, deve ter notado que a <a href="/">página principal</a> ganhou vários links novos no final, chamados “Atalhos”.</p>
+<p>Se você visitou o <a href="/">AURELIO.NET</a> recentemente, deve ter notado que a <a href="/">página principal</a> ganhou vários links novos no final, chamados "Atalhos".</p>
 <figure>
   <a href="/">
     <img src="/wp/wp-content/uploads/2007/11/atalhos-site.jpg" />
@@ -37,11 +37,11 @@ tags: [site]
 <p>O que mais gostei desse esquema foi a simplicidade de criação e manutenção de todos os atalhos: um único arquivo texto.</p>
 <p>O servidor Apache usa o arquivo especial .htaccess para guardar algumas regras especiais que podem ser aplicadas a um site. Entre estas regras, está o redirecionamento. Com uma única linha é fácil fazer o atalho já mencionado do MiGuXeiToR:</p>
 <p><code>Redirect 302 /miguxeitor https://aurelio.net/coisinha/miguxeitor/</code></p>
-<blockquote><p>Traduzindo: “Estimado Apache, por obséquio, seria possível vossa mercê redirecionar todas as visitas destinadas à área /miguxeitor deste site, para o endereço https://aurelio.net/coisinha/miguxeitor/? Ah, se não fosse pedir muito, gostaria que o código 302 fosse usado para identificar este redirecionamento. Grato por sua atenção, subscrevo-me. Obrigado.”</p></blockquote>
+<blockquote><p>Traduzindo: "Estimado Apache, por obséquio, seria possível vossa mercê redirecionar todas as visitas destinadas à área /miguxeitor deste site, para o endereço https://aurelio.net/coisinha/miguxeitor/? Ah, se não fosse pedir muito, gostaria que o código 302 fosse usado para identificar este redirecionamento. Grato por sua atenção, subscrevo-me. Obrigado."</p></blockquote>
 <p>Basta colocar várias linhas para fazer vários atalhos. Fácil, não?</p>
 <p>Tá, tem alguns detalhes importantes :)</p>
 <ul>
-<li>O arquivo deve chamar-se “.htaccess”, em minúsculas e com o ponto na frente.</li>
+<li>O arquivo deve chamar-se ".htaccess", em minúsculas e com o ponto na frente.</li>
 <li>O arquivo deve ter permissões restritas: chmod 664 nele!</li>
 <li>O arquivo deve ser colocado no diretório principal (raiz) de seu site.</li>
 <li>O atalho deve estar inteiro em uma única linha, não a quebre.</li>

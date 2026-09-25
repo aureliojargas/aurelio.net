@@ -6,7 +6,7 @@ tags: [site]
 ---
 
 
-<p>Esses dias fui consertar o leiaute do <a href="/correria/">site da banda</a> e finalmente consegui deixar o menu como eu queria, “fixo porém líquido”.</p>
+<p>Esses dias fui consertar o leiaute do <a href="/correria/">site da banda</a> e finalmente consegui deixar o menu como eu queria, "fixo porém líquido".</p>
 <p><strong>Fixo</strong> porque não muda sua largura se a janela for redimensionada. <strong>Líquido</strong> porque muda sua largura se o tamanho do texto for alterado.</p>
 <p>Tanto faz se o menu lateral do seu site é colocado à esquerda ou à direita, mas geralmente ele é uma faixa estreita, deixando o espaço restante para o conteúdo do site.</p>
 <figure>
@@ -21,12 +21,12 @@ tags: [site]
 <li>Se o usuário mudar o tamanho ou tipo da fonte, o menu deve <strong>encolher ou esticar</strong> a sua largura, acompanhando o novo tamanho do texto. O conteúdo do site se acomoda no espaço que sobrar.</li>
 <li>Se o usuário mudar o tamanho da janela, o menu <strong>não muda</strong>, o que vai diminuir/aumentar é a área do conteúdo.</li>
 </ol>
-<p>Para deixar menu e conteúdo lado a lado, tem que usar o float. Quando usa float, é necessário definir uma largura para o bloco. Aí é a pegadinha. Para que tudo estique do “jeito certo”, no menu essa largura deve ser proporcional ao tamanho do <strong>texto</strong> e no conteúdo proporcional ao tamanho da <strong>janela</strong>.</p>
+<p>Para deixar menu e conteúdo lado a lado, tem que usar o float. Quando usa float, é necessário definir uma largura para o bloco. Aí é a pegadinha. Para que tudo estique do "jeito certo", no menu essa largura deve ser proporcional ao tamanho do <strong>texto</strong> e no conteúdo proporcional ao tamanho da <strong>janela</strong>.</p>
 <p>Parece complicado né? Mas tem uma dica ninja para simplificar o problema.</p>
 <p>O normal é definir <code>float:left</code> para o menu e <code>float:right</code> para o conteúdo, jogando um para cada lado. Também é necessário definir a largura de ambos e aí reside o problema. Ao invés disso, a espadada certeira é jogar apenas o menu para a esquerda e definir sua largura, deixando que o navegador acomode o conteúdo automaticamente, no espaço que restar. Para garantir o alinhamento, o conteúdo ganha uma margem esquerda um pouco maior que a largura do menu.</p>
 <p>Então a única incógnita que restou é a largura do menu. As opções:</p>
 <h2>Menu com largura fixa (em pixels)</h2>
-<p>A mais pobre das alternativas e a que parece ser a preferida dos webdesigners com mentalidade “anos 90”. Você diz que teu menu vai ter uma largura fixa de 100 pixels e pronto. Como é fixa, se o usuário mudar o tamanho ou tipo da fonte, lascou. Se o texto for diminuído, vai sobrar muito espaço em branco nas laterais do menu. Se o texto for aumentado, vai quebrar a linha ou vai vazar para fora do menu e se misturar com o conteúdo. Mais amador impossível.</p>
+<p>A mais pobre das alternativas e a que parece ser a preferida dos webdesigners com mentalidade "anos 90". Você diz que teu menu vai ter uma largura fixa de 100 pixels e pronto. Como é fixa, se o usuário mudar o tamanho ou tipo da fonte, lascou. Se o texto for diminuído, vai sobrar muito espaço em branco nas laterais do menu. Se o texto for aumentado, vai quebrar a linha ou vai vazar para fora do menu e se misturar com o conteúdo. Mais amador impossível.</p>
 <figure>
   <img src="/wp/wp-content/uploads/2006/07/menu-fixo-liquido-pixel.png" alt="" />
   <figcaption>Menu com texto vazado e quebrado</figcaption>
@@ -46,5 +46,5 @@ tags: [site]
   <figcaption>Menu continua normal mesmo com janela pequena e fonte grande</figcaption>
 </figure>
 
-<blockquote><p>O “em” significa “eme” em inglês. Eme, você sabe, a letra M do alfabeto. Assim, a medida <strong>4em</strong> é o espaço ocupado por quatro emes seguidos: <strong>MMMM</strong>. Então se você aumentar o texto, o tamanho da letra eme vai aumentar, logo a medida 4em vai aumentar também.</p></blockquote>
-<p>Coloquei uma <a href="/web/menu-fixo-liquido.html">página de testes</a> no meu site, para que você possa ver estes conceitos “ao vivo”. Mude o tamanho da janela, aumente e diminua a fonte e veja como cada alternativa se comporta. Depois veja o código fonte da página para aprender como implementá-los.</p>
+<blockquote><p>O "em" significa "eme" em inglês. Eme, você sabe, a letra M do alfabeto. Assim, a medida <strong>4em</strong> é o espaço ocupado por quatro emes seguidos: <strong>MMMM</strong>. Então se você aumentar o texto, o tamanho da letra eme vai aumentar, logo a medida 4em vai aumentar também.</p></blockquote>
+<p>Coloquei uma <a href="/web/menu-fixo-liquido.html">página de testes</a> no meu site, para que você possa ver estes conceitos "ao vivo". Mude o tamanho da janela, aumente e diminua a fonte e veja como cada alternativa se comporta. Depois veja o código fonte da página para aprender como implementá-los.</p>

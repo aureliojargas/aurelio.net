@@ -6,7 +6,7 @@ worked: 3:00
 
 Expressões regulares é um assunto que dá medo em muita gente. O cara olha aquela mistura aleatória de símbolos, não entende nada e sai xingando quem inventou aquela porcaria :)
 
-Mas depois que você “vê a luz” e aprende a ler e criar suas próprias expressões, um novo mundo de possibilidades se abre e você passa a querer usar expressões regulares em tudo! Do ódio ao vício, o que era trevas vira ferramenta indispensável.
+Mas depois que você "vê a luz" e aprende a ler e criar suas próprias expressões, um novo mundo de possibilidades se abre e você passa a querer usar expressões regulares em tudo! Do ódio ao vício, o que era trevas vira ferramenta indispensável.
 
 ## Eu uso expressões regulares todos os dias
 
@@ -18,7 +18,7 @@ Eu acho expressões regulares tão útil e tão poderoso, me facilita tanto a vi
 
 ## Não é tão difícil quanto parece
 
-Apesar de parecer ser muito complexo, o assunto em si não é extenso e pode ser explicado e demonstrado em algumas horas. Os conceitos são abstratos, mas junto com exemplos você vai entendendo pra que serve cada um daqueles símbolos (os metacaracteres) e como “montá-los” numa expressão para resolver o seu problema.
+Apesar de parecer ser muito complexo, o assunto em si não é extenso e pode ser explicado e demonstrado em algumas horas. Os conceitos são abstratos, mas junto com exemplos você vai entendendo pra que serve cada um daqueles símbolos (os metacaracteres) e como "montá-los" numa expressão para resolver o seu problema.
 
 Não é decorar, numa questão de horas você realmente entende e aprende como funciona, e sai criando suas próprias expressões do zero. Olha só que massa, num mesmo dia você acorda sem saber nada de regex e **no fim do dia estará criando expressões**.
 
@@ -34,7 +34,7 @@ Para ter algum tipo de métrica, no início do curso eu peço para cada aluno da
 
 Em geral, no final do curso, todos já estão tão imersos no assunto, que surgem discussões abstratas sobre eficiência ou qual a melhor maneira de fazer uma expressão complexa, como a do IP ou a da data.
 
-> Qualquer um que entre na sala nesse momento, ficará chocado com o “papo de louco” :)
+> Qualquer um que entre na sala nesse momento, ficará chocado com o "papo de louco" :)
 
 ![](/curso/sdsl-3/quadro.jpg)
 

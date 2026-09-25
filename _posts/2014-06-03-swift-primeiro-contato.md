@@ -16,7 +16,7 @@ Já no lançamento a Apple disponibilizou gratuitamente um guia completo sobre a
 
 Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alguns dos pontos que me chamaram a atenção:
 
-- A documentação fala muito sobre **código legível**. Eu levei anos para finalmente compreender a importância disso, e fico feliz que eles estejam dando a devida importância. Veja uma citação do livro: “Readability is always preferred over brevity”.
+- A documentação fala muito sobre **código legível**. Eu levei anos para finalmente compreender a importância disso, e fico feliz que eles estejam dando a devida importância. Veja uma citação do livro: "Readability is always preferred over brevity".
 
 - Para melhorar a legibilidade dos **números** no código, é permitido colocar zeros à esquerda livremente (zero padding), inserir `_` para separar grupos de números e adicionar sinais de `+` na frente. Tudo isso não altera em nada o valor do número, serve apenas para melhorar sua leitura pelo programador.
 
@@ -41,7 +41,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - **Comentários multilinha** podem ser aninhados. Já tentou comentar um trecho grande de código que já possuía alguns comentários multilinha com `/* … */`? Pois é. Na Swift rola.
 
-- **Interpolação de strings** (expandir variáveis e expressões dentro de strings) achei bem estranho ser `\(assim)`. Parênteses escapados? Fala sério! Se bem que não há um padrão estabelecido, cada linguagem faz diferente: `$shell`, `{$php}`, `#{ruby}`, `%(python)s`. Mas depois de ver bastante exemplos na documentação comecei a me acostumar. E se pensar que já tem `\t` e `\n` que significam “coisas especiais” no meio de uma string, usar `\(…)` é uma escolha que faz sentido.
+- **Interpolação de strings** (expandir variáveis e expressões dentro de strings) achei bem estranho ser `\(assim)`. Parênteses escapados? Fala sério! Se bem que não há um padrão estabelecido, cada linguagem faz diferente: `$shell`, `{$php}`, `#{ruby}`, `%(python)s`. Mas depois de ver bastante exemplos na documentação comecei a me acostumar. E se pensar que já tem `\t` e `\n` que significam "coisas especiais" no meio de uma string, usar `\(…)` é uma escolha que faz sentido.
 
   ```swift
   var nome_completo = "Fulano da Silva"
@@ -49,7 +49,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
   println "Olá \(nome_completo), você tem \(idade) anos."
   ```
 
-- Mesmo acostumando com o `\(…)` dentro das strings, tem que levar em conta que o parser dele é bem limitado: “The expressions you write inside parentheses within an interpolated string cannot contain an unescaped double quote (`"`) or backslash (`\`), and cannot contain a carriage return or line feed.”
+- Mesmo acostumando com o `\(…)` dentro das strings, tem que levar em conta que o parser dele é bem limitado: "The expressions you write inside parentheses within an interpolated string cannot contain an unescaped double quote (`"`) or backslash (`\`), and cannot contain a carriage return or line feed."
 
 - Há poucas funções/métodos nativos para lidar com **strings**. E o que eu mais gosto é lidar com strings. Que pena. Alguns deles: `hasPrefix`, `hasSuffix`, `uppercaseString`, `lowercaseString`, `countElements`, `isEmpty`.
 
@@ -63,7 +63,7 @@ Li a primeira metade do guia, que trata da sintaxe da linguagem, esses foram alg
 
 - Achei interessante a ideia de dar nomes aos blocos de comandos `switch` e `while`. Assim, quando você está no meio de um loop, dentro de outro loop, dentro de outro loop, pode dar um `break nome`, para especificar exatamente de qual bloco você está saindo.
 
-- A linha da declaração de uma função é um mundo à parte. Pode ser simples e concisa, mas também pode ser um caminhão de informações ao especificar, para cada argumento: nome externo, nome interno, tipo e valor default. E o tipo do argumento ainda pode ser um “function type” como por exemplo `(Int, Int) -> Int`. E no final da linha, ainda tem o operador `->` e o retorno da função, sendo que este retorno pode ser uma tupla com vários elementos, onde é preciso especificar o tipo e opcionalmente o nome de cada um.
+- A linha da declaração de uma função é um mundo à parte. Pode ser simples e concisa, mas também pode ser um caminhão de informações ao especificar, para cada argumento: nome externo, nome interno, tipo e valor default. E o tipo do argumento ainda pode ser um "function type" como por exemplo `(Int, Int) -> Int`. E no final da linha, ainda tem o operador `->` e o retorno da função, sendo que este retorno pode ser uma tupla com vários elementos, onde é preciso especificar o tipo e opcionalmente o nome de cada um.
 
   ```swift
   // Exemplo de declaração de função que recebe 3 argumentos

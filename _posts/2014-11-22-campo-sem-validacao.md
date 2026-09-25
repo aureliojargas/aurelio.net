@@ -63,18 +63,18 @@ JOOINVILLE
 JOONVILLE
 ```
 
-Estas foram as 52 variações para o nome “Joinville”, que encontrei num banco de dados de um sistema usado por pessoas de… Joinville.
+Estas foram as 52 variações para o nome "Joinville", que encontrei num banco de dados de um sistema usado por pessoas de… Joinville.
 
 > É cômico e triste constatar que a pessoa não sabe escrever o nome da própria cidade onde mora, ou simplesmente não se preocupa em conferir o que acabou de digitar.
 
-Por isso, amigo programador, **evite usar campos de texto livre, sem validação, em seus sistemas**. Nunca subestime a “criatividade” dos seus usuários, pois eles irão te surpreender e te frustrar, e seu banco de dados ficará uma bagunça.
+Por isso, amigo programador, **evite usar campos de texto livre, sem validação, em seus sistemas**. Nunca subestime a "criatividade" dos seus usuários, pois eles irão te surpreender e te frustrar, e seu banco de dados ficará uma bagunça.
 
 O que você pode fazer é limitar a entrada dos dados. Um exemplo é usar menus em vez de campos textuais, para que o usuário escolha um item pré-determinado em vez de digitar livremente. Ou então atrelar o campo de texto a um conjunto de dados conhecidos, mostrando as alternativas válidas conforme ele vai digitando ([autocomplete](http://en.wikipedia.org/wiki/Autocomplete)).
 
 Mas atenção: mesmo com estas restrições na entrada, ainda é recomendado que você faça uma validação antes de gravar os dados no banco.
 
 - E se o usuário desligou o JavaScript no navegador?
-- E se o usuário usou a ferramenta “[Inspecionar elemento](https://developer.chrome.com/devtools)” para alterar o código HTML do site?
+- E se o usuário usou a ferramenta "[Inspecionar elemento](https://developer.chrome.com/devtools)" para alterar o código HTML do site?
 - E se outro programa (como o [curl](http://curl.haxx.se/)) for usado para fazer o POST do formulário?
 - E se os dados estão vindo de outro sistema, via webservice?
 

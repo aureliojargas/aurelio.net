@@ -38,7 +38,7 @@ Tradicionalmente, primeiro você cria o site completo para o desktop (a tela gra
 
 ![](/img/blog/mobile-first-desktop-first.png)
 
-Eu pensava assim: “tanto faz do grande pro pequeno ou do pequeno pro grande, no fim das contas dá no mesmo”. Mas que nada, iniciar pelo mobile mudou a concepção do site e foi mais fácil chegar no resultado final para todas as telas.
+Eu pensava assim: "tanto faz do grande pro pequeno ou do pequeno pro grande, no fim das contas dá no mesmo". Mas que nada, iniciar pelo mobile mudou a concepção do site e foi mais fácil chegar no resultado final para todas as telas.
 
 Em termos de CSS, a diferença é na maneira de usar as [media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries). No desktop first elas modificam o leiaute padrão do site à medida que a tela diminui, enquanto no mobile first é o inverso: o site é modificado quando a tela aumenta.
 
@@ -72,7 +72,7 @@ Este caminho único te força a colocar primeiro o que é mais importante: o con
 
 Uma vez terminado o leiaute na telinha, você começa a adaptar para telas maiores, esticando os elementos e mudando seu posicionamento conforme o espaço maior permita.
 
-> Achei fácil “esticar” o site via CSS. Foi bem mais tranquilo do que experiências passadas de “encolher” um site grande cheio de penduricalhos.
+> Achei fácil "esticar" o site via CSS. Foi bem mais tranquilo do que experiências passadas de "encolher" um site grande cheio de penduricalhos.
 
 No meu caso, decidi que a partir de 990 pixels de largura havia espaço suficiente para mostrar o menu de navegação ao lado do artigo principal, em uma barra à esquerda (sidebar). Assim, em um tablet como o iPad, que tem 1024×768 pixels, o site só aparecerá com o menu lateral se o tablet estiver deitado. O leitor pode escolher ler o site com ou sem barra lateral, bastando girar o tablet.
 

@@ -16,8 +16,8 @@ tags: []
 <li><strong>becape</strong> — Becapes antigos, da era pré-Time Machine.</li>
 <li><strong>WINDOWS</strong> (formato FAT32) — Para trocar arquivos com sistemas Windows.</li>
 </ul>
-<p>Destas três partições a única que uso frequentemente é a “media”. Raramente preciso da “WINDOWS” para trocar arquivos com os parentes e mais raramente ainda preciso de becapes pré-históricos.</p>
-<p>O problema é que cada vez que conecto o HD externo, todas as três partições são montadas e ficam lá aparecendo no Finder e na Mesa. Eu queria que somente a “media” fosse montada automaticamente, e as outras, eu montaria apenas quando necessário, na mão.</p>
+<p>Destas três partições a única que uso frequentemente é a "media". Raramente preciso da "WINDOWS" para trocar arquivos com os parentes e mais raramente ainda preciso de becapes pré-históricos.</p>
+<p>O problema é que cada vez que conecto o HD externo, todas as três partições são montadas e ficam lá aparecendo no Finder e na Mesa. Eu queria que somente a "media" fosse montada automaticamente, e as outras, eu montaria apenas quando necessário, na mão.</p>
 <p class="figures">
   <img src="/wp/wp-content/uploads/2010/07/finder-mount-no-2.png" alt="Finder mostrando 3 partições montadas: becape, WINDOWS, media" />
   <img src="/wp/wp-content/uploads/2010/07/finder-mount-ok-2.png" alt="Finder mostrando 1 partição montada: media" />
@@ -34,7 +34,7 @@ tags: []
 Volume UUID:              61B7A219-6CC4-33C0-B521-CE04ADE6F780
 $</pre>
 <h3>Passo 3</h3>
-<p>Use o comando “vifs” para entrar na configuração do sistema (/etc/fstab).</p>
+<p>Use o comando "vifs" para entrar na configuração do sistema (/etc/fstab).</p>
 <pre>$ sudo vifs</pre>
 <figure>
   <img src="/wp/wp-content/uploads/2010/07/fstab-vazio.png" alt="Foto com o Vim mostrando o conteúdo do arquivo /etc/fstab. Está vazio, somente há linhas comentadas em inglês." />
@@ -67,7 +67,7 @@ $</pre>
 <li>Se não conseguir encontrar o UUID de sua partição, pode colocar o nome dela, no formato LABEL=nome, exemplo:
 <pre><strong>LABEL=WINDOWS</strong>   none    msdos   rw,noauto</pre>
 </li>
-<li>Se tiver espaços em branco no nome de sua partição, use <code>\040</code> em seu lugar. Por exemplo, se a partição chama-se “MS Windows XP”, faça
+<li>Se tiver espaços em branco no nome de sua partição, use <code>\040</code> em seu lugar. Por exemplo, se a partição chama-se "MS Windows XP", faça
 <pre>LABEL=MS<strong>\040</strong>Windows<strong>\040</strong>XP   none    msdos   rw,noauto</pre>
 </li>
 </ul>

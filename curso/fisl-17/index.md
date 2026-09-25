@@ -1,5 +1,5 @@
 ---
-title: Palestra “Shell Script Moderno” no FISL17
+title: Palestra "Shell Script Moderno" no FISL17
 subtitle: 15 de julho de 2016, Porto Alegre - RS
 date: 2016-07-15
 worked: 6:00
@@ -81,13 +81,13 @@ Além de software livre em si, também tinha áreas diferentes, como robótica, 
 
 [![](https://c2.staticflickr.com/9/8722/27735642353_1010a3e03f.jpg)](https://www.flickr.com/photos/fisl17/27735642353/)
 
-Encontrei por lá vários **amigos** que há anos não via. É muito bom rever o pessoal. Fora a feira e palestras, pra mim esse reencontro da “turminha” das antigas é um grande atrativo do evento.
+Encontrei por lá vários **amigos** que há anos não via. É muito bom rever o pessoal. Fora a feira e palestras, pra mim esse reencontro da "turminha" das antigas é um grande atrativo do evento.
 
 Gostei bastante do FISL17. Um ambiente agradável, com pessoas legais, boa estrutura e muita informação nova pra quem quer aprender. 👍
 
 ## Ida e volta de avião
 
-Eu serei repetitivo se eu disser mais uma vez que não gosto de viajar de avião. Pois bem, eu não gosto de viajar de avião. É tanta demora e tanto tempo de vida perdido em esperas, filas, deslocamento de/para o aeroporto e tudo mais, que a magia do “você está voando a [900 km/h](http://www.aviationforall.com/qual-a-velocidade-de-um-aviao/)” é como uma gota d'água no deserto.
+Eu serei repetitivo se eu disser mais uma vez que não gosto de viajar de avião. Pois bem, eu não gosto de viajar de avião. É tanta demora e tanto tempo de vida perdido em esperas, filas, deslocamento de/para o aeroporto e tudo mais, que a magia do "você está voando a [900 km/h](http://www.aviationforall.com/qual-a-velocidade-de-um-aviao/)" é como uma gota d'água no deserto.
 
 Pior ainda quando o avião vai pro lado errado.
 

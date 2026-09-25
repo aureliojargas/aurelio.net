@@ -6,7 +6,7 @@ worked: 5:00
 
 No verão passado estava com minha sobrinha de 4 anos na piscina do clube, quando começou a chover. Começamos então a tomar pingos de chuva. Cada pingo tinha um sabor. Enquanto os dela eram morango, chocolate e outras comidas gostosas, os meus eram de sabores bizarros como: sola de sapato, tapete, rabo de elefante, volante de carro... Ela ria muito. ❤️
 
-Eu adoro crianças. Gosto de brincar com elas, correr, agitar, provocar, instigar, fazer palhaçadas, ser o “tio maluco”. Também gosto de conversar com elas e perguntar coisas esdrúxulas, só pra ver a resposta criativa que só uma criança pode dar.
+Eu adoro crianças. Gosto de brincar com elas, correr, agitar, provocar, instigar, fazer palhaçadas, ser o "tio maluco". Também gosto de conversar com elas e perguntar coisas esdrúxulas, só pra ver a resposta criativa que só uma criança pode dar.
 
 Já sou tio de três sobrinhos, de idades entre 3 e 5 anos. Fico muito feliz toda vez que os vejo e brinco com eles. É tão bom perceber eles crescendo, se desenvolvendo…
 
@@ -33,7 +33,7 @@ Sou muito muito muito feliz por ter uma história bem normal pra contar, sem dra
 
 Foi tão rápido que logo que a Mog começou a passar mal (enjoo e enxaqueca), cerca de duas semanas depois, demoramos para perceber que já era o bebê fazendo arte dentro da barriga da mamãe.
 
-**“Estou grávida.”**
+**"Estou grávida."**
 
 Que alegria ao ouvir isso. Era real. Deu certo. Foi. Já era. Done. Merged. Sem Control-Z. Grávidos! \\o/
 
@@ -47,11 +47,11 @@ Hoje ela comenta que o lado bom foi não ter engordado nesse período :)
 
 <p style="text-align:center;letter-spacing:2em;">👶👶👶👶👶</p>
 
-Estávamos bem tranquilos quanto ao sexo: menino ou menina, o que viesse seria muito bem-vind`[ao]`. Chamávamos o feto de “das Baby”, usando o [gênero neutro](http://www.aprender-alemao.com/genero-substantivos-alemao.html) do alemão para não sermos tendenciosos a nenhum lado.
+Estávamos bem tranquilos quanto ao sexo: menino ou menina, o que viesse seria muito bem-vind`[ao]`. Chamávamos o feto de "das Baby", usando o [gênero neutro](http://www.aprender-alemao.com/genero-substantivos-alemao.html) do alemão para não sermos tendenciosos a nenhum lado.
 
 Secretamente, porém, ambos desejávamos um menino. Confessamos depois.
 
-No dia do exame para descobrir o sexo, lá estava “o baita” aparecendo na tela.
+No dia do exame para descobrir o sexo, lá estava "o baita" aparecendo na tela.
 
 **É um piazinho!** \\o/
 

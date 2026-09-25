@@ -8,7 +8,7 @@ worked: 3:00
 
 [No texto anterior](/blog/2014/04/29/ressuscitei-o-sedsed/) contei que fiquei 10 anos sem tocar no código do meu programa sedsed. Quando voltei a mexer nele, foi como abrir uma [cápsula do tempo](http://pt.wikipedia.org/wiki/C%C3%A1psula_do_tempo).
 
-Ali ficaram “congelados” por uma década o código Python e os comentários em inglês. É um retrato do Aurelio de 2004, um registro do nível dos meus conhecimentos na época.
+Ali ficaram "congelados" por uma década o código Python e os comentários em inglês. É um retrato do Aurelio de 2004, um registro do nível dos meus conhecimentos na época.
 
 Ao abrir esta cápsula e dar uma espiada no passado, foi engraçado perceber que:
 
@@ -23,9 +23,9 @@ Quero deixar registrado neste texto alguns dos achados dessa garimpagem.
 
 Ao ler os comentários do código, relembrei de alguns erros bobos de inglês que eu sempre cometia. Era passar o corretor ortográfico e lá estavam eles, sempre os mesmos! Se duvidar, alguns eu ainda faço até hoje :)
 
-- **developper** (o correto é developer): Eu colocava um “p” a mais, achando que entrava naquela regra de duplicar a consoante quando a palavra termina em consoante-vogal-consoante.
+- **developper** (o correto é developer): Eu colocava um "p" a mais, achando que entrava naquela regra de duplicar a consoante quando a palavra termina em consoante-vogal-consoante.
 
-- **begining** (o correto é beginning): Aqui eu omitia um “n”, pois assim me parecia ser mais correto. Mas sabe que até hoje acho feio o “nn” nessa palavra.
+- **begining** (o correto é beginning): Aqui eu omitia um "n", pois assim me parecia ser mais correto. Mas sabe que até hoje acho feio o "nn" nessa palavra.
 
 - **sucessfully**, **sucessfuly**, **successfuly** (o correto é successfully): Essa palavra dificilmente eu acertava, sempre faltava alguma consoante duplicada. E não é que tem que duplicar tudo mesmo?
 
@@ -45,7 +45,7 @@ Na programação, antigamente eu gostava de fazer códigos compactos, com poucos
 
 > E olha que nem eram em Perl :P
 
-Hoje valorizo muito um código legível, que seja fácil de entender e de encontrar o que precisa. Esta é uma “arte” que se aprende com o tempo e com a experiência, mas tem algumas regras simples de seguir que tornam o código bem mais amigável:
+Hoje valorizo muito um código legível, que seja fácil de entender e de encontrar o que precisa. Esta é uma "arte" que se aprende com o tempo e com a experiência, mas tem algumas regras simples de seguir que tornam o código bem mais amigável:
 
 - nomes descritivos para variáveis e funções
 - somente um comando por linha

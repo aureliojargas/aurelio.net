@@ -358,7 +358,7 @@ acontecendo :)
 
 ### Eles, sempre eles...
 
-No IV FISL em Porto Alegre, foi a grande placa do “[Rio Veadinho](/viagem/fisl-2003/rio_veadinho.jpg)”
+No IV FISL em Porto Alegre, foi a grande placa do "[Rio Veadinho](/viagem/fisl-2003/rio_veadinho.jpg)"
 que dá as boas-vindas aos visitantes que entram no Rio Gande do Sul
 pela BR-101. Em Campinas, no mural da Engenharia Elétrica, dentro da
 Unicamp...

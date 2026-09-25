@@ -49,7 +49,7 @@ DELETE a,b,c
   WHERE a.post_type = 'revision'
 ```
 
-Pronto, tudo removido. Porém, o espaço ocupado por estes dados na base só vai ser liberado de fato quando você “esvaziar a lixeira”, ou seja, otimizar as tabelas:
+Pronto, tudo removido. Porém, o espaço ocupado por estes dados na base só vai ser liberado de fato quando você "esvaziar a lixeira", ou seja, otimizar as tabelas:
 
 ```sql
 OPTIMIZE TABLE wp_posts, wp_postmeta, wp_term_taxonomy

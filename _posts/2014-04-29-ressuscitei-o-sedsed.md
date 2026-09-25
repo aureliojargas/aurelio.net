@@ -34,7 +34,7 @@ No fim das contas ainda consegui manter a compatibilidade com o Python 2.6 e o 2
 
 Pretendo continuar desenvolvendo o sedsed, corrigindo bugs e implementando novas funcionalidades. Se você também é programador e quer me ajudar, nos vemos [lá no GitHub](https://github.com/aureliojargas/sedsed)!
 
-Se você usa o sed para algo mais do que um simples `s/isso/aquilo/g`, ou quer aprender de vez como funcionam aqueles outros comandos estranhos como `N`, `D`, `h`, `g` e `x`, use o sedsed. Ele vai te dar a “visão além do alcance”, mostrando o que acontece por baixo dos panos.
+Se você usa o sed para algo mais do que um simples `s/isso/aquilo/g`, ou quer aprender de vez como funcionam aqueles outros comandos estranhos como `N`, `D`, `h`, `g` e `x`, use o sedsed. Ele vai te dar a "visão além do alcance", mostrando o que acontece por baixo dos panos.
 
 Basta trocar `sed` por `sedsed -d` em sua linha de comando e pronto, mágica instantânea:
 

@@ -22,7 +22,7 @@ Ou se preferir, [assine o podcast](http://feeds.feedburner.com/CastalioPodcastMP
 
 A primeira parte, como não poderia deixar de ser, foi sobre a ([hoje extinta](http://br-linux.org/2015/01/conectiva-sa-esta-fechando-e-busca-interessados-em-comprar-direitos-de-apostilas-e-outros-materiais.html)) Conectiva. Relembrei a época em que trabalhei lá (1997 a 2002, depois 2003 a 2005). Como eu fui um dos primeiros funcionários, vi a empresa crescer de uma dúzia que trabalhava amontoado numa casa até o ápice, quando éramos mais de 100 funcionários e ocupávamos um prédio.
 
-Há muitas histórias, mas o que mais me marcou foi o ambiente de trabalho informal e desregrado, “estilo startup”, com música alta (rock), fliperama no refeitório, horário flexível e partidas de Quake nas sextas-feiras.
+Há muitas histórias, mas o que mais me marcou foi o ambiente de trabalho informal e desregrado, "estilo startup", com música alta (rock), fliperama no refeitório, horário flexível e partidas de Quake nas sextas-feiras.
 
 E claro, ter a oportunidade de estar perto de caras geniais e aprender com eles, mega programadores que admiro (os que citei no podcast foram [Arnaldo Carvalho de Melo](https://www.linkedin.com/in/acmelo), [Gustavo Niemeyer](https://labix.org) e [Alfredo Kojima](https://www.linkedin.com/in/alfredokojima)). O nível era alto, todo dia se aprendia algo novo, inclusive durante as conversas no almoço. Muito empolgante!
 

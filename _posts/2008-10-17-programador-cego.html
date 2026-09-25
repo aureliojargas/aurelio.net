@@ -61,8 +61,8 @@ Data: 12 de setembro de 2008 </span></em></p>
 <p>A respeito dos truques de programação, o principal deles é a forma de formatar e comentar os blocos de comandos.</p>
 <p>Indentar o texto, colocando espaços ou tabulações no início da linha gera um efeito visual interessante, mas completamente inútil quando não enxergamos. Além do mais, quando não utilizamos mouse, estes espaços e tabulações apenas atrapalham a movimentação, que deve ser feita pelo teclado.</p>
 <p>Então, para que eu não me perca entre inúmeros blocos de comandos, que devem ser abertos e fechados, utilizo o seguinte método:</p>
-<p>Primeiro, um bloco “{” sempre se inicia em uma nova linha, e após o início do bloco vem um comentário que descreve o conteúdo do bloco.</p>
-<p>Ao final do bloco, seu fechamento “}” é feito também em uma nova linha seguido do mesmo comentário da abertura.</p>
+<p>Primeiro, um bloco "{" sempre se inicia em uma nova linha, e após o início do bloco vem um comentário que descreve o conteúdo do bloco.</p>
+<p>Ao final do bloco, seu fechamento "}" é feito também em uma nova linha seguido do mesmo comentário da abertura.</p>
 <p>Fica mais ou menos assim:</p>
 <pre>if ($carro)
 { // possui carro
@@ -110,15 +110,15 @@ return ($found);
 <p>Com tantos blocos aninhados seria muito fácil de se perder. Desta forma, ao correr para um trecho qualquer do código e ouvir o comentário dos blocos, podemos saber exatamente onde estamos. Como a leitura é feita linha por linha, imagine reduzir a sua janela para apenas uma linha de altura! Será impossível de reconhecer em que lugar do código estamos, não é? Por isto que colocar comentários e suprimir a indentação é tão útil!</p>
 <p>Bem… é claro que eu não documentei tão detalhadamente todo o meu sistema. Mas pelo menos as funções eu fiz questão de documentar para poder utilizá-las adequadamente no futuro.</p>
 <h4 style="text-align:right;">Dar nomes úteis para os caracteres</h4>
-<p>Outro truque é exigir que o leitor de telas, o sintetizador de voz que “fala” o que está escrito, pronuncie algumas palavras especiais ao encontrar certos caracteres ou strings.</p>
-<p>Por exemplo, { e } devem ser ditos como “início do bloco” e “fim do bloco”, já que normalmente são utilizados para delimitar blocos de comandos.</p>
+<p>Outro truque é exigir que o leitor de telas, o sintetizador de voz que "fala" o que está escrito, pronuncie algumas palavras especiais ao encontrar certos caracteres ou strings.</p>
+<p>Por exemplo, { e } devem ser ditos como "início do bloco" e "fim do bloco", já que normalmente são utilizados para delimitar blocos de comandos.</p>
 <ul>
-<li><strong>// = “nota”</strong>. Poderia dizer “comentário”, porém, “nota” é mais curto para se pronunciar!</li>
-<li><strong>' = “As”</strong>, também por ser mais curto do que “apóstrofo”.</li>
-<li><strong>" = “nulo”</strong>, já que normalmente representa uma string vazia.</li>
-<li><strong>$ = “var”</strong>, já que é utilizado para indicar uma variável.</li>
-<li><strong>; = “fim”</strong>, para indicar um fim de instrução (exigido pelo php)</li>
-<li><strong>! = “not”</strong>, já que é utilizado como negação – exemplo != ou if(!$carro)</li>
+<li><strong>// = "nota"</strong>. Poderia dizer "comentário", porém, "nota" é mais curto para se pronunciar!</li>
+<li><strong>' = "As"</strong>, também por ser mais curto do que "apóstrofo".</li>
+<li><strong>" = "nulo"</strong>, já que normalmente representa uma string vazia.</li>
+<li><strong>$ = "var"</strong>, já que é utilizado para indicar uma variável.</li>
+<li><strong>; = "fim"</strong>, para indicar um fim de instrução (exigido pelo php)</li>
+<li><strong>! = "not"</strong>, já que é utilizado como negação – exemplo != ou if(!$carro)</li>
 </ul>
 <p>Para ficar mais confortável de se ouvir, também fiz as seguintes exigências:</p>
 <ul>
@@ -144,10 +144,10 @@ fechar chavetas barra barra presente</p></blockquote>
 início do bloco nota presente<br />
 print var carro fim<br />
 fim do bloco nota presente</p></blockquote>
-<p>É meio esquisito “ler” o que se vê, mas com o tempo a gente se acostuma e, de tanto ouvir, var carro fim é o mesmo que $carro;</p>
+<p>É meio esquisito "ler" o que se vê, mas com o tempo a gente se acostuma e, de tanto ouvir, var carro fim é o mesmo que $carro;</p>
 <p>No fim não deixa de ser organizado e elegante também.</p>
 <h4 style="text-align:right;">Blocos sempre iniciam em uma nova linha</h4>
-<p>Quando passamos o cursor de uma linha para a outra, o sintetizador passa a ler a nova linha. Nem sempre temos tempo de ouvir uma linha inteira para saber que no final haverá um início de bloco “{”. Por isto a decisão de que qualquer bloco deve ser iniciado em uma nova linha.</p>
+<p>Quando passamos o cursor de uma linha para a outra, o sintetizador passa a ler a nova linha. Nem sempre temos tempo de ouvir uma linha inteira para saber que no final haverá um início de bloco "{". Por isto a decisão de que qualquer bloco deve ser iniciado em uma nova linha.</p>
 <p>Agora imagina o saco que é ler um código escrito por quem enxerga, onde blocos são abertos e fechados no fim das linhas… Ou pior:</p>
 <pre>{ else }</pre>
 <p>Mas isto é o fim!</p>
@@ -177,11 +177,11 @@ olá
 <h4 style="text-align:right;">HTML: Dicas de pronúncia</h4>
 <p>Um truque também para o html é exigir a seguinte pronúncia:</p>
 <ul>
-<li>&lt; = “menor” (ao invés de “menor que”)</li>
-<li>&gt; = “maior” (ao invés de “maior que”)</li>
-<li>&lt;/ = “fecha”</li>
-<li>&lt;!– = “comentário”</li>
-<li>–&gt; = “fim do comentário”</li>
+<li>&lt; = "menor" (ao invés de "menor que")</li>
+<li>&gt; = "maior" (ao invés de "maior que")</li>
+<li>&lt;/ = "fecha"</li>
+<li>&lt;!– = "comentário"</li>
+<li>–&gt; = "fim do comentário"</li>
 </ul>
 <h4 style="text-align:right;">CSS: Pode usar a mesma pronúncia do PHP</h4>
 <p>Com folhas de estilo css eu nem me incomodo, pois utilizo as mesmas regras de pronúncia do php:</p>
@@ -197,8 +197,8 @@ fim do bloco</p></blockquote>
 <p>Espero ter alguma coisa mais concreta para mostrar em breve.</p>
 <p>Por curiosidade,</p>
 <ul>
-<li>:-) = “risos”</li>
-<li>;-) = “piscadela”</li>
+<li>:-) = "risos"</li>
+<li>;-) = "piscadela"</li>
 <li>vc = você</li>
 <li>Angelo = Ângelo (e não Angêlo)</li>
 <li>microsoft = maicrossóft (e não microzôft)</li>
@@ -208,7 +208,7 @@ fim do bloco</p></blockquote>
 </ul>
 <p>e mais umas correçõezinhas assim.</p>
 <h4 style="text-align:right;">Diferenças ao escrever um texto e um programa</h4>
-<p>Quando leio ou escrevo um texto (não um script) desativo a pronuncia da pontuação, parênteses, colchetes, etc. e também desativo o “eco” do teclado. De forma que eu não ouço o que eu digito. Apenas após a escrita eu repasso o texto para “ouvir” se algo está errado. Também, quando alguém coloca algo entre parênteses, na maioria das vezes eu não sei que eles existem.</p>
+<p>Quando leio ou escrevo um texto (não um script) desativo a pronuncia da pontuação, parênteses, colchetes, etc. e também desativo o "eco" do teclado. De forma que eu não ouço o que eu digito. Apenas após a escrita eu repasso o texto para "ouvir" se algo está errado. Também, quando alguém coloca algo entre parênteses, na maioria das vezes eu não sei que eles existem.</p>
 <p>Já quando estou programando, ativo o eco do teclado para ter certeza de que não vai faltar nem um colchete… e mesmo assim normalmente fica faltando uma aspa não fechada ou coisas deste tipo! Também ativo a leitura da pontuação, já que $cidade .= $país; não são duas frases mal escritas.</p>
 <p>Até,</p>
 <p>Ângelo Beck</p>

@@ -28,13 +28,13 @@ Parece bobo (e é), e há dezenas de aplicativos similares, mas o Plant Nanny se
 
 - Há várias plantas disponíveis, cada uma com sua própria personalidade, cores, formas e características. São os personagens do jogo.
 
-- A planta possui algumas características para torná-la mais parecida com um bichinho de estimação: ela tem rosto, bracinhos, bigode, língua. A planta também “se mexe” sozinha (tem um balanço), emite sons e responde quando você toca nela.
+- A planta possui algumas características para torná-la mais parecida com um bichinho de estimação: ela tem rosto, bracinhos, bigode, língua. A planta também "se mexe" sozinha (tem um balanço), emite sons e responde quando você toca nela.
 
 - Cada planta tem quatro estágios de vida, e conforme você vai regando com regularidade, ela vai crescendo e ficando mais complexa (upgrades).
 
 - Há três níveis de dificuldade: fácil, normal e difícil. Plantas mais difíceis são aquelas que exigem que você cumpra a meta diária sem falhas e sem grandes intervalos, e demoram mais para chegar na fase adulta.
 
-- Quando a planta chega em seu estágio adulto, ela vai para o jardim, que é onde ficam todas as plantas que você conseguiu “completar”. Então você escolhe uma nova planta e começa tudo de novo.
+- Quando a planta chega em seu estágio adulto, ela vai para o jardim, que é onde ficam todas as plantas que você conseguiu "completar". Então você escolhe uma nova planta e começa tudo de novo.
 
 - Cada planta do jardim lhe dá moedas diariamente, e com estas moedas você compra itens no jogo: potes diferentes, papéis de parede, plantas raras, etc. Quanto mais plantas no jardim, mais moedas. Esse ciclo de economia e compra é um desafio adicional do jogo que o faz se dedicar mais a ele.
 

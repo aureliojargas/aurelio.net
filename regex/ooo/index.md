@@ -114,7 +114,7 @@ title: Expressões Regulares + OpenOffice, LibreOffice, BrOffice
   Artigo com vários exemplos úteis de expressões para o OpenOffice.
 
 - [Wiki — HOWTO: Regular Expressions in Writer](http://wiki.openoffice.org/wiki/Documentation/How_Tos/Regular_Expressions_in_Writer)
-  Página Wiki oficial sobre o funcionamento das Expressões Regulares no Writer. Contém informações valiosas sobre as várias “pegadinhas” (na verdade, problemas) com o suporte às expressões no Writer. Leitura obrigatória se você pretende usar seriamente as expressões no editor.
+  Página Wiki oficial sobre o funcionamento das Expressões Regulares no Writer. Contém informações valiosas sobre as várias "pegadinhas" (na verdade, problemas) com o suporte às expressões no Writer. Leitura obrigatória se você pretende usar seriamente as expressões no editor.
 
 - [Wiki — HOWTO: Regular Expressions in Calc](http://wiki.openoffice.org/wiki/Documentation/How_Tos/Regular_Expressions_in_Calc)
   Página Wiki oficial sobre o funcionamento das Expressões Regulares no Calc. Complementa o documento anterior sobre o Writer, trazendo detalhes adicionais sobre o uso das expressões nas planilhas, para as buscas e uso nas funções (fórmulas).
@@ -141,4 +141,4 @@ title: Expressões Regulares + OpenOffice, LibreOffice, BrOffice
 ## Plugins
 
 - [Alternative dialog Find & Replace for Writer](http://extensions.services.openoffice.org/project/AltSearch)
-  Uma extensão bem bacana que traz um painel “Localizar e Substituir” diferente, bem mais poderoso que o normal. Além do suporte melhorado às Expressões Regulares, possui várias funções adicionais.
+  Uma extensão bem bacana que traz um painel "Localizar e Substituir" diferente, bem mais poderoso que o normal. Além do suporte melhorado às Expressões Regulares, possui várias funções adicionais.

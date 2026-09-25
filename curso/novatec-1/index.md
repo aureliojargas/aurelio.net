@@ -30,7 +30,7 @@ Foi bem cansativo, mas no final valeu a pena. Gostei da experiência de ter volt
 
 Eu detesto todo o estresse e demora que envolve voar de avião, então decidi ir e voltar de ônibus mesmo. A viagem é longa (dura 9 horas), mas acontece durante a noite e chega no destino no dia seguinte, bem cedo.
 
-> “Tranquilo, vou dormir durante todo o trajeto, chego lá descansado e ainda economizo uma noite de hotel!”, pensei, inocentemente.
+> "Tranquilo, vou dormir durante todo o trajeto, chego lá descansado e ainda economizo uma noite de hotel!", pensei, inocentemente.
 
 Peguei o assento leito, que é caro (R$180, o dobro do preço do normal), achando que nele eu poderia dormir confortavelmente. Que nada! O banco não deitava totalmente, e como eu sou alto (1,90m), não coube nele: não consegui esticar as pernas e o encosto de cabeça ficou na altura dos meus ombros :/
 
@@ -40,7 +40,7 @@ Resultado: não dormi direito e fiquei todo doído, tanto na ida quanto na volta
 
 - A localização ficou excelente pra mim. O [hotel Íbis](http://www.ibis.com/pt-br/hotel-9596-ibis-styles-sao-paulo-anhembi/index.shtml) já era na frente da rodoviária, e o CT da Novatec ficava tão perto (700m) que pude ir à pé todos os dias. No mesmo prédio do CT tinha um restaurante, facilitando o almoço. Que alívio não precisar rodar por São Paulo!
 
-- Ficou **muito bom o CT** que a Novatec montou: tudo novo e limpo, salas bem equipadas (quadro branco, projetor, ar condicionado, tomadas, wi-fi, cadeiras confortáveis), espaço para lanches e até uma “banca” de livros manuseados com mega desconto de 70%. Os alunos fizeram a feira! :)
+- Ficou **muito bom o CT** que a Novatec montou: tudo novo e limpo, salas bem equipadas (quadro branco, projetor, ar condicionado, tomadas, wi-fi, cadeiras confortáveis), espaço para lanches e até uma "banca" de livros manuseados com mega desconto de 70%. Os alunos fizeram a feira! :)
 
 - Havia duas paradas para um lanche (**coffee break**) durante o dia, às 10:30 e 16:30. Muito boa a comida! Os alunos se empolgavam tanto conversando entre si ou comprando os livros com desconto, que eu tinha que chamar para voltar à aula :)
 
@@ -56,7 +56,7 @@ Resultado: não dormi direito e fiquei todo doído, tanto na ida quanto na volta
 
 Não uso slides, não tenho um roteiro.
 
-Eu tenho uma lista de assuntos para ensinar, mas a ordem em que eles aparecem durante o curso é dinâmica, e varia conforme o interesse e as dúvidas da turma. Assim, os assuntos novos vão aparecendo naturalmente, seguindo o fluxo corrente, sem quebras. Acredito que este andamento orgânico é mais benéfico para o aprendizado, comparado a um roteiro rígido “ideal” que eu tenha decidido sozinho em casa.
+Eu tenho uma lista de assuntos para ensinar, mas a ordem em que eles aparecem durante o curso é dinâmica, e varia conforme o interesse e as dúvidas da turma. Assim, os assuntos novos vão aparecendo naturalmente, seguindo o fluxo corrente, sem quebras. Acredito que este andamento orgânico é mais benéfico para o aprendizado, comparado a um roteiro rígido "ideal" que eu tenha decidido sozinho em casa.
 
 Tudo o que eu explico é demonstrado na hora, usando o computador. Uso ferramentas online, a linha de comando do Unix e o prompt interativos das linguagens de programação. Não trago comandos e códigos prontos. Tudo é criado e digitado na hora, com o resultado já aparecendo imediatamente, comprovando (ou não hehe) o que acabei de explicar. Mesmo quando o resultado é diferente do esperado, isso abre o caminho para os alunos me corrigirem (demonstrando que estão prestando atenção e entendendo) ou para explorar exceções e pegadinhas. Os alunos podem acompanhar digitando os mesmos comandos em seu próprio computador, criar variações, e assim surgem as dúvidas.
 
@@ -74,11 +74,11 @@ Passei as primeiras quatro horas explicando e demonstrando cada um dos metacarac
 
 Após a parada para o almoço, focamos na aplicação das expressões: grupos, replace, extração de dados e claro, exercícios. É na hora dos exercícios que tudo fica realmente divertido, quando cada um tem que pensar sozinho e criar suas próprias expressões. Nessa hora pude dar uma boa assistência individual, e tirar dúvidas pontuais.
 
-> Eu sempre me surpreendo como aparecem soluções criativas, que fogem da maneira mais “tradicional” de resolver certos exercícios. Neste curso não foi diferente.
+> Eu sempre me surpreendo como aparecem soluções criativas, que fogem da maneira mais "tradicional" de resolver certos exercícios. Neste curso não foi diferente.
 
 Os exercícios também foram bons para lidar com uma turma heterogênea como esta, pois enquanto os iniciantes aprendiam com os primeiros exemplos, os mais experientes já foram resolvendo os próximos, que são mais complexos. Assim, todos ficaram ocupados, pensando em regex, cada um no seu ritmo.
 
-> Meu passatempo predileto durante os exercícios foi “quebrar” as expressões finalizadas dos alunos, ou seja, detectar pequenas falhas na construção da expressão e editar o texto de exemplo para que estas falhas apareçam e o aluno tenha o desafio de corrigi-las. Parece cruel, mas eles gostaram :)
+> Meu passatempo predileto durante os exercícios foi "quebrar" as expressões finalizadas dos alunos, ou seja, detectar pequenas falhas na construção da expressão e editar o texto de exemplo para que estas falhas apareçam e o aluno tenha o desafio de corrigi-las. Parece cruel, mas eles gostaram :)
 
 ![Expressões Regulares para casar uma data](regex-data.jpg)
 
@@ -102,7 +102,7 @@ Para fechar o dia, terminamos o curso fazendo juntos a já tradicional expressã
 
 Sala cheia para aprender shell script, num curso de 8 horas. Resolvi fazer um curso diferente, e em vez de ficar mostrando comandos, opções e estruturas de programação, decidi focar mais na base Unix, na filosofia e nos conceitos que tornam o Unix o que ele é, pois isso influi diretamente na maneira que você cria e usa os comandos.
 
-É o tal “jeito shell” de resolver problemas, que demonstro na minha série de vídeos [Tela Preta](/tela-preta/). Você tem que enxergar seu problema de maneira diferente, para que a solução usando shell fique simples. Sem esta visão, tudo fica muito complicado e esquisito.
+É o tal "jeito shell" de resolver problemas, que demonstro na minha série de vídeos [Tela Preta](/tela-preta/). Você tem que enxergar seu problema de maneira diferente, para que a solução usando shell fique simples. Sem esta visão, tudo fica muito complicado e esquisito.
 
 Uma boa ideia que apareceu minutos antes de começar o curso, foi escrever no quadro branco os termos principais que definem a filosofia do Unix, e quais as características principais do ambiente shell.
 
@@ -122,7 +122,7 @@ No final, ensinei como criar e executar scripts. Mas a grande mensagem que tente
 
 Mais um curso de shell de 8 horas, porém este era direcionado a programadores que já possuíam experiência com a linha de comando do Unix/Linux.
 
-Igual no curso anterior, fiz questão de passar todo o histórico, filosofia e características do Unix, porém desta vez numa linguagem mais densa, nerd, de programador para programador. Durante todo o curso, fiz comparativos da diferença entre o “jeito shell” e as soluções comuns em programação, com loops, condicionais e algoritmos. É uma grande quebra de paradigma para um programador experiente.
+Igual no curso anterior, fiz questão de passar todo o histórico, filosofia e características do Unix, porém desta vez numa linguagem mais densa, nerd, de programador para programador. Durante todo o curso, fiz comparativos da diferença entre o "jeito shell" e as soluções comuns em programação, com loops, condicionais e algoritmos. É uma grande quebra de paradigma para um programador experiente.
 
 Havia alguns alunos já bastante experientes, com grande conhecimento, como meu amigo Luciano Ramalho. Eles enriqueceram o curso, dando depoimentos e complementando as explicações. Assim, eu dei o curso mas também aprendi junto, pura diversão nerd! :)
 

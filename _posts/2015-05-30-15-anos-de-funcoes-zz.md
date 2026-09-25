@@ -24,7 +24,7 @@ Trabalhamos pesado nos últimos meses, usando nossas raras horas vagas de empreg
 
 - [50+ issues resolvidos](https://github.com/funcoeszz/funcoeszz/issues?page=1&q=is%3Aissue+is%3Aclosed+no%3Amilestone) desde a versão anterior
 
-- Mais [38 issues adicionais resolvidos](https://github.com/funcoeszz/funcoeszz/issues?q=milestone%3A%22Vers%C3%A3o+2015%22+is%3Aclosed) nas últimas semanas para deixar a versão nova “redonda”
+- Mais [38 issues adicionais resolvidos](https://github.com/funcoeszz/funcoeszz/issues?q=milestone%3A%22Vers%C3%A3o+2015%22+is%3Aclosed) nas últimas semanas para deixar a versão nova "redonda"
 
 - Muita pesquisa, investigação e problemas cabeludos:
 
@@ -39,7 +39,7 @@ Trabalhamos pesado nos últimos meses, usando nossas raras horas vagas de empreg
 O resultado é a **versão nova 15.5** ([download](https://funcoeszz.net/download/),
 [anúncio](https://funcoeszz.net/anuncio-15.5.html), [changelog](https://funcoeszz.net/changelog.html)), que traz um número recorde de 49 funções novas, deixando nosso querido software com um total de 178 funções!
 
-> Bônus: Sabe quem enviou [uma função nova](https://github.com/funcoeszz/funcoeszz/pull/215), para participar das comemorações? O [Thobias](https://funcoeszz.net/hist.html), antigo co-autor das funções que há anos não “aparecia” por estas bandas. Massa!
+> Bônus: Sabe quem enviou [uma função nova](https://github.com/funcoeszz/funcoeszz/pull/215), para participar das comemorações? O [Thobias](https://funcoeszz.net/hist.html), antigo co-autor das funções que há anos não "aparecia" por estas bandas. Massa!
 
 ## Vem participar do projeto!
 

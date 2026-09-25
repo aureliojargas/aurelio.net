@@ -12,7 +12,7 @@ Eu nunca quis ser funcionário público.
 
 Como praticamente toda a minha família é de funcionários públicos (mãe, pai, padrasto, irmã, tios, tias, avô…), desde criança sempre ouvi histórias indignantes que eles contavam sobre o lado ruim do funcionalismo: morosidade, politicagem, pilantragem, desperdício, dinossauros…
 
-Minha mãe era uma chefe “durona”, que botava todos pra trabalhar sério e lutava por mudanças, mas sofria para conseguir melhorar, modernizar, informatizar as coisas. Tudo era muito difícil de fazer acontecer. Mas apesar de tudo, até hoje ela valoriza a carreira pública e sempre sonhou que um dia eu também a seguisse.
+Minha mãe era uma chefe "durona", que botava todos pra trabalhar sério e lutava por mudanças, mas sofria para conseguir melhorar, modernizar, informatizar as coisas. Tudo era muito difícil de fazer acontecer. Mas apesar de tudo, até hoje ela valoriza a carreira pública e sempre sonhou que um dia eu também a seguisse.
 
 Porém, eu sou a ovelha negra da família, sou o desajustado.
 
@@ -27,9 +27,9 @@ Num belo dia, estava eu em casa, feliz, curtindo minha vida de desempregado, tra
 
 Isso foi em 2009. Sem eu saber, a Mog me inscreveu no [concurso da prefeitura de Joinville](https://prefeituradigital.joinville.sc.gov.br/servico/detalhe-41-Concurso+Edital+001+-+2009.html). Ela só me contou na última hora e me convenceu a ir fazer a prova.
 
-> “Vai, sem compromisso, só pra ver como é a prova…”
+> "Vai, sem compromisso, só pra ver como é a prova…"
 
-Fiz a prova de cabeça fria, sem a pressão do “tenho que passar” e até que fui bem. Me classifiquei em 21º na vaga de Analista de TI. Como eram somente 9 vagas e eu estava longe na fila, esquecemos desse concurso.
+Fiz a prova de cabeça fria, sem a pressão do "tenho que passar" e até que fui bem. Me classifiquei em 21º na vaga de Analista de TI. Como eram somente 9 vagas e eu estava longe na fila, esquecemos desse concurso.
 
 <p align="center">— ∞ —</p>
 
@@ -37,7 +37,7 @@ Fiz a prova de cabeça fria, sem a pressão do “tenho que passar” e até que
 
 Continuo feliz na minha vida de desempregado. Toca o telefone, era do RH da prefeitura. Eu nem lembrava mais desse concurso. Meu interesse nele continua zero. Mais uma vez, a Mog, manipuladora master, me convenceu a ir:
 
-> “Pelo menos vá lá conversar para saber como é a vaga. Você não é obrigado a aceitar.”
+> "Pelo menos vá lá conversar para saber como é a vaga. Você não é obrigado a aceitar."
 
 Fui. Minhas expectativas eram as piores possíveis:
 

@@ -1,5 +1,5 @@
 ---
-title: Palestra “O poder da linha de comando” no SC Dev Summit 2016
+title: Palestra "O poder da linha de comando" no SC Dev Summit 2016
 subtitle: 21 de maio de 2016, Joinville - SC
 date: 2016-05-21
 worked: 3:30
@@ -17,7 +17,7 @@ Essa foi uma palestra nova, que fiz especialmente para o evento.
 
 O evento aconteceu em dois dias, sendo o primeiro com palestras temáticas de back-end e segundo para front-end. Eu me identifico mais com o back-end, mas como eu só tinha disponibilidade no sábado, que era o dia do front-end, então aceitei o desafio de fazer uma palestra para um público diferente.
 
-Pensei comigo, esses caras hoje precisam ir para a linha de comando de vez em quando pra instalar e rodar as ferramentas que manipulam os arquivos CSS e HTML: pré-processadores, minificadores, e tudo mais. Já “molharam o pé” na tela preta, então eu poderia fazer uma demonstração do poder das ferramentas do Unix, estilo os vídeos que faço na série [Tela Preta](/tela-preta/), para despertar a curiosidade de eles explorarem e ficarem mais tempo no prompt.
+Pensei comigo, esses caras hoje precisam ir para a linha de comando de vez em quando pra instalar e rodar as ferramentas que manipulam os arquivos CSS e HTML: pré-processadores, minificadores, e tudo mais. Já "molharam o pé" na tela preta, então eu poderia fazer uma demonstração do poder das ferramentas do Unix, estilo os vídeos que faço na série [Tela Preta](/tela-preta/), para despertar a curiosidade de eles explorarem e ficarem mais tempo no prompt.
 
 Esta foi a chamada da palestra:
 
@@ -25,7 +25,7 @@ Esta foi a chamada da palestra:
 
 ## Estudando as ferramentas de front-end
 
-Apesar de eu já ter criado vários sites “na mão”, e saber bem HTML e CSS, não estou por dentro das ferramentas de front que foram criadas nos últimos anos, que agilizam o processo.
+Apesar de eu já ter criado vários sites "na mão", e saber bem HTML e CSS, não estou por dentro das ferramentas de front que foram criadas nos últimos anos, que agilizam o processo.
 
 Meu primeiro passo, antes mesmo de definir o escopo e roteiro da palestra, foi saber mais sobre o público: estudar sobre o que é ser front-end hoje, e quais ferramentas de linha de comando eles costumam utilizar.
 
